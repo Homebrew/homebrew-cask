@@ -1,19 +1,17 @@
 cask "opera@beta" do
-  version "124.0.5705.12"
-  sha256 "4f851cafc363ffe5ffd166c9c26d61c64b1eb07b2ddbfa4787a482c8290937c8"
+  version "126.0.5750.30"
+  sha256 "63cef0cda745407627cfae38bef69d3b44203e257dc16d01164a4ddbe9dff527"
 
   url "https://get.geo.opera.com/pub/opera-beta/#{version}/mac/Opera_beta_#{version}_Setup.dmg"
   name "Opera Beta"
   desc "Web browser"
   homepage "https://www.opera.com/computer/beta"
 
-  livecheck do
-    url "https://get.geo.opera.com/pub/opera-beta/"
-    regex(%r{href=["']?v?(\d+(?:\.\d+)+)/?["' >]}i)
-  end
+  # https://blogs.opera.com/desktop/2026/01/opera-126-0-5750-30-beta-update
+  deprecate! date: "2026-02-05", because: :discontinued
 
   auto_updates true
-  depends_on macos: ">= :big_sur"
+  depends_on macos: :big_sur
 
   app "Opera Beta.app"
 

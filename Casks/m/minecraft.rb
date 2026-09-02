@@ -2,8 +2,7 @@ cask "minecraft" do
   version "2.1.3,1"
   sha256 :no_check
 
-  url "https://launcher.mojang.com/download/Minecraft.dmg",
-      verified: "mojang.com/download/"
+  url "https://launcher.mojang.com/download/Minecraft.dmg"
   name "Minecraft"
   desc "Sandbox construction video game"
   homepage "https://minecraft.net/"
@@ -14,6 +13,7 @@ cask "minecraft" do
   end
 
   auto_updates true
+  depends_on :macos
 
   app "Minecraft.app"
 

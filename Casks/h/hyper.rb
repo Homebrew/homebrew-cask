@@ -6,8 +6,7 @@ cask "hyper" do
   sha256 arm:   "7d2440fdd93fde4101e603fe2de46732b54292a868ad17dbcb55288e6f8430a8",
          intel: "aa6ab73fdc60f60d428eb0247b270f958e58709249077b5102c7ab24aff19683"
 
-  url "https://github.com/vercel/hyper/releases/download/v#{version}/Hyper-#{version}-mac-#{arch}.zip",
-      verified: "github.com/vercel/hyper/"
+  url "https://github.com/vercel/hyper/releases/download/v#{version}/Hyper-#{version}-mac-#{arch}.zip"
   name "Hyper"
   desc "Terminal built on web technologies"
   homepage "https://hyper.is/"
@@ -21,6 +20,7 @@ cask "hyper" do
 
   auto_updates true
   conflicts_with cask: "hyper@canary"
+  depends_on :macos
 
   app "Hyper.app"
   binary "#{appdir}/Hyper.app/Contents/Resources/bin/hyper"

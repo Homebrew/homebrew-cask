@@ -1,9 +1,8 @@
 cask "music-decoy" do
-  version "1.1"
-  sha256 "d8cc0121ced173bc1e7f38e34b514177c2680288405e399829dca8d729584f98"
+  version "1.3"
+  sha256 "14132d0a14057e3288f8c4446829e15daa512c17e8e85d5d4e396c3722ef128f"
 
-  url "https://github.com/FuzzyIdeas/MusicDecoy/releases/download/v#{version}/MusicDecoy.zip",
-      verified: "github.com/FuzzyIdeas/MusicDecoy/"
+  url "https://github.com/FuzzyIdeas/MusicDecoy/releases/download/v#{version}/MusicDecoy.zip"
   name "Music Decoy"
   desc "Music app blocker utility"
   homepage "https://lowtechguys.com/musicdecoy"
@@ -12,6 +11,8 @@ cask "music-decoy" do
     url :url
     strategy :github_latest
   end
+
+  depends_on macos: :monterey
 
   app "Music Decoy.app"
 

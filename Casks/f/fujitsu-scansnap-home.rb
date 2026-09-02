@@ -1,22 +1,22 @@
 cask "fujitsu-scansnap-home" do
-  version "3.2.0"
-  sha256 "5cfca71cbc05b66bca452c9966db0953e57ddf01b0485832c804881694601373"
+  version "4.0.0"
+  sha256 "02a42ef28f902a7c1fb87555572bf3694180a4f8f9ca5d55ee1a515bd50af61f"
 
-  url "https://origin.pfultd.com/downloads/ss/sshinst/m-#{version.no_dots}/MacSSHOfflineInstaller_#{version.dots_to_underscores}.dmg",
-      verified: "origin.pfultd.com/"
+  url "https://origin.pfultd.com/downloads/ss/sshinst/m-#{version.no_dots}/MacSSHOfflineInstaller_#{version.dots_to_underscores}.dmg"
   name "ScanSnap Home"
   desc "Fujitsu ScanSnap Scanner software"
   homepage "https://www.fujitsu.com/global/products/computing/peripheral/scanners/soho/sshome/"
 
   livecheck do
-    url "https://www.pfu.ricoh.com/global/scanners/scansnap/dl/mac-sshoffline.html"
-    regex(/m-sshoffline[._-]v?(\d+(?:[._]\d+)+)\.html/i)
+    url "https://www.pfu.ricoh.com/imaging/ssacc/en/sshoffline.html"
+    regex(/MacSSHOfflineInstaller[._-]v?(\d+(?:[._]\d+)+)\.dmg/i)
     strategy :page_match do |page, regex|
       page.scan(regex).map { |match| match[0].tr("_", ".") }
     end
   end
 
   auto_updates true
+  depends_on :macos
   container nested: "Download/MacSSHomeInstaller_#{version.dots_to_underscores}.dmg"
 
   pkg "ScanSnap Home.pkg"
@@ -42,8 +42,4 @@ cask "fujitsu-scansnap-home" do
         "~/Library/Saved Application State/com.fujitsu.pfu.ScanSnapHome.savedState",
         "~/Library/Saved Application State/jp.co.pfu.SSHomeWizard.savedState",
       ]
-
-  caveats do
-    requires_rosetta
-  end
 end

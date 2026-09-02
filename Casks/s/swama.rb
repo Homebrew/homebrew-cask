@@ -1,13 +1,13 @@
 cask "swama" do
-  version "1.5.0"
-  sha256 "f9bd5f1be27091c69be5eb05f7b57c9de45fcd110300b1ba43010eb0c27e3220"
+  version "2.3.0"
+  sha256 "36c8a0d0c765bfb5e3e41d9a2fba2a2af24048480470d963c71ac6585e148dab"
 
   url "https://github.com/Trans-N-ai/swama/releases/download/v#{version}/Swama.dmg"
   name "Swama"
   desc "Machine-learning runtime"
   homepage "https://github.com/Trans-N-ai/swama"
 
-  depends_on macos: ">= :sonoma"
+  depends_on macos: :sequoia
   depends_on arch: :arm64
 
   app "Swama.app"

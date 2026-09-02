@@ -14,7 +14,7 @@ cask "julia-app@nightly" do
     regex(/v?(\d+(?:\.\d+)+)/i)
   end
 
-  depends_on macos: ">= :sequoia"
+  depends_on macos: :sequoia
 
   # The url is unversioned, but the download returns an app with a version number
   rename "Julia-*.app", "Julia Nightly.app"

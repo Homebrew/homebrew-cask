@@ -1,6 +1,6 @@
 cask "charles" do
-  version "5.0.3"
-  sha256 "2dc3535b295ff5b3214d474fb310c2a3fd42433f11d145a5d069c88de1b0dbe0"
+  version "5.2.1"
+  sha256 "d233395a7fbb487f0fe20ddff16e02a65990add20d5aa9ce1e87a8f9ff0fe0d5"
 
   url "https://www.charlesproxy.com/assets/release/#{version}/charles-proxy-#{version}.dmg"
   name "Charles"
@@ -13,19 +13,12 @@ cask "charles" do
   end
 
   conflicts_with cask: "charles@4"
+  depends_on :macos
 
   app "Charles.app"
 
-  uninstall_postflight do
-    stdout, * = system_command "/usr/bin/security",
-                               args: ["find-certificate", "-a", "-c", "Charles", "-Z"],
-                               sudo: true
-    hashes = stdout.lines.grep(/^SHA-256 hash:/) { |l| l.split(":").second.strip }
-    hashes.each do |h|
-      system_command "/usr/bin/security",
-                     args: ["delete-certificate", "-Z", h],
-                     sudo: true
-    end
+  uninstall_postflight_steps do
+    delete_keychain_certificates "Charles"
   end
 
   uninstall launchctl: "com.xk72.Charles.ProxyHelper",

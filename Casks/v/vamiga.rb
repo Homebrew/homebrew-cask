@@ -1,9 +1,8 @@
 cask "vamiga" do
-  version "4.3.2"
-  sha256 "ed7bee36c04b254741becc44287b34395f07304aa881d4f82e58f0be385de8cc"
+  version "4.5"
+  sha256 "8e4d98ee27cc1b10a478389c3f56da05ed60082114c3a249d8907b63a45e1bdb"
 
-  url "https://github.com/dirkwhoffmann/vAmiga/releases/download/v#{version}/vAmiga.app.zip",
-      verified: "github.com/dirkwhoffmann/vAmiga/"
+  url "https://github.com/dirkwhoffmann/vAmiga/releases/download/v#{version}/vAmiga.app.zip"
   name "vAmiga"
   desc "Amiga 500, 1000, 2000 emulator"
   homepage "https://dirkwhoffmann.github.io/vAmiga"
@@ -13,7 +12,7 @@ cask "vamiga" do
     strategy :github_latest
   end
 
-  depends_on macos: ">= :ventura"
+  depends_on macos: :ventura
 
   app "vAmiga.app"
 

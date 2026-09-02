@@ -1,6 +1,6 @@
 cask "macgamestore" do
-  version "5.6.0,7032"
-  sha256 "1ab8f9e9ea537eeafc70f0dd535d56fb2cc4d58394a9b7567efb6348bfbce11b"
+  version "5.7.13,7046"
+  sha256 "4eb28e9b27ccc80fd652958d7a3812fd48cc643052f7b26b15409e34f6862a5f"
 
   url "https://www.macgamestore.com/api_clientapp/clientupdates/public/core#{version.csv.second[0]}/MacGameStore_#{version.csv.first}_#{version.csv.second}.zip"
   name "MacGameStore"
@@ -27,6 +27,7 @@ cask "macgamestore" do
   end
 
   auto_updates true
+  depends_on :macos
 
   app "MacGameStore.app"
 

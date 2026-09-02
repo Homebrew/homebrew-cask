@@ -1,9 +1,8 @@
 cask "steamcmd" do
-  version "1759461699"
+  version "1788292693"
   sha256 :no_check
 
-  url "https://steamcdn-a.akamaihd.net/client/installer/steamcmd_osx.tar.gz",
-      verified: "steamcdn-a.akamaihd.net/"
+  url "https://steamcdn-a.akamaihd.net/client/installer/steamcmd_osx.tar.gz"
   name "SteamCMD"
   desc "Command-line client for Steam"
   homepage "https://developer.valvesoftware.com/wiki/SteamCMD"
@@ -14,23 +13,15 @@ cask "steamcmd" do
   end
 
   auto_updates true
+  depends_on :macos
 
-  # shim script (https://github.com/Homebrew/homebrew-cask/issues/18809)
-  shimscript = staged_path/"steamcmd.wrapper.sh"
-  binary shimscript, target: "steamcmd"
+  command_wrapper "steamcmd",
+                  executable: "#{staged_path}/MacOS/steamcmd.sh"
 
-  preflight do
+  preflight_steps do
     # Running for the first time will create a Frameworks symlink in the parent
     # directory pointing to a MacOS directory, so move the files in a MacOS directory.
-    files = staged_path.glob("*")
-    macos_dir = staged_path/"MacOS"
-    macos_dir.mkpath
-    FileUtils.mv files, macos_dir
-
-    shimscript.write <<~SH
-      #!/bin/sh
-      exec '#{macos_dir}/steamcmd.sh' "$@"
-    SH
+    move_contents ".", "MacOS"
   end
 
   uninstall launchctl: "com.valvesoftware.steamclean"

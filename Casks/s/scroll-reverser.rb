@@ -12,7 +12,8 @@ cask "scroll-reverser" do
     strategy :sparkle, &:short_version
   end
 
-  depends_on macos: ">= :ventura"
+  auto_updates true
+  depends_on macos: :ventura
 
   app "Scroll Reverser.app"
 

@@ -6,6 +6,10 @@ cask "switchkey" do
   name "SwitchKey"
   homepage "https://github.com/itsuhane/SwitchKey"
 
+  disable! date: "2026-09-01", because: :fails_gatekeeper_check
+
+  depends_on :macos
+
   app "SwitchKey.app"
 
   zap trash: "~/Library/Preferences/itsuhane.tools.SwitchKey.plist"

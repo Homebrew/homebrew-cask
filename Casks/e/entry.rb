@@ -1,6 +1,6 @@
 cask "entry" do
-  version "2.1.30"
-  sha256 "7653fd298f52010f0240cde143b69699f05ed18a4317bbefbb92de64aba6880d"
+  version "2.1.35"
+  sha256 "e8eefcc607e2177aec3aa167a7e0c4f41746e444f7918190d5ad0ffe78d82029"
 
   url "https://playentry.org/uploads/data/installers/Entry-#{version}.pkg"
   name "entry"
@@ -16,6 +16,8 @@ cask "entry" do
       json["recentVersion"]
     end
   end
+
+  depends_on :macos
 
   pkg "Entry-#{version}.pkg"
 

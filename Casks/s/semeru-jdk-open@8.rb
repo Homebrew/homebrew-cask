@@ -1,24 +1,22 @@
 cask "semeru-jdk-open@8" do
-  version "8u472-b08,openj9-0.56.0"
-  sha256 "43a95f6119dcddb4a15ed30d306d2f797a6d4c12a78d0a3a2cb6e92b42e6bfd2"
+  version "8.0.504.0"
+  sha256 "a5799c5d58e7105559abeab0976b2b1fd8155544c325ed98edd2ea4a7399865e"
 
-  url "https://github.com/ibmruntimes/semeru8-binaries/releases/download/jdk#{version.csv.first}_#{version.csv.second}/ibm-semeru-open-jdk_x64_mac_#{version.csv.first.tr("-", "")}_#{version.csv.second}.pkg",
-      verified: "github.com/ibmruntimes/semeru8-binaries/"
+  url "https://github.com/ibmruntimes/semeru#{version.major}-binaries/releases/download/jdk-#{version}/ibm-semeru-open-jdk_x64_mac_#{version}.pkg"
   name "IBM Semeru Runtime (JDK 8) Open Edition"
   desc "Production-ready JDK with the OpenJDK class libraries and the Eclipse OpenJ9 JVM"
-  homepage "https://developer.ibm.com/languages/java/semeru-runtimes"
+  homepage "https://developer.ibm.com/languages/semeru-runtimes/"
 
   livecheck do
     url :url
-    regex(/^(?:jdk)?(\d+u\d+)[._-](b\d+)[._-](.+?)$/i)
-    strategy :github_latest do |json, regex|
-      json["tag_name"]&.scan(regex)&.map { |match| "#{match[0]}-#{match[1]},#{match[2]}" }
-    end
+    strategy :github_latest
   end
 
-  pkg "ibm-semeru-open-jdk_x64_mac_#{version.csv.first.tr("-", "")}_#{version.csv.second}.pkg"
+  depends_on :macos
 
-  uninstall pkgutil: "net.ibm-semeru-open.8.jdk"
+  pkg "ibm-semeru-open-jdk_x64_mac_#{version}.pkg"
+
+  uninstall pkgutil: "net.ibm-semeru-open.#{version.major}.jdk"
 
   # No zap stanza required
 

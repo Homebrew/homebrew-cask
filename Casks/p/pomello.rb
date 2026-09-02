@@ -12,6 +12,8 @@ cask "pomello" do
     strategy :header_match
   end
 
+  depends_on :macos
+
   app "Pomello.app"
 
   zap trash: [

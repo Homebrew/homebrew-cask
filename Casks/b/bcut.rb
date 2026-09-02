@@ -3,19 +3,15 @@ cask "bcut" do
   pkg_key = on_arch_conditional arm: "arm_pkg_url", intel: "package_download_url"
 
   on_arm do
-    version "3.11.10,21495874,b370329ac90821631f38b86b96438e55"
-    sha256 "09e69ba2a1d57b6b182c5e269c7c59ba8a2de3666ba7d9bf721012610a165b9d"
+    version "3.11.24,23369602,a97c4192d11a838429fb9600044e67c8"
+    sha256 "c2ffdf539aed7dd235a8dee7ad3547f32a2803380d8e64367f7b11792ca1ad9c"
   end
   on_intel do
-    version "3.11.10,21495890,0f6ae6a5aec6ed262bde1e01f0a4e635"
-    sha256 "1c35f53059f6502865ca4a4e75beb75dde4f87f79b1504856f0aa8ee0367e468"
-  end
-  on_intel do
-    disable! date: "2026-09-01", because: :fails_gatekeeper_check
+    version "3.11.24,23369604,2b551373e850489c924c4cbcf64aec97"
+    sha256 "457d27e80e1862d317423659597614ceacdc63b4542554ceabab6bdef97fe3ba"
   end
 
-  url "https://boss.hdslb.com/bcut_pc_pkg/static/#{version.csv.third}/BCUT-#{version.csv.first}-#{version.csv.second}-#{arch}.dmg",
-      verified: "boss.hdslb.com/"
+  url "https://boss.hdslb.com/bcut_pc_pkg/static/#{version.csv.third}/BCUT-#{version.csv.first}-#{version.csv.second}-#{arch}.dmg"
   name "Bcut"
   name "必剪"
   desc "Professional video editing software by Bilibili"
@@ -33,6 +29,7 @@ cask "bcut" do
   end
 
   auto_updates true
+  depends_on :macos
 
   app "BCUT.app"
 

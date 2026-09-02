@@ -1,5 +1,5 @@
 cask "massreplaceit" do
-  version "3.1.2"
+  version "4.0"
   sha256 :no_check
 
   url "https://www.hexmonkeysoftware.com/files/MassReplaceIt.dmg"
@@ -12,6 +12,8 @@ cask "massreplaceit" do
     regex(/MassReplaceIt\s+(\d+(?:\.\d+)+)/i)
   end
 
+  depends_on :macos
+
   app "MassReplaceIt.app"
 
   zap trash: [
@@ -20,8 +22,4 @@ cask "massreplaceit" do
     "~/Library/Preferences/com.hexmonkey.massreplaceit.plist",
     "~/Library/Saved Application State/com.hexmonkey.massreplaceit.savedState",
   ]
-
-  caveats do
-    requires_rosetta
-  end
 end

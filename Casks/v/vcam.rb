@@ -1,6 +1,6 @@
 cask "vcam" do
-  version "5.0.3"
-  sha256 "6d50cbb713055ab66a854429470110502c7fc66d88ebf11a288b7d68f9f3f022"
+  version "5.0.7"
+  sha256 "1e67b31e25a35a3446dbdefb9765d779076063f9f4ae4b918a6cb2aaa5d5e155"
 
   url "https://installers.vcam.ai/VCam_#{version}.pkg"
   name "VCam"
@@ -12,20 +12,25 @@ cask "vcam" do
     strategy :header_match
   end
 
+  depends_on :macos
+
   pkg "VCam_#{version}.pkg"
 
-  postflight do
+  postflight_steps do
     # Description: Ensure console variant of postinstall is non-interactive.
     # This is because `open /Applications/VCam/VCam.app` is called from the
     # postinstall script of the package and we don't want any user intervention there.
-    retries ||= 3
-    ohai "The VCam package postinstall script launches the VCam app" if retries >= 3
-    ohai "Attempting to close VCam.app to avoid unwanted user intervention" if retries >= 3
-    return unless system_command "/usr/bin/pkill", args: ["-f", "/Applications/VCam/VCam.app"]
-  rescue RuntimeError
-    sleep 1
-    retry unless (retries -= 1).zero?
-    opoo "Unable to forcibly close VCam.app"
+    terminate_process(
+      "/Applications/VCam/VCam.app",
+      match:           :full,
+      attempts:        3,
+      must_succeed:    false,
+      notices:         [
+        "The VCam package postinstall script launches the VCam app",
+        "Attempting to close VCam.app to avoid unwanted user intervention",
+      ],
+      failure_message: "Unable to forcibly close VCam.app",
+    )
   end
 
   uninstall quit:    "ai.vcam.desktop",

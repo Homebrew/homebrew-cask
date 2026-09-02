@@ -1,12 +1,11 @@
 cask "freeplane" do
   arch arm: "apple", intel: "intel"
 
-  version "1.12.14"
-  sha256 arm:   "cec0b14e8251884860aef1f881391d5d5c4d6ef0d31c7e02a253f2cdbadfc524",
-         intel: "33bda56b03251f39713a75ce792bc8ee5a5efba142afdb73b87deaa9b875ea4e"
+  version "1.13.3"
+  sha256 arm:   "f6c8639cbe91ca431c84b44eb64ab0b3f984454ec0203e1132e49586265a2347",
+         intel: "5946877c7f27c1932daf10ff456a57cfe07201f727ab5d53a527dd1d3306ec44"
 
-  url "https://downloads.sourceforge.net/freeplane/Freeplane-#{version}-#{arch}.dmg",
-      verified: "downloads.sourceforge.net/freeplane/"
+  url "https://downloads.sourceforge.net/freeplane/Freeplane-#{version}-#{arch}.dmg"
   name "Freeplane"
   desc "Mind mapping and knowledge management software"
   homepage "https://docs.freeplane.org/"
@@ -15,6 +14,8 @@ cask "freeplane" do
     url "https://sourceforge.net/projects/freeplane/rss?path=/freeplane%20stable"
     regex(%r{url=.*?/Freeplane[._-]v?(\d+(?:\.\d+)+)(?:[._-]#{arch})?\.dmg}i)
   end
+
+  depends_on :macos
 
   app "Freeplane.app"
 

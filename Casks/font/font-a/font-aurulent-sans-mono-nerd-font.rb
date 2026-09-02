@@ -1,8 +1,8 @@
 cask "font-aurulent-sans-mono-nerd-font" do
-  version "3.4.0"
-  sha256 "608bdd8848255acbf7e3932c7f941ce6c4fda6cdcdcfa29ddf5f6e671184e4e2"
+  version "3.5.1"
+  sha256 "0cb5bb092b1a8b121762c9e8da70bd2b31a4ebcbc90b85cd34d7f883d7825048"
 
-  url "https://github.com/ryanoasis/nerd-fonts/releases/download/v#{version}/AurulentSansMono.zip"
+  url "https://github.com/ryanoasis/nerd-fonts/releases/download/v#{version}/AurulentSansMono.tar.xz"
   name "AurulentSansM Nerd Font (Aurulent Sans Mono)"
   homepage "https://github.com/ryanoasis/nerd-fonts"
 

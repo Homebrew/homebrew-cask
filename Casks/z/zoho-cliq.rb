@@ -1,12 +1,11 @@
 cask "zoho-cliq" do
   arch arm: "arm64", intel: "x64"
 
-  version "1.8.0"
-  sha256 arm:   "7c03b29d836762f5c07099180a6fdeba3e6222b974de93009f6bb039db26cd0a",
-         intel: "145cc372ef9e342d779ea282a1943a2a1a8b91dab25d2b2a6ba42e0a9cda08c7"
+  version "1.8.4"
+  sha256 arm:   "243242cdb5d5884b66855b0645720f5043c628bee6807a385eb6954050176f44",
+         intel: "4196a3c497ecda1fffcd3330e03205dccfae3f7a4026e06374154d8a22172019"
 
-  url "https://downloads.zohocdn.com/chat-desktop/mac/Cliq-#{arch}-#{version}.pkg",
-      verified: "downloads.zohocdn.com/chat-desktop/mac/"
+  url "https://downloads.zohocdn.com/chat-desktop/mac/Cliq-#{arch}-#{version}.pkg"
   name "Zoho Cliq"
   desc "Team communication and collaboration platform"
   homepage "https://www.zoho.com/cliq/desktop/osx.html"
@@ -21,6 +20,8 @@ cask "zoho-cliq" do
       match[1]
     end
   end
+
+  depends_on macos: :monterey
 
   pkg "Cliq-#{arch}-#{version}.pkg"
 

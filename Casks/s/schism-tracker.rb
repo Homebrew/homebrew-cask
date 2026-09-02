@@ -1,6 +1,6 @@
 cask "schism-tracker" do
-  version "20251014"
-  sha256 "13b32ac8578c88ae2f621530fc1b0d7b01a9d2ad2cd4b3828445408aab202f33"
+  version "20260524"
+  sha256 "c4f389b52bb6d60a4a004c5db9bbbcdecb8b8a5a086f45c2aa31c4f1df51333d"
 
   url "https://github.com/schismtracker/schismtracker/releases/download/#{version}/schismtracker-#{version}-macos.zip"
   name "Schism Tracker"
@@ -14,7 +14,7 @@ cask "schism-tracker" do
 
   disable! date: "2026-09-01", because: :fails_gatekeeper_check
 
-  depends_on macos: ">= :big_sur"
+  depends_on macos: :big_sur
 
   app "Schism Tracker.app"
 

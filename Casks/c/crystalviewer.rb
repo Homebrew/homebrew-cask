@@ -1,5 +1,5 @@
 cask "crystalviewer" do
-  version "11.4.0"
+  version "11.4.4"
   sha256 :no_check
 
   url "https://crystalmaker.com/downloads/crystalviewer#{version.major}_mac.zip"
@@ -13,6 +13,8 @@ cask "crystalviewer" do
       xml.get_elements("//version").map { |item| item.attributes["number"] }
     end
   end
+
+  depends_on macos: :big_sur
 
   app "CrystalViewer.app"
 

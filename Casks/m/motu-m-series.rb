@@ -1,6 +1,6 @@
 cask "motu-m-series" do
-  version "2.0.0,fb961a2c0"
-  sha256 "cb4f3a9f48d667eca14ea93aeeccca826d3a28d29ece068f54f959228222e1be"
+  version "2.0.2,b72db03fb"
+  sha256 "60918307f0d62c80172652046214ce69b8f75123dbf240db2cbc3112760d63b5"
 
   url "https://cdn-data.motu.com/downloads/audio/mseries/driver/RC/MOTU%20MSeries%20Installer%20(#{version.csv.second}).pkg"
   name "Motu M-Series"
@@ -14,6 +14,8 @@ cask "motu-m-series" do
       page.scan(regex).map { |match| "#{match[0]},#{match[1]}" }
     end
   end
+
+  depends_on :macos
 
   pkg "MOTU MSeries Installer (#{version.csv.second}).pkg"
 

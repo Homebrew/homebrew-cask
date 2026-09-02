@@ -10,8 +10,7 @@ cask "liclipse" do
     sha256 "9206476c44c1023d818a4599a1cb1578d6247f337049ac5a4206b8d3525e6a1b"
   end
 
-  url "https://www.mediafire.com/file_premium/#{version.csv.second}/liclipse_#{version.csv.first}_macosx.cocoa.#{arch.downcase}.tar.gz",
-      verified: "mediafire.com/file_premium/"
+  url "https://www.mediafire.com/file_premium/#{version.csv.second}/liclipse_#{version.csv.first}_macosx.cocoa.#{arch.downcase}.tar.gz"
   name "LiClipse"
   desc "Lightweight editors, theming and usability improvements for Eclipse"
   homepage "https://www.liclipse.com/"
@@ -23,6 +22,8 @@ cask "liclipse" do
       page.scan(regex).map { |match| "#{match[1]},#{match[0]}" }
     end
   end
+
+  depends_on :macos
 
   app "LiClipse_#{arch}/LiClipse.app"
   artifact "LiClipse_#{arch}/LiClipseJre19.app", target: "#{appdir}/LiClipseJre19.app"

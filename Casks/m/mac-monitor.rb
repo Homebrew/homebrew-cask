@@ -1,6 +1,6 @@
 cask "mac-monitor" do
-  version "2.0.0"
-  sha256 "f2207783de9f31ae952f2594e2a8c6e5bd85fdee8240443736190b865f49e4c3"
+  version "2.1.0"
+  sha256 "69734a00363039fe9cb74cbc54567bb242ca83ef73002149706625492ee12033"
 
   url "https://github.com/Brandon7CC/mac-monitor/releases/download/v#{version}/Mac-Monitor.pkg"
   name "Mac Monitor"
@@ -8,7 +8,7 @@ cask "mac-monitor" do
   homepage "https://github.com/Brandon7CC/mac-monitor"
 
   auto_updates true
-  depends_on macos: ">= :ventura"
+  depends_on macos: :ventura
 
   pkg "Mac-Monitor.pkg"
 

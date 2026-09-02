@@ -1,9 +1,10 @@
 cask "dotnet-sdk" do
+  # Differs from the `dotnet` formula by including additional closed-source components
   arch arm: "arm64", intel: "x64"
 
-  version "10.0.100"
-  sha256 arm:   "3ae5af0d9dd791e9472003ca38285f37cd1e4f7dea1c3b053e6f472ebc8753e8",
-         intel: "777e6269ea4d7a942db5704d61ce4a15342bf62ba961e6dc356350b302377d5e"
+  version "10.0.400"
+  sha256 arm:   "d500222f6e3a007ce2b020b40f4de23816a815d3eb1d7ba280321debafcf32f7",
+         intel: "e927e618f8702b5c57ecc06bebf64a2f9375e4bb12747a7feea1a50296c51ca9"
 
   url "https://builds.dotnet.microsoft.com/dotnet/Sdk/#{version}/dotnet-sdk-#{version}-osx-#{arch}.pkg"
   name ".NET SDK"
@@ -29,14 +30,13 @@ cask "dotnet-sdk" do
   conflicts_with cask: [
     "dotnet-runtime",
     "dotnet-runtime@preview",
-    "dotnet-sdk@8",
-    "dotnet-sdk@9",
     "dotnet-sdk@preview",
   ]
-  depends_on macos: ">= :ventura"
+  depends_on macos: :monterey
 
   pkg "dotnet-sdk-#{version.csv.first}-osx-#{arch}.pkg"
   binary "/usr/local/share/dotnet/dotnet"
+  binary "/usr/local/share/dotnet/dnx"
 
   uninstall pkgutil: [
     "com.microsoft.dotnet.*#{version.major_minor}*#{arch}",

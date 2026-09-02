@@ -2,8 +2,7 @@ cask "ibettercharge" do
   version "1.0.12,1568119585"
   sha256 "33de59c5a1157b23f9313348ef60e213200d007e2b16c4f53859ddcb4c66d696"
 
-  url "https://dl.devmate.com/com.softorino.iBetterCharge/#{version.csv.first}/#{version.csv.second}/iBetterCharge-#{version.csv.first}.zip",
-      verified: "devmate.com/com.softorino.iBetterCharge/"
+  url "https://dl.devmate.com/com.softorino.iBetterCharge/#{version.csv.first}/#{version.csv.second}/iBetterCharge-#{version.csv.first}.zip"
   name "iBetterCharge"
   desc "Battery level monitoring software"
   homepage "https://softorino.com/ibettercharge/"
@@ -18,6 +17,8 @@ cask "ibettercharge" do
       "#{match[2]},#{match[1]}"
     end
   end
+
+  depends_on :macos
 
   app "iBetterCharge.app"
 

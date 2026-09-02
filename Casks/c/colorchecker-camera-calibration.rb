@@ -2,8 +2,7 @@ cask "colorchecker-camera-calibration" do
   version "2.3.0"
   sha256 "a7d6d0335447b8ad85de935e3f7a37ec69895cddb8282c4c55a960d4b332db17"
 
-  url "https://downloads.xrite.com/downloads/software/ColorCheckerPassport/Mac/v#{version}/ColorCheckerCameraCalibration.zip",
-      verified: "downloads.xrite.com/downloads/software/ColorCheckerPassport/Mac/"
+  url "https://downloads.xrite.com/downloads/software/ColorCheckerPassport/Mac/v#{version}/ColorCheckerCameraCalibration.zip"
   name "ColorChecker Camera Calibration"
   desc "Software to build custom camera profiles"
   homepage "https://calibrite.com/photo-target"
@@ -12,6 +11,8 @@ cask "colorchecker-camera-calibration" do
     url "https://my.xrite.com/downloader.aspx?FileID=2324&Type=M"
     strategy :header_match
   end
+
+  depends_on :macos
 
   pkg "ColorCheckerCameraCalibration.pkg"
 

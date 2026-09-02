@@ -1,9 +1,9 @@
 cask "nethlink" do
   arch arm: "arm64", intel: "x64"
 
-  version "1.3.0"
-  sha256 arm:   "623770ba076e365b96b0010cdf718fa2b38ca38ac9f2a430f1376808eb2ef2db",
-         intel: "51e0789660f03e155e236091b78c1c1a7a7f4b4af4573efba28e383ac9de9a88"
+  version "1.5.1"
+  sha256 arm:   "349890a163cd651ab2782274f0e17dc21c7e8c758cdde0a813693833394c7788",
+         intel: "cd0f9deb3499cfb6497a68f8db3d049599050166df73cdecd938d7142dfc09ba"
 
   url "https://github.com/NethServer/nethlink/releases/download/v#{version}/nethlink-#{version}-#{arch}.dmg"
   name "NethLink"
@@ -16,8 +16,13 @@ cask "nethlink" do
   end
 
   auto_updates true
+  depends_on :macos
 
   app "NethLink.app"
 
-  zap trash: "~/Library/Application Support/nethlink"
+  zap trash: [
+    "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.nethesis.nethlink.app.sfl*",
+    "~/Library/Application Support/nethlink",
+    "~/Library/Preferences/com.nethesis.nethlink.app.plist",
+  ]
 end

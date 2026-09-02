@@ -1,6 +1,6 @@
 cask "favro" do
-  version "1.0.185"
-  sha256 "73bbef57897f731042e660d88dc00bc0df7569fe06539f5aca083dcb401f90d5"
+  version "1.0.196"
+  sha256 "66558a20fc9a924bffb1298580959d8d0ed450be04478575a6466cde47bdaf4e"
 
   url "https://download.favro.com/FavroDesktop/macOS/x64/Favro-#{version}.dmg"
   name "Favro"
@@ -14,11 +14,12 @@ cask "favro" do
     end
   end
 
-  depends_on macos: ">= :monterey"
+  depends_on macos: :monterey
 
   app "Favro.app"
 
   zap trash: [
+    "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.favro.desktop-app.sfl*",
     "~/Library/Application Support/Favro",
     "~/Library/Logs/Favro",
     "~/Library/Preferences/com.favro.desktop-app.plist",

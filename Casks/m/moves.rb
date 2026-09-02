@@ -1,12 +1,11 @@
 cask "moves" do
-  version "1.8.0"
-  sha256 "c1476ffc9835468ed7b4a214521fa046a1be3b7724eaab6085c49f7d6589d376"
+  version "1.10.1"
+  sha256 "fdf81e0d86d4ad078a16b7496ca35aaff0ad1b687a05368b85550fa41cfcbdd6"
 
-  url "https://github.com/mikker/Moves.app/releases/download/v#{version}/Moves.app.zip",
-      verified: "github.com/mikker/Moves.app/"
+  url "https://github.com/mikker/Moves.app/releases/download/v#{version}/Moves.app.zip"
   name "Moves"
   desc "Window manager"
-  homepage "https://mikkelmalmberg.com/moves"
+  homepage "https://github.com/mikker/Moves.app/"
 
   livecheck do
     url "https://mikker.github.io/Moves.app/appcast.xml"
@@ -14,7 +13,7 @@ cask "moves" do
   end
 
   auto_updates true
-  depends_on macos: ">= :ventura"
+  depends_on macos: :ventura
 
   app "Moves.app"
 

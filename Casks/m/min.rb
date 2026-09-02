@@ -1,12 +1,11 @@
 cask "min" do
   arch arm: "arm64", intel: "x86"
 
-  version "1.35.2"
-  sha256 arm:   "431fd06587bbd3da512bfbb1721618c21d0502485c3a671eafc0fbb54d093b99",
-         intel: "3f342d32935970e7afaf7c53e6dd77603514ada8c300dedd510998909240218e"
+  version "1.35.7"
+  sha256 arm:   "326dddb576e2e0a496d49d4396ccaca839ff3fffea75197a5f7d97f774716cb1",
+         intel: "0e13a1335a251949bc99482a435d715522a7653c0df472c40e971c1aeaed721c"
 
-  url "https://github.com/minbrowser/min/releases/download/v#{version}/min-v#{version}-mac-#{arch}.zip",
-      verified: "github.com/minbrowser/min/"
+  url "https://github.com/minbrowser/min/releases/download/v#{version}/min-v#{version}-mac-#{arch}.zip"
   name "Min"
   desc "Minimal browser that protects privacy"
   homepage "https://minbrowser.org/"
@@ -21,7 +20,7 @@ cask "min" do
   disable! date: "2026-09-01", because: :fails_gatekeeper_check
 
   auto_updates true
-  depends_on macos: ">= :monterey"
+  depends_on macos: :monterey
 
   app "Min.app"
 

@@ -23,6 +23,7 @@ cask "qingg" do
   end
 
   auto_updates true
+  depends_on :macos
 
   pkg "安装包.pkg"
 

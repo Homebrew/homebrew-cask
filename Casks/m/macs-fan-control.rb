@@ -1,9 +1,8 @@
 cask "macs-fan-control" do
-  version "1.5.19"
-  sha256 "444477583b1127fb7a293daef698b0e8e840211a5dd2780d673469aa77b01426"
+  version "1.5.21"
+  sha256 "91590ed71b8981e89109969c0b5bd9788d781b059b24b2fc256e5a8b57803f0d"
 
-  url "https://github.com/crystalidea/macs-fan-control/releases/download/v#{version}/macsfancontrol.zip",
-      verified: "github.com/crystalidea/macs-fan-control/"
+  url "https://github.com/crystalidea/macs-fan-control/releases/download/v#{version}/macsfancontrol.zip"
   name "Macs Fan Control"
   desc "Controls and monitors all fans on Apple computers"
   homepage "https://crystalidea.com/macs-fan-control"
@@ -14,6 +13,7 @@ cask "macs-fan-control" do
   end
 
   auto_updates true
+  depends_on :macos
 
   app "Macs Fan Control.app"
 

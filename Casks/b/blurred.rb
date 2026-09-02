@@ -7,6 +7,10 @@ cask "blurred" do
   desc "Utility to dim background/inactive content in the screen"
   homepage "https://github.com/dwarvesf/blurred/"
 
+  disable! date: "2026-06-28", because: :moved_to_mas
+
+  depends_on :macos
+
   app "Blurred.app"
 
   uninstall launchctl: "foundation.dwarves.blurredlaunche",

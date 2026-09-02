@@ -1,6 +1,6 @@
 cask "syntax-highlight" do
-  version "2.1.26"
-  sha256 "1913a9df490bc8b963d707c644136fa0423de1c5a8f4e86ba25c0c32ceacd86f"
+  version "2.1.30"
+  sha256 "d4b135c9dd8253c1f9f5bb86236c4aa1e996c72c2203ab83fea8fb3a7579156f"
 
   url "https://github.com/sbarex/SourceCodeSyntaxHighlight/releases/download/#{version}/Syntax.Highlight.zip"
   name "Syntax Highlight"
@@ -19,18 +19,22 @@ cask "syntax-highlight" do
   end
 
   auto_updates true
-  depends_on macos: ">= :big_sur"
+  depends_on macos: :big_sur
 
   app "Syntax Highlight.app"
   binary "#{appdir}/Syntax Highlight.app/Contents/Resources/syntax_highlight_cli"
 
   zap trash: [
+    "~/Library/Application Scripts/group.org.sbarex.syntaxhighlight",
     "~/Library/Application Scripts/org.sbarex.SourceCodeSyntaxHighlight",
     "~/Library/Application Scripts/org.sbarex.SourceCodeSyntaxHighlight.QuicklookExtension",
+    "~/Library/Application Scripts/org.sbarex.SourceCodeSyntaxHighlight.ShortcutCommand",
     "~/Library/Application Support/Syntax Highlight",
     "~/Library/Caches/com.apple.helpd/Generated/org.sbarex.SourceCodeSyntaxHighlight.help*",
     "~/Library/Containers/org.sbarex.SourceCodeSyntaxHighlight",
     "~/Library/Containers/org.sbarex.SourceCodeSyntaxHighlight.QuicklookExtension",
+    "~/Library/Containers/org.sbarex.SourceCodeSyntaxHighlight.ShortcutCommand",
+    "~/Library/Group Containers/group.org.sbarex.syntaxhighlight",
     "~/Library/Preferences/org.sbarex.SourceCodeSyntaxHighlight.plist",
   ]
 end

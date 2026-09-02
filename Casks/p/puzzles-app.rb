@@ -8,6 +8,9 @@ cask "puzzles-app" do
   homepage "https://www.chiark.greenend.org.uk/~sgtatham/puzzles/"
 
   deprecate! date: "2024-11-18", because: :discontinued, replacement_formula: "puzzles"
+  disable! date: "2025-11-18", because: :discontinued, replacement_formula: "puzzles"
+
+  depends_on :macos
 
   app "Puzzles.app"
 

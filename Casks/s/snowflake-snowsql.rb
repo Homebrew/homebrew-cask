@@ -1,12 +1,11 @@
 cask "snowflake-snowsql" do
   arch arm: "arm64", intel: "x86_64"
 
-  version "1.4.5"
-  sha256 arm:   "4869789576acdcc05c0ecdff46e7c90d19c6fc980688debfcc90e4901ba6296e",
-         intel: "680d6bfbf17448115197b9ca35e9d4fe9d4a07853873a762385c9798018c0cd5"
+  version "1.5.1"
+  sha256 arm:   "521e87e1b43284720dbab70357fbba32bf32b9a3709516be8dd650980d9fd4bf",
+         intel: "c9761bb580b00e6b0c6bc6b0c6004907846488f9ad9c62a7bb9de534728e6f12"
 
-  url "https://sfc-repo.snowflakecomputing.com/snowsql/bootstrap/#{version.csv.second || version.csv.first.major_minor}/darwin_#{arch}/snowsql-#{version.csv.first}-darwin_#{arch}.pkg",
-      verified: "sfc-repo.snowflakecomputing.com/"
+  url "https://sfc-repo.snowflakecomputing.com/snowsql/bootstrap/#{version.csv.second || version.csv.first.major_minor}/darwin_#{arch}/snowsql-#{version.csv.first}-darwin_#{arch}.pkg"
   name "SnowSQL"
   desc "Command-line client for connecting to Snowflake"
   homepage "https://snowflake.com/"
@@ -21,6 +20,8 @@ cask "snowflake-snowsql" do
       end
     end
   end
+
+  depends_on :macos
 
   pkg "snowsql-#{version.csv.first}-darwin_#{arch}.pkg"
 

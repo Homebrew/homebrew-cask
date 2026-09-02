@@ -1,9 +1,8 @@
 cask "unifi-identity-endpoint" do
-  version "3.4.0,b17ca6f2-9d3f-4aaf-88d6-6e5d423caec2,b546"
-  sha256 "9ae94657a5a60e38ca7369f631cb5f5e916e68fb6ce14c6cbe6dd13394a660c2"
+  version "4.2.0,86d50baf-9015-49c9-a767-724803c8b8b8,c832"
+  sha256 "478885182cd7a0062830e7e5d52c06da8f34ff6417b6bcf6fd8552dbefa511d7"
 
-  url "https://fw-download.ubnt.com/data/uid-identity-standard-desktop-app/#{version.csv.third}-macOS-#{version.csv.first}-#{version.csv.second}.pkg",
-      verified: "fw-download.ubnt.com/data/uid-identity-standard-desktop-app/"
+  url "https://fw-download.ubnt.com/data/uid-identity-standard-desktop-app/#{version.csv.third}-macOS-#{version.csv.first}-#{version.csv.second}.pkg"
   name "UniFi Identity Endpoint"
   desc "License free Wi-Fi, VPN, and Access Application for Organizations"
   homepage "https://www.ui.com/identity"
@@ -19,7 +18,8 @@ cask "unifi-identity-endpoint" do
     end
   end
 
-  depends_on macos: ">= :big_sur"
+  auto_updates true
+  depends_on macos: :big_sur
 
   pkg "#{version.csv.third}-macOS-#{version.csv.first}-#{version.csv.second}.pkg"
 
@@ -30,5 +30,7 @@ cask "unifi-identity-endpoint" do
             ],
             quit:      "com.ui.uid.standard-desktop",
             pkgutil:   "com.ui.uid.standard-desktop",
-            delete:    "/Applications/Identity.app"
+            delete:    "/Applications/UniFi Endpoint.app"
+
+  zap trash: "~/Library/Application Support/com.ui.uid.standard-desktop"
 end

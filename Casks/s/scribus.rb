@@ -1,12 +1,18 @@
 cask "scribus" do
   arch arm: "-arm64"
 
-  version "1.6.4"
-  sha256 arm:   "676e7bb8df89e49150dc4fb733f6515e0b53fd064bc4b4cfb94519d39c76b324",
-         intel: "fd5dfdfbcfd333f8079ecf6f92ea2784fd687401b6bd07055bb60a20f25ee19a"
+  version "1.6.6"
+  sha256 arm:   "0666a15e843575dea51233f874f2a840c73dc1cc5cbdf676fcff2e8978a71815",
+         intel: "69cc1b918747882395d984f0d0a3c06e965d06368299952e645b31925e284a99"
 
-  url "https://downloads.sourceforge.net/scribus/scribus/#{version.csv.first}/scribus-#{version.csv.second || version.csv.first}#{arch}.dmg",
-      verified: "sourceforge.net/scribus/"
+  on_arm do
+    depends_on macos: :big_sur
+  end
+  on_intel do
+    depends_on macos: :monterey
+  end
+
+  url "https://downloads.sourceforge.net/scribus/scribus/#{version.csv.first}/scribus-#{version.csv.second || version.csv.first}#{arch}.dmg"
   name "Scribus"
   desc "Free and open-source page layout program"
   homepage "https://www.scribus.net/"
@@ -23,6 +29,8 @@ cask "scribus" do
       "#{match[1]},#{match[2]}"
     end
   end
+
+  depends_on :macos
 
   app "Scribus.app"
 

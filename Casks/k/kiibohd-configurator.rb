@@ -2,14 +2,14 @@ cask "kiibohd-configurator" do
   version "1.1.0"
   sha256 "996abcfd4f05420199e0302be50d9e878bd28bb50f541b5f6886a1654862e20f"
 
-  url "https://github.com/kiibohd/configurator/releases/download/v#{version}/kiibohd-configurator-#{version}-mac.dmg",
-      verified: "github.com/kiibohd/configurator/"
+  url "https://github.com/kiibohd/configurator/releases/download/v#{version}/kiibohd-configurator-#{version}-mac.dmg"
   name "Kiibohd Configurator"
   desc "Modular community keyboard firmware"
   homepage "https://kiibohd.com/"
 
   disable! date: "2026-09-01", because: :fails_gatekeeper_check
 
+  depends_on :macos
   depends_on formula: "dfu-util"
 
   app "Kiibohd Configurator.app"

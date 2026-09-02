@@ -3,27 +3,19 @@ cask "transcribe" do
   url_arch = on_arch_conditional arm: "_arm"
 
   on_monterey :or_older do
-    on_catalina :or_older do
-      version "8.75.2"
-      sha256 "f01781100cd3b9987c8f8892145a2eaa358df07b92e10e26f30b6a877f5b352c"
+    version "9.21"
+    sha256 :no_check
 
-      url "https://www.seventhstring.com/xscribe/downmo/transcribe#{version.no_dots}.dmg"
-    end
-    on_big_sur :or_newer do
-      version "9.21"
-      sha256 :no_check
-
-      url "https://www.seventhstring.com/xscribe/downmo/11_12/transcribe#{url_arch}.dmg"
-    end
+    url "https://www.seventhstring.com/xscribe/downmo/11_12/transcribe#{url_arch}.dmg"
 
     livecheck do
       skip "Legacy version"
     end
   end
   on_ventura :or_newer do
-    version "9.42.2"
-    sha256 arm:   "32c5a3e6cc5258b89cc133dec796c4070c593675772b5891564f8fdd59f43c14",
-           intel: "46daa138b93d92a048250287dc41f5ded9229442be164ab1f3115050c03ec454"
+    version "9.60.7"
+    sha256 arm:   "e3c8ded09f3152bce8e2d552922079ae2f11dc4649a7a402747559903b4c0e40",
+           intel: "02115eb649f9ba4cef0ae670606d3edf6cfd99dce813c442a7ebe1714db3c363"
 
     url "https://www.seventhstring.com/xscribe/downmo/transcribe-#{arch}-#{version}.dmg"
 
@@ -36,6 +28,8 @@ cask "transcribe" do
   name "Transcribe!"
   desc "Transcribes recorded music"
   homepage "https://www.seventhstring.com/xscribe/overview.html"
+
+  depends_on :macos
 
   app "Transcribe!.app"
 

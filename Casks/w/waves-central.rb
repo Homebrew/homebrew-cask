@@ -1,5 +1,5 @@
 cask "waves-central" do
-  version "16.1.5"
+  version "17.0.4"
   sha256 :no_check
 
   url "https://cf-installers.waves.com/WavesCentral/Install_Waves_Central.dmg"
@@ -13,10 +13,12 @@ cask "waves-central" do
   end
 
   auto_updates true
+  depends_on :macos
 
   app "Waves Central.app"
 
   zap trash: [
+    "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.wavesaudio.central.sfl*",
     "~/Library/Application Support/Waves Audio",
     "~/Library/Application Support/Waves Central",
     "~/Library/Preferences/com.WavesAudio.central.plist",

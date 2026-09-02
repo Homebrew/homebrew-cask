@@ -1,6 +1,6 @@
 cask "proton-mail" do
-  version "1.9.1"
-  sha256 "53e234b6d4e80e22cb8c468a96f75bec7844e1d32b2ebc9cdb9d465c156c4043"
+  version "1.13.4"
+  sha256 "e3211f353f3db0ea000218e3655698d7283a005b98a7ab4cfc0ae7157fb5599c"
 
   url "https://proton.me/download/mail/macos/#{version}/ProtonMail-desktop.dmg"
   name "Proton Mail"
@@ -19,11 +19,14 @@ cask "proton-mail" do
   end
 
   auto_updates true
-  depends_on macos: ">= :big_sur"
+  depends_on macos: :monterey
 
   app "Proton Mail.app"
 
+  uninstall delete: "/Applications/Proton Mail Uninstaller.app"
+
   zap trash: [
+    "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/ch.protonmail.desktop.sfl*",
     "~/Library/Application Support/Proton Mail",
     "~/Library/Caches/ch.protonmail.desktop",
     "~/Library/Caches/ch.protonmail.desktop.ShipIt",

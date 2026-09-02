@@ -1,9 +1,8 @@
 cask "kindle-create" do
-  version "1.106"
+  version "1.113"
   sha256 :no_check
 
-  url "https://d2bzeorukaqrvt.cloudfront.net/KindleCreateInstaller.pkg",
-      verified: "d2bzeorukaqrvt.cloudfront.net/"
+  url "https://d2bzeorukaqrvt.cloudfront.net/KindleCreateInstaller.pkg"
   name "Kindle Create"
   desc "Creating beautiful books has never been easier"
   homepage "https://www.amazon.com/Kindle-Create/b?node=18292298011"
@@ -14,6 +13,7 @@ cask "kindle-create" do
   end
 
   auto_updates true
+  depends_on :macos
 
   pkg "KindleCreateInstaller.pkg"
 

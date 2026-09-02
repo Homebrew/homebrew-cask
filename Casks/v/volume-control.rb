@@ -1,9 +1,8 @@
 cask "volume-control" do
-  version "2.1.0"
-  sha256 "b3012f66a601aa97e0b76182dcaecc1a60f4f7cc9be393dd58a3db8abceb1d40"
+  version "2.3.0"
+  sha256 "aec78c02cfef544aac2e6f10ae9ca60252f9c3af152939eee72a260f347ba94b"
 
-  url "https://raw.githubusercontent.com/alberti42/Volume-Control/main/Releases/VolumeControl-v#{version}.zip",
-      verified: "raw.githubusercontent.com/alberti42/Volume-Control/"
+  url "https://github.com/alberti42/Volume-Control/releases/download/v#{version}/VolumeControl.zip"
   name "Volume Control"
   desc "Control the volume of Apple Music and Spotify using keyboard volume keys"
   homepage "https://github.com/alberti42/Volume-Control"
@@ -14,7 +13,7 @@ cask "volume-control" do
   end
 
   auto_updates true
-  depends_on macos: ">= :ventura"
+  depends_on macos: :ventura
 
   app "Volume Control.app"
 

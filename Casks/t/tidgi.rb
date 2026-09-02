@@ -1,9 +1,9 @@
 cask "tidgi" do
   arch arm: "arm64", intel: "x64"
 
-  version "0.12.4"
-  sha256 arm:   "6d224533aefe29510252a8f0bb51d88a99feccea6cd5a84dcccef6d7264be767",
-         intel: "9f17e73f3da8c6c614b13d90f400c3c55ab9c5c26f90d0d04c15fc1241941788"
+  version "0.14.2"
+  sha256 arm:   "deb71923dfe95b0ab43434705a87d95a5b92cd8ed188653f6da7a18cd7c37d86",
+         intel: "1be87322ed9925b60f5ea12f124675898845416160e6b3ec42b971d1f9c736ca"
 
   url "https://github.com/tiddly-gittly/TidGi-Desktop/releases/download/v#{version}/TidGi-darwin-#{arch}-#{version.split("-").first}.zip"
   name "TidGi"
@@ -18,9 +18,11 @@ cask "tidgi" do
 
   disable! date: "2026-09-01", because: :fails_gatekeeper_check
 
-  depends_on macos: ">= :big_sur"
+  depends_on macos: :monterey
 
   app "TidGi.app"
+
+  uninstall quit: "com.tidgi"
 
   zap trash: [
     "~/Library/Application Support/TidGi",

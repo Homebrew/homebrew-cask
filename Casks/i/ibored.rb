@@ -12,6 +12,8 @@ cask "ibored" do
     strategy :sparkle
   end
 
+  depends_on :macos
+
   app "iBored.app"
 
   caveats do

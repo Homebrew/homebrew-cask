@@ -10,6 +10,8 @@ cask "pdfpen" do
   deprecate! date: "2024-09-30", because: :discontinued
   disable! date: "2025-10-01", because: :discontinued
 
+  depends_on :macos
+
   app "PDFpen.app"
 
   zap trash: [

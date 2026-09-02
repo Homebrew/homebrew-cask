@@ -2,8 +2,7 @@ cask "font-wendy-one" do
   version :latest
   sha256 :no_check
 
-  url "https://github.com/google/fonts/raw/main/ofl/wendyone/WendyOne-Regular.ttf",
-      verified: "github.com/google/fonts/"
+  url "https://github.com/google/fonts/raw/main/ofl/wendyone/WendyOne-Regular.ttf"
   name "Wendy One"
   homepage "https://fonts.google.com/specimen/Wendy+One"
 

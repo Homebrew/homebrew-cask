@@ -1,5 +1,5 @@
 cask "ecodms-client" do
-  version "25.02"
+  version "26.01-3"
   sha256 :no_check
 
   url "https://www.ecodms.de/index.php/de/component/jdownloads/?task=download.send&id=413&catid=162&m=0&Itemid=661"
@@ -12,7 +12,7 @@ cask "ecodms-client" do
     strategy :header_match
   end
 
-  depends_on macos: ">= :ventura"
+  depends_on macos: :ventura
 
   # The url is unversioned, but the download returns a pkg with a version number
   rename "ecoDMS*Clients*.pkg", "ecoDMS-Clients.pkg"

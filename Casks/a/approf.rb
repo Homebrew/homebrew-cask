@@ -8,7 +8,7 @@ cask "approf" do
   homepage "https://github.com/moderato-app/approf"
 
   auto_updates true
-  depends_on macos: ">= :sonoma"
+  depends_on macos: :sonoma
 
   app "approf.app"
 

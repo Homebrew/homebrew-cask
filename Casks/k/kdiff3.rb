@@ -2,9 +2,9 @@ cask "kdiff3" do
   # NOTE: "3" is not a version number, but an intrinsic part of the product name
   arch arm: "arm64", intel: "x86_64"
 
-  version "1.12.3"
-  sha256 arm:   "2484c970943e1f69920dc0e46618b03aea8e5f141017b43d3fd3913cd0db9308",
-         intel: "2bd7e3ee18540f8499b2dab78295f69fd9a8e60c2e2acc911e21ac838dbd43f0"
+  version "1.12.6"
+  sha256 arm:   "e80b3a304a6896d6906a930e72b0760bbd6d6dcb3392c842e15f14867c28f136",
+         intel: "f0a0189f55d539cdd695497df18104a2698c2f1f4c1d7632fbd99257f39abea0"
 
   url "https://download.kde.org/stable/kdiff3/kdiff3-#{version}-macos-#{arch}.dmg"
   name "KDiff3"
@@ -16,16 +16,13 @@ cask "kdiff3" do
     regex(/href=["']?kdiff3[._-]v?(\d+(?:\.\d+)+)[._-]macos[._-]#{arch}\.dmg/i)
   end
 
-  app "kdiff3.app"
-  shimscript = "#{staged_path}/kdiff3.wrapper.sh"
-  binary shimscript, target: "kdiff3"
+  depends_on macos: :ventura
 
-  preflight do
-    File.write shimscript, <<~EOS
-      #!/bin/bash
-      '#{appdir}/kdiff3.app/Contents/MacOS/kdiff3' "$@"
-    EOS
-  end
+  app "kdiff3.app"
+  command_wrapper "kdiff3",
+                  executable: "#{appdir}/kdiff3.app/Contents/MacOS/kdiff3"
+
+  uninstall quit: "org.kde.KDiff3"
 
   zap trash: [
     "~/.kdiff3rc",

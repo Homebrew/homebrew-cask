@@ -1,9 +1,8 @@
 cask "tabtab" do
-  version "2.0.3"
+  version "2.1.3"
   sha256 :no_check
 
-  url "https://github.com/riccqi/TabTabApp/releases/download/prod/tabtab.dmg",
-      verified: "github.com/riccqi/TabTabApp/"
+  url "https://github.com/riccqi/TabTabApp/releases/download/prod/tabtab.dmg"
   name "TabTab"
   desc "Window and tab manager"
   homepage "https://tabtabapp.net/"
@@ -13,7 +12,7 @@ cask "tabtab" do
     strategy :sparkle, &:short_version
   end
 
-  depends_on macos: ">= :sonoma"
+  depends_on macos: :sonoma
 
   app "TabTab.app"
 

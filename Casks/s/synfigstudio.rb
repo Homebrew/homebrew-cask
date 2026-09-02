@@ -2,8 +2,7 @@ cask "synfigstudio" do
   version "1.4.5,2024.05.19,f4b8d"
   sha256 "cb3459979ce817b85acd2d2bdc79b49545533fb75e077e334fe16577df1e346c"
 
-  url "https://github.com/synfig/synfig/releases/download/v#{version.csv.first}/SynfigStudio-#{version.csv.first}-#{version.csv.second}-osx-#{version.csv.third}.dmg",
-      verified: "github.com/synfig/synfig/"
+  url "https://github.com/synfig/synfig/releases/download/v#{version.csv.first}/SynfigStudio-#{version.csv.first}-#{version.csv.second}-osx-#{version.csv.third}.dmg"
   name "Synfig Studio"
   desc "2D animation software"
   homepage "https://synfig.org/"
@@ -29,6 +28,10 @@ cask "synfigstudio" do
       end.flatten
     end
   end
+
+  disable! date: "2026-09-01", because: :fails_gatekeeper_check
+
+  depends_on :macos
 
   app "SynfigStudio.app"
 

@@ -14,6 +14,7 @@ cask "toontown-rewritten" do
   end
 
   auto_updates true
+  depends_on :macos
 
   # Renamed for consistency: app name is different in the Finder and in a shell.
   # Original discussion: https://github.com/Homebrew/homebrew-cask/pull/8037

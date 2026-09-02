@@ -1,12 +1,11 @@
 cask "electron-fiddle" do
   arch arm: "arm64", intel: "x64"
 
-  version "0.37.3"
-  sha256 arm:   "f253c2726f726627fa27d536d579b1135cc99f21c3f909f8ab92542ffa0865db",
-         intel: "aaab2a30c0cc9d40059b22c9b6ceb52d4d62d635abb8e4697492c4a9f6938012"
+  version "0.39.0"
+  sha256 arm:   "98206b1b49729c0bb011c3302f06bc84c1b79bd8805c908f43a8dc196eaf7fda",
+         intel: "97fc006be2e6431b58c5dbe35c888eda30ad37c549ba63ea6ebe279512dce302"
 
-  url "https://github.com/electron/fiddle/releases/download/v#{version}/Electron.Fiddle-darwin-#{arch}-#{version}.zip",
-      verified: "github.com/electron/fiddle/"
+  url "https://github.com/electron/fiddle/releases/download/v#{version}/Electron.Fiddle-darwin-#{arch}-#{version}.zip"
   name "Electron Fiddle"
   desc "Create and play with small Electron experiments"
   homepage "https://www.electronjs.org/fiddle"
@@ -16,7 +15,7 @@ cask "electron-fiddle" do
     regex(/href=.*?Electron[._-]Fiddle[._-]darwin[._-]#{arch}[._-]v?(\d+(?:\.\d+)+)\.zip/i)
   end
 
-  depends_on macos: ">= :big_sur"
+  depends_on macos: :monterey
 
   app "Electron Fiddle.app"
 

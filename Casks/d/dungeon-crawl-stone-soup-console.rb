@@ -1,9 +1,8 @@
 cask "dungeon-crawl-stone-soup-console" do
-  version "0.33.1"
-  sha256 "e71e7a7ad8e1dfdc8f48c2159739ad2bb762b5a63f43a9c01b84dbce3c45181d"
+  version "0.34.1"
+  sha256 "c8e5c06bad71c45b6c453cc1cc554d733acc73450219732944213d64af138b17"
 
-  url "https://github.com/crawl/crawl/releases/download/#{version}/dcss-#{version}-macos-console-universal.zip",
-      verified: "github.com/crawl/crawl/releases/"
+  url "https://github.com/crawl/crawl/releases/download/#{version}/dcss-#{version}-macos-console-universal.zip"
   name "Dungeon Crawl Stone Soup"
   desc "Game of dungeon exploration, combat and magic"
   homepage "https://crawl.develz.org/"
@@ -14,6 +13,8 @@ cask "dungeon-crawl-stone-soup-console" do
   end
 
   disable! date: "2026-09-01", because: :fails_gatekeeper_check
+
+  depends_on :macos
 
   app "Dungeon Crawl Stone Soup - Console.app"
 

@@ -1,5 +1,5 @@
 cask "output-factory" do
-  version "3.1.3"
+  version "3.2.6"
   sha256 :no_check
 
   url "https://zevrix.com/downloads/OutputFactory.dmg"
@@ -16,9 +16,12 @@ cask "output-factory" do
     end
   end
 
-  installer manual: "Output Factory Installer.app"
+  depends_on :macos
 
-  uninstall trash: "/Applications/Adobe Indesign */Plug-Ins/Zevrix/Output Factory.app"
+  app "Output Factory Installer.app/Contents/Resources/appPackage/Output Factory.app"
+
+  uninstall quit:  "com.zevrix.OutputFactory",
+            trash: "/Applications/Adobe Indesign */Plug-Ins/Zevrix/Output Factory.app"
 
   zap trash: [
     "~/Library/Caches/com.zevrix.OutputFactory",

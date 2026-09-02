@@ -1,6 +1,6 @@
 cask "reflex-app" do
-  version "1.2"
-  sha256 "5a192115954a28dccf29ea91a41f226af724ac1ff329362e26fc495073e0424a"
+  version "2.0"
+  sha256 "d827cd32cf730c5c8582b200ba1dfb6c1df03e30c3ac6b32c8563ae67d02b489"
 
   url "https://stuntsoftware.com/download/reflex_#{version}.zip"
   name "Reflex"
@@ -12,11 +12,9 @@ cask "reflex-app" do
     regex(/href=.*?reflex[._-]v?(\d+(?:\.\d+)+)\.zip/i)
   end
 
+  depends_on macos: :sonoma
+
   app "Reflex.app"
 
   zap trash: "~/Library/Preferences/com.stuntsoftware.Reflex.plist"
-
-  caveats do
-    requires_rosetta
-  end
 end

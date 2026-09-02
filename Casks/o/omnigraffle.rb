@@ -1,25 +1,17 @@
 cask "omnigraffle" do
   on_big_sur :or_older do
-    on_catalina :or_older do
-      version "7.18.6"
-      sha256 "5dfc4f56f5a243f39abf0baf3d9dc2b1921f981bc6edb876f4eec710379e1fa6"
+    version "7.22.6"
+    sha256 "1159e731ab282b2f2b3881cbc75cc7bb40263cb3b56826f4ef6334295b47a883"
 
-      url "https://downloads.omnigroup.com/software/MacOSX/10.14/OmniGraffle-#{version}.dmg"
-    end
-    on_big_sur do
-      version "7.22.6"
-      sha256 "1159e731ab282b2f2b3881cbc75cc7bb40263cb3b56826f4ef6334295b47a883"
-
-      url "https://downloads.omnigroup.com/software/macOS/11/OmniGraffle-#{version}.dmg"
-    end
+    url "https://downloads.omnigroup.com/software/macOS/11/OmniGraffle-#{version}.dmg"
 
     livecheck do
       skip "Legacy version"
     end
   end
   on_monterey :or_newer do
-    version "7.25"
-    sha256 "81bd2d405c93013b5689a9d177a188e927a05b3e8c1bae48ff573ec20ba59539"
+    version "7.25.3"
+    sha256 "97c9b8a264ec380a4955c1c8a3cf583010003881dd1b0cf46f712d73ef33480b"
 
     url "https://downloads.omnigroup.com/software/macOS/12/OmniGraffle-#{version}.dmg"
 
@@ -34,6 +26,7 @@ cask "omnigraffle" do
   homepage "https://www.omnigroup.com/omnigraffle/"
 
   auto_updates true
+  depends_on :macos
 
   app "OmniGraffle.app"
 

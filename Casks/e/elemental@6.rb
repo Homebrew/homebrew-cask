@@ -1,9 +1,8 @@
 cask "elemental@6" do
-  version "6.8.1"
-  sha256 "5f9103ad3c720c2bef56b85d7ec67dd57f8bf548ea67a71e3caf26ded38bbb13"
+  version "6.11.0"
+  sha256 "604fbfcfe728ca1797bfdc921121614c11a71135e9c454fa14900370bb620eb3"
 
-  url "https://github.com/evolvedbinary/elemental/releases/download/elemental-#{version}/elemental-#{version}.dmg",
-      verified: "github.com/evolvedbinary/elemental/"
+  url "https://github.com/evolvedbinary/elemental/releases/download/elemental-#{version}/elemental-#{version}.dmg"
   name "elemental"
   desc "Native XML Database with XQuery and XSLT"
   homepage "https://www.elemental.xyz/"
@@ -12,6 +11,8 @@ cask "elemental@6" do
     url :url
     regex(/^elemental[._-]v?(6(?:\.\d+)+)$/i)
   end
+
+  depends_on :macos
 
   app "Elemental.app"
 

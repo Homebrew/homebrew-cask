@@ -1,9 +1,9 @@
 cask "ivpn" do
   arch arm: "-arm64"
 
-  version "3.14.34"
-  sha256 arm:   "08cfa04033591a7320ed2c06697ecc34e9666e9a0f026babc7c4b665bf4c0303",
-         intel: "a1024b219174d3fccaac592be8129cc43f9690fb1a6dcb3ecbcad6b1e610a4aa"
+  version "3.15.13"
+  sha256 arm:   "8b56a35af8a4634d3e5dfd9d8b307e55a962e0f0e4927256c48a2ebbb53f6844",
+         intel: "6b182f89213bfb5950243ec664f5736434eeb1443d687e68789ed10461cbc485"
 
   url "https://repo.ivpn.net/macos/bin/IVPN-#{version}#{arch}.dmg"
   name "IVPN"
@@ -16,11 +16,12 @@ cask "ivpn" do
   end
 
   auto_updates true
+  depends_on macos: :monterey
 
   app "IVPN.app"
 
-  uninstall_preflight do
-    set_ownership "#{appdir}/IVPN.app"
+  uninstall_preflight_steps do
+    set_ownership "IVPN.app", base: :appdir
   end
 
   uninstall launchctl: "net.ivpn.client.Helper",

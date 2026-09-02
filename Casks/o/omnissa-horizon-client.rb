@@ -1,6 +1,6 @@
 cask "omnissa-horizon-client" do
-  version "2506-8.16.0-16536825094,CART26FQ2_MAC_2506"
-  sha256 "45bb7a2ec1b309e9bf93ccda155ab78890c12eabe52cff3e57cd900662a100c0"
+  version "2606-8.19.0-32216012208,CART27FQ2_MAC_2606"
+  sha256 "decc052f456ba0909724c5e33c78f6fb9cc7d25adfd188af95c2993d46226c3f"
 
   url "https://download3.omnissa.com/software/#{version.csv.second}/Omnissa-Horizon-Client-#{version.csv.first}.dmg"
   name "Omnissa Horizon Client"
@@ -8,7 +8,7 @@ cask "omnissa-horizon-client" do
   homepage "https://www.omnissa.com/"
 
   livecheck do
-    url "https://customerconnect.omnissa.com/channel/public/api/v1.0/products/getRelatedDLGList?locale=en_US&category=desktop_end_user_computing&product=omnissa_horizon_clients&version=8&dlgType=PRODUCT_BINARY"
+    url "https://customerconnect.omnissa.com/channel/public/api/v1.0/products/getRelatedDLGList?locale=en_US&category=virtual_desktop_and_apps&product=omnissa_horizon_clients&version=8&dlgType=PRODUCT_BINARY"
     regex(%r{/([^/]+)/Omnissa[._-]Horizon[._-]Client[._-]v?(\d+(?:[.-]\d+)+)\.dmg}i)
     strategy :json do |json, regex|
       mac_json_info = json["dlgEditionsLists"]&.find { |item| item["name"]&.match(/mac/i) }
@@ -34,7 +34,7 @@ cask "omnissa-horizon-client" do
   end
 
   auto_updates true
-  depends_on macos: ">= :big_sur"
+  depends_on macos: :ventura
 
   pkg "Omnissa Horizon Client.pkg"
 
@@ -48,6 +48,7 @@ cask "omnissa-horizon-client" do
             quit:      "com.omnissa.horizonapp",
             pkgutil:   [
               "com.omnissa.horizon.client.mac",
+              "com.omnissa.html5videoplayer",
               "com.ws1.Deem",
               "com.ws1.Deem.InstallerHelper",
               "com.ws1.EndpointTelemetryService",

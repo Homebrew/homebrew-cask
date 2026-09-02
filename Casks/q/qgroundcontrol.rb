@@ -1,9 +1,8 @@
 cask "qgroundcontrol" do
-  version "5.0.8"
-  sha256 "1f5fc88f331302adcb4d00c3b92f05ef83bad748196a2646497c50800ab74822"
+  version "5.1.4"
+  sha256 "25fa8fc92f3e6ed9b80fe7046aac0e163bf74e0ece5d6149a0b12a5faca1502d"
 
-  url "https://github.com/mavlink/qgroundcontrol/releases/download/v#{version}/QGroundControl.dmg",
-      verified: "github.com/mavlink/qgroundcontrol/"
+  url "https://github.com/mavlink/qgroundcontrol/releases/download/v#{version}/QGroundControl.dmg"
   name "QGroundControl"
   desc "Ground control station for drones"
   homepage "https://qgroundcontrol.com/"
@@ -13,7 +12,7 @@ cask "qgroundcontrol" do
     strategy :github_latest
   end
 
-  depends_on macos: ">= :monterey"
+  depends_on macos: :ventura
 
   app "QGroundControl.app"
 

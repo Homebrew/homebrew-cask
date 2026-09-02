@@ -1,15 +1,16 @@
 cask "linkandroid" do
   arch arm: "arm64", intel: "x64"
 
-  version "1.0.0"
-  sha256 arm:   "3d985bbdb6dc93c8cad0d932a2fb626b9562100cc844068c0d2d3b9130307bee",
-         intel: "4527069482590d4cde52345f4592bdfb8af184e88c1b14ed8b9386614721029b"
+  version "2.1.0"
+  sha256 arm:   "0c010350cb0dba1883b06d9315531e6c9aecc681a4e068a17893448f4e9ea8e9",
+         intel: "6c44433d934d0897f1d4a3fef847e59a03d963f5690dd53a6197f5eb9ebd7e53"
 
-  url "https://github.com/modstart-lib/linkandroid/releases/download/v#{version}/LinkAndroid-#{version}-mac-#{arch}.dmg",
-      verified: "github.com/modstart-lib/linkandroid/"
+  url "https://github.com/modstart-lib/linkandroid/releases/download/v#{version}/LinkAndroid-#{version}-mac-#{arch}.dmg"
   name "LinkAndroid"
   desc "Open source android assistant"
   homepage "https://linkandroid.com/"
+
+  depends_on :macos
 
   app "LinkAndroid.app"
 

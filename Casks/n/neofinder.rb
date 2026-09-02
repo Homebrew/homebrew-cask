@@ -1,9 +1,8 @@
 cask "neofinder" do
-  version "9.0"
-  sha256 "af5ab963c96ca20d949d0ac18cc3a5d0cdc48e1d714c365fc50d0f90b4e8e9ad"
+  version "9.3"
+  sha256 "561829258205ca3b52171283deac5ebadcd1793f08f88a8460a1302b7011f5a5"
 
-  url "https://www.wfs-apps.de/updates/neofinder-mac.#{version}.zip",
-      verified: "wfs-apps.de/"
+  url "https://www.wfs-apps.de/updates/neofinder-mac.#{version}.zip"
   name "NeoFinder"
   desc "Digital media asset manager"
   homepage "https://www.cdfinder.de/"
@@ -14,14 +13,18 @@ cask "neofinder" do
   end
 
   auto_updates true
+  depends_on :macos
 
   app "NeoFinder.app"
+
+  uninstall quit: "de.wfs-apps.neofinder"
 
   zap trash: [
     "~/Library/Application Support/CrashReporter/NeoFinder_*",
     "~/Library/Application Support/NeoFinder",
     "~/Library/Caches/de.wfs-apps.neofinder",
     "~/Library/Caches/de.wfs-apps.neofinder.quicklaunch.cache",
+    "~/Library/Preferences/de.wfs-apps.neofinder.plist",
     "~/Library/Preferences/de.wfs-apps.neofinder.plist",
     "~/Library/Preferences/de.wfs-apps.neofinder.statusBar.plist",
   ]

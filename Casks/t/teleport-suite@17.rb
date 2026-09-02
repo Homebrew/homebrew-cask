@@ -1,27 +1,28 @@
 cask "teleport-suite@17" do
-  version "17.7.9"
-  sha256 "3997bf50daf727d14f335e57045934c30063ec84f899e61998232136662f1b7d"
+  version "17.7.27"
+  sha256 "d7e2c7080edd8ed66759c505504060cf5936735ac010dc5ee7adaeeb18d9b79b"
 
-  url "https://cdn.teleport.dev/teleport-#{version}.pkg",
-      verified: "cdn.teleport.dev/"
+  url "https://cdn.teleport.dev/teleport-#{version}.pkg"
   name "Teleport"
   desc "Modern SSH server for teams managing distributed infrastructure"
   homepage "https://goteleport.com/"
 
+  # 17.x versions are found in an array of JavaScript strings on the page.
   livecheck do
-    url "https://goteleport.com/download/"
-    regex(/teleport[._-]v?(17(?:\.\d+)+)\.pkg/i)
+    url "https://goteleport.com/download/all-downloads/",
+        user_agent: :browser
+    regex(/["']v?(17(?:\.\d+)+)["']/i)
   end
 
   # Support window taken from https://goteleport.com/docs/upcoming-releases/
-  disable! date: "2026-02-28", because: :discontinued
+  disable! date: "2026-08-01", because: :discontinued
 
   conflicts_with cask: [
     "teleport-suite",
     "teleport-suite@16",
     "tsh",
-    "tsh@13",
   ]
+  depends_on :macos
 
   pkg "teleport-#{version}.pkg"
 

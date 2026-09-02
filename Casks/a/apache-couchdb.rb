@@ -1,12 +1,16 @@
 cask "apache-couchdb" do
   arch arm: "arm64", intel: "x86_64"
 
-  version "3.5.1"
-  sha256 arm:   "0adddf00aabc686f6f471546345712c86f9eb573fd364eff87e0768d0a96f11e",
-         intel: "528f6e2b6cf4352d4012ed5db29ab64861c187e0154c5a62649a1d7a41ad3ad7"
+  on_arm do
+    version "3.5.2"
+    sha256 "a14d10427e9f637ab8b2161cb538484e3bbf383a87dcb68ffa1aa305ab58ddc9"
+  end
+  on_intel do
+    version "3.5.2-1"
+    sha256 "322e4c6aa6ef2a7a766b4a1406c8440ed841e1d2c4faf6231b32629b4ebcba0b"
+  end
 
-  url "https://couchdbneighbourhoodie.fra1.digitaloceanspaces.com/downloads/#{version}/mac/#{arch}/Apache-CouchDB.zip",
-      verified: "couchdbneighbourhoodie.fra1.digitaloceanspaces.com/"
+  url "https://couchdbneighbourhoodie.fra1.digitaloceanspaces.com/downloads/#{version}/mac/#{arch}/Apache-CouchDB.zip"
   name "Apache CouchDB"
   desc "Multi-master syncing database"
   homepage "https://couchdb.apache.org/"
@@ -17,7 +21,7 @@ cask "apache-couchdb" do
   end
 
   # see https://neighbourhood.ie/download-apache-couchdb-mac/
-  depends_on macos: ">= :big_sur"
+  depends_on macos: :big_sur
 
   app "Apache CouchDB.app"
 

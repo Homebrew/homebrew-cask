@@ -1,19 +1,19 @@
 cask "openlist-app" do
   arch arm: "aarch64", intel: "x64"
 
-  version "0.8.0"
-  sha256 arm:   "19ea02135ccca0ffed420eddbcc05d1ad968605064c8d33e81e1434e0e288998",
-         intel: "7c00ea532e68eb0860877d46e979a8d063b732a7fb73a7e52474db3b5e1176ba"
+  version "0.9.1"
+  sha256 arm:   "961ac84fdec16ea7e2734763f1528159cad32a82281bbb786e905748c74d802b",
+         intel: "4be5e48a20daac219ff354f9ca5e3aefdf0a7f9cb0c266bd5333951db6e24710"
 
-  url "https://github.com/OpenListTeam/OpenList-Desktop/releases/download/v#{version}/OpenList.Desktop_#{version}_#{arch}_darwin.dmg"
+  url "https://github.com/OpenListTeam/OpenList-Desktop/releases/download/v#{version}/OpenList-Desktop_#{version}_#{arch}.dmg"
   name "OpenList Desktop"
   desc "Desktop application for OpenList"
   homepage "https://github.com/OpenListTeam/OpenList-Desktop"
 
   auto_updates true
-  depends_on macos: ">= :catalina"
+  depends_on :macos
 
-  app "OpenList Desktop.app"
+  app "OpenList-Desktop.app"
 
   zap trash: [
     "~/Library/Application Scripts/io.github.openlistteam.openlist.desktop",

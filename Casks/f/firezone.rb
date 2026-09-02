@@ -1,9 +1,8 @@
 cask "firezone" do
-  version "1.5.9"
-  sha256 "f112269cbad9fb190fa4ae2ef16003f9a4913d6ab67f80cbca97e6b6e62e22c2"
+  version "1.5.19"
+  sha256 "163bcfb0cd87736276fb676b15639276b600f6306350fb2411425ce12207c810"
 
-  url "https://github.com/firezone/firezone/releases/download/macos-client-#{version}/firezone-macos-client-#{version}.dmg",
-      verified: "github.com/firezone/firezone/"
+  url "https://github.com/firezone/firezone/releases/download/macos-client-#{version}/firezone-macos-client-#{version}.dmg"
   name "Firezone"
   desc "Zero-trust access platform built on WireGuard"
   homepage "https://www.firezone.dev/"
@@ -13,9 +12,11 @@ cask "firezone" do
     strategy :header_match
   end
 
-  depends_on macos: ">= :monterey"
+  depends_on macos: :ventura
 
   app "Firezone.app"
+
+  uninstall launchctl: "dev.firezone.firezone.keep-app-running"
 
   # The app installs a system extension that cannot be removed systematically at this time.
   # After the limitation is removed, `systemextensionsctl uninstall "dev.firezone.firezone.network-extension"`

@@ -1,9 +1,8 @@
 cask "quip" do
-  version "9.17.6"
-  sha256 "fcff67a5857716cf2140765c5f3670a0cd7c1b086ba9e3f8e55ac8eb497600b9"
+  version "9.59.0"
+  sha256 "1091d886dae9bcf7cd7c93e68fc4824d03e46f68da01c6620d79d51cda0ce6ae"
 
-  url "https://quip-clients.com/macosx_#{version}.dmg",
-      verified: "quip-clients.com/"
+  url "https://quip-clients.com/macosx_#{version}.dmg"
   name "Quip"
   desc "Tool for teams to create living documents"
   homepage "https://quip.com/"
@@ -14,6 +13,7 @@ cask "quip" do
   end
 
   auto_updates true
+  depends_on :macos
 
   app "Quip.app"
 

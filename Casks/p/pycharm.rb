@@ -1,9 +1,9 @@
 cask "pycharm" do
   arch arm: "-aarch64"
 
-  version "2025.2.4,252.27397.106"
-  sha256 arm:   "bd1b97e396ed3e880973266db57ecde02af7f6810fcdb3da3899a88806473527",
-         intel: "26a7bbaf2fb5d101bfa68ba085913a598c8898594f265044f56fd2c9ac051c06"
+  version "2026.2.1,262.9437.214"
+  sha256 arm:   "8d3bc9436e159811a337d46aaab9cdbbb58b172ab23d750159bfbea31064218f",
+         intel: "be03df215e0493a5e001ce762f9d37a9c451b00420b88aad480de12733c155f2"
 
   url "https://download.jetbrains.com/python/pycharm-professional-#{version.csv.first}#{arch}.dmg"
   name "PyCharm"
@@ -25,18 +25,11 @@ cask "pycharm" do
   end
 
   auto_updates true
+  depends_on :macos
 
   app "PyCharm.app"
-  # shim script (https://github.com/Homebrew/homebrew-cask/issues/18809)
-  shimscript = "#{staged_path}/pycharm.wrapper.sh"
-  binary shimscript, target: "pycharm"
-
-  preflight do
-    File.write shimscript, <<~EOS
-      #!/bin/sh
-      exec '#{appdir}/PyCharm.app/Contents/MacOS/pycharm' "$@"
-    EOS
-  end
+  command_wrapper "pycharm",
+                  executable: "#{appdir}/PyCharm.app/Contents/MacOS/pycharm"
 
   zap trash: [
     "~/Library/Application Support/JetBrains/PyCharm#{version.major_minor}",

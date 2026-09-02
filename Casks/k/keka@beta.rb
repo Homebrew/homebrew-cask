@@ -1,9 +1,8 @@
 cask "keka@beta" do
-  version "1.6.0"
-  sha256 "6acf206a0065a4a9fd304c8e07faf7885ac771351991a409ac2ce09b26c4d35d"
+  version "1.6.7"
+  sha256 "0fa0995fc3e58ba3e438ba53aba03636eb226c64002757d21250934116e19f7e"
 
-  url "https://github.com/aonez/Keka/releases/download/v#{version}/Keka-#{version}.dmg",
-      verified: "github.com/aonez/Keka/"
+  url "https://github.com/aonez/Keka/releases/download/v#{version}/Keka-#{version}.dmg"
   name "Keka"
   desc "File archiver"
   homepage "https://www.keka.io/#beta"
@@ -15,6 +14,7 @@ cask "keka@beta" do
 
   auto_updates true
   conflicts_with cask: "keka"
+  depends_on :macos
 
   app "Keka.app"
 

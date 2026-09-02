@@ -1,5 +1,5 @@
 cask "macx-dvd-ripper-pro" do
-  version "6.8.3"
+  version "6.9.0"
   sha256 :no_check
 
   url "https://www.macxdvd.com/download/macx-dvd-ripper-pro.dmg"
@@ -7,8 +7,9 @@ cask "macx-dvd-ripper-pro" do
   desc "DVD ripping application"
   homepage "https://www.macxdvd.com/mac-dvd-ripper-pro/"
 
+  # https 302-redirects back to http
   livecheck do
-    url "https://www.macxdvd.com/mac-dvd-ripper-pro/upgrade/macx-dvd-ripper-pro"
+    url "http://www.macxdvd.com/mac-dvd-ripper-pro/upgrade/macx-dvd-ripper-pro"
     strategy :xml do |xml|
       # The plist file contains nested "LastestVersion" keys that apply to
       # language variants, so we specifically match the main key
@@ -22,6 +23,8 @@ cask "macx-dvd-ripper-pro" do
     end
   end
 
+  depends_on :macos
+
   app "MacX DVD Ripper Pro.app"
 
   zap trash: [
@@ -31,8 +34,4 @@ cask "macx-dvd-ripper-pro" do
     "~/Library/Preferences/com.macxdvd.macxvideoconverterpro.plist",
     "~/Library/Saved Application State/com.macxdvd.macxvideoconverterpro.savedState",
   ]
-
-  caveats do
-    requires_rosetta
-  end
 end

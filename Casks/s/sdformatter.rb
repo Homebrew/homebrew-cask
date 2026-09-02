@@ -8,11 +8,11 @@ cask "sdformatter" do
   homepage "https://www.sdcard.org/downloads/formatter/"
 
   livecheck do
-    url :homepage
-    regex(/SD Memory Card Formatter (\d+(?:\.\d+)*)/i)
+    url "https://www.sdcard.org/downloads/formatter/eula_mac/version.txt"
+    regex(/(\d+(?:\.\d+)+)/i)
   end
 
-  depends_on macos: ">= :big_sur"
+  depends_on macos: :big_sur
 
   pkg "Install SD Card Formatter.mpkg"
 

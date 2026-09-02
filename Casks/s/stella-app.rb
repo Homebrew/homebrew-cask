@@ -2,8 +2,7 @@ cask "stella-app" do
   version "7.0"
   sha256 "dcd6de1baf5b2fdcf655478eb04d3fb8e65e3cdaed2e04cd6c5347b3149c1eed"
 
-  url "https://github.com/stella-emu/stella/releases/download/#{version.csv.second || version.csv.first}/Stella-#{version.csv.first}-macos.dmg",
-      verified: "github.com/stella-emu/stella/"
+  url "https://github.com/stella-emu/stella/releases/download/#{version.csv.second || version.csv.first}/Stella-#{version.csv.first}-macos.dmg"
   name "Stella"
   desc "Multi-platform Atari 2600 Emulator"
   homepage "https://stella-emu.github.io/"
@@ -21,7 +20,9 @@ cask "stella-app" do
     end
   end
 
-  depends_on macos: ">= :big_sur"
+  disable! date: "2026-09-01", because: :fails_gatekeeper_check
+
+  depends_on macos: :big_sur
 
   app "Stella.app"
 

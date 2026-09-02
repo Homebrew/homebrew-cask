@@ -1,15 +1,16 @@
 cask "mega" do
-  version "12.0.15"
-  sha256 "0ebd27e6078fefb59defc8bf62105f82e89d79f728890e62dee164152416c8c1"
+  version "12.1.2"
+  sha256 "f77e003d8597d8827052e2fb787b3b0b3cc64825d6d4b8c468d3d7dbfab271e6"
 
-  url "https://megasoftware.net/do_force_download/MEGA_#{version}_installer.pkg"
+  url "https://megasoftware.net/releases/MEGA_#{version}_installer.pkg"
   name "MEGA"
   name "Molecular Evolutionary Genetics Analysis"
   desc "Molecular evolution statistical analysis and construction of phylogenetic trees"
   homepage "https://megasoftware.net/"
 
   livecheck do
-    url "https://www.megasoftware.net/current_release/"
+    url "https://www.megasoftware.net/current_release/",
+        user_agent: :browser
     strategy :json do |json|
       json.map do |item|
         next if item["operating_system"] != "mac" ||
@@ -27,6 +28,7 @@ cask "mega" do
   end
 
   auto_updates true
+  depends_on :macos
 
   pkg "MEGA_#{version}_installer.pkg"
 

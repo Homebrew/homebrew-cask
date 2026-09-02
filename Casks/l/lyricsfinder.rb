@@ -1,8 +1,10 @@
 cask "lyricsfinder" do
-  version "1.6.3"
+  arch arm: "-arm"
+
+  version "1.7.3"
   sha256 :no_check
 
-  url "https://www.mediahuman.com/download/LyricsFinder.dmg"
+  url "https://www.mediahuman.com/download/LyricsFinder#{arch}.dmg"
   name "Lyrics Finder"
   desc "Find and download song lyrics"
   homepage "https://www.mediahuman.com/lyrics-finder/"
@@ -12,11 +14,9 @@ cask "lyricsfinder" do
     regex(/"softwareVersion">(\d+(?:\.\d+)+)</i)
   end
 
+  depends_on macos: :big_sur
+
   app "LyricsFinder.app"
 
   zap trash: "~/Library/Preferences/com.mediahuman.Lyrics Finder.plist"
-
-  caveats do
-    requires_rosetta
-  end
 end

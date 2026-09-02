@@ -1,6 +1,6 @@
 cask "nomachine-enterprise-client" do
-  version "8.16.1_2"
-  sha256 "44afd719f4f130e692e5f48149e10b66f596036efff5e7727683db475b0c5c80"
+  version "10.0.59_3"
+  sha256 "efe8d9087c380bf5533140abb3099a782aedea8655cb735f88f446f7ba6f5b49"
 
   url "https://download.nomachine.com/download/#{version.major_minor}/MacOSX/nomachine-enterprise-client_#{version}.dmg"
   name "NoMachine Enterprise Client"
@@ -8,9 +8,11 @@ cask "nomachine-enterprise-client" do
   homepage "https://www.nomachine.com/"
 
   livecheck do
-    url "https://www.nomachine.com/support&destination=downloads&callback=L2Rvd25sb2FkLz9pZD0xNi"
-    regex(/nomachine-enterprise-client[._-]v?(\d+(?:\.\d+)*_\d+)\.dmg/i)
+    url "https://download.nomachine.com/download/?id=7&platform=mac"
+    regex(/nomachine[._-]enterprise[._-]client[._-]?v?(\d+(?:[._]\d+)+)\.dmg/i)
   end
+
+  depends_on :macos
 
   pkg "NoMachine.pkg"
 

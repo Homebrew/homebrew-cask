@@ -1,9 +1,9 @@
 cask "eclipse-jee" do
   arch arm: "aarch64", intel: "x86_64"
 
-  version "4.37.0,2025-09"
-  sha256 arm:   "8bd975fa2a6c3439ad585a316d28388ff7252e3d72b9e9e233dc9011fe6e25f7",
-         intel: "0a5aebb5c68406fc85dfb9a2e85d3babafb251d2b046b91c3af12a2077b96d85"
+  version "4.40,2026-06"
+  sha256 arm:   "4efe323ef95b12c377b114ef7ec80a311556f28dcb4ed40ff6b8658b339e5d64",
+         intel: "ec5c94fc656715bf2a6b00a2478d516583aa96baf22d05dde3ecdb402c026250"
 
   url "https://www.eclipse.org/downloads/download.php?file=/technology/epp/downloads/release/#{version.csv.second}/R/eclipse-jee-#{version.csv.second}-R-macosx-cocoa-#{arch}.dmg&mirror_id=1"
   name "Eclipse IDE for Java EE Developers"
@@ -13,6 +13,8 @@ cask "eclipse-jee" do
   livecheck do
     cask "eclipse-ide"
   end
+
+  depends_on macos: :big_sur
 
   # Renamed to avoid conflict with other Eclipse.
   app "Eclipse.app", target: "Eclipse JEE.app"

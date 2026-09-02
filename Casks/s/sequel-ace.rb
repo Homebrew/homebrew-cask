@@ -1,6 +1,6 @@
 cask "sequel-ace" do
-  version "5.0.9,20095"
-  sha256 "a97d2d3dac87abaa1e60f67989034e2d3c0be744bfb5aa09042988ebfdb04f5f"
+  version "5.4.0,20109"
+  sha256 "1522e43725f4a990a7cd7f24cc7ad7b2979a6c891f0cc72d4b6554774820b5bb"
 
   url "https://github.com/Sequel-Ace/Sequel-Ace/releases/download/production/#{version.csv.first}-#{version.csv.second}/Sequel-Ace-#{version.csv.first}.zip"
   name "Sequel Ace"
@@ -17,14 +17,16 @@ cask "sequel-ace" do
     end
   end
 
-  depends_on macos: ">= :monterey"
+  depends_on macos: :monterey
 
   app "Sequel Ace.app"
 
+  uninstall quit: "com.sequel-ace.sequel-ace"
+
   zap trash: [
-    "~/Library/Application Support/Sequel Ace",
-    "~/Library/Caches/com.sequelace.SequelAce",
-    "~/Library/Preferences/com.sequelace.SequelAce.plist",
-    "~/Library/Saved Application State/com.sequelace.SequelAce.savedState",
+    "~/Library/Application Scripts/com.sequel-ace.sequel-ace",
+    "~/Library/Application Scripts/NKQ4HJ66PX.sequel-ace",
+    "~/Library/Containers/com.sequel-ace.sequel-ace",
+    "~/Library/Group Containers/NKQ4HJ66PX.sequel-ace",
   ]
 end

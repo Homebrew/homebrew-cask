@@ -1,6 +1,6 @@
 cask "thebrowsercompany-dia" do
-  version "1.4.1,70644"
-  sha256 "2bdd1ede447e57b30d1c196f060de4ed58ac6f965ae3bc277a347a00a089bb00"
+  version "1.46.0,86064"
+  sha256 "e0823b740603faac4fc9c808fdae74756add775f77cf8d261c0c0e3053a06b16"
 
   url "https://releases.diabrowser.com/release/Dia-#{version.tr(",", "-")}.zip"
   name "Dia"
@@ -14,7 +14,7 @@ cask "thebrowsercompany-dia" do
 
   auto_updates true
   depends_on arch: :arm64
-  depends_on macos: ">= :sonoma"
+  depends_on macos: :sonoma
 
   app "Dia.app"
 

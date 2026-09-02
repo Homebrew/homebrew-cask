@@ -10,6 +10,8 @@ cask "uncrustifyx" do
   deprecate! date: "2024-09-09", because: :unmaintained
   disable! date: "2025-09-09", because: :unmaintained
 
+  depends_on :macos
+
   app "UncrustifyX.app"
 
   caveats do

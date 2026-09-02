@@ -1,5 +1,5 @@
 cask "battle-net" do
-  version "1.19.0.3190"
+  version "1.19.3.3219"
   sha256 :no_check
 
   language "en", default: true do
@@ -23,11 +23,12 @@ cask "battle-net" do
   end
 
   auto_updates true
+  depends_on :macos
 
   installer manual: "Battle.net-Setup.app"
 
-  preflight do
-    set_permissions "#{staged_path}/Battle.net-Setup.app", "a+x"
+  preflight_steps do
+    set_permissions "Battle.net-Setup.app", "a+x"
   end
 
   uninstall delete: "/Applications/Battle.net.app"

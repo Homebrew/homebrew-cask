@@ -1,20 +1,16 @@
 cask "topaz-video-ai" do
-  version "7.1.3"
-  sha256 "7d3fd71d8d59066312bd87372362db87aa47646eb775e2a0b1e59d040db65bea"
+  version "7.1.5"
+  sha256 "4e3721d5605c36cbf872573471a5bbc5eb63860404c939f889251311135090ba"
 
   url "https://downloads.topazlabs.com/deploy/TopazVideoAI/#{version}/TopazVideoAI-#{version}.pkg"
   name "Topaz Video AI"
   desc "Video upscaler and quality enhancer"
   homepage "https://docs.topazlabs.com/other-apps/legacy"
 
-  livecheck do
-    url "https://topazlabs.com/d/tvai/latest/mac/full"
-    strategy :header_match
-  end
-
   deprecate! date: "2025-09-16", because: :discontinued, replacement_cask: "topaz-video"
 
   auto_updates true
+  depends_on :macos
 
   pkg "TopazVideoAI-#{version}.pkg"
 

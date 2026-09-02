@@ -1,9 +1,8 @@
 cask "status" do
-  version "2.35.1,748cd6"
-  sha256 "f8c8fe80e16e28d21147295e0a39f3dbf4134a6ad74103bcf4da2e73549909f9"
+  version "2.38.2,3ef171"
+  sha256 "af412ec0060a6075b485359f9299a72001a55c17dbd5da80e4bfdb60eaa3e64b"
 
-  url "https://github.com/status-im/status-desktop/releases/download/#{version.csv.first}/StatusIm-Desktop-#{version.csv.first}-#{version.csv.second}-aarch64.dmg",
-      verified: "github.com/status-im/status-desktop/releases/download/"
+  url "https://github.com/status-im/status-desktop/releases/download/#{version.csv.first}/StatusIm-Desktop-#{version.csv.first}-#{version.csv.second}-aarch64.dmg"
   name "Status"
   desc "Decentralised wallet and messenger"
   homepage "https://status.app/"
@@ -22,7 +21,7 @@ cask "status" do
   end
 
   depends_on arch: :arm64
-  depends_on macos: ">= :ventura"
+  depends_on macos: :sonoma
 
   app "Status.app"
 

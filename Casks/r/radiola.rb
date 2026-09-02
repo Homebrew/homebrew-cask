@@ -1,6 +1,6 @@
 cask "radiola" do
-  version "10.1.1"
-  sha256 "5df1c7b325ce407875f47e3bfc4da7abc64f5adaa36ef14017c5b8f999a3bd6c"
+  version "13.1.1"
+  sha256 "aa8dce831f6e39d025da8b76cc8cab365bf5b251185822f21c2e373a5f1ca812"
 
   url "https://github.com/SokoloffA/radiola/releases/download/v#{version}/Radiola-#{version}.dmg"
   name "Radiola"
@@ -13,7 +13,7 @@ cask "radiola" do
   end
 
   auto_updates true
-  depends_on macos: ">= :big_sur"
+  depends_on macos: :big_sur
 
   app "Radiola.app"
 

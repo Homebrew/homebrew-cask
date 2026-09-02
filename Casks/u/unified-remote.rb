@@ -1,6 +1,6 @@
 cask "unified-remote" do
-  version "3.13.0.2501"
-  sha256 "9f0a1cc45f97ecbfa3feb3000b5488333557f265f695ca2f3951a78ebf873654"
+  version "3.14.0.2604"
+  sha256 "30d4928fb40e0e711d6b66df955f714283b8f1db3000afbcfac7615724ca1d98"
 
   url "https://www.unifiedremote.com/static/builds/server/macosx/#{version.split(".").last}/ServerSetup-#{version}.dmg"
   name "Unified Remote"
@@ -12,9 +12,11 @@ cask "unified-remote" do
     strategy :header_match
   end
 
+  depends_on macos: :big_sur
+
   app "Unified Remote.app"
 
-  caveats do
-    requires_rosetta
-  end
+  uninstall quit: "com.unified.Unified-Remote"
+
+  zap trash: "~/Library/Application Support/Unified Remote"
 end

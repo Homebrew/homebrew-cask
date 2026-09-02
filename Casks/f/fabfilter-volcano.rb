@@ -1,6 +1,6 @@
 cask "fabfilter-volcano" do
-  version "3.07"
-  sha256 "d41849e5136122560c0ddc5ec5d21538ca79f7fe07bf47b10a67dfaf384c6b70"
+  version "3.09"
+  sha256 "04d6e491eec8cb3d5d5da6eb797a4e646e7b722a7b75b0e76486bb1a3d4221f4"
 
   url "https://cdn-b.fabfilter.com/downloads/ffvolcano#{version.no_dots}.dmg"
   name "FabFilter Volcano"
@@ -12,9 +12,11 @@ cask "fabfilter-volcano" do
     regex(/FabFilter\s+Volcano.*?v?(\d+(?:\.\d+)+)/im)
   end
 
+  depends_on :macos
+
   pkg "FabFilter Volcano #{version} Installer.pkg"
 
-  uninstall pkgutil: "com.fabfilter.Volcano.#{version.major}"
+  uninstall pkgutil: "com.fabfilter.Volcano.*"
 
   # No zap stanza required
 end

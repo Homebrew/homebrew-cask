@@ -1,6 +1,6 @@
 cask "tella" do
-  version "1.78,199"
-  sha256 "99d81a8375162abb089e9a24178f45e54f75f39dea9e29223e5af6c87b273a3d"
+  version "2.31,252"
+  sha256 "a3b076cbd4f8a35dab74106da9a4aa3e395535a4092f54e9b86eecc9a940d368"
 
   url "https://mac.tella.tv/Tella-#{version.csv.first}-#{version.csv.second}.dmg"
   name "Tella"
@@ -15,7 +15,7 @@ cask "tella" do
   end
 
   auto_updates true
-  depends_on macos: ">= :ventura"
+  depends_on macos: :ventura
 
   app "Tella.app"
 

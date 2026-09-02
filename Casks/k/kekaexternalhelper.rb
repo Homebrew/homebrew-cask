@@ -30,6 +30,8 @@ cask "kekaexternalhelper" do
     end
   end
 
+  depends_on :macos
+
   app "KekaExternalHelper.app"
 
   zap trash: [

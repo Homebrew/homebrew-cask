@@ -1,9 +1,9 @@
 cask "osu@tachyon" do
   arch arm: "Apple.Silicon", intel: "Intel"
 
-  version "2025.1029.1-lazer"
-  sha256 arm:   "9f6a4c9f415678aef2acc29cdd513da45c69a8fa8190cbc7d0e40bf030918d68",
-         intel: "08d96737834dd3d303e8092a1cb397efb0452069cf2f9a53aeb16213c1044446"
+  version "2026.821.0-tachyon"
+  sha256 arm:   "0148a398a3164b7a72bebbfce7c43934d26bcebaad069c3849cdeb4b0fed1ed8",
+         intel: "9d7f0e895d40f8c867c6d3ddf55cf79149eb359f6a4b45c2b8f28d636bba638b"
 
   url "https://github.com/ppy/osu/releases/download/#{version}/osu.app.#{arch}.zip"
   name "osu! (tachyon)"
@@ -30,8 +30,11 @@ cask "osu@tachyon" do
 
   auto_updates true
   conflicts_with cask: "osu"
+  depends_on :macos
 
   app "osu!.app"
+
+  uninstall quit: "sh.ppy.osu.lazer"
 
   zap trash: [
     "~/.local/share/osu",

@@ -1,12 +1,11 @@
 cask "glide-browser" do
   arch arm: "aarch64", intel: "x86_64"
 
-  version "0.1.53a"
-  sha256 arm:   "73f28afb370e577e5f5fee62a3a5a1d2e59b23d6a513dc5e114900218a6f5c04",
-         intel: "cbc941a060cf1b7ce7e14944cc8abb8446df2602d4f68b8056ed0da413df6132"
+  version "0.1.63a"
+  sha256 arm:   "63d327c853c79bf6e8f2940bcd36b67b9e7ac997ff66c13444c676d9a4778859",
+         intel: "d2a7e02bf71a3bca2a42008f7920722d46975782282a8db000cfe809abcf8c53"
 
-  url "https://github.com/glide-browser/glide/releases/download/#{version}/glide.macos-#{arch}.dmg",
-      verified: "github.com/glide-browser/glide/"
+  url "https://github.com/glide-browser/glide/releases/download/#{version}/glide.macos-#{arch}.dmg"
   name "Glide Browser"
   desc "Extensible, firefox-based web browser"
   homepage "https://glide-browser.app/"
@@ -19,6 +18,7 @@ cask "glide-browser" do
   end
 
   auto_updates true
+  depends_on :macos
 
   app "Glide.app"
   binary "#{appdir}/Glide.app/Contents/MacOS/glide"

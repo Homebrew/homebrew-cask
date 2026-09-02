@@ -17,6 +17,8 @@ cask "xmenu" do
     end
   end
 
+  depends_on :macos
+
   app "XMenu.app"
 
   zap trash: [

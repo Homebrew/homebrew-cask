@@ -1,6 +1,6 @@
 cask "refine" do
-  version "1.21"
-  sha256 "3b6065d2adf1d3dc6e6f42d1d878dcb285830c5e9706f2ce8c9df538ba6fee3b"
+  version "1.37.2"
+  sha256 "11986571f430b6d8013ba841181cbdfa1580712fa1f31814b7bcba16ec52fbff"
 
   url "https://refine.sh/release/stable/Refine_#{version}.zip"
   name "Refine"
@@ -13,13 +13,14 @@ cask "refine" do
   end
 
   auto_updates true
-  depends_on macos: ">= :sonoma"
+  depends_on macos: :sonoma
 
   app "Refine.app"
 
   zap trash: [
     "~/Library/Application Support/com.runjuu.refine",
     "~/Library/Application Support/Refine",
+    "~/Library/Caches/CloudKit/com.runjuu.refine",
     "~/Library/Caches/com.runjuu.refine",
     "~/Library/HTTPStorages/com.runjuu.refine",
     "~/Library/Preferences/com.runjuu.refine.plist",

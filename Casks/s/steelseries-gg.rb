@@ -1,9 +1,8 @@
 cask "steelseries-gg" do
-  version "98.0.0"
-  sha256 "0985d88ae1af559e41cb2f57266bbdef1fa13db5e6d2c041a2b37db853a3180b"
+  version "108.3.0"
+  sha256 "80c2eec20da51a6144bb18c70cf511ba986941ab0ebd224151ec54dc5e6b4b41"
 
-  url "https://engine.steelseriescdn.com/SteelSeriesGG#{version}.pkg",
-      verified: "engine.steelseriescdn.com/"
+  url "https://engine.steelseriescdn.com/SteelSeriesGG#{version}.pkg"
   name "SteelSeries GG #{version.major}"
   desc "Settings for SteelSeries peripherals and accessories"
   homepage "https://steelseries.com/gg"
@@ -14,7 +13,7 @@ cask "steelseries-gg" do
   end
 
   auto_updates true
-  conflicts_with cask: "steelseries-engine"
+  depends_on :macos
 
   pkg "SteelSeriesGG#{version}.pkg"
 

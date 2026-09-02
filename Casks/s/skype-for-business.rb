@@ -8,8 +8,10 @@ cask "skype-for-business" do
   homepage "https://www.microsoft.com/en-us/download/details.aspx?id=54108"
 
   deprecate! date: "2025-05-05", because: :discontinued
+  disable! date: "2026-05-09", because: :discontinued
 
   auto_updates true
+  depends_on :macos
 
   pkg "SkypeForBusinessInstaller-#{version}.pkg",
       choices: [

@@ -1,9 +1,8 @@
 cask "mumuplayer" do
-  version "1.7.1"
-  sha256 "0e20196081d9524519e2a947414c9bbe1aef4573305578051c5c0c196970c0db"
+  version "1.8.17"
+  sha256 "ba0dd6d5b3880cfcd97a2aa151673200178300f6d60503c1ba0bc8131f702548"
 
-  url "https://a11.gdl.netease.com/MuMuMacUpdater_#{version}.tar.gz",
-      verified: "a11.gdl.netease.com/"
+  url "https://a11.gdl.netease.com/MuMuUpdater_#{version}_default.tar.gz"
   name "Mumu Player Pro"
   name "MuMu模拟器Pro"
   desc "Android emulator"
@@ -23,7 +22,7 @@ cask "mumuplayer" do
   end
 
   auto_updates true
-  depends_on macos: ">= :big_sur"
+  depends_on macos: :big_sur
   depends_on arch: :arm64
 
   app "MuMuPlayer.app"

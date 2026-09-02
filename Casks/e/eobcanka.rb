@@ -1,5 +1,5 @@
 cask "eobcanka" do
-  version "3.5.0"
+  version "3.7.0"
   sha256 :no_check
 
   url "https://info.identita.gov.cz/download/eObcanka.dmg"
@@ -11,6 +11,8 @@ cask "eobcanka" do
     url "https://info.identita.gov.cz/eop/ZmenySWMacOS.aspx"
     regex(%r{<h3>Verze\s(\d+(?:\.\d+)+)</h3>}i)
   end
+
+  depends_on :macos
 
   pkg "eObcanka.pkg"
 
@@ -26,7 +28,7 @@ cask "eobcanka" do
             ]
 
   zap trash: [
-    "~/.config/eObcanka/",
-    "~/.eObcanka_logs/",
+    "~/.config/eObcanka",
+    "~/.eObcanka_logs",
   ]
 end

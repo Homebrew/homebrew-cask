@@ -11,6 +11,8 @@ cask "elektron-transfer" do
   # inaccessible outside of a browser, so this cask is effectively unusable.
   disable! date: "2025-11-01", because: :unreachable
 
+  depends_on :macos
+
   app "Transfer.app"
 
   zap trash: [

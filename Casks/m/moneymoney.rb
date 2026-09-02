@@ -1,5 +1,5 @@
 cask "moneymoney" do
-  version "2.4.64"
+  version "2.5.1"
   sha256 :no_check
 
   url "https://service.moneymoney-app.com/1/MoneyMoney.zip"
@@ -13,6 +13,7 @@ cask "moneymoney" do
   end
 
   auto_updates true
+  depends_on :macos
 
   app "MoneyMoney.app"
 

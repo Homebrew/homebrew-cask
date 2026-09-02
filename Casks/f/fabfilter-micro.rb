@@ -1,6 +1,6 @@
 cask "fabfilter-micro" do
-  version "1.30"
-  sha256 "47ad660be71beed6ca6e58445e3fadce71ee8185d73ebc6be5f83a62662acded"
+  version "1.32"
+  sha256 "3d7e2e2dcdf7533f6e7af87c464f16c0ebcebdc5a547f09d576fda67201707bf"
 
   url "https://cdn-b.fabfilter.com/downloads/ffmicro#{version.no_dots}.dmg"
   name "FabFilter Micro"
@@ -12,9 +12,11 @@ cask "fabfilter-micro" do
     regex(/FabFilter\s+Micro.*?v?(\d+(?:\.\d+)+)/im)
   end
 
+  depends_on :macos
+
   pkg "FabFilter Micro #{version} Installer.pkg"
 
-  uninstall pkgutil: "com.fabfilter.Micro.#{version.major}"
+  uninstall pkgutil: "com.fabfilter.Micro.*"
 
   # No zap stanza required
 end

@@ -1,12 +1,15 @@
 cask "adrive" do
   arch arm: "-arm64"
 
-  version "6.9.0"
-  sha256 arm:   "d34b82b8200fcd291fa3713daf6e98b8f4ac8731f3ca9d7a94dc5b8de9e819af",
-         intel: "b7bf89688504c5a18bc9bf96c03aaa8e48b5cb557647fe780f68e780a1fda60b"
+  version "6.9.3"
+  sha256 arm:   "dbf432bf09a4f6669fb9a74c56d082833b751d1b036d627550f6cf55ef7f32f4",
+         intel: "a0273748eda47b69f621e281a8228fd2791c4f8615ce041a3f248eec629941b2"
+
+  on_intel do
+    disable! date: "2026-09-01", because: :fails_gatekeeper_check
+  end
 
   url "https://cdn.aliyundrive.net/downloads/apps/desktop/aDrive-#{version}#{arch}.dmg",
-      verified:   "cdn.aliyundrive.net/",
       user_agent: :fake
   name "Aliyundrive"
   name "阿里云盘"
@@ -19,6 +22,7 @@ cask "adrive" do
   end
 
   auto_updates true
+  depends_on :macos
 
   app "aDrive.app"
 

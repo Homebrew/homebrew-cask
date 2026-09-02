@@ -1,6 +1,6 @@
 cask "sol" do
-  version "2.1.286"
-  sha256 "88b40719dd23b707f1ca4b32270efa4e346d3e754511eb01ba4e8c66f7994340"
+  version "2.1.356"
+  sha256 "5c63bf09b7dfbf76ee63a9edee06bffc992d09252f52d7a7b5c63192e2f42128"
 
   url "https://github.com/ospfranco/sol/releases/download/#{version}/#{version}.zip"
   name "Sol"
@@ -12,7 +12,7 @@ cask "sol" do
     strategy :sparkle, &:short_version
   end
 
-  depends_on macos: ">= :big_sur"
+  depends_on macos: :sonoma
 
   app "Sol.app"
 

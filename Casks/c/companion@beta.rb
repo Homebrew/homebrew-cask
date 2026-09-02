@@ -12,7 +12,7 @@ cask "companion@beta" do
 
   disable! date: "2025-09-15", because: :unreachable
 
-  depends_on macos: ">= :big_sur"
+  depends_on macos: :big_sur
 
   # Companion beta does not share preferences with the stable branch, so can be installed side by side
   app "Companion.app", target: "Companion Beta.app"

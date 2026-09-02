@@ -1,9 +1,8 @@
 cask "syncmate" do
-  version "8.9.563"
-  sha256 "312fd1fe034b4e268bc009cb1532fa13a23a609fb78f0d4748738b824f314e70"
+  version "8.11.604"
+  sha256 "4ac24541b8c87cef6001b0c9c7063408d2c00b2299f9d112af8fa911772e8e14"
 
-  url "https://cdn.electronic.us/products/syncmate/mac/update/SyncMate_#{version}.zip",
-      verified: "cdn.electronic.us/products/syncmate/"
+  url "https://cdn.electronic.us/products/syncmate/mac/update/SyncMate_#{version}.zip"
   name "SyncMate"
   desc "All-in-one sync tool"
   homepage "https://mac.eltima.com/sync-mac.html"
@@ -13,7 +12,12 @@ cask "syncmate" do
     strategy :sparkle
   end
 
+  depends_on macos: :monterey
+
   app "SyncMate.app"
+
+  uninstall launchctl: "com.eltima.SyncMate.com.eltima.SyncMateService",
+            quit:      ["com.eltima.SyncMate", "com.eltima.SyncMate.com.eltima.SyncMateService"]
 
   zap trash: [
     "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.eltima.syncmate.com.eltima.syncmateservice.sfl*",
@@ -25,8 +29,4 @@ cask "syncmate" do
     "~/Library/Preferences/com.eltima.SyncMate.plist",
     "~/Library/Saved Application State/com.eltima.SyncMate.savedState",
   ]
-
-  caveats do
-    requires_rosetta
-  end
 end

@@ -1,23 +1,22 @@
 cask "portfolioperformance" do
   arch arm: "aarch64", intel: "x86_64"
 
-  version "0.80.4"
-  sha256 arm:   "d20835100c75aa9adea37308ddad6c8ca1c457ea685ce41c69198fb0ec60332b",
-         intel: "905304293fe47cade751fb53de7131d8026fe4347c1234cb80bfef82fd149380"
+  version "0.87.0"
+  sha256 arm:   "1ed3bdf3ee5b0c828a0da606df05fa1509668b41176683347ddd7d64a2078fa3",
+         intel: "f0a744e2ac139bc00b7af2bde75db55999acced00c6891775e45e0a625f2008f"
 
-  url "https://github.com/buchen/portfolio/releases/download/#{version}/PortfolioPerformance-#{version}-#{arch}.dmg",
-      verified: "github.com/buchen/portfolio/"
+  url "https://github.com/buchen/portfolio/releases/download/#{version}/PortfolioPerformance-#{version}-#{arch}.dmg"
   name "Portfolio Performance"
   desc "Calculate the overall performance of an investment portfolio"
   homepage "https://www.portfolio-performance.info/en/"
 
   livecheck do
-    url :url
-    strategy :github_latest
+    url "https://www.portfolio-performance.info/en/download.html"
+    regex(/href=.*?PortfolioPerformance[._-]v?(\d+(?:\.\d+)+)[._-]#{arch}\.dmg/i)
   end
 
   auto_updates true
-  depends_on macos: ">= :big_sur"
+  depends_on macos: :big_sur
 
   app "PortfolioPerformance.app"
 

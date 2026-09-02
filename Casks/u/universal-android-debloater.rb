@@ -8,7 +8,10 @@ cask "universal-android-debloater" do
   desc "GUI which uses ADB to debloat non-rooted Android devices"
   homepage "https://github.com/0x192/universal-android-debloater"
 
+  disable! date: "2026-09-01", because: :fails_gatekeeper_check
+
   auto_updates true
+  depends_on :macos
   depends_on cask: "android-platform-tools"
 
   binary "uad_gui-macos-opengl", target: "uad"

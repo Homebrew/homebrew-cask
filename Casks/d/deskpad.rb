@@ -7,7 +7,7 @@ cask "deskpad" do
   desc "Virtual monitor for screen sharing"
   homepage "https://github.com/Stengo/DeskPad"
 
-  depends_on macos: ">= :ventura"
+  depends_on macos: :ventura
 
   app "DeskPad.app"
 

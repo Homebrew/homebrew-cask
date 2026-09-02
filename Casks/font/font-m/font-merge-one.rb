@@ -2,8 +2,7 @@ cask "font-merge-one" do
   version :latest
   sha256 :no_check
 
-  url "https://github.com/google/fonts/raw/main/ofl/mergeone/MergeOne-Regular.ttf",
-      verified: "github.com/google/fonts/"
+  url "https://github.com/google/fonts/raw/main/ofl/mergeone/MergeOne-Regular.ttf"
   name "Merge One"
   homepage "https://fonts.google.com/specimen/Merge+One"
 

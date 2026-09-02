@@ -1,10 +1,6 @@
 cask "calibre" do
-  on_monterey :or_older do
-    on_catalina :or_older do
-      version "6.11.0"
-      sha256 "d7c40f3f35ba9043c13303632526f135b2c4086471a5c09ceb8b397c55c076fa"
-    end
-    on_big_sur do
+  on_ventura :or_older do
+    on_big_sur :or_older do
       version "6.29.0"
       sha256 "2f76428ae19617875c5725cd892751a80eb2acdda76e06cd19c2f21a63966998"
     end
@@ -12,14 +8,18 @@ cask "calibre" do
       version "6.29.0"
       sha256 "2f76428ae19617875c5725cd892751a80eb2acdda76e06cd19c2f21a63966998"
     end
+    on_ventura do
+      version "9.6.0"
+      sha256 "1e20b1a9859eae7411f4ff4fd7f7c64524ca16339d969aeb828b791673d03d4c"
+    end
 
     livecheck do
       skip "Legacy version"
     end
   end
-  on_ventura :or_newer do
-    version "8.14.0"
-    sha256 "ac3a88243d64aed4fdbe46c9b32e22113ea06d9b4ebbdbcf54d888107689c219"
+  on_sonoma :or_newer do
+    version "9.14.0"
+    sha256 "a2f825138645ea29d9f77a78c177216c0db855fa0c7b993a16ace230c04fe3d4"
 
     livecheck do
       url "https://calibre-ebook.com/dist/osx"
@@ -35,6 +35,8 @@ cask "calibre" do
   name "calibre"
   desc "E-books management software"
   homepage "https://calibre-ebook.com/"
+
+  depends_on :macos
 
   app "calibre.app"
   binary "#{appdir}/calibre.app/Contents/MacOS/calibre"
@@ -57,6 +59,8 @@ cask "calibre" do
   binary "#{appdir}/calibre.app/Contents/MacOS/lrs2lrf"
   binary "#{appdir}/calibre.app/Contents/MacOS/markdown-calibre"
   binary "#{appdir}/calibre.app/Contents/MacOS/web2disk"
+
+  uninstall quit: "net.kovidgoyal.calibre"
 
   zap trash: [
     "~/Library/Application Support/calibre-ebook.com",

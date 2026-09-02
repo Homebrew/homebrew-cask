@@ -8,6 +8,9 @@ cask "tuck" do
   homepage "https://www.irradiatedsoftware.com/tuck/"
 
   deprecate! date: "2025-03-31", because: :unmaintained
+  disable! date: "2026-04-01", because: :unmaintained
+
+  depends_on :macos
 
   app "Tuck.app"
 

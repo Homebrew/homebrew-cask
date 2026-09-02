@@ -1,9 +1,8 @@
 cask "insomnia" do
-  version "12.0.0"
-  sha256 "98fb5e8d83afac7b92967446da5e9623343751afde986b44d3ccbcf4680c0235"
+  version "13.2.0"
+  sha256 "f0b4535e55af44c212b6e601ae5919d0fa8cdbd82c3b52c10e85a29f4f621806"
 
-  url "https://github.com/Kong/insomnia/releases/download/core%40#{version}/Insomnia.Core-#{version}.dmg",
-      verified: "github.com/Kong/insomnia/"
+  url "https://github.com/Kong/insomnia/releases/download/core%40#{version}/Insomnia.Core-#{version}.dmg"
   name "Insomnia"
   desc "HTTP and GraphQL Client"
   homepage "https://insomnia.rest/"
@@ -22,7 +21,7 @@ cask "insomnia" do
 
   auto_updates true
   conflicts_with cask: "insomnia@alpha"
-  depends_on macos: ">= :monterey"
+  depends_on macos: :monterey
 
   app "Insomnia.app"
 

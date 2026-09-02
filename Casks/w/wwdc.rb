@@ -2,8 +2,7 @@ cask "wwdc" do
   version "7.5,1044"
   sha256 "539aead52153a6decde115ba75f5a60848cbbdbd7bca3472347e5fc9d449d20c"
 
-  url "https://github.com/insidegui/WWDC/releases/download/#{version.csv.first}/WWDC_v#{version.csv.first}-#{version.csv.second}.dmg",
-      verified: "github.com/insidegui/WWDC/"
+  url "https://github.com/insidegui/WWDC/releases/download/#{version.csv.first}/WWDC_v#{version.csv.first}-#{version.csv.second}.dmg"
   name "WWDC"
   desc "Allows access to WWDC livestreams, videos and sessions"
   homepage "https://wwdc.io/"
@@ -14,7 +13,7 @@ cask "wwdc" do
   end
 
   auto_updates true
-  depends_on macos: ">= :monterey"
+  depends_on macos: :monterey
 
   app "WWDC.app"
 

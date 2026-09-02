@@ -1,9 +1,8 @@
 cask "imgotv" do
-  version "6.5.7"
-  sha256 "36e882b10da45f09a199d5cea6e7838ad05cab66e7736176e75744706c91c8c8"
+  version "6.5.9"
+  sha256 "d2c486468eea3304c83f1e56c14d7aae6395c555220667c2cbbc53bcd658b83c"
 
-  url "https://download.imgo.tv/app/mac/#{version}/mgtv-mango-#{version}.dmg",
-      verified: "download.imgo.tv/"
+  url "https://download.imgo.tv/app/mac/#{version}/mgtv-mango-#{version}.dmg"
   name "芒果TV"
   desc "Mango TV video app"
   homepage "https://www.mgtv.com/app/"
@@ -12,6 +11,8 @@ cask "imgotv" do
     url "https://pcconf.api.mgtv.com/getPcDownloadUrl?lastp=ch_home"
     strategy :header_match
   end
+
+  depends_on :macos
 
   app "芒果TV.app"
 

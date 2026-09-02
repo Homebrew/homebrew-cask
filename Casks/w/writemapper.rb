@@ -1,9 +1,8 @@
 cask "writemapper" do
-  version "4.5.0"
-  sha256 "4f3bc5b2c55f8ea60c097abec12d1a62289ac429f7d36814d8d5a3a006617561"
+  version "4.6.0"
+  sha256 "b5feebe6de35bf0cf1e6c1165278038ef2cdc71e4cb046b4772ad141658396b9"
 
-  url "https://writemapper.sfo3.cdn.digitaloceanspaces.com/writemapper-#{version.major}/mac/WriteMapper-#{version}-universal.dmg",
-      verified: "writemapper.sfo3.cdn.digitaloceanspaces.com/"
+  url "https://writemapper.sfo3.cdn.digitaloceanspaces.com/writemapper-#{version.major}/mac/WriteMapper-#{version}-universal.dmg"
   name "WriteMapper"
   desc "Writing tool that helps produce text documents using mind maps"
   homepage "https://writemapper.com/"
@@ -13,7 +12,7 @@ cask "writemapper" do
     strategy :electron_builder
   end
 
-  depends_on macos: ">= :monterey"
+  depends_on macos: :monterey
 
   app "WriteMapper.app"
 

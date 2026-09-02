@@ -2,14 +2,13 @@ cask "1password-cli@beta" do
   arch arm: "arm64", intel: "amd64"
   os macos: "darwin", linux: "linux"
 
-  version "2.32.0"
-  sha256 arm:          "11f92951d25cf77aa1e7e714f45b05b07d816227afb3f2116595b40e4ff1d8f0",
-         x86_64:       "d65ab2430d95af45b735045cb797eb33274902b8e85f945cd420929fb9bec181",
-         x86_64_linux: "68e3141b11ad38ba5004fb40d71371b710c0bbf94733f0df9180768336f90097",
-         arm64_linux:  "6f3d571aabe7701e21ad4b0f9d30207c3dcabdb2f9c261e3651106dde0ee8946"
+  version "2.39.1-beta.01"
+  sha256 arm:          "5a10849ea208649f1c98913d13fa13c6ca9981f21dae3b8daee874701f15d8ff",
+         intel:        "f450729141cb49477bc168fa98c68db96e8eabed8cea865d8b79d615a007ec72",
+         arm64_linux:  "e4cc960792a98dec659d87d571c6c1e82d6f2e4b872686409c9dd31e2ea095bd",
+         x86_64_linux: "57a5d7637e1f508194b48732136de57e53efcc447877a5dbcaed7801abeb7f49"
 
-  url "https://cache.agilebits.com/dist/1P/op2/pkg/v#{version}/op_#{os}_#{arch}_v#{version}.zip",
-      verified: "cache.agilebits.com/dist/1P/op2/pkg/"
+  url "https://cache.agilebits.com/dist/1P/op2/pkg/v#{version}/op_#{os}_#{arch}_v#{version}.zip"
   name "1Password CLI"
   desc "Command-line helper for the 1Password password manager"
   homepage "https://developer.1password.com/docs/cli"

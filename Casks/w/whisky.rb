@@ -2,8 +2,7 @@ cask "whisky" do
   version "2.3.5"
   sha256 "62fce6aa7034cc84e4809a35cb46af37e7932368102450dd2b3d4a18cbc7b94e"
 
-  url "https://github.com/IsaacMarovitz/Whisky/releases/download/v#{version}/Whisky.zip",
-      verified: "github.com/IsaacMarovitz/Whisky/"
+  url "https://github.com/IsaacMarovitz/Whisky/releases/download/v#{version}/Whisky.zip"
   name "Whisky"
   desc "Wine wrapper built with SwiftUI"
   homepage "https://getwhisky.app/"
@@ -14,7 +13,7 @@ cask "whisky" do
   deprecate! date: "2025-04-09", because: :unmaintained
 
   auto_updates true
-  depends_on macos: ">= :sonoma"
+  depends_on macos: :sonoma
   depends_on arch: :arm64
 
   app "Whisky.app"

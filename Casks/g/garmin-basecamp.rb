@@ -12,6 +12,8 @@ cask "garmin-basecamp" do
     regex(/name=["']?software_version["']?\s*content=["']?(\d+(?:\.\d+)+)["' >]/i)
   end
 
+  depends_on :macos
+
   pkg "Install BaseCamp.pkg"
 
   uninstall quit:    [

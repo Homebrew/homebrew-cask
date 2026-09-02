@@ -1,9 +1,8 @@
 cask "sqlpro-for-postgres" do
-  version "2025.06"
-  sha256 "f9082998ba9f41f67e8a8ddedea64c254158f10dcf87e9814c1023bfdb22f2c3"
+  version "2026.238"
+  sha256 "e5be77915d27dee0d6ac7d5fcc33f9143daf1a06d6cf8656ffe5b3e722dcc053"
 
-  url "https://d3fwkemdw8spx3.cloudfront.net/postgres/SQLProPostgres.#{version}.app.zip",
-      verified: "d3fwkemdw8spx3.cloudfront.net/postgres/"
+  url "https://d3fwkemdw8spx3.cloudfront.net/postgres/SQLProPostgres.#{version}.app.zip"
   name "SQLPro for Postgres"
   desc "Lightweight PostgreSQL database client"
   homepage "https://www.macpostgresclient.com/SQLProPostgres"
@@ -12,6 +11,8 @@ cask "sqlpro-for-postgres" do
     url "https://www.macpostgresclient.com/download.php"
     strategy :header_match
   end
+
+  depends_on macos: :sonoma
 
   app "SQLPro for Postgres.app"
 

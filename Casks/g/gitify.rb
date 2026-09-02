@@ -1,6 +1,6 @@
 cask "gitify" do
-  version "6.11.1"
-  sha256 "4e50b084b17e9b778984a8a54f5940f2604e2dfb9887378d543cc60252349f91"
+  version "7.7.0"
+  sha256 "9e6edc3bf8d6eca343b993651ed3db22a47a2670a404f05d1980ac6c563ffa1d"
 
   url "https://github.com/gitify-app/gitify/releases/download/v#{version}/Gitify-#{version}-universal-mac.zip"
   name "Gitify"
@@ -13,19 +13,9 @@ cask "gitify" do
   end
 
   auto_updates true
-  depends_on macos: ">= :monterey"
+  depends_on macos: :monterey
 
   app "Gitify.app"
-
-  preflight do
-    retries ||= 3
-    ohai "Attempting to close Gitify.app to avoid unwanted user intervention" if retries >= 3
-    return unless system_command "/usr/bin/pkill", args: ["-f", "/Applications/Gitify.app"]
-  rescue RuntimeError
-    sleep 1
-    retry unless (retries -= 1).zero?
-    opoo "Unable to forcibly close Gitify.app"
-  end
 
   uninstall quit: [
     "com.electron.gitify",
@@ -38,6 +28,7 @@ cask "gitify" do
     "~/Library/Caches/com.electron.gitify*",
     "~/Library/Caches/gitify-updater",
     "~/Library/HTTPStorages/com.electron.gitify",
+    "~/Library/Logs/gitify",
     "~/Library/Preferences/com.electron.gitify*.plist",
     "~/Library/Saved Application State/com.electron.gitify.savedState",
   ]

@@ -1,17 +1,28 @@
 cask "sidequest" do
   arch arm: "-arm64"
 
-  version "0.10.42"
-  sha256 arm:   "2fd14eb70dafbbe245b6b8f81ac30eb7a6699a8993ec6efcdcadc5a9cde9b9b0",
-         intel: "cdb9d983dd608487989d7a0116ee07549742ccc206989cb261edd22eed1050a8"
+  version "1.0.2"
+  sha256 arm:   "aa4a201d2482aa144385d6b1cd18933b6cc955b6b8b14365c34d7593317d56e6",
+         intel: "05f1659d8f4408208312e346822f87d186ced14f54a6c3967d5b6b018565adaa"
 
-  url "https://github.com/SideQuestVR/SideQuest/releases/download/v#{version}/SideQuest-#{version}#{arch}.dmg",
-      verified: "github.com/SideQuestVR/SideQuest/"
+  url "https://github.com/SideQuestVR/SideQuest/releases/download/v#{version}/SideQuest-#{version}#{arch}.dmg"
   name "SideQuest"
   desc "Virtual reality content platform"
   homepage "https://sidequestvr.com/"
 
+  depends_on macos: :monterey
+
   app "SideQuest.app"
 
-  zap trash: "~/Library/Application Support/SideQuest"
+  uninstall launchctl: "com.sidequestvr.app.ShipIt"
+
+  zap trash: [
+    "~/Library/Application Support/SideQuest",
+    "~/Library/Application Support/SideQuestDesktop",
+    "~/Library/Caches/com.sidequestvr.app*",
+    "~/Library/Caches/sidequest-desktop-updater",
+    "~/Library/HTTPStorages/com.sidequestvr.app",
+    "~/Library/Preferences/ByHost/com.sidequestvr.app.ShipIt.*.plist",
+    "~/Library/Preferences/com.sidequestvr.app.plist",
+  ]
 end

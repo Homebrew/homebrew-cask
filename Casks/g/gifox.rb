@@ -1,9 +1,8 @@
 cask "gifox" do
-  version "2.7.2+0,020702.00"
-  sha256 "468a344f5585941914d1a048cab96b02b6caf9846716f0c0b825744357a6df8b"
+  version "2.10.0+0,021000.00"
+  sha256 "569da6cd7d344a9e7f2f4ddebbcbcd83a3dc41d86330197d34fa7ade19529346"
 
-  url "https://d1fqctmfkpkkcg.cloudfront.net/gifox/#{version.csv.second}.dmg",
-      verified: "d1fqctmfkpkkcg.cloudfront.net/gifox/"
+  url "https://d1fqctmfkpkkcg.cloudfront.net/gifox/#{version.csv.second}.dmg"
   name "gifox"
   desc "GIF recording and sharing"
   homepage "https://gifox.io/"
@@ -23,6 +22,7 @@ cask "gifox" do
   end
 
   auto_updates true
+  depends_on :macos
 
   app "Gifox.app"
 

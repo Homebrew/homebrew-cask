@@ -12,6 +12,8 @@ cask "istat-server" do
     strategy :header_match
   end
 
+  depends_on :macos
+
   app "iStat Server.app"
 
   zap trash: [

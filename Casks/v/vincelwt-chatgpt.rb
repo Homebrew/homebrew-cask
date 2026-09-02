@@ -11,6 +11,9 @@ cask "vincelwt-chatgpt" do
   homepage "https://github.com/vincelwt/chatgpt-mac"
 
   deprecate! date: "2025-06-21", because: :unmaintained
+  disable! date: "2026-06-21", because: :unmaintained
+
+  depends_on macos: :big_sur
 
   app "Chatgpt.app"
 

@@ -1,8 +1,8 @@
 cask "elephas" do
-  version "11.3013"
-  sha256 "50d72e22862bf7a8e73e745299c575ee00a30d2344d332275351683af6745378"
+  version "12.0001"
+  sha256 "085c4188f1a797e737490ff9f09b67ca88f6355d8fa4b21c61522fbdd4de1d42"
 
-  url "https://assets.elephas.app/Elephas%20#{version.csv.second || version.csv.first}.dmg"
+  url "https://assets.elephas.app/Elephas_#{version.csv.second || version.csv.first}.dmg"
   name "Elephas"
   desc "Personal AI Writing Assistant"
   homepage "https://elephas.app/"
@@ -20,7 +20,7 @@ cask "elephas" do
 
   auto_updates true
   conflicts_with cask: "elephas@beta"
-  depends_on macos: ">= :ventura"
+  depends_on macos: :ventura
 
   app "Elephas.app"
 

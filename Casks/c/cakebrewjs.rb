@@ -1,9 +1,9 @@
 cask "cakebrewjs" do
-  version "2.89"
-  sha256 "12cb881af9f116a8c05c296d21e2922148bd840ca4201cb6d20d0133fe80030a"
+  version "2.102"
+  sha256 "151be33f8d86b700d66324d595346eeefaf042d1ca69f34c775bceac4bfbf569"
 
   url "https://downloads.sourceforge.net/cakebrewjs/Cakebrewjs-#{version}-Darwin.dmg"
-  name "cakebrewjs"
+  name "Cakebrewjs"
   desc "Homebrew GUI app"
   homepage "https://sourceforge.net/projects/cakebrewjs/"
 
@@ -14,7 +14,7 @@ cask "cakebrewjs" do
 
   disable! date: "2026-09-01", because: :fails_gatekeeper_check
 
-  depends_on macos: ">= :tahoe"
+  depends_on macos: :tahoe
 
   app "cakebrewjs.app"
 

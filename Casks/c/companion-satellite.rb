@@ -2,9 +2,9 @@ cask "companion-satellite" do
   arch arm: "arm64", intel: "x64"
   livecheck_arch = on_arch_conditional arm: "arm", intel: "intel"
 
-  version "2.4.1,539,3e659ce"
-  sha256 arm:   "69b6f7cfac64dbdf9d7be54b0df68cee74dc101117bd12fb8aca5faeb058d35f",
-         intel: "198f666b37be27db220b0d4ee5d055e4a9881b37b73a186a4f1e96077e119b28"
+  version "3.4.0,722,8bc2f14"
+  sha256 arm:   "dfd19ff649b72426ffaad6dd7fdba491e2ee2ab3d04b051e50150ae1febc4eea",
+         intel: "1cc097d222663f502e7126a000872cdcd13be1294e89b5e2aa650457b6507710"
 
   url "https://s4.bitfocus.io/builds/companion-satellite/companion-satellite-#{arch}-#{version.csv.second}-#{version.csv.third}.dmg"
   name "Bitfocus Satellite"
@@ -29,12 +29,14 @@ cask "companion-satellite" do
     end
   end
 
-  depends_on macos: ">= :big_sur"
+  depends_on macos: :monterey
 
   app "Companion Satellite.app"
 
   zap trash: [
+    "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/remote.companion.bitfocus.no.sfl*",
     "~/Library/Application Support/companion-satellite",
     "~/Library/Application Support/satellite",
+    "~/Library/Preferences/remote.companion.bitfocus.no.plist",
   ]
 end

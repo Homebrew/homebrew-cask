@@ -2,12 +2,11 @@ cask "deepchat" do
   arch arm: "arm64", intel: "x64"
   livecheck_arch = on_arch_conditional arm: "arm", intel: "x64"
 
-  version "0.4.5"
-  sha256 arm:   "b2a05c56dab4923ec99ebfc9aa2c7775f7ec351237a17837dfeb01ed9a9021fe",
-         intel: "3d2ab949cff2bf436bfd41d0f8b6785869940d0ea6d89f14095e6ebc3aaa4744"
+  version "0.5.7"
+  sha256 arm:   "140c77991f92010c42db429941ac7f7c4f0011da78b8d0799f6d2d791c007580",
+         intel: "5ae22c8b6aba88e78f598977c11593ecbaf73197cc0d37c09e9d5fa127611d0c"
 
-  url "https://github.com/ThinkInAIXYZ/deepchat/releases/download/v#{version}/DeepChat-#{version}-mac-#{arch}.dmg",
-      verified: "github.com/ThinkInAIXYZ/deepchat/"
+  url "https://github.com/ThinkInAIXYZ/deepchat/releases/download/v#{version}/DeepChat-#{version}-mac-#{arch}.dmg"
   name "DeepChat"
   desc "AI assistant"
   homepage "https://deepchat.thinkinai.xyz/"
@@ -20,7 +19,7 @@ cask "deepchat" do
   end
 
   auto_updates true
-  depends_on macos: ">= :big_sur"
+  depends_on macos: :big_sur
 
   app "DeepChat.app"
   binary "#{appdir}/DeepChat.app/Contents/MacOS/DeepChat", target: "deepchat"

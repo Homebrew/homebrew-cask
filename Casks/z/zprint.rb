@@ -10,6 +10,10 @@ cask "zprint" do
   desc "Library to reformat Clojure and Clojurescript source code and s-expressions"
   homepage "https://github.com/kkinnear/zprint"
 
+  disable! date: "2026-09-01", because: :fails_gatekeeper_check
+
+  depends_on :macos
+
   binary "zprintm#{arch}-#{version}", target: "zprint"
 
   # No zap stanza required

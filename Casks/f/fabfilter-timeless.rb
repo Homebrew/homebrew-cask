@@ -1,6 +1,6 @@
 cask "fabfilter-timeless" do
-  version "3.08"
-  sha256 "ba26f3dd8f2cd8dca37620bde17521d4e37a9f4dcc7dd5f1d03a6bf61fa9d929"
+  version "3.10"
+  sha256 "7f0d65e013ad2992cfcbbd5f1c64b81af09178be10e25675fa94cc772f8e82f0"
 
   url "https://cdn-b.fabfilter.com/downloads/fftimeless#{version.no_dots}.dmg"
   name "FabFilter Timeless"
@@ -12,9 +12,11 @@ cask "fabfilter-timeless" do
     regex(/FabFilter\s+Timeless.*?v?(\d+(?:\.\d+)+)/im)
   end
 
+  depends_on :macos
+
   pkg "FabFilter Timeless #{version} Installer.pkg"
 
-  uninstall pkgutil: "com.fabfilter.Timeless.#{version.major}"
+  uninstall pkgutil: "com.fabfilter.Timeless.*"
 
   # No zap stanza required
 end

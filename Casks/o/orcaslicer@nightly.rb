@@ -4,12 +4,13 @@ cask "orcaslicer@nightly" do
   version :latest
   sha256 :no_check
 
-  url "https://github.com/SoftFever/OrcaSlicer/releases/download/nightly-builds/OrcaSlicer_Mac_universal_nightly.dmg"
+  url "https://github.com/OrcaSlicer/OrcaSlicer/releases/download/nightly-builds/OrcaSlicer_Mac_universal_nightly.dmg"
   name "Orca Slicer Nightly"
   desc "G-code generator for 3D printers"
-  homepage "https://github.com/SoftFever/OrcaSlicer"
+  homepage "https://github.com/OrcaSlicer/OrcaSlicer"
 
   conflicts_with cask: "orcaslicer"
+  depends_on macos: :big_sur
 
   app "OrcaSlicer.app"
 

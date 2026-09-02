@@ -1,7 +1,7 @@
 cask "touch-portal" do
   arch arm: "M1"
 
-  version "4.4,6"
+  version "4.6,2"
   sha256 :no_check
 
   url "https://www.touch-portal.com/downloads/releases/mac/TouchPortalMacRelease#{arch}.dmg"
@@ -16,6 +16,8 @@ cask "touch-portal" do
       page&.scan(regex)&.map { |match| "#{match[0]},#{match[1]}" }
     end
   end
+
+  depends_on :macos
 
   app "TouchPortal.app"
 

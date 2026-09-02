@@ -7,10 +7,9 @@ cask "after-dark-classic" do
   desc "Classic After Dark screensaver set"
   homepage "https://en.infinisys.co.jp/product/afterdarkclassicset/index.shtml"
 
-  livecheck do
-    url :homepage
-    regex(/After\sDark\sClassic\sSet\s(\d+(?:\.\d+)+)/i)
-  end
+  deprecate! date: "2026-05-14", because: :discontinued
+
+  depends_on :macos
 
   pkg "AfterDark.pkg"
 

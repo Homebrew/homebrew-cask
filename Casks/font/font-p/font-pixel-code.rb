@@ -2,8 +2,7 @@ cask "font-pixel-code" do
   version "2.2"
   sha256 "528128a720941a84cb006b1c21f7695f7d8035a09e5cb1226c387d4c141c4b32"
 
-  url "https://github.com/qwerasd205/PixelCode/releases/download/v#{version}/otf.zip",
-      verified: "github.com/qwerasd205/PixelCode/"
+  url "https://github.com/qwerasd205/PixelCode/releases/download/v#{version}/otf.zip"
   name "Pixel Code"
   homepage "https://qwerasd205.github.io/PixelCode/"
 

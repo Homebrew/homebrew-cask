@@ -1,12 +1,11 @@
 cask "clash-verge-rev" do
   arch arm: "aarch64", intel: "x64"
 
-  version "2.4.3"
-  sha256 arm:   "f09c0ef0f24abb46c1268332b9f987108f8aa50a47aacc885d6f89dd845c55f2",
-         intel: "0afcdf426fb21970f02c57567d4e01041c90a6e319de13a6a2684f38504fb4f1"
+  version "2.5.2"
+  sha256 arm:   "94d29405980b5d1d3419dd1de485db3a234d35cef058f79dcce595e01b697219",
+         intel: "c9fcec27d3e4b4fffe31f314369aaa4017d80c1293c8b1cb65d85de223e9cb6c"
 
-  url "https://github.com/clash-verge-rev/clash-verge-rev/releases/download/v#{version}/Clash.Verge_#{version}_#{arch}.dmg",
-      verified: "github.com/clash-verge-rev/clash-verge-rev/"
+  url "https://github.com/clash-verge-rev/clash-verge-rev/releases/download/v#{version}/Clash.Verge_#{version}_#{arch}.dmg"
   name "Clash Verge Rev"
   desc "Continuation of Clash Verge - A Clash Meta GUI based on Tauri"
   homepage "https://clash-verge-rev.github.io/"
@@ -17,6 +16,7 @@ cask "clash-verge-rev" do
   end
 
   auto_updates true
+  depends_on macos: :big_sur
 
   app "Clash Verge.app"
 

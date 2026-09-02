@@ -1,9 +1,8 @@
 cask "playdate-mirror" do
-  version "1.3.0"
-  sha256 "2a8207105378d7517948b3c2030b66014dcd0ccce257916ab65576bfd7250eff"
+  version "1.4.0"
+  sha256 "9a963fc8769e4e81630347467787fff2d9c863f6efffc57c0aa4c8973867167e"
 
-  url "https://download-cdn.panic.com/mirror/Mirror-#{version}.zip",
-      verified: "download-cdn.panic.com/mirror/"
+  url "https://download-cdn.panic.com/mirror/Mirror-#{version}.zip"
   name "Playdate Mirror"
   desc "Application that streams gameplay audio and video from your Playdate"
   homepage "https://play.date/mirror"
@@ -14,7 +13,7 @@ cask "playdate-mirror" do
   end
 
   auto_updates true
-  depends_on macos: ">= :big_sur"
+  depends_on macos: :big_sur
 
   app "Mirror.app"
 

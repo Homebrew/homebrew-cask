@@ -2,13 +2,15 @@ cask "cumulus" do
   version "0.10.1"
   sha256 "f23cffe610f095ef28acc7a14a61b5548755af452ecf5d38c2e2916e424ca271"
 
-  url "https://github.com/gillesdemey/Cumulus/releases/download/v#{version}/Cumulus-#{version}.dmg",
-      verified: "github.com/gillesdemey/Cumulus/"
+  url "https://github.com/gillesdemey/Cumulus/releases/download/v#{version}/Cumulus-#{version}.dmg"
   name "Cumulus"
   desc "SoundCloud player that lives in the menu bar"
   homepage "https://gillesdemey.github.io/Cumulus/"
 
   deprecate! date: "2025-04-21", because: :unmaintained
+  disable! date: "2026-04-30", because: :unmaintained
+
+  depends_on :macos
 
   app "Cumulus.app"
 

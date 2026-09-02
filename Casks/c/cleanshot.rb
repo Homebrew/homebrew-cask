@@ -1,11 +1,11 @@
 cask "cleanshot" do
-  version "4.8.4"
-  sha256 "61f5d74433c5c021700ab3d9ffa67f4e0973a99f488413ec11d45e3322c8984f"
+  version "5.0"
+  sha256 "6f4535f2297ee9166ed7d57d7010cae97417895256ab43a964876a45f9294651"
 
   url "https://updates.getcleanshot.com/v3/CleanShot-X-#{version}.dmg"
   name "CleanShot"
   desc "Screen capturing tool"
-  homepage "https://getcleanshot.com/"
+  homepage "https://cleanshot.com/"
 
   livecheck do
     url "https://cleanshot.com/changelog"
@@ -13,6 +13,7 @@ cask "cleanshot" do
   end
 
   auto_updates true
+  depends_on macos: :ventura
 
   app "CleanShot X.app"
 

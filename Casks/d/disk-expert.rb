@@ -1,6 +1,6 @@
 cask "disk-expert" do
-  version "6.0,541"
-  sha256 "3ebc062a942f2e7b703c2664b6491082b4cd407abfe325b9b55d7357819c3baf"
+  version "6.0.2,572"
+  sha256 "5fb32114f9be3a236e5b92c04baea57e272b7a64e66b5ebfacb24e2c36660b19"
 
   url "https://download.nektony.com/download/diskexpert/disk-space-analyzer.dmg?build=#{version.csv.second}"
   name "Disk Expert"
@@ -13,6 +13,7 @@ cask "disk-expert" do
   end
 
   auto_updates true
+  depends_on macos: :big_sur
 
   app "Disk Expert #{version.major}.app"
 

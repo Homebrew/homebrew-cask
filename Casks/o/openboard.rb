@@ -1,9 +1,8 @@
 cask "openboard" do
-  version "1.7.3"
-  sha256 "a380cc4b762929f14e71f580b5c6261c5179b770218d0500a64327dc5610e5de"
+  version "1.7.7"
+  sha256 "23a0c2eb78a21f7edf36649c6cd99890a819a757d4f5f8b0498e13dac0353a88"
 
-  url "https://github.com/OpenBoard-org/OpenBoard/releases/download/v#{version}/OpenBoard-#{version}.dmg",
-      verified: "github.com/OpenBoard-org/OpenBoard/"
+  url "https://github.com/OpenBoard-org/OpenBoard/releases/download/v#{version}/OpenBoard-#{version}.dmg"
   name "OpenBoard"
   desc "Interactive whiteboard application"
   homepage "https://openboard.ch/index.en.html"
@@ -12,6 +11,8 @@ cask "openboard" do
     url :url
     strategy :github_latest
   end
+
+  depends_on macos: :monterey
 
   app "OpenBoard.app"
 

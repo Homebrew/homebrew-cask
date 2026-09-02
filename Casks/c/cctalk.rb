@@ -1,5 +1,5 @@
 cask "cctalk" do
-  version "7.10.15-1390"
+  version "7.10.19-1407"
   sha256 :no_check
 
   url "https://www.cctalk.com/webapi/basic/v1.1/version/down?apptype=1&terminalType=8&versionType=103"
@@ -9,11 +9,13 @@ cask "cctalk" do
 
   livecheck do
     url :url
-    regex(/(\d+(?:\.\d+)+-*\d*)\.dmg/i)
+    regex(/CCtalk[._-]v?(\d+(?:[.-]\d+)+)\.dmg/i)
     strategy :header_match
   end
 
   disable! date: "2026-09-01", because: :fails_gatekeeper_check
+
+  depends_on :macos
 
   app "CCtalk.app"
 

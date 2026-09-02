@@ -1,13 +1,7 @@
 cask "devonthink" do
   on_monterey :or_older do
-    on_catalina :or_older do
-      version "3.9.6"
-      sha256 "e272af94a61619adaf729de336e1ef24465a5e6ff27ed6ae8cb11d28ca35638a"
-    end
-    on_big_sur :or_newer do
-      version "3.9.16"
-      sha256 "a2f29f479900cd7fc56bd574d87a64f22089ab9b5cbc8cdeb1cebf33b9220fae"
-    end
+    version "3.9.16"
+    sha256 "9ace25ae408d9413e5b0424eb560b2e3e50c2e485665490fb758efe23ee7c95e"
 
     url "https://download.devontechnologies.com/download/devonthink/#{version}/DEVONthink_#{version.major}.app.zip"
 
@@ -18,8 +12,8 @@ cask "devonthink" do
     app "DEVONthink #{version.major}.app"
   end
   on_ventura :or_newer do
-    version "4.1.1"
-    sha256 "a2f29f479900cd7fc56bd574d87a64f22089ab9b5cbc8cdeb1cebf33b9220fae"
+    version "4.4"
+    sha256 "9ace25ae408d9413e5b0424eb560b2e3e50c2e485665490fb758efe23ee7c95e"
 
     url "https://download.devontechnologies.com/download/devonthink/#{version}/DEVONthink.app.zip"
 
@@ -41,6 +35,7 @@ cask "devonthink" do
   homepage "https://www.devontechnologies.com/apps/devonthink"
 
   auto_updates true
+  depends_on :macos
 
   zap trash: [
     "~/Library/Application Scripts/com.devon-technologies.*",

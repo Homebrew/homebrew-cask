@@ -1,9 +1,8 @@
 cask "seadrive" do
-  version "3.0.17"
-  sha256 "41b35c7773dd163797b10fa49e01de7d1f61b1d4eabc1156f05990575d7a977d"
+  version "3.0.24"
+  sha256 "274117fd71077439b5a9d0388c0e72f816663106449eedb52b70615ec8d8c910"
 
-  url "https://download.seadrive.org/seadrive-#{version}.pkg",
-      verified: "download.seadrive.org/"
+  url "https://sos-ch-dk-2.exo.io/seafile-downloads/seadrive-#{version}.pkg"
   name "Seadrive"
   desc "Manual for Seafile server"
   homepage "https://www.seafile.com/en/home/"
@@ -13,7 +12,7 @@ cask "seadrive" do
     regex(%r{href=.*?/seadrive[._-]v?(\d+(?:\.\d+)+)\.pkg}i)
   end
 
-  depends_on macos: ">= :monterey"
+  depends_on macos: :monterey
 
   pkg "seadrive-#{version}.pkg"
 

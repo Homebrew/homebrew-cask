@@ -1,8 +1,8 @@
 cask "openvpn-connect" do
   arch arm: "arm64", intel: "x86_64"
 
-  version "3.8.1,5790"
-  sha256 "8dbf5f3cc82d8214fcdbdb1257cdb5dcae891d1ec1859d64b6e8aa7ee9d8a983"
+  version "3.8.2,6009"
+  sha256 "8d50036510859956d20d1f50e43171be53417431104c6befb1352ff5187c248a"
 
   url "https://swupdate.openvpn.net/downloads/connect/openvpn-connect-#{version.csv.first}.#{version.csv.second}_signed.dmg"
   name "OpenVPN Connect client"
@@ -19,6 +19,8 @@ cask "openvpn-connect" do
       "#{match[1]},#{match[2]}"
     end
   end
+
+  depends_on macos: :big_sur
 
   pkg "OpenVPN_Connect_#{version.csv.first.dots_to_underscores}(#{version.csv.second})_#{arch}_Installer_signed.pkg"
 

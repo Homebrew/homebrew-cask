@@ -1,12 +1,11 @@
 cask "nagstamon" do
   arch arm: "ARM", intel: "Intel"
 
-  version "3.16.2"
-  sha256 arm:   "fabb4728569ad3501444037624be7f08659ccf70447f4456b30079a41f0c55fb",
-         intel: "e2d6e672b56a4769bc1535d45523cea4eaad7641f6a639b0edebc14bcd7f19db"
+  version "3.18.2"
+  sha256 arm:   "c15cc9002635cc26e6ee496ab6b89ff3f453b9b9697f40a4b9bfa042a07772c7",
+         intel: "1ff751ed5b8801527f916a979a92e36228d4022499736ac6d5874a1d791c949b"
 
-  url "https://github.com/HenriWahl/Nagstamon/releases/download/v#{version}/Nagstamon.#{version}.#{arch}.dmg",
-      verified: "github.com/HenriWahl/Nagstamon/"
+  url "https://github.com/HenriWahl/Nagstamon/releases/download/v#{version}/Nagstamon-#{version}-#{arch}.dmg"
   name "Nagstamon"
   desc "Nagios status monitor"
   homepage "https://nagstamon.de/"
@@ -15,6 +14,10 @@ cask "nagstamon" do
     url :url
     strategy :github_latest
   end
+
+  disable! date: "2026-09-01", because: :fails_gatekeeper_check
+
+  depends_on macos: :big_sur
 
   app "Nagstamon.app"
 

@@ -9,10 +9,14 @@ cask "resilio-sync" do
 
   livecheck do
     url "https://syncapp.zendesk.com/api/v2/help_center/en-us/articles/31386579044755"
-    regex(/u003ev?(\d+(?:\.\d+)+)[\\ "<]/i)
+    regex(/>\s*v?(\d+(?:\.\d+)+)[ (<]/i)
+    strategy :json do |json, regex|
+      json.dig("article", "body")&.scan(regex)&.map { |match| match[0] }
+    end
   end
 
   auto_updates true
+  depends_on :macos
 
   app "Resilio Sync.app"
 

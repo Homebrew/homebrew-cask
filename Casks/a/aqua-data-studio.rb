@@ -1,9 +1,8 @@
 cask "aqua-data-studio" do
-  version "25.5.0"
-  sha256 "7247585e9063036f9e79f5430f590821f43f81e49a2724098bf4f6c82edcc06c"
+  version "26.0.0"
+  sha256 "56eb1f06f01008f5d307f522ed4327b4c174cbea3c34e15645300d32c577514c"
 
-  url "https://downloads.aquafold.com/v#{version}/osx/ads-osx-#{version}.tar.gz",
-      verified: "downloads.aquafold.com/"
+  url "https://downloads.aquafold.com/v#{version}/osx/ads-osx-#{version}.tar.gz"
   name "Aquafold Aqua Data Studio"
   desc "Database IDE with data management and visual analytics"
   homepage "https://aquadatastudio.com/"
@@ -12,6 +11,8 @@ cask "aqua-data-studio" do
     url "https://aquadatastudio.com/support-update/"
     regex(/>\s*Version\s?v?(\d+(?:\.\d+)+)/i)
   end
+
+  depends_on :macos
 
   app "Aqua Data Studio.app"
 

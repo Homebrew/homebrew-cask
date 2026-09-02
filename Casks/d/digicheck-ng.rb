@@ -12,6 +12,8 @@ cask "digicheck-ng" do
     regex(/DigiCheck\s*NG.*?v?\s*?(\d+(?:\.\d+)+)[<" ]/i)
   end
 
+  depends_on :macos
+
   pkg "DigicheckNG_#{version.no_dots}.pkg"
 
   uninstall quit:    [

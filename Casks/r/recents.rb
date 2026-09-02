@@ -12,7 +12,7 @@ cask "recents" do
     strategy :sparkle, &:short_version
   end
 
-  depends_on macos: ">= :ventura"
+  depends_on macos: :ventura
 
   app "Recents.app"
 

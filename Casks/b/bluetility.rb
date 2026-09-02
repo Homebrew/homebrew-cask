@@ -12,6 +12,8 @@ cask "bluetility" do
     strategy :github_latest
   end
 
+  depends_on :macos
+
   app "Bluetility.app"
 
   zap trash: [

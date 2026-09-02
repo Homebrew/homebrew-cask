@@ -2,8 +2,7 @@ cask "font-questrial" do
   version :latest
   sha256 :no_check
 
-  url "https://github.com/google/fonts/raw/main/ofl/questrial/Questrial-Regular.ttf",
-      verified: "github.com/google/fonts/"
+  url "https://github.com/google/fonts/raw/main/ofl/questrial/Questrial-Regular.ttf"
   name "Questrial"
   homepage "https://fonts.google.com/specimen/Questrial"
 

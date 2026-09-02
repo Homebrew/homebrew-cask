@@ -1,9 +1,8 @@
 cask "swift-publisher" do
-  version "5.7.4"
+  version "5.7.8"
   sha256 :no_check
 
-  url "https://belightsoft.s3.amazonaws.com/SwiftPublisher.dmg",
-      verified: "belightsoft.s3.amazonaws.com/"
+  url "https://belightsoft.s3.amazonaws.com/SwiftPublisher.dmg"
   name "Swift Publisher"
   desc "Page layout and desktop publishing application"
   homepage "https://www.swiftpublisher.com/"
@@ -14,6 +13,7 @@ cask "swift-publisher" do
   end
 
   auto_updates true
+  depends_on :macos
 
   app "Swift Publisher #{version.major}.app"
 

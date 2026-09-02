@@ -1,9 +1,8 @@
 cask "minecraft-server" do
-  version "1.21.10,95495a7f485eedd84ce928cef5e223b757d2f764"
-  sha256 "5bb64dc47379903e8f288bd6a4b276e889075c5c0f4c0b714e958d835c1874e7"
+  version "26.1.2,97ccd4c0ed3f81bbb7bfacddd1090b0c56f9bc51"
+  sha256 "cd47e7c38328f64768fd17af8fcd8b22496b40b63d4ffee81e71ae059fedcb42"
 
-  url "https://launcher.mojang.com/v#{version.major}/objects/#{version.csv.second}/server.jar",
-      verified: "launcher.mojang.com/"
+  url "https://piston-data.mojang.com/v1/objects/#{version.csv.second}/server.jar"
   name "Minecraft Server"
   desc "Run a Minecraft multiplayer server"
   homepage "https://www.minecraft.net/en-us/"
@@ -45,32 +44,26 @@ cask "minecraft-server" do
 
   container type: :naked
 
-  # shim script (https://github.com/Homebrew/homebrew-cask/issues/18809)
-  shimscript = "#{staged_path}/minecraft-server.wrapper.sh"
-  binary shimscript, target: "minecraft-server"
-
   config_dir = HOMEBREW_PREFIX.join("etc", "minecraft-server")
 
-  preflight do
-    FileUtils.mkdir_p config_dir
+  command_wrapper "minecraft-server", content: <<~EOS
+    #!/bin/sh
+    cd '#{config_dir}' && \
+      exec /usr/bin/java ${@:--Xms1024M -Xmx1024M} -jar '#{staged_path}/server.jar' nogui
+  EOS
 
-    File.write shimscript, <<~EOS
-      #!/bin/sh
-      cd '#{config_dir}' && \
-        exec /usr/bin/java ${@:--Xms1024M -Xmx1024M} -jar '#{staged_path}/server.jar' nogui
-    EOS
+  preflight_steps do
+    mkdir_p "{{HOMEBREW_PREFIX}}/etc/minecraft-server"
   end
 
   eula_file = config_dir.join("eula.txt")
 
-  postflight do
-    system_command shimscript
-    File.write(eula_file, File.read(eula_file).sub("eula=false", "eula=TRUE"))
+  postflight_steps do
+    run "minecraft-server.wrapper.sh", base: :staged_path
+    inreplace "{{HOMEBREW_PREFIX}}/etc/minecraft-server/eula.txt", "eula=false", "eula=TRUE", audit_result: false
   end
 
-  uninstall_preflight do
-    FileUtils.rm(eula_file) if eula_file.exist?
-  end
+  uninstall delete: eula_file
 
   zap trash: config_dir
 

@@ -1,12 +1,13 @@
 cask "free-ruler" do
-  version "2.0.8"
-  sha256 "697482a35fb13cb6f58678b443a57951180ad1046141f0e98d0fc8d1f1d67da6"
+  version "2.0.19"
+  sha256 "b261c6bb152fdef376844e88c3e2b32938077ca7cdd1ccc9d9f60b97d3294e0d"
 
-  url "https://github.com/pascalpp/FreeRuler/releases/download/v#{version}/free-ruler-#{version}.zip",
-      verified: "github.com/pascalpp/FreeRuler/"
+  url "https://github.com/pascalpp/FreeRuler/releases/download/v#{version}/free-ruler-#{version}.zip"
   name "Free Ruler"
   desc "Horizontal and vertical rulers"
   homepage "https://www.pascal.com/freeruler"
+
+  depends_on macos: :sonoma
 
   app "Free Ruler.app"
 

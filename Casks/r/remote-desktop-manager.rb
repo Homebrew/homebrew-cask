@@ -1,9 +1,8 @@
 cask "remote-desktop-manager" do
-  version "2025.3.6.9"
-  sha256 "80193a8dbf85aae7e19a5aae4d6b5750ecd81cb7bd14179dbf7474b6ccf86f3c"
+  version "2026.2.5.1"
+  sha256 "d3b9beae70bda2083adb644c577c0880be28b445a5a4d6cd5056491ccd1896c1"
 
-  url "https://cdn.devolutions.net/download/Mac/Devolutions.RemoteDesktopManager.Mac.#{version}.dmg",
-      verified: "cdn.devolutions.net/download/Mac/"
+  url "https://cdn.devolutions.net/download/Mac/Devolutions.RemoteDesktopManager.Mac.#{version}.dmg"
   name "Remote Desktop Manager"
   desc "Centralises all remote connections on a single platform"
   homepage "https://mac.remotedesktopmanager.com/"
@@ -14,9 +13,11 @@ cask "remote-desktop-manager" do
   end
 
   auto_updates true
-  depends_on macos: ">= :monterey"
+  depends_on macos: :monterey
 
   app "Remote Desktop Manager.app"
+
+  uninstall quit: "com.devolutions.remotedesktopmanager"
 
   zap trash: [
     "~/Library/Application Support/com.devolutions.remotedesktopmanager",
@@ -24,5 +25,6 @@ cask "remote-desktop-manager" do
     "~/Library/Caches/com.devolutions.remotedesktopmanager",
     "~/Library/Preferences/com.devolutions.remotedesktopmanager.plist",
     "~/Library/Saved Application State/com.devolutions.remotedesktopmanager.savedState",
+    "~/Library/WebKit/com.devolutions.remotedesktopmanager",
   ]
 end

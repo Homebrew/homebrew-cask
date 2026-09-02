@@ -1,12 +1,18 @@
 cask "darktable" do
   arch arm: "arm64", intel: "x86_64"
 
-  version "5.2.1"
-  sha256 arm:   "b7d45bb3d2550695e4eba4d260580561b51c18d612d5e2b2c9e67a432ae2516c",
-         intel: "5060d73c03b3c7f4ca69a77039e69653fd2310df8cb649d66fc89f4c45289b0c"
+  version "5.6.1"
+  sha256 arm:   "155c25a48e06023eeeda3640f6f4fc7848bc1ad8e7384ba1d7b63098986fbeda",
+         intel: "ab09e11d548a7028f7bacc2bc4549a272c4e8d385be0e38ecc9e7943914abe61"
 
-  url "https://github.com/darktable-org/darktable/releases/download/release-#{version.major_minor_patch}/darktable-#{version}-#{arch}.dmg",
-      verified: "github.com/darktable-org/darktable/"
+  on_arm do
+    depends_on macos: :sonoma
+  end
+  on_intel do
+    depends_on macos: :sequoia
+  end
+
+  url "https://github.com/darktable-org/darktable/releases/download/release-#{version.major_minor_patch}/darktable-#{version}-#{arch}.dmg"
   name "darktable"
   desc "Photography workflow application and raw developer"
   homepage "https://www.darktable.org/"
@@ -18,9 +24,11 @@ cask "darktable" do
 
   disable! date: "2026-09-01", because: :fails_gatekeeper_check
 
-  depends_on macos: ">= :ventura"
+  depends_on :macos
 
   app "darktable.app"
+
+  uninstall quit: "org.darktable"
 
   zap trash: [
     "~/.cache/darktable",

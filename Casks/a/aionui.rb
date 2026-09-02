@@ -1,28 +1,31 @@
 cask "aionui" do
   arch arm: "arm64", intel: "x64"
 
-  version "1.5.2"
-  sha256 arm:   "8e44af551605a30fc2e2fde911216cfb7dba413247e6b0a5b4dc455adb2d0e70",
-         intel: "5e18c28b13ffda8bf5fa20e6faa367ca0723d95ce074f8bb10670509f92c5327"
+  version "2.2.1"
+  sha256 arm:   "e2fe252c8bee966099413cdb449cc7694429ab9fb48e1e32df135e41d414b648",
+         intel: "a8ff4e0153677db84ebee888735d0059b75f88ed7b3e8f6110ce55871341cbf1"
 
-  url "https://github.com/iOfficeAI/AionUi/releases/download/v#{version}/AionUi-#{version}-mac-#{arch}.dmg"
-  name "AionUI"
-  desc "GUI for Gemini CLI"
-  homepage "https://github.com/iOfficeAI/AionUi"
+  url "https://static.aionui.com/releases/#{version}/AionUi-#{version}-mac-#{arch}.dmg"
+  name "AionUi"
+  desc "Unified GUI for command-line AI agents"
+  homepage "https://www.aionui.com/"
 
   livecheck do
-    url :url
-    regex(/^v?(\d+(?:\.\d+)+)$/i)
-    strategy :github_latest
+    url "https://static.aionui.com/releases/latest-mac.yml"
+    regex(/^version:\s*v?(\d+(?:\.\d+)+)/i)
   end
 
-  depends_on macos: ">= :big_sur"
+  auto_updates true
+  depends_on macos: :big_sur
 
-  app "AionUI.app"
+  app "AionUi.app"
 
   zap trash: [
-    "~/Library/Application Support/AionUI",
-    "~/Library/Preferences/com.ioffice.aionui.plist",
-    "~/Library/Saved Application State/com.ioffice.aionui.savedState",
+    "~/.aionui",
+    "~/Library/Application Support/AionUi",
+    "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.aionui.app.sfl*",
+    "~/Library/Logs/AionUi",
+    "~/Library/Preferences/com.aionui.app.plist",
+    "~/Library/Saved Application State/com.aionui.app.savedState",
   ]
 end

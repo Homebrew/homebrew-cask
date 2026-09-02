@@ -1,6 +1,6 @@
 cask "codeql" do
-  version "2.23.3"
-  sha256 "37d8e06c3fe21f0a61283c6e95458440cecfef681da539375a8fd2614668b338"
+  version "2.26.4"
+  sha256 "b65e8c65fc66ffca1976f73268ffe2cacaf91c4941efab22b0f2a189787bb899"
 
   url "https://github.com/github/codeql-cli-binaries/releases/download/v#{version}/codeql-osx64.zip"
   name "CodeQL"
@@ -11,6 +11,8 @@ cask "codeql" do
     url :url
     strategy :github_latest
   end
+
+  depends_on :macos
 
   binary "#{staged_path}/codeql/codeql"
 

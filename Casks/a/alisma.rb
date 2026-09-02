@@ -15,7 +15,7 @@ cask "alisma" do
     end
   end
 
-  depends_on macos: ">= :big_sur"
+  depends_on macos: :big_sur
 
   pkg "alisma#{version.major}/alismaInstaller.pkg"
 

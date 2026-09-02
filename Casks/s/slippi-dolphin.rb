@@ -1,9 +1,8 @@
 cask "slippi-dolphin" do
-  version "3.5.1"
-  sha256 "65900d7e742d68661351bd935026bd2fc30275a6c2e5e2c6370a3aa3dd9c0f58"
+  version "3.6.4"
+  sha256 "f9732bc93370f74dc4dd52194a5182018b4272b1dfbb4cb001a972b9b89ae82f"
 
-  url "https://github.com/project-slippi/Ishiiruka/releases/download/v#{version}/FM-Slippi-#{version}-Mac.dmg",
-      verified: "github.com/project-slippi/Ishiiruka/"
+  url "https://github.com/project-slippi/Ishiiruka/releases/download/v#{version}/FM-Slippi-#{version}-Mac.dmg"
   name "Slippi"
   desc "Fork of the Dolphin GameCube and Wii emulator with netplay support via Slippi"
   homepage "https://slippi.gg/"
@@ -12,6 +11,8 @@ cask "slippi-dolphin" do
     url :url
     strategy :github_latest
   end
+
+  depends_on :macos
 
   app "Slippi Dolphin.app"
 

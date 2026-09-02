@@ -1,38 +1,38 @@
 cask "alex313031-thorium" do
-  arch arm: "ARM", intel: "X64"
+  arch arm: "ARM64", intel: "x64"
 
-  version "M130.0.6723.174"
-  sha256 arm:   "ba1c45a52962c5f7d9b293757b1ca7456171e240927c30dcdaf7fd48d2dc8c04",
-         intel: "1c92f610b56bc893b4bb11d7513366b1f991e60918d8e5feba927b5f1da66cff"
+  version "M138.0.7204.303"
+  sha256  arm:   "01f77352f40445e5c39a838c6e48198a09b64c14b0ec423c83fd9b461e0d7069",
+          intel: "9a31c4d3fea1f6a49f2943f30d3400ef7cffbb8ab815567e83049b88652b8778"
 
-  url "https://github.com/Alex313031/Thorium-MacOS/releases/download/#{version}/Thorium_MacOS_#{arch}.dmg",
-      verified: "github.com/Alex313031/Thorium-MacOS/"
+  url "https://github.com/Alex313031/Thorium-MacOS/releases/download/#{version}/Thorium_MacOS_#{arch}.dmg"
   name "Thorium"
-  desc "Web browser"
+  desc "Chromium-based web browser"
   homepage "https://thorium.rocks/"
 
   livecheck do
     url :url
     regex(/^(M?\d+(?:\.\d+)+)$/i)
-    strategy :github_latest
+    strategy :github_releases do |json, regex|
+      json.map do |release|
+        next if release["draft"] || release["prerelease"]
+
+        match = release["tag_name"]&.match(regex)
+        # Ignore releases that have `Beta` in their names
+        next if match.blank? || release["name"]&.match?(/beta/i)
+
+        match[1]
+      end
+    end
   end
 
   disable! date: "2026-09-01", because: :fails_gatekeeper_check
 
-  conflicts_with cask: "thorium"
-  depends_on macos: ">= :big_sur"
+  depends_on macos: :big_sur
 
-  app "Thorium.app"
-  # shim script (https://github.com/Homebrew/homebrew-cask/issues/18809)
-  shimscript = "#{staged_path}/thorium.wrapper.sh"
-  binary shimscript, target: "thorium"
-
-  preflight do
-    File.write shimscript, <<~EOS
-      #!/bin/bash
-      exec '#{appdir}/Thorium.app/Contents/MacOS/Thorium' "$@"
-    EOS
-  end
+  app "Thorium.app", target: "Thorium Browser.app"
+  command_wrapper "thorium",
+                  executable: "#{appdir}/Thorium Browser.app/Contents/MacOS/Thorium"
 
   zap trash: [
     "~/Library/Application Support/Thorium",

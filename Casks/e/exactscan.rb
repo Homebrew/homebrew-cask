@@ -1,9 +1,8 @@
 cask "exactscan" do
-  version "25.1"
-  sha256 "1edac4216a879790e496ed862137ad4c19daf7a30e48cce826a77eab82dd676b"
+  version "26.6"
+  sha256 "9ab96214b13fb976558768799cc224326ce4f67aa441babd6b2bc3e7e8299818"
 
-  url "https://dl.exactcode.com/exactscan/ExactScan-#{version}.dmg",
-      verified: "dl.exactcode.com/"
+  url "https://dl.exactcode.com/exactscan/ExactScan-#{version}.dmg"
   name "ExactScan"
   desc "Document scanner"
   homepage "https://exactscan.com/index.html"
@@ -13,6 +12,8 @@ cask "exactscan" do
     regex(%r{href=.*?/ExactScan-(\d+(?:\.\d+)+)\.dmg}i)
   end
 
+  depends_on :macos
+
   app "ExactScan.app"
 
   zap trash: [
@@ -20,8 +21,4 @@ cask "exactscan" do
     "~/Library/HTTPStorages/de.exactcode.ExactScan",
     "~/Library/Preferences/de.exactcode.ExactScan.plist",
   ]
-
-  caveats do
-    requires_rosetta
-  end
 end

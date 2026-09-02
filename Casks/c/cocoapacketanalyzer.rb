@@ -1,6 +1,6 @@
 cask "cocoapacketanalyzer" do
-  version "2.1.4"
-  sha256 "38adc0282b74f6ccba16725a3222d37774765db460dd965bb9fcba92c539b169"
+  version "4.0.0"
+  sha256 "8077d2fe87c7d6850573092ca718b9430aae9d430992aee62e300fe8d54c7ab3"
 
   url "https://www.tastycocoabytes.com/_downloads/CPA_#{version.no_dots}.dmg"
   name "Cocoa Packet Analyzer"
@@ -11,6 +11,8 @@ cask "cocoapacketanalyzer" do
     url "https://www.tastycocoabytes.com/cpa/updates/appcast2.xml"
     strategy :sparkle, &:short_version
   end
+
+  depends_on macos: :tahoe
 
   app "CocoaPacketAnalyzer.app"
 

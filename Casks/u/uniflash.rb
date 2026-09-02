@@ -1,6 +1,6 @@
 cask "uniflash" do
-  version "9.3.0.5401"
-  sha256 "b9458857ac722391934c2660ffcf5dee15929e60b37130dc606bc003a2e98827"
+  version "9.6.0.5764"
+  sha256 "4b4d7c85c922823eaa2d84753d035579606bdbc1865158c4265a36fbcf85fade"
 
   url "https://dr-download.ti.com/software-development/software-programming-tool/MD-QeJBJLj8gq/#{version.major_minor_patch}/uniflash_sl.#{version}.dmg"
   name "TI UniFlash"
@@ -12,20 +12,14 @@ cask "uniflash" do
     regex(/href=.*?uniflash_sl\.(\d+(?:\.\d+)+)\.dmg/i)
   end
 
+  depends_on :macos
+
   installer script: {
     executable: "uniflash_sl.#{version}.app/Contents/MacOS/installbuilder.sh",
     args:       ["--mode", "unattended", "--prefix", "/Applications/TI/UniFlash"],
   }
-  # shim script (https://github.com/Homebrew/homebrew-cask/issues/18809)
-  shimscript = "#{staged_path}/dslite"
-  binary shimscript
-
-  preflight do
-    File.write shimscript, <<~EOS
-      #!/bin/sh
-      exec '/Applications/TI/UniFlash/dslite.sh' "$@"
-    EOS
-  end
+  command_wrapper "dslite",
+                  executable: "/Applications/TI/UniFlash/dslite.sh"
 
   uninstall script: {
     executable: "/Applications/TI/UniFlash/uninstall.app/Contents/MacOS/installbuilder.sh",

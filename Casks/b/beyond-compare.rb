@@ -1,6 +1,6 @@
 cask "beyond-compare" do
-  version "5.1.6.31527"
-  sha256 "77fe22a708f859e3b576bbb014a9895f131c76fcbd38cb3395c673ef01e69376"
+  version "5.2.5.32528"
+  sha256 "f913d05e082c785f35e9532facd93e5165c1d27547ef92c9e0c196cb85b3aba3"
 
   url "https://www.scootersoftware.com/files/BCompareOSX-#{version}.zip"
   name "Beyond Compare"
@@ -13,11 +13,8 @@ cask "beyond-compare" do
   end
 
   auto_updates true
-  conflicts_with cask: [
-    "beyond-compare@4",
-    "beyond-compare@beta",
-  ]
-  depends_on macos: ">= :big_sur"
+  conflicts_with cask: "beyond-compare@4"
+  depends_on macos: :big_sur
 
   app "Beyond Compare.app"
   binary "#{appdir}/Beyond Compare.app/Contents/MacOS/bcomp"

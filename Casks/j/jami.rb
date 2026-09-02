@@ -1,6 +1,6 @@
 cask "jami" do
-  version "2.37,2025110916"
-  sha256 "0ec336a9f3d94b6076c0d7784f95461691c74582cc122bd7cbf00eb48ad05450"
+  version "2.42,2026082009"
+  sha256 "8e9e1990ce3af57629a619991c91f08c0518273facbed5b3fcdd736ef11fa6e6"
 
   url "https://dl.jami.net/mac_osx/jami#{version.csv.second}.dmg"
   name "Jami"
@@ -14,7 +14,7 @@ cask "jami" do
   end
 
   auto_updates true
-  depends_on macos: ">= :monterey"
+  depends_on macos: :ventura
 
   app "Jami.app"
 

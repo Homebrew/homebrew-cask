@@ -7,6 +7,8 @@ cask "quickjson" do
   desc "Quick Look plugin to pretty-print JSON"
   homepage "https://github.com/johan/QuickJSON"
 
+  depends_on :macos
+
   qlplugin "QuickJSON.qlgenerator"
 
   # No zap stanza required

@@ -2,13 +2,14 @@ cask "eudic" do
   version :latest
   sha256 :no_check
 
-  url "https://static.frdic.com/pkg/eudicmac.dmg",
-      verified:   "static.frdic.com/",
+  url "https://static.frdic.com/pkg/eudicmac.dmg?version",
       user_agent: :fake
   name "Eudic"
   name "欧路词典"
   desc "English dictionary"
   homepage "https://www.eudic.net/v4/en/app/eudic"
+
+  depends_on :macos
 
   app "Eudic.app"
 

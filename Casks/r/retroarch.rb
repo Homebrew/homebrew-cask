@@ -1,9 +1,8 @@
 cask "retroarch" do
-  version "1.21.0"
+  version "1.22.2"
   sha256 :no_check # required as upstream package is often updated in place
 
-  url "https://buildbot.libretro.com/stable/#{version}/apple/osx/x86_64/RetroArch.dmg",
-      verified: "buildbot.libretro.com/stable/"
+  url "https://buildbot.libretro.com/stable/#{version}/apple/osx/x86_64/RetroArch.dmg"
   name "RetroArch"
   desc "Frontend for emulators, game engines and media players (OpenGL graphics API)"
   homepage "https://www.retroarch.com/"
@@ -14,11 +13,12 @@ cask "retroarch" do
   end
 
   conflicts_with cask: "retroarch-metal"
+  depends_on :macos
 
   app "RetroArch.app"
 
   zap trash: [
-    "~/Documents/RetroArch/",
+    "~/Documents/RetroArch",
     "~/Library/Application Support/RetroArch",
     "~/Library/Saved Application State/com.libretro.RetroArch.savedState",
   ]

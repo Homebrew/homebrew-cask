@@ -1,5 +1,5 @@
 cask "music-widget" do
-  version "1.28"
+  version "1.29.3"
   sha256 :no_check
 
   url "https://marioaguzman.github.io/musicwidget/updater/Music%20Widget.dmg"
@@ -13,7 +13,7 @@ cask "music-widget" do
   end
 
   auto_updates true
-  depends_on macos: ">= :monterey"
+  depends_on macos: :monterey
 
   app "Music Widget.app"
 

@@ -12,6 +12,10 @@ cask "rocks-n-diamonds" do
     regex(/href=.*?rocksndiamonds[._-]?v?(\d+(?:\.\d+)+)\.dmg/i)
   end
 
+  disable! date: "2026-09-01", because: :fails_gatekeeper_check
+
+  depends_on :macos
+
   app "Rocks'n'Diamonds.app"
 
   zap trash: [

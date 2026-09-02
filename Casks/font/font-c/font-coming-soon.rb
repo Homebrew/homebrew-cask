@@ -2,8 +2,7 @@ cask "font-coming-soon" do
   version :latest
   sha256 :no_check
 
-  url "https://github.com/google/fonts/raw/main/apache/comingsoon/ComingSoon-Regular.ttf",
-      verified: "github.com/google/fonts/"
+  url "https://github.com/google/fonts/raw/main/apache/comingsoon/ComingSoon-Regular.ttf"
   name "Coming Soon"
   homepage "https://fonts.google.com/specimen/Coming+Soon"
 

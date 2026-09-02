@@ -2,8 +2,7 @@ cask "get-backup-pro" do
   version "3.7.3"
   sha256 "248f6eae946f266318f687c02de7265089380b8e763701f8f0ff3f212829bdd6"
 
-  url "https://belightsoft.s3.amazonaws.com/updates/Get+Backup+Pro+#{version.major}.zip",
-      verified: "belightsoft.s3.amazonaws.com/updates/"
+  url "https://belightsoft.s3.amazonaws.com/updates/Get+Backup+Pro+#{version.major}.zip"
   name "Get Backup Pro #{version.major}"
   desc "Backup software with folder synchronisation"
   homepage "https://www.belightsoft.com/products/getbackup/"
@@ -14,6 +13,7 @@ cask "get-backup-pro" do
   end
 
   auto_updates true
+  depends_on :macos
 
   app "Get Backup Pro #{version.major}.app"
 

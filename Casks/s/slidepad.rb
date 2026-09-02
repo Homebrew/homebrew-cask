@@ -1,9 +1,8 @@
 cask "slidepad" do
-  version "1.5.9"
-  sha256 "b8f1d279c56db3eeeaf939c5dc819076cccbea24091e2b0cec43e01308b18d96"
+  version "1.6.2"
+  sha256 "6d7e7999bd505e67debb810be67bd88593916dc263d1bdc4992bb59c13041904"
 
-  url "https://f002.backblazeb2.com/file/Slidepad/Slidepad_#{version.dots_to_underscores}.zip",
-      verified: "f002.backblazeb2.com/file/Slidepad/"
+  url "https://f002.backblazeb2.com/file/Slidepad/Slidepad_#{version.dots_to_underscores}.zip"
   name "Slidepad"
   desc "Slide over browser"
   homepage "https://slidepad.app/"
@@ -16,7 +15,7 @@ cask "slidepad" do
   end
 
   auto_updates true
-  depends_on macos: ">= :big_sur"
+  depends_on macos: :big_sur
 
   app "Slidepad.app"
 

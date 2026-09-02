@@ -1,19 +1,21 @@
 cask "netlogo" do
   arch arm: "aarch64", intel: "x86_64"
 
-  version "7.0.2"
-  sha256 arm:   "3c14a641733bd7a17c1cb4273ec65bd6cf2986b02e623a38c9d9ba1eec575999",
-         intel: "4f9dd40700f8fe6d1a57d42eadc880ac8cb409b87606386888eedcd1ffde80af"
+  version "7.0.4"
+  sha256 arm:   "39c215b3f79e9fd66c4aac6f269c660763d111514c0ae37992d3c9d37d4b6b3c",
+         intel: "18dc290f038505994e134cc89520c2988856e730dc3c8f7ecf7d692ce90cab87"
 
-  url "https://ccl.northwestern.edu/netlogo/#{version}/NetLogo-#{version}-#{arch}.dmg"
+  url "https://downloads.netlogo.org/#{version}/NetLogo-#{version}-#{arch}.dmg"
   name "NetLogo"
   desc "Multi-agent programmable modelling environment"
-  homepage "https://ccl.northwestern.edu/netlogo/"
+  homepage "https://www.netlogo.org/"
 
   livecheck do
-    url "https://ccl.northwestern.edu/netlogo/oldversions.shtml"
-    regex(/NetLogo\s*(\d+(?:\.\d+)+)/i)
+    url "https://docs.netlogo.org/versions"
+    regex(/Version\s*(\d+(?:\.\d+)+)/i)
   end
+
+  depends_on :macos
 
   suite "NetLogo #{version}"
 

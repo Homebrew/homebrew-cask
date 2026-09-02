@@ -1,6 +1,6 @@
 cask "finbar" do
-  version "1.16.1"
-  sha256 "69e3ce775019d8e390622f23a968e1a4b2d0877ee4fe8a6bffaf02ba2793edea"
+  version "1.22"
+  sha256 "d5cad0638817288b363158d174b3158f6d6e64b94640fc0af08cb2bf2a687cbf"
 
   url "https://roeybiran.com/apps/finbar/Finbar%20#{version}.dmg"
   name "Finbar"
@@ -13,7 +13,7 @@ cask "finbar" do
   end
 
   auto_updates true
-  depends_on macos: ">= :ventura"
+  depends_on macos: :sonoma
 
   app "Finbar.app"
 

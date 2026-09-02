@@ -1,8 +1,8 @@
 cask "sidenotes" do
-  version "1.5.2"
-  sha256 "4f73f7eb16a85362cc6b9bf0e39936a6b12be9b4ffdd8bb96f8bea034331653e"
+  version "1.6.3"
+  sha256 "6b0fff7ff9a22701dd24bec14da178fa17465276a6c201e75d993ba19e77f4fe"
 
-  url "https://www.apptorium.com/public/products/sidenotes/releases/SideNotes-#{version}.zip"
+  url "https://www.apptorium.com/public/products/sidenotes/releases/SideNotes-#{version.chomp(".0")}.zip"
   name "SideNotes"
   desc "Note-taking application"
   homepage "https://www.apptorium.com/sidenotes"
@@ -13,7 +13,7 @@ cask "sidenotes" do
   end
 
   auto_updates true
-  depends_on macos: ">= :ventura"
+  depends_on macos: :ventura
 
   app "SideNotes.app"
 

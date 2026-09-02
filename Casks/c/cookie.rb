@@ -1,5 +1,5 @@
 cask "cookie" do
-  version "8.0"
+  version "8.6.1"
   sha256 :no_check
 
   url "https://sweetpproductions.com/products/cookie#{version.major}/Cookie.dmg"
@@ -13,7 +13,7 @@ cask "cookie" do
   end
 
   auto_updates true
-  depends_on macos: ">= :monterey"
+  depends_on macos: :monterey
 
   app "Cookie.app"
 

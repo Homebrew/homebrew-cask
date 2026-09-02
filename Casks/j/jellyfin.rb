@@ -1,9 +1,9 @@
 cask "jellyfin" do
   arch arm: "arm64", intel: "amd64"
 
-  version "10.11.2"
-  sha256 arm:   "4cc390a8ea0e11472172705e91354f1635443a8be70f4bd6a20316c519859064",
-         intel: "8e3082d574844f466b4fbf91979d9755dd12dc6fc637cc9864be7251cb605aa4"
+  version "10.11.11"
+  sha256 arm:   "f345914f10b988f56fd453b07128faa23dfcd561405216ffd04e32a47e9f6c9c",
+         intel: "ee8a5b843254f733ee4b315f2c038ea1a37e5ac1ce4c56fdfe66faa545229e3b"
 
   url "https://repo.jellyfin.org/files/server/macos/stable/v#{version}/#{arch}/jellyfin_#{version}-#{arch}.dmg"
   name "Jellyfin"
@@ -15,15 +15,15 @@ cask "jellyfin" do
     regex(/href=.*?jellyfin[._-]v?(\d+(?:[.-]\d+)+)-#{arch}\.dmg/i)
   end
 
-  depends_on macos: ">= :monterey"
+  depends_on macos: :monterey
 
   app "Jellyfin.app"
 
   zap trash: [
     "/Library/Logs/DiagnosticReports/jellyfin*.diag",
-    "~/.cache/jellyfin/",
-    "~/.config/jellyfin/",
-    "~/.local/share/jellyfin/",
+    "~/.cache/jellyfin",
+    "~/.config/jellyfin",
+    "~/.local/share/jellyfin",
     "~/Library/Application Support/jellyfin",
     "~/Library/Preferences/Jellyfin.Server.plist",
   ]

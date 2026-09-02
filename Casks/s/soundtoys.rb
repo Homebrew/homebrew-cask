@@ -1,9 +1,8 @@
 cask "soundtoys" do
-  version "5.5.3.18786"
-  sha256 "5cc60d0754f4e577b1661c796feb551e623e6b68892df19cbe5f92df4f261822"
+  version "5.5.5.19885"
+  sha256 "a2b89b886a5b3f8a5e51abe4ee61b43db62cb45c739abd46aa81fa09d6fc878a"
 
-  url "https://storage.googleapis.com/soundtoys-download/versions/version_#{version.dots_to_underscores}/SoundtoysV#{version.major_minor.no_dots}Bundle_#{version}.dmg",
-      verified: "storage.googleapis.com/soundtoys-download/versions/"
+  url "https://storage.googleapis.com/soundtoys-download/versions/version_#{version.dots_to_underscores}/SoundtoysV#{version.major_minor.no_dots}Bundle_#{version}.dmg"
   name "Soundtoys"
   desc "Audio Effects Plugins"
   homepage "https://www.soundtoys.com/product/soundtoys/"
@@ -18,6 +17,8 @@ cask "soundtoys" do
       end
     end
   end
+
+  depends_on :macos
 
   pkg "Install Soundtoys #{version.major_minor} Bundle.pkg"
 

@@ -1,6 +1,6 @@
 cask "opgg" do
-  version "2.0.8"
-  sha256 "0dc3ca7255c8e677b45e4cfbb1eee00b4a90b13bbc33890c1e5650f0aa4e53c0"
+  version "2.5.1"
+  sha256 "031bbdc3ae139ea7686807d561075d5daa5e7db35c51f3bb076a132ace95f6a0"
 
   url "https://desktop-patch.op.gg/update/general/OP.GG-#{version}-universal.dmg"
   name "OP.GG Desktop"
@@ -13,7 +13,7 @@ cask "opgg" do
   end
 
   auto_updates true
-  depends_on macos: ">= :big_sur"
+  depends_on macos: :big_sur
 
   app "OP.GG.app"
 

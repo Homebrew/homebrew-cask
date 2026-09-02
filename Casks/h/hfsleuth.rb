@@ -11,6 +11,10 @@ cask "hfsleuth" do
     skip "unversioned command-line application"
   end
 
+  disable! date: "2026-09-01", because: :fails_gatekeeper_check
+
+  depends_on :macos
+
   binary "hfsleuth.universal", target: "hfsleuth"
   manpage "hfsleuth.1"
 end

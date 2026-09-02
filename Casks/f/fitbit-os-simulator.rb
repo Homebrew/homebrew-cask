@@ -12,6 +12,8 @@ cask "fitbit-os-simulator" do
     strategy :electron_builder
   end
 
+  depends_on :macos
+
   app "Fitbit OS Simulator.app"
 
   caveats do

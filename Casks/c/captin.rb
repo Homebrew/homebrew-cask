@@ -1,17 +1,14 @@
 cask "captin" do
-  version "1.3.1"
+  version "2.0.1"
   sha256 :no_check
 
-  url "https://raw.githubusercontent.com/cool8jay/public/master/captin/Captin.zip",
-      verified: "raw.githubusercontent.com/cool8jay/public/master/captin/"
+  url "https://raw.githubusercontent.com/cool8jay/public/master/captin/Captin.zip"
   name "Captin"
   desc "Tool to show caps lock status"
-  homepage "https://captin.mystrikingly.com/"
+  # https://captin.mystrikingly.com/ got redirected to some phishing site
+  homepage "https://github.com/cool8jay/public"
 
-  livecheck do
-    url "https://raw.githubusercontent.com/cool8jay/public/master/captin/appcast.xml"
-    strategy :sparkle, &:short_version
-  end
+  depends_on macos: :big_sur
 
   app "Captin.app"
 

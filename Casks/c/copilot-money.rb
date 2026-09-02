@@ -1,9 +1,8 @@
 cask "copilot-money" do
-  version "6.0.7,300-2e31325d"
-  sha256 "2e31325db410b2b20bcf1effe484f890e4fb18fad7043ecb32d327b1f26977c0"
+  version "6.4.4,332-80a7fa78"
+  sha256 "80a7fa78efbb42bcd2db13c040c051146d466dc46df7398712ef2cd914486fe2"
 
-  url "https://storage.googleapis.com/copilot-mac-releases/images/Copilot-#{version.csv.first}-#{version.csv.second}.dmg",
-      verified: "storage.googleapis.com/copilot-mac-releases/"
+  url "https://storage.googleapis.com/copilot-mac-releases/images/Copilot-#{version.csv.first}-#{version.csv.second}.dmg"
   name "Copilot"
   desc "Track and budget money"
   homepage "https://copilot.money/"
@@ -17,7 +16,7 @@ cask "copilot-money" do
   end
 
   auto_updates true
-  depends_on macos: ">= :monterey"
+  depends_on macos: :monterey
 
   app "Copilot.app"
 

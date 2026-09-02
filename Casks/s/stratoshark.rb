@@ -1,11 +1,10 @@
 cask "stratoshark" do
   arch arm: "arm64", intel: "x86-64"
 
-  version "0.9.3"
-  sha256 "4a1080d20edb8ff06a44886e97e7854811ca09b5ec112b15f8dbbf6a497cefa0"
+  version "0.10.2"
+  sha256 "b77bdb3341c7c454ff907fd65aea9f40bc8eed9797b5aac00f4c0502c0beda1a"
 
-  url "https://www.wireshark.org/download/osx/all-versions/Stratoshark%20#{version}.dmg",
-      verified: "wireshark.org/download/osx/all-versions/"
+  url "https://www.wireshark.org/download/osx/all-versions/Stratoshark%20#{version}.dmg"
   name "Stratoshark"
   desc "System calls and log messages analyzer"
   homepage "https://stratoshark.org/"
@@ -16,7 +15,7 @@ cask "stratoshark" do
   end
 
   auto_updates true
-  depends_on macos: ">= :monterey"
+  depends_on macos: :ventura
 
   app "Stratoshark.app"
   binary "#{appdir}/Stratoshark.app/Contents/MacOS/extcap/falcodump"

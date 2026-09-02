@@ -7,19 +7,17 @@ cask "pronotes" do
   desc "Apple Notes extension"
   homepage "https://www.pronotes.app/"
 
-  # The HTTP response for the appcast contains a `Content-Encoding: aws-chunked`
-  # header and this causes curl to return an "Unrecognized content encoding
-  # type" error when the `--compressed` option is used. livecheck uses
-  # `--compressed` when fetching content, so this check will predictably fail
-  # until we can selectively disable compression in a `livecheck` block.
+  # This file is served with a `Content-Encoding: aws-chunked` header when
+  # compression is requested but that causes curl to error because it doesn't
+  # understand what decompression to apply.
   livecheck do
-    # url "https://assets.pronotes.app/downloads/appcast.xml"
-    # strategy :sparkle, &:short_version
-    skip "curl will only return the appcast content with compression disabled"
+    url "https://assets.pronotes.app/downloads/appcast.xml",
+        compressed: false
+    strategy :sparkle, &:short_version
   end
 
   auto_updates true
-  depends_on macos: ">= :ventura"
+  depends_on macos: :sonoma
 
   app "ProNotes.app"
 

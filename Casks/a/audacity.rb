@@ -1,12 +1,11 @@
 cask "audacity" do
   arch arm: "arm64", intel: "x86_64"
 
-  version "3.7.5"
-  sha256 arm:   "20beb5515153a0df8cb02c270a39a90efbfaaa5f2d21fe1db06c7b0d987ea653",
-         intel: "d9ba4c5b61030151953bfd0c0611fbb340208d3a3f149a9a6c297155e1f57289"
+  version "3.7.9"
+  sha256 arm:   "fafeb7fa963d3e2ba05ee7aba5290c966362ac5f5feca86eb8b1f61c7819d499",
+         intel: "142f3900bea5d49a73e66cce06e156b8e5387643e1b718806e85286753d6294f"
 
-  url "https://github.com/audacity/audacity/releases/download/Audacity-#{version}/audacity-macOS-#{version}-#{arch}.dmg",
-      verified: "github.com/audacity/audacity/"
+  url "https://github.com/audacity/audacity/releases/download/Audacity-#{version}/audacity-macOS-#{version}-#{arch}.dmg"
   name "Audacity"
   desc "Multi-track audio editor and recorder"
   homepage "https://www.audacityteam.org/"
@@ -16,7 +15,11 @@ cask "audacity" do
     regex(/^Audacity[._-]v?(\d+(?:\.\d+)+)$/i)
   end
 
+  depends_on :macos
+
   app "Audacity.app"
+
+  uninstall quit: "org.audacityteam.audacity"
 
   zap trash: [
     "~/Library/Application Support/audacity",

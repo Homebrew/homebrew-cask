@@ -22,6 +22,8 @@ cask "toshiba-color-mfp" do
     end
   end
 
+  depends_on :macos
+
   pkg "TOSHIBA ColorMFP.pkg"
 
   uninstall pkgutil: "com.toshiba.pde.x7.colormfp",

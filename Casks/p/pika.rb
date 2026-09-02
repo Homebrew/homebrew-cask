@@ -1,9 +1,8 @@
 cask "pika" do
-  version "1.1.0"
-  sha256 "be04a0af8a7b8a4ae0cfbae5b91120201953e69b7b6741ab2a732c9ad3bcd459"
+  version "1.9.0"
+  sha256 "082ca16bdf7f4bf91f41c1d855cbaf7911c3a7c9f076bbe3f663af2f543de222"
 
-  url "https://github.com/superhighfives/pika/releases/download/#{version}/Pika-#{version}.dmg",
-      verified: "github.com/superhighfives/pika/"
+  url "https://github.com/superhighfives/pika/releases/download/#{version}/Pika-#{version}.dmg"
   name "Pika"
   desc "Colour picker for colours onscreen"
   homepage "https://superhighfives.com/pika"
@@ -14,9 +13,11 @@ cask "pika" do
   end
 
   auto_updates true
-  depends_on macos: ">= :sonoma"
+  depends_on macos: :sonoma
 
   app "Pika.app"
+
+  uninstall quit: "com.superhighfives.Pika"
 
   zap trash: [
     "~/Library/Application Scripts/com.superhighfives.Pika-LaunchAtLoginHelper",

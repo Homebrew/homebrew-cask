@@ -1,6 +1,6 @@
 cask "send-anywhere" do
-  version "24.4.1,1758092363"
-  sha256 "696d5f93b942faa8f3f52ba537d51d1fbddb7041fc99cd24b3181049e21e61c8"
+  version "24.6.1,1783999839"
+  sha256 "d8a490fb48d2edcb91c9783f95648f2063262403a2a293b28617b068b8d08807"
 
   url "https://update.send-anywhere.com/osx_downloads/SendAnywhere_#{version.csv.second}.dmg"
   name "Send Anywhere"
@@ -20,6 +20,8 @@ cask "send-anywhere" do
     end
   end
 
+  depends_on :macos
+
   app "Send Anywhere.app"
 
   zap trash: [
@@ -27,8 +29,4 @@ cask "send-anywhere" do
     "~/Library/Logs/Send Anywhere",
     "~/Library/Preferences/com.estmob.osx.sendanywhere.plist",
   ]
-
-  caveats do
-    requires_rosetta
-  end
 end

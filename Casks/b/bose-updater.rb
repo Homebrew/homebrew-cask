@@ -1,6 +1,6 @@
 cask "bose-updater" do
-  version "7.1.13.5399"
-  sha256 "134c700d5a32f1cc1f50ca8c8553c917b74258e075fb1be600db9d72b5e3c32f"
+  version "7.1.13.5404"
+  sha256 "9281944be4a50bc383a691fd630a32da9b3b7aaf0b766f6d590a8a6eccaae9f8"
 
   url "https://downloads.bose.com/ced/boseupdater/mac/BoseUpdater_#{version}.dmg"
   name "Bose Device Updater"
@@ -13,6 +13,8 @@ cask "bose-updater" do
       json["MUV"]
     end
   end
+
+  depends_on :macos
 
   app "Bose Updater.app"
 

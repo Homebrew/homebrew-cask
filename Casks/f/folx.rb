@@ -1,9 +1,8 @@
 cask "folx" do
-  version "5.31"
+  version "5.34"
   sha256 :no_check
 
-  url "https://cdn.electronic.us/products/folx/mac/download/downloader_mac.dmg",
-      verified: "cdn.electronic.us/products/folx/"
+  url "https://cdn.electronic.us/products/folx/mac/download/downloader_mac.dmg"
   name "Folx"
   desc "Download manager with a torrent client"
   homepage "https://mac.eltima.com/download-manager.html"
@@ -14,6 +13,7 @@ cask "folx" do
   end
 
   auto_updates true
+  depends_on :macos
 
   app "Folx.app"
 
@@ -33,8 +33,4 @@ cask "folx" do
     "~/Library/Preferences/com.eltima.FolxAgent.plist",
     "~/Library/Saved Application State/com.eltima.Folx3.savedState",
   ]
-
-  caveats do
-    requires_rosetta
-  end
 end

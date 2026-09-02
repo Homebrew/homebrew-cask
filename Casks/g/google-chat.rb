@@ -6,10 +6,9 @@ cask "google-chat" do
   name "Chat"
   homepage "https://gsuite.google.com/products/chat/"
 
-  livecheck do
-    url "https://dl.google.com/chat/latest/InstallHangoutsChat.dmg"
-    strategy :header_match
-  end
+  disable! date: "2026-01-23", because: :discontinued
+
+  depends_on :macos
 
   app "Chat.app"
 

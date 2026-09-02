@@ -1,18 +1,21 @@
 cask "pokerth" do
-  version "1.1.2"
-  sha256 "bce46072dd13ebfa6253a49aca92d9ca28c28f77cb63831d5ed67b7b167ef7a3"
+  version "2.1.7"
+  sha256 "12dd48e42eb6f629604bb519a79079282d74302de044283e97a7e1dea0954193"
 
-  url "https://downloads.sourceforge.net/pokerth/PokerTH_#{version}.dmg",
-      verified: "downloads.sourceforge.net/pokerth/"
+  url "https://downloads.sourceforge.net/pokerth/PokerTH-#{version}-Combined.dmg"
   name "PokerTH"
   desc "Free Texas hold'em poker"
   homepage "https://www.pokerth.net/"
 
+  livecheck do
+    url "https://sourceforge.net/projects/pokerth/rss?path=/pokerth"
+  end
+
   disable! date: "2026-09-01", because: :fails_gatekeeper_check
 
-  app "pokerth.app"
+  depends_on macos: :monterey
 
-  caveats do
-    requires_rosetta
-  end
+  app "PokerTH.app"
+
+  zap trash: "~/.pokerth"
 end

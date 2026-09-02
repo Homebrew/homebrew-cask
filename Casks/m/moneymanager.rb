@@ -1,6 +1,6 @@
 cask "moneymanager" do
-  version "1.8.15"
-  sha256 "f658a86aed05b1ac3fd008527c6e6bfec557b3ffc745011fd04096291aebeab4"
+  version "1.8.19"
+  sha256 "d445c7cb2c51baf07b38363411d3ed86894898acdecc90473306dd732624ed79"
 
   url "https://download.realbyteapps.com/MoneyManager-#{version}.dmg"
   name "MoneyManager"
@@ -13,6 +13,7 @@ cask "moneymanager" do
   end
 
   auto_updates true
+  depends_on :macos
 
   app "MoneyManager.app"
 
@@ -26,8 +27,4 @@ cask "moneymanager" do
     "~/Library/Preferences/com.realbyteapps.moneymanagerpc.plist",
     "~/Library/Saved Application State/com.realbyteapps.moneymanagerpc.savedState",
   ]
-
-  caveats do
-    requires_rosetta
-  end
 end

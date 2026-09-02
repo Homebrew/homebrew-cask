@@ -1,6 +1,6 @@
 cask "manico" do
-  version "3.10,512"
-  sha256 "3b8de36fa74d62b89ef7954af761c94a3a1e94ae2ad4a14ceb99866efa9f03fd"
+  version "3.14,543"
+  sha256 "5b8e3bc05c2e3e3fcf202af07f39daff8c135ba9055162af08b013a62479a36d"
 
   url "https://manico.im/api/release_manager/downloads/im.manico.Manico/#{version.csv.second}.zip"
   name "Manico"
@@ -13,7 +13,7 @@ cask "manico" do
   end
 
   auto_updates true
-  depends_on macos: ">= :ventura"
+  depends_on macos: :ventura
 
   app "Manico.app"
 

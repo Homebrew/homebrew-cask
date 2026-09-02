@@ -1,5 +1,5 @@
 cask "offset-explorer" do
-  version "3.0.3"
+  version "4.0.4"
   sha256 :no_check
 
   url "https://www.kafkatool.com/download#{version.major}/offsetexplorer.dmg"
@@ -12,6 +12,8 @@ cask "offset-explorer" do
     url "https://www.kafkatool.com/download.html"
     regex(/Offset\s*Explorer\s*v?(\d+(?:\.\d+)+)/i)
   end
+
+  depends_on :macos
 
   app "Offset Explorer #{version.major}.app"
 

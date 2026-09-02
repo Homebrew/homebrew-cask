@@ -1,9 +1,9 @@
 cask "pdf-over" do
   arch arm: "aarch64", intel: "x86_64"
 
-  version "4.4.6.1,2025,09"
-  sha256 arm:   "0e3d3faee6fdabcd1ea2e863eb66dd247f7a7d952497f1bd0c746cf5b78f35ec",
-         intel: "6c1f2424ed851343dd9a7c336f84731faac503b14ab6203dd66fa41a1bb027e7"
+  version "4.4.9,2026,08"
+  sha256 arm:   "80b46027a64c36547de58a65ea6644ebe9f46daf531c9cbf2ceea59551c3f299",
+         intel: "a375486dab901ca3881c63d323a1b3a5ebfefb1da59cce5bbe6b85e7b2da724a"
 
   url "https://technology.a-sit.at/wp-content/uploads/#{version.csv.second}/#{version.csv.third}/PDF-Over-#{version.csv.first}-#{arch}.dmg"
   name "PDF-Over"
@@ -17,6 +17,8 @@ cask "pdf-over" do
       page.scan(regex).map { |match| "#{match[2]},#{match[0]},#{match[1]}" }
     end
   end
+
+  depends_on macos: :big_sur
 
   app "PDF-Over.app"
 

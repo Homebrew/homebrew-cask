@@ -1,16 +1,17 @@
 cask "openrct2" do
   # NOTE: "2" is not a version number, but an intrinsic part of the product name
 
-  version "0.4.28"
-  sha256 "465349824751bf2e6a5c16985cc974e21ebac55e2ad06e36c851799ffecb9f17"
+  version "0.5.4"
+  sha256 "f52fec44e34d3d0094b94f1ff1d5d90f220f9a8ce32c99b2723fb513d2fe1e14"
 
-  url "https://github.com/OpenRCT2/OpenRCT2/releases/download/v#{version}/OpenRCT2-v#{version}-macos-universal.zip",
-      verified: "github.com/OpenRCT2/OpenRCT2/"
+  url "https://github.com/OpenRCT2/OpenRCT2/releases/download/v#{version}/OpenRCT2-v#{version}-macos-universal.zip"
   name "OpenRCT2"
   desc "Open-source re-implementation of RollerCoaster Tycoon 2"
   homepage "https://openrct2.io/"
 
   disable! date: "2026-09-01", because: :fails_gatekeeper_check
+
+  depends_on :macos
 
   app "OpenRCT2.app"
 

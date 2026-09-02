@@ -1,6 +1,6 @@
 cask "freefilesync" do
-  version "14.5"
-  sha256 "99b531404a083b25bf323750c5e376fca9aae7af491a2872e3b11d3789f5b273"
+  version "14.11"
+  sha256 "bd6b9cef8d5b92730a8908f85458cbc6a7f824ffde3d479b016935359668b065"
 
   url "https://freefilesync.org/download/FreeFileSync_#{version}_macOS.zip"
   name "FreeFileSync"
@@ -11,6 +11,8 @@ cask "freefilesync" do
     url "https://freefilesync.org/download.php"
     regex(/href=.*?FreeFileSync[._-]v?(\d+(?:\.\d+)+)(?:[._-]macOS)?\.zip/i)
   end
+
+  depends_on :macos
 
   pkg "FreeFileSync_#{version}.pkg"
 

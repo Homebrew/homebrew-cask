@@ -1,5 +1,5 @@
 cask "karafun" do
-  version "2.12.1"
+  version "2.17.2"
   sha256 :no_check
 
   url "https://www.karafun.com/download/mac.html"
@@ -12,10 +12,8 @@ cask "karafun" do
     strategy :sparkle, &:short_version
   end
 
-  disable! date: "2026-09-01", because: :fails_gatekeeper_check
-
   auto_updates true
-  depends_on macos: ">= :sonoma"
+  depends_on macos: :sonoma
 
   app "KaraFun.app"
 

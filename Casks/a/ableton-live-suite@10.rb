@@ -13,6 +13,7 @@ cask "ableton-live-suite@10" do
   end
 
   auto_updates true
+  depends_on :macos
 
   app "Ableton Live #{version.major} Suite.app"
 

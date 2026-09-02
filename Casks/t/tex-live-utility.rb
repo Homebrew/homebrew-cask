@@ -1,6 +1,6 @@
 cask "tex-live-utility" do
-  version "1.54"
-  sha256 "983178326b457b77324151c304269ecaf7ae93aec62e8509c0badf52c718995e"
+  version "1.57"
+  sha256 "e738c49250a1b62568bdf9d8333e6cfbd57b08185659073f2ab7a6103881dce4"
 
   url "https://github.com/amaxwell/tlutility/releases/download/#{version}/TeX.Live.Utility.app-#{version}.zip"
   name "TeX Live Utility"
@@ -13,6 +13,7 @@ cask "tex-live-utility" do
   end
 
   auto_updates true
+  depends_on :macos
 
   app "TeX Live Utility.app"
 

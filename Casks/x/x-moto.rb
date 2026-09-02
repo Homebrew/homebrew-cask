@@ -20,13 +20,12 @@ cask "x-moto" do
     end
   end
 
-  url "https://github.com/xmoto/xmoto/releases/download/v#{version}/xmoto-#{version}#{arch}-macos.dmg",
-      verified: "github.com/xmoto/xmoto/"
+  url "https://github.com/xmoto/xmoto/releases/download/v#{version}/xmoto-#{version}#{arch}-macos.dmg"
   name "X-Moto"
   desc "2D motocross platform game"
   homepage "https://xmoto.tuxfamily.org/"
 
-  # Not every release suppports both architectures, so we need to check the
+  # Not every release supports both architectures, so we need to check the
   # release artifacts to find the latest version for the current architecture.
   livecheck do
     url :url
@@ -45,7 +44,9 @@ cask "x-moto" do
     end
   end
 
-  depends_on macos: ">= :big_sur"
+  disable! date: "2026-09-01", because: :fails_gatekeeper_check
+
+  depends_on macos: :big_sur
 
   app "X-Moto.app"
 

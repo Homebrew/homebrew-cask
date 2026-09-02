@@ -21,6 +21,8 @@ cask "attachecase" do
     end
   end
 
+  depends_on :macos
+
   app "AttacheCase.app"
 
   zap trash: [

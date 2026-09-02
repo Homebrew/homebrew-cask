@@ -12,6 +12,8 @@ cask "nestopia" do
     regex(/>\s*?Nestopia\s+?v?(\d+(?:\.\d+)+)\s*?</i)
   end
 
+  depends_on :macos
+
   app "Nestopia v#{version}/Nestopia.app"
 
   zap trash: [

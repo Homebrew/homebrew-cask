@@ -1,24 +1,26 @@
 cask "zipic" do
-  version "1.8.2"
-  sha256 "20b5a9a095ef7e6048eaabe4c1d53dc2a31a4be158b87bbc2c20680b5db42698"
+  version "1.10.0"
+  sha256 "7a9e1c3a7fcc693e85b7a0f4ac184e829f8138d711fc99dde0857c74784bc1ed"
 
-  url "https://zipic.5km.tech/Zipic%20#{version}.dmg"
+  url "https://releases.5km.tech/zipic/Zipic%20#{version}.dmg"
   name "Zipic"
   desc "Image compression tool"
-  homepage "https://zipic.5km.tech/"
+  homepage "https://zipic.app/"
 
   livecheck do
-    url "https://zipic.5km.tech/appcast.xml"
+    url "https://releases.5km.tech/zipic/appcast.xml"
     strategy :sparkle, &:short_version
   end
 
   auto_updates true
-  depends_on macos: ">= :ventura"
+  depends_on macos: :ventura
 
   app "Zipic.app"
 
   zap trash: [
+    "~/Library/Application Support/zipic",
     "~/Library/Preferences/studio.5km.zipic.plist",
     "~/Library/Saved Application State/studio.5km.zipic.savedState",
+    "~/Library/zipic",
   ]
 end

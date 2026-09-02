@@ -18,6 +18,7 @@ cask "little-snitch@4" do
     "little-snitch@5",
     "little-snitch@nightly",
   ]
+  depends_on :macos
   container type: :naked
 
   installer manual: "LittleSnitch-#{version}.dmg"

@@ -14,9 +14,10 @@ cask "mmhmm-studio" do
   homepage "https://www.mmhmm.app/product"
 
   deprecate! date: "2025-05-26", because: :discontinued
+  disable! date: "2026-05-27", because: :discontinued
 
   auto_updates true
-  depends_on macos: ">= :big_sur"
+  depends_on macos: :big_sur
 
   app "mmhmm Studio.app"
 

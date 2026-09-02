@@ -13,6 +13,7 @@ cask "ua-midi-control" do
   end
 
   auto_updates true
+  depends_on :macos
 
   app "UA Midi Control.app"
 

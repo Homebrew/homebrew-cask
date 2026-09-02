@@ -1,12 +1,11 @@
 cask "nucleo" do
   arch arm: "-silicon"
 
-  version "4.1.8"
-  sha256 arm:   "90c61c386935dc271fe8c9cf73437f43f9a835c1e71d433a6b94f3301d04bc9f",
-         intel: "1f0599a2ad63808a7a93971929909f56f1ea3a0e1f57e844a6386283a08cf697"
+  version "4.2.0"
+  sha256 arm:   "47bb642f3d0491326ae71096be3a5f97f5c3c997bdd2017669a1109bd90c10fd",
+         intel: "d0cc44fc77642cd37fa0236b30a5d5f9404259db76ef2aa48ab916f80dc41a2f"
 
-  url "https://nucleo-app-releases.s3.amazonaws.com/mac#{arch}/Nucleo_#{version}.zip",
-      verified: "nucleo-app-releases.s3.amazonaws.com/"
+  url "https://downloads.nucleoapp.com/mac#{arch}/Nucleo_#{version}.zip"
   name "Nucleo"
   desc "Icon manager and library"
   homepage "https://nucleoapp.com/"
@@ -15,6 +14,8 @@ cask "nucleo" do
     url "https://nucleoapp.com/updates"
     regex(/href=.*?Nucleo[._-]v?(\d+(?:\.\d+)+)\.zip/i)
   end
+
+  depends_on :macos
 
   app "Nucleo.app"
 

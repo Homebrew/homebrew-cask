@@ -1,9 +1,8 @@
 cask "veracrypt" do
-  version "1.26.24"
-  sha256 "b052052519179ac5ab1ca73df9b087adcd06b95e9b872866e279a68db0745b21"
+  version "1.26.29"
+  sha256 "a316c2dcb7f42eb3b0fcccbd305ae1c2abc46df6d79e9e5bf0544719d7774ed4"
 
-  url "https://launchpad.net/veracrypt/trunk/#{version}/+download/VeraCrypt_#{version}.dmg",
-      verified: "launchpad.net/veracrypt/trunk/"
+  url "https://launchpad.net/veracrypt/trunk/#{version}/+download/VeraCrypt_#{version}.dmg"
   name "VeraCrypt"
   desc "Disk encryption software focusing on security based on TrueCrypt"
   homepage "https://veracrypt.io/"
@@ -14,6 +13,7 @@ cask "veracrypt" do
   end
 
   conflicts_with cask: "veracrypt-fuse-t"
+  depends_on :macos
   depends_on cask: "macfuse"
 
   pkg "VeraCrypt_Installer.pkg"

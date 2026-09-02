@@ -1,9 +1,11 @@
 cask "dashcam-viewer" do
-  version "4.0.7"
-  sha256 "ba4bc6367b4394a8ba5da113ae6e4f4cb551a2f47a9f7ceaad3a33873c313eaf"
+  arch arm: "_AppleCPU"
 
-  url "https://filedn.com/l2s8TAtm4VASBX72ds0zYD8/dcv/Dashcam_Viewer_v#{version}.dmg",
-      verified: "filedn.com/l2s8TAtm4VASBX72ds0zYD8/dcv/"
+  version "4.0.8"
+  sha256 arm:   "4eb8ecd1f4f57700b94232025d38a6cbb978ad05cb99a3a0e3edff3b2d02a7a1",
+         intel: "a0b9d103030178ffce30c3946f317b48fa8f970883887466b933080cd0ab63cb"
+
+  url "https://filedn.com/l2s8TAtm4VASBX72ds0zYD8/dcv/Dashcam_Viewer_v#{version}#{arch}.dmg"
   name "Dashcam Viewer"
   name "Dashcam Viewer by Earthshine Software"
   desc "View videos, GPS data, and G-force data recorded by dashcams and action cams"
@@ -14,7 +16,7 @@ cask "dashcam-viewer" do
     regex(%r{href=.*?/Dashcam[._-]Viewer[._-]v?(\d+(?:\.\d+)+)\.dmg}i)
   end
 
-  depends_on macos: ">= :monterey"
+  depends_on macos: :monterey
 
   app "Dashcam Viewer.app"
 
@@ -23,8 +25,4 @@ cask "dashcam-viewer" do
     "~/Library/Caches/earthshinesw",
     "~/Library/Preferences/com.earthshinesw.DashcamViewer.plist",
   ]
-
-  caveats do
-    requires_rosetta
-  end
 end

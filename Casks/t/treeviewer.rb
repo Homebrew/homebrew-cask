@@ -10,6 +10,8 @@ cask "treeviewer" do
   desc "Phylogenetic tree viewer"
   homepage "https://github.com/arklumpus/TreeViewer"
 
+  depends_on :macos
+
   app "TreeViewer.app"
 
   zap trash: [

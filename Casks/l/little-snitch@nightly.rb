@@ -1,6 +1,6 @@
 cask "little-snitch@nightly" do
-  version "6.3,7164"
-  sha256 "fabca858692ce61f0b3818fc11050c807f1d8b788ec9a81d0145a601c173bedf"
+  version "6.5,7301"
+  sha256 "259fc5a4b41f00f1d080547be3608c5ec2d1cdb40427007c129b592668ef8d27"
 
   url "https://www.obdev.at/downloads/littlesnitch/nightly/LittleSnitch-#{version.csv.first}-nightly-(#{version.csv.second}).dmg"
   name "Little Snitch"
@@ -21,9 +21,11 @@ cask "little-snitch@nightly" do
     "little-snitch@4",
     "little-snitch@5",
   ]
-  depends_on macos: ">= :sonoma"
+  depends_on macos: :sonoma
 
   app "Little Snitch.app"
+
+  uninstall quit: "at.obdev.littlesnitch"
 
   zap trash: [
         "/Library/Application Support/Objective Development/Little Snitch",

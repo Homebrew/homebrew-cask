@@ -2,8 +2,7 @@ cask "splashtop-personal" do
   version "3.7.6.0"
   sha256 "87c46e7918f21af36c0ac7483f7b399fded50fca79ed438c565ce8306e8f7bf4"
 
-  url "https://d17kmd0va0f0mp.cloudfront.net/macclient/STP/Splashtop_Personal_Mac_v#{version}.dmg",
-      verified: "d17kmd0va0f0mp.cloudfront.net/"
+  url "https://d17kmd0va0f0mp.cloudfront.net/macclient/STP/Splashtop_Personal_Mac_v#{version}.dmg"
   name "Splashtop Personal"
   desc "Connect to and control computers from desktop and mobile devices"
   homepage "https://www.splashtop.com/personal"
@@ -12,6 +11,8 @@ cask "splashtop-personal" do
     url "https://redirect.splashtop.com/stp-src/mac"
     strategy :header_match
   end
+
+  depends_on :macos
 
   pkg "Splashtop Personal.pkg"
 

@@ -1,12 +1,11 @@
 cask "readmoreading" do
   arch arm: "arm64", intel: "x64"
 
-  version "1.2.7"
-  sha256 arm:   "f58c2ef27f65aa5e204acfc75f32b3f7c2b55bb8ef2d13b1e3562a3f4ef01d81",
-         intel: "c4a8209fae509d691d0c0a3f2d1c460b63f8535be7b333a529fbf486362d38bd"
+  version "1.8.3"
+  sha256 arm:   "c0440c17556e9a2cffc60b4d1dbff5cfe4bee355834551108cc1125bdc69fa6e",
+         intel: "0ed1b598fc2fce4243396aaf68a942879d4a6e5c236276dd80170611e8c44d5a"
 
-  url "https://github.com/eCrowdMedia/remake/releases/download/v#{version}/Readmoo.-#{version}-#{arch}.dmg",
-      verified: "github.com/eCrowdMedia/remake/"
+  url "https://github.com/eCrowdMedia/remake/releases/download/v#{version}/Readmoo.-#{version}-#{arch}.dmg"
   name "Readmo Reading"
   desc "Traditional Chinese eBook service"
   homepage "https://readmoo.com/"
@@ -15,6 +14,8 @@ cask "readmoreading" do
     url :url
     strategy :github_latest
   end
+
+  depends_on macos: :monterey
 
   app "Readmoo看書.app"
 

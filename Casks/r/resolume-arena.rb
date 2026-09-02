@@ -1,9 +1,8 @@
 cask "resolume-arena" do
-  version "7.23.2,51094"
-  sha256 "d6e52d847b83b19d99a71618257a5acfc1d456b09d098418d1db3a643b47b7f2"
+  version "7.27.1,15990"
+  sha256 "a7c177755dd9658f05f5ff9fcc636137599681e0dc83121f730380093f4b70b5"
 
-  url "https://dd5sgwxv3xok.cloudfront.net/Resolume_Arena_#{version.csv.first.dots_to_underscores}_rev_#{version.csv.second}_Installer.dmg",
-      verified: "dd5sgwxv3xok.cloudfront.net/"
+  url "https://dd5sgwxv3xok.cloudfront.net/Resolume_Arena_#{version.csv.first.dots_to_underscores}_rev_#{version.csv.second}_Installer.dmg"
   name "Resolume Arena"
   desc "Video mapping software"
   homepage "https://resolume.com/"
@@ -20,6 +19,7 @@ cask "resolume-arena" do
   end
 
   auto_updates true
+  depends_on :macos
 
   pkg "Resolume Arena Installer.pkg"
 

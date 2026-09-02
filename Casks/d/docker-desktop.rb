@@ -1,9 +1,9 @@
 cask "docker-desktop" do
   arch arm: "arm64", intel: "amd64"
 
-  version "4.50.0,209931"
-  sha256 arm:   "3c2e155bfb5b56aef51385f8760e34e71643c992b7e65581181c2199070a03ef",
-         intel: "0b96b954df5dedefb745f4d548e5d21db6e22bc5158646d0469c8be2725ef77e"
+  version "4.89.0,238018"
+  sha256 arm:   "d333f7c8d42f746429ab1f32ad3284efec887e2a08c03b2ed373a7091373e392",
+         intel: "cb22c74b9c6c9c2768d64459828b6c2b0ab4d5b7ace4b28f0979d7de4f28e336"
 
   on_intel do
     binary "#{appdir}/Docker.app/Contents/Resources/bin/com.docker.hyperkit",
@@ -24,7 +24,7 @@ cask "docker-desktop" do
 
   auto_updates true
   conflicts_with cask: "rancher"
-  depends_on macos: ">= :sonoma"
+  depends_on macos: :sonoma
 
   app "Docker.app"
   binary "#{appdir}/Docker.app/Contents/Resources/bin/docker",
@@ -35,8 +35,6 @@ cask "docker-desktop" do
          target: "/usr/local/bin/docker-credential-ecr-login"
   binary "#{appdir}/Docker.app/Contents/Resources/bin/docker-credential-osxkeychain",
          target: "/usr/local/bin/docker-credential-osxkeychain"
-  binary "#{appdir}/Docker.app/Contents/Resources/bin/hub-tool",
-         target: "/usr/local/bin/hub-tool"
   binary "#{appdir}/Docker.app/Contents/Resources/bin/kubectl",
          target: "/usr/local/bin/kubectl.docker"
   binary "#{appdir}/Docker.app/Contents/Resources/cli-plugins/docker-compose",
@@ -48,22 +46,11 @@ cask "docker-desktop" do
   zsh_completion "#{appdir}/Docker.app/Contents/Resources/etc/docker-compose.zsh-completion"
   zsh_completion "#{appdir}/Docker.app/Contents/Resources/etc/docker.zsh-completion"
 
-  postflight do
-    kubectl_target = Pathname("/usr/local/bin/kubectl")
-
+  postflight_steps do
     # Only link if `kubernetes-cli` is not installed.
-    next if kubectl_target.exist?
-
-    system_command "/bin/ln", args: ["-sfn", appdir/"Docker.app/Contents/Resources/bin/kubectl", kubectl_target],
-                              sudo: !kubectl_target.dirname.writable?
-  end
-
-  uninstall_postflight do
-    kubectl_target = Pathname("/usr/local/bin/kubectl")
-
-    if kubectl_target.symlink? && kubectl_target.readlink == appdir/"Docker.app/Contents/Resources/bin/kubectl"
-      system_command "/bin/rm", args: [kubectl_target],
-                                sudo: !kubectl_target.dirname.writable?
+    unless_path_exists "/usr/local/bin/kubectl" do
+      symlink "{{appdir}}/Docker.app/Contents/Resources/bin/kubectl", "/usr/local/bin/kubectl",
+              remove_on_uninstall: true, sudo: :if_needed, overwrite: true
     end
   end
 
@@ -72,7 +59,10 @@ cask "docker-desktop" do
               "com.docker.socket",
               "com.docker.vmnetd",
             ],
-            quit:      "com.docker.docker",
+            quit:      [
+              "com.docker.docker",
+              "com.electron.dockerdesktop",
+            ],
             delete:    [
               "/Library/PrivilegedHelperTools/com.docker.socket",
               "/Library/PrivilegedHelperTools/com.docker.vmnetd",
@@ -89,8 +79,11 @@ cask "docker-desktop" do
         "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.electron.dockerdesktop.sfl*",
         "~/Library/Application Support/com.bugsnag.Bugsnag/com.docker.docker",
         "~/Library/Application Support/Docker Desktop",
+        "~/Library/Application Support/docker-secrets-engine",
         "~/Library/Caches/com.docker.docker",
         "~/Library/Caches/com.plausiblelabs.crashreporter.data/com.docker.docker",
+        "~/Library/Caches/Docker Desktop",
+        "~/Library/Caches/docker-secrets-engine",
         "~/Library/Caches/KSCrashReports/Docker",
         "~/Library/Containers/com.docker.docker",
         "~/Library/Containers/com.docker.helper",

@@ -12,6 +12,8 @@ cask "packetproxy" do
     strategy :github_latest
   end
 
+  depends_on :macos
+
   app "PacketProxy.app"
 
   zap trash: [

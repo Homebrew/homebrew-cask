@@ -1,6 +1,6 @@
 cask "ppsspp-emulator" do
-  version "1.19.3"
-  sha256 "547426b2871e5472596c185376a3996f9748b12b8af588bb1901ba6d2bd9bfe2"
+  version "1.20.4"
+  sha256 "bad86fc544a2c2fc5795d6a5832a8925d6db43e5789fe507f742305aaa357e17"
 
   url "https://www.ppsspp.org/files/#{version.dots_to_underscores}/PPSSPP_macOS.dmg"
   name "PPSSPP"
@@ -8,11 +8,14 @@ cask "ppsspp-emulator" do
   homepage "https://www.ppsspp.org/"
 
   livecheck do
-    url "https://builds.ppsspp.org/meta/status.json"
-    strategy :json do |json|
-      json.dig("latest", "tag")&.tr("v", "")
+    url "https://www.ppsspp.org/download/"
+    regex(%r{href=.*?/v?(\d+(?:[._]\d+)+)/PPSSPP[._-]macOS\.dmg}i)
+    strategy :page_match do |page, regex|
+      page.scan(regex).map { |match| match[0].tr("_", ".") }
     end
   end
+
+  depends_on macos: :big_sur
 
   app "PPSSPPSDL.app"
 

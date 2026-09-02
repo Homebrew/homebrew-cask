@@ -12,6 +12,10 @@ cask "pdf-toolbox" do
     regex(/Version\s*(\d+(?:\.\d+)*)/i)
   end
 
+  disable! date: "2026-09-01", because: :fails_gatekeeper_check
+
+  depends_on :macos
+
   app "PDF Toolbox.app"
 
   zap trash: [

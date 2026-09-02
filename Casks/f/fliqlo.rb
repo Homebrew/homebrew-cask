@@ -8,8 +8,8 @@ cask "fliqlo" do
     end
   end
   on_sonoma :or_newer do
-    version "1.9.4"
-    sha256 "55bf6fc9317a27951f33ab474005db4313796c0c9cc367be5f2fe694c30ca40e"
+    version "1.9.5"
+    sha256 "eac70be43c503997ff5176cfec5a2240d833f9748b5e7375f26ecfd222d03eeb"
 
     livecheck do
       url :homepage
@@ -22,6 +22,8 @@ cask "fliqlo" do
   name "Fliqlo"
   desc "Flip clock screensaver"
   homepage "https://fliqlo.com/"
+
+  depends_on :macos
 
   screen_saver "Fliqlo.saver"
 

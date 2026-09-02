@@ -1,6 +1,6 @@
 cask "textual" do
-  version "7.2.6,65222a260"
-  sha256 "fc4217076a74e0f92f67ec4ccde6b9e59509a3df167b1d039a5b65a3b4ad8daa"
+  version "7.2.7,87084841d"
+  sha256 "5feec0c92ae08df269d368677cd501b048f2741c8612bd5108bc07ea48f57864"
 
   url "https://cached.codeux.com/textual/downloads/builds/stable/Textual-#{version.csv.second}/universal/Textual.zip"
   name "Textual"
@@ -16,7 +16,7 @@ cask "textual" do
   end
 
   auto_updates true
-  depends_on macos: ">= :big_sur"
+  depends_on macos: :monterey
 
   app "Textual.app"
 

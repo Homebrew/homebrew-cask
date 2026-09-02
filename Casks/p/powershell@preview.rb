@@ -1,9 +1,9 @@
 cask "powershell@preview" do
   arch arm: "arm64", intel: "x64"
 
-  version "7.6.0-preview.5"
-  sha256 arm:   "b3fac2817c8b7cb2a5ab721246d5cfb0ebe759e780d9770ae209b54b58a87526",
-         intel: "4ac7c96fe7cf1b49d845f5aa6c2db19c867597de555e63ff82c08851afa9f1b2"
+  version "7.7.0-preview.4"
+  sha256 arm:   "1bf003f51ad1c1e048333acf967684c1368b1195a56ad522fe5436babd3c4b33",
+         intel: "697ba667b6d5eb55535a7c40fc4c76971ff9b1e76676ff5e9f8aba39dc9cd997"
 
   url "https://github.com/PowerShell/PowerShell/releases/download/v#{version}/powershell-#{version}-osx-#{arch}.pkg"
   name "PowerShell"
@@ -29,11 +29,12 @@ cask "powershell@preview" do
     end
   end
 
-  disable! date: "2026-09-01", because: :fails_gatekeeper_check
+  depends_on macos: :big_sur
 
   pkg "powershell-#{version}-osx-#{arch}.pkg"
 
-  uninstall pkgutil: "com.microsoft.powershell-preview"
+  uninstall pkgutil: "com.microsoft.powershell-preview",
+            delete:  "/Applications/PowerShell-preview.app"
 
   zap trash: [
         "~/.cache/powershell",

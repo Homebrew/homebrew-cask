@@ -1,8 +1,8 @@
 cask "yate" do
-  version "8.3.4"
+  version "9.2.2.1"
   sha256 :no_check
 
-  url "https://2manyrobots.com/Updates/Yate/Yate.zip"
+  url "https://2manyrobots.com/Updates/YateMain/Yate.zip"
   name "Yate"
   desc "Media file tag editor"
   homepage "https://2manyrobots.com/yate/"
@@ -13,6 +13,7 @@ cask "yate" do
   end
 
   auto_updates true
+  depends_on :macos
 
   app "Yate.app"
 

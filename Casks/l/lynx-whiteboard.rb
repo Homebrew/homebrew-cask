@@ -1,5 +1,5 @@
 cask "lynx-whiteboard" do
-  version "8.5.10.0"
+  version "8.7.4.0"
   sha256 :no_check
 
   url "https://downloads.lynxcloud.app/lynx-whiteboard/releases/macx/lynx-whiteboard.pkg"
@@ -13,6 +13,7 @@ cask "lynx-whiteboard" do
   end
 
   auto_updates true
+  depends_on macos: :big_sur
 
   pkg "lynx-whiteboard.pkg"
 

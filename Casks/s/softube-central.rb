@@ -1,9 +1,8 @@
 cask "softube-central" do
-  version "2.1.4"
-  sha256 "4158f99732e7c8132465b203a57c9297a20c39d2725f0cf144ef6c40aa5a50da"
+  version "2.2.0"
+  sha256 "9aa7713784878c62d58c5a90b72e29a8af64f3d148532a960f91466e0ef59b17"
 
-  url "https://softubestorage.b-cdn.net/softubecentraldata/softubecentral/Softube%20Central-#{version}-universal.pkg",
-      verified: "softubestorage.b-cdn.net/"
+  url "https://softubestorage.b-cdn.net/softubecentraldata/softubecentral/Softube%20Central-#{version}-universal.pkg"
   name "Softube Central"
   desc "Installer for installation and license activation of Softube products"
   homepage "https://www.softube.com/"
@@ -15,6 +14,7 @@ cask "softube-central" do
 
   auto_updates true
   depends_on cask: "ilok-license-manager"
+  depends_on macos: :monterey
 
   pkg "Softube Central-#{version}-universal.pkg"
 

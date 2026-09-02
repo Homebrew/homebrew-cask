@@ -1,9 +1,8 @@
 cask "singlebox" do
-  version "61.10.0"
-  sha256 "7ce9065a1e6a0db4990031729dcbb593dc8de734531a2c826163100cc0187c10"
+  version "67.2.0"
+  sha256 "6ba895b1b6993f64e4d17d1f201d175dddbd6423322adc352ac3b2091521aecc"
 
-  url "https://cdn-2.webcatalog.io/singlebox2/Singlebox-#{version}-universal.dmg",
-      verified: "cdn-2.webcatalog.io/singlebox2/"
+  url "https://cdn-2.webcatalog.io/singlebox2/Singlebox-#{version}-universal.dmg"
   name "Singlebox"
   desc "Multi-account web browser"
   homepage "https://singlebox.app/en/"
@@ -14,7 +13,7 @@ cask "singlebox" do
   end
 
   auto_updates true
-  depends_on macos: ">= :monterey"
+  depends_on macos: :ventura
 
   app "Singlebox.app"
 

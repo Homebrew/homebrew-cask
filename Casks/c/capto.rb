@@ -1,9 +1,8 @@
 cask "capto" do
-  version "2.1.3,1002.1.3012"
+  version "2.1.6,1002.1.6007"
   sha256 :no_check
 
-  url "https://d3l6g06uqih57x.cloudfront.net/Captomac/webstore/Capto.dmg",
-      verified: "d3l6g06uqih57x.cloudfront.net/Captomac/"
+  url "https://d3l6g06uqih57x.cloudfront.net/Captomac/webstore/Capto.dmg"
   name "Capto"
   desc "Screen capture/recorder and video editor"
   homepage "https://www.globaldelight.com/capto/"
@@ -12,6 +11,8 @@ cask "capto" do
     url :url
     strategy :extract_plist
   end
+
+  depends_on :macos
 
   app "Capto.app"
 

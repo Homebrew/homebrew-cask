@@ -1,6 +1,6 @@
 cask "systhist" do
-  version "1.21,2025.06"
-  sha256 "2229b4cf48626abf6be6eb55a780d1393fb07af03966306e87a09bbd98e22fe8"
+  version "1.22,2026.06"
+  sha256 "3a19d75b1f439bca183d538f7386f4499afad1bb09763fe3c8a63ccc9ca6390c"
 
   url "https://eclecticlight.co/wp-content/uploads/#{version.csv.second.major}/#{version.csv.second.minor}/systhist#{version.csv.first.no_dots}.zip"
   name "SystHist"
@@ -23,7 +23,7 @@ cask "systhist" do
     end
   end
 
-  depends_on macos: ">= :big_sur"
+  depends_on macos: :big_sur
 
   app "systhist#{version.csv.first.no_dots}/SystHist.app"
 

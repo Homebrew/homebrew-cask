@@ -1,8 +1,8 @@
 cask "pixel-shift-combiner" do
-  version "1.6.0,1060,bbh12c19"
-  sha256 "8095e878942602162d8834b3053a5b75074ba4a41a0d2fd48c28a574460c00af"
+  version "1.7.1,1071,azni331w"
+  sha256 "9ef68715310c7c6cef528fe19c9670e2b919e8cbc553b4f960d9d10b2607be4c"
 
-  url "https://dl.fujifilm-x.com/support/software/pixel-shift-combiner-mac#{version.csv.second}-#{version.csv.third}/FUJIFILM_PixelShiftCombiner#{version.csv.second}.dmg"
+  url "https://dl.fujifilm-x.com/support/software/pixel-shift-combiner-mac#{version.csv.second}-#{version.csv.third}/FUJIFILM_PixelShiftCombiner#{version.csv.second}.pkg"
   name "Fujifilm Pixel Shift Combiner"
   desc "Tool to tether and combine photos for Fujifilm cameras with IBIS function"
   homepage "https://www.fujifilm-x.com/en-us/support/download/software/pixel-shift-combiner/"
@@ -18,7 +18,12 @@ cask "pixel-shift-combiner" do
     end
   end
 
-  app "Pixel Shift Combiner.app"
+  depends_on :macos
+
+  pkg "FUJIFILM_PixelShiftCombiner#{version.csv.second}.pkg"
+
+  uninstall pkgutil: "com.fujifilm.denji.PIXEL-SHIFT-COMBINER",
+            delete:  "/Applications/Pixel Shift Combiner.app"
 
   zap trash: [
     "~/Library/Application Support/com.fujifilm.denji/*Pixel Shift Combiner",

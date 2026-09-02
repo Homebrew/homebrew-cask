@@ -10,6 +10,8 @@ cask "ultimate-control" do
   deprecate! date: "2024-11-01", because: :unmaintained
   disable! date: "2025-11-01", because: :unmaintained
 
+  depends_on :macos
+
   app "Ultimate Control.app"
 
   caveats do

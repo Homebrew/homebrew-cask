@@ -1,6 +1,6 @@
 cask "pecunia" do
-  version "2.2.0"
-  sha256 "233cd0c7cda54230e0bf7b45ca56553a70672ecd07e24754f559a0ff9eac62b6"
+  version "2.2.2"
+  sha256 "9223d9d4d7bab655830f07feb876a9bef68c68e0a4087a29f56204726ffc6c41"
 
   url "https://pecuniabanking.de/downloads/#{version}/Pecunia.zip"
   name "Pecunia"
@@ -11,6 +11,8 @@ cask "pecunia" do
     url "https://pecuniabanking.de/index.php/downloads"
     regex(%r{href=.*?downloads/v?(\d+(?:\.\d+)+)/Pecunia\.zip}i)
   end
+
+  depends_on :macos
 
   app "Pecunia.app"
 

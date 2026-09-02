@@ -1,9 +1,8 @@
 cask "amadine" do
-  version "1.7"
+  version "1.8.4"
   sha256 :no_check
 
-  url "https://belightsoft.s3.amazonaws.com/Amadine.dmg",
-      verified: "belightsoft.s3.amazonaws.com/"
+  url "https://belightsoft.s3.amazonaws.com/Amadine.dmg"
   name "Amadine"
   desc "Vector graphic and illustration software"
   homepage "https://amadine.com/"
@@ -14,6 +13,7 @@ cask "amadine" do
   end
 
   auto_updates true
+  depends_on macos: :big_sur
 
   app "Amadine.app"
 

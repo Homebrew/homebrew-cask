@@ -2,10 +2,9 @@ cask "font-noto-sans-runic" do
   version :latest
   sha256 :no_check
 
-  url "https://noto-website-2.storage.googleapis.com/pkgs/NotoSansRunic-unhinted.zip",
-      verified: "noto-website-2.storage.googleapis.com/"
+  url "https://github.com/google/fonts/raw/main/ofl/notosansrunic/NotoSansRunic-Regular.ttf"
   name "Noto Sans Runic"
-  homepage "https://www.google.com/get/noto/#sans-runr"
+  homepage "https://fonts.google.com/specimen/Noto+Sans+Runic"
 
   font "NotoSansRunic-Regular.ttf"
 

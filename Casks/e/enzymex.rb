@@ -12,6 +12,8 @@ cask "enzymex" do
     regex(/\d+(?:\.\d+)+/i)
   end
 
+  depends_on :macos
+
   app "EnzymeX.app"
 
   zap trash: [

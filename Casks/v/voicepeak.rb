@@ -2,8 +2,7 @@ cask "voicepeak" do
   version "1.2.2"
   sha256 :no_check
 
-  url "https://download.dreamtonics.com/voicepeak-jashinchan-trial/voicepeak_jashinchan_freetrial.zip",
-      verified: "download.dreamtonics.com/voicepeak-jashinchan-trial/"
+  url "https://download.dreamtonics.com/voicepeak-jashinchan-trial/voicepeak_jashinchan_freetrial.zip"
   name "VOICEPEAK"
   desc "High quality text-to-speech software with emotional expression"
   homepage "https://www.ah-soft.com/voice/"
@@ -12,6 +11,8 @@ cask "voicepeak" do
     url :url
     strategy :extract_plist
   end
+
+  depends_on :macos
 
   pkg "VOICEPEAK 邪神ちゃん 無料お試し版/Mac/Voicepeak.pkg"
 

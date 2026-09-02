@@ -1,8 +1,8 @@
 cask "insta360-studio" do
-  version "5.8.0,release_insta360,RC_build64,_20251027_150257_signed_1761552612745,662cbed4068f3563ed28ff6c3c251a42"
-  sha256 "30c4bc37b332ebf86b7e4ec4c2a00e28ae2b82aea23da762b71759ed905d5176"
+  version "6.0.2,release_insta360,RC_build111,_20260817_195644_signed_1787026375195,df3b6ccefe99451fb55b7a0d0523affb"
+  sha256 "66b859c469eec1ca3ac0783c30b3970a02eae50f3fa6624fc129f7ac4a0999fc"
 
-  url "https://file.insta360.com/static/#{version.csv.fifth}/Insta360_Studio_#{version.csv.first}_#{version.csv.second}(#{version.csv.third})#{version.csv.fourth}.zip"
+  url "https://wassets.insta360.com/common/#{version.csv.fifth}/Insta360_Studio_#{version.csv.first}_#{version.csv.second}(#{version.csv.third})#{version.csv.fourth}.zip"
   name "Insta360 Studio"
   desc "Video and photo editor"
   homepage "https://www.insta360.com/"
@@ -36,6 +36,8 @@ cask "insta360-studio" do
       "#{match[2]},#{match[3].tr("()", ",")},#{match[1]}"
     end
   end
+
+  depends_on :macos
 
   # The pkg is often inconsistently named comparatively to the url version
   rename "Insta360_Studio*.pkg", "Insta360_Studio.pkg"

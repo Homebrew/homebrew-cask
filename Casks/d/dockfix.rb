@@ -1,5 +1,5 @@
 cask "dockfix" do
-  version "4.1.3"
+  version "4.2.1"
   sha256 :no_check
 
   url "https://www.dockfix.app/downloads/DockFix.dmg"
@@ -13,7 +13,7 @@ cask "dockfix" do
   end
 
   auto_updates true
-  depends_on macos: ">= :ventura"
+  depends_on macos: :ventura
 
   app "DockFix.app"
 

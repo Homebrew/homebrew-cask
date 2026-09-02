@@ -1,30 +1,23 @@
 cask "do-not-disturb" do
-  version "1.3.0"
-  sha256 "000e3ce8f5abd1313bbb603c401a1be0b5cf4f11644d36f1d5d382745079fdc3"
+  version "2.1.0"
+  sha256 "af4a0e55d20ff5a28b5c91a9517f70bdba77c182174c24a93d234347e2885da1"
 
-  url "https://github.com/objective-see/DoNotDisturb/releases/download/#{version}/DoNotDisturb_#{version}.zip",
-      verified: "github.com/objective-see/DoNotDisturb/"
+  url "https://github.com/objective-see/DoNotDisturb/releases/download/v#{version}/DoNotDisturb_#{version}.zip"
   name "Do Not Disturb"
   desc "Open-source physical access (aka 'evil maid') attack detector"
   homepage "https://objective-see.org/products/dnd.html"
 
-  deprecate! date: "2024-11-16", because: :unmaintained
+  depends_on :macos
 
-  installer script: {
-    executable: "#{staged_path}/Do Not Disturb Installer.app/Contents/MacOS/Do Not Disturb Installer",
-    args:       ["-install"],
-    sudo:       true,
-  }
+  # the installer is interactive, running the configure script directly doesn't produce a
+  # working install.
+  installer manual: "DoNotDisturb Installer.app"
 
   uninstall script: {
-    executable: "#{staged_path}/Do Not Disturb Installer.app/Contents/MacOS/Do Not Disturb Installer",
+    executable: "#{staged_path}/DoNotDisturb Installer.app/Contents/Resources/configure.sh",
     args:       ["-uninstall"],
     sudo:       true,
   }
 
   # No zap stanza required
-
-  caveats do
-    requires_rosetta
-  end
 end

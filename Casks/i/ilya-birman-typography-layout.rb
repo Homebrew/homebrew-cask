@@ -12,6 +12,8 @@ cask "ilya-birman-typography-layout" do
     regex(/href=.*?ilya[._-]birman[._-]typolayout[._-]v?(\d+(?:\.\d+)+)[._-]mac\.(?:dmg|zip)/i)
   end
 
+  depends_on :macos
+
   keyboard_layout "Ilya Birman Typography Layout.bundle"
 
   # No zap stanza required

@@ -8,11 +8,12 @@ cask "shadowsocksx-ng-r" do
   homepage "https://github.com/qinyuhang/ShadowsocksX-NG-R/"
 
   conflicts_with cask: "shadowsocksx"
+  depends_on :macos
 
   app "ShadowsocksX-NG-R8.app"
 
-  postflight do
-    system_command "#{appdir}/ShadowsocksX-NG-R8.app/Contents/Resources/install_helper.sh"
+  postflight_steps do
+    run "ShadowsocksX-NG-R8.app/Contents/Resources/install_helper.sh", base: :appdir
   end
 
   uninstall launchctl: [

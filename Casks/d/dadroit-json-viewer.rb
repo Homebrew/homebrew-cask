@@ -15,6 +15,8 @@ cask "dadroit-json-viewer" do
     end
   end
 
+  depends_on :macos
+
   app "Dadroit JSON Viewer.app"
 
   zap trash: [

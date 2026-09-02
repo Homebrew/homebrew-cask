@@ -10,6 +10,8 @@ cask "ealeksandrov-cd-to" do
   deprecate! date: "2024-10-14", because: :unmaintained
   disable! date: "2025-10-14", because: :unmaintained
 
+  depends_on :macos
+
   app "cd_to_#{version.major_minor.dots_to_underscores}/terminal/cd_to.app"
 
   caveats do

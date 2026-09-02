@@ -6,6 +6,10 @@ cask "material-colors" do
   name "Material Colors for Mac"
   homepage "https://github.com/romannurik/MaterialColorsApp"
 
+  disable! date: "2026-09-01", because: :fails_gatekeeper_check
+
+  depends_on :macos
+
   app "Material Colors.app"
 
   zap trash: [

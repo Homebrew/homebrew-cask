@@ -17,6 +17,8 @@ cask "easyfind" do
     end
   end
 
+  depends_on :macos
+
   app "EasyFind.app"
 
   zap trash: [

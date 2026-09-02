@@ -6,29 +6,35 @@ cask "gcc-arm-embedded" do
   pkg_version = nil
   gcc_version = nil
   on_arm do
-    version "14.3.rel1"
-    sha256 "b93712026cec9f98a5d98dfec84e8096d32be3759642381e1982c4a5d2aa020b"
-    pkg_version = "14.3.rel1"
-    gcc_version = "14.3.1"
+    version "15.3.rel1"
+    pkg_version = "15.3.rel1"
+    gcc_version = "15.3.1"
+    sha256 "5fb58dc3bd6684e70a02bd1c654a6b91f044cda241eb3ae663a7b9170491d7b2"
+
     livecheck do
-      url "https://developer.arm.com/downloads/-/arm-gnu-toolchain-downloads"
-      regex(/href=.*?arm-gnu-toolchain-(\d+\.\d+\.\w+)-darwin-(?:\w+)-arm-none-eabi\.pkg/i)
+      url "https://gitlab.arm.com/tooling/gnu-toolchains-for-arm/-/raw/main/README.md"
+      regex(%r{\([^)]*?releases/v?(\d+(?:\.\d+)+(?:[._-]rel\d+)?)[?)]}i)
     end
+
+    binary "/Applications/ArmGNUToolchain/#{pkg_version}/arm-none-eabi/bin/arm-none-eabi-gstack"
   end
   on_intel do
     version "14.2.rel1"
-    sha256 "5d2e9ee4e73350bda79accc69fcd5ee59ccb902804a3f81a01d4c543b1ad7de7"
     pkg_version = "14.2.rel1"
     gcc_version = "14.2.1"
+    sha256 "5d2e9ee4e73350bda79accc69fcd5ee59ccb902804a3f81a01d4c543b1ad7de7"
+
     livecheck do
       skip "Legacy version"
     end
   end
 
-  url "https://developer.arm.com/-/media/Files/downloads/gnu/#{version}/binrel/arm-gnu-toolchain-#{version}-darwin-#{arch}-arm-none-eabi.pkg"
+  url "https://gitlab.arm.com/api/v4/projects/tooling%2Fgnu-toolchains-for-arm/packages/generic/gnu-toolchain/#{version}/arm-gnu-toolchain-#{version}-darwin-#{arch}-arm-none-eabi.pkg"
   name "GCC ARM Embedded"
   desc "Pre-built GNU bare-metal toolchain for 32-bit Arm processors"
-  homepage "https://developer.arm.com/Tools%20and%20Software/GNU%20Toolchain"
+  homepage "https://developer.arm.com/tools-and-software/gnu-toolchain"
+
+  depends_on :macos
 
   pkg "arm-gnu-toolchain-#{version}-darwin-#{arch}-arm-none-eabi.pkg"
   binary "/Applications/ArmGNUToolchain/#{pkg_version}/arm-none-eabi/bin/arm-none-eabi-addr2line"

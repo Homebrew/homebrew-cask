@@ -1,9 +1,8 @@
 cask "wins" do
-  version "3.0,45"
+  version "3.5.1,53"
   sha256 :no_check
 
-  url "https://winswebsite.s3.us-east-005.backblazeb2.com/Wins.zip",
-      verified: "winswebsite.s3.us-east-005.backblazeb2.com/"
+  url "https://winswebsite.s3.us-east-005.backblazeb2.com/Wins.zip"
   name "Wins"
   desc "Window manager"
   homepage "https://wins.cool/"
@@ -14,12 +13,16 @@ cask "wins" do
   end
 
   auto_updates true
+  depends_on macos: :monterey
 
   app "Wins.app"
+
+  uninstall launchctl: "cool.wins.WinsHelper"
 
   zap trash: [
     "~/Library/Application Scripts/cool.wins.WinsHelper",
     "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/cool.wins.*.sfl*",
+    "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/cools.wins.*.sfl*",
     "~/Library/Application Support/cools.wins.main",
     "~/Library/Application Support/Wins",
     "~/Library/Caches/cools.wins.main",
@@ -27,7 +30,6 @@ cask "wins" do
     "~/Library/Containers/WinsHelper",
     "~/Library/HTTPStorages/cools.wins.main*",
     "~/Library/PreferencePanes/Wins.prefPane",
-    "~/Library/Preferences/com.tinynudge.pomello.plist",
     "~/Library/Preferences/cools.wins.main.plist",
     "~/Library/WebKit/cools.wins.main",
   ]

@@ -2,8 +2,7 @@ cask "font-hannari" do
   version :latest
   sha256 :no_check
 
-  url "https://github.com/google/fonts/raw/main/ofl/hannari/Hannari-Regular.ttf",
-      verified: "github.com/google/fonts/"
+  url "https://github.com/google/fonts/raw/main/ofl/hannari/Hannari-Regular.ttf"
   name "Hannari"
   homepage "https://fonts.google.com/specimen/Hannari"
 

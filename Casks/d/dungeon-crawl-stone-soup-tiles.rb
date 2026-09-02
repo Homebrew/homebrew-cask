@@ -1,9 +1,8 @@
 cask "dungeon-crawl-stone-soup-tiles" do
-  version "0.33.1"
-  sha256 "aa63f58d606afdd158bc6b0139c97b0e36a4062cb73641e637d03e2732c032b5"
+  version "0.34.1"
+  sha256 "b59b334d8cb06b5a5e26c490d4c08c8ac7762dc7b8f4a03cd800ca34aba6ac9a"
 
-  url "https://github.com/crawl/crawl/releases/download/#{version}/dcss-#{version}-macos-tiles-universal.zip",
-      verified: "github.com/crawl/crawl/releases/"
+  url "https://github.com/crawl/crawl/releases/download/#{version}/dcss-#{version}-macos-tiles-universal.zip"
   name "Dungeon Crawl Stone Soup"
   desc "Game of dungeon exploration, combat and magic"
   homepage "https://crawl.develz.org/"
@@ -14,6 +13,8 @@ cask "dungeon-crawl-stone-soup-tiles" do
   end
 
   disable! date: "2026-09-01", because: :fails_gatekeeper_check
+
+  depends_on :macos
 
   app "Dungeon Crawl Stone Soup - Tiles.app"
 

@@ -2,8 +2,7 @@ cask "font-shippori-antique" do
   version :latest
   sha256 :no_check
 
-  url "https://github.com/google/fonts/raw/main/ofl/shipporiantique/ShipporiAntique-Regular.ttf",
-      verified: "github.com/google/fonts/"
+  url "https://github.com/google/fonts/raw/main/ofl/shipporiantique/ShipporiAntique-Regular.ttf"
   name "Shippori Antique"
   homepage "https://fonts.google.com/specimen/Shippori+Antique"
 

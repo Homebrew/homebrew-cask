@@ -1,6 +1,6 @@
 cask "openinterminal-lite" do
-  version "1.2.7"
-  sha256 "07c558faf0975fd0dca604be2eb793272be91a8f6422f74c8c075ed76775df84"
+  version "1.2.8"
+  sha256 "189842433aed140307a17f25e93cbbe496fc0d745b6e7c2e879cb5dab23250af"
 
   url "https://github.com/Ji4n1ng/OpenInTerminal/releases/download/v#{version}/OpenInTerminal-Lite.zip"
   name "OpenInTerminal-Lite"
@@ -26,6 +26,8 @@ cask "openinterminal-lite" do
       end
     end
   end
+
+  depends_on :macos
 
   app "OpenInTerminal-Lite.app"
 

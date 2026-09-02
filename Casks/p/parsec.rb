@@ -1,5 +1,5 @@
 cask "parsec" do
-  version "150-100e"
+  version "150-104a"
   sha256 :no_check
 
   url "https://builds.parsec.app/package/parsec-macos.pkg"
@@ -15,9 +15,11 @@ cask "parsec" do
     end
   end
 
+  depends_on :macos
+
   pkg "parsec-macos.pkg"
 
-  postflight do
+  postflight_steps do
     set_ownership "~/.parsec"
   end
 

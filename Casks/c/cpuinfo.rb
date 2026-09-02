@@ -1,13 +1,13 @@
 cask "cpuinfo" do
-  version "1.5.1"
-  sha256 "e6037c41db55d6032bfb0c5f6ed6b62d8303a58b1a13a972522253aeebef427a"
+  version "1.7.0"
+  sha256 "9ba2008a1b7101bfae32ea33f03c5c9dc7759d5a48881a8cba446b7da7328293"
 
-  url "https://github.com/yusukeshibata/cpuinfo/raw/#{version}/dist/cpuinfo.zip"
+  url "https://github.com/yusukeshib/cpuinfo/releases/download/v#{version}/cpuinfo.zip"
   name "cpuinfo"
   desc "CPU meter menu bar app"
-  homepage "https://github.com/yusukeshibata/cpuinfo/"
+  homepage "https://github.com/yusukeshib/cpuinfo"
 
-  disable! date: "2026-09-01", because: :fails_gatekeeper_check
+  depends_on :macos
 
   app "cpuinfo.app"
 

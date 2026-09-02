@@ -1,6 +1,6 @@
 cask "qspace-pro" do
-  version "6.0.6"
-  sha256 "76097a1307e32d0e2cfb76c0853d5295f09313e1c593b2de762878ad5388981f"
+  version "6.3.2"
+  sha256 "542dc46e729db2c0ad0ff1507d990220c78111a87535f240bd38f7c99c739bdd"
 
   url "https://cdn.awehunt.com/qs/rel/QSpace%20Pro_V#{version}.dmg"
   name "QSpace Pro"
@@ -13,6 +13,7 @@ cask "qspace-pro" do
   end
 
   auto_updates true
+  depends_on :macos
 
   app "QSpace Pro.app"
 

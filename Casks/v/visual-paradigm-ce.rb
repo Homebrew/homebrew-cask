@@ -1,9 +1,9 @@
 cask "visual-paradigm-ce" do
   arch arm: "AArch64", intel: "WithJRE"
 
-  version "17.3,20251122"
-  sha256 arm:   "7c0c44783722f2438660b2d1bc5f5e2c8818fc48f18a5be4ad75889371d38161",
-         intel: "dbed4d5973a2dd99a820fe224a10ffea755a05a8b178485c4b4ae2b77af083bf"
+  version "18.0,20260521"
+  sha256 arm:   "a717bf96d53aacd45f9cbacbbf33e5513deb08e4a1deef4cf2dbb18379950ece",
+         intel: "40a7a1218a3dd73f6e529ca089b035aafa3efe40ec8f6618ee9436bcd9e53731"
 
   url "https://www.visual-paradigm.com/downloads/vpce/Visual_Paradigm_CE_#{version.csv.first.dots_to_underscores}_#{version.csv.second}_OSX_#{arch}.dmg"
   name "Visual Paradigm Community Edition"
@@ -20,6 +20,8 @@ cask "visual-paradigm-ce" do
       "#{match[1]},#{match[2]}"
     end
   end
+
+  depends_on :macos
 
   # Renamed to avoid conflict with visual-paradigm.
   app "Visual Paradigm.app", target: "Visual Paradigm CE.app"

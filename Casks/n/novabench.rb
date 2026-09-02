@@ -1,5 +1,5 @@
 cask "novabench" do
-  version "5.6.0"
+  version "6.1.2"
   sha256 :no_check
 
   url "https://novabench.com/files/novabench.dmg"
@@ -12,7 +12,7 @@ cask "novabench" do
     regex(/Novabench\s*(?:<!--[^>]*-->)?\s*(\d+(?:\.\d+)*)/i)
   end
 
-  depends_on macos: ">= :big_sur"
+  depends_on macos: :big_sur
 
   app "Novabench.app"
 

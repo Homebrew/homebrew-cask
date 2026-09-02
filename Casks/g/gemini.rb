@@ -1,9 +1,8 @@
 cask "gemini" do
-  version "2.9.11,399,1696867671"
-  sha256 "a94aa56531b855b48542c78053d3414106824ead57f95c5327d2f14b06488ee5"
+  version "2.10.1,406,1781745541"
+  sha256 "c96dff8fa9f02becfab943a7e5b9c67eb054f1c7b41fb62b5caa5ef0536852dc"
 
-  url "https://dl.devmate.com/com.macpaw.site.Gemini#{version.major}/#{version.csv.second}/#{version.csv.third}/Gemini#{version.major}-#{version.csv.second}.zip",
-      verified: "dl.devmate.com/"
+  url "https://dl.devmate.com/com.macpaw.site.Gemini#{version.major}/#{version.csv.second}/#{version.csv.third}/Gemini#{version.major}-#{version.csv.second}.zip"
   name "Gemini"
   desc "Disk space cleaner that finds and deletes duplicated and similar files"
   homepage "https://macpaw.com/gemini"
@@ -20,16 +19,18 @@ cask "gemini" do
   end
 
   auto_updates true
+  depends_on :macos
 
   app "Gemini #{version.major}.app"
 
   zap trash: [
-    "/Users/Shared/Gemini #{version.major}",
-    "~/Library/Application Support/Gemini*",
-    "~/Library/Caches/com.macpaw.site.Gemini*",
-    "~/Library/Cookies/com.macpaw.site.Gemini*.binarycookies",
-    "~/Library/Logs/com.macpaw.site.Gemini*",
-    "~/Library/Preferences/com.macpaw.site.Gemini*",
-    "~/Library/Saved Application State/com.macpaw.site.Gemini*",
-  ]
+        "/Users/Shared/Gemini #{version.major}",
+        "~/Library/Application Support/Gemini*",
+        "~/Library/Caches/com.macpaw.site.Gemini*",
+        "~/Library/Cookies/com.macpaw.site.Gemini*.binarycookies",
+        "~/Library/Logs/com.macpaw.site.Gemini*",
+        "~/Library/Preferences/com.macpaw.site.Gemini*",
+        "~/Library/Saved Application State/com.macpaw.site.Gemini*",
+      ],
+      rmdir: "~/.gemini"
 end

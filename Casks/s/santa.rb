@@ -1,11 +1,13 @@
 cask "santa" do
-  version "2025.11"
-  sha256 "6f4328f49237df2c9ca59f9c947a5c01f3aa69564d6dbe3e7e49a18e37326cea"
+  version "2026.7"
+  sha256 "8504918fb6c00e23980f4c6d6037db07f4928e424181550d9c16b2a550b893ad"
 
   url "https://github.com/northpolesec/santa/releases/download/#{version}/santa-#{version}.dmg"
   name "Santa"
   desc "Binary authorization system"
   homepage "https://github.com/northpolesec/santa"
+
+  depends_on macos: :ventura
 
   pkg "santa-#{version}.pkg"
 

@@ -12,7 +12,9 @@ cask "redis-pro" do
     strategy :github_latest
   end
 
-  depends_on macos: ">= :big_sur"
+  disable! date: "2026-09-01", because: :fails_gatekeeper_check
+
+  depends_on macos: :big_sur
 
   app "redis-pro.app"
 

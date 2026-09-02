@@ -2,26 +2,25 @@ cask "codex" do
   arch arm: "aarch64", intel: "x86_64"
   os macos: "apple-darwin", linux: "unknown-linux-musl"
 
-  version "0.57.0"
-  sha256 arm:          "74e1c0532cfee52f2efeab9fbb746fea7aa808dd3fa5694409356a1ddea97b39",
-         intel:        "d29e67110c6651f314d3188154c92375f6eae76e31511947023cf65db30cef0d",
-         arm64_linux:  "987660ebde0f5cdc083d52d218a894837fab498ba42b80d22ef7224c7e012296",
-         x86_64_linux: "a558ef07d234771fdbcdc761a45924f31a8aceff132d72d3cad70d2690a7eadd"
+  version "0.152.1"
+  sha256 arm:          "0a5dffe5a4ab6769e70d962708d2a195b2adcf8cb96e7b9d969a2c95d2238575",
+         intel:        "a36dc3f5b93f8726eb3be874796f423d6f0287980a10db770bf289046d72d924",
+         arm64_linux:  "f93fc7015af13ac2a2486af23629946d9aade5f88b40c2cc7e1aa1fca2c93ef8",
+         x86_64_linux: "2aeea68239b4d96081b3e7fe91d0d64e4875b224668c381985d22bb31d7566b9"
 
-  url "https://github.com/openai/codex/releases/download/rust-v#{version}/codex-#{arch}-#{os}.tar.gz"
+  url "https://github.com/openai/codex/releases/download/rust-v#{version}/codex-package-#{arch}-#{os}.tar.gz"
   name "Codex"
   desc "OpenAI's coding agent that runs in your terminal"
   homepage "https://github.com/openai/codex"
 
   livecheck do
     url :url
-    regex(/^rust-v?(\d+(?:\.\d+)+)$/i)
+    regex(/^rust[._-]v?(\d+(?:\.\d+)+)$/i)
     strategy :github_latest
   end
 
-  depends_on formula: "ripgrep"
+  binary "bin/codex"
+  generate_completions_from_executable "bin/codex", "completion"
 
-  binary "codex-#{arch}-#{os}", target: "codex"
-
-  zap trash: "~/.codex"
+  zap rmdir: "~/.codex"
 end

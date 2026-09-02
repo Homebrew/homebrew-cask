@@ -1,28 +1,19 @@
 cask "minstaller" do
-  on_catalina :or_older do
-    version "3.0.2"
-    sha256 "e87e41c78dffaee4c01803b01fc324851de2e482a1c22e6d35a49b37f7f65192"
-
-    livecheck do
-      skip "Legacy version"
-    end
-  end
-  on_big_sur :or_newer do
-    version "3.2.1"
-    sha256 "3c03b7dd9a037b7fd3564f5d121be0490b92e07f2cc4d3d8dd69dc4b401bee86"
-
-    livecheck do
-      url "https://s3.motionvfx.com/mvfxpublic/mInstaller/sparkle/appcast.xml"
-      strategy :sparkle
-    end
-  end
+  version "3.2.5"
+  sha256 "58bf762d53c0a30c6b7a685152f28591c5b1ac01519e03114c5e75b3ee12e5b4"
 
   url "https://s3.motionvfx.com/mvfxpublic/mInstaller/sparkle/mInstaller-#{version}.zip"
   name "mInstaller"
   desc "Downloader and manager for MotionVFX products"
   homepage "https://www.motionvfx.com/"
 
+  livecheck do
+    url "https://s3.motionvfx.com/mvfxpublic/mInstaller/sparkle/appcast.xml"
+    strategy :sparkle
+  end
+
   auto_updates true
+  depends_on :macos
 
   app "mInstaller.app"
 

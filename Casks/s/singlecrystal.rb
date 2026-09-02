@@ -1,5 +1,5 @@
 cask "singlecrystal" do
-  version "5.3.0"
+  version "5.3.3"
   sha256 :no_check
 
   url "https://crystalmaker.com/downloads/singlecrystal#{version.major}_mac.zip"
@@ -13,6 +13,8 @@ cask "singlecrystal" do
       xml.get_elements("//version").map { |item| item.attributes["number"] }
     end
   end
+
+  depends_on :macos
 
   app "SingleCrystal.app"
 

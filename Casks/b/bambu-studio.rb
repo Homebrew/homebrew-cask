@@ -1,9 +1,8 @@
 cask "bambu-studio" do
-  version "02.03.01.51,20251029114602"
-  sha256 "dd92a263dcec8818edfbc3087a6ff1e96bee82384a3dbe09744237772953c968"
+  version "02.08.02.61,20260820225108"
+  sha256 "cf648a95858fb630e1353c4987038df60d6caab693f18411fb95fb809f2d6926"
 
-  url "https://github.com/bambulab/BambuStudio/releases/download/v#{version.csv.third || version.csv.first}/Bambu_Studio_mac-v#{version.csv.first}-#{version.csv.second}.dmg",
-      verified: "github.com/bambulab/BambuStudio/"
+  url "https://github.com/bambulab/BambuStudio/releases/download/v#{version.csv.third || version.csv.first}/Bambu_Studio_mac-v#{version.csv.first}-#{version.csv.second}.dmg"
   name "Bambu Studio"
   desc "3D model slicing software for 3D printers, maintained by Bambu Lab"
   homepage "https://bambulab.com/en/download/studio"
@@ -21,7 +20,7 @@ cask "bambu-studio" do
     end
   end
 
-  depends_on macos: ">= :big_sur"
+  depends_on macos: :big_sur
 
   app "BambuStudio.app"
 

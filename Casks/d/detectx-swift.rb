@@ -2,8 +2,7 @@ cask "detectx-swift" do
   version "1.0982"
   sha256 :no_check
 
-  url "https://s3.amazonaws.com/sqwarq.com/PublicZips/DetectX_Swift.dmg",
-      verified: "s3.amazonaws.com/sqwarq.com/"
+  url "https://s3.amazonaws.com/sqwarq.com/PublicZips/DetectX_Swift.dmg"
   name "DetectX Swift"
   desc "Searching and troubleshooting tool"
   homepage "https://sqwarq.com/detectx/"
@@ -14,6 +13,7 @@ cask "detectx-swift" do
   end
 
   auto_updates true
+  depends_on :macos
 
   app "DetectX Swift.app"
 

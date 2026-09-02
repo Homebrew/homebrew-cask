@@ -2,8 +2,7 @@ cask "find-my-ports" do
   version "1.4.0,KmCUblOLkztgxfVd3uaPti8c5i6BnM"
   sha256 "da35357bc51cc776854b60606f36258b70fb4d350ae7330f17f602beed285753"
 
-  url "https://12tlni7vrjp0srft.public.blob.vercel-storage.com/find-my-ports/Find%20My%20Ports%20#{version.csv.first}-#{version.csv.second}.dmg",
-      verified: "12tlni7vrjp0srft.public.blob.vercel-storage.com/"
+  url "https://12tlni7vrjp0srft.public.blob.vercel-storage.com/find-my-ports/Find%20My%20Ports%20#{version.csv.first}-#{version.csv.second}.dmg"
   name "find-my-ports"
   desc "Manager for open development ports and remote Vercel deployments"
   homepage "https://www.findmyports.com/"
@@ -19,7 +18,7 @@ cask "find-my-ports" do
     end
   end
 
-  depends_on macos: ">= :sonoma"
+  depends_on macos: :sonoma
 
   app "Find My Ports.app"
 

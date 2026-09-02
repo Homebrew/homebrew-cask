@@ -1,5 +1,5 @@
 cask "rightfont" do
-  version "9.8"
+  version "10.1.1"
   sha256 :no_check
 
   url "https://rightfontapp.com/update/rightfont.zip"
@@ -13,7 +13,7 @@ cask "rightfont" do
   end
 
   auto_updates true
-  depends_on macos: ">= :big_sur"
+  depends_on macos: :big_sur
 
   app "RightFont.app"
 
@@ -22,6 +22,7 @@ cask "rightfont" do
         "~/Library/Application Support/com.rightfontapp.RightFont*",
         "~/Library/Application Support/RightFont",
         "~/Library/Caches/com.rightfontapp.RightFont*",
+        "~/Library/HTTPStorages/com.rightfontapp.RightFont5",
         "~/Library/Logs/RightFont*",
         "~/Library/Preferences/com.rightfontapp.RightFont*.plist",
         "~/Library/WebKit/com.rightfontapp.RightFont*",

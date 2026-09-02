@@ -1,12 +1,11 @@
 cask "wordpresscom" do
   arch arm: "arm64", intel: "x64"
 
-  version "8.0.4"
-  sha256 arm:   "4fea40eba336ad397a0c55f511a7942c6314970d9daa57fedb609ff487887a21",
-         intel: "8f76a13f4b2f152b20220d196af8b60236d475d65a5689849efd9e0f50a308b2"
+  version "8.2.3"
+  sha256 arm:   "6e584669c8d8fe7b96d75f99692cb102a654940fb5598ea0bc369a21e5a283e5",
+         intel: "6bcff34d7a1590ccb8410d890252633e2c05cd8101d5b0d70f5b08f960aa7ca2"
 
-  url "https://github.com/Automattic/wp-desktop/releases/download/v#{version}/wordpress.com-macOS-dmg-#{version}-#{arch}.dmg",
-      verified: "github.com/Automattic/wp-desktop/"
+  url "https://github.com/Automattic/wp-desktop/releases/download/v#{version}/wordpress.com-macOS-dmg-#{version}-#{arch}.dmg"
   name "WordPress.com"
   desc "WordPress client"
   homepage "https://apps.wordpress.com/desktop/"
@@ -17,6 +16,7 @@ cask "wordpresscom" do
   end
 
   auto_updates true
+  depends_on macos: :monterey
 
   app "WordPress.com.app"
 

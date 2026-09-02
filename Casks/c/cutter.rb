@@ -1,12 +1,11 @@
 cask "cutter" do
   arch arm: "arm64", intel: "x86_64"
 
-  version "2.4.1"
-  sha256 arm:   "172d364bb4d3bdbd7cedc12f32721003b3630536a96d1e6c382d9a453f483ea9",
-         intel: "b88d772cbcce0186d36beca0e49ec58573e8c1d9af4be77dc3225467748f29ab"
+  version "2.5.0"
+  sha256 arm:   "ec08477489cb7f769d4121e5084b09131b02b6a801ac7a2d5896a67e87193452",
+         intel: "02a7f1c507239691b151e6cc41a5d33f89d672ec443f12890e31087ad37271a6"
 
-  url "https://github.com/rizinorg/cutter/releases/download/v#{version}/Cutter-v#{version}-macOS-#{arch}.dmg",
-      verified: "github.com/rizinorg/cutter/"
+  url "https://github.com/rizinorg/cutter/releases/download/v#{version}/Cutter-v#{version}-macOS-#{arch}.dmg"
   name "Cutter"
   desc "Reverse engineering platform powered by Rizin"
   homepage "https://cutter.re/"
@@ -16,17 +15,11 @@ cask "cutter" do
     strategy :github_latest
   end
 
-  app "Cutter.app"
-  # shim script (https://github.com/Homebrew/homebrew-cask/issues/18809)
-  shimscript = "#{staged_path}/cutter.wrapper.sh"
-  binary shimscript, target: "cutter"
+  depends_on macos: :big_sur
 
-  preflight do
-    File.write shimscript, <<~EOS
-      #!/bin/sh
-      '#{appdir}/Cutter.app/Contents/MacOS/Cutter' "$@"
-    EOS
-  end
+  app "Cutter.app"
+  command_wrapper "cutter",
+                  executable: "#{appdir}/Cutter.app/Contents/MacOS/Cutter"
 
   zap trash: [
     "~/.config/rizin",

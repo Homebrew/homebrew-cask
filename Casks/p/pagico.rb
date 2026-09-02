@@ -1,6 +1,6 @@
 cask "pagico" do
-  version "10,20250819"
-  sha256 "ee7438a4c6a1916b8c5fef2b9c903c89879a4da5ede3345097c38c84950397a1"
+  version "10,20260518"
+  sha256 "02533c88810ba861d8785695b6369215f61d5ba4b86bb5f9671bab471d24d57a"
 
   url "https://www.pagico.com/downloads/Pagico_macOS_r#{version.csv.second}.dmg"
   name "Pagico"
@@ -13,6 +13,7 @@ cask "pagico" do
   end
 
   auto_updates true
+  depends_on :macos
 
   app "Pagico.app"
 

@@ -1,16 +1,15 @@
 cask "rstudio" do
-  version "2025.09.2,418"
-  sha256 "9d1719ce11ec54027b8b698c966a3ac2fb58b1769f8c05325b86d70be749d8d6"
+  version "2026.08.2,200"
+  sha256 "4e7147d90bf5702b8b8d8dac5c3666b943f89a3997b787a5d7c3b8f5bb07b5d0"
 
-  url "https://download1.rstudio.org/electron/macos/RStudio-#{version.csv.first}-#{version.csv.second}.dmg",
-      verified: "download1.rstudio.org/electron/macos/"
+  url "https://download1.rstudio.org/electron/macos/RStudio-#{version.csv.first}-#{version.csv.second}.dmg"
   name "RStudio"
   desc "Data science software focusing on R and Python"
   homepage "https://posit.co/products/open-source/rstudio/"
 
   livecheck do
-    url "https://posit.co/download/rstudio-desktop/"
-    regex(/RStudio[._-]v?(\d+(?:\.\d+)+)[._-](\d+)\.dmg/i)
+    url "https://www.rstudio.org/links/check_for_update?version=0.0.0&os=mac"
+    regex(/update-version=v?(\d+(?:\.\d+)+)%2B(\d+)/i)
     strategy :page_match do |page, regex|
       match = page.match(regex)
       next if match.blank?
@@ -20,9 +19,11 @@ cask "rstudio" do
   end
 
   conflicts_with cask: "rstudio@daily"
-  depends_on macos: ">= :big_sur"
+  depends_on macos: :monterey
 
   app "RStudio.app"
+
+  uninstall quit: "com.rstudio.desktop"
 
   zap trash: "~/.rstudio-desktop"
 

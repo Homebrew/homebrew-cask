@@ -20,6 +20,8 @@ cask "jandi" do
     end
   end
 
+  depends_on :macos
+
   app "JANDI.app"
 
   uninstall quit: "com.jandi.osx.JANDI"

@@ -1,9 +1,8 @@
 cask "fluent-reader" do
-  version "1.1.4"
-  sha256 "cdcac2ad7199b214be1c4fe0f0f0c936c86ef87c2e173fb87e9395652399cad6"
+  version "1.2.2"
+  sha256 "f966116db2ad855c30d5c710ec3c9d8408d867b81ca156b639539010e56ad906"
 
-  url "https://github.com/yang991178/fluent-reader/releases/download/v#{version}/Fluent.Reader.#{version}.dmg",
-      verified: "github.com/yang991178/fluent-reader/"
+  url "https://github.com/yang991178/fluent-reader/releases/download/v#{version}/Fluent.Reader.#{version}.dmg"
   name "Fluent Reader"
   desc "RSS/Atom news aggregator"
   homepage "https://hyliu.me/fluent-reader/"
@@ -13,6 +12,8 @@ cask "fluent-reader" do
     regex(/^v?(\d+(?:\.\d+)+)$/i)
   end
 
+  depends_on macos: :monterey
+
   app "Fluent Reader.app"
 
   zap trash: [
@@ -20,8 +21,4 @@ cask "fluent-reader" do
     "~/Library/Preferences/me.hyliu.fluentreader.plist",
     "~/Library/Saved Application State/me.hyliu.fluentreader.savedState",
   ]
-
-  caveats do
-    requires_rosetta
-  end
 end

@@ -8,9 +8,11 @@ cask "mdb-accdb-viewer" do
   homepage "https://eggerapps.at/mdbviewer/"
 
   livecheck do
-    url "https://eggerapps.at/mdbviewer/download/"
+    url "https://eggerapps.at/mdbviewer/download/download.php"
     strategy :header_match
   end
+
+  depends_on :macos
 
   app "MDB ACCDB Viewer.app"
 

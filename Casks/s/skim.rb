@@ -1,9 +1,8 @@
 cask "skim" do
-  version "1.7.11"
-  sha256 "25f340e5819bcc77d8fab45196528bdb0991e7e9f0218fbb0caf7ec1107fd3c5"
+  version "1.7.15"
+  sha256 "804b2785f7c22e79d75fe9bbd0b2b2663ec1d765eb103fb0cb75fc3864dbeb73"
 
-  url "https://downloads.sourceforge.net/skim-app/Skim/Skim-#{version}/Skim-#{version}.dmg",
-      verified: "downloads.sourceforge.net/skim-app/Skim/"
+  url "https://downloads.sourceforge.net/skim-app/Skim/Skim-#{version}/Skim-#{version}.dmg"
   name "Skim"
   desc "PDF reader and note-taking application"
   homepage "https://skim-app.sourceforge.io/"
@@ -14,6 +13,7 @@ cask "skim" do
   end
 
   auto_updates true
+  depends_on :macos
 
   app "Skim.app"
   binary "#{appdir}/Skim.app/Contents/SharedSupport/displayline"

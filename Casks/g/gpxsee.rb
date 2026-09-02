@@ -1,9 +1,8 @@
 cask "gpxsee" do
-  version "15.3"
-  sha256 "b99d69b2869dc9f264981e361b6fa70408988c2d500c1c84198ebc9c27abcded"
+  version "16.14"
+  sha256 "4ff6c8ee314b94d60ee0763435ca32aea40e4023da96fcfef76bc06336522d90"
 
-  url "https://downloads.sourceforge.net/gpxsee/Mac%20OS%20X/GPXSee-#{version}.dmg",
-      verified: "sourceforge.net/gpxsee/Mac%20OS%20X/"
+  url "https://downloads.sourceforge.net/gpxsee/Mac%20OS%20X/GPXSee-#{version}.dmg"
   name "GPXSee"
   desc "GPS log file viewer and analyzer"
   homepage "https://www.gpxsee.org/"
@@ -15,7 +14,7 @@ cask "gpxsee" do
 
   disable! date: "2026-09-01", because: :fails_gatekeeper_check
 
-  depends_on macos: ">= :monterey"
+  depends_on macos: :sonoma
 
   app "GPXSee.app"
 

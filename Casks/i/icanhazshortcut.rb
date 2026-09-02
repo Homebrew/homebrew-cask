@@ -1,19 +1,17 @@
 cask "icanhazshortcut" do
-  version "1.3.0"
-  sha256 "f2b8a8b2eb7c099f4a5df31613d9828ff25fa200bcef4e39b41074736511186b"
+  version "2.0.1"
+  sha256 "95de7bfaf4a986ec5426ca720e4eda80fb233ad93b8294d2e5b65c3fd2ae6e7d"
 
   url "https://github.com/deseven/icanhazshortcut/releases/download/#{version}/ichs.dmg"
   name "iCanHazShortcut"
   desc "Shortcut manager"
-  homepage "https://github.com/deseven/icanhazshortcut/"
+  homepage "https://icanhazapps.d7.wtf/shortcut"
+
+  depends_on macos: :ventura
 
   app "iCanHazShortcut.app"
 
   uninstall quit: "info.deseven.icanhazshortcut"
 
   zap trash: "~/Library/Preference/info.deseven.icanhazshortcut"
-
-  caveats do
-    requires_rosetta
-  end
 end

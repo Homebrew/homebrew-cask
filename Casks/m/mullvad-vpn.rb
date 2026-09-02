@@ -1,6 +1,6 @@
 cask "mullvad-vpn" do
-  version "2025.13"
-  sha256 "9eecf83f823bbdfcac0607c5e20f88d4472edf4c3be9ecede0a514f2c2603dfe"
+  version "2026.4"
+  sha256 "b00522020be5d580d96e0cf506baf78269c1b699cb860860451ae86e9b26b60c"
 
   url "https://cdn.mullvad.net/app/desktop/releases/#{version}/MullvadVPN-#{version}.pkg"
   name "Mullvad VPN"
@@ -19,21 +19,14 @@ cask "mullvad-vpn" do
 
   auto_updates true
   conflicts_with cask: "mullvad-vpn@beta"
-  depends_on macos: ">= :ventura"
+  depends_on macos: :monterey
 
   pkg "MullvadVPN-#{version}.pkg"
 
   uninstall launchctl: "net.mullvad.daemon",
             quit:      "net.mullvad.vpn",
-            script:    {
-              executable:   "/Applications/Mullvad VPN.app/Contents/Resources/mullvad-setup",
-              args:         ["reset-firewall"],
-              sudo:         true,
-              must_succeed: false,
-            },
             pkgutil:   "net.mullvad.vpn",
             delete:    [
-              "/etc/mullvad-vpn",
               "/Library/Caches/mullvad-vpn",
               "/opt/homebrew/share/fish/vendor_completions.d/mullvad.fish",
               "/opt/homebrew/share/zsh/site-functions/_mullvad",
@@ -44,11 +37,18 @@ cask "mullvad-vpn" do
               "/var/log/mullvad-vpn",
             ]
 
-  zap trash: [
-    "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/net.mullvad.vpn.sfl*",
-    "~/Library/Application Support/Mullvad VPN",
-    "~/Library/Logs/Mullvad VPN",
-    "~/Library/Preferences/net.mullvad.vpn.helper.plist",
-    "~/Library/Preferences/net.mullvad.vpn.plist",
-  ]
+  zap script: {
+        executable:   "/Applications/Mullvad VPN.app/Contents/Resources/mullvad-setup",
+        args:         ["reset-firewall"],
+        sudo:         true,
+        must_succeed: false,
+      },
+      trash:  [
+        "/etc/mullvad-vpn",
+        "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/net.mullvad.vpn.sfl*",
+        "~/Library/Application Support/Mullvad VPN",
+        "~/Library/Logs/Mullvad VPN",
+        "~/Library/Preferences/net.mullvad.vpn.helper.plist",
+        "~/Library/Preferences/net.mullvad.vpn.plist",
+      ]
 end

@@ -7,6 +7,8 @@ cask "font-sf-armenian" do
   name "SF Armenian"
   homepage "https://developer.apple.com/fonts"
 
+  depends_on :macos
+
   pkg "SF Armenian Fonts.pkg"
 
   uninstall pkgutil: "com.apple.pkg.SFArmenianFonts"

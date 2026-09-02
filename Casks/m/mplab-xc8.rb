@@ -1,25 +1,25 @@
 cask "mplab-xc8" do
-  version "3.10"
-  sha256 "42569224273f43ae3f6a4d14d675766df17b0e99044c316e0b3b49d2d1a14145"
+  version "4.00"
+  sha256 "b3a95dbbb95a3d02648cb796a45f7a8687827d9eb10eadb36b5645af0d623025"
 
   url "https://ww1.microchip.com/downloads/aemDocuments/documents/DEV/ProductDocuments/SoftwareTools/xc8-v#{version}-full-install-macos-x64-installer.dmg"
   name "MPLab XC8 Compiler"
   desc "Compiler for 8-bit PIC and SAM MCUs and MPUs"
-  homepage "https://www.microchip.com/mplab/compilers"
+  homepage "https://www.microchip.com/en-us/tools-resources/develop/mplab-xc-compilers/xc8"
 
   livecheck do
-    url "https://www.microchip.com/en-us/tools-resources/develop/mplab-xc-compilers/xc8"
+    url "https://www.microchip.com/en-us/tools-resources/develop/mplab-xc-compilers/xc8",
+        user_agent: :browser
     regex(%r{href=.*?ProductDocuments/SoftwareTools/xc8[._-]v?(\d+(?:\.\d+)+)-full-install-macos-x64-installer\.dmg}i)
   end
+
+  depends_on :macos
 
   installer script: {
     executable: "xc8-v#{version}-full-install-macos-x64-installer.app/Contents/MacOS/installbuilder.sh",
     args:       [
       "--mode", "unattended",
-      "--unattendedmodeui", "none",
       "--ModifyAll", "0",
-      "--netservername", '""',
-      "--LicenseType", "WorkstationMode",
       "--prefix", staged_path.to_s
     ],
     input:      ["y"],
@@ -29,10 +29,9 @@ cask "mplab-xc8" do
   binary "#{staged_path}/bin/xc8-ar"
   binary "#{staged_path}/bin/xc8-cc"
   binary "#{staged_path}/bin/xc8-clangd"
-  binary "#{staged_path}/bin/xclm"
 
-  postflight do
-    set_ownership staged_path.to_s
+  postflight_steps do
+    set_ownership "."
   end
 
   uninstall script: {

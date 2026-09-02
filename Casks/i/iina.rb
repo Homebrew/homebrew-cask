@@ -1,18 +1,28 @@
 cask "iina" do
-  version "1.4.1,160"
-  sha256 "177ad469ea129bed95a82ac59b5fb58d0a06c35342fca7a37dba214a8821f848"
+  version "1.4.4"
+  sha256 "dd0fc0bd4b37fb57a1c8d30d6e3201b3a64bafd29959fe56953964613237beb1"
 
-  url "https://dl-portal.iina.io/IINA.v#{version.csv.first}.dmg"
+  on_macos do
+    on_arm do
+      depends_on macos: :monterey
+    end
+    on_intel do
+      depends_on macos: :big_sur
+    end
+  end
+
+  url "https://dl.iina.io/IINA.v#{version}.dmg"
   name "IINA"
   desc "Free and open-source media player"
   homepage "https://iina.io/"
 
   livecheck do
     url "https://www.iina.io/appcast.xml"
-    strategy :sparkle # IINA sometimes rebuilds with the same short version.
+    strategy :sparkle, &:short_version # IINA sometimes rebuilds with the same short version.
   end
 
   auto_updates true
+  depends_on :macos
 
   app "IINA.app"
   binary "#{appdir}/IINA.app/Contents/MacOS/iina-cli", target: "iina"

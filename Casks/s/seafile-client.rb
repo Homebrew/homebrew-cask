@@ -1,9 +1,8 @@
 cask "seafile-client" do
-  version "9.0.15"
-  sha256 "d899e827e68d77503ea204884276a8accfe565d7b012e31983ced6f449647eb6"
+  version "9.0.21"
+  sha256 "7af0726a075ea4280383a5191011e840729aef9fbe1554faa6924a4545e7f1b3"
 
-  url "https://s3.eu-central-1.amazonaws.com/download.seadrive.org/seafile-client-#{version}.dmg",
-      verified: "s3.eu-central-1.amazonaws.com/download.seadrive.org/"
+  url "https://sos-ch-dk-2.exo.io/seafile-downloads/seafile-client-#{version}.dmg"
   name "Seafile Client"
   desc "File syncing client"
   homepage "https://www.seafile.com/"
@@ -13,9 +12,11 @@ cask "seafile-client" do
     regex(%r{href=.*?/seafile[._-]client[._-]v?(\d+(?:\.\d+)+)\.dmg}i)
   end
 
-  depends_on macos: ">= :big_sur"
+  depends_on macos: :big_sur
 
   app "Seafile Client.app"
+
+  uninstall quit: "com.seafile.seafile-client"
 
   zap trash: [
     "~/Library/Application Scripts/com.seafile.seafile-client.findersync",

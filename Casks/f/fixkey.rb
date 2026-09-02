@@ -1,9 +1,8 @@
 cask "fixkey" do
-  version "2.9.1"
-  sha256 "94f3a4e47125312d53a2d3a9e15ce5a0beb663677d158cf1d343272bca32b096"
+  version "2.9.3"
+  sha256 "571e6cc6fe1d6f95e41bc68d5aaad5d6b1ecc943ec8efd43062646d7314ff520"
 
-  url "https://fixkey.download/fixkey%20#{version}.dmg",
-      verified: "fixkey.download/"
+  url "https://fixkey.download/fixkey%20#{version}.dmg"
   name "fixkey"
   desc "Keyboard-focused AI copilot for writing"
   homepage "https://fixkey.ai/"
@@ -14,7 +13,7 @@ cask "fixkey" do
   end
 
   auto_updates true
-  depends_on macos: ">= :ventura"
+  depends_on macos: :ventura
 
   app "fixkey.app"
 

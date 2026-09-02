@@ -1,13 +1,13 @@
 cask "deltachat" do
   arch arm: "arm64", intel: "universal"
 
-  version "2.22.0"
-  sha256 arm:   "e373306623fee4ab683eb75f929a4b772a95620e46f0fbbe7b102e362171ed12",
-         intel: "2a2353521fedd538724b397a33dca9c3ddaeac5446b68ff81e03b5e5f4d7edbb"
+  version "2.59.1"
+  sha256 arm:   "1dc32427bbc4f4b6e133c33c9f435c254d5caf598675ccbde8846162ae54942b",
+         intel: "9199e541ad7f78d27e5f6b604072f1f2ece0eb1790844337e0ff8aad98396af3"
 
   url "https://download.delta.chat/desktop/v#{version}/DeltaChat-#{version}-#{arch}.dmg"
-  name "DeltaChat"
-  desc "Chat via the e-mail server network"
+  name "Delta Chat"
+  desc "Secure and reliable decentralised instant messenger"
   homepage "https://delta.chat/"
 
   livecheck do
@@ -15,12 +15,13 @@ cask "deltachat" do
     regex(/href=.*?DeltaChat[._-]v?(\d+(?:\.\d+)+)[._-]#{arch}\.dmg/i)
   end
 
-  depends_on macos: ">= :big_sur"
+  depends_on macos: :monterey
 
   app "DeltaChat.app"
 
   zap trash: [
     "~/Library/Application Scripts/chat.delta.desktop.electron",
+    "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/chat.delta.desktop.electron.sfl*",
     "~/Library/Application Support/CrashReporter/DeltaChat *_*.plist",
     "~/Library/Application Support/DeltaChat",
     "~/Library/Containers/chat.delta.desktop.electron",

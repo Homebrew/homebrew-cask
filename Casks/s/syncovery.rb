@@ -1,9 +1,9 @@
 cask "syncovery" do
   arch arm: "-Apple"
 
-  version "11.10.1"
-  sha256 arm:   "5951cbfa0a7aa845c850c8981376eecf3cf6e2d08ea3e13edd06401c168f953c",
-         intel: "cd0cc18a0811b7e49d8537d15ef2481d5890d911d2a07420110d8029cfe028e4"
+  version "12.6.1"
+  sha256 arm:   "e5218c439af023607491098b684c21f583576c99557743af8374dfd3dadaff84",
+         intel: "3997bfc4f9d6f1e650318b2ce911a23a653723c2bf4cef024406491422bd622d"
 
   url "https://www.syncovery.com/release/SyncoveryMac#{version}#{arch}.dmg"
   name "Syncovery"
@@ -14,6 +14,8 @@ cask "syncovery" do
     url "https://www.syncovery.com/download/mac/"
     regex(%r{href=.*?/SyncoveryMac[._-]?v?(\d+(?:\.\d+)+[a-z]?)#{arch}\.dmg}i)
   end
+
+  depends_on :macos
 
   pkg "SyncoveryMac (double-click to install).pkg"
 

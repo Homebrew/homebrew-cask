@@ -12,6 +12,8 @@ cask "sixtyforce" do
     regex(/>\s*sixtyforce\s*v?(\d+(?:\.\d+)*)\.zip/i)
   end
 
+  depends_on :macos
+
   app "sixtyforce.app"
 
   zap trash: [

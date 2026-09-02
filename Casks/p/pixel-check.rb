@@ -10,6 +10,8 @@ cask "pixel-check" do
   deprecate! date: "2024-11-01", because: :unmaintained
   disable! date: "2025-11-01", because: :unmaintained
 
+  depends_on :macos
+
   app "PiXel Check #{version}/PiXel Check.app"
 
   caveats do

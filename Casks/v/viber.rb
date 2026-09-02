@@ -1,5 +1,5 @@
 cask "viber" do
-  version "1.0.0.87,2154"
+  version "1.0.0.93,2154"
   sha256 :no_check
 
   url "https://download.viber.com/desktop/mac/online/Viber.dmg"
@@ -13,7 +13,7 @@ cask "viber" do
   end
 
   auto_updates true
-  depends_on macos: ">= :big_sur"
+  depends_on macos: :big_sur
 
   app "Viber.app"
 

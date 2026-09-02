@@ -1,9 +1,9 @@
 cask "rider" do
   arch arm: "-aarch64"
 
-  version "2025.3,253.28294.88"
-  sha256 arm:   "033f8dad94b9fec826ba9bd87025dfe668ef6d063a5cb49e7d33f7122ec2885e",
-         intel: "add7e6e67b9f2588979782d86a7ff680a263ef41cd13664ed703975a6498976e"
+  version "2026.2.1,262.9437.287"
+  sha256 arm:   "5b565eea336499813e594a537ccf50d3f2639c00c3caa3fa9fc3686cdf22ada4",
+         intel: "3172cecfefa55581909da9d3acee8485b0f5442f4494cffe1d2c2e8e85a079d2"
 
   url "https://download.jetbrains.com/rider/JetBrains.Rider-#{version.csv.first}#{arch}.dmg"
   name "JetBrains Rider"
@@ -24,18 +24,11 @@ cask "rider" do
   end
 
   auto_updates true
+  depends_on :macos
 
   app "Rider.app"
-  # shim script (https://github.com/Homebrew/homebrew-cask/issues/18809)
-  shimscript = "#{staged_path}/rider.wrapper.sh"
-  binary shimscript, target: "rider"
-
-  preflight do
-    File.write shimscript, <<~EOS
-      #!/bin/sh
-      exec '#{appdir}/Rider.app/Contents/MacOS/rider' "$@"
-    EOS
-  end
+  command_wrapper "rider",
+                  executable: "#{appdir}/Rider.app/Contents/MacOS/rider"
 
   zap trash: [
     "~/Library/Application Support/Rider#{version.major_minor}",

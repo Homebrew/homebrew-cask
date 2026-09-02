@@ -1,5 +1,5 @@
 cask "hancom-docs" do
-  version "12.30.0.6163"
+  version "12.30.0.6446"
   sha256 :no_check
 
   url "https://cdn.hancom.com/pds/hnc/DOWN/HancomDocs/HwpMac_HancomDocs.pkg",
@@ -12,6 +12,8 @@ cask "hancom-docs" do
     url "https://cdn.hancom.com/upd/HwpMac2022/HancomOfficeHWPDocs/hupdate_mac.ini"
     regex(/Hwp_mac\s*=\s*(\d+(?:\.\d+)+)/i)
   end
+
+  depends_on :macos
 
   pkg "HwpMac_HancomDocs.pkg"
 

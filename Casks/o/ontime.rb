@@ -1,12 +1,11 @@
 cask "ontime" do
   arch arm: "arm64", intel: "x64"
 
-  version "4.1.0"
-  sha256 arm:   "03f02234949ca0b41c43509fc00774a058b7409a9775575a3cdb72601a1f62b3",
-         intel: "ef24445724734a5fac529397752d50758e07564435a53080d6737b0207ee15da"
+  version "4.12.0"
+  sha256 arm:   "d639e76efb67cc090ce7e129ffc6d31f05173c6b7b9d2c62805cb642269ee54a",
+         intel: "2719a7108cd212d15b9aa11ea2cc956969c7d43e430926f9cdba5fbe0be715da"
 
-  url "https://github.com/cpvalente/ontime/releases/download/v#{version}/ontime-macOS-#{arch}.dmg",
-      verified: "github.com/cpvalente/ontime/"
+  url "https://github.com/cpvalente/ontime/releases/download/v#{version}/ontime-macOS-#{arch}.dmg"
   name "Ontime"
   desc "Time keeping for live events"
   homepage "https://getontime.no/"
@@ -17,7 +16,7 @@ cask "ontime" do
   end
 
   auto_updates true
-  depends_on macos: ">= :monterey"
+  depends_on macos: :monterey
 
   app "ontime.app"
 

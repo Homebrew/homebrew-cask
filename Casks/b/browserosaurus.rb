@@ -11,8 +11,10 @@ cask "browserosaurus" do
   homepage "https://github.com/will-stone/browserosaurus"
 
   deprecate! date: "2025-08-30", because: :discontinued
+  disable! date: "2026-08-30", because: :discontinued
 
   auto_updates true
+  depends_on :macos
 
   app "Browserosaurus.app"
 

@@ -1,38 +1,47 @@
 cask "chatgpt" do
-  version "1.2025.301,1761940772"
-  sha256 "94d1d9c106a26eb2b336c7e4756691014dcf6123f0d8b254e3c66ca44d3e0334"
+  arch arm: "arm64", intel: "x64"
+  livecheck_arch = on_arch_conditional intel: "-x64"
 
-  url "https://persistent.oaistatic.com/sidekick/public/ChatGPT_Desktop_public_#{version.csv.first}_#{version.csv.second}.dmg",
-      verified: "persistent.oaistatic.com/sidekick/public/"
+  version "26.901.20858"
+  sha256 arm:   "c8cab4ba07ff1852b5eeb11a7e077adba48e28fe8faada158eaa5edca90f0062",
+         intel: "f5e7e86b980183d41078a29c96d0a2b81122effe2c661bba931b3b16bfdaeaec"
+
+  url "https://persistent.oaistatic.com/codex-app-prod/ChatGPT-darwin-#{arch}-#{version}.zip"
   name "ChatGPT"
   desc "OpenAI's official ChatGPT desktop app"
   homepage "https://chatgpt.com/"
 
-  # Some older items in the Sparkle feed have a more recent pubDate, so it's necessary to
-  # work with all of the items in the feed (not just the newest one).
   livecheck do
-    url "https://persistent.oaistatic.com/sidekick/public/sparkle_public_appcast.xml"
-    strategy :sparkle do |items|
-      items.map(&:nice_version)
-    end
+    url "https://persistent.oaistatic.com/codex-app-prod/appcast#{livecheck_arch}.xml"
+    strategy :sparkle, &:short_version
   end
 
   auto_updates true
-  depends_on macos: ">= :sonoma"
-  depends_on arch: :arm64
+  depends_on macos: :ventura
 
   app "ChatGPT.app"
 
-  uninstall quit: "com.openai.chat"
+  uninstall quit: "com.openai.codex"
 
   zap trash: [
-    "~/Library/Application Support/ChatGPT",
-    "~/Library/Application Support/com.openai.chat",
-    "~/Library/Caches/com.openai.chat",
-    "~/Library/HTTPStorages/com.openai.chat",
-    "~/Library/HTTPStorages/com.openai.chat.binarycookies",
-    "~/Library/Preferences/com.openai.chat.*.plist",
-    "~/Library/Preferences/com.openai.chat.plist",
-    "~/Library/Saved Application State/com.openai.chat.savedState",
-  ]
+        "/Library/Application Support/CodexComputerUseAuthorizationPlugin",
+        "~/Library/Application Support/Codex",
+        "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.openai.codex.sfl*",
+        "~/Library/Application Support/com.openai.codex",
+        "~/Library/Application Support/OpenAI/Codex",
+        "~/Library/Caches/Codex",
+        "~/Library/Caches/com.openai.codex",
+        "~/Library/Caches/com.openai.sky.CUAService",
+        "~/Library/Group Containers/*.com.openai.sky.CUAService",
+        "~/Library/HTTPStorages/com.openai.codex",
+        "~/Library/HTTPStorages/com.openai.codex.binarycookies",
+        "~/Library/HTTPStorages/com.openai.sky.CUAService",
+        "~/Library/HTTPStorages/com.openai.sky.CUAService.binarycookies",
+        "~/Library/Logs/com.openai.codex",
+        "~/Library/Preferences/com.openai.codex.plist",
+        "~/Library/Preferences/com.openai.sky.CUAService.cli.plist",
+        "~/Library/Preferences/com.openai.sky.CUAService.plist",
+        "~/Library/Saved Application State/com.openai.codex.savedState",
+      ],
+      rmdir: "~/.codex"
 end

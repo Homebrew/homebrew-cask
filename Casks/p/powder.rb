@@ -1,12 +1,11 @@
 cask "powder" do
   arch arm: "aarch64", intel: "x86_64"
 
-  version "99.3.384"
-  sha256 arm:   "c20e68c27e3b595f9c0f410359f606a5b9c6858f9b752d5a9f953e78934ab561",
-         intel: "1e32a99bef0e36aabe740c101efd0665dcc99f196c53b8e86ac852e3b0b7fa40"
+  version "100.1.400"
+  sha256 arm:   "baad1d8e94f74752e1a458d4fe6b9b2de8682607556d046f92695714cef7f3d1",
+         intel: "81236e7be76dbf5af8e63203f538deb5605dead0064b894f56f1225ddd4be8e6"
 
-  url "https://github.com/The-Powder-Toy/The-Powder-Toy/releases/download/v#{version}/powder-v#{version}-#{arch}-darwin-macos.dmg",
-      verified: "github.com/The-Powder-Toy/The-Powder-Toy/"
+  url "https://github.com/The-Powder-Toy/The-Powder-Toy/releases/download/v#{version}/powder-v#{version}-#{arch}-darwin-macos.dmg"
   name "Powder Toy"
   desc "Physics sandbox game"
   homepage "https://powdertoy.co.uk/"
@@ -17,6 +16,8 @@ cask "powder" do
   end
 
   disable! date: "2026-09-01", because: :fails_gatekeeper_check
+
+  depends_on macos: :big_sur
 
   app "The Powder Toy.app"
 

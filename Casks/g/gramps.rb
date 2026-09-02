@@ -1,12 +1,11 @@
 cask "gramps" do
   arch arm: "Arm", intel: "Intel"
 
-  version "6.0.6,1"
-  sha256 arm:   "2a80b056431581c574b3a5adb3db64b7be537de6b6e91972c7b94e63d7ddc7a1",
-         intel: "6bfb133200bf3afe1ddaa82ad01ff4b706d5d4997143c5bb249c6d16e1c571f3"
+  version "6.0.8,1"
+  sha256 arm:   "8465bbb6a3dbf23ca7a49cebd121db0d1490ee39a8d3c545161324dd2edc0848",
+         intel: "5c2698ab9e684b6ae05fea7b27cf6edbeb05ac6d6ccaadad00365b5c4ee19254"
 
-  url "https://github.com/gramps-project/gramps/releases/download/v#{version.csv.first}/Gramps-#{arch}-#{version.csv.first}-#{version.csv.second}.dmg",
-      verified: "github.com/gramps-project/gramps/"
+  url "https://github.com/gramps-project/gramps/releases/download/v#{version.csv.first}/Gramps-#{arch}-#{version.csv.first}-#{version.csv.second}.dmg"
   name "Gramps"
   desc "Genealogy software"
   homepage "https://gramps-project.org/blog/"
@@ -28,7 +27,7 @@ cask "gramps" do
     end
   end
 
-  depends_on macos: ">= :big_sur"
+  depends_on macos: :big_sur
 
   app "Gramps.app"
 

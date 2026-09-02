@@ -1,8 +1,8 @@
 cask "microsoft-auto-update" do
-  version "4.81.25111027"
-  sha256 "07c055a24521a102bf9154fe36a699bb4fb92cdb820f87024ffdb80938666632"
+  version "4.84.26071119"
+  sha256 "be878237348c79d03c6a8286e7b61c58265d9cc5917d1a282c25059fe46bd4a7"
 
-  url "https://officecdnmac.microsoft.com/pr/C1297A47-86C4-4C1F-97FA-950631F94777/MacAutoupdate/Microsoft_AutoUpdate_#{version}_Updater.pkg"
+  url "https://res.public.onecdn.static.microsoft/mro1cdnstorage/C1297A47-86C4-4C1F-97FA-950631F94777/MacAutoupdate/Microsoft_AutoUpdate_#{version}_Updater.pkg"
   name "Microsoft Auto Update"
   desc "Provides updates to various Microsoft products"
   homepage "https://docs.microsoft.com/officeupdates/release-history-microsoft-autoupdate"
@@ -14,6 +14,7 @@ cask "microsoft-auto-update" do
   end
 
   auto_updates true
+  depends_on macos: :monterey
 
   pkg "Microsoft_AutoUpdate_#{version}_Updater.pkg"
 

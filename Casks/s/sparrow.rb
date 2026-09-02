@@ -1,17 +1,20 @@
 cask "sparrow" do
   arch arm: "aarch64", intel: "x86_64"
 
-  version "2.3.1"
-  sha256 arm:   "f9d410d1e6cbe64ed08e05d2a26ec404325ce14469d2eadaee9732f21b3aa2c4",
-         intel: "0aca484eed61bbfc94423a2f885283ae042f6be204796db0186e148169c44770"
+  version "2.5.4"
+  sha256 arm:   "e8d8637a737480721bc820a1b96a79483fc4c73bc0095f6ce1cfb93637158173",
+         intel: "ab497521e5f7f2d525198df94ef26fdf3d4086ddaa611f578cac2c399a34cce2"
 
-  url "https://github.com/sparrowwallet/sparrow/releases/download/#{version}/Sparrow-#{version}-#{arch}.dmg",
-      verified: "github.com/sparrowwallet/sparrow/"
+  url "https://github.com/sparrowwallet/sparrow/releases/download/#{version}/Sparrow-#{version}-#{arch}.dmg"
   name "Sparrow Bitcoin Wallet"
   desc "Bitcoin wallet application"
   homepage "https://sparrowwallet.com/"
 
+  depends_on :macos
+
   app "Sparrow.app"
+
+  uninstall quit: "com.sparrowwallet.sparrow"
 
   zap trash: "~/.sparrow"
 end

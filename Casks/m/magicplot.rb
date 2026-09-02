@@ -1,25 +1,26 @@
 cask "magicplot" do
-  version "3.0.1"
-  sha256 "67419db679bd1c5cd9c6bc919dfb4e37e767222afe4a2d164e67abfd94fda11b"
+  arch arm: "arm64", intel: "x64"
 
-  url "https://magicplot.com/downloads/MagicPlot#{version}.zip"
+  version "3.2"
+  sha256 arm:   "156fe5691e628415e0148e9c31504b9c1e158b0148d83760d96b39b8e17419f9",
+         intel: "2bbab000de1c14446ee60704a77d453ccd464ec8610b674980090e7ac084947d"
+
+  url "https://magicplot.com/downloads/MagicPlot-#{version}-macos-#{arch}.zip"
   name "MagicPlot"
   desc "Software for nonlinear fitting, plotting and data analysis"
   homepage "https://magicplot.com/"
 
   livecheck do
     url :homepage
-    regex(/href=.*?MagicPlot(\d+(?:\.\d+)*)\.zip/i)
+    regex(/href=.*?MagicPlot[._-]v?(\d+(?:\.\d+)+)[._-]macos[._-]#{arch}\.zip/i)
   end
 
-  app "MagicPlot#{version}.app"
+  depends_on :macos
+
+  app "MagicPlot.app"
 
   zap trash: [
     "~/Library/Application Support/MagicPlot",
     "~/Library/Saved Application State/com.magicplot.MagicPlot.savedState",
   ]
-
-  caveats do
-    requires_rosetta
-  end
 end

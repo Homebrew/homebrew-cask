@@ -12,6 +12,8 @@ cask "shop-different" do
     regex(%r{href=.*?/Shop\+Different\+(\d+(?:\.\d+)+)\.dmg}i)
   end
 
+  depends_on :macos
+
   app "Shop Different.app"
 
   zap trash: [

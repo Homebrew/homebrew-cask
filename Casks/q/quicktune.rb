@@ -1,5 +1,5 @@
 cask "quicktune" do
-  version "7.4.2"
+  version "7.5.1"
   sha256 :no_check
 
   url "https://marioaguzman.github.io/quicktune/updater/QuickTune.dmg"
@@ -13,7 +13,7 @@ cask "quicktune" do
   end
 
   auto_updates true
-  depends_on macos: ">= :big_sur"
+  depends_on macos: :big_sur
 
   app "QuickTune.app"
 

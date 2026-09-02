@@ -20,7 +20,7 @@ cask "devcleaner" do
     end
   end
 
-  depends_on macos: ">= :sonoma"
+  depends_on macos: :sonoma
 
   app "DevCleaner.app"
 

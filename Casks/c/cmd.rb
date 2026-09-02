@@ -1,9 +1,8 @@
 cask "cmd" do
-  version "0.1.34"
-  sha256 "106ad67a846ba1ca4f11db81c2ccf7724c9d8cb42828f11126ca015ba0535dd2"
+  version "0.2.3"
+  sha256 "4353828e77a46e39c44041aebfb65474e41eb18c7237ac16e9fc21841959877a"
 
-  url "https://github.com/getcmd-dev/cmd/releases/download/v#{version}/cmd.dmg",
-      verified: "github.com/getcmd-dev/cmd/"
+  url "https://github.com/getcmd-dev/cmd/releases/download/v#{version}/cmd.dmg"
   name "cmd"
   desc "AI assistant for development in Xcode"
   homepage "https://getcmd.dev/"
@@ -16,7 +15,7 @@ cask "cmd" do
   end
 
   auto_updates true
-  depends_on macos: ">= :sequoia"
+  depends_on macos: :sequoia
 
   app "cmd.app"
 

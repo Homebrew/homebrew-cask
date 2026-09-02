@@ -7,6 +7,8 @@ cask "openpht" do
   desc "Community-driven fork of Plex Home Theater"
   homepage "https://github.com/RasPlex/OpenPHT"
 
+  depends_on :macos
+
   app "OpenPHT.app"
 
   zap trash: [

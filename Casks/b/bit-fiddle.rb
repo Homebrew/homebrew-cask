@@ -8,6 +8,9 @@ cask "bit-fiddle" do
   homepage "https://manderc.com/apps/bitfiddle/index_eng.php"
 
   deprecate! date: "2025-05-12", because: :moved_to_mas
+  disable! date: "2026-05-14", because: :moved_to_mas
+
+  depends_on :macos
 
   app "Bit Fiddle.app"
 

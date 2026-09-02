@@ -1,8 +1,8 @@
 cask "font-departure-mono-nerd-font" do
-  version "3.4.0"
-  sha256 "e186890efcae31b72e9f2abc860360123ec1b3ae03bc79bb2a9fec388ebade8a"
+  version "3.5.1"
+  sha256 "7d2d86db20730e26ee4fc926e3c64429d6f9da6fce91e74c325fe1c5ee74d9ee"
 
-  url "https://github.com/ryanoasis/nerd-fonts/releases/download/v#{version}/DepartureMono.zip"
+  url "https://github.com/ryanoasis/nerd-fonts/releases/download/v#{version}/DepartureMono.tar.xz"
   name "DepartureMono Nerd Font (Departure Mono)"
   homepage "https://github.com/ryanoasis/nerd-fonts"
 

@@ -1,8 +1,11 @@
 cask "dymo-connect" do
-  version "1.5.1.15"
-  sha256 "04090b1a1cc357791a29463e2b15331bfaff69dd64fe62f6afa5294b7f2a3a6b"
+  arch arm: "Arm64", intel: "X64"
 
-  url "https://download.dymo.com/dymo/Software/Mac/DCDMac#{version}.pkg"
+  version "1.6.1.4"
+  # At present, the checksum are the same across architectures, but this may change in future.
+  sha256 "5b3b201c99235aadc6178f0dd0dae30d6edb64e7cef6e1de5faa875c5fb5967b"
+
+  url "https://dymoreleasecontent.blob.core.windows.net/dymo-release/DCDMAC/DCDMac#{version}-#{arch}.pkg"
   name "Dymo Connect"
   desc "Software for DYMO LabelWriters"
   homepage "https://www.dymo.com/support?cfid=online-support"
@@ -15,8 +18,9 @@ cask "dymo-connect" do
   end
 
   auto_updates true
+  depends_on :macos
 
-  pkg "DCDMac#{version}.pkg"
+  pkg "DCDMac#{version}-#{arch}.pkg"
 
   uninstall launchctl: [
               "com.dymo.dcd.webservice",

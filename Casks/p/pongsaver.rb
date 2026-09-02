@@ -12,5 +12,7 @@ cask "pongsaver" do
     regex(/PongSaver\s+v?(\d+(?:\.\d+)+)/i)
   end
 
+  depends_on :macos
+
   screen_saver "PongSaver.saver"
 end

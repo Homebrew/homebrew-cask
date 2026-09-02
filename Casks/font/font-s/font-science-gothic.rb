@@ -4,7 +4,7 @@ cask "font-science-gothic" do
 
   url "https://github.com/google/fonts/raw/main/ofl/sciencegothic/ScienceGothic%5BCTRS%2Cslnt%2Cwdth%2Cwght%5D.ttf"
   name "Science Gothic"
-  homepage "https://github.com/googlefonts/science-gothic"
+  homepage "https://fonts.google.com/specimen/Science+Gothic"
 
   font "ScienceGothic[CTRS,slnt,wdth,wght].ttf"
 

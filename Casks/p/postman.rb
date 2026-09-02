@@ -1,12 +1,11 @@
 cask "postman" do
   arch arm: "osx_arm64", intel: "osx64"
 
-  version "11.70.6"
-  sha256 arm:   "fa23ca7b7252a91fb7a1cf6f585b313dc725fec4ef616ef43695b8a6ff348921",
-         intel: "06aa0cd9c22c8d168b4fa09f40bc0deda81a33a223a3acd8bf1705eb0cd6232c"
+  version "12.26.3"
+  sha256 arm:   "507b3ab7ae4cde5ff09fd0d3616dfafe34c92f1c3338e8aa5dd07aef4506c256",
+         intel: "a8069f34f8d54bf08177541ff54c659f424555f2d08997d583ae54ab4111abf8"
 
-  url "https://dl.pstmn.io/download/version/#{version}/#{arch}",
-      verified: "dl.pstmn.io/download/version/"
+  url "https://dl.pstmn.io/download/version/#{version}/#{arch}"
   name "Postman"
   desc "Collaboration platform for API development"
   homepage "https://www.postman.com/"
@@ -23,11 +22,14 @@ cask "postman" do
   end
 
   auto_updates true
-  depends_on macos: ">= :big_sur"
+  depends_on macos: :big_sur
 
   app "Postman.app"
 
+  uninstall quit: "com.postmanlabs.mac"
+
   zap trash: [
+    "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.postmanlabs.mac.sfl*",
     "~/Library/Application Support/com.postmanlabs.mac.ShipIt",
     "~/Library/Application Support/Postman",
     "~/Library/Caches/com.postmanlabs.mac",

@@ -7,6 +7,10 @@ cask "augur" do
   desc "App that bundles Augur UI and Augur Node together and deploys them locally"
   homepage "https://github.com/AugurProject/augur-app/"
 
+  disable! date: "2026-09-01", because: :fails_gatekeeper_check
+
+  depends_on :macos
+
   app "augur.app"
 
   zap trash: [

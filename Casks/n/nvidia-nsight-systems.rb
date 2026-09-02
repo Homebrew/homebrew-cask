@@ -1,9 +1,9 @@
 cask "nvidia-nsight-systems" do
   arch arm: "-arm64"
 
-  version "2025.5.1.121-3638078"
-  sha256 arm:   "6ea1bdddfcb690b0f9dd4db41eb931882f7636e52d5164da28a4408cdf31922d",
-         intel: "da6f0a135bab4bf02965487aa4b80c4415d4528d18ad36fc3909f672c766718f"
+  version "2026.4.1.191-3860507"
+  sha256 arm:   "4b510c087f325c3464f1334d7c86773a55d30eab75d7a043ac0a632ff1dcad44",
+         intel: "82bf6e7eaebd87d11f19da07a8c8e5631cb6b20c3d63eb3c2b4481c19573106f"
 
   url "https://developer.nvidia.com/downloads/assets/tools/secure/nsight-systems/#{version.major_minor.dots_to_underscores}/NsightSystems-macos#{arch}-public-#{version}.dmg"
   name "NVIDIA Nsight Systems"
@@ -14,6 +14,8 @@ cask "nvidia-nsight-systems" do
     url "https://developer.nvidia.com/nsight-systems/get-started"
     regex(/NsightSystems[._-]macos#{arch}[._-]public[._-]v?(\d+(?:[.-]\d+)+)\.dmg/i)
   end
+
+  depends_on :macos
 
   app "NVIDIA Nsight Systems.app"
 

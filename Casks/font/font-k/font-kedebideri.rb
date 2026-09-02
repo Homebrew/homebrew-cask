@@ -6,7 +6,7 @@ cask "font-kedebideri" do
       branch:    "main",
       only_path: "ofl/kedebideri"
   name "Kedebideri"
-  homepage "https://github.com/silnrsi/font-kedebideri"
+  homepage "https://fonts.google.com/specimen/Kedebideri"
 
   font "Kedebideri-Black.ttf"
   font "Kedebideri-Bold.ttf"

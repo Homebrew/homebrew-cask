@@ -1,23 +1,21 @@
 cask "element" do
-  version "1.12.3"
-  sha256 "e63f99f4cfe421bd798444363b4c1501da7fde56c7c53ae24327e914e51bea05"
+  version "1.12.27"
+  sha256 "a9a577bcfbc2a2307525579fb9ca722ed70e9fd7d45e843dc9a297bba2bc1570"
 
   url "https://packages.element.io/desktop/update/macos/Element-#{version}-universal-mac.zip"
   name "Element"
   desc "Matrix collaboration client"
   homepage "https://element.io/get-started"
 
-  # The `releases.json` file is served with a `Content-Encoding: aws-chunked`
-  # header, which will cause curl to error if the `--compressed` option is used.
-  # This checks the version on the directory listing page until we can account
-  # for this situation in livecheck.
   livecheck do
-    url "https://packages.element.io/desktop/update/macos/index.html"
-    regex(/href=.*?Element[._-]v?(\d+(?:\.\d+)+)[._-]universal[._-]mac\.zip/i)
+    url "https://packages.element.io/desktop/update/macos/releases.json"
+    strategy :json do |json|
+      json["currentRelease"]
+    end
   end
 
   auto_updates true
-  depends_on macos: ">= :monterey"
+  depends_on macos: :monterey
 
   app "Element.app"
 

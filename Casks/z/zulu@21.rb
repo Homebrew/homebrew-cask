@@ -1,9 +1,9 @@
 cask "zulu@21" do
   arch arm: "aarch64", intel: "x64"
 
-  version "21.0.9,21.46.19"
-  sha256 arm:   "34ed690a5f66b17b29be9b2db21b3cba85532b33adedacab85a5780aab8754d2",
-         intel: "c9be55089eb9cf055713e048bde97e7bc27848abc52e6f070017d6375a23d86d"
+  version "21.0.12.1,21.52.203"
+  sha256 arm:   "3490a57308781fc8f4d8c35cedb9cc3407e87ce0c9f5a2c001574d2f89584321",
+         intel: "a9c513deaa7b810f71e786ffcb040043695fb3dc03866834889218d38bc18ac6"
 
   url "https://cdn.azul.com/zulu/bin/zulu#{version.csv.second}-ca-jdk#{version.csv.first}-macosx_#{arch}.dmg",
       referer: "https://www.azul.com/downloads/"
@@ -24,7 +24,7 @@ cask "zulu@21" do
     end
   end
 
-  depends_on macos: ">= :big_sur"
+  depends_on macos: :big_sur
 
   pkg "Double-Click to Install Azul Zulu JDK #{version.major}.pkg"
 

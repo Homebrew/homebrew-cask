@@ -1,6 +1,6 @@
 cask "cinderella" do
-  version "3.0b.2091"
-  sha256 "d0664131fcfa124ffabcd770ff3dee1dc93a3090cb76c008451e12738556fe7b"
+  version "3.0.2136"
+  sha256 "69d1bf77310b8708fa3e1f0d435ca5c4a621133bce81e46b2f72b7ca4c267e9e"
 
   url "https://beta.cinderella.de/Cinderella-#{version}.dmg"
   name "Cinderella"
@@ -11,6 +11,8 @@ cask "cinderella" do
     url "https://beta.cinderella.de/"
     regex(/href=.*?Cinderella[._-](\d+(?:\.[\db]+)*)\.dmg/i)
   end
+
+  depends_on :macos
 
   app "Cinderella.app"
 

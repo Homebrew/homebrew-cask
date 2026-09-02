@@ -2,12 +2,15 @@ cask "jasp" do
   arch arm: "arm64", intel: "x86_64"
   livecheck_folder = on_arch_conditional arm: "-apple-silicon"
 
-  version "0.95.4.0"
-  sha256 arm:   "da91ef4b78e7013da30da1c9981c2644e84bcf104f51e739c169e56abfdd5ab8",
-         intel: "4368d6d83663efe3d26315e74ca3302083007cc09a3f0807975d032455c2ef8a"
+  version "0.98.1.0"
+  sha256 arm:   "e980236d1ec6d58571b1f120d48f6c4c8ffc71bc893250a4988e96637220f257",
+         intel: "d39665e1c1478ae04c1b1c5c92754806b0824f31dcb65d4c5f7497b9e1f2fb07"
 
-  url "https://github.com/jasp-stats/jasp-desktop/releases/download/v#{version.csv.first.major_minor_patch}/JASP-#{version.csv.first}-macOS-#{arch}.dmg",
-      verified: "github.com/jasp-stats/jasp-desktop/"
+  on_intel do
+    disable! date: "2026-09-01", because: :fails_gatekeeper_check
+  end
+
+  url "https://github.com/jasp-stats/jasp-desktop/releases/download/v#{version.csv.first.major_minor_patch}/JASP-#{version.csv.first}-macOS-#{arch}.dmg"
   name "JASP"
   desc "Statistical analysis application"
   homepage "https://jasp-stats.org/"
@@ -22,7 +25,7 @@ cask "jasp" do
     end
   end
 
-  depends_on macos: ">= :monterey"
+  depends_on macos: :monterey
 
   app "JASP.app"
 

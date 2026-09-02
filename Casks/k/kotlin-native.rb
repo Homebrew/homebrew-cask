@@ -1,12 +1,11 @@
 cask "kotlin-native" do
   arch arm: "aarch64", intel: "x86_64"
 
-  version "2.2.21"
-  sha256 arm:   "3a35d8ebec146370ad3416e25dcd61e63d31b02642d2f5639b54a370a7b31134",
-         intel: "0c1494b855cbd0ea519ddbb59d1618f11cefcfd257ca557b2b75877c892dad0d"
+  version "2.4.10"
+  sha256 arm:   "55ded039bb56a69aec9df354a92b42df9e916104e3c53d8d9852d9cc6617ed9d",
+         intel: "7bfda60c2a4ce859fc85011ea2c3229961b1eb40e9cc0b6b85fee885f23973cb"
 
-  url "https://github.com/JetBrains/kotlin/releases/download/v#{version}/kotlin-native-prebuilt-macos-#{arch}-#{version}.tar.gz",
-      verified: "github.com/JetBrains/kotlin/"
+  url "https://github.com/JetBrains/kotlin/releases/download/v#{version}/kotlin-native-prebuilt-macos-#{arch}-#{version}.tar.gz"
   name "Kotlin Native"
   desc "LLVM backend for Kotlin"
   homepage "https://kotlinlang.org/docs/reference/native-overview.html"
@@ -15,6 +14,8 @@ cask "kotlin-native" do
     url :url
     regex(/^v?(\d+(?:\.\d+)+)$/i)
   end
+
+  depends_on :macos
 
   binary "kotlin-native-prebuilt-macos-#{arch}-#{version}/bin/cinterop"
   binary "kotlin-native-prebuilt-macos-#{arch}-#{version}/bin/generate-platform"

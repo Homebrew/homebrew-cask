@@ -1,35 +1,31 @@
 cask "superduper" do
-  version "3.10.0,135"
-  sha256 :no_check
+  version "4.0.5"
+  sha256 "727809450037deda1d81b78dd2c6b474a195d7c4179aec0fd0d9028f7f10e7cb"
 
-  url "https://shirtpocket.s3.amazonaws.com/SuperDuper/SuperDuper!.dmg",
-      verified: "shirtpocket.s3.amazonaws.com/SuperDuper/"
+  url "https://www.shirt-pocket.com/downloads/SuperDuper-#{version}.dmg"
   name "SuperDuper!"
   desc "Backup, recovery and cloning software"
-  homepage "https://www.shirt-pocket.com/SuperDuper/SuperDuperDescription.html"
+  homepage "https://www.shirt-pocket.com/superduper4.php"
 
   livecheck do
-    url "https://shirtpocket.s3.amazonaws.com/SuperDuper/superduperinfo.rtf"
-    regex(/v?(\d+(?:\.\d+)+)\s*\(v?(\d+)\)/i)
-    strategy :page_match do |page, regex|
-      match = page.match(regex)
-      next if match.blank?
-
-      "#{match[1]},#{match[2]}"
-    end
+    url "https://www.shirt-pocket.com/SuperDuper#{version.major}/appcast.xml"
+    strategy :sparkle, &:short_version
   end
 
   auto_updates true
+  depends_on macos: :sonoma
 
   app "SuperDuper!.app"
 
+  uninstall launchctl: "com.shirtpocket.SuperDuper4.menu"
+
   zap trash: [
+    "~/Library/Application Support/CrashReporter/SuperDuper!_*.plist",
     "~/Library/Application Support/SuperDuper!",
-    "~/Library/Caches/com.blacey.SuperDuper",
-    "~/Library/Preferences/com.blacey.SuperDuper.plist",
-    "~/Library/Preferences/com.paradigmasoft.VStudio",
-    "~/Library/Preferences/com.paradigmasoft.vstudio.plist",
-    "~/Library/Saved Application State/com.blacey.SuperDuper.savedState",
-    "~/Library/Services/Run SuperDuper! Settings.workflow",
+    "~/Library/Caches/com.shirtpocket.SuperDuper4",
+    "~/Library/HTTPStorages/com.shirtpocket.SuperDuper4",
+    "~/Library/Preferences/com.shirtpocket.SuperDuper4.menu.plist",
+    "~/Library/Preferences/com.shirtpocket.SuperDuper4.plist",
+    "~/Library/Preferences/com.shirtpocket.SuperDuper4.shared.plist",
   ]
 end

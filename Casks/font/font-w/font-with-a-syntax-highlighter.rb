@@ -2,8 +2,7 @@ cask "font-with-a-syntax-highlighter" do
   version :latest
   sha256 :no_check
 
-  url "https://github.com/hlotvonen/FontWithASyntaxHighlighter/archive/refs/heads/main.tar.gz",
-      verified: "github.com/hlotvonen/FontWithASyntaxHighlighter/"
+  url "https://github.com/hlotvonen/FontWithASyntaxHighlighter/archive/refs/heads/main.tar.gz"
   name "Font with a Syntax Highlighter"
   homepage "https://blog.glyphdrawing.club/font-with-built-in-syntax-highlighting/"
 

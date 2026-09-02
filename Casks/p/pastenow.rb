@@ -1,6 +1,6 @@
 cask "pastenow" do
-  version "2.26,632"
-  sha256 "bf62778fb72b521fe59ebd9ceb63bda6f30301768e2911a79047c79004671b51"
+  version "2.32,761"
+  sha256 "f894ef1fce545beaeb1fbd9446cd391f5636c2d9a963eeb55a59c60f33cd10f0"
 
   url "https://pastenow.app/api/release_manager/downloads/app.pastenow.PasteNow/#{version.csv.second}.zip"
   name "PasteNow"
@@ -13,12 +13,15 @@ cask "pastenow" do
   end
 
   auto_updates true
-  depends_on macos: ">= :ventura"
+  depends_on macos: :sonoma
 
   app "PasteNow.app"
 
   zap trash: [
+    "~/Library/Application Scripts/*app.pastenow.PasteNow",
     "~/Library/Caches/app.pastenow.PasteNow",
+    "~/Library/Containers/app.pastenow.PasteNow",
+    "~/Library/Group Containers/*.app.pastenow.PasteNow",
     "~/Library/HTTPStorages/app.pastenow.PasteNow",
     "~/Library/Preferences/app.pastenow.PasteNow.plist",
   ]

@@ -2,8 +2,7 @@ cask "font-send-flowers" do
   version :latest
   sha256 :no_check
 
-  url "https://github.com/google/fonts/raw/main/ofl/sendflowers/SendFlowers-Regular.ttf",
-      verified: "github.com/google/fonts/"
+  url "https://github.com/google/fonts/raw/main/ofl/sendflowers/SendFlowers-Regular.ttf"
   name "Send Flowers"
   homepage "https://fonts.google.com/specimen/Send+Flowers"
 

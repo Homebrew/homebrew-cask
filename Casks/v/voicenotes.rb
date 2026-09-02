@@ -1,12 +1,8 @@
 cask "voicenotes" do
-  arch arm: "-arm64"
+  version "2.0.7"
+  sha256 "1c87d7adf0bc526e071ecd46366c7146fc5cb42f7886f98ecdbc3e6fc8c84755"
 
-  version "1.4.8"
-  sha256 arm:   "d64c57cbd0372bcf11896e4191ee61668f9262406d2f314f4cf8b88a469070d7",
-         intel: "39e9fa7833f6a038fffc054b39c968ba3153df375b4b512c38dc44780b5262a2"
-
-  url "https://github.com/brewdotcom/vn-apps-release/releases/download/#{version}/Voicenotes-#{version}#{arch}.dmg",
-      verified: "github.com/brewdotcom/vn-apps-release/"
+  url "https://github.com/brewdotcom/vn-apps-release/releases/download/v#{version}/Voicenotes-#{version}-mac.zip"
   name "Voicenotes"
   desc "AI-powered app for recording, transcribing and summarising voice notes"
   homepage "https://voicenotes.com/"
@@ -16,7 +12,7 @@ cask "voicenotes" do
     strategy :github_latest
   end
 
-  depends_on macos: ">= :big_sur"
+  depends_on macos: :ventura
 
   app "Voicenotes.app"
 

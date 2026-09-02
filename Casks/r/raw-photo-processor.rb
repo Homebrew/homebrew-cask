@@ -15,6 +15,8 @@ cask "raw-photo-processor" do
     skip "No version information available"
   end
 
+  depends_on :macos
+
   app "Raw Photo Processor 64.app"
 
   zap trash: [

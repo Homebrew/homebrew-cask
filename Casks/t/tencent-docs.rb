@@ -17,6 +17,7 @@ cask "tencent-docs" do
   deprecate! date: "2025-10-05", because: :unreachable
 
   auto_updates true
+  depends_on :macos
 
   app "TencentDocs.app"
 

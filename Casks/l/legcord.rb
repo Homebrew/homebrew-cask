@@ -1,9 +1,8 @@
 cask "legcord" do
-  version "1.1.6"
-  sha256 "bb5ffc2bbf73544460eccc14a7e62130c5b678bae0a4224830ddd48be1a73a41"
+  version "1.3.0"
+  sha256 "02b3a74e859feaeaf4a872e096ba2dba2da72fa7d970215b8efe71edd32298b5"
 
-  url "https://github.com/legcord/legcord/releases/download/v#{version}/legcord-#{version}-mac-universal.dmg",
-      verified: "github.com/legcord/legcord/"
+  url "https://github.com/legcord/legcord/releases/download/v#{version}/legcord-#{version}-mac-universal.dmg"
   name "Legcord"
   desc "Custom Discord client"
   homepage "https://legcord.app/"
@@ -15,7 +14,7 @@ cask "legcord" do
     end
   end
 
-  depends_on macos: ">= :monterey"
+  depends_on macos: :monterey
 
   app "legcord.app"
 

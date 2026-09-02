@@ -2,10 +2,9 @@ cask "font-noto-sans-lepcha" do
   version :latest
   sha256 :no_check
 
-  url "https://noto-website-2.storage.googleapis.com/pkgs/NotoSansLepcha-unhinted.zip",
-      verified: "noto-website-2.storage.googleapis.com/"
+  url "https://github.com/google/fonts/raw/main/ofl/notosanslepcha/NotoSansLepcha-Regular.ttf"
   name "Noto Sans Lepcha"
-  homepage "https://www.google.com/get/noto/#sans-lepc"
+  homepage "https://fonts.google.com/specimen/Noto+Sans+Lepcha"
 
   font "NotoSansLepcha-Regular.ttf"
 

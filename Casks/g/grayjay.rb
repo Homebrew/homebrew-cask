@@ -1,13 +1,9 @@
 cask "grayjay" do
   arch arm: "arm64", intel: "x64"
 
-  version "12"
-  sha256 arm:   "18a32d7517b96c3ad0d3199923e12deaaad420e32003db84499c196d134eaab2",
-         intel: "91694b37c5b8bd3f8f634cd631e2a2b055181d8f77b75fb18e108298bfdc7e9c"
-
-  on_intel do
-    disable! date: "2026-09-01", because: :fails_gatekeeper_check
-  end
+  version "17"
+  sha256 arm:   "d19c6a57cd925424a92806d96796ab1a031b7e9ae9deaa312fe411a5b3d456aa",
+         intel: "14986dbe9a712a442351750778d50420d8c5d6d08200553667564961cdd3f757"
 
   url "https://updater.grayjay.app/Apps/Grayjay.Desktop/#{version}/Grayjay.Desktop-osx-#{arch}-v#{version}.zip"
   name "Grayjay desktop"
@@ -18,6 +14,8 @@ cask "grayjay" do
     url "https://updater.grayjay.app/Apps/Grayjay.Desktop/VersionLastMacOS.json"
     strategy :json, &:to_s
   end
+
+  depends_on :macos
 
   app "Grayjay.app"
 

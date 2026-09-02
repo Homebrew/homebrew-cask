@@ -1,6 +1,6 @@
 cask "zotero@beta" do
-  version "8.0-beta.3,8355a9540"
-  sha256 "cffacdbd4e018ee3dfbc95d29e39390456da9f76db4780ad474e2d1f0b597e31"
+  version "10.0.2-beta.3,dbffb22ce"
+  sha256 "f7ef13be97ea640699af7b27772a8aee9fc26e72267465514aaf623d347f5790"
 
   url "https://download.zotero.org/client/beta/#{version.csv.first}%2B#{version.csv.second}/Zotero-#{version.csv.first}%2B#{version.csv.second}.dmg"
   name "Zotero Beta"
@@ -8,22 +8,31 @@ cask "zotero@beta" do
   homepage "https://www.zotero.org/"
 
   livecheck do
-    url "https://www.zotero.org/download/client/update/0/0/Darwin/0/beta/update.xml?force=1"
-    strategy :xml do |xml|
-      xml.get_elements("//update").map { |item| item.attributes["version"]&.tr("+", ",") }
+    url "https://www.zotero.org/download/client/dl?platform=mac&channel=beta"
+    regex(/Zotero[._-]v?(\d+(?:\.\d+)+-beta\.\d+)%2B([0-9a-f]+)\.dmg/i)
+    strategy :header_match do |headers, regex|
+      match = headers["location"]&.match(regex)
+      next if match.blank?
+
+      "#{match[1]},#{match[2]}"
     end
   end
 
   auto_updates true
   conflicts_with cask: "zotero"
+  depends_on :macos
 
   app "Zotero.app"
 
+  uninstall quit: "org.zotero.zotero-beta"
+
   zap trash: [
         "~/Library/Application Scripts/org.zotero.SafariExtensionApp.SafariExtension",
+        "~/Library/Application Scripts/org.zotero.zotero-beta.SafariExtension",
         "~/Library/Application Support/Zotero",
         "~/Library/Caches/Zotero",
         "~/Library/Containers/org.zotero.SafariExtensionApp.SafariExtension",
+        "~/Library/Containers/org.zotero.zotero-beta.SafariExtension",
         "~/Library/Preferences/org.zotero.zotero-beta.plist",
         "~/Library/Saved Application State/org.zotero.zotero-beta.savedState",
       ],

@@ -9,6 +9,8 @@ cask "cmd-eikana" do
 
   disable! date: "2026-09-01", because: :fails_gatekeeper_check
 
+  depends_on :macos
+
   app "⌘英かな.app"
 
   zap trash: "~/Library/Preferences/io.github.imasanari.cmd-eikana.plist"

@@ -10,8 +10,7 @@ cask "icestudio" do
     sha256 "959f55093888b91fa8b6715ecc9d6a4d2494dc814ee2ab717ee825284ba13889"
   end
 
-  url "https://github.com/FPGAwars/icestudio/releases/download/v#{version}/icestudio-#{version}-osx#{arch}.dmg",
-      verified: "github.com/FPGAwars/icestudio/"
+  url "https://github.com/FPGAwars/icestudio/releases/download/v#{version}/icestudio-#{version}-osx#{arch}.dmg"
   name "icestudio"
   desc "Visual editor for open FPGA board"
   homepage "https://icestudio.io/"
@@ -35,6 +34,8 @@ cask "icestudio" do
   end
 
   disable! date: "2026-09-01", because: :fails_gatekeeper_check
+
+  depends_on :macos
 
   app "icestudio.app"
 

@@ -1,18 +1,20 @@
 cask "realvnc-connect" do
-  version "8.2.1"
-  sha256 "9077e360f0a33c627db035bcafe24400b3fb9ae4f99d1b91c5cf7c375eddb8bc"
+  version "8.4.2"
+  sha256 "cb4e3f1e4ec24f7be605e17600013e7d403cea09e02288190cd9e62b38b87565"
 
   url "https://downloads.realvnc.com/download/file/realvnc-connect/RealVNC-Connect-#{version}-MacOSX-universal.pkg"
   name "RealVNC Connect"
   desc "Remote desktop client and server application"
   homepage "https://www.realvnc.com/"
 
+  # The upstream download page links to the latest pkg file but Cloudflare
+  # protections prevent us from fetching it, so it must be checked manually:
+  # https://www.realvnc.com/en/connect/download/#moreInstall
   livecheck do
-    url "https://www.realvnc.com/en/connect/download"
-    regex(/RealVNC[._-]Connect[._-]v?(\d+(?:\.\d+)+)[._-]MacOSX[._-]universal\.pkg/i)
+    skip "Cannot be fetched due to Cloudflare protections"
   end
 
-  depends_on macos: ">= :sequoia"
+  depends_on macos: :sequoia
 
   pkg "RealVNC-Connect-#{version}-MacOSX-universal.pkg"
 

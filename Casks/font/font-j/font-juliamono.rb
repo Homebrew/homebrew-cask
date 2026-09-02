@@ -1,9 +1,8 @@
 cask "font-juliamono" do
-  version "0.061"
-  sha256 "b5136a8f05637c183a2376d9acec4b32a10f3abcff2aafa8540c6e7c2923a023"
+  version "0.63.2"
+  sha256 "be6517295198ec5c92bdbaad42f4f6f8d83f921d80512b79f54fe036add95c0c"
 
-  url "https://github.com/cormullion/juliamono/releases/download/v#{version}/JuliaMono-ttf.tar.gz",
-      verified: "github.com/cormullion/juliamono/"
+  url "https://github.com/cormullion/juliamono/releases/download/v#{version}/JuliaMono-ttf.tar.gz"
   name "JuliaMono"
   homepage "https://juliamono.netlify.app/"
 

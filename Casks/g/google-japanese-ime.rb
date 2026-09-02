@@ -1,9 +1,8 @@
 cask "google-japanese-ime" do
-  version "2.32.5990"
+  version "3.33.6130"
   sha256 :no_check
 
-  url "https://dl.google.com/japanese-ime/latest/GoogleJapaneseInput.dmg",
-      verified: "dl.google.com/japanese-ime/"
+  url "https://dl.google.com/japanese-ime/latest/GoogleJapaneseInput.dmg"
   name "Google Japanese Input Method Editor"
   desc "Japanese input software"
   homepage "https://www.google.co.jp/ime/"
@@ -14,6 +13,8 @@ cask "google-japanese-ime" do
       items["com.google.inputmethod.Japanese"]&.short_version
     end
   end
+
+  depends_on macos: :monterey
 
   pkg "GoogleJapaneseInput.pkg"
 

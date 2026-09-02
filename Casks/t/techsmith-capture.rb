@@ -7,12 +7,10 @@ cask "techsmith-capture" do
   desc "Screen capture software"
   homepage "https://www.techsmith.com/jing-tool.html"
 
-  livecheck do
-    url "https://assets.techsmith.com/techsmithcapture/mac/TechSmithCaptureAppcast.xml"
-    strategy :sparkle, &:short_version
-  end
+  disable! date: "2026-03-28", because: :no_longer_available, replacement_cask: "snagit"
 
   auto_updates true
+  depends_on :macos
 
   app "TechSmith Capture.app"
 

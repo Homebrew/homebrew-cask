@@ -15,6 +15,7 @@ cask "teamviewer-host" do
 
   auto_updates true
   conflicts_with cask: "teamviewer"
+  depends_on :macos
 
   pkg "Install TeamViewerHost.app/Contents/Resources/Install TeamViewerHost.pkg"
 

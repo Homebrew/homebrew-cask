@@ -1,6 +1,6 @@
 cask "atok" do
-  version "35.2"
-  sha256 "f980edac6a38821e530089cef6eae7c879d93a3cd2cb025a40a62430df45a25d"
+  version "36.2"
+  sha256 "a7b4f348778cee8d3fa290aa5c685e2918305164d4fa1f74b5fa813b1a1c1bad"
 
   url "https://gate.justsystems.com/download/atok/ut/mac/at#{version.dots_to_underscores}.dmg"
   name "ATOK"
@@ -14,6 +14,9 @@ cask "atok" do
       page.scan(regex).map { |match| match[0].tr("_", ".") }
     end
   end
+
+  auto_updates true
+  depends_on :macos
 
   pkg "ATOK インストーラ.pkg"
 

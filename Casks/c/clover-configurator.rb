@@ -1,5 +1,5 @@
 cask "clover-configurator" do
-  version "5.28.0.1"
+  version "5.29.0.0"
   sha256 :no_check
 
   url "https://mackie100projects.altervista.org/apps/cloverconf/download-new-build.php?version=global",
@@ -16,6 +16,7 @@ cask "clover-configurator" do
   disable! date: "2026-09-01", because: :fails_gatekeeper_check
 
   auto_updates true
+  depends_on :macos
 
   app "Clover Configurator.app"
 

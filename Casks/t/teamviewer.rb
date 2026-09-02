@@ -1,25 +1,5 @@
 cask "teamviewer" do
-  on_catalina :or_older do
-    version "15.42.4"
-    sha256 "3357bc366cd0295dd100b790d6af6216d349d34451ea18ba08692a51eadd6cf7"
-
-    livecheck do
-      url "https://download.teamviewer.com/download/update/macupdates.xml?id=0&lang=en&version=#{version}&os=macos&osversion=10.15.1&type=1&channel=1"
-      strategy :sparkle
-    end
-
-    # This Cask should be installed and uninstalled manually on Catalina.
-    # See https://github.com/Homebrew/homebrew-cask/issues/76829
-    installer manual: "TeamViewer.pkg"
-
-    caveats <<~EOS
-      WARNING: #{token} has a bug in Catalina where it doesn't deal well with being uninstalled by other utilities.
-      The recommended way to remove it is by running their uninstaller under:
-
-         Preferences → Advanced
-    EOS
-  end
-  on_big_sur do
+  on_big_sur :or_older do
     version "15.71.4"
     sha256 "194147bcb5a23452f974e73e0b9570b9395d9c46190f7dc8fcd867aaae9cef06"
 
@@ -30,12 +10,23 @@ cask "teamviewer" do
 
     pkg "TeamViewer.pkg"
   end
-  on_monterey :or_newer do
+  on_monterey do
     version "15.71.4"
     sha256 "194147bcb5a23452f974e73e0b9570b9395d9c46190f7dc8fcd867aaae9cef06"
 
     livecheck do
       url "https://download.teamviewer.com/download/update/macupdates.xml?id=0&lang=en&version=#{version}&os=macos&osversion=12.7&type=1&channel=1"
+      strategy :sparkle
+    end
+
+    pkg "TeamViewer.pkg"
+  end
+  on_ventura :or_newer do
+    version "15.81.5"
+    sha256 "17bd3fd5f5172451685787ff8292e88178ac132c0d58a0c8064bb32ea201bb92"
+
+    livecheck do
+      url "https://download.teamviewer.com/download/update/macupdates.xml?id=0&lang=en&version=#{version}&os=macos&osversion=13.7&type=1&channel=1"
       strategy :sparkle
     end
 
@@ -49,17 +40,21 @@ cask "teamviewer" do
 
   auto_updates true
   conflicts_with cask: "teamviewer-host"
+  depends_on :macos
 
-  postflight do
+  postflight_steps do
     # postinstall launches the app
-    retries ||= 3
-    ohai "The TeamViewer package postinstall script launches the TeamViewer app" if retries >= 3
-    ohai "Attempting to close the TeamViewer app to avoid unwanted user intervention" if retries >= 3
-    return unless system_command "/usr/bin/pkill", args: ["-f", "/Applications/TeamViewer.app"]
-  rescue RuntimeError
-    sleep 1
-    retry unless (retries -= 1).zero?
-    opoo "Unable to forcibly close TeamViewer"
+    terminate_process(
+      "/Applications/TeamViewer.app",
+      match:           :full,
+      attempts:        3,
+      must_succeed:    false,
+      notices:         [
+        "The TeamViewer package postinstall script launches the TeamViewer app",
+        "Attempting to close the TeamViewer app to avoid unwanted user intervention",
+      ],
+      failure_message: "Unable to forcibly close TeamViewer",
+    )
   end
 
   uninstall launchctl: [
@@ -89,6 +84,7 @@ cask "teamviewer" do
             ]
 
   zap trash: [
+    "/Library/Application Support/TeamViewer",
     "~/Library/Application Support/TeamViewer",
     "~/Library/Caches/com.teamviewer.TeamViewer",
     "~/Library/Caches/TeamViewer",

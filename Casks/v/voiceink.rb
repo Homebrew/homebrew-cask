@@ -1,9 +1,8 @@
 cask "voiceink" do
-  version "1.61"
-  sha256 "7e3e790e68edfd13d074080f2ed755c4d5baa5d9be3019d69c77c6f2b9f57164"
+  version "2.13"
+  sha256 "56663e4e233b8a4c6e8250d43268fb5b118128a6fb63226930cc916f7de39317"
 
-  url "https://github.com/Beingpax/VoiceInk/releases/download/v#{version}/VoiceInk.dmg",
-      verified: "github.com/Beingpax/VoiceInk/"
+  url "https://github.com/Beingpax/VoiceInk/releases/download/v#{version}/VoiceInk.dmg"
   name "VoiceInk"
   desc "Voice to text app"
   homepage "https://tryvoiceink.com/"
@@ -14,7 +13,7 @@ cask "voiceink" do
   end
 
   auto_updates true
-  depends_on macos: ">= :sonoma"
+  depends_on macos: :sonoma
 
   app "VoiceInk.app"
 

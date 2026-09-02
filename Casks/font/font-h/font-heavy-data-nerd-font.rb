@@ -1,8 +1,8 @@
 cask "font-heavy-data-nerd-font" do
-  version "3.4.0"
-  sha256 "7fbe911ba18864f19afa4f97201dc8ecc4694c6c47b44d2e3dd1c13be3e63574"
+  version "3.5.1"
+  sha256 "5137500fe224d8f7876557352136c0c9eef94b371ccea78cdee6aa0160e2e254"
 
-  url "https://github.com/ryanoasis/nerd-fonts/releases/download/v#{version}/HeavyData.zip"
+  url "https://github.com/ryanoasis/nerd-fonts/releases/download/v#{version}/HeavyData.tar.xz"
   name "HeavyData Nerd Font (Heavy Data)"
   homepage "https://github.com/ryanoasis/nerd-fonts"
 

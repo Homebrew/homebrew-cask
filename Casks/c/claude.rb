@@ -1,19 +1,18 @@
 cask "claude" do
-  version "0.14.10,fe3f5688c1c2a4b648d1bf6d9784d62ef9fc336a"
-  sha256 "bf83ee2cc3655dfc237812ca06ccd941fa6051272ef0a85a03f6e20d8c765738"
+  version "1.44121.2,817a7b4563855a33d4b678faefc71f87554445d8"
+  sha256 "8338dec197c816516a2ba5de3569e9875cf40a5c7a335a0c0caa2d1071e0132e"
 
-  url "https://storage.googleapis.com/osprey-downloads-c02f6a0d-347c-492b-a752-3e0651722e97/nest/release-#{version.csv.first}-artifact-#{version.csv.second}.zip",
-      verified: "storage.googleapis.com/osprey-downloads-c02f6a0d-347c-492b-a752-3e0651722e97/nest/"
+  url "https://downloads.claude.ai/releases/darwin/universal/#{version.csv.first}/Claude-#{version.csv.second}.zip"
   name "Claude"
   desc "Anthropic's official Claude AI desktop app"
-  homepage "https://claude.ai/download"
+  homepage "https://claude.com/download"
 
   livecheck do
-    url "https://storage.googleapis.com/osprey-downloads-c02f6a0d-347c-492b-a752-3e0651722e97/nest/update_manifest.json"
-    regex(/release[._-]v?(\d+(?:\.\d+)+)[._-]artifact[._-](\h+)\.zip/i)
+    url "https://downloads.claude.ai/releases/darwin/universal/RELEASES.json"
+    regex(%r{/(\d+(?:\.\d+)+)/Claude[._-](\h+)\.zip}i)
     strategy :json do |json, regex|
-      json["releases"]&.map do |item|
-        match = item.dig("updateTo", "url")&.match(regex)
+      json["releases"]&.map do |release|
+        match = release.dig("updateTo", "url")&.match(regex)
         next if match.blank?
 
         "#{match[1]},#{match[2]}"
@@ -22,9 +21,14 @@ cask "claude" do
   end
 
   auto_updates true
-  depends_on macos: ">= :big_sur"
+  depends_on macos: :monterey
 
   app "Claude.app"
+
+  uninstall quit: [
+    "com.anthropic.claudefordesktop",
+    "com.anthropic.claudefordesktop.helper",
+  ]
 
   zap trash: [
     "~/Library/Application Support/Claude",

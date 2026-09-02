@@ -1,8 +1,8 @@
 cask "earnapp" do
-  version "1.561.208"
-  sha256 "7d3984140ca98b77e3f8a50edf6bab193db31941f14611876b038f8468d93118"
+  version "1.660.965"
+  sha256 "06b5f120fe1897857ab3f61a8e0f1b1ddcfa65643af5e4162027acfa197fae96"
 
-  url "https://cdn.earnapp.com/static/earnapp-macos-#{version}.dmg"
+  url "https://cdn.earnapp.com/static/earnapp-macos-#{version}.pkg"
   name "EarnApp"
   desc "Monetize unused internet bandwidth"
   homepage "https://earnapp.com/"
@@ -14,13 +14,16 @@ cask "earnapp" do
     end
   end
 
-  app "EarnApp.app"
+  depends_on :macos
 
-  uninstall quit: [
-    "com.earnapp",
-    "io.luminati.sdk.net-updater",
-    "io.luminati.sdk.net-updater-launcher",
-  ]
+  pkg "earnapp-macos-#{version}.pkg"
+
+  uninstall quit:    [
+              "com.earnapp",
+              "io.luminati.sdk.net-updater",
+              "io.luminati.sdk.net-updater-launcher",
+            ],
+            pkgutil: "com.pkg.(null)"
 
   zap trash: [
     "~/Library/Caches/com.earnapp",

@@ -12,6 +12,8 @@ cask "heaven" do
     regex(%r{href=.*?/Unigine[._-]Heaven[._-]v?(\d+(?:\.\d+)+)\.dmg}i)
   end
 
+  depends_on :macos
+
   app "Heaven.app"
 
   zap trash: [

@@ -11,6 +11,7 @@ cask "eme" do
   disable! date: "2025-10-14", because: :unmaintained
 
   auto_updates true
+  depends_on :macos
 
   app "EME.app"
 

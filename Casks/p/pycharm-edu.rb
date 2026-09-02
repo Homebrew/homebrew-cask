@@ -12,18 +12,16 @@ cask "pycharm-edu" do
   homepage "https://www.jetbrains.com/pycharm-edu/"
 
   deprecate! date: "2025-02-10", because: :discontinued
+  disable! date: "2026-02-11", because: :discontinued
 
   auto_updates true
+  depends_on :macos
 
   app "PyCharm Edu.app"
 
-  uninstall_postflight do
-    ENV["PATH"].split(File::PATH_SEPARATOR).map { |path| File.join(path, "charm") }.each do |path|
-      if File.readable?(path) &&
-         File.readlines(path).grep(/# see com.intellij.idea.SocketLock for the server side of this interface/).any?
-        File.delete(path)
-      end
-    end
+  uninstall_postflight_steps do
+    remove "charm", base:             :search_path,
+                    content_contains: "# see com.intellij.idea.SocketLock for the server side of this interface"
   end
 
   zap trash: [

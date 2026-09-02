@@ -1,7 +1,7 @@
 cask "anythingllm" do
   arch arm: "-Silicon"
 
-  version "1.9.0"
+  version "1.16.1"
   sha256 :no_check
 
   url "https://cdn.anythingllm.com/latest/AnythingLLMDesktop#{arch}.dmg",
@@ -14,6 +14,8 @@ cask "anythingllm" do
     url "https://cdn.anythingllm.com/latest/version.txt"
     regex(/(\d+(?:\.\d+)+)/i)
   end
+
+  depends_on :macos
 
   app "AnythingLLM.app"
 

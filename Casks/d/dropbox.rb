@@ -2,12 +2,11 @@ cask "dropbox" do
   arch arm: ".arm64"
   livecheck_query = on_arch_conditional arm: "&arch=arm64"
 
-  version "236.4.5918"
-  sha256 arm:   "eafd7cc3a1a182a565fa5200f70009b13b0cc767a1b41195f60d03c1bf7ab306",
-         intel: "580bf450ad700c03ff27c7d08c839624b84453ee31f9ccb9f109987fb6908ce3"
+  version "268.4.4124"
+  sha256 arm:   "c07371457ba5c23a72b9a6bf101286886ef7db876d34c81daedc5be8688eafaa",
+         intel: "6ae7f7efce0b1d163ab73f93739c4ff878ae04ba7387189e94ace9235d238851"
 
-  url "https://edge.dropboxstatic.com/dbx-releng/client/Dropbox%20#{version}#{arch}.dmg",
-      verified: "dropboxstatic.com/dbx-releng/client/"
+  url "https://edge.dropboxstatic.com/dbx-releng/client/Dropbox%20#{version}#{arch}.dmg"
   name "Dropbox"
   desc "Client for the Dropbox cloud storage service"
   homepage "https://www.dropbox.com/"
@@ -20,10 +19,16 @@ cask "dropbox" do
 
   auto_updates true
   conflicts_with cask: "dropbox@beta"
+  depends_on :macos
 
   app "Dropbox.app"
 
-  uninstall launchctl: "com.dropbox.DropboxMacUpdate.agent",
+  uninstall launchctl: [
+              "com.dropbox.DropboxMacUpdate.agent",
+              "com.dropbox.dropboxmacupdate.xpcservice",
+              "com.dropbox.DropboxUpdater.wake",
+            ],
+            quit:      "com.getdropbox.dropbox",
             kext:      "com.getdropbox.dropbox.kext",
             delete:    [
               "/Library/DropboxHelperTools",

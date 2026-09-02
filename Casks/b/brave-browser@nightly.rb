@@ -2,12 +2,17 @@ cask "brave-browser@nightly" do
   arch arm: "arm64", intel: "x64"
   folder = on_arch_conditional arm: "nightly-arm64", intel: "nightly"
 
-  version "1.86.64.0"
-  sha256 arm:   "da359a55a2321ca21e8cd1c8b4ba0b4e5154089e25b1c7729db112a696e6eb81",
-         intel: "eadcb976cf9c03f8bb8cdf82f7c040e0813b440171cc99110b3a6192a628c492"
+  sha256 arm:   "dbde16dd11d6d9e0fb7868f9ef4f0794a468d99624de1efece3f12a2f59c8b2a",
+         intel: "5917d53d7ea9a26ae94122ac4ce02effe998176d86227062fe28b8f5f5768116"
 
-  url "https://updates-cdn.bravesoftware.com/sparkle/Brave-Browser/#{folder}/#{version.major_minor_patch.sub(".", "")}/Brave-Browser-Nightly-#{arch}.dmg",
-      verified: "updates-cdn.bravesoftware.com/sparkle/Brave-Browser/"
+  on_arm do
+    version "1.96.39.0"
+  end
+  on_intel do
+    version "1.96.39.0"
+  end
+
+  url "https://updates-cdn.bravesoftware.com/sparkle/Brave-Browser/#{folder}/#{version.major_minor_patch.sub(".", "")}/Brave-Browser-Nightly-#{arch}.dmg"
   name "Brave Nightly"
   desc "Web browser focusing on privacy"
   homepage "https://brave.com/download-nightly/"
@@ -18,7 +23,7 @@ cask "brave-browser@nightly" do
   end
 
   auto_updates true
-  depends_on macos: ">= :monterey"
+  depends_on macos: :ventura
 
   app "Brave Browser Nightly.app"
 

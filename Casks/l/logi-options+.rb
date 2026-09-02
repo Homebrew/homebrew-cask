@@ -1,21 +1,9 @@
 cask "logi-options+" do
-  on_catalina do
-    version "1.44.415778"
-    sha256 "c38b38aada01a296d32dcebb61200b53977e876089b8502b7f8453d1efa3a3f6"
-
-    url "https://download01.logi.com/web/ftp/pub/techsupport/optionsplus/logioptionsplus_installer_#{version}.zip",
-        verified: "download01.logi.com/web/ftp/pub/techsupport/optionsplus/"
-
-    livecheck do
-      skip "Legacy version"
-    end
-  end
-  on_big_sur do
+  on_big_sur :or_older do
     version "1.60.495862"
     sha256 "711d64f48b9dc2ed48f50dccc8610e64b3ce437383ed6ff3da6e220380271434"
 
-    url "https://download01.logi.com/web/ftp/pub/techsupport/optionsplus/logioptionsplus_installer_#{version}.zip",
-        verified: "download01.logi.com/web/ftp/pub/techsupport/optionsplus/"
+    url "https://download01.logi.com/web/ftp/pub/techsupport/optionsplus/logioptionsplus_installer_#{version}.zip"
 
     livecheck do
       skip "Legacy version"
@@ -25,22 +13,20 @@ cask "logi-options+" do
     version "1.93.755983"
     sha256 "297ead81044da4876fe6b1830f39b38769d5f1bca8b7dae8c1768ea42909f482"
 
-    url "https://download01.logi.com/web/ftp/pub/techsupport/optionsplus/logioptionsplus_installer_#{version}.zip",
-        verified: "download01.logi.com/web/ftp/pub/techsupport/optionsplus/"
+    url "https://download01.logi.com/web/ftp/pub/techsupport/optionsplus/logioptionsplus_installer_#{version}.zip"
 
     livecheck do
       skip "Legacy version"
     end
   end
   on_ventura :or_newer do
-    version "1.97.791262"
+    version "2.7.961922"
     sha256 :no_check
 
-    url "https://download01.logi.com/web/ftp/pub/techsupport/optionsplus/logioptionsplus_installer.zip",
-        verified: "download01.logi.com/web/ftp/pub/techsupport/optionsplus/"
+    url "https://download01.logi.com/web/ftp/pub/techsupport/optionsplus/logioptionsplus_installer.zip"
 
     livecheck do
-      url "https://updates.optionsplus.logitechg.com/pipeline/v2/update/optionsplus4/osx/public/update.json"
+      url "https://updates.optionsplus.logitechg.com/pipeline/v2/update/optionsplus5/osx/public/update.json"
       strategy :json do |json|
         json["version"]
       end
@@ -52,6 +38,7 @@ cask "logi-options+" do
   homepage "https://www.logitech.com/en-us/software/logi-options-plus.html"
 
   auto_updates true
+  depends_on :macos
 
   # The installer path can be inconsistent between versions/systems without notice
   rename "Logi Options+ Installer.app", "logioptionsplus_installer.app"
@@ -82,6 +69,7 @@ cask "logi-options+" do
             delete:    [
               "/Applications/logioptionsplus.app",
               "/Applications/Utilities/Logi Options+ Driver Installer.bundle",
+              "/Library/Application Support/Logi",
               "/Library/Application Support/Logitech.localized/LogiOptionsPlus",
             ],
             rmdir:     "/Library/Application Support/Logitech.localized"
@@ -89,11 +77,16 @@ cask "logi-options+" do
   zap trash: [
     "/Users/Shared/logi",
     "/Users/Shared/LogiOptionsPlus",
-    "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.logi.optionsplus*.sfl*",
+    "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.logi.*.sfl*",
+    "~/Library/Application Support/Logi",
     "~/Library/Application Support/LogiOptionsPlus",
+    "~/Library/HTTPStorages/LogiPluginServiceNative",
+    "~/Library/Logs/xlog_logitech",
     "~/Library/Preferences/com.logi.cp-dev-mgr.plist",
+    "~/Library/Preferences/com.logi.lps.settings.plist",
     "~/Library/Preferences/com.logi.optionsplus.driverhost.plist",
     "~/Library/Preferences/com.logi.optionsplus.plist",
+    "~/Library/Preferences/com.logi.pluginservice.plist",
     "~/Library/Saved Application State/com.logi.optionsplus.savedState",
   ]
 

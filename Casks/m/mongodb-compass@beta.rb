@@ -1,9 +1,9 @@
 cask "mongodb-compass@beta" do
   arch arm: "arm64", intel: "x64"
 
-  version "1.48.1-beta.1"
-  sha256 arm:   "39501325fcae73ca704f66bf754c85aa0982d39991685173f8db8b406c0c1c04",
-         intel: "2d7759c88f226b5888f4127a1340df4d20b72c5c6eb7ed16a571e13c8663f480"
+  version "1.50.0-beta.0"
+  sha256 arm:   "a2c10da777cd892002436ec1416a9fced77be1d6715f789645b88517de8d4c00",
+         intel: "80e7ec753c0658615ab416b2fec9cfbf31539a2b314bcb2dbc40e257a2cf2ade"
 
   url "https://downloads.mongodb.com/compass/beta/mongodb-compass-#{version}-darwin-#{arch}.dmg"
   name "MongoDB Compass"
@@ -23,12 +23,15 @@ cask "mongodb-compass@beta" do
     end
   end
 
-  depends_on macos: ">= :big_sur"
+  depends_on macos: :monterey
 
   app "MongoDB Compass Beta.app"
 
+  uninstall quit: "com.mongodb.compass.beta"
+
   zap trash: [
     "~/.mongodb",
+    "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.mongodb.compass.beta.sfl*",
     "~/Library/Application Support/MongoDB Compass Beta",
     "~/Library/Preferences/com.mongodb.compass.beta.plist",
     "~/Library/Saved Application State/com.mongodb.compass.beta.savedState",

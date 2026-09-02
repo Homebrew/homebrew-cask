@@ -1,18 +1,26 @@
 cask "slack-cli" do
-  arch arm: "arm64", intel: "amd64"
+  arch arm: "arm64", intel: on_system_conditional(macos: "amd64", linux: "64-bit")
+  os macos: "macOS", linux: "linux"
 
-  version "3.9.1"
-  sha256 arm:   "bb0980930f2fd129443966e76298b8963d01a684fb60f8f8b508435a1a3780d4",
-         intel: "b2de93d1f2687ba4b6b668f70597c13f3f8f41c9b5f84f42274719db95dca3c6"
+  version "4.7.0"
 
-  url "https://downloads.slack-edge.com/slack-cli/slack_cli_#{version}_macOS_#{arch}.tar.gz",
-      verified: "downloads.slack-edge.com/slack-cli/"
+  on_macos do
+    sha256 arm:   "ccb6dc5910e06e8b12ff4d9690d015b72f8a81249ea716e8829dddddfd39d404",
+           intel: "8a66be49be2e23cb19a08dc58fb1d7695eaad9b649556ea9a06a3f7c9b5142dc"
+  end
+  on_linux do
+    sha256 "9d06c481bca07c1afffd106462e5ad3a8748334eb3b09aba3911a557673b5429"
+
+    depends_on arch: :x86_64
+  end
+
+  url "https://downloads.slack-edge.com/slack-cli/slack_cli_#{version}_#{os}_#{arch}.tar.gz"
   name "Slack CLI"
   desc "CLI to create, run, and deploy Slack apps"
   homepage "https://docs.slack.dev/tools/slack-cli/"
 
   livecheck do
-    url "https://api.slack.com/slackcli/metadata.json"
+    url "https://docs.slack.dev/tools/metadata.json"
     strategy :json do |json|
       json.dig("slack-cli", "releases")&.map { |release| release["version"] }
     end
@@ -20,5 +28,5 @@ cask "slack-cli" do
 
   binary "bin/slack"
 
-  # No zap stanza required
+  zap trash: "~/.slack"
 end

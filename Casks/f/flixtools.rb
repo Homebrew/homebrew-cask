@@ -21,6 +21,8 @@ cask "flixtools" do
     end
   end
 
+  depends_on :macos
+
   app "FlixTools.app"
 
   zap trash: [

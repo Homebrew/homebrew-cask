@@ -1,9 +1,8 @@
 cask "utm" do
-  version "4.7.4"
-  sha256 "e259e81fd142acbdc4596369980118cfe5c2c4f491ed96bf5bc606c405d79ace"
+  version "4.7.5"
+  sha256 "a8435c93cfb5f8bbfeea4b134cfad1ac66b67632b75e438c63b1a8ae043bef0e"
 
-  url "https://github.com/utmapp/UTM/releases/download/v#{version}/UTM.dmg",
-      verified: "github.com/utmapp/UTM/"
+  url "https://github.com/utmapp/UTM/releases/download/v#{version}/UTM.dmg"
   name "UTM"
   desc "Virtual machines UI using QEMU"
   homepage "https://mac.getutm.app/"
@@ -15,7 +14,7 @@ cask "utm" do
   end
 
   conflicts_with cask: "utm@beta"
-  depends_on macos: ">= :big_sur"
+  depends_on macos: :big_sur
 
   app "UTM.app"
   binary "#{appdir}/UTM.app/Contents/MacOS/utmctl"

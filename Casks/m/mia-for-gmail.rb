@@ -1,9 +1,8 @@
 cask "mia-for-gmail" do
-  version "2.7.5"
-  sha256 "7fadbc7fa1f15fa9874973265f74b71a5fe21ca53b27e04296e6f24e5d5e10b6"
+  version "2.8.2"
+  sha256 "0270ca4ff60614806096c8889591d384da11c165b3a30559439ff6d5a0199470"
 
-  url "https://www.sovapps.com/application/notifier-pro-for-gmail/mia.#{version}.zip",
-      verified: "sovapps.com/application/notifier-pro-for-gmail/"
+  url "https://www.sovapps.com/application/notifier-pro-for-gmail/mia.#{version}.zip"
   name "Mia for Gmail"
   desc "Desktop email client for Gmail"
   homepage "https://www.miaforgmail.com/"
@@ -14,6 +13,7 @@ cask "mia-for-gmail" do
   end
 
   auto_updates true
+  depends_on :macos
 
   app "Mia for Gmail.app"
 

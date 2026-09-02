@@ -1,10 +1,9 @@
 cask "wiso-steuer-2023" do
   # NOTE: "2023" is not a version number, but an intrinsic part of the product name
-  version "30.16.5130-RC1"
-  sha256 "c9dce5d0098d36d797d91b97b3d8b4cf062c9e1cc934d2a3c8defd0713b46feb"
+  version "30.17.5610-HF1"
+  sha256 "0af66e1b300048513f84fa6185dd6d62f765054dd8168e32004405b56a61e070"
 
-  url "https://update.buhl-data.com/Updates/Steuer/2023/Mac/Files/#{version}/SteuerMac2023-#{version.split("-").first}.dmg",
-      verified: "update.buhl-data.com/Updates/Steuer/"
+  url "https://update.buhl-data.com/Updates/Steuer/2023/Mac/Files/#{version}/SteuerMac2023-#{version.split("-").first}.dmg"
   name "WISO Steuer 2023"
   desc "Tax declaration for the fiscal year 2022"
   homepage "https://www.buhl.de/download/wiso-steuer-2023/"
@@ -21,6 +20,7 @@ cask "wiso-steuer-2023" do
   end
 
   auto_updates true
+  depends_on :macos
 
   # Renamed for consistency: app name differs in Finder to shell
   app "SteuerMac 2023.app", target: "WISO Steuer 2023.app"

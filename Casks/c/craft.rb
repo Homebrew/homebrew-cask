@@ -1,5 +1,5 @@
 cask "craft" do
-  version "3.2.9"
+  version "3.6.0"
   sha256 :no_check
 
   url "https://res.craft.do/native/sparkle/Craft.dmg"
@@ -13,12 +13,14 @@ cask "craft" do
   end
 
   auto_updates true
-  depends_on macos: ">= :monterey"
+  depends_on macos: :monterey
 
   app "Craft.app"
 
   zap trash: [
     "~/Library/Application Scripts/com.lukilabs.lukiapp.Craft*",
     "~/Library/Containers/com.lukilabs.lukiapp.Craft*",
+    "~/Library/Group Containers/group.com.lukilabs.lukiapp.share",
+    "~/Library/Preferences/com.lukilabs.lukiapp.plist",
   ]
 end

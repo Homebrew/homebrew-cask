@@ -1,12 +1,11 @@
 cask "creality-print" do
   arch arm: "arm64", intel: "x86_64"
 
-  version "6.3.0.3420"
-  sha256 arm:   "62cc49b9ad41aa9426f1b8c04cca9b3a04eb8eeb2f420f6ad26762d348fd9bb9",
-         intel: "34e029e963353b3ef453a03b86f4d9719d404b06664a1e3e187be90855e26edd"
+  version "7.2.1.5476"
+  sha256 arm:   "6fe5eb238a2d73e9bcb524d77d6fb84e32da4c5c957a150b97ffae614c2b0713",
+         intel: "5b89736e41bf1917708a4bb6ba7a62a6f3b3c77dc6f076f9e36386cbd85173ba"
 
-  url "https://github.com/CrealityOfficial/CrealityPrint/releases/download/v#{version.major_minor_patch}/CrealityPrint-#{version}-macx-#{arch}-Release.dmg",
-      verified: "github.com/CrealityOfficial/CrealityPrint/"
+  url "https://github.com/CrealityOfficial/CrealityPrint/releases/download/v#{version.major_minor_patch}/CrealityPrint-#{version}-macx-#{arch}-Release.dmg"
   name "Creality Print"
   desc "Slicer and cloud services for some Creality FDM 3D printers"
   homepage "https://www.creality.com/pages/download-software"
@@ -23,6 +22,8 @@ cask "creality-print" do
       end
     end
   end
+
+  depends_on macos: :big_sur
 
   app "Creality Print.app"
 

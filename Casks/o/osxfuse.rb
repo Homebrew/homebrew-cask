@@ -2,17 +2,19 @@ cask "osxfuse" do
   version "3.11.2"
   sha256 "0f9fd021810063ded2f9a40347e11961369238af27615842063831568a0860ce"
 
-  url "https://github.com/osxfuse/osxfuse/releases/download/osxfuse-#{version}/osxfuse-#{version}.dmg",
-      verified: "github.com/osxfuse/"
+  url "https://github.com/osxfuse/osxfuse/releases/download/osxfuse-#{version}/osxfuse-#{version}.dmg"
   name "OSXFUSE"
   desc "File system integration"
   homepage "https://osxfuse.github.io/"
 
   deprecate! date: "2025-03-28", because: :discontinued, replacement_cask: "macfuse"
+  disable! date: "2026-03-28", because: :discontinued, replacement_cask: "macfuse"
+
+  depends_on :macos
 
   pkg "Extras/FUSE for macOS #{version}.pkg"
 
-  postflight do
+  postflight_steps do
     set_ownership ["/usr/local/include", "/usr/local/lib"]
   end
 

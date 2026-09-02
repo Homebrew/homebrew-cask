@@ -1,9 +1,8 @@
 cask "popclip" do
-  version "2025.9.2"
-  sha256 "d04d7c15ac6a6e6719e3b93325ba6238787a532470a94e2724d783897b3b2d92"
+  version "2026.8"
+  sha256 "fa4cb1e4dbdfaaf2f2fd45ef11ebeb57e824c090a4830231ba2c942b6b9b7768"
 
-  url "https://pilotmoon.com/downloads/PopClip-#{version}.zip",
-      verified: "pilotmoon.com/downloads/"
+  url "https://pilotmoon.com/downloads/PopClip-#{version}.zip"
   name "PopClip"
   desc "Used to access context-specific actions when text is selected"
   homepage "https://www.popclip.app/"
@@ -18,7 +17,7 @@ cask "popclip" do
   end
 
   auto_updates true
-  depends_on macos: ">= :big_sur"
+  depends_on macos: :ventura
 
   app "PopClip.app"
 

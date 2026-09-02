@@ -1,6 +1,6 @@
 cask "nordlayer" do
-  version "3.7.1"
-  sha256 "24be3f92e2c8c231d2db31c1e9ebbc01d79790ab765ce9bbad6aab03d6821af1"
+  version "3.12.1"
+  sha256 "3d62a50eaeccda650a201cfc742d8f839e5133cae3e3050b1dfcbc746968a672"
 
   url "https://downloads.nordlayer.com/mac/latest/NordLayer_v#{version}.pkg"
   name "NordLayer"
@@ -13,7 +13,7 @@ cask "nordlayer" do
   end
 
   auto_updates true
-  depends_on macos: ">= :big_sur"
+  depends_on macos: :big_sur
 
   pkg "NordLayer_v#{version}.pkg"
 
@@ -27,10 +27,12 @@ cask "nordlayer" do
 
   zap trash: [
     "~/Library/Application Scripts/com.nordvpn.macos.teams",
+    "~/Library/Application Scripts/group.com.nordlayer.macos",
     "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.nordvpn.macos.teams.sfl*",
     "~/Library/Application Support/com.nordvpn.macos.teams",
     "~/Library/Caches/com.nordvpn.macos.teams",
     "~/Library/Containers/com.nordvpn.macos.teams",
+    "~/Library/Group Containers/group.com.nordlayer.macos",
     "~/Library/HTTPStorages/com.nordvpn.macos.teams",
     "~/Library/Preferences/com.nordvpn.macos.teams.plist",
   ]

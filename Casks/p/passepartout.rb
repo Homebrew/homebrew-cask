@@ -1,24 +1,25 @@
 cask "passepartout" do
   arch arm: "arm64", intel: "x86_64"
 
-  version "3.6.0"
-  sha256 arm:   "dfa04044916bbd9c82e6f88a14495682b436d259335bd09b53f5e6d06bf99122",
-         intel: "3bf2c4a597f19c76e20c3083c32ee2faebad487b0ec1c1e4b9e55e925a2e2c08"
+  version "3.11.0"
+  sha256 arm:   "94bffbf9d864e41f5890f26c1529b71fae451c0fd129df74fd2da1ffca370ee4",
+         intel: "619346bf65776899de636525ae08ea2c67882905c61201ea36042422ef13ebff"
 
-  url "https://github.com/passepartoutvpn/passepartout/releases/download/v#{version}/Passepartout.#{arch}.dmg",
-      verified: "github.com/passepartoutvpn/passepartout/"
+  url "https://github.com/partout-io/passepartout/releases/download/v#{version}/Passepartout.#{arch}.dmg"
   name "Passepartout"
   desc "OpenVPN and WireGuard client"
-  homepage "https://passepartoutvpn.app/"
+  homepage "https://partout.io/passepartout/"
 
   livecheck do
     url :url
     strategy :github_latest
   end
 
-  depends_on macos: ">= :ventura"
+  depends_on macos: :sonoma
 
   app "Passepartout.app"
+
+  uninstall quit: "com.algoritmico.mac.Passepartout"
 
   zap trash: [
     "~/Library/Application Scripts/com.algoritmico.mac.Passepartout",

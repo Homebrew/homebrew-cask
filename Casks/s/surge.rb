@@ -1,6 +1,6 @@
 cask "surge" do
-  version "6.4.1,9550,d5ca6e6585c0a68908898b04d45e846e"
-  sha256 "9d25dd81353e9bbcc091a3d085460312a8b37eddd5ed75605ce528887fe516d4"
+  version "6.9.0,12250,2e39a9dd675107098a3c4e779953f46a"
+  sha256 "d6a0e7fba9f84294e61176d8ca3962a51182d92603ba4bba25890e1ca3d5a53d"
 
   url "https://dl.nssurge.com/mac/v#{version.major}/Surge-#{version.tr(",", "-")}.zip"
   name "Surge"
@@ -21,7 +21,7 @@ cask "surge" do
 
   auto_updates true
   conflicts_with cask: "surge@4"
-  depends_on macos: ">= :monterey" # Confirmed by LSMinimumSystemVersion "12.0"
+  depends_on macos: :monterey # Confirmed by LSMinimumSystemVersion "12.0"
 
   app "Surge.app"
   binary "#{appdir}/Surge.app/Contents/Applications/Surge Dashboard.app", target: "#{appdir}/Surge Dashboard.app"

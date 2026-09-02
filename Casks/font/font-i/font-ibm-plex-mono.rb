@@ -1,14 +1,20 @@
 cask "font-ibm-plex-mono" do
-  version "1.1.0"
-  sha256 "4bfc936d0e1fd19db6327a3786eabdbc3dc0d464500576f6458f6706df68d26c"
+  version "2.5.0"
+  sha256 "6d23f01257663d8cc49a0d64c22ced630b79e0e2a0ac08a0da86e9a38bbc481c"
 
   url "https://github.com/IBM/plex/releases/download/%40ibm%2Fplex-mono%40#{version}/ibm-plex-mono.zip"
   name "IBM Plex Mono"
   homepage "https://github.com/IBM/plex"
 
+  # There can be a notable gap between when a version is tagged and a
+  # corresponding release is created, so we check releases instead of the Git
+  # tags. Upstream maintains multiple fonts in this repository and the "latest"
+  # release may be for another font, so we have to check multiple releases to
+  # identify the correct version.
   livecheck do
     url :url
     regex(%r{^@ibm/plex-mono@?(\d+(?:\.\d+)+)$}i)
+    strategy :github_releases
   end
 
   font "ibm-plex-mono/fonts/complete/otf/IBMPlexMono-Bold.otf"

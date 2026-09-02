@@ -2,7 +2,7 @@ cask "font-pt-astra-sans" do
   version :latest
   sha256 :no_check
 
-  url "https://api.paratype.com/api/editions/ofl/download/52180",
+  url "https://api.paratype.com/api/download/ofl/pack/3759",
       referer: "https://www.paratype.com/"
   name "PT Astra Sans"
   homepage "https://www.paratype.com/fonts/pt/pt-astra-sans"

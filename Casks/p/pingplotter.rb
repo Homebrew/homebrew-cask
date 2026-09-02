@@ -1,5 +1,5 @@
 cask "pingplotter" do
-  version "5.25.20"
+  version "5.27.13"
   sha256 :no_check
 
   url "https://www.pingplotter.com/downloads/pingplotter_osx.zip"
@@ -12,6 +12,8 @@ cask "pingplotter" do
     regex(/(\d+(?:\.\d+)+).*?h2/i)
   end
 
+  depends_on macos: :monterey
+
   app "PingPlotter.app"
 
   uninstall quit: "com.pingman.pingplotter.mac"
@@ -22,8 +24,4 @@ cask "pingplotter" do
     "~/Library/Preferences/com.pingman.pingplotter.mac.plist",
     "~/Library/Saved Application State/com.pingman.pingplotter.mac.savedState",
   ]
-
-  caveats do
-    requires_rosetta
-  end
 end

@@ -1,12 +1,11 @@
 cask "sculptor" do
   arch arm: "arm64", intel: "x64"
 
-  version "0.2.29"
-  sha256 arm:   "0bfa8fde4cbc6ee28b3a2103cea6f42d92d0c63bbf1cbbc61c14f1a6dbf09e29",
-         intel: "7036b1f7581e5b6041126f0ab3e435f34236bcce30b3292e47f7caf7404a3aed"
+  version "0.7.0"
+  sha256 arm:   "083cd0fd55940824e8d73b8679a11c93d03724a653ecbb929524860473d12e25",
+         intel: "b0f8610f0774460ddcb01497b86973b83b477941380ba294c7f5a12efab7436f"
 
-  url "https://imbue-sculptor-releases.s3.us-west-2.amazonaws.com/sculptor/zip/darwin/#{arch}/Sculptor-darwin-#{arch}-#{version}.zip",
-      verified: "imbue-sculptor-releases.s3.us-west-2.amazonaws.com/"
+  url "https://imbue-sculptor-releases.s3.us-west-2.amazonaws.com/sculptor/zip/darwin/#{arch}/Sculptor-darwin-#{arch}-#{version}.zip"
   name "Sculptor"
   desc "GUI for Claude Code"
   homepage "https://imbue.com/sculptor/"
@@ -17,7 +16,7 @@ cask "sculptor" do
   end
 
   auto_updates true
-  depends_on macos: ">= :big_sur"
+  depends_on macos: :big_sur
 
   app "Sculptor.app"
 

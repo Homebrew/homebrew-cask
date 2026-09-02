@@ -1,9 +1,8 @@
 cask "mycard" do
-  version "3.0.75"
-  sha256 "1d0984f4d59456cd8cee0f59c5fe04fbb7c83ced430046246d90300ffb04cef1"
+  version "3.0.87"
+  sha256 "ed302498dd66e3f0d42e428991ed1f93f953f3a7b295c568eab116a0d83a2634"
 
-  url "https://cdn02.moecube.com:444/downloads/MyCard-#{version}.dmg",
-      verified: "cdn02.moecube.com:444/downloads/"
+  url "https://cdn02.moecube.com:444/downloads/MyCard-#{version}.dmg"
   name "MyCard"
   desc "Yu-Gi-Oh! Complete Card Simulator"
   homepage "https://mycard.moe/"
@@ -13,9 +12,12 @@ cask "mycard" do
     strategy :electron_builder
   end
 
+  depends_on :macos
+
   app "MyCard.app"
 
   zap trash: [
+    "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.mycard.mycard.sfl*",
     "~/Library/Application Support/mycard",
     "~/Library/Application Support/MyCardLibrary",
     "~/Library/Logs/MyCard",

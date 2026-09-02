@@ -14,17 +14,11 @@ cask "meld" do
     url "https://gitlab.com/dehesselle/meld_macos.git"
   end
 
-  app "Meld.app"
-  # shim script (https://github.com/Homebrew/homebrew-cask/issues/18809)
-  shimscript = "#{staged_path}/meld.wrapper.sh"
-  binary shimscript, target: "meld"
+  depends_on :macos
 
-  preflight do
-    File.write shimscript, <<~EOS
-      #!/bin/sh
-      exec '#{appdir}/Meld.app/Contents/MacOS/Meld' "$@"
-    EOS
-  end
+  app "Meld.app"
+  command_wrapper "meld",
+                  executable: "#{appdir}/Meld.app/Contents/MacOS/Meld"
 
   zap trash: [
     "~/.local/share/meld",

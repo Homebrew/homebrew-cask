@@ -1,12 +1,11 @@
 cask "mcreator" do
   arch arm: "aarch64", intel: "64bit"
 
-  version "2025.3.45720"
-  sha256 arm:   "09748527a33a20f0a9a097fe3800562245037bd9e8d4999ebb591436427f8274",
-         intel: "92acb7d99b29157c1a2cd14d5730140a9a4f69479580b10a29f16a7d66ccbd41"
+  version "2026.2.33518"
+  sha256 arm:   "e4750f18a4a0b3f26cdf10e5fae338b373acdcb1e8b6906db5bbae37ee328c62",
+         intel: "58b1d9ad9bfa356ddfab139f92c749227dab235195c10dce0e355878c61a7c77"
 
-  url "https://github.com/MCreator/MCreator/releases/download/#{version}/MCreator.#{version.major_minor}.Mac.#{arch}.dmg",
-      verified: "github.com/MCreator/MCreator/"
+  url "https://github.com/MCreator/MCreator/releases/download/#{version}/MCreator.#{version.major_minor}.Mac.#{arch}.dmg"
   name "MCreator"
   desc "Software used to make Minecraft Java Edition mods"
   homepage "https://mcreator.net/"
@@ -16,9 +15,11 @@ cask "mcreator" do
     strategy :github_latest
   end
 
-  depends_on macos: ">= :big_sur"
+  depends_on macos: :big_sur
 
   app "MCreator.app"
+
+  uninstall quit: "net.mcreator"
 
   zap trash: "~/.mcreator"
 end

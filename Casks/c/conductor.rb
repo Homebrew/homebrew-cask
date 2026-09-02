@@ -1,16 +1,23 @@
 cask "conductor" do
-  version "0.21.0,01K9RAZ32EVHVV2NTJQTV89Z71"
-  sha256 "68adc67c16b28299043ed286ebdeeb35e20407c8dcb598845d4fa14a86830734"
+  arch arm: "aarch64", intel: "x86_64"
 
-  url "https://cdn.crabnebula.app/asset/#{version.csv.second}",
-      verified: "cdn.crabnebula.app/asset/"
+  on_arm do
+    version "0.83.3,01M1HNYV5HBWJ8D4TR8XZ5PCDE"
+    sha256 "9230d5c6a8a2593f53c33e0e981d9aef429f925f2953cc763a220e798c9a5b5e"
+  end
+  on_intel do
+    version "0.83.3,01M1HNZ5NMBJYKR5XEJ6RND4FZ"
+    sha256 "571baa3a9528d4726cc662ed9c4731cd0b9aa2cb975112715d09c69417ed8668"
+  end
+
+  url "https://cdn.crabnebula.app/asset/#{version.csv.second}"
   name "Conductor"
   desc "Claude code parallelisation"
   homepage "https://conductor.build/"
 
   livecheck do
-    url "https://cdn.crabnebula.app/update/melty/conductor/darwin-aarch64/latest"
-    regex(%r{cdn.crabnebula.app/asset/(.+)}i)
+    url "https://cdn.crabnebula.app/update/melty/conductor/darwin-#{arch}/latest"
+    regex(%r{/asset/([^?/]+)}i)
     strategy :json do |json, regex|
       asset_id = json["url"]&.[](regex, 1)
       version = json["version"]
@@ -20,7 +27,8 @@ cask "conductor" do
     end
   end
 
-  depends_on arch: :arm64
+  auto_updates true
+  depends_on :macos
 
   app "Conductor.app"
 

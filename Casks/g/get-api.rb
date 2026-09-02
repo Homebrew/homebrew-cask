@@ -1,6 +1,6 @@
 cask "get-api" do
-  version "1.3.4"
-  sha256 "05f4e1cb870eb1797254efb857573b291ab4df4366611d936fb3cbdf56982ea5"
+  version "2.1.3"
+  sha256 "5487101967443f6c33f3ffadb71f471d832c3cf3042ffdd33a7ba4900a67f860"
 
   url "https://files.getapi.io/macos/#{version}/Get%20API.dmg"
   name "GetAPI"
@@ -13,7 +13,7 @@ cask "get-api" do
   end
 
   auto_updates true
-  depends_on macos: ">= :big_sur"
+  depends_on macos: :big_sur
 
   app "Get API.app"
 

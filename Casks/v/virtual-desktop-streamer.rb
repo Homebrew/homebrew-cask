@@ -1,5 +1,5 @@
 cask "virtual-desktop-streamer" do
-  version "1.34.10"
+  version "1.34.22"
   sha256 :no_check
 
   url "https://files.vrdesktop.net/files/VirtualDesktop.Streamer.Setup.pkg"
@@ -11,6 +11,8 @@ cask "virtual-desktop-streamer" do
     url :url
     strategy :extract_plist
   end
+
+  depends_on :macos
 
   pkg "VirtualDesktop.Streamer.Setup.pkg"
 
@@ -26,6 +28,7 @@ cask "virtual-desktop-streamer" do
             ]
 
   zap trash: [
+    "/Library/LaunchAgents/com.virtualdesktop.streamer.plist",
     "~/Library/Application Support/VirtualDesktop",
     "~/Library/Caches/com.virtualdesktop.streamer",
     "~/Library/Preferences/com.virtualdesktop.streamer.plist",

@@ -2,9 +2,9 @@ cask "studio-3t" do
   arch arm: "-aarch64"
   livecheckarch = on_arch_conditional arm: "_aarch64"
 
-  version "2025.20.0"
-  sha256 arm:   "55a95a2064547bca4d54b0002e068785ef51d27ca31e551667783072f41fc63d",
-         intel: "8fe0d903b8807a7627e644ff508140654ede49c55e5d6828df7d9686beea2f05"
+  version "2026.13.0"
+  sha256 arm:   "3192f2767ee65b7aa92deab9f4a8f5d40603e895ec3864bf9a1b99fccfca55e9",
+         intel: "509bc0f0b3a786f733f249e74dd31dd70f5894435701f9d2eb52c8798a78ecfc"
 
   url "https://download.studio3t.com/studio-3t/mac#{arch}/#{version}/Studio-3T.dmg"
   name "Studio 3T"
@@ -12,16 +12,20 @@ cask "studio-3t" do
   homepage "https://studio3t.com/"
 
   livecheck do
-    url "https://studio3t.com/download-thank-you/?OS=osx#{livecheckarch}"
+    url "https://studio3t.com/download-thank-you/?OS=osx#{livecheckarch}",
+        cookies: { "3t-can-download-software" => "1" }
     regex(%r{/v?(\d+(?:\.\d+)+)/Studio[._-]?3T\.dmg}i)
   end
 
   auto_updates true
+  depends_on :macos
 
   app "Studio 3T.app"
 
+  uninstall quit: "com.install4j.0526-4458-1435-8154.837"
+
   zap trash: [
-    "~/.3T/studio-3t/",
+    "~/.3T/studio-3t",
     "~/Library/Preferences/3t.enterprise.mongochef.plist",
     "~/Library/Preferences/3t.mongochef.core.plist",
     "~/Library/Preferences/3t.mongochef.enterprise.plist",

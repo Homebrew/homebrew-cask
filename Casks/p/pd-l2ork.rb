@@ -2,8 +2,7 @@ cask "pd-l2ork" do
   version "2.20.1"
   sha256 "65c1c41a0eb4eaa1b439785fcfa0ccc7698a1b95c29277b2179d941ec9afad05"
 
-  url "https://github.com/agraef/purr-data/releases/download/#{version.csv.first}/purr-data-#{version.csv.first}-macos-x86_64.zip",
-      verified: "github.com/agraef/purr-data/"
+  url "https://github.com/agraef/purr-data/releases/download/#{version.csv.first}/purr-data-#{version.csv.first}-macos-x86_64.zip"
   name "Pd-l2ork"
   name "Purr Data"
   desc "Programming environment for computer music and multimedia applications"
@@ -16,11 +15,13 @@ cask "pd-l2ork" do
 
   disable! date: "2026-09-01", because: :fails_gatekeeper_check
 
+  depends_on :macos
+
   app "Purr-Data.app"
   binary "#{appdir}/Purr-Data.app/Contents/Resources/app.nw/bin/pd-l2ork"
 
-  uninstall_preflight do
-    set_permissions "#{appdir}/Purr-Data.app", "0777"
+  uninstall_preflight_steps do
+    set_permissions "Purr-Data.app", "0777", base: :appdir
   end
 
   zap trash: [

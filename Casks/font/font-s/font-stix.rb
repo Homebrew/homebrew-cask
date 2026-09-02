@@ -2,8 +2,7 @@ cask "font-stix" do
   version "2.13b171"
   sha256 "1e76b9ab0bb08372ff73ad5b58d9116260e9058d1fce4b83fe1e213c3b9c947f"
 
-  url "https://github.com/stipub/stixfonts/archive/refs/tags/v#{version}.tar.gz",
-      verified: "github.com/stipub/stixfonts/"
+  url "https://github.com/stipub/stixfonts/archive/refs/tags/v#{version}.tar.gz"
   name "STIX"
   homepage "https://stixfonts.org/"
 

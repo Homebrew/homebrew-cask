@@ -1,5 +1,5 @@
 cask "batchoutput-pdf" do
-  version "3.1.6"
+  version "3.1.8"
   sha256 :no_check
 
   url "https://zevrix.com/downloads/BatchOutputPDF.dmg"
@@ -12,7 +12,11 @@ cask "batchoutput-pdf" do
     regex(/BatchOutput\s*PDF\s*(\d+(?:\.\d+)+)/i)
   end
 
+  depends_on :macos
+
   app "BatchOutput PDF.app"
+
+  uninstall quit: "com.zevrix.BatchOutputPDF*"
 
   zap trash: [
     "~/Library/Caches/com.zevrix.BatchOutputPDF*",

@@ -2,8 +2,7 @@ cask "macdown" do
   version "0.7.2"
   sha256 "271f11eb64c19fccee2615e092067cdecc29adf0c2ed0703dae9acda8fa0a672"
 
-  url "https://github.com/MacDownApp/macdown/releases/download/v#{version}/MacDown.app.zip",
-      verified: "github.com/MacDownApp/macdown/"
+  url "https://github.com/MacDownApp/macdown/releases/download/v#{version}/MacDown.app.zip"
   name "MacDown"
   desc "Open-source Markdown editor"
   homepage "https://macdown.uranusjr.com/"
@@ -19,7 +18,11 @@ cask "macdown" do
     end
   end
 
+  disable! date: "2026-09-01", because: :fails_gatekeeper_check
+
   auto_updates true
+  conflicts_with cask: "macdown-3000"
+  depends_on :macos
 
   app "MacDown.app"
   binary "#{appdir}/MacDown.app/Contents/SharedSupport/bin/macdown"

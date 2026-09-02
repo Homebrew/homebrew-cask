@@ -15,6 +15,8 @@ cask "exifrenamer" do
     end
   end
 
+  depends_on :macos
+
   app "ExifRenamer.app"
 
   zap trash: "~/Library/Preferences/de.qdev.ExifRenamer.plist"

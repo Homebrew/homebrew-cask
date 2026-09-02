@@ -1,7 +1,7 @@
 cask "mobirise" do
   arch arm: "-m"
 
-  version "6.1.9"
+  version "6.1.12"
   sha256 :no_check
 
   url "https://download.mobirise.com/MobiriseSetup#{arch}.dmg"
@@ -10,9 +10,11 @@ cask "mobirise" do
   homepage "https://mobirise.com/"
 
   livecheck do
-    url "https://mobirise.com/history.html"
+    url "https://history.mobirisesite.com"
     regex(/>\s*Mobirise\s+v?(\d+(?:\.\d+)+)/i)
   end
+
+  depends_on :macos
 
   app "Mobirise.app"
 

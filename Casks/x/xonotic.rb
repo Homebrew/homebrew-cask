@@ -12,6 +12,8 @@ cask "xonotic" do
     regex(%r{href=.*?/xonotic[._-]v?(\d+(?:\.\d+)+)\.zip}i)
   end
 
+  depends_on :macos
+
   suite "Xonotic"
 
   zap trash: "~/Library/Application Support/xonotic"

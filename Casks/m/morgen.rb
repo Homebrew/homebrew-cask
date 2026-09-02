@@ -1,12 +1,11 @@
 cask "morgen" do
   arch arm: "arm64", intel: "x64"
 
-  version "3.6.19,250927sfzvudsa6"
-  sha256 arm:   "7e08046e4b601ae6596f6505f2934de06e81ea95835b482cbb1009a0f654555b",
-         intel: "07490cb8b3eb93e547d51b3018b70edca60373c2db00c2ed1c9068186655e9ed"
+  version "4.0.6,260519by9gmr661"
+  sha256 arm:   "a707db932ca1e9b3b7e2cfa2de91cbdeb0c3f99fb80e00df03758d3387424b2d",
+         intel: "f03717da01d90ad53a2266279eba59aab0f32d263efae2c0953d1065cad06132"
 
-  url "https://download.todesktop.com/210203cqcj00tw1/Morgen%20#{version.csv.first}%20-%20Build%20#{version.csv.second}-#{arch}.dmg",
-      verified: "download.todesktop.com/210203cqcj00tw1/"
+  url "https://download.todesktop.com/210203cqcj00tw1/Morgen%20#{version.csv.first}%20-%20Build%20#{version.csv.second}-#{arch}.dmg"
   name "Morgen"
   desc "All-in-one calendars, tasks and scheduler"
   homepage "https://morgen.so/"
@@ -23,6 +22,9 @@ cask "morgen" do
       end
     end
   end
+
+  auto_updates true
+  depends_on macos: :big_sur
 
   app "Morgen.app"
 

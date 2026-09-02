@@ -12,6 +12,8 @@ cask "advancedrestclient" do
     regex(/^v?(\d+(?:\.\d+)+)$/i)
   end
 
+  depends_on :macos
+
   app "AdvancedRestClient.app"
 
   zap trash: [

@@ -7,6 +7,10 @@ cask "semulov" do
   desc "Access mounted and unmounted volumes from the menubar"
   homepage "https://github.com/kainjow/Semulov"
 
+  disable! date: "2026-09-01", because: :fails_gatekeeper_check
+
+  depends_on :macos
+
   app "Semulov.app"
 
   zap trash: "~/Library/Preferences/com.kainjow.Semulov.plist"

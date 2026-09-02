@@ -2,8 +2,7 @@ cask "font-yarndings-20-charted" do
   version :latest
   sha256 :no_check
 
-  url "https://github.com/google/fonts/raw/main/ofl/yarndings20charted/Yarndings20Charted-Regular.ttf",
-      verified: "github.com/google/fonts/"
+  url "https://github.com/google/fonts/raw/main/ofl/yarndings20charted/Yarndings20Charted-Regular.ttf"
   name "Yarndings 20 Charted"
   homepage "https://fonts.google.com/specimen/Yarndings+20+Charted"
 

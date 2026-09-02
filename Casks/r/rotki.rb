@@ -1,12 +1,11 @@
 cask "rotki" do
   arch arm: "arm64", intel: "x64"
 
-  version "1.41.0"
-  sha256 arm:   "f3c4be1e4c83a1c7cdc391a7cae8a87e1b0109fcb507f921313f55e60fc66d50",
-         intel: "9196aae967b1f1bee0405937938642b20e4cd722c4c41f32ffe94898cab53e9f"
+  version "1.44.0"
+  sha256 arm:   "253669c869c455bd1756d3a86a7a7716a737cb4adf4ad7e8dc5f5f05b00f8ef8",
+         intel: "9071aabd6ef7e334af850024f0811463acb9ce50deaf6c26c570c99e6979281e"
 
-  url "https://github.com/rotki/rotki/releases/download/v#{version}/rotki-darwin_#{arch}-v#{version}.dmg",
-      verified: "github.com/rotki/rotki/"
+  url "https://github.com/rotki/rotki/releases/download/v#{version}/rotki-darwin_#{arch}-v#{version}.dmg"
   name "Rotki"
   desc "Portfolio tracking and accounting tool"
   homepage "https://rotki.com/"
@@ -16,7 +15,7 @@ cask "rotki" do
     strategy :github_latest
   end
 
-  depends_on macos: ">= :big_sur"
+  depends_on macos: :monterey
 
   app "rotki.app"
 

@@ -4,10 +4,10 @@ cask "itau" do
   sha256 :no_check
 
   on_arm do
-    version "2.3.2.21"
+    version "2.3.2.22"
   end
   on_intel do
-    version "2.2.2.21"
+    version "2.2.2.22"
   end
 
   url "https://guardiao.itau.com.br/UpdateServer/aplicativoitau#{arch}.dmg"
@@ -19,6 +19,8 @@ cask "itau" do
     url :url
     strategy :extract_plist
   end
+
+  depends_on :macos
 
   app "Itau.app"
 

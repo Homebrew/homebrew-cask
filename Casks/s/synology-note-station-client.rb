@@ -14,6 +14,8 @@ cask "synology-note-station-client" do
     end
   end
 
+  depends_on :macos
+
   app "Synology Note Station Client.app"
 
   zap trash: [

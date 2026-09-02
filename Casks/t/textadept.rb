@@ -1,9 +1,8 @@
 cask "textadept" do
-  version "12.9"
-  sha256 "91a187250c3b7257ab234502150225408afe05a50cbdd29ae530f4b8b5e177fa"
+  version "13.0"
+  sha256 "a691837637cabbab3035a88d64c4f83175e3f79b5018abb4942d79a65b0f28a5"
 
-  url "https://github.com/orbitalquark/textadept/releases/download/textadept_#{version}/textadept_#{version}.macOS.zip",
-      verified: "github.com/orbitalquark/textadept/"
+  url "https://github.com/orbitalquark/textadept/releases/download/textadept_#{version}/textadept_#{version}.macOS.zip"
   name "Textadept"
   desc "Text editor"
   homepage "https://orbitalquark.github.io/textadept/"
@@ -14,6 +13,8 @@ cask "textadept" do
   end
 
   disable! date: "2026-09-01", because: :fails_gatekeeper_check
+
+  depends_on :macos
 
   app "Textadept.app"
   binary "ta"

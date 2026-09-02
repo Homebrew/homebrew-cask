@@ -34,8 +34,8 @@ cask "propresenter@beta" do
     end
   end
   on_ventura :or_newer do
-    version "21,352321570"
-    sha256 "d053ab5046487f115a7e08076877a76c236bd820791ea3cb309b1145132a68d3"
+    version "21.4,352583705"
+    sha256 "a428409c5a59c0e1f0ced0d8788d521c75672fadd50ec15e20992a1fffbd4b9d"
 
     url "https://renewedvision.com/downloads//propresenter/mac/ProPresenter_#{version.csv.first}_#{version.csv.second}.zip"
 
@@ -57,7 +57,7 @@ cask "propresenter@beta" do
 
   auto_updates true
   conflicts_with cask: "propresenter"
-  depends_on macos: ">= :big_sur"
+  depends_on macos: :big_sur
 
   app "ProPresenter.app"
 

@@ -1,5 +1,5 @@
 cask "rode-central" do
-  version "2.0.106"
+  version "2.0.111"
   sha256 :no_check
 
   url "https://update.rode.com/central/RODE_Central_MACOS.zip"
@@ -13,6 +13,8 @@ cask "rode-central" do
       json.dig("rode-central-manifest", "macos", "main-version", "update-version")
     end
   end
+
+  depends_on :macos
 
   rename "RØDE Central*.pkg", "RØDE Central.pkg"
 

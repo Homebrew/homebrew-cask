@@ -1,12 +1,11 @@
 cask "hamrs-pro" do
   arch arm: "arm64", intel: "x64"
 
-  version "2.45.0"
-  sha256 arm:   "963441d97aa221697fb88022ef8178ff143ca8f9cf97c22b8aed2bc1ef495cb0",
-         intel: "fff762001b1ff36920e6ee4d8d3eabe6ca28f9d03131ee503462dd0c050927ac"
+  version "2.52.0"
+  sha256 arm:   "33c268849918d54e4d4070a2320f36a4f8521ff6dfd476a1fbd8f27bd3fc1331",
+         intel: "1d01acff971cd36fb516977aa02efba1ffbd61e8cf97908f1be6508e087789d2"
 
-  url "https://hamrs-dist.s3.amazonaws.com/hamrs-pro-#{version}-mac-#{arch}.dmg",
-      verified: "hamrs-dist.s3.amazonaws.com/"
+  url "https://hamrs-dist.s3.amazonaws.com/hamrs-pro-#{version}-mac-#{arch}.dmg"
   name "HAMRS Pro"
   desc "Portable logger"
   homepage "https://hamrs.app/"
@@ -17,7 +16,7 @@ cask "hamrs-pro" do
   end
 
   auto_updates true
-  depends_on macos: ">= :big_sur"
+  depends_on macos: :big_sur
 
   app "HAMRS Pro.app"
 

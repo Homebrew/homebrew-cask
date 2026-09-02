@@ -8,6 +8,9 @@ cask "quicklook-pat" do
   homepage "https://github.com/pixelrowdies/quicklook-pat"
 
   deprecate! date: "2024-11-15", because: :unmaintained
+  disable! date: "2025-11-15", because: :unmaintained
+
+  depends_on :macos
 
   pkg "PatternQuickLook.pkg"
 

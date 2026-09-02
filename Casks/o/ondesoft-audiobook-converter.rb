@@ -12,6 +12,8 @@ cask "ondesoft-audiobook-converter" do
     strategy :extract_plist
   end
 
+  depends_on :macos
+
   app "Ondesoft AudioBook Converter.app"
 
   caveats do

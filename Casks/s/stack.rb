@@ -1,9 +1,9 @@
 cask "stack" do
   arch arm: "arm64", intel: "x86_64"
 
-  version "5.3.1-20240731"
-  sha256 arm:   "bd8efc4954f7f6e14f0b55ed19cd462008943cce5d7a9dd3c7b8362a283e8d0f",
-         intel: "11788fd9d523bfa215b2bed2478717d7f58f096f31bdadd5dc415a9c1081aa45"
+  version "6.0.3-20260619"
+  sha256 arm:   "bf297418c881a822d97e8cde849c69d9f796fc99e4e6e12120f7599b83899143",
+         intel: "12363dbd10b8fd027bf6bb90ef0cfee77ea2e7ebef832af317ba66eeae148d11"
 
   url "https://filehosting-client.transip.nl/packages/stack/v#{version}/macos/stack-v#{version}.#{arch}.dmg"
   name "STACK"
@@ -15,6 +15,8 @@ cask "stack" do
     regex(/stack[._-]v?(\d(?:[.-]\d+)+)[._-]#{arch}\.dmg/i)
     strategy :header_match
   end
+
+  depends_on macos: :ventura
 
   app "stack.app"
 

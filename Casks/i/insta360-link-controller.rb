@@ -1,16 +1,15 @@
 cask "insta360-link-controller" do
-  version "2.0.6,build6,72fc6ee5e25db0752bba3b7c0484e4f5"
-  sha256 "0a63260a01a7a083dc5253bbb613d04c18e8ba77cb53e6c5da2c6cfef64b47e9"
+  version "2.2.4,build14,f5d12724880a43bbb77753d6daa1e9cd"
+  sha256 "04a247dce00ac46a14bfd9051e768dd0c5c21d20890f41d0705067ac389438a6"
 
-  url "https://file.insta360.com/static/#{version.csv.third}/Insta360LinkController_#{version.csv.first}(#{version.csv.second}).pkg"
+  url "https://wassets.insta360.com/common/#{version.csv.third}/Insta360LinkController_#{version.csv.first}(#{version.csv.second}).pkg"
   name "Insta360 Link Controller"
   desc "Controller for Insta360 webcams"
   homepage "https://www.insta360.com/"
 
   livecheck do
     url "https://openapi.insta360.com/app/appDownload/getGroupApp?group=insta360-link&X-Language=en-us"
-    regex(%r{/(\h+)/Insta360LinkController_\d+\.\d+\.\d+\((build\d+)\)\.pkg}i)
-
+    regex(%r{/(\h+)/Insta360(?:[._-]|%20)?LinkController(?:[._-]|%20)v?(\d+(?:\.\d+)+)[._-]?(.+?)\.(?:pkg|zip)}i)
     strategy :json do |json, regex|
       # Find the Insta360 Link Controller app
       app = json.dig("data", "apps")&.find { |item| item["app_id"] == 100 }
@@ -25,14 +24,14 @@ cask "insta360-link-controller" do
       channel = newest_release["channels"]&.find { |item| item["channel"] == "official" }
       next if channel.blank?
 
-      # Collect the version parts
-      version = newest_release["version"]
       match = channel["download_url"]&.match(regex)
-      next if version.blank? || match.blank?
+      next unless match
 
-      "#{version.split("_").first},#{match[2]},#{match[1]}"
+      "#{match[2]},#{match[3].tr("()", ",")},#{match[1]}".gsub(/,{2,}/, ",")
     end
   end
+
+  depends_on :macos
 
   pkg "Insta360LinkController_#{version.csv.first}(#{version.csv.second}).pkg"
 

@@ -7,11 +7,10 @@ cask "spark-ar-studio" do
   desc "Create and share augmented reality experiences using the Facebook family of apps"
   homepage "https://sparkar.facebook.com/ar-studio/"
 
-  livecheck do
-    url :url
-    regex(/SparkARStudio[._-]?v?(\d+)\.dmg/i)
-    strategy :header_match
-  end
+  # https://spark.meta.com/blog/meta-spark-announcement
+  disable! date: "2025-12-01", because: :discontinued
+
+  depends_on :macos
 
   app "Meta Spark Studio.app"
 

@@ -1,5 +1,5 @@
 cask "tresorit" do
-  version "3.5.3376.4650"
+  version "3.5.3492.4840"
   sha256 :no_check
 
   url "https://installer.tresorit.com/Tresorit.dmg"
@@ -15,10 +15,12 @@ cask "tresorit" do
   end
 
   auto_updates true
+  depends_on macos: :big_sur
 
   app "Tresorit.app"
 
-  uninstall login_item: "Tresorit"
+  uninstall launchctl:  "com.tresorit.mac.ExtensionHelper",
+            login_item: "Tresorit"
 
   zap trash: [
     "~/Library/Application Support/Tresorit",

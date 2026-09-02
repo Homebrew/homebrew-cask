@@ -12,7 +12,9 @@ cask "acronis-true-image-cleanup-tool" do
     regex(/\x00cleanup_tool_mac_macarm64[._-]v?(\d+(?:\.\d+)*)\x00/i)
   end
 
-  depends_on macos: ">= :big_sur"
+  disable! date: "2026-09-01", because: :fails_gatekeeper_check
+
+  depends_on macos: :big_sur
 
   lib_directory = "#{HOMEBREW_PREFIX}/lib/acronis-true-image"
 

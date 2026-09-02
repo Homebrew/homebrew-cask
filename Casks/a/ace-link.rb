@@ -12,6 +12,9 @@ cask "ace-link" do
     strategy :github_latest
   end
 
+  disable! date: "2026-09-01", because: :fails_gatekeeper_check
+
+  depends_on :macos
   depends_on cask: "docker"
 
   app "Ace Link.app"

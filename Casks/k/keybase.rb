@@ -1,34 +1,34 @@
 cask "keybase" do
-  arch arm: "arm64-"
+  arch arm: "-arm64"
+
+  sha256 :no_check
 
   on_arm do
-    version "6.5.4,20250917154415,52400b6f28"
-    sha256 "6e76006267d80b40e182d3110bb18c940a05aca41b9bb29a2a4ccc64967f8745"
+    version "6.6.3,20260603142618,f60f2ff97e"
   end
   on_intel do
-    version "6.5.4,20250917153314,52400b6f28"
-    sha256 "4dc3a84c3ba33467928b5c340d2296ad6d368009b47f4e24cb8baa75ae90da44"
+    version "6.6.3,20260603140308,f60f2ff97e"
   end
 
-  url "https://prerelease.keybase.io/darwin-#{arch}updates/Keybase-#{version.csv.first}-#{version.csv.second}%2B#{version.csv.third}.zip"
+  url "https://prerelease.keybase.io/Keybase#{arch}.dmg"
   name "Keybase"
   desc "End-to-end encryption software"
   homepage "https://keybase.io/"
 
   livecheck do
-    url "https://prerelease.keybase.io/update-darwin-#{arch}prod-v2.json"
+    url "https://prerelease.keybase.io/update-darwin#{arch}-prod-v2.json"
     strategy :json do |json|
       json["version"]&.tr("-+", ",")
     end
   end
 
   auto_updates true
+  depends_on macos: :monterey
 
   app "Keybase.app"
 
-  postflight do
-    system_command "#{appdir}/Keybase.app/Contents/SharedSupport/bin/keybase",
-                   args: ["install-auto"]
+  postflight_steps do
+    run "Keybase.app/Contents/SharedSupport/bin/keybase", args: ["install-auto"], base: :appdir
   end
 
   uninstall launchctl: "keybase.Helper",

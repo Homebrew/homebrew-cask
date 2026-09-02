@@ -1,6 +1,6 @@
 cask "sync" do
-  version "2.2.53"
-  sha256 "a9c7ad873e5e56034f0d2317d46debeb9d90a6b406021ff0378464fb2615c7ed"
+  version "2.2.62"
+  sha256 "458960bfed82fe409aae2727b4e122caa92388745c9deb74266066f25408a3cd"
 
   url "https://www10.sync.com/download/apple/Sync-#{version}.dmg"
   name "Sync"
@@ -13,6 +13,7 @@ cask "sync" do
   end
 
   auto_updates true
+  depends_on :macos
 
   app "Sync.app"
 

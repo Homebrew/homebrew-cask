@@ -1,9 +1,8 @@
 cask "ente-auth" do
-  version "4.4.4"
-  sha256 "4cc0fd821cb5e1e25fb6a4f10f31ccef48ad92bf5e23f4b6c0d80e33b65d08e8"
+  version "4.4.25"
+  sha256 "a1a2f979feb28d4b1cf210190ed0e2efe22cbbb42edc2c22545fd244567049c0"
 
-  url "https://github.com/ente-io/ente/releases/download/auth-v#{version}/ente-auth-v#{version}.dmg",
-      verified: "github.com/ente-io/ente/"
+  url "https://github.com/ente-io/ente/releases/download/auth-v#{version}/ente-auth-v#{version}.dmg"
   name "Ente Auth"
   desc "Desktop client for Ente Auth"
   homepage "https://ente.io/auth/"
@@ -13,6 +12,8 @@ cask "ente-auth" do
     regex(/^auth[._-]v?(\d+(?:\.\d+)+)$/i)
     strategy :github_releases
   end
+
+  depends_on :macos
 
   app "Ente Auth.app"
 

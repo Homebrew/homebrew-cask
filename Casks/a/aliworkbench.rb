@@ -1,9 +1,8 @@
 cask "aliworkbench" do
-  version "9.88.02QNM"
-  sha256 "88e6b3f32d0ba61be3b5372f2b1fc9680224dc3c6dc74e08683aa74aac6bd414"
+  version "9.95.01QNM"
+  sha256 "10bc474553bd97fde78598d331327617f3ded8c81c13db32f4ef50973d42390f"
 
-  url "https://download.alicdn.com/wangwang/AliworkbenchQN_(#{version}).dmg",
-      verified: "download.alicdn.com/wangwang/"
+  url "https://download.alicdn.com/wangwang/AliworkbenchQN_(#{version}).dmg"
   name "AliWorkBench"
   name "Qian Niu"
   name "千牛"
@@ -20,6 +19,8 @@ cask "aliworkbench" do
       end
     end
   end
+
+  depends_on :macos
 
   app "AliWorkBench.app"
 

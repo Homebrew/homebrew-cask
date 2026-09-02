@@ -1,12 +1,11 @@
 cask "freeyourmusic" do
   arch intel: "-x64"
 
-  version "9.19.0"
-  sha256 arm:   "574d3782ac9584495ae354b0e24d783808897fb5eea62d2b909089ae538981fc",
-         intel: "6a7ee767f43fe97cc7cbe08cc38ab201cefcfc18a0e7af8a71145ab4cfff6492"
+  version "9.32.0"
+  sha256 arm:   "9706328b0dbeb9231ee64f6099e8428326e8ff9facf73cd71a6969eae28a7f13",
+         intel: "59a8afe9164b270a7cc5f0907a2bfc84b3086e874c76926f27245f225e26f613"
 
-  url "https://fym-app-production.s3.nl-ams.scw.cloud/FreeYourMusic-#{version}#{arch}.dmg",
-      verified: "fym-app-production.s3.nl-ams.scw.cloud/"
+  url "https://fym-app-production.s3.nl-ams.scw.cloud/FreeYourMusic-#{version}#{arch}.dmg"
   name "FreeYourMusic"
   desc "Move playlists, tracks, and albums between music platforms"
   homepage "https://freeyourmusic.com/"
@@ -17,8 +16,11 @@ cask "freeyourmusic" do
   end
 
   auto_updates true
+  depends_on macos: :monterey
 
   app "FreeYourMusic.app"
+
+  uninstall quit: "com.freeyourmusic.app"
 
   zap trash: [
     "~/Library/Application Support/Caches/freeyourmusic-updater",

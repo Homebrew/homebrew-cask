@@ -1,28 +1,19 @@
 cask "launchcontrol" do
-  on_catalina :or_older do
-    version "1.52.7"
-    sha256 "760edc3f3238ecbbc9f0c14b17ced9ac2a46c46a4ed8feec6bfb532fced37b7e"
-
-    livecheck do
-      skip "Legacy version"
-    end
-  end
-  on_big_sur :or_newer do
-    version "2.9"
-    sha256 "3579eeba63d3afe37522e1dbfa0f0364a74e50f2807a53268ce40f03c3e4b51a"
-
-    livecheck do
-      url "https://www.soma-zone.com/LaunchControl/a/appcast-update-#{version.major}.xml"
-      strategy :sparkle, &:short_version
-    end
-  end
+  version "2.11"
+  sha256 "d46eb1548e78e9f811e089bd23f0fffa0a5a8fc7f3ed297658cff53d2bf519e5"
 
   url "https://www.soma-zone.com/download/files/LaunchControl-#{version}.tar.xz"
   name "LaunchControl"
   desc "Create, manage and debug system and user services"
   homepage "https://www.soma-zone.com/LaunchControl/"
 
+  livecheck do
+    url "https://www.soma-zone.com/LaunchControl/a/appcast-update-#{version.major}.xml"
+    strategy :sparkle, &:short_version
+  end
+
   auto_updates true
+  depends_on macos: :big_sur
 
   app "LaunchControl.app"
   binary "#{appdir}/LaunchControl.app/Contents/MacOS/fdautil"

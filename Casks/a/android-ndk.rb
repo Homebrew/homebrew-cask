@@ -2,8 +2,7 @@ cask "android-ndk" do
   version "29"
   sha256 "2d6922da5f95178bea870069f0a463c33d014ddfa364c74320e11c47531db24d"
 
-  url "https://dl.google.com/android/repository/android-ndk-r#{version}-darwin.dmg",
-      verified: "dl.google.com/android/repository/"
+  url "https://dl.google.com/android/repository/android-ndk-r#{version}-darwin.dmg"
   name "Android NDK"
   desc "Toolset to implement parts of Android apps in native code"
   homepage "https://developer.android.com/ndk/index.html"
@@ -13,28 +12,18 @@ cask "android-ndk" do
     regex(/Latest\b(?!\s+Beta|\s+Pre-Release).*?r(\d+[a-z]?)/i)
   end
 
-  # shim script (https://github.com/Homebrew/homebrew-cask/issues/18809)
-  shimscript = "#{staged_path}/ndk_exec.sh"
-  preflight do
-    Pathname.new("#{HOMEBREW_PREFIX}/share").mkpath
+  depends_on :macos
 
-    build = File.read("#{staged_path}/source.properties").match(/(?<=Pkg.Revision\s=\s\d\d.\d.)\d+/)
-    FileUtils.ln_sf("#{staged_path}/AndroidNDK#{build}.app/Contents/NDK", "#{HOMEBREW_PREFIX}/share/android-ndk")
+  command_wrapper "ndk-build", executable: "#{HOMEBREW_PREFIX}/share/android-ndk/ndk-build"
+  command_wrapper "ndk-depends", executable: "#{HOMEBREW_PREFIX}/share/android-ndk/ndk-depends"
+  command_wrapper "ndk-gdb", executable: "#{HOMEBREW_PREFIX}/share/android-ndk/ndk-gdb"
+  command_wrapper "ndk-stack", executable: "#{HOMEBREW_PREFIX}/share/android-ndk/ndk-stack"
+  command_wrapper "ndk-which", executable: "#{HOMEBREW_PREFIX}/share/android-ndk/ndk-which"
 
-    File.write shimscript, <<~EOS
-      #!/bin/bash
-      readonly executable="#{staged_path}/AndroidNDK#{build}.app/Contents/NDK/$(basename ${0})"
-      test -f "${executable}" && exec "${executable}" "${@}"
-    EOS
+  preflight_steps do
+    symlink "AndroidNDK*.app/Contents/NDK", "share/android-ndk",
+            target_base: :homebrew_prefix, source_glob: true, overwrite: true
   end
-
-  %w[
-    ndk-build
-    ndk-depends
-    ndk-gdb
-    ndk-stack
-    ndk-which
-  ].each { |link_name| binary shimscript, target: link_name }
 
   uninstall delete: "#{HOMEBREW_PREFIX}/share/android-ndk"
 

@@ -1,17 +1,21 @@
 cask "uu-booster" do
-  version "2.8.13"
-  sha256 "ac852e67a2dd7004eb3e143a1099a983b98d3b1e72467d6736b77fc08dae767b"
+  version "2.8.19"
+  sha256 :no_check
 
-  url "https://uu.gdl.netease.com/UU-macOS-#{version}.dmg",
-      verified: "uu.gdl.netease.com/"
+  url "https://adl.netease.com/d/g/uu/c/gw?type=mac&direct=1"
   name "UU Booster"
   desc "Network accelerator"
-  homepage "https://uu.163.com/down/mac/"
+  homepage "https://uu.163.com/download/"
 
   livecheck do
-    url "https://adl.netease.com/d/g/uu/c/uumac?type=pc"
-    regex(%r{pc_link.*?/UU[._-]macOS[._-]v?(\d+(?:\.\d+)+).dmg}i)
+    url "https://uu.163.com/json/download_info.json"
+    strategy :json do |json|
+      json.dig("mac", "version")
+    end
   end
+
+  auto_updates true
+  depends_on :macos
 
   app "UUBooster.app"
 

@@ -7,13 +7,11 @@ cask "realforce" do
   desc "Software for Realforce keyboards and mice"
   homepage "https://www.realforce.co.jp/"
 
-  livecheck do
-    url "https://www.realforce.co.jp/support/download/software/"
-    regex(%r{href=.*?/REALFORCE\s*?CONNECT\s*?Software[._-](\d+(?:-\d+)+)\.pkg}i)
-    strategy :page_match do |page, regex|
-      page.scan(regex).map { |match| match[0].tr("-", ".") }
-    end
-  end
+  # The upstream website uses Cloudflare protections and the pkg file is
+  # inaccessible outside of a browser, so this cask is effectively unusable.
+  disable! date: "2026-05-28", because: :unreachable
+
+  depends_on :macos
 
   pkg "REALFORCE CONNECT Software_#{version.dots_to_hyphens}.pkg"
 

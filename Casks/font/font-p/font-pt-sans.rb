@@ -2,7 +2,7 @@ cask "font-pt-sans" do
   version :latest
   sha256 :no_check
 
-  url "https://api.paratype.com/api/editions/ofl/download/52212",
+  url "https://api.paratype.com/api/download/ofl/pack/3762",
       referer: "https://www.paratype.com/"
   name "PT Sans"
   homepage "https://www.paratype.com/fonts/pt/pt-sans"

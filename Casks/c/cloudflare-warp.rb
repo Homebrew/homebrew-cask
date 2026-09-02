@@ -1,9 +1,8 @@
 cask "cloudflare-warp" do
-  version "2025.9.558.0"
-  sha256 "aadd196355c7340a44723f890605883b0574e312f5bd3773763d3981c007440d"
+  version "2026.7.1376.0"
+  sha256 "d8fea3fff465927076224d4444ca56355a86d034b2001fb4febdc3080f1f745a"
 
-  url "https://downloads.cloudflareclient.com/v1/download/macos/version/#{version}",
-      verified: "downloads.cloudflareclient.com/v1/download/macos/"
+  url "https://downloads.cloudflareclient.com/v1/download/macos/version/#{version}"
   name "Cloudflare WARP"
   desc "Free app that makes your Internet safer"
   homepage "https://cloudflarewarp.com/"
@@ -15,6 +14,7 @@ cask "cloudflare-warp" do
 
   auto_updates true
   conflicts_with cask: "cloudflare-warp@beta"
+  depends_on macos: :sonoma
 
   pkg "Cloudflare_WARP_#{version}.pkg"
 
@@ -23,6 +23,10 @@ cask "cloudflare-warp" do
               "com.cloudflare.1dot1dot1dot1.macos.warp.daemon",
             ],
             quit:      "com.cloudflare.1dot1dot1dot1.macos",
+            script:    {
+              executable: "/Applications/Cloudflare WARP.app/Contents/Resources/uninstall.sh",
+              sudo:       true,
+            },
             pkgutil:   "com.cloudflare.1dot1dot1dot1.macos",
             delete:    [
               "/usr/local/bin/warp-cli",

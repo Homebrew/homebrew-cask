@@ -19,6 +19,8 @@ cask "balsamiq-wireframes" do
     end
   end
 
+  depends_on :macos
+
   app "Balsamiq Wireframes.app"
 
   zap trash: [

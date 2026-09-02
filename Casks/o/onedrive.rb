@@ -1,9 +1,8 @@
 cask "onedrive" do
-  version "25.184.0921.0004"
-  sha256 "c8e2f57a159f1c67ecad1d2028134e4209e799f0392b35835963e90f7f605cb2"
+  version "26.150.0804.0011"
+  sha256 "e718dda687b08d1c908d4aa43a20fcb987e07e897d4f255adec5487f49593265"
 
-  url "https://oneclient.sfx.ms/Mac/Installers/#{version}/universal/OneDrive.pkg",
-      verified: "oneclient.sfx.ms/Mac/Installers/"
+  url "https://oneclient.sfx.ms/Mac/Installers/#{version}/universal/OneDrive.pkg"
   name "OneDrive"
   desc "Cloud storage client"
   homepage "https://www.microsoft.com/en-us/microsoft-365/onedrive/online-cloud-storage"
@@ -18,6 +17,7 @@ cask "onedrive" do
     "microsoft-office",
     "microsoft-office-businesspro",
   ]
+  depends_on macos: :sonoma
 
   pkg "OneDrive.pkg"
 

@@ -7,6 +7,10 @@ cask "sublercli" do
   desc "Command-line version of Subler"
   homepage "https://bitbucket.org/galad87/sublercli/"
 
+  disable! date: "2026-09-01", because: :fails_gatekeeper_check
+
+  depends_on :macos
+
   binary "SublerCLI"
 
   # No zap stanza required

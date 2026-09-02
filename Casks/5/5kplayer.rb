@@ -1,8 +1,8 @@
 cask "5kplayer" do
-  version "6.10.0"
+  version "6.11.0"
   sha256 :no_check
 
-  url "https://www.5kplayer.com/download/5kplayer.dmg"
+  url "https://www.5kplayer.com/download/5kplayer-setup.dmg"
   name "5KPlayer"
   desc "Play 4K/1080p/360-degree video, MP3/AAC/APE/FLAC music without quality loss"
   homepage "https://www.5kplayer.com/"
@@ -18,6 +18,7 @@ cask "5kplayer" do
   end
 
   auto_updates true
+  depends_on :macos
 
   app "5KPlayer.app"
 
@@ -28,8 +29,4 @@ cask "5kplayer" do
     "~/Library/Preferences/com.digiarty.5kplayer.plist",
     "~/Library/Saved Application State/com.digiarty.5kplayer.savedState",
   ]
-
-  caveats do
-    requires_rosetta
-  end
 end

@@ -19,6 +19,7 @@ cask "surge@4" do
 
   auto_updates true
   conflicts_with cask: "surge"
+  depends_on :macos
 
   app "Surge.app"
 

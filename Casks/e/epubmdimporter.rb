@@ -9,5 +9,7 @@ cask "epubmdimporter" do
   deprecate! date: "2024-10-13", because: :unmaintained
   disable! date: "2025-10-13", because: :unmaintained
 
+  depends_on :macos
+
   mdimporter "epub.mdimporter", target: "AA_epub.mdimporter"
 end

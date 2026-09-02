@@ -11,6 +11,8 @@ cask "wacom-inkspace" do
     regex(/href=.*?wacominkspaceappsetup[._-]v?(\d+(?:\.\d+)+)\.dmg/i)
   end
 
+  depends_on :macos
+
   app "Wacom Inkspace App.app"
 
   zap trash: [

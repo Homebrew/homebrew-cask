@@ -10,6 +10,8 @@ cask "nzbvortex" do
   deprecate! date: "2024-11-04", because: :unmaintained
   disable! date: "2025-11-06", because: :unmaintained
 
+  depends_on :macos
+
   app "NZBVortex #{version.major}.app"
 
   caveats do

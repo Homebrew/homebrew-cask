@@ -2,8 +2,7 @@ cask "redquits" do
   version "2.0"
   sha256 :no_check
 
-  url "https://redquits.s3.amazonaws.com/RedQuits_v#{version.major}.pkg",
-      verified: "redquits.s3.amazonaws.com/"
+  url "https://redquits.s3.amazonaws.com/RedQuits_v#{version.major}.pkg"
   name "RedQuits"
   desc "Quit an app when closing the last window"
   homepage "http://carsten-mielke.com/redquits.html"
@@ -12,6 +11,10 @@ cask "redquits" do
     url :homepage
     regex(/RedQuits\s+v?(\d+(?:\.\d+)+)/i)
   end
+
+  disable! date: "2026-09-01", because: :fails_gatekeeper_check
+
+  depends_on :macos
 
   pkg "RedQuits_v#{version.major}.pkg"
 

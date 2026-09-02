@@ -1,6 +1,6 @@
 cask "font-ibm-plex-serif" do
-  version "1.1.0"
-  sha256 "76f1a272b084d2beedcd22aaaa653bc6f92b71b5689081aef9c5b05d0a470e1b"
+  version "2.0.0"
+  sha256 "c006b095c47b919c6c8d78319e9e628745033f5db94507c1c9dfe4b35dd51f1e"
 
   url "https://github.com/IBM/plex/releases/download/%40ibm%2Fplex-serif%40#{version}/ibm-plex-serif.zip"
   name "IBM Plex Serif"

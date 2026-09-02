@@ -11,6 +11,8 @@ cask "color-oracle" do
     regex(/Version\s+(\d+(?:\.\d+)+)/i)
   end
 
+  depends_on :macos
+
   app "Color Oracle.app"
 
   uninstall login_item: "Color Oracle"

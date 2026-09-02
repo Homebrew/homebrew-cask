@@ -1,19 +1,25 @@
 cask "safe-exam-browser" do
-  version "3.6"
-  sha256 "05a6bdd1abd76ef162883fbf364c93e7498d14231aa936a4633699aa06ea0fb5"
+  version "3.7"
+  sha256 "fcf9725e9bbe42e58a843e5f60c4fc40ea7429c3bdebfb9c6f8c59f6f61f28e2"
 
-  url "https://github.com/SafeExamBrowser/seb-mac/releases/download/#{version}/SafeExamBrowser-#{version}.dmg",
-      verified: "github.com/SafeExamBrowser/seb-mac/"
+  url "https://github.com/SafeExamBrowser/seb-mac/releases/download/#{version}/SafeExamBrowser-#{version}.dmg"
   name "Safe Exam Browser"
   desc "Web browser environment to carry out e-assessments safely"
   homepage "https://safeexambrowser.org/"
 
   livecheck do
-    url :url
-    strategy :github_latest
+    url "https://safeexambrowser.org/download_en.html"
+    regex(/href=.*?SafeExamBrowser[._-]v?(\d+(?:\.\d+)+)\.dmg/i)
   end
+
+  depends_on :macos
 
   app "Safe Exam Browser.app"
 
-  zap trash: "~/Library/Preferences/org.safeexambrowser.SafeExamBrowser.plist"
+  zap trash: [
+    "~/Library/Caches/org.safeexambrowser.SafeExamBrowser",
+    "~/Library/Logs/Safe Exam Browser",
+    "~/Library/Preferences/org.safeexambrowser.SafeExamBrowser.plist",
+    "~/Library/WebKit/org.safeexambrowser.SafeExamBrowser",
+  ]
 end

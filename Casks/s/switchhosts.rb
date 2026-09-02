@@ -1,19 +1,18 @@
 cask "switchhosts" do
-  arch arm: "arm64", intel: "x64"
+  arch arm: "aarch64", intel: "x64"
 
-  version "4.2.0.6119"
-  sha256 arm:   "28491e01af40f1f9e4b7032177cdb39b6af1cc92813958c6820c1a1758fda611",
-         intel: "71e1ac2fd425a80fc6ad290b2849c3f1bda8fe385d4f3f9cd205ddf0be7ddc32"
+  version "5.0.1"
+  sha256 arm:   "b36aac4b9e671265a35d2a7e88a1125d8575ec5581b365bd89d9846905833b72",
+         intel: "f393316fd6387822035a09d7bd9a63790ab7cb419909ed8d884c253ee3094035"
 
-  url "https://github.com/oldj/SwitchHosts/releases/download/v#{version.major_minor_patch}/SwitchHosts_mac_#{arch}_#{version}.dmg",
-      verified: "github.com/oldj/SwitchHosts/"
+  url "https://github.com/oldj/SwitchHosts/releases/download/v#{version}/SwitchHosts-#{version}-mac-#{arch}.dmg"
   name "SwitchHosts"
   desc "App to switch hosts"
   homepage "https://switchhosts.vercel.app/"
 
   livecheck do
     url :url
-    regex(/^SwitchHosts_mac_#{arch}[._-]v?(\d+(?:\.\d+)+)\.dmg$/i)
+    regex(/^SwitchHosts[._-]v?(\d+(?:\.\d+)+)[._-]mac[._-]#{arch}\.dmg$/i)
     strategy :github_latest do |json, regex|
       json["assets"]&.map do |asset|
         match = asset["name"]&.match(regex)
@@ -23,6 +22,8 @@ cask "switchhosts" do
       end
     end
   end
+
+  depends_on :macos
 
   app "SwitchHosts.app"
 

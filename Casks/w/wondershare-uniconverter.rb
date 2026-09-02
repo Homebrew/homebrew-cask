@@ -1,9 +1,9 @@
 cask "wondershare-uniconverter" do
   arch arm: "_arm"
 
-  version "17.0.6"
-  sha256 arm:   "1b82d638a375f6b3aeed05950720dadda35ec6d4af34653375549fd5042983b2",
-         intel: "bdb040c75a72604275a65eec73a48229b72982ba45806347e6c3bc07098571e3"
+  version "17.6.0"
+  sha256 arm:   "d56bf9bcfae047ad91ff2dc8124ed74cd761a1d411e6f50bf6d4897b73304a56",
+         intel: "d5b83ff6a8fadfc9dbaaabcb391980e3c031ee4b4d6a6b11f82b0848388c7763"
 
   url "https://download.wondershare.com/cbs_down/uniconverter-mac#{arch}_#{version}_full14207.zip"
   name "UniConverter"
@@ -17,7 +17,14 @@ cask "wondershare-uniconverter" do
     end
   end
 
+  depends_on :macos
+
   app "Wondershare UniConverter #{version.major}.app"
+
+  uninstall quit: [
+    "com.google.Chrome",
+    "com.Wondershare.UniConverter#{version.major}",
+  ]
 
   zap trash: [
     "/Users/Shared/.Wondershare*.dat",

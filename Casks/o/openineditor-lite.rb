@@ -1,6 +1,6 @@
 cask "openineditor-lite" do
-  version "1.2.7"
-  sha256 "c079751dc86ac4a683840e62b05872acc4dfbb08d2c7019bb3c6b9d88a0c8017"
+  version "1.2.8"
+  sha256 "40db3a781bee2da0f24cc17a9da5a59162ec4ca1d6f17e0504874f41c326106f"
 
   url "https://github.com/Ji4n1ng/OpenInTerminal/releases/download/v#{version}/OpenInEditor-Lite.zip"
   name "OpenInEditor-Lite"
@@ -26,6 +26,8 @@ cask "openineditor-lite" do
       end
     end
   end
+
+  depends_on :macos
 
   app "OpenInEditor-Lite.app"
 

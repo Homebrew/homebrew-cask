@@ -1,6 +1,6 @@
 cask "reaper" do
-  version "7.53"
-  sha256 "b95d7965b3f15d06e8904816679099370b5ea72d7d3f0f5623c2cc269ae8a508"
+  version "7.79"
+  sha256 "2493cea3cd6105d84bbf02710280d73ea8a119f06370152773483767fade8602"
 
   url "https://dlcf.reaper.fm/#{version.major}.x/reaper#{version.major_minor.no_dots}_universal.dmg"
   name "REAPER"
@@ -12,7 +12,11 @@ cask "reaper" do
     regex(/^v?(\d+(?:\.\d+)+)$/i)
   end
 
+  depends_on :macos
+
   app "REAPER.app"
+
+  uninstall quit: "com.cockos.reaper"
 
   zap trash: [
     "~/Library/Application Support/REAPER",

@@ -13,6 +13,7 @@ cask "combine-pdfs" do
   end
 
   auto_updates true
+  depends_on :macos
 
   app "Combine PDFs.app"
 

@@ -1,9 +1,8 @@
 cask "expandrive" do
-  version "2025.11.10.800"
-  sha256 "8a8c1a66972176f172627b976100bb3ff6a10ebc6b8e38d84e0548dcb4970852"
+  version "2026.08.25.883"
+  sha256 :no_check
 
-  url "https://corp.hosted-by-files.com/builds/ExpanDrive/#{version}/mac/ExpanDrive_#{version.major_minor_patch}.dmg",
-      verified: "corp.hosted-by-files.com/builds/ExpanDrive/"
+  url "https://www.expandrive.com/api/download/expandrive?platform=macos"
   name "ExpanDrive"
   desc "Network drive and browser for cloud storage"
   homepage "https://www.expandrive.com/apps/expandrive/"
@@ -14,12 +13,19 @@ cask "expandrive" do
     strategy :header_match
   end
 
-  depends_on macos: ">= :big_sur"
+  depends_on macos: :big_sur
 
   app "ExpanDrive.app"
 
   zap trash: [
+    "~/Library/Application Scripts/CH86M498V4.com.expandrive",
+    "~/Library/Application Scripts/com.expandrive.ExpanDrive.FileProvider",
+    "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.expandrive.expandrive.sfl*",
     "~/Library/Application Support/ExpanDrive",
+    "~/Library/Containers/com.expandrive.ExpanDrive.FileProvider",
+    "~/Library/Group Containers/CH86M498V4.com.expandrive",
+    "~/Library/HTTPStorages/com.expandrive.ExpanDrive",
+    "~/Library/Logs/ExpanDrive",
     "~/Library/Preferences/com.expandrive.exfs.plist",
     "~/Library/Preferences/com.expandrive.ExpanDrive*.plist",
     "~/Library/Preferences/com.expandrive.ExpanDrive.helper.plist",

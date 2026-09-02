@@ -12,7 +12,7 @@ cask "notesollama" do
     regex(/NotesOllama-(\d+(?:\.\d+)*)\.zip/i)
   end
 
-  depends_on macos: ">= :ventura"
+  depends_on macos: :ventura
 
   app "NotesOllama.app"
 

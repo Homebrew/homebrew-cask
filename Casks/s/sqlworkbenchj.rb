@@ -1,6 +1,6 @@
 cask "sqlworkbenchj" do
-  version "132"
-  sha256 "917cdad945bc2f634df0e95ef192c6e6238542618970b82129a993871344a326"
+  version "133"
+  sha256 "e445598800435baa0a206a40aba62d83031bb2130420abbc935f6ddc5d638354"
 
   url "https://www.sql-workbench.eu/Workbench-Build#{version}-Mac-with-optional-libs.tgz"
   name "SQL Workbench/J"
@@ -13,6 +13,10 @@ cask "sqlworkbenchj" do
       xml.elements["//Program_Version"]&.text&.strip
     end
   end
+
+  disable! date: "2026-09-01", because: :fails_gatekeeper_check
+
+  depends_on :macos
 
   app "SQLWorkbenchJ.app"
 

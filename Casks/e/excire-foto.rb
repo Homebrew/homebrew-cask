@@ -1,9 +1,9 @@
 cask "excire-foto" do
   arch arm: "arm64", intel: "x64"
 
-  version "4.1.0"
-  sha256 arm:   "a820d919e3685b6f0584d1e4afa3f7699dff9d7a88de228c409a5d883d74a4d5",
-         intel: "6d35ac44fda06e20b32ed7d6976a2372a12aab6b3ab2e38298901d60fea42983"
+  version "4.1.6"
+  sha256 arm:   "e08d88cd2458b6f4d35aabfbbb2baca0369b3513c81596361119981828d0f842",
+         intel: "1d02591ca30e036cb1f40f3f1c8d243daecf9e4f5d4d8e4b0df4754cc8c90764"
 
   url "https://www.excire.com/downloads/excire-foto/ExcireFoto-#{version}-#{arch}.dmg.zip"
   name "Excire Foto"
@@ -17,11 +17,14 @@ cask "excire-foto" do
     end
   end
 
-  depends_on macos: ">= :big_sur"
+  depends_on macos: :big_sur
 
   pkg "Install.pkg"
 
   uninstall pkgutil: "prc.excire.foto"
 
-  zap trash: "~/Library/Application Support/excire-foto"
+  zap trash: [
+    "~/Library/Application Support/excire-foto",
+    "~/Library/Preferences/prc.excire.foto.plist",
+  ]
 end

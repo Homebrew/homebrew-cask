@@ -1,17 +1,16 @@
 cask "defold@beta" do
   arch arm: "arm64", intel: "x86_64"
 
-  version "1.11.2"
+  version "1.13.1"
   sha256 :no_check # required as upstream package is updated in-place
 
-  url "https://github.com/defold/defold/releases/download/#{version}-beta/Defold-#{arch}-macos.dmg",
-      verified: "github.com/defold/defold/"
+  url "https://github.com/defold/defold/releases/download/#{version}-beta/Defold-#{arch}-macos.dmg"
   name "Defold"
   desc "Game engine for development of desktop, mobile and web games"
   homepage "https://defold.com/"
 
   livecheck do
-    url "http://d.defold.com/beta/info.json"
+    url "https://d.defold.com/beta/info.json"
     strategy :json do |json|
       json["version"]
     end
@@ -22,7 +21,7 @@ cask "defold@beta" do
     "defold",
     "defold@alpha",
   ]
-  depends_on macos: ">= :big_sur"
+  depends_on macos: :big_sur
 
   app "Defold.app"
 

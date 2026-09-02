@@ -1,6 +1,6 @@
 cask "quo" do
-  version "4.1.12"
-  sha256 "c2938c18cd29259121d8cd3d9aa522c609727cd0a17fa627796798cd43fb3211"
+  version "5.6.11"
+  sha256 "4f8910884fc74a42c6fb33f820c666e66b6c5b44ec9adb4005dbc69aa25821c9"
 
   url "https://download.quo.com/Quo-#{version}-universal.dmg"
   name "Quo"
@@ -11,6 +11,8 @@ cask "quo" do
     url "https://s3-us-west-2.amazonaws.com/download.openphone.co/latest-mac.yml"
     strategy :electron_builder
   end
+
+  depends_on macos: :monterey
 
   app "Quo.app"
 

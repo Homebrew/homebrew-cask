@@ -1,8 +1,8 @@
 cask "pia" do
-  version "3.0.3"
-  sha256 "696dafca5d4a4472eca0c1ded044a3ef3448d767e0a8a65c239ec5c415187964"
+  version "4.1.0"
+  sha256 "eb8a25db8c2ad67fbaad39100e48102f18a436cb6a99bc0db9829a95e8e6e283"
 
-  url "https://github.com/LINCnil/pia/releases/download/v#{version}/pia-#{version}.dmg"
+  url "https://github.com/LINCnil/pia/releases/download/v#{version}/pia-#{version}-universal.dmg"
   name "Pia"
   desc "Privacy Impact Assessment Tool"
   homepage "https://github.com/LINCnil/pia"
@@ -11,7 +11,7 @@ cask "pia" do
   # recent releases instead of only the "latest" release.
   livecheck do
     url :url
-    regex(/^pia[._-]v?(\d+(?:\.\d+)+)\.dmg$/i)
+    regex(/^pia[._-]v?(\d+(?:\.\d+)+)[._-]universal\.dmg$/i)
     strategy :github_releases do |json, regex|
       json.map do |release|
         next if release["draft"] || release["prerelease"]
@@ -26,6 +26,8 @@ cask "pia" do
     end
   end
 
+  depends_on macos: :big_sur
+
   app "pia.app"
 
   zap trash: [
@@ -36,8 +38,4 @@ cask "pia" do
     "~/Library/Preferences/com.atnos.pia.plist",
     "~/Library/Saved Application State/com.atnos.pia.savedState",
   ]
-
-  caveats do
-    requires_rosetta
-  end
 end

@@ -7,6 +7,9 @@ cask "pokemon-showdown" do
   homepage "https://pokemonshowdown.com/"
 
   deprecate! date: "2025-06-07", because: :discontinued
+  disable! date: "2026-06-08", because: :discontinued
+
+  depends_on :macos
 
   app "Pokemon Showdown.app"
 

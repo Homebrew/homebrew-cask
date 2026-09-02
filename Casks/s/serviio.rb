@@ -1,6 +1,6 @@
 cask "serviio" do
-  version "2.4"
-  sha256 "20034345e81df70d5199376f6de70b8201cbb48b21b3e6507ab999d20450d1be"
+  version "2.5"
+  sha256 "a34474a502ee2e3ea4cbc77ee1326bc1dc6d7d66b7609ca983c2f34c2ac13a9f"
 
   url "https://download.serviio.org/releases/serviio-#{version}-osx.tar.gz"
   name "Serviio"
@@ -11,6 +11,8 @@ cask "serviio" do
     url "https://www.serviio.org/download"
     regex(%r{href=.*?/serviio-(\d+(?:\.\d+)+)-osx\.t}i)
   end
+
+  depends_on :macos
 
   pkg "Serviio-#{version}.pkg"
 

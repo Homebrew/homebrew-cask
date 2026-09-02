@@ -1,12 +1,11 @@
 cask "proclaim" do
   arch arm: "-arm"
 
-  version "4.15.0.0167"
-  sha256 arm:   "7b89747f5bad4619b864dcd7d4f99cb7012e34b365b8ee240b95dd74dde9c213",
-         intel: "25b532e5cd5ddacec37734deb497c3f6bae3f03095d286e86b6f2d0795a4b72a"
+  version "4.20.0.0134"
+  sha256 arm:   "1743e4dc68c183d0555c25a56301baa008f64fa671976ae0554f8c47a14bcb6f",
+         intel: "6a6de96aab4b4c62ba59bf492cdca8b2ec0c9e496d903da23111d6fc86b2dfc7"
 
-  url "https://downloads.logoscdn.com/Proclaim/Installer/#{version}/Proclaim#{arch}.dmg",
-      verified: "logoscdn.com/Proclaim/"
+  url "https://downloads.logoscdn.com/Proclaim/Installer/#{version}/Proclaim#{arch}.dmg"
   name "Proclaim"
   desc "Church presentation software"
   homepage "https://proclaim.logos.com/"
@@ -19,7 +18,7 @@ cask "proclaim" do
   end
 
   auto_updates true
-  depends_on macos: ">= :monterey"
+  depends_on macos: :monterey
 
   app "Proclaim.app"
 

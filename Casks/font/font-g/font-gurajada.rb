@@ -2,8 +2,7 @@ cask "font-gurajada" do
   version :latest
   sha256 :no_check
 
-  url "https://github.com/google/fonts/raw/main/ofl/gurajada/Gurajada-Regular.ttf",
-      verified: "github.com/google/fonts/"
+  url "https://github.com/google/fonts/raw/main/ofl/gurajada/Gurajada-Regular.ttf"
   name "Gurajada"
   homepage "https://fonts.google.com/specimen/Gurajada"
 

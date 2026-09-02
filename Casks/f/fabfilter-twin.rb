@@ -1,6 +1,6 @@
 cask "fabfilter-twin" do
-  version "3.05"
-  sha256 "0f93606650ce1ead95ba7eabd65140fe0bec9fb9de9844d39e4c01eec3991318"
+  version "3.07"
+  sha256 "ef20ab98909c90fab197343bcc856026c8c4183e9d5743499b37c906fce7d0ae"
 
   url "https://cdn-b.fabfilter.com/downloads/fftwin#{version.no_dots}.dmg"
   name "FabFilter Twin"
@@ -12,9 +12,11 @@ cask "fabfilter-twin" do
     regex(/FabFilter\s+Twin.*?v?(\d+(?:\.\d+)+)/im)
   end
 
+  depends_on :macos
+
   pkg "FabFilter Twin #{version} Installer.pkg"
 
-  uninstall pkgutil: "com.fabfilter.Twin.#{version.major}"
+  uninstall pkgutil: "com.fabfilter.Twin.*"
 
   # No zap stanza required
 end

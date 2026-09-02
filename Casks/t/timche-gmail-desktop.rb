@@ -8,6 +8,9 @@ cask "timche-gmail-desktop" do
   homepage "https://github.com/timche/gmail-desktop"
 
   deprecate! date: "2025-05-09", because: :discontinued, replacement_cask: "meru"
+  disable! date: "2026-05-09", because: :discontinued, replacement_cask: "meru"
+
+  depends_on :macos
 
   app "Gmail Desktop.app"
 

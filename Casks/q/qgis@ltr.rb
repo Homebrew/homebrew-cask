@@ -1,19 +1,28 @@
 cask "qgis@ltr" do
-  version "3.40.5,20250321_160709"
-  sha256 "e25964bff62a884aab696c86f698172b0aa7b26a5fbb8279c0e17c97287c75e8"
+  version "3.44.14"
+  sha256 "09942c5078bbb19416cd2339e47d16aed81390053fed9dec46028fd54b091422"
 
-  url "https://download.qgis.org/downloads/macos/ltr/qgis_ltr_final-#{version.csv.first.dots_to_underscores}_#{version.csv.second}.dmg"
+  url "https://download.qgis.org/downloads/macos/ltr/qgis_ltr_final-#{version.dots_to_underscores.csv.join("_")}.dmg"
   name "QGIS LTR"
   desc "Geographic Information System"
   homepage "https://www.qgis.org/"
 
   livecheck do
-    url "https://download.qgis.org/downloads/macos/qgis-macos-ltr.sha256sum"
-    regex(/qgis_ltr_final[._-]v?(\d+(?:_\d+)+)[._-](\d+_\d+)\.dmg/i)
+    url "https://www.qgis.org/downloads-list/#macos/ltr"
+    regex(/qgis[._-]ltr[._-]final[._-]v?(\d+(?:[._]\d+)+?)(?:[._-](\d{6,8}(?:[._-]\d+)?))?\.dmg/i)
     strategy :page_match do |page, regex|
-      page.scan(regex).map { |match| "#{match[0].tr("_", ".")},#{match[1]}" }
+      page.scan(regex).map do |match|
+        match[0] = match[0].tr("_", ".")
+        match.compact.join(",")
+      end
     end
   end
+
+  depends_on macos: :big_sur
+
+  # The application path can change between versions,
+  # renaming also allows installation alongside the main "qgis" cask.
+  rename "QGIS.app", "QGIS-LTR.app"
 
   app "QGIS-LTR.app"
 
@@ -22,8 +31,4 @@ cask "qgis@ltr" do
     "~/Library/Caches/QGIS",
     "~/Library/Saved Application State/org.qgis.qgis*.savedState",
   ]
-
-  caveats do
-    requires_rosetta
-  end
 end

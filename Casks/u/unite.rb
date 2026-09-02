@@ -1,9 +1,8 @@
 cask "unite" do
-  version "6.5"
-  sha256 "2bb2cb45b201fd20f034608d736786faed2d0cbfb9929826d1d52b4ece2216ea"
+  version "6.6"
+  sha256 "3b6e006e91d61694262c807598c7c4c62938fa642757083ef224cbce6e36d5ff"
 
-  url "https://bzgdownloads.s3.amazonaws.com/Unite/Unite+#{version}.zip",
-      verified: "bzgdownloads.s3.amazonaws.com/Unite/"
+  url "https://bzgdownloads.s3.amazonaws.com/Unite/Unite+#{version}.zip"
   name "Unite"
   desc "Turn websites into apps"
   homepage "https://bzgapps.com/unite"
@@ -14,7 +13,7 @@ cask "unite" do
   end
 
   auto_updates true
-  depends_on macos: ">= :monterey"
+  depends_on macos: :monterey
 
   app "Unite.app"
 

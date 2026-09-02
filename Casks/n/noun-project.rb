@@ -2,18 +2,19 @@ cask "noun-project" do
   version "2.3"
   sha256 :no_check
 
-  url "https://nounproject.s3.amazonaws.com/mac/NounProject.dmg",
-      verified: "nounproject.s3.amazonaws.com/"
+  url "https://nounproject.s3.amazonaws.com/mac/NounProject.dmg"
   name "Noun Project"
   desc "Icon manager"
   homepage "https://thenounproject.com/"
 
   livecheck do
     url :url
-    strategy :extract_plist do |item|
-      item["com.thenounproject.Noun-Project"]&.short_version
+    strategy :extract_plist do |items|
+      items["com.thenounproject.Noun-Project"]&.short_version
     end
   end
+
+  depends_on :macos
 
   app "Noun Project.app"
 

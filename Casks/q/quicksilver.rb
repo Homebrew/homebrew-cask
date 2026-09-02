@@ -1,9 +1,8 @@
 cask "quicksilver" do
-  version "2.5.3"
-  sha256 "1e3ca2a6b00140870e9e1adcad4b7801356701da1761da52b66cefb3b002a52c"
+  version "2.6.0"
+  sha256 "47d4fdfb128109e213ee21c272a100fa0408d389932c47f66b0440b5a0d32c8c"
 
-  url "https://github.com/quicksilver/Quicksilver/releases/download/v#{version}/Quicksilver.#{version}.dmg",
-      verified: "github.com/quicksilver/Quicksilver/"
+  url "https://github.com/quicksilver/Quicksilver/releases/download/v#{version}/Quicksilver.#{version}.dmg"
   name "Quicksilver"
   desc "Productivity application"
   homepage "https://qsapp.com/"
@@ -14,6 +13,7 @@ cask "quicksilver" do
   end
 
   auto_updates true
+  depends_on :macos
 
   app "Quicksilver.app"
 

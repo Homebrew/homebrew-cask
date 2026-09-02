@@ -12,7 +12,7 @@ cask "peninsula" do
     regex(/^v?(\d+(?:\.\d+)+(?:[._-]post[._-]?\d+)?)$/i)
   end
 
-  depends_on macos: ">= :sonoma"
+  depends_on macos: :sonoma
 
   app "Peninsula.app"
 

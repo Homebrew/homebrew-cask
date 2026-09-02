@@ -1,6 +1,6 @@
 cask "expo-orbit" do
-  version "2.2.0"
-  sha256 "210a3ea2a8a430437a6cf28402231e439b7b022e841b19448a42e3229b16ef2c"
+  version "2.8.1"
+  sha256 "55a05786c5f3c99b3198bcefc5de3557de776bbb3a01414f620f79975795bab0"
 
   url "https://github.com/expo/orbit/releases/download/expo-orbit-v#{version}/expo-orbit.v#{version}-macos.zip"
   name "Expo Orbit"
@@ -8,7 +8,7 @@ cask "expo-orbit" do
   homepage "https://github.com/expo/orbit/"
 
   auto_updates true
-  depends_on macos: ">= :big_sur"
+  depends_on macos: :sonoma
 
   app "Expo Orbit.app"
 

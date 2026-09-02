@@ -1,9 +1,8 @@
 cask "dexed" do
-  version "0.9.8"
-  sha256 "3be32f98e56b40d9555a4069368c7307b8bae3368459bb087cf6195ae7538704"
+  version "1.0.1"
+  sha256 "a6505103869d15400e7bed1d988d9dd155d6d8204a3d532f5301966ae7507ad8"
 
-  url "https://github.com/asb2m10/dexed/releases/download/v#{version}/dexed-#{version}-macos.zip",
-      verified: "github.com/asb2m10/dexed/"
+  url "https://github.com/asb2m10/dexed/releases/download/v#{version}/Dexed-#{version}-macOS.dmg"
   name "Dexed"
   desc "DX7 FM synthesiser"
   homepage "https://asb2m10.github.io/dexed/"
@@ -13,7 +12,9 @@ cask "dexed" do
     strategy :github_latest
   end
 
-  pkg "dexed-macOS-#{version}.pkg"
+  depends_on :macos
+
+  pkg "Dexed-#{version}-macOS.pkg"
 
   uninstall pkgutil: [
               "com.digitalsuburban.dexed.app.pkg",

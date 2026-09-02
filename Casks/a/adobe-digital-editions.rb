@@ -8,9 +8,12 @@ cask "adobe-digital-editions" do
   homepage "https://www.adobe.com/solutions/ebook/digital-editions.html"
 
   livecheck do
-    url "https://www.adobe.com/solutions/ebook/digital-editions/download.html"
+    url "https://www.adobe.com/solutions/ebook/digital-editions/download.html",
+        user_agent: :browser
     regex(/Adobe\s*Digital\s*Editions\s*(\d+(?:\.\d+)+)/i)
   end
+
+  depends_on :macos
 
   pkg "Digital Editions #{version.major_minor} Installer.pkg"
 

@@ -1,5 +1,5 @@
 cask "privadovpn" do
-  version "3.13.0"
+  version "4.2.0"
   sha256 :no_check
 
   url "https://privadovpn.com/apps/osx/PrivadoVPN.dmg"
@@ -11,6 +11,8 @@ cask "privadovpn" do
     url "https://blog.privadovpn.com/privadovpn-macos-app-version-log/"
     regex(/macOS\s+v?(\d+(?:\.\d+)+)/i)
   end
+
+  depends_on :macos
 
   app "PrivadoVPN.app"
 

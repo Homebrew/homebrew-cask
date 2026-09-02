@@ -1,10 +1,9 @@
 cask "typora@dev" do
-  version "1.12.0-dev"
-  sha256 "8ea86dc5135392e986fe4d3f8aa9659e283e5e3e2b0430d0325bb53ed9728464"
+  version "1.14.5-dev"
+  sha256 "ad1d70de84e1be2c4dd49a58c216de6683cff71b77e5ef9403c470360e6298a8"
 
   language "zh-Hans-CN" do # use official Chinese mirror
-    url "https://downloads.typoraio.cn/mac/Typora-#{version}.dmg",
-        verified: "typoraio.cn/"
+    url "https://downloads.typoraio.cn/mac/Typora-#{version}.dmg"
 
     "zh-Hans-CN"
   end
@@ -25,7 +24,7 @@ cask "typora@dev" do
 
   auto_updates true
   conflicts_with cask: "typora"
-  depends_on macos: ">= :big_sur"
+  depends_on macos: :big_sur
 
   app "Typora.app"
 

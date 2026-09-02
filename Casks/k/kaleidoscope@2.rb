@@ -28,8 +28,8 @@ cask "kaleidoscope@2" do
   conflicts_with cask: %w[
     kaleidoscope
     kaleidoscope@3
-    ksdiff
   ]
+  depends_on :macos
 
   app "Kaleidoscope.app"
   binary "#{appdir}/Kaleidoscope.app/Contents/Resources/bin/ksdiff"

@@ -1,10 +1,11 @@
 cask "profit" do
   arch arm: "arm64", intel: "x64"
 
-  version "1.0.35"
+  version "1.0.0.56-stable"
   sha256 :no_check
 
-  url "https://downloadserver-cdn.nelogica.com.br/content/mac/stable/#{arch}/profit.dmg"
+  url "https://downloadserver-cdn.nelogica.com.br/content/mac/stable/#{arch}/profit.dmg",
+      user_agent: :browser
   name "Profit"
   desc "Financial trading software from Nelogica"
   homepage "https://www.nelogica.com.br/"
@@ -15,6 +16,8 @@ cask "profit" do
       json["appVersion"]
     end
   end
+
+  depends_on macos: :monterey
 
   app "Profit.app"
 

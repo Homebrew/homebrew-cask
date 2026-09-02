@@ -1,17 +1,11 @@
 cask "gnucash" do
   arch arm: "Arm", intel: "Intel"
 
-  on_arm do
-    version "5.13-2"
-    sha256 "f392c641c8747c27d706552c3f97164302bd98dd42141dca002e3af1c1c3c204"
-  end
-  on_intel do
-    version "5.13-3"
-    sha256 "6bc9ffc888a10fc39a25dc529024d14f3c56533612fe8e4bef7c7601342f702b"
-  end
+  version "5.16-3"
+  sha256 arm:   "26ae2e340edf2a58fdb906962cc48eb4ec1cf1a7b5862b72108f9a5401fd664b",
+         intel: "f86d41e70a2d2124395baabc357124e1d04120039c741c18775473bd0deb3705"
 
-  url "https://github.com/Gnucash/gnucash/releases/download/#{version.hyphens_to_dots.major_minor}/Gnucash-#{arch}-#{version}.dmg",
-      verified: "github.com/Gnucash/gnucash/"
+  url "https://github.com/Gnucash/gnucash/releases/download/#{version.hyphens_to_dots.major_minor}/Gnucash-#{arch}-#{version}.dmg"
   name "GnuCash"
   desc "Double-entry accounting program"
   homepage "https://www.gnucash.org/"
@@ -28,6 +22,8 @@ cask "gnucash" do
       end
     end
   end
+
+  depends_on macos: :big_sur
 
   app "Gnucash.app"
 

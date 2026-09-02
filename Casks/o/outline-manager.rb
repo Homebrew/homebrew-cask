@@ -1,9 +1,8 @@
 cask "outline-manager" do
-  version "1.18.0,1"
-  sha256 "c05bcae6cedeeaeb61074ea920ca43a7b08872cd65ba0c40b9a58ae0b5b219bd"
+  version "1.21.0,1"
+  sha256 "9a0298fb5a6f434443146500a3fb43281d8bc2522586689f563094419c15cd4b"
 
-  url "https://s3.amazonaws.com/outline-releases/manager/macos/#{version.csv.first}/#{version.csv.second}/Outline-Manager.dmg",
-      verified: "s3.amazonaws.com/outline-releases/manager/macos/"
+  url "https://s3.amazonaws.com/outline-releases/manager/macos/#{version.csv.first}/#{version.csv.second}/Outline-Manager.dmg"
   name "Outline Manager"
   desc "Tool to create and manage Outline servers, powered by Shadowsocks"
   homepage "https://www.getoutline.org/"
@@ -20,6 +19,8 @@ cask "outline-manager" do
       end
     end
   end
+
+  depends_on :macos
 
   app "Outline Manager.app"
 

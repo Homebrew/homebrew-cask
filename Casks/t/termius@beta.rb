@@ -1,7 +1,7 @@
 cask "termius@beta" do
   arch arm: "mac-beta-arm64", intel: "mac-beta"
 
-  version "9.33.0"
+  version "9.43.1"
   sha256 :no_check
 
   url "https://autoupdate.termius.com/#{arch}/Termius%20Beta.dmg"
@@ -14,6 +14,8 @@ cask "termius@beta" do
     strategy :electron_builder
   end
 
+  depends_on :macos
+
   app "Termius Beta.app"
 
   uninstall delete: [
@@ -23,8 +25,10 @@ cask "termius@beta" do
 
   zap trash: [
     "~/.termius",
+    "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.termius-beta.mac.sfl*",
     "~/Library/Application Support/Termius Beta",
     "~/Library/Logs/Termius Beta",
+    "~/Library/Preferences/com.termius-beta.mac.plist",
     "~/Library/Saved Application State/com.termius-beta.mac.savedState",
   ]
 end

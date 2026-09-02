@@ -5,8 +5,7 @@ cask "drawpile" do
     version "2.2.1"
     sha256 "d4b29c78da9a64eb8a5526c464f9647b48a99b60cace0ce3eaf06a4e484dec60"
 
-    url "https://github.com/drawpile/Drawpile/releases/download/#{version}/Drawpile-#{version}.dmg",
-        verified: "github.com/drawpile/Drawpile"
+    url "https://github.com/drawpile/Drawpile/releases/download/#{version}/Drawpile-#{version}.dmg"
 
     livecheck do
       skip "Legacy version"
@@ -17,12 +16,11 @@ cask "drawpile" do
     end
   end
   on_monterey :or_newer do
-    version "2.2.2"
-    sha256 arm:   "59b1ff5b42bb1ded49be5070f290429a37d0d7a723fed07a6ec51ec79cdea7a9",
-           intel: "56d484ea4ea32fccbc6015eedb5d80f1f4f77fa018b8724e2d9499368c70a922"
+    version "2.3.0"
+    sha256 arm:   "d6ba02a723b57ca83a523ea61b192b349005c8c3f8a10579877477d5b652409c",
+           intel: "09eeff8bacc62200f810c8be89dcb595e0a069efd9ca9659b6f97f50c1244573"
 
-    url "https://github.com/drawpile/Drawpile/releases/download/#{version}/Drawpile-#{version}-#{arch}.dmg",
-        verified: "github.com/drawpile/Drawpile"
+    url "https://github.com/drawpile/Drawpile/releases/download/#{version}/Drawpile-#{version}-#{arch}.dmg"
 
     livecheck do
       url :url
@@ -35,6 +33,8 @@ cask "drawpile" do
   homepage "https://drawpile.net/"
 
   disable! date: "2026-09-01", because: :fails_gatekeeper_check
+
+  depends_on :macos
 
   app "Drawpile.app"
 

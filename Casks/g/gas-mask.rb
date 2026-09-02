@@ -7,7 +7,10 @@ cask "gas-mask" do
   desc "Hosts file editor/manager"
   homepage "https://github.com/2ndalpha/gasmask/"
 
+  disable! date: "2026-09-01", because: :fails_gatekeeper_check
+
   auto_updates true
+  depends_on :macos
 
   app "Gas Mask.app"
 

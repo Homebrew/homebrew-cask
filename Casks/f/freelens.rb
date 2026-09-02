@@ -1,18 +1,17 @@
 cask "freelens" do
   arch arm: "arm64", intel: "amd64"
 
-  version "1.6.1"
-  sha256 arm:   "d04837c4113eca336f36396850024932963d87b89f815fb81b76be12f6d72fe4",
-         intel: "257a8c6b0e4a96ba27ae9358354d18715c1175d1d1acafd8e5be4d137cb9040f"
+  version "1.10.3"
+  sha256 arm:   "ae33e11d5db858da1f64ae2c4f7ca3835786780bcb2af02e55fe756f08900419",
+         intel: "d9b462114b9587ca8daaf1ce62529de7d3ec65e42f39628edfc10ecbd69c3175"
 
-  url "https://github.com/freelensapp/freelens/releases/download/v#{version}/Freelens-#{version}-macos-#{arch}.dmg",
-      verified: "github.com/freelensapp/freelens/"
+  url "https://github.com/freelensapp/freelens/releases/download/v#{version}/Freelens-#{version}-macos-#{arch}.dmg"
   name "Freelens"
   desc "Kubernetes IDE"
   homepage "https://freelens.app/"
 
   conflicts_with cask: "freelens@nightly"
-  depends_on macos: ">= :big_sur"
+  depends_on macos: :monterey
 
   app "Freelens.app"
 

@@ -13,7 +13,7 @@ cask "acronis-true-image" do
   end
 
   auto_updates true
-  depends_on macos: ">= :big_sur"
+  depends_on macos: :big_sur
   depends_on cask: "acronis-true-image-cleanup-tool"
 
   pkg "Installer.pkg"

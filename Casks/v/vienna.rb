@@ -1,22 +1,22 @@
 cask "vienna" do
-  version "3.9.5"
-  sha256 "ad42b17574fd91741fe1b80717e0d713e09a451d127e975f6b5746031236db0f"
+  version "3.10.8"
+  sha256 "6833fecb70c23c1ba98868086e2245c9a05a4f5a4960b019b64ca3728aaa85bd"
 
-  url "https://downloads.sourceforge.net/vienna-rss/v_#{version}/Vienna#{version}.tgz",
-      verified: "downloads.sourceforge.net/vienna-rss/"
+  url "https://downloads.sourceforge.net/vienna-rss/v_#{version}/Vienna#{version}.dmg"
   name "Vienna"
   desc "RSS and Atom reader"
   homepage "https://www.vienna-rss.com/"
 
   livecheck do
     url "https://www.vienna-rss.com/sparkle-files/changelog.xml"
-    regex(/Vienna[._-]?v?(\d+(?:\.\d+)+)\.t/i)
+    regex(/Vienna[._-]?v?(\d+(?:\.\d+)+)/i)
     strategy :sparkle do |items, regex|
       items.map { |item| item.url[regex, 1] }
     end
   end
 
   auto_updates true
+  depends_on :macos
 
   app "Vienna.app"
 

@@ -1,6 +1,6 @@
 cask "nuage" do
-  version "0.0.9"
-  sha256 "6d41b5b307511ae7db8e4613b3ce8882dd0d652fbe6bd7c006c90a4ff7b0ebc1"
+  version "0.0.10"
+  sha256 "ce7229d464f9fb5a1f5bab6b4d67495f8e77692be95c3d7813168faf3c9d1626"
 
   url "https://github.com/lbrndnr/nuage-macos/releases/download/v#{version}/Nuage.app.zip"
   name "Nuage"
@@ -9,7 +9,7 @@ cask "nuage" do
 
   disable! date: "2026-09-01", because: :fails_gatekeeper_check
 
-  depends_on macos: ">= :ventura"
+  depends_on macos: :ventura
 
   app "Nuage.app"
 

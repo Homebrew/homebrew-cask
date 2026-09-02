@@ -1,6 +1,6 @@
 cask "notchnook" do
-  version "1.5.4"
-  sha256 "385dea226528c133318178b1ffa6946fdbf987a82837d426c8840bdcb8e739a5"
+  version "1.6.2"
+  sha256 "4f5023cc25567000d1e054aa3d24387fa576c3ffe738e864bc03ecf78d61dc9b"
 
   url "https://lo.cafe/notchnook-files/NotchNook-#{version}.zip"
   name "NotchNook"
@@ -13,7 +13,7 @@ cask "notchnook" do
   end
 
   auto_updates true
-  depends_on macos: ">= :sonoma"
+  depends_on macos: :sonoma
 
   app "NotchNook.app"
 

@@ -21,6 +21,8 @@ cask "cernbox" do
     end
   end
 
+  depends_on :macos
+
   pkg "cernbox-#{version}-#{arch}.pkg"
 
   uninstall signal:     ["TERM", "ch.cern.cernbox"],

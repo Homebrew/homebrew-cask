@@ -9,6 +9,9 @@ cask "jlutil" do
   homepage "https://newosxbook.com/tools/simplistic.html"
 
   deprecate! date: "2024-11-17", because: :unmaintained
+  disable! date: "2025-11-17", because: :unmaintained
+
+  depends_on :macos
 
   binary "jlutil.universal", target: "jlutil"
 

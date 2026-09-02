@@ -23,6 +23,8 @@ cask "horos" do
     regex(/href=.*?Horos[._-]?v?(\d+(?:\.\d+)+)[._-]?#{arch}\.dmg/i)
   end
 
+  depends_on :macos
+
   app "Horos.app"
 
   zap trash: [

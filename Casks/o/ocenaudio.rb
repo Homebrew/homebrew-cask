@@ -1,5 +1,5 @@
 cask "ocenaudio" do
-  version "3.16.2"
+  version "3.21.0"
   sha256 :no_check
 
   url "https://www.ocenaudio.com/downloads/index.php/ocenaudio_universal.dmg"
@@ -12,9 +12,11 @@ cask "ocenaudio" do
     strategy :header_match
   end
 
-  depends_on macos: ">= :ventura"
+  depends_on macos: :sonoma
 
   app "ocenaudio.app"
+
+  uninstall quit: "com.ocenaudio"
 
   zap trash: [
     "~/Library/Application Support/ocenaudio",

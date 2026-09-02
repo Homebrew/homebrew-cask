@@ -17,6 +17,8 @@ cask "paperspace" do
     end
   end
 
+  depends_on :macos
+
   app "Paperspace.app"
 
   zap trash: [

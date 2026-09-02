@@ -1,6 +1,6 @@
 cask "melodics" do
-  version "4.1.2251,6BE274CF-C019-48E5-9AF5-66DD77FB293D"
-  sha256 "d9989137b01f4e2ebd8438ab076f5ba4598bd6fc8ca2c2de9ec802dec15e8ac6"
+  version "5.0.1147,6FD7E6AB-D570-4981-90D4-AA4819C1F15F"
+  sha256 "16bd47bf57a9f0661009b561e6d9c8a3d53168f910191daf4f099df09352dddc"
 
   url "https://web-cdn.melodics.com/download/#{version.csv.second}.zip"
   name "Melodics"
@@ -19,9 +19,11 @@ cask "melodics" do
   end
 
   auto_updates true
-  depends_on macos: ">= :monterey"
+  depends_on macos: :monterey
 
   app "Melodics.app"
+
+  uninstall quit: "com.melodics.melodics"
 
   zap trash: [
     "~/Library/Application Support/Melodics",

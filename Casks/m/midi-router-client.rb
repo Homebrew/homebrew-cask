@@ -1,6 +1,6 @@
 cask "midi-router-client" do
-  version "2.5.0"
-  sha256 "0f36d8ae9613a7794227bdbef5db4934b8660cc2aa7fe56361c1a7b37653cfdb"
+  version "2.44.0"
+  sha256 "7674176f095cc734d45d305ee7da9ee5a83314c9709114f3d590c62fd7e36f14"
 
   url "https://downloads.sourceforge.net/midi-router-client/midi-router-client-#{version}-Darwin.dmg"
   name "Midi Router Client"
@@ -12,7 +12,9 @@ cask "midi-router-client" do
     regex(%r{url=.*?/midi-router-client[._-]v?(\d+(?:\.\d+)+)[._-]Darwin\.(?:dmg|zip)}i)
   end
 
-  depends_on macos: ">= :tahoe"
+  disable! date: "2026-09-01", because: :fails_gatekeeper_check
+
+  depends_on macos: :tahoe
 
   app "midi-router-client.app"
 

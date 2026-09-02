@@ -1,6 +1,6 @@
 cask "cmake-app" do
-  version "4.1.2"
-  sha256 "9c2973414e30afd876e6ae154689c199ba07dc5958ef6041eff1c78dfeac97f0"
+  version "4.4.3"
+  sha256 "0423c5c00f71fb8e7be281afa834137c5f95a5791a125beec7939eef45bcfc94"
 
   url "https://cmake.org/files/v#{version.major_minor}/cmake-#{version}-macos-universal.dmg"
   name "CMake"
@@ -11,6 +11,8 @@ cask "cmake-app" do
     url "https://cmake.org/files/LatestRelease/"
     regex(/href=.*?cmake[._-]v?(\d+(?:\.\d+)+)[._-]macos[._-]universal\.dmg/i)
   end
+
+  depends_on macos: :monterey
 
   app "CMake.app"
   binary "#{appdir}/CMake.app/Contents/bin/ccmake"
@@ -44,6 +46,7 @@ cask "cmake-app" do
   manpage "#{appdir}/CMake.app/Contents/man/man7/cpack-generators.7"
 
   zap trash: [
+    "~/Library/Preferences/com.kitware.CMakeSetup.plist",
     "~/Library/Preferences/org.cmake.cmake.plist",
     "~/Library/Saved Application State/org.cmake.cmake.savedState",
   ]

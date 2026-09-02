@@ -9,6 +9,8 @@ cask "mysides" do
   deprecate! date: "2024-10-13", because: :unmaintained
   disable! date: "2025-10-13", because: :unmaintained
 
+  depends_on :macos
+
   pkg "mysides-#{version}.pkg"
 
   uninstall pkgutil: "com.github.mosen.mysides"

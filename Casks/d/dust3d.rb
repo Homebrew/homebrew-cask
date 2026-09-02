@@ -1,27 +1,22 @@
 cask "dust3d" do
-  version "1.0.0-rc.9"
-  sha256 "9d2a251f26bcdcbe671677d48743f0c617be63c78f5c9291bd5b45e0dbb49a7f"
+  version "1.1.6"
+  sha256 "d224bdb3a948ed40ae84a4c923607afff5f54a636fbde27622b98e7dde222022"
 
-  url "https://github.com/huxingyi/dust3d/releases/download/#{version}/dust3d-#{version}.dmg",
-      verified: "github.com/huxingyi/dust3d/"
+  url "https://github.com/huxingyi/dust3d/releases/download/#{version}/dust3d-#{version}.dmg"
   name "Dust3D"
   desc "Open-source 3D modelling software"
   homepage "https://dust3d.org/"
 
-  # TODO: Update this regex to only match stable versions once 1.0.0 stabilizes:
-  # regex(/^v?(\d+(?:\.\d+)+)$/i)
   livecheck do
     url :url
-    regex(/^v?(\d+(?:\.\d+)+(?:-rc\.?\d*)?)$/i)
+    regex(/^v?(\d+(?:\.\d+)+)$/i)
   end
 
   disable! date: "2026-09-01", because: :fails_gatekeeper_check
 
-  app "dust3d-#{version}.app"
+  depends_on :macos
+
+  app "dust3d.app"
 
   zap trash: "~/Library/Saved Application State/com.yourcompany.dust3d.savedState"
-
-  caveats do
-    requires_rosetta
-  end
 end

@@ -1,6 +1,6 @@
 cask "stravu-crystal" do
-  version "0.3.3"
-  sha256 "826b3e3a87d5841fdd75e0ace1d1628c89d302a90c39c114dfa8647766e74e4b"
+  version "0.3.5"
+  sha256 "5e7df5646f426c19f808fd3e4e4e4288ef00d708c7cf6c51fcb10068490b4d6e"
 
   url "https://github.com/stravu/crystal/releases/download/v#{version}/Crystal-#{version}-macOS-universal.dmg"
   name "Crystal"
@@ -15,7 +15,7 @@ cask "stravu-crystal" do
     strategy :github_latest
   end
 
-  depends_on macos: ">= :big_sur"
+  depends_on macos: :big_sur
 
   app "Crystal.app"
 

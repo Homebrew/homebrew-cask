@@ -1,9 +1,8 @@
 cask "lunatask" do
-  version "2.1.15"
-  sha256 "e0c2d496ab49382bc939cd2eadef1926dd6e57fcd171a2609d4d36d3d1b8dcf3"
+  version "2.1.29"
+  sha256 "93dedebb249e12250c798738d50599b60a14d1adcc60a2cf0714ef2d6c1ec2e9"
 
-  url "https://github.com/lunatask/lunatask/releases/download/v#{version}/Lunatask-#{version}-universal.dmg",
-      verified: "github.com/lunatask/lunatask/"
+  url "https://github.com/lunatask/lunatask/releases/download/v#{version}/Lunatask-#{version}-universal.dmg"
   name "Lunatask"
   desc "Encrypted to-do list, habit tracker, journaling, life-tracking and notes app"
   homepage "https://lunatask.app/"
@@ -13,7 +12,7 @@ cask "lunatask" do
     strategy :github_latest
   end
 
-  depends_on macos: ">= :big_sur"
+  depends_on macos: :monterey
 
   app "Lunatask.app"
 

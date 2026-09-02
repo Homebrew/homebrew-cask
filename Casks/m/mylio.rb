@@ -1,9 +1,8 @@
 cask "mylio" do
-  version "24.6.7848"
+  version "24.8.7901"
   sha256 :no_check
 
-  url "https://myliodownloads.com/Mylio.dmg",
-      verified: "myliodownloads.com/"
+  url "https://myliodownloads.com/Mylio.dmg"
   name "Mylio"
   desc "Photo organiser"
   homepage "https://mylio.com/"
@@ -14,8 +13,11 @@ cask "mylio" do
   end
 
   auto_updates true
+  depends_on :macos
 
   app "Mylio.app"
+
+  uninstall launchctl: "mylollc.Mylio.LoginItem"
 
   zap trash: [
     "~/Library/Application Support/Mylio",

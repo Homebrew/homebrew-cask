@@ -1,17 +1,18 @@
 cask "buzz" do
-  arch arm: "arm64", intel: "x64"
+  arch arm: "ARM64", intel: "X64"
 
-  version "1.2.0"
-  sha256 arm:   "8bc210ead8ff0f694246f772ff48b8f0d777d4c5df2594cac57937a5fc0f61d1",
-         intel: "72bd99f2e80fcbb4b29e440bc0e7a471472b14a68d86a65c7fa0857c6453ef03"
+  version "1.4.5"
+  sha256 arm:   "db705058144c859e15d410e11a2b7a4b6faeb6994aab8e8101bd0bb5a05a06a8",
+         intel: "14de05e47eabcf8a183baa2890b11eb2cde2369bfff992fd1375a8f051491e8d"
 
   url "https://github.com/chidiwilliams/buzz/releases/download/v#{version}/Buzz-#{version}-mac-#{arch}.dmg"
   name "Buzz"
-  desc "Transcribes and translates audio"
+  desc "Transcribe and translate audio"
   homepage "https://github.com/chidiwilliams/buzz"
 
-  deprecate! date: "2024-04-03", because: :moved_to_mas
-  disable! date: "2025-04-05", because: :moved_to_mas
+  auto_updates true
+  conflicts_with cask: "block-buzz"
+  depends_on macos: :big_sur
 
   app "Buzz.app"
 

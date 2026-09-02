@@ -1,9 +1,8 @@
 cask "espanso" do
-  version "2.3.0"
-  sha256 "e785543bc37e9860434e2e00ccc18a5df7409ab9b20d1f41bfc4801b5e543eae"
+  version "2.4.1"
+  sha256 "e6aee2d9446d7625e57dafc6613add21fc7c9f709ba42f08b5ada844c6f7110a"
 
-  url "https://github.com/espanso/espanso/releases/download/v#{version}/Espanso-Mac-Universal.zip",
-      verified: "github.com/espanso/espanso/"
+  url "https://github.com/espanso/espanso/releases/download/v#{version}/Espanso-Mac-Universal.dmg"
   name "Espanso"
   desc "Cross-platform Text Expander written in Rust"
   homepage "https://espanso.org/"
@@ -13,8 +12,7 @@ cask "espanso" do
     strategy :github_latest
   end
 
-  depends_on macos: ">= :big_sur"
-  container nested: "espanso/Espanso.dmg"
+  depends_on macos: :big_sur
 
   app "Espanso.app"
   binary "#{appdir}/Espanso.app/Contents/MacOS/espanso"

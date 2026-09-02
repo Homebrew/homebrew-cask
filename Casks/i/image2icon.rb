@@ -2,8 +2,7 @@ cask "image2icon" do
   version "2.17"
   sha256 "653db224080c06b303a187e3048b6aa4dd07b7d0a5021623f038254e12baa81a"
 
-  url "https://sf-applications.s3.amazonaws.com/Image2Icon/app-releases/Image2icon#{version}.zip",
-      verified: "sf-applications.s3.amazonaws.com/Image2Icon/"
+  url "https://sf-applications.s3.amazonaws.com/Image2Icon/app-releases/Image2icon#{version}.zip"
   name "Image2Icon"
   desc "Icon creator and file and folder customiser"
   homepage "https://www.img2icnsapp.com/"
@@ -14,6 +13,7 @@ cask "image2icon" do
   end
 
   auto_updates true
+  depends_on :macos
 
   app "Image2Icon.app"
 

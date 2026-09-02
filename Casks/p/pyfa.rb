@@ -1,6 +1,6 @@
 cask "pyfa" do
-  version "2.64.3"
-  sha256 "95859e34f4ef0ba03102693a24c9c4f10cef1bbd17dea04f1a79f3782f128b8e"
+  version "2.68.0"
+  sha256 "12b5cea9fac84e05c4e6329399a650e6c78e9cced8b79eb73669e0805143ab77"
 
   url "https://github.com/pyfa-org/Pyfa/releases/download/v#{version}/pyfa-v#{version}-mac.zip"
   name "pyfa"
@@ -13,6 +13,8 @@ cask "pyfa" do
   end
 
   disable! date: "2026-09-01", because: :fails_gatekeeper_check
+
+  depends_on :macos
 
   app "pyfa.app"
 

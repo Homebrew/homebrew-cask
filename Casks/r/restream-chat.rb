@@ -1,6 +1,6 @@
 cask "restream-chat" do
-  version "2.5.4-beta"
-  sha256 "32b4dae6cdce145b1f6a43b5046636bfa2188c924d792b21337c9604d3dc1809"
+  version "2.8.1"
+  sha256 "9d97fbc52c80ca2537e8f63cc718154ed1cce6a9c63fbe56e21713eb97fd4877"
 
   url "https://chat-client.restream.io/Restream+Chat-#{version}.dmg"
   name "Restream Chat"
@@ -12,9 +12,16 @@ cask "restream-chat" do
     strategy :header_match
   end
 
+  depends_on :macos
+
   app "Restream Chat.app"
 
-  zap trash: "~/Library/Application Support/Restream Chat"
+  zap trash: [
+    "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/io.restream.chat.sfl*",
+    "~/Library/Application Support/Restream Chat",
+    "~/Library/Logs/Restream Chat",
+    "~/Library/Preferences/io.restream.chat.plist",
+  ]
 
   caveats do
     requires_rosetta

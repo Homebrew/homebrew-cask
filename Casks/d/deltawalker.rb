@@ -1,12 +1,20 @@
 cask "deltawalker" do
   arch arm: "aarch64", intel: "x64"
 
-  version "2.7.0"
-  sha256 arm:   "804c509f0813e28c3b960a24ab57f200331ba2333ed9ef9dee479f29ac3bf554",
-         intel: "e1000806db159cd760fd4d812f475581851d5c02a6f4f7bc1040835bcc6668ad"
+  version "2.8.1"
+  sha256 arm:   "f5cc0843ca324f55e84ce7a0907b20349bbdef058440cb56aeb6c245efbb882e",
+         intel: "7301ad9f6ad001251c42fcbce989efe62439d5d2245090f413df438c54857035"
 
-  url "https://deltawalker.s3.amazonaws.com/DeltaWalker-#{version}_#{arch}.dmg",
-      verified: "deltawalker.s3.amazonaws.com/"
+  # The uninstall script is not present in the intel version.
+  on_arm do
+    uninstall script: {
+      executable:   "#{staged_path}/run-me-first.command",
+      sudo:         false,
+      must_succeed: false,
+    }
+  end
+
+  url "https://deltawalker.s3.amazonaws.com/DeltaWalker-#{version}_#{arch}.dmg"
   name "DeltaWalker"
   desc "Tool to compare and synchronise files and folders"
   homepage "https://www.deltawalker.com/"
@@ -16,13 +24,9 @@ cask "deltawalker" do
     regex(/href=.*?DeltaWalker[._-]?v?(\d+(?:\.\d+)+)_#{arch}\.dmg/i)
   end
 
-  app "DeltaWalker.app"
+  depends_on macos: :big_sur
 
-  uninstall script: {
-    executable:   "#{staged_path}/run-me-first.command",
-    sudo:         false,
-    must_succeed: false,
-  }
+  app "DeltaWalker.app"
 
   zap trash: [
     "~/Library/Caches/com.deltopia.DeltaWalker",

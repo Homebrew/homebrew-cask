@@ -1,6 +1,6 @@
 cask "fabfilter-saturn" do
-  version "2.11"
-  sha256 "0bb94e8d2c1643af89d1d6f7f805e8effcaa29a1af87f54eb27094adf810b2ef"
+  version "2.13"
+  sha256 "2937c0054e748807db6e2b3d5ffeece0a21ea696aa844c70007ab789258f6888"
 
   url "https://cdn-b.fabfilter.com/downloads/ffsaturn#{version.no_dots}.dmg"
   name "FabFilter Saturn"
@@ -12,9 +12,11 @@ cask "fabfilter-saturn" do
     regex(/FabFilter\s+Saturn.*?v?(\d+(?:\.\d+)+)/im)
   end
 
+  depends_on :macos
+
   pkg "FabFilter Saturn #{version} Installer.pkg"
 
-  uninstall pkgutil: "com.fabfilter.Saturn.#{version.major}"
+  uninstall pkgutil: "com.fabfilter.Saturn.*"
 
   # No zap stanza required
 end

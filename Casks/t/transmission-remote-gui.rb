@@ -6,12 +6,16 @@ cask "transmission-remote-gui" do
   name "Transmission Remote GUI"
   homepage "https://github.com/transmission-remote-gui/transgui"
 
+  disable! date: "2026-09-01", because: :fails_gatekeeper_check
+
+  depends_on :macos
+
   app "Transmission Remote GUI.app"
 
   uninstall quit: "com.transgui"
 
   zap trash: [
-    "~/.config/Transmission Remote GUI/",
+    "~/.config/Transmission Remote GUI",
     "~/Library/Preferences/com.transgui.plist",
     "~/Library/Saved Application State/com.transgui.savedState",
   ]

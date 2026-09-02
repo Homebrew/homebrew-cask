@@ -8,6 +8,9 @@ cask "qth" do
   homepage "https://www.w8wjb.com/wp/qth/"
 
   deprecate! date: "2025-02-24", because: :moved_to_mas
+  disable! date: "2026-02-24", because: :moved_to_mas
+
+  depends_on :macos
 
   app "QTH.app"
 

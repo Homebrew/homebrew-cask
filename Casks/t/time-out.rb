@@ -1,6 +1,6 @@
 cask "time-out" do
-  version "2.9.7"
-  sha256 "fb39f93737a7ca5b7f73133524427c0c9f3d799a81084eed99dc445030545467"
+  version "3.1"
+  sha256 "904b8eca776c57793a29e6bb553240b4be10e8e44cb32516e87436009bb81dbd"
 
   url "https://www.dejal.com/download/timeout-#{version}.zip"
   name "Time Out"
@@ -13,6 +13,7 @@ cask "time-out" do
   end
 
   auto_updates true
+  depends_on macos: :tahoe
 
   app "Time Out.app"
 

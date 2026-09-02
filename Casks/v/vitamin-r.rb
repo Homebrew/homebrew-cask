@@ -1,6 +1,6 @@
 cask "vitamin-r" do
-  version "4.21"
-  sha256 "96904470a41e5fe61c267ea1e4feb9bedad22d836cdd0fdc41e10a78229821ca"
+  version "4.26"
+  sha256 "7c95f12a62b61c62947ab21c0cfa87027d0807c7d5f16290708495f57a66fd7c"
 
   url "https://www.publicspace.net/download/signedVitamin#{version.major}.zip"
   name "Vitamin-R"
@@ -13,7 +13,7 @@ cask "vitamin-r" do
   end
 
   auto_updates true
-  depends_on macos: ">= :ventura"
+  depends_on macos: :ventura
 
   app "Vitamin-R #{version.major}.app"
 

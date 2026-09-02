@@ -1,12 +1,11 @@
 cask "clickup" do
   arch arm: "arm64", intel: "x64"
 
-  version "3.5.150,251013m2bgbbgpp"
-  sha256 arm:   "34d3b8f056d000e4d6df22b36999fbe9fef6526f1c71ee0f41eee5032c8c32d1",
-         intel: "6fc4415c33ee08ca8a555b15e8f74ff1a7cf7838d7be948ac0771d6e3b5252f9"
+  version "3.5.262,260717dcrpwg7m0"
+  sha256 arm:   "76168f07eeddcab9f0ab967e1c2be6f0a6a0450625ca1369835f6ceb8d4e2a01",
+         intel: "cb433840a43593ec45ab7f5486098cf01a0cf63d8211a3e2e3736a63f0e23ba3"
 
-  url "https://download.todesktop.com/221003ra4tebclw/ClickUp%20#{version.csv.first}%20-%20Build%20#{version.csv.second}-#{arch}.dmg",
-      verified: "download.todesktop.com/221003ra4tebclw/"
+  url "https://download.todesktop.com/221003ra4tebclw/ClickUp%20#{version.csv.first}%20-%20Build%20#{version.csv.second}-#{arch}.dmg"
   name "ClickUp"
   desc "Productivity platform for tasks, docs, goals, and chat"
   homepage "https://clickup.com/"
@@ -27,7 +26,7 @@ cask "clickup" do
   end
 
   auto_updates true
-  depends_on macos: ">= :monterey"
+  depends_on macos: :monterey
 
   app "ClickUp.app"
 

@@ -7,6 +7,9 @@ cask "aexol-remote-mouse" do
   homepage "https://remotemouse.aexol.com/"
 
   deprecate! date: "2024-11-15", because: :unmaintained
+  disable! date: "2025-11-15", because: :unmaintained
+
+  depends_on :macos
 
   app "Remote Mouse for Mac.app"
 

@@ -12,6 +12,8 @@ cask "outset" do
     strategy :github_latest
   end
 
+  depends_on :macos
+
   pkg "outset-#{version}.pkg"
 
   uninstall launchctl: [

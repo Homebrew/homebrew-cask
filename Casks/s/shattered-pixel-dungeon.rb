@@ -1,9 +1,8 @@
 cask "shattered-pixel-dungeon" do
-  version "3.2.5"
-  sha256 "8d138773092388ea190f1da22a0bd8d90153a24ea8fb5b5d116af21381e02758"
+  version "3.3.8"
+  sha256 "edfa21381903f23b4ffd902e5a82f56d21901d52695bcdfd4c1821d25221cae6"
 
-  url "https://github.com/00-Evan/shattered-pixel-dungeon/releases/download/v#{version}/ShatteredPD-v#{version}-macOS.zip",
-      verified: "github.com/00-Evan/shattered-pixel-dungeon/"
+  url "https://github.com/00-Evan/shattered-pixel-dungeon/releases/download/v#{version}/ShatteredPD-v#{version}-macOS.zip"
   name "Shattered Pixel Dungeon"
   desc "Traditional roguelike dungeon crawler with randomised levels, enemies and items"
   homepage "https://shatteredpixel.com/shatteredpd"
@@ -13,9 +12,8 @@ cask "shattered-pixel-dungeon" do
     strategy :github_latest
   end
 
-  disable! date: "2026-09-01", because: :fails_gatekeeper_check
-
   auto_updates true
+  depends_on :macos
 
   app "Shattered Pixel Dungeon.app"
 

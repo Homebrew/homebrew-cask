@@ -1,9 +1,8 @@
 cask "roon" do
-  version "2.56"
+  version "2.71"
   sha256 :no_check
 
-  url "https://download.roonlabs.net/builds/Roon.dmg",
-      verified: "download.roonlabs.net/"
+  url "https://download.roonlabs.net/builds/Roon.dmg"
   name "Roon"
   desc "Music player"
   homepage "https://roonlabs.com/"
@@ -19,6 +18,7 @@ cask "roon" do
   end
 
   auto_updates true
+  depends_on macos: :monterey
 
   app "Roon.app"
 

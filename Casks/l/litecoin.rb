@@ -1,6 +1,6 @@
 cask "litecoin" do
-  version "0.21.4"
-  sha256 "1ae347f6e77c10f857d98a18b778ec4fc2449b7bb51c425bad726b02cb9ef876"
+  version "0.21.5.6"
+  sha256 "8eae361597a1698d61bac73e89d6aed8a32578db24be5e42958a583d7abf7276"
 
   url "https://download.litecoin.org/litecoin-#{version}/osx/litecoin-#{version}-osx.dmg"
   name "Litecoin"
@@ -8,22 +8,24 @@ cask "litecoin" do
   homepage "https://litecoin.org/"
 
   livecheck do
-    url :homepage
-    regex(/href=.*?litecoin[._-]v?(\d+(?:\.\d+)+)[^"' >]*?\.dmg/i)
+    url "https://download.litecoin.org/"
+    regex(%r{href=["']?litecoin[._-]v?(\d+(?:\.\d+)+)/?["' >]}i)
   end
+
+  depends_on :macos
 
   app "Litecoin-Qt.app"
 
-  preflight do
-    set_permissions "#{staged_path}/Litecoin-Qt.app", "0755"
+  preflight_steps do
+    set_permissions "Litecoin-Qt.app", "0755"
   end
 
-  postflight do
-    set_permissions "#{appdir}/Litecoin-Qt.app", "0555"
+  postflight_steps do
+    set_permissions "Litecoin-Qt.app", "0555", base: :appdir
   end
 
-  uninstall_preflight do
-    set_permissions "#{appdir}/Litecoin-Qt.app", "0755"
+  uninstall_preflight_steps do
+    set_permissions "Litecoin-Qt.app", "0755", base: :appdir
   end
 
   zap trash: [

@@ -1,6 +1,6 @@
 cask "clamxav" do
-  version "3.9.1,11136"
-  sha256 "216ecd4e17636ecc1f1cfd088a5db5b1ed306f52d6380e42ccd4092dbb3e9fde"
+  version "3.11,11823"
+  sha256 "083e4544ef0dac631d7842beaeca9a58f7841c292bc93f06a8fe6028990fe505"
 
   url "https://cdn.clamxav.com/ClamXAVdownloads/ClamXAV_#{version.csv.first}_#{version.csv.second}_Installer.pkg"
   name "ClamXAV"
@@ -13,6 +13,7 @@ cask "clamxav" do
   end
 
   auto_updates true
+  depends_on :macos
 
   pkg "ClamXAV_#{version.csv.first}_#{version.csv.second}_Installer.pkg"
   binary "#{appdir}/ClamXAV.app/Contents/MacOS/XAV"

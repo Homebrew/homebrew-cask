@@ -1,6 +1,6 @@
 cask "rekordbox" do
-  version "7.2.7,20251111150953"
-  sha256 "cc874e2490cf6ecf21a1985e0b18456235e7f1c910f8927122ecfef2231dd167"
+  version "7.2.18,20260805123505"
+  sha256 "b5b74a5c35fa2ccc1bf6fbe51ee5315de2c7464b19ac7d46913276272adc6e05"
 
   url "https://cdn.rekordbox.com/files/#{version.csv.second}/Install_rekordbox_#{version.csv.first.dots_to_underscores}.pkg_.zip"
   name "rekordbox"
@@ -16,6 +16,7 @@ cask "rekordbox" do
   end
 
   auto_updates true
+  depends_on :macos
 
   pkg "Install_rekordbox_#{version.csv.first.dots_to_underscores}.pkg"
 

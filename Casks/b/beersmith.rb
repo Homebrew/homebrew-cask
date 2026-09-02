@@ -1,9 +1,8 @@
 cask "beersmith" do
-  version "3.2.8"
-  sha256 "47538ccdeb793a0164c41741b596f9c178fd2b9046a5b42c507e272a5e8c3cd1"
+  version "4.0.22"
+  sha256 "97fe0d9eee2e8be6d677f340af8de36067b075f7981aaa85194df4050bea903f"
 
-  url "https://beersmith3-2.s3.amazonaws.com/BeerSmith#{version.dots_to_underscores}.dmg",
-      verified: "beersmith3-2.s3.amazonaws.com/"
+  url "https://beersmith#{version.major}.s3.amazonaws.com/BeerSmith_#{version}.dmg"
   name "BeerSmith"
   desc "Beer brewing software"
   homepage "https://beersmith.com/"
@@ -16,6 +15,8 @@ cask "beersmith" do
     end
   end
 
+  depends_on macos: :big_sur
+
   app "BeerSmith#{version.major}.app"
 
   zap trash: [
@@ -24,8 +25,4 @@ cask "beersmith" do
     "~/Library/Preferences/BeerSmith-LLC.BeerSmith.*.plist",
     "~/Library/Saved Application State/BeerSmith-LLC.BeerSmith.*.savedStat",
   ]
-
-  caveats do
-    requires_rosetta
-  end
 end

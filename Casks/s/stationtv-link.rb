@@ -12,6 +12,8 @@ cask "stationtv-link" do
     regex(/\[Ver\.(\d+(?:\.\d+)+)\]/i)
   end
 
+  depends_on :macos
+
   app "StationTV Link.app"
 
   caveats do

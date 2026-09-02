@@ -12,6 +12,8 @@ cask "itermai" do
     regex(%r{href=.*?/iTermAI[._-](\d+(?:\.\d+)*)\.zip}i)
   end
 
+  depends_on :macos
+
   app "iTermAI.app"
 
   zap trash: [

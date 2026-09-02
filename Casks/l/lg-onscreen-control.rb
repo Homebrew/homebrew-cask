@@ -1,9 +1,8 @@
 cask "lg-onscreen-control" do
-  version "7.20,9mZ5Rk4cToGkdcOPTFIUgA"
-  sha256 "d2891a3b1b5413d1d55ecb9da6182f374e6d2fb2151d3c56a1efcb7d341e68c0"
+  version "7.30,clVHLZBprha2LMY4GyIBsQ"
+  sha256 "bb174c4158876f4c8a0c5393bb69aa20cd14817afd86278926299ff57b7ed070"
 
-  url "https://gscs-b2c.lge.com/downloadFile?fileId=#{version.csv.second}",
-      verified: "lge.com/"
+  url "https://gscs-b2c.lge.com/downloadFile?fileId=#{version.csv.second}"
   name "LG OnScreen Control"
   desc "Displays all connected LG monitor information"
   homepage "https://www.lg.com/us/support/monitors"
@@ -29,12 +28,12 @@ cask "lg-onscreen-control" do
     end
   end
 
+  depends_on :macos
+
   pkg "OSC_V#{version.csv.first}_signed.pkg"
 
-  postflight do
-    system_command "/bin/chmod",
-                   args: ["755", "/usr/local", "/usr/local/lmm"],
-                   sudo: true
+  postflight_steps do
+    run "/bin/chmod", args: ["755", "/usr/local", "/usr/local/lmm"], sudo: true
   end
 
   uninstall quit:       [

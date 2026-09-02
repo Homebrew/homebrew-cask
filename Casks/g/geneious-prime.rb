@@ -1,6 +1,6 @@
 cask "geneious-prime" do
-  version "2025.2.2"
-  sha256 "57a6111045599ccc446fee01c6933b97dd7ea89bad94a68c0c1c436f92f7e4ec"
+  version "2026.1.2"
+  sha256 "3d1d19536489141f1a837a73a85e5396c91898963f3a1cbd4712b27e06025cfe"
 
   url "https://assets.geneious.com/installers/geneious/release/Geneious_Prime_mac64_#{version.dots_to_underscores}_with_jre.dmg"
   name "Geneious Prime"
@@ -14,6 +14,8 @@ cask "geneious-prime" do
       page.scan(regex)&.map { |match| match[0].tr("_", ".") }
     end
   end
+
+  depends_on :macos
 
   app "Geneious Prime.app"
 

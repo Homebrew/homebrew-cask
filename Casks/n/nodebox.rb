@@ -1,9 +1,8 @@
 cask "nodebox" do
-  version "3.0.52"
-  sha256 "64409451f786bb8bc08df0ac3b4e3e41f4340512960f682b2230a0bb8182fff3"
+  version "3.1.0"
+  sha256 "b46328edcd6fdf2f3f6dcbb87995d53b2eb4efeb6afaa36fff55943bd3873b4e"
 
-  url "https://github.com/nodebox/nodebox/releases/download/v#{version}/NodeBox-#{version}.dmg",
-      verified: "github.com/nodebox/nodebox/"
+  url "https://github.com/nodebox/nodebox/releases/download/v#{version}/NodeBox-#{version}.dmg"
   name "NodeBox"
   desc "Node-based data application for visualisation and generative design"
   homepage "https://www.nodebox.net/node/"
@@ -13,14 +12,12 @@ cask "nodebox" do
     regex(/href=.*?NodeBox[._-]v?(\d+(?:\.\d+)+)\.dmg/i)
   end
 
+  depends_on :macos
+
   app "NodeBox.app"
 
   zap trash: [
     "~/Library/Logs/NodeBox",
     "~/Library/NodeBox",
   ]
-
-  caveats do
-    requires_rosetta
-  end
 end

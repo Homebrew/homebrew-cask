@@ -2,10 +2,14 @@ cask "font-bungee" do
   version "2.001"
   sha256 "df293931cb01e8a8737defbcee3eb853db2af67271005d65e4508d541b6f592c"
 
-  url "https://github.com/djrrb/bungee/releases/download/v#{version}/Bungee-fonts.zip",
-      verified: "github.com/djrrb/bungee/"
+  url "https://github.com/djrrb/bungee/releases/download/v#{version}/Bungee-fonts.zip"
   name "Bungee"
   homepage "https://djr.com/bungee/"
+
+  livecheck do
+    url :url
+    strategy :github_latest
+  end
 
   font "Bungee-fonts/Bungee_Basic/Bungee-Regular.ttf"
   font "Bungee-fonts/Bungee_Basic/BungeeHairline-Regular.ttf"

@@ -1,6 +1,6 @@
 cask "imazing" do
-  version "3.4.0,23269"
-  sha256 "d7a65419cdaa1bfc6fd82354af4593b022b046055a7aa1e342e228ef92dbc342"
+  version "3.6.3,24326"
+  sha256 "cbb1fe5d0c0ed23531d5605a830af7fe4c7d98dbe3ccdf03c1ec2b5f22aa38b3"
 
   url "https://downloads.imazing.com/mac/iMazing/#{version.csv.first}.#{version.csv.second}/iMazing_#{version.csv.first}.#{version.csv.second}.dmg"
   name "iMazing"
@@ -13,12 +13,14 @@ cask "imazing" do
   end
 
   auto_updates true
+  depends_on :macos
 
   app "iMazing.app"
 
   uninstall quit:       [
               "com.DigiDNA.iMazing#{version.csv.first}.#{version.csv.second}Mac",
               "com.DigiDNA.iMazing#{version.csv.first}.#{version.csv.second}Mac.Mini",
+              "com.DigiDNA.iMazing#{version.major}Mac",
             ],
             login_item: "iMazing Mini"
 

@@ -1,5 +1,5 @@
 cask "automounterhelper" do
-  version "1.7.0"
+  version "1.9.0"
   sha256 :no_check
 
   url "https://pixeleyes.co.nz/automounter/helper/AutoMounterHelper.dmg"
@@ -12,7 +12,7 @@ cask "automounterhelper" do
     regex(/Version:\s+v?(\d+(?:\.\d+)+)/i)
   end
 
-  depends_on macos: ">= :monterey"
+  depends_on macos: :monterey
 
   installer manual: "AutoMounterHelper.app"
 

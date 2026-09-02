@@ -1,14 +1,13 @@
 cask "whalebird" do
-  version "6.2.5"
-  sha256 "9c2ccb4c9ab1b4a041fbc7b9b123f5a84c6cbf5f385d663bfb5a70f3e85130a5"
+  version "6.3.0"
+  sha256 "ee76f40befbc69669d6c7118b5189a4464497b0e9c09d47285ccb946dae91635"
 
-  url "https://github.com/h3poteto/whalebird-desktop/releases/download/v#{version}/Whalebird-#{version}-mac-universal.dmg",
-      verified: "github.com/h3poteto/whalebird-desktop/"
+  url "https://github.com/h3poteto/whalebird-desktop/releases/download/v#{version}/Whalebird-#{version}-mac-universal.dmg"
   name "Whalebird"
   desc "Mastodon, Pleroma, and Misskey client"
   homepage "https://whalebird.social/"
 
-  depends_on macos: ">= :sonoma"
+  depends_on macos: :sonoma
 
   app "Whalebird.app"
 

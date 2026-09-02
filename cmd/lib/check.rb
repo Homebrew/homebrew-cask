@@ -5,8 +5,10 @@ require "system_command"
 
 APPLE_LAUNCHJOBS_REGEX =
   /\A(?:application\.)?com\.apple\.
-  (AppStore|installer|Preview|Safari|systemevents|systempreferences|Terminal)
+  (AppStore|installer|Preview|Safari|shortcuts|systemevents|systempreferences|Terminal)
   (?:\.|$)/x
+
+GOOGLE_LAUNCHJOBS_REGEX = /com\.google\.(keystone|GoogleUpdater)/
 
 module Check
   # TODO: replace with public API like Utils.safe_popen_read that's less likely to be volatile to changes
@@ -16,20 +18,21 @@ module Check
   CHECKS = {
     installed_apps:       lambda {
       ["/Applications", File.expand_path("~/Applications")]
-        .flat_map { |dir| (0..5).map { |i| "/*" * i }.flat_map { |glob| Dir["#{dir}#{glob}.app"] } }
+      .flat_map { |dir| (0..5).map { |i| "/*" * i }.flat_map { |glob| Dir["#{dir}#{glob}.app"] } }
     },
     installed_kexts:      lambda {
       system_command!("/usr/sbin/kextstat", args: ["-kl"], print_stderr: false)
-        .stdout
-        .lines
-        .map { |l| l.match(/^.{52}([^\s]+)/)[1] }
-        .grep_v(/^com\.apple\./)
+      .stdout
+      .lines
+      .map { |l| l.match(/^.{52}([^\s]+)/)[1] }
+      .grep_v(/^com\.apple\./)
     },
     installed_pkgs:       lambda {
       Pathname("/var/db/receipts")
-        .children
-        .grep(/\.plist$/)
-        .map { |path| path.basename.to_s.sub(/\.plist$/, "") }
+      .children
+      .grep(/\.plist$/)
+      .map { |path| path.basename.to_s.sub(/\.plist$/, "") }
+      .grep_v(/^com\.google(?:\.pkg)?\.Keystone/i)
     },
     installed_launchjobs: lambda {
       format_launchjob = lambda { |file|
@@ -48,24 +51,27 @@ module Check
         "/Library/LaunchAgents",
         "/Library/LaunchDaemons",
       ].map { |p| Pathname(p).expand_path }
-        .select(&:directory?)
-        .flat_map(&:children)
-        .select { |child| child.extname == ".plist" }
-        .select(&:exist?)
-        .map(&format_launchjob)
+      .select(&:directory?)
+      .flat_map(&:children)
+      .grep_v(GOOGLE_LAUNCHJOBS_REGEX)
+      .select { |child| child.extname == ".plist" }
+      .select(&:exist?)
+      .map(&format_launchjob)
     },
     loaded_launchjobs:    lambda {
       launchctl = lambda do |sudo|
         system_command!("/bin/launchctl", args: ["list"], print_stderr: false, sudo:)
-          .stdout
-          .lines.drop(1)
-          .grep_v(APPLE_LAUNCHJOBS_REGEX)
+        .stdout
+        .lines.drop(1)
+        .grep_v(APPLE_LAUNCHJOBS_REGEX)
+        .grep_v(GOOGLE_LAUNCHJOBS_REGEX)
       end
 
       [false, true]
-        .flat_map(&launchctl)
-        .map { |l| l.split(/\s+/)[2] }
-        .grep_v(/^com\.apple\./)
+      .flat_map(&launchctl)
+      .map { |l| l.split(/\s+/)[2] }
+      .grep_v(/^com\.apple\./)
+      .grep_v(GOOGLE_LAUNCHJOBS_REGEX)
     },
   }.freeze
   private_constant :CHECKS
@@ -120,7 +126,9 @@ module Check
       errors << message
     end
 
-    installed_packages = diff[:installed_pkgs].added
+    installed_packages = diff[:installed_pkgs]
+                         .added
+                         .grep_v(/^com\.logi\.installer\.pluginservice\.package/i)
     if installed_packages.any?
       message = "Some packages are still installed, add them to #{Formatter.identifier("uninstall pkgutil:")}\n"
       message += installed_packages.join("\n")
@@ -138,13 +146,14 @@ module Check
                    .added
                    .grep(/\.\d+\Z/)
                    .grep_v(APPLE_LAUNCHJOBS_REGEX)
+                   .grep_v(GOOGLE_LAUNCHJOBS_REGEX)
                    .map { |id| id.sub(/\A(?:application\.)?(.*?)(?:\.\d+){0,2}\Z/, '\1') }
 
     loaded_launchjobs = diff[:loaded_launchjobs]
                         .added
                         .grep_v(/\.\d+\Z/)
 
-    missing_running_apps = running_apps - Array(uninstall_directives[:quit])
+    missing_running_apps = reject_matching(running_apps, uninstall_directives[:quit])
 
     # Some applications may launch a browser session after install
     # Skip Firefox, unless the cask is a Firefox cask
@@ -156,7 +165,8 @@ module Check
       errors << message
     end
 
-    missing_loaded_launchjobs = loaded_launchjobs - Array(uninstall_directives[:launchctl])
+    missing_loaded_launchjobs = reject_matching(loaded_launchjobs, uninstall_directives[:launchctl],
+                                                anchored: false, ignore_case: false)
     if missing_loaded_launchjobs.any?
       message = "Some launch jobs were not unloaded, add them to #{Formatter.identifier("uninstall launchctl:")}\n"
       message += missing_loaded_launchjobs.join("\n")
@@ -164,5 +174,17 @@ module Check
     end
 
     errors
+  end
+
+  # Match `*` wildcards as `Cask::Artifact::AbstractUninstall` resolves them:
+  # `quit:` anchors and ignores case, `launchctl:` does neither.
+  def self.reject_matching(ids, directives, anchored: true, ignore_case: true)
+    patterns = Array(directives).map do |directive|
+      directive = directive.to_s
+      source = Regexp.escape(directive).gsub("\\*", ".*")
+      source = "\\A#{source}\\z" if anchored || directive.exclude?("*")
+      Regexp.new(source, ignore_case ? Regexp::IGNORECASE : nil)
+    end
+    ids.reject { |id| patterns.any? { |pattern| pattern.match?(id) } }
   end
 end

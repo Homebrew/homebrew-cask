@@ -1,5 +1,5 @@
 cask "virtualhere" do
-  version "5.9.4"
+  version "6.0.2"
   sha256 :no_check
 
   url "https://www.virtualhere.com/sites/default/files/usbclient/VirtualHereUniversal.dmg"
@@ -12,9 +12,12 @@ cask "virtualhere" do
     regex(/Version\s*(\d+(?:\.\d+)+)/i)
   end
 
-  depends_on macos: ">= :big_sur"
+  depends_on macos: :big_sur
 
   app "VirtualHereUniversal.app"
 
-  zap trash: "~/Library/Preferences/com.virtualhere.vhui.plist"
+  zap trash: [
+    "~/Library/Preferences/com.virtualhere.client.plist",
+    "~/Library/Preferences/com.virtualhere.vhui.plist",
+  ]
 end

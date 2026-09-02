@@ -1,6 +1,6 @@
 cask "transmit" do
-  version "5.11.2"
-  sha256 "90eba6375d37f0cc60cfc33b9bc853ee7fb6cc231621cfb656087d32b1a831fb"
+  version "5.11.6"
+  sha256 "6761097e3ec7141058f0fa67815ff2244e2ca68f9fcdce06edeaf04279a10208"
 
   url "https://download-cdn.panic.com/transmit/Transmit%20#{version}.zip",
       user_agent: :browser
@@ -14,9 +14,11 @@ cask "transmit" do
   end
 
   auto_updates true
-  depends_on macos: ">= :ventura"
+  depends_on macos: :ventura
 
   app "Transmit.app"
+
+  uninstall quit: "com.panic.Transmit"
 
   zap trash: [
     "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.panic.transmit.sfl*",

@@ -1,6 +1,6 @@
 cask "adobe-acrobat-reader" do
-  version "25.001.20841"
-  sha256 "18a8864575a17a6668f5cf9ad79aae3c190a9bd873c7218554d037266b1c6dd5"
+  version "26.001.21662"
+  sha256 "21821609bea4210e54b1844a1129cdafccea21f6d6d3d0797808f92e357d5705"
 
   url "https://ardownload2.adobe.com/pub/adobe/reader/mac/AcrobatDC/#{version.no_dots}/AcroRdrDC_#{version.no_dots}_MUI.dmg"
   name "Adobe Acrobat Reader"
@@ -15,6 +15,7 @@ cask "adobe-acrobat-reader" do
   end
 
   auto_updates true
+  depends_on macos: :ventura
 
   pkg "AcroRdrDC_#{version.no_dots}_MUI.pkg"
 

@@ -1,10 +1,10 @@
 cask "yubico-authenticator" do
-  version "7.3.0"
-  sha256 "d060f00d451270b614cd42f7ea7538e8982150b0dd47aeb5eb8f8590e8f303f9"
+  version "7.4.1"
+  sha256 "9adb0de91b139003c86903296d042053a78f3f60ead68388341bf1b1bc2e1ef3"
 
   url "https://developers.yubico.com/yubioath-flutter/Releases/yubico-authenticator-#{version}-mac.dmg"
   name "Yubico Authenticator"
-  desc "Application for generating TOTP and HOTP codes"
+  desc "Full-featured companion app to the YubiKey"
   homepage "https://developers.yubico.com/yubioath-flutter/"
 
   livecheck do
@@ -12,10 +12,12 @@ cask "yubico-authenticator" do
     regex(/href=.*?yubico[._-]authenticator[._-]v?(\d+(?:\.\d+)+)[._-]mac\.dmg/i)
   end
 
+  depends_on :macos
+
   app "Yubico Authenticator.app"
 
   zap trash: [
-    "~/Library/Application Scripts/com.yubico.authenticator",
-    "~/Library/Containers/com.yubico.authenticator",
+    "~/Library/Application Scripts/com.yubico.yubioath",
+    "~/Library/Containers/com.yubico.yubioath",
   ]
 end

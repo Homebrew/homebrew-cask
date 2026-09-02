@@ -1,9 +1,9 @@
 cask "owncloud" do
   arch arm: "arm64", intel: "x86_64"
 
-  version "6.0.2.17506"
-  sha256 arm:   "5ad75cc312ddb251d71c050889dc339e71267aa33e0509ea4380dad2b77db0b9",
-         intel: "70b68e014a24b606634fc967170eac9b0b0ac2951d2da64bb06627e5c2ac0ced"
+  version "7.1.0.19041"
+  sha256 arm:   "459d1ab3d18a5fc12cfcfe02cf3069e3b8db3ceea7a41d1173ee37497be02dda",
+         intel: "756da460b27490d812a36b2a95c28ff78c7fa3b7b32bbac17c4044c140c5aaf9"
 
   url "https://download.owncloud.com/desktop/ownCloud/stable/#{version}/mac/ownCloud-#{version}-#{arch}.pkg"
   name "ownCloud"
@@ -16,6 +16,7 @@ cask "owncloud" do
   end
 
   auto_updates true
+  depends_on :macos
 
   pkg "ownCloud-#{version}-#{arch}.pkg"
 

@@ -11,11 +11,13 @@ cask "quakespasm" do
     url "https://sourceforge.net/projects/quakespasm/rss?path=/Mac"
   end
 
+  depends_on :macos
+
   suite "QuakeSpasm"
 
-  preflight do
+  preflight_steps do
     # There is no sub-folder; the root *is* the folder
-    FileUtils.mv(staged_path.children, staged_path.join("QuakeSpasm").tap(&:mkpath))
+    move_contents ".", "QuakeSpasm"
   end
 
   caveats <<~EOS

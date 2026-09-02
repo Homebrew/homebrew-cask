@@ -1,12 +1,11 @@
 cask "lexicon-dj" do
   arch arm: "aarch64", intel: "amd64"
 
-  version "1.9.6"
-  sha256 arm:   "17325003b13e98afcf50e0530ffdf357ef96e5cad2e681eb11031820d10b1306",
-         intel: "84c836f5fc73cc8c98a8391658127956463129018e5611cfcc07f82950360d8d"
+  version "1.11.13"
+  sha256 arm:   "5ff697895c5245dfab283655502c17c5a80ad9a0aca956d3bc2198397953bf3d",
+         intel: "514287b77a02d1ca756ccedddaa11ffcaf739a5a8d7c5f1f8a92d865d9acb1c8"
 
-  url "https://update.rekord.cloud/releases/lexicon/latest/lexicon-#{version}-mac-#{arch}.zip",
-      verified: "update.rekord.cloud/releases/lexicon/latest/"
+  url "https://update.rekord.cloud/releases/lexicon/latest/lexicon-#{version}-mac-#{arch}.zip"
   name "Lexicon"
   desc "Library management for professional DJs"
   homepage "https://www.lexicondj.com/"
@@ -17,6 +16,7 @@ cask "lexicon-dj" do
   end
 
   auto_updates true
+  depends_on :macos
 
   app "Lexicon.app"
 

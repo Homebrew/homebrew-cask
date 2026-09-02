@@ -15,6 +15,8 @@ cask "yed" do
     regex(/yEd[._-]v?(\d+(?:\.\d+)+)[._-]with[._-]JRE\d+?[._-]#{arch}\.dmg/i)
   end
 
+  depends_on :macos
+
   app "yEd.app"
 
   zap trash: [

@@ -1,5 +1,5 @@
 cask "integrity" do
-  version "12.11.3"
+  version "12.12.1"
   sha256 :no_check
 
   url "https://peacockmedia.software/mac/integrity/integrity.dmg"
@@ -11,6 +11,8 @@ cask "integrity" do
     url "https://peacockmedia.software/mac/integrity/version_history.html"
     regex(/<h3>v?(\d+(?:\.\d+)+)\s(?!.*beta)/i)
   end
+
+  depends_on :macos
 
   app "Integrity.app"
 

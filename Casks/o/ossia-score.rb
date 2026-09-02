@@ -1,12 +1,11 @@
 cask "ossia-score" do
   arch arm: "AppleSilicon", intel: "Intel"
 
-  version "3.7.1"
-  sha256 arm:   "ff253867f6ae8c6960292c7b609f7e8aa4da8e5931e4788c7f277aa13bde4164",
-         intel: "81c41202c9bbbbe3ba662bb2bda75272991712cfab5ff0a24d0158ab5f1d42c6"
+  version "3.8.2"
+  sha256 arm:   "48a2e953bb175f0524f4466572c3a27beb88180dc19c44d16bf3ea8913976e95",
+         intel: "87d02b89412a1d74059aaba546978f7f4d85d57e06844cdcb89b7b1c02ef7ef4"
 
-  url "https://github.com/ossia/score/releases/download/v#{version}/ossia.score-#{version}-macOS-#{arch}.dmg",
-      verified: "github.com/ossia/score/"
+  url "https://github.com/ossia/score/releases/download/v#{version}/ossia.score-#{version}-macOS-#{arch}.dmg"
   name "ossia score"
   desc "Interactive sequencer for intermedia art"
   homepage "https://ossia.io/"
@@ -28,7 +27,7 @@ cask "ossia-score" do
     end
   end
 
-  depends_on macos: ">= :monterey"
+  depends_on macos: :monterey
 
   app "ossia score.app"
 

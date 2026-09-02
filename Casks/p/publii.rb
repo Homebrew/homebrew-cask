@@ -1,7 +1,7 @@
 cask "publii" do
   arch arm: "arm64", intel: "intel"
 
-  version "0.47.2,17336"
+  version "0.47.9,17481"
   sha256 :no_check # required as upstream package is updated in-place
 
   url "https://getpublii.com/download/Publii-#{version.csv.first}-#{arch}.dmg"
@@ -16,6 +16,8 @@ cask "publii" do
       page.scan(regex).map { |match| "#{match[1]},#{match[0]}" }
     end
   end
+
+  depends_on :macos
 
   app "Publii.app"
 

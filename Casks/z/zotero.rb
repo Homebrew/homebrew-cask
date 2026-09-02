@@ -1,6 +1,6 @@
 cask "zotero" do
-  version "7.0.29"
-  sha256 "0779d7265cc1f7fc7d22163ed06915a56ad657f4d2b185e096fc33639b48c6f4"
+  version "10.0.1"
+  sha256 "1b6e57cedb2dbcbe3f31c06069734d2201559da99a34c7f84167b6b4c7ee5aa8"
 
   url "https://download.zotero.org/client/release/#{version}/Zotero-#{version}.dmg"
   name "Zotero"
@@ -8,16 +8,17 @@ cask "zotero" do
   homepage "https://www.zotero.org/"
 
   livecheck do
-    url "https://www.zotero.org/download/client/update/0/0/Darwin/0/release/update.xml?force=1"
-    strategy :xml do |xml|
-      xml.get_elements("//update").map { |item| item.attributes["version"] }
-    end
+    url "https://www.zotero.org/download/client/dl?channel=release&platform=mac"
+    strategy :header_match
   end
 
   auto_updates true
   conflicts_with cask: "zotero@beta"
+  depends_on :macos
 
   app "Zotero.app"
+
+  uninstall quit: "org.zotero.zotero"
 
   zap trash: [
         "~/Library/Application Scripts/org.zotero.SafariExtensionApp.SafariExtension",

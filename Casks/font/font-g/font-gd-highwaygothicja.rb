@@ -5,7 +5,7 @@ cask "font-gd-highwaygothicja" do
   url "https://542.jp/font/data/GDHighwayGoJA-Rev#{version}-OTF.zip"
   name "GD-HighwayGothicJA"
   name "GD-高速道路ゴシックJA"
-  homepage "https://542.jp/font/"
+  homepage "https://542.jp/font/gdhwgoja/"
 
   livecheck do
     url :homepage

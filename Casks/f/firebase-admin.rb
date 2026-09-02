@@ -8,6 +8,9 @@ cask "firebase-admin" do
   homepage "https://firebaseadmin.com/"
 
   deprecate! date: "2025-06-01", because: :unmaintained
+  disable! date: "2026-06-01", because: :unmaintained
+
+  depends_on :macos
 
   app "firebase-admin.app"
 

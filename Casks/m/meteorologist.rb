@@ -1,9 +1,8 @@
 cask "meteorologist" do
-  version "4.0.9"
-  sha256 "e940988935c9908a92e8bc909ea427a1cebb10e0e02e174df0312828f41272e0"
+  version "5.0.3"
+  sha256 "9727f28ff99e331bcc8d297e8195ca712b75bbd3e1546684cc63bc796ce06d05"
 
-  url "https://downloads.sourceforge.net/heat-meteo/Meteorologist-#{version}.dmg",
-      verified: "downloads.sourceforge.net/heat-meteo/"
+  url "https://downloads.sourceforge.net/heat-meteo/Meteorologist-#{version}.dmg"
   name "Meteorologist"
   desc "Adjustable weather viewing application"
   homepage "https://heat-meteo.sourceforge.io/"
@@ -13,7 +12,7 @@ cask "meteorologist" do
     regex(%r{url=.*?/Meteorologist[._-]v?(\d+(?:\.\d+)+)\.dmg}i)
   end
 
-  depends_on macos: ">= :ventura"
+  depends_on macos: :sonoma
 
   app "Meteorologist.app"
 

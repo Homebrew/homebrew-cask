@@ -12,6 +12,8 @@ cask "doomsday-engine" do
     regex(/doomsday_(\d+(?:\.\d+)+)_x86_64\.dmg/i)
   end
 
+  depends_on :macos
+
   app "Doomsday.app"
   app "Doomsday Shell.app"
 

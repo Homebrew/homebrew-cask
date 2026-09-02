@@ -13,6 +13,7 @@ cask "lyricsx" do
   end
 
   auto_updates true
+  depends_on :macos
 
   app "LyricsX.app"
 

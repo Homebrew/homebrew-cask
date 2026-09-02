@@ -14,6 +14,8 @@ cask "pock" do
     end
   end
 
+  depends_on :macos
+
   app "Pock.app"
 
   zap trash: [

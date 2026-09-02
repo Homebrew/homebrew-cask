@@ -12,6 +12,8 @@ cask "digital" do
     strategy :github_latest
   end
 
+  depends_on :macos
+
   suite "Digital"
 
   zap trash: "~/.digital.cfg"

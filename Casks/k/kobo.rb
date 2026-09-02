@@ -11,6 +11,8 @@ cask "kobo" do
     skip "unversioned QT application"
   end
 
+  depends_on :macos
+
   app "Kobo.app"
 
   zap trash: [

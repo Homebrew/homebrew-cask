@@ -12,6 +12,10 @@ cask "megazeux" do
     regex(/href=["'][^"' >]*?download\.php\?latest=osx["' ][^>]*?>\s*v?(\d+(?:\.\d+)+[a-z]?)\s*</im)
   end
 
+  disable! date: "2026-09-01", because: :fails_gatekeeper_check
+
+  depends_on :macos
+
   app "MegaZeux.app"
   artifact "Documentation", target: "~/Library/Application Support/MegaZeux/Documentation"
 

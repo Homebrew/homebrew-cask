@@ -7,10 +7,16 @@ cask "locationsimulator" do
   desc "Application to spoof your iOS, iPadOS or iPhoneSimulator device location"
   homepage "https://github.com/Schlaubischlump/LocationSimulator"
 
+  depends_on :macos
+
   app "LocationSimulator.app"
 
   zap trash: [
+    "~/Library/Application Scripts/de.davidklopp.locationsimulator",
+    "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/de.davidklopp.locationsimulator.sfl*",
     "~/Library/Application Support/LocationSimulator",
+    "~/Library/Caches/com.apple.helpd/Generated/de.davidklopp.locationsimulatorhelp*0.2.2",
+    "~/Library/Containers/de.davidklopp.locationsimulator",
     "~/Library/Preferences/com.schlaubi.LocationSimulator.plist",
   ]
 end

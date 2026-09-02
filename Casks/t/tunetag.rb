@@ -1,5 +1,5 @@
 cask "tunetag" do
-  version "1.8.2"
+  version "1.13"
   sha256 :no_check
 
   url "https://sweetpproductions.com/products/tunetag/TuneTag.dmg"
@@ -13,7 +13,7 @@ cask "tunetag" do
   end
 
   auto_updates true
-  depends_on macos: ">= :big_sur"
+  depends_on macos: :big_sur
 
   app "TuneTag.app"
 

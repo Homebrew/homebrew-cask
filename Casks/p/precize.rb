@@ -23,6 +23,8 @@ cask "precize" do
     end
   end
 
+  depends_on :macos
+
   app "precize#{version.csv.first.no_dots}/Precize.app"
 
   zap trash: [

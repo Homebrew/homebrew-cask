@@ -1,6 +1,6 @@
 cask "transfer" do
-  version "2.3"
-  sha256 "51595a101dfddd0b3f30e1f36c7a1a354d979b257bad63d1593f6ef4656c0d95"
+  version "2.4.3"
+  sha256 "f97bd2d3ef07ec54a607926eef6b6a605a72f87eb66cb07ae2e9a1e2e42b5613"
 
   url "https://www.intuitibits.com/downloads/Transfer_#{version}.dmg"
   name "Transfer"
@@ -13,7 +13,7 @@ cask "transfer" do
   end
 
   auto_updates true
-  depends_on macos: ">= :ventura"
+  depends_on macos: :ventura
 
   app "Transfer.app"
 

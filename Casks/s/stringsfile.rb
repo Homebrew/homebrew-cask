@@ -8,6 +8,9 @@ cask "stringsfile" do
   homepage "https://blog.timac.org/?p=933"
 
   deprecate! date: "2024-11-15", because: :unmaintained
+  disable! date: "2025-11-15", because: :unmaintained
+
+  depends_on :macos
 
   qlplugin "StringsFile.qlgenerator"
 

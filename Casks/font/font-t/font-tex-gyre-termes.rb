@@ -1,14 +1,20 @@
 cask "font-tex-gyre-termes" do
-  version "2.004"
-  sha256 "5d467d8db17c96037b04409d682f071d7cc33cf94eda35a0a0465776a2c862b2"
+  version "2.609,31_03_2026"
+  sha256 "939908103cc061c6b1bc84d17c4fb11283f206ce79bb60f9f1073f4a2b5d8326"
 
-  url "https://www.gust.org.pl/projects/e-foundry/tex-gyre/termes/qtm#{version}otf.zip"
+  url "https://www.gust.org.pl/projects/e-foundry/tex-gyre/termes/tg_termes-otf-#{version.csv.first.dots_to_underscores}#{"-#{version.csv.second}" if version.csv.second}.zip"
   name "TeX Gyre Termes"
   homepage "https://www.gust.org.pl/projects/e-foundry/tex-gyre/termes"
 
   livecheck do
-    url "https://www.gust.org.pl/projects/e-foundry/tex-gyre/whole"
-    regex(%r{Termes</a>,\sver\.\s(\d+(?:\.\d+)+)}i)
+    url :homepage
+    regex(/href=.*?termes-otf[._-]v?(\d+(?:[._]\d+)+)(?:-(\d+(?:[._]\d+)+))?\.zip/i)
+    strategy :page_match do |page, regex|
+      page.scan(regex).map do |match|
+        version = match[0].tr("_", ".")
+        match[1].present? ? "#{version},#{match[1]}" : version
+      end
+    end
   end
 
   font "texgyretermes-bold.otf"

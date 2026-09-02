@@ -1,6 +1,6 @@
 cask "homerow" do
-  version "1.4.1"
-  sha256 "546b027bf8d7ead24554c2ab8bf73f659ad0c357712b39051df1f0f6188da006"
+  version "1.5.3"
+  sha256 "39616e577d74459d2a095e2da571fce2e528d5375615abf102b8080c1f091c6b"
 
   url "https://builds.homerow.app/v#{version}/Homerow.zip"
   name "Homerow"
@@ -13,7 +13,7 @@ cask "homerow" do
   end
 
   auto_updates true
-  depends_on macos: ">= :ventura"
+  depends_on macos: :ventura
 
   app "Homerow.app"
 

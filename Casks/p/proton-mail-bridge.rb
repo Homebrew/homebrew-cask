@@ -1,9 +1,8 @@
 cask "proton-mail-bridge" do
-  version "3.21.2"
-  sha256 "6a8ff1beb2aa219fb9039a58a1bea6748ca7153665c788196a598ad9b8c852b0"
+  version "3.26.0"
+  sha256 "9f47cedf1e5a239c1c97083723a2b704677410719bc0c82f75e227fe89953884"
 
-  url "https://github.com/ProtonMail/proton-bridge/releases/download/v#{version}/Bridge-Installer.dmg",
-      verified: "github.com/ProtonMail/proton-bridge/"
+  url "https://github.com/ProtonMail/proton-bridge/releases/download/v#{version}/Bridge-Installer.dmg"
   name "Proton Mail Bridge"
   desc "Bridges Proton Mail to email clients supporting IMAP and SMTP protocols"
   homepage "https://proton.me/mail/bridge"
@@ -14,6 +13,7 @@ cask "proton-mail-bridge" do
   end
 
   auto_updates true
+  depends_on macos: :big_sur
 
   app "Proton Mail Bridge.app"
 

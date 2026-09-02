@@ -15,7 +15,7 @@ cask "katalon-studio" do
     regex(/^free[._-]v?(\d+(?:\.\d+)+)$/i)
   end
 
-  depends_on macos: ">= :big_sur"
+  depends_on macos: :big_sur
 
   app "Katalon Studio.app"
 

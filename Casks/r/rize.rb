@@ -1,12 +1,11 @@
 cask "rize" do
   arch arm: "arm64", intel: "x64"
 
-  version "2.3.2"
-  sha256 arm:   "c7e9493e0903561c27ddfdadad4231624021a279c910839eec579622f7123fe3",
-         intel: "8b75f434ea296d970e668da6ba5bf174ab6314370a45e26ef601e2377709a081"
+  version "3.0.45"
+  sha256 arm:   "e632dcf1155811f907a044463a0317be6ed6fcf37ad4ea8392a3d8c5cb5beb42",
+         intel: "2b23fb8915f3c0b2c30a3a78568b59b8de2cc2045fc960e9eb971ffe1a4cf441"
 
-  url "https://github.com/rize-io/lua/releases/download/v#{version}/Rize-#{version}-#{arch}.dmg",
-      verified: "github.com/rize-io/lua/"
+  url "https://github.com/rize-io/lua/releases/download/v#{version}/Rize-#{version}-#{arch}.dmg"
   name "Rize"
   desc "AI time tracker"
   homepage "https://rize.io/"
@@ -17,11 +16,12 @@ cask "rize" do
   end
 
   auto_updates true
-  depends_on macos: ">= :monterey"
+  depends_on macos: :monterey
 
   app "Rize.app"
 
   zap trash: [
+    "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/io.rize.sfl*",
     "~/Library/Application Support/Rize",
     "~/Library/Caches/io.rize",
     "~/Library/Caches/io.rize.ShipIt",

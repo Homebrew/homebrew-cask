@@ -1,6 +1,6 @@
 cask "camo-studio" do
-  version "2.4.0,17515"
-  sha256 "800f30295b4a99274d58f1bc92a3a6cbca1e5a351c770d5c28695d79a60a0ed2"
+  version "2.8.2,24402"
+  sha256 "ea9d87383a9c037e19e22fc774c558c98232bce723285e6f70ca21c3f32aca70"
 
   url "https://releases.reincubate.com/camo/camo-macos-#{version.csv.first}.#{version.csv.second}.zip"
   name "Camo Studio"
@@ -13,7 +13,7 @@ cask "camo-studio" do
   end
 
   auto_updates true
-  depends_on macos: ">= :monterey"
+  depends_on macos: :monterey
 
   app "Camo Studio.app"
 

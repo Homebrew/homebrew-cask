@@ -1,15 +1,16 @@
 cask "gb-studio" do
   arch arm: "apple-silicon", intel: "intel"
 
-  version "4.1.3"
-  sha256 arm:   "95712c8ec4bcf940fd6058536f278197fd3fe2e0471c297bcf76afc442aacca6",
-         intel: "8111b041246b5f5b81b1e3ab1f33304715a5a51400be91dc04d6d00d5dc2c935"
+  version "4.3.2"
+  sha256 arm:   "1b5e2c4402350223cf2810bd917a98025d85b350a48e449d1da3bb4486ff91eb",
+         intel: "d56a850c7585f22c99b09d9c03af231fd76604a402b1f6c556979e72aefdba7c"
 
-  url "https://github.com/chrismaltby/gb-studio/releases/download/v#{version}/gb-studio-mac-#{arch}.zip",
-      verified: "github.com/chrismaltby/gb-studio/"
+  url "https://github.com/chrismaltby/gb-studio/releases/download/v#{version}/gb-studio-mac-#{arch}.zip"
   name "GB Studio"
   desc "Drag and drop retro game creator"
   homepage "https://www.gbstudio.dev/"
+
+  depends_on :macos
 
   app "GB Studio.app"
 

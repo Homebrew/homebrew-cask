@@ -1,29 +1,27 @@
 cask "ltspice" do
-  version "17.2.4"
+  version "26.0.2"
   sha256 :no_check
 
-  url "https://ltspice.analog.com/software/LTspice.pkg"
+  url "https://ltspice.analog.com/software/LTspice_#{version.major}.pkg"
   name "LTspice"
   desc "SPICE simulation software, schematic capture and waveform viewer"
   homepage "https://www.analog.com/en/resources/design-tools-and-calculators/ltspice-simulator.html"
 
   livecheck do
-    url :homepage
-    regex(/for\s+MacOS[\s\S]*Version\s+v?(\d+(?:\.\d+)+)/i)
+    skip "Blocked by upstream bot protection"
   end
 
-  pkg "LTspice.pkg"
+  depends_on macos: :sonoma
 
-  uninstall pkgutil: [
-    "com.analog.LTspice",
-    "com.analog.LTspice.App",
-  ]
+  pkg "LTspice_#{version.major}.pkg"
+
+  uninstall pkgutil: "com.analog.ltspice"
 
   zap trash: [
         "~/Documents/LTspice/examples",
         "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.analog.ltspice.app.sfl*",
         "~/Library/Application Support/LTspice",
-        "~/Library/Preferences/com.analog.LTspice.App.plist",
+        "~/Library/Preferences/com.analog.ltspice.plist",
         "~/Library/Saved Application State/com.analog.LTspice.App.savedState",
       ],
       rmdir: "~/Documents/LTspice"

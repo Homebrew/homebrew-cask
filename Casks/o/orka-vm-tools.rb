@@ -1,9 +1,8 @@
 cask "orka-vm-tools" do
-  version "3.5.0"
-  sha256 "bd5086e233c34977a2b0085fc47086be74636768cc8097ec7951a938ed1a3987"
+  version "3.6.0"
+  sha256 "54be7207b27790de8ba32a7e082b904e07672ac2c2c732472c100937407fd80f"
 
-  url "https://orka-tools.s3.amazonaws.com/orka-vm-tools/official/#{version}/orka-vm-tools.pkg",
-      verified: "orka-tools.s3.amazonaws.com/orka-vm-tools/official/"
+  url "https://orka-tools.s3.amazonaws.com/orka-vm-tools/official/#{version}/orka-vm-tools.pkg"
   name "Orka VM TOOLS"
   desc "Orchestration with Kubernetes on Apple"
   homepage "https://support.macstadium.com/hc/en-us"
@@ -14,6 +13,8 @@ cask "orka-vm-tools" do
       json["version"]
     end
   end
+
+  depends_on :macos
 
   pkg "orka-vm-tools.pkg"
 

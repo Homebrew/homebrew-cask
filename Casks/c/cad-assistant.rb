@@ -21,6 +21,7 @@ cask "cad-assistant" do
   end
 
   auto_updates true
+  depends_on :macos
 
   app "CAD Assistant.app"
 

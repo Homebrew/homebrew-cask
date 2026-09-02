@@ -2,8 +2,7 @@ cask "sharepod" do
   version "4.3.2"
   sha256 "1e6799be8764fb6f57ff87fef79de86d0391d63d349f68999f02729a72529211"
 
-  url "https://assets.macroplant.com/download/32/Sharepod-#{version}.dmg",
-      verified: "assets.macroplant.com/"
+  url "https://assets.macroplant.com/download/32/Sharepod-#{version}.dmg"
   name "Sharepod"
   desc "Transfer music from iOS to Macs or PC"
   homepage "https://www.getsharepod.com/"
@@ -12,6 +11,8 @@ cask "sharepod" do
     url "https://macroplant.com/sharepod/download/"
     strategy :header_match
   end
+
+  depends_on :macos
 
   app "Sharepod.app"
 

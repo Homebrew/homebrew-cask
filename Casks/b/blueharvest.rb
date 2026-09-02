@@ -1,6 +1,6 @@
 cask "blueharvest" do
-  version "8.4,840"
-  sha256 "010c6d7f102caa533c28564cbcd1fa8952f4df283a450cc233b835e5995cffa6"
+  version "8.5,850"
+  sha256 "db1e83ab27b5844f6fc47e9e58e5eb6e89beb38119971153d500b30221404444"
 
   url "https://zeroonetwenty.com/blueharvest/downloads/BlueHarvest#{version.csv.second}.dmg"
   name "BlueHarvest"
@@ -19,6 +19,7 @@ cask "blueharvest" do
   end
 
   auto_updates true
+  depends_on :macos
 
   app "BlueHarvest.app"
 

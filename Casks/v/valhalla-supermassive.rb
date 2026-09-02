@@ -1,20 +1,21 @@
 cask "valhalla-supermassive" do
-  version "4.0.0"
-  sha256 "6f64b1401cc788877bc19ad07b1d52039196b268702fdd1f458388b2f9954377"
+  version "5.0.0"
+  sha256 "eaac6d0a24ffed0a02afd1dd06124d12f94716d32a8ac376606aa2d701a70c3e"
 
-  url "https://valhallaproduction.s3.us-west-2.amazonaws.com/supermassive/ValhallaSupermassiveOSX_#{version.dots_to_underscores}v#{version.major}.dmg",
-      verified: "valhallaproduction.s3.us-west-2.amazonaws.com"
+  url "https://valhallaproduction.s3.us-west-2.amazonaws.com/supermassive/ValhallaSupermassiveOSX_#{version.dots_to_underscores}.dmg"
   name "Valhalla Supermassive"
   desc "Delay/reverb plugin"
   homepage "https://valhalladsp.com/shop/reverb/valhalla-supermassive/"
 
   livecheck do
     url "https://valhalladsp.com/demos-downloads/"
-    regex(/ValhallaSupermassiveOSX[._-]v?(\d+(?:[._]\d+)+)v?\d+\.dmg/i)
+    regex(/ValhallaSupermassiveOSX[._-]v?(\d+(?:[._]\d+)+)\.dmg/i)
     strategy :page_match do |page, regex|
       page.scan(regex).map { |match| match&.first&.tr("_", ".") }
     end
   end
+
+  depends_on :macos
 
   pkg "ValhallaSupermassiveOSX.pkg"
 

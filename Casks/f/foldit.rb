@@ -2,8 +2,7 @@ cask "foldit" do
   version "52"
   sha256 :no_check
 
-  url "https://files.ipd.uw.edu/pub/foldit/Foldit-macos_x64.dmg",
-      verified: "files.ipd.uw.edu/pub/foldit/"
+  url "https://files.ipd.uw.edu/pub/foldit/Foldit-macos_x64.dmg"
   name "Foldit"
   desc "Protein folding computer game"
   homepage "https://fold.it/"
@@ -14,6 +13,7 @@ cask "foldit" do
   end
 
   auto_updates true
+  depends_on :macos
 
   app "Foldit.app"
 

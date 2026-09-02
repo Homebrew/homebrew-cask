@@ -1,12 +1,11 @@
 cask "agentkube" do
   arch arm: "aarch64", intel: "x64"
 
-  version "0.0.9"
-  sha256 arm:   "5cc9a31c8ae950cac0f287a93d11bb598c4662039babad7b6c67988b93308852",
-         intel: "70a68f24e1668b2cd2a9f2941d56299679c229f1008d921806c996ae2239a6df"
+  version "0.0.12"
+  sha256 arm:   "c8c80699198b681ad79a31f8294df24e718e4f2aa935e90e2708f2535dd93dc4",
+         intel: "a29e56e28ef9a2d837281e0c3add6f7eeee43c27cbe8ee8d04b04292aef10bf6"
 
-  url "https://github.com/agentkube/agentkube/releases/download/v#{version}/agentkube_#{version}_#{arch}-apple-darwin.tar.gz",
-      verified: "github.com/agentkube/agentkube/"
+  url "https://github.com/agentkube/agentkube/releases/download/v#{version}/agentkube_#{version}_#{arch}.dmg"
   name "Agentkube"
   desc "AI-powered Kubernetes IDE"
   homepage "https://agentkube.com/"
@@ -19,6 +18,7 @@ cask "agentkube" do
   end
 
   auto_updates true
+  depends_on :macos
 
   app "Agentkube.app"
 

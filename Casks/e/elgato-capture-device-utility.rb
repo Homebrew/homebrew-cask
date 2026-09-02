@@ -12,7 +12,7 @@ cask "elgato-capture-device-utility" do
     strategy :sparkle
   end
 
-  depends_on macos: ">= :monterey"
+  depends_on macos: :monterey
 
   app "Elgato Capture Device Utility.app"
 

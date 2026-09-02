@@ -8,6 +8,9 @@ cask "shiba" do
   homepage "https://github.com/rhysd/Shiba/"
 
   deprecate! date: "2024-11-16", because: :unmaintained
+  disable! date: "2025-11-16", because: :unmaintained
+
+  depends_on :macos
 
   app "Shiba-darwin-x64/Shiba.app"
 

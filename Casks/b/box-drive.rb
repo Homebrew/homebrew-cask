@@ -1,22 +1,21 @@
 cask "box-drive" do
-  version "2.43.205"
-  sha256 "200c5fa6d8eec5516924938d46e7fa6122fdc189044fd935e8c155faa5beaf3d"
+  version "2.54.172"
+  sha256 "06d4fd378b5afe3f6184d6e9bfc69cb1f2b6eb9044b0a936377fd64b40dd6d73"
 
-  url "https://e3.boxcdn.net/desktop/releases/mac/BoxDrive-#{version}.pkg",
-      verified: "e3.boxcdn.net/desktop/releases/mac/"
+  url "https://e3.boxcdn.net/desktop/releases/mac/BoxDrive-#{version}.pkg"
   name "Box Drive"
   desc "Client for the Box cloud storage service"
   homepage "https://www.box.com/drive"
 
   livecheck do
-    url "https://cdn07.boxcdn.net/Autoupdate5.json"
+    url "https://cdn07.boxcdn.net/Autoupdate6.json"
     strategy :json do |json|
       json.dig("mac", "free", "version")
     end
   end
 
   auto_updates true
-  conflicts_with cask: "box-sync"
+  depends_on macos: :ventura
 
   pkg "BoxDrive-#{version}.pkg"
 

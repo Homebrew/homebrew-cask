@@ -8,6 +8,9 @@ cask "aural" do
   homepage "https://github.com/maculateConception/aural-player"
 
   deprecate! date: "2025-06-22", because: :discontinued
+  disable! date: "2026-06-22", because: :discontinued
+
+  depends_on :macos
 
   app "Aural.app"
 

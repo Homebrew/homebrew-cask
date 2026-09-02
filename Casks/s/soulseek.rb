@@ -1,9 +1,8 @@
 cask "soulseek" do
-  version "2024-6-30"
-  sha256 "43a788bf49e50f7a1d23bd4b9df89db5835edf431328b88f502619a7a5818cf1"
+  version "2026-4-30"
+  sha256 "72fa8c2b91c9eda39c765485c09995299a17834bf62862e37e4d6353bc18f1b7"
 
-  url "https://f004.backblazeb2.com/file/SoulseekQt/SoulseekQt-#{version}.dmg",
-      verified: "f004.backblazeb2.com/file/SoulseekQt/"
+  url "https://f004.backblazeb2.com/file/SoulseekQt/SoulseekQt-#{version}.dmg"
   name "Soulseek"
   desc "File sharing network"
   homepage "https://www.slsknet.org/"
@@ -13,7 +12,7 @@ cask "soulseek" do
     regex(/href=.*?SoulseekQt[._-]v?(\d+(?:[.-]\d+)+)\.dmg/i)
   end
 
-  depends_on macos: ">= :big_sur"
+  depends_on macos: :ventura
 
   app "SoulseekQt.app"
 

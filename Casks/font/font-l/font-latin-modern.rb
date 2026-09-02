@@ -1,14 +1,20 @@
 cask "font-latin-modern" do
-  version "2.006"
-  sha256 "608a6f3de9fbafd70f977fbf21ca32850178dd19b11530385358840c8f291f06"
+  version "2.007,31_03_2026"
+  sha256 "2d8e05083e211ac838a9e306fb5e4856ed37ec15130e185a971e2683a7c5d1a1"
 
-  url "https://www.gust.org.pl/projects/e-foundry/latin-modern/download/lm#{version}otf.zip"
+  url "https://www.gust.org.pl/projects/e-foundry/latin-modern/download/Latin_Modern-otf-#{version.csv.first.dots_to_underscores}#{"-#{version.csv.second}" if version.csv.second}.zip"
   name "Latin Modern"
   homepage "https://www.gust.org.pl/projects/e-foundry/latin-modern"
 
   livecheck do
     url "https://www.gust.org.pl/projects/e-foundry/latin-modern/download"
-    regex(/lm(\d+(?:\.\d+)+)otf\.zip/i)
+    regex(/href=.*?Latin[._-]Modern[._-]otf[._-]v?(\d+(?:[._]\d+)+)(?:-(\d+(?:[._]\d+)+))?\.zip/i)
+    strategy :page_match do |page, regex|
+      page.scan(regex).map do |match|
+        version = match[0].tr("_", ".")
+        match[1].present? ? "#{version},#{match[1]}" : version
+      end
+    end
   end
 
   font "lmmono10-italic.otf"

@@ -1,12 +1,11 @@
 cask "slite" do
   arch arm: "arm64", intel: "x64"
 
-  version "1.3.0,250731antv74pv7"
-  sha256 arm:   "25d954582c379d2d62b966de40c1c5fcec60d1d0eabab75d2432bca5fb78cac0",
-         intel: "c64a214d2f39de9102df1c7f28dfb39a201b4827a5c24eddc506f4ade83a1fa4"
+  version "1.6.1,260828mtti4851m"
+  sha256 arm:   "e7121a882260baaca19ec71e1a4504c9ed903b33aaa5a5892ff776dd2550ebf7",
+         intel: "ff2955208d4b58ef0e995191d8e61adc87a4902b793b5bb9d87b8657a7a8c9a5"
 
-  url "https://download.todesktop.com/20062929x31pwfi/Slite%20#{version.csv.first}%20-%20Build%20#{version.csv.second}-#{arch}-mac.zip",
-      verified: "download.todesktop.com/20062929x31pwfi/"
+  url "https://download.todesktop.com/20062929x31pwfi/Slite%20#{version.csv.first}%20-%20Build%20#{version.csv.second}-#{arch}-mac.zip"
   name "Slite"
   desc "Team communication and collaboration software"
   homepage "https://slite.com/"
@@ -23,6 +22,8 @@ cask "slite" do
       end
     end
   end
+
+  depends_on macos: :monterey
 
   app "Slite.app"
 

@@ -1,12 +1,11 @@
 cask "poe" do
   arch arm: "arm64", intel: "x64"
 
-  version "1.1.37"
-  sha256 arm:   "445622b205f4fea8dc50d2764c8e1b3304ab3f0bb9d913063f6e075163ef7653",
-         intel: "aca6ab1f716dae12cd0a76f9a7ad8764f17ae1d68389c762c792aec4ea8a3aee"
+  version "1.1.45"
+  sha256 arm:   "14260ec8e9c8d1c9a364b05c524724a93fa499488f2b59b4ac04ac73a5683bed",
+         intel: "0f4fc872b341ac9e6aacb7a3e616aa9e08ea9bbc4de0b8e65734e4a8dc266ad8"
 
-  url "https://desktop-app.poecdn.net/updates/darwin_#{arch}/#{version}.zip",
-      verified: "desktop-app.poecdn.net/updates/"
+  url "https://desktop-app.poecdn.net/updates/darwin_#{arch}/#{version}.zip"
   name "Poe"
   desc "AI chat client"
   homepage "https://poe.com/"
@@ -22,7 +21,7 @@ cask "poe" do
     end
   end
 
-  depends_on macos: ">= :monterey"
+  depends_on macos: :big_sur
 
   app "Poe.app"
 

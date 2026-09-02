@@ -1,11 +1,13 @@
 cask "opensc-app" do
-  version "0.26.1"
-  sha256 "7b66e256cefc7fdf6d9267383ac9e4763e299339aa52c99973f414b8a6a2ee05"
+  version "0.27.1"
+  sha256 "61c2c7b9329a65e43a34151016530d54859561d8fbbe7a723911119abf0ccd7f"
 
   url "https://github.com/OpenSC/OpenSC/releases/download/#{version}/OpenSC-#{version}.dmg"
   name "OpenSC"
   desc "Smart card libraries and utilities"
   homepage "https://github.com/OpenSC/OpenSC/wiki"
+
+  depends_on :macos
 
   pkg "OpenSC #{version}.pkg"
 

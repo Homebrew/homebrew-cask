@@ -2,8 +2,7 @@ cask "sherlock-app" do
   version "2.12.0"
   sha256 "97ca67d876eb3524c1bfdb74248a686097957f598c233d1458d19588a732348d"
 
-  url "https://sherlock-macos-releases.s3.amazonaws.com/Sherlock+#{version}.dmg",
-      verified: "sherlock-macos-releases.s3.amazonaws.com/"
+  url "https://sherlock-macos-releases.s3.amazonaws.com/Sherlock+#{version}.dmg"
   name "Sherlock"
   desc "iOS simulator visual debugger"
   homepage "https://sherlock.inspiredcode.io/"
@@ -13,7 +12,7 @@ cask "sherlock-app" do
     strategy :sparkle
   end
 
-  depends_on macos: ">= :monterey"
+  depends_on macos: :monterey
 
   app "Sherlock.app"
 
@@ -24,7 +23,7 @@ cask "sherlock-app" do
     "~/Library/Application Support/io.inspiredcode.Sherlock",
     "~/Library/Application Support/Sherlock",
     "~/Library/Caches/io.inspiredcode.Sherlock",
-    "~/Library/Caches/io.inspiredcode.Sherlock",
+    "~/Library/HTTPStorages/io.inspiredcode.Sherlock",
     "~/Library/Preferences/io.inspiredcode.Sherlock.plist",
   ]
 end

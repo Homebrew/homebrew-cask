@@ -1,9 +1,9 @@
 cask "huly" do
   arch arm: "arm64", intel: "x64"
 
-  version "0.7.266"
-  sha256 arm:   "81803e4a390b024956b6d3de1b7ad80295e6fa4d604c197050863a9a78376286",
-         intel: "b41f168660fa5c88c73fccd9be9b8fb653cacc5470722ab091897077d96078b5"
+  version "0.7.426"
+  sha256 arm:   "1965a7f09dff166586f3675aded9a9b53e1733096beacbc87967ab3b4f82a926",
+         intel: "24d31c6491364963e3f3bf086878a7012d7a2b2cbc6e15401e4c0712a24bb7e4"
 
   url "https://dist.huly.io/Huly-macos-#{version}-#{arch}.zip"
   name "Huly"
@@ -16,7 +16,7 @@ cask "huly" do
   end
 
   auto_updates true
-  depends_on macos: ">= :monterey"
+  depends_on macos: :monterey
 
   app "Huly.app"
 

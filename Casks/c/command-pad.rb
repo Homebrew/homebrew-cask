@@ -7,6 +7,8 @@ cask "command-pad" do
   desc "Start and stop command-line tools and monitor the output"
   homepage "https://github.com/supnate/command-pad"
 
+  depends_on :macos
+
   app "Command Pad.app"
 
   zap trash: [

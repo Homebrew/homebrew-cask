@@ -8,6 +8,7 @@ cask "react-native-debugger" do
   homepage "https://github.com/jhen0409/react-native-debugger"
 
   auto_updates true
+  depends_on :macos
 
   app "React Native Debugger.app"
 

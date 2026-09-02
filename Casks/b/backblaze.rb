@@ -1,6 +1,6 @@
 cask "backblaze" do
-  version "9.2.2.898"
-  sha256 "a1a22004ad24f05585180e17d43f001034ed958d73b4f6522f8123177a5bd126"
+  version "10.0.2.1048"
+  sha256 "21c7501391c3f28c13fd49c7e4eae24ea2780b708ef690cdc70464a88e141d57"
 
   url "https://secure.backblaze.com/api/install_backblaze?file=bzinstall-mac-#{version}.dmg"
   name "Backblaze"
@@ -15,6 +15,7 @@ cask "backblaze" do
   end
 
   auto_updates true
+  depends_on :macos
 
   installer manual: "Backblaze Installer.app"
 

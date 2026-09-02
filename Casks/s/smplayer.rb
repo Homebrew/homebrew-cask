@@ -2,8 +2,7 @@ cask "smplayer" do
   version "25.6.0"
   sha256 "de88cc07f128f4e99cb36fa0dc5ae38dea261e4d8f51cd0235eca427cb23672e"
 
-  url "https://github.com/smplayer-dev/smplayer/releases/download/v#{version}/smplayer-#{version}.dmg",
-      verified: "github.com/smplayer-dev/smplayer/"
+  url "https://github.com/smplayer-dev/smplayer/releases/download/v#{version}/smplayer-#{version}.dmg"
   name "SMPlayer"
   desc "Media player with built-in codecs"
   homepage "https://www.smplayer.info/"
@@ -12,6 +11,10 @@ cask "smplayer" do
     url :url
     strategy :github_latest
   end
+
+  disable! date: "2026-09-01", because: :fails_gatekeeper_check
+
+  depends_on :macos
 
   app "SMPlayer.app"
 

@@ -1,13 +1,13 @@
 cask "macskk" do
-  version "2.6.0"
-  sha256 "5f765747c357d1b370e53d8a136700d6b0f6b580fa697ad766ef467b8bb7e682"
+  version "2.19.0"
+  sha256 "6f2b5e24e7a412224b72c33c8cd0084207dfad40d3aa94357867d690019696df"
 
   url "https://github.com/mtgto/macSKK/releases/download/#{version}/macSKK-#{version}.dmg"
   name "macSKK"
   desc "SKK Input Method"
   homepage "https://github.com/mtgto/macSKK"
 
-  depends_on macos: ">= :ventura"
+  depends_on macos: :ventura
 
   pkg "macSKK-#{version}.pkg"
 

@@ -1,12 +1,11 @@
 cask "nao" do
   arch arm: "arm64", intel: "x64"
 
-  version "0.10.1"
-  sha256 arm:   "48fa39c5f9aa72dbcc4661a4fb51f26b94b596ba12b493e51315447880339b08",
-         intel: "1e4d2b54a3265129c71a35f36db9866268e390799078c6d97cd45b07a3fe6e17"
+  version "0.16.8"
+  sha256 arm:   "b860eb8a2b9c20e91cc9d8a431ecbcdbeeb8d4d8d82949c5538ab316152cfa7a",
+         intel: "78ddf4666a563344d9ab02f968e09bbce873c40ec8d0aaf8776c90fa62ca1750"
 
-  url "https://storage.googleapis.com/nao-releases/nao/darwin-#{arch}/#{version}/nao.#{arch}.#{version}.dmg",
-      verified: "storage.googleapis.com/nao-releases/nao/"
+  url "https://storage.googleapis.com/nao-releases/nao/darwin-#{arch}/#{version}/nao.#{arch}.#{version}.dmg"
   name "nao"
   desc "AI code editor for data"
   homepage "https://getnao.io/"
@@ -24,7 +23,7 @@ cask "nao" do
     end
   end
 
-  depends_on macos: ">= :big_sur"
+  depends_on macos: :big_sur
 
   app "nao.app"
   binary "#{appdir}/nao.app/Contents/Resources/app/bin/nao"

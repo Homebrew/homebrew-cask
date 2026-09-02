@@ -1,12 +1,11 @@
 cask "nrf-connect" do
   arch arm: "arm64", intel: "x64"
 
-  version "5.2.0"
-  sha256 arm:   "935e2eac4dcd28e15bbb109cf591e37f8a403326f0472ab4a4e21e7e0024ac1a",
-         intel: "7f7148d6eb07650a8d8b50902acb568ed3406572eb9506e5bf50dc1ead80c8da"
+  version "5.4.0"
+  sha256 arm:   "aa1c3154d40258c2fb4a82a923629efc837772e2754f5eb4c24d9c53d1457ef7",
+         intel: "f677d359a764aae0a7ce4e8870f5c36bc1d00dc8a2e0d05c601d823e41fb8983"
 
-  url "https://github.com/NordicSemiconductor/pc-nrfconnect-launcher/releases/download/v#{version}/nrfconnect-#{version}-#{arch}.dmg",
-      verified: "github.com/NordicSemiconductor/pc-nrfconnect-launcher/"
+  url "https://github.com/NordicSemiconductor/pc-nrfconnect-launcher/releases/download/v#{version}/nrfconnect-#{version}-#{arch}.dmg"
   name "nRF Connect for Desktop"
   desc "Framework for development on BLE devices"
   homepage "https://www.nordicsemi.com/Products/Development-tools/nRF-Connect-for-Desktop"
@@ -17,6 +16,7 @@ cask "nrf-connect" do
   end
 
   auto_updates true
+  depends_on macos: :monterey
 
   app "nRF Connect for Desktop.app"
 

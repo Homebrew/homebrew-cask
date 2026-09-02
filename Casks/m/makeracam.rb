@@ -1,12 +1,13 @@
 cask "makeracam" do
-  version "0.2.1.7"
-  sha256 "63596491b682b88253d7f6bdbd3a702b04534bb53fd3728d0d506c9c2f251a3c"
+  version "0.2.1.9"
+  sha256 "c591506cb661778a3dc08e56a86ad4e033780214ea17e9fc6a9955a1c973d2bd"
 
-  url "https://github.com/MakeraInc/MakeraCAM/releases/download/v#{version}/MakeraCAM_Mac_v#{version}.dmg",
-      verified: "github.com/MakeraInc/MakeraCAM/"
+  url "https://github.com/MakeraInc/MakeraCAM/releases/download/v#{version}/MakeraCAM_Mac_v#{version}.dmg"
   name "MakeraCAM"
   desc "CAM software for Makera CNCs"
   homepage "https://www.makera.com/pages/software"
+
+  depends_on :macos
 
   app "MakeraCAM.app"
 

@@ -1,12 +1,11 @@
 cask "rustdesk" do
   arch arm: "aarch64", intel: "x86_64"
 
-  version "1.4.3"
-  sha256 arm:   "53160fa045d44c33b0fb6e78465dfc01b6190852c19944a37d582e295180d0a7",
-         intel: "bfd26a785058a6cbd2a39f093adab66c0bb487d4d0fe42151f3e31e93af96b41"
+  version "1.4.9"
+  sha256 arm:   "f7935597b247d42c8f2a2ed71176a9f5868018cd9e1a33b8096418a668c8caf0",
+         intel: "fa1129a0635019f9c5841937942cc2b08be028a192f47c009edde7e53812904e"
 
-  url "https://github.com/rustdesk/rustdesk/releases/download/#{version}/rustdesk-#{version}-#{arch}.dmg",
-      verified: "github.com/rustdesk/rustdesk/"
+  url "https://github.com/rustdesk/rustdesk/releases/download/#{version}/rustdesk-#{version}-#{arch}.dmg"
   name "RustDesk"
   desc "Open source virtual/remote desktop application"
   homepage "https://rustdesk.com/"
@@ -16,6 +15,8 @@ cask "rustdesk" do
     regex(/^v?(\d+(?:[.-]\d+)+)$/i)
     strategy :github_latest
   end
+
+  depends_on macos: :monterey
 
   app "RustDesk.app"
 

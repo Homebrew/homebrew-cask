@@ -2,16 +2,17 @@ cask "avast-security" do
   version "15.8.0"
   sha256 :no_check
 
-  url "https://bits.avcdn.net/productfamily_ANTIVIRUS/insttype_FREE/platform_MAC/installertype_ONLINE/build_RELEASE/",
-      verified: "bits.avcdn.net/productfamily_ANTIVIRUS/insttype_FREE/platform_MAC/installertype_ONLINE/"
+  url "https://bits.avcdn.net/productfamily_ANTIVIRUS/insttype_FREE/platform_MAC/installertype_ONLINE/build_RELEASE/"
   name "Avast Security"
   desc "Antivirus software"
   homepage "https://www.avast.com/"
 
   livecheck do
-    url "http://mac-av.u.avcdn.net/mac-av/10_11/AAFM/changelog.html"
+    url "https://mac-av.u.avcdn.net/mac-av/10_11/AAFM/changelog.html"
     regex(%r{<h2>(\d+(?:\.\d+)+).*</h2>}i)
   end
+
+  depends_on :macos
 
   # pkg cannot be installed automatically
   installer manual: "Install Avast Security.pkg"

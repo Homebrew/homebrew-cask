@@ -1,6 +1,6 @@
 cask "linphone" do
-  version "5.3.1"
-  sha256 "9f4f9884ebb8e0ff13c43b0e51ccca6a78c3ee5d73b86463c49d38d213584895"
+  version "6.2.2"
+  sha256 "e94b9448e5bb3c08414d0279286b82310686a59df3866c60855e40ac4a2979bc"
 
   url "https://download.linphone.org/releases/macosx/app/Linphone-#{version}-mac.dmg"
   name "Linphone"
@@ -12,7 +12,7 @@ cask "linphone" do
     regex(/Linphone[._-]v?(\d+(?:\.\d+)+)[._-]mac\.dmg/i)
   end
 
-  depends_on macos: ">= :monterey"
+  depends_on macos: :monterey
 
   app "Linphone.app"
 
@@ -24,8 +24,4 @@ cask "linphone" do
     "~/Library/Preferences/linphone",
     "~/Library/Saved Application State/com.belledonnecommunications.linphone.savedState",
   ]
-
-  caveats do
-    requires_rosetta
-  end
 end

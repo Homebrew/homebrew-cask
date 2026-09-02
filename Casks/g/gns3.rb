@@ -1,10 +1,9 @@
 cask "gns3" do
   # NOTE: "3" is not a version number, but an intrinsic part of the product name
-  version "3.0.5"
-  sha256 "8980dd1162c583701db5c8c3e9354f608cda890e1888ed156996a5bcdcd0b53c"
+  version "3.0.6"
+  sha256 "0b557edb15127ac942f422ff9bff57640bb7c10e4c0e1db331653a2a05dd12ea"
 
-  url "https://github.com/GNS3/gns3-gui/releases/download/v#{version}/GNS3-#{version}.dmg",
-      verified: "github.com/GNS3/gns3-gui/"
+  url "https://github.com/GNS3/gns3-gui/releases/download/v#{version}/GNS3-#{version}.dmg"
   name "GNS3"
   name "Graphical Network Simulator 3"
   desc "GUI for the Dynamips Cisco router emulator"
@@ -19,7 +18,7 @@ cask "gns3" do
     strategy :github_releases
   end
 
-  depends_on macos: ">= :monterey"
+  depends_on macos: :monterey
 
   app "GNS3.app"
 

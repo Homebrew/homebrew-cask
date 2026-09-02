@@ -1,9 +1,8 @@
 cask "brewtarget" do
-  version "4.2.1"
-  sha256 "cd30fdae9a97d5b363eb7dbcaaef15c974947489b7fb16f7b3b191e7c39e5bb6"
+  version "5.1.1"
+  sha256 "01366cec23ca735cb11aec389d4fec61db921e3130ef4f50ee0ceaf9f66313e4"
 
-  url "https://github.com/Brewtarget/brewtarget/releases/download/v#{version}/brewtarget_#{version}_MacOS.dmg",
-      verified: "github.com/Brewtarget/brewtarget/"
+  url "https://github.com/Brewtarget/brewtarget/releases/download/v#{version}/brewtarget_#{version}_MacOS.dmg"
   name "brewtarget"
   desc "Beer recipe creation tool"
   homepage "https://www.brewtarget.beer/"
@@ -15,7 +14,7 @@ cask "brewtarget" do
 
   disable! date: "2026-09-01", because: :fails_gatekeeper_check
 
-  depends_on macos: ">= :sequoia"
+  depends_on macos: :sequoia
 
   app "brewtarget_#{version}_MacOS.app"
 

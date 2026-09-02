@@ -1,10 +1,6 @@
 cask "microsoft-powerpoint" do
-  on_monterey :or_older do
-    on_catalina :or_older do
-      version "16.66.22101101"
-      sha256 "bea8c4790445f726debd0f64d24fbdac59e3a9b51e95c092fb31da3913164540"
-    end
-    on_big_sur do
+  on_ventura :or_older do
+    on_big_sur :or_older do
       version "16.77.23091703"
       sha256 "9ece350fa314584aafacfcdf559bb67b8707bc2c2e7a961f7881d1ea280aac4d"
     end
@@ -12,14 +8,18 @@ cask "microsoft-powerpoint" do
       version "16.89.24091630"
       sha256 "44801ae2e12318f6f8982da6fabb1c7c1d79fb38cc464fecfd60189aa36e9555"
     end
+    on_ventura do
+      version "16.101.25100321"
+      sha256 "6256fbb45f2922fa60c9a0101da3b27f933fcf0ada6f530ef1aca235803a7782"
+    end
 
     livecheck do
       skip "Legacy version"
     end
   end
-  on_ventura :or_newer do
-    version "16.103.25110922"
-    sha256 "476b15be8fd078e07c7f16cd4c23e506dc06992fe1e1f2074e7c2475cdb787c5"
+  on_sonoma :or_newer do
+    version "16.112.26083020"
+    sha256 "77aaa12e2769a2c31d41718d51672d1e6ec88de9bd2490dd11cef04289d5cd1e"
 
     livecheck do
       url "https://go.microsoft.com/fwlink/p/?linkid=525136"
@@ -27,7 +27,7 @@ cask "microsoft-powerpoint" do
     end
   end
 
-  url "https://officecdnmac.microsoft.com/pr/C1297A47-86C4-4C1F-97FA-950631F94777/MacAutoupdate/Microsoft_PowerPoint_#{version}_Installer.pkg"
+  url "https://res.public.onecdn.static.microsoft/mro1cdnstorage/C1297A47-86C4-4C1F-97FA-950631F94777/MacAutoupdate/Microsoft_PowerPoint_#{version}_Installer.pkg"
   name "Microsoft PowerPoint"
   desc "Presentation software"
   homepage "https://www.microsoft.com/en-US/microsoft-365/powerpoint"
@@ -37,6 +37,7 @@ cask "microsoft-powerpoint" do
     "microsoft-office",
     "microsoft-office-businesspro",
   ]
+  depends_on :macos
 
   pkg "Microsoft_PowerPoint_#{version}_Installer.pkg",
       choices: [

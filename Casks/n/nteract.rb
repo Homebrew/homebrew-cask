@@ -1,32 +1,38 @@
 cask "nteract" do
-  version "0.28.0"
-  sha256 "de65abe5ed76489217a9c29bcc177aa5b2ee2f0657cd017301af33280ca8a737"
+  version "2.7.6,202608280705"
+  sha256 "355d19221eb5de3e66b2cd872d4ea06836d8bff4058ad49d7f780ab1e2fe29dc"
 
-  url "https://github.com/nteract/nteract/releases/download/v#{version}/nteract-#{version}.dmg"
+  url "https://github.com/nteract/desktop/releases/download/v#{version.csv.first}-stable.#{version.csv.second}/nteract-stable-darwin-arm64.dmg"
   name "nteract"
   desc "Interactive computing suite"
-  homepage "https://github.com/nteract/nteract"
+  homepage "https://github.com/nteract/desktop"
 
   livecheck do
-    url :url
-    strategy :github_latest
+    url "https://github.com/nteract/desktop/releases/download/stable-latest/latest.json"
+    regex(/v?(\d+(?:\.\d+)+)(?:[._-]stable)?[._-](\d+(?:\.\d+)*)/i)
+    strategy :json do |json, regex|
+      match = json["version"]&.match(regex)
+      next unless match
+
+      match[2].present? ? "#{match[1]},#{match[2]}" : match[1]
+    end
   end
 
-  auto_updates true
+  depends_on macos: :big_sur
+  depends_on arch: :arm64
 
   app "nteract.app"
 
-  uninstall delete: "/usr/local/bin/nteract"
+  uninstall launchctl: "io.nteract.runtimed",
+            delete:    [
+              "/usr/local/bin/nb",
+              "/usr/local/bin/runt",
+            ]
 
   zap trash: [
-    "~/Library/Application Support/Caches/nteract-updater",
     "~/Library/Application Support/nteract",
-    "~/Library/Logs/nteract",
-    "~/Library/Preferences/io.nteract.nteract.plist",
-    "~/Library/Saved Application State/io.nteract.nteract.savedState",
+    "~/Library/Application Support/org.nteract.desktop",
+    "~/Library/Caches/org.nteract.desktop",
+    "~/Library/WebKit/org.nteract.desktop",
   ]
-
-  caveats do
-    requires_rosetta
-  end
 end

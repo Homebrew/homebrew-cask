@@ -1,16 +1,15 @@
 cask "kameleo" do
-  version "4.2.0"
-  sha256 "f3daf5cfabb92a10a039ab912ea563fe27b3719df9cc5e970e1267014320a74c"
+  version "5.2.0"
+  sha256 "8acfdf89ae13ed701af53a443662bc32d2bb2d4a03ea3a6509e10b97ad61c526"
 
-  url "https://github.com/kameleo-io/releases/releases/download/#{version}/kameleo-#{version}-osx-arm64.dmg",
-      verified: "github.com/kameleo-io/releases/"
+  url "https://github.com/kameleo-io/kameleo/releases/download/#{version}/kameleo-#{version}-osx-arm64.dmg"
   name "Kameleo"
   desc "Antidetect browser to bypass anti-bot systems"
   homepage "https://kameleo.io/"
 
   auto_updates true
   depends_on arch: :arm64
-  depends_on macos: ">= :monterey"
+  depends_on macos: :monterey
 
   app "Kameleo.app"
 

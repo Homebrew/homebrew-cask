@@ -9,6 +9,9 @@ cask "coinomi-wallet" do
   homepage "https://www.coinomi.com/en/"
 
   deprecate! date: "2025-05-25", because: :moved_to_mas
+  disable! date: "2026-05-27", because: :moved_to_mas
+
+  depends_on :macos
 
   app "Coinomi Wallet.app"
 

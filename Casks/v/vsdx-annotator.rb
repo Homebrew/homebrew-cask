@@ -13,6 +13,7 @@ cask "vsdx-annotator" do
   end
 
   auto_updates true
+  depends_on :macos
 
   app "VSDX Annotator.app"
 

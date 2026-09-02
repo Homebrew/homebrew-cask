@@ -2,16 +2,15 @@ cask "tencent-meeting" do
   arch arm: "arm64", intel: "x86_64"
 
   on_arm do
-    version "3.39.1.424,615ff39948570b3c598bdcb2d868a9d3"
-    sha256 "9d613afddf3e4d4ea92198713cbb3ee5ca67aa5979ade49d413514c0b5738d32"
+    version "3.45.10.412,88ba033c8b9ccd1b728f9b292abb9088"
+    sha256 "39552078b8e4de9611a2e1a88855e92a143259bd32dfb9dbb88ecf427e9426fb"
   end
   on_intel do
-    version "3.39.1.424,586e21b2c369f59900f463141314a055"
-    sha256 "e4db0375c69a6f1c0767c63f2d7d006d0c63b71ea89c724e4fa9828c34517c4f"
+    version "3.45.10.412,db230c1ca40f8715f0d473797baaf9b2"
+    sha256 "725942e02a50d0cb0176e22870f13585b9e7d1977e82991fd7fe1a7bcaea5848"
   end
 
-  url "https://updatecdn.meeting.qq.com/cos/#{version.csv.second}/TencentMeeting_0300000000_#{version.csv.first}.publish.#{arch}.officialwebsite.dmg",
-      verified: "updatecdn.meeting.qq.com/cos/"
+  url "https://updatecdn.meeting.qq.com/cos/#{version.csv.second}/TencentMeeting_0300000000_#{version.csv.first}.publish.#{arch}.officialwebsite.dmg"
   name "Tencent Meeting"
   name "腾讯会议"
   desc "Cloud video conferencing"
@@ -31,6 +30,7 @@ cask "tencent-meeting" do
   end
 
   auto_updates true
+  depends_on :macos
 
   app "TencentMeeting.app"
 

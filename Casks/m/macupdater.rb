@@ -1,5 +1,5 @@
 cask "macupdater" do
-  version "3.4.6"
+  version "3.5.0"
   # required as upstream package is regularly updated in-place https://github.com/Homebrew/homebrew-cask/pull/182188#issuecomment-2284199515
   sha256 :no_check
 
@@ -8,15 +8,10 @@ cask "macupdater" do
   desc "Track and update to the latest versions of installed software"
   homepage "https://www.corecode.io/macupdater/index.html"
 
-  livecheck do
-    url "https://www.corecode.io/macupdater/macupdater#{version.major}.xml"
-    strategy :sparkle, &:short_version
-  end
-
   deprecate! date: "2026-01-01", because: :discontinued
 
   auto_updates true
-  depends_on macos: ">= :monterey"
+  depends_on macos: :monterey
 
   app "MacUpdater.app"
   binary "#{appdir}/MacUpdater.app/Contents/Resources/macupdater_install"
@@ -31,7 +26,10 @@ cask "macupdater" do
     "~/Library/Caches/com.corecode.MacUpdater",
     "~/Library/Containers/com.corecode.MacUpdaterLaunchHelper",
     "~/Library/Cookies/com.corecode.MacUpdater.binarycookies",
+    "~/Library/HTTPStorages/com.corecode.MacUpdater",
+    "~/Library/HTTPStorages/com.corecode.MacUpdater.binarycookies",
     "~/Library/Logs/Mac Updater Logs",
     "~/Library/Preferences/com.corecode.MacUpdater.plist",
+    "~/Library/WebKit/com.corecode.MacUpdater",
   ]
 end

@@ -7,7 +7,7 @@ cask "ball" do
   desc "Utility that adds a ball to your dock"
   homepage "https://github.com/nate-parrott/ball"
 
-  depends_on macos: ">= :ventura"
+  depends_on macos: :ventura
 
   app "Ball.app"
 

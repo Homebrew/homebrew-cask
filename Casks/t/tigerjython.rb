@@ -1,5 +1,5 @@
 cask "tigerjython" do
-  version "2.41"
+  version "2.42"
   sha256 :no_check
 
   url "https://www.tjgroup.ch/download/TigerJython.dmg"
@@ -11,6 +11,8 @@ cask "tigerjython" do
     url "https://www.tjgroup.ch/index.php?site=download"
     regex(/version\s+(\d+(?:\.\d+)+)/i)
   end
+
+  depends_on :macos
 
   suite "TigerJython"
 

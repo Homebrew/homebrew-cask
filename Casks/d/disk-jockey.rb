@@ -12,6 +12,8 @@ cask "disk-jockey" do
     strategy :sparkle, &:short_version
   end
 
+  depends_on :macos
+
   app "Disk Jockey.app"
 
   zap trash: [

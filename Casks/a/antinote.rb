@@ -1,6 +1,6 @@
 cask "antinote" do
-  version "1.1.7"
-  sha256 "f0a900697929d981ba2ab1aaa7b538a232d895ff53e38d42e1e6c9b9a769e7e5"
+  version "2.1.0"
+  sha256 "106bcf712a5890f3d5eeafe15013ef679fe5b8e438ee2f8db514eb7b46542681"
 
   url "https://antinote.io/updates/Antinote_#{version}.dmg"
   name "Antinote"
@@ -13,7 +13,7 @@ cask "antinote" do
   end
 
   auto_updates true
-  depends_on macos: ">= :sonoma"
+  depends_on macos: :sonoma
 
   app "Antinote.app"
 

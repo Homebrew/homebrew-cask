@@ -1,5 +1,5 @@
 cask "kilohearts-installer" do
-  version "2.4.4"
+  version "2.4.6"
   sha256 :no_check
 
   url "https://kilohearts.com/data/install/_/mac"
@@ -13,7 +13,7 @@ cask "kilohearts-installer" do
   end
 
   auto_updates true
-  depends_on macos: ">= :big_sur"
+  depends_on macos: :big_sur
 
   app "Kilohearts Installer.app"
 

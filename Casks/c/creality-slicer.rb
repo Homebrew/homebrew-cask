@@ -15,6 +15,8 @@ cask "creality-slicer" do
     end
   end
 
+  depends_on :macos
+
   app "Creality Slicer.app"
 
   zap trash: [

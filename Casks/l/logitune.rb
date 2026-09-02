@@ -1,5 +1,5 @@
 cask "logitune" do
-  version "3.11.89"
+  version "3.14.72"
   sha256 :no_check
 
   url "https://software.vc.logitech.com/downloads/tune/LogiTuneInstaller.dmg"
@@ -21,6 +21,7 @@ cask "logitune" do
   end
 
   auto_updates true
+  depends_on :macos
 
   installer manual: "LogiTuneInstaller.app"
 

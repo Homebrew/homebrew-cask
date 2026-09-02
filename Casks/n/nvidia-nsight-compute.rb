@@ -1,11 +1,11 @@
 cask "nvidia-nsight-compute" do
   arch arm: "arm64", intel: "x86_64"
 
-  version "2025.3.0.19-36273991"
-  sha256 arm:   "e7df8a120a66f72a9a740c81350d365e3acb1f9cff8eab6a9db49f2d702e269d",
-         intel: "03ea2e18bbf3e3bcbe552b15ba57159dda795e073efc8dbe1201c7006051e01f"
+  version "2026.2.1.6"
+  sha256 arm:   "3c72deb8208751babcdb9ed353a7a20092754bdff7002e771e39db48813bf1b4",
+         intel: "b091a67218d2a48f16515422985f01f6d1ba6230d8ddcbf550bccc21b75f0d53"
 
-  url "https://developer.nvidia.com/downloads/assets/tools/secure/nsight-compute/#{version.major_minor_patch.dots_to_underscores}/nsight-compute-mac-#{arch}-#{version}.dmg"
+  url "https://developer.nvidia.com/downloads/assets/tools/secure/nsight-compute/#{version.major_minor_patch.dots_to_underscores}/nsight_compute-mac-#{arch}-#{version}.dmg"
   name "NVIDIA Nsight Compute"
   desc "Interactive profiler for CUDA and NVIDIA OptiX"
   homepage "https://developer.nvidia.com/nsight-compute"
@@ -15,7 +15,7 @@ cask "nvidia-nsight-compute" do
     regex(/nsight[._-]compute[._-]mac[._-]#{arch}[._-]v?(\d+(?:[.-]\d+)+)\.dmg/i)
   end
 
-  disable! date: "2025-10-02", because: "requires login to download"
+  depends_on :macos
 
   app "NVIDIA Nsight Compute.app"
 

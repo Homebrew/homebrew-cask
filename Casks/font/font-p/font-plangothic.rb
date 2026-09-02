@@ -1,6 +1,6 @@
 cask "font-plangothic" do
-  version "2.9.5787"
-  sha256 "98e88ae093f0cb4ec7142eb3e517c9117ec00e434f425857adb52c2b333a8e4b"
+  version "2.9.5795"
+  sha256 "5a6c8a957ca03487ab86157dc5880af9a4e9f1fa1b74b3693486408d975ff1f9"
 
   url "https://github.com/Fitzgerald-Porthmouth-Koenigsegg/Plangothic_Project/releases/download/V#{version}/Plangothic-OTF-V#{version}.7z"
   name "Plangothic"

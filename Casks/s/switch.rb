@@ -1,5 +1,5 @@
 cask "switch" do
-  version "13.07"
+  version "14.08"
   sha256 :no_check
 
   url "https://www.nch.com.au/components/switchmaci.zip"
@@ -11,6 +11,8 @@ cask "switch" do
     url "https://www.nch.com.au/switch/versions.html"
     regex(/Version\s+v?(\d+(?:\.\d+)+)[^>]*>\s*macOS/im)
   end
+
+  depends_on :macos
 
   app "Switch.app"
 

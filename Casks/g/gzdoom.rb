@@ -20,6 +20,8 @@ cask "gzdoom" do
     end
   end
 
+  depends_on :macos
+
   app "GZDoom.app"
 
   zap trash: "~/Library/Preferences/gzdoom.ini"

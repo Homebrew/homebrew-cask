@@ -1,9 +1,9 @@
 cask "prosys-opc-ua-browser" do
   arch arm: "aarch64", intel: "x64"
 
-  version "5.2.0,15"
-  sha256 arm:   "48a6b2529902332e2eabbec5bf957d3365354b4be67d4a191b665664bb09b19a",
-         intel: "19cd99abfbca7dc60200e354266e72588c2f57b98648ed93ad2ce172ccfe87cd"
+  version "2026.1.2,38"
+  sha256 arm:   "1813beffa796e792e79f784a6518d57269dcc1ed45af8452e1411782bf949d2d",
+         intel: "7eb3d6798f252ee908df1e3b6e36c7b8c2160154987fc09d08b26b841e628415"
 
   url "https://downloads.prosysopc.com/opcua/apps/UaBrowser/dist/#{version.csv.first}-#{version.csv.second}/prosys-opc-ua-browser-mac-#{arch}-#{version.csv.first}-#{version.csv.second}.dmg"
   name "Prosys OPC UA Browser"
@@ -20,6 +20,8 @@ cask "prosys-opc-ua-browser" do
       "#{match[1]},#{match[2]}"
     end
   end
+
+  depends_on :macos
 
   installer script: {
     executable: "Prosys OPC UA Browser Installer.app/Contents/MacOS/JavaApplicationStub",

@@ -1,5 +1,5 @@
 cask "virtual-ii" do
-  version "13.0.1"
+  version "13.2"
   sha256 :no_check
 
   url "https://virtualii.com/VirtualII.dmg"
@@ -7,23 +7,16 @@ cask "virtual-ii" do
   desc "Apple II Emulator"
   homepage "https://virtualii.com/"
 
-  livecheck do
-    url "https://virtualii.com/versionlist.xml"
-    strategy :xml do |xml|
-      version = xml.elements["//key[text()='VirtualII']"]&.next_element&.text
-      next if version.blank?
+  # The download URL is consistently unreachable in CI environment
+  disable! date: "2026-08-28", because: :unreachable
 
-      version.strip
-    end
-  end
-
-  depends_on macos: ">= :monterey"
+  depends_on macos: :monterey
 
   suite "Virtual ]["
 
-  preflight do
+  preflight_steps do
     # There is no sub-folder in the DMG; the root *is* the folder
-    FileUtils.mv(staged_path.children, staged_path.join("Virtual ][").tap(&:mkpath))
+    move_contents ".", "Virtual ]["
   end
 
   zap trash: [

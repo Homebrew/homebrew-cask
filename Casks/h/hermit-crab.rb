@@ -7,12 +7,10 @@ cask "hermit-crab" do
   desc "Run shell commands without leaving your current app"
   homepage "https://belkadan.com/hermitcrab/"
 
-  livecheck do
-    url "https://belkadan.com/hermitcrab/updates/"
-    strategy :sparkle
-  end
+  disable! date: "2026-05-16", because: :no_longer_available
 
   auto_updates true
+  depends_on :macos
 
   app "Hermit Crab.app"
 

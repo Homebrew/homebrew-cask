@@ -1,11 +1,12 @@
 cask "egovframedev" do
   arch arm: "AArch64", intel: "x86_64"
 
-  version "4.3.1"
-  sha256 arm:   "f7a13637be51c750093b98763df20210131c6041a6fcba8237c352eb1f335a5d",
-         intel: "f0149077a39664654842b8ee6b2a0084fd0bd17b726d078fe3b1de2eeec64bdb"
+  version "5.0.2"
+  sha256 arm:   "17aa276ec0775afc5169c9dbfab56bbdd94d4f74940a371c1b46608d59e57c32",
+         intel: "cbe4400bacd588b622b798409dc3f4e92bbb67f5365db1b335372864a0788b23"
 
-  url "https://maven.egovframe.go.kr/publist/HDD1/public/eGovFrameDev-#{version}-Mac-#{arch}.dmg"
+  url "https://maven.egovframe.go.kr/publist/HDD1/public/egovframework_v#{version.major_minor}/2_DevelopmentEnvironment/eGovFrame-Dev/#{version}/eGovFrameDev-#{version}-macOS-#{arch}.dmg",
+      user_agent: :fake
   name "eGovFrameDev"
   desc "Open-source framework by South Korea for web-based public service development"
   homepage "https://www.egovframe.go.kr/"
@@ -15,9 +16,9 @@ cask "egovframedev" do
     regex(/개발자용\s+개발환경\s+v?(\d+(?:\.\d+)+)\s+(?!Beta)/i)
   end
 
-  depends_on macos: ">= :big_sur"
+  depends_on macos: :big_sur
 
-  app "eGovFrameDev-#{version}-Mac-#{arch}.app"
+  app "eGovFrameDev-#{version}-macOS-#{arch}.app"
 
   zap trash: [
     "~/Library/Preferences/org.eclipse.platform.ide.plist",

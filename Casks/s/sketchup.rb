@@ -1,21 +1,24 @@
 cask "sketchup" do
-  version "2026.0.428.164"
-  sha256 "eb2ed5fb18b9dcc63350057275ab14d4f9624a98996c4ce7f6f1299832fa2dd5"
+  version "2026.2.242.76"
+  sha256 "3a89d6ea7a5eddbd97521bde884f528f2dd6348b6408b74651551fb89d27c344"
 
   url "https://download.sketchup.com/SketchUp-#{version.dots_to_hyphens}.dmg"
   name "SketchUp"
   desc "3D modeling software used to create and manipulate 3D models"
-  homepage "https://www.sketchup.com/"
+  homepage "https://sketchup.trimble.com/en"
 
   livecheck do
-    url "https://www.sketchup.com/download/all"
-    regex(/href=.*?SketchUp[._-]v?(\d+(?:[.-]\d+)+)\.dmg/i)
-    strategy :page_match do |page, regex|
-      page.scan(regex).map { |match| match[0].tr("-", ".") }
+    url "https://sketchup.trimble.com/sketchup/SketchUpPro-dmg"
+    regex(/SketchUp[._-]v?(\d+(?:[.-]\d+)+)\.dmg/i)
+    strategy :header_match do |headers, regex|
+      match = headers["location"].match(regex)
+      next if match.blank?
+
+      match[1].tr("-", ".")
     end
   end
 
-  depends_on macos: ">= :monterey"
+  depends_on macos: :monterey
 
   suite "SketchUp #{version.major}"
 

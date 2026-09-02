@@ -2,11 +2,11 @@ cask "akuity" do
   arch arm: "arm64", intel: "amd64"
   os macos: "darwin", linux: "linux"
 
-  version "0.25.1-0.20251030042310-58bc912eac78"
-  sha256 arm:          "819f4879aeeb6e185379dabb27b68499e009594b0538ab9bc00e5bc5491c640a",
-         intel:        "1ae08fb14d7cce428268980d02d562ed8152ac135a0ed9161d23acc0015683d9",
-         arm64_linux:  "5174c4173d1440ceeeaccceab50c88c8309f1096c9a39fb3f16931e228df0deb",
-         x86_64_linux: "078c838fda2cd38c3e907948ec6a43503308334c74e4f406715255303afa47cc"
+  version "0.33.0-rl.1.0.20260827115115-953dc42eb87d"
+  sha256 arm:          "34cc85faaef9e85c3b47450ca7c28c74d580b7fc2750767231f8c356135f1a5d",
+         intel:        "a8119272b2f399533cb301c8e42265e87ce928c2f6ba36c13e89c4bd24a0314d",
+         arm64_linux:  "c396d45af6448fad5212be5526bed4aa32f446db6d720c3a59a1f763f7eb5103",
+         x86_64_linux: "de3e442ff37ce140c0834ec855de83e11788f2910312226ebae91747938eb4a6"
 
   url "https://dl.akuity.io/akuity-cli/v#{version}/#{os}/#{arch}/akuity"
   name "Akuity"
@@ -15,7 +15,7 @@ cask "akuity" do
 
   livecheck do
     url "https://dl.akuity.io/akuity-cli/stable.txt"
-    regex(/v?(\d+(?:\.\d+)+(?:[_-]\d+(?:\.\d+)*)?(?:[_-]\h+)?)/i)
+    regex(/^v?(\d+(?:\.\d+)+.*)$/i)
   end
 
   binary "akuity"

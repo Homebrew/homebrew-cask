@@ -1,13 +1,12 @@
 cask "tiger-trade" do
-  version "9.11.2"
-  sha256 "7d37ae1caa0650739ff3aa523ac748dbb46303eef5a0eb8fd3dcc4fefae6ab58"
+  version "9.26.2"
+  sha256 "ddf5578ba565b06404c4574c6a22181196d02e513e21b8a32d5aedeca0a6f6e0"
 
-  url "https://download.tigerfintech.com/desktop/cdn/f/TigerTrade_#{version}.dmg",
-      verified: "download.tigerfintech.com/"
+  url "https://download.tigerfintech.com/desktop/cdn/f/TigerTrade_#{version}.dmg"
   name "Tiger Trade"
   name "老虎证券"
   desc "Trading platform"
-  homepage "https://www.tigerbrokers.com.sg/download/"
+  homepage "https://www.itiger.com/sg/download/"
 
   livecheck do
     url "https://up.play-analytics.com/app/upgrade/latest?lang=zh_CN&platform=darwin&appVer=1"
@@ -17,10 +16,13 @@ cask "tiger-trade" do
     end
   end
 
+  depends_on :macos
+
   app "Tiger Trade.app"
 
   zap trash: [
     "~/Library/Application Scripts/com.itiger.TigerTrade-Mac",
+    "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.itiger.tigertrade-mac.sfl*",
     "~/Library/Containers/com.itiger.TigerTrade-Mac",
   ]
 end

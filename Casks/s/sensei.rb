@@ -1,6 +1,6 @@
 cask "sensei" do
-  version "2.0,125"
-  sha256 "4d395c8c997489d49e8f763026a45a8c765023d3826fc3afe27ad20425656583"
+  version "2.1.2,139"
+  sha256 "7a966316472666be061a444078bf0cf8c7c5a6837fc7ed23694691195adef5b0"
 
   url "https://cdn.cindori.com/apps/sensei/updates/#{version.csv.first}-#{version.csv.second}/Sensei.dmg"
   name "Sensei"
@@ -13,11 +13,18 @@ cask "sensei" do
   end
 
   auto_updates true
-  depends_on macos: ">= :ventura"
+  depends_on macos: :sonoma
 
   app "Sensei.app"
 
-  uninstall launchctl: "org.cindori.SenseiTool",
+  uninstall launchctl: [
+              "org.cindori.SenseiMonitor",
+              "org.cindori.SenseiTool",
+            ],
+            quit:      [
+              "org.cindori.Sensei",
+              "org.cindori.SenseiMonitor",
+            ],
             delete:    [
               "/Library/LaunchAgents/org.cindori.SenseiMonitor.plist",
               "/Library/LaunchDaemons/org.cindori.SenseiDaemon.plist",
@@ -26,10 +33,15 @@ cask "sensei" do
             ]
 
   zap trash: [
+    "/Library/Logs/DiagnosticReports/Sensei_*.cpu_resource.diag",
+    "/Library/Logs/DiagnosticReports/Sensei_*.hang",
+    "~/Library/Application Support/CrashReporter/Sensei_*.plist",
     "~/Library/Application Support/org.cindori.Sensei",
     "~/Library/Application Support/Sensei",
+    "~/Library/Caches/amplitude/org.cindori.Sensei",
     "~/Library/Caches/com.plausiblelabs.crashreporter.data/org.cindori.Sensei",
     "~/Library/Caches/org.cindori.Sensei",
+    "~/Library/Caches/SentryCrash/Sensei",
     "~/Library/Cookies/org.cindori.Sensei.binarycookies",
     "~/Library/HTTPStorages/org.cindori.Sensei",
     "~/Library/HTTPStorages/org.cindori.Sensei.binarycookies",

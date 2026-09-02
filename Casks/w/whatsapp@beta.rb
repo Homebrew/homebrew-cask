@@ -1,43 +1,43 @@
 cask "whatsapp@beta" do
-  version "2.25.34.17"
-  sha256 "a050e44a8d7c3b807c889b4e2fb85d265b81a14e6805793e18b7f3efcb73ee13"
+  version "26.35.12"
+  sha256 "7ee3944047abee1a9ad87f85db5099e34e72867a6d466253d3628bcaa25fed58"
 
-  url "https://web.whatsapp.com/desktop/mac_native/release/?version=#{version}&extension=zip&configuration=Beta&branch=master"
+  url "https://web.whatsapp.com/desktop/mac_native/release/?version=2.#{version}&extension=zip&configuration=Beta&branch=master"
   name "WhatsApp Beta"
   desc "Native desktop client for WhatsApp"
   homepage "https://www.whatsapp.com/"
 
   livecheck do
     url "https://web.whatsapp.com/desktop/mac_native/updates/?configuration=Beta&branch=master"
-    regex(/version=v?(\d+(?:\.\d+)+)/i)
-    strategy :sparkle do |item, regex|
-      item.url.scan(regex).map(&:first)
-    end
+    strategy :sparkle, &:short_version
   end
 
   auto_updates true
-  conflicts_with cask: [
-    "whatsapp",
-    "whatsapp@legacy",
-  ]
-  depends_on macos: ">= :monterey"
+  conflicts_with cask: "whatsapp"
+  depends_on macos: :monterey
 
   app "WhatsApp.app"
 
+  uninstall launchctl: [
+              "net.whatsapp.WhatsApp-sparkle-progress",
+              "net.whatsapp.WhatsApp-sparkle-updater",
+            ],
+            quit:      [
+              "net.whatsapp.WhatsApp",
+              "net.whatsapp.WhatsApp-sparkle-progress",
+              "net.whatsapp.WhatsApp-sparkle-updater",
+            ]
+
   zap trash: [
-    "~/Library/Application Scripts/net.whatsapp.WhatsApp",
-    "~/Library/Application Scripts/net.whatsapp.WhatsApp.Intents",
-    "~/Library/Application Scripts/net.whatsapp.WhatsApp.IntentsUI",
-    "~/Library/Application Scripts/net.whatsapp.WhatsApp.ServiceExtension",
+    "~/Library/Application Scripts/group.net.whatsapp.family",
+    "~/Library/Application Scripts/group.net.whatsapp.WhatsApp.private",
+    "~/Library/Application Scripts/group.net.whatsapp.WhatsApp.shared",
+    "~/Library/Application Scripts/group.net.whatsapp.WhatsAppSMB.shared",
+    "~/Library/Application Scripts/net.whatsapp.WhatsApp*",
     "~/Library/Caches/net.whatsapp.WhatsApp",
-    "~/Library/Containers/net.whatsapp.WhatsApp",
-    "~/Library/Containers/net.whatsapp.WhatsApp.Intents",
-    "~/Library/Containers/net.whatsapp.WhatsApp.ServiceExtension",
+    "~/Library/Containers/net.whatsapp.WhatsApp*",
     "~/Library/Group Containers/group.com.facebook.family",
-    "~/Library/Group Containers/group.net.whatsapp.family",
-    "~/Library/Group Containers/group.net.whatsapp.WhatsApp.private",
-    "~/Library/Group Containers/group.net.whatsapp.WhatsApp.shared",
-    "~/Library/Group Containers/group.net.whatsapp.WhatsAppSMB.shared",
+    "~/Library/Group Containers/group.net.whatsapp*",
     "~/Library/Saved Application State/net.whatsapp.WhatsApp.savedState",
   ]
 end

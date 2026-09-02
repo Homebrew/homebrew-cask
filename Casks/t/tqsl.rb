@@ -1,6 +1,6 @@
 cask "tqsl" do
-  version "2.8.2"
-  sha256 "c3d796ace8b377e915cac7ece64e98a335eb46e54b9403e9a20f1a347089ebfb"
+  version "2.8.6"
+  sha256 "eda4a02d307651928e240a6415d96e7bcf5efca71ec54f7262c7a24f8e69258b"
 
   url "https://www.arrl.org/tqsl/tqsl-#{version}.pkg"
   name "Trusted QSL"
@@ -11,6 +11,8 @@ cask "tqsl" do
     url :homepage
     regex(%r{href=.*?/tqsl[._-]v?(\d+(?:\.\d+)+)\.pkg}i)
   end
+
+  depends_on :macos
 
   pkg "tqsl-#{version}.pkg"
 

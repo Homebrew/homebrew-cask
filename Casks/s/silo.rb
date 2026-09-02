@@ -1,6 +1,6 @@
 cask "silo" do
-  version "2025.2.0"
-  sha256 "3751133586904f76840ee40778792d43c954e039ab6f346ce54093a1eca67cdb"
+  version "2026.2.0"
+  sha256 "007d0b62134745336ffa3781549c12957290873282f330d4e6c2bc23ce493548"
 
   url "https://nevercenter.com/silo/download/filearchive/Install_Silo_#{version.dots_to_underscores}_mac.dmg"
   name "Silo"
@@ -15,7 +15,11 @@ cask "silo" do
     end
   end
 
+  depends_on :macos
+
   app "Silo.app"
+
+  uninstall quit: "com.nevercenter.silo"
 
   zap trash: [
     "/Library/Caches/com.nevercenter.silo",

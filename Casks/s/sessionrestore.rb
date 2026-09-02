@@ -1,5 +1,5 @@
 cask "sessionrestore" do
-  version "3.0.1"
+  version "4.0"
   sha256 :no_check
 
   url "https://sweetpproductions.com/products/sessionrestore/SessionRestore.dmg"
@@ -13,7 +13,7 @@ cask "sessionrestore" do
   end
 
   auto_updates true
-  depends_on macos: ">= :ventura"
+  depends_on macos: :ventura
 
   app "SessionRestore.app"
 

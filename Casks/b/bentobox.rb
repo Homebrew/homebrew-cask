@@ -1,9 +1,8 @@
 cask "bentobox" do
-  version "0.9.1"
-  sha256 "46f8370abe7e22dbdaaaae2d1c7b46880173e32d0a3c7d111ff4571e3d43e1ff"
+  version "1.1.10"
+  sha256 "2a02591fcd74286dfdfd992b8e7a7fed1272a4579d2412c3eeb5fb2d167a7125"
 
-  url "https://releases.bentobox.friendlyventures.org/#{version}/bentobox-macos-universal.zip",
-      verified: "releases.bentobox.friendlyventures.org/"
+  url "https://releases.bentobox.friendlyventures.org/#{version}/bentobox-macos-universal.zip"
   name "BentoBox"
   desc "Window manager that organizes desktop applications into predefined zones"
   homepage "https://bentoboxapp.com/"
@@ -14,7 +13,7 @@ cask "bentobox" do
   end
 
   auto_updates true
-  depends_on macos: ">= :ventura"
+  depends_on macos: :sonoma
 
   app "BentoBox.app"
 

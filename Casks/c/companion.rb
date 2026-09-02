@@ -2,18 +2,18 @@ cask "companion" do
   arch arm: "arm64", intel: "x64"
   livecheck_arch = on_arch_conditional arm: "arm", intel: "intel"
 
-  version "4.1.4,8492,4cb4314544"
-  sha256 arm:   "7b34eb6cdf7164c1c511d71df42392580906208c672067148a4cbad46b983bf9",
-         intel: "fa71f6c14e1c96cf94ed26417c270499cbe5e1920c4932ab07745f9564bd3f45"
+  version "5.0.4,9717,a69c14dec2"
+  sha256 arm:   "893becb2ac02c30909de2e469d557b37407b1500387c022dff73d08446ad9f81",
+         intel: "11c1e6168cc65fe23656fe6fb1dd939ac4f7a8c33ab7b0f53dafa6ec108bedf5"
 
-  url "https://s4.bitfocus.io/builds/companion/companion-mac-#{arch}-#{version.csv.first}+#{version.csv.second}-stable-#{version.csv.third}.dmg"
+  url "https://cf-pub.bitfocus.io/companion/companion/companion-mac-#{arch}-#{version.csv.first}-#{version.csv.second}-stable-#{version.csv.third}.dmg"
   name "Bitfocus Companion"
   desc "Streamdeck extension and emulation software"
   homepage "https://bitfocus.io/companion"
 
   livecheck do
     url "https://api.bitfocus.io/v1/product/companion/packages?branch=stable&limit=150"
-    regex(/companion[._-]mac[._-]#{arch}[._-]v?(\d+(?:\.\d+)+)\+(\d+(?:\.\d+)*)[._-]stable[._-](\h+)\.dmg/i)
+    regex(/companion[._-]mac[._-]#{arch}[._-]v?(\d+(?:\.\d+)+)[+-](\d+(?:\.\d+)*)[._-]stable[._-](\h+)\.dmg/i)
     strategy :json do |json, regex|
       json["packages"]&.map do |package|
         next if package["target"] != "mac-#{livecheck_arch}"
@@ -26,7 +26,7 @@ cask "companion" do
     end
   end
 
-  depends_on macos: ">= :big_sur"
+  depends_on macos: :monterey
 
   app "Companion.app"
 

@@ -7,10 +7,14 @@ cask "spaceid" do
   desc "Menu bar indicator showing the currently selected space"
   homepage "https://github.com/dshnkao/SpaceId/"
 
+  disable! date: "2026-09-01", because: :fails_gatekeeper_check
+
+  depends_on :macos
+
   app "SpaceId.app"
 
-  preflight do
-    set_permissions "#{staged_path}/SpaceId.app", "0755"
+  preflight_steps do
+    set_permissions "SpaceId.app", "0755"
   end
 
   uninstall login_item: "SpaceId"

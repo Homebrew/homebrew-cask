@@ -5,8 +5,7 @@ cask "soapui" do
   sha256 arm:   "8fd400d40bebfa0260d2f7a8ccead22742a08b6c0b33ef321def7b2f19022969",
          intel: "1c95a58c88151b20adb7fc76cfbe22f3a429d2306cd7e20496a5dce7e5b16eec"
 
-  url "https://dl.eviware.com/soapuios/#{version}/SoapUI-#{arch}-#{version}.dmg",
-      verified: "dl.eviware.com/soapuios/"
+  url "https://dl.eviware.com/soapuios/#{version}/SoapUI-#{arch}-#{version}.dmg"
   name "SmartBear SoapUI"
   desc "API testing tool"
   homepage "https://www.soapui.org/"
@@ -15,6 +14,8 @@ cask "soapui" do
     url "https://www.soapui.org/downloads/latest-release/"
     regex(%r{href=.*?/SoapUI[._-]#{arch}[._-]v?(\d+(?:\.\d+)+)\.dmg}i)
   end
+
+  depends_on :macos
 
   installer script: {
     executable: "SoapUI #{version} Installer.app/Contents/MacOS/JavaApplicationStub",

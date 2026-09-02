@@ -1,9 +1,10 @@
 cask "dotnet-sdk@preview" do
+  # Differs from the `dotnet` formula by including additional closed-source components
   arch arm: "arm64", intel: "x64"
 
-  version "10.0.100"
-  sha256 arm:   "3ae5af0d9dd791e9472003ca38285f37cd1e4f7dea1c3b053e6f472ebc8753e8",
-         intel: "777e6269ea4d7a942db5704d61ce4a15342bf62ba961e6dc356350b302377d5e"
+  version "11.0.100-preview.7.26381.103"
+  sha256 arm:   "df7704195094f778abd9d862288ac61d141ee0bd47b4ff66add4bb9078bd0201",
+         intel: "1306c0758625ed38b4ab4a83b81f7b7bd075389de8b2d76dd773e20c4ead8ea7"
 
   url "https://builds.dotnet.microsoft.com/dotnet/Sdk/#{version}/dotnet-sdk-#{version}-osx-#{arch}.pkg"
   name ".NET SDK"
@@ -23,10 +24,8 @@ cask "dotnet-sdk@preview" do
     "dotnet-runtime",
     "dotnet-runtime@preview",
     "dotnet-sdk",
-    "dotnet-sdk@8",
-    "dotnet-sdk@9",
   ]
-  depends_on macos: ">= :ventura"
+  depends_on macos: :monterey
 
   pkg "dotnet-sdk-#{version.csv.first}-osx-#{arch}.pkg"
   binary "/usr/local/share/dotnet/dotnet"

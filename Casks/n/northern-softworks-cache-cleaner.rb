@@ -1,5 +1,5 @@
 cask "northern-softworks-cache-cleaner" do
-  version "26.1"
+  version "26.6"
   sha256 :no_check
 
   # Homepage, livecheck regex, and app change with major macOS releases
@@ -14,11 +14,14 @@ cask "northern-softworks-cache-cleaner" do
     regex(/Download\s*Tahoe\s*Cache\s*Cleaner\s*v?(\d+(?:\.\d+)+)/i)
   end
 
+  depends_on :macos
+
   app "Tahoe Cache Cleaner.app"
 
   zap trash: [
     "~/Library/Application Support/com.northernsw.nswCacheCleaner",
     "~/Library/Preferences/Sonoma Cache Cleaner Preferences",
+    "~/Library/Preferences/Tahoe Cache Cleaner Preferences",
     "~/Library/Preferences/Ventura Cache Cleaner Preferences",
     "~/Library/Saved Application State/com.northernsw.nswCacheCleaner.savedState",
   ]

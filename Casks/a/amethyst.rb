@@ -1,33 +1,19 @@
 cask "amethyst" do
-  on_catalina :or_older do
-    version "0.22.2"
-    sha256 "43b16fadf9d349c5d3f5a406917f60e31d0ea65b1f9fc529b09292e906f75e50"
+  version "0.24.3"
+  sha256 "442d2b9fe53f8062051dd63e5d01512ed2020c78cbdbe4f93ecf30290a5b0302"
 
-    url "https://github.com/ianyh/Amethyst/releases/download/v#{version}/Amethyst.zip",
-        verified: "github.com/ianyh/Amethyst/"
-
-    livecheck do
-      skip "Legacy version"
-    end
-  end
-  on_big_sur :or_newer do
-    version "0.24.0"
-    sha256 "bde78f466a2a211741f28fbc329cb7f82b1133612d1f17befbee944cc703316b"
-
-    url "https://github.com/ianyh/Amethyst/releases/download/v#{version}/Amethyst.zip",
-        verified: "github.com/ianyh/Amethyst/"
-
-    livecheck do
-      url "https://ianyh.com/amethyst/appcast.xml"
-      strategy :sparkle, &:short_version
-    end
-  end
-
+  url "https://github.com/ianyh/Amethyst/releases/download/v#{version}/Amethyst.zip"
   name "Amethyst"
   desc "Automatic tiling window manager similar to xmonad"
   homepage "https://ianyh.com/amethyst/"
 
+  livecheck do
+    url "https://ianyh.com/amethyst/appcast.xml"
+    strategy :sparkle, &:short_version
+  end
+
   auto_updates true
+  depends_on :macos
 
   app "Amethyst.app"
 

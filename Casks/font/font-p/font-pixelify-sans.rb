@@ -2,8 +2,7 @@ cask "font-pixelify-sans" do
   version :latest
   sha256 :no_check
 
-  url "https://github.com/google/fonts/raw/main/ofl/pixelifysans/PixelifySans%5Bwght%5D.ttf",
-      verified: "github.com/google/fonts/"
+  url "https://github.com/google/fonts/raw/main/ofl/pixelifysans/PixelifySans%5Bwght%5D.ttf"
   name "Pixelify Sans"
   homepage "https://fonts.google.com/specimen/Pixelify+Sans"
 

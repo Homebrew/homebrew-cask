@@ -1,9 +1,8 @@
 cask "bezel" do
-  version "3.4.1"
-  sha256 "43f0cd34007aef37344c35d960738a5c3fc51f542c2fc34d10b785272ee4b78d"
+  version "4.7.0"
+  sha256 "db0cf532162db8308d9d286db107f92d8e3595414cd0265ebd1f2b00f5323b1a"
 
-  url "https://download.nonstrict.eu/bezel/Bezel-#{version}.zip",
-      verified: "download.nonstrict.eu/bezel/"
+  url "https://download.nonstrict.eu/bezel/Bezel-#{version}.zip"
   name "Bezel"
   desc "iOS screen output recorder"
   homepage "https://getbezel.app/"
@@ -16,7 +15,7 @@ cask "bezel" do
   end
 
   auto_updates true
-  depends_on macos: ">= :ventura"
+  depends_on macos: :sonoma
 
   app "Bezel.app"
 

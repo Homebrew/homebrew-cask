@@ -1,6 +1,6 @@
 cask "tailscale-app" do
-  version "1.90.6"
-  sha256 "8e0634a531c9207ee77402c6211a854ea5864b527e63b33ac4e3e2c4a12a721c"
+  version "1.102.3"
+  sha256 "a1161b5146d65ec945199f6bb741c86b7057c4f1aeae41e10d7c08208064b64b"
 
   url "https://pkgs.tailscale.com/stable/Tailscale-#{version}-macos.pkg"
   name "Tailscale"
@@ -13,23 +13,17 @@ cask "tailscale-app" do
   end
 
   auto_updates true
-  depends_on macos: ">= :monterey"
+  depends_on macos: :monterey
 
   pkg "Tailscale-#{version}-macos.pkg"
-  # shim script (https://github.com/caskroom/homebrew-cask/issues/18809)
-  shimscript = "#{staged_path}/tailscale.wrapper.sh"
-  binary shimscript, target: "tailscale"
-
-  preflight do
-    File.write shimscript, <<~EOS
-      #!/bin/sh
-      exec '#{appdir}/Tailscale.app/Contents/MacOS/Tailscale' "$@"
-    EOS
-  end
 
   uninstall quit:       "io.tailscale.ipn.macsys",
             login_item: "Tailscale",
-            pkgutil:    "com.tailscale.ipn.macsys"
+            pkgutil:    "com.tailscale.ipn.macsys",
+            delete:     [
+              "/usr/local/bin/tailscale",
+              "/usr/local/share/man/man8/tssentineld.8",
+            ]
 
   zap trash: [
     "/Library/Tailscale",

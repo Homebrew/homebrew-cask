@@ -2,8 +2,7 @@ cask "opensong" do
   version "3.4.8"
   sha256 "d3058292e406402bb1a65c4ed10d1e9c77fc9656d07ff381ed5f7904e1cd81b3"
 
-  url "https://downloads.sourceforge.net/opensong/OpenSong/V#{version}%20Beta/OpenSong%20#{version}.pkg",
-      verified: "sourceforge.net/opensong/"
+  url "https://downloads.sourceforge.net/opensong/OpenSong/V#{version}%20Beta/OpenSong%20#{version}.pkg"
   name "OpenSong"
   desc "Presentation software"
   homepage "https://www.opensong.org/"
@@ -14,6 +13,8 @@ cask "opensong" do
     url "https://sourceforge.net/projects/opensong/rss?path=/OpenSong"
     regex(/OpenSong[\s._-]*?v?(\d+(?:[._]\d+)+(?:[\s._-]?(?:B(?:eta)?|RC)\d*)?)(?:[._-][^"']+?)?\.(?:dmg|pkg)/i)
   end
+
+  depends_on :macos
 
   pkg "OpenSong%20#{version}.pkg"
 

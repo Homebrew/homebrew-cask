@@ -1,6 +1,6 @@
 cask "irpf2023" do
-  version "1.8"
-  sha256 "2cd503c2cbaeb680b4d46d3adb01341cace375839537387df1e50949cd5b229f"
+  version "1.9"
+  sha256 "a39dd793ea3a0352a3193d9da890d0e61724188f58cf2ce6735f0c2be9b9ebb8"
 
   url "https://downloadirpf.receita.fazenda.gov.br/irpf/2023/irpf/arquivos/IRPF2023-v#{version}.dmg"
   name "IRPF 2023"
@@ -13,6 +13,10 @@ cask "irpf2023" do
       xml.elements["//pkgver"]&.text&.strip
     end
   end
+
+  disable! date: "2026-09-01", because: :fails_gatekeeper_check
+
+  depends_on :macos
 
   installer manual: "IRPF2023.app"
 

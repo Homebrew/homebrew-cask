@@ -1,6 +1,6 @@
 cask "twingate" do
-  version "2025.288.20108"
-  sha256 "22b5143a3eba41c5494c4ddd962aedd9591b4fe22b87124b6bcd94c3136b368d"
+  version "2026.182.26057"
+  sha256 "de64c52f5a7b52c81ca0cffd6e37f563d9d17cff497b88246835df6807e1126a"
 
   url "https://binaries.twingate.com/client/macos/#{version}/Twingate.pkg"
   name "Twingate"
@@ -13,7 +13,7 @@ cask "twingate" do
   end
 
   auto_updates true
-  depends_on macos: ">= :monterey"
+  depends_on macos: :monterey
 
   pkg "Twingate.pkg"
 

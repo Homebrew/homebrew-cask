@@ -1,5 +1,5 @@
 cask "hackintool" do
-  version "4.1.4"
+  version "4.1.5"
   sha256 :no_check # required as upstream package is updated in-place
 
   url "https://github.com/headkaze/Hackintool/releases/download/#{version}/Hackintool.zip"
@@ -10,6 +10,7 @@ cask "hackintool" do
   disable! date: "2026-09-01", because: :fails_gatekeeper_check
 
   auto_updates true
+  depends_on :macos
 
   app "Hackintool.app"
 
@@ -19,8 +20,4 @@ cask "hackintool" do
     "~/Library/Cookies/com.Headsoft.Hackintool.binarycookies",
     "~/Library/Preferences/com.Headsoft.Hackintool.plist",
   ]
-
-  caveats do
-    requires_rosetta
-  end
 end

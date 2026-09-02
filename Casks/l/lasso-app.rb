@@ -2,8 +2,7 @@ cask "lasso-app" do
   version "1.8.2"
   sha256 :no_check
 
-  url "https://f003.backblazeb2.com/file/lasso-app/Lasso.dmg",
-      verified: "f003.backblazeb2.com/file/lasso-app/"
+  url "https://f003.backblazeb2.com/file/lasso-app/Lasso.dmg"
   name "Lasso"
   desc "Move and resize windows with mouse"
   homepage "https://thelasso.app/"
@@ -18,7 +17,7 @@ cask "lasso-app" do
   end
 
   auto_updates true
-  depends_on macos: ">= :ventura"
+  depends_on macos: :ventura
 
   app "Lasso.app"
 

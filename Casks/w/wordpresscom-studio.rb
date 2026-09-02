@@ -1,29 +1,29 @@
 cask "wordpresscom-studio" do
   arch arm: "arm64", intel: "x64"
+  folder_arch = on_arch_conditional arm: "silicon", intel: "intel"
 
-  version "1.6.3"
-  sha256 arm:   "f151209431e79cb8912714b0598a516be57a2ba3cdbbd7a163c0acf2e6c29f64",
-         intel: "b0fdbdb9aee71ff5b949dd12cb9d5eaaca5ad946cdfb364094523fa4833b1dfe"
+  version "1.20.0,21476"
+  sha256 arm:   "53d4a0a0e878ccb6e76f8c83ac280aab3d3e23b7f6a8847aceb456926fb988c8",
+         intel: "85a00ada459a832f9df85be1a00d0198cf9d7b947aefeed54f7943ae17ab2a58"
 
-  url "https://cdn.a8c-ci.services/studio/studio-darwin-#{arch}-v#{version}.app.zip",
-      verified: "cdn.a8c-ci.services/studio/"
+  url "https://appscdn.wordpress.com/downloads/wordpress-com-studio/mac-#{folder_arch}/v#{version.csv.first}/#{version.csv.second}/update/studio-#{arch}-v#{version.csv.first}.zip"
   name "Wordpress Studio"
   desc "WordPress local development environment"
   homepage "https://developer.wordpress.com/studio/"
 
   livecheck do
     url "https://public-api.wordpress.com/wpcom/v2/studio-app/updates?platform=darwin&arch=#{arch}&version=0.0.0"
-    regex(/studio[._-]darwin[._-]#{arch}[._-]v?(\d+(?:\.\d+)+)\.app\.zip/i)
+    regex(%r{/(\d+(?:\.\d+)*)/update/studio(?:[._-]darwin)?[._-]#{arch}[._-]v?(\d+(?:\.\d+)+)(?:\.app)?\.zip}i)
     strategy :json do |json, regex|
       match = json["url"]&.match(regex)
-      next if match.blank?
+      next unless match
 
-      match[1]
+      "#{match[2]},#{match[1]}"
     end
   end
 
   auto_updates true
-  depends_on macos: ">= :monterey"
+  depends_on macos: :monterey
 
   app "Studio.app"
 

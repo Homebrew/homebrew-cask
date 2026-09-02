@@ -14,7 +14,7 @@ cask "cinc-workstation" do
     end
   end
   on_monterey do
-    version "25.9.1094"
+    version "25.13.7"
     sha256 arm:   "9d8f3c9ea48aea18192d3356d655e92a6d822853239fe016436f7f17186284f1",
            intel: "88e5c93fb060bb7574db4bd1c06763656b6a1b221ae194fae03e7d64ed75f010"
 
@@ -26,9 +26,9 @@ cask "cinc-workstation" do
     end
   end
   on_ventura :or_newer do
-    version "25.9.1094"
-    sha256 arm:   "1a3d3183facaae8dd5e4e3970ba83ba5929a9212bd548cd7229401db8766802c",
-           intel: "e8ee8ea3fd5165d54132e788f26e9659b9b3e3e0b4241e45beff36bbaacadcd5"
+    version "25.13.7"
+    sha256 arm:   "c3341af080428e5f38966ed5317560c334508622a8983305bcfe5dd9ca3da1c4",
+           intel: "d7854c6786cfd78cd4ae3b9562f2f098a107c840fef94252344c5a0e819917e4"
 
     url "https://downloads.cinc.sh/files/stable/cinc-workstation/#{version}/mac_os_x/13/cinc-workstation-#{version}-1.#{arch}.dmg"
 
@@ -44,7 +44,7 @@ cask "cinc-workstation" do
 
   disable! date: "2026-09-01", because: :fails_gatekeeper_check
 
-  depends_on macos: ">= :big_sur"
+  depends_on macos: :big_sur
 
   pkg "cinc-workstation-#{version}-1.#{arch}.pkg"
 
@@ -55,5 +55,5 @@ cask "cinc-workstation" do
             },
             pkgutil:   "com.cinc-project.pkg.cinc-workstation"
 
-  zap trash: "~/.cinc-workstation/"
+  zap trash: "~/.cinc-workstation"
 end

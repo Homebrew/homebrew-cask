@@ -11,6 +11,7 @@ cask "termora" do
   homepage "https://github.com/TermoraDev/termora"
 
   auto_updates true
+  depends_on :macos
 
   app "Termora.app"
 

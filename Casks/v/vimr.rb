@@ -1,6 +1,6 @@
 cask "vimr" do
-  version "0.59.0,20251103.194245"
-  sha256 "57a49a95f053bc59d62ea45bcbb989d43d68f5151d371bcee371c0f7011e4513"
+  version "0.66.0,20260827.194249"
+  sha256 "afb4533be5db5f9aa051ec2810bd748ec46fa595915c0cd1da69a8643c0f9eb1"
 
   url "https://github.com/qvacua/vimr/releases/download/v#{version.csv.first}-#{version.csv.second}/VimR-v#{version.csv.first}.tar.bz2"
   name "VimR"
@@ -15,7 +15,7 @@ cask "vimr" do
   end
 
   auto_updates true
-  depends_on macos: ">= :ventura"
+  depends_on macos: :sonoma
 
   app "VimR.app"
   binary "#{appdir}/VimR.app/Contents/Resources/vimr"

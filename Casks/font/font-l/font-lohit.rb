@@ -2,8 +2,7 @@ cask "font-lohit" do
   version :latest
   sha256 :no_check
 
-  url "https://github.com/google/fonts/raw/main/ofl/lohitdevanagari/Lohit-Devanagari.ttf",
-      verified: "github.com/google/fonts/"
+  url "https://github.com/google/fonts/raw/main/ofl/lohitdevanagari/Lohit-Devanagari.ttf"
   name "Lohit"
   homepage "https://fonts.google.com/earlyaccess"
 

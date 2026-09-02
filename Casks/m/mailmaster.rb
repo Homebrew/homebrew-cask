@@ -1,9 +1,8 @@
 cask "mailmaster" do
-  version "5.3.2,1422"
-  sha256 :no_check
+  version "5.6.5.1505"
+  sha256 "59bcf8e773f3b42135c19523b7ce8c8a1d93ed7c0a59bb6c778d10df7ed1e64a"
 
   url "https://res.126.net/dl/client/macmail/dashi/mail#{version.major}.dmg",
-      verified:   "res.126.net/dl/client/macmail/dashi/",
       user_agent: :fake
   name "NetEase Mail Master"
   name "网易邮箱大师"
@@ -11,11 +10,30 @@ cask "mailmaster" do
   homepage "https://dashi.163.com/"
 
   livecheck do
-    url "https://u.163.com/macds-beta"
-    strategy :extract_plist
+    url "https://appconf.mail.163.com/mailmaster/api/app/update.do",
+        post_json: {
+          app_ver:    version.split(".").then do |p|
+                        (p[0].to_i * 10_000_000_000) +
+                          (p[1].to_i * 10_000_000) +
+                          (p[2].to_i * 10_000) +
+                          p[3].to_i
+                      end,
+          appid:      11,
+          deviceInfo: {
+            appId:      "11",
+            appVersion: version.to_s,
+            deviceId:   Array.new(32) { rand(16).to_s(16) }.join,
+            osType:     "mac",
+            osVersion:  "999",
+          },
+        }
+    strategy :json do |json|
+      json.dig("data", "original", "ver")
+    end
   end
 
   auto_updates true
+  depends_on :macos
 
   app "MailMaster.app"
 

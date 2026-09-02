@@ -1,8 +1,8 @@
 cask "typora" do
-  version "1.12.3"
-  sha256 "be911d46a7aeecdd896bba4b0ad5f84168d77efd90cfaa3b1c7b09aced5f746d"
+  version "1.14.9"
+  sha256 "40026b675bc81124a4f112e8601bf0c47cc4b5b7f05e52bfaf14c5ce8f85ffb5"
 
-  url "https://download.typora.io/mac/Typora-#{version}.dmg"
+  url "https://downloads.typora.io/mac/Typora-#{version}.dmg"
   name "Typora"
   desc "Configurable document editor that supports Markdown"
   homepage "https://typora.io/"
@@ -14,7 +14,7 @@ cask "typora" do
 
   auto_updates true
   conflicts_with cask: "typora@dev"
-  depends_on macos: ">= :big_sur"
+  depends_on macos: :big_sur
 
   app "Typora.app"
 

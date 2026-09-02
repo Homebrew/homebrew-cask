@@ -1,4 +1,8 @@
-[
-  "icon-composer",
-  "shotcut"
-]
+{
+  "ai-studio": "all",
+  "empoche": "intel",
+  "icon-composer": "intel",
+  "musescore": "intel",
+  "readdle-spark": "intel",
+  "plover": "intel"
+}

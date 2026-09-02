@@ -3,8 +3,7 @@ cask "soothe2" do
   version "1.3.3"
   sha256 "ee27005e6a55ac300f9af51dd0897ed707636566f7f6b7bbe02a7c8a5e396aae"
 
-  url "https://oeksound.ams3.cdn.digitaloceanspaces.com/soothe2_v#{version.no_dots}_Mac.pkg",
-      verified: "oeksound.ams3.cdn.digitaloceanspaces.com/"
+  url "https://oeksound.ams3.cdn.digitaloceanspaces.com/soothe2_v#{version.no_dots}_Mac.pkg"
   name "Soothe 2"
   desc "Dynamic resonance suppressor"
   homepage "https://oeksound.com/plugins/soothe2/"
@@ -13,6 +12,8 @@ cask "soothe2" do
     url "https://oeksound.com/changelog/soothe2/"
     regex(/<h3>v?(\d+(?:\.\d+)+)[" <]/i)
   end
+
+  depends_on :macos
 
   pkg "soothe2_v#{version.no_dots}_Mac.pkg"
 

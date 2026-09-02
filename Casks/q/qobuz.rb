@@ -1,9 +1,9 @@
 cask "qobuz" do
   arch arm: "arm64/bigsur", intel: "x64/elCapitan_sierra"
 
-  version "8.1.0,019"
-  sha256 arm:   "446b5acf47dd4a0db7d03dfec5f3cc91ea946669535c5e700cdca72fa539a189",
-         intel: "b8f12f8794da4cfc0e8bcd8d08d64b5c31e5077c7c8f400a08d946c273bcb685"
+  version "8.2.0,033"
+  sha256 arm:   "a33b008770682ac90c1faa2f6b4a0886ca632f6043c5819389ad5bb5de259e19",
+         intel: "9535d930aa82e9e19034cc74c02d93a9e62996a4f3da66fc7367d1e28c9fb205"
 
   url "https://desktop.qobuz.com/releases/darwin/#{arch}/#{version.csv.first}-b#{version.csv.second}/Qobuz.dmg"
   name "Qobuz"
@@ -18,6 +18,7 @@ cask "qobuz" do
   end
 
   auto_updates true
+  depends_on :macos
 
   app "Qobuz.app"
 

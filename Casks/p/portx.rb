@@ -1,12 +1,11 @@
 cask "portx" do
   arch arm: "arm64", intel: "x64"
 
-  version "2.2.13,10.74"
-  sha256 arm:   "D8F5A9CB70233ED804E695D07024768D018B9C0B7525E1E4E600100663918672",
-         intel: "1B312B3155D757979D768ACFD8DB33BDBA1D23599DB884AD00C833B00050821C"
+  version "2.3.0,10.79"
+  sha256 arm:   "FE0080499E07837EFCADC1D11FCE231D7383D7083ADD87E2CEB17F991A8CC7FE",
+         intel: "A45759983EFDBAF48CA1C24B2E1F1DCD7528CD9FEB268E8530E63A560D63D8CF"
 
-  url "https://cdn.netsarang.net/0ac7ea20/PortX-#{version.csv.first}-#{arch}.dmg",
-      verified: "cdn.netsarang.net/"
+  url "https://cdn.netsarang.net/0ac7ea20/PortX-#{version.csv.first}-#{arch}.dmg"
   name "portx"
   desc "SSH Client"
   homepage "https://portx.online/"
@@ -15,6 +14,8 @@ cask "portx" do
     url "https://cdn.netsarang.net/0ac7ea20/PortX-latest-#{arch}.dmg"
     strategy :extract_plist
   end
+
+  depends_on :macos
 
   app "PortX.app"
 

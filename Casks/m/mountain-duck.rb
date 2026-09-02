@@ -1,6 +1,6 @@
 cask "mountain-duck" do
-  version "5.0.4,28064"
-  sha256 "7faf4304d8f5e5dc64371985b68c40dddfdb4a96a0a4e5fb97ce1f1386bf556c"
+  version "5.3.2,29785"
+  sha256 "682d496bfd747a6f74a63c63f4a441b5d376034249686c7be29f9679628004ef"
 
   url "https://dist.mountainduck.io/Mountain%20Duck-#{version.csv.first}.#{version.csv.second}.zip"
   name "Mountain Duck"
@@ -13,15 +13,24 @@ cask "mountain-duck" do
   end
 
   auto_updates true
-  depends_on macos: ">= :ventura"
+  depends_on macos: :ventura
 
   app "Mountain Duck.app"
 
+  uninstall launchctl: "io.mountainduck.loginitem"
+
   zap trash: [
+    "~/Library/Application Scripts/io.mountainduck.fileprovider",
     "~/Library/Application Scripts/io.mountainduck.findersync",
+    "~/Library/Application Scripts/io.mountainduck.loginitem",
+    "~/Library/Application Support/Mountain Duck",
     "~/Library/Caches/io.mountainduck",
+    "~/Library/Containers/io.mountainduck.fileprovider",
     "~/Library/Containers/io.mountainduck.findersync",
+    "~/Library/Containers/io.mountainduck.loginitem",
     "~/Library/Group Containers/G69SCX94XU.duck",
+    "~/Library/HTTPStorages/io.mountainduck",
+    "~/Library/Logs/Mountain Duck",
     "~/Library/Preferences/G69SCX94XU.duck.plist",
     "~/Library/Preferences/io.mountainduck.plist",
   ]

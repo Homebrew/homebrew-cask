@@ -1,12 +1,11 @@
 cask "front" do
   arch arm: "arm64", intel: "x64"
 
-  version "3.66.2"
-  sha256 arm:   "92814e3ef9b57ac14e25c91c8b3061e91a6d764264623331bd86a484b5f5f964",
-         intel: "b2663c02fba2a384ac57d93e41529bc7db6aad40178864fd97b479fa46bcdb3f"
+  version "3.77.0"
+  sha256 arm:   "e8fb367c9746626f08afe7a7d0f40fb458097d028281daa1b65d3ba29d2f6af8",
+         intel: "9d6592b7d337e3928a7a30f12f28c3f13e0cb4f9ee0e94f642d32b5bba373c45"
 
-  url "https://dl.frontapp.com/desktop/builds/#{version}/Front-#{version}-#{arch}.zip",
-      verified: "dl.frontapp.com/desktop/builds/"
+  url "https://dl.frontapp.com/desktop/builds/#{version}/Front-#{version}-#{arch}.zip"
   name "Front"
   desc "Customer communication platform"
   homepage "https://front.com/"
@@ -17,7 +16,7 @@ cask "front" do
   end
 
   auto_updates true
-  depends_on macos: ">= :big_sur"
+  depends_on macos: :monterey
 
   app "Front.app"
 

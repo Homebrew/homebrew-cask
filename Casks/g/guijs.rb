@@ -2,8 +2,7 @@ cask "guijs" do
   version "0.1.19"
   sha256 "857bed89fe461edeca980a5bb17ec53016dd64ffc0b4e49a76b729f5fa7b594a"
 
-  url "https://github.com/Akryum/guijs/releases/download/v#{version}/guijs.app.tgz",
-      verified: "github.com/Akryum/guijs/"
+  url "https://github.com/Akryum/guijs/releases/download/v#{version}/guijs.app.tgz"
   name "guijs"
   desc "Graphical interface to manage JS projects"
   homepage "https://guijs.dev/"
@@ -12,6 +11,10 @@ cask "guijs" do
     url :url
     strategy :github_latest
   end
+
+  disable! date: "2026-09-01", because: :fails_gatekeeper_check
+
+  depends_on :macos
 
   app "guijs.app"
 

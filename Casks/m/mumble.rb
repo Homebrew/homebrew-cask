@@ -1,9 +1,8 @@
 cask "mumble" do
-  version "1.5.857"
-  sha256 "bbc5b8d774ab09d8953e66aa8c9aaeceba14972f54f99252f6405ba23991e473"
+  version "1.5.901"
+  sha256 "9618a7abf0da3743e1d8c13ddb45ea6524fcfff001e844d9bb95a86867aa6f47"
 
-  url "https://github.com/mumble-voip/mumble/releases/download/v#{version}/mumble_client-#{version}.x64.dmg",
-      verified: "github.com/mumble-voip/mumble/"
+  url "https://github.com/mumble-voip/mumble/releases/download/v#{version}/mumble_client-#{version}.x64.dmg"
   name "Mumble"
   desc "Open-source, low-latency, high quality voice chat software for gaming"
   homepage "https://www.mumble.info/"
@@ -16,6 +15,7 @@ cask "mumble" do
   disable! date: "2026-09-01", because: :fails_gatekeeper_check
 
   conflicts_with cask: "mumble@snapshot"
+  depends_on :macos
 
   app "Mumble.app"
 

@@ -1,9 +1,8 @@
 cask "yacreader" do
-  version "9.15.0.2501014"
-  sha256 "3fee3a0486738cb388dbbe7b11d78bbae2a32710f03dd6c5437bcf82ccac7d79"
+  version "10.3.0.260901368"
+  sha256 "3b23304407079b7fb77cf7f5f1aeecc54e39014c72f9a877e41ee184e637d2ac"
 
-  url "https://github.com/YACReader/yacreader/releases/download/#{version.major_minor_patch}/YACReader-#{version}.MacOSX-U.Qt6.dmg",
-      verified: "github.com/YACReader/yacreader/"
+  url "https://github.com/YACReader/yacreader/releases/download/#{version.major_minor_patch}/YACReader-#{version}.MacOSX-U.Qt6.dmg"
   name "YACReader"
   desc "Comic reader"
   homepage "https://www.yacreader.com/"
@@ -21,11 +20,16 @@ cask "yacreader" do
     end
   end
 
+  depends_on macos: :monterey
+
   app "YACReader.app"
   app "YACReaderLibrary.app"
 
+  uninstall quit: "com.yacreader.YACReader"
+
   zap trash: [
     "~/Library/Application Support/YACReader",
+    "~/Library/Caches/YACReader",
     "~/Library/Preferences/com.yacreader.YACReader.plist",
     "~/Library/Preferences/com.yacreader.YACReaderLibrary.plist",
     "~/Library/Saved Application State/com.yacreader.YACReader.savedState",

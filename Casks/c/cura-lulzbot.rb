@@ -12,7 +12,7 @@ cask "cura-lulzbot" do
     regex(/href=.*?Cura[._-]LulzBot[._-]Edition[._-]v?(\d+(?:\.\d+)+(?:-patch)?)\.dmg/i)
   end
 
-  depends_on macos: ">= :big_sur"
+  depends_on macos: :big_sur
 
   app "Cura LulzBot Edition.app"
 

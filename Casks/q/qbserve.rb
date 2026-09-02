@@ -1,6 +1,6 @@
 cask "qbserve" do
-  version "1.9"
-  sha256 "f21cd5eda08757e9e94ca18cc36af634e0f42dae4f99dfb4f426623b0c4579b4"
+  version "1.91"
+  sha256 "1e9536d366497f5014aba15e2f3b9fc11b6ab52038a64a4854baa586e1f32a78"
 
   url "https://qotoqot.com/qbserve/app/Qbserve-#{version}.zip"
   name "Qbserve"
@@ -13,7 +13,7 @@ cask "qbserve" do
   end
 
   auto_updates true
-  depends_on macos: ">= :big_sur"
+  depends_on macos: :big_sur
 
   app "Qbserve.app"
 

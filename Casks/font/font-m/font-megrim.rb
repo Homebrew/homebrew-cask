@@ -2,8 +2,7 @@ cask "font-megrim" do
   version :latest
   sha256 :no_check
 
-  url "https://github.com/google/fonts/raw/main/ofl/megrim/Megrim.ttf",
-      verified: "github.com/google/fonts/"
+  url "https://github.com/google/fonts/raw/main/ofl/megrim/Megrim.ttf"
   name "Megrim"
   homepage "https://fonts.google.com/specimen/Megrim"
 

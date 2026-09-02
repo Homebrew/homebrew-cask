@@ -1,5 +1,5 @@
 cask "ip-in-menu-bar" do
-  version "4.7.1"
+  version "4.7.2"
   sha256 :no_check
 
   url "https://www.monkeybreadsoftware.de/Software/IPinmenubar.dmg"
@@ -11,6 +11,8 @@ cask "ip-in-menu-bar" do
     url :homepage
     regex(/IP\s+in\s+menubar\s+(\d+(?:\.\d+)+)/i)
   end
+
+  depends_on macos: :big_sur
 
   app "IP in menu bar.app"
 

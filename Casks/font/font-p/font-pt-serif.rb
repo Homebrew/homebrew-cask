@@ -2,7 +2,7 @@ cask "font-pt-serif" do
   version :latest
   sha256 :no_check
 
-  url "https://api.paratype.com/api/editions/ofl/download/52194",
+  url "https://api.paratype.com/api/download/ofl/pack/3761",
       referer: "https://www.paratype.com/"
   name "PT Serif"
   homepage "https://www.paratype.com/fonts/pt/pt-serif"

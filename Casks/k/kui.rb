@@ -11,6 +11,9 @@ cask "kui" do
   homepage "https://github.com/kubernetes-sigs/kui"
 
   deprecate! date: "2025-08-30", because: :discontinued
+  disable! date: "2026-08-30", because: :discontinued
+
+  depends_on :macos
 
   app "Kui-darwin-#{arch}/Kui.app"
   binary "#{appdir}/Kui.app/Contents/Resources/kubectl-kui"

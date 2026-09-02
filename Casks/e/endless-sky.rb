@@ -1,9 +1,8 @@
 cask "endless-sky" do
-  version "0.10.16"
-  sha256 "09b999ecc91e8dd9778b711749f291be618d8da623b0cb614e5300c0caab49b6"
+  version "0.11.2"
+  sha256 "338f139a790f55a41444b77bd8361bd9f21f3f5a010f52421596ffd4391e55ef"
 
-  url "https://github.com/endless-sky/endless-sky/releases/download/v#{version}/Endless-Sky-v#{version}.dmg",
-      verified: "github.com/endless-sky/endless-sky/"
+  url "https://github.com/endless-sky/endless-sky/releases/download/v#{version}/Endless-Sky-v#{version}.dmg"
   name "Endless Sky"
   desc "Space exploration, trading, and combat game"
   homepage "https://endless-sky.github.io/"
@@ -14,6 +13,8 @@ cask "endless-sky" do
   end
 
   disable! date: "2026-09-01", because: :fails_gatekeeper_check
+
+  depends_on :macos
 
   app "Endless Sky.app"
 

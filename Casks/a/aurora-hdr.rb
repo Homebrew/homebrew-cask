@@ -8,11 +8,12 @@ cask "aurora-hdr" do
   homepage "https://skylum.com/aurorahdr"
 
   livecheck do
-    url "http://aurorahdr2019mac.update.skylum.com/"
+    url "https://aurorahdrmac.skylum.com"
     strategy :sparkle
   end
 
   auto_updates true
+  depends_on :macos
 
   app "Aurora HDR.app"
 

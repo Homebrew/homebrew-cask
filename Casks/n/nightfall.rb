@@ -7,6 +7,8 @@ cask "nightfall" do
   desc "Menu bar utility for toggling dark mode"
   homepage "https://github.com/r-thomson/Nightfall/"
 
+  depends_on :macos
+
   app "Nightfall.app"
 
   zap trash: [

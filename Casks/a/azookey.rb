@@ -1,6 +1,6 @@
 cask "azookey" do
-  version "0.1.2"
-  sha256 "eb8dfe0b47a2e2e76d4cae5be18a1b8810baf98b2b3ff3433540a85b16968d21"
+  version "0.1.4"
+  sha256 "d389315c928c28da732c4eb2ade8ed0c19c896fdf06f8353ac617d95dcf2b39c"
 
   url "https://github.com/azooKey/azooKey-Desktop/releases/download/v#{version}/azooKey-release-signed.pkg"
   name "azooKey"
@@ -9,11 +9,10 @@ cask "azookey" do
 
   livecheck do
     url :url
-    regex(/^v?(\d+(?:\.\d+)+(?:[._-]alpha[._-]?\d+)?)$/i)
     strategy :github_latest
   end
 
-  depends_on macos: ">= :ventura"
+  depends_on macos: :ventura
 
   pkg "azooKey-release-signed.pkg"
 

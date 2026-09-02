@@ -1,24 +1,23 @@
 cask "freetube" do
   arch arm: "arm64", intel: "x64"
 
-  on_catalina do
-    version "0.22.1"
-    sha256 "0e9eb9db841f36671c81fedff4580c39dbbd6bd541d5158ed4897218c4134946"
+  on_big_sur :or_older do
+    version "0.23.15"
+    sha256 arm:   "6a25f689ecf0382c9b3c98be308f5d97eda1c362035dd1d715307a25ab68320a",
+           intel: "ebade3bc4b3cb7c994201cf1bd50459c33c8b4d85ae0e714b2c5a32612c70e69"
 
-    url "https://github.com/FreeTubeApp/FreeTube/releases/download/v#{version}-beta/freetube-#{version}-mac-x64.dmg",
-        verified: "github.com/FreeTubeApp/FreeTube/"
+    url "https://github.com/FreeTubeApp/FreeTube/releases/download/v#{version}-beta/freetube-#{version}-beta-mac-#{arch}.dmg"
 
     livecheck do
       skip "Legacy version"
     end
   end
-  on_big_sur :or_newer do
-    version "0.23.12"
-    sha256 arm:   "6b70398d0453186b0f2087ac684eebb0c17eb847c75f4ed4e1507cea6d8eed47",
-           intel: "93b4d0553653a7c243b7bf7fd875441b689ddc57430b5a6e88dcc2ba865eb100"
+  on_monterey :or_newer do
+    version "0.25.3"
+    sha256 arm:   "2b445d64f5e56a873debea50c785cd41400bdabc387f0d67fc7be745b2b9146e",
+           intel: "40fb6c671ec75905e035968ec0c14bfe717643730af80536e625d191455f49bf"
 
-    url "https://github.com/FreeTubeApp/FreeTube/releases/download/v#{version}-beta/freetube-#{version}-beta-mac-#{arch}.dmg",
-        verified: "github.com/FreeTubeApp/FreeTube/"
+    url "https://github.com/FreeTubeApp/FreeTube/releases/download/v#{version}-beta/freetube-#{version}-beta-mac-#{arch}.dmg"
 
     livecheck do
       url :url
@@ -31,6 +30,8 @@ cask "freetube" do
   homepage "https://freetubeapp.io/"
 
   disable! date: "2026-09-01", because: :fails_gatekeeper_check
+
+  depends_on :macos
 
   app "FreeTube.app"
 

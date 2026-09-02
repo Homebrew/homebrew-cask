@@ -1,10 +1,6 @@
 cask "microsoft-excel" do
-  on_monterey :or_older do
-    on_catalina :or_older do
-      version "16.66.22101101"
-      sha256 "94148628c6f143f07555b3d2a70cea61cef817d963539d281b092834496f8f16"
-    end
-    on_big_sur do
+  on_ventura :or_older do
+    on_big_sur :or_older do
       version "16.77.23091703"
       sha256 "582fca32104e828e01c0928e674122f2d8044d84fd2dc1d7964e0a807e2f4695"
     end
@@ -12,14 +8,18 @@ cask "microsoft-excel" do
       version "16.89.24091630"
       sha256 "81e02698c209b0681999737d9be8f685e12e43c8ceaf7ee2c7a08ad61adc99f7"
     end
+    on_ventura do
+      version "16.101.25100321"
+      sha256 "251accd3472778f3519c89258fdfe17797fc987935fd57fc5bf7b713eb4d0915"
+    end
 
     livecheck do
       skip "Legacy version"
     end
   end
-  on_ventura :or_newer do
-    version "16.103.25110922"
-    sha256 "d9c80677f85f10eae1c663ad40e1033804c9caa4e4a853c162f95c03dd09f578"
+  on_sonoma :or_newer do
+    version "16.112.26083020"
+    sha256 "8d7e51e42886c9ae7a0c7981aa6df64c8ce56eb08948afee270c26bf3c1a9eee"
 
     livecheck do
       url "https://go.microsoft.com/fwlink/p/?linkid=525135"
@@ -27,7 +27,7 @@ cask "microsoft-excel" do
     end
   end
 
-  url "https://officecdnmac.microsoft.com/pr/C1297A47-86C4-4C1F-97FA-950631F94777/MacAutoupdate/Microsoft_Excel_#{version}_Installer.pkg"
+  url "https://res.public.onecdn.static.microsoft/mro1cdnstorage/C1297A47-86C4-4C1F-97FA-950631F94777/MacAutoupdate/Microsoft_Excel_#{version}_Installer.pkg"
   name "Microsoft Excel"
   desc "Spreadsheet software"
   homepage "https://www.microsoft.com/en-US/microsoft-365/excel"
@@ -37,6 +37,7 @@ cask "microsoft-excel" do
     "microsoft-office",
     "microsoft-office-businesspro",
   ]
+  depends_on :macos
 
   pkg "Microsoft_Excel_#{version}_Installer.pkg",
       choices: [

@@ -2,13 +2,15 @@ cask "react-studio" do
   version "1814,426"
   sha256 "88e4874ca5f14a6fb442b0aeb371e48d5c8e1ced24099cf5c021771482a44423"
 
-  url "https://s3.amazonaws.com/sc.neonto.com/ReactStudio_v#{version.csv.first}_build#{version.csv.second}.zip",
-      verified: "s3.amazonaws.com/sc.neonto.com/"
+  url "https://s3.amazonaws.com/sc.neonto.com/ReactStudio_v#{version.csv.first}_build#{version.csv.second}.zip"
   name "ReactStudio"
   desc "App design environment"
   homepage "https://reactstudio.com/"
 
   deprecate! date: "2025-07-24", because: :unmaintained
+  disable! date: "2026-07-24", because: :unmaintained
+
+  depends_on :macos
 
   app "React Studio.app"
 

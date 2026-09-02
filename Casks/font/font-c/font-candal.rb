@@ -2,8 +2,7 @@ cask "font-candal" do
   version :latest
   sha256 :no_check
 
-  url "https://github.com/google/fonts/raw/main/ofl/candal/Candal.ttf",
-      verified: "github.com/google/fonts/"
+  url "https://github.com/google/fonts/raw/main/ofl/candal/Candal.ttf"
   name "Candal"
   homepage "https://fonts.google.com/specimen/Candal"
 

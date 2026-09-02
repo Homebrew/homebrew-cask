@@ -1,13 +1,13 @@
 cask "privileges" do
-  version "2.4.2"
-  sha256 "83e0d84ead1fdf35a20fbb1395aebcac3dc1430605c93f55731ad7e6d145f408"
+  version "2.5.3"
+  sha256 "5948b4b809d05796ff09d4f064a72f049a3f895af194c146d3937f005d34401d"
 
   url "https://github.com/SAP/macOS-enterprise-privileges/releases/download/#{version}/Privileges_#{version}.pkg"
   name "Privileges"
   desc "Admin rights switcher"
   homepage "https://github.com/SAP/macOS-enterprise-privileges"
 
-  depends_on macos: ">= :big_sur"
+  depends_on macos: :big_sur
 
   pkg "Privileges_#{version}.pkg"
   binary "#{appdir}/Privileges.app/Contents/MacOS/PrivilegesCLI"
@@ -15,6 +15,7 @@ cask "privileges" do
   uninstall launchctl: [
               "corp.sap.privileges.agent",
               "corp.sap.privileges.daemon",
+              "corp.sap.privileges.helper",
               "corp.sap.privileges.watcher",
             ],
             pkgutil:   "corp.sap.privileges.pkg"

@@ -1,9 +1,8 @@
 cask "osp-tracker" do
-  version "6.3.2"
-  sha256 "ec23de4b8b69f7970b2f3016a4d9362eec85341c7be41a2847a099d26910d234"
+  version "6.3.5"
+  sha256 "b43fae20b5acd01b9f8f1c1dba1a5a7958cbd67e2b7a132432bc4d01fbc471b0"
 
-  url "https://physlets.org/tracker/installers/Tracker-#{version}-osx-installer.dmg",
-      verified: "physlets.org/tracker/installers/"
+  url "https://www.compadre.org/osp/images/tracker/Tracker-#{version}-osx-installer.dmg"
   name "Tracker"
   desc "Video analysis and modelling tool for physics education"
   homepage "https://opensourcephysics.github.io/tracker-website/"
@@ -12,6 +11,8 @@ cask "osp-tracker" do
     url :homepage
     regex(/href=.*?Tracker[._-]v?(\d+(?:\.\d+)+)[._-]osx[._-]installer\.dmg/i)
   end
+
+  depends_on :macos
 
   installer script: {
     executable: "Tracker-#{version}-osx-installer.app/Contents/MacOS/osx-x86_64",

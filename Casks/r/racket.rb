@@ -1,9 +1,9 @@
 cask "racket" do
   arch arm: "aarch64", intel: "x86_64"
 
-  version "8.18"
-  sha256 arm:   "9f69059464546e21375a9eb359c225553cd82c364aaad0bbb909cdb8981bdcfe",
-         intel: "f5d4918f8fd8ef9ac65c6ee5d639742a396cb13e0a68b9f9a6fb0beb173c1e5f"
+  version "9.3"
+  sha256 arm:   "404dcf7198eb8847bd357295a9f2659e427ab9d481d488a16c70d03db72d7b02",
+         intel: "501f3bc55313e5ad012510e5f00c0ac44e330e8278eb5286a89134ca304e5026"
 
   url "https://mirror.racket-lang.org/installers/#{version}/racket-#{version}-#{arch}-macosx-cs.dmg"
   name "Racket"
@@ -14,6 +14,8 @@ cask "racket" do
     url "https://download.racket-lang.org/all-versions.html"
     regex(/racket[._-]v?(\d+(?:\.\d+)+)/i)
   end
+
+  depends_on :macos
 
   suite "Racket v#{version}"
   binary "#{appdir}/Racket v#{version}/bin/drracket"

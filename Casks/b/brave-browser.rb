@@ -2,12 +2,11 @@ cask "brave-browser" do
   arch arm: "arm64", intel: "x64"
   folder = on_arch_conditional arm: "stable-arm64", intel: "stable"
 
-  version "1.84.135.0"
-  sha256 arm:   "65c49864cbfad7b00f890be6365a027aa7e34faa381d4a27906c86fe80911a3d",
-         intel: "4c39d40a9a654458c270565771861d1e0537447c0c2e01970dad56ddc730038f"
+  version "1.94.119.0"
+  sha256 arm:   "c565e36a86eb5215fefaa9dcef689cce653da94e74aa0e880e2d74090a5d6586",
+         intel: "824d6ee770a404bce17c2e408ced801bf6219406f1b565c54b463af5851630fb"
 
-  url "https://updates-cdn.bravesoftware.com/sparkle/Brave-Browser/#{folder}/#{version.major_minor_patch.sub(".", "")}/Brave-Browser-#{arch}.dmg",
-      verified: "updates-cdn.bravesoftware.com/sparkle/Brave-Browser/"
+  url "https://updates-cdn.bravesoftware.com/sparkle/Brave-Browser/#{folder}/#{version.major_minor_patch.sub(".", "")}/Brave-Browser-#{arch}.dmg"
   name "Brave"
   desc "Web browser focusing on privacy"
   homepage "https://brave.com/"
@@ -18,7 +17,7 @@ cask "brave-browser" do
   end
 
   auto_updates true
-  depends_on macos: ">= :monterey"
+  depends_on macos: :ventura
 
   app "Brave Browser.app"
 

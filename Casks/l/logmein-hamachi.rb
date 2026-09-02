@@ -23,6 +23,8 @@ cask "logmein-hamachi" do
   desc "Hosted VPN service that lets you securely extend LAN-like networks"
   homepage "https://vpn.net/"
 
+  depends_on :macos
+
   installer manual: "LogMeInHamachiInstaller.app"
 
   uninstall script: {

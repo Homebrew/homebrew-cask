@@ -2,16 +2,15 @@ cask "voov-meeting" do
   arch arm: "arm64", intel: "x86_64"
 
   on_arm do
-    version "3.32.21.510,19ddb56e8200df5f189c29795081a897"
-    sha256 "ffed2c02d988275b3486de9be0ced21ff636880ae1de4f474a5273b0ba711d2f"
+    version "3.43.0.510,676602c370071da9c30765f945f41b83"
+    sha256 "e0b770f1770557f72ac2869395304c1cc901bc519c93ccddb096349891467de7"
   end
   on_intel do
-    version "3.32.21.510,10d8f710e20aabfca77b90e7997b7e14"
-    sha256 "5b023c017fe3bf9d1dbbee8d9edf54330fca61945c0523830b61ed59eae159b4"
+    version "3.43.0.510,09ec308a02c61e0ede83ffac486e5cea"
+    sha256 "fa46b369a658468e77a3a11eb65b48ab5c9668dd05376e64821e82d4c2721685"
   end
 
-  url "https://updatecdn.meeting.qq.com/cos/#{version.csv.second}/VooVMeeting_1410000198_#{version.csv.first}.publish.#{arch}.dmg",
-      verified: "updatecdn.meeting.qq.com/cos/"
+  url "https://updatecdn.meeting.qq.com/cos/#{version.csv.second}/VooVMeeting_1410000198_#{version.csv.first}.publish.#{arch}.dmg"
   name "VooV Meeting"
   name "Tencent Meeting International Version"
   desc "Video conferencing software"
@@ -29,6 +28,8 @@ cask "voov-meeting" do
       end
     end
   end
+
+  depends_on :macos
 
   app "VooV Meeting.app"
 

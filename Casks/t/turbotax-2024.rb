@@ -1,6 +1,6 @@
 cask "turbotax-2024" do
-  version "2024.000.0189,DEB99023F98B541E84CDD215ABD270F4"
-  sha256 "0e7b63f7163a62519d6e6fd6d8fa7d75dba86fd79ac152884f881e6f76abd264"
+  version "2024.000.0192,27A6F8163D974F8CD3F72EA23A5142D4"
+  sha256 "eabec3010127afc2aa876b6500e992dc5af07b2dca380e22a3defee8e6120f1f"
 
   url "https://downloadpatch.esd.intuit.com/ESD/Files/CTG/comp/#{version.csv.second}/v1/Content/Mac_TurboTax_Download2024.dmg"
   name "TurboTax 2024"
@@ -33,7 +33,7 @@ cask "turbotax-2024" do
   end
 
   auto_updates true
-  depends_on macos: ">= :ventura"
+  depends_on macos: :ventura
 
   app "TurboTax 2024.app"
 

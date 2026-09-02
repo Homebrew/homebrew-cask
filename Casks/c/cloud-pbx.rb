@@ -1,12 +1,11 @@
 cask "cloud-pbx" do
   arch arm: "arm", intel: "intel"
 
-  version "45.8.0"
-  sha256 arm:   "ea2ba14fc4e2ce2202290168136112f975b4d1090ca910eaec2341e76aaed770",
-         intel: "02bbcb9da02291ee0b2221e4541d9dc4298a6b2086e97777b1bebbf7b78e3ecd"
+  version "46.7"
+  sha256 arm:   "59db6f93469ef98653dde0ad8308c32a8c247df568c34aed6854643b4f917e9e",
+         intel: "99d9a983e4e74c2226615c06d476c5f5bfdd853deb5bb0efc07b98509fedfbc7"
 
-  url "https://cpbx-hilfe.deutschland-lan.de/de/direkthilfe/hilfe-downloads/desktop-clients/cloud-pbx-2.0-#{arch}_v#{version}",
-      verified: "cpbx-hilfe.deutschland-lan.de/de/direkthilfe/hilfe-downloads/desktop-clients/"
+  url "https://cpbx-hilfe.deutschland-lan.de/de/direkthilfe/hilfe-downloads/desktop-clients/cloud-pbx-2.0-#{arch}_v#{version}"
   name "Cloud PBX"
   desc "Cloud-based telephone system"
   homepage "https://geschaeftskunden.telekom.de/internet-dsl/tarife/festnetz-internet-dsl/companyflex/cloud-pbx"
@@ -15,6 +14,8 @@ cask "cloud-pbx" do
     url "https://cpbx-hilfe.deutschland-lan.de/de/direkthilfe/hilfe-downloads/downloads"
     regex(%r{href=.*?/cloud[._-]pbx[._-]2\.0[._-]#{arch}[._-]v?(\d+(?:\.\d+)+)}i)
   end
+
+  depends_on macos: :monterey
 
   app "Cloud PBX 2.0.app"
 
@@ -28,8 +29,4 @@ cask "cloud-pbx" do
     "~/Library/Saved Application State/Cisco-Systems.Spark.savedState",
     "~/Library/Saved Application State/com.broadsoft.communicator.savedState",
   ]
-
-  caveats do
-    requires_rosetta
-  end
 end

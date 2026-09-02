@@ -17,11 +17,11 @@ cask "fvim" do
     end
   end
 
+  disable! date: "2026-09-01", because: :fails_gatekeeper_check
+
+  depends_on :macos
+
   app "FVim.app"
 
   zap trash: "~/Library/Saved Application State/com.fvim.www.savedState"
-
-  caveats do
-    requires_rosetta
-  end
 end

@@ -4,6 +4,7 @@ cask "aquaskk" do
 
   url "https://github.com/codefirst/aquaskk/releases/download/#{version}/AquaSKK-#{version}.pkg"
   name "AquaSKK"
+  desc "Input method without morphological analysis"
   homepage "https://github.com/codefirst/aquaskk"
 
   livecheck do
@@ -11,7 +12,15 @@ cask "aquaskk" do
     strategy :github_latest
   end
 
+  depends_on :macos
+
   pkg "AquaSKK-#{version}.pkg"
 
   uninstall pkgutil: "org.codefirst.aquaskk.pkg"
+
+  zap trash: [
+    "~/Library/Application Support/AquaSKK",
+    "~/Library/Preferences/jp.sourceforge.inputmethod.aquaskk.plist",
+    "~/Library/Preferences/jp.sourceforge.inputmethod.aquaskk.preferences.plist",
+  ]
 end

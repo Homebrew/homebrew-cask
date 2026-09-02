@@ -2,12 +2,16 @@ cask "chef-workstation" do
   arch arm: "arm64", intel: "x86_64"
 
   on_arm do
-    version "25.9.1094,14"
-    sha256 "241242ab6e7e418f3b492a07bce84e18e1d390b25c3bbb4b702222f61929a6d1"
+    version "25.14.2,14"
+    sha256 "35f28e3bd3549a322a287cee6b85a1ddc5a9e8f013aa32154e7dd36c741a7004"
+
+    depends_on macos: :ventura
   end
   on_intel do
     version "25.9.1094,12"
     sha256 "d0f537cb4a1e5ae1b6752576427f8bfbf9ce7ac4de4dd3cbbeb603c8f9892347"
+
+    depends_on macos: :monterey
   end
 
   url "https://packages.chef.io/files/stable/chef-workstation/#{version.csv.first}/mac_os_x/#{version.csv.second}/chef-workstation-#{version.csv.first}-1.#{arch}.dmg"
@@ -23,7 +27,7 @@ cask "chef-workstation" do
     end
   end
 
-  depends_on macos: ">= :monterey"
+  depends_on :macos
 
   pkg "chef-workstation-#{version.csv.first}-1.#{arch}.pkg"
 
@@ -38,5 +42,5 @@ cask "chef-workstation" do
             },
             pkgutil:   "com.getchef.pkg.chef-workstation"
 
-  zap trash: "~/.chef-workstation/"
+  zap trash: "~/.chef-workstation"
 end

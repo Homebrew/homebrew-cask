@@ -17,6 +17,8 @@ cask "scrub-utility" do
     end
   end
 
+  depends_on :macos
+
   app "scrub#{version.csv.first.no_dots}/Scrub.app"
 
   zap trash: [

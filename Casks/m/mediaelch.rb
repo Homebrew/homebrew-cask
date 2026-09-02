@@ -2,8 +2,7 @@ cask "mediaelch" do
   version "2.12.0,2024-10-13,80324653"
   sha256 "a49e8f12326cc5c7e55ed0b0b6e951fd27cf704ae2ddc3f24cb860af45a7dad4"
 
-  url "https://github.com/Komet/MediaElch/releases/download/v#{version.csv.first}/MediaElch_macOS_11_or_later_Qt6_#{version.csv.first}_#{version.csv.second}_git-#{version.csv.third}.dmg",
-      verified: "github.com/Komet/MediaElch/"
+  url "https://github.com/Komet/MediaElch/releases/download/v#{version.csv.first}/MediaElch_macOS_11_or_later_Qt6_#{version.csv.first}_#{version.csv.second}_git-#{version.csv.third}.dmg"
   name "MediaElch"
   desc "Media Manager for Kodi"
   homepage "https://www.kvibes.de/en/mediaelch/"
@@ -20,6 +19,10 @@ cask "mediaelch" do
       end
     end
   end
+
+  disable! date: "2026-09-01", because: :fails_gatekeeper_check
+
+  depends_on :macos
 
   app "MediaElch.app"
 

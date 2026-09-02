@@ -1,9 +1,8 @@
 cask "thunder" do
-  version "5.80.3.66608"
-  sha256 "6c6d72409c6a05ac4802d359d1dcc0f9d767624ffcb0dc4333c07f20092a2f48"
+  version "5.80.7.66659"
+  sha256 "2d5c41dad06f2070e0496a77754be25c3848e33c4e7ddd25ca61a04f8fb5bf9c"
 
-  url "https://down.sandai.net/mac/thunder_#{version}.dmg",
-      verified: "down.sandai.net/mac/"
+  url "https://down.sandai.net/mac/thunder_#{version}.dmg"
   name "Thunder"
   name "迅雷"
   desc "VPN and WiFi proxy"
@@ -15,7 +14,7 @@ cask "thunder" do
   end
 
   auto_updates true
-  depends_on macos: ">= :big_sur"
+  depends_on macos: :big_sur
 
   app "Thunder.app"
 

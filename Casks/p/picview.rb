@@ -1,12 +1,11 @@
 cask "picview" do
   arch arm: "arm64", intel: "x64"
 
-  version "4.0.0"
-  sha256 arm:   "f84df1c30b2387fc303a6e0925c39a135888a63d7b1855d1ebee8394adc20287",
-         intel: "e7b1be19a1f9ed78f46cdef5e21947c3c22fbf543375ebadb9870672b55dada9"
+  version "5.0.6"
+  sha256 arm:   "1adac9ee3d19b02b56c9ce3e47322dba4ea735df08633033a6190aee24e49402",
+         intel: "3a699a1df05ceaa9bbfc02ff25933a4999724c9ad9e251383de1222b30a9b5f3"
 
-  url "https://github.com/Ruben2776/PicView/releases/download/#{version}/PicView-#{version}-macOS-#{arch}.dmg",
-      verified: "github.com/Ruben2776/PicView/"
+  url "https://github.com/Ruben2776/PicView/releases/download/#{version}/PicView-#{version}-macOS-#{arch}.dmg"
   name "PicView"
   desc "Picture viewer"
   homepage "https://picview.org/"
@@ -15,6 +14,8 @@ cask "picview" do
     url :url
     strategy :github_latest
   end
+
+  depends_on :macos
 
   app "PicView.app"
 

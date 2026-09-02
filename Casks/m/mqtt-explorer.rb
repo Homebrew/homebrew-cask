@@ -2,8 +2,7 @@ cask "mqtt-explorer" do
   version "0.3.5"
   sha256 "4322a9127c3ce9025d33afa3ff91e76e8873fff260493a112eadc4769c027778"
 
-  url "https://github.com/thomasnordquist/MQTT-Explorer/releases/download/v#{version}/MQTT-Explorer-#{version}-mac.zip",
-      verified: "github.com/thomasnordquist/MQTT-Explorer/"
+  url "https://github.com/thomasnordquist/MQTT-Explorer/releases/download/v#{version}/MQTT-Explorer-#{version}-mac.zip"
   name "MQTT Explorer"
   homepage "https://mqtt-explorer.com/"
 
@@ -11,6 +10,10 @@ cask "mqtt-explorer" do
     url :url
     strategy :github_latest
   end
+
+  disable! date: "2026-09-01", because: :fails_gatekeeper_check
+
+  depends_on :macos
 
   app "MQTT Explorer.app"
 

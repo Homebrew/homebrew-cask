@@ -1,9 +1,9 @@
 cask "bitcoin-core" do
   arch arm: "arm64", intel: "x86_64"
 
-  version "30.0"
-  sha256 arm:   "f6e2d885027e25500c8b16406c95b0fb7e536a4e2bbaae2cf8b48a476a60abe1",
-         intel: "0eb10b714a4f5a0f7c40a9533d0bda141c739e7930c814e392baa99b3bf24790"
+  version "31.1"
+  sha256 arm:   "f6e7c185c4b81d5f53fb7471a438f58cc1b55c10c407095afef340e03289b504",
+         intel: "4715aaf04731eab1406f3b92977668a2ae191299f9bacb06b4f95f170fbaac2b"
 
   url "https://bitcoincore.org/bin/bitcoin-core-#{version}/bitcoin-#{version}-#{arch}-apple-darwin.zip"
   name "Bitcoin Core"
@@ -19,13 +19,13 @@ cask "bitcoin-core" do
     strategy :github_latest
   end
 
-  depends_on macos: ">= :ventura"
+  depends_on macos: :sonoma
 
   # Renamed for consistency: app name is different in the Finder and in a shell.
   app "Bitcoin-Qt.app", target: "Bitcoin Core.app"
 
-  preflight do
-    set_permissions "#{staged_path}/Bitcoin-Qt.app", "0755"
+  preflight_steps do
+    set_permissions "Bitcoin-Qt.app", "0755"
   end
 
   # Don't trash directory "~/Library/Application Support/Bitcoin" because it can contain bitcoin wallets

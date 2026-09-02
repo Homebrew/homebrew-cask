@@ -1,9 +1,8 @@
 cask "macfuse" do
-  version "5.1.1"
-  sha256 "cdd60135ba49467e6f17cbf97d843d7d9e0ab0eda022861d39deaa3cee53e359"
+  version "5.3.3"
+  sha256 "7a0b7b66c0e7f8932707d1215dc9cf486e178d097ae0a2dcdf17d8530566aa15"
 
-  url "https://github.com/macfuse/macfuse/releases/download/macfuse-#{version}/macfuse-#{version}.dmg",
-      verified: "github.com/macfuse/macfuse/"
+  url "https://github.com/macfuse/macfuse/releases/download/macfuse-#{version}/macfuse-#{version}.dmg"
   name "macFUSE"
   desc "File system integration"
   homepage "https://macfuse.github.io/"
@@ -17,11 +16,12 @@ cask "macfuse" do
 
   auto_updates true
   conflicts_with cask: "macfuse@dev"
+  depends_on :macos
 
   pkg "Extras/macFUSE #{version}.pkg"
 
-  postflight do
-    set_ownership ["/usr/local/include", "/usr/local/lib"]
+  postflight_steps do
+    set_ownership ["/usr/local/include", "/usr/local/lib"], recursive: false
   end
 
   uninstall launchctl: [

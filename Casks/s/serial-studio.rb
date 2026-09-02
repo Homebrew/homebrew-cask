@@ -1,9 +1,8 @@
 cask "serial-studio" do
-  version "3.1.10"
-  sha256 "2a76e9e299aa5c3517f8d01b59f320371bb84845e6f0e7c193702100fd92ccf1"
+  version "4.0.1"
+  sha256 "2dad21f5823e7d36fa628c334f54469b370a0e8b91d4f0a12e89c3fa9d5f9489"
 
-  url "https://github.com/Serial-Studio/Serial-Studio/releases/download/v#{version}/Serial-Studio-Pro-#{version}-macOS.dmg",
-      verified: "github.com/Serial-Studio/Serial-Studio/"
+  url "https://github.com/Serial-Studio/Serial-Studio/releases/download/v#{version}/Serial-Studio-Pro-#{version}-macOS.dmg"
   name "Serial Studio"
   desc "Data visualisation software for embedded devices and projects"
   homepage "https://serial-studio.github.io/"
@@ -13,7 +12,7 @@ cask "serial-studio" do
     strategy :github_latest
   end
 
-  depends_on macos: ">= :ventura"
+  depends_on macos: :ventura
 
   app "Serial Studio Pro.app"
 

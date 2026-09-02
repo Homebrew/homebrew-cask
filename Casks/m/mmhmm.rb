@@ -8,9 +8,10 @@ cask "mmhmm" do
   homepage "https://www.mmhmm.app/product"
 
   deprecate! date: "2025-05-25", because: :discontinued
+  disable! date: "2026-05-27", because: :discontinued
 
   auto_updates true
-  depends_on macos: ">= :ventura"
+  depends_on macos: :ventura
 
   pkg "mmhmm.pkg"
 

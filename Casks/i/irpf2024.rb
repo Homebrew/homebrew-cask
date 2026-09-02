@@ -1,6 +1,6 @@
 cask "irpf2024" do
-  version "1.8"
-  sha256 "b1d4be0fcf49ffb1334820d70960fc18d110b13e36fe7e661c98948403cb7a7a"
+  version "1.9"
+  sha256 "028567ecf0c130b6a2d2bcf791a84f4f0815206278aaacbd5fe0e1ccac95504b"
 
   url "https://downloadirpf.receita.fazenda.gov.br/irpf/2024/irpf/arquivos/IRPF2024-v#{version}.dmg"
   name "IRPF 2024"
@@ -13,6 +13,10 @@ cask "irpf2024" do
       xml.elements["//pkgver"]&.text&.strip
     end
   end
+
+  disable! date: "2026-09-01", because: :fails_gatekeeper_check
+
+  depends_on :macos
 
   installer manual: "IRPF2024.app"
 

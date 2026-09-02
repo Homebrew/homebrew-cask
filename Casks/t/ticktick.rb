@@ -1,12 +1,11 @@
 cask "ticktick" do
-  version "6.4.10,449"
-  sha256 "7f82cf20114629ee83c9f4d3e930d5df1279b2ba196d7c85152ae1cfb4f9bd16"
+  version "8.2.00,916"
+  sha256 "6c44fce60cbdc0f0ace97f15f596d3880407a4b115d39a0d3f9bb27544740dab"
 
-  url "https://ticktick-download-mac.s3.amazonaws.com/download/mac/TickTick_#{version.csv.first}_#{version.csv.second}.dmg",
-      verified: "ticktick-download-mac.s3.amazonaws.com/download/mac/"
+  url "https://download.ticktick.app/download/mac/TickTick_#{version.csv.first}_#{version.csv.second}.dmg"
   name "TickTick"
   desc "To-do & task list manager"
-  homepage "https://www.ticktick.com/home"
+  homepage "https://www.ticktick.com/"
 
   livecheck do
     url "https://pull.ticktick.com/mac/release_note/mac_appcast.xml"
@@ -14,6 +13,7 @@ cask "ticktick" do
   end
 
   auto_updates true
+  depends_on macos: :monterey
 
   app "TickTick.app"
 

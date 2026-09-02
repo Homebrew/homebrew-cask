@@ -1,6 +1,6 @@
 cask "blackhole-64ch" do
-  version "0.6.1"
-  sha256 "8ff9606314d44ef008066732e8b18cf0dfb3c4093dfacf6fb039e6098a6e2b86"
+  version "0.7.1"
+  sha256 "586b614cffb8b84ac39b2b926b69d5416ab9a4d64c63217b71ce2f5f5d7aabd1"
 
   url "https://existential.audio/downloads/BlackHole64ch-#{version}.pkg"
   name "BlackHole 64ch"
@@ -13,6 +13,8 @@ cask "blackhole-64ch" do
     url "https://github.com/ExistentialAudio/BlackHole"
     strategy :github_latest
   end
+
+  depends_on :macos
 
   pkg "BlackHole64ch-#{version}.pkg"
 

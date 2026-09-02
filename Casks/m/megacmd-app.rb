@@ -1,5 +1,5 @@
 cask "megacmd-app" do
-  version "2.1.1"
+  version "2.6.0"
   sha256 :no_check
 
   url "https://mega.nz/MEGAcmdSetup.dmg"
@@ -14,6 +14,8 @@ cask "megacmd-app" do
     url "https://github.com/meganz/MEGAcmd"
     regex(/^v?(\d+(?:\.\d+)+)[._-]macOS$/i)
   end
+
+  depends_on :macos
 
   app "MEGAcmd.app"
   binary "#{appdir}/MEGAcmd.app/Contents/MacOS/MEGAcmdShell", target: "megacmd"
@@ -77,7 +79,14 @@ cask "megacmd-app" do
   binary "#{appdir}/MEGAcmd.app/Contents/MacOS/mega-webdav"
   binary "#{appdir}/MEGAcmd.app/Contents/MacOS/mega-whoami"
 
-  zap trash: "~/.megaCmd"
+  uninstall launchctl: "megacmd.mac.megaupdater"
+
+  zap trash: [
+    "~/.megaCmd",
+    "~/Library/Caches/megacmd.mac",
+    "~/Library/HTTPStorages/megacmd.mac",
+    "~/Library/LaunchAgents/megacmd.mac.megaupdater.plist",
+  ]
 
   caveats <<~EOS
     #{token} only works if called from /Applications, so you may need to install

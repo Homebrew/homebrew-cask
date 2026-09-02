@@ -20,7 +20,7 @@ cask "iconchanger" do
     end
   end
 
-  depends_on macos: ">= :monterey"
+  depends_on macos: :monterey
 
   app "IconChanger #{version.csv.second} #{version.csv.third}/IconChanger.app"
 

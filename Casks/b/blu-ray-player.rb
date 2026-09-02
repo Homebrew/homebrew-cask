@@ -19,6 +19,7 @@ cask "blu-ray-player" do
   end
 
   auto_updates true
+  depends_on :macos
 
   app "Blu-ray Player.app"
 

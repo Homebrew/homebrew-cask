@@ -1,9 +1,8 @@
 cask "meld-studio" do
-  version "0.9.7.5"
+  version "0.10.6.1"
   sha256 :no_check
 
-  url "https://packages.streamwithmeld.com/MeldStudioInstaller.dmg",
-      verified: "packages.streamwithmeld.com/"
+  url "https://packages.streamwithmeld.com/MeldStudioInstaller.dmg"
   name "Meld Studio"
   desc "Live streaming and recording software"
   homepage "https://www.meldstudio.co/"
@@ -14,16 +13,28 @@ cask "meld-studio" do
   end
 
   auto_updates true
-  depends_on macos: ">= :monterey"
+  depends_on macos: :monterey
 
   app "Meld Studio.app"
 
+  uninstall launchctl: [
+              "co.meldstudio.keystone.agent",
+              "co.meldstudio.keystone.xpcservice",
+              "co.meldstudio.MeldStudioUpdater.wake",
+            ],
+            quit:      "co.meldstudio.MeldStudio"
+
   zap trash: [
     "~/Library/Application Support/MeldStudio",
+    "~/Library/Caches/co.meldstudio.MeldStudio",
+    "~/Library/Caches/Meld Studio",
+    "~/Library/HTTPStorages/co.meldstudio.MeldStudio.binarycookies",
     "~/Library/HTTPStorages/co.meldstudio.MeldStudioUpdater",
     "~/Library/LaunchAgents/co.meldstudio.keystone.agent.plist",
     "~/Library/LaunchAgents/co.meldstudio.keystone.xpcservice.plist",
     "~/Library/LaunchAgents/co.meldstudio.MeldStudioUpdater.wake.plist",
+    "~/Library/Meld Studio",
     "~/Library/MeldStudio",
+    "~/Library/WebKit/co.meldstudio.MeldStudio",
   ]
 end

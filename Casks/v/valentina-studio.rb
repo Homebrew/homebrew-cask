@@ -9,7 +9,7 @@ cask "valentina-studio" do
 
   disable! date: "2025-11-02", because: :unreachable
 
-  depends_on macos: ">= :monterey"
+  depends_on macos: :monterey
 
   app "Valentina Studio.app"
 

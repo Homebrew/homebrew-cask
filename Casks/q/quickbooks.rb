@@ -1,5 +1,5 @@
 cask "quickbooks" do
-  version "22.0.6.800,2023"
+  version "22.0.8.906,2023"
   sha256 :no_check # required as upstream package is updated in-place
 
   url "https://http-download.intuit.com/http.intuit/Downloads/#{version.csv.second}/Latest/QuickBooksMac#{version.csv.second}.dmg"
@@ -19,7 +19,7 @@ cask "quickbooks" do
   end
 
   auto_updates true
-  depends_on macos: ">= :monterey"
+  depends_on macos: :monterey
 
   app "QuickBooks #{version.csv.second}.app"
 

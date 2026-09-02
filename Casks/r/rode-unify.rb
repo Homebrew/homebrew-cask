@@ -1,5 +1,5 @@
 cask "rode-unify" do
-  version "1.3.45"
+  version "1.3.47"
   sha256 :no_check
 
   url "https://update.rode.com/unify_new/macos/RODE_UNIFY_MACOS.zip"
@@ -13,6 +13,8 @@ cask "rode-unify" do
       json.dig("rode-unify-new-manifest", "macos", "main-version", "update-version")
     end
   end
+
+  depends_on :macos
 
   # The url is unversioned, but the download returns a pkg with a version number
   rename "RØDE Unify*.pkg", "RØDE Unify.pkg"

@@ -1,6 +1,6 @@
 cask "operadriver" do
-  version "139.0.7258.156"
-  sha256 "6126de9582ccadb988fa55e5eef8e405cd4af28ec56109cd7267a22c21fdfdb0"
+  version "150.0.7871.212"
+  sha256 "6e11b896cbd19848717847792e90dd0600b5cb69aec93dc187480bedd14016be"
 
   url "https://github.com/operasoftware/operachromiumdriver/releases/download/v.#{version}/operadriver_mac64.zip"
   name "OperaChromiumDriver"
@@ -13,6 +13,8 @@ cask "operadriver" do
   end
 
   disable! date: "2026-09-01", because: :fails_gatekeeper_check
+
+  depends_on :macos
 
   binary "operadriver_mac64/operadriver"
 

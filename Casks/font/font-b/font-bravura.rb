@@ -1,16 +1,16 @@
 cask "font-bravura" do
-  version "1.392"
-  sha256 "42d18929af4cbdd13784a51c509175d4458010332d238310b4d4cd962e2bc1db"
+  version "1.482"
+  sha256 "b90867e2835cae1e15296213c32b8391dcaaa812b228a0519eeedfaf2c85add5"
 
   url "https://github.com/steinbergmedia/bravura/archive/refs/tags/bravura-#{version}.tar.gz"
   name "Bravura"
   homepage "https://github.com/steinbergmedia/bravura"
 
-  # Upstream may mark a release that is described as the current release on the first-party
-  # page as a "pre-release" on GitHub, so we have to check the first-party page.
+  # We check the SMuFL fonts page as the version it lists as current may be
+  # marked as "pre-release" on GitHub.
   livecheck do
     url "https://www.smufl.org/fonts/"
-    regex(%r{href=.*?/bravura/releases/tag/bravura[._-]v?(\d+(?:\.\d+)+)"}i)
+    regex(%r{href=.*?/bravura/releases/tag/bravura[._-]v?(\d+(?:\.\d+)+)["' >]}i)
   end
 
   font "bravura-bravura-#{version}/redist/otf/Bravura.otf"

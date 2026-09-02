@@ -17,6 +17,8 @@ cask "wondershare-filmora" do
     end
   end
 
+  depends_on :macos
+
   app "Wondershare Filmora Mac.app"
 
   zap trash: [

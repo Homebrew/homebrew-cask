@@ -2,8 +2,7 @@ cask "displaycal" do
   version "3.8.9.3"
   sha256 "3e3f4a506c3ffc1e2004d57c6cd521d6cacb1bb6a71f9e3fa4cd81ab6ad4f31a"
 
-  url "https://downloads.sourceforge.net/dispcalgui/release/#{version}/DisplayCAL-#{version}.pkg",
-      verified: "sourceforge.net/dispcalgui/"
+  url "https://downloads.sourceforge.net/dispcalgui/release/#{version}/DisplayCAL-#{version}.pkg"
   name "DisplayCAL"
   desc "Display calibration and characterization powered by ArgyllCMS"
   homepage "https://displaycal.net/"
@@ -15,6 +14,7 @@ cask "displaycal" do
   disable! date: "2026-09-01", because: :fails_gatekeeper_check
 
   auto_updates true
+  depends_on :macos
   depends_on formula: "argyll-cms"
 
   pkg "DisplayCAL-#{version}.pkg"

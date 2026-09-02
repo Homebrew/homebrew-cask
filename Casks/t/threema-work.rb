@@ -1,16 +1,20 @@
 cask "threema-work" do
-  version "1.2.49"
+  version "1.2.50"
   sha256 :no_check
 
   url "https://releases.threema.ch/web-electron/v1/release/Threema-Work-Latest.dmg"
   name "Threema Work"
   desc "End-to-end encrypted instant messaging application"
-  homepage "https://work.threema.ch/"
+  homepage "https://threema.com/products/work"
 
+  # TODO: Update this to check https://threema.com/en/changelog/desktop-md
+  # after a stable Threema Work 2.0 version appears.
   livecheck do
-    url "https://threema.ch/en/work/changelog"
+    url "https://threema.com/en/changelog"
     regex(/>\s*Threema\s+Work\s+v?(\d+(?:\.\d+)+)\s+for\s+Desktop\s*</i)
   end
+
+  depends_on macos: :big_sur
 
   app "Threema Work.app"
 

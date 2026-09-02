@@ -1,9 +1,8 @@
 cask "bria" do
-  version "6.8.4,128270"
-  sha256 "2ad8783760a007a6946f5128710b44ba7c6ba8b8886dbb6343407efcbfdd2ebe"
+  version "6.8.8,131080"
+  sha256 "bce3749db091916ffc4441ee3e854684b7ff7c01aa7818f443d476bc16572986"
 
-  url "https://counterpath.s3.amazonaws.com/downloads/Bria_#{version.csv.first}_#{version.csv.second}.dmg",
-      verified: "counterpath.s3.amazonaws.com/"
+  url "https://counterpath.s3.amazonaws.com/downloads/Bria_#{version.csv.first}_#{version.csv.second}.dmg"
   name "Bria"
   desc "Softphone application"
   homepage "https://www.counterpath.com/bria-solo/"
@@ -20,7 +19,7 @@ cask "bria" do
   end
 
   auto_updates true
-  depends_on macos: ">= :big_sur"
+  depends_on macos: :sonoma
 
   app "Bria.app"
 

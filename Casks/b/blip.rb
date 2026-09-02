@@ -1,9 +1,8 @@
 cask "blip" do
-  version "1.1.10,20250915095959"
-  sha256 "53f1c80134f826f1b7620c7bea6a2934a99a8aef04b3c8713853da1c9a069380"
+  version "1.1.16,20260425132215"
+  sha256 "c5dd4954c0f22c135c9bd5c21c7799757fe6cce0279554a99c36a0e625a8aab9"
 
-  url "https://f000.backblazeb2.com/file/push-mac/Blip-#{version.csv.second}.zip",
-      verified: "f000.backblazeb2.com/file/push-mac/"
+  url "https://f000.backblazeb2.com/file/push-mac/Blip-#{version.csv.second}.zip"
   name "blip"
   desc "Send any size file between devices"
   homepage "https://blip.net/"
@@ -13,7 +12,7 @@ cask "blip" do
     strategy :sparkle
   end
 
-  depends_on macos: ">= :monterey"
+  depends_on macos: :monterey
 
   app "Blip.app"
 

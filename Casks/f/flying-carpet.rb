@@ -1,6 +1,6 @@
 cask "flying-carpet" do
-  version "9.0.4,9.0.0"
-  sha256 "686dfec58bbd3cbfd495c74dd5c8c7c7d5fd18b5b0b108e6e44b69d6433ac80a"
+  version "10.0.4,10.0.0"
+  sha256 "b6db75afed626081275fd56215330fcfaf16af3070ddcfeda09c91a8c9ba2771"
 
   url "https://github.com/spieglt/FlyingCarpet/releases/download/v#{version.csv.second || version.csv.first}/macOS_FlyingCarpet_#{version.csv.first}.zip"
   name "Flying Carpet"
@@ -30,12 +30,15 @@ cask "flying-carpet" do
     end
   end
 
-  depends_on macos: ">= :ventura"
+  depends_on macos: :ventura
 
   app "FlyingCarpet.app"
 
   zap trash: [
+    "~/Library/Application Scripts/dev.spiegl.FlyingCarpet",
+    "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/dev.spiegl.flyingcarpet.sfl*",
     "~/Library/Caches/dev.spiegl",
+    "~/Library/Containers/dev.spiegl.FlyingCarpet",
     "~/Library/Preferences/com.yourcompany.flyingcarpet.plist",
     "~/Library/Preferences/dev.spiegl.plist",
     "~/Library/Saved Application State/com.yourcompany.flyingcarpet.savedState",

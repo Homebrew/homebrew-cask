@@ -1,8 +1,8 @@
 cask "expressions" do
-  version "1.3.6.61"
-  sha256 "5d0bfa6cee764cf942bdaaddab336461633f1bcfb5737fcd21b3970e5d308adb"
+  version "1.3.10"
+  sha256 "bb6f033ca5eadb3fd60105c6c2bf2709cb987d78311e7cecdbb0ca14ee24e23a"
 
-  url "https://cdn.apptorium.com/products/expressions/releases/Expressions-#{version}.zip"
+  url "https://www.apptorium.com/public/products/expressions/releases/Expressions-#{version}.zip"
   name "Expressions"
   desc "Regular expressions manager app"
   homepage "https://www.apptorium.com/expressions"
@@ -11,6 +11,8 @@ cask "expressions" do
     url "https://www.apptorium.com/expressions/trial"
     regex(%r{href=.*?/Expressions-(\d+(?:\.\d+)*)\.zip}i)
   end
+
+  depends_on macos: :monterey
 
   app "Expressions.app"
 

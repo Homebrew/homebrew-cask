@@ -2,8 +2,7 @@ cask "font-bahianita" do
   version :latest
   sha256 :no_check
 
-  url "https://github.com/google/fonts/raw/main/ofl/bahianita/Bahianita-Regular.ttf",
-      verified: "github.com/google/fonts/"
+  url "https://github.com/google/fonts/raw/main/ofl/bahianita/Bahianita-Regular.ttf"
   name "Bahianita"
   homepage "https://fonts.google.com/specimen/Bahianita"
 

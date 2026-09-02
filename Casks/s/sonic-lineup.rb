@@ -2,8 +2,7 @@ cask "sonic-lineup" do
   version "1.1,2768"
   sha256 "ebf5e90dbfd6cc5c3fcdd0004830d5cb7ff8b6f05ad9c7c4cac810d7a7b48c4c"
 
-  url "https://code.soundsoftware.ac.uk/attachments/download/#{version.csv.second}/Sonic%20Lineup-#{version.csv.first}.dmg",
-      verified: "code.soundsoftware.ac.uk/attachments/download/"
+  url "https://code.soundsoftware.ac.uk/attachments/download/#{version.csv.second}/Sonic%20Lineup-#{version.csv.first}.dmg"
   name "Sonic Lineup"
   desc "Rapid visualisation of multiple audio files for comparison"
   homepage "https://sonicvisualiser.org/sonic-lineup/"
@@ -15,6 +14,8 @@ cask "sonic-lineup" do
       page.scan(regex).map { |match| "#{match[1]},#{match[0]}" }
     end
   end
+
+  depends_on :macos
 
   app "Sonic Lineup.app"
 

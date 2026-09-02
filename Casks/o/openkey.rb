@@ -7,6 +7,10 @@ cask "openkey" do
   desc "Vietnamese input system"
   homepage "https://github.com/tuyenvm/OpenKey/"
 
+  disable! date: "2026-09-01", because: :fails_gatekeeper_check
+
+  depends_on :macos
+
   app "OpenKey.app"
 
   zap trash: [

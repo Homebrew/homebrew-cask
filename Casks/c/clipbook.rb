@@ -1,12 +1,11 @@
 cask "clipbook" do
   arch arm: "arm64", intel: "x64"
 
-  version "1.29.6"
-  sha256 arm:   "10616a291af731816ee433a10a02461111f71c8eb6beb3748e95abd4e51e0f88",
-         intel: "3af198e777e9e8e9b658cbcc5515bc8ae17a054407c9e3b19632800b65424a2f"
+  version "1.36.0"
+  sha256 arm:   "d59ad57f6bb8026c026e392e996eea2523fc8c9180e6a48be4981a491764d767",
+         intel: "4525bdd33db37b24a995860fcc54d421b98090a293e2e16269fbd1a440f5bc1b"
 
-  url "https://f005.backblazeb2.com/file/clipbook/ClipBook-#{version}-#{arch}.dmg",
-      verified: "f005.backblazeb2.com/file/clipbook/"
+  url "https://f005.backblazeb2.com/file/clipbook/ClipBook-#{version}-#{arch}.dmg"
   name "ClipBook"
   desc "Clipboard history app"
   homepage "https://clipbook.app/"
@@ -16,7 +15,7 @@ cask "clipbook" do
     strategy :sparkle, &:short_version
   end
 
-  depends_on macos: ">= :monterey"
+  depends_on macos: :monterey
 
   app "ClipBook.app"
 

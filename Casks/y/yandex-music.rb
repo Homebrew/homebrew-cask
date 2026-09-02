@@ -1,20 +1,19 @@
 cask "yandex-music" do
-  version "5.75.2"
-  sha256 "b6ac10c2def36755abcd1654ff27a764508e4ba74b3219fe5a52bd64a8694d8d"
+  version "5.117.1"
+  sha256 "3168521642c690626ccc4ad9d4c0afb08271f08cd840ee692007215941d731a0"
 
-  url "https://music-desktop-application.s3.yandex.net/stable/Yandex_Music_universal_#{version}.dmg",
-      verified: "music-desktop-application.s3.yandex.net/stable/"
+  url "https://desktop.app.music.yandex.net/stable/Yandex_Music_universal_#{version}.dmg"
   name "Yandex Music"
   desc "Tune in to Yandex Music and get personal recommendations"
   homepage "https://music.yandex.ru/"
 
   livecheck do
-    url "https://music-desktop-application.s3.yandex.net/stable/latest-mac.yml"
+    url "https://desktop.app.music.yandex.net/stable/latest-mac.yml"
     strategy :electron_builder
   end
 
   auto_updates true
-  depends_on macos: ">= :big_sur"
+  depends_on macos: :monterey
 
   app "Яндекс Музыка.app"
 

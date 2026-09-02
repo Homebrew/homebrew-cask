@@ -2,8 +2,7 @@ cask "specter" do
   version "2.0.5"
   sha256 "2419d08e0cc32c6c1e8d7f09af90e4e867d786bc51ee238f62ff741785caccc3"
 
-  url "https://github.com/cryptoadvance/specter-desktop/releases/download/v#{version}/Specter-v#{version}.dmg",
-      verified: "github.com/cryptoadvance/specter-desktop/"
+  url "https://github.com/cryptoadvance/specter-desktop/releases/download/v#{version}/Specter-v#{version}.dmg"
   name "Specter"
   desc "Desktop GUI for Bitcoin Core optimised to work with hardware wallets"
   homepage "https://specter.solutions/"
@@ -27,6 +26,8 @@ cask "specter" do
       js_file.scan(regex).map { |match| match[0] }
     end
   end
+
+  depends_on :macos
 
   app "Specter.app"
 

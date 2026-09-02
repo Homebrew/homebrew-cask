@@ -1,6 +1,6 @@
 cask "a-better-finder-attributes" do
-  version "7.41"
-  sha256 "282399644b62ef3e70f97f60d27f47bee5aebe9240e92331114b8bb02f836d9a"
+  version "7.48"
+  sha256 "141e4d9c50ed301bffda62592f8d1e3c464f9990ae8447588427a3af48b29790"
 
   url "https://www.publicspace.net/download/signedABFA#{version.major}.zip"
   name "A Better Finder Attributes"
@@ -13,7 +13,7 @@ cask "a-better-finder-attributes" do
   end
 
   auto_updates true
-  depends_on macos: ">= :ventura"
+  depends_on macos: :ventura
 
   app "A Better Finder Attributes #{version.major}.app"
 

@@ -8,6 +8,9 @@ cask "barrier" do
   homepage "https://github.com/debauchee/barrier/"
 
   deprecate! date: "2025-05-13", because: :unmaintained
+  disable! date: "2026-05-14", because: :unmaintained
+
+  depends_on :macos
 
   app "Barrier.app"
 

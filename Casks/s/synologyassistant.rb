@@ -1,6 +1,6 @@
 cask "synologyassistant" do
-  version "7.0.6,50085"
-  sha256 "b2bf2d6f1cb711cb136d6aba7927cd4c4efd9ab312a8556017c63702f1f856ad"
+  version "7.0.7,50095"
+  sha256 "12c67dcf2bd77398941b51183e693fe88d9a79da212652c8a0f0a13682848b5e"
 
   url "https://global.download.synology.com/download/Utility/Assistant/#{version.tr(",", "-")}/Mac/synology-assistant-#{version.tr(",", "-")}.dmg"
   name "Synology Assistant"
@@ -13,6 +13,8 @@ cask "synologyassistant" do
       json.dig("info", "versions", "", "all_versions")&.map { |item| item["version"]&.tr("-", ",") }
     end
   end
+
+  depends_on :macos
 
   app "SynologyAssistant.app"
 

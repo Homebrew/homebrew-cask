@@ -1,6 +1,6 @@
 cask "eaglefiler" do
-  version "1.9.19"
-  sha256 "e34c5c3538d965bd229afe40ba812380849b4ccb8a27f686278a47e002c30637"
+  version "1.9.21"
+  sha256 "4a2b7b010eed6729a27a6c451b3c6c9100266ac9eda19357d03f059618e2b434"
 
   url "https://c-command.com/downloads/EagleFiler-#{version}.dmg"
   name "EagleFiler"
@@ -21,6 +21,7 @@ cask "eaglefiler" do
   end
 
   auto_updates true
+  depends_on :macos
 
   app "EagleFiler.app"
 

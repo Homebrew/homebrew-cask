@@ -21,6 +21,7 @@ cask "quickhash" do
 
   disable! date: "2026-09-01", because: :fails_gatekeeper_check
 
+  depends_on :macos
   container nested: "Quickhash-GUI_#{version.csv.third}#{version.csv.fourth}#{version.csv.fifth}.dmg"
 
   app "Quickhash-GUI.app"

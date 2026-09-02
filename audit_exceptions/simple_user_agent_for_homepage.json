@@ -1,9 +1,14 @@
 [
+  "arm-performance-libraries",
+  "gcc-arm-embedded",
   "microsoft-excel",
   "microsoft-office",
   "microsoft-office-businesspro",
   "microsoft-onenote",
   "microsoft-outlook",
   "microsoft-powerpoint",
-  "microsoft-word"
+  "microsoft-word",
+  "salesforce-cli",
+  "sonos",
+  "webex"
 ]

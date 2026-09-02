@@ -1,6 +1,6 @@
 cask "bluestacks" do
-  version "5.21.745.7536,17b8c929cbb641779826342bdcd1aec1"
-  sha256 "d1dcc1361321fc7bc40d4d46a0fb5fdf30eaef3591c2579ea95aa249883bf984"
+  version "5.21.785.7533,5705bb9982864feeaf81191256adb6c1"
+  sha256 "c60cdff4ce3e5d1855eec34ec7e178745b01aaabbc0aaec94c83905d53d4e428"
 
   url "https://ak-build.bluestacks.com/public/app-player/mac/nxt_mac2/#{version.csv.first}/#{version.csv.second}/BlueStacksInstaller_#{version.csv.first}.pkg"
   name "BlueStacks"
@@ -19,16 +19,21 @@ cask "bluestacks" do
   end
 
   depends_on arch: :arm64
-  depends_on macos: ">= :big_sur"
+  depends_on macos: :big_sur
 
   pkg "BlueStacksInstaller_#{version.csv.first}.pkg"
 
   uninstall launchctl: "com.now.gg.BlueStacks.cleanup",
             pkgutil:   [
+              "com.now.gg.BlueAI",
               "com.now.gg.BlueStacks",
+              "com.now.gg.BlueStacksAirMIM",
               "com.now.gg.BlueStacksMIM",
             ],
-            delete:    "/Applications/BlueStacksMIM.app"
+            delete:    [
+              "/Applications/BlueStacks Air multi-instance manager.app",
+              "/Applications/BlueStacksMIM.app",
+            ]
 
   zap trash: [
         "/Users/Shared/Library/Application Support/BlueStacks",

@@ -1,14 +1,20 @@
 cask "font-tex-gyre-heros" do
-  version "2.004"
-  sha256 "755954b7349b803fc1c3d82fe9d9c4f7cf66467af718eaaf4f78ae1a09bf265d"
+  version "2.609,31_03_2026"
+  sha256 "a5803bb6211202b0e52447bbcbd41a209716b0952224c1116a28b6d342225abe"
 
-  url "https://www.gust.org.pl/projects/e-foundry/tex-gyre/heros/qhv#{version}otf.zip"
+  url "https://www.gust.org.pl/projects/e-foundry/tex-gyre/heros/tg_heros-otf-#{version.csv.first.dots_to_underscores}#{"-#{version.csv.second}" if version.csv.second}.zip"
   name "TeX Gyre Heros"
   homepage "https://www.gust.org.pl/projects/e-foundry/tex-gyre/heros"
 
   livecheck do
-    url "https://www.gust.org.pl/projects/e-foundry/tex-gyre/whole"
-    regex(%r{Heros</a>,\sver\.\s(\d+(?:\.\d+)+)}i)
+    url :homepage
+    regex(/href=.*?heros-otf[._-]v?(\d+(?:[._]\d+)+)(?:-(\d+(?:[._]\d+)+))?\.zip/i)
+    strategy :page_match do |page, regex|
+      page.scan(regex).map do |match|
+        version = match[0].tr("_", ".")
+        match[1].present? ? "#{version},#{match[1]}" : version
+      end
+    end
   end
 
   font "texgyreheros-bold.otf"

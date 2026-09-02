@@ -1,6 +1,6 @@
 cask "geogebra@5" do
-  version "5.2.905.1"
-  sha256 "46375dd164120f153d766c5fab6ee28fdc3926f909a1e260d6cb7bfc77c785dd"
+  version "5.4.929.3"
+  sha256 "e6f681ac7c1ca5631ff5f912161ecac194d3b68732b0a93c06b981efeb6a77d6"
 
   url "https://download.geogebra.org/installers/#{version.major_minor}/GeoGebra-MacOS-Installer-withJava-#{version.dots_to_hyphens}.zip"
   name "GeoGebra"
@@ -18,9 +18,9 @@ cask "geogebra@5" do
     end
   end
 
-  disable! date: "2026-09-01", because: :fails_gatekeeper_check
+  depends_on :macos
 
-  app "Geogebra.app"
+  app "GeoGebra.app"
 
   uninstall quit:       "org.geogebra#{version.major}.mac",
             login_item: "Geogebra"

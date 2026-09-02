@@ -1,18 +1,20 @@
 cask "airbuddy" do
-  version "2.7.4,650"
-  sha256 "7a7beb66a71601224df23ecb4dd6cea44f518ce7b7c9e5fc1731580b153f4254"
+  version "3.0.1,1008"
+  sha256 "0c8e2b7349629f8176d7af8d2460cd06e37d1721edff6a925109914b53992700"
 
-  url "https://su.airbuddy.app/kCRSAmcjBc/AirBuddy_v#{version.csv.first}-#{version.csv.second}.dmg"
+  url "https://su.airbuddy.app/lleMaylxgd/AirBuddy_v#{version.csv.first}-#{version.csv.second}.dmg",
+      user_agent: :browser
   name "AirBuddy"
   desc "AirPods companion app"
   homepage "https://airbuddy.app/"
 
   livecheck do
-    url "https://su.airbuddy.app/kCRSAmcjBc/appcast_hyeon.xml"
+    url "https://su.airbuddy.app/lleMaylxgd/appcast_taeyang.xml"
     strategy :sparkle
   end
 
   auto_updates true
+  depends_on macos: :sonoma
 
   app "AirBuddy.app"
 

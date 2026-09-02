@@ -1,12 +1,11 @@
 cask "kopiaui" do
   arch arm: "-arm64"
 
-  version "0.21.1"
-  sha256 arm:   "50222a8cf70bde831d756100a779259d8ef927064f9284e3afabd33c30bb157f",
-         intel: "aafe3306b2c6fe35a30f7709d2762c71c97a3c25c4a174111fd8621620dc6e4b"
+  version "0.23.1"
+  sha256 arm:   "f2adb1869c603c66aaeabd846affd21df426c614cc8285230f5465f9389a003c",
+         intel: "518c6ff1ed4c992085f1c2ce3eeec0d8616562d855c12b82d7da02eb2103b7a5"
 
-  url "https://github.com/kopia/kopia/releases/download/v#{version}/KopiaUI-#{version}#{arch}.dmg",
-      verified: "github.com/kopia/kopia/"
+  url "https://github.com/kopia/kopia/releases/download/v#{version}/KopiaUI-#{version}#{arch}.dmg"
   name "KopiaUI"
   desc "Backup/restore tool"
   homepage "https://kopia.io/"
@@ -17,7 +16,7 @@ cask "kopiaui" do
   end
 
   auto_updates true
-  depends_on macos: ">= :big_sur"
+  depends_on macos: :monterey
 
   app "KopiaUI.app"
 

@@ -1,12 +1,11 @@
 cask "coscreen" do
   arch arm: "arm64", intel: "x64"
 
-  version "8.9.6"
-  sha256 arm:   "ca91cff60c046d69bd40055de625f5bcdf5abbee1787f7b741b2cccee661a206",
-         intel: "ecedd17094060f6a1c4fe0368c67f04942348aa5ae9b2f34b68e0d1fdf96091c"
+  version "8.11.14"
+  sha256 arm:   "00a91e0532ad699c3eb9b1df6bd56334e161e255026b9776bbe761f65c1e28b5",
+         intel: "9f58c2e9157a8bbf57f9e48e6ac5d090b9c0420a62973a12259d7a115b83ec91"
 
-  url "https://update.coscreen.org/CoScreen-#{version}-stable-#{arch}.dmg",
-      verified: "update.coscreen.org/"
+  url "https://update.coscreen.org/CoScreen-#{version}-stable-#{arch}.dmg"
   name "CoScreen"
   desc "Collaboration tool with multi-user screen sharing"
   homepage "https://www.coscreen.co/"
@@ -17,7 +16,7 @@ cask "coscreen" do
   end
 
   auto_updates true
-  depends_on macos: ">= :ventura"
+  depends_on macos: :ventura
 
   app "CoScreen.app"
 

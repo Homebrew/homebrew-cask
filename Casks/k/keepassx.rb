@@ -14,10 +14,12 @@ cask "keepassx" do
 
   disable! date: "2026-09-01", because: :fails_gatekeeper_check
 
+  depends_on :macos
+
   app "KeePassX.app"
 
-  uninstall_preflight do
-    set_ownership "#{appdir}/KeePassX.app"
+  uninstall_preflight_steps do
+    set_ownership "KeePassX.app", base: :appdir
   end
 
   zap trash: "~/.keepassx"

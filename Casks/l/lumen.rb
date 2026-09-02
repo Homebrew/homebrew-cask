@@ -1,6 +1,6 @@
 cask "lumen" do
-  version "1.3.0"
-  sha256 "354cc6f83728a4bb4d2d469195afe7abcc5160ea1ca915ec84aee72c7907cd52"
+  version "1.3.1"
+  sha256 "3e22d1a8c646c414f7b99cb880730123ad0a5c66c2f2774c060e0c22cff5af0b"
 
   url "https://github.com/anishathalye/lumen/releases/download/v#{version}/Lumen.zip"
   name "Lumen"
@@ -8,6 +8,8 @@ cask "lumen" do
   homepage "https://github.com/anishathalye/lumen"
 
   disable! date: "2026-09-01", because: :fails_gatekeeper_check
+
+  depends_on macos: :sonoma
 
   app "Lumen.app"
 

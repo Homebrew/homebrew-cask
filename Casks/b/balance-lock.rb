@@ -13,6 +13,7 @@ cask "balance-lock" do
   end
 
   auto_updates true
+  depends_on :macos
 
   app "Balance Lock.app"
 

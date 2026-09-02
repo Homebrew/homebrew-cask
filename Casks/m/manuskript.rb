@@ -2,8 +2,7 @@ cask "manuskript" do
   version "0.16.1"
   sha256 "f67f3f44fee26259c04eb2df24b7a85b71c9963be1fe93d5c24e738af4a2d2af"
 
-  url "https://github.com/olivierkes/manuskript/releases/download/#{version.major_minor_patch}/manuskript-#{version}-osx.dmg",
-      verified: "github.com/olivierkes/manuskript/"
+  url "https://github.com/olivierkes/manuskript/releases/download/#{version.major_minor_patch}/manuskript-#{version}-osx.dmg"
   name "Manuskript"
   desc "Tool for writers"
   homepage "https://www.theologeek.ch/manuskript/"
@@ -12,6 +11,10 @@ cask "manuskript" do
     url "https://www.theologeek.ch/manuskript/download/"
     regex(/href.*?manuskript[._-]v?(\d+(?:\.\d+)+)[._-]osx\.dmg/i)
   end
+
+  disable! date: "2026-09-01", because: :fails_gatekeeper_check
+
+  depends_on :macos
 
   app "manuskript.app"
 

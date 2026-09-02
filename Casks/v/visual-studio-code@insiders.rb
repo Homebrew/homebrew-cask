@@ -1,12 +1,11 @@
 cask "visual-studio-code@insiders" do
   arch arm: "-arm64"
 
-  version "1.106.0-insider,1762871417911,ac4cbdf48759c7d8c3eb91ffe6bb04316e263c57"
-  sha256 arm:   "803859eb28c93246d1aaac5d59945cc50879cd125ad6183f29232fe3bd7f0ecc",
-         intel: "75328abe0e0095cbb7502ba6a969a8e03d4e79b5c35178e24dcc6c5c7fa73f45"
+  version "1.137.0-insider,1788325681211,1f625adb84abf41cdff31f40f66e58a222f033f6"
+  sha256 arm:   "9255a3b975d7180117eb3b59fd0b894626fbdda5d9bf816d2baa10bbd0122d85",
+         intel: "a5dde871b0ba6e99a17e658d8f9dd83d6fafbcb4e71a10af770da3458851b17e"
 
-  url "https://vscode.download.prss.microsoft.com/dbazure/download/insider/#{version.csv.third}/VSCode-darwin#{arch}.zip",
-      verified: "vscode.download.prss.microsoft.com/"
+  url "https://vscode.download.prss.microsoft.com/dbazure/download/insider/#{version.csv.third}/VSCode-darwin#{arch}.zip"
   name "Microsoft Visual Studio Code Insiders"
   name "VS Code Insiders"
   desc "Open-source code editor"
@@ -25,7 +24,7 @@ cask "visual-studio-code@insiders" do
   end
 
   auto_updates true
-  depends_on macos: ">= :big_sur"
+  depends_on macos: :monterey
 
   app "Visual Studio Code - Insiders.app"
   binary "#{appdir}/Visual Studio Code - Insiders.app/Contents/Resources/app/bin/code", target: "code-insiders"

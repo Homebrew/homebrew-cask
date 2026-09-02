@@ -20,6 +20,8 @@ cask "desktoppr" do
     end
   end
 
+  depends_on :macos
+
   pkg "desktoppr-#{version.tr(",", "-")}.pkg"
 
   uninstall pkgutil: "com.scriptingosx.desktoppr"

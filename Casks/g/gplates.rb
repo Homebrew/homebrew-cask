@@ -5,8 +5,7 @@ cask "gplates" do
   version "2.5.0"
   sha256 :no_check
 
-  url "https://www.earthbyte.org/download/#{livecheck_id}/",
-      verified: "earthbyte.org/"
+  url "https://www.earthbyte.org/download/#{livecheck_id}/"
   name "GPlates"
   desc "Plate tectonics program"
   homepage "https://www.gplates.org/"
@@ -16,6 +15,8 @@ cask "gplates" do
     regex(/gplates[._-]v?(\d+(?:\.\d+)+)[._-]Darwin[._-]#{arch}\.dmg/i)
     strategy :header_match
   end
+
+  depends_on :macos
 
   # The url is unversioned, but the download returns an app directory with a version number
   rename "GPlates_*", "Gplates"

@@ -2,8 +2,7 @@ cask "memory" do
   version "2023.11"
   sha256 :no_check
 
-  url "https://memorymacapp.s3.amazonaws.com/Memory.zip",
-      verified: "memorymacapp.s3.amazonaws.com/"
+  url "https://memorymacapp.s3.amazonaws.com/Memory.zip"
   name "Memory Tracker by Timely"
   desc "Time tracking software"
   homepage "https://memory.ai/timely/"
@@ -14,6 +13,7 @@ cask "memory" do
   end
 
   auto_updates true
+  depends_on :macos
 
   app "Memory.app"
 

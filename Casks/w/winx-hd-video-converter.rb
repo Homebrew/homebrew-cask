@@ -12,6 +12,8 @@ cask "winx-hd-video-converter" do
     regex(/for\s*Mac\s*v?(\d+(?:\.\d+)+)/i)
   end
 
+  depends_on :macos
+
   app "WinX HD Video Converter for Mac.app"
 
   zap trash: [

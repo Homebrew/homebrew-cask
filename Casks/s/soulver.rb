@@ -1,6 +1,6 @@
 cask "soulver" do
-  version "3.15.1,501"
-  sha256 "02654eca19afdf8dbbc441135253266d6712b101fed7928b944fc06e394492d8"
+  version "3.16.3,541"
+  sha256 "5412bb0f5aecf456b2c767ae9ce19e0a34ccaa9c3c0c1d9fe217749eef799d9c"
 
   url "https://soulver.app/mac/sparkle/soulver-#{version.csv.first}-#{version.csv.second}.zip"
   name "Soulver"
@@ -14,7 +14,7 @@ cask "soulver" do
 
   auto_updates true
   conflicts_with cask: "soulver-cli"
-  depends_on macos: ">= :ventura"
+  depends_on macos: :sonoma
 
   app "Soulver #{version.major}.app"
   binary "#{appdir}/Soulver #{version.major}.app/Contents/MacOS/CLI/soulver"

@@ -1,12 +1,11 @@
 cask "weasis" do
   arch arm: "aarch64", intel: "x86-64"
 
-  version "4.6.5"
-  sha256 arm:   "7c28cf3547a637b57f98c18fda80abb2911b84d3056f8ec911a924507ea39bf5",
-         intel: "d9d9cbc1d84c4291e930459617bf340d63634db57b844917513a2ea46f3cbe84"
+  version "4.7.3"
+  sha256 arm:   "5dc395a35390798bc8c9174c00afe968fce29c2845d248f9fa08e90e437a1ba7",
+         intel: "7580a3c20a0f52b2e3635ef6040cf09db6392c41c9522aa714d12fb7bb654579"
 
-  url "https://github.com/nroduit/Weasis/releases/download/v#{version}/Weasis-#{version}-#{arch}.pkg",
-      verified: "github.com/nroduit/Weasis/"
+  url "https://github.com/nroduit/Weasis/releases/download/v#{version}/Weasis-#{version}-#{arch}.pkg"
   name "Weasis"
   desc "Free DICOM viewer for displaying and analyzing medical images"
   homepage "https://weasis.org/en/index.html"
@@ -19,6 +18,7 @@ cask "weasis" do
   end
 
   auto_updates true
+  depends_on :macos
 
   pkg "Weasis-#{version}-#{arch}.pkg"
 

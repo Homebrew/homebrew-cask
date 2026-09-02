@@ -1,6 +1,6 @@
 cask "sloth" do
-  version "3.4"
-  sha256 "2bc0f078114020b110caaae2e8d3bea79a916a6f811e3224d6d978de072c78db"
+  version "3.6"
+  sha256 "d3997c364c0b5f58e8676d336b78943cfcbc54e6c78cab348bd1580c29332da6"
 
   url "https://sveinbjorn.org/files/software/sloth/sloth-#{version}.zip"
   name "Sloth"
@@ -13,6 +13,7 @@ cask "sloth" do
   end
 
   auto_updates true
+  depends_on macos: :big_sur
 
   app "Sloth.app"
 

@@ -13,6 +13,7 @@ cask "anydo" do
   end
 
   auto_updates true
+  depends_on :macos
 
   app "Anydo.app"
 

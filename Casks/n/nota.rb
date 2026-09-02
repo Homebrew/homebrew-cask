@@ -5,13 +5,13 @@ cask "nota" do
   sha256 arm:   "727571f727486376127f0a52b8b460f2bc6ab152e3f2c7377eb7154ef5ec88dd",
          intel: "4ef87e0c7f5cbf796eb6a730569334cc02db76f50ecb06f475847d2ea155ee90"
 
-  url "https://github.com/notaapp/releases/releases/download/#{version}/Nota-#{version}-#{arch}.zip",
-      verified: "github.com/notaapp/releases/"
+  url "https://github.com/notaapp/releases/releases/download/#{version}/Nota-#{version}-#{arch}.zip"
   name "Nota"
   desc "Markdown files editor"
   homepage "https://nota.md/"
 
   auto_updates true
+  depends_on :macos
 
   app "Nota.app"
   binary "#{appdir}/Nota.app/Contents/Resources/app.asar.unpacked/assets/nota.sh", target: "nota"

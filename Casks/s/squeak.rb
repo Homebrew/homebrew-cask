@@ -1,6 +1,6 @@
 cask "squeak" do
-  version "6.0,22148"
-  sha256 "a1902d43ba77a0fc02ea31b38d9a290bacb08a82a5933a296c4c586657918bce"
+  version "6.1,23976"
+  sha256 "375fa6abc1bf2d3b6a20b7c31cef7c5218d797adda42291cd80b0ca6d40d528c"
 
   url "https://files.squeak.org/#{version.csv.first}/Squeak#{version.csv.first}-#{version.csv.second}-64bit/Squeak#{version.csv.first}-#{version.csv.second}-64bit-All-in-One.zip"
   name "Squeak"
@@ -14,6 +14,8 @@ cask "squeak" do
       page.scan(regex).map { |match| "#{match[0]},#{match[1]}" }
     end
   end
+
+  depends_on macos: :big_sur
 
   app "Squeak#{version.csv.first}-#{version.csv.second}-64bit-All-in-One.app"
 

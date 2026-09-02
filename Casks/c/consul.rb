@@ -1,12 +1,11 @@
 cask "consul" do
   arch arm: "arm64", intel: "amd64"
 
-  version "1.22.0"
-  sha256 arm:   "6d9d58a2364d2ac23c816d6eb463ffcd10c568c547268fad310dc4299ac483e5",
-         intel: "eb949ef495d53c1a08d9564105e742ed9eb93ef4f05abafaa4c479b3895bb4b8"
+  version "2.0.3"
+  sha256 arm:   "fed05e8e2a296989c1a5c86e3b38d5f4dbdc7d83e0c0acf4c5fe7e302e8f4fde",
+         intel: "9a8ced39610be73c4b6c918e64c1589a3fe9747f3a2188b8da55d0a35ddca4e0"
 
-  url "https://releases.hashicorp.com/consul/#{version}/consul_#{version}_darwin_#{arch}.zip",
-      verified: "releases.hashicorp.com/consul/"
+  url "https://releases.hashicorp.com/consul/#{version}/consul_#{version}_darwin_#{arch}.zip"
   name "Consul"
   desc "Tool for service discovery, monitoring and configuration"
   homepage "https://www.consul.io/"
@@ -15,6 +14,8 @@ cask "consul" do
     url "https://releases.hashicorp.com/consul/"
     regex(%r{href=.*?/v?(\d+(?:\.\d+)+)/}i)
   end
+
+  depends_on :macos
 
   binary "consul"
 

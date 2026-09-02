@@ -2,12 +2,11 @@ cask "flexoptix" do
   arch arm: "arm64", intel: "x64"
   arch_suffix = on_arch_conditional arm: "-arm64"
 
-  version "5.54.0-latest"
-  sha256 arm:   "3d5a8b189c11be695b4434f30fd462692c36287527c9145b7b0ca9205d5cb007",
-         intel: "85d9ebdabe5650c67ad01f4d8ee714a674afe55ea03b99421278a45429b221d6"
+  version "5.67.0-latest"
+  sha256 arm:   "af2f7a75a2475b26742a0445e0e0e6cc3fb8583e0c8d4cf99aac399ffd431c70",
+         intel: "670a16b1857eb1b4f899335dc619b91140a009eab51a5c7e0983ab1841404658"
 
-  url "https://flexbox.reconfigure.me/download/electron/mac/#{arch}/FLEXOPTIX%20App-#{version}#{arch_suffix}.dmg",
-      verified: "flexbox.reconfigure.me/download/electron/mac/"
+  url "https://flexbox.reconfigure.me/download/electron/mac/#{arch}/FLEXOPTIX%20App-#{version}#{arch_suffix}.dmg"
   name "FLEXOPTIX App"
   desc "Connect to your FLEXBOX without cables and configure transceivers"
   homepage "https://www.flexoptix.net/en/flexoptix-app/#"
@@ -18,7 +17,7 @@ cask "flexoptix" do
   end
 
   auto_updates true
-  depends_on macos: ">= :big_sur"
+  depends_on macos: :big_sur
 
   app "FLEXOPTIX App.app"
 

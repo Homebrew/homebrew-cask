@@ -2,8 +2,7 @@ cask "affinity-publisher@1" do
   version "1.10.8"
   sha256 "6d5675970b745775bd5c35d28d20e1c68fe0771cdc2c17161f6762c2730a1278"
 
-  url "https://affinity-update.s3.amazonaws.com/mac/retail/Affinity%20Publisher-#{version}.app.zip",
-      verified: "affinity-update.s3.amazonaws.com/"
+  url "https://affinity-update.s3.amazonaws.com/mac/retail/Affinity%20Publisher-#{version}.app.zip"
   name "Affinity Publisher"
   desc "Professional desktop publishing software"
   homepage "https://affinity.serif.com/en-us/publisher/"
@@ -11,6 +10,7 @@ cask "affinity-publisher@1" do
   deprecate! date: "2025-10-30", because: :discontinued
 
   auto_updates true
+  depends_on :macos
 
   app "Affinity Publisher.app"
 

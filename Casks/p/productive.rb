@@ -1,9 +1,9 @@
 cask "productive" do
   arch arm: "-arm64"
 
-  version "1.16.2"
-  sha256 arm:   "9100ee5a7886c7a6b55a492caa899590a9a865bf8f31bf9758056c334e04af4f",
-         intel: "ef97de80e3665743f139f7e5fcd3eb78d86aea00132eaea7c9c27cbcc4346080"
+  version "1.17.4"
+  sha256 arm:   "ed065f75a0726e2a269d2fd8fe78f50335851adc833e34058e4b5d16ec724cb1",
+         intel: "d2392869312c41632a90ea41e6a3e9fb96d83d0ad49b51bb8c3db8639c07b49c"
 
   url "https://download.productive.io/desktop/electron/Productive-#{version}#{arch}.dmg"
   name "Productive"
@@ -16,7 +16,7 @@ cask "productive" do
   end
 
   auto_updates true
-  depends_on macos: ">= :big_sur"
+  depends_on macos: :monterey
 
   app "Productive.app"
 

@@ -1,9 +1,9 @@
 cask "binance" do
   arch arm: "arm64", intel: "x64"
 
-  version "2.0.2"
-  sha256 arm:   "ebae9f0661a1d577f3c2880f87a99f84a01e8ede3b375c4d635f1d1f14eb33db",
-         intel: "5f4f03e11a4547279825db2db751c9a36a7c938346ff2cca666bcdef12452fa5"
+  version "2.4.1"
+  sha256 arm:   "2bb7e4c115a5bbef14c734f31ead811456e46a4863d3ec3303a66cb3e5c6e745",
+         intel: "4890a7651cf52f45ee5a81f54db9dc4c7624d3418158031aba64cd956c969c0b"
 
   url "https://ftp.binance.com/electron-desktop/mac/production/binance-#{version}-#{arch}.dmg"
   name "Binance"
@@ -16,13 +16,15 @@ cask "binance" do
   end
 
   auto_updates true
-  depends_on macos: ">= :monterey"
+  depends_on macos: :monterey
 
   app "Binance.app"
 
   zap trash: [
     "~/Library/Application Support/Binance",
+    "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.binance.binancedesktop.sfl*",
     "~/Library/Logs/Binance",
+    "~/Library/Preferences/com.binance.BinanceDesktop.plist",
     "~/Library/Saved Application State/com.binance.BinanceDesktop.savedState",
   ]
 end

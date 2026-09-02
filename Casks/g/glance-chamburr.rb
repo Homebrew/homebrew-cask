@@ -1,13 +1,15 @@
 cask "glance-chamburr" do
-  version "1.5.2"
-  sha256 "c2ee7f62b575fd4482fc4fec2c990c0e4bdf419e58a0dc2f2f918f6b14c0ce0b"
+  version "1.5.4"
+  sha256 "f2df114e83b8b834c2da9d4cfbd4d3307a8f0563a9e613bfdd88b4b3bffe61ad"
 
   url "https://github.com/chamburr/glance/releases/download/v#{version}/Glance-#{version}.dmg"
   name "Glance"
   desc "Utility to provide quick look previews for files that aren't natively supported"
   homepage "https://github.com/chamburr/glance"
 
-  depends_on macos: ">= :big_sur"
+  disable! date: "2026-09-01", because: :fails_gatekeeper_check
+
+  depends_on macos: :big_sur
 
   app "Glance.app"
 

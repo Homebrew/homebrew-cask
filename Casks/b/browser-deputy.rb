@@ -1,5 +1,5 @@
 cask "browser-deputy" do
-  version "1.9"
+  version "1.10"
   sha256 :no_check
 
   url "https://anybox.ltd/browser-deputy/download/browserdeputy-latest.zip"
@@ -13,7 +13,7 @@ cask "browser-deputy" do
   end
 
   auto_updates true
-  depends_on macos: ">= :ventura"
+  depends_on macos: :ventura
 
   app "Browser Deputy.app"
 

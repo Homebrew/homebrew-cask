@@ -5,16 +5,14 @@ cask "netdownloadhelpercoapp" do
   sha256 arm:   "be91d5896db29724389c79bc8ce2b1b257bf7516068755aa2a4027c87c82eb9b",
          intel: "3e4c513c368aa426d9713c857778996773014bcf1874c909c80cfb6ec96de50e"
 
-  url "https://github.com/aclap-dev/vdhcoapp/releases/download/v#{version}/vdhcoapp-mac-#{arch}-installer.pkg",
-      verified: "github.com/aclap-dev/vdhcoapp/"
+  url "https://github.com/aclap-dev/vdhcoapp/releases/download/v#{version}/vdhcoapp-mac-#{arch}-installer.pkg"
   name "Video DownloadHelper Companion App"
   desc "Allows video downloads from the Web"
   homepage "https://www.downloadhelper.net/w/CoApp-Installation"
 
-  livecheck do
-    url :url
-    strategy :github_latest
-  end
+  deprecate! date: "2026-05-02", because: :discontinued
+
+  depends_on :macos
 
   pkg "vdhcoapp-mac-#{arch}-installer.pkg"
   pkg "vdhcoapp-mac-#{arch}-installer.pkg"

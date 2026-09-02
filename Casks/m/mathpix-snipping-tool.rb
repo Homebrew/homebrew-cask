@@ -1,6 +1,6 @@
 cask "mathpix-snipping-tool" do
-  version "3.4.16.2"
-  sha256 "b6b97ae6a8d9e1c3bc651e6990958138ce58072b3eb262e79aed15db54c15f8d"
+  version "3.4.21.4"
+  sha256 "fc197bae9c337aaccc7121dca3295e156e73613bd4af934fe0741be184e4e586"
 
   url "https://mathpix.com/dmg/SnippingTool-v#{version}.dmg"
   name "Mathpix Snipping Tool"
@@ -16,6 +16,7 @@ cask "mathpix-snipping-tool" do
   end
 
   auto_updates true
+  depends_on :macos
 
   app "Mathpix Snipping Tool.app"
 

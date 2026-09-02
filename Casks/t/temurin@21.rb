@@ -1,12 +1,17 @@
 cask "temurin@21" do
   arch arm: "aarch64", intel: "x64"
 
-  version "21.0.9,10"
-  sha256 arm:   "021202e4f57972a7620a076ca4f78814a8074b02beb96e727b52aafba0bc35fe",
-         intel: "74adf5a8f9f2038c237c34b31d50984aa92cbc205f58fa04eb5b3f53f414e9b8"
+  sha256 arm:   "575bb8d9d604821d8f350325b28a35e49bcffd7ec33727b41edc8d709537dada",
+         intel: "9294fd37c0d38d75bf8b0d3e5a74f11c90006dc65b25bf1dd5a3b887e53f5bb9"
 
-  url "https://github.com/adoptium/temurin#{version.major}-binaries/releases/download/jdk-#{version.csv.first}%2B#{version.csv.second}/OpenJDK#{version.major}U-jdk_#{arch}_mac_hotspot_#{version.csv.first}_#{version.csv.second.major}.pkg",
-      verified: "github.com/adoptium/"
+  on_arm do
+    version "21.0.12.1,1"
+  end
+  on_intel do
+    version "21.0.12.1,1"
+  end
+
+  url "https://github.com/adoptium/temurin#{version.major}-binaries/releases/download/jdk-#{version.csv.first}%2B#{version.csv.second}/OpenJDK#{version.major}U-jdk_#{arch}_mac_hotspot_#{version.csv.first}_#{version.csv.second.major}.pkg"
   name "Eclipse Temurin 21"
   desc "JDK from the Eclipse Foundation (Adoptium)"
   homepage "https://adoptium.net/"
@@ -23,6 +28,8 @@ cask "temurin@21" do
       end
     end
   end
+
+  depends_on :macos
 
   pkg "OpenJDK#{version.major}U-jdk_#{arch}_mac_hotspot_#{version.csv.first}_#{version.csv.second.major}.pkg"
 

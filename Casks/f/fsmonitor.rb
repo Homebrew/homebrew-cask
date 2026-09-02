@@ -1,9 +1,8 @@
 cask "fsmonitor" do
-  version "1.2,137"
-  sha256 "f7e78086bbcae56c00582aae04abfe7bbbc50235d0228766d0dbc5b18fa0a3db"
+  version "2.0,158"
+  sha256 "9e9b73568bfcd91ef64980782b847e1fc721b001ae38a0fa03fbf5de08bef6ef"
 
-  url "https://tristan-software.ch/FSMonitor/Archives/FSMonitor_#{version.csv.first}(#{version.csv.second}).zip",
-      verified: "tristan-software.ch/FSMonitor/"
+  url "https://tristan-software.ch/FSMonitor/Archives/FSMonitor_#{version.csv.first}(#{version.csv.second}).zip"
   name "FSMonitor"
   desc "Visualize filesystem changes in realtime"
   homepage "https://fsmonitor.com/"
@@ -14,6 +13,7 @@ cask "fsmonitor" do
   end
 
   auto_updates true
+  depends_on :macos
 
   app "FSMonitor.app"
 
@@ -28,8 +28,4 @@ cask "fsmonitor" do
     "~/Library/Preferences/com.tristan.FSMonitor.plist",
     "~/Library/Saved Application State/com.tristan.FSMonitor.savedState",
   ]
-
-  caveats do
-    requires_rosetta
-  end
 end

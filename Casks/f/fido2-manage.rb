@@ -1,5 +1,5 @@
 cask "fido2-manage" do
-  version "0.2"
+  version "0.2.1"
   sha256 :no_check
 
   url "https://www.token2.swiss/soft/fido2-manage.dmg"
@@ -12,7 +12,7 @@ cask "fido2-manage" do
     regex(/Version\s*v?(\d+(?:\.\d+)+)[ <"]/i)
   end
 
-  depends_on macos: ">= :big_sur"
+  depends_on macos: :big_sur
   depends_on arch: :arm64
 
   app "fido2-manage.app"

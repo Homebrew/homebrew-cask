@@ -1,9 +1,8 @@
 cask "bbedit" do
-  version "15.5.3"
-  sha256 "f134a7d3e99bbeffb9e49875542bd37e5fab352cc6f538e542ae6f03bd70566c"
+  version "16.0.3"
+  sha256 "acf2ae9e5c68beacdfd7534861fa8c992e1bdd5391a71b3c08b3ed879c2b3572"
 
-  url "https://s3.amazonaws.com/BBSW-download/BBEdit_#{version}.dmg",
-      verified: "s3.amazonaws.com/BBSW-download/"
+  url "https://s3.amazonaws.com/BBSW-download/BBEdit_#{version}.dmg"
   name "BBEdit"
   desc "Text, code, and markup editor"
   homepage "https://www.barebones.com/products/bbedit/"
@@ -17,7 +16,7 @@ cask "bbedit" do
 
   auto_updates true
   conflicts_with cask: "bbedit@14"
-  depends_on macos: ">= :big_sur"
+  depends_on macos: :sonoma
 
   app "BBEdit.app"
   binary "#{appdir}/BBEdit.app/Contents/Helpers/bbedit_tool", target: "bbedit"

@@ -8,6 +8,9 @@ cask "sekey" do
   homepage "https://github.com/sekey/sekey/"
 
   deprecate! date: "2025-05-25", because: :unmaintained
+  disable! date: "2026-05-27", because: :unmaintained
+
+  depends_on :macos
 
   pkg "SeKey-#{version}.pkg"
   binary "/Applications/SeKey.app/Contents/MacOS/sekey"

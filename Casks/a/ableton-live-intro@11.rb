@@ -12,7 +12,7 @@ cask "ableton-live-intro@11" do
   end
 
   auto_updates true
-  depends_on macos: ">= :big_sur"
+  depends_on macos: :big_sur
 
   app "Ableton Live #{version.major} Intro.app"
 

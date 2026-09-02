@@ -15,13 +15,14 @@ cask "popchar" do
     end
   end
 
-  depends_on macos: ">= :monterey"
+  depends_on macos: :monterey
 
   app "PopChar.app"
 
   zap trash: [
     "~/Library/Application Support/PopChar",
     "~/Library/Caches/com.macility.popchar3",
+    "~/Library/HTTPStorages/com.macility.popchar3",
     "~/Library/Preferences/com.macility.popchar3.plist",
   ]
 end

@@ -2,8 +2,7 @@ cask "font-barriecito" do
   version :latest
   sha256 :no_check
 
-  url "https://github.com/google/fonts/raw/main/ofl/barriecito/Barriecito-Regular.ttf",
-      verified: "github.com/google/fonts/"
+  url "https://github.com/google/fonts/raw/main/ofl/barriecito/Barriecito-Regular.ttf"
   name "Barriecito"
   homepage "https://fonts.google.com/specimen/Barriecito"
 

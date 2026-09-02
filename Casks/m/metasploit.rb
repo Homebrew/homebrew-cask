@@ -1,6 +1,6 @@
 cask "metasploit" do
-  version "6.4.98,20251110055540"
-  sha256 "be002c2bd74dc20b804b84d6d05f53085b1689eee33be2e1414041b110e493db"
+  version "6.5.3,20260826055538"
+  sha256 "643851d6bd79a7b5d7345dc0f0d295719e1d927526c6d5c9bdef12bce395165d"
 
   url "https://osx.metasploit.com/metasploit-framework-#{version.csv.first}-#{version.csv.second}-1rapid7-1.x86_64.pkg"
   name "Metasploit Framework"
@@ -20,6 +20,7 @@ cask "metasploit" do
 
   disable! date: "2026-09-01", because: :fails_gatekeeper_check
 
+  depends_on :macos
   depends_on formula: "nmap"
 
   pkg "metasploit-framework-#{version.csv.first}-#{version.csv.second}-1rapid7-1.x86_64.pkg"

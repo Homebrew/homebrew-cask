@@ -1,17 +1,22 @@
 cask "replit" do
-  arch intel: "-Intel"
+  version "1.1.9"
+  sha256 :no_check
 
-  version "1.0.14"
-  sha256 arm:   "193c4282d69c0b49bc4d3780c4db102b2602bfb6d3f7cd7322957cde5ff6cb41",
-         intel: "4d2bbec2d40060f97b3140a8390ac2ae8baf7bb4e769783550748a5d599a7d6c"
-
-  url "https://github.com/replit/desktop/releases/download/v#{version}/Replit#{arch}.dmg",
-      verified: "github.com/replit/desktop/"
+  url "https://desktop.replit.com/download/mac"
   name "Replit"
   desc "Software development and deployment platform"
   homepage "https://replit.com/"
 
+  livecheck do
+    url "https://desktop.replit.com/latest"
+    strategy :json do |json|
+      json["version"]
+    end
+  end
+
   auto_updates true
+  depends_on macos: :monterey
+  depends_on arch: :arm64
 
   app "Replit.app"
 

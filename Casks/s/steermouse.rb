@@ -1,6 +1,6 @@
 cask "steermouse" do
-  version "5.7.7"
-  sha256 "12b1d9c737af42a808138497aba98433c9f7a03e8f175a710dfa15c826076e54"
+  version "5.7.8"
+  sha256 "17ad7a5c8b711a1873e4c57da49b45f9215796f9fefebfde84b0ea4aa6680a03"
 
   url "https://plentycom.jp/ctrl/files_sm/SteerMouse#{version}.dmg"
   name "SteerMouse"
@@ -11,6 +11,8 @@ cask "steermouse" do
     url "https://plentycom.jp/en/steermouse/download.php"
     regex(/href=.*?SteerMouse[._-]?v?(\d+(?:\.\d+)+)\.dmg/i)
   end
+
+  depends_on :macos
 
   app "SteerMouse.app"
 

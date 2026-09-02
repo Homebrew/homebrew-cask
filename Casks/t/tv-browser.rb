@@ -2,8 +2,7 @@ cask "tv-browser" do
   version "4.2.7"
   sha256 "b9f568db953da4e8cb93f77d8f90e8f0150fb9bda48b841bfa05d0d3117d580a"
 
-  url "https://downloads.sourceforge.net/tvbrowser/tvbrowser_#{version}_macjava.dmg",
-      verified: "sourceforge.net/tvbrowser/"
+  url "https://downloads.sourceforge.net/tvbrowser/tvbrowser_#{version}_macjava.dmg"
   name "TV-Browser"
   desc "Electronic TV guide"
   homepage "https://www.tvbrowser.org/"
@@ -14,6 +13,10 @@ cask "tv-browser" do
     url :url
     regex(%r{url=.*?/tvbrowser[._-]v?(\d+(?:\.\d+)*)(?:[._-]mac(?:java)?)?\.dmg}i)
   end
+
+  disable! date: "2026-09-01", because: :fails_gatekeeper_check
+
+  depends_on :macos
 
   app "TV-Browser.app"
 

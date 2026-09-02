@@ -1,9 +1,8 @@
 cask "steam" do
-  version "4.0"
+  version "6.0"
   sha256 :no_check
 
-  url "https://cdn.cloudflare.steamstatic.com/client/installer/steam.dmg",
-      verified: "cdn.cloudflare.steamstatic.com/"
+  url "https://cdn.cloudflare.steamstatic.com/client/installer/steam.dmg"
   name "Steam"
   desc "Video game digital distribution service"
   homepage "https://store.steampowered.com/about/"
@@ -14,6 +13,7 @@ cask "steam" do
   end
 
   auto_updates true
+  depends_on :macos
 
   app "Steam.app"
 

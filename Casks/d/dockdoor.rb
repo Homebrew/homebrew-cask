@@ -1,9 +1,8 @@
 cask "dockdoor" do
-  version "1.25.5"
-  sha256 "b2dac25e6bb38602d81e2149dd8bf9615f61904e932daed0334969b115ac15c1"
+  version "1.39.5"
+  sha256 "2c3c06027f2a2e74375d1c4c95d2133b6bf7e88843cc7026c4c40d5e84c56d40"
 
-  url "https://github.com/ejbills/DockDoor/releases/download/#{version}/DockDoor.dmg",
-      verified: "github.com/ejbills/DockDoor/"
+  url "https://github.com/ejbills/DockDoor/releases/download/#{version}/DockDoor.dmg"
   name "DockDoor"
   desc "Window peeking utility app"
   homepage "https://dockdoor.net/"
@@ -14,7 +13,7 @@ cask "dockdoor" do
   end
 
   auto_updates true
-  depends_on macos: ">= :ventura"
+  depends_on macos: :ventura
 
   app "DockDoor.app"
 

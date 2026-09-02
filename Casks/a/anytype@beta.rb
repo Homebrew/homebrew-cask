@@ -1,12 +1,11 @@
 cask "anytype@beta" do
   arch arm: "arm64", intel: "x64"
 
-  version "0.50.46-beta"
-  sha256 arm:   "12b1f09b0712126160d0d9ccb0e46d11b5513143ed04b86532d91533e008df5d",
-         intel: "6fcb078eeed51e4e0c7d9708d55e282a86af10a87510473d5f710059c0f190a4"
+  version "0.56.8-beta"
+  sha256 arm:   "28c01c50da81e2b37923199650ad9d3d70782f95c9f389fa8fd02f5db30bc410",
+         intel: "a8e233ad493ba586af57f803cfa81373c5cf5d3d9cb1a4e5a563c58203046d90"
 
-  url "https://anytype-release.fra1.cdn.digitaloceanspaces.com/Anytype-#{version}-mac-#{arch}.dmg",
-      verified: "anytype-release.fra1.cdn.digitaloceanspaces.com/"
+  url "https://anytype-release.fra1.cdn.digitaloceanspaces.com/Anytype-#{version}-mac-#{arch}.dmg"
   name "Anytype"
   desc "Local-first and end-to-end encrypted notes app"
   homepage "https://anytype.io/"
@@ -21,7 +20,7 @@ cask "anytype@beta" do
     "anytype",
     "anytype@alpha",
   ]
-  depends_on macos: ">= :big_sur"
+  depends_on macos: :monterey
 
   app "Anytype.app"
 

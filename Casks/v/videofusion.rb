@@ -1,9 +1,8 @@
 cask "videofusion" do
-  version "9.4.0.12121"
-  sha256 "c954a17432c81f381df4bcebb6eaa7459d806597a85a9bbf8f09804b8fa41934"
+  version "11.3.0.13047"
+  sha256 "a054c7b6fe4ec39679808bb1918d27361f7e178a6770ecf2bbffb9805b7ac670"
 
-  url "https://lf3-package.vlabstatic.com/obj/faceu-packages/Jianying_#{version.dots_to_underscores}_jianyingpro_0_creatortool.dmg",
-      verified: "lf3-package.vlabstatic.com/obj/faceu-packages/"
+  url "https://lf3-package.vlabstatic.com/obj/faceu-packages/Jianying_#{version.dots_to_underscores}_jianyingpro_0_creatortool.dmg"
   name "VideoFusion"
   name "剪映专业版"
   name "Jianying Pro"
@@ -26,6 +25,7 @@ cask "videofusion" do
   end
 
   auto_updates true
+  depends_on :macos
 
   app "VideoFusion-macOS.app"
 

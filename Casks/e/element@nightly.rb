@@ -1,27 +1,27 @@
 cask "element@nightly" do
-  version "2025111101"
-  sha256 "4f46288b8b27c4f5654aea702d3dd99f6581bdace2f4f96b550109dcdd6eea4d"
+  version "2026090201"
+  sha256 "bed539f980c1b01888cd95ac75eaa02481c2e0986168efc14c087e981d3a5e4e"
 
   url "https://packages.element.io/nightly/update/macos/Element%20Nightly-#{version}-universal-mac.zip"
   name "Element Nightly"
   desc "Matrix collaboration client"
   homepage "https://element.io/get-started"
 
-  # The `releases.json` file is served with a `Content-Encoding: aws-chunked`
-  # header, which will cause curl to error if the `--compressed` option is used.
-  # This checks the version on the directory listing page until we can account
-  # for this situation in livecheck.
   livecheck do
-    url "https://packages.element.io/nightly/update/macos/index.html"
-    regex(/href=.*?Element\s+Nightly[._-]v?(\d+(?:\.\d+)*)[._-]universal[._-]mac\.zip/i)
+    url "https://packages.element.io/nightly/update/macos/releases.json"
+    strategy :json do |json|
+      json["currentRelease"]
+    end
   end
 
   auto_updates true
-  depends_on macos: ">= :monterey"
+  depends_on macos: :ventura
 
   app "Element Nightly.app"
 
   zap trash: [
+    "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/im.riot.nightly.sfl*",
+    "~/Library/Application Support/Element Nightly",
     "~/Library/Application Support/Element",
     "~/Library/Application Support/Riot",
     "~/Library/Caches/im.riot.app",
@@ -31,6 +31,7 @@ cask "element@nightly" do
     "~/Library/Preferences/ByHost/im.riot.app.ShipIt.*.plist",
     "~/Library/Preferences/im.riot.app.helper.plist",
     "~/Library/Preferences/im.riot.app.plist",
+    "~/Library/Preferences/im.riot.nightly.plist",
     "~/Library/Saved Application State/im.riot.app.savedState",
   ]
 end

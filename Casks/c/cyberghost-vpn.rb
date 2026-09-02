@@ -1,6 +1,6 @@
 cask "cyberghost-vpn" do
-  version "8.4.3,224"
-  sha256 "8a66ad28e3723c48d4278ed6522428b0777df66500b059d0910c512af00ac1f1"
+  version "8.4.7,267"
+  sha256 "ef1254b0cca99835ed4a15b820c702d250d4da5e8046ed2d894363262b534262"
 
   url "https://download.cyberghostvpn.com/mac/updates/v7/CyberGhost-#{version.csv.first}-#{version.csv.second}.dmg"
   name "CyberGhost"
@@ -15,6 +15,8 @@ cask "cyberghost-vpn" do
       items.map(&:nice_version)
     end
   end
+
+  depends_on :macos
 
   app "CyberGhost VPN.app"
 

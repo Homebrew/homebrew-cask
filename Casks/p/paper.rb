@@ -1,26 +1,26 @@
 cask "paper" do
-  version "5.3.0"
-  sha256 "475c6938114873fc527486e8c116dbba34856420dcdcfbb767c74e9c8f16c3c6"
+  version "5.5.5"
+  sha256 "ccbef03d6fecf529e34c566034d8f052d5d719d3886fd19469cf27bfd078c16c"
 
-  url "https://s3.nxn.fun/dl/paper-v#{version}.dmg",
-      verified: "s3.nxn.fun/"
+  url "https://www.paperapp.net/app/pap.er_v#{version}.dmg"
   name "pap.er"
   desc "Pap.er, 4K 5K HD Wallpaper Application"
-  homepage "https://paper.photos/"
+  homepage "https://www.paperapp.net/"
 
   livecheck do
     url :homepage
-    regex(/paper[._-]v?(\d+(?:\.\d+)+)\.dmg/i)
+    regex(/pap\.?er[._-]v?(\d+(?:\.\d+)+)\.dmg/i)
   end
 
   auto_updates true
-  depends_on macos: ">= :big_sur"
+  depends_on macos: :big_sur
 
   app "pap.er.app"
 
   uninstall quit: "com.w.paper"
 
   zap trash: [
+    "~/Library/Application Scripts/com.w.paper",
     "~/Library/Containers/com.w.paper",
     "~/Library/Containers/com.w.paper-LaunchAtLoginHelper",
   ]

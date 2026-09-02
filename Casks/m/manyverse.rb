@@ -2,8 +2,7 @@ cask "manyverse" do
   version "0.2310.9-beta"
   sha256 "b5defc07fb08b6f8bf9c5eabdb0801b035b2b5eb95fb5de76efd3975f3b3c5b7"
 
-  url "https://github.com/staltz/manyverse/releases/download/v#{version}/Manyverse-#{version}.dmg",
-      verified: "github.com/staltz/manyverse/"
+  url "https://github.com/staltz/manyverse/releases/download/v#{version}/Manyverse-#{version}.dmg"
   name "Manyverse"
   desc "Social network built on the peer-to-peer SSB protocol"
   homepage "https://www.manyver.se/"
@@ -13,6 +12,10 @@ cask "manyverse" do
     regex(/v?(\d+(?:\.\d+)+-beta)/i)
     strategy :github_latest
   end
+
+  disable! date: "2026-09-01", because: :fails_gatekeeper_check
+
+  depends_on :macos
 
   app "Manyverse.app"
 

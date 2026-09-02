@@ -1,36 +1,50 @@
 cask "languagetool-desktop" do
-  version "2.9.1"
-  sha256 "026f8c040f8107883b61a964b48743f66486a02977ab94574b326f4627b98b50"
+  version "3.3.0,rc2"
+  sha256 "6ec200d7910ab514be4c5d74a788e725a21fc12a11ca4648026cb1d44844c23c"
 
-  url "https://languagetool.org/download/mac-app/LanguageToolDesktop-#{version}.dmg"
+  url "https://languagetool.org/download/mac-app/LanguageToolDesktop-#{version.csv.first}#{version.csv.second if version.csv.second}.dmg"
   name "LanguageTool for Desktop"
   desc "Grammar, spelling and style suggestions in all the writing apps"
   homepage "https://languagetool.org/"
 
   # Older items in the Sparkle feed may have a newer pubDate, so it's necessary
-  # to work with all of the items in the feed (not just the newest one).
+  # to work with all of the items (not just the newest one).
   livecheck do
     url "https://languagetool.org/download/mac-app/appcast.xml"
-    regex(/(\d+(?:\.\d+)+)/i)
+    regex(/LanguageToolDesktop[._-]v?(\d+(?:\.\d+)+)(.*)?\.dmg/i)
     strategy :sparkle do |items, regex|
-      # The Sparkle versioning scheme is inconsistent. We check the short
-      # version directly since the versions are not listed chronologically.
-      # The livecheck may need to be reverted to extracting the version from
-      # the url. See: https://github.com/Homebrew/homebrew-cask/pull/156995
-      items.map { |item| item.short_version[regex, 1] }
+      items.filter_map do |item|
+        # Skip items in unstable channels (e.g. `beta`)
+        next unless item.channel.nil?
+
+        match = item.url&.match(regex)
+        next unless match
+
+        match[2].present? ? "#{match[1]},#{match[2]}" : match[1]
+      end
     end
   end
 
   auto_updates true
-  depends_on macos: ">= :monterey"
+  depends_on macos: :monterey
 
   app "LanguageTool for Desktop.app"
 
-  uninstall quit: "org.languagetool.desktop"
+  uninstall launchctl: [
+              "org.languageTool.desktop.LauncherApplication",
+              "org.languageTool.desktop.UninstallHelper",
+            ],
+            quit:      "org.languagetool.desktop"
 
   zap trash: [
+    "~/Library/Application Scripts/N6PF5J2JR8.org.languagetool.desktop.group",
+    "~/Library/Application Scripts/org.languagetool.desktop.ShareExtension",
     "~/Library/Application Support/LanguageTool for Desktop",
     "~/Library/Caches/org.languagetool.desktop",
+    "~/Library/Containers/org.languagetool.desktop.ShareExtension",
+    "~/Library/Group Containers/N6PF5J2JR8.org.languagetool.desktop.group",
+    "~/Library/HTTPStorages/org.languagetool.desktop*",
+    "~/Library/LaunchAgents/org.languageTool.desktop.UninstallHelper.plist",
     "~/Library/Preferences/org.languagetool.desktop.plist",
   ]
 end

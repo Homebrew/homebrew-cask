@@ -1,9 +1,9 @@
 cask "orbstack" do
   arch arm: "arm64", intel: "amd64"
 
-  version "2.0.4,19887"
-  sha256 arm:   "ba88340750eba3996448c0d6afe14ebe6787fee7b736834dbc8511ffe15910db",
-         intel: "94b8f8065486d3508c6025415ae0128f10a3adccefee66c2d625ccd168161edc"
+  version "2.2.3,20963"
+  sha256 arm:   "7ca77868f3a0d7d9f57b3f98615aad30cc59d23cc84bbff13f78846df0b493d4",
+         intel: "d1aa8723d19a6bc8dba4b6490e99710e926aa5f229920da8e1be0fbba903641f"
 
   url "https://cdn-updates.orbstack.dev/#{arch}/OrbStack_v#{version.csv.first}_#{version.csv.second}_#{arch}.dmg"
   name "OrbStack"
@@ -18,7 +18,7 @@ cask "orbstack" do
   end
 
   auto_updates true
-  depends_on macos: ">= :sonoma"
+  depends_on macos: :sonoma
 
   app "OrbStack.app"
   binary "#{appdir}/OrbStack.app/Contents/MacOS/bin/orb"
@@ -28,9 +28,8 @@ cask "orbstack" do
   zsh_completion "#{appdir}/OrbStack.app/Contents/Resources/completions/zsh/_orb"
   zsh_completion "#{appdir}/OrbStack.app/Contents/Resources/completions/zsh/_orbctl"
 
-  postflight do
-    system_command "#{appdir}/OrbStack.app/Contents/MacOS/bin/orbctl",
-                   args: ["_internal", "brew-postflight"]
+  postflight_steps do
+    run "OrbStack.app/Contents/MacOS/bin/orbctl", args: ["_internal", "brew-postflight"], base: :appdir
   end
 
   uninstall script: {

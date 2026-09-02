@@ -1,9 +1,8 @@
 cask "openthesaurus-deutsch" do
-  version "2025.03.24"
-  sha256 "095ff0ade92893980151ef627486f6295949cbfc982784027d860fbc9054fab0"
+  version "2026.03.07"
+  sha256 "d620dc74b4e2bdf5322a7a537a3c126e209436b3621c849c725289cb6066aa90"
 
-  url "https://github.com/Tekl/openthesaurus-deutsch/releases/download/v#{version}/OpenThesaurus_Deutsch_dictionaryfile.zip",
-      verified: "github.com/Tekl/openthesaurus-deutsch/"
+  url "https://github.com/Tekl/openthesaurus-deutsch/releases/download/v#{version}/OpenThesaurus_Deutsch_dictionaryfile.zip"
   name "OpenThesaurus Deutsch Dictionary plugin"
   desc "German thesaurus for Apple Dictionary"
   homepage "https://tekl.de/lexikon-plug-ins/openthesaurus-deutsch-lexikon-plugin"
@@ -12,6 +11,8 @@ cask "openthesaurus-deutsch" do
     url :url
     strategy :github_latest
   end
+
+  depends_on :macos
 
   dictionary "OpenThesaurus Deutsch.dictionary"
 

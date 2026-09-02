@@ -2,8 +2,7 @@ cask "league-of-legends" do
   version "1.0"
   sha256 :no_check
 
-  url "https://lol.secure.dyn.riotcdn.net/channels/public/x/installer/current/live.na.zip",
-      verified: "lol.secure.dyn.riotcdn.net/"
+  url "https://lol.secure.dyn.riotcdn.net/channels/public/x/installer/current/live.na.zip"
   name "League of Legends"
   desc "Multiplayer online battle arena game"
   homepage "https://na.leagueoflegends.com/en-us/"
@@ -12,6 +11,8 @@ cask "league-of-legends" do
     url :url
     strategy :extract_plist
   end
+
+  depends_on :macos
 
   installer manual: "Install League of Legends na.app"
 

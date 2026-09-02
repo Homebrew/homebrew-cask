@@ -2,8 +2,7 @@ cask "font-league-mono" do
   version "2.300"
   sha256 "16bdc983aa5eb1803a3c2fbb11d15a8cfa1ce317334a61b01f0f3ab302fdcf0d"
 
-  url "https://github.com/theleagueof/league-mono/releases/download/#{version}/LeagueMono-#{version}.tar.xz",
-      verified: "github.com/theleagueof/league-mono/"
+  url "https://github.com/theleagueof/league-mono/releases/download/#{version}/LeagueMono-#{version}.tar.xz"
   name "League Mono"
   homepage "https://www.theleagueofmoveabletype.com/league-mono"
 

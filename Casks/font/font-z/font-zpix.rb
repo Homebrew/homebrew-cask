@@ -1,9 +1,8 @@
 cask "font-zpix" do
-  version "3.1.9"
-  sha256 "d8a830e19aacfe989b7d0de45f050657e83b1840ccbab0f8600a5352dbacf9e3"
+  version "3.2.0"
+  sha256 "fb18664ac66d1c6f09c2663b4c1a049f9a00e678f12bfc1c080679aa8e4951d4"
 
-  url "https://github.com/SolidZORO/zpix-pixel-font/releases/download/v#{version}/zpix.ttf",
-      verified: "github.com/SolidZORO/zpix-pixel-font/"
+  url "https://github.com/SolidZORO/zpix-pixel-font/releases/download/v#{version}/zpix.ttf"
   name "Zpix"
   homepage "https://zpix.vercel.app/"
 

@@ -1,14 +1,6 @@
 cask "displaylink" do
-  on_big_sur :or_older do
-    on_catalina :or_older do
-      version "1.5,2021-09"
-      sha256 "d703cc8e9093e4d163c5e612326c0907a02c6d4eec6aaca8d0727503859ef95d"
-
-      url "https://www.synaptics.com/sites/default/files/exe_files/#{version.csv.second}/DisplayLink%20Manager%20Graphics%20Connectivity#{version.csv.first}-EXE.pkg"
-
-      pkg "DisplayLink Manager Graphics Connectivity#{version.csv.first}-EXE.pkg"
-    end
-    on_big_sur do
+  on_ventura :or_older do
+    on_big_sur :or_older do
       version "1.9,2023-07"
       sha256 "cd7f7c7c313b0699bfa187f7112a45e5c5441264447b381569839318676208aa"
 
@@ -16,16 +8,34 @@ cask "displaylink" do
 
       pkg "DisplayLink Manager Graphics Connectivity#{version.csv.first}-EXE.pkg"
     end
+    on_monterey do
+      version "1.11,2024-10"
+      sha256 "e154588f340aefe887d10e3566703ac381592eefc0175b7f1a53569fcc315a3f"
+
+      url "https://www.synaptics.com/sites/default/files/exe_files/#{version.csv.second}/DisplayLink%20Manager%20Graphics%20Connectivity#{version.csv.first}-EXE.pkg"
+
+      pkg "DisplayLink Manager Graphics Connectivity#{version.csv.first}-EXE.pkg"
+    end
+    on_ventura do
+      version "14.2,2025-11"
+      sha256 "2a08be4e7fba2c11dbfaf5ea78f60c66e1683a14212c60ff36e24ba469822b1c"
+
+      url "https://www.synaptics.com/sites/default/files/exe_files/#{version.csv.second}/DisplayLink%20Manager%20Graphics%20Connectivity#{version.csv.first}-EXE.zip"
+
+      rename "DisplayLinkManager-#{version.csv.first}*pkg", "DisplayLinkManager-#{version.csv.first}.pkg"
+
+      pkg "DisplayLinkManager-#{version.csv.first}.pkg"
+    end
 
     livecheck do
       skip "Legacy version"
     end
   end
-  on_monterey :or_newer do
-    version "14.1,2025-10"
-    sha256 "40427945890d17fbb738e373f9f979318659eb0b2cf9cb14a996d64549d4d056"
+  on_sonoma :or_newer do
+    version "16.2,2026-07"
+    sha256 "fd9eafab9542e592baa39984ed4e87e64e89f3de6b9a4429ab13a2334a7538e6"
 
-    url "https://www.synaptics.com/sites/default/files/exe_files/#{version.csv.second}/DisplayLink%20Manager%20Graphics%20Connectivity#{version.csv.first}-EXE.zip"
+    url "https://www.synaptics.com/sites/default/files/exe_files/#{version.csv.second}/DisplayLink%20Manager%20Graphics%20Connectivity#{version.csv.first}-EXE.pkg"
 
     livecheck do
       url "https://www.synaptics.com/products/displaylink-graphics/downloads/macos"
@@ -35,14 +45,14 @@ cask "displaylink" do
       end
     end
 
-    rename "DisplayLinkManager-#{version.csv.first}*pkg", "DisplayLinkManager-#{version.csv.first}.pkg"
-
-    pkg "DisplayLinkManager-#{version.csv.first}.pkg"
+    pkg "DisplayLink Manager Graphics Connectivity#{version.csv.first}-EXE.pkg"
   end
 
   name "DisplayLink USB Graphics Software"
   desc "Drivers for DisplayLink docks, adapters and monitors"
   homepage "https://www.synaptics.com/products/displaylink-graphics"
+
+  depends_on :macos
 
   uninstall launchctl: [
               "73YQY62QM3.com.displaylink.DisplayLinkAPServer",

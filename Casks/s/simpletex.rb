@@ -1,9 +1,9 @@
 cask "simpletex" do
   arch arm: "-arm64"
 
-  version "0.2.11"
-  sha256 arm:   "e18dad77f1f7aff9a6d79832e1503468f0ff8948e22da91f8c41e17faa7163f7",
-         intel: "d6c3c579d5ed0d1b7b4660d3b0486313adca4e998c6931217dff06bc359adf69"
+  version "0.2.12"
+  sha256 arm:   "ce69d50773583fc2026922fe3d2367c46971e95123198c734fb49d8978b5be7a",
+         intel: "b2b434a5d7a52da837d348f1a7f1b2802d04d6ba5df9c2a3a2314bc40bed3b98"
 
   url "https://update.simpletex.net/publish/electron/darwin/SimpleTex-#{version}#{arch}.dmg"
   name "SimpleTex"
@@ -18,6 +18,7 @@ cask "simpletex" do
   end
 
   auto_updates true
+  depends_on :macos
 
   app "SimpleTex.app"
 

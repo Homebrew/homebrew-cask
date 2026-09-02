@@ -1,19 +1,25 @@
 cask "tribler" do
-  version "8.2.3"
-  sha256 "68d22bbc7d7fcbb290959a9d5f9c99cdf7b9d0f801114b6af707f21142d3cf76"
+  arch arm: "arm", intel: "i386"
 
-  url "https://github.com/Tribler/tribler/releases/download/v#{version}/Tribler-#{version}.dmg",
-      verified: "github.com/Tribler/tribler/"
+  version "8.4.3"
+  sha256 arm:   "5f6541b71f5537469728db8b7cda2fd0e2a11a33a3185db3339c518843b33e3c",
+         intel: "65652bc9889e91b8be6364c133d097ecc1af88a74351be7bb7f680bcd171e5a2"
+
+  url "https://github.com/Tribler/tribler/releases/download/v#{version}/Tribler-#{version}-#{arch}.dmg"
   name "Tribler"
   desc "Privacy enhanced BitTorrent client with P2P content discovery"
-  homepage "https://www.tribler.org/"
+  homepage "https://github.com/Tribler/tribler"
 
   livecheck do
     url :url
     strategy :github_latest
   end
 
-  app "Tribler.app"
+  disable! date: "2026-09-01", because: :fails_gatekeeper_check
+
+  depends_on :macos
+
+  app "tribler-#{version}-#{arch}.app", target: "Tribler.app"
 
   zap trash: [
     "~/.Tribler",
@@ -21,8 +27,4 @@ cask "tribler" do
     "~/Library/Preferences/nl.tudelft.tribler.plist",
     "~/Library/Saved Application State/nl.tudelft.tribler.savedState",
   ]
-
-  caveats do
-    requires_rosetta
-  end
 end

@@ -1,12 +1,11 @@
 cask "burp-suite@early-adopter" do
   arch arm: "MacOsArm64", intel: "MacOsx"
 
-  version "2025.10.1"
-  sha256 arm:   "9223642b097aa1e9308a9204910493c21b4f535fe776e847434a665476247c90",
-         intel: "4b482f22375147b3762dc068a4b037893fb7840cb1dda9fa868a49fc38056bac"
+  version "2026.8"
+  sha256 arm:   "638ff9d9c3026838798f5659904e3e9cba00ee0b26f3d616f93b1967f275d2ce",
+         intel: "6c6f0f8450179d1c3e99538fcdad7d1d764a5d7e290c8c48b9070018e08c9411"
 
-  url "https://portswigger-cdn.net/burp/releases/download?product=community&version=#{version}&type=#{arch}",
-      verified: "portswigger-cdn.net/burp/releases/"
+  url "https://portswigger-cdn.net/burp/releases/download?product=desktop&version=#{version}&type=#{arch}"
   name "Burp Suite Community Edition"
   desc "Web security testing toolkit"
   homepage "https://portswigger.net/burp/"
@@ -20,17 +19,21 @@ cask "burp-suite@early-adopter" do
       all_versions.filter_map do |item|
         item["version"] if
               item["releaseChannels"]&.include?("Early Adopter") &&
-              item["categories"]&.include?("Community") &&
+              item["categories"]&.include?("Desktop") &&
               item["builds"]&.any? do |build|
-                build["ProductPlatform"] == arch.to_s
+                build["BuildCategoryId"] == "desktop" &&
+                build["BuildCategoryPlatform"] == arch.to_s
               end
       end
     end
   end
 
   conflicts_with cask: "burp-suite"
+  depends_on :macos
 
-  app "Burp Suite Community Edition.app"
+  app "Burp Suite.app"
+
+  uninstall quit: "com.install4j.6592-1155-2163-3973.70"
 
   zap trash: "~/.BurpSuite"
 end

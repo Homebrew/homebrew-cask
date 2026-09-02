@@ -1,15 +1,16 @@
 cask "focusany" do
   arch arm: "arm64", intel: "x64"
 
-  version "1.1.0"
-  sha256 arm:   "2bd3213064b3dc021cd3f69b042b896ce2537abfebab3a1c84c8554d04e389ca",
-         intel: "894f5cad795e8ffeb4d03e0be719de4ccab01e6035615fd2ed337798371dc80d"
+  version "2.1.0"
+  sha256 arm:   "500748811382d04e1756500ece790385fdec272e2a70162554e6e3dc7300757b",
+         intel: "29114bec682c819f469ae667244dfa99a88d040a9ae33ad9dd11e43dd3cf8fef"
 
-  url "https://github.com/modstart-lib/focusany/releases/download/v#{version}/FocusAny-#{version}-mac-#{arch}.dmg",
-      verified: "github.com/modstart-lib/focusany/"
+  url "https://github.com/modstart-lib/focusany/releases/download/v#{version}/FocusAny-#{version}-mac-#{arch}.dmg"
   name "FocusAny"
   desc "Open source desktop toolbox"
   homepage "https://focusany.com/"
+
+  depends_on :macos
 
   app "FocusAny.app"
 

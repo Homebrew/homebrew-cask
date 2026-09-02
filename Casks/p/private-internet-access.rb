@@ -1,6 +1,6 @@
 cask "private-internet-access" do
-  version "3.7-08412"
-  sha256 "65cc95fcc3cdef8332f7d05a4947e2e364435dbb2a7a5499cdd4505805e561a5"
+  version "3.7.2-08420"
+  sha256 "5677fa6fd8ccc1a3d31d568e7c00a99c0887797b359a1db07d75e1de77f4fb0a"
 
   url "https://installers.privateinternetaccess.com/download/pia-macos-#{version}.zip"
   name "Private Internet Access"
@@ -13,6 +13,7 @@ cask "private-internet-access" do
   end
 
   auto_updates true
+  depends_on :macos
 
   installer script: {
     executable: "Private Internet Access Installer.app/Contents/Resources/vpn-installer.sh",

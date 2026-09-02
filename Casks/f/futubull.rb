@@ -1,6 +1,6 @@
 cask "futubull" do
-  version "15.38.13708"
-  sha256 "2e92b17aaa6cecb8d968be92f305218aaaee570900ab2edda443308025a4e7df"
+  version "16.30.17508"
+  sha256 "899efb1013be6ddc6895b3b8f67a6b602f887e59cc4161523033d83116eb009d"
 
   url "https://softwaredownload.futunn.com/FTNN_desktop_#{version}_Website.dmg",
       user_agent: :fake,
@@ -20,6 +20,8 @@ cask "futubull" do
       end
     end
   end
+
+  depends_on :macos
 
   # Renamed for consistency: app name is different in the Finder and in a shell.
   app "富途牛牛.app", target: "Futubull.app"

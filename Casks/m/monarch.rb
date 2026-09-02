@@ -1,27 +1,47 @@
 cask "monarch" do
-  arch arm: "arm64", intel: "x64"
+  arch arm: "aarch64", intel: "x64"
 
-  version "0.7.14"
-  sha256 arm:   "1d79522451231c24699a3141c8acf78ff2c9fbbc59590cd5c6c029b00801c591",
-         intel: "b627239613200f14a88aab803f21786927bdeac4d2fe59152f960f194f70e82e"
+  on_arm do
+    version "0.9.50"
+    sha256 "f7fe0c08416eb13221c3e48c78998edd760e295303dea2971d008b790a8beb48"
 
-  url "https://storage.googleapis.com/monarchlauncher/#{arch}/monarch-#{version}.dmg",
-      verified: "storage.googleapis.com/monarchlauncher/"
+    url "https://storage.googleapis.com/monarchlauncher/v08/#{arch}/monarch-#{version}.dmg"
+
+    livecheck do
+      url "https://storage.googleapis.com/monarchlauncher/v08/#{arch}/latest.json"
+      strategy :json do |json|
+        json["version"]
+      end
+    end
+  end
+  on_intel do
+    version "0.7.14"
+    sha256 "b627239613200f14a88aab803f21786927bdeac4d2fe59152f960f194f70e82e"
+
+    url "https://storage.googleapis.com/monarchlauncher/#{arch}/monarch-#{version}.dmg"
+
+    livecheck do
+      skip "Legacy version"
+    end
+  end
+
   name "Monarch"
   desc "Spotlight Search"
   homepage "https://monarchlauncher.com/"
 
-  livecheck do
-    url "https://storage.googleapis.com/monarchlauncher/#{arch}/latest-mac.yml"
-    strategy :electron_builder
-  end
-
-  depends_on macos: ">= :monterey"
+  auto_updates true
+  depends_on macos: :monterey
 
   app "Monarch.app"
 
+  uninstall quit: "com.monarch.macos"
+
   zap trash: [
+    "~/Library/Application Support/com.monarch.macos",
     "~/Library/Application Support/monarch",
+    "~/Library/Caches/com.monarch.macos",
+    "~/Library/Preferences/com.monarch.macos.plist",
     "~/Library/Saved Application State/com.electron.monarch.savedState",
+    "~/Library/WebKit/com.monarch.macos",
   ]
 end

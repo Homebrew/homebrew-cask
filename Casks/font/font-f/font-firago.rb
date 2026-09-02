@@ -2,10 +2,9 @@ cask "font-firago" do
   version "1.000"
   sha256 "b2f97f1ee02921ca1776903fa0e6f1358b017bf854c0e8776b6b8512e3c9d4a1"
 
-  url "https://github.com/bBoxType/FiraGO/archive/refs/tags/#{version}.tar.gz",
-      verified: "github.com/bBoxType/FiraGO/"
+  url "https://github.com/bBoxType/FiraGO/archive/refs/tags/#{version}.tar.gz"
   name "FiraGO"
-  homepage "https://bboxtype.com/typefaces/FiraGO/"
+  homepage "https://carrois.com/typefaces/FiraGO/"
 
   font "FiraGO-#{version}/Fonts/FiraGO_OTF/Italic/FiraGO-BoldItalic.otf"
   font "FiraGO-#{version}/Fonts/FiraGO_OTF/Italic/FiraGO-BookItalic.otf"

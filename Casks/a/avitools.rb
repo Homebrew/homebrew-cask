@@ -12,6 +12,8 @@ cask "avitools" do
     regex(%r{href=.*?/avitools(\d+(?:\.\d+)+)\.zip}i)
   end
 
+  depends_on :macos
+
   app "avitools#{version}/AVItools.app"
 
   zap trash: [

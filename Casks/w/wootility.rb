@@ -1,12 +1,11 @@
 cask "wootility" do
   arch arm: "-arm64"
 
-  version "5.1.2"
-  sha256 arm:   "5c63dc1417241a7d129e5554ddf2a26ef70661738a431df3646266ae5b26c904",
-         intel: "96022a94cb7b84acb934f28c1b404d5c3e355414b4e262f87941216e12186f3e"
+  version "5.4.1"
+  sha256 arm:   "f76dfb789ecfcd25a427b9929f3c09574e346270b75799ceb57e54b6ec625bac",
+         intel: "baf100bef61649184b77d3849da6898e10cfe27bd4631f545dad2e2813128a83"
 
-  url "https://wootility-updates.ams3.cdn.digitaloceanspaces.com/wootility-mac/Wootility-#{version}#{arch}.dmg",
-      verified: "wootility-updates.ams3.cdn.digitaloceanspaces.com/wootility-mac/"
+  url "https://wootility-updates.ams3.cdn.digitaloceanspaces.com/wootility-mac/Wootility-#{version}#{arch}.dmg"
   name "Wootility"
   desc "Configuration software for Wooting keyboards"
   homepage "https://wooting.io/wootility"
@@ -15,6 +14,8 @@ cask "wootility" do
     url "https://wootility-updates.ams3.digitaloceanspaces.com/wootility-mac/latest-mac.yml"
     strategy :electron_builder
   end
+
+  depends_on macos: :big_sur
 
   app "Wootility.app"
 

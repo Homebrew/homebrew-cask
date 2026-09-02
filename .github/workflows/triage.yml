@@ -8,17 +8,19 @@ concurrency:
 
 jobs:
   triage:
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-slim
     permissions:
       contents: read
       pull-requests: write
+      statuses: write
     steps:
       - name: Check commit format
-        uses: Homebrew/actions/check-commit-format@main
+        uses: Homebrew/actions/check-commit-format@a657b8b0cd35d0f65cce41fce9b24cf054b49869 # 2026.08.24.1
         with:
-          token: ${{secrets.HOMEBREW_GITHUB_PUBLIC_REPO_TOKEN}}
+          token: ${{ secrets.HOMEBREW_GITHUB_PUBLIC_REPO_TOKEN }}
+
       - name: Label pull request
-        uses: Homebrew/actions/label-pull-requests@main
+        uses: Homebrew/actions/label-pull-requests@a657b8b0cd35d0f65cce41fce9b24cf054b49869 # 2026.08.24.1
         if: always()
         with:
           token: ${{secrets.HOMEBREW_GITHUB_PUBLIC_REPO_TOKEN}}
@@ -66,7 +68,7 @@ jobs:
 
             - label: linux cask
               path: Casks/.+
-              content: (x86_64|arm64)_linux
+              content: (x86_64|arm64|on)_linux
 
   check-base-branch:
     permissions:
@@ -74,7 +76,7 @@ jobs:
       issues: write
       pull-requests: write
     if: always() && github.repository_owner == 'Homebrew' && github.actor != 'BrewTestBot'
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-slim
     env:
       PR: ${{ github.event.number }}
     steps:

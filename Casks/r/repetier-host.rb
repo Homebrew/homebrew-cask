@@ -12,6 +12,8 @@ cask "repetier-host" do
     strategy :sparkle, &:short_version
   end
 
+  depends_on :macos
+
   app "Repetier-Host Mac.app"
 
   zap trash: [

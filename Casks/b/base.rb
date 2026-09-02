@@ -1,6 +1,6 @@
 cask "base" do
-  version "3.1.0"
-  sha256 "f110a96e211449f0ef217472e7d444ca32888083e8bb0bca5ecf91f804e581bf"
+  version "3.3.0"
+  sha256 "1e943707779f277848aac9c430a4cf5fe0a67f1403f73334dd5781dccecfcbf6"
 
   url "https://files.menial.co.uk/base/Base-#{version}.zip"
   name "Menial Base"
@@ -13,16 +13,18 @@ cask "base" do
   end
 
   auto_updates true
-  depends_on macos: ">= :sequoia"
+  depends_on macos: :sequoia
 
   app "Base.app"
 
   zap trash: [
+    "~/Library/Application Scripts/uk.co.menial.Base*",
     "~/Library/Application Support/Base",
     "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/uk.co.menial.base.sfl*",
     "~/Library/Caches/com.apple.helpd/Generated/uk.co.menial.base.help*",
     "~/Library/Caches/com.apple.helpd/SDMHelpData/Other/English/HelpSDMIndexFile/uk.co.menial.base.help*",
     "~/Library/Caches/uk.co.menial.Base",
+    "~/Library/Containers/uk.co.menial.Base*",
     "~/Library/Preferences/uk.co.menial.Base.plist",
   ]
 end

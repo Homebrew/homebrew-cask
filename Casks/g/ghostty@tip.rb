@@ -1,37 +1,44 @@
 cask "ghostty@tip" do
-  version "12898,05b580911577ae86e7a29146fac29fb368eab536"
-  sha256 "95c79a9bd4a177212f52d77fac0df263a40d37e912ea8ccafda9868b3ffdfc49"
+  version "17657,3c1ef5b32fc5ea6b93d28493fabf193f595139cf"
+  sha256 "574bd1ceae5d033152536d3b78cbc7a76aded53ffdf84a884955a64e7aa05557"
 
   url "https://tip.files.ghostty.org/#{version.csv.second}/Ghostty.dmg"
   name "Ghostty"
   desc "Terminal emulator that uses platform-native UI and GPU acceleration"
   homepage "https://ghostty.org/"
 
+  # Upstream typically creates several releases per day and there isn't always
+  # a release for every version increase.
   livecheck do
     url "https://tip.files.ghostty.org/appcast.xml"
     regex(%r{/(\h+)/Ghostty\.dmg}i)
-    strategy :sparkle do |item, regex|
-      match = item.url&.match(regex)
-      next if match.blank?
+    strategy :sparkle do |items, regex|
+      items.map do |item|
+        match = item.url&.match(regex)
+        next if match.blank?
 
-      "#{item.version},#{match[1]}"
+        "#{item.version},#{match[1]}"
+      end
     end
+    throttle days: 1
   end
 
   auto_updates true
   conflicts_with cask: "ghostty"
-  depends_on macos: ">= :ventura"
+  depends_on macos: :ventura
 
   app "Ghostty.app"
-  binary "#{appdir}/Ghostty.app/Contents/MacOS/ghostty"
   manpage "#{appdir}/Ghostty.app/Contents/Resources/man/man1/ghostty.1"
   manpage "#{appdir}/Ghostty.app/Contents/Resources/man/man5/ghostty.5"
   bash_completion "#{appdir}/Ghostty.app/Contents/Resources/bash-completion/completions/ghostty.bash"
   fish_completion "#{appdir}/Ghostty.app/Contents/Resources/fish/vendor_completions.d/ghostty.fish"
   zsh_completion "#{appdir}/Ghostty.app/Contents/Resources/zsh/site-functions/_ghostty"
 
+  uninstall quit: "com.mitchellh.ghostty"
+
   zap trash: [
-    "~/.config/ghostty/",
+    "~/.cache/ghostty",
+    "~/.config/ghostty",
     "~/Library/Application Support/com.mitchellh.ghostty",
     "~/Library/Caches/com.mitchellh.ghostty",
     "~/Library/HTTPStorages/com.mitchellh.ghostty",

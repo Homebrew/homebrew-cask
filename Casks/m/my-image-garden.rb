@@ -2,8 +2,7 @@ cask "my-image-garden" do
   version "3.6.8,06"
   sha256 "4e31bfce4bf811fee352945149b4bf868e9db09064e52addea0a0fad90f94eb3"
 
-  url "https://gdlp01.c-wss.com/gds/2/0200006062/#{version.csv.second}/mmig-mac-#{version.csv.first.dots_to_underscores}-ea11.dmg",
-      verified: "c-wss.com/"
+  url "https://gdlp01.c-wss.com/gds/2/0200006062/#{version.csv.second}/mmig-mac-#{version.csv.first.dots_to_underscores}-ea11.dmg"
   name "Canon My Image Garden"
   desc "Photo editing and printing tool"
   homepage "https://support-asia.canon-asia.com/?personal"
@@ -18,6 +17,8 @@ cask "my-image-garden" do
       "#{match[2].tr("_", ".")},#{match[1]}"
     end
   end
+
+  depends_on :macos
 
   pkg "My Image Garden V#{version.csv.first.no_dots}.pkg"
 

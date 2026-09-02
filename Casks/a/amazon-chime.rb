@@ -1,6 +1,6 @@
 cask "amazon-chime" do
-  version "5.23.22453"
-  sha256 "74cb17e9a8f5f2922c69d6cb9af064cdc687c409310db2cddf62547f1d19a15f"
+  version "5.23.22533"
+  sha256 "6db57a44e3db098f46f4ecfb5aa04e0a6e5e8f5fabd609a6fa15d3d89081f234"
 
   url "https://clients.chime.aws/mac-nme/AmazonChime-#{version}.dmg"
   name "Amazon Chime"
@@ -14,7 +14,7 @@ cask "amazon-chime" do
   end
 
   auto_updates true
-  depends_on macos: ">= :big_sur"
+  depends_on macos: :monterey
 
   app "Amazon Chime.app"
 

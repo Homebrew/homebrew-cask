@@ -1,10 +1,6 @@
 cask "secretive" do
   on_ventura :or_older do
-    on_catalina :or_older do
-      version "1.0.3"
-      sha256 "d8522c153f20cd03513e6815bdb46be98eae0db2b2a45d30f60b25a6609d1657"
-    end
-    on_big_sur do
+    on_big_sur :or_older do
       version "2.3.1"
       sha256 "493a72362898b4480baa70f115d9515b41b2af4a503caf00277e2bc3824b0bbd"
     end
@@ -18,8 +14,8 @@ cask "secretive" do
     end
   end
   on_sonoma :or_newer do
-    version "3.0.3"
-    sha256 "ab8a7d6b590b3313f7bb383b881fb40ad1ffe4ab848580e9b08899b3e60c323d"
+    version "3.0.4"
+    sha256 "696d07812e4431075234a900a0136dbad3131a91086e535fc2b07d69a1d084ba"
 
     livecheck do
       url :url
@@ -32,12 +28,13 @@ cask "secretive" do
   desc "Store SSH keys in the Secure Enclave"
   homepage "https://github.com/maxgoedjen/secretive"
 
+  depends_on :macos
+
   app "Secretive.app"
 
   zap trash: [
     "~/Library/Application Scripts/com.maxgoedjen.Secretive.Host",
     "~/Library/Application Scripts/com.maxgoedjen.Secretive.SecretAgent",
-    "~/Library/Containers/com.maxgoedjen.Secretive.Host",
-    "~/Library/Containers/com.maxgoedjen.Secretive.SecretAgent",
+    "~/Library/Containers/com.maxgoedjen.Secretive.*",
   ]
 end

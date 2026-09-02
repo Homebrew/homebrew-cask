@@ -1,18 +1,21 @@
 cask "free-download-manager" do
-  version "6.30.3"
+  arch intel: "_x86_64"
+
+  version "6.34.4"
   sha256 :no_check # required as upstream package is updated in-place
 
-  url "https://files2.freedownloadmanager.org/#{version.major}/latest/fdm.dmg"
+  url "https://files2.freedownloadmanager.org/#{version.major}/latest/fdm#{arch}.dmg"
   name "Free Download Manager"
   desc "Download accelerator and organiser"
   homepage "https://www.freedownloadmanager.org/"
 
   livecheck do
-    url "https://www.freedownloadmanager.org/download-fdm-for-mac.htm"
-    regex(/>\s*FDM\s*v?(\d+(?:\.\d+)+)/i)
+    url "https://www.freedownloadmanager.org/download.htm"
+    regex(/>\s*FDM\s+v?(\d+(?:\.\d+)+)\s+for\s+Mac\s*</i)
   end
 
   auto_updates true
+  depends_on :macos
 
   app "Free Download Manager.app"
 
@@ -38,8 +41,4 @@ cask "free-download-manager" do
         "~/Library/Application Support/Softdeluxe",
         "~/Library/Caches/Softdeluxe",
       ]
-
-  caveats do
-    requires_rosetta
-  end
 end

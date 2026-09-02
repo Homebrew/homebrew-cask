@@ -1,12 +1,11 @@
 cask "phoenix-code" do
   arch arm: "aarch64", intel: "x64"
 
-  version "4.0.3"
-  sha256 arm:   "6eb5238eb6e2bf53b4ec976faf9ae5a035a409dc74776ad56f09eed6020702d2",
-         intel: "c88f999d6d51f1a70a8463b6d7f30da97dfc442dac917819dee391a2c201f885"
+  version "5.2.5"
+  sha256 arm:   "a1e49fc187df97e0e8e122ff1733439a1809ceda74cf643d70d9338b3475268d",
+         intel: "ed2dfcb732f929d41a3dcc7fdcb2a280f110d285338dff1f8dd0a8f81d2d9515"
 
-  url "https://github.com/phcode-dev/phoenix-desktop/releases/download/prod-app-v#{version}/Phoenix.Code_#{version}_#{arch}.dmg",
-      verified: "github.com/phcode-dev/phoenix-desktop/"
+  url "https://github.com/phcode-dev/phoenix-desktop/releases/download/prod-app-v#{version}/Phoenix.Code_#{version}_#{arch}.dmg"
   name "Phoenix Code"
   desc "Code editor"
   homepage "https://phcode.io/"
@@ -19,6 +18,7 @@ cask "phoenix-code" do
   end
 
   auto_updates true
+  depends_on :macos
 
   app "Phoenix Code.app"
 

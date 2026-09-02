@@ -1,12 +1,11 @@
 cask "servo" do
   arch arm: "aarch64", intel: "x86_64"
 
-  version "2025-11-11"
-  sha256 arm:   "553b4cd69f38edb93e4bdb1e71675bd99c3bfa819216728ff83e735ad499a72d",
-         intel: "dd78b14a693918d21394d791a63da52deaa650a1821c6a92bf393c111f2fc394"
+  version "2026-08-30"
+  sha256 arm:   "306c27f20bb3f3833a97070baae087b77c88ad5318b8975531e4ee7c576f32f0",
+         intel: "ed721a34485bd59171d8c62c959cb485bc7a7c627e348da32f860c0d8b311aa7"
 
-  url "https://github.com/servo/servo-nightly-builds/releases/download/#{version}/servo-#{arch}-apple-darwin.dmg",
-      verified: "github.com/servo/servo-nightly-builds/"
+  url "https://github.com/servo/servo-nightly-builds/releases/download/#{version}/servo-#{arch}-apple-darwin.dmg"
   name "Servo"
   desc "Parallel browser engine"
   homepage "https://servo.org/"
@@ -19,7 +18,7 @@ cask "servo" do
 
   disable! date: "2026-09-01", because: :fails_gatekeeper_check
 
-  depends_on macos: ">= :ventura"
+  depends_on macos: :ventura
 
   app "Servo.app"
 

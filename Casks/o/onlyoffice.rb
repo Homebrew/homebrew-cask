@@ -1,34 +1,38 @@
 cask "onlyoffice" do
-  arch arm: "arm", intel: "x86_64"
+  arch arm: on_system_conditional(macos: "arm", linux: "arm64"), intel: "x86_64"
+  os macos: "ONLYOFFICE-#{arch}.dmg", linux: "DesktopEditors-#{arch}.AppImage"
 
-  version "9.1.0"
-  sha256 arm:   "1c5b25ee657f879b11c00861e0f00ae03370745036a0f103004009d892208630",
-         intel: "1ac3b0c07d7c6f64e4068591f66a7921f5ce4ea8d7ad0f60e76271b4f91a6e73"
+  version "9.4.0"
+  sha256 arm:          "e965be2222609add6b5a70baa2a8cdb599402491fb2925825d9039dcb154beb4",
+         intel:        "43ac517493c0c316f268ce4b7dc3810b77a7aefe83c0edc1655476d9f21681d2",
+         arm64_linux:  "7dfc2fa195ff9912a4022841613b9a99fdba2a238792648f257007a7df887b7c",
+         x86_64_linux: "f5faf24552665262fe94486a510b997d2e5a24bde14df94c802c79bf17f9254c"
 
-  url "https://download.onlyoffice.com/install/desktop/editors/mac/#{arch}/updates/ONLYOFFICE-#{arch}-#{version}.zip"
+  on_macos do
+    auto_updates true
+    depends_on macos: :big_sur
+
+    app "ONLYOFFICE.app"
+
+    zap trash: [
+      "~/Library/Application Support/asc.onlyoffice.ONLYOFFICE",
+      "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/asc.onlyoffice.onlyoffice.sfl*",
+      "~/Library/HTTPStorages/asc.onlyoffice.ONLYOFFICE",
+      "~/Library/Preferences/asc.onlyoffice.editors-helper-renderer.plist",
+      "~/Library/Preferences/asc.onlyoffice.ONLYOFFICE.plist",
+    ]
+  end
+  on_linux do
+    app_image "DesktopEditors-#{arch}.AppImage", target: "ONLYOFFICE.AppImage"
+  end
+
+  url "https://github.com/ONLYOFFICE/DesktopEditors/releases/download/v#{version}/#{os}"
   name "ONLYOFFICE"
   desc "Document editor"
   homepage "https://www.onlyoffice.com/"
 
-  # Older items in the Sparkle feed may have a newer pubDate, so it's necessary
-  # to work with all of the items in the feed (not just the newest one).
   livecheck do
-    url "https://download.onlyoffice.com/install/desktop/editors/mac/#{arch}/onlyoffice.xml"
-    strategy :sparkle do |items|
-      items.map(&:short_version)
-    end
+    url :url
+    strategy :github_latest
   end
-
-  auto_updates true
-  depends_on macos: ">= :big_sur"
-
-  app "ONLYOFFICE.app"
-
-  zap trash: [
-    "~/Library/Application Support/asc.onlyoffice.ONLYOFFICE",
-    "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/asc.onlyoffice.onlyoffice.sfl*",
-    "~/Library/HTTPStorages/asc.onlyoffice.ONLYOFFICE",
-    "~/Library/Preferences/asc.onlyoffice.editors-helper-renderer.plist",
-    "~/Library/Preferences/asc.onlyoffice.ONLYOFFICE.plist",
-  ]
 end

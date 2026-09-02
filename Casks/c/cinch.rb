@@ -8,6 +8,9 @@ cask "cinch" do
   homepage "https://www.irradiatedsoftware.com/cinch/"
 
   deprecate! date: "2025-03-01", because: :unmaintained
+  disable! date: "2026-03-01", because: :unmaintained
+
+  depends_on :macos
 
   app "Cinch.app"
 

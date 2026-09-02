@@ -1,9 +1,8 @@
 cask "material-maker" do
-  version "1.4"
-  sha256 "653cde79a6e0d1e6f705720b43ed864af4ee03b414bbfe44ae04af41030e4ce8"
+  version "1.7"
+  sha256 "af07244151d890f2ee4863c0cb8cdc526b7ca226b8dfcfe14bb8ae6acbc98550"
 
-  url "https://github.com/RodZill4/material-maker/releases/download/#{version}/material_maker_#{version.dots_to_underscores}.dmg",
-      verified: "github.com/RodZill4/material-maker/"
+  url "https://github.com/RodZill4/material-maker/releases/download/#{version}/material_maker_#{version.dots_to_underscores}.dmg"
   name "Material Maker"
   desc "Procedural material authoring and 3D painting tool based on the Godot Engine"
   homepage "https://rodzilla.itch.io/material-maker"
@@ -11,7 +10,10 @@ cask "material-maker" do
   livecheck do
     url :url
     strategy :github_latest
+    regex(/v?(\d+(?:\.\d+)+(?:p\d+)?)/i)
   end
+
+  depends_on macos: :big_sur
 
   app "Material Maker.app"
 

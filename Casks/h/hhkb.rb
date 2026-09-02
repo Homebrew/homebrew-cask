@@ -1,9 +1,8 @@
 cask "hhkb" do
-  version "1.4.0"
-  sha256 "e6dd6f893de82f5379904d02c510abafd60f5f42a35dae07387d7ed77beb8db5"
+  version "2.0.1"
+  sha256 "c0e57922fc972f1d8ab6f317d8f4e9cffc25f51b2aad1f78fbf187f968f1af5a"
 
-  url "https://origin.pfultd.com/downloads/hhkb/mac/HHKBkeymapTool_#{version.no_dots}ma.dmg",
-      verified: "origin.pfultd.com/downloads/hhkb/mac/"
+  url "https://origin.pfultd.com/downloads/hhkb/mac/HHKBkeymapTool_#{version.no_dots}ma.dmg"
   name "Happy Hacking Keyboard Keymap Tool"
   desc "Allows keymap customization on HHKB HYBRID Type-S and HYBRID models"
   homepage "https://happyhackingkb.com/"
@@ -12,6 +11,8 @@ cask "hhkb" do
     url "https://happyhackingkb.com/download/"
     regex(%r{macOS\s*</td>.*?HHKBkeymapTool[._-]v?\d+(?:\.\d+)*[^.]*?\.dmg.*?>\s*v?(\d+(?:\.\d+)+)\s*<}im)
   end
+
+  depends_on :macos
 
   pkg "HHKBkeymapTool_#{version.no_dots}ma.pkg"
 

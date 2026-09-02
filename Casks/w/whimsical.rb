@@ -1,12 +1,11 @@
 cask "whimsical" do
   arch arm: "arm64", intel: "x64"
 
-  version "0.4.0,251005hjpxaj26h"
-  sha256 arm:   "dff8d174826927fa8c7a2188f9aa7ccb705efe73a3316ab6f70069e6587c6a79",
-         intel: "81e339c0dd87d40c2a42985d2259baf8699c335444ad56f39a8059e7b57d80ba"
+  version "2026.10.3,2608253amgezq7v"
+  sha256 arm:   "81d387d6e1c1cc1b91a84b9d8a8719d994271f1fe186810f3efdda3822833df6",
+         intel: "67eaf14495a48b8cdd823f1a5291dbed3c44e6a5115a5c89485d4070aaa70506"
 
-  url "https://download.todesktop.com/2402209z4j37b73/Whimsical%20#{version.csv.first}%20-%20Build%20#{version.csv.second}-#{arch}-mac.zip",
-      verified: "download.todesktop.com/2402209z4j37b73/"
+  url "https://download.todesktop.com/2402209z4j37b73/Whimsical%20#{version.csv.first}%20-%20Build%20#{version.csv.second}-#{arch}-mac.zip"
   name "Whimsical"
   desc "Collaboration and diagramming tool"
   homepage "https://whimsical.com/"
@@ -25,7 +24,7 @@ cask "whimsical" do
   end
 
   auto_updates true
-  depends_on macos: ">= :monterey"
+  depends_on macos: :monterey
 
   app "Whimsical.app"
 

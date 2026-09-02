@@ -1,6 +1,6 @@
 cask "pdfify" do
-  version "4.0,400"
-  sha256 "759e5b7c49108bd653a962f22757e21d17e210ea3bd4abc7934580b945cdcfcf"
+  version "5.2,52004"
+  sha256 "25ef8931b33f497119c146fb7a42c865846d8a7e28585dc79c0ff07a2ae406a4"
 
   url "https://pdfify.app/get/cask/download/macos/PDFify-#{version.csv.first}-#{version.csv.second}.zip"
   name "PDFify"
@@ -11,6 +11,8 @@ cask "pdfify" do
     url "https://pdfify.app/updater-macos"
     strategy :sparkle
   end
+
+  depends_on :macos
 
   app "PDFify.app"
 

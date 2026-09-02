@@ -1,6 +1,6 @@
 cask "crossover" do
-  version "25.1.1"
-  sha256 "55cce02fc5c394c3b5233e4fc4bf35bfb921dbf58e85f7448161c7ef9a4a0533"
+  version "26.3.0"
+  sha256 "8688e0848c4e5f79f1cc351cb52d32447da00c6c00cfd3b4bb2d164d44589a26"
 
   url "https://media.codeweavers.com/pub/crossover/cxmac/demo/crossover-#{version}.zip"
   name "CrossOver"
@@ -13,6 +13,7 @@ cask "crossover" do
   end
 
   auto_updates true
+  depends_on :macos
 
   app "CrossOver.app"
 

@@ -1,9 +1,8 @@
 cask "lycheeslicer" do
-  version "7.4.6"
-  sha256 "aa26ebe6ac0e8e0e553d5d894fc10265ceb3616830e831780d4c31b124b916ba"
+  version "7.6.6"
+  sha256 "70fd494199795476e5c5feeaa9822e0253e13d93cdade2dd45d0a7ca14cf15c0"
 
-  url "https://mango-lychee.nyc3.cdn.digitaloceanspaces.com/LycheeSlicer-#{version}.dmg",
-      verified: "mango-lychee.nyc3.cdn.digitaloceanspaces.com/"
+  url "https://mango-lychee.nyc3.cdn.digitaloceanspaces.com/LycheeSlicer-#{version}.dmg"
   name "Lychee Slicer"
   desc "Slicer for Resin 3D printers"
   homepage "https://mango3d.io/"
@@ -12,6 +11,8 @@ cask "lycheeslicer" do
     url "https://mango-lychee.nyc3.digitaloceanspaces.com/latest-mac.yml"
     strategy :electron_builder
   end
+
+  depends_on :macos
 
   app "LycheeSlicer.app"
 

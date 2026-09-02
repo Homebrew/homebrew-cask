@@ -1,6 +1,6 @@
 cask "scidvsmac" do
-  version "4.26"
-  sha256 "f9f52ac36ecba8495e0fbd8cade2aec9bc5c1d991857469f53061ac828ec6965"
+  version "4.27"
+  sha256 "89e16278504a9734671670f4dd5d5daa78f949808475fe5a111cf8c4b77763bf"
 
   url "https://downloads.sourceforge.net/scidvspc/ScidvsMac-#{version}.x64.dmg"
   name "Scid vs. Mac"
@@ -12,6 +12,10 @@ cask "scidvsmac" do
     regex(/ScidvsMac-(\d+(?:\.\d+)*)\.x64\.dmg/i)
   end
 
+  disable! date: "2026-09-01", because: :fails_gatekeeper_check
+
+  depends_on :macos
+
   app "ScidvsMac.app"
 
   zap trash: [
@@ -19,8 +23,4 @@ cask "scidvsmac" do
     "~/Library/Preferences/net.sf.scid.plist",
     "~/Library/Saved Application State/net.sf.scid.savedState",
   ]
-
-  caveats do
-    requires_rosetta
-  end
 end

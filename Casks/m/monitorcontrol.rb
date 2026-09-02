@@ -8,6 +8,7 @@ cask "monitorcontrol" do
   homepage "https://github.com/MonitorControl/MonitorControl"
 
   auto_updates true
+  depends_on :macos
 
   app "MonitorControl.app"
 

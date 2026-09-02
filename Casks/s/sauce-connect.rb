@@ -1,6 +1,6 @@
 cask "sauce-connect" do
-  version "5.3.1"
-  sha256 "660c07baa8f5d48fc259c6279ed78723359900f497705409bfae3c1dcdd648e2"
+  version "5.5.3"
+  sha256 "3b48b144a262c254cfb86483557d80474d696411563d69b2a90c4c12bed7e339"
 
   url "https://saucelabs.com/downloads/sauce-connect/#{version}/sauce-connect-#{version}_darwin.all.zip"
   name "Sauce Connect"
@@ -11,6 +11,8 @@ cask "sauce-connect" do
     url "https://docs.saucelabs.com/secure-connections/sauce-connect-#{version.major}/installation/"
     regex(/href=.*?sauce-connect[._-]v?(\d+(?:\.\d+)+)[._-]darwin\.all\.zip/i)
   end
+
+  depends_on :macos
 
   binary "sc"
   bash_completion "completions/sc.bash"

@@ -1,20 +1,30 @@
 cask "atuin-desktop" do
   arch arm: "aarch64", intel: "x64"
 
-  version "0.1.11"
-  sha256 arm:   "06b6b1ca87b9ec354d7b1d7ec074a7ab573a93d37a7db84cddc076e8750f25cd",
-         intel: "e6285c8d9f9d60ce9948d76e494877e0c5e3f0e3defb7e6894034a96518c8c52"
+  on_arm do
+    version "0.2.20"
+    sha256 "ac5444d6df2dff182da4db4fe9f65bac1a49337739b1c913d71304d28c4e45d3"
 
-  url "https://github.com/atuinsh/desktop/releases/download/v#{version}/Atuin_#{version}_#{arch}.dmg",
-      verified: "github.com/atuinsh/desktop/"
+    livecheck do
+      url :url
+      strategy :github_latest
+    end
+  end
+  on_intel do
+    version "0.2.17"
+    sha256 "af263d709c5e0db897ee25947ae2a13247d5dfe0f622309bf07a71db838a809d"
+
+    livecheck do
+      skip "Legacy version"
+    end
+  end
+
+  url "https://github.com/atuinsh/desktop/releases/download/v#{version}/Atuin_#{version}_#{arch}.dmg"
   name "Atuin Desktop"
   desc "Runbook editor for terminal workflows"
   homepage "https://atuin.sh/"
 
-  livecheck do
-    url :url
-    strategy :github_latest
-  end
+  depends_on :macos
 
   app "Atuin.app"
 

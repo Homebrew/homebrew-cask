@@ -8,6 +8,9 @@ cask "tnefs-enough" do
   homepage "https://www.joshjacob.com/mac-development/tnef.php"
 
   deprecate! date: "2025-03-02", because: :unmaintained
+  disable! date: "2026-03-02", because: :unmaintained
+
+  depends_on :macos
 
   app "TNEF's Enough.app"
 

@@ -1,9 +1,8 @@
 cask "furtherance" do
-  version "25.3.0"
-  sha256 "7d04cb84e461dd9c9c2f343702435f1fb11f6d0b76660e986832ef58d025777f"
+  version "26.7.0"
+  sha256 "8b57438402f37bc648f34eb62c95efac42d67fc3121ae914a6d3f6a7b34071c2"
 
-  url "https://github.com/unobserved-io/Furtherance/releases/download/#{version}/furtherance-#{version}.dmg",
-      verified: "github.com/unobserved-io/Furtherance/"
+  url "https://github.com/unobserved-io/Furtherance/releases/download/#{version}/furtherance-#{version}.dmg"
   name "Furtherance"
   desc "Time tracker"
   homepage "https://furtherance.app/"
@@ -12,6 +11,8 @@ cask "furtherance" do
     url :url
     strategy :github_latest
   end
+
+  depends_on macos: :big_sur
 
   app "Furtherance.app"
 

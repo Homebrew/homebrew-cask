@@ -1,18 +1,17 @@
 cask "capcut" do
-  version "3.3.0.1159"
-  sha256 "26c253719a61eae679a2923121a83d0a39b98d920a5c57f3e00d66224986c867"
+  version "9.3.0.4490"
+  sha256 "8cc8703ca65359e69463c0e464b4661134757be2cda06dee2ffeb06e5238c8cb"
 
-  url "https://lf16-capcut.faceulv.com/obj/capcutpc-packages-us/packages/CapCut_#{version.dots_to_underscores}_capcutpc_0_creatortool.dmg",
-      verified: "lf16-capcut.faceulv.com/obj/capcutpc-packages-us/packages/"
+  url "https://sf16-web-tos-buz.capcutstatic.com/obj/capcut-web-buz-sg/packages/CapCut_#{version.dots_to_underscores}_capcutpc_0_creatortool.dmg"
   name "CapCut"
   desc "Video editing and image design platform"
   homepage "https://www.capcut.com/"
 
   livecheck do
-    url "https://editor-api.capcutapi.com/service/settings/v3/?aid=359289&from_aid=359289&device_platform=mac&from_channel=capcutpc_0"
+    url "https://editor-api-sg.capcutapi.com/service/settings/v3/?aid=359289&device_platform=mac&channel=capcutpc_0&version_code=1&os_version=26.4&region=GB&traffic_type=release"
     regex(/CapCut[._-]v?(\d+(?:[._]\d+)+).+?\.dmg/i)
     strategy :json do |json, regex|
-      url = json.dig("data", "settings", "installer_downloader_config", "url")
+      url = json.dig("data", "settings", "update_reminder", "lastest_stable_url")
       next if url.blank?
 
       match = url.match(regex)
@@ -22,12 +21,15 @@ cask "capcut" do
     end
   end
 
+  depends_on :macos
+
   app "CapCut.app"
+
+  uninstall quit: "com.lemon.lvoverseas"
 
   zap trash: [
     "~/Library/Application Scripts/com.lemon.lvoverseas",
     "~/Library/Containers/com.lemon.lvoverseas",
     "~/Library/Group Containers/22MMUN2RN5.lv",
-    "~/Library/Group Containers/22MMUN2RN5.ve",
   ]
 end

@@ -12,6 +12,8 @@ cask "apache-directory-studio" do
     regex(%r{href=["']?v?(\d+(?:\.\d+)+[^/]*?)/?["' >]}i)
   end
 
+  depends_on :macos
+
   app "ApacheDirectoryStudio.app"
 
   zap trash: "~/.ApacheDirectoryStudio"

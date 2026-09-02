@@ -1,9 +1,8 @@
 cask "flightgear" do
-  version "2024.1.3"
-  sha256 "48367db60f8e878ae4a3a94c62577445133974cc816be51558340b8e0a2b6aa6"
+  version "2024.1.7"
+  sha256 "302e9e068342eed1aac6808b2966b5b0e70fa40cef4bb92bddfef709d098d6fc"
 
-  url "https://mirrors.ibiblio.org/flightgear/ftp/release-#{version.major_minor}/flightgear-#{version}-macos-universal.dmg",
-      verified: "mirrors.ibiblio.org/flightgear/"
+  url "https://mirrors.ibiblio.org/flightgear/ftp/release-#{version.major_minor}/flightgear-#{version}-macos-universal.dmg"
   name "FlightGear"
   desc "Flight simulator"
   homepage "https://www.flightgear.org/"
@@ -13,7 +12,11 @@ cask "flightgear" do
     regex(/href=.*?flightgear[._-]?v?(\d+(?:\.\d+)+)(?:[._-]macos)?(?:[._-]universal)?\.dmg/i)
   end
 
+  depends_on :macos
+
   app "FlightGear.app"
+
+  uninstall quit: "org.flightgear.mac"
 
   zap trash: "~/Library/Application Support/FlightGear"
 end

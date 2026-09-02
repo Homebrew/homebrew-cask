@@ -1,9 +1,9 @@
 cask "jupyterlab-app" do
   arch arm: "arm64", intel: "x64"
 
-  version "4.2.5-1"
-  sha256 arm:   "189e5e1294cc646b11701e06e41b3d91159bfe8b7913eebdf76a5d5512e0af38",
-         intel: "23ba65b91957a202239beeb19d4f94603de1837d59f81576d262d68b4c106b3e"
+  version "4.6.3-1"
+  sha256 arm:   "0c208d3ba4cfa4eedc3a2adafabc009b00f14a271b43b9c8a047b06f12e14503",
+         intel: "bf47dc3a2c7d42edb2c9d84809553a85d2ab8d7afc3c06a28172b67ebe3672ca"
 
   url "https://github.com/jupyterlab/jupyterlab-desktop/releases/download/v#{version}/JupyterLab-Setup-macOS-#{arch}.dmg"
   name "JupyterLab App"
@@ -15,6 +15,8 @@ cask "jupyterlab-app" do
     regex(/v?(\d+(?:[.-]\d+)+)/i)
     strategy :github_latest
   end
+
+  depends_on macos: :monterey
 
   app "JupyterLab.app"
 

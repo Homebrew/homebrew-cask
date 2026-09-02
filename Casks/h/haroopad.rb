@@ -2,13 +2,15 @@ cask "haroopad" do
   version "0.13.2"
   sha256 "97ef0a7df52daeace17ea01a1ca82dc974955c147593f251fb7c04ca0ff09064"
 
-  url "https://bitbucket.org/rhiokim/haroopad-download/downloads/Haroopad-v#{version}-x64.dmg",
-      verified: "bitbucket.org/rhiokim/haroopad-download/"
+  url "https://bitbucket.org/rhiokim/haroopad-download/downloads/Haroopad-v#{version}-x64.dmg"
   name "Haroopad"
   desc "Markdown editor"
   homepage "http://pad.haroopress.com/"
 
   deprecate! date: "2025-01-05", because: :unmaintained
+  disable! date: "2026-01-05", because: :unmaintained
+
+  depends_on :macos
 
   app "Haroopad.app"
 

@@ -5,15 +5,11 @@ cask "ftdi-vcp-driver" do
   url "https://ftdichip.com/wp-content/uploads/#{version.csv.second}/#{version.csv.third}/FTDIUSBSerialDextInstaller_#{version.csv.first.dots_to_underscores}.dmg"
   name "FTDI VCP Driver"
   desc "Virtual COM port driver"
-  homepage "https://www.ftdichip.com/Drivers/VCP.htm"
+  homepage "https://ftdichip.com/drivers/vcp-drivers/"
 
-  livecheck do
-    url "https://ftdichip.com/drivers/vcp-drivers/"
-    regex(%r{href=.*?/(\d+)/(\d+)/FTDIUSBSerialDextInstaller[._-]v?(\d+(?:[._]\d+)+)\.dmg}i)
-    strategy :page_match do |page, regex|
-      page.scan(regex).map { |match| "#{match[2].tr("_", ".")},#{match[0]},#{match[1]}" }
-    end
-  end
+  deprecate! date: "2026-05-16", because: :unreachable
+
+  depends_on :macos
 
   # App must be installed in `/Applications`.
   app "FTDIUSBSerialDextInstaller_#{version.csv.first.dots_to_underscores}.app",

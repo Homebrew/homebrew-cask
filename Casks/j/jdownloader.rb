@@ -9,6 +9,8 @@ cask "jdownloader" do
   desc "Download manager"
   homepage "https://jdownloader.org/"
 
+  depends_on :macos
+
   installer script: {
     executable:   "JDownloader 2 Installer.app/Contents/MacOS/JavaApplicationStub",
     args:         [

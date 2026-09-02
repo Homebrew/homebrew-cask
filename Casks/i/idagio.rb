@@ -1,6 +1,6 @@
 cask "idagio" do
-  version "1.13.0"
-  sha256 "92bb5576117cff4414abe53c3dc35d47e45ab15f4fd31e96423a42ce67c1dc9e"
+  version "1.15.0"
+  sha256 "f5b8d8985c3f93765a96c1f85bdab54c84113cc3da22ee9e2b286b31d52115e2"
 
   url "https://dl.idagio.com/IDAGIO-#{version}.dmg"
   name "IDAGIO"
@@ -13,6 +13,7 @@ cask "idagio" do
   end
 
   auto_updates true
+  depends_on macos: :monterey
 
   app "IDAGIO.app"
 

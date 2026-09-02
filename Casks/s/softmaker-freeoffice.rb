@@ -1,9 +1,8 @@
 cask "softmaker-freeoffice" do
-  version "2024,1228"
+  version "2024,1234"
   sha256 :no_check # required as upstream package is updated in place
 
-  url "https://www.softmaker.net/down/softmaker-freeoffice-#{version.csv.first}.pkg",
-      verified: "softmaker.net/"
+  url "https://www.softmaker.net/down/softmaker-freeoffice-#{version.csv.first}.pkg"
   name "SoftMaker FreeOffice"
   desc "Office suite"
   homepage "https://www.freeoffice.com/"
@@ -18,6 +17,8 @@ cask "softmaker-freeoffice" do
       "#{match[1]},#{match[2]}"
     end
   end
+
+  depends_on :macos
 
   pkg "softmaker-freeoffice-#{version.csv.first}.pkg"
 

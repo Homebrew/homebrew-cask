@@ -2,8 +2,7 @@ cask "subsync" do
   version "0.17.0"
   sha256 "8d81f4d8da99b5f6b023da3fd100fccadb0c2b07143e495eb57bd22bfa5a78bd"
 
-  url "https://github.com/sc0ty/subsync/releases/download/#{version.major_minor}/subsync-#{version}-mac-x86_64.dmg",
-      verified: "github.com/sc0ty/subsync/"
+  url "https://github.com/sc0ty/subsync/releases/download/#{version.major_minor}/subsync-#{version}-mac-x86_64.dmg"
   name "subsync"
   desc "Subtitle speech synchroniser"
   homepage "https://subsync.online/"
@@ -11,17 +10,12 @@ cask "subsync" do
   deprecate! date: "2024-10-04", because: :unmaintained
   disable! date: "2025-10-04", because: :unmaintained
 
-  app "subsync.app"
-  # shim script (https://github.com/Homebrew/homebrew-cask/issues/18809)
-  shimscript = "#{staged_path}/subsync.wrapper.sh"
-  binary shimscript, target: "subsync"
+  depends_on :macos
 
-  preflight do
-    File.write shimscript, <<~EOS
-      #!/bin/sh
-      exec '#{appdir}/subsync.app/Contents/MacOS/subsync' --cli "$@"
-    EOS
-  end
+  app "subsync.app"
+  command_wrapper "subsync",
+                  executable: "#{appdir}/subsync.app/Contents/MacOS/subsync",
+                  args:       "--cli"
 
   zap trash: "~/Library/Preferences/subsync"
 

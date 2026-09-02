@@ -12,6 +12,8 @@ cask "divvy" do
     strategy :sparkle, &:short_version
   end
 
+  depends_on :macos
+
   app "Divvy.app"
 
   zap trash: [

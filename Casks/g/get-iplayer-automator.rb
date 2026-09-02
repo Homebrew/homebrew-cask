@@ -1,6 +1,6 @@
 cask "get-iplayer-automator" do
-  version "1.27.1,20250809002"
-  sha256 "c97cc2833fa667344a36c8ed0807761af4d3952ab44e7372a951cfa18f9463b1"
+  version "1.29.6,202608131913"
+  sha256 "8de169c394d87a84496fff180d535a11b2c1629d231180712759ff903627efe0"
 
   url "https://github.com/Ascoware/get-iplayer-automator/releases/download/v#{version.csv.first}/Get.iPlayer.Automator.v#{version.csv.first}.b#{version.csv.second}.zip"
   name "Get iPlayer Automator"
@@ -20,13 +20,22 @@ cask "get-iplayer-automator" do
     end
   end
 
+  depends_on :macos
+
   app "Get iPlayer Automator.app"
 
+  uninstall quit: "com.ascoware.get-iplayer-automator"
+
   zap trash: [
+    "~/Library/Application Scripts/group.com.ascoware.get-iplayer-automator",
     "~/Library/Application Support/Get iPlayer Automator",
+    "~/Library/Caches/com.ascoware.get-iplayer-automator",
     "~/Library/Caches/com.ascoware.getiPlayerAutomator",
+    "~/Library/Group Containers/group.com.ascoware.get-iplayer-automator",
+    "~/Library/HTTPStorages/com.ascoware.get-iplayer-automator",
     "~/Library/HTTPStorages/com.ascoware.getiPlayerAutomator",
     "~/Library/Logs/Get iPlayer Automator",
+    "~/Library/Preferences/com.ascoware.get-iplayer-automator.plist",
     "~/Library/Preferences/com.ascoware.getiPlayerAutomator.plist",
     "~/Library/Saved Application State/com.ascoware.getiPlayerAutomator.savedState",
     "~/Library/WebKit/com.ascoware.getiPlayerAutomator",

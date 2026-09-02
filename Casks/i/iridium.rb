@@ -10,6 +10,8 @@ cask "iridium" do
   deprecate! date: "2024-11-03", because: :discontinued
   disable! date: "2025-11-03", because: :discontinued
 
+  depends_on :macos
+
   app "Iridium.app"
 
   zap trash: [

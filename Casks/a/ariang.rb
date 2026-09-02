@@ -1,9 +1,9 @@
 cask "ariang" do
   arch arm: "arm64", intel: "x64"
 
-  version "1.3.11"
-  sha256 arm:   "b5290e421d6529d0dd4e0b49259c4062290229718cc8483abf55f9344bcddb57",
-         intel: "68c3f3c1e8df4e7d8ecd617539a1a32635d6a750808b17f900a5fb4e0713c194"
+  version "1.3.14"
+  sha256 arm:   "bb6d460a6cbeb3a494f98d86406b6940ca9cf9ac4680c0c761ffa6eb88b67c2c",
+         intel: "04b77d4a908f8d711a2f4826770ca988fcd23421aac36a8e46a184c6cf024022"
 
   url "https://github.com/mayswind/AriaNg-Native/releases/download/#{version}/AriaNg_Native-#{version}-macOS-#{arch}.dmg"
   name "AriaNg Native"
@@ -11,6 +11,8 @@ cask "ariang" do
   homepage "https://github.com/mayswind/AriaNg-Native"
 
   disable! date: "2026-09-01", because: :fails_gatekeeper_check
+
+  depends_on :macos
 
   app "AriaNg Native.app"
 

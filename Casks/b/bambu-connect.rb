@@ -1,12 +1,11 @@
 cask "bambu-connect" do
   arch arm: "arm64", intel: "x64"
 
-  version "2.0.0-beta.7"
-  sha256 arm:   "45290f374ff28729d2deb4c3e379266d553fb9005f178c9b4e940c813076e718",
-         intel: "7a4af9bd5570777fd8eb23c1dfd34c54857a8c50aa76a3b172bb8625df70b02d"
+  version "2.5.0-beta.12"
+  sha256 arm:   "067cfef8624e937007839d84375758fe8d2db6dce5ebd5e61ccaa149979b2c7d",
+         intel: "2423e89bbfdb1e1eb82b379cca23f5d01f01164fc2d5c54c646f5bdf4fb756e9"
 
-  url "https://public-cdn.bblmw.com/upgrade/bambu-connect/updates/versions/#{version}/bambu-connect-v#{version}-darwin-#{arch}.dmg",
-      verified: "public-cdn.bblmw.com/upgrade/bambu-connect/updates/versions/"
+  url "https://public-cdn.bblmw.com/upgrade/bambu-connect/updates/versions/#{version}/bambu-connect-v#{version}-darwin-#{arch}.dmg"
   name "Bambu Connect"
   desc "Tool for linking with Bambu Lab 3D printers"
   homepage "https://wiki.bambulab.com/en/software/bambu-connect"
@@ -16,7 +15,7 @@ cask "bambu-connect" do
     strategy :electron_builder
   end
 
-  depends_on macos: ">= :big_sur"
+  depends_on macos: :big_sur
 
   app "Bambu Connect.app"
 

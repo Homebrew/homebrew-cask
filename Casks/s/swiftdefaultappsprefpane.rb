@@ -7,6 +7,8 @@ cask "swiftdefaultappsprefpane" do
   desc "Replacement for RCDefaultApps, written in Swift"
   homepage "https://github.com/Lord-Kamina/SwiftDefaultApps"
 
+  depends_on :macos
+
   binary "swda"
   prefpane "SwiftDefaultApps.prefpane"
 

@@ -1,6 +1,6 @@
 cask "simplenote" do
-  version "2.23.2"
-  sha256 "3ea1ae52f355d972c1796401feaaa8486c79acca6cdec6b19230f8db81e34f78"
+  version "2.27.1"
+  sha256 "6ff36e3488ea2fb1e8c4bb20f6646a76c3caeb91b7d90c7d31ec421383e68903"
 
   url "https://github.com/Automattic/simplenote-electron/releases/download/v#{version}/Simplenote-macOS-#{version}.dmg"
   name "Simplenote"
@@ -11,6 +11,8 @@ cask "simplenote" do
     url :url
     strategy :github_latest
   end
+
+  depends_on macos: :big_sur
 
   app "Simplenote.app"
 

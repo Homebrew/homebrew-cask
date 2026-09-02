@@ -18,9 +18,11 @@ cask "epoccam" do
     end
   end
 
+  depends_on :macos
+
   pkg "EpocCam_Installer_#{version.dots_to_underscores}.pkg"
 
-  uninstall_preflight do
+  uninstall_preflight_steps do
     set_ownership "/Library/Audio/Plug-Ins/HAL/VirtualMic.driver"
     set_ownership "/Library/CoreMediaIO/Plug-Ins/DAL/EpocCamPlugin.plugin"
   end

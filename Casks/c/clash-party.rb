@@ -1,23 +1,21 @@
 cask "clash-party" do
   arch arm: "arm64", intel: "x64"
 
-  version "1.8.8"
+  version "2.0.2"
 
-  on_catalina :or_older do
-    sha256 arm:   "f188e7d39b0d39a65a9d02e6ae4d5b4d4b11edab20c3cc29995ef0f8ee870edd",
-           intel: "5a3ca4d10d84850ab67e195b827cc146eee8c736bfcd46decce6b49d7a7346f3"
+  on_big_sur :or_older do
+    sha256 arm:   "d0eaaea4956325f42aa77bbabf7d902d613aaccbef923f5cf9e0287401112963",
+           intel: "2b80a2a7311e71e6d70661f3975a4b700eb021dd6ea9a702cbf798965bd8c500"
 
-    url "https://github.com/mihomo-party-org/clash-party/releases/download/v#{version}/clash-party-catalina-#{version}-#{arch}.pkg",
-        verified: "github.com/mihomo-party-org/clash-party/"
+    url "https://github.com/mihomo-party-org/clash-party/releases/download/v#{version}/clash-party-catalina-#{version}-#{arch}.pkg"
 
     pkg "clash-party-catalina-#{version}-#{arch}.pkg"
   end
-  on_big_sur :or_newer do
-    sha256 arm:   "09544ac95dff9b0fe943119d7dcc6558e82ccfdeda3759ba1ede96d13ace2e0e",
-           intel: "fb516694b3f98ae2168d7055dd43e6fc6d9966e2cf8e157506fc1a7e51f03586"
+  on_monterey :or_newer do
+    sha256 arm:   "438c65bd5cdd8e0fda1fb858bee4b1de4ee7c05f031047a6a597109734edf62b",
+           intel: "3e7a54146f0a740828103a9cb4103788813b6b91a8bbf26135485d74fe4e1f42"
 
-    url "https://github.com/mihomo-party-org/clash-party/releases/download/v#{version}/clash-party-macos-#{version}-#{arch}.pkg",
-        verified: "github.com/mihomo-party-org/clash-party/"
+    url "https://github.com/mihomo-party-org/clash-party/releases/download/v#{version}/clash-party-macos-#{version}-#{arch}.pkg"
 
     pkg "clash-party-macos-#{version}-#{arch}.pkg"
   end
@@ -32,6 +30,7 @@ cask "clash-party" do
   end
 
   auto_updates true
+  depends_on :macos
 
   uninstall launchctl: "party.mihomo.helper",
             pkgutil:   "party.mihomo.app"

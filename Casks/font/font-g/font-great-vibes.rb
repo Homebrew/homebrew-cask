@@ -2,8 +2,7 @@ cask "font-great-vibes" do
   version :latest
   sha256 :no_check
 
-  url "https://github.com/google/fonts/raw/main/ofl/greatvibes/GreatVibes-Regular.ttf",
-      verified: "github.com/google/fonts/"
+  url "https://github.com/google/fonts/raw/main/ofl/greatvibes/GreatVibes-Regular.ttf"
   name "Great Vibes"
   homepage "https://fonts.google.com/specimen/Great+Vibes"
 

@@ -2,11 +2,11 @@ cask "autofirma" do
   arch arm: "M1", intel: "x64"
   pkg_arch = on_arch_conditional arm: "aarch64", intel: "x64"
 
-  version "1.9"
-  sha256 arm:   "8684c89024711d3a29745738f2e67e85f3d7d22fd3d80ddfb1acf4137f97d455",
-         intel: "06bd9980f86c0e45a54474c827e87747d4a84f9b4df608460b10bfa0eee524ff"
+  version "1.9.2"
+  sha256 arm:   "858aa128f2cd2d5e7cf294129193cedb7da4839ba5157deff4b01c9780ad301a",
+         intel: "ce7c83c9b12cc6fc4a1d9f725ef104c56d32623e8ab04f53c6a778166614a153"
 
-  url "https://firmaelectronica.gob.es/content/dam/firmaelectronica/descargas-software/autofirma#{version.no_dots}/Autofirma_Mac_#{arch}.zip"
+  url "https://firmaelectronica.gob.es/content/dam/firmaelectronica/descargas-software/Autofirma_#{version.dots_to_underscores}_Mac_#{arch}.zip"
   name "AutoFirma"
   desc "Digital signature editor and validator"
   homepage "https://firmaelectronica.gob.es/ciudadanos/descargas"
@@ -22,22 +22,15 @@ cask "autofirma" do
     end
   end
 
+  depends_on :macos
+
   # See https://github.com/Homebrew/homebrew-cask/pull/116137#issuecomment-998220031
-  installer manual: "AutoFirma_#{version.dots_to_underscores}_#{pkg_arch}.pkg"
+  installer manual: "AutoFirma_#{version.dots_to_underscores}_#{pkg_arch}_signed.pkg"
 
   # remove 'Autofirma ROOT' and '127.0.0.1' certificates from keychain (these were installed by pkg)
-  uninstall_postflight do
-    ["AutoFirma ROOT", "127.0.0.1"].each do |cert_name|
-      stdout, * = system_command "/usr/bin/security",
-                                 args: ["find-certificate", "-a", "-c", cert_name, "-Z"],
-                                 sudo: true
-      hashes = stdout.lines.grep(/^SHA-256 hash:/) { |l| l.split(":").second.strip }
-      hashes.each do |h|
-        system_command "/usr/bin/security",
-                       args: ["delete-certificate", "-Z", h],
-                       sudo: true
-      end
-    end
+  uninstall_postflight_steps do
+    delete_keychain_certificates "AutoFirma ROOT"
+    delete_keychain_certificates "127.0.0.1"
   end
 
   uninstall quit:    "es.gob.afirma",

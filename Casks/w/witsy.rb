@@ -1,25 +1,22 @@
 cask "witsy" do
   arch arm: "arm64", intel: "x64"
 
-  version "3.1.1"
-  sha256 arm:   "dcb75f783f19badd2139471fd083ba7e39f8d1d12383bcba8294e79ab9260fcd",
-         intel: "06e0b9f9200fe4cf27c82caed0a4d2584d1c541384c43a7e5fa1fac80bdb8060"
+  version "3.5.2"
+  sha256 arm:   "e9c8e371362c43b41812b17f7280807a5feb3cb9a4829ca0909824639ca23205",
+         intel: "fb9d62c2e050e7969ef3bc535eb4ce02239174667b2eb174e8038eb2f0b29d5a"
 
-  url "https://github.com/nbonamy/witsy/releases/download/v#{version}/Witsy-#{version}-darwin-#{arch}.dmg",
-      verified: "github.com/nbonamy/witsy/"
+  url "https://github.com/Kochava-Studios/witsy/releases/download/v#{version}/Witsy-#{version}-darwin-#{arch}.dmg"
   name "Witsy"
   desc "BYOK (Bring Your Own Keys) AI assistant"
   homepage "https://witsyai.com/"
 
   livecheck do
-    url "https://update.electronjs.org/nbonamy/witsy/darwin-#{arch}/0.0.0"
-    strategy :json do |json|
-      json["name"]
-    end
+    url :url
+    strategy :github_latest
   end
 
   auto_updates true
-  depends_on macos: ">= :monterey"
+  depends_on macos: :monterey
 
   app "Witsy.app"
 

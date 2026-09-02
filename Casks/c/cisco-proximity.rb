@@ -7,10 +7,9 @@ cask "cisco-proximity" do
   desc "Content sharing and video conference system control"
   homepage "https://proximity.cisco.com/"
 
-  livecheck do
-    url "https://proximity.cisco.com/mac/version.txt"
-    regex(/^desktop[._-]v?(\d+(?:\.\d+)+)$/i)
-  end
+  disable! date: "2026-05-18", because: :discontinued
+
+  depends_on :macos
 
   app "Cisco Proximity.app"
 

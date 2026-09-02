@@ -1,6 +1,6 @@
 cask "input-source-pro" do
-  version "2.6.1"
-  sha256 "99b1f5e357a30ecdf581a4181a056cb34b2cbca4c84f2265ce51917dcdbb278f"
+  version "2.11.0"
+  sha256 "036f77e2142fa3602d3acffe823bc8272c3e2a5cdb7a0350ddf5fc944903294b"
 
   url "https://inputsource.pro/stable/Input%20Source%20Pro%20#{version}.dmg"
   name "Input Source Pro"
@@ -13,7 +13,7 @@ cask "input-source-pro" do
   end
 
   auto_updates true
-  depends_on macos: ">= :big_sur"
+  depends_on macos: :big_sur
 
   app "Input Source Pro.app"
 

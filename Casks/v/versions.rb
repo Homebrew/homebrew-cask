@@ -1,6 +1,6 @@
 cask "versions" do
-  version "2.4.4,2040"
-  sha256 "e2b91a4d8921fce230d5713ec60cad7dfd95c560af691533e125d99c7ffd013b"
+  version "2.4.5,2042"
+  sha256 "38cd533eff8669046f9d4a886c5ebabfdb93e8c51f9bb94e43fa5f3d31af9ae4"
 
   url "https://updates.versionsapp.com/v#{version.major}/prod/Versions-#{version.csv.first}-#{version.csv.second}.zip"
   name "Versions"
@@ -12,12 +12,16 @@ cask "versions" do
     strategy :sparkle
   end
 
+  depends_on :macos
+
   app "Versions.app"
 
   zap trash: [
     "~/Library/Application Support/com.versionsapp.v#{version.major}",
     "~/Library/Application Support/Versions",
     "~/Library/Caches/com.versionsapp.v#{version.major}",
+    "~/Library/HTTPStorages/com.versionsapp.v#{version.major}",
     "~/Library/Preferences/com.versionsapp.v#{version.major}.plist",
+    "~/Library/WebKit/com.versionsapp.v#{version.major}",
   ]
 end

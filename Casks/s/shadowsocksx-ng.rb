@@ -7,7 +7,10 @@ cask "shadowsocksx-ng" do
   desc "Tunneling proxy"
   homepage "https://github.com/shadowsocks/ShadowsocksX-NG/"
 
+  disable! date: "2026-09-01", because: :fails_gatekeeper_check
+
   conflicts_with cask: "shadowsocksx"
+  depends_on :macos
 
   app "ShadowsocksX-NG.app"
 

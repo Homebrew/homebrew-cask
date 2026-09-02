@@ -1,9 +1,9 @@
 cask "signal" do
   arch arm: "arm64", intel: "x64"
 
-  version "7.78.0"
-  sha256 arm:   "b9ff9e92f53cc74f0114ef931549a2d44b76e75e79ab4c808934dcfccb7f985f",
-         intel: "ac4bc7c09ab210145ded2ac1cce4ece874a3cadb10cb32171f6c18aba3129ddb"
+  version "8.25.0"
+  sha256 arm:   "956a5ec1db1622bad9c54bd336285349c60d066eea7d645dd52bfb910900263b",
+         intel: "cc6d4355d906ee4a6d6a1cca34f7c4f44d0bd40fd1afdb79bfa0be0863285043"
 
   url "https://updates.signal.org/desktop/signal-desktop-mac-#{arch}-#{version}.zip"
   name "Signal"
@@ -16,7 +16,7 @@ cask "signal" do
   end
 
   auto_updates true
-  depends_on macos: ">= :monterey"
+  depends_on macos: :monterey
 
   app "Signal.app"
 

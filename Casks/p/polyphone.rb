@@ -1,12 +1,12 @@
 cask "polyphone" do
-  macos_version = "-MacOS_12"
-
   on_big_sur :or_older do
     version "2.5.1,130"
     sha256 "03b3509f8a6af45a7de6b93aeaf62bf5fae552aba7806b0ac46cf24ba57f37e3"
 
-    macos_version = "_MacOS_10.13"
+    "_MacOS_10.13"
   end
+  macos_version = "-MacOS_12"
+
   on_monterey :or_newer do
     version "2.5.1,129"
     sha256 "89a60fc2444a4502719d23f2d5404a1fa9677db64ef09267ebced0eddf77a0dc"
@@ -30,6 +30,8 @@ cask "polyphone" do
   end
 
   disable! date: "2026-09-01", because: :fails_gatekeeper_check
+
+  depends_on :macos
 
   app "polyphone.app"
 

@@ -1,12 +1,11 @@
 cask "heynote" do
   arch arm: "arm64", intel: "x64"
 
-  version "2.6.2"
-  sha256 arm:   "af3bfb9aa43e6ca52c49f3e27510f33a13754ad157c28dfc8498a7b991726bd6",
-         intel: "7a7acec67c14ce7750b6c52704548f934eb6c92ee88dcd1172dc9eddc5244305"
+  version "2.9.1"
+  sha256 arm:   "6db5ca77fb01004b6d041fc2a22660c1b25de8b16f6323598aaf163f7efe90d8",
+         intel: "f24a919f37e24dfd5cdd69f6e4f2c330f6033384521cead8a9b8968b8150540f"
 
-  url "https://github.com/heyman/heynote/releases/download/v#{version}/Heynote_#{version}_#{arch}.dmg",
-      verified: "github.com/heyman/heynote/"
+  url "https://github.com/heyman/heynote/releases/download/v#{version}/Heynote_#{version}_#{arch}.dmg"
   name "Heynote"
   desc "Dedicated scratchpad for developers"
   homepage "https://heynote.com/"
@@ -17,7 +16,7 @@ cask "heynote" do
   end
 
   auto_updates true
-  depends_on macos: ">= :monterey"
+  depends_on macos: :monterey
 
   app "Heynote.app"
 

@@ -1,9 +1,8 @@
 cask "trainerroad" do
-  version "2025.45.0.417"
-  sha256 "abbe07c738f8b68b42dbc17872091c8ce7a732c2051db7290b7f7a5e19f2a4b8"
+  version "2026.29.2.468"
+  sha256 "49851b970827ce158b7cc7e2f8390e994ae5436cf44036be0eed7c4ef46d5b9a"
 
-  url "https://trainrdtrcmn01un1softw01.blob.core.windows.net/installers/mac/v001/Production/TrainerRoad-#{version}.dmg",
-      verified: "trainrdtrcmn01un1softw01.blob.core.windows.net/"
+  url "https://trainrdtrcmn01un1softw01.blob.core.windows.net/installers/mac/v001/Production/TrainerRoad-#{version}.dmg"
   name "TrainerRoad"
   desc "Cycling training system"
   homepage "https://www.trainerroad.com/"
@@ -21,9 +20,15 @@ cask "trainerroad" do
     end
   end
 
+  depends_on :macos
+
   app "TrainerRoad.app"
 
-  zap trash: "~/Library/Application Support/TrainerRoad"
+  zap trash: [
+    "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.trainerroad.mac.sfl*",
+    "~/Library/Application Support/TrainerRoad",
+    "~/Library/Preferences/com.trainerroad.mac.plist",
+  ]
 
   caveats do
     requires_rosetta

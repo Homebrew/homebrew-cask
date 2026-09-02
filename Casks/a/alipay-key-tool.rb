@@ -1,5 +1,5 @@
 cask "alipay-key-tool" do
-  version "2.0.3"
+  version "2.0.4"
   sha256 :no_check
 
   url "https://ideservice.alipay.com/ide/getPluginUrl.htm?clientType=assistant&platform=mac&channelType=WEB"
@@ -10,6 +10,10 @@ cask "alipay-key-tool" do
   livecheck do
     skip "version is shown in screenshot on homepage"
   end
+
+  disable! date: "2026-09-01", because: :fails_gatekeeper_check
+
+  depends_on :macos
 
   app "支付宝开放平台密钥工具.app"
 

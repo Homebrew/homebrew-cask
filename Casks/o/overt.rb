@@ -5,8 +5,7 @@ cask "overt" do
   sha256 arm:   "ba1a584b1c0a3afcefdb4dc25aebd829d8395c744b8def525bcf63b1af24d1cf",
          intel: "7d9aa67e7c314034b1307aa36a0cf701e88fa3e6c659dfced3d7740693606e21"
 
-  url "https://github.com/GetOvert/Overt/releases/download/v#{version}/Overt-darwin-#{arch}-#{version}.zip",
-      verified: "github.com/GetOvert/Overt/"
+  url "https://github.com/GetOvert/Overt/releases/download/v#{version}/Overt-darwin-#{arch}-#{version}.zip"
   name "Overt"
   desc "Open app store"
   homepage "https://getovert.app/"
@@ -15,6 +14,8 @@ cask "overt" do
     url :url
     strategy :github_latest
   end
+
+  depends_on :macos
 
   app "Overt.app"
 

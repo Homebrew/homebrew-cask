@@ -7,26 +7,10 @@ cask "bot-framework-emulator" do
   desc "Test and debug chat bots built with the Bot Framework SDK"
   homepage "https://github.com/Microsoft/BotFramework-Emulator"
 
-  # Not every GitHub release provides a file for macOS, so we check multiple
-  # recent releases instead of only the "latest" release.
-  livecheck do
-    url :url
-    regex(/^botframework[._-]emulator.*?v?(\d+(?:\.\d+)+)[._-]mac\.(?:dmg|pkg|zip)$/i)
-    strategy :github_releases do |json, regex|
-      json.map do |release|
-        next if release["draft"] || release["prerelease"]
-
-        release["assets"]&.map do |asset|
-          match = asset["name"]&.match(regex)
-          next if match.blank?
-
-          match[1]
-        end
-      end.flatten
-    end
-  end
+  deprecate! date: "2026-05-02", because: :discontinued
 
   auto_updates true
+  depends_on :macos
 
   app "Bot Framework Emulator.app"
 
