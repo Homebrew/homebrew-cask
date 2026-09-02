@@ -1,6 +1,6 @@
 cask "egnyte" do
-  version "1.19.1,2367"
-  sha256 "687e35bab2d54b6c979ec6002a7f09aa6259b7331a490b5173ee8b1d29a200d0"
+  version "1.20.1,2383"
+  sha256 "81667458b6130282b5bbaedf88fc3e7c3893443d59a565458d8360c756d4e8e7"
 
   url "https://egnyte-cdn.egnyte.com/desktopapp/mac/en-us/#{version.csv.first}/Egnyte_#{version.csv.first}_#{version.csv.second}.dmg"
   name "Egnyte"
@@ -17,9 +17,14 @@ cask "egnyte" do
   app "Egnyte.app"
 
   uninstall launchctl: [
-    "com.egnyte.DesktopLaunchHelper",
-    "FELUD555VC.group.com.egnyte.DesktopApp.XPCBroker",
-  ]
+              "com.egnyte.DesktopLaunchHelper",
+              "FELUD555VC.group.com.egnyte.DesktopApp.XPCBroker",
+            ],
+            quit:      [
+              "com.egnyte.DesktopApp",
+              "com.egnyte.DesktopApp.FinderHelper",
+              "com.egnyte.UpgradeChecker",
+            ]
 
   zap trash: [
     "~/Library/Application Scripts/com.egnyte.DesktopApp",
