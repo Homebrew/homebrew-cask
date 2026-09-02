@@ -1,9 +1,9 @@
 cask "intellij-idea-oss" do
   arch arm: "-aarch64"
 
-  version "2026.2.1"
-  sha256 arm:   "478bd7e69fc483603c307270429f95c0fd0523e173ab242e779955e4b6fd0179",
-         intel: "f36a22b107cf9794e7dc37d2cd4e9c6311586d9956af7acbaa328b93231b9869"
+  version "2026.2.2"
+  sha256 arm:   "7d213fdc8f46bd377142976a2983c86430ce63e517471343b3d18cb90cb57872",
+         intel: "3be978e26e5548c9b2967b9a1232cc7797a7011cc8191da66d0b899a119055ed"
 
   url "https://github.com/JetBrains/intellij-community/releases/download/idea%2F#{version}/idea-#{version}#{arch}.dmg"
   name "IntelliJ IDEA OSS"
