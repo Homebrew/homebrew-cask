@@ -3,12 +3,12 @@ cask "lark" do
   livecheck_arch = on_arch_conditional arm: "_m1"
 
   on_arm do
-    version "7.74.22,18b7e01d"
-    sha256 "94a9b3abf7bf005162a35ac2599644ea2afd984a56978df30dfa0c39e1d6efd5"
+    version "7.75.20,c22d69d1"
+    sha256 "dfd5c9fafd8cefe0147d1b0a8b8186ccef20d6b0ad227ca5c05bca7867d3e70d"
   end
   on_intel do
-    version "7.74.22,994acc84"
-    sha256 "fc7a38ec0ae5e15cc71441c588492c29f7a88d95a080200d40d5dbe0dc4d1215"
+    version "7.75.20,07add062"
+    sha256 "d081f05c6b97b11e38a2aa044bae6a9c82e0e90578f86d1ae429013eedf904a4"
   end
 
   url "https://sf16-sg.larksuitecdn.com/obj/lark-version-sg/#{version.csv.second}/Lark-darwin_#{arch}-#{version.csv.first}-signed.dmg"
@@ -28,7 +28,7 @@ cask "lark" do
   end
 
   auto_updates true
-  depends_on :macos
+  depends_on macos: :big_sur
 
   app "LarkSuite.app"
 
