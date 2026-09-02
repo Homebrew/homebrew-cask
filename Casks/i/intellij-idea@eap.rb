@@ -1,9 +1,9 @@
 cask "intellij-idea@eap" do
   arch arm: "-aarch64"
 
-  version "2026.2.2,262.10315.19"
-  sha256 arm:   "ebf36075449523dfbc73cf14335b5fed87ac79b358ad3216b14e57ad6f2f6d84",
-         intel: "25c8a04b4a52ed3ef916e3faad5b769e74e3d2e592bb092e5f815a01190986e0"
+  version "2026.3,263.3889.65"
+  sha256 arm:   "4bd04fd1a156ec18ceaad15d7d385f40568e356af64b00affa27677d4bb08e5e",
+         intel: "f9c6a41a46151b5d54b48e8605b208e4ee9b50ce8b2cb4bcb788c08c7231ba1c"
 
   url "https://download.jetbrains.com/idea/ideaIU-#{version.csv.second}#{arch}.dmg"
   name "IntelliJ IDEA EAP"
@@ -33,12 +33,13 @@ cask "intellij-idea@eap" do
   app "IntelliJ IDEA.app"
   binary "#{appdir}/IntelliJ IDEA.app/Contents/MacOS/idea"
 
-  uninstall quit: "com.jetbrains.intellij"
+  uninstall quit: ["com.jetbrains.intellij-EAP", "com.jetbrains.intellij"]
 
   zap trash: [
     "~/Library/Application Support/JetBrains/IntelliJIdea#{version.csv.first}",
     "~/Library/Caches/JetBrains/IntelliJIdea#{version.csv.first}",
     "~/Library/Logs/JetBrains/IntelliJIdea#{version.csv.first}",
+    "~/Library/Preferences/com.jetbrains.intellij-EAP.plist",
     "~/Library/Preferences/com.jetbrains.intellij.plist",
     "~/Library/Preferences/IntelliJIdea#{version.csv.first}",
     "~/Library/Preferences/jetbrains.idea.*.plist",
