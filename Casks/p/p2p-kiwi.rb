@@ -7,6 +7,8 @@ cask "p2p-kiwi" do
   on_macos do
     sha256 "18d6082cdcf073e0842d82d9235882454ed42325868547da56700a4542703b6f"
 
+    depends_on macos: :ventura
+
     app "p2p.kiwi.app"
 
     zap trash: [
