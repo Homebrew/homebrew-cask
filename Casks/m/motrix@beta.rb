@@ -9,7 +9,7 @@ cask "motrix@beta" do
          x86_64_linux: "8eb381cefe85e3ac08081c7489c730eb27bf0b4ac49ed46a16c86bcf9fe4dd29"
 
   on_macos do
-    depends_on macos: :monterey
+    depends_on macos: :ventura
 
     app "Motrix.app"
 
