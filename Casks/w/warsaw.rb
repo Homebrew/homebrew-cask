@@ -29,6 +29,5 @@ cask "warsaw" do
     "/usr/local/bin/warsaw",
     "/usr/local/etc/warsaw",
     "/usr/local/lib/warsaw",
-    "/WS_*",
   ]
 end

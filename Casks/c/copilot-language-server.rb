@@ -19,6 +19,5 @@ cask "copilot-language-server" do
 
   binary "copilot-language-server"
 
-  zap trash: "~/.cache/pkg/*/rg",
-      rmdir: "~/.cache/pkg"
+  # No zap stanza required
 end
