@@ -29,6 +29,8 @@ cask "jetbrains-gateway" do
   app "JetBrains Gateway.app"
   binary "#{appdir}/JetBrains Gateway.app/Contents/MacOS/gateway"
 
+  uninstall quit: "com.jetbrains.gateway"
+
   zap trash: [
     "~/Library/Application Support/JetBrains/JetBrainsGateway#{version.major_minor}",
     "~/Library/Caches/JetBrains/JetBrainsGateway#{version.major_minor}",
