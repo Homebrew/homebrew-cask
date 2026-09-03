@@ -12,7 +12,7 @@ cask "serial-studio" do
     strategy :github_latest
   end
 
-  depends_on macos: :sonoma
+  depends_on macos: :tahoe
 
   app "Serial Studio Pro.app"
 
