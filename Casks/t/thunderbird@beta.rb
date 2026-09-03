@@ -81,6 +81,9 @@ cask "thunderbird@beta" do
   auto_updates true
   depends_on :macos
 
+  # Sometimes different languages can serve the latest beta version as Thunderbird Daily.app
+  rename "Thunderbird*.app", "Thunderbird Beta.app"
+
   app "Thunderbird Beta.app"
 
   uninstall quit: "org.mozilla.thunderbirdbeta"
