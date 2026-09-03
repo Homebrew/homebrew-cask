@@ -4,7 +4,7 @@ cask "mangodisk" do
 
   url "https://github.com/harry0703/MangoDisk/releases/download/v#{version}/MangoDisk-#{version}-macos.dmg"
   name "MangoDisk"
-  desc "Safety-first disk cleaner and disk space analyzer"
+  desc "Disk cleaner and storage analyser"
   homepage "https://mangodisk.app/"
 
   auto_updates true
