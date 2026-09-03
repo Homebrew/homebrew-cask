@@ -7,11 +7,6 @@ cask "relay" do
   desc "Menu bar app for building LLM prompts from files, clipboard and voice notes"
   homepage "https://github.com/msllrs/relay/"
 
-  livecheck do
-    url :url
-    strategy :github_latest
-  end
-
   auto_updates true
   depends_on arch: :arm64
   depends_on macos: :sequoia
