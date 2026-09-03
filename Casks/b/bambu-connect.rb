@@ -5,14 +5,13 @@ cask "bambu-connect" do
   sha256 arm:   "3f3398d1fc3f087f0317e82cf788b741b7ac83c9461a7ac3755d011a1f1890b6",
          intel: "ec3fca35f3d655451cb44b6ca5a7429fbabd9ff6df7cf30ac2b8aa070f1eaa33"
 
-  url "https://public-cdn.bblmw.com/upgrade/bambu-connect/updates/versions/#{version}/bambu-connect-v#{version}-darwin-#{arch}.dmg",
-      verified: "public-cdn.bblmw.com/upgrade/bambu-connect/updates/versions/"
+  url "https://public-cdn.bblmw.com/upgrade/bambu-connect/updates/versions/#{version}/bambu-connect-v#{version}-darwin-#{arch}.dmg"
   name "Bambu Connect"
   desc "Tool for linking with Bambu Lab 3D printers"
   homepage "https://wiki.bambulab.com/en/software/bambu-connect"
 
   livecheck do
-    url "https://public-cdn.bblmw.com/upgrade/bambu-connect/updates/beta-mac.yml"
+    url "https://public-cdn.bblmw.com/upgrade/bambu-connect/updates/beta-mac.yml?noCache=#{Time.now.to_i}"
     strategy :electron_builder
   end
 
