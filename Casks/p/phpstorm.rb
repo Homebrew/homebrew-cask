@@ -30,6 +30,8 @@ cask "phpstorm" do
   command_wrapper "phpstorm",
                   executable: "#{appdir}/PhpStorm.app/Contents/MacOS/phpstorm"
 
+  uninstall quit: "com.jetbrains.PhpStorm"
+
   zap trash: [
     "~/Library/Application Support/JetBrains/consentOptions",
     "~/Library/Application Support/JetBrains/PhpStorm#{version.major_minor}",
