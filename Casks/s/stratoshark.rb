@@ -1,8 +1,8 @@
 cask "stratoshark" do
   arch arm: "arm64", intel: "x86-64"
 
-  version "0.10.2"
-  sha256 "b77bdb3341c7c454ff907fd65aea9f40bc8eed9797b5aac00f4c0502c0beda1a"
+  version "0.10.3"
+  sha256 "157087e97de2686e2f95936244240e877bbff1110bed2229c366c21fc0a151e0"
 
   url "https://www.wireshark.org/download/osx/all-versions/Stratoshark%20#{version}.dmg"
   name "Stratoshark"
