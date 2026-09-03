@@ -19,10 +19,13 @@ cask "elegoo-slicer" do
 
   app "ElegooSlicer.app"
 
+  uninstall quit: "com.elegoo3d.elegoo-slicer"
+
   zap trash: [
     "~/Library/Application Support/ElegooSlicer",
     "~/Library/Caches/com.elegoo3d.elegoo-slicer",
     "~/Library/Preferences/com.elegoo3d.elegoo-slicer.plist",
     "~/Library/Saved Application State/com.elegootechsupport.elegoo-slicer.savedState",
+    "~/Library/WebKit/com.elegoo3d.elegoo-slicer",
   ]
 end
