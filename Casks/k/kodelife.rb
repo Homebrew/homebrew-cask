@@ -17,6 +17,8 @@ cask "kodelife" do
 
   app "KodeLife.app"
 
+  uninstall quit: "net.hexler.KodeLife"
+
   zap trash: [
     "~/Library/Application Support/net.hexler.KodeLife",
     "~/Library/Caches/net.hexler.KodeLife",
