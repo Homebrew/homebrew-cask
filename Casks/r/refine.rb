@@ -1,6 +1,6 @@
 cask "refine" do
-  version "1.37.2"
-  sha256 "11986571f430b6d8013ba841181cbdfa1580712fa1f31814b7bcba16ec52fbff"
+  version "1.37.3"
+  sha256 "674256f52469fdaa02b901262b5ba11f3b2bb42c5006d9eb39483f1d1e963652"
 
   url "https://refine.sh/release/stable/Refine_#{version}.zip"
   name "Refine"
