@@ -16,7 +16,6 @@ cask "diskboard" do
 
   app "DiskBoard.app"
 
-  # The app keeps everything inside its bundle; these two are created by macOS itself.
   zap trash: [
     "~/Library/Preferences/com.futonica.diskboard.plist",
     "~/Library/Saved Application State/com.futonica.diskboard.savedState",
