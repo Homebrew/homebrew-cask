@@ -22,7 +22,6 @@ jobs:
         runner:
           - macos-14
           - macos-15
-          - macos-15-intel
           - macos-26
           - ubuntu-latest
     runs-on: ${{ matrix.runner }}
