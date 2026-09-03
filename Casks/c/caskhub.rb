@@ -1,6 +1,6 @@
 cask "caskhub" do
-  version "0.8.0"
-  sha256 "a74566635f9ed8052bd20b90d5c5ec22cfe98c1bd50647c967207de5cd69c717"
+  version "0.8.1"
+  sha256 "1b518d030ba7dd05db71f922b338f9ca94ef3758d2db53aad71abab249ea9dc7"
 
   url "https://github.com/alielsokary/CaskHub/releases/download/#{version}/CaskHub-#{version}.zip"
   name "CaskHub"
