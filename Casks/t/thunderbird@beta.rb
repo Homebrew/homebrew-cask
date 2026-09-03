@@ -1,68 +1,68 @@
 cask "thunderbird@beta" do
-  version "155.0b5"
+  version "156.0b2"
 
   language "cs" do
-    sha256 "0f8099290a6a458a68f9ce42c689954294e521757f4b91bce210df0825bf1c63"
+    sha256 "174ce61e1b57555eb491d1cdba2efe2547bcebd6414681279a92b3db70fc2ec3"
     "cs"
   end
   language "de" do
-    sha256 "afb8600551804a9d1fd86af3fa58953788909018cea3f1146a50d4154110ca6d"
+    sha256 "a4c45089724d382023cacca86cb6254909e4c6cdf53666925921b5a6a18130e6"
     "de"
   end
   language "en-GB" do
-    sha256 "551c49541504fd072fe60cb7087243864e3e766aca661f67608ee7dfd75a8c49"
+    sha256 "bca8501e8258cb1ba3bf249bde1e88dd92288759007bc6b7f47098bd0d68382f"
     "en-GB"
   end
   language "en", default: true do
-    sha256 "a4a48025d220871f5c8e58aad655752f410237daa548c7a3e1ae5c64ca5b6a77"
+    sha256 "b9254358c9605b64f55967bf662d95361f0a7f6da0b161ade61b55b5939ffde3"
     "en-US"
   end
   language "fr" do
-    sha256 "598efc675904b4b5df70a3e5a3092b0aa163038d9947f88994c0558b2164c2bf"
+    sha256 "b29b6c091131b6c3cf5306bd6c2b5efb74bbbf61cb3df26873ee4c0a4c4871e1"
     "fr"
   end
   language "gl" do
-    sha256 "9a9812179a60aea1d923f5d7809020021362ba85401872cdda4edf417a6e94f5"
+    sha256 "7c5e45f61b61b89c9cf171540bf020deb33f599ff8daf9f2c3357523b64f01fd"
     "gl"
   end
   language "it" do
-    sha256 "dea27ac5cfef497ae755742b9859b351cb72be0ade0c1612422759d17eadb5c0"
+    sha256 "d35479fe50fa74adea1e7fb34f6b499f4612335b4e6dd1bf82e9d9b09817d359"
     "it"
   end
   language "ja" do
-    sha256 "6698839643cee7c24eca536b9716b97ce1919905273a31f76b8d4735f52149ce"
+    sha256 "fb4cb14f9ed64c6f04f9db2842220ef3854ac6e2cf5a95450e299981b586ebfe"
     "ja-JP-mac"
   end
   language "nl" do
-    sha256 "b2ca16e58e713583fcd15f83edb8ccbdef14ee8a2b1340111ff763c6883ba94c"
+    sha256 "59cd60e843237a43fc2fc35a10e5d35041ffa9dc915f708099a9629982004bb0"
     "nl"
   end
   language "pl" do
-    sha256 "954c5bf4754ef0916acbce29434589a4406424457b8c9c0fb54de5949b6fa95e"
+    sha256 "e53eb295d6172794312fb69c9cd592f1e2067cb0ba7e5f3710d3c9c2efe8e784"
     "pl"
   end
   language "pt" do
-    sha256 "854b3ca261f91a4cf66d096b9ecad02cce5d91167c8ceceff5ae87549df68e46"
+    sha256 "f70e4b79230c2ef05fcf27f8fce3401497c41bbb553242c32f90db88e8238b63"
     "pt-PT"
   end
   language "pt-BR" do
-    sha256 "27d15715701880319ab0aab4c574a044c7ad6ebec1e5a96a4696b7e1dfaf39ef"
+    sha256 "b789fc76a6be383b1301eb54db4013a6c5efdb5528cfcccd0ed03c577abe421f"
     "pt-BR"
   end
   language "ru" do
-    sha256 "ebc1bfc4e90083e438b4def327a23998105abdbe3063e65140d423f6f742a238"
+    sha256 "044241f31c4339bb4a83b0dfc5c7429bf99af0c4ca0e2d54763873357140f87f"
     "ru"
   end
   language "uk" do
-    sha256 "a35c4189184ba84879a2d057738e82247f2a222a87fd710d51d5fce79641b607"
+    sha256 "88e81366d6b97b62ab451c7eb07cfeedd4532b95ee2419f43208278173faeb92"
     "uk"
   end
   language "zh-TW" do
-    sha256 "810755674e42cdbc121c8e21cbf86ac1d18879964c0d4faacc04b2e0fc988e3a"
+    sha256 "7d833c217ca7667f2016f87a331e558aae9e09399b7ca1c2034d30561dacdd3e"
     "zh-TW"
   end
   language "zh" do
-    sha256 "52970bf534d24b8ac5a75432f7d3d544ccf5de1697dcce03fb326f93203e9f95"
+    sha256 "bb0e3fb042666836a908ce81310060409e4480850aaf1a8c1a212b95c4b755a1"
     "zh-CN"
   end
 
@@ -80,6 +80,9 @@ cask "thunderbird@beta" do
 
   auto_updates true
   depends_on :macos
+
+  # Sometimes different languages can serve the latest beta version as Thunderbird Daily.app
+  rename "Thunderbird*.app", "Thunderbird Beta.app"
 
   app "Thunderbird Beta.app"
 
