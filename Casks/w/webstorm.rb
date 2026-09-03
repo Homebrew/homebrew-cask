@@ -30,6 +30,8 @@ cask "webstorm" do
   command_wrapper "webstorm",
                   executable: "#{appdir}/WebStorm.app/Contents/MacOS/webstorm"
 
+  uninstall quit: "com.jetbrains.WebStorm"
+
   zap trash: [
     "~/Library/Application Support/JetBrains/WebStorm#{version.major_minor}",
     "~/Library/Caches/com.apple.nsurlsessiond/Downloads/com.jetbrains.WebStorm",
