@@ -13,7 +13,8 @@ cask "riverside-studio" do
   end
 
   auto_updates true
-  depends_on macos: :tahoe
+  depends_on arch: :arm64
+  depends_on macos: :sequoia
 
   app "Riverside Studio.app"
 
