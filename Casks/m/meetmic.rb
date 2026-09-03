@@ -20,6 +20,7 @@ cask "meetmic" do
   depends_on arch: :arm64
 
   app "MeetMic developer-id/MeetMic.app"
+  binary "#{appdir}/MeetMic.app/Contents/MacOS/meetmic-cli", target: "meetmic"
 
   zap trash: [
     "~/Library/Application Scripts/ltd.iwt.QuickWhisper",
