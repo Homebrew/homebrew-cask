@@ -17,6 +17,8 @@ cask "macloggerdx" do
 
   app "MacLoggerDX.app"
 
+  uninstall quit: "com.dogparksoftware.MacLoggerDX"
+
   zap trash: [
     "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.dogparksoftware.macloggerdx.sfl*",
     "~/Library/Caches/com.apple.helpd/Generated/MacLoggerDX Help*",
