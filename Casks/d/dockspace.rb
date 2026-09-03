@@ -1,6 +1,6 @@
 cask "dockspace" do
-  version "0.8"
-  sha256 "52195593aa25758508f9bd792e05b943d55dc74cee45d059f7282ef8937aa949"
+  version "0.9"
+  sha256 "3bfe9ac33d22da5ca365435d12ee432fd96aa0aca618fb1c03211d3cab3d6e02"
 
   url "https://s4.getdockspace.app/releases/Dockspace-#{version}.zip"
   name "Dockspace"
