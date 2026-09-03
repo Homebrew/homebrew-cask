@@ -1,23 +1,22 @@
 cask "provisionql" do
-  version "1.6.4"
-  sha256 "b76751b596e10b806bd75c643a09bcbf1680b6635f57c4feefa67bee7799f5df"
+  version "2.0.0"
+  sha256 "949a7a69d2920c2f00a1246c65d0fd93b78ef8237a88af5ac4dd0f24245bd01a"
 
-  url "https://github.com/ealeksandrov/ProvisionQL/releases/download/#{version}/ProvisionQL.zip"
+  url "https://github.com/ealeksandrov/ProvisionQL/releases/download/#{version}/ProvisionQL.dmg"
   name "ProvisionQL"
   desc "Quick Look plugin for mobile apps and provisioning profiles"
   homepage "https://github.com/ealeksandrov/ProvisionQL"
 
-  deprecate! date: "2025-09-22", because: :no_longer_meets_criteria
+  depends_on macos: :sequoia
 
-  depends_on :macos
+  app "ProvisionQL.app"
 
-  qlplugin "ProvisionQL.qlgenerator"
-
-  # No zap stanza required
-
-  caveats <<~EOS
-    To prevent mobileprovision Quick Look override by Xcode:
-
-      https://github.com/ealeksandrov/ProvisionQL/issues/20
-  EOS
+  zap trash: [
+    "~/Library/Application Scripts/com.ealeksandrov.ProvisionQL",
+    "~/Library/Application Scripts/com.ealeksandrov.ProvisionQL.preview",
+    "~/Library/Application Scripts/com.ealeksandrov.ProvisionQL.thumbnail",
+    "~/Library/Containers/com.ealeksandrov.ProvisionQL",
+    "~/Library/Containers/com.ealeksandrov.ProvisionQL.preview",
+    "~/Library/Containers/com.ealeksandrov.ProvisionQL.thumbnail",
+  ]
 end
