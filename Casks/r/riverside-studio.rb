@@ -12,10 +12,8 @@ cask "riverside-studio" do
     strategy :sparkle, &:short_version
   end
 
-  disable! date: "2026-09-02", because: :fails_gatekeeper_check
-
   auto_updates true
-  depends_on macos: :sequoia
+  depends_on macos: :tahoe
 
   app "Riverside Studio.app"
 
