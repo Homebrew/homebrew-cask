@@ -19,10 +19,4 @@ cask "provisionql" do
     "~/Library/Containers/com.ealeksandrov.ProvisionQL.preview",
     "~/Library/Containers/com.ealeksandrov.ProvisionQL.thumbnail",
   ]
-
-  caveats <<~EOS
-    Launch ProvisionQL.app once.
-    If Finder previews do not appear, enable the Quick Look extensions in System Settings > Login Items & Extensions.
-    From the toolbar, click Extensions to open System Settings > Login Items & Extensions.
-  EOS
 end
