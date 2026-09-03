@@ -15,7 +15,7 @@ cask "gyazo" do
   depends_on macos: :big_sur
   depends_on maximum_macos: :sequoia
 
-  pkg "Gyazo-#{version}.pkg"
+  installer manual: "Gyazo-#{version}.pkg"
 
   uninstall launchctl: "com.gyazo.menu.helper",
             quit:      "com.gyazo.menu",
