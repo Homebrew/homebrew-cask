@@ -5,8 +5,7 @@ cask "readyapi" do
   sha256 arm:   "e1e5ca628fe41b12d17da9b4aacb1f82b33126657c9c3e1f0e6c44ef6a7dc9f1",
          intel: "e7bb40c8419f168a488721004b0b0193d1fa75ac8ed378b051c39bed80962dec"
 
-  url "https://dl.eviware.com/ready-api/#{version}/ReadyAPI-#{arch}-#{version}.dmg",
-      verified: "dl.eviware.com/ready-api/"
+  url "https://dl.eviware.com/ready-api/#{version}/ReadyAPI-#{arch}-#{version}.dmg"
   name "ReadyAPI Desktop"
   desc "Automated API testing platform"
   homepage "https://smartbear.com/product/ready-api/"
@@ -21,7 +20,7 @@ cask "readyapi" do
   app "ReadyAPI-#{version}.app"
 
   # The app identifier has unique numeric parts like 3080-8797-1984-6034.102895.
-  uninstall quit: "com.install4j*"
+  uninstall quit: "com.install4j.*"
 
   zap trash: [
     "~/.readyapi",
