@@ -1,6 +1,6 @@
 cask "petrichor" do
-  version "1.6.1"
-  sha256 "5d5330eb9d3b03fb3885c3c4e875dfc68d742cd1375e4ca1ac4c86c802993650"
+  version "1.7.0"
+  sha256 "196ba2d4d1a9abd5344f3e83063b66f065d2b69cc24d5a30c10ffee2d98e827c"
 
   url "https://github.com/kushalpandya/Petrichor/releases/download/v#{version}/Petrichor-#{version}-Universal.dmg"
   name "Petrichor"
@@ -18,6 +18,7 @@ cask "petrichor" do
   app "Petrichor.app"
 
   zap trash: [
+    "~/Library/Application Scripts/org.Petrichor",
     "~/Library/Containers/org.Petrichor",
     "~/Library/Saved Application State/org.Petrichor.savedState",
   ]
