@@ -17,14 +17,18 @@ cask "sidenotes" do
 
   app "SideNotes.app"
 
+  uninstall quit: "com.apptorium.SideNotes-paddle"
+
   zap trash: [
     "~/Library/Application Scripts/com.apptorium.SideNotes",
     "~/Library/Application Scripts/com.apptorium.SideNotes-paddle*.ShareExtension--Paddle-",
+    "~/Library/Application Scripts/com.apptorium.SideNotes-paddle.Widgets",
     "~/Library/Application Scripts/com.apptorium.SideNotes.ShareExtension",
     "~/Library/Application Support/com.apptorium.SideNotes-paddle",
     "~/Library/Application Support/SideNotes",
     "~/Library/Caches/com.apptorium.SideNotes-paddle",
     "~/Library/Containers/com.apptorium.SideNotes-paddle.ShareExtension--Paddle-",
+    "~/Library/Containers/com.apptorium.SideNotes-paddle.Widgets",
     "~/Library/HTTPStorages/com.apptorium.SideNotes-paddle*",
     "~/Library/Preferences/com.apptorium.SideNotes-paddle.plist",
     "~/Library/WebKit/com.apptorium.SideNotes-paddle",
