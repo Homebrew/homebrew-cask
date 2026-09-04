@@ -10,7 +10,7 @@ cask "drawio" do
          x86_64_linux: "0f441eaa5ebebc1ed939b056e99c57d46d18fa3ef806c500a420eee38370cc7a"
 
   on_macos do
-    depends_on macos: :monterey
+    depends_on macos: :ventura
 
     app "draw.io.app"
     command_wrapper "drawio",
