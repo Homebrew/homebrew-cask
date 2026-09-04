@@ -5,7 +5,7 @@ cask "petrichor" do
   url "https://github.com/kushalpandya/Petrichor/releases/download/v#{version}/Petrichor-#{version}-Universal.dmg"
   name "Petrichor"
   desc "Offline Music Player"
-  homepage "https://github.com/kushalpandya/Petrichor"
+  homepage "https://petrichor.page/"
 
   livecheck do
     url :url
@@ -18,6 +18,7 @@ cask "petrichor" do
   app "Petrichor.app"
 
   zap trash: [
+    "~/Library/Application Scripts/org.Petrichor",
     "~/Library/Containers/org.Petrichor",
     "~/Library/Saved Application State/org.Petrichor.savedState",
   ]
