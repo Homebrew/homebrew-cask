@@ -54,5 +54,8 @@ cask "qbittorrent" do
   desc "Peer to peer Bitorrent client"
   homepage "https://www.qbittorrent.org/"
 
-  conflicts_with cask: "qbittorrent@lt20"
+  conflicts_with cask: [
+    "c0re100-qbittorrent",
+    "qbittorrent@lt20",
+  ]
 end
