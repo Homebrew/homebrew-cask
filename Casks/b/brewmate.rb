@@ -7,11 +7,6 @@ cask "brewmate" do
   desc "Homebrew GUI apps manager"
   homepage "https://github.com/romankurnovskii/BrewMate"
 
-  livecheck do
-    url :url
-    strategy :github_latest
-  end
-
   auto_updates true
   depends_on :linux
   depends_on arch: :x86_64
