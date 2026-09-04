@@ -11,16 +11,19 @@ cask "audacity" do
 
     app "Audacity 4.app"
 
-    uninstall quit: "org.audacityteam.audacity"
+    uninstall quit: "org.audacityteam.audacity4"
 
-    zap trash: [
+    zap quit: "org.audacityteam.audacity4", trash: [
+      "~/Documents/Audacity4",
       "~/Library/Application Support/audacity",
+      "~/Library/Caches/Audacity",
       "~/Library/Preferences/org.audacityteam.audacity.plist",
+      "~/Library/Preferences/org.audacityteam.Audacity4.plist",
       "~/Library/Saved Application State/org.audacityteam.audacity.savedState",
     ]
   end
   on_linux do
-    sha256 arm64_linux:   "e5def4e76febc4ab2dea7525a43aa62ddfa092434d164c1ea039687889a6104d",
+    sha256 arm64_linux:  "e5def4e76febc4ab2dea7525a43aa62ddfa092434d164c1ea039687889a6104d",
            x86_64_linux: "772663b0b407be44232193b8402cde4da4665c7f6e81edb5b70e3b14e8b9b5b4"
 
     app_image "audacity-linux-#{version}-#{arch}.AppImage", target: "Audacity.AppImage"
