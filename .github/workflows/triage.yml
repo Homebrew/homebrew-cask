@@ -68,7 +68,7 @@ jobs:
 
             - label: linux cask
               path: Casks/.+
-              content: (x86_64|arm64|on)_linux
+              content: ((x86_64|arm64|on)_linux|depends_on :linux)
 
   check-base-branch:
     permissions:
