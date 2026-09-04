@@ -5,7 +5,7 @@ cask "petrichor" do
   url "https://github.com/kushalpandya/Petrichor/releases/download/v#{version}/Petrichor-#{version}-Universal.dmg"
   name "Petrichor"
   desc "Offline Music Player"
-  homepage "https://github.com/kushalpandya/Petrichor"
+  homepage "https://petrichor.page/"
 
   livecheck do
     url :url
