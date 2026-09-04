@@ -1,6 +1,6 @@
 cask "sidenotes" do
-  version "1.6.3"
-  sha256 "6b0fff7ff9a22701dd24bec14da178fa17465276a6c201e75d993ba19e77f4fe"
+  version "1.6.4"
+  sha256 "847fb2eeb22890440675067e5fd1650cd5c41f5335d0c317b4251234fee910b7"
 
   url "https://www.apptorium.com/public/products/sidenotes/releases/SideNotes-#{version.chomp(".0")}.zip"
   name "SideNotes"
@@ -17,14 +17,18 @@ cask "sidenotes" do
 
   app "SideNotes.app"
 
+  uninstall quit: "com.apptorium.SideNotes-paddle"
+
   zap trash: [
     "~/Library/Application Scripts/com.apptorium.SideNotes",
     "~/Library/Application Scripts/com.apptorium.SideNotes-paddle*.ShareExtension--Paddle-",
+    "~/Library/Application Scripts/com.apptorium.SideNotes-paddle.Widgets",
     "~/Library/Application Scripts/com.apptorium.SideNotes.ShareExtension",
     "~/Library/Application Support/com.apptorium.SideNotes-paddle",
     "~/Library/Application Support/SideNotes",
     "~/Library/Caches/com.apptorium.SideNotes-paddle",
     "~/Library/Containers/com.apptorium.SideNotes-paddle.ShareExtension--Paddle-",
+    "~/Library/Containers/com.apptorium.SideNotes-paddle.Widgets",
     "~/Library/HTTPStorages/com.apptorium.SideNotes-paddle*",
     "~/Library/Preferences/com.apptorium.SideNotes-paddle.plist",
     "~/Library/WebKit/com.apptorium.SideNotes-paddle",
