@@ -1,6 +1,6 @@
 cask "koharu" do
-  version "0.81.4"
-  sha256 "89351c565b9b08cd891b94394daf1f6308aff8393f3b5fcd036eda8d521782bf"
+  version "0.81.5"
+  sha256 "e5d903417963e5bac103f6640f2b9d0adaddf3dcbf71d64ee46489e2169981c3"
 
   url "https://github.com/mayocream/koharu/releases/download/#{version}/koharu_#{version}_aarch64.dmg"
   name "Koharu"
