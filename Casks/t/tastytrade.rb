@@ -1,9 +1,9 @@
 cask "tastytrade" do
   arch arm: "-aarch64"
 
-  version "2.29.2"
-  sha256 arm:   "d450cbda6c5a0f7076553688a842219a27c119eca8079ba0873d758fbfd1ef74",
-         intel: "3f27d11bd06ab5af6c2da274ca6524da36b50396736c2fdcd4b04efc8ab2b471"
+  version "2.60.2"
+  sha256 arm:   "8774dc3797d55ed3a3a5f026c45e9152e19937f82bedd35c8e6cc485dc721e9d",
+         intel: "5628b74ee0d6065deb514a2fc2cad03d48c950a0a94c40a0ca99d628ed991b2f"
 
   url "https://download.tastytrade.com/desktop-#{version.major}.x.x/#{version}/tastytrade-#{version}#{arch}.dmg"
   name "tastytrade"
