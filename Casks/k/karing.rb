@@ -1,6 +1,6 @@
 cask "karing" do
   version "1.2.24.2709"
-  sha256 "7251c079316078a82857785e59b5118df5ae4242898acbc05af57f92cdd5d6e1"
+  sha256 "7ee8f97d0291218beb83f910bd445a4081c67ea830e4dd5b73d2c4128563a8da"
 
   url "https://github.com/KaringX/karing/releases/download/v#{version}/karing_#{version}_macos_universal.dmg"
   name "Karing"
