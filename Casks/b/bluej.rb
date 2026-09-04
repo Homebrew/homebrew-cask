@@ -19,5 +19,7 @@ cask "bluej" do
 
   app "BlueJ.app"
 
+  uninstall quit: "org.bluej.BlueJ"
+
   zap trash: "~/Library/Preferences/org.bluej"
 end
