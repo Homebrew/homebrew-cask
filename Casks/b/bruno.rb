@@ -22,7 +22,7 @@ cask "bruno" do
     ]
   end
   on_linux do
-    app_image "bruno_#{version}_#{arch}_linux.AppImage"
+    app_image "bruno_#{version}_#{arch}_linux.AppImage", target: "Bruno.AppImage"
   end
 
   url "https://github.com/usebruno/bruno/releases/download/v#{version}/bruno_#{version}_#{arch}_#{os}.#{url_end}"
