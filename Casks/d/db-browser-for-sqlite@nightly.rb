@@ -3,10 +3,10 @@ cask "db-browser-for-sqlite@nightly" do
   os macos: "universal_"
   url_end = on_system_conditional macos: ".dmg", linux: "-#{arch}.AppImage"
 
-  version "20260903"
+  version "20260904"
 
   on_macos do
-    sha256 "a7ac047e48856bc3a5096dd89bc6d7b613028e21ea2ab934d01d320777bc4ec9"
+    sha256 "f18c02b87323ad818587123b374fe3a1da5bb56e83f8ceb5e83e6507f12989b5"
 
     app "DB Browser for SQLite Nightly.app"
 
@@ -17,8 +17,8 @@ cask "db-browser-for-sqlite@nightly" do
     ]
   end
   on_linux do
-    sha256 arm64_linux:  "0ba7ccff641422ccc72542b6ef3683a7c6f845c83cc10b7cf8242012c8745f96",
-           x86_64_linux: "68d9dc342e35e371cc02ea7b68b1ab76665a5eb558addc6d7ee87fb9b74e70b5"
+    sha256 arm64_linux:  "0a104a28a9f7fc72509cd54228f9d4d97d484ee0f3d60aee3e036e9df2c43a65",
+           x86_64_linux: "70842ded7e975b644ab422e1ac175f1c08118f6ac80f257b312fa6d7eb2bcaa3"
 
     app_image "DB.Browser.for.SQLite-#{version}-#{arch}.AppImage",
               target: "DBBrowserForSQLiteNightly.AppImage"
