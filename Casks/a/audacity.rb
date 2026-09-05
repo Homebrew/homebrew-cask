@@ -6,6 +6,8 @@ cask "audacity" do
 
   version "4.0.0"
 
+  # While there are split-arch binaries, the ARM64 version currently does not support plugins,
+  # Use the Universal binary to retain plugin support on ARM.
   on_macos do
     sha256 "03bdb378bc333695af8cba1ff0b91775cf17961a6f23a34edc6a94e3ca7c85ab"
 
