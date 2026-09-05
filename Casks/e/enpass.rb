@@ -8,7 +8,8 @@ cask "enpass" do
   homepage "https://www.enpass.io/"
 
   livecheck do
-    url "https://www.enpass.io/download/macos/website/stable"
+    url "https://www.enpass.io/download/macos/website/stable",
+        user_agent: :browser
     strategy :header_match
   end
 
