@@ -1,8 +1,37 @@
 cask "shotcut" do
-  version "26.8.1"
-  sha256 "7bab10bd96fe3590bb3ba0461d21d3022681574b324bb1c21366d5432cac5657"
+  os = on_system_conditional macos: "macos", linux: "linux-x86_64"
+  url_end = on_system_conditional macos: "dmg", linux: "AppImage"
 
-  url "https://github.com/mltframework/shotcut/releases/download/v#{version.csv.first}/shotcut-macos-#{version.csv.second || version.csv.first}.dmg"
+  version "26.8.1"
+
+  on_macos do
+    sha256 "7bab10bd96fe3590bb3ba0461d21d3022681574b324bb1c21366d5432cac5657"
+
+    depends_on macos: :monterey
+
+    app "Shotcut.app"
+
+    zap trash: [
+      "~/Library/Application Support/Meltytech",
+      "~/Library/Caches/Meltytech",
+      "~/Library/Preferences/com.meltytech.Shotcut.plist",
+    ]
+  end
+  on_linux do
+    sha256 "2a177fce8be1944a61149650ac21cdb259e84b611cb3c00bc638b554d2003b75"
+
+    depends_on arch: :x86_64
+
+    app_image "shotcut-linux-x86_64-#{version.csv.second || version.csv.first}.AppImage", target: "Shotcut.AppImage"
+
+    zap trash: [
+      "~/.cache/Meltytech",
+      "~/.config/Meltytech",
+      "~/.local/share/Meltytech",
+    ]
+  end
+
+  url "https://github.com/mltframework/shotcut/releases/download/v#{version.csv.first}/shotcut-#{os}-#{version.csv.second || version.csv.first}.#{url_end}"
   name "Shotcut"
   desc "Video editor"
   homepage "https://www.shotcut.org/"
@@ -24,13 +53,5 @@ cask "shotcut" do
     end
   end
 
-  depends_on macos: :monterey
-
-  app "Shotcut.app"
-
-  zap trash: [
-    "~/Library/Application Support/Meltytech",
-    "~/Library/Caches/Meltytech",
-    "~/Library/Preferences/com.meltytech.Shotcut.plist",
-  ]
+  auto_updates true
 end
