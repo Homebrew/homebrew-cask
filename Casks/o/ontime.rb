@@ -20,8 +20,11 @@ cask "ontime" do
 
   app "ontime.app"
 
+  uninstall quit: "no.lightdev.ontime"
+
   zap trash: [
     "~/Library/Application Support/ontime",
+    "~/Library/Application Support/ontime-electron",
     "~/Library/Preferences/no.lightdev.ontime.plist",
     "~/Library/Saved Application State/no.lightdev.ontime.savedState",
   ]
