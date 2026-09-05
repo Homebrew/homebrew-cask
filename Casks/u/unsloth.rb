@@ -1,8 +1,33 @@
 cask "unsloth" do
-  version "0.1.806-beta"
-  sha256 "ec9d320140fe523728e5f029df17f62b8a3b8b2200081628e573fd60c6bcd5ee"
+  os macos: "MacOS.dmg", linux: "Linux.AppImage"
 
-  url "https://github.com/unslothai/unsloth/releases/download/v#{version}/Unsloth-Desktop-MacOS.dmg"
+  version "0.1.806-beta"
+
+  on_macos do
+    sha256 "ec9d320140fe523728e5f029df17f62b8a3b8b2200081628e573fd60c6bcd5ee"
+
+    auto_updates true
+    depends_on arch: :arm64
+
+    app "Unsloth.app"
+
+    zap trash: [
+      "~/.unsloth/studio",
+      "~/Library/Application Support/ai.unsloth.studio",
+      "~/Library/Caches/ai.unsloth.studio",
+      "~/Library/LaunchAgents/unsloth-studio.plist",
+      "~/Library/WebKit/ai.unsloth.studio",
+    ]
+  end
+  on_linux do
+    sha256 "426f6ad066b1bb191c1497f094b5d9cb6afd07541499bd8e26b31da5e896c816"
+
+    depends_on arch: :x86_64
+
+    app_image "Unsloth-Desktop-Linux.AppImage", target: "Unsloth.AppImage"
+  end
+
+  url "https://github.com/unslothai/unsloth/releases/download/v#{version}/Unsloth-Desktop-#{os}"
   name "Unsloth Desktop"
   desc "Desktop application for Unsloth Studio"
   homepage "https://unsloth.ai/"
@@ -15,18 +40,4 @@ cask "unsloth" do
     regex(/^v?(\d+(?:\.\d+)+.*)$/i)
     strategy :github_latest
   end
-
-  auto_updates true
-  depends_on arch: :arm64
-  depends_on :macos
-
-  app "Unsloth.app"
-
-  zap trash: [
-    "~/.unsloth/studio",
-    "~/Library/Application Support/ai.unsloth.studio",
-    "~/Library/Caches/ai.unsloth.studio",
-    "~/Library/LaunchAgents/unsloth-studio.plist",
-    "~/Library/WebKit/ai.unsloth.studio",
-  ]
 end
