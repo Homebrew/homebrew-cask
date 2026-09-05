@@ -9,7 +9,8 @@ cask "airbuddy" do
   homepage "https://airbuddy.app/"
 
   livecheck do
-    url "https://su.airbuddy.app/lleMaylxgd/appcast_taeyang.xml"
+    url "https://su.airbuddy.app/lleMaylxgd/appcast_taeyang.xml",
+        user_agent: :browser
     strategy :sparkle
   end
 
