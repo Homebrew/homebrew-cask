@@ -18,6 +18,8 @@ cask "go64" do
 
   app "Go64.app"
 
+  uninstall quit: "com.stclairsoft.Go64"
+
   zap trash: [
     "~/Library/Application Support/com.stclairsoft.Go64",
     "~/Library/Caches/com.stclairsoft.Go64",
