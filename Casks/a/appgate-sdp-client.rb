@@ -1,38 +1,20 @@
 cask "appgate-sdp-client" do
-  version "6.6.0"
-  sha256 "90cdbd253d63344860de6ddf32f975ca066d5682c404674a8443c2e654b4c890"
+  version "6.7.2"
+  sha256 "af6c96b03182556f02c2bd426ee1e515628b3bb10694d4d0a7a5599e6435195e"
 
   url "https://bin.appgate-sdp.com/#{version.major_minor}/client/Appgate-SDP-#{version}-Installer.dmg"
   name "AppGate SDP Client for macOS"
   desc "Software-defined perimeter for secure network access"
-  homepage "https://www.appgate.com/support/software-defined-perimeter-support"
+  homepage "https://support.appgate.com/support/appgate-ztna-user-guide"
 
   livecheck do
-    url :homepage
+    url "https://support.appgate.com/support/downloads"
     regex(%r{href=.*?/Appgate[._-]SDP[._-]v?(\d+(?:\.\d+)+)[._-]Installer\.dmg}i)
-    strategy :page_match do |page, regex|
-      support_versions =
-        page.scan(%r{href=["']?([^"' >]*?/software-defined-perimeter-support/sdp[._-]v?(\d+(?:[.-]\d+)+))["' >]}i)
-            .sort_by { |match| Version.new(match[1]) }
-      next if support_versions.blank?
-
-      # Assume the last-sorted version is newest
-      version_page_path, = support_versions.last
-
-      # Check the page for the newest major/minor version, which links to the
-      # latest disk image file (containing the full version in the file name)
-      version_page = Homebrew::Livecheck::Strategy.page_content(
-        URI.join("https://www.appgate.com/", version_page_path).to_s,
-      )
-      next if version_page[:content].blank?
-
-      version_page[:content].scan(regex).map(&:first)
-    end
   end
 
   depends_on :macos
 
-  pkg "AppGate SDP Installer.pkg"
+  pkg "Appgate SDP Installer.pkg"
 
   uninstall launchctl: [
               "com.appgate.sdp.client.agent",
