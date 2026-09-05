@@ -2,9 +2,9 @@ cask "starnet2" do
   arch arm: "arm64", intel: "x64"
   runtime = on_arch_conditional arm: "COREML", intel: "ORT"
 
-  version "2.5.4-0214"
-  sha256 arm:   "95d318794dac837fcfc21cb87bd7fe55155da515fdaadac4bc680d5f95caaad5",
-         intel: "81320096875b6814fa565fe42f7c0f99fa288414fe86a1fb710fb768d0d577e4"
+  version "2.6.0-0231"
+  sha256 arm:   "4189ba2ed9e8825b1acbac5826b40e73f19c921dfddbad72850ffe45881ab4e6",
+         intel: "35389a94e0faf1eef6fb59d3f43c017c5ea199e464e0c4fffb9a533d3d80e8da"
 
   url "https://download.starnetastro.com/StarNet2_macos-#{arch}_#{version}_#{runtime}_#{arch}.pkg"
   name "starnet2"
