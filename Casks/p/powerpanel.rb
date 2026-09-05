@@ -8,7 +8,8 @@ cask "powerpanel" do
   homepage "https://www.cyberpowersystems.com/products/software/power-panel-personal/"
 
   livecheck do
-    url "https://www.cyberpowersystems.com/product/software/power-panel-personal/powerpanel-personal-mac/"
+    url "https://www.cyberpowersystems.com/product/software/power-panel-personal/powerpanel-personal-mac/",
+        user_agent: :browser
     regex(/href=.*?PPP[._-]Mac[._-]v?(\d+(?:\.\d+)+)\.pkg/i)
   end
 
