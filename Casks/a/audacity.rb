@@ -11,16 +11,16 @@ cask "audacity" do
   on_macos do
     sha256 "03bdb378bc333695af8cba1ff0b91775cf17961a6f23a34edc6a94e3ca7c85ab"
 
-    app "Audacity 4.app"
+    app "Audacity #{version.major}.app"
 
-    uninstall quit: "org.audacityteam.audacity4"
+    uninstall quit: "org.audacityteam.audacity#{version.major}"
 
-    zap quit: "org.audacityteam.audacity4", trash: [
-      "~/Documents/Audacity4",
+    zap quit: "org.audacityteam.audacity#{version.major}", trash: [
+      "~/Documents/Audacity#{version.major}",
       "~/Library/Application Support/audacity",
       "~/Library/Caches/Audacity",
+      "~/Library/Preferences/org.audacityteam.Audacity#{version.major}.plist",
       "~/Library/Preferences/org.audacityteam.audacity.plist",
-      "~/Library/Preferences/org.audacityteam.Audacity4.plist",
       "~/Library/Saved Application State/org.audacityteam.audacity.savedState",
     ]
   end
