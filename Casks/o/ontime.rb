@@ -1,9 +1,9 @@
 cask "ontime" do
   arch arm: "arm64", intel: "x64"
 
-  version "4.12.0"
-  sha256 arm:   "d639e76efb67cc090ce7e129ffc6d31f05173c6b7b9d2c62805cb642269ee54a",
-         intel: "2719a7108cd212d15b9aa11ea2cc956969c7d43e430926f9cdba5fbe0be715da"
+  version "4.13.0"
+  sha256 arm:   "7cd8a4a296b122064a717681787c995e56f1845690f58eaa1b31a6d0d2f5cdb7",
+         intel: "a8d6baee015eaaa7251d9923e21032f1f3b600b73ae40c996bf6d6145d3bd60e"
 
   url "https://github.com/cpvalente/ontime/releases/download/v#{version}/ontime-macOS-#{arch}.dmg"
   name "Ontime"
@@ -20,8 +20,11 @@ cask "ontime" do
 
   app "ontime.app"
 
+  uninstall quit: "no.lightdev.ontime"
+
   zap trash: [
     "~/Library/Application Support/ontime",
+    "~/Library/Application Support/ontime-electron",
     "~/Library/Preferences/no.lightdev.ontime.plist",
     "~/Library/Saved Application State/no.lightdev.ontime.savedState",
   ]
