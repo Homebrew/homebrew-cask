@@ -11,7 +11,7 @@ cask "sejda-pdf" do
   homepage "https://www.sejda.com/en/desktop"
 
   livecheck do
-    url :homepage
+    url :homepage, user_agent: :browser
     regex(/mac\s*:\s*["']sejda[._-]desktop[._-]v?(\d+(?:\.\d+)+)\.dmg/i)
   end
 
