@@ -8,7 +8,8 @@ cask "datagraph" do
   homepage "https://www.visualdatatools.com/DataGraph/"
 
   livecheck do
-    url "https://community.visualdatatools.com/datagraph/versions/"
+    url "https://community.visualdatatools.com/datagraph/versions/",
+        user_agent: :browser
     regex(/href=["']?[^"' >]*?(?:datagraph|version)[._-]v?(\d+(?:[.-]\d+)+)/i)
     strategy :page_match do |page, regex|
       page.scan(regex).map { |match| match[0].tr("-", ".") }

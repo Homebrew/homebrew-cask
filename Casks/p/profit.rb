@@ -11,7 +11,8 @@ cask "profit" do
   homepage "https://www.nelogica.com.br/"
 
   livecheck do
-    url "https://downloadserver-cdn.nelogica.com.br/content/mac/stable/#{arch}/version.json"
+    url "https://downloadserver-cdn.nelogica.com.br/content/mac/stable/#{arch}/version.json",
+        user_agent: :browser
     strategy :json do |json|
       json["appVersion"]
     end

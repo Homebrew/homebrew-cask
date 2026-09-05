@@ -11,7 +11,8 @@ cask "salesforce-cli" do
   homepage "https://developer.salesforce.com/tools/salesforcecli"
 
   livecheck do
-    url "https://developer.salesforce.com/media/salesforce-cli/sf/channels/stable/sf-darwin-#{arch}-buildmanifest"
+    url "https://developer.salesforce.com/media/salesforce-cli/sf/channels/stable/sf-darwin-#{arch}-buildmanifest",
+        user_agent: :browser
     strategy :json do |json|
       next if json["version"].blank? || json["sha"].blank?
 
