@@ -22,6 +22,7 @@ cask "powerpanel" do
               "com.cyberpower.powerpanel-personal.client",
               "com.cyberpower.powerpanel-personal.daemon",
             ],
+            quit:      "com.cyberpower.powerpanel-personal.client",
             pkgutil:   [
               "com.cpsww.ppupsd",
               "com.cyberpower.powerpanelpersonal.ppp",
