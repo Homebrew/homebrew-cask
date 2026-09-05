@@ -34,7 +34,7 @@ cask "workflowy" do
   url "https://github.com/workflowy/desktop/releases/download/v#{version}/WorkFlowy#{url_end}"
   name "WorkFlowy"
   desc "Notetaking tool"
-  homepage "https://workflowy.com/downloads/mac/"
+  homepage "https://workflowy.com/download/"
 
   livecheck do
     url :url
