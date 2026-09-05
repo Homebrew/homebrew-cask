@@ -1,6 +1,6 @@
 cask "serial-studio" do
-  version "4.0.1"
-  sha256 "2dad21f5823e7d36fa628c334f54469b370a0e8b91d4f0a12e89c3fa9d5f9489"
+  version "4.1.0"
+  sha256 "df72e6295bb4243dc4fc1892c421315d5104c50e91b42ea926b5cfcf1c5ba9a9"
 
   url "https://github.com/Serial-Studio/Serial-Studio/releases/download/v#{version}/Serial-Studio-Pro-#{version}-macOS.dmg"
   name "Serial Studio"
@@ -12,7 +12,7 @@ cask "serial-studio" do
     strategy :github_latest
   end
 
-  depends_on macos: :ventura
+  depends_on macos: :sonoma
 
   app "Serial Studio Pro.app"
 
