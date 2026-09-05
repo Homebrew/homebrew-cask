@@ -10,7 +10,8 @@ cask "ddpm" do
   homepage "https://dell.com/"
 
   livecheck do
-    url "https://clientperipherals.dell.com/DDPM/Mac/Application/ddpm.json"
+    url "https://clientperipherals.dell.com/DDPM/Mac/Application/ddpm.json",
+        user_agent: :browser
     strategy :json do |json|
       json["versionTable"].map { |_, entry| entry["originVersion"] }
     end
