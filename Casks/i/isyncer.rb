@@ -19,7 +19,10 @@ cask "isyncer" do
 
   pkg "iSyncer-installer-#{arch}-#{version}.pkg"
 
-  uninstall pkgutil: "de.isyncer.iSyncer"
+  uninstall pkgutil: [
+    "de.isyncer.iSyncer",
+    "main.ISyncer",
+  ]
 
   zap trash: [
     "~/iSyncer",
