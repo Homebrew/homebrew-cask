@@ -1,26 +1,40 @@
-cask "isyncer" do
-  version "4.3.0"
-  sha256 "15b2854bf6cac10b2b36efad9b5d9d15b033e50ffbe833380bb2b61a7fd470ab"
+# typed: strict
+# frozen_string_literal: true
 
-  url "https://www.isyncer.de/system/iSyncerV#{version}mac-installer.tgz"
+cask "isyncer" do
+  version "5.0.0"
+
+  on_arm do
+    sha256 "1b13a20b5b1444b0177ccabdc75161b2dcd2124440ac4a485208522657dea08d"
+
+    url "https://www.isyncer.de/system/iSyncerV#{version}mac-installer-aarch64.tgz"
+
+    pkg "iSyncer-installer-aarch64-#{version}.pkg"
+  end
+  on_intel do
+    sha256 "e5540659c1f728beb45d667edda81fb5097458b131589bb1b659fbaba7137994"
+
+    url "https://www.isyncer.de/system/iSyncerV#{version}mac-installer-x64.tgz"
+
+    pkg "iSyncer-installer-x64-#{version}.pkg"
+  end
+
   name "iSyncer"
-  desc "Apple Music playlist exporting tool"
+  desc "Utility to export and sync iTunes/Apple Music playlists"
   homepage "https://www.isyncer.de/"
 
   livecheck do
-    url "https://www.isyncer.de/en/releases/"
-    regex(/href=.*?iSyncer[._-]?v?(\d+(?:\.\d+)+)[._-]?mac[._-]installer\.t/i)
+    url "https://www.isyncer.de/en/releases"
+    regex(/Version\s*v?(\d+(?:\.\d+)+)/i)
   end
-
-  disable! date: "2026-09-01", because: :fails_gatekeeper_check
 
   depends_on :macos
 
-  pkg "iSyncer-installer-#{version}.pkg"
+  uninstall pkgutil: "de.isyncer.iSyncer"
 
-  uninstall pkgutil: "main.ISyncer.*"
-
-  caveats do
-    requires_rosetta
-  end
+  zap trash: [
+    "~/iSyncer",
+    "~/Library/Application Support/iSyncer",
+    "~/Library/Preferences/de.isyncer.iSyncer.plist",
+  ]
 end
