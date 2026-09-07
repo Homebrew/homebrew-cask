@@ -2,13 +2,13 @@ cask "azure-cli-ci-test" do
   arch arm: "arm64", intel: "x86_64"
   os macos: "macos", linux: "linux"
 
-  version "2.89.0"
-  sha256 arm:          "2bdff89b779be06f606e61d7424cfe05596a7dc7ab071bcf874dcdb4c9fc3afd",
-         intel:        "24c162c06f8258202caeb4620e208b8e9d970895a77f1ecf8dc0425bc51080b0",
-         arm64_linux:  "7476cdcb31da93c52c90b951fb493df24a8814474590e55f996335909e7963df",
-         x86_64_linux: "bbf7a627370995993c9b25ba2e45584061fc6c5a07531ebae6be7451af4fe6aa"
+  version "2.90.0"
+  sha256 arm:          "1cdcf8dc99ece8c10d198d9451d7ac0905a4d63aea5fac5fcf903bdf2aba93b3",
+         intel:        "4617d8d16350dbee34f8024059ac768e0cfbdb7ec8f637abdfdaab1e5c9ba0ce",
+         arm64_linux:  "df71d304216c1adb1bf6957f0386ea320d32beaf7019f927e0b7e4cf2d2a4df5",
+         x86_64_linux: "9b2a19ad37bbe578e506a2643e974c99d3ee141b2f94cdb6f064a342e5c4eae1"
 
-  url "https://github.com/Azure/homebrew-azure-cli/releases/download/azure-cli-#{version}/azure-cli-#{version}-#{os}-#{arch}.tar.gz"
+  url "https://github.com/Azure/azure-cli/releases/download/azure-cli-#{version}/azure-cli-#{version}-#{os}-#{arch}.tar.gz"
   name "Azure CLI CI Test"
   desc "Microsoft Azure CLI 2.0 standalone archive validation"
   homepage "https://docs.microsoft.com/cli/azure/overview"
