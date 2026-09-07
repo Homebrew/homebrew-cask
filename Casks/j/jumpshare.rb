@@ -17,13 +17,16 @@ cask "jumpshare" do
 
   app "Jumpshare.app"
 
-  uninstall launchctl: "com.jumpshare.JumpshareLoginHelper"
+  uninstall launchctl: "com.jumpshare.JumpshareLoginHelper",
+            quit:      "com.jumpshare.Jumpshare"
 
   zap trash: [
+    "~/Library/Application Scripts/697K87ALT7.com.jumpshare.Jumpshare",
     "~/Library/Application Scripts/com.jumpshare.JumpshareLoginHelper",
     "~/Library/Application Support/com.jumpshare.Jumpshare",
     "~/Library/Containers/com.jumpshare.JumpshareLoginHelper",
     "~/Library/Cookies/com.jumpshare.Jumpshare.binarycookies",
+    "~/Library/Group Containers/697K87ALT7.com.jumpshare.Jumpshare",
     "~/Library/Preferences/com.jumpshare.Jumpshare.plist",
   ]
 end
