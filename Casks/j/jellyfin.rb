@@ -24,6 +24,7 @@ cask "jellyfin" do
     "~/.cache/jellyfin",
     "~/.config/jellyfin",
     "~/.local/share/jellyfin",
+    "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/jellyfin.server.sfl*",
     "~/Library/Application Support/jellyfin",
     "~/Library/Preferences/Jellyfin.Server.plist",
   ]
