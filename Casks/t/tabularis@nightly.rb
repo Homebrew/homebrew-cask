@@ -22,7 +22,7 @@ cask "tabularis@nightly" do
     ]
   end
   on_linux do
-    depends_on arch: :arm64
+    depends_on arch: :x86_64
 
     app_image "tabularis_#{version.csv.first}_amd64.AppImage", target: "tabularis.AppImage"
   end
