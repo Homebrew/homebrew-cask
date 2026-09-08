@@ -18,7 +18,7 @@ cask "zentty" do
   app "Zentty.app"
   binary "#{appdir}/Zentty.app/Contents/Resources/bin/shared/zentty"
 
-  uninstall quit:   "be.zenjoy.zentty"
+  uninstall quit: "be.zenjoy.zentty"
 
   zap trash: [
     "~/.config/zentty",
