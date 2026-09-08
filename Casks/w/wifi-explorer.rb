@@ -17,10 +17,14 @@ cask "wifi-explorer" do
 
   app "WiFi Explorer.app"
 
+  uninstall quit: "wifiexplorer"
+
   zap trash: [
+    "~/Library/Application Support/WiFi Explorer",
     "~/Library/Caches/wifiexplorer",
     "~/Library/Cookies/wifiexplorer.binarycookies",
     "~/Library/Group Containers/2B9R362QNU.com.adriangranados.wifiexplorer",
+    "~/Library/HTTPStorages/wifiexplorer*",
     "~/Library/Preferences/com.adriangranados.wifiexplorer*",
     "~/Library/Preferences/wifiexplorer.plist",
     "~/Library/Saved Application State/wifiexplorer.savedState",
