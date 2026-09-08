@@ -9,7 +9,7 @@ cask "t3-code@nightly" do
 
   on_macos do
     auto_updates true
-    depends_on macos: :monterey
+    depends_on macos: :ventura
 
     app "T3 Code (Nightly).app"
 
