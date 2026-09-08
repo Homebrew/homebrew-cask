@@ -16,6 +16,8 @@ cask "modern-csv" do
 
   app "Modern CSV.app"
 
+  uninstall quit: "net.galliumdigital.Modern-CSV"
+
   zap trash: [
     "~/Library/Application Support/Modern CSV",
     "~/Library/Saved Application State/net.galliumdigital.Modern-CSV.savedState",
