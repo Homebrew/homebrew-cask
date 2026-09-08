@@ -7,7 +7,7 @@ cask "docktile" do
   desc "Group apps into iOS-style folders in the Dock"
   homepage "https://github.com/k97/dock-tile"
 
-  depends_on macos: :ventura
+  depends_on macos: :sequoia
 
   app "Dock Tile.app"
 
