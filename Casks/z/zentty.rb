@@ -4,7 +4,7 @@ cask "zentty" do
 
   url "https://github.com/dedene/zentty/releases/download/v#{version}/Zentty.dmg"
   name "Zentty"
-  desc "Terminal for agent-driven development, built on Ghostty"
+  desc "Terminal for agent-driven development"
   homepage "https://zentty.org/"
 
   livecheck do
@@ -18,8 +18,7 @@ cask "zentty" do
   app "Zentty.app"
   binary "#{appdir}/Zentty.app/Contents/Resources/bin/shared/zentty"
 
-  uninstall quit:   "be.zenjoy.zentty",
-            signal: ["TERM", "be.zenjoy.zentty"]
+  uninstall quit:   "be.zenjoy.zentty"
 
   zap trash: [
     "~/.config/zentty",
