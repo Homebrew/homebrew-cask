@@ -27,6 +27,8 @@ cask "musescore" do
   command_wrapper "mscore",
                   executable: "#{appdir}/MuseScore #{version.major}.app/Contents/MacOS/mscore"
 
+  uninstall quit: "org.musescore.MuseScore"
+
   zap trash: [
     "~/Library/Application Support/MuseScore",
     "~/Library/Caches/MuseScore",
