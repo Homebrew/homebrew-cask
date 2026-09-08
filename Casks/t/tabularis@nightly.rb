@@ -24,7 +24,7 @@ cask "tabularis@nightly" do
   on_linux do
     depends_on arch: :x86_64
 
-    app_image "tabularis_#{version.csv.first}_amd64.AppImage", target: "tabularis.AppImage"
+    app_image "tabularis_#{version.csv.first}_#{arch}.AppImage", target: "tabularis.AppImage"
   end
 
   url "https://github.com/TabularisDB/tabularis/releases/download/nightly-#{version.csv.second}/tabularis_#{version.csv.first}_#{arch}.#{os}"
