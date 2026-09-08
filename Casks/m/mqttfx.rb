@@ -30,5 +30,7 @@ cask "mqttfx" do
   zap trash: [
     "~/Library/Application Support/MQTT-FX",
     "~/Library/Application Support/MQTT.fx",
+    "~/Library/Preferences/de.softblade.mqttfx.plist",
+    "~/Library/Saved Application State/de.softblade.mqttfx.savedState",
   ]
 end
