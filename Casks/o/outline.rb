@@ -17,13 +17,19 @@ cask "outline" do
 
   app "Outline.app"
 
+  uninstall quit: "com.gorillized.outlinemac.standalone"
+
   zap trash: [
     "~/Library/Application Scripts/6WN928JT76.com.gorillized",
     "~/Library/Application Scripts/com.gorillized.outlinemac.standalone.extension",
+    "~/Library/Application Scripts/com.gorillized.outlinemac.standalone.widget",
     "~/Library/Application Support/com.gorillized.outlinemac.standalone",
+    "~/Library/Application Support/Outline",
     "~/Library/Caches/com.gorillized.outlinemac.standalone",
     "~/Library/Containers/com.gorillized.outlinemac.standalone.extension",
+    "~/Library/Containers/com.gorillized.outlinemac.standalone.widget",
     "~/Library/Group Containers/6WN928JT76.com.gorillized",
+    "~/Library/HTTPStorages/com.gorillized.outlinemac.standalone",
     "~/Library/Outline",
     "~/Library/Preferences/com.gorillized.outlinemac.standalone.plist",
   ]
