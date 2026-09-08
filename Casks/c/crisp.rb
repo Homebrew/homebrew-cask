@@ -11,6 +11,7 @@ cask "crisp" do
   depends_on macos: :sonoma
 
   app "Crisp.app"
+  binary "#{appdir}/Crisp.app/Contents/MacOS/crispctl"
 
   uninstall quit:       "com.crisp.app",
             login_item: "Crisp"
