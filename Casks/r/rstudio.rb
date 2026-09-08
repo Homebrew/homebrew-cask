@@ -1,9 +1,8 @@
 cask "rstudio" do
-  version "2026.07.1,147"
-  sha256 "f5fb4ddf44c106ac87b2a3674d229379c429f491b9a559a8a30c8faaa3893df3"
+  version "2026.08.2,200"
+  sha256 "4e7147d90bf5702b8b8d8dac5c3666b943f89a3997b787a5d7c3b8f5bb07b5d0"
 
-  url "https://download1.rstudio.org/electron/macos/RStudio-#{version.csv.first}-#{version.csv.second}.dmg",
-      verified: "download1.rstudio.org/electron/macos/"
+  url "https://download1.rstudio.org/electron/macos/RStudio-#{version.csv.first}-#{version.csv.second}.dmg"
   name "RStudio"
   desc "Data science software focusing on R and Python"
   homepage "https://posit.co/products/open-source/rstudio/"
@@ -23,6 +22,8 @@ cask "rstudio" do
   depends_on macos: :monterey
 
   app "RStudio.app"
+
+  uninstall quit: "com.rstudio.desktop"
 
   zap trash: "~/.rstudio-desktop"
 

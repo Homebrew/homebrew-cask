@@ -12,8 +12,7 @@ cask "orange" do
     app "Orange#{version.major}.app"
   end
 
-  url "https://download.biolab.si/download/files/Orange#{version.major}-#{version}-Python3.12.10-#{arch}.dmg",
-      verified: "download.biolab.si/download/"
+  url "https://download.biolab.si/download/files/Orange#{version.major}-#{version}-Python3.12.10-#{arch}.dmg"
   name "Orange"
   desc "Component-based data mining software"
   homepage "https://orangedatamining.com/"

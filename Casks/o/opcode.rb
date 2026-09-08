@@ -2,8 +2,7 @@ cask "opcode" do
   version "0.2.0"
   sha256 "9868d20b46fa3fba134049e931ef745571805b0e1919e7bad807ca454f5932f8"
 
-  url "https://github.com/getAsterisk/opcode/releases/download/v#{version}/opcode_v#{version}_macOS_universal.dmg",
-      verified: "github.com/getAsterisk/opcode/"
+  url "https://github.com/getAsterisk/opcode/releases/download/v#{version}/opcode_v#{version}_macOS_universal.dmg"
   name "opcode"
   desc "GUI app and toolkit for Claude Code"
   homepage "https://opcode.sh/"

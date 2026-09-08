@@ -1,9 +1,8 @@
 cask "maestri" do
-  version "0.39.3"
-  sha256 "05b810fec78fde89bb98011000ee4b6cb45b75dc09dbdd0fb5df574582cb2634"
+  version "0.45.6"
+  sha256 "531d9a40f143d9b52363958243ceb07dffb2951663a5d597a21446cab5c82cc6"
 
-  url "https://pub-84eb0b1f3fb3420bbe57a88de7443b71.r2.dev/downloads/Maestri-#{version}.zip",
-      verified: "pub-84eb0b1f3fb3420bbe57a88de7443b71.r2.dev/downloads/"
+  url "https://pub-84eb0b1f3fb3420bbe57a88de7443b71.r2.dev/downloads/Maestri-#{version}.zip"
   name "Maestri"
   desc "Canvas for agent orchestration"
   homepage "https://www.themaestri.app/"

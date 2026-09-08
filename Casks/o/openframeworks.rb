@@ -2,8 +2,7 @@ cask "openframeworks" do
   version "0.12.1"
   sha256 "170d24422e53bef30297f8154604f10343fae58f7a84d42b37d7d00350ac2192"
 
-  url "https://github.com/openframeworks/openFrameworks/releases/download/#{version}/of_v#{version}_osx_release.tar.gz",
-      verified: "github.com/openframeworks/openFrameworks/"
+  url "https://github.com/openframeworks/openFrameworks/releases/download/#{version}/of_v#{version}_osx_release.tar.gz"
   name "Openframeworks"
   desc "C++ toolkit for creative coding"
   homepage "https://openframeworks.cc/"

@@ -2,8 +2,7 @@ cask "font-sofadi-one" do
   version :latest
   sha256 :no_check
 
-  url "https://github.com/google/fonts/raw/main/ofl/sofadione/SofadiOne-Regular.ttf",
-      verified: "github.com/google/fonts/"
+  url "https://github.com/google/fonts/raw/main/ofl/sofadione/SofadiOne-Regular.ttf"
   name "Sofadi One"
   homepage "https://fonts.google.com/specimen/Sofadi+One"
 

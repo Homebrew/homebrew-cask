@@ -1,11 +1,10 @@
 cask "paranoia-file-text-encryption" do
   arch arm: "arm64", intel: "x86_64"
 
-  version "17.0.43"
-  sha256 "5b94503f957a79854fa6a1aa6adb04e0173b526004c97c436d64c851d594e0ac"
+  version "17.2.43"
+  sha256 "8d99a7b67cc915cc2db1ec3aed7382c4815e43f6c3e97eac8ed1208a30b5b692"
 
-  url "https://paranoiaworks.com/download/ParanoiaFileTextEnc-#{version}.pkg",
-      verified: "paranoiaworks.com/download/"
+  url "https://paranoiaworks.com/download/ParanoiaFileTextEnc-#{version}.pkg"
   name "Paranoia File & Text Encryption"
   desc "File and text encryptor with steganography and post-quantum key exchange"
   homepage "https://paranoiaworks.mobi/pfte/"

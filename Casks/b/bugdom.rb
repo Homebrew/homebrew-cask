@@ -22,8 +22,7 @@ cask "bugdom" do
     app_image "Bugdom-#{version}-linux-#{arch}.AppImage", target: "Bugdom.AppImage"
   end
 
-  url "https://github.com/jorio/Bugdom/releases/download/#{version}/Bugdom-#{version}-#{url_end}",
-      verified: "github.com/jorio/Bugdom/"
+  url "https://github.com/jorio/Bugdom/releases/download/#{version}/Bugdom-#{version}-#{url_end}"
   name "Bugdom"
   desc "Bug-themed 3D action/adventure game from Pangea Software"
   homepage "https://jorio.itch.io/bugdom"

@@ -5,8 +5,7 @@ cask "chia" do
   sha256 arm:   "9ad5a80804c7e8d8662aab2182aa7b39e8ebbf3600c2c19e51c17bb439a93c1d",
          intel: "448aec7ff859c56b6d4b291cb3530ed8a526d3724506d671253929382cb0a737"
 
-  url "https://github.com/Chia-Network/chia-blockchain/releases/download/#{version}/Chia-#{version}#{arch}.dmg",
-      verified: "github.com/Chia-Network/chia-blockchain/"
+  url "https://github.com/Chia-Network/chia-blockchain/releases/download/#{version}/Chia-#{version}#{arch}.dmg"
   name "Chia Blockchain"
   desc "GUI Python implementation for the Chia blockchain"
   homepage "https://www.chia.net/"

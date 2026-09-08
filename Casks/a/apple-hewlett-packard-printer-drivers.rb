@@ -2,8 +2,7 @@ cask "apple-hewlett-packard-printer-drivers" do
   version "5.1.1,2021,071-46903-20211101-0BD2764A-901C-41BA-9573-C17B8FDC4D90"
   sha256 "523836b630431bc39b0170a17099099d6f821ef62ff29e6ec64ebb69b9954133"
 
-  url "https://updates.cdn-apple.com/#{version.csv.second}/macos/#{version.csv.third}/HewlettPackardPrinterDrivers.dmg",
-      verified: "updates.cdn-apple.com/"
+  url "https://updates.cdn-apple.com/#{version.csv.second}/macos/#{version.csv.third}/HewlettPackardPrinterDrivers.dmg"
   name "HP Printer Drivers"
   desc "HP printing and scanning software"
   homepage "https://support.apple.com/kb/DL1888"

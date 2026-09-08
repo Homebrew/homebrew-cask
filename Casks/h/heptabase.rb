@@ -1,12 +1,11 @@
 cask "heptabase" do
   arch arm: "-arm64"
 
-  version "1.102.0"
-  sha256 arm:   "b35665b121f11a362b56e2168c9cbcd01d9345f38d89faa8e1971795368b7d07",
-         intel: "408779ecfb1d9f3e88f8a9fc09d49ab4404a403bec0dd3184081d3a8e0671206"
+  version "1.108.2"
+  sha256 arm:   "e0415b7b0dceb0ff229218f687536dc95d9cd285befc0585fafc141cc7f80ca8",
+         intel: "a857d5b28d80b1dd40928f01263fcc399e2f563fd46caf7b8370708582dbaae0"
 
-  url "https://github.com/heptameta/project-meta/releases/download/v#{version}/Heptabase-#{version}#{arch}-mac.zip",
-      verified: "github.com/heptameta/project-meta/"
+  url "https://github.com/heptameta/project-meta/releases/download/v#{version}/Heptabase-#{version}#{arch}-mac.zip"
   name "Hepta"
   desc "Note-taking tool for visual learning"
   homepage "https://heptabase.com/"

@@ -5,8 +5,7 @@ cask "tandem" do
   sha256 arm:   "752cb298635d614c59737806fb8ed13ba485d87d3a8ecc2b6eb03dc2f9c1503c",
          intel: "754f7d4070801d9c4a2d4ceebdc30f2edf25ba6fa18674e1eaf66089201b31f7"
 
-  url "https://download.todesktop.com/200527auaqaacsy/Tandem%20#{version.csv.first}%20-%20Build%20#{version.csv.second}-#{arch}.dmg",
-      verified: "download.todesktop.com/200527auaqaacsy/"
+  url "https://download.todesktop.com/200527auaqaacsy/Tandem%20#{version.csv.first}%20-%20Build%20#{version.csv.second}-#{arch}.dmg"
   name "Tandem"
   desc "Virtual office for remote teams"
   homepage "https://tandem.chat/"

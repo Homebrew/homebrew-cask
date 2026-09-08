@@ -1,9 +1,8 @@
 cask "amneziavpn" do
-  version "5.0.0.5"
-  sha256 "049e26feb833ffac4387e676f5867d8e292458ba229cc04935ce643289b317eb"
+  version "5.0.1.5"
+  sha256 "8e88c02605375400a7972ee5205cc6bcd223e555757522fbc97fe3c9a4946084"
 
-  url "https://github.com/amnezia-vpn/amnezia-client/releases/download/#{version}/AmneziaVPN_#{version}_macos_x64.pkg",
-      verified: "github.com/amnezia-vpn/amnezia-client/"
+  url "https://github.com/amnezia-vpn/amnezia-client/releases/download/#{version}/AmneziaVPN_#{version}_macos_x64.pkg"
   name "Amnezia VPN"
   desc "VPN client"
   homepage "https://amnezia.org/"

@@ -1,10 +1,9 @@
 cask "kstars" do
-  version "3.8.3"
+  version "3.8.4"
   sha256 :no_check # required as upstream package is updated in-place
 
   url "https://www.indilib.org/jdownloads/kstars/kstars-#{version}.dmg",
-      user_agent: :browser,
-      verified:   "indilib.org/jdownloads/kstars/"
+      user_agent: :browser
   name "KStars"
   desc "Astronomy software"
   homepage "https://kstars.kde.org/"
@@ -17,6 +16,8 @@ cask "kstars" do
   depends_on macos: :ventura
 
   app "kstars.app"
+
+  uninstall launchctl: "org.freedesktop.dbus-kstars"
 
   zap trash: [
     "~/Library/Application Support/kstars",

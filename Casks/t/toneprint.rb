@@ -2,8 +2,7 @@ cask "toneprint" do
   version "4.6.16,dBdeIScCJECmA6pTU4VfHA,bykSZtSgsUKVx3UABT5qSg,7+25e8c66a"
   sha256 "d9bbfef769a14ccf2a024218efb7164420211c9d68f2630dd31ce4edbce2d106"
 
-  url "https://cdn.mediavalet.com/aunsw/musictribe/#{version.csv.second}/#{version.csv.third}/Original/Toneprint_#{version.csv.first}-public.#{version.csv.fourth}.dmg",
-      verified: "cdn.mediavalet.com/aunsw/musictribe/"
+  url "https://cdn.mediavalet.com/aunsw/musictribe/#{version.csv.second}/#{version.csv.third}/Original/Toneprint_#{version.csv.first}-public.#{version.csv.fourth}.dmg"
   name "TonePrint"
   desc "Alter the character of your TonePrint pedal"
   homepage "https://www.tcelectronic.com/tonePrints.html"

@@ -7,8 +7,9 @@ cask "macx-dvd-ripper-pro" do
   desc "DVD ripping application"
   homepage "https://www.macxdvd.com/mac-dvd-ripper-pro/"
 
+  # https 302-redirects back to http
   livecheck do
-    url "https://www.macxdvd.com/mac-dvd-ripper-pro/upgrade/macx-dvd-ripper-pro"
+    url "http://www.macxdvd.com/mac-dvd-ripper-pro/upgrade/macx-dvd-ripper-pro"
     strategy :xml do |xml|
       # The plist file contains nested "LastestVersion" keys that apply to
       # language variants, so we specifically match the main key

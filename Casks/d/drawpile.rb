@@ -5,8 +5,7 @@ cask "drawpile" do
     version "2.2.1"
     sha256 "d4b29c78da9a64eb8a5526c464f9647b48a99b60cace0ce3eaf06a4e484dec60"
 
-    url "https://github.com/drawpile/Drawpile/releases/download/#{version}/Drawpile-#{version}.dmg",
-        verified: "github.com/drawpile/Drawpile"
+    url "https://github.com/drawpile/Drawpile/releases/download/#{version}/Drawpile-#{version}.dmg"
 
     livecheck do
       skip "Legacy version"
@@ -21,8 +20,7 @@ cask "drawpile" do
     sha256 arm:   "d6ba02a723b57ca83a523ea61b192b349005c8c3f8a10579877477d5b652409c",
            intel: "09eeff8bacc62200f810c8be89dcb595e0a069efd9ca9659b6f97f50c1244573"
 
-    url "https://github.com/drawpile/Drawpile/releases/download/#{version}/Drawpile-#{version}-#{arch}.dmg",
-        verified: "github.com/drawpile/Drawpile"
+    url "https://github.com/drawpile/Drawpile/releases/download/#{version}/Drawpile-#{version}-#{arch}.dmg"
 
     livecheck do
       url :url

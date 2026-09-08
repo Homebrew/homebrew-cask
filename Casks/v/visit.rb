@@ -3,8 +3,7 @@ cask "visit" do
     on_monterey do
       version "3.4.2"
       sha256 "75b4d4bc4f8b4d9d8d0ef55e14d34e97442fbf2cf7e10b4726dd773f30b7e827"
-      url "https://github.com/visit-dav/visit/releases/download/v#{version}/visit#{version.dots_to_underscores}.darwin23-arm64.dmg",
-          verified: "github.com/visit-dav/visit/"
+      url "https://github.com/visit-dav/visit/releases/download/v#{version}/visit#{version.dots_to_underscores}.darwin23-arm64.dmg"
 
       livecheck do
         skip "Legacy version"
@@ -13,8 +12,7 @@ cask "visit" do
     on_ventura do
       version "3.4.2"
       sha256 "75b4d4bc4f8b4d9d8d0ef55e14d34e97442fbf2cf7e10b4726dd773f30b7e827"
-      url "https://github.com/visit-dav/visit/releases/download/v#{version}/visit#{version.dots_to_underscores}.darwin23-arm64.dmg",
-          verified: "github.com/visit-dav/visit/"
+      url "https://github.com/visit-dav/visit/releases/download/v#{version}/visit#{version.dots_to_underscores}.darwin23-arm64.dmg"
 
       livecheck do
         skip "Legacy version"
@@ -23,8 +21,7 @@ cask "visit" do
     on_sonoma do
       version "3.4.2"
       sha256 "75b4d4bc4f8b4d9d8d0ef55e14d34e97442fbf2cf7e10b4726dd773f30b7e827"
-      url "https://github.com/visit-dav/visit/releases/download/v#{version}/visit#{version.dots_to_underscores}.darwin23-arm64.dmg",
-          verified: "github.com/visit-dav/visit/"
+      url "https://github.com/visit-dav/visit/releases/download/v#{version}/visit#{version.dots_to_underscores}.darwin23-arm64.dmg"
 
       livecheck do
         skip "Legacy version"
@@ -33,8 +30,7 @@ cask "visit" do
     on_sequoia :or_newer do
       version "3.5.0"
       sha256 "a22479b7349a215ace6887c8b624ec2313323a744544588e4132ceb28850a1fa"
-      url "https://github.com/visit-dav/visit/releases/download/v#{version}/visit#{version.dots_to_underscores}.darwin24-arm64.dmg",
-          verified: "github.com/visit-dav/visit/"
+      url "https://github.com/visit-dav/visit/releases/download/v#{version}/visit#{version.dots_to_underscores}.darwin24-arm64.dmg"
 
       livecheck do
         url :url
@@ -48,8 +44,7 @@ cask "visit" do
 
       sha256 "27399911756a57817e6081d3a6e22e3d569028b9261fe04bf8ee1841fddad591"
 
-      url "https://github.com/visit-dav/visit/releases/download/v#{version}/visit#{version.dots_to_underscores}.darwin22-x86_64.dmg",
-          verified: "github.com/visit-dav/visit/"
+      url "https://github.com/visit-dav/visit/releases/download/v#{version}/visit#{version.dots_to_underscores}.darwin22-x86_64.dmg"
       livecheck do
         skip "Legacy version"
       end
@@ -59,8 +54,7 @@ cask "visit" do
     version "3.3.2"
     sha256 "f406850b21ddc16a6ca636b5c9087b41baeb5460ac92a9b140194c010eb285b3"
 
-    url "https://github.com/visit-dav/visit/releases/download/v#{version}/Visit-#{version}.dmg",
-        verified: "github.com/visit-dav/visit/"
+    url "https://github.com/visit-dav/visit/releases/download/v#{version}/Visit-#{version}.dmg"
 
     livecheck do
       skip "Legacy version"

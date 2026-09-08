@@ -2,8 +2,7 @@ cask "roon" do
   version "2.71"
   sha256 :no_check
 
-  url "https://download.roonlabs.net/builds/Roon.dmg",
-      verified: "download.roonlabs.net/"
+  url "https://download.roonlabs.net/builds/Roon.dmg"
   name "Roon"
   desc "Music player"
   homepage "https://roonlabs.com/"

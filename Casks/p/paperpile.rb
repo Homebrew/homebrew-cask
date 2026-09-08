@@ -1,8 +1,11 @@
 cask "paperpile" do
-  version "0.10.1"
-  sha256 "97efa23fca20d1bb650bf3c4d94db0b6b105d1d2182dab086162cf927349283f"
+  arch arm: "-arm64"
 
-  url "https://cdn.paperpile.com/download/desktop/Paperpile-#{version}.dmg"
+  version "0.10.1"
+  sha256 arm:   "75c29a3651c76c6844aa5d125618310214d88683e50131da76aaf1180522c910",
+         intel: "97efa23fca20d1bb650bf3c4d94db0b6b105d1d2182dab086162cf927349283f"
+
+  url "https://cdn.paperpile.com/download/desktop/Paperpile-#{version}#{arch}.dmg"
   name "Paperpile"
   desc "Citation plugin for Microsoft Word"
   homepage "https://paperpile.com/word-plugin/"
@@ -22,8 +25,4 @@ cask "paperpile" do
     "~/Library/Group Containers/*.Office/User Content.localized/Startup.localized/Word/paperpile*",
     "~/Library/Preferences/com.paperpile.paperpile.plist",
   ]
-
-  caveats do
-    requires_rosetta
-  end
 end

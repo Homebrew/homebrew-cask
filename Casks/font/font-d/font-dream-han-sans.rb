@@ -18,14 +18,6 @@ cask "font-dream-han-sans" do
   end
 
   font "DreamHanSans-W1.ttc"
-  font "DreamHanSans-W2.ttc"
-  font "DreamHanSans-W3.ttc"
-  font "DreamHanSans-W4.ttc"
-  font "DreamHanSans-W5.ttc"
-  font "DreamHanSans-W6.ttc"
-  font "DreamHanSans-W7.ttc"
-  font "DreamHanSans-W8.ttc"
-  font "DreamHanSans-W9.ttc"
   font "DreamHanSans-W10.ttc"
   font "DreamHanSans-W11.ttc"
   font "DreamHanSans-W12.ttc"
@@ -36,6 +28,7 @@ cask "font-dream-han-sans" do
   font "DreamHanSans-W17.ttc"
   font "DreamHanSans-W18.ttc"
   font "DreamHanSans-W19.ttc"
+  font "DreamHanSans-W2.ttc"
   font "DreamHanSans-W20.ttc"
   font "DreamHanSans-W21.ttc"
   font "DreamHanSans-W22.ttc"
@@ -44,6 +37,13 @@ cask "font-dream-han-sans" do
   font "DreamHanSans-W25.ttc"
   font "DreamHanSans-W26.ttc"
   font "DreamHanSans-W27.ttc"
+  font "DreamHanSans-W3.ttc"
+  font "DreamHanSans-W4.ttc"
+  font "DreamHanSans-W5.ttc"
+  font "DreamHanSans-W6.ttc"
+  font "DreamHanSans-W7.ttc"
+  font "DreamHanSans-W8.ttc"
+  font "DreamHanSans-W9.ttc"
 
   # No zap stanza required
 end

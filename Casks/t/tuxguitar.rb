@@ -2,8 +2,7 @@ cask "tuxguitar" do
   version "2.1.0"
   sha256 "ae4590df0965276a271eb3ab51bf0fb755c5e92c1732f83d8bb2ee7ba7fb5abc"
 
-  url "https://github.com/helge17/tuxguitar/releases/download/#{version}/tuxguitar-#{version}-macosx-swt-cocoa-x86_64.app.tar.gz",
-      verified: "github.com/helge17/tuxguitar/"
+  url "https://github.com/helge17/tuxguitar/releases/download/#{version}/tuxguitar-#{version}-macosx-swt-cocoa-x86_64.app.tar.gz"
   name "TuxGuitar"
   desc "Multitrack guitar tablature editor and player"
   homepage "https://www.tuxguitar.app/"

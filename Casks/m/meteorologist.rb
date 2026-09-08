@@ -2,8 +2,7 @@ cask "meteorologist" do
   version "5.0.3"
   sha256 "9727f28ff99e331bcc8d297e8195ca712b75bbd3e1546684cc63bc796ce06d05"
 
-  url "https://downloads.sourceforge.net/heat-meteo/Meteorologist-#{version}.dmg",
-      verified: "downloads.sourceforge.net/heat-meteo/"
+  url "https://downloads.sourceforge.net/heat-meteo/Meteorologist-#{version}.dmg"
   name "Meteorologist"
   desc "Adjustable weather viewing application"
   homepage "https://heat-meteo.sourceforge.io/"

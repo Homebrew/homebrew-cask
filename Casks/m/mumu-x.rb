@@ -2,8 +2,7 @@ cask "mumu-x" do
   version "1.4.3,o9MCyhdQLC9HL3r1Yfks"
   sha256 "c8840523becdb36476fde1c44aec735f0cc5c0572f4361e7b3c406691c4e561c"
 
-  url "https://paddle.s3.amazonaws.com/fulfillment_downloads/116824/662730/#{version.csv.second}_Mumu%20X%20#{version.csv.first}.dmg",
-      verified: "paddle.s3.amazonaws.com/fulfillment_downloads/116824/662730/"
+  url "https://paddle.s3.amazonaws.com/fulfillment_downloads/116824/662730/#{version.csv.second}_Mumu%20X%20#{version.csv.first}.dmg"
   name "Mumu X"
   desc "Utilises GPT-3 AI powered synonyms to find emojis and symbols"
   homepage "https://getmumu.com/"

@@ -5,8 +5,7 @@ cask "nao" do
   sha256 arm:   "b860eb8a2b9c20e91cc9d8a431ecbcdbeeb8d4d8d82949c5538ab316152cfa7a",
          intel: "78ddf4666a563344d9ab02f968e09bbce873c40ec8d0aaf8776c90fa62ca1750"
 
-  url "https://storage.googleapis.com/nao-releases/nao/darwin-#{arch}/#{version}/nao.#{arch}.#{version}.dmg",
-      verified: "storage.googleapis.com/nao-releases/nao/"
+  url "https://storage.googleapis.com/nao-releases/nao/darwin-#{arch}/#{version}/nao.#{arch}.#{version}.dmg"
   name "nao"
   desc "AI code editor for data"
   homepage "https://getnao.io/"

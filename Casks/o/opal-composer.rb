@@ -2,8 +2,7 @@ cask "opal-composer" do
   version "2.0.0,24"
   sha256 "4eaa1225a203b057dbabaa7b17d7bbff91512cac32e942359b651dbef06928b3"
 
-  url "https://updates.opal.camera/release/Opal_Composer_#{version.csv.first}_#{version.csv.second}.dmg",
-      verified: "updates.opal.camera/release/"
+  url "https://updates.opal.camera/release/Opal_Composer_#{version.csv.first}_#{version.csv.second}.dmg"
   name "Opal Composer"
   desc "Professional webcam software for the Opal C1"
   homepage "https://opalcamera.com/opal-composer"

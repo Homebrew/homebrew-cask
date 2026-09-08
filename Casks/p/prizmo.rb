@@ -2,8 +2,7 @@ cask "prizmo" do
   version "4.7.1"
   sha256 "71f085b54ec6dde38a25675a81a9e799661fcd82b27629b28bbf8e88907d6456"
 
-  url "https://creaceed.s3.amazonaws.com/downloads/prizmo#{version.major}_#{version}.zip",
-      verified: "creaceed.s3.amazonaws.com/downloads/"
+  url "https://creaceed.s3.amazonaws.com/downloads/prizmo#{version.major}_#{version}.zip"
   name "Prizmo"
   desc "Scanning application with Optical Character Recognition (OCR)"
   homepage "https://creaceed.com/prizmo"

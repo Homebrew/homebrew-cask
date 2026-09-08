@@ -2,8 +2,7 @@ cask "remotix-agent" do
   version "1.5.19,23333"
   sha256 "87be3d61e5406cd55e3c8ff50567e255379b085d1eeca330899186f7ad96b117"
 
-  url "https://downloads.remotix.com/agent-mac/RemotixAgent-#{version.csv.first}-#{version.csv.second}.pkg",
-      verified: "remotix.com/agent-mac/"
+  url "https://downloads.remotix.com/agent-mac/RemotixAgent-#{version.csv.first}-#{version.csv.second}.pkg"
   name "Remotix Agent"
   desc "Remote desktop and monitoring solution"
   homepage "https://remotixcloud.com/"

@@ -5,8 +5,7 @@ cask "ossapp" do
   sha256 arm:   "c8a4b3d9b11d6e2e04b2e2161d28af8695aa7fc7fa25d27ec2fdb2d71c5220aa",
          intel: "5a20d73f29d8b05c12c90cc7689efe771059d8129c9dbbcd58b8ba45523c2d1c"
 
-  url "https://gui.pkgx.dev/release/ossapp-#{version}#{arch}-mac.zip",
-      verified: "gui.pkgx.dev/release/"
+  url "https://gui.pkgx.dev/release/ossapp-#{version}#{arch}-mac.zip"
   name "ossapp"
   desc "Unified package manager"
   homepage "https://pkgx.app/"

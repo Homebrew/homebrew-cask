@@ -1,9 +1,8 @@
 cask "capcut" do
-  version "9.1.0.4369"
-  sha256 "95a8b1cc9ecbcbe368b3e788c2acfb911a8969eb15936e9dc6cdd9d7eb720148"
+  version "9.4.1.4574"
+  sha256 "86d48a42dfcb38b0d7468bbc8674f68edf722bc2587c9db1ee8714a83b520a1f"
 
-  url "https://sf16-web-tos-buz.capcutstatic.com/obj/capcut-web-buz-sg/packages/CapCut_#{version.dots_to_underscores}_capcutpc_0_creatortool.dmg",
-      verified: "sf16-web-tos-buz.capcutstatic.com/obj/capcut-web-buz-sg/packages/"
+  url "https://sf16-web-tos-buz.capcutstatic.com/obj/capcut-web-buz-sg/packages/CapCut_#{version.dots_to_underscores}_capcutpc_0_creatortool.dmg"
   name "CapCut"
   desc "Video editing and image design platform"
   homepage "https://www.capcut.com/"
@@ -25,6 +24,8 @@ cask "capcut" do
   depends_on :macos
 
   app "CapCut.app"
+
+  uninstall quit: "com.lemon.lvoverseas"
 
   zap trash: [
     "~/Library/Application Scripts/com.lemon.lvoverseas",

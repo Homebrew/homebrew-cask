@@ -2,8 +2,7 @@ cask "keyboard-maestro" do
   version "11.1.1,1111"
   sha256 "0b9ccdbce9e6f81159041e0369bf571ce411a96eb21c20dfce9cf23af3dbe172"
 
-  url "https://files.stairways.com/keyboardmaestro-#{version.csv.second}.zip",
-      verified: "stairways.com/"
+  url "https://files.stairways.com/keyboardmaestro-#{version.csv.second}.zip"
   name "Keyboard Maestro"
   desc "Automation software"
   homepage "https://www.keyboardmaestro.com/main/"

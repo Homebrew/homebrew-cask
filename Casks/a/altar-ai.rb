@@ -1,9 +1,8 @@
 cask "altar-ai" do
-  version "1.17.1"
-  sha256 "038b0c3c8c89a8964f5b63da06ad4c471a358d7c917e15bc298d740e66043c1d"
+  version "2.0.5"
+  sha256 "8d3fa8840c0ca370b99873a4dfd49950b3f722be1c224f36cba973bfacf7fb16"
 
-  url "https://altar-prototype.sgp1.cdn.digitaloceanspaces.com/releases/v#{version}/altar-app-#{version}.dmg",
-      verified: "altar-prototype.sgp1.cdn.digitaloceanspaces.com/"
+  url "https://altar-prototype.sgp1.cdn.digitaloceanspaces.com/releases/v#{version}/altar-app-#{version}.dmg"
   name "Altar AI"
   desc "AI-powered meeting assistant"
   homepage "https://app.altar.inc/"

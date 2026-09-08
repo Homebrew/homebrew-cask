@@ -5,8 +5,7 @@ cask "dymo-connect" do
   # At present, the checksum are the same across architectures, but this may change in future.
   sha256 "5b3b201c99235aadc6178f0dd0dae30d6edb64e7cef6e1de5faa875c5fb5967b"
 
-  url "https://dymoreleasecontent.blob.core.windows.net/dymo-release/DCDMAC/DCDMac#{version}-#{arch}.pkg",
-      verified: "dymoreleasecontent.blob.core.windows.net/dymo-release/"
+  url "https://dymoreleasecontent.blob.core.windows.net/dymo-release/DCDMAC/DCDMac#{version}-#{arch}.pkg"
   name "Dymo Connect"
   desc "Software for DYMO LabelWriters"
   homepage "https://www.dymo.com/support?cfid=online-support"

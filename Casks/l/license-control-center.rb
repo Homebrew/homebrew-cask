@@ -2,8 +2,7 @@ cask "license-control-center" do
   version "6.12.11.1328"
   sha256 :no_check
 
-  url "https://download.steinberg.net/downloads/eLicenserControl.dmg",
-      verified: "download.steinberg.net/downloads/"
+  url "https://download.steinberg.net/downloads/eLicenserControl.dmg"
   name "eLicenser Control Center"
   desc "Music software license manager"
   homepage "https://helpcenter.steinberg.de/hc/en-us/articles/360008841379"

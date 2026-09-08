@@ -4,12 +4,7 @@ cask "deeper" do
   # NOTE: We use separate `url` values in each of the macOS on_system blocks
   # so that the API data correctly includes URL variants for each.
   on_sequoia :or_older do
-    on_catalina :or_older do
-      version "2.6.0"
-
-      url "https://www.titanium-software.fr/download/1015/Deeper.dmg"
-    end
-    on_big_sur do
+    on_big_sur :or_older do
       version "2.7.1"
 
       url "https://www.titanium-software.fr/download/11/Deeper.dmg"
@@ -57,7 +52,6 @@ cask "deeper" do
   homepage "https://www.titanium-software.fr/en/deeper.html"
 
   depends_on macos: [
-    :catalina,
     :big_sur,
     :monterey,
     :ventura,

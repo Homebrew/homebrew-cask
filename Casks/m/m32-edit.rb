@@ -2,8 +2,7 @@ cask "m32-edit" do
   version "4.4.1,-9wjMPE6KUuoA04LKN3i5Q,0kmo3C_Pjk-L7if9X24-xw"
   sha256 "6c508f2160d4a34f9d124e503e66263d726f3258b492c590c2beb69aa4fc5f22"
 
-  url "https://cdn.mediavalet.com/aunsw/musictribe/#{version.csv.second}/#{version.csv.third}/Original/M32-Edit_MAC_#{version.csv.first}.zip",
-      verified: "mediavalet.com/aunsw/musictribe/"
+  url "https://cdn.mediavalet.com/aunsw/musictribe/#{version.csv.second}/#{version.csv.third}/Original/M32-Edit_MAC_#{version.csv.first}.zip"
   name "M32 Edit"
   desc "Remote control for Midas M32 audio consoles"
   homepage "https://www.midasconsoles.com/product.html?modelCode=0603-AEO"

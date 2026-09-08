@@ -1,6 +1,6 @@
 cask "font-3270-nerd-font" do
-  version "3.5.0"
-  sha256 "41999d601d1fa41bc57c3e7e6050a137265d0f2d5770cf6218e4a2577df47ed3"
+  version "3.5.1"
+  sha256 "0be3de53807798fc5bdca90eb972225b0b3880bdd9b505121b3c06750a08b698"
 
   url "https://github.com/ryanoasis/nerd-fonts/releases/download/v#{version}/3270.tar.xz"
   name "3270 Nerd Font (IBM 3270)"

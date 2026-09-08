@@ -1,9 +1,8 @@
 cask "activitywatch@beta" do
-  version "0.14.0b3"
-  sha256 "c88d8a1b428e27dbd98f2e5122ce8647eb921d602faee09e5bbb99daa11fcf11"
+  version "0.14.0b5"
+  sha256 "82e914c8b10e5ee7e1b06c96aa96e0b5a529f60fcb9897898c9d323a6cb6ff2d"
 
-  url "https://github.com/ActivityWatch/activitywatch/releases/download/v#{version}/activitywatch-tauri-v#{version}-macos-arm64.dmg",
-      verified: "github.com/ActivityWatch/activitywatch/"
+  url "https://github.com/ActivityWatch/activitywatch/releases/download/v#{version}/activitywatch-tauri-v#{version}-macos-arm64.dmg"
   name "ActivityWatch"
   desc "Time tracker"
   homepage "https://activitywatch.net/"

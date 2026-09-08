@@ -2,8 +2,7 @@ cask "presentify" do
   version "8.1.4"
   sha256 "58ebb945db724ada06160723b6a94ba4cec9f736c61061a91bf27a8ff181d878"
 
-  url "https://rampatra.github.io/presentify-updates/Presentify-#{version}.dmg",
-      verified: "rampatra.github.io/presentify-updates/"
+  url "https://rampatra.github.io/presentify-updates/Presentify-#{version}.dmg"
   name "Presentify"
   desc "Annotate screens, highlight cursors, and spotlight or zoom key areas"
   homepage "https://presentifyapp.com/"

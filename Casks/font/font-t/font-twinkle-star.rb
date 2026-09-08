@@ -2,8 +2,7 @@ cask "font-twinkle-star" do
   version :latest
   sha256 :no_check
 
-  url "https://github.com/google/fonts/raw/main/ofl/twinklestar/TwinkleStar-Regular.ttf",
-      verified: "github.com/google/fonts/"
+  url "https://github.com/google/fonts/raw/main/ofl/twinklestar/TwinkleStar-Regular.ttf"
   name "Twinkle Star"
   homepage "https://fonts.google.com/specimen/Twinkle+Star"
 

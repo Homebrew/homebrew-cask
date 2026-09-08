@@ -2,8 +2,8 @@ cask "miniconda" do
   arch arm: "arm64", intel: "x86_64"
 
   on_arm do
-    version "py314_26.5.3-2"
-    sha256 "e830bee5b9c6ebfb67e9df924b259a0d43c451bd17b965f7aa84523b69f7c3eb"
+    version "py314_26.7.1-1"
+    sha256 "9bdf85d31ea3b4b85ef26b2762d68e2d849fdd38b608fb5272127acef802ff75"
 
     livecheck do
       url "https://repo.anaconda.com/miniconda/"

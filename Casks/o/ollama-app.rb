@@ -1,9 +1,8 @@
 cask "ollama-app" do
-  version "0.32.5"
-  sha256 "729396bb6fea20df0f3792087f363b90465e68f7f596fcb4b5926929b0dce4d8"
+  version "0.33.3"
+  sha256 "335f1a11299f5f60dc2d5f2651cf12af9d3c303812c68e978be3e45ea7d6eaf4"
 
-  url "https://github.com/ollama/ollama/releases/download/v#{version}/Ollama-darwin.zip",
-      verified: "github.com/ollama/ollama/"
+  url "https://github.com/ollama/ollama/releases/download/v#{version}/Ollama-darwin.zip"
   name "Ollama"
   desc "Get up and running with large language models locally"
   homepage "https://ollama.com/"

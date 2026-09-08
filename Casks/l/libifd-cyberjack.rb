@@ -5,8 +5,7 @@ cask "libifd-cyberjack" do
   sha256 arm:   "ce347734f78bbcc66fa8da24828a191f5f585adceb14cf5423aac7e12d9638fb",
          intel: "2aa15c5e647fa8841ffd9c7fff950dc642ce23656a498a2e83412cd9c1551a0a"
 
-  url "https://support.reiner-sct.de/downloads/MAC/pcsc-cyberjack_#{version}-#{arch}-signed.pkg",
-      verified: "support.reiner-sct.de/downloads/MAC/"
+  url "https://support.reiner-sct.de/downloads/MAC/pcsc-cyberjack_#{version}-#{arch}-signed.pkg"
   name "Reiner SCT cyberJack driver"
   desc "Driver for REINER SCT cyberJack smart card readers"
   homepage "https://www.reiner-sct.com/"

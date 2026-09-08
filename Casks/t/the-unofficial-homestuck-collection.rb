@@ -2,8 +2,7 @@ cask "the-unofficial-homestuck-collection" do
   version "2.7.2"
   sha256 "a71d5a14e631c3721a96302679e0531fbc367b7712886e28fc2547fa988f44c2"
 
-  url "https://github.com/Bambosh/unofficial-homestuck-collection/releases/download/v#{version}/The-Unofficial-Homestuck-Collection-#{version}.dmg",
-      verified: "github.com/Bambosh/unofficial-homestuck-collection/"
+  url "https://github.com/Bambosh/unofficial-homestuck-collection/releases/download/v#{version}/The-Unofficial-Homestuck-Collection-#{version}.dmg"
   name "The Unofficial Homestuck Collection"
   desc "Offline viewer for the webcomic Homestuck"
   homepage "https://bambosh.github.io/unofficial-homestuck-collection/"

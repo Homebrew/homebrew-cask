@@ -2,8 +2,7 @@ cask "slicer" do
   version "5.12.3,6a61a0b02eb3d967f032af6c"
   sha256 "7904d7aa6aadc5ee5ea855ec7d28b33c24444daddd98684a8673a14f4c37d794"
 
-  url "https://slicer-packages.kitware.com/api/v1/item/#{version.csv.second}/download",
-      verified: "slicer-packages.kitware.com/"
+  url "https://slicer-packages.kitware.com/api/v1/item/#{version.csv.second}/download"
   name "3D Slicer"
   desc "Medical image processing and visualization system"
   homepage "https://www.slicer.org/"

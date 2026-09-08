@@ -1,9 +1,9 @@
 cask "plaud" do
   arch arm: "-arm64"
 
-  version "1.3.2"
-  sha256 arm:   "c2f306a7890868d9e15705e8c89a157da9c19901ccb171dc6b63bfc5a57af69a",
-         intel: "1bc2177392eef877f254af5fcebc42b14cfce72f048995458fdbe27597ad28fc"
+  version "1.3.7"
+  sha256 arm:   "27a772c9af849a22a5b872430103c3c2ee1a4fd4b5cb99c7212f32ba85dbce5f",
+         intel: "40a7796b83561709b39730c935cbee41aaa15afef0cfdd411af1f45766b6f41a"
 
   url "https://client-download.plaud.ai/desktop/v#{version.major}/Plaud-#{version}#{arch}.dmg"
   name "Plaud"

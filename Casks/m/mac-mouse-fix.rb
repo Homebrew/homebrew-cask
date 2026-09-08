@@ -2,8 +2,7 @@ cask "mac-mouse-fix" do
   version "3.0.8"
   sha256 "db164e45d30b2fd02ff12635ac17c5441ebfc542faefde6bb861596a798df8ae"
 
-  url "https://github.com/noah-nuebling/mac-mouse-fix/releases/download/#{version}/MacMouseFixApp.zip",
-      verified: "github.com/noah-nuebling/mac-mouse-fix/"
+  url "https://github.com/noah-nuebling/mac-mouse-fix/releases/download/#{version}/MacMouseFixApp.zip"
   name "Mac Mouse Fix"
   desc "Mouse utility to add gesture functions and smooth scrolling to 3rd party mice"
   homepage "https://macmousefix.com/"

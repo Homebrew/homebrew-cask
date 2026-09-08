@@ -1,17 +1,15 @@
 cask "switchy" do
-  version "1.1.4,70"
-  sha256 "de151649e8c0d3fa52f5f2b31db168b7d67325e3ac40109d25f8db9f5e4089b2"
+  version "1.1.6,82"
+  sha256 "0732cbe26c7caf19facc163e342d8c61fee7e30cfd222bd9197ace6dfab6b2a0"
 
-  url "https://mangobuns.com/switchy/downloads/Switchy-#{version.csv.first}.#{version.csv.second}.dmg"
+  url "https://github.com/benhursenabathi/mangobuns/releases/download/switchy-v#{version.csv.first}-build#{version.csv.second}/Switchy-#{version.csv.first}.dmg"
   name "Switchy"
   desc "Switch Magic Keyboard, Trackpad and Mouse between Macs"
   homepage "https://mangobuns.com/switchy/"
 
   livecheck do
     url "https://mangobuns.com/switchy/appcast.xml"
-    strategy :sparkle do |items|
-      items.find { |item| item.channel.nil? }&.nice_version
-    end
+    strategy :sparkle
   end
 
   auto_updates true

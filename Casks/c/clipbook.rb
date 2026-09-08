@@ -5,8 +5,7 @@ cask "clipbook" do
   sha256 arm:   "d59ad57f6bb8026c026e392e996eea2523fc8c9180e6a48be4981a491764d767",
          intel: "4525bdd33db37b24a995860fcc54d421b98090a293e2e16269fbd1a440f5bc1b"
 
-  url "https://f005.backblazeb2.com/file/clipbook/ClipBook-#{version}-#{arch}.dmg",
-      verified: "f005.backblazeb2.com/file/clipbook/"
+  url "https://f005.backblazeb2.com/file/clipbook/ClipBook-#{version}-#{arch}.dmg"
   name "ClipBook"
   desc "Clipboard history app"
   homepage "https://clipbook.app/"

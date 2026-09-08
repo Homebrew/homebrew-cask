@@ -2,8 +2,7 @@ cask "tla+-toolbox" do
   version "1.7.4"
   sha256 "258677703e28a65d2d85c75388756a51198041a2555923e52ad5d6925f5c5bd7"
 
-  url "https://github.com/tlaplus/tlaplus/releases/download/v#{version}/TLAToolbox-#{version}-macosx.cocoa.x86_64.zip",
-      verified: "github.com/tlaplus/tlaplus/"
+  url "https://github.com/tlaplus/tlaplus/releases/download/v#{version}/TLAToolbox-#{version}-macosx.cocoa.x86_64.zip"
   name "TLA+ Toolbox"
   desc "IDE for TLA+"
   homepage "https://lamport.azurewebsites.net/tla/toolbox.html"

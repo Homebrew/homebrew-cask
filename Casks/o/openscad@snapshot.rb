@@ -1,6 +1,6 @@
 cask "openscad@snapshot" do
-  version "2026.06.12"
-  sha256 "555be2ed313e67657b3d8ba3e1de0acd6141b982fd458776c52d3eda748f57c4"
+  version "2026.09.07"
+  sha256 "6b47f7cb7e4969b983a2322aca5a5a4c6822675d03d5dcfd66cb646d76e8c2c3"
 
   url "https://files.openscad.org/snapshots/OpenSCAD-#{version}.dmg"
   name "OpenSCAD"
@@ -18,7 +18,10 @@ cask "openscad@snapshot" do
   app "OpenSCAD.app"
   binary "#{appdir}/OpenSCAD.app/Contents/MacOS/OpenSCAD", target: "openscad"
 
+  uninstall quit: "org.openscad.OpenSCAD"
+
   zap trash: [
+    "~/Library/Application Support/OpenSCAD",
     "~/Library/Caches/org.openscad.OpenSCAD",
     "~/Library/Preferences/org.openscad.OpenSCAD.plist",
     "~/Library/Saved Application State/org.openscad.OpenSCAD.savedState",

@@ -2,8 +2,7 @@ cask "ba-connected" do
   version "1.85.0"
   sha256 "3628c2eab7ee4d36a7e1247e4d2ae5fc8f81e5c671c734dcb0e7912ff3e3a686"
 
-  url "https://downloads.bsn.cloud/BA%20connected-#{version}.dmg",
-      verified: "downloads.bsn.cloud/"
+  url "https://downloads.bsn.cloud/BA%20connected-#{version}.dmg"
   name "BrightAuthor:connected"
   desc "Configurator and manager for BrightSign devices"
   homepage "https://www.brightsign.biz/resources/software-downloads/"

@@ -2,8 +2,7 @@ cask "chime@alpha" do
   version "3.0.0,205"
   sha256 "c81932326b5b1a063c4540c03dff0a50acc6766fbc41b680b3706d2a40711db0"
 
-  url "https://github.com/ChimeHQ/Chime/releases/download/#{version.csv.second}/Chime.zip",
-      verified: "github.com/ChimeHQ/Chime/"
+  url "https://github.com/ChimeHQ/Chime/releases/download/#{version.csv.second}/Chime.zip"
   name "Chime"
   desc "Text and code editor"
   homepage "https://www.chimehq.com/"

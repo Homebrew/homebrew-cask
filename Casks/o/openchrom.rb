@@ -1,12 +1,11 @@
 cask "openchrom" do
   arch arm: "aarch64", intel: "x86_64"
 
-  version "1.6.26"
-  sha256 arm:   "580561abb3f59aba1d5f36e007e538ab40508d265bf1b5ff7fd1aef969e87536",
-         intel: "37d35c96620a520d930797c7153a242e7be3576bcf856d8fa5ba2dec73cb40cc"
+  version "1.6.31"
+  sha256 arm:   "8862346f08720b7363201b4cceff55e7dc1d89c81181d10d8f68a5023fa8dec4",
+         intel: "13204fd60fc6807f64c31110495183ba356447ca63f290c5f5fbccf9b7e251e0"
 
-  url "https://products.lablicate.com/openchrom/#{version}/OpenChrom_#{version}_#{arch}.dmg",
-      verified: "products.lablicate.com/openchrom/"
+  url "https://products.lablicate.com/openchrom/#{version}/OpenChrom_#{version}_#{arch}.dmg"
   name "OpenChrom"
   desc "Data analysis for analytical chemistry"
   homepage "https://www.openchrom.net/"
@@ -25,8 +24,11 @@ cask "openchrom" do
 
   app "OpenChrom.app"
 
+  uninstall quit: "net.openchrom.rcp.compilation.community.product.id"
+
   zap trash: [
     "~/.openchrom",
+    "~/Library/Preferences/net.openchrom.rcp.compilation.community.product.id.plist",
     "~/OpenChrom",
   ]
 end

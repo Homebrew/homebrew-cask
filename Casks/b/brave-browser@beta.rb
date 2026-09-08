@@ -2,18 +2,17 @@ cask "brave-browser@beta" do
   arch arm: "arm64", intel: "x64"
   folder = on_arch_conditional arm: "beta-arm64", intel: "beta"
 
-  sha256 arm:   "89bf349fd0b32d28d0fb85ed2bd2cafa26777c8bf7046c8182d78c13a122134a",
-         intel: "07b6d1a068f175bd7d8835adee57b594971de1aaed94e1fbad2cd620b84ec39c"
+  sha256 arm:   "6c6106ce367093f57d90db46ff879dedf71fd3d7916ffe7de330253f846330ed",
+         intel: "275729581bbcc9cd8aba508204e96b8f5d13e422388564ce15381b11d2eb8582"
 
   on_arm do
-    version "1.94.99.0"
+    version "1.95.96.0"
   end
   on_intel do
-    version "1.94.99.0"
+    version "1.95.96.0"
   end
 
-  url "https://updates-cdn.bravesoftware.com/sparkle/Brave-Browser/#{folder}/#{version.major_minor_patch.sub(".", "")}/Brave-Browser-Beta-#{arch}.dmg",
-      verified: "updates-cdn.bravesoftware.com/sparkle/Brave-Browser/"
+  url "https://updates-cdn.bravesoftware.com/sparkle/Brave-Browser/#{folder}/#{version.major_minor_patch.sub(".", "")}/Brave-Browser-Beta-#{arch}.dmg"
   name "Brave Beta"
   desc "Web browser focusing on privacy"
   homepage "https://brave.com/download-beta/"

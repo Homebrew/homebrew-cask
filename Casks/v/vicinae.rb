@@ -1,9 +1,8 @@
 cask "vicinae" do
-  version "0.24.0"
-  sha256 "a3ced923ebe07da1373624c734404e983990752ece5f0bfe4dfacc516af8bd98"
+  version "0.28.1"
+  sha256 "6cf27bfcb83b127a3af4a3df32267e171cd58046f241d983fd166dc238617039"
 
-  url "https://github.com/vicinaehq/vicinae/releases/download/v#{version}/Vicinae.dmg",
-      verified: "github.com/vicinaehq/vicinae/"
+  url "https://github.com/vicinaehq/vicinae/releases/download/v#{version}/Vicinae.dmg"
   name "Vicinae"
   desc "Application launcher and command palette"
   homepage "https://vicinae.com/"

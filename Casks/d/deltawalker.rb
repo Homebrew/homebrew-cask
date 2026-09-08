@@ -14,8 +14,7 @@ cask "deltawalker" do
     }
   end
 
-  url "https://deltawalker.s3.amazonaws.com/DeltaWalker-#{version}_#{arch}.dmg",
-      verified: "deltawalker.s3.amazonaws.com/"
+  url "https://deltawalker.s3.amazonaws.com/DeltaWalker-#{version}_#{arch}.dmg"
   name "DeltaWalker"
   desc "Tool to compare and synchronise files and folders"
   homepage "https://www.deltawalker.com/"

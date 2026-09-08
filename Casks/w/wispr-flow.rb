@@ -1,12 +1,11 @@
 cask "wispr-flow" do
   arch arm: "arm64", intel: "x64"
 
-  version "1.6.399"
-  sha256 arm:   "483a169acf5080a78883af8a51589033daa159f99aaf903d28ab74fbba0642d3",
-         intel: "c7d8169f702186822f1078cf26dec149d600a2b9fbbe883766d56adaf0e1a66b"
+  version "1.6.793"
+  sha256 arm:   "2b85ad41529e82cc6f1a77117b9b3ceec335a2eea5b32befbcb079565c046e15",
+         intel: "9cbfa5b8197f84fd25047d0ad6b5deda240244c8b3b4911712c4fe12887fc52b"
 
-  url "https://dl.wisprflow.com/wispr-flow/darwin/#{arch}/dmgs/Flow-v#{version}.dmg",
-      verified: "dl.wisprflow.com/wispr-flow/"
+  url "https://dl.wisprflow.com/wispr-flow/darwin/#{arch}/dmgs/Flow-v#{version}.dmg"
   name "Wispr Flow"
   desc "Voice-to-text dictation with AI-powered auto-editing"
   homepage "https://wisprflow.ai/"

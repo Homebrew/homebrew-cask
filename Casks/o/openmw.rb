@@ -12,8 +12,7 @@ cask "openmw" do
     depends_on macos: :ventura
   end
 
-  url "https://github.com/OpenMW/openmw/releases/download/openmw-#{version}/OpenMW-#{version}-macOS-#{arch}.dmg",
-      verified: "github.com/OpenMW/openmw/"
+  url "https://github.com/OpenMW/openmw/releases/download/openmw-#{version}/OpenMW-#{version}-macOS-#{arch}.dmg"
   name "OpenMW"
   desc "Open-source open-world RPG game engine that supports playing Morrowind"
   homepage "https://openmw.org/"

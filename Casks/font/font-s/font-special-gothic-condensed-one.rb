@@ -2,8 +2,7 @@ cask "font-special-gothic-condensed-one" do
   version :latest
   sha256 :no_check
 
-  url "https://github.com/google/fonts/raw/main/ofl/specialgothiccondensedone/SpecialGothicCondensedOne-Regular.ttf",
-      verified: "github.com/google/fonts/"
+  url "https://github.com/google/fonts/raw/main/ofl/specialgothiccondensedone/SpecialGothicCondensedOne-Regular.ttf"
   name "Special Gothic Condensed One"
   homepage "https://fonts.google.com/specimen/Special+Gothic+Condensed+One"
 

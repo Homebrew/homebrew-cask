@@ -2,8 +2,7 @@ cask "do-not-disturb" do
   version "2.1.0"
   sha256 "af4a0e55d20ff5a28b5c91a9517f70bdba77c182174c24a93d234347e2885da1"
 
-  url "https://github.com/objective-see/DoNotDisturb/releases/download/v#{version}/DoNotDisturb_#{version}.zip",
-      verified: "github.com/objective-see/DoNotDisturb/"
+  url "https://github.com/objective-see/DoNotDisturb/releases/download/v#{version}/DoNotDisturb_#{version}.zip"
   name "Do Not Disturb"
   desc "Open-source physical access (aka 'evil maid') attack detector"
   homepage "https://objective-see.org/products/dnd.html"

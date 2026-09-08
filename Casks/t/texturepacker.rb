@@ -1,6 +1,6 @@
 cask "texturepacker" do
-  version "8.2.0"
-  sha256 "3aca7b1040985310b15e59e1e0d546d5e87bf7af1e7f2e925c0813239ffb322d"
+  version "8.2.2"
+  sha256 "4dafd317b7ecb1940c9592be16dfd4acd15811a5efdc2fd2597d8ce91f3a9374"
 
   url "https://www.codeandweb.com/download/texturepacker/#{version}/TexturePacker-#{version}.dmg"
   name "TexturePacker"
@@ -12,11 +12,13 @@ cask "texturepacker" do
     strategy :sparkle
   end
 
+  auto_updates true
   depends_on macos: :ventura
 
   app "TexturePacker.app"
 
-  uninstall delete: "/usr/local/bin/TexturePacker"
+  uninstall quit:   "de.code-and-web.TexturePacker",
+            delete: "/usr/local/bin/TexturePacker"
 
   zap trash: [
     "~/Library/Caches/code-and-web.de/TexturePacker",

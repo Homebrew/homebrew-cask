@@ -22,8 +22,7 @@ cask "candy-crisis" do
     app_image "CandyCrisis-#{version}-linux-#{arch}.AppImage", target: "Candy Crisis.AppImage"
   end
 
-  url "https://github.com/jorio/CandyCrisis/releases/download/v#{version}/CandyCrisis-#{version}-#{url_end}",
-      verified: "github.com/jorio/CandyCrisis/"
+  url "https://github.com/jorio/CandyCrisis/releases/download/v#{version}/CandyCrisis-#{version}-#{url_end}"
   name "Candy Crisis"
   desc "Tile matching puzzle/action game"
   homepage "https://candycrisis.sourceforge.net/"

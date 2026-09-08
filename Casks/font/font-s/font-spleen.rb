@@ -6,11 +6,11 @@ cask "font-spleen" do
   name "Spleen"
   homepage "https://github.com/fcambus/spleen"
 
-  font "spleen-#{version}/spleen-6x12.otf"
-  font "spleen-#{version}/spleen-8x16.otf"
   font "spleen-#{version}/spleen-12x24.otf"
   font "spleen-#{version}/spleen-16x32.otf"
   font "spleen-#{version}/spleen-32x64.otf"
+  font "spleen-#{version}/spleen-6x12.otf"
+  font "spleen-#{version}/spleen-8x16.otf"
 
   # No zap stanza required
 end

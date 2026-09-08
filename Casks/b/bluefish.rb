@@ -2,8 +2,7 @@ cask "bluefish" do
   version "2.4.2"
   sha256 "c10c1d90a61319553f85febde2955d9684de23a2e5ab39210df773b9f46855b5"
 
-  url "https://www.bennewitz.com/bluefish/stable/binaries/macosx/Bluefish-#{version}.dmg",
-      verified: "bennewitz.com/"
+  url "https://www.bennewitz.com/bluefish/stable/binaries/macosx/Bluefish-#{version}.dmg"
   name "Bluefish"
   desc "Open source code editor"
   homepage "https://bluefish.openoffice.nl/index.html"

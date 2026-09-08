@@ -5,8 +5,7 @@ cask "prowlarr" do
   sha256 arm:   "c6233cd942aad3c382c2660ad0004f942a3cd54c4fb8b805e14d2cd1d6b2b264",
          intel: "c6e5074b431259f4ddbf26aba35e618a920154ccb9a342bbc072e0f817c8331d"
 
-  url "https://github.com/Prowlarr/Prowlarr/releases/download/v#{version}/Prowlarr.master.#{version}.osx-app-core-#{arch}.zip",
-      verified: "github.com/Prowlarr/Prowlarr/"
+  url "https://github.com/Prowlarr/Prowlarr/releases/download/v#{version}/Prowlarr.master.#{version}.osx-app-core-#{arch}.zip"
   name "Prowlarr"
   desc "Indexer manager/proxy for various PVR apps"
   homepage "https://prowlarr.com/"

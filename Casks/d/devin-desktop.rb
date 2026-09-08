@@ -1,15 +1,14 @@
 cask "devin-desktop" do
   arch arm: "arm64", intel: "x64"
 
-  version "3.6.27,0becb483ee8498d49deadf6aefe8c24f58b8007e"
-  sha256 arm:   "ab28d18c4bc25befa6ab70e67a1c06eb53ec86101d23d8f27975adc59cf6ea93",
-         intel: "4b465c61e2028422c62741483eeb5db95d88a0be44a06807d43852763cf244df"
+  version "3.8.20,2d9020110aa91587b3c3b0fcf7d1faaf601fc7b8"
+  sha256 arm:   "2d606a3cf77b0d7da96b68e22edd5a353731c6aec772f41e9724c83f74897a0e",
+         intel: "d8dea3387c72e20c47d908a35c06354e68c55b06756fdb1895f75ca1b603458d"
 
-  url "https://windsurf-stable.codeiumdata.com/darwin-#{arch}-dmg/stable/#{version.csv.second}/Devin-darwin-#{arch}-#{version.csv.first}.dmg",
-      verified: "windsurf-stable.codeiumdata.com/"
+  url "https://windsurf-stable.codeiumdata.com/darwin-#{arch}-dmg/stable/#{version.csv.second}/Devin-darwin-#{arch}-#{version.csv.first}.dmg"
   name "Devin Desktop"
   desc "Agentic IDE with AI agent command center"
-  homepage "https://devin.ai/desktop"
+  homepage "https://devin.ai/desktop", browsed: "2026-09-07"
 
   livecheck do
     url "https://windsurf-stable.codeium.com/api/update/darwin-#{arch}-dmg/stable/latest"

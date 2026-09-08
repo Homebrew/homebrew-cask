@@ -1,9 +1,5 @@
 cask "lingon-x" do
-  on_catalina :or_older do
-    version "8.4.9"
-    sha256 "c1c839e8dc13bd295f2080980c5bea22299c33f3333b7c6981161b46d6f021d8"
-  end
-  on_big_sur do
+  on_big_sur :or_older do
     version "8.4.9"
     sha256 "c1c839e8dc13bd295f2080980c5bea22299c33f3333b7c6981161b46d6f021d8"
   end

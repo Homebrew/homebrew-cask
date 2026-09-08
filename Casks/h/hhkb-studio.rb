@@ -2,8 +2,7 @@ cask "hhkb-studio" do
   version "1.1.2"
   sha256 "b58e77841517952f4ec218dab600ae70c20a3ac49860f22eccfb67eab967288f"
 
-  url "https://origin.pfultd.com/downloads/hhkbstudio/mac/HHKBStudiokeymapTool_#{version.no_dots}ma.dmg",
-      verified: "origin.pfultd.com/downloads/hhkbstudio/mac/"
+  url "https://origin.pfultd.com/downloads/hhkbstudio/mac/HHKBStudiokeymapTool_#{version.no_dots}ma.dmg"
   name "Happy Hacking Keyboard Studio Keymap Tool"
   desc "Customize keymap, shortcuts, and gesture pad behavior on HHKB Studio"
   homepage "https://happyhackingkb.com/"

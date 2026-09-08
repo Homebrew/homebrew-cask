@@ -1,18 +1,19 @@
 cask "clarify" do
-  version "1.6.10"
-  sha256 "79c816403f79f59f6d13252e4d5f7e6b82c87b72cb85019dfcd7c3e9f4fb248d"
+  version "1.7.6"
+  sha256 "7c4a49d5d75d316cfc9ae096592952c17ff2a19e0210988cfb3b9074d6b27066"
 
-  url "https://github.com/clarifyhq/desktop-app-releases/releases/download/v#{version}/Clarify.dmg",
-      verified: "github.com/clarifyhq/desktop-app-releases/"
+  url "https://github.com/clarifyhq/desktop-app-releases/releases/download/v#{version}/Clarify.dmg"
   name "Clarify"
   desc "Autonomous CRM"
   homepage "https://clarify.ai/"
 
   auto_updates true
   depends_on arch: :arm64
-  depends_on macos: :monterey
+  depends_on macos: :ventura
 
   app "Clarify.app"
+
+  uninstall quit: "com.clarify.desktop"
 
   zap trash: [
     "~/Library/Application Support/clarify-desktop",

@@ -2,8 +2,7 @@ cask "x32-edit" do
   version "4.4.1,YSCXK_yETESoGXDjR7eEMA,8XnUpbE1hEqmH3z3FzdNAw"
   sha256 "65ad5512474beb5c54da421185d9a7e9479c95237fd6ca6c6f914c30b3dcd5ef"
 
-  url "https://cdn.mediavalet.com/aunsw/musictribe/#{version.csv.second}/#{version.csv.third}/Original/X32-Edit_MAC_#{version.csv.first}.zip",
-      verified: "mediavalet.com/aunsw/musictribe/"
+  url "https://cdn.mediavalet.com/aunsw/musictribe/#{version.csv.second}/#{version.csv.third}/Original/X32-Edit_MAC_#{version.csv.first}.zip"
   name "X32 Edit"
   desc "Remote control for Behringer X32 audio consoles"
   homepage "https://www.behringer.com/product.html?modelCode=0603-ACE"

@@ -12,11 +12,11 @@ cask "font-hermit" do
   end
 
   font "Hermit-Bold.otf"
-  font "Hermit-RegularItalic.otf"
-  font "Hermit-LightItalic.otf"
-  font "Hermit-Light.otf"
-  font "Hermit-Regular.otf"
   font "Hermit-BoldItalic.otf"
+  font "Hermit-Light.otf"
+  font "Hermit-LightItalic.otf"
+  font "Hermit-Regular.otf"
+  font "Hermit-RegularItalic.otf"
 
   # No zap stanza required
 end

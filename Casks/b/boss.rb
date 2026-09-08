@@ -1,9 +1,8 @@
 cask "boss" do
-  version "9.4.0"
-  sha256 "a8c89a8b5612207bc6787179b9248b7850040e9d88f33f4b3f76ae827bb88c00"
+  version "9.5.9"
+  sha256 "a96f3a3c421ad6f6e801c893a04cd603b8340a47526831596bc22fff57da04b8"
 
-  url "https://github.com/risa-labs-inc/BOSS-Releases/releases/download/v#{version}/BOSS-#{version}-Universal.dmg",
-      verified: "github.com/risa-labs-inc/BOSS-Releases/"
+  url "https://github.com/risa-labs-inc/BOSS-Releases/releases/download/v#{version}/BOSS-#{version}-Universal.dmg"
   name "BOSS"
   desc "AI-powered workspace for complex business operations"
   homepage "https://www.risalabs.ai/"

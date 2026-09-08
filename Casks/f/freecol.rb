@@ -5,8 +5,7 @@ cask "freecol" do
   sha256 arm:   "3bf9b810ef9288440620090869b0778c52d91c234f92d728d3c8b138e38676ac",
          intel: "2f330f6a0b884374fa9ef8308547dccb3ebfb2d4199ee89321daabeb1fdc7a7b"
 
-  url "https://downloads.sourceforge.net/freecol/FreeCol#{arch}-#{version}.dmg",
-      verified: "sourceforge.net/freecol/"
+  url "https://downloads.sourceforge.net/freecol/FreeCol#{arch}-#{version}.dmg"
   name "FreeCol"
   desc "Turn-based strategy game"
   homepage "https://www.freecol.org/"

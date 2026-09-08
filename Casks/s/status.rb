@@ -2,8 +2,7 @@ cask "status" do
   version "2.38.2,3ef171"
   sha256 "af412ec0060a6075b485359f9299a72001a55c17dbd5da80e4bfdb60eaa3e64b"
 
-  url "https://github.com/status-im/status-desktop/releases/download/#{version.csv.first}/StatusIm-Desktop-#{version.csv.first}-#{version.csv.second}-aarch64.dmg",
-      verified: "github.com/status-im/status-desktop/releases/download/"
+  url "https://github.com/status-im/status-desktop/releases/download/#{version.csv.first}/StatusIm-Desktop-#{version.csv.first}-#{version.csv.second}-aarch64.dmg"
   name "Status"
   desc "Decentralised wallet and messenger"
   homepage "https://status.app/"

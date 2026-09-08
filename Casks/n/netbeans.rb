@@ -5,8 +5,7 @@ cask "netbeans" do
   sha256 arm:   "d7af84ab960540e8a0769e28b400ceac6cb87bd9d2626487db3a08d0cb52f929",
          intel: "5ac8845161fc9bb43c728e586eb29e0766e950f61685153039c7cf981598c4ba"
 
-  url "https://github.com/Friends-of-Apache-NetBeans/netbeans-installers/releases/download/#{version.csv.second}/Apache-NetBeans-#{version.csv.first}-#{version.csv.third}-#{arch}.pkg",
-      verified: "github.com/Friends-of-Apache-NetBeans/netbeans-installers/"
+  url "https://github.com/Friends-of-Apache-NetBeans/netbeans-installers/releases/download/#{version.csv.second}/Apache-NetBeans-#{version.csv.first}-#{version.csv.third}-#{arch}.pkg"
   name "NetBeans IDE"
   desc "Development environment, tooling platform and application framework"
   homepage "https://netbeans.apache.org/"

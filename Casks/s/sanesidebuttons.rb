@@ -17,8 +17,7 @@ cask "sanesidebuttons" do
     end
   end
 
-  url "https://github.com/thealpa/SaneSideButtons/releases/download/#{version}/SaneSideButtons.dmg",
-      verified: "github.com/thealpa/SaneSideButtons/"
+  url "https://github.com/thealpa/SaneSideButtons/releases/download/#{version}/SaneSideButtons.dmg"
   name "SaneSideButtons"
   desc "Menu bar app that enables system-wide navigation using side mouse buttons"
   homepage "https://janhuelsmann.com/sanesidebuttons"

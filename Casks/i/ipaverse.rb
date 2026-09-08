@@ -1,11 +1,16 @@
 cask "ipaverse" do
-  version "2.2.0"
-  sha256 "7dc3b941beb07f8546db011e6c7848d9f7397bef6dae627e2f2d91704265143d"
+  version "2.4.0"
+  sha256 "bee5454a462a3a0c593b3209b47bfc0c1cef9f161e76a68b7a67b8237f906997"
 
   url "https://github.com/bahattinkoc/ipaverse/releases/download/v#{version}/ipaverse.dmg"
   name "ipaverse"
-  desc "Tool for downloading and managing iOS apps from the App Store"
+  desc "App Store package downloader, IPA re-signer, and security analysis toolkit"
   homepage "https://github.com/bahattinkoc/ipaverse"
+
+  livecheck do
+    url :url
+    regex(/^v?(\d+(?:\.\d+)+)$/i)
+  end
 
   depends_on macos: :sonoma
 

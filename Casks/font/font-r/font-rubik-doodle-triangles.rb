@@ -2,8 +2,7 @@ cask "font-rubik-doodle-triangles" do
   version :latest
   sha256 :no_check
 
-  url "https://github.com/google/fonts/raw/main/ofl/rubikdoodletriangles/RubikDoodleTriangles-Regular.ttf",
-      verified: "github.com/google/fonts/"
+  url "https://github.com/google/fonts/raw/main/ofl/rubikdoodletriangles/RubikDoodleTriangles-Regular.ttf"
   name "Rubik Doodle Triangles"
   homepage "https://fonts.google.com/specimen/Rubik+Doodle+Triangles"
 

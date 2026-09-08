@@ -2,8 +2,7 @@ cask "clariti" do
   version "1.2.0,81"
   sha256 "94c4f3a78c71c9014f615887a4027d2d00733a14a56b17dc6c81e991cb523055"
 
-  url "https://d3dsf8uz95lw15.cloudfront.net/builds/macos/Clariti-#{version.tr(",", ".")}.dmg",
-      verified: "d3dsf8uz95lw15.cloudfront.net/"
+  url "https://d3dsf8uz95lw15.cloudfront.net/builds/macos/Clariti-#{version.tr(",", ".")}.dmg"
   name "Clariti"
   desc "Focus and relaxation soundscapes"
   homepage "https://clariti.io/"

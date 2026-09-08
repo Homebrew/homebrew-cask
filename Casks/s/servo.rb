@@ -1,12 +1,11 @@
 cask "servo" do
   arch arm: "aarch64", intel: "x86_64"
 
-  version "2026-08-03"
-  sha256 arm:   "bc8316494ecc16596a65aa60f53aa68f3726621f8074dff9c8c7a01305754404",
-         intel: "113aacecc15ca89e039ddb89cc3c9dc0ab0adbb4a1c225e4b235fa23d96493e7"
+  version "2026-08-30"
+  sha256 arm:   "306c27f20bb3f3833a97070baae087b77c88ad5318b8975531e4ee7c576f32f0",
+         intel: "ed721a34485bd59171d8c62c959cb485bc7a7c627e348da32f860c0d8b311aa7"
 
-  url "https://github.com/servo/servo-nightly-builds/releases/download/#{version}/servo-#{arch}-apple-darwin.dmg",
-      verified: "github.com/servo/servo-nightly-builds/"
+  url "https://github.com/servo/servo-nightly-builds/releases/download/#{version}/servo-#{arch}-apple-darwin.dmg"
   name "Servo"
   desc "Parallel browser engine"
   homepage "https://servo.org/"

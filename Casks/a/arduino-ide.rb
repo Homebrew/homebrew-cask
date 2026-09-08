@@ -29,8 +29,7 @@ cask "arduino-ide" do
     app_image "arduino-ide_#{version}_Linux_#{arch}.AppImage", target: "ArduinoIDE.AppImage"
   end
 
-  url "https://github.com/arduino/arduino-ide/releases/download/#{version}/arduino-ide_#{version}_#{os}_#{arch}.#{url_end}",
-      verified: "github.com/arduino/arduino-ide/"
+  url "https://github.com/arduino/arduino-ide/releases/download/#{version}/arduino-ide_#{version}_#{os}_#{arch}.#{url_end}"
   name "Arduino IDE"
   desc "Electronics prototyping platform"
   homepage "https://www.arduino.cc/en/software"

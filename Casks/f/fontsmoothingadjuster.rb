@@ -2,8 +2,7 @@ cask "fontsmoothingadjuster" do
   version "2.0.0"
   sha256 "187401950b827c58262a9bb86878c5dd5820550c00ca414f971ce82837d7419f"
 
-  url "https://github.com/bouncetechnologies/Font-Smoothing-Adjuster/releases/download/v#{version}/Font.Smoothing.Adjuster.#{version}.dmg",
-      verified: "github.com/bouncetechnologies/Font-Smoothing-Adjuster/"
+  url "https://github.com/bouncetechnologies/Font-Smoothing-Adjuster/releases/download/v#{version}/Font.Smoothing.Adjuster.#{version}.dmg"
   name "Font Smoothing Adjuster"
   desc "Re-enable the font smoothing controls"
   homepage "https://www.fontsmoothingadjuster.com/"

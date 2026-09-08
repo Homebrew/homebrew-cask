@@ -2,8 +2,7 @@ cask "dynamodb-local" do
   version "2026-07-31"
   sha256 "f80bcec477f85f57e2c77f8d54aa6b672a8403fceff0c450560aee1cf6c21163"
 
-  url "https://d1ni2b6xgvw0s0.cloudfront.net/v2.x/dynamodb_local_#{version}.tar.gz",
-      verified: "d1ni2b6xgvw0s0.cloudfront.net/"
+  url "https://d1ni2b6xgvw0s0.cloudfront.net/v2.x/dynamodb_local_#{version}.tar.gz"
   name "Amazon DynamoDB Local"
   desc "Development tool for DynamoDB"
   homepage "https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/DynamoDBLocal.html"

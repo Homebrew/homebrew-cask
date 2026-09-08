@@ -5,8 +5,7 @@ cask "salt" do
   sha256 arm:   "9a227cd679b5ec276957e558bb0f87a014ee2b84bc72c70810494a7b8b73defa",
          intel: "50affec75bc4036cc5d5424e49fee2d11b7daa4778afdabc58cd2b9cc3421b40"
 
-  url "https://packages.broadcom.com/artifactory/saltproject-generic/macos/#{version}/salt-#{version}-py3-#{arch}.pkg",
-      verified: "packages.broadcom.com/artifactory/saltproject-generic/"
+  url "https://packages.broadcom.com/artifactory/saltproject-generic/macos/#{version}/salt-#{version}-py3-#{arch}.pkg"
   name "Salt"
   desc "Automation and infrastructure management engine"
   homepage "https://saltproject.io/"

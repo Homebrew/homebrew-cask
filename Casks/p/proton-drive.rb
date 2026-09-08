@@ -1,6 +1,6 @@
 cask "proton-drive" do
-  version "3.0.0"
-  sha256 "b8c2b8b86b9c526c02c327bd27d25b279ce60ed96154f4ed304402f2e911647f"
+  version "3.0.3"
+  sha256 "e89c467632a91815d5edace10917f8db19a712d7c44dbcc0dbf167b274e63951"
 
   url "https://proton.me/download/drive/macos/#{version}/ProtonDrive-#{version}.dmg"
   name "Proton Drive"
@@ -21,6 +21,8 @@ cask "proton-drive" do
   depends_on macos: :ventura
 
   app "Proton Drive.app"
+
+  uninstall launchctl: "ch.protonmail.drive.agent"
 
   zap trash: [
     "~/Library/Application Scripts/ch.protonmail.drive*",

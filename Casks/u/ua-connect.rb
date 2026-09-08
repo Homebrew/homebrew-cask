@@ -1,6 +1,6 @@
 cask "ua-connect" do
-  version "1.9.5,3743"
-  sha256 "59034c71eaae579d95d2cab936494e5a8ed8a5b03ad6d460e50c9fba73d8deb9"
+  version "1.9.6,3797"
+  sha256 "f0e901d41994ffea7bbeaac1bf7a933f84e6bede68734c385e437167a392ecda"
 
   url "https://builds.uaudio.com/apps/UA_Connect/UA_Connect_#{version.csv.first.dots_to_underscores}_#{version.csv.second}_Mac.dmg"
   name "UA Connect"
@@ -23,7 +23,10 @@ cask "ua-connect" do
 
   app "UA Connect.app"
 
-  uninstall launchctl: "com.uaudio.bsd.helper",
+  uninstall launchctl: [
+              "com.uaudio.bsd.helper",
+              "com.uaudio.uac.launch-helper",
+            ],
             quit:      "com.uaudio.ua-connect",
             delete:    [
               "/Library/LaunchDaemons/com.uaudio.bsd.helper.plist",

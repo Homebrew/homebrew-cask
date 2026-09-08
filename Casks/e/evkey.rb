@@ -2,8 +2,7 @@ cask "evkey" do
   version "3.3.10"
   sha256 :no_check
 
-  url "https://github.com/lamquangminh/EVKey/releases/download/Release/EVKeyMac.zip",
-      verified: "github.com/lamquangminh/EVKey/"
+  url "https://github.com/lamquangminh/EVKey/releases/download/Release/EVKeyMac.zip"
   name "EVKey"
   desc "Vietnamese keyboard"
   homepage "https://evkeyvn.com/"

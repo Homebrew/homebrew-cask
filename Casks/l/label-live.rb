@@ -1,6 +1,6 @@
 cask "label-live" do
-  version "4.13.0"
-  sha256 "2e74705cfb87b9bf77f36f13c8b983c640a7aca80f40e5810ac3ccb3a6520e7d"
+  version "4.14.2"
+  sha256 "cc85c729a6b6dc4b9a90a1948c3184b6019c6e8ee3de5906fc488a9942401bac"
 
   url "https://download.label.live/Label-LIVE-#{version}.dmg"
   name "Label LIVE"

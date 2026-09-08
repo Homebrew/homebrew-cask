@@ -2,8 +2,7 @@ cask "threema-work" do
   version "1.2.50"
   sha256 :no_check
 
-  url "https://releases.threema.ch/web-electron/v1/release/Threema-Work-Latest.dmg",
-      verified: "releases.threema.ch/"
+  url "https://releases.threema.ch/web-electron/v1/release/Threema-Work-Latest.dmg"
   name "Threema Work"
   desc "End-to-end encrypted instant messaging application"
   homepage "https://threema.com/products/work"

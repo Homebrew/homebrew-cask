@@ -1,6 +1,6 @@
 cask "jiba" do
-  version "1.5.0"
-  sha256 "d2e44e8023f8e906874102d0b52c7650dc53bc9ee06046ac085c663ade772807"
+  version "1.5.1"
+  sha256 "a17c5adde186d04aae21098feb328dfd14be212e3e0b5fa44bfcac97b190b037"
 
   url "https://hee.ink/updates/stable/JiBA-#{version}.dmg"
   name "JiBA"
@@ -13,9 +13,11 @@ cask "jiba" do
   end
 
   auto_updates true
-  depends_on macos: :ventura
+  depends_on macos: :sonoma
 
   app "JiBA.app"
+
+  uninstall quit: "ink.hee.jibapplemusic"
 
   zap trash: [
     "~/.jibam",

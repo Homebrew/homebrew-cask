@@ -6,15 +6,14 @@ cask "gcc-arm-embedded" do
   pkg_version = nil
   gcc_version = nil
   on_arm do
-    version "15.2.rel1"
-    pkg_version = "15.2.rel1"
-    gcc_version = "15.2.1"
-    sha256 "396aacf7bb81126fed0de66f17e2d0009de373b667abbcc7855afab43628224f"
+    version "15.3.rel1"
+    pkg_version = "15.3.rel1"
+    gcc_version = "15.3.1"
+    sha256 "5fb58dc3bd6684e70a02bd1c654a6b91f044cda241eb3ae663a7b9170491d7b2"
 
     livecheck do
-      url "https://developer.arm.com/downloads/-/arm-gnu-toolchain-downloads",
-          user_agent: :curl
-      regex(/href=.*?arm-gnu-toolchain-(\d+\.\d+\.\w+)-darwin-(?:\w+)-arm-none-eabi\.pkg/i)
+      url "https://gitlab.arm.com/tooling/gnu-toolchains-for-arm/-/raw/main/README.md"
+      regex(%r{\([^)]*?releases/v?(\d+(?:\.\d+)+(?:[._-]rel\d+)?)[?)]}i)
     end
 
     binary "/Applications/ArmGNUToolchain/#{pkg_version}/arm-none-eabi/bin/arm-none-eabi-gstack"
@@ -30,11 +29,10 @@ cask "gcc-arm-embedded" do
     end
   end
 
-  url "https://developer.arm.com/-/media/Files/downloads/gnu/#{version}/binrel/arm-gnu-toolchain-#{version}-darwin-#{arch}-arm-none-eabi.pkg",
-      user_agent: :curl
+  url "https://gitlab.arm.com/api/v4/projects/tooling%2Fgnu-toolchains-for-arm/packages/generic/gnu-toolchain/#{version}/arm-gnu-toolchain-#{version}-darwin-#{arch}-arm-none-eabi.pkg"
   name "GCC ARM Embedded"
   desc "Pre-built GNU bare-metal toolchain for 32-bit Arm processors"
-  homepage "https://developer.arm.com/Tools%20and%20Software/GNU%20Toolchain"
+  homepage "https://developer.arm.com/tools-and-software/gnu-toolchain"
 
   depends_on :macos
 

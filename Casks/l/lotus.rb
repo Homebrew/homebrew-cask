@@ -2,8 +2,7 @@ cask "lotus" do
   version "1.3.3"
   sha256 "198646e1fd02c07c2695b7d1ffcda1473103734f971b13524440e4fdf4fee1b0"
 
-  url "https://app-updates.vadimdemedes.com/lotus/download/Lotus-#{version}-mac.zip",
-      verified: "app-updates.vadimdemedes.com/lotus/download/"
+  url "https://app-updates.vadimdemedes.com/lotus/download/Lotus-#{version}-mac.zip"
   name "Lotus"
   desc "Keep up with GitHub notifications"
   homepage "https://getlotus.app/"

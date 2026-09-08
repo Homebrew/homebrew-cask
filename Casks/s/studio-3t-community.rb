@@ -6,8 +6,7 @@ cask "studio-3t-community" do
   sha256 arm:   "8bb1055aacb27d40b56ee5183ef40a86d6d44d84e85602c6f0ad71bf997c5031",
          intel: "3989252ae68ab2700a766490dcb3fa20db1757a41ec865c59ad0ff2f6382b994"
 
-  url "https://download-ce.studio3t.com/studio-3t/mac#{arch}/#{version}/Studio-3T-Community-Edition.dmg",
-      verified: "download-ce.studio3t.com/"
+  url "https://download-ce.studio3t.com/studio-3t/mac#{arch}/#{version}/Studio-3T-Community-Edition.dmg"
   name "Studio 3T Community Edition"
   desc "IDE, client, and GUI for MongoDB"
   homepage "https://robomongo.org/"

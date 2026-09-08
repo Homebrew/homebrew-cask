@@ -1,9 +1,8 @@
 cask "telegram-desktop" do
-  version "7.0.7"
-  sha256 "8d27509046e35e262886f3b62d7390ef4eaa316638d996a62b60e0d2cf6daf09"
+  version "7.2.5"
+  sha256 "ffbdd94ab72b4c691edd167bdce2721cbded3010f54431ca6d6cf436a45d50b9"
 
-  url "https://updates.tdesktop.com/tmac/tsetup.#{version}.dmg",
-      verified: "updates.tdesktop.com/tmac/"
+  url "https://updates.tdesktop.com/tmac/tsetup.#{version}.dmg"
   name "Telegram Desktop"
   desc "Desktop client for Telegram messenger"
   homepage "https://desktop.telegram.org/"

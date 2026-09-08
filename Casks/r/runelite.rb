@@ -5,8 +5,7 @@ cask "runelite" do
   sha256 arm:   "ab1ff4b62998dfcdca740dee08bf199f33cbcbfba57718803a66354722cf8c04",
          intel: "cffce9ea15ec8a28779007b626a0b324016bf181bef338f81a8a6d63d81b1f56"
 
-  url "https://github.com/runelite/launcher/releases/download/#{version}/RuneLite-#{arch}.dmg",
-      verified: "github.com/runelite/launcher/"
+  url "https://github.com/runelite/launcher/releases/download/#{version}/RuneLite-#{arch}.dmg"
   name "RuneLite"
   desc "Client for Old School RuneScape"
   homepage "https://runelite.net/"

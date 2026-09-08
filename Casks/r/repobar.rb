@@ -1,9 +1,8 @@
 cask "repobar" do
-  version "0.8.7"
-  sha256 "c359a24f6a1108fb5254a5c099939de7b2ae5e21901dad51530b452662ece1a3"
+  version "0.9.0"
+  sha256 "2168685f4eddd5c0055be44434ec6b4486b99a6f9bdbc9c025567f5d1e0738b0"
 
-  url "https://github.com/steipete/RepoBar/releases/download/v#{version}/RepoBar-#{version}.zip",
-      verified: "github.com/steipete/RepoBar/"
+  url "https://github.com/steipete/RepoBar/releases/download/v#{version}/RepoBar-#{version}.zip"
   name "RepoBar"
   desc "Menu bar dashboard for GitHub repository health"
   homepage "https://repobar.app/"

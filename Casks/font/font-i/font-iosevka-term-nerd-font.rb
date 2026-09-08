@@ -1,6 +1,6 @@
 cask "font-iosevka-term-nerd-font" do
-  version "3.5.0"
-  sha256 "27027f7c31866b9d96edfdcf15b72fec19ede01ec29f03861c292c0df21a20bb"
+  version "3.5.1"
+  sha256 "054a4a369cdcc5d57e9bc91ea56dfefd66c71c253dcb0c0d7b72c0810373da26"
 
   url "https://github.com/ryanoasis/nerd-fonts/releases/download/v#{version}/IosevkaTerm.tar.xz"
   name "IosevkaTerm Nerd Font (Iosevka Term)"

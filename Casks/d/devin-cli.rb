@@ -2,14 +2,14 @@ cask "devin-cli" do
   arch arm: "aarch64", intel: "x86_64"
   os macos: "apple-darwin", linux: "unknown-linux"
 
-  version "3000.3.27"
+  version "3000.6.14"
 
   on_macos do
-    sha256 arm:   "ec047ea396d53fc370c1c7c6de211637585cf99a5c5cd5dcdbf7e4c7f2a20626",
-           intel: "2d67b0c3aeee4fa98d022ce13925573d6c18f2666927fef79672c1abc1aff729"
+    sha256 arm:   "6005bc2c1944f0143456577d73a6a4cc80d5717dcf2606dcd361a8958c472126",
+           intel: "93a704fa1f9a105fba3887732c7fb4137f7d9b4acb995dc9f73660ff987e244d"
   end
   on_linux do
-    sha256 "cad56a13aba260567b67e59a926d234564dc1a61b9dfa854d686fa2e3c3b948b"
+    sha256 "28cf64c1df9f58ccd063fb7e6fd6e9391073c585b733449371485e1ef8a3e6db"
 
     depends_on arch: :x86_64
   end

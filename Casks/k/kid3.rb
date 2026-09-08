@@ -6,8 +6,7 @@ cask "kid3" do
   sha256 arm:   "b8d5339c8b2e584e073a42f8f90fce8cc6865e121040d1a10d476d74d0a54950",
          intel: "243c842d7bc74b54934051562ad4a6ebbdf4ef6866b4c35a4a8e41803b97cfcc"
 
-  url "https://downloads.sourceforge.net/kid3/kid3-#{version}-Darwin-#{arch}.dmg",
-      verified: "downloads.sourceforge.net/kid3/"
+  url "https://downloads.sourceforge.net/kid3/kid3-#{version}-Darwin-#{arch}.dmg"
   name "Kid3"
   desc "Audio tagger focusing on efficiency"
   homepage "https://kid3.kde.org/"

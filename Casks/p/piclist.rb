@@ -5,8 +5,7 @@ cask "piclist" do
   sha256 arm:   "783eab8c9413a8a8ad2ef7a6ee0524cbc89e16f2dba0a5219eda638063e63884",
          intel: "dc96d5370e9501b35ba8279b730e5020a5f2db340f903d0a5538ab67a5ab4b35"
 
-  url "https://github.com/Kuingsmile/PicList/releases/download/v#{version}/PicList-#{version}-#{arch}.dmg",
-      verified: "github.com/Kuingsmile/PicList/"
+  url "https://github.com/Kuingsmile/PicList/releases/download/v#{version}/PicList-#{version}-#{arch}.dmg"
   name "PicList"
   desc "Cloud storage manager tool"
   homepage "https://piclist.cn/"

@@ -7,8 +7,9 @@ cask "macx-video-converter-pro" do
   desc "Tool to convert, edit, download & resize videos"
   homepage "https://www.macxdvd.com/mac-video-converter-pro/"
 
+  # https 302-redirects back to http
   livecheck do
-    url "https://www.macxdvd.com/mac-video-converter-pro/upgrade/video-converter-pro.xml"
+    url "http://www.macxdvd.com/mac-video-converter-pro/upgrade/video-converter-pro.xml"
     strategy :xml do |xml|
       # `LastestVersion` is an upstream typo of `LatestVersion`
       xml.get_elements("//key[text()='LastestVersion']").map { |item| item.next_element&.text&.strip }

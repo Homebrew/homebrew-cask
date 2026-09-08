@@ -2,11 +2,11 @@ cask "cate" do
   arch arm: "-arm64"
   url_end = on_system_conditional macos: "#{arch}.dmg", linux: ".AppImage"
 
-  version "1.5.3"
+  version "1.7.0"
 
   on_macos do
-    sha256 arm:   "b6d756e7347c40b613428fde60adb20744be2f4a4456240c9cd54df1b09d81b5",
-           intel: "5d20f8b740f33a3f205225d9c053e5ccde66cfd85a246f133add46f24a243511"
+    sha256 arm:   "4deba2757d813a13e784b0d71e6e7fb22f418d7c06e0bec7b87f47eab7aa43ec",
+           intel: "d682affb59dd7cf5ab855cdff58b2e65ef38a2fe4fa8fae5216dec1d9d1d80d3"
 
     depends_on macos: :monterey
 
@@ -27,15 +27,14 @@ cask "cate" do
     ]
   end
   on_linux do
-    sha256 "dfdbfe9261b7444ca057c13b783d5e65ca522bdc782b9597da7482eb63a5a3e8"
+    sha256 "3fda53f5de14ab9a19d17bad6715b6158cb6f0b63ffde9378f4c1cf742da28aa"
 
     depends_on arch: :x86_64
 
     app_image "Cate-#{version}.AppImage", target: "Cate.AppImage"
   end
 
-  url "https://github.com/0-AI-UG/cate/releases/download/v#{version}/Cate-#{version}#{url_end}",
-      verified: "github.com/0-AI-UG/cate/"
+  url "https://github.com/0-AI-UG/cate/releases/download/v#{version}/Cate-#{version}#{url_end}"
   name "Cate"
   desc "Infinite zoomable canvas with editor, terminal, and browser panels"
   homepage "https://cate.cero-ai.com/"

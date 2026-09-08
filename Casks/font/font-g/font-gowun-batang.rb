@@ -3,7 +3,6 @@ cask "font-gowun-batang" do
   sha256 :no_check
 
   url "https://github.com/google/fonts.git",
-      verified:  "github.com/google/fonts",
       branch:    "main",
       only_path: "ofl/gowunbatang"
   name "Gowun Batang"

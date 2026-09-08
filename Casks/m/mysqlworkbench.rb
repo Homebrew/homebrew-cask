@@ -2,20 +2,7 @@ cask "mysqlworkbench" do
   arch arm: "arm64", intel: "x86_64"
 
   on_monterey :or_older do
-    on_catalina :or_older do
-      version "8.0.23"
-      sha256 "4c8664f5686a449a9760bda9b85d7e8c6beb1367d35f668048ffe534652da7b3"
-
-      url "https://downloads.mysql.com/archives/get/p/#{version.major}/file/mysql-workbench-community-#{version}-macos-x86_64.dmg",
-          user_agent: :curl
-
-      disable! date: "2026-09-01", because: :fails_gatekeeper_check
-
-      caveats do
-        requires_rosetta
-      end
-    end
-    on_big_sur do
+    on_big_sur :or_older do
       version "8.0.31"
       sha256 "6807ac1138c424c57d7e912c08301a838a90935dd0fc7a5658d3ded23f98a865"
 

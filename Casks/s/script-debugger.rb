@@ -2,8 +2,7 @@ cask "script-debugger" do
   version "8.0.10-8A88"
   sha256 "4146e6ef549f3af64c50055f911fc0b3a0ab9dc9f12d181d4cf553b1243c4b53"
 
-  url "https://s3.amazonaws.com/latenightsw.com/ScriptDebugger#{version}.dmg",
-      verified: "s3.amazonaws.com/latenightsw.com/"
+  url "https://s3.amazonaws.com/latenightsw.com/ScriptDebugger#{version}.dmg"
   name "Script Debugger"
   desc "Integrated development environment focused entirely on AppleScript"
   homepage "https://latenightsw.com/"

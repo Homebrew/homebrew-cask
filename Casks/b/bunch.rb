@@ -2,8 +2,7 @@ cask "bunch" do
   version "1.4.17,180"
   sha256 "8889757631a7a2fdfc9c81b0acf39459926fa1ce31a89822cb4ca788ca7370db"
 
-  url "https://brettterpstra.com/updates/bunch/Bunch#{version.csv.first}#{version.csv.second}.dmg",
-      verified: "brettterpstra.com/updates/bunch/"
+  url "https://brettterpstra.com/updates/bunch/Bunch#{version.csv.first}#{version.csv.second}.dmg"
   name "Bunch"
   desc "Automation tool"
   homepage "https://bunchapp.co/"

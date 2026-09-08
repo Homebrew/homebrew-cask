@@ -2,8 +2,7 @@ cask "planet" do
   version "0.22.3"
   sha256 "3edb27834d250748f1b819601310bdf33e61729066d05182a88c85ce9570a4b6"
 
-  url "https://github.com/Planetable/Planet/releases/download/release-#{version}/Planet.zip",
-      verified: "github.com/Planetable/Planet/"
+  url "https://github.com/Planetable/Planet/releases/download/release-#{version}/Planet.zip"
   name "Planet"
   desc "Decentralised blogs and websites powered by IPFS and Ethereum Name System"
   homepage "https://www.planetable.xyz/"

@@ -1,9 +1,9 @@
 cask "atv-remote" do
   arch arm: "-arm64"
 
-  version "2.1.1"
-  sha256 arm:   "61c9133a3527ae2819ce8f256e036fa866ff3d16d760e753443005790a75305c",
-         intel: "f35c290e96c38696f533520d7b88dcdd8eea99b944dd6c50ecbf31b4b9154444"
+  version "2.2.1"
+  sha256 arm:   "0f3cfca6a7cc68261ff302f7b5163cfd9b8b6cc6c30417580c0d537a35c84629",
+         intel: "20092f59e500298c17d83c6aec03998455362a1e61c0f97116537d4e46e442bf"
 
   url "https://github.com/bsharper/atv-desktop-remote/releases/download/v#{version}/ATV.Remote-#{version}#{arch}.dmg"
   name "ATV Remote"
@@ -20,6 +20,8 @@ cask "atv-remote" do
   depends_on macos: :monterey
 
   app "ATV Remote.app"
+
+  uninstall quit: "com.electron.atvMacRemote"
 
   zap trash: [
     "~/Library/Application Support/ATV Remote",

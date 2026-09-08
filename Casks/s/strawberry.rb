@@ -1,9 +1,8 @@
 cask "strawberry" do
-  version "0.1.22"
-  sha256 "9d173ccc863866c8ec6d98bd0c36b41eac40b9b594fff648d03a6fb3d462e24a"
+  version "0.1.44"
+  sha256 "ea60513f9d599a899e173cc98ff22d6cf5ce47f3ca2ef57ba787b65c20d87471"
 
-  url "https://strawberrybucket.com/strawberry-#{version}.dmg",
-      verified: "strawberrybucket.com/"
+  url "https://strawberrybucket.com/strawberry-#{version}.dmg"
   name "Strawberry"
   desc "AI-powered web browser"
   homepage "https://strawberrybrowser.com/"
@@ -18,5 +17,9 @@ cask "strawberry" do
 
   app "Strawberry.app"
 
-  zap trash: "~/Library/Application Support/strawberry"
+  zap trash: [
+    "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.mirror-browser.sfl*",
+    "~/Library/Application Support/strawberry",
+    "~/Library/Preferences/com.mirror-browser.plist",
+  ]
 end

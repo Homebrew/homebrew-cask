@@ -12,7 +12,7 @@ cask "itermcompanion" do
     regex(%r{href=.*?/iTermCompanion[._-](\d+(?:\.\d+)*)\.zip}i)
   end
 
-  depends_on macos: :catalina
+  depends_on :macos
 
   app "iTermCompanion.app"
 

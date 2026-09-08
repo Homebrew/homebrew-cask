@@ -1,12 +1,11 @@
 cask "codebuddy-cn" do
   arch arm: "arm64", intel: "x64"
 
-  version "4.10.4.33993995,1ba59196"
-  sha256 arm:   "7b4f0a6a84ee463d1564ed4ec88d4166b4bfe2534f6a1ad2012f6e29d8c70865",
-         intel: "05327236e853b7f127422e36213af75d6ca96a07275e90559820864da35c11f5"
+  version "4.12.0.37847260,b4c35ed0"
+  sha256 arm:   "b35419e267fe7cbb4b5f1b1f748141860531fb399ee32a2e9e8121ada2285e2a",
+         intel: "a56902021b2386e73e7a9bec82ed5b063e2c5a09d7926e6b9e304efe01ee4e86"
 
-  url "https://acc-1258344699.cos.accelerate.myqcloud.com/aiide/darwin-#{arch}/CodeBuddy-darwin-#{arch}-#{version.csv.first}-#{version.csv.second}-cn.zip",
-      verified: "acc-1258344699.cos.accelerate.myqcloud.com/aiide/"
+  url "https://acc-1258344699.cos.accelerate.myqcloud.com/aiide/darwin-#{arch}/CodeBuddy-darwin-#{arch}-#{version.csv.first}-#{version.csv.second}-cn.zip"
   name "CodeBuddy CN"
   desc "AI-powered adaptive IDE (Chinese version)"
   homepage "https://copilot.tencent.com/ide/"
@@ -32,8 +31,11 @@ cask "codebuddy-cn" do
     "~/Library/Application Support/CodeBuddy CN",
     "~/Library/Application Support/CodeBuddyExtension",
     "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.tencent.codebuddycn.sfl*",
+    "~/Library/Application Support/com.tencent.codebuddycn*",
     "~/Library/Caches/com.tencent.codebuddycn",
     "~/Library/Caches/com.tencent.codebuddycn.ShipIt",
+    "~/Library/HTTPStorages/com.tencent.codebuddycn*",
+    "~/Library/Preferences/com.tencent.codebuddycn.helper.plist",
     "~/Library/Preferences/com.tencent.codebuddycn.plist",
   ]
 end

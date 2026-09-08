@@ -2,8 +2,7 @@ cask "hammerspoon" do
   version "1.1.1"
   sha256 "11bb1c90faf5427f37c7bd4fe7eab9774ae43e1d5cb020c5b3088dac32849efa"
 
-  url "https://github.com/Hammerspoon/hammerspoon/releases/download/#{version}/Hammerspoon-#{version}.zip",
-      verified: "github.com/Hammerspoon/hammerspoon/"
+  url "https://github.com/Hammerspoon/hammerspoon/releases/download/#{version}/Hammerspoon-#{version}.zip"
   name "Hammerspoon"
   desc "Desktop automation application"
   homepage "https://www.hammerspoon.org/"

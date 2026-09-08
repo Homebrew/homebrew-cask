@@ -1,12 +1,6 @@
 cask "deepl" do
   on_ventura :or_older do
-    on_catalina :or_older do
-      version "3.7.292629"
-      sha256 "efcac4988a606d9793a3bdb8e7e73dce8e3d06ed2249a4434eb54c1624b40b87"
-
-      url "https://www.deepl.com/macos/download/old/#{version.major_minor}/#{version.patch}/DeepL.zip"
-    end
-    on_big_sur do
+    on_big_sur :or_older do
       version "24.2.1798840"
       sha256 "dacbf3dbd42eab3b1d3c4b48e0f0672146d07d94627b7ad073985fe41e9e9217"
 

@@ -1,9 +1,8 @@
 cask "tuist" do
-  version "4.203.1"
-  sha256 "7af01272af69a460729f82de71d68cd34a35bb3b21622cfd12c0c7b74e1a1b3b"
+  version "4.207.0"
+  sha256 "583fec75cc187bb84a30509ba5afe7455607547be0917fdcf5899a7ef338305e"
 
-  url "https://github.com/tuist/tuist/releases/download/#{version}/tuist.zip",
-      verified: "github.com/tuist/tuist/"
+  url "https://github.com/tuist/tuist/releases/download/#{version}/tuist.zip"
   name "Tuist"
   desc "Create, maintain, and interact with Xcode projects at scale"
   homepage "https://tuist.io/"

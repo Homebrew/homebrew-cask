@@ -2,8 +2,7 @@ cask "droidcam-obs" do
   version "2.5.1"
   sha256 "f98a35aa1096ccb878718d89ebb4de865d4350dac0f8de5154df9c20c1824bcc"
 
-  url "https://github.com/dev47apps/droidcam-obs-plugin/releases/download/#{version}/DroidCamOBS_#{version}_macos.pkg",
-      verified: "github.com/dev47apps/droidcam-obs-plugin/"
+  url "https://github.com/dev47apps/droidcam-obs-plugin/releases/download/#{version}/DroidCamOBS_#{version}_macos.pkg"
   name "DroidCam OBS"
   desc "Use your phone as a camera directly in OBS Studio"
   homepage "https://www.dev47apps.com/obs/"

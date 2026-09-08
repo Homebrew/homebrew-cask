@@ -1,6 +1,6 @@
 cask "tpvirtual" do
-  version "5"
-  sha256 "ccbdb47ef0627bac3326d1a0dd18b61da1a8fc80ef62dcf7a6d81a4c1847211b"
+  version "6"
+  sha256 "7a117865f86708f732dfacd6ec4bbe69656e75e4bf71d6801832b25fe52bef20"
 
   url "https://virtual.trainingpeaks.com/TPVirtual-Installer_v#{version}.dmg"
   name "TrainingPeaks Virtual"

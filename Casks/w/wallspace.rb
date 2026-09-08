@@ -2,8 +2,7 @@ cask "wallspace" do
   version "1.5.1"
   sha256 "ac3b52dbe675273793256d03a12392a6fdccdf05f46d1d6d5d8cb745e173d61c"
 
-  url "https://dvivcibhncrefmnjtjeq.supabase.co/functions/v1/download-version?v=#{version}",
-      verified: "dvivcibhncrefmnjtjeq.supabase.co/"
+  url "https://dvivcibhncrefmnjtjeq.supabase.co/functions/v1/download-version?v=#{version}"
   name "Wallspace"
   desc "Live wallpaper app"
   homepage "https://wallspace.app/"

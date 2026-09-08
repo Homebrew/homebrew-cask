@@ -2,8 +2,7 @@ cask "roonbridge" do
   version "1.8,100801125"
   sha256 "003dcaf79a3ae4bc06f62e5edd35bb40ccf32b05df28bf59182eacb9ac35ba28"
 
-  url "https://download.roonlabs.net/updates/stable/RoonBridge_#{version.csv.second}.dmg",
-      verified: "download.roonlabs.net/updates/"
+  url "https://download.roonlabs.net/updates/stable/RoonBridge_#{version.csv.second}.dmg"
   name "Roon Bridge"
   desc "Music player network extender"
   homepage "https://roon.app/"

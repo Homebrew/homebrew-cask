@@ -1,9 +1,9 @@
 cask "toolhive-studio" do
   arch arm: "arm64", intel: "x64"
 
-  version "0.39.3"
-  sha256 arm:   "fd1058f5412cd32e9fd1d9cc59bd42982152718ead6287404543159c05b89d6c",
-         intel: "a65b668fb435231b7addaf520a541970e3e622a50c9e9ce88be397fa7b23072b"
+  version "0.40.0"
+  sha256 arm:   "bb91250bce9f94dc48fed6cf32c96646ae5fc4e1078d5ec8b657fd36d7eef387",
+         intel: "c501c239fd4e6a31e04c9d17fb86b130c24747a0bd129dac751609bf46d929e6"
 
   url "https://github.com/stacklok/toolhive-studio/releases/download/v#{version}/ToolHive-#{arch}.dmg"
   name "ToolHive"
@@ -18,6 +18,8 @@ cask "toolhive-studio" do
   depends_on macos: :monterey
 
   app "ToolHive.app"
+
+  uninstall quit: "com.electron.toolhive"
 
   zap trash: [
     "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.electron.toolhive.sfl*",

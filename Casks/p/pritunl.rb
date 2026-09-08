@@ -1,9 +1,8 @@
 cask "pritunl" do
-  version "1.3.4696.56"
-  sha256 "474f3be3103c30624e58ea6d3ad131c488c098f8c5444f59d91ede070cad80c4"
+  version "1.3.4729.52"
+  sha256 "14e5f66b8d8baec83eba5597cf77dceaddf6d6e0d30b81f4ff9753cb82e50223"
 
-  url "https://github.com/pritunl/pritunl-client-electron/releases/download/#{version}/Pritunl.pkg.zip",
-      verified: "github.com/pritunl/pritunl-client-electron/"
+  url "https://github.com/pritunl/pritunl-client-electron/releases/download/#{version}/Pritunl.pkg.zip"
   name "Pritunl"
   desc "OpenVPN client"
   homepage "https://client.pritunl.com/"

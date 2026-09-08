@@ -5,8 +5,7 @@ cask "roslynpad" do
   sha256 arm:   "b8bfb0f5ab2874bfe7aa369d8f0eeb388545a24cca7a1afb37df66fd9063f2a0",
          intel: "268280175cd2f325cdb9d43f2166d12a1f103976b244041bcc30aaed386f90f7"
 
-  url "https://github.com/roslynpad/roslynpad/releases/download/#{version}/RoslynPad-macos-#{arch}.dmg",
-      verified: "github.com/roslynpad/roslynpad/"
+  url "https://github.com/roslynpad/roslynpad/releases/download/#{version}/RoslynPad-macos-#{arch}.dmg"
   name "RoslynPad"
   desc "C# editor and runner based on Roslyn"
   homepage "https://roslynpad.net/"

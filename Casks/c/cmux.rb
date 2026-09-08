@@ -2,8 +2,7 @@ cask "cmux" do
   version "0.64.22"
   sha256 "fd148dba3519fe7d308844089ce4d062b17739ba645623f058f67a64798cea25"
 
-  url "https://github.com/manaflow-ai/cmux/releases/download/v#{version}/cmux-macos.dmg",
-      verified: "github.com/manaflow-ai/cmux/"
+  url "https://github.com/manaflow-ai/cmux/releases/download/v#{version}/cmux-macos.dmg"
   name "cmux"
   desc "Ghostty-based terminal with vertical tabs and notifications for AI coding agents"
   homepage "https://www.cmux.dev/"

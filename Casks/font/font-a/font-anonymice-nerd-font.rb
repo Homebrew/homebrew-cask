@@ -1,6 +1,6 @@
 cask "font-anonymice-nerd-font" do
-  version "3.5.0"
-  sha256 "48fe768a075cd4bb8bcdfaa76a1e769d3224ad851b766848562af03a2b4e359d"
+  version "3.5.1"
+  sha256 "f84f067b4de991a14afdbd498e106239c429a553a27e76a364048638f2e1de70"
 
   url "https://github.com/ryanoasis/nerd-fonts/releases/download/v#{version}/AnonymousPro.tar.xz"
   name "AnonymicePro Nerd Font (Anonymous Pro)"

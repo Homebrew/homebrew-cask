@@ -9,8 +9,8 @@ cask "cisdem-duplicate-finder" do
   homepage "https://www.cisdem.com/duplicate-finder.html"
 
   livecheck do
-    url "https://www.cisdem.com/js/notes/duplicate-finder-mac.js"
-    regex(/(\d+(?:\.\d+)*)\s+\(\d+(?:-\d+)+\)/i)
+    url "https://www.cisdem.com/duplicate-finder-mac/release-notes.html"
+    regex(/(\d+(?:\.\d+)+)\(\d+(?:-\d+)+\)/i)
   end
 
   depends_on :macos

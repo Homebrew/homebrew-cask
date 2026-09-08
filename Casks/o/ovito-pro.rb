@@ -2,8 +2,8 @@ cask "ovito-pro" do
   arch arm: "arm64", intel: "intel"
 
   on_arm do
-    version "3.15.5"
-    sha256 "65efd2ce59d7c93c215b48993e63c39c5a3da0e252c0e53e9156576b2c0de49a"
+    version "3.16.0"
+    sha256 "d6bf3311f62861dec757f57d837dc266c5ea6090e51710d45da936535d2efb83"
   end
   on_intel do
     version "3.12.0"
@@ -25,6 +25,8 @@ cask "ovito-pro" do
   depends_on macos: :big_sur
 
   app "Ovito.app"
+
+  uninstall quit: "org.ovito"
 
   zap trash: [
     "~/Library/Preferences/org.ovito.Ovito.plist",

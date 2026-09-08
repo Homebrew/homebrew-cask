@@ -1,9 +1,8 @@
 cask "replaywebpage" do
-  version "2.4.7"
-  sha256 "b253771631e6440754bb734fbd384e7845f23dce3e3d9862bfba0e5c694ff871"
+  version "2.5.3"
+  sha256 "26374be14d413e454108b47772b4b4bc06f16bbc2a54835b75913051f85a5fcb"
 
-  url "https://github.com/webrecorder/replayweb.page/releases/download/v#{version}/ReplayWeb.page-#{version}.dmg",
-      verified: "github.com/webrecorder/replayweb.page/"
+  url "https://github.com/webrecorder/replayweb.page/releases/download/v#{version}/ReplayWeb.page-#{version}.dmg"
   name "ReplayWeb.page"
   desc "Web archive viewer for WARC and WACZ files"
   homepage "https://replayweb.page/"

@@ -2,8 +2,7 @@ cask "openra@playtest" do
   version "20260222"
   sha256 "e2499bcd3d6e5bc80d66d9677f294e64c2af8f48159bcf2bc5362ccf862392c4"
 
-  url "https://github.com/OpenRA/OpenRA/releases/download/playtest-#{version}/OpenRA-playtest-#{version}.dmg",
-      verified: "github.com/OpenRA/OpenRA/"
+  url "https://github.com/OpenRA/OpenRA/releases/download/playtest-#{version}/OpenRA-playtest-#{version}.dmg"
   name "OpenRA (playtest)"
   desc "Real-time strategy game engine for Westwood games"
   homepage "https://www.openra.net/"

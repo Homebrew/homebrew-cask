@@ -1,12 +1,11 @@
 cask "renameclick" do
   arch arm: "arm64", intel: "x64"
 
-  version "2.14.6"
-  sha256 arm:   "c65e486d0ab6caddcd4ddddf74b08f8750a7312a634f80b75777519fd74082b3",
-         intel: "38c2a234836ef0618e07182ed7767ce99199080a6d72e83b3b94d4a6b07540bf"
+  version "2.15.5"
+  sha256 arm:   "50c82ff176305f07cf5d593e9dd9f101c47b83fef1ca743be6211485e8e60ff4",
+         intel: "2dfef8a16f3c8c0b35784e1882b9f5ba5106174b480eb33399efe3bb131b275a"
 
-  url "https://github.com/noemaVision/renameclick/releases/download/v#{version}/RenameClick-#{version}-#{arch}.dmg",
-      verified: "github.com/noemaVision/renameclick/"
+  url "https://github.com/noemaVision/renameclick/releases/download/v#{version}/RenameClick-#{version}-#{arch}.dmg"
   name "RenameClick"
   desc "Local-first AI app for file renaming and organisation"
   homepage "https://rename.click/"
@@ -20,6 +19,8 @@ cask "renameclick" do
   depends_on macos: :ventura
 
   app "RenameClick.app"
+
+  uninstall quit: "com.renameclick.app"
 
   zap trash: [
     "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.renameclick.app.sfl*",

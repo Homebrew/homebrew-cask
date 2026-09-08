@@ -5,8 +5,7 @@ cask "nanoleaf" do
   sha256 arm:   "d05bde80876e0f132ea73f28b8739dd0bee7533322898666e4638cb19400d164",
          intel: "eda74a15cad07233908e019be9b214c9c07e4adda1d5ca409c5296af3c1feb83"
 
-  url "https://desktop-app-prod-3.s3.us-west-2.amazonaws.com/Nanoleaf%20Desktop-#{version}#{arch}.dmg",
-      verified: "desktop-app-prod-3.s3.us-west-2.amazonaws.com/"
+  url "https://desktop-app-prod-3.s3.us-west-2.amazonaws.com/Nanoleaf%20Desktop-#{version}#{arch}.dmg"
   name "Nanoleaf Desktop"
   desc "Control your Nanoleaf lights"
   homepage "https://nanoleaf.me/"

@@ -6,8 +6,8 @@ cask "font-liga-comic-mono" do
   name "Liga Comic Mono"
   homepage "https://github.com/wayou/comic-mono-font"
 
-  font "comic-mono-font-master/LigaComicMono.ttf"
   font "comic-mono-font-master/LigaComicMono-Bold.ttf"
+  font "comic-mono-font-master/LigaComicMono.ttf"
 
   # No zap stanza required
 end

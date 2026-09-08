@@ -2,8 +2,7 @@ cask "canon-mg2500-driver" do
   version "16.91.0.0,05,0100011526,6"
   sha256 "95d2cfd5ded450b0e2cecdbed792c7a592223adf3209182d05347f0a44ce96be"
 
-  url "https://gdlp01.c-wss.com/gds/#{version.csv.fourth}/#{version.csv.third}/#{version.csv.second}/mcpd-mac-mg2500-#{version.csv.first.dots_to_underscores}-ea21_3.dmg",
-      verified: "gdlp01.c-wss.com/"
+  url "https://gdlp01.c-wss.com/gds/#{version.csv.fourth}/#{version.csv.third}/#{version.csv.second}/mcpd-mac-mg2500-#{version.csv.first.dots_to_underscores}-ea21_3.dmg"
   name "Canon PIXMA driver"
   desc "CUPS driver for Canon PIXMA MG2500 series"
   homepage "https://ij.manual.canon/ij/webmanual/Manual/M/MG2500%20series/EN/CNT/Top.html"

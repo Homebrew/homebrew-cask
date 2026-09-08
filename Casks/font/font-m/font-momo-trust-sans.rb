@@ -2,8 +2,7 @@ cask "font-momo-trust-sans" do
   version :latest
   sha256 :no_check
 
-  url "https://github.com/google/fonts/raw/main/ofl/momotrustsans/MomoTrustSans%5Bwght%5D.ttf",
-      verified: "github.com/google/fonts/"
+  url "https://github.com/google/fonts/raw/main/ofl/momotrustsans/MomoTrustSans%5Bwght%5D.ttf"
   name "Momo Trust Sans"
   homepage "https://fonts.google.com/specimen/Momo+Trust+Sans"
 

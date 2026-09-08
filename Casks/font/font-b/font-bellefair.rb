@@ -2,8 +2,7 @@ cask "font-bellefair" do
   version :latest
   sha256 :no_check
 
-  url "https://github.com/google/fonts/raw/main/ofl/bellefair/Bellefair-Regular.ttf",
-      verified: "github.com/google/fonts/"
+  url "https://github.com/google/fonts/raw/main/ofl/bellefair/Bellefair-Regular.ttf"
   name "Bellefair"
   homepage "https://fonts.google.com/specimen/Bellefair"
 

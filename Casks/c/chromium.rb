@@ -4,8 +4,7 @@ cask "chromium" do
   version :latest
   sha256 :no_check
 
-  url "https://download-chromium.appspot.com/dl/#{arch}?type=snapshots",
-      verified: "download-chromium.appspot.com/dl/"
+  url "https://download-chromium.appspot.com/dl/#{arch}?type=snapshots"
   name "Chromium"
   desc "Free and open-source web browser"
   homepage "https://www.chromium.org/Home"

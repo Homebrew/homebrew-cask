@@ -2,8 +2,7 @@ cask "dfu-blaster-pro" do
   version "5.0,3567"
   sha256 "9084c38301beb24a232377984f9f0f909f91c8f79c10f09c6e1c100ede2a2cf9"
 
-  url "https://twocanoes-software-updates.s3.amazonaws.com/DFU_Blaster_Pro_Build-#{version.csv.second}_Version-#{version.csv.first}.dmg",
-      verified: "twocanoes-software-updates.s3.amazonaws.com/"
+  url "https://twocanoes-software-updates.s3.amazonaws.com/DFU_Blaster_Pro_Build-#{version.csv.second}_Version-#{version.csv.first}.dmg"
   name "DFU Blaster Pro"
   desc "Utility to put Apple silicon Macs into DFU mode for restore"
   homepage "https://twocanoes.com/products/mac/dfu-blaster/"

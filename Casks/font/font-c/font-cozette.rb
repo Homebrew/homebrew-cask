@@ -11,12 +11,12 @@ cask "font-cozette" do
     strategy :github_latest
   end
 
-  font "CozetteFonts/cozette.dfont"
-  font "CozetteFonts/cozette_hidpi.dfont"
   font "CozetteFonts/CozetteCrossedSevenVector.otf"
   font "CozetteFonts/CozetteCrossedSevenVectorBold.otf"
   font "CozetteFonts/CozetteVector.otf"
   font "CozetteFonts/CozetteVectorBold.otf"
+  font "CozetteFonts/cozette.dfont"
+  font "CozetteFonts/cozette_hidpi.dfont"
 
   # No zap stanza required
 end

@@ -2,8 +2,7 @@ cask "avast-security" do
   version "15.8.0"
   sha256 :no_check
 
-  url "https://bits.avcdn.net/productfamily_ANTIVIRUS/insttype_FREE/platform_MAC/installertype_ONLINE/build_RELEASE/",
-      verified: "bits.avcdn.net/productfamily_ANTIVIRUS/insttype_FREE/platform_MAC/installertype_ONLINE/"
+  url "https://bits.avcdn.net/productfamily_ANTIVIRUS/insttype_FREE/platform_MAC/installertype_ONLINE/build_RELEASE/"
   name "Avast Security"
   desc "Antivirus software"
   homepage "https://www.avast.com/"

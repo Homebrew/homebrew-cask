@@ -2,8 +2,7 @@ cask "anchor-wallet" do
   version "1.3.12"
   sha256 "043f92369bf5dbc41d48ce6439eb2138017bc7f21694c60e2eab9d321a819508"
 
-  url "https://github.com/greymass/anchor/releases/download/v#{version}/mac-anchor-wallet-#{version}-x64.dmg",
-      verified: "github.com/greymass/anchor/"
+  url "https://github.com/greymass/anchor/releases/download/v#{version}/mac-anchor-wallet-#{version}-x64.dmg"
   name "Anchor Wallet"
   desc "EOSIO Desktop Wallet and Authenticator"
   homepage "https://www.greymass.com/anchor"

@@ -1,12 +1,11 @@
 cask "lens" do
   arch arm: "-arm64"
 
-  version "2026.6.260931"
-  sha256 arm:   "b30b9266baf85485e42acc819e838b202cbeb8b6c03a1a295453547aa548abdc",
-         intel: "cc895b846bc4826df91a938e223f916267799c914aa2128486bf566122d70c99"
+  version "2026.9.20601"
+  sha256 arm:   "62679820a44362672030021076938aebb04c36281d94375bc9279970ee4a7e48",
+         intel: "72b40b848201e4ccdd7c6e632d70231b476a21c44e3fd3960326113eac1e2754"
 
-  url "https://api.k8slens.dev/binaries/Lens-#{version}-latest#{arch}.dmg",
-      verified: "api.k8slens.dev/binaries/"
+  url "https://api.k8slens.dev/binaries/Lens-#{version}-latest#{arch}.dmg"
   name "Lens"
   desc "Kubernetes IDE"
   homepage "https://lenshq.io/"

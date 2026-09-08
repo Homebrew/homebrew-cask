@@ -1,9 +1,8 @@
 cask "rockxy" do
-  version "0.33.0,50"
-  sha256 "7384e0b53b060a443d2344f8ef66e85e2979d8923467bf1e99a45735a446699f"
+  version "0.38.2,57"
+  sha256 "95c38a821d161a6f747970ea0f16d645757b3c48428a8872920c8655f18818b9"
 
-  url "https://github.com/RockxyApp/Rockxy/releases/download/v#{version.csv.first}/Rockxy-#{version.tr(",", "-")}.dmg",
-      verified: "github.com/RockxyApp/Rockxy/"
+  url "https://github.com/RockxyApp/Rockxy/releases/download/v#{version.csv.first}/Rockxy-#{version.tr(",", "-")}.dmg"
   name "Rockxy"
   desc "HTTP proxy"
   homepage "https://rockxy.io/"
@@ -18,12 +17,14 @@ cask "rockxy" do
 
   app "Rockxy.app"
 
-  uninstall launchctl: "com.amunx.rockxy.community.direct-proxy-watchdog",
+  uninstall launchctl: "com.amunx.rockxy.community.direct-proxy-watchdog.*",
             quit:      "com.amunx.rockxy.community"
 
   zap trash: [
     "~/Library/Application Support/com.amunx.rockxy",
     "~/Library/Application Support/com.amunx.rockxy.community",
+    "~/Library/Caches/com.amunx.rockxy.community",
+    "~/Library/HTTPStorages/com.amunx.rockxy.community",
     "~/Library/Preferences/com.amunx.rockxy.community.plist",
   ]
 end

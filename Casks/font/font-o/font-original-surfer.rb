@@ -2,8 +2,7 @@ cask "font-original-surfer" do
   version :latest
   sha256 :no_check
 
-  url "https://github.com/google/fonts/raw/main/ofl/originalsurfer/OriginalSurfer-Regular.ttf",
-      verified: "github.com/google/fonts/"
+  url "https://github.com/google/fonts/raw/main/ofl/originalsurfer/OriginalSurfer-Regular.ttf"
   name "Original Surfer"
   homepage "https://fonts.google.com/specimen/Original+Surfer"
 

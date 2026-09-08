@@ -2,8 +2,7 @@ cask "journey" do
   version "2.14.6"
   sha256 "19da0e4da7983f54c1dabd7bc8bfb03ff8d783ad02a4fb9701b4f2891450e44a"
 
-  url "https://github.com/2-App-Studio/journey-releases/releases/download/v#{version}/Journey-darwin-#{version}.zip",
-      verified: "github.com/2-App-Studio/journey-releases/"
+  url "https://github.com/2-App-Studio/journey-releases/releases/download/v#{version}/Journey-darwin-#{version}.zip"
   name "Journey"
   desc "Diary app"
   homepage "https://2appstudio.com/journey/"

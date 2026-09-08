@@ -2,8 +2,7 @@ cask "sound-control" do
   version "3.3.3"
   sha256 "0d00495d22ae5e5bd25b29647023a124a02c85cb1005e9da5973a7c083f54aa9"
 
-  url "https://s3.amazonaws.com/staticz.net/downloads/soundcontrol/SoundControl_#{version}.dmg",
-      verified: "s3.amazonaws.com/staticz.net/downloads/soundcontrol/"
+  url "https://s3.amazonaws.com/staticz.net/downloads/soundcontrol/SoundControl_#{version}.dmg"
   name "Sound Control"
   desc "Per-app audio controls"
   homepage "https://staticz.com/soundcontrol/"

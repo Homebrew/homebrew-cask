@@ -2,8 +2,7 @@ cask "noun-project" do
   version "2.3"
   sha256 :no_check
 
-  url "https://nounproject.s3.amazonaws.com/mac/NounProject.dmg",
-      verified: "nounproject.s3.amazonaws.com/"
+  url "https://nounproject.s3.amazonaws.com/mac/NounProject.dmg"
   name "Noun Project"
   desc "Icon manager"
   homepage "https://thenounproject.com/"

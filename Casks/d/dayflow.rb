@@ -1,6 +1,6 @@
 cask "dayflow" do
-  version "2.0.3"
-  sha256 "dc502be08caa3f3588e860b62dfa9a82eb5eab86bcc6ea0cf841f92f7989a87a"
+  version "2.4.0"
+  sha256 "16183ec026b3f790a2b5d33d6b88ece27780c40acad9fc4fa6c0643751aaff60"
 
   url "https://github.com/JerryZLiu/Dayflow/releases/download/v#{version}/Dayflow.dmg"
   name "Dayflow"
@@ -16,6 +16,9 @@ cask "dayflow" do
   depends_on macos: :sonoma
 
   app "Dayflow.app"
+  binary "#{appdir}/Dayflow.app/Contents/Helpers/dayflow"
+
+  uninstall quit: "teleportlabs.com.Dayflow"
 
   zap trash: [
     "~/Library/Application Scripts/teleportlabs.com.Dayflow",

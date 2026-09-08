@@ -2,8 +2,7 @@ cask "font-dr-sugiyama" do
   version :latest
   sha256 :no_check
 
-  url "https://github.com/google/fonts/raw/main/ofl/drsugiyama/DrSugiyama-Regular.ttf",
-      verified: "github.com/google/fonts/"
+  url "https://github.com/google/fonts/raw/main/ofl/drsugiyama/DrSugiyama-Regular.ttf"
   name "Dr Sugiyama"
   homepage "https://fonts.google.com/specimen/Dr+Sugiyama"
 

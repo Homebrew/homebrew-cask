@@ -2,8 +2,7 @@ cask "quicksilver" do
   version "2.6.0"
   sha256 "47d4fdfb128109e213ee21c272a100fa0408d389932c47f66b0440b5a0d32c8c"
 
-  url "https://github.com/quicksilver/Quicksilver/releases/download/v#{version}/Quicksilver.#{version}.dmg",
-      verified: "github.com/quicksilver/Quicksilver/"
+  url "https://github.com/quicksilver/Quicksilver/releases/download/v#{version}/Quicksilver.#{version}.dmg"
   name "Quicksilver"
   desc "Productivity application"
   homepage "https://qsapp.com/"

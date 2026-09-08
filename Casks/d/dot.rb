@@ -1,9 +1,8 @@
 cask "dot" do
-  version "2.3.4"
-  sha256 "f969a9714f051b659f52de42d4cb6b8cf9a7bac016f75d1108866972e718e047"
+  version "2.4.1"
+  sha256 "0c856e2dcc1984262dad80efd5414b641f86b6b9bc6affc56d1278a38ce712c5"
 
-  url "https://github.com/prateekkeshari/dot-releases/releases/download/v#{version}/Dot-#{version}.dmg",
-      verified: "github.com/prateekkeshari/dot-releases/"
+  url "https://github.com/prateekkeshari/dot-releases/releases/download/v#{version}/Dot-#{version}.dmg"
   name "Dot"
   desc "Menu bar calendar with meeting reminders"
   homepage "https://www.trydot.app/"
@@ -16,6 +15,8 @@ cask "dot" do
   depends_on macos: :ventura
 
   app "Dot.app"
+
+  uninstall quit: "com.dot.app"
 
   zap trash: [
     "~/Library/Application Scripts/com.dot.app",

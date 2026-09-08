@@ -1,12 +1,11 @@
 cask "amie" do
   arch arm: "-arm64"
 
-  version "260722.1.0"
-  sha256 arm:   "aaa8b9a0ab008f03efcb7ae1e9417fd7060d96849fb0a4a36220c1c7ecc41fd7",
-         intel: "3b5501121324057562ba9752d285315a1e4e082c0ab9a694d2835a2d0b36e82f"
+  version "260903.0.0"
+  sha256 arm:   "973952b3b6c5752ff97543096a3cc4bf8a2a7a483636d3675e8edaf47fe58b1b",
+         intel: "0db52b41b13e9c4a590cd1fdb843c26637d9a9f98bc0e0a1bfd9832ab850bd7d"
 
-  url "https://github.com/amieso/electron-releases/releases/download/v#{version}/Amie-#{version}#{arch}-mac.zip",
-      verified: "github.com/amieso/electron-releases/"
+  url "https://github.com/amieso/electron-releases/releases/download/v#{version}/Amie-#{version}#{arch}-mac.zip"
   name "Amie"
   desc "Calendar and task manager"
   homepage "https://amie.so/"

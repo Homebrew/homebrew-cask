@@ -2,8 +2,7 @@ cask "font-edu-sa-beginner" do
   version :latest
   sha256 :no_check
 
-  url "https://github.com/google/fonts/raw/main/ofl/edusabeginner/EduSABeginner%5Bwght%5D.ttf",
-      verified: "github.com/google/fonts/"
+  url "https://github.com/google/fonts/raw/main/ofl/edusabeginner/EduSABeginner%5Bwght%5D.ttf"
   name "Edu SA Beginner"
   homepage "https://fonts.google.com/specimen/Edu+SA+Beginner"
 

@@ -23,8 +23,7 @@ cask "aigcpanel" do
               target: "AigcPanel.AppImage"
   end
 
-  url "https://github.com/modstart-lib/aigcpanel/releases/download/v#{version.csv.first}/AigcPanel-#{version.csv.second || version.csv.first}-#{os}-#{arch}.#{url_end}",
-      verified: "github.com/modstart-lib/aigcpanel/"
+  url "https://github.com/modstart-lib/aigcpanel/releases/download/v#{version.csv.first}/AigcPanel-#{version.csv.second || version.csv.first}-#{os}-#{arch}.#{url_end}"
   name "AigcPanel"
   desc "AI video, audio and broadcast generator"
   homepage "https://aigcpanel.com/"

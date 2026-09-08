@@ -27,8 +27,7 @@ cask "widelands-app" do
            intel: "92bec98b8078a6caf0efed6fffb7f01f5ba82cba0016a185ee61e2a5d009da7f"
   end
 
-  url "https://github.com/widelands/widelands/releases/download/v#{version}/Widelands-#{version}-MacOS#{arch}.dmg",
-      verified: "github.com/widelands/widelands/"
+  url "https://github.com/widelands/widelands/releases/download/v#{version}/Widelands-#{version}-MacOS#{arch}.dmg"
   name "Widelands"
   desc "Free real-time strategy game like Settlers II"
   homepage "https://www.widelands.org/"

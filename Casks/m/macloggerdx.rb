@@ -1,6 +1,6 @@
 cask "macloggerdx" do
-  version "6.61"
-  sha256 "a0de08eee26f1a5ac34bc8c4c4472c5b98d362ef7199708ef5a61eb31c199d79"
+  version "6.62"
+  sha256 :no_check # required as upstream package is often updated in-place
 
   url "https://www.dogparksoftware.com/files/MacLoggerDX#{version.no_dots}.dmg"
   name "MacLoggerDX"
@@ -16,6 +16,8 @@ cask "macloggerdx" do
   depends_on :macos
 
   app "MacLoggerDX.app"
+
+  uninstall quit: "com.dogparksoftware.MacLoggerDX"
 
   zap trash: [
     "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.dogparksoftware.macloggerdx.sfl*",

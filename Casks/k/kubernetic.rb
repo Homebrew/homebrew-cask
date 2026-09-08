@@ -2,8 +2,7 @@ cask "kubernetic" do
   version "4.4.0"
   sha256 "176f3210c3b53b882dee831af622010cf1ba74b54d4d71cdfe4ab4bc4eef17ed"
 
-  url "https://kubernetic.s3.amazonaws.com/Kubernetic-#{version}.dmg",
-      verified: "kubernetic.s3.amazonaws.com/"
+  url "https://kubernetic.s3.amazonaws.com/Kubernetic-#{version}.dmg"
   name "Kubernetic"
   desc "Kubernetes desktop client"
   homepage "https://kubernetic.com/"

@@ -2,18 +2,17 @@ cask "brave-origin@beta" do
   arch arm: "arm64", intel: "x64"
   folder_arch = on_arch_conditional arm: "-arm64"
 
-  sha256 arm:   "d85a80db8a407da23daee1dd748988cb66a106588e4d71808a053129504a0d99",
-         intel: "2a37b545571c203b246c47b6be09d10f2047225301a9498c5dcf62f3ab619742"
+  sha256 arm:   "4263496bf3c83fb19a3c17b622543e954d8516989b6f59b1eba8bb562884679b",
+         intel: "b0aefd8f837e023b11f02ed8c71ea6a85581f7aec02f012b85ab74d8f6f8cec2"
 
   on_arm do
-    version "1.94.99.0"
+    version "1.96.47.0"
   end
   on_intel do
-    version "1.94.99.0"
+    version "1.96.47.0"
   end
 
-  url "https://updates-cdn.bravesoftware.com/sparkle/Brave-Origin/beta#{folder_arch}/#{version.major_minor_patch.sub(".", "")}/Brave-Origin-Beta-#{arch}.dmg",
-      verified: "updates-cdn.bravesoftware.com/sparkle/Brave-Origin/"
+  url "https://updates-cdn.bravesoftware.com/sparkle/Brave-Origin/beta#{folder_arch}/#{version.major_minor_patch.sub(".", "")}/Brave-Origin-Beta-#{arch}.dmg"
   name "Brave Origin Beta"
   desc "Privacy-focused web browser"
   homepage "https://brave.com/origin/#beta"

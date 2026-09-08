@@ -3,7 +3,7 @@ cask "shutter-encoder" do
        intel: on_system_conditional(macos: "Mac 64bits", linux: "Linux 64bits")
   os macos: "pkg", linux: "AppImage"
 
-  version "20.2"
+  version "20.3"
   sha256 :no_check # required as upstream package is updated in-place
 
   on_macos do

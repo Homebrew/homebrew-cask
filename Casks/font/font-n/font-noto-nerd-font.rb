@@ -1,6 +1,6 @@
 cask "font-noto-nerd-font" do
-  version "3.5.0"
-  sha256 "4d81167a7000592d7c667c4ff05169c306d134d47f5b115c60655b1fc574fae9"
+  version "3.5.1"
+  sha256 "818deb4370c71315986b7d7a92c0dc508dd785a8d57f7cdfa871397a3a3834ab"
 
   url "https://github.com/ryanoasis/nerd-fonts/releases/download/v#{version}/Noto.tar.xz"
   name "Noto Nerd Font families (Noto)"

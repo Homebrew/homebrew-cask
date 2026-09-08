@@ -2,8 +2,7 @@ cask "lets" do
   version "3.1.1"
   sha256 "d07d17b9feaf1f4953ca4bf1c56871c830019160276bc8d0c3ccf83d90709282"
 
-  url "https://d1lzipub3cpsx.cloudfront.net/download/apps/2/#{version}/LETS-Installer.zip",
-      verified: "d1lzipub3cpsx.cloudfront.net/"
+  url "https://d1lzipub3cpsx.cloudfront.net/download/apps/2/#{version}/LETS-Installer.zip"
   name "LETS Desktop App"
   name "LETSデスクトップアプリ"
   desc "Font manager for Fontworks' LETS"

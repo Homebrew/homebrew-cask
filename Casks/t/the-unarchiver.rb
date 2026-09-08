@@ -2,8 +2,7 @@ cask "the-unarchiver" do
   version "4.3.9,147,1742287964"
   sha256 "d0d8dd2e028519ece5eeb0f018b3392f67e1c85053472ccbbaee64e87f173a28"
 
-  url "https://dl.devmate.com/com.macpaw.site.theunarchiver/#{version.csv.second}/#{version.csv.third}/TheUnarchiver-#{version.csv.second}.zip",
-      verified: "devmate.com/com.macpaw.site.theunarchiver/"
+  url "https://dl.devmate.com/com.macpaw.site.theunarchiver/#{version.csv.second}/#{version.csv.third}/TheUnarchiver-#{version.csv.second}.zip"
   name "The Unarchiver"
   desc "Unpacks archive files"
   homepage "https://theunarchiver.com/"

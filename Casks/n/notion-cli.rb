@@ -2,14 +2,13 @@ cask "notion-cli" do
   arch arm: "aarch64", intel: "x86_64"
   os macos: "apple-darwin", linux: "unknown-linux-musl"
 
-  version "0.21.8"
-  sha256 arm:          "d17282f0f7caf7d1f2d934f2a28237b0ae5389fd1d26fd3ed56d2c3f69579a81",
-         intel:        "f25c508fbdc4528d0b43e87ddd32554b60e6631678d8f4678d87b325ccf37721",
-         arm64_linux:  "8f1b8faef4afff4dff0d9ed0a0d2ee6166b8a3b83cc448ad5cc8b310ae6121d3",
-         x86_64_linux: "fb644a127b77dece922af869acd5a76b74e3c31e367fcfbf97cf3864874f4763"
+  version "0.23.2"
+  sha256 arm:          "c6626ad5d629fc45a60c89b79da43f252d9a4aabb6d951a70619134c038c8a70",
+         intel:        "ab9bcf19b7c71d8c9e6bdd3994039fe6e9614ed49da355f433ec00354eaa651f",
+         arm64_linux:  "df7250f5e6afd986e97579e6af2b8a78ff769cfd1a8e375545a0301b98d4414b",
+         x86_64_linux: "7e63a35c50ef4a03d30916e1a726fc4f19f8f0fb262034ed060646f2e8254a09"
 
-  url "https://ntn.dev/releases/v#{version}/ntn-#{arch}-#{os}.tar.gz",
-      verified: "ntn.dev/"
+  url "https://ntn.dev/releases/v#{version}/ntn-#{arch}-#{os}.tar.gz"
   name "Notion CLI"
   desc "Command-line interface for Notion"
   homepage "https://www.notion.com/product/dev"

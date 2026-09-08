@@ -1,9 +1,8 @@
 cask "meetmic" do
-  version "1.31.372"
-  sha256 "46a0b31ad15a03f231e4fc2b727091b2814c5bed00412aa4be77df17dbb56bcd"
+  version "1.34.432"
+  sha256 "299bb50dc6c4671bdb1725c454129a2192c7126dc33a3f33d049ebcaca372656"
 
-  url "https://meetmicapp.s3.us-west-002.backblazeb2.com/MeetMic_#{version}.zip",
-      verified: "meetmicapp.s3.us-west-002.backblazeb2.com/"
+  url "https://meetmicapp.s3.us-west-002.backblazeb2.com/MeetMic-#{version}.zip"
   name "MeetMic"
   desc "Audio transcription tool"
   homepage "https://meetmic.app/"
@@ -20,7 +19,8 @@ cask "meetmic" do
   depends_on macos: :sequoia
   depends_on arch: :arm64
 
-  app "MeetMic.app"
+  app "MeetMic developer-id/MeetMic.app"
+  binary "#{appdir}/MeetMic.app/Contents/MacOS/meetmic-cli", target: "meetmic"
 
   zap trash: [
     "~/Library/Application Scripts/ltd.iwt.QuickWhisper",

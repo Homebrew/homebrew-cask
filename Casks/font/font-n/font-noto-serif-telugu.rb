@@ -2,8 +2,7 @@ cask "font-noto-serif-telugu" do
   version :latest
   sha256 :no_check
 
-  url "https://github.com/google/fonts/raw/main/ofl/notoseriftelugu/NotoSerifTelugu%5Bwght%5D.ttf",
-      verified: "github.com/google/fonts/"
+  url "https://github.com/google/fonts/raw/main/ofl/notoseriftelugu/NotoSerifTelugu%5Bwght%5D.ttf"
   name "Noto Serif Telugu"
   homepage "https://fonts.google.com/specimen/Noto+Serif+Telugu"
 

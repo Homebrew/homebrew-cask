@@ -1,6 +1,6 @@
 cask "brilliant" do
-  version "0.1.0-beta.47"
-  sha256 "b7ef31fa0d4c35e307614b4071e1b5a3ddd9e43d33a40226403eecc4538749d9"
+  version "0.1.0-beta.67"
+  sha256 "90f5057c694bfb44997760376e4585d3fd3de68cd7cf57c37bbf0b59891b5f0c"
 
   url "https://api.brilliant.design/v1/download/macos/#{version}"
   name "Brilliant"
@@ -18,6 +18,8 @@ cask "brilliant" do
   depends_on macos: :sonoma
 
   app "brilliant.app"
+
+  uninstall quit: "design.brilliant"
 
   zap trash: [
     "~/.config/brilliant",

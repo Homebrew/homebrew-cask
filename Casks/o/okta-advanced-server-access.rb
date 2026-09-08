@@ -1,9 +1,8 @@
 cask "okta-advanced-server-access" do
-  version "1.109.0"
-  sha256 "a6ef7ee13cd6b5e2ca4cf264c255d3644f6a389acf5ca34a84b63253d4c87679"
+  version "1.112.0"
+  sha256 "7cc9092b382ed3f5d3111a2b07115d4d143ea8c93a7c575fcee452c763495bca"
 
-  url "https://dist.scaleft.com/repos/macos/stable/all/macos-client/v#{version}/ScaleFT-#{version}.pkg",
-      verified: "dist.scaleft.com/repos/macos/stable/all/macos-client/"
+  url "https://dist.scaleft.com/repos/macos/stable/all/macos-client/v#{version}/ScaleFT-#{version}.pkg"
   name "Okta Advanced Server Access"
   name "ScaleFT"
   desc "Identity and access management"

@@ -2,8 +2,7 @@ cask "istat-menus" do
   version "7.30"
   sha256 :no_check # required as upstream package is updated in-place
 
-  url "https://cdn.istatmenus.app/files/istatmenus#{version.major}/versions/iStatMenus#{version}.zip",
-      verified: "cdn.istatmenus.app/"
+  url "https://cdn.istatmenus.app/files/istatmenus#{version.major}/versions/iStatMenus#{version}.zip"
   name "iStats Menus"
   desc "System monitoring app"
   homepage "https://bjango.com/mac/istatmenus/"

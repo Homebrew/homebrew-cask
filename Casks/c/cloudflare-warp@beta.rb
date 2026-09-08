@@ -2,8 +2,7 @@ cask "cloudflare-warp@beta" do
   version "2026.7.1210.1"
   sha256 "44e16d2848bee801f759a915623b0b819a48aba834c1fe35be8724bacf13bda9"
 
-  url "https://downloads.cloudflareclient.com/v1/download/macos/version/#{version}",
-      verified: "downloads.cloudflareclient.com/v1/download/macos/"
+  url "https://downloads.cloudflareclient.com/v1/download/macos/version/#{version}"
   name "Cloudflare WARP"
   desc "Free app that makes your Internet safer"
   homepage "https://cloudflarewarp.com/"

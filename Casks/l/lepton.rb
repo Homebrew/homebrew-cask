@@ -5,8 +5,7 @@ cask "lepton" do
   sha256 arm:   "e5a783fd960438af176ad2b79c5687371cbb985f49c13cdfea695fd5df0e8115",
          intel: "4c7e11a3af18362d20a7cfaefe9da585271ae36e4c5ba69b080409acedae9ba8"
 
-  url "https://github.com/hackjutsu/Lepton/releases/download/v#{version}/Lepton-#{version}-mac-#{arch}.dmg",
-      verified: "github.com/hackjutsu/Lepton/"
+  url "https://github.com/hackjutsu/Lepton/releases/download/v#{version}/Lepton-#{version}-mac-#{arch}.dmg"
   name "Lepton"
   desc "Snippet management app"
   homepage "https://hackjutsu.com/Lepton/"

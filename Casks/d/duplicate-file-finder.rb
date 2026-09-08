@@ -1,6 +1,6 @@
 cask "duplicate-file-finder" do
-  version "9.2.1,1029"
-  sha256 "22edb747f277d343cc68f3e358a85b1787be7d34dc29977dd359b54364e10d8a"
+  version "9.2.2,1042"
+  sha256 "186587b7b4806544e6fbffe13f2b371a1ba9b4a176c7a19b3c13090603e8a94c"
 
   url "https://download.nektony.com/download/duplicate-file-finder/duplicate-file-finder.dmg?build=#{version.csv.second}"
   name "Duplicate File Finder"

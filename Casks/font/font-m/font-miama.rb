@@ -2,8 +2,7 @@ cask "font-miama" do
   version :latest
   sha256 :no_check
 
-  url "https://github.com/google/fonts/raw/main/ofl/miama/Miama-Regular.ttf",
-      verified: "github.com/google/fonts/"
+  url "https://github.com/google/fonts/raw/main/ofl/miama/Miama-Regular.ttf"
   name "Miama"
   homepage "https://fonts.google.com/specimen/Miama"
 

@@ -2,8 +2,7 @@ cask "musescore" do
   version "4.7.4.260706075,4.7.4"
   sha256 "e3596e27da0806a3384cab67d52f8478ad21ed2bd6fc96d7cb874d840b016fac"
 
-  url "https://github.com/musescore/MuseScore/releases/download/v#{version.csv.second}/MuseScore-Studio-#{version.csv.first}.dmg",
-      verified: "github.com/musescore/MuseScore/"
+  url "https://github.com/musescore/MuseScore/releases/download/v#{version.csv.second}/MuseScore-Studio-#{version.csv.first}.dmg"
   name "MuseScore"
   desc "Open-source music notation software"
   homepage "https://musescore.org/"

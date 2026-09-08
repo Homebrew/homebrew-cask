@@ -2,8 +2,7 @@ cask "fotokasten" do
   version "4.49.0,251028.1453"
   sha256 "c76b6736fc6a84bb6b71c0e81415031d09095172e82b9df0df81d280bab26ec5"
 
-  url "https://downloads.poi.de/fotokasten/pgx-mac/de_DE/fotokasten_22153088_de_DE_#{version.csv.first}-#{version.csv.second}.dmg",
-      verified: "downloads.poi.de/fotokasten/"
+  url "https://downloads.poi.de/fotokasten/pgx-mac/de_DE/fotokasten_22153088_de_DE_#{version.csv.first}-#{version.csv.second}.dmg"
   name "Fotokasten"
   desc "Create and buy photo products"
   homepage "https://www.fotokasten.de/"

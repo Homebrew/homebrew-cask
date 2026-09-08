@@ -1,18 +1,18 @@
 cask "aionui" do
   arch arm: "arm64", intel: "x64"
 
-  version "2.1.46"
-  sha256 arm:   "f8d8de8e627b27e90e80baf1c8c21015843f214b0793235dbb81186bcb359242",
-         intel: "a8c61f04787515fbe6257a6b4639eb6edba1b8ccf5c5d17f359dedf5fbcb5b9e"
+  version "2.2.1"
+  sha256 arm:   "e2fe252c8bee966099413cdb449cc7694429ab9fb48e1e32df135e41d414b648",
+         intel: "a8ff4e0153677db84ebee888735d0059b75f88ed7b3e8f6110ce55871341cbf1"
 
-  url "https://github.com/iOfficeAI/AionUi/releases/download/v#{version}/AionUi-#{version}-mac-#{arch}.dmg"
+  url "https://static.aionui.com/releases/#{version}/AionUi-#{version}-mac-#{arch}.dmg"
   name "AionUi"
   desc "Unified GUI for command-line AI agents"
-  homepage "https://github.com/iOfficeAI/AionUi"
+  homepage "https://www.aionui.com/"
 
   livecheck do
-    url :url
-    strategy :github_latest
+    url "https://static.aionui.com/releases/latest-mac.yml"
+    regex(/^version:\s*v?(\d+(?:\.\d+)+)/i)
   end
 
   auto_updates true

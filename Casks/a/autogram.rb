@@ -5,8 +5,7 @@ cask "autogram" do
   sha256 arm:   "2e225c212377157a4500ef8485772d7a0187dd515575cff33ab24a3cd3c6ab71",
          intel: "34851c479f556badaa2d03baf8aa7c9e0b58db2289601eb5113542b4bdc564f4"
 
-  url "https://github.com/slovensko-digital/autogram/releases/download/v#{version}/autogram-#{version}-macos#{arch}.pkg",
-      verified: "github.com/slovensko-digital/autogram/"
+  url "https://github.com/slovensko-digital/autogram/releases/download/v#{version}/autogram-#{version}-macos#{arch}.pkg"
   name "autogram"
   desc "Application for electronic signing of signatures"
   homepage "https://sluzby.slovensko.digital/autogram/"

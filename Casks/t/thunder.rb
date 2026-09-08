@@ -2,8 +2,7 @@ cask "thunder" do
   version "5.80.7.66659"
   sha256 "2d5c41dad06f2070e0496a77754be25c3848e33c4e7ddd25ca61a04f8fb5bf9c"
 
-  url "https://down.sandai.net/mac/thunder_#{version}.dmg",
-      verified: "down.sandai.net/mac/"
+  url "https://down.sandai.net/mac/thunder_#{version}.dmg"
   name "Thunder"
   name "迅雷"
   desc "VPN and WiFi proxy"

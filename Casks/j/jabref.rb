@@ -5,8 +5,7 @@ cask "jabref" do
   sha256 arm:   "c4637b9bbfa075c9e25636203e0fda73bbf8ef0166ca35866dbdd13d9f589430",
          intel: "d668ef907b02dfb1941deef5b2896e6bfa343e7ef1aa776effdf248536ae4f99"
 
-  url "https://github.com/JabRef/jabref/releases/download/v#{version}/JabRef-#{version}#{arch}.dmg",
-      verified: "github.com/JabRef/jabref/"
+  url "https://github.com/JabRef/jabref/releases/download/v#{version}/JabRef-#{version}#{arch}.dmg"
   name "JabRef"
   desc "Reference manager to edit, manage and search BibTeX files"
   homepage "https://www.jabref.org/"

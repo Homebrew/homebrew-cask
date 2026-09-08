@@ -1,9 +1,8 @@
 cask "mission-control-plus" do
-  version "1.24"
-  sha256 "b791fc0f174c1c0082176178c5a1671841fc0a3c90de9d5cb9d13ed9c21cc765"
+  version "1.27"
+  sha256 "b52994e33ebbb05cddb6eea55b54fee377eed8a9e96a59d409ab11599de859d1"
 
-  url "https://github.com/ronyfadel/MissionControlPlusReleases/releases/download/v#{version}/Mission.Control.Plus.tgz",
-      verified: "github.com/ronyfadel/MissionControlPlusReleases/"
+  url "https://github.com/ronyfadel/MissionControlPlusReleases/releases/download/v#{version}/Mission.Control.Plus.tgz"
   name "Mission Control Plus"
   desc "Manage your windows in Mission Control"
   homepage "https://fadel.io/MissionControlPlus"

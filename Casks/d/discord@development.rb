@@ -1,9 +1,8 @@
 cask "discord@development" do
-  version "1.0.1012"
-  sha256 "7ef87b1deed8103302ed03411b9abf23fcf5eaa14e39ca14d5a2865571a85760"
+  version "1.0.1021"
+  sha256 "91b387c2e20013f3358f1cf192c94be6d9445f70cba36b82ab66a9cf2be7d718"
 
-  url "https://dl-development.discordapp.net/apps/osx/#{version}/DiscordDevelopment.dmg",
-      verified: "dl-development.discordapp.net/"
+  url "https://dl-development.discordapp.net/apps/osx/#{version}/DiscordDevelopment.dmg"
   name "Discord Development"
   desc "Voice and text chat software"
   homepage "https://discord.com/"

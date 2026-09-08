@@ -1,12 +1,11 @@
 cask "nimbalyst" do
   arch arm: "arm64", intel: "x64"
 
-  version "0.71.3"
-  sha256 arm:   "57259ffa9d3995aa92f2d2481bb1a88bd024048f37d77d05def481024b473133",
-         intel: "6c81f7696106c54f0675971178b30a49606e65d70497145ce7f69ab57d7a3a97"
+  version "0.76.2"
+  sha256 arm:   "0e8a29595a25881a46aff110ae1d17afd9e718d641884a5ae3e763164b31bc13",
+         intel: "4af7436ef8ac34091a9f8f8539dbd99a2319f643f56a52ac581245fe822a2b7b"
 
-  url "https://github.com/Nimbalyst/nimbalyst/releases/download/v#{version}/Nimbalyst-macOS-#{arch}.dmg",
-      verified: "github.com/Nimbalyst/nimbalyst/"
+  url "https://github.com/Nimbalyst/nimbalyst/releases/download/v#{version}/Nimbalyst-macOS-#{arch}.dmg"
   name "Nimbalyst"
   desc "Visual workspace for building with Codex and Claude Code"
   homepage "https://nimbalyst.com/"

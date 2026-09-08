@@ -1,9 +1,8 @@
 cask "aphera" do
-  version "1.2.1"
-  sha256 "7f27359cad4d9b4e6a1e3b54bc9a15989d2d9692cef1cf0a130945b92b4bb2ea"
+  version "1.4.0"
+  sha256 "be6b0490a41926cff7ccd86d78ff263f2c5a6186c35211be9bd316070eefcf7e"
 
-  url "https://releases.aphera.app/Aphera.#{version}.dmg",
-      verified: "releases.aphera.app/"
+  url "https://releases.aphera.app/Aphera.#{version}.dmg"
   name "Aphera"
   desc "Raw photo editing software"
   homepage "https://aphera.co/"

@@ -5,8 +5,7 @@ cask "librecad" do
   sha256 arm:   "0c6ce2e25a027ff3e921b74101d1c4e167687d2386fe0798f2f4c37d12deb436",
          intel: "34369e791af12e414d6e08c0954f679990706215a07b569a8eb7b9a6fa115f38"
 
-  url "https://github.com/LibreCAD/LibreCAD/releases/download/v#{version.csv.first}/LibreCAD-v#{version.csv.second || version.csv.first}#{arch}.dmg",
-      verified: "github.com/LibreCAD/LibreCAD/"
+  url "https://github.com/LibreCAD/LibreCAD/releases/download/v#{version.csv.first}/LibreCAD-v#{version.csv.second || version.csv.first}#{arch}.dmg"
   name "LibreCAD"
   desc "CAD application"
   homepage "https://librecad.org/"

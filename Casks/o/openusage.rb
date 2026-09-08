@@ -1,9 +1,8 @@
 cask "openusage" do
-  version "0.7.6"
-  sha256 "3b849b69477a71f95981b49a52d8480730ee21b41024a4df382f35e7eae86264"
+  version "0.7.11"
+  sha256 "27bfb24dee6c5325c37489799c9c7e6bd2e3129b885158be43e75adc56675039"
 
-  url "https://github.com/robinebers/openusage/releases/download/v#{version}/OpenUsage-#{version}.dmg",
-      verified: "github.com/robinebers/openusage/"
+  url "https://github.com/robinebers/openusage/releases/download/v#{version}/OpenUsage-#{version}.dmg"
   name "OpenUsage"
   desc "AI usage tracker for Cursor, Claude Code, Codex, Copilot and more"
   homepage "https://www.openusage.ai/"
@@ -12,6 +11,8 @@ cask "openusage" do
   depends_on macos: :sequoia
 
   app "OpenUsage.app"
+
+  uninstall quit: "com.robinebers.openusage"
 
   zap trash: [
     "~/Library/Application Support/com.robinebers.openusage",

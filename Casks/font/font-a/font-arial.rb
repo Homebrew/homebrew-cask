@@ -6,10 +6,10 @@ cask "font-arial" do
   name "Arial"
   homepage "https://sourceforge.net/projects/corefonts/files/the%20fonts/final/"
 
-  font "Ariali.TTF"
+  font "Arial.TTF"
   font "Arialbd.TTF"
   font "Arialbi.TTF"
-  font "Arial.TTF"
+  font "Ariali.TTF"
 
   # No zap stanza required
 end

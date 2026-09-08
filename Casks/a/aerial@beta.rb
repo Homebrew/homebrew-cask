@@ -1,9 +1,8 @@
 cask "aerial@beta" do
-  version "4.0.14"
-  sha256 "77faa5883a9a0e97ad874daea4108fac16b3dfe845aabfe0a5d6125024d4aab4"
+  version "4.0.16"
+  sha256 "33a6b4008b9e4b6271daf0d450363fdbddb452fd3836ff81966ba5fa80ccbfe9"
 
-  url "https://github.com/AerialScreensaver/Aerial/releases/download/v#{version}/Aerial-#{version}.zip",
-      verified: "github.com/AerialScreensaver/Aerial/"
+  url "https://github.com/AerialScreensaver/Aerial/releases/download/v#{version}/Aerial-#{version}.zip"
   name "Aerial"
   desc "Apple TV Aerial screensaver"
   homepage "https://aerialscreensaver.github.io/"
@@ -24,6 +23,7 @@ cask "aerial@beta" do
 
   zap trash: [
     "/Users/Shared/Aerial",
+    "~/Library/Application Scripts/com.glouel.Aerial-App.AerialScreenSaverExtension",
     "~/Library/Application Support/Aerial",
     "~/Library/Caches/com.glouel.Aerial-App",
     "~/Library/Containers/com.apple.ScreenSaver.Engine.legacyScreenSaver.x86-64/Data/Library/Application Support/Aerial",
@@ -32,6 +32,7 @@ cask "aerial@beta" do
     "~/Library/Containers/com.apple.ScreenSaver.Engine.legacyScreenSaver/Data/Library/Caches/Aerial",
     "~/Library/Containers/com.apple.ScreenSaver.Engine.legacyScreenSaver/Data/Library/Preferences/ByHost/com.JohnCoates.Aerial*.plist",
     "~/Library/Containers/com.glouel.Aerial-App",
+    "~/Library/Containers/com.glouel.Aerial-App.AerialScreenSaverExtension",
     "~/Library/Containers/com.glouel.Aerial-App.ScreenSaverExtension",
     "~/Library/HTTPStorages/com.glouel.Aerial-App",
     "~/Library/Logs/Aerial",

@@ -1,6 +1,6 @@
 cask "snapndrag" do
-  version "4.5.4"
-  sha256 "ffcef31891184fadae977bcfaa2a33502188592b6bf250defebc9975e95ad2bd"
+  version "4.5.6"
+  sha256 "70c798897eda2b45e13f9b31258c197bed3e43f9364de199e1b5707fb6091f5f"
 
   url "https://yellowmug.com/download/SnapNDrag_#{version}.dmg"
   name "SnapNDrag"
@@ -12,9 +12,11 @@ cask "snapndrag" do
     strategy :sparkle
   end
 
-  depends_on :macos
+  depends_on macos: :sequoia
 
   app "SnapNDrag.app"
+
+  uninstall quit: "com.yellowmug.SnapNDrag"
 
   zap trash: [
     "~/Library/Application Support/com.yellowmug.SnapNDrag",

@@ -1,6 +1,6 @@
 cask "paste" do
-  version "6.6.4"
-  sha256 "22171f94a83034fa32188112d1d8c0d2ba19d03f48b2777f01f8d7cc2e771aea"
+  version "6.6.10"
+  sha256 "3710b379796259dbdfe00af65f40981fd464365f29c0ec3560b1a413cf9ea85b"
 
   url "https://downloads.pasteapp.io/dist/stable/Paste-#{version}.zip"
   name "Paste"

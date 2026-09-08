@@ -1,6 +1,6 @@
 cask "holavpn" do
-  version "4.0,1.255.991"
-  sha256 "5df14d5711250e4f72eb400118231107f3abc108b2121d7c06b98f3e5f16cfa1"
+  version "4.0,1.257.548"
+  sha256 "2f6c28366e98c2e23209e298360f6fad5a4e7777785b39d0bde28bd3f2949860"
 
   url "https://cdn4.hola.org/static/HolaVPN2E-#{version.csv.first}-#{version.csv.second}.dmg"
   name "Hola VPN"
@@ -15,7 +15,7 @@ cask "holavpn" do
     end
   end
 
-  depends_on :macos
+  depends_on macos: :monterey
 
   app "HolaVPN2E.app"
 

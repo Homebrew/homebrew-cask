@@ -12,6 +12,7 @@ cask "writerside" do
 
   # https://blog.jetbrains.com/writerside/2025/03/sunsetting-writerside-ide/
   deprecate! date: "2025-08-16", because: :discontinued
+  disable! date: "2026-08-20", because: :discontinued
 
   auto_updates true
   depends_on :macos

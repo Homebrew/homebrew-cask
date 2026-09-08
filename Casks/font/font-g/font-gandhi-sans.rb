@@ -6,10 +6,10 @@ cask "font-gandhi-sans" do
   name "Gandhi Sans"
   homepage "https://www.fontsquirrel.com/fonts/gandhi-sans"
 
-  font "GandhiSans-Regular.otf"
-  font "GandhiSans-Italic.otf"
   font "GandhiSans-Bold.otf"
   font "GandhiSans-BoldItalic.otf"
+  font "GandhiSans-Italic.otf"
+  font "GandhiSans-Regular.otf"
 
   # No zap stanza required
 end

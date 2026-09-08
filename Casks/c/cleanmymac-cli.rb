@@ -2,8 +2,7 @@ cask "cleanmymac-cli" do
   version "1.0.0"
   sha256 "f22dcf72e26a680e16e7d4deb0f36c0588f5beb0f7a892248e0ddacf68fb737a"
 
-  url "https://cli.cleanmymac.com/#{version}/CleanMyMac-CLI-#{version}.zip",
-      verified: "cli.cleanmymac.com/"
+  url "https://cli.cleanmymac.com/#{version}/CleanMyMac-CLI-#{version}.zip"
   name "CleanMyMac CLI"
   desc "Command-line interface for CleanMyMac"
   homepage "https://github.com/MacPaw/cleanmymac-cli"

@@ -1,9 +1,8 @@
 cask "incident-io" do
-  version "1.3.9"
-  sha256 "87ba46568c3e9c76c0a81ebffc5ce19138c59bf80965fee51553f8ae439fd3fa"
+  version "1.4.2"
+  sha256 "839e30a68ea8d37249ca67bdd51355f449a6f650d1ffef66f6d6b80502542172"
 
-  url "https://storage.googleapis.com/incident-io-production-downloads/incident.io-#{version}.zip",
-      verified: "storage.googleapis.com/incident-io-production-downloads/"
+  url "https://storage.googleapis.com/incident-io-production-downloads/incident.io-#{version}.zip"
   name "incident.io"
   desc "Incident management platform"
   homepage "https://incident.io/"

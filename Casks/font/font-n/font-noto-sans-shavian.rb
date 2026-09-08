@@ -2,8 +2,7 @@ cask "font-noto-sans-shavian" do
   version :latest
   sha256 :no_check
 
-  url "https://github.com/google/fonts/raw/main/ofl/notosansshavian/NotoSansShavian-Regular.ttf",
-      verified: "github.com/google/fonts/"
+  url "https://github.com/google/fonts/raw/main/ofl/notosansshavian/NotoSansShavian-Regular.ttf"
   name "Noto Sans Shavian"
   homepage "https://fonts.google.com/specimen/Noto+Sans+Shavian"
 

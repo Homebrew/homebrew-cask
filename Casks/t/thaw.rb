@@ -1,6 +1,6 @@
 cask "thaw" do
-  version "1.2.0"
-  sha256 "d67f4d31ef9fa057849a98540b810cfa42e0bc66019d3605abd08e45c69aa06f"
+  version "2.0.1"
+  sha256 "aafefc186a96b2e0b7868b0966df4cbe3bf6737ced3f9b25a22d6c07dc6f8fba"
 
   url "https://github.com/thaw-app/Thaw/releases/download/#{version}/Thaw_#{version}.zip"
   name "Thaw"
@@ -8,7 +8,7 @@ cask "thaw" do
   homepage "https://github.com/thaw-app/Thaw/"
 
   auto_updates true
-  depends_on macos: :sonoma
+  depends_on macos: :tahoe
 
   app "Thaw.app"
 

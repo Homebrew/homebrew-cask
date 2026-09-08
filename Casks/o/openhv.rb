@@ -2,8 +2,7 @@ cask "openhv" do
   version "20250725"
   sha256 "7ccb58351554bbabf2181c6330cfabd139ba555b7f71ee91d9880c7c8110c60f"
 
-  url "https://github.com/OpenHV/OpenHV/releases/download/#{version}/OpenHV-#{version}.dmg",
-      verified: "github.com/OpenHV/OpenHV/"
+  url "https://github.com/OpenHV/OpenHV/releases/download/#{version}/OpenHV-#{version}.dmg"
   name "OpenHV"
   desc "Pixel art science-fiction real-time strategy game"
   homepage "https://www.openhv.net/"

@@ -3,8 +3,7 @@ cask "stellarium" do
     version "26.2"
     sha256 "f6d08ed9bc7c7272f237b78dd91eb299aac4ed9ef9c4b25a5e89f65eef2495e0"
 
-    url "https://github.com/Stellarium/stellarium/releases/download/v#{version.major_minor}/Stellarium-#{version}-qt5-x86_64.zip",
-        verified: "github.com/Stellarium/stellarium/"
+    url "https://github.com/Stellarium/stellarium/releases/download/v#{version.major_minor}/Stellarium-#{version}-qt5-x86_64.zip"
 
     livecheck do
       url :url
@@ -15,8 +14,7 @@ cask "stellarium" do
     version "26.2"
     sha256 "960cdf1526a2989d213bc2c75f4b5747fd77f5a580345286a4913825ad192978"
 
-    url "https://github.com/Stellarium/stellarium/releases/download/v#{version.major_minor}/Stellarium-#{version}-qt6-macOS.zip",
-        verified: "github.com/Stellarium/stellarium/"
+    url "https://github.com/Stellarium/stellarium/releases/download/v#{version.major_minor}/Stellarium-#{version}-qt6-macOS.zip"
 
     livecheck do
       url :url

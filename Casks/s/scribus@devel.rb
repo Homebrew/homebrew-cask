@@ -12,8 +12,7 @@ cask "scribus@devel" do
     depends_on macos: :monterey
   end
 
-  url "https://downloads.sourceforge.net/scribus/scribus-devel/#{version.csv.first}/scribus-#{version.csv.second || version.csv.first}#{arch}.dmg",
-      verified: "sourceforge.net/scribus/"
+  url "https://downloads.sourceforge.net/scribus/scribus-devel/#{version.csv.first}/scribus-#{version.csv.second || version.csv.first}#{arch}.dmg"
   name "Scribus"
   desc "Free and open-source page layout program"
   homepage "https://www.scribus.net/"

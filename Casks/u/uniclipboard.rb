@@ -1,12 +1,11 @@
 cask "uniclipboard" do
   arch arm: "aarch64", intel: "x64"
 
-  version "0.19.1"
-  sha256 arm:   "8836a78b382602de833988e057bd6b91d86b45f25dd039afffd8d87d3edaba92",
-         intel: "dd49c7aa0b397e5dfd59dbfa1d9e6d1c0952df096a13a7db752fe424ec0c3038"
+  version "0.19.3"
+  sha256 arm:   "f633f6b9a999babb8ef76e9ea453b2556568a7e1eb26db630f479bb1e3a85152",
+         intel: "aee45d012d0d890b4af55f3236639448bbb3ac09d44722cc1d381c24461163b8"
 
-  url "https://github.com/UniClipboard/UniClipboard/releases/download/v#{version}/UniClipboard_#{version}_#{arch}.dmg",
-      verified: "github.com/UniClipboard/UniClipboard/"
+  url "https://github.com/UniClipboard/UniClipboard/releases/download/v#{version}/UniClipboard_#{version}_#{arch}.dmg"
   name "UniClipboard"
   desc "Cross-device clipboard syncing tool"
   homepage "https://www.uniclipboard.app/"
@@ -24,5 +23,6 @@ cask "uniclipboard" do
     "~/Library/Application Support/app.uniclipboard.desktop",
     "~/Library/Caches/app.uniclipboard.desktop",
     "~/Library/Logs/app.uniclipboard.desktop",
+    "~/Library/WebKit/app.uniclipboard.desktop",
   ]
 end

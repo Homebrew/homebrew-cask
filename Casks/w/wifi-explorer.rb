@@ -1,6 +1,6 @@
 cask "wifi-explorer" do
-  version "3.6.7"
-  sha256 "d84b6d7a634598598906c15d06d77e3673617c910da9f59050ae386494ee04dc"
+  version "3.6.9"
+  sha256 "8c5841dcd4427ecb1bb6b77c05fb22ef1ccb082e73aa2701ff710ad00df9ceee"
 
   url "https://www.intuitibits.com/downloads/WiFiExplorer_#{version}.dmg"
   name "WiFi Explorer"
@@ -17,10 +17,14 @@ cask "wifi-explorer" do
 
   app "WiFi Explorer.app"
 
+  uninstall quit: "wifiexplorer"
+
   zap trash: [
+    "~/Library/Application Support/WiFi Explorer",
     "~/Library/Caches/wifiexplorer",
     "~/Library/Cookies/wifiexplorer.binarycookies",
     "~/Library/Group Containers/2B9R362QNU.com.adriangranados.wifiexplorer",
+    "~/Library/HTTPStorages/wifiexplorer*",
     "~/Library/Preferences/com.adriangranados.wifiexplorer*",
     "~/Library/Preferences/wifiexplorer.plist",
     "~/Library/Saved Application State/wifiexplorer.savedState",

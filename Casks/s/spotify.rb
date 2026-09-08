@@ -1,11 +1,10 @@
 cask "spotify" do
   arch arm: "ARM64"
 
-  version "1.2.94.583"
+  version "1.2.99.317"
   sha256 :no_check
 
-  url "https://download.scdn.co/Spotify#{arch}.dmg",
-      verified: "download.scdn.co/"
+  url "https://download.scdn.co/Spotify#{arch}.dmg"
   name "Spotify"
   desc "Music streaming service"
   homepage "https://www.spotify.com/"
@@ -16,7 +15,7 @@ cask "spotify" do
   end
 
   auto_updates true
-  depends_on macos: :monterey
+  depends_on macos: :ventura
 
   app "Spotify.app"
 

@@ -1,9 +1,9 @@
 cask "prosys-opc-ua-browser" do
   arch arm: "aarch64", intel: "x64"
 
-  version "2026.1.2,38"
-  sha256 arm:   "1813beffa796e792e79f784a6518d57269dcc1ed45af8452e1411782bf949d2d",
-         intel: "7eb3d6798f252ee908df1e3b6e36c7b8c2160154987fc09d08b26b841e628415"
+  version "2026.2.0,45"
+  sha256 arm:   "e5ffd10b747299a2086256ded47e6565261a4beb7e26630d45e1d8b1c60f08ca",
+         intel: "d8e53b82a0facc2b1905a04cbfd1efde3a95c2eb145b1b6b38c970d4e658e74c"
 
   url "https://downloads.prosysopc.com/opcua/apps/UaBrowser/dist/#{version.csv.first}-#{version.csv.second}/prosys-opc-ua-browser-mac-#{arch}-#{version.csv.first}-#{version.csv.second}.dmg"
   name "Prosys OPC UA Browser"

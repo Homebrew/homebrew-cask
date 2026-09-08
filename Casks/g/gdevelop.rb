@@ -1,9 +1,8 @@
 cask "gdevelop" do
-  version "5.6.276"
-  sha256 "c8253683f5249f12528b4b19f736008c3b858e3d0af3c33b3bdfbf093850e19a"
+  version "5.6.281"
+  sha256 "aef3fb9ae7b81ee1cb31bec50e29aca8194a672bc608f9081a1694496907bd2d"
 
-  url "https://github.com/4ian/GDevelop/releases/download/v#{version}/GDevelop-#{version.major}-#{version}-universal.dmg",
-      verified: "github.com/4ian/GDevelop/"
+  url "https://github.com/4ian/GDevelop/releases/download/v#{version}/GDevelop-#{version.major}-#{version}-universal.dmg"
   name "GDevelop"
   desc "Open-source, cross-platform game engine designed to be used by everyone"
   homepage "https://gdevelop.io/"

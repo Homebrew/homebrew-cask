@@ -6,13 +6,14 @@ cask "egovframedev" do
          intel: "cbe4400bacd588b622b798409dc3f4e92bbb67f5365db1b335372864a0788b23"
 
   url "https://maven.egovframe.go.kr/publist/HDD1/public/egovframework_v#{version.major_minor}/2_DevelopmentEnvironment/eGovFrame-Dev/#{version}/eGovFrameDev-#{version}-macOS-#{arch}.dmg",
-      user_agent: :fake
+      user_agent: :browser
   name "eGovFrameDev"
   desc "Open-source framework by South Korea for web-based public service development"
   homepage "https://www.egovframe.go.kr/"
 
   livecheck do
-    url "https://www.egovframe.go.kr/home/sub.do?menuNo=39"
+    url "https://www.egovframe.go.kr/home/sub.do?menuNo=39",
+        user_agent: :browser
     regex(/개발자용\s+개발환경\s+v?(\d+(?:\.\d+)+)\s+(?!Beta)/i)
   end
 

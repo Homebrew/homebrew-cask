@@ -1,9 +1,9 @@
 cask "intellij-idea" do
   arch arm: "-aarch64"
 
-  version "2026.2.0.1,262.8665.337"
-  sha256 arm:   "bcddb055a33957d1f95e7ae3bfd308293d0f812250aab9399164163aa118399f",
-         intel: "96a99a9f7a53b45693d9b6030f5c0961b4dafd5c4be30abadf505dcfcc0a3804"
+  version "2026.2.2,262.10315.125"
+  sha256 arm:   "f4a45f451008c86ce4e9342d5931fd89c8553f9d3ab6e8012da7533e9fe5c249",
+         intel: "d2849855effe178f22d58025165d968179f76bb745a5a71ebf3c29e40510cd3a"
 
   url "https://download.jetbrains.com/idea/ideaIU-#{version.csv.first}#{arch}.dmg"
   name "IntelliJ IDEA Ultimate"
@@ -30,6 +30,8 @@ cask "intellij-idea" do
   app "IntelliJ IDEA.app"
   command_wrapper "idea",
                   executable: "#{appdir}/IntelliJ IDEA.app/Contents/MacOS/idea"
+
+  uninstall quit: "com.jetbrains.intellij"
 
   zap trash: [
     "~/Library/Application Support/JetBrains/IntelliJIdea#{version.major_minor}",

@@ -1,9 +1,8 @@
 cask "steamcmd" do
-  version "1785799152"
+  version "1788292693"
   sha256 :no_check
 
-  url "https://steamcdn-a.akamaihd.net/client/installer/steamcmd_osx.tar.gz",
-      verified: "steamcdn-a.akamaihd.net/"
+  url "https://steamcdn-a.akamaihd.net/client/installer/steamcmd_osx.tar.gz"
   name "SteamCMD"
   desc "Command-line client for Steam"
   homepage "https://developer.valvesoftware.com/wiki/SteamCMD"

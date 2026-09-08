@@ -2,12 +2,11 @@ cask "remnote" do
   arch arm: "-arm64"
   livecheck_arch = on_arch_conditional arm: "_m1"
 
-  version "1.27.19"
-  sha256 arm:   "eefff346a65375cbdaf38eb8f332e2019ce36f931e8eb000978f62ca5256215c",
-         intel: "5e8806811484d15536aca9153a0d173a84b0091077ce30497ce799a67b09e86d"
+  version "1.28.14"
+  sha256 arm:   "c582d1f24383e0299b60a97743dd45f06d13c1a27699414ac3d036e8b547fcf3",
+         intel: "47a2af4044a43f7e0108786fd34017d88a9fa403aa78cc3e3c74a8c5a1100cce"
 
-  url "https://download2.remnote.io/remnote-desktop2/RemNote-#{version}#{arch}-mac.zip",
-      verified: "download2.remnote.io/"
+  url "https://download2.remnote.io/remnote-desktop2/RemNote-#{version}#{arch}-mac.zip"
   name "RemNote"
   desc "Spaced-repetition powered note-taking tool"
   homepage "https://www.remnote.com/"

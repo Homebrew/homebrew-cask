@@ -1,12 +1,11 @@
 cask "whimsical" do
   arch arm: "arm64", intel: "x64"
 
-  version "2026.10.1,260729oshpovqhh"
-  sha256 arm:   "60ec80be7f3246e2578f123b1b5e24b7fe84ed4b4d6ce984639812a3055c2b6f",
-         intel: "f0359a24a6ddbe71699fed2527f1f2ad115ace9bee68321cc5f365d3020f865e"
+  version "2026.10.3,2608253amgezq7v"
+  sha256 arm:   "81d387d6e1c1cc1b91a84b9d8a8719d994271f1fe186810f3efdda3822833df6",
+         intel: "67eaf14495a48b8cdd823f1a5291dbed3c44e6a5115a5c89485d4070aaa70506"
 
-  url "https://download.todesktop.com/2402209z4j37b73/Whimsical%20#{version.csv.first}%20-%20Build%20#{version.csv.second}-#{arch}-mac.zip",
-      verified: "download.todesktop.com/2402209z4j37b73/"
+  url "https://download.todesktop.com/2402209z4j37b73/Whimsical%20#{version.csv.first}%20-%20Build%20#{version.csv.second}-#{arch}-mac.zip"
   name "Whimsical"
   desc "Collaboration and diagramming tool"
   homepage "https://whimsical.com/"

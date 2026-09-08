@@ -1,9 +1,9 @@
 cask "mkvtoolnix-app" do
   arch arm: "arm64", intel: "x86_64"
 
-  version "100.0-1"
-  sha256 arm:   "155ded045a35bd1079ba466c2e1011bdcb1a85b74c984ed5627841cd313850a0",
-         intel: "aea7ab9c7146943fd9535b2ea60c074deeea3181a9c6736e58e1437456906c0a"
+  version "101.0-1"
+  sha256 arm:   "12f7b200d1bc64db16933b55f2c3ce47fdbe4a88878e2e6aa26b702424eac1f0",
+         intel: "e53d6e4bef163943909f100ec8559e46700f68d69ba3c500685c9897405d14f0"
 
   url "https://mkvtoolnix.download/macos/releases/#{version.split("-").first}/MKVToolNix-#{version}-#{arch}.dmg"
   name "MKVToolNix"
@@ -14,7 +14,7 @@ cask "mkvtoolnix-app" do
     url "https://mkvtoolnix.download/macos/releases/"
     regex(/href=.*?MKVToolNix[._-]v?(\d+(?:[.-]\d+)+)[._-]#{arch}\.dmg/i)
     strategy :page_match do |page, regex|
-      main_version = page.scan(%r{href=.*?releases/v?(\d+(?:\.\d+)+)/}i)
+      main_version = page.scan(%r{href=.*?/v?(\d+(?:\.\d+)+)/}i)
                          .max_by { |match| Version.new(match[0]) }
                          &.first
       next if main_version.blank?

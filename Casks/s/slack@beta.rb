@@ -1,12 +1,11 @@
 cask "slack@beta" do
   arch arm: "arm64", intel: "x64"
 
-  version "4.51.185"
-  sha256 arm:   "9ce367cd4ee4b9ec494bdf84a7591e83abd8bd0837a7bacb0d91256a1f1f5faa",
-         intel: "72c995a15ddfefe3c62808da2fd676fc2a66dbeb927cda76c8b08e9921e6c402"
+  version "4.52.155"
+  sha256 arm:   "28f3d5dcdfcb267c10a863417bcdfe6d1a6f73b214965b19f72c825fd4b7b60e",
+         intel: "21669dad8412cbe75af0e0ea694fe3fb0b49e36e2600c5d0f39676a17fcd4201"
 
-  url "https://downloads.slack-edge.com/desktop-releases/mac/#{arch}/#{version}/Slack-#{version}-macOS.dmg",
-      verified: "downloads.slack-edge.com/desktop-releases/mac/"
+  url "https://downloads.slack-edge.com/desktop-releases/mac/#{arch}/#{version}/Slack-#{version}-macOS.dmg"
   name "Slack"
   desc "Team communication and collaboration software"
   homepage "https://slack.com/beta/osx"
@@ -18,7 +17,7 @@ cask "slack@beta" do
 
   auto_updates true
   conflicts_with cask: "slack"
-  depends_on macos: :monterey
+  depends_on macos: :ventura
 
   app "Slack.app"
 

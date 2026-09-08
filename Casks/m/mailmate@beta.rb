@@ -2,8 +2,7 @@ cask "mailmate@beta" do
   version "6272"
   sha256 :no_check
 
-  url "https://updates.mailmate-app.com/archives/MailMateBeta.tbz",
-      verified: "mailmate-app.com/"
+  url "https://updates.mailmate-app.com/archives/MailMateBeta.tbz"
   name "MailMate"
   desc "IMAP email client"
   homepage "https://freron.com/"

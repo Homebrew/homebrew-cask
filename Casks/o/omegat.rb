@@ -1,23 +1,21 @@
 cask "omegat" do
   version "6.0.1"
-  sha256 "458cfd1508cfe7e73fc193b800f40c533a3191adddc3336769ee4e44fc50b3ae"
+  sha256 "49eb622bdcf32dcb0f4ee7ba2adc43f9837614d7b71435f33f86235c7c75a6bb"
 
-  url "https://downloads.sourceforge.net/omegat/OmegaT%20-%20Standard/OmegaT%20#{version.major_minor_patch}/OmegaT_#{version}_Mac.zip",
-      verified: "downloads.sourceforge.net/omegat/"
+  url "https://downloads.sourceforge.net/omegat/OmegaT%20-%20Standard/OmegaT%20#{version.major_minor_patch}/OmegaT_#{version}_macOS_Notarized.dmg"
   name "OmegaT"
   desc "Translation memory tool"
   homepage "https://omegat.org/"
 
   livecheck do
     url "https://sourceforge.net/projects/omegat/rss?path=/OmegaT%20-%20Standard"
+    regex(%r{url=.*?/OmegaT[._-]v?(\d+(?:\.\d+)+)[._-]macOS[._-]Notarized\.dmg}i)
   end
-
-  disable! date: "2026-09-01", because: :fails_gatekeeper_check
 
   conflicts_with cask: "omegat@latest"
   depends_on :macos
 
-  app "OmegaT_#{version}_Mac/OmegaT.app"
+  app "OmegaT.app"
 
   zap trash: [
     "~/Library/Application Support/OmegaT",

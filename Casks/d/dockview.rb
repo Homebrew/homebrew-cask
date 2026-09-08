@@ -2,8 +2,7 @@ cask "dockview" do
   version "1.7.5"
   sha256 :no_check
 
-  url "https://macplus-software.com/downloads/DockViewStandard.zip",
-      verified: "macplus-software.com/downloads/"
+  url "https://macplus-software.com/downloads/DockViewStandard.zip"
   name "DockView"
   desc "Utility to preview application windows in the dock"
   homepage "https://noteifyapp.com/dockview/"

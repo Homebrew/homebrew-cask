@@ -10,8 +10,7 @@ cask "apache-couchdb" do
     sha256 "322e4c6aa6ef2a7a766b4a1406c8440ed841e1d2c4faf6231b32629b4ebcba0b"
   end
 
-  url "https://couchdbneighbourhoodie.fra1.digitaloceanspaces.com/downloads/#{version}/mac/#{arch}/Apache-CouchDB.zip",
-      verified: "couchdbneighbourhoodie.fra1.digitaloceanspaces.com/"
+  url "https://couchdbneighbourhoodie.fra1.digitaloceanspaces.com/downloads/#{version}/mac/#{arch}/Apache-CouchDB.zip"
   name "Apache CouchDB"
   desc "Multi-master syncing database"
   homepage "https://couchdb.apache.org/"

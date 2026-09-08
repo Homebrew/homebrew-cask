@@ -1,9 +1,8 @@
 cask "jamie" do
-  version "5.7.10"
-  sha256 "3c3932d17c58baa2153219b95fdc994135864ae646d02777a192254512f95103"
+  version "5.7.16"
+  sha256 "53bcfcf4cc44c503d1878d1b812e1906730df5eee171e7662a4103934a58723e"
 
-  url "https://github.com/meetjamie/releases/releases/download/app-v#{version}/Jamie_universal.app.tar.gz",
-      verified: "github.com/meetjamie/releases/"
+  url "https://github.com/meetjamie/releases/releases/download/app-v#{version}/Jamie_#{version}_universal.app.tar.gz"
   name "Jamie"
   desc "AI-powered meeting notes"
   homepage "https://www.meetjamie.ai/"

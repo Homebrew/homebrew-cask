@@ -4,8 +4,7 @@ cask "inkstitch" do
   on_monterey :or_older do
     sha256 "0e4a39a7dfc62b8ec84b110dc3a9ccceff52fa1b92940e19d34dd04e16dcfca4"
 
-    url "https://github.com/inkstitch/inkstitch/releases/download/v#{version}/inkstitch-#{version}-old-osx-x86_64.pkg",
-        verified: "github.com/inkstitch/inkstitch/"
+    url "https://github.com/inkstitch/inkstitch/releases/download/v#{version}/inkstitch-#{version}-old-osx-x86_64.pkg"
 
     pkg "inkstitch-v#{version}-old-osx-x86_64.pkg"
 
@@ -19,8 +18,7 @@ cask "inkstitch" do
     sha256 arm:   "eb48bbed6b58438427accc5adc079f41d4ad3a82a3ebeeb04af93f204a529b2f",
            intel: "756485679c1de66d9052571200695a7e247829ef8bef99bf2e336afdd2c93b57"
 
-    url "https://github.com/inkstitch/inkstitch/releases/download/v#{version}/inkstitch-v#{version}-osx-#{arch}.pkg",
-        verified: "github.com/inkstitch/inkstitch/"
+    url "https://github.com/inkstitch/inkstitch/releases/download/v#{version}/inkstitch-v#{version}-osx-#{arch}.pkg"
 
     pkg "inkstitch-v#{version}-osx-#{arch}.pkg"
   end

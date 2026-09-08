@@ -1,9 +1,8 @@
 cask "rstudio@daily" do
-  version "2026.08.0-daily-174"
-  sha256 "4b11f9866e26d733d0144c4859118d4fe119f9c5616fd5a6272aa36a7eb2a5dc"
+  version "2026.09.0-174"
+  sha256 "a22e32640874996d2440491eeec276c03ac66c3e9d6b8fe0f7c4edf08516496f"
 
-  url "https://rstudio-ide-build.s3.amazonaws.com/electron/macos/RStudio-#{version}.dmg",
-      verified: "rstudio-ide-build.s3.amazonaws.com/electron/macos/"
+  url "https://rstudio-ide-build.s3.amazonaws.com/electron/macos/RStudio-#{version}.dmg"
   name "RStudio Daily"
   desc "Data science software focusing on R and Python"
   homepage "https://dailies.rstudio.com/"
@@ -20,6 +19,8 @@ cask "rstudio@daily" do
   depends_on macos: :monterey
 
   app "RStudio.app"
+
+  uninstall quit: "com.rstudio.desktop"
 
   zap trash: [
     "~/.rstudio-desktop",

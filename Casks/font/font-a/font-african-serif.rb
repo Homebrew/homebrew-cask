@@ -11,10 +11,10 @@ cask "font-african-serif" do
     regex(/African\s+Serif.*?\(\s*v?(\d+(?:\.\d+)+)[^)]*\)/i)
   end
 
-  font "African Serif REGULAR #{version.no_dots}.ttf"
   font "African Serif BOLD #{version.no_dots}.ttf"
   font "African Serif BOLD ITALIC #{version.no_dots}.ttf"
   font "African Serif ITALIC #{version.no_dots}.ttf"
+  font "African Serif REGULAR #{version.no_dots}.ttf"
 
   # No zap stanza required
 end

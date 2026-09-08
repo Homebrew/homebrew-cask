@@ -2,8 +2,7 @@ cask "clips-ide" do
   version "6.4.2"
   sha256 "48dbe73f5e91e5941648df5c9636717b858728953a98311a000927e6a91db223"
 
-  url "https://downloads.sourceforge.net/clipsrules/clips_macos_executable_#{version.no_dots}.dmg",
-      verified: "downloads.sourceforge.net/clipsrules/"
+  url "https://downloads.sourceforge.net/clipsrules/clips_macos_executable_#{version.no_dots}.dmg"
   name "CLIPS IDE"
   desc "Tool for building expert systems"
   homepage "https://www.clipsrules.net/"

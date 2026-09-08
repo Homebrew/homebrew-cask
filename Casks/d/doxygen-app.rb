@@ -1,9 +1,9 @@
 cask "doxygen-app" do
   arch arm: "arm", intel: "intel"
 
-  version "1.17.0"
-  sha256 arm:   "238cc26fd8fbc041af8d952c56a0f311775e98ee7352ae86ce65f45582feefac",
-         intel: "f79b108a90355c77a9e23efe9c57c58a94cf964f97319c437956f49e77af79c8"
+  version "1.18.0"
+  sha256 arm:   "59f42b0b991766380a6b0a42afca226e0fc172ef4525145eaef044e3a6663259",
+         intel: "36440a181c89f48e56817d85210d55a6e7f4c60ee6d6238370e1f81089d4d3ab"
 
   url "https://www.doxygen.nl/files/Doxygen-#{version}-#{arch}.dmg"
   name "Doxygen"

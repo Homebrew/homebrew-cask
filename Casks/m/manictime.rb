@@ -41,6 +41,15 @@ cask "manictime" do
     binary "manictime/ManicTime", target: "manictime"
     manpage "manictime/manictime.1.gz"
 
+    # ManicTime's `.tar.gz` package includes a `ManicTimeTrackerSettings.json`
+    # that triggers portable mode, instructing the tracker to write its data
+    # next to the binary (therefore, inside the versioned Caskroom)
+    # Removing it lets the tracker fall back to its default `~/.config/manictime`,
+    # matching the behavior of the upstream `.deb`/`.rpm` packages.
+    preflight_steps do
+      remove "manictime/ManicTimeTrackerSettings.json", base: :staged_path
+    end
+
     zap trash: [
       "~/.config/manictime",
       "~/.local/share/manictime",

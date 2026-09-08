@@ -2,11 +2,11 @@ cask "gcloud-cli" do
   arch arm: "arm", intel: "x86_64"
   os macos: "darwin", linux: "linux"
 
-  version "579.0.0"
-  sha256 arm:          "c43232ba6cedfea699ead175273e6018b411390ed028a5e3346d858a76acf7d4",
-         intel:        "8869810649bde738381f1574c081498e19213b83e93753fc3d216393808b6862",
-         arm64_linux:  "edc914b75f8c5d50e1efc78b849d6fa636c4412346784c148c4130f5dc3eba00",
-         x86_64_linux: "a9a7fbe51cda37cf6142b1bbcff12227550e60a6c67e8cf84644fb301371c4de"
+  version "583.0.0"
+  sha256 arm:          "7d091f55db0465f8a1d8a8026bff3f1122e3e1da4a8a288c330f321b6b76e07d",
+         intel:        "977eb92b986079d519fd5b401f8be9bc70b7f9cbafef83563bd97ff182c67277",
+         arm64_linux:  "8ce6287e01e54b53d2e9618d124b62ac85efe5a093904ae027b17f2057030662",
+         x86_64_linux: "84c5e4798836bda13aa82c3e84fa1acd0c4e4ca5318f7141052e3a5a26a7cc97"
 
   google_cloud_sdk_root = "#{HOMEBREW_PREFIX}/share/google-cloud-sdk"
 
@@ -75,13 +75,15 @@ cask "gcloud-cli" do
                                                                         "python@3.14/libexec/bin/python",
                                                  }
       end
-      run "share/google-cloud-sdk/bin/gcloud", base: :homebrew_prefix,
-                                               args: ["config", "virtualenv", "create", "--python-to-use",
-                                                      "{{HOMEBREW_PREFIX}}/opt/python@3.14/libexec/bin/python"],
-                                               env:  {
+      run "share/google-cloud-sdk/bin/gcloud", base:           :homebrew_prefix,
+                                               args:           ["config", "virtualenv", "create", "--python-to-use",
+                                                                "{{HOMEBREW_PREFIX}}/opt/" \
+                                                                "python@3.14/libexec/bin/python"],
+                                               env:            {
                                                  "CLOUDSDK_PYTHON" => "{{HOMEBREW_PREFIX}}/opt/" \
                                                                       "python@3.14/libexec/bin/python",
-                                               }
+                                               },
+                                               network_access: true
       run "share/google-cloud-sdk/bin/gcloud", base: :homebrew_prefix,
                                                args: ["config", "virtualenv", "enable"],
                                                env:  {

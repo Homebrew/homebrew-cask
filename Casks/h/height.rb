@@ -2,8 +2,7 @@ cask "height" do
   version "0.28.2"
   sha256 "d1bc02ef43598842d0a96533127ce0f2d38a56397e43ab1df31f2c02662ef17d"
 
-  url "https://storage.googleapis.com/height-statics/_app/Height-#{version}-universal.dmg",
-      verified: "storage.googleapis.com/height-statics/_app/"
+  url "https://storage.googleapis.com/height-statics/_app/Height-#{version}-universal.dmg"
   name "Height"
   desc "All-in-one project management tool"
   homepage "https://height.app/"

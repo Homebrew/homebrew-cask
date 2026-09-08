@@ -2,8 +2,7 @@ cask "font-share-tech-mono" do
   version :latest
   sha256 :no_check
 
-  url "https://github.com/google/fonts/raw/main/ofl/sharetechmono/ShareTechMono-Regular.ttf",
-      verified: "github.com/google/fonts/"
+  url "https://github.com/google/fonts/raw/main/ofl/sharetechmono/ShareTechMono-Regular.ttf"
   name "Share Tech Mono"
   homepage "https://fonts.google.com/specimen/Share+Tech+Mono"
 

@@ -2,8 +2,7 @@ cask "autopkgr" do
   version "2.0"
   sha256 "05955ffd7cc7e6e18b099aae1c3e2a373350543366e604bd540958148ce729e7"
 
-  url "https://github.com/lindegroup/autopkgr/releases/download/v#{version}/AutoPkgr-#{version}.dmg",
-      verified: "github.com/lindegroup/autopkgr/"
+  url "https://github.com/lindegroup/autopkgr/releases/download/v#{version}/AutoPkgr-#{version}.dmg"
   name "AutoPkgr"
   desc "Install and configure AutoPkg"
   homepage "https://www.lindegroup.com/autopkgr"

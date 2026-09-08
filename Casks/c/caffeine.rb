@@ -2,8 +2,7 @@ cask "caffeine" do
   version "1.1.4"
   sha256 "1ad34c3299a0c866873c4feb432c3e11186375adb6f43c5f481ae9d46d06d723"
 
-  url "https://github.com/IntelliScape/caffeine/releases/download/#{version}/Caffeine.dmg",
-      verified: "github.com/IntelliScape/caffeine/"
+  url "https://github.com/IntelliScape/caffeine/releases/download/#{version}/Caffeine.dmg"
   name "Caffeine"
   desc "Utility that prevents the system from going to sleep"
   homepage "https://intelliscapesolutions.com/apps/caffeine"

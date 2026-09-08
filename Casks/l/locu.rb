@@ -5,8 +5,7 @@ cask "locu" do
   sha256 arm:   "733db35ac9e0049f40fef1e7ce5c9be394ec6c033f6b8f98d414abbc93d6b917",
          intel: "71f1d6615033bd84b073ff91d2f0bb5f41b0327fdce5a751c3ea60aa48daf224"
 
-  url "https://locu.sfo2.digitaloceanspaces.com/Locu-#{version}#{arch}-mac.zip",
-      verified: "locu.sfo2.digitaloceanspaces.com/"
+  url "https://locu.sfo2.digitaloceanspaces.com/Locu-#{version}#{arch}-mac.zip"
   name "Locu"
   desc "Daily planner and focus timer"
   homepage "https://locu.app/"

@@ -5,8 +5,7 @@ cask "jquake" do
   sha256 arm:   "e035c0b51ab1947719a20d54493ffea103e4e2d3c1dbf73d2de145cfe8f3223e",
          intel: "d503a113791ea5f731bcb0de4c57d3e4544982263296a3c14b99c21e5105db9f"
 
-  url "https://fleneindre.github.io/downloads/JQuake_#{version}_mac_#{arch}.dmg",
-      verified: "fleneindre.github.io/downloads/"
+  url "https://fleneindre.github.io/downloads/JQuake_#{version}_mac_#{arch}.dmg"
   name "JQuake"
   desc "Real-time earthquake monitoring software for Japan"
   homepage "https://jquake.net/"

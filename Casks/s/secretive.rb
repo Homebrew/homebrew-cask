@@ -1,10 +1,6 @@
 cask "secretive" do
   on_ventura :or_older do
-    on_catalina :or_older do
-      version "1.0.3"
-      sha256 "d8522c153f20cd03513e6815bdb46be98eae0db2b2a45d30f60b25a6609d1657"
-    end
-    on_big_sur do
+    on_big_sur :or_older do
       version "2.3.1"
       sha256 "493a72362898b4480baa70f115d9515b41b2af4a503caf00277e2bc3824b0bbd"
     end

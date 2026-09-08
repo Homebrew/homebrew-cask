@@ -2,8 +2,7 @@ cask "activitywatch" do
   version "0.13.2"
   sha256 "22f3bce0e169457902b2c8d2967701cde887171f737d281dd414a210bd3090ed"
 
-  url "https://github.com/ActivityWatch/activitywatch/releases/download/v#{version}/activitywatch-v#{version}-macos-x86_64.dmg",
-      verified: "github.com/ActivityWatch/activitywatch/"
+  url "https://github.com/ActivityWatch/activitywatch/releases/download/v#{version}/activitywatch-v#{version}-macos-x86_64.dmg"
   name "ActivityWatch"
   desc "Time tracker"
   homepage "https://activitywatch.net/"

@@ -2,8 +2,7 @@ cask "font-squada-one" do
   version :latest
   sha256 :no_check
 
-  url "https://github.com/google/fonts/raw/main/ofl/squadaone/SquadaOne-Regular.ttf",
-      verified: "github.com/google/fonts/"
+  url "https://github.com/google/fonts/raw/main/ofl/squadaone/SquadaOne-Regular.ttf"
   name "Squada One"
   homepage "https://fonts.google.com/specimen/Squada+One"
 

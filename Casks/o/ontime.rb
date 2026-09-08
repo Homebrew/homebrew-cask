@@ -1,12 +1,11 @@
 cask "ontime" do
   arch arm: "arm64", intel: "x64"
 
-  version "4.11.0"
-  sha256 arm:   "9066d78facf18e434bac67f6c3b0944239066d1818c43536bf3c47c6ce0f8f28",
-         intel: "243e9185f20b76a0bfea4cd6dfea694c8fad2e589cd38e5e2a57cb4adf16f190"
+  version "4.13.0"
+  sha256 arm:   "7cd8a4a296b122064a717681787c995e56f1845690f58eaa1b31a6d0d2f5cdb7",
+         intel: "a8d6baee015eaaa7251d9923e21032f1f3b600b73ae40c996bf6d6145d3bd60e"
 
-  url "https://github.com/cpvalente/ontime/releases/download/v#{version}/ontime-macOS-#{arch}.dmg",
-      verified: "github.com/cpvalente/ontime/"
+  url "https://github.com/cpvalente/ontime/releases/download/v#{version}/ontime-macOS-#{arch}.dmg"
   name "Ontime"
   desc "Time keeping for live events"
   homepage "https://getontime.no/"
@@ -21,8 +20,11 @@ cask "ontime" do
 
   app "ontime.app"
 
+  uninstall quit: "no.lightdev.ontime"
+
   zap trash: [
     "~/Library/Application Support/ontime",
+    "~/Library/Application Support/ontime-electron",
     "~/Library/Preferences/no.lightdev.ontime.plist",
     "~/Library/Saved Application State/no.lightdev.ontime.savedState",
   ]

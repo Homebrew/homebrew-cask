@@ -1,9 +1,8 @@
 cask "happ" do
-  version "3.3.6"
-  sha256 "722c7734be623de6e1dd19cef5650ae02b0d9f93cd9a274a3c53eac148f17b15"
+  version "4.2.1"
+  sha256 "25675fd3e6002d4768c26c1f938ccfcd4a5c0459cef0ae9cfa1e2f7193378cba"
 
-  url "https://github.com/Happ-proxy/happ-desktop/releases/download/#{version}/Happ.macOS.universal.dmg",
-      verified: "github.com/Happ-proxy/happ-desktop/"
+  url "https://github.com/Happ-proxy/happ-desktop/releases/download/#{version}/Happ.macOS.universal.dmg"
   name "Happ"
   desc "Platform for building proxies to bypass network restrictions"
   homepage "https://www.happ.su/main/"

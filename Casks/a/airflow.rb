@@ -2,8 +2,7 @@ cask "airflow" do
   version "3.3.10"
   sha256 "76a5da7cebebe651fc849d7510c948d960163bdcdcded0d1abb8c061da447c78"
 
-  url "https://cdn.downloads.iocave.net/Airflow/Airflow%20#{version}.zip",
-      verified: "cdn.downloads.iocave.net/Airflow/"
+  url "https://cdn.downloads.iocave.net/Airflow/Airflow%20#{version}.zip"
   name "Airflow"
   desc "Watch local content on Apple TV and Chromecast"
   homepage "https://airflowapp.com/"

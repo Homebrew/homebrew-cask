@@ -2,8 +2,7 @@ cask "flock-app" do
   version "2.2.513"
   sha256 "610d73f1792905a4dd6c0dbbd27dd83a40e3c7d482784a298d4623ada8621ff6"
 
-  url "https://updates.flock.co/fl_mac_electron/Flock-macOS-#{version}.dmg",
-      verified: "flock.co/"
+  url "https://updates.flock.co/fl_mac_electron/Flock-macOS-#{version}.dmg"
   name "Flock"
   desc "Business messaging and team collaboration app"
   homepage "https://flock.com/"

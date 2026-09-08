@@ -10,8 +10,7 @@ cask "es-de" do
     sha256 "2bab445b3efef263b54fedc4c0cbac76c477f72221130f49fc11796d0294bf6a"
   end
 
-  url "https://gitlab.com/es-de/emulationstation-de/-/package_files/#{version.csv.second}/download",
-      verified: "gitlab.com/es-de/emulationstation-de/"
+  url "https://gitlab.com/es-de/emulationstation-de/-/package_files/#{version.csv.second}/download"
   name "ES-DE"
   name "EmulationStation Desktop Edition"
   desc "Frontend for browsing and launching games from your multi-platform collection"

@@ -1,12 +1,11 @@
 cask "paseo" do
   arch arm: "arm64", intel: "x64"
 
-  version "0.2.5"
-  sha256 arm:   "54291ee7df9542040ba71066f2aaff14041ce15fc9c3b8ac279050544ef29b70",
-         intel: "66257aef8e060eb9c08a03e3e8638805c2ed6e555d43eb87659166d4927c23ff"
+  version "0.7.2"
+  sha256 arm:   "8d959576c1488e464e4e052573d6724277425ce753286b817049cec9b796768f",
+         intel: "93a3bab8d9c73087fcfdcf9947f26f167c6878d0e36ee1ea589c6c7d02d685eb"
 
-  url "https://github.com/getpaseo/paseo/releases/download/v#{version}/Paseo-#{version}-#{arch}.dmg",
-      verified: "github.com/getpaseo/paseo/"
+  url "https://github.com/getpaseo/paseo/releases/download/v#{version}/Paseo-#{version}-#{arch}.dmg"
   name "Paseo"
   desc "Self-hosted daemon for AI coding agents"
   homepage "https://paseo.sh/"

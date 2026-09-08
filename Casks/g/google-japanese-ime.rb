@@ -2,8 +2,7 @@ cask "google-japanese-ime" do
   version "3.33.6130"
   sha256 :no_check
 
-  url "https://dl.google.com/japanese-ime/latest/GoogleJapaneseInput.dmg",
-      verified: "dl.google.com/japanese-ime/"
+  url "https://dl.google.com/japanese-ime/latest/GoogleJapaneseInput.dmg"
   name "Google Japanese Input Method Editor"
   desc "Japanese input software"
   homepage "https://www.google.co.jp/ime/"

@@ -2,8 +2,7 @@ cask "font-armata" do
   version :latest
   sha256 :no_check
 
-  url "https://github.com/google/fonts/raw/main/ofl/armata/Armata-Regular.ttf",
-      verified: "github.com/google/fonts/"
+  url "https://github.com/google/fonts/raw/main/ofl/armata/Armata-Regular.ttf"
   name "Armata"
   homepage "https://fonts.google.com/specimen/Armata"
 

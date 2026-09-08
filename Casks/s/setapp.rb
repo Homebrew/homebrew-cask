@@ -1,9 +1,8 @@
 cask "setapp" do
-  version "3.54.1,154,1785484295"
-  sha256 "356afe716fd432db41809dfaa9fb52b5d81666d1aeeb9fa061953860d952504c"
+  version "3.55.1,157,1788525316"
+  sha256 "326adec1a6ebc43f0f849ca166c99d7d6ce44562ac7e91955d67f47af15cc052"
 
-  url "https://dl.devmate.com/com.setapp.DesktopClient/#{version.csv.second}/#{version.csv.third}/Setapp-#{version.csv.second}.zip",
-      verified: "devmate.com/com.setapp.DesktopClient/"
+  url "https://dl.devmate.com/com.setapp.DesktopClient/#{version.csv.second}/#{version.csv.third}/Setapp-#{version.csv.second}.zip"
   name "Setapp"
   desc "Collection of apps available by subscription"
   homepage "https://setapp.com/"

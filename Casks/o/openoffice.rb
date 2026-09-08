@@ -34,8 +34,7 @@ cask "openoffice" do
     "ru"
   end
 
-  url "https://downloads.sourceforge.net/openofficeorg.mirror/Apache_OpenOffice_#{version}_MacOS_x86-64_install_#{language}.dmg",
-      verified: "sourceforge.net/openofficeorg.mirror/"
+  url "https://downloads.sourceforge.net/openofficeorg.mirror/Apache_OpenOffice_#{version}_MacOS_x86-64_install_#{language}.dmg"
   name "Apache OpenOffice"
   desc "Free and open-source productivity suite"
   homepage "https://www.openoffice.org/"

@@ -2,8 +2,7 @@ cask "font-ms-madi" do
   version :latest
   sha256 :no_check
 
-  url "https://github.com/google/fonts/raw/main/ofl/msmadi/MsMadi-Regular.ttf",
-      verified: "github.com/google/fonts/"
+  url "https://github.com/google/fonts/raw/main/ofl/msmadi/MsMadi-Regular.ttf"
   name "Ms Madi"
   homepage "https://fonts.google.com/specimen/Ms+Madi"
 

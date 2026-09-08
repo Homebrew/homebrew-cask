@@ -1,6 +1,6 @@
 cask "litecoin" do
-  version "0.21.5.6"
-  sha256 "8eae361597a1698d61bac73e89d6aed8a32578db24be5e42958a583d7abf7276"
+  version "0.21.5.7"
+  sha256 "08e3ec1473b25afc0d222fefaec457ecdf316b3e29ce164f1269fc9289dfd4f0"
 
   url "https://download.litecoin.org/litecoin-#{version}/osx/litecoin-#{version}-osx.dmg"
   name "Litecoin"
@@ -27,6 +27,8 @@ cask "litecoin" do
   uninstall_preflight_steps do
     set_permissions "Litecoin-Qt.app", "0755", base: :appdir
   end
+
+  uninstall quit: "org.litecoin.Litecoin-Qt"
 
   zap trash: [
     "~/Library/Application Support/Litecoin",

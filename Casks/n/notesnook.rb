@@ -1,12 +1,11 @@
 cask "notesnook" do
   arch arm: "arm64", intel: "x64"
 
-  version "3.4.5"
-  sha256 arm:   "c70f28486a93a2f0a2a11bba15529922b16b684ef63f03efa999ace7e2b74bf3",
-         intel: "66594e83b8ea920ab97d75cda0a3b8725d3f18ca3664abaf7601e777667db477"
+  version "3.4.7"
+  sha256 arm:   "69916269603cb6bd4dbae95efea293af5854b90ffd813b36009aaba230057834",
+         intel: "f1154eae151c1afc1d6edd99a6c9c3d82db46784c1aa8ebb7d337039c28a5871"
 
-  url "https://github.com/streetwriters/notesnook/releases/download/v#{version}/notesnook_mac_#{arch}.dmg",
-      verified: "github.com/streetwriters/notesnook/"
+  url "https://github.com/streetwriters/notesnook/releases/download/v#{version}/notesnook_mac_#{arch}.dmg"
   name "Notesnook"
   desc "Privacy-focused note taking app"
   homepage "https://notesnook.com/"

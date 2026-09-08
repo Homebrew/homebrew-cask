@@ -1,9 +1,8 @@
 cask "granola" do
-  version "7.452.4"
-  sha256 "ffb30437fb3f491f6ba0c9ee7e7609ce06d1e95aac7f5a03bdb920ea12d6fdc8"
+  version "7.529.3"
+  sha256 "9356b4f3ef261007f6228fc297f0feb61778a586478e5e8632d056ea290901b1"
 
-  url "https://dr2v7l5emb758.cloudfront.net/#{version}/Granola-#{version}-mac-universal.dmg",
-      verified: "dr2v7l5emb758.cloudfront.net/"
+  url "https://dr2v7l5emb758.cloudfront.net/#{version}/Granola-#{version}-mac-universal.dmg"
   name "Granola"
   desc "AI-powered notepad for meetings"
   homepage "https://www.granola.ai/"
@@ -14,9 +13,11 @@ cask "granola" do
   end
 
   auto_updates true
-  depends_on macos: :monterey
+  depends_on macos: :ventura
 
   app "Granola.app"
+
+  uninstall quit: "com.granola.app"
 
   zap trash: [
     "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.granola.app.sfl*",

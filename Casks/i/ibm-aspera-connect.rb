@@ -13,8 +13,7 @@ cask "ibm-aspera-connect" do
     version "4.2.19.956-HEAD"
     sha256 "5f6b88d3b5fdf3d1e1dbeb4c49e366be12942100712622aa582571e4d7d3feef"
 
-    url "https://d3gcli72yxqn2z.cloudfront.net/downloads/connect/latest/bin/ibm-aspera-connect_#{version}_macOS_#{arch}.pkg",
-        verified: "d3gcli72yxqn2z.cloudfront.net/downloads/connect/latest/bin/"
+    url "https://d3gcli72yxqn2z.cloudfront.net/downloads/connect/latest/bin/ibm-aspera-connect_#{version}_macOS_#{arch}.pkg"
   end
 
   name "IBM Aspera Connect"

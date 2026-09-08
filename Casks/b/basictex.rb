@@ -2,8 +2,7 @@ cask "basictex" do
   version "2026.0301"
   sha256 "19164fbfef08c30fd433f59203c8804abbbd685d3a344ef7f0ba8c1fd4157cb3"
 
-  url "https://mirror.ctan.org/systems/mac/mactex/mactex-basictex-#{version.no_dots}.pkg",
-      verified: "mirror.ctan.org/systems/mac/mactex/"
+  url "https://mirror.ctan.org/systems/mac/mactex/mactex-basictex-#{version.no_dots}.pkg"
   name "BasicTeX"
   desc "Compact TeX distribution as alternative to the full TeX Live / MacTeX"
   homepage "https://www.tug.org/mactex/morepackages.html"

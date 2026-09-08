@@ -1,6 +1,6 @@
 cask "font-roboto-mono-nerd-font" do
-  version "3.5.0"
-  sha256 "8cae18d31d25293099d8429de177fc1f1ccaae7a694836304990b4dd20fc27ab"
+  version "3.5.1"
+  sha256 "61f53438b240a00c87c92dc2c372db0bbb264473b36a8144ea62babf787f8383"
 
   url "https://github.com/ryanoasis/nerd-fonts/releases/download/v#{version}/RobotoMono.tar.xz"
   name "RobotoMono Nerd Font (Roboto Mono)"

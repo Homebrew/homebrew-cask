@@ -1,9 +1,8 @@
 cask "openvanilla" do
-  version "1.8.4,3499"
-  sha256 "2021b1990b830e6e7db26a66b07230667e297c161162428673fa247692a6dab8"
+  version "1.8.6,3516"
+  sha256 "db11af44b5b5a82e1875cbd6a95a91012386a02a074128d26eeac80d574b129a"
 
-  url "https://github.com/openvanilla/openvanilla/releases/download/#{version.csv.first}/OpenVanilla-Installer-Mac-#{version.csv.first}.zip",
-      verified: "github.com/openvanilla/openvanilla/"
+  url "https://github.com/openvanilla/openvanilla/releases/download/#{version.csv.first}/OpenVanilla-Installer-Mac-#{version.csv.first}.zip"
   name "OpenVanilla"
   desc "Provides common input methods"
   homepage "https://openvanilla.org/"

@@ -1,17 +1,9 @@
 cask "omniplan" do
   on_big_sur :or_older do
-    on_catalina :or_older do
-      version "4.2.7"
-      sha256 "157cbea0055a87b2c078c336ea9f5d9aaa9caa242c92265f410e5d7ac534883f"
+    version "4.6"
+    sha256 "2d674c80ee5c60e3697a38b4933084958ea2b1f990a28827722b803257e7722d"
 
-      url "https://downloads.omnigroup.com/software/MacOSX/10.14/OmniPlan-#{version}.dmg"
-    end
-    on_big_sur do
-      version "4.6"
-      sha256 "2d674c80ee5c60e3697a38b4933084958ea2b1f990a28827722b803257e7722d"
-
-      url "https://downloads.omnigroup.com/software/macOS/11/OmniPlan-#{version}.dmg"
-    end
+    url "https://downloads.omnigroup.com/software/macOS/11/OmniPlan-#{version}.dmg"
 
     livecheck do
       skip "Legacy version"

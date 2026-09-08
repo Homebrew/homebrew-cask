@@ -1,5 +1,5 @@
 cask "cisdem-data-recovery" do
-  version "19.2.0"
+  version "20.6.0"
   sha256 :no_check
 
   url "https://download.cisdem.com/cisdem-datarecovery.dmg",
@@ -9,8 +9,8 @@ cask "cisdem-data-recovery" do
   homepage "https://www.cisdem.com/data-recovery-mac.html"
 
   livecheck do
-    url "https://www.cisdem.com/js/notes/data-recovery-mac.js"
-    regex(/(\d+(?:\.\d+)+)\s+\(\d+(?:-\d+)+\)/i)
+    url "https://www.cisdem.com/data-recovery-mac/release-notes.html"
+    regex(/(\d+(?:\.\d+)+)\(\d+(?:-\d+)+\)/i)
   end
 
   depends_on :macos

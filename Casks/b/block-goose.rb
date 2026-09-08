@@ -1,12 +1,11 @@
 cask "block-goose" do
   arch intel: "_intel_mac"
 
-  version "1.45.0"
-  sha256 arm:   "03b25d4b4e89c070d42afc7b0fbee278ce395bb09cc0373db6984ca3c3717131",
-         intel: "1bac119e6ca0a12908f40291e721f3e3f2f496325905eb05913f1e3e7ccdcc82"
+  version "1.49.0"
+  sha256 arm:   "b26c3e0bdb4d32f2d9da1eaa5e3566d5637e5b15cd2fb78348b67e2b434e6510",
+         intel: "23cad5bd9c84da7bd068ac6aa4271d78f09c325ceac5795770a652f6bf3ebc3d"
 
-  url "https://github.com/block/goose/releases/download/v#{version}/Goose#{arch}.zip",
-      verified: "github.com/block/goose/"
+  url "https://github.com/block/goose/releases/download/v#{version}/Goose#{arch}.zip"
   name "Goose"
   desc "Open source, extensible AI agent that goes beyond code suggestions"
   homepage "https://block.github.io/goose/"

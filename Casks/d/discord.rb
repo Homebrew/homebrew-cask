@@ -1,13 +1,5 @@
 cask "discord" do
-  on_catalina :or_older do
-    version "0.0.336"
-    sha256 "470fc7ad490d7ad42f01632af16dee69fbec6e3db7e3f79af4f2ee246e382398"
-
-    livecheck do
-      skip "Legacy version"
-    end
-  end
-  on_big_sur do
+  on_big_sur :or_older do
     version "0.0.402"
     sha256 "568293a1f65fab2244b5acdac282b88b6f00efd87defd76cc77185d1b9caba64"
 
@@ -16,17 +8,18 @@ cask "discord" do
     end
   end
   on_monterey :or_newer do
-    version "0.0.406"
-    sha256 "bdda8d3d655294dffa3d062ce8c93710a2695f5ba7486647d3b306dc5277424c"
+    version "0.0.410"
+    sha256 "893ec758b3ae3fdc6f8c9bb197603d41042bff317aaa7d616f8ea64350d93b19"
 
     livecheck do
-      url "https://discord.com/api/download/stable?platform=osx"
-      strategy :header_match
+      url "https://updates.discord.com/distributions/app/manifests/latest?channel=stable&platform=osx&arch=x64"
+      strategy :json do |json|
+        json.dig("full", "host_version")&.join(".")
+      end
     end
   end
 
-  url "https://dl.discordapp.net/apps/osx/#{version}/Discord.dmg",
-      verified: "dl.discordapp.net/"
+  url "https://dl.discordapp.net/apps/osx/#{version}/Discord.dmg"
   name "Discord"
   desc "Voice and text chat software"
   homepage "https://discord.com/"

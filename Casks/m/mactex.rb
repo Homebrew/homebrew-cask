@@ -2,8 +2,7 @@ cask "mactex" do
   version "2026.0324"
   sha256 "e30af0640f51979a95b9f54084456d1e16749b79e12e65bdebd630fb2795ff1e"
 
-  url "https://mirror.ctan.org/systems/mac/mactex/mactex-#{version.no_dots}.pkg",
-      verified: "mirror.ctan.org/systems/mac/mactex/"
+  url "https://mirror.ctan.org/systems/mac/mactex/mactex-#{version.no_dots}.pkg"
   name "MacTeX"
   desc "Full TeX Live distribution with GUI applications"
   homepage "https://www.tug.org/mactex/"

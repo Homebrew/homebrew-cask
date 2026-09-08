@@ -5,8 +5,7 @@ cask "raindropio" do
   sha256 arm:   "be2f654e5e978de6925a8636ea11540d783caef3379eb820965b55d06b13c44d",
          intel: "43d4a82eabcb597c1b98aa733efe590924d0654087538d4a6f036615b18aa5c6"
 
-  url "https://github.com/raindropio/desktop/releases/download/v#{version}/Raindrop-#{arch}.dmg",
-      verified: "github.com/raindropio/desktop/"
+  url "https://github.com/raindropio/desktop/releases/download/v#{version}/Raindrop-#{arch}.dmg"
   name "Raindrop.io"
   desc "All-in-one bookmark manager"
   homepage "https://raindrop.io/"

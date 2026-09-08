@@ -5,8 +5,7 @@ cask "laserpecker-design-space" do
   sha256 arm:   "1493e198c3c397e5e7d712441f9c89e3bd8a9fafe38fa50df2abdc771cf3b69c",
          intel: "fec12d652fea335ead976c9c78da91c05b8316399a7fe1014195c66a72ef510a"
 
-  url "https://laserpecker-prod.oss-cn-hongkong.aliyuncs.com/apply/software/pc/LaserPecker-Design-Space-#{arch}-#{version}.dmg",
-      verified: "laserpecker-prod.oss-cn-hongkong.aliyuncs.com/"
+  url "https://laserpecker-prod.oss-cn-hongkong.aliyuncs.com/apply/software/pc/LaserPecker-Design-Space-#{arch}-#{version}.dmg"
   name "LaserPecker Design Space"
   desc "Laser engraving and cutting software"
   homepage "https://laserpecker.net/"

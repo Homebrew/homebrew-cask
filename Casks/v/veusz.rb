@@ -5,8 +5,7 @@ cask "veusz" do
   sha256 arm:   "fcf3193e0a60f365ba9f82ab1dc634257e59ee3c758cc3a882e6c1eb60867300",
          intel: "a508781df33cfb36a07cd1873b297f1faa3c0cba883b836753f974e61bbc5ae7"
 
-  url "https://github.com/veusz/veusz/releases/download/veusz-#{version.csv.second || version.csv.first}/veusz-#{version.csv.first}-AppleOSX-#{arch}.dmg",
-      verified: "github.com/veusz/veusz/"
+  url "https://github.com/veusz/veusz/releases/download/veusz-#{version.csv.second || version.csv.first}/veusz-#{version.csv.first}-AppleOSX-#{arch}.dmg"
   name "Veusz"
   desc "Scientific plotting application"
   homepage "https://veusz.github.io/"

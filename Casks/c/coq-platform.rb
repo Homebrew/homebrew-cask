@@ -10,8 +10,7 @@ cask "coq-platform" do
     sha256 "cf63fd3031e0593d76431918427591c384591bfabf8fe9dbd385f92c0f0a0065"
   end
 
-  url "https://github.com/rocq-prover/platform/releases/download/#{version.csv.first}/coq-Platform-release-#{version.csv.first}-version.#{version.csv.second}-MacOS-#{arch}.dmg",
-      verified: "github.com/rocq-prover/platform/"
+  url "https://github.com/rocq-prover/platform/releases/download/#{version.csv.first}/coq-Platform-release-#{version.csv.first}-version.#{version.csv.second}-MacOS-#{arch}.dmg"
   name "Coq Platform"
   desc "Formal proof management system"
   homepage "https://rocq-prover.org/"

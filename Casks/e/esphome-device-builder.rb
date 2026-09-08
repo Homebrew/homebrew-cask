@@ -1,17 +1,16 @@
 cask "esphome-device-builder" do
   os macos: "dmg", linux: "AppImage"
 
-  version "1.0.2"
-  sha256 arm:          "646fb8d4ee5e2573dbadc2759b67e0ddfaad9c9a72bc1d7f83a90e526c49df50",
-         intel:        "d3dc20ba9648fde36d2e3aef33c3fc95c710d902b10590371f98b19e2be6cf98",
-         arm64_linux:  "8447208521c7169a0a8f0ed08d7ee715fa14141488e771365c3824f10d58bb55",
-         x86_64_linux: "a059d59d76b833b7708187f2e067cf0924d77272625f3b36014aa66c03c3c0e8"
+  version "1.1.3"
+  sha256 arm:          "48e7e7aecf6c0d7617eb7bd9a05a930448434b2648e0d62fbec39966dbbb9f3b",
+         intel:        "d142e7991af9e1ece7edff2b504d827debacc925023eb32e4efd3088b5aa0df7",
+         arm64_linux:  "ad85fc67a8ae4b341c4d27526949582780c30dc0df292e555ce6a16c94b05ec7",
+         x86_64_linux: "a9d876d6ca6d1e075d2a80881c3de28abe5920acff10711854a649bdafdceae1"
 
   on_macos do
     arch arm: "aarch64", intel: "x64"
 
     auto_updates true
-    depends_on macos: :catalina
 
     app "ESPHome Device Builder.app"
     binary "#{appdir}/ESPHome Device Builder.app/Contents/MacOS/esphome-desktop"
@@ -27,8 +26,7 @@ cask "esphome-device-builder" do
     app_image "ESPHome.Device.Builder_#{version}_#{arch}.AppImage", target: "ESPHome Device Builder.AppImage"
   end
 
-  url "https://github.com/esphome/esphome-desktop/releases/download/v#{version}/ESPHome.Device.Builder_#{version}_#{arch}.#{os}",
-      verified: "github.com/esphome/esphome-desktop/"
+  url "https://github.com/esphome/esphome-desktop/releases/download/v#{version}/ESPHome.Device.Builder_#{version}_#{arch}.#{os}"
   name "ESPHome Device Builder"
   desc "Desktop app to create, edit and install your ESPHome device configurations"
   homepage "https://desktop.esphome.io/"

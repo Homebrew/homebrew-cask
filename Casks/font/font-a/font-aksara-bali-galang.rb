@@ -2,8 +2,7 @@ cask "font-aksara-bali-galang" do
   version :latest
   sha256 :no_check
 
-  url "https://github.com/google/fonts/raw/main/ofl/aksarabaligalang/AksaraBaliGalang-Regular.ttf",
-      verified: "github.com/google/fonts/"
+  url "https://github.com/google/fonts/raw/main/ofl/aksarabaligalang/AksaraBaliGalang-Regular.ttf"
   name "Aksara Bali Galang"
   homepage "https://fonts.google.com/specimen/Aksara+Bali+Galang"
 

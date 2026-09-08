@@ -1,9 +1,8 @@
 cask "willow-voice" do
-  version "2.3.8"
-  sha256 "6bf07f279a5d337bebe379e640cd98c1e0a209cc09a2c76c6b9ea590f3b55663"
+  version "2.3.20"
+  sha256 "c2e919885d894c8996d66a7f2573bc9050e19f79a1220f258810c8f420825f85"
 
-  url "https://github.com/LiuLawrence45/stt-sparkle-update/releases/download/v#{version}/Willow.Installer.dmg",
-      verified: "github.com/LiuLawrence45/stt-sparkle-update/"
+  url "https://github.com/LiuLawrence45/stt-sparkle-update/releases/download/v#{version}/Willow.Installer.dmg"
   name "Willow Voice"
   desc "AI-powered voice dictation and writing assistant"
   homepage "https://willowvoice.com/"

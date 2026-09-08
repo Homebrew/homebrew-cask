@@ -2,8 +2,7 @@ cask "trim-enabler" do
   version "4.3.6,26,1609590590"
   sha256 "e26f27030303c41cfcfe59fe72ad43202db666bcaaf9047ebf52cbad87896db5"
 
-  url "https://dl.devmate.com/org.cindori.TrimEnabler4/#{version.csv.second}/#{version.csv.third}/TrimEnabler-#{version.csv.second}.zip",
-      verified: "dl.devmate.com/org.cindori.TrimEnabler4/"
+  url "https://dl.devmate.com/org.cindori.TrimEnabler4/#{version.csv.second}/#{version.csv.third}/TrimEnabler-#{version.csv.second}.zip"
   name "Trim Enabler"
   desc "Enable trim for SSD performance"
   homepage "https://cindori.org/trimenabler/"

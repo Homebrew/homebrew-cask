@@ -153,7 +153,7 @@ module Check
                         .added
                         .grep_v(/\.\d+\Z/)
 
-    missing_running_apps = running_apps - Array(uninstall_directives[:quit])
+    missing_running_apps = reject_matching(running_apps, uninstall_directives[:quit])
 
     # Some applications may launch a browser session after install
     # Skip Firefox, unless the cask is a Firefox cask
@@ -165,7 +165,8 @@ module Check
       errors << message
     end
 
-    missing_loaded_launchjobs = loaded_launchjobs - Array(uninstall_directives[:launchctl])
+    missing_loaded_launchjobs = reject_matching(loaded_launchjobs, uninstall_directives[:launchctl],
+                                                anchored: false, ignore_case: false)
     if missing_loaded_launchjobs.any?
       message = "Some launch jobs were not unloaded, add them to #{Formatter.identifier("uninstall launchctl:")}\n"
       message += missing_loaded_launchjobs.join("\n")
@@ -173,5 +174,17 @@ module Check
     end
 
     errors
+  end
+
+  # Match `*` wildcards as `Cask::Artifact::AbstractUninstall` resolves them:
+  # `quit:` anchors and ignores case, `launchctl:` does neither.
+  def self.reject_matching(ids, directives, anchored: true, ignore_case: true)
+    patterns = Array(directives).map do |directive|
+      directive = directive.to_s
+      source = Regexp.escape(directive).gsub("\\*", ".*")
+      source = "\\A#{source}\\z" if anchored || directive.exclude?("*")
+      Regexp.new(source, ignore_case ? Regexp::IGNORECASE : nil)
+    end
+    ids.reject { |id| patterns.any? { |pattern| pattern.match?(id) } }
   end
 end

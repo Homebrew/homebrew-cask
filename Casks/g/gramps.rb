@@ -5,8 +5,7 @@ cask "gramps" do
   sha256 arm:   "8465bbb6a3dbf23ca7a49cebd121db0d1490ee39a8d3c545161324dd2edc0848",
          intel: "5c2698ab9e684b6ae05fea7b27cf6edbeb05ac6d6ccaadad00365b5c4ee19254"
 
-  url "https://github.com/gramps-project/gramps/releases/download/v#{version.csv.first}/Gramps-#{arch}-#{version.csv.first}-#{version.csv.second}.dmg",
-      verified: "github.com/gramps-project/gramps/"
+  url "https://github.com/gramps-project/gramps/releases/download/v#{version.csv.first}/Gramps-#{arch}-#{version.csv.first}-#{version.csv.second}.dmg"
   name "Gramps"
   desc "Genealogy software"
   homepage "https://gramps-project.org/blog/"

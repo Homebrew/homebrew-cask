@@ -2,8 +2,7 @@ cask "wolfram-engine" do
   version "15.0.0.0"
   sha256 "ca3f0252b0df22d87d139dee1371a2a53be9784106b5974787dd024ef6ef959b"
 
-  url "https://files.wolframcdn.com/packages/Homebrew/#{version}/WolframEngine_#{version.major_minor_patch}_MAC.dmg",
-      verified: "files.wolframcdn.com/packages/Homebrew/"
+  url "https://files.wolframcdn.com/packages/Homebrew/#{version}/WolframEngine_#{version.major_minor_patch}_MAC.dmg"
   name "Wolfram Engine"
   desc "Evaluator for the Wolfram Language"
   homepage "https://www.wolfram.com/engine/"

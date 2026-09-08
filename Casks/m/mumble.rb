@@ -2,8 +2,7 @@ cask "mumble" do
   version "1.5.901"
   sha256 "9618a7abf0da3743e1d8c13ddb45ea6524fcfff001e844d9bb95a86867aa6f47"
 
-  url "https://github.com/mumble-voip/mumble/releases/download/v#{version}/mumble_client-#{version}.x64.dmg",
-      verified: "github.com/mumble-voip/mumble/"
+  url "https://github.com/mumble-voip/mumble/releases/download/v#{version}/mumble_client-#{version}.x64.dmg"
   name "Mumble"
   desc "Open-source, low-latency, high quality voice chat software for gaming"
   homepage "https://www.mumble.info/"

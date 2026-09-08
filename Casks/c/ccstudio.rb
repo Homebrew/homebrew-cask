@@ -2,8 +2,7 @@ cask "ccstudio" do
   version "1.1.4"
   sha256 "090ea91ebd83d360e9e32cc519067f0924d3e1dfe90967e9cbcc99a7fbc7773a"
 
-  url "https://downloads.xrite.com/Downloads/Software/ccStudio/v#{version}/mac/ccStudio.zip",
-      verified: "downloads.xrite.com/Downloads/Software/ccStudio/"
+  url "https://downloads.xrite.com/Downloads/Software/ccStudio/v#{version}/mac/ccStudio.zip"
   name "ccStudio"
   desc "Color management tool for accurate monitor and printer calibration"
   homepage "https://calibrite.com/us/software-downloads/"

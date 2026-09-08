@@ -1,12 +1,11 @@
 cask "mcreator" do
   arch arm: "aarch64", intel: "64bit"
 
-  version "2026.2.30420"
-  sha256 arm:   "4d48ece91d43a4575e27e7f663f457c8588e0c80bf492981833134398e669f15",
-         intel: "9d7c3a0955fbb9d7b54f6d9bb52c48f2d6283ad0cd580d52a3af92f634bafda7"
+  version "2026.2.33518"
+  sha256 arm:   "e4750f18a4a0b3f26cdf10e5fae338b373acdcb1e8b6906db5bbae37ee328c62",
+         intel: "58b1d9ad9bfa356ddfab139f92c749227dab235195c10dce0e355878c61a7c77"
 
-  url "https://github.com/MCreator/MCreator/releases/download/#{version}/MCreator.#{version.major_minor}.Mac.#{arch}.dmg",
-      verified: "github.com/MCreator/MCreator/"
+  url "https://github.com/MCreator/MCreator/releases/download/#{version}/MCreator.#{version.major_minor}.Mac.#{arch}.dmg"
   name "MCreator"
   desc "Software used to make Minecraft Java Edition mods"
   homepage "https://mcreator.net/"

@@ -1,9 +1,8 @@
 cask "swift-shift" do
-  version "1.3.2"
-  sha256 "b4e3d8b2e922111e142210c07aff6501fe4e03fe74b44f516eb2abfc917b8b80"
+  version "1.4.1"
+  sha256 "858b9537d7a6277dcdb160a0e7ba218a80e69db764ff1a36bf29cc010130ed92"
 
-  url "https://github.com/pablopunk/SwiftShift/releases/download/#{version}/SwiftShift.zip",
-      verified: "github.com/pablopunk/SwiftShift/"
+  url "https://github.com/pablopunk/SwiftShift/releases/download/#{version}/SwiftShift.zip"
   name "Swift Shift"
   desc "Window manager"
   homepage "https://www.swiftshift.app/"

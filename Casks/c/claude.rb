@@ -1,9 +1,8 @@
 cask "claude" do
-  version "1.25927.0,003700efafbc2ccb4b1177a5e637b14da381799e"
-  sha256 "024fd60c6008efcac5be32e5faf3f5e7510b6a8adef07fd5834e49a7b5d1a78a"
+  version "1.46388.4,50e62f90a2c85243eef42913398f7c8f1534abef"
+  sha256 "494c3c6e791c5c0a5041371f8234a6dffa9c9426165d5ef4c7dbcf85ade58617"
 
-  url "https://downloads.claude.ai/releases/darwin/universal/#{version.csv.first}/Claude-#{version.csv.second}.zip",
-      verified: "downloads.claude.ai/releases/darwin/universal/"
+  url "https://downloads.claude.ai/releases/darwin/universal/#{version.csv.first}/Claude-#{version.csv.second}.zip"
   name "Claude"
   desc "Anthropic's official Claude AI desktop app"
   homepage "https://claude.com/download"

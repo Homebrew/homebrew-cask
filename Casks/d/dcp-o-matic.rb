@@ -1,6 +1,6 @@
 cask "dcp-o-matic" do
-  version "2.18.46"
-  sha256 "523b9f73175c4ee2a7c85c0e7f8e14eef81954cae9441c7f8454c2537b4de79a"
+  version "2.19.1"
+  sha256 "b98e533de6452bf4d560d9b9a05caf8cbe7301697078a9c8cfe493dad3b4b310"
 
   url "https://download.dcpomatic.com/dl.php?id=osx-10.10-main&version=#{version}"
   name "DCP-o-matic"
@@ -15,6 +15,8 @@ cask "dcp-o-matic" do
   depends_on macos: :big_sur
 
   app "DCP-o-matic #{version.major}.app"
+
+  uninstall quit: "com.dcpomatic"
 
   zap trash: "~/Library/Preferences/com.dcpomatic"
 end

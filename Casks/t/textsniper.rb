@@ -2,8 +2,7 @@ cask "textsniper" do
   version "1.12.1"
   sha256 "1169237a1fd8bb1055c9e6bc62a098d2e6f5ee218dfcca963e2eb99e34ef48fe"
 
-  url "https://s3.amazonaws.com/textsniper.app/Gumroad/TextSniper#{version}.dmg",
-      verified: "s3.amazonaws.com/textsniper.app/Gumroad/"
+  url "https://s3.amazonaws.com/textsniper.app/Gumroad/TextSniper#{version}.dmg"
   name "TextSniper"
   desc "Extract text from images and other digital documents"
   homepage "https://textsniper.app/"

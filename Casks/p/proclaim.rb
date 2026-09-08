@@ -1,12 +1,11 @@
 cask "proclaim" do
   arch arm: "-arm"
 
-  version "4.20.0.0126"
-  sha256 arm:   "2c7673bd31c0a3a3df9a4d32ae36f823a98114736f1e765227c606ef3b5a6f17",
-         intel: "afac1c2625724d21520929ff5bb8d8d13c416ff90d49bf3bcf2539a31c3af501"
+  version "4.20.0.0135"
+  sha256 arm:   "1f6ce2dcc2b7936d216b343475fad32d75dd2616f9b680e5abd23822e5889e8d",
+         intel: "a9361a175e9e49ce99a92b49b0659b48cdf7bf3021c7ec4d08ce93f5c4ebf6fc"
 
-  url "https://downloads.logoscdn.com/Proclaim/Installer/#{version}/Proclaim#{arch}.dmg",
-      verified: "logoscdn.com/Proclaim/"
+  url "https://downloads.logoscdn.com/Proclaim/Installer/#{version}/Proclaim#{arch}.dmg"
   name "Proclaim"
   desc "Church presentation software"
   homepage "https://proclaim.logos.com/"

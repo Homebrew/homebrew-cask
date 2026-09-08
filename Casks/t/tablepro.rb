@@ -1,12 +1,11 @@
 cask "tablepro" do
   arch arm: "arm64", intel: "x86_64"
 
-  version "0.62.0"
-  sha256 arm:   "d8c741326a646a4da21afed76dc72ec09254ce685549bcda302e5fbbd3371580",
-         intel: "87c4ae7ad8e09a139fd5ce62032e641dcd4ad1fd5f90ee241d153a43ec92cafc"
+  version "0.72.0"
+  sha256 arm:   "529d55ed0da0c0615e0e89e0bc2e2eb8081a2e0a19bac7b66d09f01fac757d5b",
+         intel: "2620863cb9cfcb91337d4555a3013e1f4051558cf64376fc4da62ac76a7efb33"
 
-  url "https://github.com/TableProApp/TablePro/releases/download/v#{version}/TablePro-#{version}-#{arch}.dmg",
-      verified: "github.com/TableProApp/TablePro/"
+  url "https://github.com/TableProApp/TablePro/releases/download/v#{version}/TablePro-#{version}-#{arch}.dmg"
   name "TablePro"
   desc "Native database client for many database types"
   homepage "https://tablepro.app/"

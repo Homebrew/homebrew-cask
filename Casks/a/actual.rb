@@ -3,11 +3,11 @@ cask "actual" do
   os macos: "mac", linux: "linux"
   url_end = on_system_conditional macos: "dmg", linux: "AppImage"
 
-  version "26.8.0"
-  sha256 arm:          "13c469e2f919e5aa1ed04de11ead29e8ec77401606ddd76c0dd7ed779b9abe73",
-         intel:        "c38fb280b4056a05d6d2c1cf310609802569f05cf239ce915a60132b8dffcd62",
-         arm64_linux:  "48ca421a8cb1949125b6043ac3a4a96b1fa5163e938fc7b6ab619502de1caa69",
-         x86_64_linux: "de1297f99f0ee18ef54c1217a905d421efe7056bdd73ec8ce908937032c761dc"
+  version "26.9.0"
+  sha256 arm:          "d6c01a7fc830d28ef6e476073a1574ae356222cc524c9097e74387017212247b",
+         intel:        "73f3b239f1a937c7c5f8ca03504800115a92175796cbe71b043c4358593ed176",
+         arm64_linux:  "5375f889ec614665f54a029fa8c7537e511d90a67398fb6e0c3ec8b0b66c86d3",
+         x86_64_linux: "fb3e5dbe756bfa614be3d0714c182ac9af977d77749d105535f7068aeeb38171"
 
   on_macos do
     depends_on macos: :monterey
@@ -27,8 +27,7 @@ cask "actual" do
     app_image "Actual-linux-#{arch}.AppImage", target: "Actual.AppImage"
   end
 
-  url "https://github.com/actualbudget/actual/releases/download/v#{version}/Actual-#{os}-#{arch}.#{url_end}",
-      verified: "github.com/actualbudget/actual/"
+  url "https://github.com/actualbudget/actual/releases/download/v#{version}/Actual-#{os}-#{arch}.#{url_end}"
   name "Actual"
   desc "Privacy-focused app for managing your finances"
   homepage "https://actualbudget.org/"

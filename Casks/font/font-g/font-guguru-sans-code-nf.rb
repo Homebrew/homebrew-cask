@@ -6,14 +6,14 @@ cask "font-guguru-sans-code-nf" do
   name "Guguru Sans Code NF"
   homepage "https://github.com/yuru7/guguru-sans-code"
 
-  font "GuguruSansCodeNF_v#{version}/GuguruSansCodeConsole_NF/GuguruSansCodeConsoleNF-BoldItalic.ttf"
-  font "GuguruSansCodeNF_v#{version}/GuguruSansCodeConsole_NF/GuguruSansCodeConsoleNF-Italic.ttf"
-  font "GuguruSansCodeNF_v#{version}/GuguruSansCodeConsole_NF/GuguruSansCodeConsoleNF-Bold.ttf"
-  font "GuguruSansCodeNF_v#{version}/GuguruSansCodeConsole_NF/GuguruSansCodeConsoleNF-Regular.ttf"
+  font "GuguruSansCodeNF_v#{version}/GuguruSansCodeConsole35_NF/GuguruSansCodeConsole35NF-Bold.ttf"
   font "GuguruSansCodeNF_v#{version}/GuguruSansCodeConsole35_NF/GuguruSansCodeConsole35NF-BoldItalic.ttf"
   font "GuguruSansCodeNF_v#{version}/GuguruSansCodeConsole35_NF/GuguruSansCodeConsole35NF-Italic.ttf"
-  font "GuguruSansCodeNF_v#{version}/GuguruSansCodeConsole35_NF/GuguruSansCodeConsole35NF-Bold.ttf"
   font "GuguruSansCodeNF_v#{version}/GuguruSansCodeConsole35_NF/GuguruSansCodeConsole35NF-Regular.ttf"
+  font "GuguruSansCodeNF_v#{version}/GuguruSansCodeConsole_NF/GuguruSansCodeConsoleNF-Bold.ttf"
+  font "GuguruSansCodeNF_v#{version}/GuguruSansCodeConsole_NF/GuguruSansCodeConsoleNF-BoldItalic.ttf"
+  font "GuguruSansCodeNF_v#{version}/GuguruSansCodeConsole_NF/GuguruSansCodeConsoleNF-Italic.ttf"
+  font "GuguruSansCodeNF_v#{version}/GuguruSansCodeConsole_NF/GuguruSansCodeConsoleNF-Regular.ttf"
 
   # No zap stanza required
 end

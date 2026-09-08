@@ -2,8 +2,7 @@ cask "jordanbaird-ice" do
   version "0.11.12"
   sha256 "d770e81597566dd2d2363feb350f808c7a92e363df95c51e48140eb30e452cc9"
 
-  url "https://github.com/jordanbaird/ice-releases/releases/download/#{version}/Ice.zip",
-      verified: "github.com/jordanbaird/ice-releases/"
+  url "https://github.com/jordanbaird/ice-releases/releases/download/#{version}/Ice.zip"
   name "Ice"
   desc "Menu bar manager"
   homepage "https://icemenubar.app/"

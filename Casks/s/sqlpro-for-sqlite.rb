@@ -1,9 +1,8 @@
 cask "sqlpro-for-sqlite" do
-  version "2026.85"
-  sha256 "b0b8d61c7d32c21fe25d1f417e7459f7743df2776ab7aef9d7189cbb3563d85d"
+  version "2026.247"
+  sha256 "f23651b10654d4cb5f053df877f372ffed509cbfffb1f515c32a6579edfabfd7"
 
-  url "https://d3fwkemdw8spx3.cloudfront.net/sqlite/SQLProSQLite.#{version}.app.zip",
-      verified: "d3fwkemdw8spx3.cloudfront.net/sqlite/"
+  url "https://d3fwkemdw8spx3.cloudfront.net/sqlite/SQLProSQLite.#{version}.app.zip"
   name "SQLPro for SQLite"
   desc "Advanced sqlite editor"
   homepage "https://www.sqlitepro.com/"

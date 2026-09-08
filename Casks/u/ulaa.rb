@@ -1,22 +1,17 @@
 cask "ulaa" do
   arch arm: "arm64", intel: "x64"
 
-  sha256 arm:   "0f2ad5cf42d7aed64b54388b013335c52837bd37018e17573ae57e387b8f8901",
-         intel: "9aa48a03d926b8f7570cb2cbf70085ec9bd3e2b2646a3b7a6800e1a4fdb8c049"
+  sha256 arm:   "65cf5d56752f08f40f15774491de95e834a60056ab23ff2f1e523aaf9dabc6ee",
+         intel: "042f806fda5f681449d26cab5418266c5efd7cbc8d83474b6e2c5c309a7d642c"
 
   on_arm do
-    version "2.46.0"
-
-    depends_on macos: :ventura
+    version "2.47.4"
   end
   on_intel do
-    version "2.45.5"
-
-    depends_on macos: :monterey
+    version "2.47.4"
   end
 
-  url "https://downloads.zohocdn.com/ulaa-browser/release/mac/stable/#{arch}/Ulaa-Browser-v#{version}-#{arch}.dmg",
-      verified: "downloads.zohocdn.com/ulaa-browser/"
+  url "https://downloads.zohocdn.com/ulaa-browser/release/mac/stable/#{arch}/Ulaa-Browser-v#{version}-#{arch}.dmg"
   name "Ulaa Browser"
   desc "Privacy-centric browser with advanced tracking protection"
   homepage "https://ulaa.com/"
@@ -27,7 +22,7 @@ cask "ulaa" do
     strategy :header_match
   end
 
-  depends_on :macos
+  depends_on macos: :ventura
 
   app "Ulaa.app"
 

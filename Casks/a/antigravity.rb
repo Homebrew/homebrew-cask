@@ -2,12 +2,11 @@ cask "antigravity" do
   arch arm: "arm", intel: "x64"
   livecheck_arch = on_arch_conditional arm: "arm64", intel: "x64"
 
-  version "2.5.0,5471848641724416"
-  sha256 arm:   "18b6e837d1fef34456d22296b2def3ee90a0a14a539a0c1d83c3eaaf5029811f",
-         intel: "bdb98fea576e5cdaf6cd4326f599c4da6d0ce6858c3b2028ef79b0c2ba426442"
+  version "2.12.2,6298742303883264"
+  sha256 arm:   "9f22b1f7a444d3c0c99483528963381f45e287237e3ba18bedc8bf47935b3d18",
+         intel: "cf44715e997570788919909b888485eeee1dfc516efb56c17d7af4721320b5c3"
 
-  url "https://storage.googleapis.com/antigravity-public/antigravity-hub/#{version.csv.first}-#{version.csv.second}/darwin-#{arch}/Antigravity.dmg",
-      verified: "storage.googleapis.com/antigravity-public/antigravity-hub/"
+  url "https://storage.googleapis.com/antigravity-public/antigravity-hub/#{version.csv.first}-#{version.csv.second}/darwin-#{arch}/Antigravity.dmg"
   name "Google Antigravity"
   desc "Agent orchestration platform"
   homepage "https://antigravity.google/product/antigravity-2"

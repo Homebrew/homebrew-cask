@@ -7,7 +7,7 @@
 #
 # To install dependencies:
 #
-#   pip3 install gftools html2text jinja2 protobuf
+#   pip3 install gfmetadata html2text jinja2 protobuf
 
 from functools import reduce
 from glob import glob
@@ -15,7 +15,7 @@ import os
 import re
 import sys
 from google.protobuf import text_format
-import gftools.fonts_public_pb2 as fonts_pb2
+import gfmetadata.fonts_public_pb2 as fonts_pb2
 import jinja2
 import html2text
 import urllib.request
@@ -41,14 +41,8 @@ class FontCask:
 
 {% if files|length == 1 %}
   url "https://github.com/google/fonts/raw/main/{{folder}}/{{files[0] | urlencode}}"
-      {%- if not 'github.com/' in homepage %},
-      verified: "github.com/google/fonts/"
-      {%- endif +%}
 {% else %}
   url "https://github.com/google/fonts.git",
-      {%- if not 'github.com/' in homepage +%}
-      verified:  "github.com/google/fonts",
-      {%- endif +%}
       branch:    "main",
       only_path: "{{folder}}"
 {% endif %}

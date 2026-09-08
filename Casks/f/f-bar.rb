@@ -1,6 +1,6 @@
 cask "f-bar" do
-  version "6.1.0"
-  sha256 "da22b1a27a007a036ec075abb2399ec73dc905401e1339c87e3d1b4665a55d05"
+  version "6.2.0"
+  sha256 "817d6720837f39f59cb60bbeb4d7a113b6fef8f52cd43c132549313b095b48bc"
 
   url "https://app.laravel-forge-menubar.com/storage/releases/F-Bar_#{version}.zip"
   name "F-Bar"

@@ -1,6 +1,6 @@
 cask "hytale" do
-  version "2026.07.29-8228f98"
-  sha256 "3974b198744b478548608f2000257d65f970ee4511b32b08fd942a5d18f3351e"
+  version "2026.08.28-3d62362"
+  sha256 "a47d7a861d568c0f11a7397d372890e46a143c72f92aaa911c203f45a5548703"
 
   url "https://launcher.hytale.com/builds/release/darwin/arm64/hytale-launcher-#{version}.dmg"
   name "Hytale"

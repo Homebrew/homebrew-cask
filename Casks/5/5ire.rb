@@ -5,8 +5,7 @@ cask "5ire" do
   sha256 arm:   "617a55c4b3fa5fd5872861cd5cda8f6dfdb8039b1468345dff8cc8d5411324cd",
          intel: "97eee400ca4fd4207717fc034c086a22d75ee6fdf2ecf0ad387dac5135cf6482"
 
-  url "https://github.com/nanbingxyz/5ire/releases/download/v#{version}/5ire-#{version}#{arch}.dmg",
-      verified: "github.com/nanbingxyz/5ire/"
+  url "https://github.com/nanbingxyz/5ire/releases/download/v#{version}/5ire-#{version}#{arch}.dmg"
   name "5ire"
   desc "AI assistant and MCP client"
   homepage "https://5ire.app/"

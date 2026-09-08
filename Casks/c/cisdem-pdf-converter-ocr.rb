@@ -1,5 +1,5 @@
 cask "cisdem-pdf-converter-ocr" do
-  version "9.6.0"
+  version "9.7.0"
   sha256 :no_check
 
   url "https://download.cisdem.com/cisdem-pdfconverterocr.dmg",
@@ -9,8 +9,8 @@ cask "cisdem-pdf-converter-ocr" do
   homepage "https://www.cisdem.com/pdf-converter-ocr-mac.html"
 
   livecheck do
-    url "https://www.cisdem.com/js/notes/pdf-converter-ocr-mac.js"
-    regex(/(\d+(?:\.\d+)*)\s+\(\d+(?:-\d+)+\)/i)
+    url "https://www.cisdem.com/pdf-converter-ocr-mac/release-notes.html"
+    regex(/(\d+(?:\.\d+)+)\(\d+(?:-\d+)+\)/i)
   end
 
   depends_on :macos

@@ -3,16 +3,15 @@ cask "feishu" do
   livecheck_arch = on_arch_conditional arm: "_m1"
 
   on_arm do
-    version "7.73.9,0672e97f"
-    sha256 "39f79438e5eb9f83011f845565d7abbc49fc18ddfdf0e86f9acf6b425baec72b"
+    version "7.75.18,37e3e3a1"
+    sha256 "91f751e5e07aa9e7164377aaa092edc98b71cbfd6b618d27e6819d14d1e402ab"
   end
   on_intel do
-    version "7.73.9,ac6a604b"
-    sha256 "30ac1229c88de6e9695e88fccf5d32ffd7916f41fb5aaa1d9047ea35f71c360d"
+    version "7.75.18,d7b09c05"
+    sha256 "2a2f449b9b8665c25147638e10a825c6472241b691780142a5781a7dd1369d53"
   end
 
-  url "https://sf3-cn.feishucdn.com/obj/ee-appcenter/#{version.csv.second}/Feishu-darwin_#{arch}-#{version.csv.first}-signed.dmg",
-      verified: "sf3-cn.feishucdn.com/obj/ee-appcenter/"
+  url "https://sf3-cn.feishucdn.com/obj/ee-appcenter/#{version.csv.second}/Feishu-darwin_#{arch}-#{version.csv.first}-signed.dmg"
   name "Feishu"
   desc "Project management software"
   homepage "https://www.feishu.cn/"

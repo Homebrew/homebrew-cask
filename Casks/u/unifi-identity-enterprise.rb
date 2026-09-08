@@ -2,8 +2,7 @@ cask "unifi-identity-enterprise" do
   version "0.90.0,cf7eb9f5-2570-4d3c-9501-2c3eac3e7409,42db"
   sha256 "bd2f1f241cdcc02d3ba4e03868aec21f2158f0516538e2380e143244e2ab4e8e"
 
-  url "https://fw-download.ubnt.com/data/uid-ui-desktop-app/#{version.csv.third}-macOS-#{version.csv.first}-#{version.csv.second}.pkg",
-      verified: "fw-download.ubnt.com/data/uid-ui-desktop-app/"
+  url "https://fw-download.ubnt.com/data/uid-ui-desktop-app/#{version.csv.third}-macOS-#{version.csv.first}-#{version.csv.second}.pkg"
   name "UniFi Identity Enterprise"
   desc "Corporate Wi-Fi, VPN, SSO, and HR Application"
   homepage "https://www.ui.com/identity"

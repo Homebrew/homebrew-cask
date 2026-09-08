@@ -1,6 +1,6 @@
 cask "cinebench" do
   version "2026"
-  sha256 "c8b156354f027cc9488957ae4129b6229691ff59320fa272f133b7e4cfd9dd94"
+  sha256 :no_check
 
   url "https://mx-app-blob-prod.maxon.net/mx-package-production/website/macos/maxon/cinebench/Cinebench#{version}_macOS.dmg",
       referer: "https://www.maxon.net/en/downloads/cinebench-#{version}-downloads"

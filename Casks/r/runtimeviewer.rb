@@ -1,6 +1,6 @@
 cask "runtimeviewer" do
-  version "2.0.1"
-  sha256 "0d4320d77b7658d4de9c635478477566af2986c8b17ef8a1651b0f32423bf185"
+  version "2.1.2"
+  sha256 "0cca9b3844135f8de175cf22c3fceebc668984b022b81565fede8aa976e325d2"
 
   url "https://github.com/MxIris-Reverse-Engineering/RuntimeViewer/releases/download/v#{version}/RuntimeViewer-macOS.zip"
   name "RuntimeViewer"

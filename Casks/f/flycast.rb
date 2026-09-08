@@ -1,6 +1,6 @@
 cask "flycast" do
-  version "2.6"
-  sha256 "1dc33d2a77b9c84d0ba1fe30a88f570701f15a47ffb40a306dc244b0a8213267"
+  version "2.7"
+  sha256 "dbd59cb88f52a95ea4de90693bb4ac156530452d5457f2cc4f656fdfd242fc26"
 
   url "https://github.com/flyinghead/flycast/releases/download/v#{version}/flycast-macOS-#{version}.zip"
   name "Flycast"

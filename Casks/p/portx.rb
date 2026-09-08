@@ -5,8 +5,7 @@ cask "portx" do
   sha256 arm:   "FE0080499E07837EFCADC1D11FCE231D7383D7083ADD87E2CEB17F991A8CC7FE",
          intel: "A45759983EFDBAF48CA1C24B2E1F1DCD7528CD9FEB268E8530E63A560D63D8CF"
 
-  url "https://cdn.netsarang.net/0ac7ea20/PortX-#{version.csv.first}-#{arch}.dmg",
-      verified: "cdn.netsarang.net/"
+  url "https://cdn.netsarang.net/0ac7ea20/PortX-#{version.csv.first}-#{arch}.dmg"
   name "portx"
   desc "SSH Client"
   homepage "https://portx.online/"

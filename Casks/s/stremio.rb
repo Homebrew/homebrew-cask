@@ -5,13 +5,6 @@ cask "stremio" do
   sha256 arm:   "f85286f24856e78d7160eb493e6e86994871979a10bc02aa55470c893346fbb4",
          intel: "a1d5124a0f928f121d6c141540755302aa126495cdc55e767f255799d31b6e15"
 
-  on_arm do
-    depends_on macos: :big_sur
-  end
-  on_intel do
-    depends_on macos: :catalina
-  end
-
   url "https://dl.strem.io/stremio-shell-macos/v#{version}/Stremio_#{arch}.dmg"
   name "Stremio"
   desc "Open-source media center"

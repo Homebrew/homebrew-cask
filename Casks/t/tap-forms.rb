@@ -2,8 +2,7 @@ cask "tap-forms" do
   version "5.3.45,sVRdq8QqvjZ3jBJUQNwZ"
   sha256 "82a6e945b233e1202373393919e97dca891fc5a0f472ff2ebcc71cefacbaf991"
 
-  url "https://paddle.s3.amazonaws.com/fulfillment_downloads/9234/503174/#{version.csv.second}_Tap%20Forms%20Install%20#{version.csv.first}.dmg",
-      verified: "paddle.s3.amazonaws.com/"
+  url "https://paddle.s3.amazonaws.com/fulfillment_downloads/9234/503174/#{version.csv.second}_Tap%20Forms%20Install%20#{version.csv.first}.dmg"
   name "Tap Forms 5"
   desc "Helps to organise important files in one place"
   homepage "https://www.tapforms.com/"

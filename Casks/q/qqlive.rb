@@ -1,6 +1,6 @@
 cask "qqlive" do
-  version "2.178.0.55815"
-  sha256 "0705a91f3eeac5acab64bc640266cba433a870f5efeb4b0e1b310c46934d8fa5"
+  version "2.183.0.55849"
+  sha256 "6b228e78a3cc86e7568eeb21c9e8880161a64ebcda3d0ca9e7a18757642fc15e"
 
   url "https://dldir1.qq.com/qqtv/mac/TencentVideo#{version}.dmg"
   name "QQLive"
@@ -23,6 +23,8 @@ cask "qqlive" do
   depends_on :macos
 
   app "QQLive.app"
+
+  uninstall quit: "com.tencent.tenvideo"
 
   zap trash: [
     "~/Library/Caches/com.tencent.tenvideo",

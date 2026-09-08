@@ -1,9 +1,5 @@
 cask "free-gpgmail" do
-  on_catalina :or_older do
-    version "5,2022.2,-unsigned"
-    sha256 "43e349ae21213e36f48677551215f61a9d183907ef0596c4b54d1d745bb7cb27"
-  end
-  on_big_sur do
+  on_big_sur :or_older do
     version "5,2022.2,-signed"
     sha256 "1935b0f65a5351c1c84870f316d0b97331c40ca50c13a912a703a68a08dabc4e"
   end

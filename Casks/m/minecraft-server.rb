@@ -2,8 +2,7 @@ cask "minecraft-server" do
   version "26.1.2,97ccd4c0ed3f81bbb7bfacddd1090b0c56f9bc51"
   sha256 "cd47e7c38328f64768fd17af8fcd8b22496b40b63d4ffee81e71ae059fedcb42"
 
-  url "https://piston-data.mojang.com/v1/objects/#{version.csv.second}/server.jar",
-      verified: "piston-data.mojang.com/"
+  url "https://piston-data.mojang.com/v1/objects/#{version.csv.second}/server.jar"
   name "Minecraft Server"
   desc "Run a Minecraft multiplayer server"
   homepage "https://www.minecraft.net/en-us/"

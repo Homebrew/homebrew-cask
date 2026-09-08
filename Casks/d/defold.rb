@@ -1,11 +1,10 @@
 cask "defold" do
   arch arm: "arm64", intel: "x86_64"
 
-  version "1.13.0"
+  version "1.13.1"
   sha256 :no_check # required as upstream package is updated in-place
 
-  url "https://github.com/defold/defold/releases/download/#{version}/Defold-#{arch}-macos.dmg",
-      verified: "github.com/defold/defold/"
+  url "https://github.com/defold/defold/releases/download/#{version}/Defold-#{arch}-macos.dmg"
   name "Defold"
   desc "Game engine for development of desktop, mobile and web games"
   homepage "https://defold.com/"
@@ -25,6 +24,8 @@ cask "defold" do
   depends_on macos: :big_sur
 
   app "Defold.app"
+
+  uninstall quit: "com.defold.editor"
 
   zap trash: [
     "~/Library/Application Support/Defold",

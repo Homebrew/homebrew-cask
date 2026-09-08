@@ -1,9 +1,8 @@
 cask "devknife" do
-  version "1.16.0"
-  sha256 "ce91719791e25e191822126840a7638930c76cc528bc7bc6396eb8c030d79c3a"
+  version "1.18.0"
+  sha256 "a00291d7571a58f1040558dee931253e862a01c228c39220eeda6d552b5ee196"
 
-  url "https://files.solotuna.com/devknife/DevKnife-#{version}.dmg",
-      verified: "files.solotuna.com/devknife/"
+  url "https://files.solotuna.com/devknife/DevKnife-#{version}.dmg"
   name "DevKnife"
   desc "Collection of handy developer tools"
   homepage "https://devknife.app/"
@@ -18,8 +17,11 @@ cask "devknife" do
 
   app "DevKnife.app"
 
+  uninstall quit: "com.solotuna.devknife"
+
   zap trash: [
     "~/Library/Application Support/com.solotuna.devknife",
+    "~/Library/Application Support/DevKnife",
     "~/Library/Preferences/com.solotuna.devknife.plist",
   ]
 end

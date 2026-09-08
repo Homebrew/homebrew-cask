@@ -1,12 +1,11 @@
 cask "postman" do
   arch arm: "osx_arm64", intel: "osx64"
 
-  version "12.22.2"
-  sha256 arm:   "3da12d46254b4ce6bc1d6b162982f8f0d6e126a6a63ecd51d77f6b59de982220",
-         intel: "0b641144a9f16e609d69fbc05149419cbbe35719e6fbacdb4ed23824e64ffe18"
+  version "12.27.1"
+  sha256 arm:   "ca52cb01736b5464eca1cb20df406beddc73d7a7c780759b5fed48176dd24a8d",
+         intel: "85d9dfe576b0ffb4a50128c2f1267517166d15e795d22f96e07731ef3be814fe"
 
-  url "https://dl.pstmn.io/download/version/#{version}/#{arch}",
-      verified: "dl.pstmn.io/download/version/"
+  url "https://dl.pstmn.io/download/version/#{version}/#{arch}"
   name "Postman"
   desc "Collaboration platform for API development"
   homepage "https://www.postman.com/"
@@ -26,6 +25,8 @@ cask "postman" do
   depends_on macos: :big_sur
 
   app "Postman.app"
+
+  uninstall quit: "com.postmanlabs.mac"
 
   zap trash: [
     "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.postmanlabs.mac.sfl*",

@@ -6,8 +6,8 @@ cask "font-elice-digital-baeum" do
   name "Elice Digital Baeum"
   homepage "https://font.elice.io/"
 
-  font "EliceDigitalBaeumOTF_Regular.otf"
   font "EliceDigitalBaeumOTF_Bold.otf"
+  font "EliceDigitalBaeumOTF_Regular.otf"
 
   # No zap stanza required
 end

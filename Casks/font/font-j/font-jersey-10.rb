@@ -2,8 +2,7 @@ cask "font-jersey-10" do
   version :latest
   sha256 :no_check
 
-  url "https://github.com/google/fonts/raw/main/ofl/jersey10/Jersey10-Regular.ttf",
-      verified: "github.com/google/fonts/"
+  url "https://github.com/google/fonts/raw/main/ofl/jersey10/Jersey10-Regular.ttf"
   name "Jersey 10"
   homepage "https://fonts.google.com/specimen/Jersey+10"
 

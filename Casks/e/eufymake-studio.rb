@@ -2,8 +2,7 @@ cask "eufymake-studio" do
   version "1.5.26.2,1.8.0"
   sha256 "beaa5760814cc7dc09818efebfbbb7c13113b5128a7db33afcd04fbc2c7c9b2d"
 
-  url "https://github.com/eufymake/eufyMake-PrusaSlicer-Release/releases/download/v#{version.csv.first.major_minor_patch}/eufyMake_Studio_V#{version.csv.first}_E#{version.csv.second}.dmg",
-      verified: "github.com/eufymake/eufyMake-PrusaSlicer-Release/"
+  url "https://github.com/eufymake/eufyMake-PrusaSlicer-Release/releases/download/v#{version.csv.first.major_minor_patch}/eufyMake_Studio_V#{version.csv.first}_E#{version.csv.second}.dmg"
   name "eufyMake Studio"
   desc "Slicer for eufyMake 3D printers"
   homepage "https://www.eufymake.com/eufymake-studio"
