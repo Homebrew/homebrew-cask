@@ -16,11 +16,14 @@ cask "kmeet" do
 
   app "kMeet.app"
 
-  uninstall quit: "com.infomaniak.meet"
+  uninstall launchctl: "com.infomaniak.meet.ShipIt",
+            quit:      "com.infomaniak.meet"
 
   zap trash: [
     "~/Library/Application Support/Caches/kmeet-electron-updater",
     "~/Library/Application Support/kMeet",
+    "~/Library/Caches/com.infomaniak.meet*",
+    "~/Library/HTTPStorages/com.infomaniak.meet",
     "~/Library/Logs/kMeet",
     "~/Library/Preferences/com.infomaniak.meet.plist",
   ]
