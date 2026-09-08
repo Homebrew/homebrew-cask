@@ -1,6 +1,6 @@
 cask "appgate-sdp-client" do
-  version "6.7.2"
-  sha256 "af6c96b03182556f02c2bd426ee1e515628b3bb10694d4d0a7a5599e6435195e"
+  version "6.7.3"
+  sha256 "b6c2e83cc790f70edb1ceec3ffa276370cbb535b217f4ac99f4a530d36f7dc24"
 
   url "https://bin.appgate-sdp.com/#{version.major_minor}/client/Appgate-SDP-#{version}-Installer.dmg"
   name "AppGate SDP Client for macOS"
