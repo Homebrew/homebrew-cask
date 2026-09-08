@@ -4,16 +4,18 @@ cask "docktile" do
 
   url "https://github.com/k97/dock-tile/releases/download/v#{version}/DockTile-#{version}.dmg"
   name "Dock Tile"
-  desc "Group apps into iOS-style folders in the macOS Dock"
+  desc "Group apps into iOS-style folders in the Dock"
   homepage "https://github.com/k97/dock-tile"
+
+  depends_on macos: ">= :ventura"
 
   app "Dock Tile.app"
 
   zap trash: [
-    "~/Library/Application Support/DockTile",
     "~/Library/Application Support/com.docktile.app",
     "~/Library/Caches/com.docktile.app",
     "~/Library/HTTPStorages/com.docktile.app",
     "~/Library/Preferences/com.docktile.app.plist",
+    "~/Library/Application Support/DockTile",
   ]
 end
