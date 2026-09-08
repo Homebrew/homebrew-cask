@@ -8,4 +8,12 @@ cask "docktile" do
   homepage "https://github.com/k97/dock-tile"
 
   app "Dock Tile.app"
+
+  zap trash: [
+    "~/Library/Application Support/DockTile",
+    "~/Library/Application Support/com.docktile.app",
+    "~/Library/Caches/com.docktile.app",
+    "~/Library/HTTPStorages/com.docktile.app",
+    "~/Library/Preferences/com.docktile.app.plist",
+  ]
 end
