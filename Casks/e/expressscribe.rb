@@ -16,9 +16,13 @@ cask "expressscribe" do
 
   app "ExpressScribe.app"
 
-  uninstall quit: "com.nchsoftware.expressscribe-free"
+  uninstall quit: [
+    "com.nchsoftware.expressscribe-free",
+    "com.nchsoftware.expressscribefree",
+  ]
 
   zap trash: [
+    "~/Library/Preferences/ByHost/com.nchsoftware.expressscribe.*.plist",
     "~/Library/Preferences/com.nchsoftware.expressscribe-free.plist",
     "~/Library/Saved Application State/com.nchsoftware.expressscribe-free.savedState",
   ]
