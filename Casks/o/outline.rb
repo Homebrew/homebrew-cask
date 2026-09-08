@@ -23,6 +23,7 @@ cask "outline" do
     "~/Library/Application Scripts/6WN928JT76.com.gorillized",
     "~/Library/Application Scripts/com.gorillized.outlinemac.standalone.extension",
     "~/Library/Application Scripts/com.gorillized.outlinemac.standalone.widget",
+    "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.gorillized.outlinemac.standalone.sfl*",
     "~/Library/Application Support/com.gorillized.outlinemac.standalone",
     "~/Library/Application Support/Outline",
     "~/Library/Caches/com.gorillized.outlinemac.standalone",
