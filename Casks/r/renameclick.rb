@@ -1,9 +1,9 @@
 cask "renameclick" do
   arch arm: "arm64", intel: "x64"
 
-  version "2.15.4"
-  sha256 arm:   "b7970ced840a9bd91382932e6611ae1b7396e6731d9f71c7de88407d7ad9b60f",
-         intel: "833ec8dddb2a05abfc7019ea8b45a2ad618081cfc604965423613f8b87397399"
+  version "2.15.5"
+  sha256 arm:   "50c82ff176305f07cf5d593e9dd9f101c47b83fef1ca743be6211485e8e60ff4",
+         intel: "2dfef8a16f3c8c0b35784e1882b9f5ba5106174b480eb33399efe3bb131b275a"
 
   url "https://github.com/noemaVision/renameclick/releases/download/v#{version}/RenameClick-#{version}-#{arch}.dmg"
   name "RenameClick"
