@@ -1,6 +1,6 @@
 cask "modern-csv" do
-  version "2.4.3.1"
-  sha256 "68ed7da50dafb4b8dd35ddf63624cdafd6fef6bd68ba3cd963a95d9482bffa95"
+  version "2.4.4"
+  sha256 "d8a266c48d799a16be15a121cf62f7190b46d7aefde967b81725492d9f252093"
 
   url "https://www.moderncsv.com/release/ModernCSV-Mac-v#{version}.dmg"
   name "Modern CSV"
@@ -15,6 +15,8 @@ cask "modern-csv" do
   depends_on :macos
 
   app "Modern CSV.app"
+
+  uninstall quit: "net.galliumdigital.Modern-CSV"
 
   zap trash: [
     "~/Library/Application Support/Modern CSV",
