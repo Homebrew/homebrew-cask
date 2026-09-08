@@ -20,8 +20,16 @@ cask "bezel" do
   app "Bezel.app"
 
   zap trash: [
+    "/Library/Preferences/com.apple.BezelServices.plist",
+    "~/Library/Application Scripts/com.nonstrict.BezelAppleTVHelper",
+    "~/Library/Application Scripts/com.nonstrict.BezelDALService",
+    "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.nonstrict.bezel-direct.sfl*",
+    "~/Library/Application Support/com.nonstrict.Bezel-direct",
     "~/Library/Caches/com.nonstrict.Bezel-direct",
+    "~/Library/Containers/com.nonstrict.BezelAppleTVHelper",
+    "~/Library/Containers/com.nonstrict.BezelDALService",
     "~/Library/HTTPStorages/com.nonstrict.Bezel-direct",
+    "~/Library/Preferences/com.apple.BezelServices.plist",
     "~/Library/Preferences/com.nonstrict.Bezel-direct.plist",
   ]
 end
