@@ -11,6 +11,8 @@ cask "docktile" do
 
   app "Dock Tile.app"
 
+  uninstall launchctl: "com.docktile.app.tilelauncher"
+
   zap trash: [
     "~/Library/Application Support/com.docktile.app",
     "~/Library/Application Support/DockTile",
