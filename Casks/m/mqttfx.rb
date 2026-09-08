@@ -24,7 +24,8 @@ cask "mqttfx" do
 
   app "MQTT.fx.app"
 
-  uninstall delete: "/Applications/MQTT.fx.app"
+  uninstall quit:   "com.install4j.2094-5999-4730-7458.200",
+            delete: "/Applications/MQTT.fx.app"
 
   zap trash: [
     "~/Library/Application Support/MQTT-FX",
