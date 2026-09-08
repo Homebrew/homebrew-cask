@@ -16,13 +16,13 @@ cask "audacity" do
 
     zap quit:  "org.audacityteam.audacity#{version.major}",
         trash: [
-          "~/Documents/Audacity#{version.major}",
           "~/Library/Application Support/audacity",
           "~/Library/Caches/Audacity",
           "~/Library/Preferences/org.audacityteam.Audacity#{version.major}.plist",
           "~/Library/Preferences/org.audacityteam.audacity.plist",
           "~/Library/Saved Application State/org.audacityteam.audacity.savedState",
-        ]
+        ],
+        rmdir: "~/Documents/Audacity#{version.major}"
   end
   on_linux do
     app_image "audacity-linux-#{version}-#{arch}.AppImage", target: "Audacity.AppImage"
