@@ -18,6 +18,7 @@ cask "bluos-controller" do
 
   zap trash: [
     "~/Library/Application Support/BluOS Controller",
+    "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.bluesound.bluos.sfl*",
     "~/Library/Logs/BluOS Controller",
     "~/Library/Preferences/com.bluesound.bluos.plist",
     "~/Library/Saved Application State/com.bluesound.bluos.savedState",
