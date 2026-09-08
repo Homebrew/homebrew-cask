@@ -1,15 +1,15 @@
 cask "easymac-cleaner" do
-  version "1.3,17"
+  version "1.3"
   sha256 "ff507578f37e0e2afc3f19018c85a32e751cb199c1605bae0fb577cdbc788428"
 
-  url "https://updates.martiancat.space/cleaner/EasyMacCleaner-#{version.csv.first}.zip"
+  url "https://updates.martiancat.space/cleaner/EasyMacCleaner-#{version}.zip"
   name "EasyMac Cleaner"
   desc "Cleaning, privacy, and system optimization utility"
   homepage "https://martiancat.space/"
 
   livecheck do
     url "https://updates.martiancat.space/cleaner/appcast.xml"
-    strategy :sparkle
+    strategy :sparkle, &:short_version
   end
 
   auto_updates true
