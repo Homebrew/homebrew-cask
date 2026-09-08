@@ -158,46 +158,7 @@ jobs:
         id: info
         env:
           CASK_PATH: ${{ matrix.cask.path }}
-        run: |
-          brew ruby -- - "$CASK_PATH" <<'EOF'
-            require 'cask/cask_loader'
-            require 'cask/installer'
-
-            cask = Cask::CaskLoader.load(ARGV.fetch(0))
-
-            manual_installer = cask.artifacts.any? do |artifact|
-              if defined?(artifact.manual_install)
-                artifact.manual_install
-              end
-            end
-
-            macos_requirement_satisfied = if macos_requirement = cask.depends_on.macos
-              macos_requirement.satisfied?
-            else
-              true
-            end
-
-            cask_conflicts = cask.conflicts_with&.dig(:cask).to_a.select { |c| Cask::CaskLoader.load(c).installed? }
-            formula_conflicts = cask.conflicts_with&.dig(:formula).to_a.select { |f| Formula[f].any_version_installed? }
-
-            installer = Cask::Installer.new(cask)
-            cask_and_formula_dependencies = installer.missing_cask_and_formula_dependencies
-
-            cask_dependencies = cask_and_formula_dependencies.select { |d| d.is_a?(Cask::Cask) }.map(&:full_name)
-            formula_dependencies = cask_and_formula_dependencies.select { |d| d.is_a?(Formula) }.map(&:full_name)
-
-            File.open(ENV.fetch("GITHUB_OUTPUT"), "a") do |f|
-              f.puts "manual_installer=#{JSON.generate(manual_installer)}"
-              f.puts "macos_requirement_satisfied=#{JSON.generate(macos_requirement_satisfied)}"
-              f.puts "formula_dependencies=#{JSON.generate(formula_dependencies)}"
-            end
-
-            File.open(ENV.fetch("GITHUB_ENV"), "a") do |f|
-              f.puts "CASK_CONFLICTS=#{cask_conflicts&.join(" ")}" if cask_conflicts.present?
-              f.puts "CASK_DEPENDENCIES=#{cask_dependencies&.join(" ")}" if cask_dependencies.present?
-              f.puts "FORMULA_CONFLICTS=#{formula_conflicts&.join(" ")}" if formula_conflicts.present?
-            end
-          EOF
+        run: brew cask-ci info "$CASK_PATH"
         if: always() && steps.fetch.outcome == 'success' && matrix.cask
 
       - name: Uninstall conflicting formulae
@@ -222,14 +183,7 @@ jobs:
 
       - name: Take snapshot of installed and running apps and services (macOS only)
         id: snapshot
-        run: |
-          brew ruby -r "$(brew --repository homebrew/cask)/cmd/lib/check.rb" <<'EOF'
-            File.open(ENV.fetch("GITHUB_ENV"), "a") do |f|
-              # We have to use a `HOMEBREW_` prefix so it will survive the
-              # environment variable filtering in `brew`.
-              f.puts "HOMEBREW_SNAPSHOT_BEFORE=#{JSON.generate(Check.all)}"
-            end
-          EOF
+        run: brew cask-ci snapshot
         if: always() && steps.info.outcome == 'success' && runner.os == 'macOS'
 
       - name: Run brew install --cask ${{ matrix.cask.token }}
@@ -242,10 +196,7 @@ jobs:
         timeout-minutes: 30
 
       - name: Check for missing zap paths
-        run: |
-          brew ruby -r "$(brew --repository homebrew/cask)/cmd/lib/zap_check.rb" <<'EOF'
-            ZapCheck.run('${{ matrix.cask.path }}')
-          EOF
+        run: brew cask-ci zap-check '${{ matrix.cask.path }}'
         if: >
           always() &&
           steps.install.outcome == 'success' &&
@@ -266,24 +217,7 @@ jobs:
         timeout-minutes: 30
 
       - name: Compare installed and running apps and services with snapshot (macOS only)
-        run: |
-          brew ruby -r "$(brew --repository homebrew/cask)/cmd/lib/check.rb" <<'EOF'
-            require "cask/cask_loader"
-            require "utils/github/actions"
-
-            before = JSON.parse(ENV.fetch("HOMEBREW_SNAPSHOT_BEFORE", "{}"))
-                         .transform_keys(&:to_sym)
-            after = Check.all
-
-            cask = Cask::CaskLoader.load('${{ matrix.cask.path }}')
-            errors = Check.errors(before, after, cask: cask)
-
-            errors.each do |error|
-              puts GitHub::Actions::Annotation.new(:error, error, file: '${{ matrix.cask.path }}')
-            end
-
-            exit 1 if errors.any?
-          EOF
+        run: brew cask-ci check '${{ matrix.cask.path }}'
         if: always() && steps.snapshot.outcome == 'success' && steps.install.outcome == 'success' && runner.os == 'macOS'
 
   conclusion:
