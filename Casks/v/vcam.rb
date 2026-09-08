@@ -44,6 +44,7 @@ cask "vcam" do
   zap trash: [
     "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/ai.vcam.desktop.sfl*",
     "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.splitmedialabs.camerahelper.sfl*",
+    "~/Library/Application Support/VCam",
     "~/Library/Application Support/VCam.ai",
     "~/Library/Preferences/ai.vcam.desktop.plist",
     "~/Library/Saved Application State/ai.vcam.desktop.savedState",
