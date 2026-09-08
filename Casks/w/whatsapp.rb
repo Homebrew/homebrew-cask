@@ -1,6 +1,6 @@
 cask "whatsapp" do
-  version "26.36.16"
-  sha256 "1e5962813d45b68cb67953b6bd0c1b795864e200c054ddbdd995a7f4e84518d3"
+  version "26.36.18"
+  sha256 "1818f681826f172d422664ff11b3e103caefb6c265acb76815f66b3274fd1fa8"
 
   url "https://web.whatsapp.com/desktop/mac_native/release/?version=2.#{version}&extension=zip&configuration=Release&branch=master&is_buck=true"
   name "WhatsApp"
