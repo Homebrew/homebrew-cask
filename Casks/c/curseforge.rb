@@ -22,6 +22,9 @@ cask "curseforge" do
 
   zap trash: [
     "~/Library/Application Support/Caches/curseforge-updater",
+    "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.overwolf.curseforge.sfl*",
     "~/Library/Application Support/CurseForge",
+    "~/Library/Logs/CurseForge",
+    "~/Library/Preferences/com.overwolf.curseforge.plist",
   ]
 end

@@ -14,6 +14,7 @@ cask "motrix@beta" do
     app "Motrix.app"
 
     zap trash: [
+      "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/app.motrix.native.sfl*",
       "~/Library/Application Support/Motrix",
       "~/Library/Caches/app.motrix.native",
       "~/Library/Logs/Motrix",
