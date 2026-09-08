@@ -9,8 +9,12 @@ cask "adguard-vpn@nightly" do
 
   livecheck do
     url "https://static.adguard-vpn.com/mac/adguard-nightly-appcast.xml"
-    strategy :sparkle do |item|
-      item.short_version.delete_suffix(" nightly")
+    regex(%r{/AdGuardVPN[._-]v?(\d+(?:\.\d+)+)\.dmg}i)
+    strategy :sparkle do |item, regex|
+      match = item.url&.match(regex)
+      next if match.blank?
+
+      match[1]
     end
   end
 
