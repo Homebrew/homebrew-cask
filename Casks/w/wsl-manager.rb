@@ -4,7 +4,7 @@ cask "wsl-manager" do
 
   url "https://github.com/bostrot/wsl2-distro-manager/releases/download/v#{version}/wsl2-distro-manager-v#{version}-macos.dmg"
   name "WSL Manager"
-  desc "Manage native Linux VMs and remote WSL distros, with AI assistant and MCP server"
+  desc "Manage native Linux VMs and remote WSL distros"
   homepage "https://wslmanager.com/"
 
   auto_updates true
