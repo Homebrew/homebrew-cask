@@ -11,7 +11,7 @@ cask "ray" do
   homepage "https://myray.app/"
 
   livecheck do
-    url "https://spatie.be/products/ray/v3/download/macos-#{arch}/latest"
+    url "https://spatie.be/products/ray/v#{version.major}/download/macos-#{arch}/latest"
     regex(/ray[._-]v?(\d+(?:\.\d+)+).+#{arch}\.dmg/i)
     strategy :header_match
   end
