@@ -8,8 +8,8 @@ cask "discord" do
     end
   end
   on_monterey :or_newer do
-    version "0.0.410"
-    sha256 "893ec758b3ae3fdc6f8c9bb197603d41042bff317aaa7d616f8ea64350d93b19"
+    version "0.0.411"
+    sha256 "d24a9e295f4b6d927e21b0c407f9bd57d2ce91efa73da7c6e2b2cc6f79d06b7d"
 
     livecheck do
       url "https://updates.discord.com/distributions/app/manifests/latest?channel=stable&platform=osx&arch=x64"
