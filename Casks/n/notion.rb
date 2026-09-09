@@ -2,11 +2,11 @@ cask "notion" do
   arch arm: "-arm64"
   livecheck_folder = on_arch_conditional arm: "arm64", intel: "latest"
 
-  sha256 arm:   "2ea97cd7d4afff341c90420082372d9eeab6a21716f373380677094329d24460",
+  sha256 arm:   "1c1d9834d565b382aa40568a99a608afc0222528ee7b166c02ce8cfd15aa906f",
          intel: "6e63b51abb9fe7a897eba505b8f1f8be9f8771674a734aab80e824c437ed41b2"
 
   on_arm do
-    version "7.32.1"
+    version "7.33.0"
   end
   on_intel do
     version "7.32.1"
