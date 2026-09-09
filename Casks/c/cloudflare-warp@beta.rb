@@ -21,12 +21,9 @@ cask "cloudflare-warp@beta" do
   uninstall launchctl: [
               "com.cloudflare.1dot1dot1dot1.macos.loginlauncherapp",
               "com.cloudflare.1dot1dot1dot1.macos.warp.daemon",
+              "com.cloudflare.warp.updater",
             ],
             quit:      "com.cloudflare.1dot1dot1dot1.macos",
-            script:    {
-              executable: "/Applications/Cloudflare WARP.app/Contents/Resources/uninstall.sh",
-              sudo:       true,
-            },
             pkgutil:   "com.cloudflare.1dot1dot1dot1.macos",
             delete:    [
               "/usr/local/bin/warp-cli",
@@ -34,16 +31,20 @@ cask "cloudflare-warp@beta" do
               "/usr/local/bin/warp-diag",
             ]
 
-  zap trash: [
-    "/Library/LaunchDaemons/com.cloudflare.1dot1dot1dot1.macos.warp.daemon.plist",
-    "~/Library/Application Scripts/com.cloudflare.1dot1dot1dot1.macos.loginlauncherapp",
-    "~/Library/Application Support/com.cloudflare.1dot1dot1dot1.macos",
-    "~/Library/Caches/com.cloudflare.1dot1dot1dot1.macos",
-    "~/Library/Caches/com.plausiblelabs.crashreporter.data/com.cloudflare.1dot1dot1dot1.macos",
-    "~/Library/Containers/com.cloudflare.1dot1dot1dot1.macos.loginlauncherapp",
-    "~/Library/HTTPStorages/com.cloudflare.1dot1dot1dot1.macos",
-    "~/Library/HTTPStorages/com.cloudflare.1dot1dot1dot1.macos.binarycookies",
-    "~/Library/Preferences/com.cloudflare.1dot1dot1dot1.macos.plist",
-    "~/Library/WebKit/com.cloudflare.1dot1dot1dot1.macos",
-  ]
+  zap script: {
+        executable: "/Applications/Cloudflare WARP.app/Contents/Resources/uninstall.sh",
+        sudo:       true,
+      },
+      trash:  [
+        "/Library/LaunchDaemons/com.cloudflare.1dot1dot1dot1.macos.warp.daemon.plist",
+        "~/Library/Application Scripts/com.cloudflare.1dot1dot1dot1.macos.loginlauncherapp",
+        "~/Library/Application Support/com.cloudflare.1dot1dot1dot1.macos",
+        "~/Library/Caches/com.cloudflare.1dot1dot1dot1.macos",
+        "~/Library/Caches/com.plausiblelabs.crashreporter.data/com.cloudflare.1dot1dot1dot1.macos",
+        "~/Library/Containers/com.cloudflare.1dot1dot1dot1.macos.loginlauncherapp",
+        "~/Library/HTTPStorages/com.cloudflare.1dot1dot1dot1.macos",
+        "~/Library/HTTPStorages/com.cloudflare.1dot1dot1dot1.macos.binarycookies",
+        "~/Library/Preferences/com.cloudflare.1dot1dot1dot1.macos.plist",
+        "~/Library/WebKit/com.cloudflare.1dot1dot1dot1.macos",
+      ]
 end
