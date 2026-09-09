@@ -1,14 +1,14 @@
 cask "cocoapacketanalyzer" do
-  version "4.0.0"
-  sha256 "8077d2fe87c7d6850573092ca718b9430aae9d430992aee62e300fe8d54c7ab3"
+  version "4.0.1"
+  sha256 "4bde1a5171fa64f951fdb990f3b07702244e9ad68bedbc0a0e539db63f72cbf4"
 
-  url "https://www.tastycocoabytes.com/_downloads/CPA_#{version.no_dots}.dmg"
+  url "https://appcast.tastycocoabytes.com/cpa/downloads/CPA_#{version.no_dots}.dmg"
   name "Cocoa Packet Analyzer"
   desc "Network protocol analyzer and packet sniffer"
   homepage "https://www.tastycocoabytes.com/"
 
   livecheck do
-    url "https://www.tastycocoabytes.com/cpa/updates/appcast2.xml"
+    url "https://appcast.tastycocoabytes.com/cpa/appcast.xml"
     strategy :sparkle, &:short_version
   end
 
