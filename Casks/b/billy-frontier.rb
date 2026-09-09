@@ -3,10 +3,12 @@ cask "billy-frontier" do
   url_end = on_system_conditional macos: "mac.dmg", linux: "linux-#{arch}.AppImage"
 
   version "1.1.1"
+  sha256 arm:          "d8200ed658786406d0f8ef3ad56ed9eb3a0c4223a689685888e1454d1bb2de1e",
+         intel:        "d8200ed658786406d0f8ef3ad56ed9eb3a0c4223a689685888e1454d1bb2de1e",
+         arm64_linux:  "9ae93fca1686d665a2ca03fdf76ecf4ef845f9527f151a1a5d30d69ca124679a",
+         x86_64_linux: "04dc7a6ab140eab94512d44297694eb7c69282306318dcaef6e11f7d3a167f01"
 
   on_macos do
-    sha256 "d8200ed658786406d0f8ef3ad56ed9eb3a0c4223a689685888e1454d1bb2de1e"
-
     app "Billy Frontier.app"
     artifact "Instructions.pdf", target: "~/Library/Application Support/BillyFrontier/Instructions.pdf"
 
@@ -17,9 +19,6 @@ cask "billy-frontier" do
     ]
   end
   on_linux do
-    sha256 arm64_linux:  "9ae93fca1686d665a2ca03fdf76ecf4ef845f9527f151a1a5d30d69ca124679a",
-           x86_64_linux: "04dc7a6ab140eab94512d44297694eb7c69282306318dcaef6e11f7d3a167f01"
-
     app_image "BillyFrontier-#{version}-linux-#{arch}.AppImage", target: "Billy Frontier.AppImage"
   end
 

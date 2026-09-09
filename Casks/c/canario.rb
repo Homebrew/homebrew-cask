@@ -13,8 +13,8 @@ cask "canario" do
   end
 
   auto_updates true
-  depends_on macos: :sonoma
   depends_on arch: :arm64
+  depends_on macos: :sonoma
 
   app "Canario.app"
 

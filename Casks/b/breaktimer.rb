@@ -2,10 +2,11 @@ cask "breaktimer" do
   url_end = on_system_conditional macos: "dmg", linux: "AppImage"
 
   version "2.0.3"
+  sha256 arm:          "2b5d3d3a8b9b85c5f41b4eb4384a341ecf6d7d2c0b377619e051a97ceb9ebfdd",
+         intel:        "2b5d3d3a8b9b85c5f41b4eb4384a341ecf6d7d2c0b377619e051a97ceb9ebfdd",
+         x86_64_linux: "e3cae710a2ce9b54ff4a2a8a8e6a611f4bb6a04cac2053827acacf07b5aa7809"
 
   on_macos do
-    sha256 "2b5d3d3a8b9b85c5f41b4eb4384a341ecf6d7d2c0b377619e051a97ceb9ebfdd"
-
     depends_on macos: :big_sur
 
     app "BreakTimer.app"
@@ -25,8 +26,6 @@ cask "breaktimer" do
     ]
   end
   on_linux do
-    sha256 "e3cae710a2ce9b54ff4a2a8a8e6a611f4bb6a04cac2053827acacf07b5aa7809"
-
     depends_on arch: :x86_64
 
     app_image "BreakTimer.AppImage", target: "BreakTimer.AppImage"

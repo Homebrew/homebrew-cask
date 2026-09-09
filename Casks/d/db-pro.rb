@@ -6,11 +6,12 @@ cask "db-pro" do
   url_end = on_system_conditional macos: "dmg", linux: "AppImage"
 
   version "2.8.1"
+  sha256 arm:          "5c8583e3da6c6cf98ac35dd47c03880275df9bfe558fb9791563241450bfea27",
+         intel:        "55da2a7c655334b154bd676ecc42a93113fef57da5411e4ae4e14542725e3b17",
+         arm64_linux:  "cbefbfa43623547fd0ce2afbc0582233abdc9a7507b29307546463b828c465cd",
+         x86_64_linux: "e70a958b1a18ffb7f66789618f0550e7e3039041f2b45e980016b9b572f0ed73"
 
   on_macos do
-    sha256 arm:   "5c8583e3da6c6cf98ac35dd47c03880275df9bfe558fb9791563241450bfea27",
-           intel: "55da2a7c655334b154bd676ecc42a93113fef57da5411e4ae4e14542725e3b17"
-
     depends_on macos: :monterey
 
     app "DB Pro.app"
@@ -25,9 +26,6 @@ cask "db-pro" do
     ]
   end
   on_linux do
-    sha256 arm64_linux:  "cbefbfa43623547fd0ce2afbc0582233abdc9a7507b29307546463b828c465cd",
-           x86_64_linux: "e70a958b1a18ffb7f66789618f0550e7e3039041f2b45e980016b9b572f0ed73"
-
     app_image "DB Pro-#{version}-#{file_arch}.AppImage", target: "DB Pro.AppImage"
   end
 

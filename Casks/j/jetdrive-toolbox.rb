@@ -15,8 +15,8 @@ cask "jetdrive-toolbox" do
   end
 
   auto_updates true
-  depends_on :macos
   depends_on arch: :arm64
+  depends_on :macos
 
   pkg "JetDriveToolbox_v#{version}.pkg"
 

@@ -3,11 +3,11 @@ cask "browseros" do
   url_end = on_system_conditional macos: "dmg", linux: "AppImage"
 
   version "0.50.3"
+  sha256 arm:          "6c6935ce2a0387ce7980f674849023869f8d700638a8a378534b4d2ffe3d8d39",
+         intel:        "b396b885b8b919c1969e3da998feb7eebd58b51495b244168fd5546cb4af3c13",
+         x86_64_linux: "168967dda944ff319160d17fa778582f9083e5dbd76a9728ba20a53de8f60da4"
 
   on_macos do
-    sha256 arm:   "6c6935ce2a0387ce7980f674849023869f8d700638a8a378534b4d2ffe3d8d39",
-           intel: "b396b885b8b919c1969e3da998feb7eebd58b51495b244168fd5546cb4af3c13"
-
     depends_on macos: :ventura
 
     app "BrowserOS.app"
@@ -19,8 +19,6 @@ cask "browseros" do
     ]
   end
   on_linux do
-    sha256 "168967dda944ff319160d17fa778582f9083e5dbd76a9728ba20a53de8f60da4"
-
     depends_on arch: :x86_64
 
     app_image "BrowserOS_v#{version.csv.first}_#{arch}.AppImage", target: "BrowserOS.AppImage"

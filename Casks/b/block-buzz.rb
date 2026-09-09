@@ -3,11 +3,11 @@ cask "block-buzz" do
   os macos: "dmg", linux: "AppImage"
 
   version "0.5.23"
+  sha256 arm:          "9197dde29a09ade77f56677e07cb4d6a9d7d1a6a157d7212f0a050144059c5b2",
+         intel:        "dd0abf673a68e1aad59999194208dd7c144f4718742a997cea7d9c27b7bd016c",
+         x86_64_linux: "f5bad1edeba2d6343e4102e9ce2baed4cda4a6dfd16abaa33081bfadbc5f9d4e"
 
   on_macos do
-    sha256 arm:   "9197dde29a09ade77f56677e07cb4d6a9d7d1a6a157d7212f0a050144059c5b2",
-           intel: "dd0abf673a68e1aad59999194208dd7c144f4718742a997cea7d9c27b7bd016c"
-
     conflicts_with cask: "buzz"
 
     app "Buzz.app"
@@ -23,8 +23,6 @@ cask "block-buzz" do
         rmdir: "~/.buzz"
   end
   on_linux do
-    sha256 "f5bad1edeba2d6343e4102e9ce2baed4cda4a6dfd16abaa33081bfadbc5f9d4e"
-
     depends_on arch: :x86_64
 
     app_image "Buzz_#{version}_#{arch}.AppImage", target: "Buzz.AppImage"

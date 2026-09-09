@@ -4,11 +4,11 @@ cask "artisan" do
   url_end = on_system_conditional macos: "dmg", linux: "AppImage"
 
   version "4.2.0"
+  sha256 arm:          "ef4abc2a8db4efee94d89703d150b033555f3c19164ba34665ba39854e1492a2",
+         intel:        "d152a64f41145807af248336971378be974c67db4b51194acc5606a15e4d68c6",
+         x86_64_linux: "e2f85dc7ded8f27b63e075364ffa47abf6608a8798d328bec9d55c0c5ac746b4"
 
   on_macos do
-    sha256 arm:   "ef4abc2a8db4efee94d89703d150b033555f3c19164ba34665ba39854e1492a2",
-           intel: "d152a64f41145807af248336971378be974c67db4b51194acc5606a15e4d68c6"
-
     on_arm do
       depends_on macos: :sonoma
     end
@@ -25,8 +25,6 @@ cask "artisan" do
     ]
   end
   on_linux do
-    sha256 "e2f85dc7ded8f27b63e075364ffa47abf6608a8798d328bec9d55c0c5ac746b4"
-
     depends_on arch: :x86_64
 
     app_image "artisan-linux-#{version}.AppImage", target: "Artisan.AppImage"

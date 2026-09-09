@@ -29,8 +29,8 @@ cask "unity" do
     end
   end
 
-  depends_on :macos
   depends_on cask: "unity-hub"
+  depends_on :macos
 
   pkg "Unity-#{version.csv.first}.pkg"
 

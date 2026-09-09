@@ -10,8 +10,8 @@ cask "mit-app-inventor" do
   deprecate! date: "2024-10-27", because: :unmaintained
   disable! date: "2025-10-27", because: :unmaintained
 
-  depends_on :macos
   depends_on arch: :x86_64
+  depends_on :macos
 
   pkg "MITAppInventorSetup.pkg"
 

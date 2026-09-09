@@ -10,8 +10,8 @@ cask "doteditor" do
   deprecate! date: "2024-09-08", because: :unmaintained
   disable! date: "2025-09-09", because: :unmaintained
 
-  depends_on :macos
   depends_on formula: "graphviz"
+  depends_on :macos
 
   app "DotEditor.app"
 

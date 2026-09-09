@@ -16,8 +16,8 @@ cask "meetmic" do
   end
 
   auto_updates true
-  depends_on macos: :sequoia
   depends_on arch: :arm64
+  depends_on macos: :sequoia
 
   app "MeetMic developer-id/MeetMic.app"
   binary "#{appdir}/MeetMic.app/Contents/MacOS/meetmic-cli", target: "meetmic"

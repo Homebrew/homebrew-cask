@@ -13,8 +13,8 @@ cask "bricklink-partdesigner" do
   end
 
   auto_updates true
-  depends_on :macos
   depends_on cask: "bricklink-studio"
+  depends_on :macos
 
   pkg "PartDesigner.pkg"
 

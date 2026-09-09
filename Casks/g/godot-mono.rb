@@ -13,8 +13,8 @@ cask "godot-mono" do
     strategy :github_latest
   end
 
-  depends_on macos: :big_sur
   depends_on cask: "dotnet-sdk"
+  depends_on macos: :big_sur
 
   app "Godot_mono.app"
   command_wrapper "godot-mono",

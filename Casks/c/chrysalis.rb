@@ -2,10 +2,11 @@ cask "chrysalis" do
   url_end = on_system_conditional macos: "universal.dmg", linux: "x64.AppImage"
 
   version "0.13.3"
+  sha256 arm:          "307c17836e901fb26bccfdbfad50744ea1b3c00536306c1dd06a63c430602f06",
+         intel:        "307c17836e901fb26bccfdbfad50744ea1b3c00536306c1dd06a63c430602f06",
+         x86_64_linux: "7d3fb145a21bd1644d344c4e3c88c87390fdd9efe2c4fde4c584ec6099cb1339"
 
   on_macos do
-    sha256 "307c17836e901fb26bccfdbfad50744ea1b3c00536306c1dd06a63c430602f06"
-
     app "Chrysalis.app"
 
     zap trash: [
@@ -14,8 +15,6 @@ cask "chrysalis" do
     ]
   end
   on_linux do
-    sha256 "7d3fb145a21bd1644d344c4e3c88c87390fdd9efe2c4fde4c584ec6099cb1339"
-
     depends_on arch: :x86_64
 
     app_image "Chrysalis-#{version}-x64.AppImage", target: "Chrysalis.AppImage"

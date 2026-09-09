@@ -12,8 +12,8 @@ cask "beid-viewer" do
     regex(/href=.*?eID(?:(?:%20|\s)+|[._-])?Viewer[._-]v?(\d+(?:\.\d+)+)\.dmg/i)
   end
 
-  depends_on macos: :sonoma
   depends_on cask: "beid-token"
+  depends_on macos: :sonoma
 
   app "eID Viewer.app"
 

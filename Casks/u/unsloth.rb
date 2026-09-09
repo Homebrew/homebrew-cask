@@ -2,10 +2,10 @@ cask "unsloth" do
   os macos: "MacOS.dmg", linux: "Linux.AppImage"
 
   version "0.1.807-beta"
+  sha256 arm:          "e964a82e3cfb5d5df68130fa8544c1804be5401a109de6f45f08bc53f3b08f3c",
+         x86_64_linux: "11fb6003685f0683bd531af346ed33068ecf26d2f704d4343e165e30ad21ba63"
 
   on_macos do
-    sha256 "e964a82e3cfb5d5df68130fa8544c1804be5401a109de6f45f08bc53f3b08f3c"
-
     auto_updates true
     depends_on arch: :arm64
 
@@ -20,8 +20,6 @@ cask "unsloth" do
     ]
   end
   on_linux do
-    sha256 "11fb6003685f0683bd531af346ed33068ecf26d2f704d4343e165e30ad21ba63"
-
     depends_on arch: :x86_64
 
     app_image "Unsloth-Desktop-Linux.AppImage", target: "Unsloth.AppImage"

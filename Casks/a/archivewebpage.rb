@@ -2,10 +2,11 @@ cask "archivewebpage" do
   url_end = on_system_conditional macos: "dmg", linux: "AppImage"
 
   version "0.17.1"
+  sha256 arm:          "244d566e1697e28b7f9520f98ec5bea50f4c0b4baa2d8f5611e0fc6807178fc3",
+         intel:        "244d566e1697e28b7f9520f98ec5bea50f4c0b4baa2d8f5611e0fc6807178fc3",
+         x86_64_linux: "a840308bf35211a3a267436e21665bb58b24ce9f6060379aec4c5fc8e1f76a6c"
 
   on_macos do
-    sha256 "244d566e1697e28b7f9520f98ec5bea50f4c0b4baa2d8f5611e0fc6807178fc3"
-
     depends_on macos: :monterey
 
     app "ArchiveWeb.page.app"
@@ -22,8 +23,6 @@ cask "archivewebpage" do
     ]
   end
   on_linux do
-    sha256 "a840308bf35211a3a267436e21665bb58b24ce9f6060379aec4c5fc8e1f76a6c"
-
     depends_on arch: :x86_64
 
     app_image "ArchiveWeb.page-#{version}.AppImage", target: "ArchiveWeb.page.AppImage"

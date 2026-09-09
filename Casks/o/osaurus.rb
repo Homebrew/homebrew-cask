@@ -12,8 +12,8 @@ cask "osaurus" do
     strategy :github_latest
   end
 
-  depends_on macos: :sequoia
   depends_on arch: :arm64
+  depends_on macos: :sequoia
 
   app "osaurus.app"
   binary "#{appdir}/osaurus.app/Contents/Helpers/osaurus"

@@ -504,8 +504,8 @@ cask "libreoffice-language-pack" do
     cask "libreoffice"
   end
 
-  depends_on :macos
   depends_on cask: "libreoffice"
+  depends_on :macos
 
   generated_script "SilentInstall.sh", content: <<~EOS
     #!/bin/bash

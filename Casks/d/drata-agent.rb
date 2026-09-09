@@ -3,10 +3,11 @@ cask "drata-agent" do
   url_end = on_system_conditional macos: "dmg", linux: "AppImage"
 
   version "3.9.0"
+  sha256 arm:          "1a312c713b2b6bdd94638121345db14c339089a686b208e684b2f5a3d3d2edf8",
+         intel:        "1a312c713b2b6bdd94638121345db14c339089a686b208e684b2f5a3d3d2edf8",
+         x86_64_linux: "4988d5bfd96bdd43da8b471b196cc4cd45b49185fa52b2ce26a410147dcee484"
 
   on_macos do
-    sha256 "1a312c713b2b6bdd94638121345db14c339089a686b208e684b2f5a3d3d2edf8"
-
     depends_on macos: :monterey
 
     app "Drata Agent.app"
@@ -18,8 +19,6 @@ cask "drata-agent" do
     ]
   end
   on_linux do
-    sha256 "4988d5bfd96bdd43da8b471b196cc4cd45b49185fa52b2ce26a410147dcee484"
-
     depends_on arch: :x86_64
 
     app_image "Drata-Agent-linux.AppImage", target: "DrataAgent.AppImage"

@@ -4,11 +4,11 @@ cask "devpod" do
   url_end = on_system_conditional macos: "dmg", linux: "AppImage"
 
   version "0.6.15"
+  sha256 arm:          "63fea2f91762be167a53267722b1f37b95214bb1824957e2eeaf38d41f6a16af",
+         intel:        "f90c172732d7430b74a221b3af7602fcadcf0175a3dfce3b9ce7953e8f93d2ed",
+         x86_64_linux: "eb8bfefc4f2c3f20bce370877e985fcc750858f7f06a5db06cfe339cd1eca9ba"
 
   on_macos do
-    sha256 arm:   "63fea2f91762be167a53267722b1f37b95214bb1824957e2eeaf38d41f6a16af",
-           intel: "f90c172732d7430b74a221b3af7602fcadcf0175a3dfce3b9ce7953e8f93d2ed"
-
     app "DevPod.app"
     binary "#{appdir}/DevPod.app/Contents/MacOS/devpod-cli", target: "devpod"
 
@@ -23,8 +23,6 @@ cask "devpod" do
     ]
   end
   on_linux do
-    sha256 "eb8bfefc4f2c3f20bce370877e985fcc750858f7f06a5db06cfe339cd1eca9ba"
-
     depends_on arch: :x86_64
 
     app_image "DevPod_linux_amd64.AppImage", target: "DevPod.AppImage"

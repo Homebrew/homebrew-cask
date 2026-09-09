@@ -13,8 +13,8 @@ cask "pale-moon" do
     strategy :header_match
   end
 
-  depends_on macos: :big_sur
   depends_on arch: :arm64
+  depends_on macos: :big_sur
 
   app "Pale Moon.app"
 

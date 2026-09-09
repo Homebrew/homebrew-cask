@@ -3,11 +3,11 @@ cask "cate" do
   url_end = on_system_conditional macos: "#{arch}.dmg", linux: ".AppImage"
 
   version "1.7.0"
+  sha256 arm:          "4deba2757d813a13e784b0d71e6e7fb22f418d7c06e0bec7b87f47eab7aa43ec",
+         intel:        "d682affb59dd7cf5ab855cdff58b2e65ef38a2fe4fa8fae5216dec1d9d1d80d3",
+         x86_64_linux: "3fda53f5de14ab9a19d17bad6715b6158cb6f0b63ffde9378f4c1cf742da28aa"
 
   on_macos do
-    sha256 arm:   "4deba2757d813a13e784b0d71e6e7fb22f418d7c06e0bec7b87f47eab7aa43ec",
-           intel: "d682affb59dd7cf5ab855cdff58b2e65ef38a2fe4fa8fae5216dec1d9d1d80d3"
-
     depends_on macos: :monterey
 
     app "Cate.app"
@@ -27,8 +27,6 @@ cask "cate" do
     ]
   end
   on_linux do
-    sha256 "3fda53f5de14ab9a19d17bad6715b6158cb6f0b63ffde9378f4c1cf742da28aa"
-
     depends_on arch: :x86_64
 
     app_image "Cate-#{version}.AppImage", target: "Cate.AppImage"

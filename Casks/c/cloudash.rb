@@ -3,11 +3,11 @@ cask "cloudash" do
   url_end = on_system_conditional macos: "#{arch}.dmg", linux: ".AppImage"
 
   version "1.22.1"
+  sha256 arm:          "94ce30488721f5511433994ed4fbc045fe6b4ec54b06e37f23cb343b19b33556",
+         intel:        "73451741b9ddf1d26eecd2ae21d92602e2c2eae414eab6329243fa75cd18428c",
+         x86_64_linux: "6f6e7d88c42710375e2775766a465fec88448ed8610b69e323836d25201048b1"
 
   on_macos do
-    sha256 arm:   "94ce30488721f5511433994ed4fbc045fe6b4ec54b06e37f23cb343b19b33556",
-           intel: "73451741b9ddf1d26eecd2ae21d92602e2c2eae414eab6329243fa75cd18428c"
-
     app "Cloudash.app"
 
     zap trash: [
@@ -18,8 +18,6 @@ cask "cloudash" do
     ]
   end
   on_linux do
-    sha256 "6f6e7d88c42710375e2775766a465fec88448ed8610b69e323836d25201048b1"
-
     depends_on arch: :x86_64
 
     app_image "Cloudash-#{version}.AppImage", target: "Cloudash.AppImage"

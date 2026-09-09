@@ -32,8 +32,8 @@ cask "inkstitch" do
     strategy :github_latest
   end
 
-  depends_on :macos
   depends_on cask: "inkscape"
+  depends_on :macos
 
   preflight_steps do
     # This needs to exist, otherwise the installer gets stuck at a prompt asking the user to run Inkscape first.

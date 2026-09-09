@@ -29,8 +29,8 @@ cask "parallels" do
     "parallels@19",
     "parallels@20",
   ]
-  depends_on macos: :sonoma
   depends_on arch: :arm64
+  depends_on macos: :sonoma
 
   app "Parallels Desktop.app"
 

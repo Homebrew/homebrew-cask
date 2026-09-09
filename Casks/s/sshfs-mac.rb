@@ -26,8 +26,8 @@ cask "sshfs-mac" do
     end
   end
 
-  depends_on :macos
   depends_on cask: "macfuse"
+  depends_on :macos
 
   pkg "sshfs-#{version}.pkg"
 

@@ -3,10 +3,11 @@ cask "brickstore" do
   url_end = on_system_conditional macos: ".dmg", linux: "-x86_64.AppImage"
 
   version "2026.8.1"
+  sha256 arm:          "2ddecbd2ca849ddc765a273ff11c6e379b7bf4ec9f653c4b8b3562a65f3958ab",
+         intel:        "2ddecbd2ca849ddc765a273ff11c6e379b7bf4ec9f653c4b8b3562a65f3958ab",
+         x86_64_linux: "d6746398e368a8b807902dcae7d097fe1408f73131165bfbc19c94ede02e974a"
 
   on_macos do
-    sha256 "2ddecbd2ca849ddc765a273ff11c6e379b7bf4ec9f653c4b8b3562a65f3958ab"
-
     depends_on macos: :ventura
 
     app "BrickStore.app"
@@ -18,8 +19,6 @@ cask "brickstore" do
     ]
   end
   on_linux do
-    sha256 "d6746398e368a8b807902dcae7d097fe1408f73131165bfbc19c94ede02e974a"
-
     depends_on arch: :x86_64
 
     app_image "Linux-AppImage-BrickStore-#{version}-x86_64.AppImage", target: "BrickStore.AppImage"
