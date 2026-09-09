@@ -16,6 +16,8 @@ cask "safe-exam-browser" do
 
   app "Safe Exam Browser.app"
 
+  uninstall quit: "org.safeexambrowser.SafeExamBrowser"
+
   zap trash: [
     "~/Library/Caches/org.safeexambrowser.SafeExamBrowser",
     "~/Library/Logs/Safe Exam Browser",
