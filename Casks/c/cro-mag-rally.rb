@@ -3,10 +3,12 @@ cask "cro-mag-rally" do
   url_end = on_system_conditional macos: "mac.dmg", linux: "linux-#{arch}.AppImage"
 
   version "3.0.1"
+  sha256 arm:          "fc039fc19df8a466c7c185490e7768a81760312a89fe415c4ddb2ebc08e601e9",
+         intel:        "fc039fc19df8a466c7c185490e7768a81760312a89fe415c4ddb2ebc08e601e9",
+         arm64_linux:  "8fd24301873fb7650495e4307dd8c34ad6f95038300ad2763cbd9ba406484335",
+         x86_64_linux: "3be2a5b501276713f95f07462912954fb75572e90b59b1083007bde1617b8ee2"
 
   on_macos do
-    sha256 "fc039fc19df8a466c7c185490e7768a81760312a89fe415c4ddb2ebc08e601e9"
-
     app "Cro-Mag Rally.app"
     artifact "Documentation", target: "~/Library/Application Support/CroMagRally"
 
@@ -16,9 +18,6 @@ cask "cro-mag-rally" do
     ]
   end
   on_linux do
-    sha256 arm64_linux:  "8fd24301873fb7650495e4307dd8c34ad6f95038300ad2763cbd9ba406484335",
-           x86_64_linux: "3be2a5b501276713f95f07462912954fb75572e90b59b1083007bde1617b8ee2"
-
     app_image "CroMagRally-#{version}-linux-#{arch}.AppImage", target: "Cro-Mag Rally.AppImage"
   end
 
