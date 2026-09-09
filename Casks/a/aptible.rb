@@ -15,8 +15,8 @@ cask "aptible" do
     regex(%r{/release/aptible-cli-go/aptible-cli-go[._-]v?(\d+(?:\.\d+)+)_darwin[._-]arm64\.pkg}i)
   end
 
-  depends_on :macos
   depends_on formula: "libfido2"
+  depends_on :macos
 
   pkg "aptible-cli-go_#{version}_darwin_#{arch}.pkg"
 
