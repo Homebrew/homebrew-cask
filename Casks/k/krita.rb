@@ -4,10 +4,11 @@ cask "krita" do
   url_end = on_system_conditional macos: "dmg", linux: "AppImage"
 
   version "5.3.3"
+  sha256 arm:          "625e37c01cfb74094ae58353dd9d343cd389a00c33cb65d6ddf1f2f1e2bc3a19",
+         intel:        "625e37c01cfb74094ae58353dd9d343cd389a00c33cb65d6ddf1f2f1e2bc3a19",
+         x86_64_linux: "1e3fff5da006c0d2600f98a41aa2c9a7dfa49bd931f3640616f30d762db4f743"
 
   on_macos do
-    sha256 "625e37c01cfb74094ae58353dd9d343cd389a00c33cb65d6ddf1f2f1e2bc3a19"
-
     # Renamed for consistency: app name is different in the Finder and in a shell.
     app "krita.app", target: "Krita.app"
 
@@ -22,8 +23,6 @@ cask "krita" do
     ]
   end
   on_linux do
-    sha256 "1e3fff5da006c0d2600f98a41aa2c9a7dfa49bd931f3640616f30d762db4f743"
-
     depends_on arch: :x86_64
 
     app_image "krita-#{version}-#{arch}.AppImage", target: "Krita.AppImage"
