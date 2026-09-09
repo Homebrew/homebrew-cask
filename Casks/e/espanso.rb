@@ -2,10 +2,11 @@ cask "espanso" do
   os macos: "Espanso-Mac-Universal.dmg", linux: "Espanso-X11.AppImage"
 
   version "2.4.1"
+  sha256 arm:          "e6aee2d9446d7625e57dafc6613add21fc7c9f709ba42f08b5ada844c6f7110a",
+         intel:        "e6aee2d9446d7625e57dafc6613add21fc7c9f709ba42f08b5ada844c6f7110a",
+         x86_64_linux: "58b1b9c270c2416f3c6cb9069dfbcfb882d82de3369cf675861102936fc5f540"
 
   on_macos do
-    sha256 "e6aee2d9446d7625e57dafc6613add21fc7c9f709ba42f08b5ada844c6f7110a"
-
     depends_on macos: :big_sur
 
     app "Espanso.app"
@@ -22,8 +23,6 @@ cask "espanso" do
     ]
   end
   on_linux do
-    sha256 "58b1b9c270c2416f3c6cb9069dfbcfb882d82de3369cf675861102936fc5f540"
-
     depends_on arch: :x86_64
 
     app_image "Espanso-X11.AppImage", target: "Espanso.AppImage"
