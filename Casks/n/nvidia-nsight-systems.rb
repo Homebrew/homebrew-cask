@@ -19,5 +19,7 @@ cask "nvidia-nsight-systems" do
 
   app "NVIDIA Nsight Systems.app"
 
+  uninstall quit: "com.nvidia.devtools.QuadD"
+
   zap trash: "~/Library/Saved Application State/com.nvidia.devtools.QuadD.savedState"
 end
