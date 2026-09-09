@@ -4,7 +4,7 @@ cask "flick" do
 
   url "https://getflick.dev/Flick-#{version}.dmg"
   name "Flick"
-  desc "Radial command wheel: hold a key, flick the mouse toward an action, release"
+  desc "Radial command wheel triggered by holding a key and flicking the mouse"
   homepage "https://getflick.dev/"
 
   livecheck do
