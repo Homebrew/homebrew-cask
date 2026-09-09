@@ -3,10 +3,11 @@ cask "colour-contrast-analyser" do
   url_end = on_system_conditional macos: "dmg", linux: "AppImage"
 
   version "3.5.5"
+  sha256 arm:          "d0e0922642a05149dd95f57e5b8814049149e94a0c7ea89fc9d56dfb60a813d9",
+         intel:        "d0e0922642a05149dd95f57e5b8814049149e94a0c7ea89fc9d56dfb60a813d9",
+         x86_64_linux: "88264e94c770515469ca2a669645643b898fd1d43fa293a200efd5309ea0ff63"
 
   on_macos do
-    sha256 "d0e0922642a05149dd95f57e5b8814049149e94a0c7ea89fc9d56dfb60a813d9"
-
     depends_on macos: :big_sur
 
     app "Colour Contrast Analyser.app"
@@ -17,8 +18,6 @@ cask "colour-contrast-analyser" do
     ]
   end
   on_linux do
-    sha256 "88264e94c770515469ca2a669645643b898fd1d43fa293a200efd5309ea0ff63"
-
     depends_on arch: :x86_64
 
     app_image "Colour-Contrast-Analyser-Setup-#{version}.AppImage", target: "Colour Contrast Analyser.AppImage"
