@@ -1,6 +1,6 @@
 cask "ia-presenter" do
-  version "2.0.2,20026"
-  sha256 "1e324b88018df8faee28bf2463d98b8cc0ec9136233a915e12c92f9fcbf545a9"
+  version "2.0.4,20033"
+  sha256 "e71d839950d9234b8815d293f9b96115c465add1547f79c22573b70b41a503b0"
 
   url "https://files.ia.net/presenter/release/iA-Presenter-#{version.csv.first}-#{version.csv.second}.zip"
   name "iA Presenter"
