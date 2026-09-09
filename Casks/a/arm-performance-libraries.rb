@@ -15,8 +15,8 @@ cask "arm-performance-libraries" do
     regex(/Version[._-]v?(\d+(?:\.\d+)+)/i)
   end
 
-  depends_on :macos
   depends_on arch: :arm64
+  depends_on :macos
 
   installer script: {
     executable: "armpl_#{install_suffix}_install.sh",
