@@ -18,6 +18,8 @@ cask "macparakeet" do
 
   app "MacParakeet.app"
 
+  uninstall quit: "com.macparakeet.MacParakeet"
+
   zap trash: [
     "~/Library/Application Support/MacParakeet",
     "~/Library/Caches/com.macparakeet.MacParakeet",
