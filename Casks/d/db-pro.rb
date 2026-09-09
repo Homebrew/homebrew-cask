@@ -5,11 +5,11 @@ cask "db-pro" do
   livecheck_file = on_system_conditional macos: "latest-mac.yml", linux: "latest-linux.yml"
   url_end = on_system_conditional macos: "dmg", linux: "AppImage"
 
-  version "2.9.0"
-  sha256 arm:          "e7e0f77e3fb2c3f981ae1cddb3bf4aea723c6888da182f987e1e91a034662fc4",
-         intel:        "3ef071de124c0597e4b68beb242f2c7f711a0dbf195603237d7ed7bc881a58b9",
-         arm64_linux:  "fa5ed174726729920143bc65e9a8a74547dc38d182b9909a4a2a6c37fd7a5215",
-         x86_64_linux: "00ee7f2e4e219f5fbbbe9f4c8bbe4322867167c96787f548f17f36f507acefe3"
+  version "2.9.1"
+  sha256 arm:          "8209adfcaf624997aaeb083bb754944018df949873134e9cda7a5a56ec43f63a",
+         intel:        "d8178c8b11a5a8bc2b3007bbca6cc1ba6b725f7e91d152dc9b651e972ae06135",
+         arm64_linux:  "c1a870c8d7067d743b479c64dda84a4030d81d0dd23244d874afffd652ff60b6",
+         x86_64_linux: "e83c7a744896124641cf7495850ffb0f5c1088a45bfb52fd57f78b3c50d08027"
 
   on_macos do
     depends_on macos: :monterey
