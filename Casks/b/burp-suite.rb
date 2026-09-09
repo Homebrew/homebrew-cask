@@ -33,5 +33,10 @@ cask "burp-suite" do
 
   app "Burp Suite.app"
 
-  zap trash: "~/.BurpSuite"
+  uninstall quit: "com.install4j.6592-1155-2163-3973.70"
+
+  zap trash: [
+    "~/.BurpSuite",
+    "~/Library/Preferences/com.install4j.6592-1155-2163-3973.70.plist",
+  ]
 end
