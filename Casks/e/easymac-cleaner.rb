@@ -4,7 +4,7 @@ cask "easymac-cleaner" do
 
   url "https://updates.martiancat.space/cleaner/EasyMacCleaner-#{version}.zip"
   name "EasyMac Cleaner"
-  desc "Cleaning, privacy, and system optimization utility"
+  desc "Cleaning, privacy, and system optimisation utility"
   homepage "https://martiancat.space/"
 
   livecheck do
