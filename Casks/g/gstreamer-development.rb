@@ -14,8 +14,8 @@ cask "gstreamer-development" do
 
   disable! date: "2026-09-01", because: :fails_gatekeeper_check
 
-  depends_on :macos
   depends_on cask: "gstreamer-runtime"
+  depends_on :macos
 
   pkg "gstreamer-1.0-devel-#{version}-universal.pkg"
 
