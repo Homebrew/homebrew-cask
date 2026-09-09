@@ -11,8 +11,8 @@ cask "unity-windows-support-for-editor" do
     cask "unity"
   end
 
-  depends_on :macos
   depends_on cask: "unity"
+  depends_on :macos
 
   pkg "UnitySetup-Windows-Mono-Support-for-Editor-#{version.csv.first}.pkg"
 
