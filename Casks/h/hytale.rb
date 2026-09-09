@@ -15,8 +15,8 @@ cask "hytale" do
   end
 
   auto_updates true
-  depends_on :macos
   depends_on arch: :arm64
+  depends_on :macos
 
   app "Hytale Launcher.app"
 
