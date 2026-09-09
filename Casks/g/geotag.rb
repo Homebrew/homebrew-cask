@@ -12,8 +12,8 @@ cask "geotag" do
     regex(/href=.*?GeoTag[._-]v?(\d+(?:\.\d+)+)\.dmg/i)
   end
 
-  depends_on macos: :tahoe
   depends_on formula: "exiftool"
+  depends_on macos: :tahoe
 
   app "GeoTag.app"
 
