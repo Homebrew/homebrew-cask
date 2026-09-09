@@ -1,7 +1,7 @@
 cask "eclipse-jee" do
   arch arm: "aarch64", intel: "x86_64"
 
-  version "4.40,2026-06"
+  version "4.41,2026-06"
   sha256 arm:   "4efe323ef95b12c377b114ef7ec80a311556f28dcb4ed40ff6b8658b339e5d64",
          intel: "ec5c94fc656715bf2a6b00a2478d516583aa96baf22d05dde3ecdb402c026250"
 
