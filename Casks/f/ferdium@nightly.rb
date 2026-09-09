@@ -3,10 +3,10 @@ cask "ferdium@nightly" do
   os macos: "mac", linux: "linux-Portable"
   url_end = on_system_conditional macos: "#{arch}.dmg", linux: "x86_64.AppImage"
 
-  version "7.2.4-nightly.1"
-  sha256 arm:          "f581846ec508c4871a5558e0614db70e97058a1f07f731f4963b08404e149ea1",
-         intel:        "7ccfe6f3c0b4d350d5327e642710c38a478fd42c1be46e19138347f88e18371a",
-         x86_64_linux: "83d70f0ffd5d2c9258b5f5ca74d1422c811b19dd1a993919751d88c51e753005"
+  version "7.2.4-nightly.3"
+  sha256 arm:          "3ebd2e5d4f3e80dd01e92393c08100a2d666f6f6493f716c0330dc52131f0af9",
+         intel:        "2b0d1140028ec13e52fc8052653a6b843f77143b0cd51cf3e24df733eb2984ca",
+         x86_64_linux: "7a9b516b34104463fb53a0011d1ed5373906f73843ec912c0974fa09a324ff08"
 
   on_macos do
     depends_on macos: :ventura
