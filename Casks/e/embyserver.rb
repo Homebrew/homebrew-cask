@@ -19,5 +19,7 @@ cask "embyserver" do
 
   app "osx-#{arch}/EmbyServer.app"
 
+  uninstall quit: "com.embyapp.embymediaserver"
+
   zap trash: "~/.config/emby-server"
 end
