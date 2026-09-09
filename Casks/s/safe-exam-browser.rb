@@ -1,6 +1,6 @@
 cask "safe-exam-browser" do
-  version "3.7"
-  sha256 "fcf9725e9bbe42e58a843e5f60c4fc40ea7429c3bdebfb9c6f8c59f6f61f28e2"
+  version "3.7.1"
+  sha256 "d9a11b2f5f35f5681b0f0f204a217bdcb90413481748f34cbff2ae86044e6086"
 
   url "https://github.com/SafeExamBrowser/seb-mac/releases/download/#{version}/SafeExamBrowser-#{version}.dmg"
   name "Safe Exam Browser"
@@ -15,6 +15,8 @@ cask "safe-exam-browser" do
   depends_on :macos
 
   app "Safe Exam Browser.app"
+
+  uninstall quit: "org.safeexambrowser.SafeExamBrowser"
 
   zap trash: [
     "~/Library/Caches/org.safeexambrowser.SafeExamBrowser",
