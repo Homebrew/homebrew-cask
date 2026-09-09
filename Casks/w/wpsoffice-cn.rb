@@ -1,9 +1,9 @@
 cask "wpsoffice-cn" do
   arch arm: "arm64", intel: "x64"
 
-  version "12.1.28492"
-  sha256 arm:   "324aa5dc8da0a1a16004750765b9f396882821c030bce881b12c60eaeb818eaa",
-         intel: "9c5777f567a474a579eeafdd7af059c68f1b17f77c19b018301ccce3bc5bd657"
+  version "12.1.28496"
+  sha256 arm:   "15fd015f8349325e9e512221a0cc6857f3a4a98ea3b8f9f95e8c4ed603e5a564",
+         intel: "46b6fed0812bf3155b2e27a60b21877337d4a683cb004580556da02514673281"
 
   url "https://package.mac.wpscdn.cn/mac_wps_pkg/#{version}/WPS_Office_#{version}(#{version.patch})_#{arch}.dmg"
   name "WPS Office"
