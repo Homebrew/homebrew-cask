@@ -3,10 +3,12 @@ cask "bugdom" do
   url_end = on_system_conditional macos: "mac.dmg", linux: "linux-#{arch}.AppImage"
 
   version "1.3.4"
+  sha256 arm:          "9797091290e29336e74f8d3692589acd5accc53bccf085e6aeb8636552349644",
+         intel:        "9797091290e29336e74f8d3692589acd5accc53bccf085e6aeb8636552349644",
+         arm64_linux:  "e9751d454f9fcd2be4eaad1431f57ce68e0b94b9954e1abc9a05023c3ce0a31f",
+         x86_64_linux: "b17cd2366a2aedfd727b22ab4154ced83994cf90e0a408acbdf0d0d53b4ad6d5"
 
   on_macos do
-    sha256 "9797091290e29336e74f8d3692589acd5accc53bccf085e6aeb8636552349644"
-
     app "Bugdom.app"
     artifact "Documentation", target: "~/Library/Application Support/Bugdom"
 
@@ -16,9 +18,6 @@ cask "bugdom" do
     ]
   end
   on_linux do
-    sha256 arm64_linux:  "e9751d454f9fcd2be4eaad1431f57ce68e0b94b9954e1abc9a05023c3ce0a31f",
-           x86_64_linux: "b17cd2366a2aedfd727b22ab4154ced83994cf90e0a408acbdf0d0d53b4ad6d5"
-
     app_image "Bugdom-#{version}-linux-#{arch}.AppImage", target: "Bugdom.AppImage"
   end
 
