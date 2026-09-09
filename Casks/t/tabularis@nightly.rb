@@ -34,22 +34,19 @@ cask "tabularis@nightly" do
 
   livecheck do
     url "https://github.com/TabularisDB/tabularis/releases"
-    strategy :github_releases do |json|
+    regex(%r{/nightly[._-]([^/]+)/tabularis[._-](.+)[._-]#{arch}\.#{os}}i)
+    strategy :github_releases do |json, regex|
       json.map do |release|
-        next unless release["prerelease"]
+        next if release["draft"]
+        next unless release["tag_name"]&.start_with?("nightly")
 
-        tag = release["tag_name"]
-        next unless tag&.start_with?("nightly-")
+        release["assets"]&.map do |asset|
+          match = asset["browser_download_url"]&.match(regex)
+          next unless match
 
-        tag_suffix = tag.sub(/^nightly-/, "")
-        asset = release["assets"]&.find { |a| a["name"]&.match?(/^tabularis_.*_#{arch}\.#{os}$/) }
-        next if asset.nil?
-
-        app_version = asset["name"][/^tabularis_(.+)_#{arch}\.#{os}$/, 1]
-        next if app_version.nil?
-
-        "#{app_version},#{tag_suffix}"
-      end
+          "#{match[2]},#{match[1]}"
+        end
+      end.flatten
     end
   end
 
