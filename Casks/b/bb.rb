@@ -2,10 +2,10 @@ cask "bb" do
   os macos: "arm64.dmg", linux: "x86_64.AppImage"
 
   version "0.42.1"
+  sha256 arm:          "7a9fb692c402799e219493b3c17704577396d1100767d604580e6853fbcaf1e7",
+         x86_64_linux: "b29165f5cd2f06feeba51c36ca86b96006bfc6c48521903367c004ae63c86976"
 
   on_macos do
-    sha256 "7a9fb692c402799e219493b3c17704577396d1100767d604580e6853fbcaf1e7"
-
     depends_on arch: :arm64
     depends_on macos: :monterey
 
@@ -19,8 +19,6 @@ cask "bb" do
         rmdir: "~/.bb"
   end
   on_linux do
-    sha256 "b29165f5cd2f06feeba51c36ca86b96006bfc6c48521903367c004ae63c86976"
-
     depends_on arch: :x86_64
 
     app_image "bb-#{version}-x86_64.AppImage", target: "bb.AppImage"
