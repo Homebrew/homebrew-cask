@@ -41,8 +41,8 @@ cask "free-gpgmail" do
     end
   end
 
-  depends_on :macos
   depends_on cask: "gpg-suite-no-mail"
+  depends_on :macos
 
   artifact "Free-GPGMail_#{version.csv.first.major}.mailbundle", target: "~/Library/Mail/Bundles/Free-GPGMail_#{version.csv.first.major}.mailbundle"
 
