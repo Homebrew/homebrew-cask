@@ -3,14 +3,11 @@ cask "slack-cli" do
   os macos: "macOS", linux: "linux"
 
   version "4.7.0"
+  sha256 arm:          "ccb6dc5910e06e8b12ff4d9690d015b72f8a81249ea716e8829dddddfd39d404",
+         intel:        "8a66be49be2e23cb19a08dc58fb1d7695eaad9b649556ea9a06a3f7c9b5142dc",
+         x86_64_linux: "9d06c481bca07c1afffd106462e5ad3a8748334eb3b09aba3911a557673b5429"
 
-  on_macos do
-    sha256 arm:   "ccb6dc5910e06e8b12ff4d9690d015b72f8a81249ea716e8829dddddfd39d404",
-           intel: "8a66be49be2e23cb19a08dc58fb1d7695eaad9b649556ea9a06a3f7c9b5142dc"
-  end
   on_linux do
-    sha256 "9d06c481bca07c1afffd106462e5ad3a8748334eb3b09aba3911a557673b5429"
-
     depends_on arch: :x86_64
   end
 
