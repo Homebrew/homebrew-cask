@@ -2,10 +2,12 @@ cask "warp" do
   os macos: "dmg", linux: on_arch_conditional(arm: "appimage_arm64", intel: "appimage")
 
   version "0.2026.09.02.08.27.stable_01"
+  sha256 arm:          "b7515ae8bc1901d805034e5b0765d078db2d60bde07ccf65e0ffacf6f2422659",
+         intel:        "b7515ae8bc1901d805034e5b0765d078db2d60bde07ccf65e0ffacf6f2422659",
+         arm64_linux:  "ef97433689bc43d172099d7744e45f61e9ef8b334cde8b8a0b81f2f96dc22747",
+         x86_64_linux: "57426e3b316a990cfde82912bed3f26168d0a5affde0b40eb92da1c383f01832"
 
   on_macos do
-    sha256 "b7515ae8bc1901d805034e5b0765d078db2d60bde07ccf65e0ffacf6f2422659"
-
     auto_updates true
     depends_on macos: :big_sur
 
@@ -21,9 +23,6 @@ cask "warp" do
   end
   on_linux do
     arch arm: "aarch64", intel: "x86_64"
-
-    sha256 arm64_linux:  "ef97433689bc43d172099d7744e45f61e9ef8b334cde8b8a0b81f2f96dc22747",
-           x86_64_linux: "57426e3b316a990cfde82912bed3f26168d0a5affde0b40eb92da1c383f01832"
 
     app_image "Warp-#{arch}.AppImage", target: "Warp.AppImage"
 
