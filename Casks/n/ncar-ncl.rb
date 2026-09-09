@@ -10,9 +10,9 @@ cask "ncar-ncl" do
 
   disable! date: "2026-01-27", because: :no_longer_available
 
-  depends_on :macos
   depends_on cask: "xquartz"
   depends_on formula: "gcc"
+  depends_on :macos
 
   artifact "include", target: "#{HOMEBREW_PREFIX}/ncl-#{version}/include"
   artifact "bin", target: "#{HOMEBREW_PREFIX}/ncl-#{version}/bin"
