@@ -1,9 +1,9 @@
 cask "arm-performix" do
   arch arm: "arm64", intel: "x64"
 
-  version "2026.3.2"
-  sha256 arm:   "9faf4b7c3c583bc7ddbfc56b80b4b58405c4065280f9fd3662febc704d5a1b69",
-         intel: "4dea2237e66bb69aad1e03e1d79536872f1df58cce95c954f3f65176c57d1f3a"
+  version "2026.3.3"
+  sha256 arm:   "d6ca9e7d10785a19b11a9c27bcb64ff8f9146f5062e520a8d87fd76a4d2cc8cc",
+         intel: "76a4a8d97ad6cab2fc1cb612f3d9ef8e99836bdcee42fba67a5d42c23ffdd9d1"
 
   url "https://artifacts.tools.arm.com/arm-performix/app/#{version}/darwin/#{arch}/ArmPerformix-darwin-#{arch}.pkg"
   name "Arm Performix"
