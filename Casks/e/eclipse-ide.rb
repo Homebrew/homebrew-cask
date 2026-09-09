@@ -1,7 +1,7 @@
 cask "eclipse-ide" do
   arch arm: "aarch64", intel: "x86_64"
 
-  version "4.40,2026-06"
+  version "4.41,2026-06"
   sha256 arm:   "069e2418aa5faffd443516b0c147ad9f6453d6b4fc70e5209bd01b3673e48b53",
          intel: "fa57f507844b7be46d1c1775f150c4edd77850d5e34f6eddbd104d36acec785e"
 
