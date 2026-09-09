@@ -67,7 +67,12 @@ Layout/SpaceBeforeBrackets:
   - Taps/*/*/*.rb
   - "/**/{Formula,Casks}/**/*.rb"
   - "**/{Formula,Casks}/**/*.rb"
+Style/CommandLiteral:
+  Exclude:
+  - Homebrew/**/*.rb
 Lint/AmbiguousBlockAssociation:
+  Enabled: false
+Lint/ArgumentMismatch:
   Enabled: false
 Lint/DuplicateBranch:
   Exclude:
@@ -146,6 +151,8 @@ Style/ClassAndModuleChildren:
   - "**/*.rbi"
 Style/CollectionMethods:
   Enabled: true
+Style/DirectiveScope:
+  Enabled: false
 Style/DisableCopsWithinSourceCodeDirective:
   Enabled: true
   Include:
