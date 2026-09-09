@@ -19,6 +19,8 @@ cask "eclipse-jee" do
   # Renamed to avoid conflict with other Eclipse.
   app "Eclipse.app", target: "Eclipse JEE.app"
 
+  uninstall quit: "epp.package.jee"
+
   zap trash: [
     "~/Library/Caches/org.eclipse.platform.ide",
     "~/Library/Cookies/org.eclipse.platform.ide.binarycookies",
