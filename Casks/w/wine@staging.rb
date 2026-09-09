@@ -36,8 +36,8 @@ cask "wine@staging" do
     "wine-stable",
     "wine@devel",
   ]
-  depends_on :macos
   depends_on cask: "gstreamer-runtime"
+  depends_on :macos
 
   app "Wine Staging.app"
   dir_path = "#{appdir}/Wine Staging.app/Contents/Resources"
