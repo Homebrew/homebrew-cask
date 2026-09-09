@@ -10,8 +10,8 @@ cask "beutl" do
   desc "Video editor"
   homepage "https://beutl.beditor.net/"
 
-  depends_on macos: :monterey
   depends_on formula: "ffmpeg@6"
+  depends_on macos: :monterey
 
   app "Beutl.app"
 
