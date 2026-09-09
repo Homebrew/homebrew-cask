@@ -4,10 +4,12 @@ cask "beaver-notes" do
   name_start = on_system_conditional macos: "Beaver-notes", linux: "Beaver-Notes"
 
   version "4.4.0"
+  sha256 arm:          "c2b83192c2b25542e8c8d5ffcaa4152e0175208de1d5caefa83095c6fd064f43",
+         intel:        "c2b83192c2b25542e8c8d5ffcaa4152e0175208de1d5caefa83095c6fd064f43",
+         arm64_linux:  "ed729c63e9ef6f8fcd3919626d37119f4abfcd131958c25140ab3d169d9e54f3",
+         x86_64_linux: "55aec4f6a5ca57f8c2ee805c8bddfdffab8ae1f23ec9e7269c62794ae37c775f"
 
   on_macos do
-    sha256 "c2b83192c2b25542e8c8d5ffcaa4152e0175208de1d5caefa83095c6fd064f43"
-
     depends_on macos: :monterey
 
     app "Beaver Notes.app"
@@ -19,9 +21,6 @@ cask "beaver-notes" do
     ]
   end
   on_linux do
-    sha256 arm64_linux:  "ed729c63e9ef6f8fcd3919626d37119f4abfcd131958c25140ab3d169d9e54f3",
-           x86_64_linux: "55aec4f6a5ca57f8c2ee805c8bddfdffab8ae1f23ec9e7269c62794ae37c775f"
-
     app_image "Beaver-Notes-#{version}#{arch}.AppImage", target: "Beaver Notes.AppImage"
   end
 
