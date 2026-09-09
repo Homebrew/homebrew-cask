@@ -10,18 +10,8 @@ cask "psysonic" do
   desc "Desktop client for Navidrome and other Subsonic-compatible servers"
   homepage "https://www.psysonic.de/"
 
-  livecheck do
-    url :url
-    strategy :github_latest
-    regex(/^app[._-]v?(\d+(?:\.\d+)+)$/i)
-  end
-
-  # The app ships an in-app updater (Tauri updater plugin, macOS since 1.40.0):
-  # it replaces Psysonic.app in place and relaunches. Without this stanza
-  # `brew upgrade` would roll a self-updated app back to the cask version.
   auto_updates true
-  # Bare symbol = minimum version (the ">= :catalina" string form is deprecated).
-  depends_on macos: :catalina
+  depends_on :macos
 
   app "Psysonic.app"
 
