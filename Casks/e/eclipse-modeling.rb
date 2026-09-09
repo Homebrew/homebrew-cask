@@ -19,6 +19,8 @@ cask "eclipse-modeling" do
   # Renamed to avoid conflict with other Eclipse.
   app "Eclipse.app", target: "Eclipse Modeling.app"
 
+  uninstall quit: "epp.package.modeling"
+
   zap trash: [
     "~/.eclipse",
     "~/eclipse-workspace",
