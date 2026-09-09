@@ -17,6 +17,8 @@ cask "shattered-pixel-dungeon" do
 
   app "Shattered Pixel Dungeon.app"
 
+  uninstall quit: "com.shatteredpixel.shatteredpixeldungeon.apple"
+
   zap trash: [
     "~/Library/Application Support/Shattered Pixel Dungeon",
     "~/Library/Saved Application State/com.shatteredpixel.shatteredpixeldungeon.apple.savedState",
