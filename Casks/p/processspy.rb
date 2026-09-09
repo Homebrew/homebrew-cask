@@ -17,6 +17,8 @@ cask "processspy" do
 
   app "ProcessSpy.app"
 
+  uninstall quit: "com.itone.ProcessSpy"
+
   zap trash: [
     "~/Library/HTTPStorages/com.itone.ProcessSpy",
     "~/Library/Preferences/com.itone.ProcessSpy.plist",
