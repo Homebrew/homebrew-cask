@@ -13,8 +13,8 @@ cask "mplab-xc16" do
     regex(%r{href=.*?ProductDocuments/SoftwareTools/xc16[._-]v?(\d+(?:\.\d+)+)-full-install-osx64-installer\.dmg}i)
   end
 
-  depends_on :macos
   depends_on arch: :x86_64
+  depends_on :macos
 
   installer script: {
     executable: "xc16-v#{version}-osx-installer.app/Contents/MacOS/installbuilder.sh",
