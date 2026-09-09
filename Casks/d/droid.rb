@@ -16,8 +16,8 @@ cask "droid" do
   end
 
   auto_updates true
-  depends_on :macos
   depends_on formula: "ripgrep"
+  depends_on :macos
 
   binary "droid"
 
