@@ -1,6 +1,6 @@
 cask "proton-mail" do
-  version "1.13.4"
-  sha256 "e3211f353f3db0ea000218e3655698d7283a005b98a7ab4cfc0ae7157fb5599c"
+  version "1.14.0"
+  sha256 "343802be033408ce91364968d95b8c4596ffa13e726a25bb42ac89540afa847a"
 
   url "https://proton.me/download/mail/macos/#{version}/ProtonMail-desktop.dmg"
   name "Proton Mail"
