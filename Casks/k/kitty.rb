@@ -3,10 +3,12 @@ cask "kitty" do
   os macos: ".dmg", linux: "-#{arch}.txz"
 
   version "0.48.2"
+  sha256 arm:          "f804f58ee4b69c76f84eb3281e140748269a63f3f4a816015a8dec2a06d2b195",
+         intel:        "f804f58ee4b69c76f84eb3281e140748269a63f3f4a816015a8dec2a06d2b195",
+         arm64_linux:  "534b214d407a05e4603da75ef02fffa592ec1bbec20a413c5e0cd3f853c928cb",
+         x86_64_linux: "967a1958e7fc67b495d279c0963bcd1a0482097151817ce6506fabc822689af7"
 
   on_macos do
-    sha256 "f804f58ee4b69c76f84eb3281e140748269a63f3f4a816015a8dec2a06d2b195"
-
     depends_on macos: :monterey
 
     app "kitty.app"
@@ -16,9 +18,6 @@ cask "kitty" do
                     executable: "#{appdir}/kitty.app/Contents/MacOS/kitten"
   end
   on_linux do
-    sha256 arm64_linux:  "534b214d407a05e4603da75ef02fffa592ec1bbec20a413c5e0cd3f853c928cb",
-           x86_64_linux: "967a1958e7fc67b495d279c0963bcd1a0482097151817ce6506fabc822689af7"
-
     binary "bin/kitty"
     binary "bin/kitten"
     manpage "share/man/man1/kitty.1"
