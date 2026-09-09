@@ -13,8 +13,8 @@ cask "unity-android-support-for-editor" do
 
   disable! date: "2026-09-01", because: :fails_gatekeeper_check
 
-  depends_on :macos
   depends_on cask: "unity"
+  depends_on :macos
 
   pkg "UnitySetup-Android-Support-for-Editor-#{version.csv.first}.pkg"
 
