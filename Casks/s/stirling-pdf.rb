@@ -3,10 +3,11 @@ cask "stirling-pdf" do
   os macos: "macos-universal.dmg", linux: "linux-#{arch}.AppImage"
 
   version "2.14.3"
+  sha256 arm:          "25073f75260c75854af3c81b457958471142b204f3f37c1142b41c75c5704a55",
+         intel:        "25073f75260c75854af3c81b457958471142b204f3f37c1142b41c75c5704a55",
+         x86_64_linux: "9beca308e9c507a7eec804b672e3bf220728caf49a58e2cd896154a69ac82d07"
 
   on_macos do
-    sha256 "25073f75260c75854af3c81b457958471142b204f3f37c1142b41c75c5704a55"
-
     app "Stirling PDF.app"
 
     zap trash: [
@@ -19,8 +20,6 @@ cask "stirling-pdf" do
     ]
   end
   on_linux do
-    sha256 "9beca308e9c507a7eec804b672e3bf220728caf49a58e2cd896154a69ac82d07"
-
     depends_on arch: :x86_64
 
     app_image "Stirling-PDF-linux-#{arch}.AppImage", target: "Stirling-PDF.AppImage"
