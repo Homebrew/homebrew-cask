@@ -1,7 +1,7 @@
 cask "eclipse-rcp" do
   arch arm: "aarch64", intel: "x86_64"
 
-  version "4.40,2026-06"
+  version "4.41,2026-06"
   sha256 arm:   "382b008a81a0ea0962dc6b05eaea572dd8ec08a01b7a5fa4a108c0f12f6160a4",
          intel: "51622a8c166ae0cd6f302f7c50f9d361c292147e9810bc6bc3b0f6efca9c8489"
 
