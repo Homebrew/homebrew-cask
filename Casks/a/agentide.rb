@@ -8,8 +8,8 @@ cask "agentide" do
   homepage "https://github.com/MikeMcQuaid/AgentIDE"
 
   depends_on arch: :arm64
-  depends_on macos: :golden_gate
   depends_on formula: ["herdr", "ripgrep", "gh"]
+  depends_on macos: :golden_gate
 
   app "AgentIDE.app"
   binary "#{appdir}/AgentIDE.app/Contents/Resources/bin/agentide"
