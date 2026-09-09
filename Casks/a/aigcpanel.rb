@@ -12,6 +12,8 @@ cask "aigcpanel" do
   on_macos do
     app "AigcPanel.app"
 
+    uninstall quit: "AigcPanel"
+
     zap trash: [
       "~/Library/Application Support/aigcpanel",
       "~/Library/Preferences/AigcPanel.plist",
