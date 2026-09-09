@@ -14,8 +14,8 @@ cask "ace-link" do
 
   disable! date: "2026-09-01", because: :fails_gatekeeper_check
 
-  depends_on :macos
   depends_on cask: "docker"
+  depends_on :macos
 
   app "Ace Link.app"
 
