@@ -7,8 +7,8 @@ cask "omniwm" do
   desc "Tiling window manager"
   homepage "https://omniwm.app/"
 
-  depends_on macos: :tahoe
   depends_on arch: :arm64
+  depends_on macos: :tahoe
 
   app "OmniWM.app"
   binary "#{appdir}/OmniWM.app/Contents/MacOS/omniwmctl"
