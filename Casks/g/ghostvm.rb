@@ -13,8 +13,8 @@ cask "ghostvm" do
   end
 
   auto_updates true
-  depends_on macos: :sequoia
   depends_on arch: :arm64
+  depends_on macos: :sequoia
 
   app "GhostVM.app"
   binary "#{appdir}/GhostVM.app/Contents/PlugIns/Helpers/vmctl.app/Contents/MacOS/vmctl"
