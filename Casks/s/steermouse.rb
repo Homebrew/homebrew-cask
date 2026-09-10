@@ -16,6 +16,8 @@ cask "steermouse" do
 
   app "SteerMouse.app"
 
+  uninstall launchctl: "jp.plentycom.boa.SteerMouse"
+
   zap trash: [
     "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/jp.plentycom.boa.steermouse.sfl*",
     "~/Library/Application Support/SteerMouse & CursorSense",
