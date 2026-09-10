@@ -12,7 +12,7 @@ cask "igv-desktop" do
     regex(/href=.*?IGV[._-]MacApp[._-]v?(\d+(?:\.\d+)+)\.zip/i)
   end
 
-  depends_on macos: :big_sur
+  depends_on :macos
 
   app "IGV_#{version}.app"
 

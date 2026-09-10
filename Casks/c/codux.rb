@@ -12,7 +12,7 @@ cask "codux" do
 
   deprecate! date: "2025-10-25", because: :unmaintained
 
-  depends_on macos: :big_sur
+  depends_on :macos
 
   app "Codux.app"
 

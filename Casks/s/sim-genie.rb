@@ -12,7 +12,7 @@ cask "sim-genie" do
     strategy :sparkle
   end
 
-  depends_on macos: :big_sur
+  depends_on :macos
 
   app "Sim Genie.app"
 

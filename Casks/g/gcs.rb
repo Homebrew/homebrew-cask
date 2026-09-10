@@ -10,7 +10,7 @@ cask "gcs" do
   desc "Character sheet editor for the GURPS Fourth Edition roleplaying game"
   homepage "https://gurpscharactersheet.com/"
 
-  depends_on macos: :big_sur
+  depends_on :macos
 
   app "GCS.app"
 

@@ -11,7 +11,6 @@ cask "bruno" do
 
   on_macos do
     auto_updates true
-    depends_on macos: :big_sur
 
     app "Bruno.app"
 

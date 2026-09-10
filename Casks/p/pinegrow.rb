@@ -16,7 +16,7 @@ cask "pinegrow" do
     regex(/^pg(\d+(?:\.\d+)+)$/i)
   end
 
-  depends_on macos: :big_sur
+  depends_on :macos
 
   app "Pinegrow.app"
 

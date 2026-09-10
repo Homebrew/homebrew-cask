@@ -15,7 +15,7 @@ cask "k8studio" do
     regex(/href=.*?k8studio[._-]v?(\d+(?:\.\d+)+(?:[._-]beta)?)\.dmg/i)
   end
 
-  depends_on macos: :big_sur
+  depends_on :macos
 
   app "K8Studio.app"
 

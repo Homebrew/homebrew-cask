@@ -14,7 +14,7 @@ cask "boom-3d" do
     end
   end
 
-  depends_on macos: :big_sur
+  depends_on :macos
 
   app "Boom 3D.app"
 

@@ -29,7 +29,7 @@ cask "powershell@preview" do
     end
   end
 
-  depends_on macos: :big_sur
+  depends_on :macos
 
   pkg "powershell-#{version}-osx-#{arch}.pkg"
 

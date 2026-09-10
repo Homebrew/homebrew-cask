@@ -12,7 +12,7 @@ cask "breitbandmessung" do
     strategy :electron_builder
   end
 
-  depends_on macos: :big_sur
+  depends_on :macos
 
   app "Breitbandmessung.app"
 

@@ -23,7 +23,7 @@ cask "emacs-app@pretest" do
     "emacs-app",
     "emacs-app@nightly",
   ]
-  depends_on macos: :big_sur
+  depends_on :macos
 
   app "Emacs.app"
   binary "#{appdir}/Emacs.app/Contents/MacOS/Emacs", target: "emacs"

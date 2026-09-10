@@ -9,8 +9,6 @@ cask "blink1control" do
          x86_64_linux: "147c220e339140ad6c6c3cf426aba56ded7dd1347fc94a42f4e71493398cffa5"
 
   on_macos do
-    depends_on macos: :big_sur
-
     app "Blink1Control#{version.major}.app"
 
     zap trash: [

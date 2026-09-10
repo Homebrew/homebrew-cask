@@ -15,7 +15,7 @@ cask "laserpecker-design-space" do
     regex(/LaserPecker[._-]Design[._-]Space[._-]#{arch}[._-]v?(\d+(?:\.\d+)+)\.dmg/i)
   end
 
-  depends_on macos: :big_sur
+  depends_on :macos
 
   app "LaserPecker Design Space.app"
 

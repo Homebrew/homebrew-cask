@@ -13,7 +13,7 @@ cask "launchcontrol" do
   end
 
   auto_updates true
-  depends_on macos: :big_sur
+  depends_on :macos
 
   app "LaunchControl.app"
   binary "#{appdir}/LaunchControl.app/Contents/MacOS/fdautil"

@@ -18,7 +18,7 @@ cask "dfu-blaster-pro" do
     end
   end
 
-  depends_on macos: :big_sur
+  depends_on :macos
 
   pkg "DFU Blaster Pro.pkg"
 

@@ -16,7 +16,7 @@ cask "backyard-ai" do
     end
   end
 
-  depends_on macos: :big_sur
+  depends_on :macos
 
   app "Backyard AI.app"
 

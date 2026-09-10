@@ -14,7 +14,7 @@ cask "elektron-overbridge" do
     skip "Cannot be fetched due to Cloudflare protections"
   end
 
-  depends_on macos: :big_sur
+  depends_on :macos
 
   pkg "Elektron Overbridge Installer #{version}.pkg"
 

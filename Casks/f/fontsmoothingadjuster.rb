@@ -10,7 +10,7 @@ cask "fontsmoothingadjuster" do
   deprecate! date: "2025-07-14", because: :unmaintained
   disable! date: "2026-07-22", because: :unmaintained
 
-  depends_on macos: :big_sur
+  depends_on :macos
 
   app "Font Smoothing Adjuster.app"
 

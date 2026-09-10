@@ -7,8 +7,6 @@ cask "shutter-encoder" do
   sha256 :no_check # required as upstream package is updated in-place
 
   on_macos do
-    depends_on macos: :big_sur
-
     pkg "Shutter Encoder #{version} #{arch}.pkg"
 
     uninstall launchctl: "application.com.paulpacifico.shutterencoder.*",

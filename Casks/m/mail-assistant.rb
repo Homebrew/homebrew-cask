@@ -12,7 +12,7 @@ cask "mail-assistant" do
     regex(%r{Download\s+Mail\s+Assistant</strong>.*</a>.*\(v?(\d+(?:\.\d+)+)[, <]}im)
   end
 
-  depends_on macos: :big_sur
+  depends_on :macos
 
   app "Mail Assistant.app"
 

@@ -8,10 +8,6 @@ cask "copilot-language-server" do
          arm64_linux:  "1484af9f90233d1e7a8bbed0523497edf9ef31d36b9fe3a1ce82a08f8c2007a9",
          x86_64_linux: "420029d44839f1684519e21d5f51d4a81dca8488bacbff9835b9e8faeb6ab676"
 
-  on_macos do
-    depends_on macos: :big_sur
-  end
-
   url "https://github.com/github/copilot-language-server-release/releases/download/#{version}/copilot-language-server-#{os}-#{arch}-#{version}.zip"
   name "GitHub Copilot Language Server"
   desc "Language Server Protocol server for GitHub Copilot"

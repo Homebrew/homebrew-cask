@@ -8,7 +8,7 @@ cask "wezterm@nightly" do
   homepage "https://wezterm.org/"
 
   conflicts_with cask: "wezterm"
-  depends_on macos: :big_sur
+  depends_on :macos
 
   # Move "WezTerm-macos-<date>/WezTerm.app" out of the subfolder
   rename "WezTerm-*/WezTerm.app", "WezTerm.app"

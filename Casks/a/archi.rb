@@ -15,7 +15,7 @@ cask "archi" do
   disable! date:    "2025-11-18",
            because: "the developer intentionally makes distribution difficult for package managers"
 
-  depends_on macos: :big_sur
+  depends_on :macos
 
   app "Archi.app"
 

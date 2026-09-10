@@ -52,7 +52,7 @@ cask "blender" do
   homepage "https://www.blender.org/"
 
   conflicts_with cask: "blender@lts"
-  depends_on macos: :big_sur
+  depends_on :macos
 
   app "Blender.app"
   command_wrapper "blender",

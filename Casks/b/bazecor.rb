@@ -8,8 +8,6 @@ cask "bazecor" do
          x86_64_linux: "b5d92e67b6087477ad74b8b911493d1ccbd6d265b43aab1bdbcc6c7a2b1eb364"
 
   on_macos do
-    depends_on macos: :big_sur
-
     app "Bazecor.app"
 
     zap trash: [

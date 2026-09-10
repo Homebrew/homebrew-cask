@@ -13,7 +13,7 @@ cask "redot" do
     strategy :github_latest
   end
 
-  depends_on macos: :big_sur
+  depends_on :macos
 
   app "Redot.app"
   binary "#{appdir}/Redot.app/Contents/MacOS/Redot", target: "redot"

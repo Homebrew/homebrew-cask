@@ -12,7 +12,7 @@ cask "vitalsource-bookshelf" do
     regex(/href=.*?VitalSource[._-]Bookshelf[._-]v?(\d+(?:\.\d+)+)\.dmg/i)
   end
 
-  depends_on macos: :big_sur
+  depends_on :macos
 
   app "VitalSource Bookshelf.app"
 

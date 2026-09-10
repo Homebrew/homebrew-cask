@@ -13,7 +13,7 @@ cask "ecamm-live" do
   end
 
   auto_updates true
-  depends_on macos: :big_sur
+  depends_on :macos
 
   # The url is unversioned but the zip contains an app directory with a version
   # number

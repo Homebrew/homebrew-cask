@@ -7,8 +7,6 @@ cask "breaktimer" do
          x86_64_linux: "e3cae710a2ce9b54ff4a2a8a8e6a611f4bb6a04cac2053827acacf07b5aa7809"
 
   on_macos do
-    depends_on macos: :big_sur
-
     app "BreakTimer.app"
     binary "#{appdir}/BreakTimer.app/Contents/MacOS/BreakTimer", target: "breaktimer"
 

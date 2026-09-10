@@ -7,8 +7,6 @@ cask "espanso" do
          x86_64_linux: "58b1b9c270c2416f3c6cb9069dfbcfb882d82de3369cf675861102936fc5f540"
 
   on_macos do
-    depends_on macos: :big_sur
-
     app "Espanso.app"
     binary "#{appdir}/Espanso.app/Contents/MacOS/espanso"
 

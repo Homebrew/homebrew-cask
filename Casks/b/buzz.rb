@@ -12,7 +12,7 @@ cask "buzz" do
 
   auto_updates true
   conflicts_with cask: "block-buzz"
-  depends_on macos: :big_sur
+  depends_on :macos
 
   app "Buzz.app"
 

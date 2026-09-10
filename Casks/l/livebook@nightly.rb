@@ -7,8 +7,6 @@ cask "livebook@nightly" do
   sha256 :no_check
 
   on_macos do
-    depends_on macos: :big_sur
-
     app "Livebook.app"
 
     zap trash: [

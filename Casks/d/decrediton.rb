@@ -9,8 +9,6 @@ cask "decrediton" do
          x86_64_linux: "326efece642afca2a2ce9803d0493141e5e80096c00b68a6219fabdd79b6476f"
 
   on_macos do
-    depends_on macos: :big_sur
-
     app "Decrediton.app"
 
     zap trash: [

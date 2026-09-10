@@ -10,8 +10,6 @@ cask "deskreen" do
          x86_64_linux: "25c54a448344587257ce977288c4b3c7e729fc1cc7061ad7471622cd09a47ab2"
 
   on_macos do
-    depends_on macos: :big_sur
-
     app "Deskreen CE.app"
 
     zap trash: [

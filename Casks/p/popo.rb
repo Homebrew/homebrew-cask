@@ -32,7 +32,7 @@ cask "popo" do
     end
   end
 
-  depends_on macos: :big_sur
+  depends_on :macos
 
   app "popo_mac.app"
 

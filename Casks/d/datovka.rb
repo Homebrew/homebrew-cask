@@ -15,7 +15,7 @@ cask "datovka" do
     regex(%r{href=.*?/datovka[._-](\d+(?:\.\d+)+)[._-]#{arch}\.dmg}i)
   end
 
-  depends_on macos: :big_sur
+  depends_on :macos
 
   app "datovka.app"
 

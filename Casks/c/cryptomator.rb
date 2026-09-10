@@ -12,8 +12,6 @@ cask "cryptomator" do
          x86_64_linux: "895d09255b5f5fe39029dba337ab0950f8609b3b7919313eeeb18d221e7e25ab"
 
   on_macos do
-    depends_on macos: :big_sur
-
     app "Cryptomator.app"
 
     zap trash: [

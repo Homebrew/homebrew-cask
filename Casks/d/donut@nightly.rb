@@ -6,8 +6,6 @@ cask "donut@nightly" do
   sha256 :no_check
 
   on_macos do
-    depends_on macos: :big_sur
-
     app "Donut.app"
 
     uninstall quit: "com.donutbrowser"

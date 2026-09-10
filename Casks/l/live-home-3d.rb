@@ -12,7 +12,7 @@ cask "live-home-3d" do
     strategy :sparkle, &:short_version
   end
 
-  depends_on macos: :big_sur
+  depends_on :macos
 
   app "Live Home 3D.app"
 

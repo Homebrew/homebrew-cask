@@ -12,7 +12,7 @@ cask "green-go-control" do
     regex(%r{href=.*?/(\d+(?:\.\d+)+)/macos/green-go-control\.dmg}i)
   end
 
-  depends_on macos: :big_sur
+  depends_on :macos
 
   app "Green-GO Control.app"
 
