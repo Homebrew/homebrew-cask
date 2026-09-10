@@ -1,5 +1,5 @@
 cask "yandex-cloud-cli" do
-  version "1.33.0"
+  version "1.34.0"
   sha256 :no_check
 
   url "https://storage.yandexcloud.net/yandexcloud-yc/install.sh"
