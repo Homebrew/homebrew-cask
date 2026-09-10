@@ -5,7 +5,7 @@ cask "doubaoime" do
   url "https://lf-wave.doubaocdn.com/obj/doubao-ime/app/macos/DoubaoImeInstaller_v#{version.csv.second}_release.zip"
   name "Doubao Input Method"
   name "豆包输入法"
-  desc "支持语音输入和智能联想的中文输入法"
+  desc "Chinese input method with voice input and intelligent suggestions"
   homepage "https://shurufa.doubao.com/pc"
 
   livecheck do
