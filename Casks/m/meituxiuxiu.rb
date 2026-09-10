@@ -1,5 +1,5 @@
 cask "meituxiuxiu" do
-  version "2.2.70"
+  version "2.2.80"
   sha256 :no_check
 
   url "https://xiuxiupc-dl.meitudata.com/xiuxiumac_setup.dmg",
@@ -20,6 +20,8 @@ cask "meituxiuxiu" do
   depends_on :macos
 
   app "美图秀秀.app"
+
+  uninstall quit: "com.meitu.mtxxpro"
 
   zap trash: [
     "~/Library/Caches/com.meitu.mtxxpro",
