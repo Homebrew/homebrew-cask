@@ -7,6 +7,7 @@ cask "codexbar" do
   desc "Menu bar usage monitor for Codex and Claude"
   homepage "https://codexbar.app/"
 
+  auto_updates true
   depends_on macos: :sonoma
 
   app "CodexBar.app"
