@@ -57,7 +57,7 @@ cask "navicat-for-oracle" do
     cask "navicat-premium"
   end
 
-  depends_on macos: :big_sur
+  depends_on :macos
 
   app "Navicat for Oracle.app"
 
