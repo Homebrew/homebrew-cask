@@ -21,7 +21,7 @@ cask "realvnc-connect-viewer" do
   end
 
   conflicts_with cask: "realvnc-connect"
-  depends_on macos: :big_sur
+  depends_on :macos
 
   pkg "RealVNC-Connect-Viewer-#{version}-MacOSX-universal.pkg"
 
