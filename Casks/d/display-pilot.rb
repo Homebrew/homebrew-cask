@@ -24,7 +24,7 @@ cask "display-pilot" do
     end
   end
 
-  depends_on macos: :big_sur
+  depends_on :macos
 
   app "Display Pilot 2.app"
 
