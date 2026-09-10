@@ -18,7 +18,7 @@ cask "smartgit" do
     end
   end
 
-  depends_on macos: :big_sur
+  depends_on :macos
 
   app "SmartGit.app"
   binary "#{appdir}/SmartGit.app/Contents/MacOS/SmartGit"
