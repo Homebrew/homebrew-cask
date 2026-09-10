@@ -15,7 +15,7 @@ cask "squeak" do
     end
   end
 
-  depends_on macos: :big_sur
+  depends_on :macos
 
   app "Squeak#{version.csv.first}-#{version.csv.second}-64bit-All-in-One.app"
 
