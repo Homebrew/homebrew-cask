@@ -15,7 +15,7 @@ cask "cutter" do
     strategy :github_latest
   end
 
-  depends_on macos: :big_sur
+  depends_on :macos
 
   app "Cutter.app"
   command_wrapper "cutter",
