@@ -1,5 +1,5 @@
 cask "tight-studio" do
-  version "3.1.8"
+  version "3.2.0"
   sha256 :no_check
 
   url "https://downloads.tight.studio/TightStudio.zip"
