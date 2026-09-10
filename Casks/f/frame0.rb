@@ -20,7 +20,7 @@ cask "frame0" do
     end
   end
 
-  depends_on macos: :big_sur
+  depends_on :macos
 
   app "Frame0.app"
 
