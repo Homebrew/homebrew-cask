@@ -16,4 +16,11 @@ cask "tencent-yingyongbao" do
   depends_on macos: :monterey
 
   app "YYBMacApp.app"
+
+  zap trash: [
+    "~/Library/Application Support/com.tencent.yybmac",
+    "~/Library/Application Support/com.tencent.yybmac.engine",
+    "~/Library/Application Support/com.tencent.yybmac.wine.engine",
+    "~/Library/Logs/com.tencent.yybmac",
+  ]
 end
