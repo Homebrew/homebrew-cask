@@ -10,8 +10,6 @@ cask "chatall" do
          x86_64_linux: "aec84550ec808b8e2902ddd4d74d99df1ecf51bf13d25372806167594b643c4d"
 
   on_macos do
-    depends_on macos: :big_sur
-
     app "ChatALL.app"
 
     zap trash: [
