@@ -10,8 +10,6 @@ cask "standard-notes" do
          x86_64_linux: "207e671836cbd7c6b43b6fc753748605e492aeeffafc637dc70a4435535cd265"
 
   on_macos do
-    depends_on macos: :big_sur
-
     app "Standard Notes.app"
 
     zap trash: [
