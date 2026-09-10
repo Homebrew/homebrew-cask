@@ -15,7 +15,7 @@ cask "paseo" do
     regex(/^v?(\d+(?:\.\d+)+)$/i)
   end
 
-  depends_on macos: :monterey
+  depends_on macos: :ventura
 
   app "Paseo.app"
   binary "#{appdir}/Paseo.app/Contents/Resources/bin/paseo"
