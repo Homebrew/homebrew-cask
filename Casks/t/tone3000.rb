@@ -7,7 +7,7 @@ cask "tone3000" do
   desc "Amp modeling plug-in for Neural Amp Modeler captures and impulse responses"
   homepage "https://www.tone3000.com/"
 
-  depends_on macos: :big_sur
+  depends_on :macos
 
   pkg "TONE3000-v#{version}-macos-universal.pkg"
 
