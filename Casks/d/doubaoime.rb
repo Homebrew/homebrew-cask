@@ -27,7 +27,6 @@ cask "doubaoime" do
   uninstall delete: "/Library/Input Methods/DoubaoIme.app"
 
   zap trash: [
-    "/tmp/DoubaoIme",
     "~/Library/Application Support/DoubaoIme",
     "~/Library/Caches/com.bytedance.inputmethod.doubaoime",
     "~/Library/Caches/com.bytedance.inputmethod.doubaoime.installer",
