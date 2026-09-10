@@ -14,7 +14,7 @@ cask "pale-moon" do
   end
 
   depends_on arch: :arm64
-  depends_on macos: :big_sur
+  depends_on :macos
 
   app "Pale Moon.app"
 
