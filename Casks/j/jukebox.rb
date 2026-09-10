@@ -7,7 +7,7 @@ cask "jukebox" do
   desc "Menu bar song viewer"
   homepage "https://www.jaysce.dev/projects/jukebox"
 
-  depends_on macos: :big_sur
+  depends_on :macos
 
   app "Jukebox.app"
 
