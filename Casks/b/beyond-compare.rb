@@ -14,7 +14,7 @@ cask "beyond-compare" do
 
   auto_updates true
   conflicts_with cask: "beyond-compare@4"
-  depends_on macos: :big_sur
+  depends_on :macos
 
   app "Beyond Compare.app"
   binary "#{appdir}/Beyond Compare.app/Contents/MacOS/bcomp"
