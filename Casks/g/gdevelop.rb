@@ -12,7 +12,7 @@ cask "gdevelop" do
     strategy :github_latest
   end
 
-  depends_on macos: :big_sur
+  depends_on :macos
 
   app "GDevelop #{version.major}.app"
 
