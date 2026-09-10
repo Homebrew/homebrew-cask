@@ -1,9 +1,9 @@
 cask "asana" do
   arch arm: "arm64", intel: "x64"
 
-  version "2.8.1"
-  sha256 arm:   "ada5626bcf7e657da850a19f9c07bd616f1c51d464d4bf0e6eaa7886aa1c4afb",
-         intel: "8b17b75b4ddeaebc6e6ac9558a6a157c9a9a20d033bfa0017da769cad8a26d36"
+  version "2.9.0"
+  sha256 arm:   "d6f6af330797de2a2a1215d201fd78c6e5fa98c14e6899d55b12f1cd92992c2d",
+         intel: "a7e46c5465c1e3ab5fd7030c5e08a184810ffc2ee6353b0422b5ede13f3147d0"
 
   url "https://desktop-downloads.asana.com/darwin_#{arch}/prod/v#{version}/Asana-darwin-#{arch}-#{version}.zip"
   name "Asana"
