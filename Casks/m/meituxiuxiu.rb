@@ -21,6 +21,8 @@ cask "meituxiuxiu" do
 
   app "美图秀秀.app"
 
+  uninstall quit: "com.meitu.mtxxpro"
+
   zap trash: [
     "~/Library/Caches/com.meitu.mtxxpro",
     "~/Library/Preferences/com.meitu.mtxxpro.plist",
