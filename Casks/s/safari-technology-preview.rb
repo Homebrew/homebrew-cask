@@ -1,7 +1,7 @@
 cask "safari-technology-preview" do
   on_tahoe :or_older do
-    version "251,140-94790-20260826-3c91860d-070e-431a-8a0d-0927cf32dc6c"
-    sha256 "1dec128ebadb74a87913b5e4878ca2fe38425da4ac66b5a53d23f88575ed2e0c"
+    version "252,142-15045-20260910-e4690e3f-4b63-4560-962c-c584ada7ee7e"
+    sha256 "42950d149fd5a12793916732b326c5770679b625560ff44bdf854caec0558e59"
 
     livecheck do
       url :homepage
