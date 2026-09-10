@@ -13,7 +13,7 @@ cask "input-source-pro" do
   end
 
   auto_updates true
-  depends_on macos: :big_sur
+  depends_on :macos
 
   app "Input Source Pro.app"
 
