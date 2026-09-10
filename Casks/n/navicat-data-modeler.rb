@@ -18,7 +18,7 @@ cask "navicat-data-modeler" do
     end
   end
 
-  depends_on macos: :big_sur
+  depends_on :macos
 
   app "Navicat Data Modeler.app"
 
