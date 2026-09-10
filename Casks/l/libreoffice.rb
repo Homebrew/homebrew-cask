@@ -29,7 +29,7 @@ cask "libreoffice" do
   end
 
   conflicts_with cask: "libreoffice-still"
-  depends_on macos: :big_sur
+  depends_on :macos
 
   app "LibreOffice.app"
   binary "#{appdir}/LibreOffice.app/Contents/MacOS/gengal"
