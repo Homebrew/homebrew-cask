@@ -16,7 +16,7 @@ cask "sina-finance" do
     regex(/href=.*?sinafinancedesktop[._-]v?(\d+(?:\.\d+)+)[._-]#{arch}\.dmg/i)
   end
 
-  depends_on macos: :big_sur
+  depends_on :macos
 
   app "新浪财经APP.app"
 
