@@ -21,9 +21,11 @@ cask "defold@beta" do
     "defold",
     "defold@alpha",
   ]
-  depends_on macos: :big_sur
+  depends_on :macos
 
   app "Defold.app"
+
+  uninstall quit: "com.defold.editor"
 
   zap trash: [
     "~/Library/Application Support/Defold",
