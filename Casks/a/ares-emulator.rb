@@ -7,7 +7,7 @@ cask "ares-emulator" do
   desc "Cross-platform, multi-system emulator, focusing on accuracy and preservation"
   homepage "https://ares-emu.net/"
 
-  depends_on macos: :big_sur
+  depends_on :macos
 
   app "ares-v#{version}/ares.app"
 
