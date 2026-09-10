@@ -10,7 +10,7 @@ cask "orcaslicer@nightly" do
   homepage "https://github.com/OrcaSlicer/OrcaSlicer"
 
   conflicts_with cask: "orcaslicer"
-  depends_on macos: :big_sur
+  depends_on :macos
 
   app "OrcaSlicer.app"
 
