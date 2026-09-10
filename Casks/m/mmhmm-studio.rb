@@ -17,7 +17,7 @@ cask "mmhmm-studio" do
   disable! date: "2026-05-27", because: :discontinued
 
   auto_updates true
-  depends_on macos: :big_sur
+  depends_on :macos
 
   app "mmhmm Studio.app"
 
