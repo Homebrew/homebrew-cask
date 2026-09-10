@@ -22,7 +22,7 @@ cask "orange" do
     regex(/Orange#{version.major}[._-]v?(\d+(?:\.\d+)+)\.zip/i)
   end
 
-  depends_on macos: :big_sur
+  depends_on :macos
 
   zap trash: [
     "~/Library/Application Support/Orange",
