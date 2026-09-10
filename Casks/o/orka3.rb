@@ -11,8 +11,10 @@ cask "orka3" do
   homepage "https://support.macstadium.com/hc/en-us/articles/42514244203419-Orka3-CLI-Overview-Configuration"
 
   livecheck do
-    url "https://docs.macstadium.com/orka/orka-overview/tools-integrations"
-    regex(%r{href=.*?/(\d+(?:\.\d+)+)/orka3/macos/#{arch}/orka3\.pkg}i)
+    url "https://cli-builds-public.s3.amazonaws.com/official/latest.json"
+    strategy :json do |json|
+      json["version"]
+    end
   end
 
   depends_on :macos
