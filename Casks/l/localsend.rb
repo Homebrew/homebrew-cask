@@ -7,8 +7,6 @@ cask "localsend" do
          x86_64_linux: "19f21613d1834f6caa69517113670461a3f10b80a2a315f86548c0663d9c0aaf"
 
   on_macos do
-    depends_on macos: :big_sur
-
     app "LocalSend.app"
 
     zap trash: [
