@@ -28,7 +28,7 @@ cask "alex313031-thorium" do
 
   disable! date: "2026-09-01", because: :fails_gatekeeper_check
 
-  depends_on macos: :big_sur
+  depends_on :macos
 
   app "Thorium.app", target: "Thorium Browser.app"
   command_wrapper "thorium",
