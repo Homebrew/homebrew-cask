@@ -10,8 +10,6 @@ cask "agentsview" do
          x86_64_linux: "73f374d2b9982ce4b2211d920e4d7f4da9aa56e561428f404db0d85ed82c654b"
 
   on_macos do
-    depends_on macos: :big_sur
-
     app "AgentsView.app"
     binary "#{appdir}/AgentsView.app/Contents/MacOS/agentsview"
 
