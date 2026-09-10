@@ -19,9 +19,12 @@ cask "chia" do
 
   app "Chia.app"
 
+  uninstall quit: "net.chia.blockchain"
+
   zap trash: [
     "~/.chia",
     "~/Library/Application Support/Chia Blockchain",
+    "~/Library/Caches/Chia Blockchain",
     "~/Library/Preferences/net.chia.blockchain.plist",
     "~/Library/Saved Application State/net.chia.blockchain.savedState",
   ]
