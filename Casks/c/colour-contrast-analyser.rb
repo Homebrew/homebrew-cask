@@ -8,8 +8,6 @@ cask "colour-contrast-analyser" do
          x86_64_linux: "88264e94c770515469ca2a669645643b898fd1d43fa293a200efd5309ea0ff63"
 
   on_macos do
-    depends_on macos: :big_sur
-
     app "Colour Contrast Analyser.app"
 
     zap trash: [
