@@ -14,7 +14,7 @@ cask "godot-mono" do
   end
 
   depends_on cask: "dotnet-sdk"
-  depends_on macos: :big_sur
+  depends_on :macos
 
   app "Godot_mono.app"
   command_wrapper "godot-mono",
