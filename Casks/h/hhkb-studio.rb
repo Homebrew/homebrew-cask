@@ -12,7 +12,7 @@ cask "hhkb-studio" do
     regex(%r{macOS\s*</td>.*?HHKBStudiokeymapTool[._-]v?\d+(?:\.\d+)*[^.]*?\.dmg.*?>\s*v?(\d+(?:\.\d+)+)\s*<}im)
   end
 
-  depends_on macos: :big_sur
+  depends_on :macos
 
   pkg "HHKBStudiokeymapTool_#{version.no_dots}ma.pkg"
 
