@@ -29,4 +29,9 @@ cask "openhuman" do
   name "OpenHuman"
   desc "Personal AI assistant with local memory and integrations"
   homepage "https://tinyhumans.ai/openhuman"
+
+  livecheck do
+    url :url
+    strategy :github_latest
+  end
 end
