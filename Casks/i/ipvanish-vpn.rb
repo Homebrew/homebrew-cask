@@ -1,6 +1,6 @@
 cask "ipvanish-vpn" do
-  version "5.1.3,166526"
-  sha256 "fe25e7e8041868f069f197a34cfb9d7b722e56e2533e1dd1ca5ed68343e85689"
+  version "5.3.0,169679"
+  sha256 "87262ee5dc9cb33b87d3d922403e1bf92620ac4ef4591b7db88ff8a6e205964b"
 
   url "https://www.ipvanish.com/software/osx/IPVanish_v#{version.csv.first}_#{version.csv.second}.zip"
   name "IPVanish"
