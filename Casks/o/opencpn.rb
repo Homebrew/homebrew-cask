@@ -18,7 +18,7 @@ cask "opencpn" do
     end
   end
 
-  depends_on macos: :big_sur
+  depends_on :macos
 
   pkg "OpenCPN_#{version.csv.first}#{version.csv.second}.pkg"
 
