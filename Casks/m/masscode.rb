@@ -15,7 +15,7 @@ cask "masscode" do
     regex(/^v?(\d+(?:\.\d+)+)$/i)
   end
 
-  depends_on macos: :big_sur
+  depends_on :macos
 
   app "massCode.app"
 
