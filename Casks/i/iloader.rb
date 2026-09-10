@@ -2,11 +2,11 @@ cask "iloader" do
   arch arm: "aarch64", intel: "amd64"
   os macos: "iloader-darwin-universal.dmg", linux: "iloader-linux-#{arch}.AppImage"
 
-  version "2.3.1"
-  sha256 arm:          "91dc2b658fc1f4921dfb086e7799087153b48fd5925dad435fa90e564222298b",
-         intel:        "91dc2b658fc1f4921dfb086e7799087153b48fd5925dad435fa90e564222298b",
-         arm64_linux:  "01a333c3b3cc902c17677a387852c12bad6e600b4ad294d91e3464a4dd24a1bb",
-         x86_64_linux: "0fe37ee9f9ebe3616bba745214248dc2d3f9ffedc4a8241706cc95d963813652"
+  version "2.3.2"
+  sha256 arm:          "5569719659f1bf8dce2df5603a927ab1e3cce99e4363f478caf193179d3ca189",
+         intel:        "5569719659f1bf8dce2df5603a927ab1e3cce99e4363f478caf193179d3ca189",
+         arm64_linux:  "4ce31c41eca9f86c529023f19f1e7fd9b70292976f42760703819dd1c590da28",
+         x86_64_linux: "607b39849dfd04799118fcbb6256c74bb374651fd11d01436e99ea6d5b12611a"
 
   on_macos do
     auto_updates true
