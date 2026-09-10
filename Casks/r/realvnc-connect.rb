@@ -20,6 +20,7 @@ cask "realvnc-connect" do
     end
   end
 
+  conflicts_with cask: "realvnc-connect-viewer"
   depends_on macos: :sequoia
 
   pkg "RealVNC-Connect-#{version}-MacOSX-universal.pkg"
