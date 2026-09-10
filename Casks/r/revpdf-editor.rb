@@ -10,7 +10,7 @@ cask "revpdf-editor" do
   desc "PDF editor for annotation and editing"
   homepage "https://revpdf.com/"
 
-  depends_on macos: :big_sur
+  depends_on :macos
 
   app "RevPDF Editor.app"
 
