@@ -1,9 +1,9 @@
 cask "voiden@beta" do
   arch arm: "arm64", intel: "x64"
 
-  version "2.3.0-beta.2"
-  sha256 arm:   "441d08fa041b26087299ed0f276a044797552730c3cb79fed1bc546265e981a1",
-         intel: "8ccfa1a8e4cc28011a634f3d02a17150383a1840186e4eb1a428906076900424"
+  version "2.3.0-beta.3"
+  sha256 arm:   "dd476a7cee301c98627347327c3bc4dd9c7511e0dd17f9719379df8f6466082d",
+         intel: "2ba4ac8c3b397c6455bdfddb63ca6a5f6ba100ee46da862f31e112fb0958a417"
 
   url "https://voiden-beta-releases.s3.eu-west-1.amazonaws.com/voiden/darwin/#{arch}/Voiden-darwin-#{arch}-#{version}.zip"
   name "Voiden Beta"
