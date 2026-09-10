@@ -7,11 +7,17 @@ cask "realvnc-connect" do
   desc "Remote desktop client and server application"
   homepage "https://www.realvnc.com/"
 
-  # The upstream download page links to the latest pkg file but Cloudflare
-  # protections prevent us from fetching it, so it must be checked manually:
-  # https://www.realvnc.com/en/connect/download/#moreInstall
   livecheck do
-    skip "Cannot be fetched due to Cloudflare protections"
+    url "https://help.realvnc.com/api/v2/help_center/en-us/sections/26441433034013/articles.json"
+    regex(/RealVNC\s+Connect\s+v?(\d+(?:\.\d+)+)/i)
+    strategy :json do |json, regex|
+      json["articles"]&.map do |article|
+        match = article["title"]&.match(regex)
+        next if match.blank?
+
+        match[1]
+      end
+    end
   end
 
   depends_on macos: :sequoia
