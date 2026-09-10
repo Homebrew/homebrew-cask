@@ -10,7 +10,7 @@ cask "gephi" do
   desc "Open-source platform for visualizing and manipulating large graphs"
   homepage "https://gephi.org/"
 
-  depends_on macos: :big_sur
+  depends_on :macos
 
   app "Gephi.app"
 
