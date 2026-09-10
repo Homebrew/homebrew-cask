@@ -5,11 +5,11 @@ cask "gimp" do
   name_start = on_system_conditional macos: "gimp", linux: "GIMP"
   url_end = on_system_conditional macos: "dmg", linux: "AppImage"
 
-  version "3.2.4"
-  sha256 arm:          "294c016dca7795999129a38b462f80fac3c13cb963e6de9d04eeb5d6e519392b",
-         intel:        "85214a388687718d30169d88b22794d6b0a89849bcc7aa456f4afb83c1326be8",
-         arm64_linux:  "7cb6f5c2b5a693302beb3e41c987c47562ff146eed4125b19ecf414ba6dca0ab",
-         x86_64_linux: "f1ce6dc671ef1c4aad87a0db9d7462e8ca9c0b5f899456337803c6ba32d0babe"
+  version "3.2.6"
+  sha256 arm:          "854573aec2be6a185aa021109c3c0ca94f210379204b704231bdd191b4060294",
+         intel:        "ebe633642445d4d6fc6b68e7be7ca581c0b28c18dc9de7747849528c982e5677",
+         arm64_linux:  "d1b8271e440dc4e36065ca25f219c0534abd2dfb43aeb033c76b16832d395e19",
+         x86_64_linux: "79ea41bc9b06f78fda181849a9ca8e42d83f1124dedb756f4d52352e2465010f"
 
   on_macos do
     app "GIMP.app"
