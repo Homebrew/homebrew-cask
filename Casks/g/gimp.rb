@@ -12,8 +12,6 @@ cask "gimp" do
          x86_64_linux: "f1ce6dc671ef1c4aad87a0db9d7462e8ca9c0b5f899456337803c6ba32d0babe"
 
   on_macos do
-    depends_on macos: :big_sur
-
     app "GIMP.app"
     command_wrapper "gimp", executable: "#{appdir}/GIMP.app/Contents/MacOS/gimp"
 
