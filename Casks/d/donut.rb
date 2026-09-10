@@ -9,8 +9,6 @@ cask "donut" do
          x86_64_linux: "55cb3b67259439c9f2f998e8c683f953a95a3935dba8c14076bf836400547893"
 
   on_macos do
-    depends_on macos: :big_sur
-
     app "Donut.app"
 
     uninstall quit: "com.donutbrowser"
