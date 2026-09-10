@@ -24,7 +24,7 @@ cask "typora@dev" do
 
   auto_updates true
   conflicts_with cask: "typora"
-  depends_on macos: :big_sur
+  depends_on :macos
 
   app "Typora.app"
 
