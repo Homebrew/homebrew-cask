@@ -19,7 +19,7 @@ cask "basictex" do
     "mactex",
     "mactex-no-gui",
   ]
-  depends_on macos: :big_sur
+  depends_on :macos
 
   pkg "mactex-basictex-#{version.no_dots}.pkg"
 
