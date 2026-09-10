@@ -40,7 +40,7 @@ cask "slack" do
 
   auto_updates true
   conflicts_with cask: "slack@beta"
-  depends_on macos: :big_sur
+  depends_on :macos
 
   app "Slack.app"
 
