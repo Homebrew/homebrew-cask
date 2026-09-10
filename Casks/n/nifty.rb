@@ -12,7 +12,7 @@ cask "nifty" do
     strategy :extract_plist
   end
 
-  depends_on macos: :big_sur
+  depends_on :macos
 
   app "Nifty.app"
 
