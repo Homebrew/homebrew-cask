@@ -10,8 +10,6 @@ cask "livebook" do
          x86_64_linux: "a6ef1b0a1b4213b4939cc8e0512a650e13b9ceff207ae29b62679787122f4b0c"
 
   on_macos do
-    depends_on macos: :big_sur
-
     app "Livebook.app"
 
     zap trash: [
