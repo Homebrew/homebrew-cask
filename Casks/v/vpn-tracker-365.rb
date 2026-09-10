@@ -19,7 +19,7 @@ cask "vpn-tracker-365" do
     end
   end
 
-  depends_on macos: :big_sur
+  depends_on :macos
 
   app "VPN Tracker 365.app"
 
