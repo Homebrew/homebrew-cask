@@ -25,4 +25,17 @@ cask "doubaoime" do
   installer manual: "DoubaoImeInstaller_v#{version.csv.second}.app"
 
   uninstall delete: "/Library/Input Methods/DoubaoIme.app"
+
+  zap trash: [
+    "/tmp/DoubaoIme",
+    "~/Library/Application Support/DoubaoIme",
+    "~/Library/Caches/com.bytedance.inputmethod.doubaoime",
+    "~/Library/Caches/com.bytedance.inputmethod.doubaoime.installer",
+    "~/Library/Caches/com.bytedance.inputmethod.doubaoime.settings",
+    "~/Library/HTTPStorages/com.bytedance.inputmethod.doubaoime",
+    "~/Library/HTTPStorages/com.bytedance.inputmethod.doubaoime.installer",
+    "~/Library/HTTPStorages/com.bytedance.inputmethod.doubaoime.settings",
+    "~/Library/Preferences/com.bytedance.inputmethod.doubaoime.plist",
+    "~/Library/Preferences/com.bytedance.inputmethod.doubaoime.settings.plist",
+  ]
 end
