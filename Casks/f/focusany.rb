@@ -1,9 +1,9 @@
 cask "focusany" do
   arch arm: "arm64", intel: "x64"
 
-  version "2.1.0"
-  sha256 arm:   "500748811382d04e1756500ece790385fdec272e2a70162554e6e3dc7300757b",
-         intel: "29114bec682c819f469ae667244dfa99a88d040a9ae33ad9dd11e43dd3cf8fef"
+  version "2.2.0"
+  sha256 arm:   "2b783943d15e55e632ea56ea1185d1eb4790f452ab2b833ab646863f4fafbe96",
+         intel: "a1d7585af304a179ee49e2f958f9fd31290178e4d99800591ab7cc8b3c6cc27f"
 
   url "https://github.com/modstart-lib/focusany/releases/download/v#{version}/FocusAny-#{version}-mac-#{arch}.dmg"
   name "FocusAny"
