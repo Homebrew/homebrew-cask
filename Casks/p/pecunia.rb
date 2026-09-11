@@ -16,6 +16,8 @@ cask "pecunia" do
 
   app "Pecunia.app"
 
+  uninstall quit: "de.pecuniabanking.pecunia"
+
   zap trash: [
     "~/Library/Application Scripts/de.pecuniabanking.pecunia",
     "~/Library/Containers/de.pecuniabanking.pecunia",
