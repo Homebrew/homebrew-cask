@@ -14,4 +14,11 @@ cask "langdock" do
   depends_on macos: :sonoma
 
   app "Langdock.app"
+
+  zap trash: [
+    "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.langdock.desktop.sfl*",
+    "~/Library/Application Support/langdock",
+    "~/Library/Logs/Langdock",
+    "~/Library/Preferences/com.langdock.desktop.plist",
+  ]
 end
