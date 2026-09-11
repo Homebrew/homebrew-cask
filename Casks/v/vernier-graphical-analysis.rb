@@ -1,6 +1,6 @@
 cask "vernier-graphical-analysis" do
-  version "6.3.0-4399"
-  sha256 "79e3836d931f1258579178f5dd82ce281da2aadd9afa7978ef0b8d410b212648"
+  version "6.3.1-4464"
+  sha256 "4743422c61d7930250dd07368407eaa72f7d8c42f02a22603200fb0f6dbde497"
 
   url "https://software-releases.graphicalanalysis.com/ga/mac/release/Vernier-Graphical-Analysis-#{version}.zip"
   name "Vernier Graphical Analysis"
