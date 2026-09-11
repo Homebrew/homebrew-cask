@@ -2,10 +2,10 @@ cask "joplin" do
   arch arm: "-arm64"
   url_end = on_system_conditional macos: "#{arch}.DMG", linux: ".AppImage"
 
-  version "3.7.16"
-  sha256 arm:          "6bd0ab0857f475baf44028fd5614e0dbe5e92a91963f8aa2316972db94271cd3",
-         intel:        "fe2c4f87a4a801db1f79c01e4e242708438088b22338068f5929bc76dda63672",
-         x86_64_linux: "0c187ce66c4cddd59960f4b1861c87973d598d697239073c042ba1e35f08b30b"
+  version "3.7.18"
+  sha256 arm:          "103c9bc884108bc31593060008005411a45c1b2b530eeffca4d5ad262306c6e6",
+         intel:        "73cd99d29fa0756078d70f799dbc440baabc0055c2a80874c88ba101e9af7d52",
+         x86_64_linux: "c7ed7eeb6985621b75f0d09088cd01efc9af7aa2cfa17649ed4a83a75b29aca5"
 
   on_macos do
     depends_on macos: :monterey
