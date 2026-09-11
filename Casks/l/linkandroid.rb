@@ -14,6 +14,8 @@ cask "linkandroid" do
 
   app "LinkAndroid.app"
 
+  uninstall quit: "LinkAndroid"
+
   zap trash: [
     "~/Library/Application Support/linkandroid",
     "~/Library/Preferences/LinkAndroid.plist",
