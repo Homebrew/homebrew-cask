@@ -16,6 +16,8 @@ cask "draw-things" do
 
   app "Draw Things.app"
 
+  uninstall quit: "com.liuliu.draw-things"
+
   zap trash: [
     "~/Library/Application Scripts/com.liuliu.draw-things",
     "~/Library/Containers/com.liuliu.draw-things",
