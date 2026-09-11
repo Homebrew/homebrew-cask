@@ -39,7 +39,7 @@ Some style guidelines:
 * Use string manipulations to improve the maintainability of your cask (see [`version` methods](https://docs.brew.sh/Cask-Cookbook#version-methods)).
 * Test your cask using `brew audit` and `brew style` (see the documentation on [testing and auditing](https://docs.brew.sh/Adding-Software-to-Homebrew#testing-and-auditing-the-cask)).
 * Make one pull request per cask change.
-* Do not squash commits after updating a pull request.
+* Squash commits after updating a pull request so that each cask has one commit.
 * Use descriptive commit messages - mention cask name and version/change (ie. `transmission 2.82`, `google-chrome: update zap`).
 
 ## AI/LLM usage
