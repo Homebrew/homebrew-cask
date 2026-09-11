@@ -1,9 +1,9 @@
 cask "devin-desktop" do
   arch arm: "arm64", intel: "x64"
 
-  version "3.9.19,e2b252e21dd5cdfd88fce58f49477260e90294bc"
-  sha256 arm:   "6d1b779fde24388b4e336f27b62439ed6784080cc0cc9464072e9425da7bdb4f",
-         intel: "b99306cc44a9bc1a56401b0909c1d66d6c893b7ae9abe3cd1f70033e9eb3e2e4"
+  version "3.10.23,deb816008be02bf5f9da707b7def3ebdb53a51cd"
+  sha256 arm:   "74ec490cfe95d80d6d17efaad45eecedcba09043ffd7aa9219558f3f7ac26631",
+         intel: "c1d674d59268a8021b43ccc70b0d683762005a2545a76993196b493685e3def7"
 
   url "https://windsurf-stable.codeiumdata.com/darwin-#{arch}-dmg/stable/#{version.csv.second}/Devin-darwin-#{arch}-#{version.csv.first}.dmg"
   name "Devin Desktop"
