@@ -3,9 +3,9 @@ cask "unity-hub@beta" do
   url_end = on_system_conditional macos: "dmg", linux: "AppImage"
 
   version "3.21.2"
-  sha256 arm:          "97e455c3bd63c3e354f4f3fa7c556b45ea22919c63f6774341d598ec1b2ec662",
+  sha256 arm:          "1f8881fd1b985a2b945387feb4be89dac95e5d754a58e7f72c0612dcf9552ecf",
          intel:        "3cea8d44596aca22f0fdc9a6714e7068fe8bf0c029536b413190a2cdb663684a",
-         x86_64_linux: "ef3fda3aa0317039fa09e11a7c528b729f6f52f889f21215b56a01a10bcbae02"
+         x86_64_linux: "f57e20d844ee7c09fefb8773e145f301bb044e4d898cddae78890edcdd39de3d"
 
   on_macos do
     depends_on macos: :monterey
