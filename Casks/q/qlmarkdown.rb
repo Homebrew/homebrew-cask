@@ -24,6 +24,8 @@ cask "qlmarkdown" do
   app "QLMarkdown.app"
   binary "#{appdir}/QLMarkdown.app/Contents/Resources/qlmarkdown_cli"
 
+  uninstall quit: "org.sbarex.QLMarkdown"
+
   zap trash: [
     "~/Library/Application Scripts/group.org.sbarex.qlmarkdown",
     "~/Library/Application Scripts/org.sbarex.QLMarkdown",
