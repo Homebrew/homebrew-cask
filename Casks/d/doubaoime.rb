@@ -21,10 +21,9 @@ cask "doubaoime" do
   end
 
   depends_on :macos
+  container nested: "DoubaoImeInstaller_v#{version.csv.second}.app/Contents/Resources/DoubaoIme.zip"
 
-  installer manual: "DoubaoImeInstaller_v#{version.csv.second}.app"
-
-  uninstall delete: "/Library/Input Methods/DoubaoIme.app"
+  input_method "DoubaoIme.app", target: "/Library/Input Methods/DoubaoIme.app"
 
   zap trash: [
     "~/Library/Application Support/DoubaoIme",
@@ -37,4 +36,8 @@ cask "doubaoime" do
     "~/Library/Preferences/com.bytedance.inputmethod.doubaoime.plist",
     "~/Library/Preferences/com.bytedance.inputmethod.doubaoime.settings.plist",
   ]
+
+  caveats do
+    logout
+  end
 end
