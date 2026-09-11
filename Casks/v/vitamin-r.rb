@@ -17,7 +17,8 @@ cask "vitamin-r" do
 
   app "Vitamin-R #{version.major}.app"
 
-  uninstall login_item: "Vitamin-R #{version.major}"
+  uninstall quit:       "net.publicspace.dist.vitaminr#{version.major}",
+            login_item: "Vitamin-R #{version.major}"
 
   zap trash: [
     "~/Library/Application Support/Vitamin-R",
