@@ -11,9 +11,10 @@ cask "workbuddy-cn" do
   homepage "https://www.workbuddy.cn/"
 
   livecheck do
-    url "https://www.workbuddy.cn/v2/update?platform=workbuddy-darwin-arm64"
-    strategy :json do |json|
-      json["url"][/WorkBuddy-darwin-arm64-(.+)\.zip$/, 1]
+    url "https://www.workbuddy.cn/v2/update?platform=workbuddy-darwin-#{arch}"
+    regex(/WorkBuddy-darwin-#{arch}-(.+)\.zip$/)
+    strategy :json do |json, regex|
+      json["url"]&.[](regex, 1)
     end
   end
 
