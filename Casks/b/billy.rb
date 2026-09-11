@@ -19,6 +19,8 @@ cask "billy" do
 
   app "Billy.app"
 
+  uninstall quit: "com.simonlou.Billy"
+
   zap trash: [
     "~/Library/Application Scripts/com.simonlou.Billy",
     "~/Library/Application Scripts/com.simonlou.Billy.BillyMailExtension",
