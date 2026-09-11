@@ -10,14 +10,19 @@ cask "airi" do
   desc "AI companion and VTuber application"
   homepage "https://airi.moeru.ai/"
 
+  # The latest release on GitHub may not always be a stable version, so we check
+  # the upstream download page until unstable versions are consistently marked
+  # as pre-release on GitHub.
   livecheck do
-    url :url
-    strategy :github_latest
+    url "https://airi.moeru.ai/docs/en/docs/overview/versions"
+    regex(%r{/releases/tag/v?(\d+(?:\.\d+)+)["' >]}i)
   end
 
   depends_on macos: :monterey
 
-  app "AIRI.app"
+  app "airi.app"
+
+  uninstall quit: "ai.moeru.airi"
 
   zap trash: [
     "~/Library/Application Support/ai.moeru.airi",
