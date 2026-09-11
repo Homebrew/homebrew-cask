@@ -1,6 +1,6 @@
 cask "linguax" do
-  version "2025.12,5118"
-  sha256 "1528dace8d6c24389006042cd38a996d9d23cf682dfd13b0bfd2df3c1fbf80dd"
+  version "2025.12,5120"
+  sha256 "0d12624fd71686f17ad961cc8ccb262c7ebcb54bde1aa9b6fff5752ceadfef66"
 
   url "https://st.deepzz.com/linguax/LinguaX#{version.csv.first}.#{version.csv.second}.zip"
   name "LinguaX"
