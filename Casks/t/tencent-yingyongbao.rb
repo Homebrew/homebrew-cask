@@ -8,37 +8,48 @@ cask "tencent-yingyongbao" do
   homepage "https://sj.qq.com/download/macbrand"
 
   livecheck do
-    require "json"
-    require "digest"
+    url "https://sj.qq.com/download/macbrand"
+    strategy :page_match do |page|
+      require "digest"
+      require "json"
 
-    # Step 1: read the access key from the public page (a field in the
-    # `__NEXT_DATA__` SSR payload).
-    page = Homebrew::Livecheck::Strategy.page_content("https://sj.qq.com/download/macbrand")[:content]
-    ak   = page[/"macServiceAccessKey":"([^"]+)"/, 1]
-    biz  = "yybmac"
+      # Step 1: read the access key from the page's `__NEXT_DATA__` payload.
+      access_key = page[/"macServiceAccessKey":"([^"]+)"/, 1]
+      next if access_key.blank?
 
-    # Step 2: build the signature.
-    payload = { pkg_name: "", supply_id: 2_100_200_129 }
-    body    = JSON.generate(payload)
-    ts      = (Time.now.to_f * 1000).to_i.to_s
-    nonce   = rand(10_000).to_s
-    sig     = Digest::MD5.hexdigest(body + ts + ak.to_s + nonce)
+      # Step 2: build a signature over the body, timestamp and nonce.
+      payload = { pkg_name: "", supply_id: 2_100_200_129 }
+      timestamp = (Time.now.to_f * 1000).to_i.to_s
+      nonce = rand(10_000).to_s
+      signature = Digest::MD5.hexdigest(
+        "#{JSON.generate(payload)}#{timestamp}#{access_key}#{nonce}",
+      )
 
-    # Step 3: request the version endpoint with the signature.
-    url "https://yybadaccess.3g.qq.com/v3/yybmac_deliver",
+      # Step 3: request the version endpoint with the signature.
+      options = Homebrew::Livecheck::Options.new(
         post_json: payload,
-        header:    ["businessid: #{biz}",
-                    "Ual-Access-Businessid: #{biz}",
-                    "Ual-Access-Nonce: #{nonce}",
-                    "Ual-Access-Signature: #{sig}",
-                    "Ual-Access-Timestamp: #{ts}"]
+        header:    [
+          "businessid: yybmac",
+          "Ual-Access-Businessid: yybmac",
+          "Ual-Access-Nonce: #{nonce}",
+          "Ual-Access-Signature: #{signature}",
+          "Ual-Access-Timestamp: #{timestamp}",
+        ],
+      )
+      content = Homebrew::Livecheck::Strategy.page_content(
+        "https://yybadaccess.3g.qq.com/v3/yybmac_deliver", options:
+      )[:content]
+      next if content.blank?
 
-    # The channel ID in the download URL changes with every release, so it has
-    # to be tracked alongside the version.
-    strategy :json do |json|
-      data = json["data"]
+      data = begin
+        JSON.parse(content)["data"]
+      rescue JSON::ParserError
+        nil
+      end
       next if data.blank?
 
+      # The channel ID in the download URL changes with every release, so it
+      # has to be tracked alongside the version.
       channel = data["download_url"].to_s[%r{/raw/([^/]+)/}, 1]
       next if channel.blank?
 
