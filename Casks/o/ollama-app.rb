@@ -13,6 +13,7 @@ cask "ollama-app" do
   end
 
   auto_updates true
+  conflicts_with cask: "ollama-binary"
   depends_on macos: :sonoma
 
   app "Ollama.app"
