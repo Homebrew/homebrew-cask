@@ -10,6 +10,9 @@ cask "orka3" do
   desc "Orchestration with Kubernetes on Apple"
   homepage "https://support.macstadium.com/hc/en-us/articles/42514244203419-Orka3-CLI-Overview-Configuration"
 
+  # If versions with non-stable suffixes (such as `-alpha`) are detected
+  # these are still considered stable if served from this url.
+  # Upstream use these suffixes in a non-conventional way.
   livecheck do
     url "https://cli-builds-public.s3.amazonaws.com/official/latest.json"
     strategy :json do |json|
