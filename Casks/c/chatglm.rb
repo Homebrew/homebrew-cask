@@ -1,8 +1,8 @@
 cask "chatglm" do
-  version "1.1.7"
-  sha256 "af11fd807f05cb1fd4fdeeb52d4805248d3915308ec8a06fad8b565fc80f6c38"
+  version "2.0.5"
+  sha256 "3cff6a913b089c00d896d75b9906a8aa6abfa0b8e06e24289f20a0e64d0c1c17"
 
-  url "https://sfile.chatglm.cn/apk/xinyu/windows/chatglm_setup_darwin_universal_#{version}.dmg"
+  url "https://sfile.chatglm.cn/apk/xinyu/windows/chatglm_#{version}_universal.dmg"
   name "ChatGLM"
   name "智谱清言"
   desc "Desktop client for the ChatGLM AI chatbot"
@@ -14,7 +14,7 @@ cask "chatglm" do
   end
 
   auto_updates true
-  depends_on :macos
+  depends_on macos: :monterey
 
   app "智谱清言.app"
 
