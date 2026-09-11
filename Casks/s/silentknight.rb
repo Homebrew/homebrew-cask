@@ -33,7 +33,7 @@ cask "silentknight" do
 
   depends_on :macos
 
-  app "silentknight#{no_dot_version}/SilentKnight.app"
+  app "sk#{no_dot_version}/SilentKnight.app"
 
   zap trash: [
     "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/co.eclecticlight.silentknight.sfl*",
