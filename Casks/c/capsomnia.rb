@@ -20,11 +20,15 @@ cask "capsomnia" do
               "/Library/PrivilegedHelperTools/capsomnia-pmset",
             ]
 
-  zap trash: [
-    "~/Library/Caches/Capsomnia",
-    "~/Library/Caches/com.github.fuji-mak.capsomnia",
-    "~/Library/HTTPStorages/com.github.fuji-mak.capsomnia",
-    "~/Library/Logs/Capsomnia",
-    "~/Library/Preferences/com.github.fuji-mak.capsomnia.plist",
-  ]
+  zap delete: [
+        "/Library/LaunchAgents/com.github.fuji-mak.capsomnia.plist",
+        "/Library/PrivilegedHelperTools/capsomnia-pmset",
+      ],
+      trash:  [
+        "~/Library/Caches/Capsomnia",
+        "~/Library/Caches/com.github.fuji-mak.capsomnia",
+        "~/Library/HTTPStorages/com.github.fuji-mak.capsomnia",
+        "~/Library/Logs/Capsomnia",
+        "~/Library/Preferences/com.github.fuji-mak.capsomnia.plist",
+      ]
 end
