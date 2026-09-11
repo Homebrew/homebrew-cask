@@ -1,19 +1,28 @@
 cask "omnigraffle" do
-  on_big_sur :or_older do
-    version "7.22.6"
-    sha256 "1159e731ab282b2f2b3881cbc75cc7bb40263cb3b56826f4ef6334295b47a883"
+  on_ventura :or_older do
+    on_big_sur :or_older do
+      version "7.22.6"
+      sha256 "1159e731ab282b2f2b3881cbc75cc7bb40263cb3b56826f4ef6334295b47a883"
 
-    url "https://downloads.omnigroup.com/software/macOS/11/OmniGraffle-#{version}.dmg"
+      url "https://downloads.omnigroup.com/software/macOS/11/OmniGraffle-#{version}.dmg"
+    end
+
+    on_monterey :or_newer do
+      version "7.25.3"
+      sha256  "97c9b8a264ec380a4955c1c8a3cf583010003881dd1b0cf46f712d73ef33480b"
+
+      url "https://downloads.omnigroup.com/software/macOS/12/OmniGraffle-#{version}.dmg"
+    end
 
     livecheck do
       skip "Legacy version"
     end
   end
-  on_monterey :or_newer do
-    version "7.25.3"
-    sha256 "97c9b8a264ec380a4955c1c8a3cf583010003881dd1b0cf46f712d73ef33480b"
+  on_sonoma :or_newer do
+    version "7.26"
+    sha256 "2f7432ab290969413dfa6ab95f22797a7abef3eb44ec556fb8b95adb021b9ddf"
 
-    url "https://downloads.omnigroup.com/software/macOS/12/OmniGraffle-#{version}.dmg"
+    url "https://downloads.omnigroup.com/software/macOS/14/OmniGraffle-#{version}.dmg"
 
     livecheck do
       url "https://www.omnigroup.com/download/latest/omnigraffle/"
