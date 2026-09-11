@@ -1,9 +1,9 @@
 cask "perforce" do
   arch arm: "12arm64", intel: "1015x86_64"
 
-  version "2026.1,2972966"
-  sha256 arm:   "173be6c67c605add6e5d6e4228e4ab3e33b249a6bd35306054439c8f0926bd54",
-         intel: "12a81063ebf3ce37b36388bd116a7f5a12bce4c984b0977380d59127b8a06ab1"
+  version "2026.1,3062361"
+  sha256 arm:   "33663a9de2b296d33432f79b85d9ee2731480d8260242f18ffed838b555ef058",
+         intel: "fc69f142ebfb1a1b0a4cfc20d7b0a34d906db5fc7adb3795a2900b78f6071b1d"
 
   url "https://filehost.perforce.com/perforce/r#{version.major[-2..]}.#{version.minor}/bin.macosx#{arch}/helix-core-server.tgz"
   name "Perforce Helix Core Server"
