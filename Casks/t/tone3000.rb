@@ -1,6 +1,6 @@
 cask "tone3000" do
-  version "0.0.7"
-  sha256 "5f67ce1659ae3b7226db469ed5b58fbc962db9e5d208cbab420e6738c91fba4d"
+  version "0.0.8"
+  sha256 "24707ba1f460d46f8e3bdeb84b8356b295f6d18a7c29a10b03ef305f42b36f6b"
 
   url "https://github.com/tone-3000/tone3000-plugin/releases/download/v#{version}/TONE3000-v#{version}-macos-universal.pkg"
   name "TONE3000"
