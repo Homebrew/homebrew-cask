@@ -5,8 +5,7 @@ cask "asciidocfx" do
   sha256 arm:   "eb4510935a93df580633a7508be2c719f827a889ea6ded72f2a5956ba3b1a9a8",
          intel: "2b50145239ee80c7adf053bbfc5df481580da14e5e5fb0703a4adc8c2fdb45ea"
 
-  url "https://github.com/asciidocfx/AsciidocFX/releases/download/v#{version}/AsciidocFX_Mac#{arch}.dmg",
-      verified: "github.com/asciidocfx/AsciidocFX/"
+  url "https://github.com/asciidocfx/AsciidocFX/releases/download/v#{version}/AsciidocFX_Mac#{arch}.dmg"
   name "AsciidocFX"
   desc "Asciidoc editor and toolchain to build books, documents and slides"
   homepage "https://www.asciidocfx.com/"

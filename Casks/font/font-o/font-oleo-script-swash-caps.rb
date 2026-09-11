@@ -3,7 +3,6 @@ cask "font-oleo-script-swash-caps" do
   sha256 :no_check
 
   url "https://github.com/google/fonts.git",
-      verified:  "github.com/google/fonts",
       branch:    "main",
       only_path: "ofl/oleoscriptswashcaps"
   name "Oleo Script Swash Caps"

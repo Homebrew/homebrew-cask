@@ -7,6 +7,8 @@ cask "micro-sniff" do
   desc "Monitor microphone activity"
   homepage "https://github.com/dwarvesf/micro-sniff"
 
+  disable! date: "2026-07-28", because: :moved_to_mas
+
   depends_on :macos
 
   app "Micro Sniff.app"

@@ -6,10 +6,10 @@ cask "font-georgia" do
   name "Georgia"
   homepage "https://sourceforge.net/projects/corefonts/files/the%20fonts/final/"
 
-  font "Georgiaz.TTF"
+  font "Georgia.TTF"
   font "Georgiab.TTF"
   font "Georgiai.TTF"
-  font "Georgia.TTF"
+  font "Georgiaz.TTF"
 
   # No zap stanza required
 end

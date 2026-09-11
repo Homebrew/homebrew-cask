@@ -2,8 +2,7 @@ cask "pibar" do
   version "1.2.1"
   sha256 "a36a898bc4f933c700e9d42d4a589b4253b504d460bbbd63929b492f44f5c6f3"
 
-  url "https://amiantos.s3.amazonaws.com/PiBar-#{version}.zip",
-      verified: "amiantos.s3.amazonaws.com/"
+  url "https://amiantos.s3.amazonaws.com/PiBar-#{version}.zip"
   name "PiBar"
   desc "Pi-hole(s) management in the menu bar"
   homepage "https://github.com/amiantos/pibar"

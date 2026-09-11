@@ -2,8 +2,7 @@ cask "font-noto-sans-old-permic" do
   version :latest
   sha256 :no_check
 
-  url "https://github.com/google/fonts/raw/main/ofl/notosansoldpermic/NotoSansOldPermic-Regular.ttf",
-      verified: "github.com/google/fonts/"
+  url "https://github.com/google/fonts/raw/main/ofl/notosansoldpermic/NotoSansOldPermic-Regular.ttf"
   name "Noto Sans Old Permic"
   homepage "https://fonts.google.com/specimen/Noto+Sans+Old+Permic"
 

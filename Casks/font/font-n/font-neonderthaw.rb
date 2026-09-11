@@ -2,8 +2,7 @@ cask "font-neonderthaw" do
   version :latest
   sha256 :no_check
 
-  url "https://github.com/google/fonts/raw/main/ofl/neonderthaw/Neonderthaw-Regular.ttf",
-      verified: "github.com/google/fonts/"
+  url "https://github.com/google/fonts/raw/main/ofl/neonderthaw/Neonderthaw-Regular.ttf"
   name "Neonderthaw"
   homepage "https://fonts.google.com/specimen/Neonderthaw"
 

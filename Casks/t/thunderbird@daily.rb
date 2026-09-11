@@ -1,73 +1,72 @@
 cask "thunderbird@daily" do
-  version "154.0a1,2026-07-19-09-59-03"
+  version "157.0a1,2026-09-10-10-22-13"
 
   language "cs" do
-    sha256 "fbe198e79e3e56624cbd2ce7d0c126c409b57307896a8df2ca3b5da3dca60273"
+    sha256 "26ce81959a4d966298d3770593fe5c0112df3379b0d35bfb631ac6c1ad193886"
     "cs"
   end
   language "de" do
-    sha256 "b74d1a31ea16b40d9150b46f527f586272c77ada51f64fe3fbd32c152c6bc656"
+    sha256 "3932a946ae00b792ffc010c9a57864ef55285ab4bc1e26d0a6feb530a759bfd2"
     "de"
   end
   language "en-GB" do
-    sha256 "b272c34ab71cf7b199492c00114ade2cc72e21bdce06fea8b47bbb7b3b3e9409"
+    sha256 "96c38627ae0a0fbe7a5d223135fa4a2b6963e0b405f97237f61fb5091c5a9c3c"
     "en-GB"
   end
   language "en", default: true do
-    sha256 "361f28c6cc1671cd8d9e0c7878b41cd5314eafce64b8dea10cbc99e321930092"
+    sha256 "654a232b86c7ad627670c129326edc3bb6434cf2b63d825c531b9ab1ebdb3c78"
     "en-US"
   end
   language "fr" do
-    sha256 "8a8cc9b5ad08831361fe41c8ca3445040aca7ca15b817df8c7a9b5531cd4a647"
+    sha256 "a18af94efe4374d1ac2432b425e4ac9a520a8275c3ac9d4e0756391b275cefb8"
     "fr"
   end
   language "gl" do
-    sha256 "881d5ee04d3b1544603a3088190a067a8f8511ea365975a60092a29522fb12c8"
+    sha256 "4b52f7934b2e9a6e38d441c154573fde8c918561aa1f442a8e4563ad8f771a12"
     "gl"
   end
   language "it" do
-    sha256 "d0231ecc9e585e1fbebb5e3c70e981ea78ba11141980f51b1bbd4df3d249821f"
+    sha256 "2a760763b286b98ef9cbec280abac6b00031246bb995232698fce28e4659ab43"
     "it"
   end
   language "ja" do
-    sha256 "3f439f57854f2b40d75b2e9c27231ca7142fb4202afe5092ef86ca0c2bfd0365"
+    sha256 "144a0e7a88513e2e9abd2274b2f774cfbf73ec4e3c2fa0080c37c29ee9a71bed"
     "ja-JP-mac"
   end
   language "nl" do
-    sha256 "eeaab38f21a567d3d52cea47495a61d9c20bf977241cb9ad7a2b454e7e38a4de"
+    sha256 "c1720b4aafdf80c6b79c5ee35b7e00ef92b7983392e809c4cc8a7102e90679b5"
     "nl"
   end
   language "pl" do
-    sha256 "8e3390018eeda426f1de945dd3ab0d0cc8e0a6f1bb5161c50cba3bcdd90735c2"
+    sha256 "1efe681ec19651f7ac9c4c35a0adc98bccb79219d7a0a9a4dd424b1170dc008d"
     "pl"
   end
   language "pt" do
-    sha256 "d35b355fe36eadf8ec5e9ebbbab6980670831c9fecc0b975734203abd7e1073e"
+    sha256 "5805beb69d761b7b5686cd38c5f26710210b8cd1b90b6c23f761a7524ce2c31f"
     "pt-PT"
   end
   language "pt-BR" do
-    sha256 "25377544912ed08f2041d7dae7532c064b3df8912d9c52791416c5b016bc0eea"
+    sha256 "c284a29b653c2f38179160c7e3ef062d662267b43e86580e0116141f1390dfab"
     "pt-BR"
   end
   language "ru" do
-    sha256 "27933bbb066b5fb326cb4231f4df3072ccd60ed6a3ebee38e4068fa6563a6180"
+    sha256 "fbca673361d90a9d4d533af4c630d67ae9acca071d2843d75a49834fc3734822"
     "ru"
   end
   language "uk" do
-    sha256 "33f87eae7eafebc416ba62da066f06ac0a633449a897ccd541980df4343a5d63"
+    sha256 "d90c63996211486813c8a0e1beddc92ba292e97db8e0821524a2c0776db28b93"
     "uk"
   end
   language "zh-TW" do
-    sha256 "9ef529a45ec0a807f004b14da241b19c0cdab5738d884018b711e4f04e89e0b7"
+    sha256 "5dd9c6527975a9d6cc1f23cec71274627ad379164ccde02675eb74cb898dab95"
     "zh-TW"
   end
   language "zh" do
-    sha256 "3ee66fed88104c02077882e9a9a0ada10ed8799308ea3b187f1ad52cd5765d14"
+    sha256 "6c80d0808b3dd5b628a54e9df37558ea576428a88fb66f6470f2e8d26a8a9741"
     "zh-CN"
   end
 
-  url "https://ftp.mozilla.org/pub/thunderbird/nightly/#{version.csv.second.split("-").first}/#{version.csv.second.split("-").second}/#{version.csv.second}-comm-central#{"-l10n" if language != "en-US"}/thunderbird-#{version.csv.first}.#{language}.mac.dmg",
-      verified: "ftp.mozilla.org/"
+  url "https://ftp.mozilla.org/pub/thunderbird/nightly/#{version.csv.second.split("-").first}/#{version.csv.second.split("-").second}/#{version.csv.second}-comm-central#{"-l10n" if language != "en-US"}/thunderbird-#{version.csv.first}.#{language}.mac.dmg"
   name "Mozilla Thunderbird Daily"
   desc "Customizable email client"
   homepage "https://www.thunderbird.net/#{language}/download/daily/"
@@ -94,6 +93,8 @@ cask "thunderbird@daily" do
   depends_on :macos
 
   app "Thunderbird Daily.app"
+
+  uninstall quit: "org.mozilla.thunderbird-daily"
 
   zap trash: [
         "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/org.mozilla.thunderbird*.sfl*",

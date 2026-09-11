@@ -34,24 +34,15 @@ jobs:
     steps:
       - name: Set up Homebrew
         id: setup-homebrew
-        uses: Homebrew/actions/setup-homebrew@18fcb8e3e06b4247c676c506750dc95ea7226479 # 2026.07.13.1
+        uses: Homebrew/actions/setup-homebrew@f8d4222eb633e65c2a0157383cf80861fc7fae7f # 2026.09.07.1
         with:
           core: false
           cask: false
 
-      - uses: Homebrew/actions/cache-homebrew-prefix@18fcb8e3e06b4247c676c506750dc95ea7226479 # 2026.07.13.1
-        # Don't cache the prefix for the formulae.brew.sh repository as it won't download its own JSON API files
-        if: github.repository != 'Homebrew/formulae.brew.sh'
-        with:
-          install: actionlint shellcheck zizmor
-          # Not needed in .github but required for other repositories with multiple uses of cache-homebrew-prefix.
-          workflow-key: actionlint
-
       - name: Install tools
-        if: github.repository == 'Homebrew/formulae.brew.sh'
         run: brew install actionlint shellcheck zizmor
 
-      - uses: actions/checkout@9c091bb21b7c1c1d1991bb908d89e4e9dddfe3e0 # v7.0.0
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
         with:
           persist-credentials: false
 
@@ -101,7 +92,7 @@ jobs:
           path: results.sarif
 
       - name: Upload SARIF file
-        uses: github/codeql-action/upload-sarif@99df26d4f13ea111d4ec1a7dddef6063f76b97e9 # v4.37.0
+        uses: github/codeql-action/upload-sarif@cdf488f595d80d6e07e03d4674febd5ab45fa938 # v4.37.9
         with:
           sarif_file: results.sarif
           category: zizmor

@@ -12,7 +12,7 @@ cask "ip-in-menu-bar" do
     regex(/IP\s+in\s+menubar\s+(\d+(?:\.\d+)+)/i)
   end
 
-  depends_on macos: :big_sur
+  depends_on :macos
 
   app "IP in menu bar.app"
 

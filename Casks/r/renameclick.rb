@@ -1,12 +1,11 @@
 cask "renameclick" do
   arch arm: "arm64", intel: "x64"
 
-  version "2.13.2"
-  sha256 arm:   "062335bc79d4575d4668b6844a8d5fdb6d48a556a6b5e2b934ca75ef28848d9d",
-         intel: "ebab57cdf696d733f1fa6ee905cf36d1b2f101c425a139111d0e1c6a1cf30d9f"
+  version "2.15.5"
+  sha256 arm:   "50c82ff176305f07cf5d593e9dd9f101c47b83fef1ca743be6211485e8e60ff4",
+         intel: "2dfef8a16f3c8c0b35784e1882b9f5ba5106174b480eb33399efe3bb131b275a"
 
-  url "https://github.com/noemaVision/renameclick/releases/download/v#{version}/RenameClick-#{version}-#{arch}.dmg",
-      verified: "github.com/noemaVision/renameclick/"
+  url "https://github.com/noemaVision/renameclick/releases/download/v#{version}/RenameClick-#{version}-#{arch}.dmg"
   name "RenameClick"
   desc "Local-first AI app for file renaming and organisation"
   homepage "https://rename.click/"
@@ -21,11 +20,15 @@ cask "renameclick" do
 
   app "RenameClick.app"
 
+  uninstall quit: "com.renameclick.app"
+
   zap trash: [
+    "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.renameclick.app.sfl*",
     "~/Library/Application Support/RenameClick",
     "~/Library/Caches/com.renameclick.app",
     "~/Library/Caches/com.renameclick.app.helper",
     "~/Library/HTTPStorages/com.renameclick.app",
+    "~/Library/Logs/RenameClick",
     "~/Library/Logs/renameclick.log",
     "~/Library/Preferences/com.renameclick.app.helper.plist",
     "~/Library/Preferences/com.renameclick.app.plist",

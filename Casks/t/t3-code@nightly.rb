@@ -1,13 +1,36 @@
 cask "t3-code@nightly" do
-  arch arm: "arm64", intel: "x64"
+  arch arm: "arm64", intel: on_system_conditional(macos: "x64", linux: "x86_64")
+  os macos: "dmg", linux: "AppImage"
 
-  version "0.0.29-nightly.20260719.851"
+  version "0.0.41-nightly.20260911.1533"
+  sha256 arm:          "d0a6619284fb96c48cdce59139a0f0ca487c1c73c9ab954dd7f2abcfd70e2cf0",
+         intel:        "56efb639827233cba6ff6a31d4861326f70029f4d65b936c06f9b8ce399630c5",
+         x86_64_linux: "3b4bc95e3f7a0ca85a0ddd9277f3ff4958411e4febff31bb18b433c770416cac"
 
-  artifact = on_system_conditional linux: "T3-Code-#{version}-x86_64.AppImage",
-                                   macos: "T3-Code-#{version}-#{arch}.dmg"
+  on_macos do
+    auto_updates true
+    depends_on macos: :ventura
 
-  url "https://github.com/pingdotgg/t3code/releases/download/v#{version}/#{artifact}",
-      verified: "github.com/pingdotgg/t3code/"
+    app "T3 Code (Nightly).app"
+
+    zap trash: [
+      "~/.t3/userdata",
+      "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.t3tools.t3code.sfl*",
+      "~/Library/Application Support/T3 Code (Alpha)",
+      "~/Library/Application Support/t3code",
+      "~/Library/Caches/com.t3tools.t3code",
+      "~/Library/HTTPStorages/com.t3tools.t3code",
+      "~/Library/Preferences/com.t3tools.t3code.plist",
+      "~/Library/Saved Application State/com.t3tools.t3code.savedState",
+    ]
+  end
+  on_linux do
+    depends_on arch: :x86_64
+
+    app_image "T3-Code-#{version}-#{arch}.AppImage", target: "T3 Code Nightly.AppImage"
+  end
+
+  url "https://github.com/pingdotgg/t3code/releases/download/v#{version}/T3-Code-#{version}-#{arch}.#{os}"
   name "T3 Code Nightly"
   desc "Minimal GUI for AI code agents"
   homepage "https://t3.codes/"
@@ -25,32 +48,5 @@ cask "t3-code@nightly" do
         match[1]
       end
     end
-  end
-
-  on_macos do
-    sha256 arm:   "c7050e6205e24dc479f7532da91d3deea8e07e8a0389b08136266e3ce2f7b24f",
-           intel: "732491ad05f84238051d6876a4d0d550816ab5203d330aecdf4214e6d22ec57a"
-
-    auto_updates true
-    depends_on macos: :monterey
-
-    app "T3 Code (Nightly).app"
-
-    zap trash: [
-      "~/.t3/userdata",
-      "~/Library/Application Support/T3 Code (Alpha)",
-      "~/Library/Application Support/t3code",
-      "~/Library/Caches/com.t3tools.t3code",
-      "~/Library/HTTPStorages/com.t3tools.t3code",
-      "~/Library/Preferences/com.t3tools.t3code.plist",
-      "~/Library/Saved Application State/com.t3tools.t3code.savedState",
-    ]
-  end
-
-  on_linux do
-    sha256 "9449f63061c49a55d1b8da8baaafc1243ecbb90e4cdeb21921a41ffecdd526c3"
-
-    depends_on arch: :x86_64
-    app_image artifact, target: "T3 Code Nightly.AppImage"
   end
 end

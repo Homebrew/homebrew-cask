@@ -1,12 +1,11 @@
 cask "hbuilderx" do
   arch arm: ".arm64"
 
-  version "5.15.2026070915"
-  sha256 arm:   "3cd9c2c4f39932e2d0a33fac557cdbf3d5fba3f63581ae2fc6ac1919bebc389b",
-         intel: "ac1f0b73d2d378c22b4f9be4b35364797edbac64356ac91e428d143c3e2bbe1e"
+  version "5.24.2026081301"
+  sha256 arm:   "3a1e0041551b25ddedcf00301ae0b00009167821749f953f917636b5f54e877b",
+         intel: "1539b4aaeffe1cbddcfc827e7f4928bd65755a35df1bce540fc350e75f868eae"
 
-  url "https://download1.dcloud.net.cn/download/HBuilderX.#{version}#{arch}.dmg",
-      verified: "download1.dcloud.net.cn/download/"
+  url "https://download1.dcloud.net.cn/download/HBuilderX.#{version}#{arch}.dmg"
   name "HBuilderX"
   desc "HTML editor"
   homepage "https://www.dcloud.io/hbuilderx.html"
@@ -18,7 +17,7 @@ cask "hbuilderx" do
     end
   end
 
-  depends_on macos: :big_sur
+  depends_on :macos
 
   app "HBuilderX.app"
 

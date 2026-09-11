@@ -1,8 +1,8 @@
 cask "font-symbols-only-nerd-font" do
-  version "3.4.0"
-  sha256 "8e617904b980fe3648a4b116808788fe50c99d2d495376cb7c0badbd8a564c47"
+  version "3.5.1"
+  sha256 "01172f37db8543edb102e5cb5c64101c9f4686630804d49b419aa07b23a69996"
 
-  url "https://github.com/ryanoasis/nerd-fonts/releases/download/v#{version}/NerdFontsSymbolsOnly.zip"
+  url "https://github.com/ryanoasis/nerd-fonts/releases/download/v#{version}/NerdFontsSymbolsOnly.tar.xz"
   name "Symbols Nerd Font (Symbols Only)"
   homepage "https://github.com/ryanoasis/nerd-fonts"
 

@@ -2,11 +2,11 @@ cask "awesun" do
   arch arm: "arm64", intel: "x86_64"
   livecheck_id = on_arch_conditional arm: "_ARM"
 
-  version "16.5.0.30905"
-  sha256 arm:   "1265c59faa0e66d66b4504495b38506d7a9628be63ec577f50ea3332cfd9748e",
-         intel: "14ef421eb76593f4034bb5c50a2ce35c29b69c10a55f34641de47f1d195d5661"
+  version "16.6.0.32198"
+  sha256 arm:   "77620f879d6b1b325d75afac647cb94dc0b74d6b0f4d1348794e1a27875c7c2b",
+         intel: "a51362ff9791e0542dccd75de917e85ce5ac6a77dcf2d89a74aa38797c578f75"
 
-  url "https://dw.oray.com/sl/mac/AweSun_v#{version}_#{arch}.dmg"
+  url "https://d-cdn.oray.com/sl/mac/AweSun_#{version}_#{arch}.dmg"
   name "Sunlogin Client"
   name "向日葵个人版"
   desc "Remote desktop control and monitoring tool"
@@ -23,13 +23,18 @@ cask "awesun" do
 
   pkg "AweSun.pkg"
 
-  postflight do
+  postflight_steps do
     # The postinstall script automatically opens the app. Therefore, we must
     # suppress this behavior to make the cask installation non-interactive.
-    retries ||= 3
-    ohai "The AweSun package postinstall script launches the app" if retries >= 3
-    ohai "Attempting to close AweSun to avoid unwanted user intervention" if retries >= 3
-    return unless system_command "/usr/bin/pkill", args: ["-f", "/Applications/AweSun.app"]
+    terminate_process(
+      "/Applications/AweSun.app",
+      match:        :full,
+      must_succeed: true,
+      notices:      [
+        "The AweSun package postinstall script launches the app",
+        "Attempting to close AweSun to avoid unwanted user intervention",
+      ],
+    )
   end
 
   uninstall launchctl: [
@@ -47,7 +52,7 @@ cask "awesun" do
             ],
             delete:    "/Applications/AweSun.app"
 
-  zap delete: "/private/var/log/AweSun/",
+  zap delete: "/private/var/log/AweSun",
       trash:  [
         "/Library/Application Support/Oray/AweSun",
         "/Library/LaunchDaemons/com.oray.awesun.helper.plist",

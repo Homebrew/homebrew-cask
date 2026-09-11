@@ -1,9 +1,8 @@
 cask "nessie-app" do
-  version "1.4.1571"
-  sha256 "0a15adc65c3071a8041f8caa80c468d4e2d16b4ac62735431b2c3d077c2de479"
+  version "1.4.3998"
+  sha256 "06e6f34e3b33b4917f949b2eb085360c2010750b8d34957d6b00d76c556b120a"
 
-  url "https://nessie-notes-app-auto-updates.s3.us-west-2.amazonaws.com/Nessie_#{version}.zip",
-      verified: "nessie-notes-app-auto-updates.s3.us-west-2.amazonaws.com/"
+  url "https://nessie-notes-app-auto-updates.s3.us-west-2.amazonaws.com/Nessie_#{version}.zip"
   name "Nessie"
   desc "Knowledge base from AI chats"
   homepage "https://nessielabs.com/"
@@ -20,8 +19,12 @@ cask "nessie-app" do
 
   zap trash: [
     "~/Library/Application Scripts/com.nessielabs.Nessie",
+    "~/Library/Application Support/CrashReporter/Nessie_*.plist",
+    "~/Library/Application Support/Nessie",
     "~/Library/Caches/com.nessielabs.Nessie",
     "~/Library/Containers/com.nessielabs.Nessie",
+    "~/Library/HTTPStorages/com.nessielabs.Nessie",
+    "~/Library/Logs/DiagnosticReports/Nessie-*.ips",
     "~/Library/Preferences/com.nessielabs.Nessie.plist",
   ]
 end

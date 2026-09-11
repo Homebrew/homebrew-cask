@@ -2,8 +2,7 @@ cask "font-yarndings-12" do
   version :latest
   sha256 :no_check
 
-  url "https://github.com/google/fonts/raw/main/ofl/yarndings12/Yarndings12-Regular.ttf",
-      verified: "github.com/google/fonts/"
+  url "https://github.com/google/fonts/raw/main/ofl/yarndings12/Yarndings12-Regular.ttf"
   name "Yarndings 12"
   homepage "https://fonts.google.com/specimen/Yarndings+12"
 

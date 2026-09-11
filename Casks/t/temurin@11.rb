@@ -1,12 +1,11 @@
 cask "temurin@11" do
   arch arm: "aarch64", intel: "x64"
 
-  version "11.0.31,11"
-  sha256 arm:   "7ff35af5d5d1c4a2540c4b826b817e06ba3b367cf141eeb7ea3d3b481c6ac42d",
-         intel: "408d9ab5dcbdd01a05ad942b4edda8be5a6dcc8c7ceeee8bb22fe039b71ba320"
+  version "11.0.32.1,1"
+  sha256 arm:   "e559ceb33cc71b402393997440b195c6d52647aff10d6cf0eaee148e9f333a91",
+         intel: "0180c3c43d6d9ab82173a1a0f0e9f57760793e9838b3ac2b1caaafa710d97319"
 
-  url "https://github.com/adoptium/temurin#{version.major}-binaries/releases/download/jdk-#{version.csv.first}%2B#{version.csv.second}/OpenJDK#{version.major}U-jdk_#{arch}_mac_hotspot_#{version.csv.first}_#{version.csv.second.major}.pkg",
-      verified: "github.com/adoptium/"
+  url "https://github.com/adoptium/temurin#{version.major}-binaries/releases/download/jdk-#{version.csv.first}%2B#{version.csv.second}/OpenJDK#{version.major}U-jdk_#{arch}_mac_hotspot_#{version.csv.first}_#{version.csv.second.major}.pkg"
   name "Eclipse Temurin 11"
   desc "JDK from the Eclipse Foundation (Adoptium)"
   homepage "https://adoptium.net/"

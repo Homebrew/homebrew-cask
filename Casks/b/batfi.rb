@@ -1,5 +1,5 @@
 cask "batfi" do
-  version "3.1.1"
+  version "4.0.0"
   sha256 :no_check
 
   url "https://files.micropixels.software/batfi/BatFi-latest.zip"
@@ -15,8 +15,8 @@ cask "batfi" do
   end
 
   auto_updates true
-  depends_on macos: :sonoma
   depends_on arch: :arm64
+  depends_on macos: :sonoma
 
   app "BatFi.app"
 

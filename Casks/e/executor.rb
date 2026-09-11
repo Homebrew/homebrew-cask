@@ -1,12 +1,11 @@
 cask "executor" do
   arch arm: "arm64", intel: "x64"
 
-  version "1.5.34"
-  sha256 arm:   "6942e8e1284cc1a08f02da253ce9f9e17b0cb59dfd9cb9ee79f2f7480151be9a",
-         intel: "f1506a7c204f4e85b09e708b0031de2e3a6fd2e16cb7b9be1dbbe0a76205ed63"
+  version "1.6.8"
+  sha256 arm:   "f4f948d9f253d796e37d4e344af70c326314b051cab42b7a43d0fc497ea2ca1f",
+         intel: "209a4cf289fe8233eb6ace7158a069b69172b07e62d4d73fbceb030e59143e33"
 
-  url "https://github.com/RhysSullivan/executor/releases/download/v#{version}/executor-desktop-mac-#{arch}.dmg",
-      verified: "github.com/RhysSullivan/executor/"
+  url "https://github.com/RhysSullivan/executor/releases/download/v#{version}/executor-desktop-mac-#{arch}.dmg"
   name "Executor"
   desc "Tool discovery and execution layer for AI agents"
   homepage "https://executor.sh/"
@@ -26,7 +25,9 @@ cask "executor" do
   zap trash: [
     "~/.executor",
     "~/.local/share/executor",
+    "~/Library/Application Support/@executor-js",
     "~/Library/Application Support/@executor-js/desktop",
+    "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/sh.executor.desktop.sfl*",
     "~/Library/Application Support/Executor",
     "~/Library/Caches/sh.executor.desktop",
     "~/Library/Caches/sh.executor.desktop.ShipIt",

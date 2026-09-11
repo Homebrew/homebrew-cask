@@ -6,10 +6,10 @@ cask "font-courier-prime" do
   name "Courier Prime"
   homepage "https://quoteunquoteapps.com/courierprime/"
 
-  font "Courier Prime/Courier Prime.ttf"
-  font "Courier Prime/Courier Prime Bold.ttf"
   font "Courier Prime/Courier Prime Bold Italic.ttf"
+  font "Courier Prime/Courier Prime Bold.ttf"
   font "Courier Prime/Courier Prime Italic.ttf"
+  font "Courier Prime/Courier Prime.ttf"
 
   # No zap stanza required
 end

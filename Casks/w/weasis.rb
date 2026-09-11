@@ -1,12 +1,11 @@
 cask "weasis" do
   arch arm: "aarch64", intel: "x86-64"
 
-  version "4.7.1"
-  sha256 arm:   "4dc9c9fc0b4a017c11d2aa1f063b54a4f6e9fefd058e96e8a145a01e6ab84888",
-         intel: "717bf23faf2c3eec419da5ffbf17afdc4e5d1c134507c4ed08adf197881e3a60"
+  version "4.7.3"
+  sha256 arm:   "5dc395a35390798bc8c9174c00afe968fce29c2845d248f9fa08e90e437a1ba7",
+         intel: "7580a3c20a0f52b2e3635ef6040cf09db6392c41c9522aa714d12fb7bb654579"
 
-  url "https://github.com/nroduit/Weasis/releases/download/v#{version}/Weasis-#{version}-#{arch}.pkg",
-      verified: "github.com/nroduit/Weasis/"
+  url "https://github.com/nroduit/Weasis/releases/download/v#{version}/Weasis-#{version}-#{arch}.pkg"
   name "Weasis"
   desc "Free DICOM viewer for displaying and analyzing medical images"
   homepage "https://weasis.org/en/index.html"

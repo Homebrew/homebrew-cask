@@ -1,6 +1,6 @@
 cask "dcp-o-matic-editor" do
-  version "2.18.44"
-  sha256 "20d2be72c5eaa1e77fe44254b2f221280a4ab05a925b5c4e2a8bd0b18d148fbe"
+  version "2.19.1"
+  sha256 "7780501c4303e5216620e426f441f38887ffcfc4707d227c54fd90afd9136a37"
 
   url "https://download.dcpomatic.com/dl.php?id=osx-10.10-editor&version=#{version}"
   name "DCP-o-matic Editor"
@@ -11,9 +11,9 @@ cask "dcp-o-matic-editor" do
     cask "dcp-o-matic"
   end
 
-  depends_on macos: :big_sur
+  depends_on :macos
 
   app "DCP-o-matic #{version.major} Editor.app"
 
-  # No zap stanza required
+  zap trash: "~/Library/Preferences/com.dcpomatic.editor.plist"
 end

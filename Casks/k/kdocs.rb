@@ -2,8 +2,7 @@ cask "kdocs" do
   version "3.11.2,1001"
   sha256 "9fe64f666405af7761e2858dcc486fbfb6a3ee58c242122155d989f5446de681"
 
-  url "https://qn.cache.wpscdn.cn/kdocs/apk/kdesktopmac/KDocs_#{version.csv.second}_v#{version.csv.first}.dmg",
-      verified: "qn.cache.wpscdn.cn/kdocs/apk/kdesktopmac/"
+  url "https://qn.cache.wpscdn.cn/kdocs/apk/kdesktopmac/KDocs_#{version.csv.second}_v#{version.csv.first}.dmg"
   name "金山文档"
   desc "Online collaborate editor for Word, Excel and PPT documents"
   homepage "https://www.kdocs.cn/"

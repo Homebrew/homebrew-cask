@@ -1,12 +1,12 @@
 cask "winbox" do
   os macos: ".dmg", linux: "_Linux.zip"
 
-  version "4.2"
+  version "4.3"
+  sha256 arm:          "5681d03e32133858b3dc541c78c1bae38cb3355b5fd98326ac725e0bd8bab570",
+         intel:        "5681d03e32133858b3dc541c78c1bae38cb3355b5fd98326ac725e0bd8bab570",
+         x86_64_linux: "573600ac24df38a7a06ea4318b12754247eec4b54c6c90b0a57100d676787a4c"
 
-  url "https://download.mikrotik.com/routeros/winbox/#{version}/WinBox#{os}"
   on_macos do
-    sha256 "ac405d90b87dfbb833765438b88fd2742016c169c6dad0503d64dd19c1137ec2"
-
     depends_on macos: :monterey
 
     app "WinBox.app"
@@ -18,8 +18,6 @@ cask "winbox" do
     ]
   end
   on_linux do
-    sha256 "86dc95c2e0ac091c2f030b1d9dbcfe67713d4e4ea41fc5347da183a3d0afc95a"
-
     depends_on arch: :x86_64
 
     binary "WinBox", target: "winbox"
@@ -27,6 +25,7 @@ cask "winbox" do
     zap trash: "#{ENV.fetch("HOMEBREW_XDG_DATA_HOME", "~/.local/share")}/MikroTik/WinBox"
   end
 
+  url "https://download.mikrotik.com/routeros/winbox/#{version}/WinBox#{os}"
   name "WinBox"
   desc "Administration tool for MikroTik RouterOS"
   homepage "https://mikrotik.com/"

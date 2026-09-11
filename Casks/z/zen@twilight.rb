@@ -1,29 +1,15 @@
 cask "zen@twilight" do
   arch arm: "aarch64", intel: "x86_64"
+  os macos: ".macos-universal", linux: "-#{arch}"
+  livecheck_os = on_system_conditional macos: "Darwin", linux: "Linux"
+  url_end = on_system_conditional macos: "dmg", linux: "AppImage"
 
-  version "1.22t,20260717111626"
+  version "1.23t,20260910084922"
   sha256 :no_check
-
-  artifact = on_system_conditional macos: "zen.macos-universal.dmg", linux: "zen-#{arch}.AppImage"
-
-  url "https://github.com/zen-browser/desktop/releases/download/twilight-1/#{artifact}",
-      verified: "github.com/zen-browser/desktop/"
-  name "Zen Twilight"
-  desc "Gecko based web browser"
-  homepage "https://zen-browser.app/"
-
-  livecheck do
-    url "https://updates.zen-browser.app/updates/browser/Darwin_aarch64-gcc3/twilight/update.xml"
-    strategy :xml do |xml|
-      xml.get_elements("//update").map { |item| "#{item.attributes["appVersion"]},#{item.attributes["buildID"]}" }
-    end
-  end
-
-  auto_updates true
 
   on_macos do
     app "Twilight.app"
-    binary "#{appdir}/Twilight.app/Contents/MacOS/zen", target: "zen-twilight"
+    command_wrapper "zen-twilight", executable: "#{appdir}/Twilight.app/Contents/MacOS/zen"
 
     uninstall quit: "app.zen-browser.zen"
 
@@ -39,8 +25,21 @@ cask "zen@twilight" do
         ],
         rmdir: "~/Library/Caches/Mozilla"
   end
-
   on_linux do
-    app_image artifact, target: "Zen Twilight.AppImage"
+    app_image "zen-#{arch}.AppImage", target: "Zen Twilight.AppImage"
   end
+
+  url "https://github.com/zen-browser/desktop/releases/download/twilight-1/zen#{os}.#{url_end}"
+  name "Zen Twilight"
+  desc "Gecko based web browser"
+  homepage "https://zen-browser.app/"
+
+  livecheck do
+    url "https://updates.zen-browser.app/updates/browser/#{livecheck_os}_#{arch}-gcc3/twilight/update.xml"
+    strategy :xml do |xml|
+      xml.get_elements("//update").map { |item| "#{item.attributes["appVersion"]},#{item.attributes["buildID"]}" }
+    end
+  end
+
+  auto_updates true
 end

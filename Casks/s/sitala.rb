@@ -1,6 +1,6 @@
 cask "sitala" do
-  version "2.1"
-  sha256 "2ff61671675d8581bbcbc530943cdffbadb075944deca698eed11a212d905f52"
+  version "2.1.1"
+  sha256 "ddf465dee57cd6ba741c72daf8bb3ce96f7628d85920b80a769a4e9886eb057c"
 
   url "https://decomposer.de/sitala/releases/Sitala-#{version}.dmg"
   name "Sitala"

@@ -1,6 +1,6 @@
 cask "paper" do
-  version "5.5.0"
-  sha256 "59c4cb97a31a85be754c5516a095628a12d16fede9e4564c02bc743158b25f89"
+  version "5.5.5"
+  sha256 "ccbef03d6fecf529e34c566034d8f052d5d719d3886fd19469cf27bfd078c16c"
 
   url "https://www.paperapp.net/app/pap.er_v#{version}.dmg"
   name "pap.er"
@@ -13,13 +13,14 @@ cask "paper" do
   end
 
   auto_updates true
-  depends_on macos: :big_sur
+  depends_on :macos
 
   app "pap.er.app"
 
   uninstall quit: "com.w.paper"
 
   zap trash: [
+    "~/Library/Application Scripts/com.w.paper",
     "~/Library/Containers/com.w.paper",
     "~/Library/Containers/com.w.paper-LaunchAtLoginHelper",
   ]

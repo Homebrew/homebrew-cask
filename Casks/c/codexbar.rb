@@ -1,9 +1,8 @@
 cask "codexbar" do
-  version "0.45.2"
-  sha256 "0a488ffafe991e8cbb93a48fa03fc8ba0fd1a40e6dbfe030c508382234a2f483"
+  version "0.59.0"
+  sha256 "d0bf866d879166a71032d12b7e8d7990b9e4d684744fa4a4c631e9d9acf83c2d"
 
-  url "https://github.com/steipete/CodexBar/releases/download/v#{version}/CodexBar-macos-universal-#{version}.zip",
-      verified: "github.com/steipete/CodexBar/"
+  url "https://github.com/steipete/CodexBar/releases/download/v#{version}/CodexBar-macos-universal-#{version}.zip"
   name "CodexBar"
   desc "Menu bar usage monitor for Codex and Claude"
   homepage "https://codexbar.app/"

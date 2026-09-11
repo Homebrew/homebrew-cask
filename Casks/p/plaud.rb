@@ -1,9 +1,9 @@
 cask "plaud" do
   arch arm: "-arm64"
 
-  version "1.3.2"
-  sha256 arm:   "c2f306a7890868d9e15705e8c89a157da9c19901ccb171dc6b63bfc5a57af69a",
-         intel: "1bc2177392eef877f254af5fcebc42b14cfce72f048995458fdbe27597ad28fc"
+  version "1.3.8"
+  sha256 arm:   "8ccf2ab4f671b16ae651e9c5c3b83e9421f10c39cbfc2eb3ab90d294228732b9",
+         intel: "41f02ed98b8972358871dee6c3297c6778a61673b710454360e00b19e0d04831"
 
   url "https://client-download.plaud.ai/desktop/v#{version.major}/Plaud-#{version}#{arch}.dmg"
   name "Plaud"
@@ -15,7 +15,7 @@ cask "plaud" do
     strategy :electron_builder
   end
 
-  depends_on macos: :big_sur
+  depends_on :macos
 
   app "Plaud.app"
 

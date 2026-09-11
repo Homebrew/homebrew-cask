@@ -6,8 +6,7 @@ cask "deepchat" do
   sha256 arm:   "140c77991f92010c42db429941ac7f7c4f0011da78b8d0799f6d2d791c007580",
          intel: "5ae22c8b6aba88e78f598977c11593ecbaf73197cc0d37c09e9d5fa127611d0c"
 
-  url "https://github.com/ThinkInAIXYZ/deepchat/releases/download/v#{version}/DeepChat-#{version}-mac-#{arch}.dmg",
-      verified: "github.com/ThinkInAIXYZ/deepchat/"
+  url "https://github.com/ThinkInAIXYZ/deepchat/releases/download/v#{version}/DeepChat-#{version}-mac-#{arch}.dmg"
   name "DeepChat"
   desc "AI assistant"
   homepage "https://deepchat.thinkinai.xyz/"
@@ -20,7 +19,7 @@ cask "deepchat" do
   end
 
   auto_updates true
-  depends_on macos: :big_sur
+  depends_on :macos
 
   app "DeepChat.app"
   binary "#{appdir}/DeepChat.app/Contents/MacOS/DeepChat", target: "deepchat"

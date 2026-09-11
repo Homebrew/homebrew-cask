@@ -32,7 +32,7 @@ cask "sf-symbols" do
     end
   end
   on_sequoia :or_newer do
-    version "8.0,123"
+    version "8.0,135"
     sha256 :no_check # required as upstream package is updated in-place
 
     livecheck do
@@ -55,7 +55,7 @@ cask "sf-symbols" do
   homepage "https://developer.apple.com/sf-symbols/"
 
   auto_updates true
-  depends_on macos: :big_sur
+  depends_on :macos
 
   pkg "SF Symbols.pkg"
 

@@ -2,8 +2,7 @@ cask "vial" do
   version "0.7.5"
   sha256 "b628db11f8df012faafcceef7deb36b54821b507d4c970336f85a56c800e8876"
 
-  url "https://github.com/vial-kb/vial-gui/releases/download/v#{version}/Vial-v#{version}.dmg",
-      verified: "github.com/vial-kb/vial-gui/"
+  url "https://github.com/vial-kb/vial-gui/releases/download/v#{version}/Vial-v#{version}.dmg"
   name "Vial"
   desc "Configurator of compatible keyboards in real time"
   homepage "https://get.vial.today/"

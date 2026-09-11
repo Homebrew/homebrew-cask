@@ -2,8 +2,7 @@ cask "fluent-reader" do
   version "1.2.2"
   sha256 "f966116db2ad855c30d5c710ec3c9d8408d867b81ca156b639539010e56ad906"
 
-  url "https://github.com/yang991178/fluent-reader/releases/download/v#{version}/Fluent.Reader.#{version}.dmg",
-      verified: "github.com/yang991178/fluent-reader/"
+  url "https://github.com/yang991178/fluent-reader/releases/download/v#{version}/Fluent.Reader.#{version}.dmg"
   name "Fluent Reader"
   desc "RSS/Atom news aggregator"
   homepage "https://hyliu.me/fluent-reader/"

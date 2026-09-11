@@ -2,8 +2,7 @@ cask "sketchup" do
   version "2026.2.242.76"
   sha256 "3a89d6ea7a5eddbd97521bde884f528f2dd6348b6408b74651551fb89d27c344"
 
-  url "https://download.sketchup.com/SketchUp-#{version.dots_to_hyphens}.dmg",
-      verified: "download.sketchup.com/"
+  url "https://download.sketchup.com/SketchUp-#{version.dots_to_hyphens}.dmg"
   name "SketchUp"
   desc "3D modeling software used to create and manipulate 3D models"
   homepage "https://sketchup.trimble.com/en"

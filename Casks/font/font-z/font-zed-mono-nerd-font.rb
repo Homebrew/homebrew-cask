@@ -1,8 +1,8 @@
 cask "font-zed-mono-nerd-font" do
-  version "3.4.0"
-  sha256 "14cdf24d017986c8912d3a23a29d532171f31e5800b579bb20b9aa542e8d6b3c"
+  version "3.5.1"
+  sha256 "0411af0883248778335d34bbad8e400466b638d5d896e15c2eb37cd9d4518321"
 
-  url "https://github.com/ryanoasis/nerd-fonts/releases/download/v#{version}/ZedMono.zip"
+  url "https://github.com/ryanoasis/nerd-fonts/releases/download/v#{version}/ZedMono.tar.xz"
   name "ZedMono Nerd Font (Zed Mono)"
   homepage "https://github.com/ryanoasis/nerd-fonts"
 

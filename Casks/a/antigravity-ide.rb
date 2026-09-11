@@ -2,12 +2,11 @@ cask "antigravity-ide" do
   arch arm: "arm", intel: "x64"
   livecheck_arch = on_arch_conditional arm: "-arm64"
 
-  version "2.1.1,6123990880747520"
-  sha256 arm:   "e0a132f335c368e2df874662f589eafca29697a51402017aeb7471026bdd1b29",
-         intel: "b2bd703835fc0558ffcc40e80aa78e128ef6397ebf26e78142b42247d7d0b8b7"
+  version "2.5.5,4923483625488384"
+  sha256 arm:   "cad67d6d30a537fcb3bb9a6100330040ec6bcb686e38069f1ff16fe42306a33e",
+         intel: "a6434e157a549d1553bd19f99a233fcb03f1d7f66eee30ea16683559dd112120"
 
-  url "https://edgedl.me.gvt1.com/edgedl/release2/j0qc3/antigravity/stable/#{version.csv.first}-#{version.csv.second}/darwin-#{arch}/Antigravity%20IDE.dmg",
-      verified: "edgedl.me.gvt1.com/edgedl/release2/j0qc3/antigravity/"
+  url "https://edgedl.me.gvt1.com/edgedl/release2/j0qc3/antigravity/stable/#{version.csv.first}-#{version.csv.second}/darwin-#{arch}/Antigravity%20IDE.dmg"
   name "Google Antigravity IDE"
   desc "AI Coding Agent IDE"
   homepage "https://antigravity.google/product/antigravity-ide"
@@ -33,9 +32,9 @@ cask "antigravity-ide" do
   uninstall quit: "com.google.antigravity-ide"
 
   zap trash: [
-    "~/.antigravity-ide-server/",
-    "~/.antigravity-ide/",
-    "~/.gemini/antigravity-ide/",
+    "~/.antigravity-ide",
+    "~/.antigravity-ide-server",
+    "~/.gemini/antigravity-ide",
     "~/Library/Application Support/Antigravity IDE",
     "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.google.antigravity-ide.sfl*",
     "~/Library/Caches/com.google.antigravity-ide",

@@ -5,8 +5,7 @@ cask "wordpresscom" do
   sha256 arm:   "6e584669c8d8fe7b96d75f99692cb102a654940fb5598ea0bc369a21e5a283e5",
          intel: "6bcff34d7a1590ccb8410d890252633e2c05cd8101d5b0d70f5b08f960aa7ca2"
 
-  url "https://github.com/Automattic/wp-desktop/releases/download/v#{version}/wordpress.com-macOS-dmg-#{version}-#{arch}.dmg",
-      verified: "github.com/Automattic/wp-desktop/"
+  url "https://github.com/Automattic/wp-desktop/releases/download/v#{version}/wordpress.com-macOS-dmg-#{version}-#{arch}.dmg"
   name "WordPress.com"
   desc "WordPress client"
   homepage "https://apps.wordpress.com/desktop/"

@@ -2,8 +2,7 @@ cask "ndi-tools" do
   version "6.3.2.0"
   sha256 :no_check
 
-  url "https://downloads.ndi.tv/Tools/NDIToolsInstaller.pkg",
-      verified: "downloads.ndi.tv/Tools/"
+  url "https://downloads.ndi.tv/Tools/NDIToolsInstaller.pkg"
   name "NDI Tools"
   desc "Tools & plugins for NDI"
   homepage "https://ndi.video/tools/"

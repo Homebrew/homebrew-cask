@@ -1,9 +1,8 @@
 cask "harper-desktop" do
-  version "2.6.0"
-  sha256 "1a62cb2fe8be6f4ec797923dfa7f07d81469d5b75c649f6c7fbfc8d253f0a9dc"
+  version "2.10.0"
+  sha256 "6ef7cd7d8f3bbf80e206d2fffb2d597bccae29789c59abde7efa3441d3d51406"
 
-  url "https://github.com/Automattic/harper/releases/download/v#{version}/Harper_#{version}_universal.dmg",
-      verified: "github.com/Automattic/harper/"
+  url "https://github.com/Automattic/harper/releases/download/v#{version}/Harper_#{version}_universal.dmg"
   name "Harper Desktop"
   desc "Grammar checker for developers"
   homepage "https://writewithharper.com/"

@@ -1,6 +1,6 @@
 cask "macmd-viewer" do
-  version "1.5.0"
-  sha256 "7b5c735ac311e4b81e3650a06528ce9bba976b5cf54823bc3391c5ce5c530b5c"
+  version "1.6.2"
+  sha256 "f38d641dc993e13fa9fac01ddbb51c863a6762523c39a0ea1d672813b51883d5"
 
   url "https://macmdviewer.com/downloads/v#{version}/MacMDViewer.dmg"
   name "MacMD Viewer"
@@ -18,7 +18,12 @@ cask "macmd-viewer" do
   app "MacMD Viewer.app"
 
   zap trash: [
+    "~/Library/Application Scripts/com.arthur.MarkdownViewer",
+    "~/Library/Application Scripts/group.com.arthur.MarkdownViewer",
+    "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.arthur.markdownviewer.sfl*",
     "~/Library/Caches/com.arthur.MarkdownViewer",
+    "~/Library/Containers/com.arthur.MarkdownViewer",
+    "~/Library/Group Containers/group.com.arthur.MarkdownViewer",
     "~/Library/HTTPStorages/com.arthur.MarkdownViewer",
     "~/Library/Preferences/com.arthur.MarkdownViewer.plist",
     "~/Library/Saved Application State/com.arthur.MarkdownViewer.savedState",

@@ -2,12 +2,11 @@ cask "dropbox" do
   arch arm: ".arm64"
   livecheck_query = on_arch_conditional arm: "&arch=arm64"
 
-  version "260.4.2926"
-  sha256 arm:   "03b5507c71436f3a88657f70dc926059b76b8aa57495690e1fad70105f0f9b75",
-         intel: "9d427d0cc1cdd666d6de66343b9d789b1fb5784d65ff6b2570c3f28b16855026"
+  version "268.4.4124"
+  sha256 arm:   "c07371457ba5c23a72b9a6bf101286886ef7db876d34c81daedc5be8688eafaa",
+         intel: "6ae7f7efce0b1d163ab73f93739c4ff878ae04ba7387189e94ace9235d238851"
 
-  url "https://edge.dropboxstatic.com/dbx-releng/client/Dropbox%20#{version}#{arch}.dmg",
-      verified: "dropboxstatic.com/dbx-releng/client/"
+  url "https://edge.dropboxstatic.com/dbx-releng/client/Dropbox%20#{version}#{arch}.dmg"
   name "Dropbox"
   desc "Client for the Dropbox cloud storage service"
   homepage "https://www.dropbox.com/"
@@ -24,7 +23,11 @@ cask "dropbox" do
 
   app "Dropbox.app"
 
-  uninstall launchctl: "com.dropbox.DropboxMacUpdate.agent",
+  uninstall launchctl: [
+              "com.dropbox.DropboxMacUpdate.agent",
+              "com.dropbox.dropboxmacupdate.xpcservice",
+              "com.dropbox.DropboxUpdater.wake",
+            ],
             quit:      "com.getdropbox.dropbox",
             kext:      "com.getdropbox.dropbox.kext",
             delete:    [

@@ -1,9 +1,8 @@
 cask "groove-omnidialer" do
-  version "26.717.933"
-  sha256 "460f8f2fc4cec19efc480091d780c31eefa78ba529454fc7237c20ba3d02586b"
+  version "26.910.928"
+  sha256 "a6189d1a678cc091a68a6325ec2d759ec06deca8504f061e3747ac4e58a285a1"
 
-  url "https://groove-dialer.s3-us-west-2.amazonaws.com/electron/Groove%20OmniDialer-#{version}-universal.dmg",
-      verified: "groove-dialer.s3-us-west-2.amazonaws.com/electron/"
+  url "https://groove-dialer.s3-us-west-2.amazonaws.com/electron/Groove%20OmniDialer-#{version}-universal.dmg"
   name "Groove OmniDialer"
   desc "Outbound sales dialer for making and managing calls"
   homepage "https://www.groove.co/"
@@ -14,7 +13,7 @@ cask "groove-omnidialer" do
   end
 
   auto_updates true
-  depends_on macos: :catalina
+  depends_on :macos
 
   app "Groove OmniDialer.app"
 

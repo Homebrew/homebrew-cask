@@ -2,8 +2,7 @@ cask "ivacy" do
   version "7.0.1"
   sha256 :no_check
 
-  url "https://apps-ivacy.s3.amazonaws.com/mac/Ivacy.dmg",
-      verified: "apps-ivacy.s3.amazonaws.com/"
+  url "https://apps-ivacy.s3.amazonaws.com/mac/Ivacy.dmg"
   name "Ivacy"
   desc "VPN client"
   homepage "https://www.ivacy.com/"

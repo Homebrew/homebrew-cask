@@ -2,8 +2,7 @@ cask "transmission@beta" do
   version "4.1.3"
   sha256 "d622736c19990262f2ab12183e1acaa5b0dad5777ddc7db0a187c06e035a7e1a"
 
-  url "https://github.com/transmission/transmission/releases/download/#{version}/Transmission-#{version}.dmg",
-      verified: "github.com/transmission/transmission/"
+  url "https://github.com/transmission/transmission/releases/download/#{version}/Transmission-#{version}.dmg"
   name "Transmission"
   desc "Open-source BitTorrent client"
   homepage "https://transmissionbt.com/"
@@ -30,7 +29,7 @@ cask "transmission@beta" do
     "transmission",
     "transmission@nightly",
   ]
-  depends_on macos: :big_sur
+  depends_on :macos
 
   app "Transmission.app"
 

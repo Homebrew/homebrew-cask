@@ -1,9 +1,8 @@
 cask "musescore" do
-  version "4.7.4.260706075,4.7.4"
-  sha256 "e3596e27da0806a3384cab67d52f8478ad21ed2bd6fc96d7cb874d840b016fac"
+  version "4.7.5.260831071,4.7.5"
+  sha256 "5a8cc26994d3f346d3e7d88c6a1583959e990ee9346b00d7b1d3f9498de6473a"
 
-  url "https://github.com/musescore/MuseScore/releases/download/v#{version.csv.second}/MuseScore-Studio-#{version.csv.first}.dmg",
-      verified: "github.com/musescore/MuseScore/"
+  url "https://github.com/musescore/MuseScore/releases/download/v#{version.csv.second}/MuseScore-Studio-#{version.csv.first}.dmg"
   name "MuseScore"
   desc "Open-source music notation software"
   homepage "https://musescore.org/"
@@ -25,16 +24,10 @@ cask "musescore" do
   depends_on :macos
 
   app "MuseScore #{version.major}.app"
-  # shim script (https://github.com/caskroom/homebrew-cask/issues/18809)
-  shimscript = "#{staged_path}/mscore.wrapper.sh"
-  binary shimscript, target: "mscore"
+  command_wrapper "mscore",
+                  executable: "#{appdir}/MuseScore #{version.major}.app/Contents/MacOS/mscore"
 
-  preflight do
-    File.write shimscript, <<~EOS
-      #!/bin/sh
-      exec '#{appdir}/MuseScore #{version.major}.app/Contents/MacOS/mscore' "$@"
-    EOS
-  end
+  uninstall quit: "org.musescore.MuseScore"
 
   zap trash: [
     "~/Library/Application Support/MuseScore",

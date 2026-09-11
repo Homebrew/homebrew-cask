@@ -6,8 +6,8 @@ cask "font-trebuchet-ms" do
   name "Trebuchet MS"
   homepage "https://sourceforge.net/projects/corefonts/files/the%20fonts/final/"
 
-  font "trebuc.ttf"
   font "Trebucbd.ttf"
+  font "trebuc.ttf"
   font "trebucbi.ttf"
   font "trebucit.ttf"
 

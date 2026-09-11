@@ -1,13 +1,5 @@
 cask "boxcryptor" do
-  on_catalina :or_older do
-    version "2.46.1667"
-    sha256 "386defb15f934561541929ddfe9305fb6a44121b59804810f641b52986996a0b"
-
-    livecheck do
-      skip "Legacy version"
-    end
-  end
-  on_big_sur do
+  on_big_sur :or_older do
     version "2.46.1668"
     sha256 "0cd09325a1bb9716cd56b67ca8c080d5d0e6ea77c2360cdf15d1368c4725869f"
 

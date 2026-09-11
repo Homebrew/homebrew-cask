@@ -2,14 +2,13 @@ cask "macdown-3000" do
   version "3000.0.7"
   sha256 "62296564c5b6604b93c9a11849ec441572beadbde2e499dcc232e1d1ddd01c98"
 
-  url "https://github.com/schuyler/macdown3000/releases/download/v#{version}/MacDown-#{version}.dmg",
-      verified: "github.com/schuyler/macdown3000/"
+  url "https://github.com/schuyler/macdown3000/releases/download/v#{version}/MacDown-#{version}.dmg"
   name "MacDown 3000"
   desc "Markdown editor with live preview and syntax highlighting"
   homepage "https://macdown.app/"
 
   conflicts_with cask: "macdown"
-  depends_on macos: :big_sur
+  depends_on :macos
 
   app "MacDown 3000.app"
   binary "#{appdir}/MacDown 3000.app/Contents/SharedSupport/bin/macdown"

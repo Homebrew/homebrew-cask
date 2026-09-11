@@ -4,7 +4,7 @@ cask "font-caacupe-one" do
 
   url "https://github.com/google/fonts/raw/main/ofl/caacupeone/CaacupeOne-Regular.ttf"
   name "Caacupe One"
-  homepage "https://github.com/googlefonts/caacupe"
+  homepage "https://fonts.google.com/specimen/Caacupe+One"
 
   font "CaacupeOne-Regular.ttf"
 

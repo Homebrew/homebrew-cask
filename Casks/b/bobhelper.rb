@@ -2,8 +2,7 @@ cask "bobhelper" do
   version "0.1.0"
   sha256 "1b888ec348cf28a509cca874e30688dab8975043d89dd6371aad04f565be9fbd"
 
-  url "https://release.ripperhe.com/BobHelper/tag/v#{version}/BobHelper.dmg",
-      verified: "release.ripperhe.com/BobHelper/"
+  url "https://release.ripperhe.com/BobHelper/tag/v#{version}/BobHelper.dmg"
   name "BobHelper"
   desc "Helper tool designed for Bob to solve the shortcut key issue"
   homepage "https://bobtranslate.com/guide/advance/bobhelper.html"

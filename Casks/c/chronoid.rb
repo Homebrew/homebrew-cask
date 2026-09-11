@@ -1,6 +1,6 @@
 cask "chronoid" do
-  version "1.0.91"
-  sha256 "c4b910af5765ac0d5d48ff0679084eaf518c142b4095f626c16e26fd49b849ec"
+  version "1.0.101"
+  sha256 "78731d9b607ba437625cc65693c161506efade8ffa4601a3fd8c9593644bf849"
 
   url "https://download.chronoid.app/Chronoid-#{version}.dmg"
   name "Chronoid"
@@ -18,6 +18,7 @@ cask "chronoid" do
   app "Chronoid.app"
 
   zap trash: [
+    "/Users/Shared/.chronoid-security",
     "~/Library/Application Support/com.vu.Chronoid",
     "~/Library/Caches/com.vu.Chronoid",
     "~/Library/HTTPStorages/com.vu.Chronoid",

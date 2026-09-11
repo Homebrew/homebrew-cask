@@ -1,9 +1,8 @@
 cask "tiger-trade" do
-  version "9.23.3"
-  sha256 "326969ccf108eaefafe477ea447ac93f450cece803f2e01d669ccff7f7bb7b88"
+  version "9.26.2"
+  sha256 "ddf5578ba565b06404c4574c6a22181196d02e513e21b8a32d5aedeca0a6f6e0"
 
-  url "https://download.tigerfintech.com/desktop/cdn/f/TigerTrade_#{version}.dmg",
-      verified: "download.tigerfintech.com/"
+  url "https://download.tigerfintech.com/desktop/cdn/f/TigerTrade_#{version}.dmg"
   name "Tiger Trade"
   name "老虎证券"
   desc "Trading platform"
@@ -23,6 +22,7 @@ cask "tiger-trade" do
 
   zap trash: [
     "~/Library/Application Scripts/com.itiger.TigerTrade-Mac",
+    "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.itiger.tigertrade-mac.sfl*",
     "~/Library/Containers/com.itiger.TigerTrade-Mac",
   ]
 end

@@ -2,8 +2,7 @@ cask "mymonero" do
   version "1.3.3"
   sha256 "39001378bdd5db86329b4b4bb70cdb876f632c82855ea53502f7824f9e114e05"
 
-  url "https://github.com/mymonero/mymonero-app-js/releases/download/v#{version}/MyMonero-#{version}.dmg",
-      verified: "github.com/mymonero/mymonero-app-js/"
+  url "https://github.com/mymonero/mymonero-app-js/releases/download/v#{version}/MyMonero-#{version}.dmg"
   name "MyMonero"
   desc "Wallet for the Monero cryptocurrency"
   homepage "https://mymonero.com/"

@@ -1,12 +1,11 @@
 cask "agentsmesh" do
   arch arm: "-arm64"
 
-  version "0.44.4"
-  sha256 arm:   "240a096cb8ac43a8802d29bdf6cace09a516f2a3730beb99bf434a3840accd63",
-         intel: "8f06efcf40ca40eec2b6f8be322b33a129ff4469d469834c0cbedc4fe12e045b"
+  version "0.44.7"
+  sha256 arm:   "8b016def312775f24c85c325c8d48eca8edf4b830ffb355437c7127d4ccc4954",
+         intel: "49d05189cc4765ce9855f602774a059a884ff647073a959db3fd569243c0c77b"
 
-  url "https://github.com/AgentsMesh/AgentsMesh/releases/download/v#{version}/AgentsMesh-#{version}#{arch}.dmg",
-      verified: "github.com/AgentsMesh/AgentsMesh/"
+  url "https://github.com/AgentsMesh/AgentsMesh/releases/download/v#{version}/AgentsMesh-#{version}#{arch}.dmg"
   name "AgentsMesh"
   desc "AI agent workforce platform"
   homepage "https://agentsmesh.ai/"
@@ -16,12 +15,13 @@ cask "agentsmesh" do
     strategy :github_latest
   end
 
-  depends_on macos: :big_sur
+  depends_on :macos
 
   app "AgentsMesh.app"
 
   zap trash: [
     "~/Library/Application Support/agentsmesh",
+    "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/ai.agentsmesh.desktop.sfl*",
     "~/Library/Caches/agentsmesh-updater",
     "~/Library/Caches/ai.agentsmesh.desktop",
     "~/Library/HTTPStorages/ai.agentsmesh.desktop",

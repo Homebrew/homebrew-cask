@@ -1,6 +1,6 @@
 cask "thinlinc-client" do
-  version "4.20.0_4284"
-  sha256 "5a762511077829a004e0acb45bd5b7e6b4ae2dfe12cb62ec04425937d173f230"
+  version "4.21.0_4588"
+  sha256 "e398bce58c233fc6626fc0ace72e467f313d21082734d8839d552a3124427ec6"
 
   url "https://www.cendio.com/downloads/clients/tl-#{version}-client-macos.dmg"
   name "ThinLinc"
@@ -12,7 +12,7 @@ cask "thinlinc-client" do
     regex(/tl[._-]v?(\d+(?:[._]\d+)+)[._-]client[._-]macos\.(?:dmg|iso)/i)
   end
 
-  depends_on :macos
+  depends_on macos: :ventura
 
   app "ThinLinc Client.app"
 

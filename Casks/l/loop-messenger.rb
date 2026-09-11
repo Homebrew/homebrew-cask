@@ -5,8 +5,7 @@ cask "loop-messenger" do
   sha256 arm:   "e0cc5604ba65178b1064769e6d72d38d5944bf46fba87e8103443873b2d8ce49",
          intel: "be760a6a2538d328fd3f3902b1f99b77e8ed5cf8bc94b0c844371e3ecc622032"
 
-  url "https://artifacts.wilix.dev/repository/loop-files/loop-#{version}/loop-desktop-#{version}-mac-#{arch}.dmg",
-      verified: "artifacts.wilix.dev/"
+  url "https://artifacts.wilix.dev/repository/loop-files/loop-#{version}/loop-desktop-#{version}-mac-#{arch}.dmg"
   name "Loop"
   desc "Team messenger for business communication"
   homepage "https://loop.ru/"

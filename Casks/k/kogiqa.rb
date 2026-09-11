@@ -1,6 +1,6 @@
 cask "kogiqa" do
-  version "0.5.1105"
-  sha256 "098b8416deafacaad53329c1a35ba6e0554243eb3b6db386597f54f33b519fe5"
+  version "0.5.1149"
+  sha256 "ab859c7223780995aeac4280c8f2eea2b0700744116171118615a8a328931d41"
 
   url "https://updater.kogiqa.com/release/kogi-qa-#{version}-universal.dmg"
   name "kogiQA"
@@ -17,5 +17,9 @@ cask "kogiqa" do
 
   app "kogiQA.app"
 
-  zap trash: "~/Library/Application Support/kogiQA"
+  zap trash: [
+    "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.atagon.kogi.app.sfl*",
+    "~/Library/Application Support/kogiQA",
+    "~/Library/Preferences/com.atagon.kogi.app.plist",
+  ]
 end

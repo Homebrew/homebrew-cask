@@ -1,12 +1,11 @@
 cask "eigent" do
   arch arm: "-arm64"
 
-  version "1.0.1"
-  sha256 arm:   "1d1418bd543896f35a785f6f24ae3330d499a5e3618b27b380b22e6ae7f3847b",
-         intel: "885cf738da3af0874b838b08acfeff1309046e1933cf9c7b6d7558844966fa22"
+  version "1.0.4"
+  sha256 arm:   "2f05a18ea7f5d7c1d62add5ce7aacf1c0330af7d7bc07e98902c3860a44480dd",
+         intel: "45d23b31a5b4d44aa822915455a3bf97ab68c5a69e00789ec64276204213cdc4"
 
-  url "https://github.com/eigent-ai/eigent/releases/download/v#{version}/Eigent-#{version}#{arch}.dmg",
-      verified: "github.com/eigent-ai/eigent/"
+  url "https://github.com/eigent-ai/eigent/releases/download/v#{version}/Eigent-#{version}#{arch}.dmg"
   name "Eigent"
   desc "Desktop AI agent"
   homepage "https://www.eigent.ai/"
@@ -30,9 +29,11 @@ cask "eigent" do
     end
   end
 
-  depends_on macos: :big_sur
+  depends_on :macos
 
   app "Eigent.app"
+
+  uninstall quit: "com.eigent.app"
 
   zap trash: [
     "~/.eigent",

@@ -1,9 +1,8 @@
 cask "juicy" do
-  version "1.5.2,2606251712"
-  sha256 "98319db8a2f9d0f9c097d4ebc41b52ee2c7610fc9b35700f013a1a0b7e49e2ae"
+  version "1.5.6,2608211929"
+  sha256 "99ea6893d651ffdfe7c9e7645b0ae1591eb84d8ad886e9ce520f1453c033c8e7"
 
-  url "https://cdn.amore.computer/releases/io.sevendegrees.juicy.direct/#{version.csv.first}-#{version.csv.second}/Juicy.dmg",
-      verified: "cdn.amore.computer/releases/io.sevendegrees.juicy.direct/"
+  url "https://cdn.amore.computer/releases/io.sevendegrees.juicy.direct/#{version.csv.first}-#{version.csv.second}/Juicy.dmg"
   name "Juicy"
   desc "Menu bar battery monitor with custom charge alerts and health tracking"
   homepage "https://getjuicy.app/"

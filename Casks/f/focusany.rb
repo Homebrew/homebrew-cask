@@ -1,12 +1,11 @@
 cask "focusany" do
   arch arm: "arm64", intel: "x64"
 
-  version "2.0.0"
-  sha256 arm:   "0bbac3d2bd16560fc4cf8fc8badb273892e242823f3d2b8aa70fae4e55aca392",
-         intel: "10f6a0d2e72255bd12f1ea95e642573f9a2042c3b6a416a6fa619cd4004900cf"
+  version "2.2.0"
+  sha256 arm:   "2b783943d15e55e632ea56ea1185d1eb4790f452ab2b833ab646863f4fafbe96",
+         intel: "a1d7585af304a179ee49e2f958f9fd31290178e4d99800591ab7cc8b3c6cc27f"
 
-  url "https://github.com/modstart-lib/focusany/releases/download/v#{version}/FocusAny-#{version}-mac-#{arch}.dmg",
-      verified: "github.com/modstart-lib/focusany/"
+  url "https://github.com/modstart-lib/focusany/releases/download/v#{version}/FocusAny-#{version}-mac-#{arch}.dmg"
   name "FocusAny"
   desc "Open source desktop toolbox"
   homepage "https://focusany.com/"
@@ -15,8 +14,12 @@ cask "focusany" do
 
   app "FocusAny.app"
 
+  uninstall quit: "com.focusany.app"
+
   zap trash: [
+    "~/.focusany",
     "~/Library/Application Support/focusany",
+    "~/Library/Preferences/com.focusany.app.plist",
     "~/Library/Preferences/FocusAny.plist",
     "~/Library/Saved Application State/FocusAny.savedState",
   ]

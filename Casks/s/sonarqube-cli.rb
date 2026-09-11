@@ -2,21 +2,18 @@ cask "sonarqube-cli" do
   arch arm: "arm64", intel: "x86-64"
   os macos: "macos", linux: "linux"
 
-  version "1.3.0.3493"
+  version "1.7.0.4638"
+  sha256 arm:          "8a4611b2899dafeef2be6c2d820b3d2c004a02acd012bf7b0f1fd08ca9193659",
+         arm64_linux:  "f4a69cc7f9c1312567572f674e4343094e6325e1c142d05d3e491482d8979329",
+         x86_64_linux: "42b9dd631120b8776cd63daafd18db8e2d1229fdcde2a3ce6ef258580eb63a8c"
+
+  on_macos do
+    depends_on arch: :arm64
+  end
 
   artifact = "sonarqube-cli-#{version}-#{os}-#{arch}.bin"
 
   url "https://binaries.sonarsource.com/Distribution/sonarqube-cli/#{version}/#{os}/#{artifact}"
-  on_macos do
-    sha256 "f4c80d4c3c484e7c2545395931bc0035f895deaec10003d4479e08d3cad28045"
-    depends_on arch: :arm64
-  end
-
-  on_linux do
-    sha256 arm64_linux:  "57019f9b8540015c0aba5a9e6defc3d46b1ff984fa12f71602597b4c82bee679",
-           x86_64_linux: "c999e7873f53df19512aae53e1089f13bb3e8d87680d8aa0d1de2f8d801950c9"
-  end
-
   name "SonarQube CLI"
   desc "Code quality and security for terminal workflows, scripts, and AI agents"
   homepage "https://www.sonarsource.com/sonarqube/cli/"

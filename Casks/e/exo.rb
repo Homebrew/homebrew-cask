@@ -25,16 +25,14 @@ cask "exo" do
               "/Library/Application Support/EXO/disable_bridge_enable_dhcp.sh",
               "/Library/LaunchDaemons/io.exo.networksetup.plist",
             ],
-            rmdir:     [
-              "/Library/Application Support/EXO",
-              "~/.exo",
-            ]
+            rmdir:     "/Library/Application Support/EXO"
 
   zap trash: [
-    "~/Library/Application Support/exolabs.EXO",
-    "~/Library/Caches/exolabs.EXO",
-    "~/Library/HTTPStorages/exolabs.EXO",
-    "~/Library/Preferences/exolabs.EXO.plist",
-    "~/Library/Saved Application State/exolabs.EXO.savedState",
-  ]
+        "~/Library/Application Support/exolabs.EXO",
+        "~/Library/Caches/exolabs.EXO",
+        "~/Library/HTTPStorages/exolabs.EXO",
+        "~/Library/Preferences/exolabs.EXO.plist",
+        "~/Library/Saved Application State/exolabs.EXO.savedState",
+      ],
+      rmdir: "~/.exo"
 end

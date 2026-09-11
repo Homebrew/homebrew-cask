@@ -1,33 +1,15 @@
 cask "dbx" do
-  on_macos do
-    arch arm: "aarch64", intel: "x64"
-  end
-  on_linux do
-    arch arm: "aarch64", intel: "amd64"
-  end
+  arch arm: "arm64", intel: on_system_conditional(macos: "x64", linux: "amd64")
+  os macos: "dmg", linux: "AppImage"
 
-  version "0.5.60"
-  sha256 arm:          "0f1abc90e7bf3d2e21a9f4bcb431438ef0f63e4882af3ef40654b14a6bdf0be5",
-         intel:        "94abda7ceb166b0168be860d75c548884e9d8ce49b9fcc43c18a94cc19fd257e",
-         arm64_linux:  "896fbb46477029b3f94f2e1e67c59dadfa7f2243a3f75ac56364110771e2965d",
-         x86_64_linux: "b244ef1ed3cd29f081c5938d8a4f506de2720d0f0ac89094e7a0ae38edd1bb08"
-
-  url_end = on_system_conditional macos: ".dmg", linux: ".AppImage"
-
-  url "https://github.com/t8y2/dbx/releases/download/v#{version}/DBX_#{version}_#{arch}#{url_end}",
-      verified: "github.com/t8y2/dbx/"
-  name "DBX"
-  desc "Database management tool"
-  homepage "https://dbxio.com/"
-
-  livecheck do
-    url :url
-    strategy :github_latest
-  end
+  version "0.6.10"
+  sha256 arm:          "5e1e85b0501b95146356a8fb573e530fa525dc68e62de1c355bee3b07240053b",
+         intel:        "5fdc73c34986d2f547d192644fe63c3056aa80fe25ccf0d0e2d0ec991255ef40",
+         arm64_linux:  "cd66a9e0c3813235dcc0e41dadb210b4f3302ba7c21da94c383e333863891975",
+         x86_64_linux: "69cbeb8dce877a8918193ee7019805491da6dfd239a44445824109dabc5056ad"
 
   on_macos do
     auto_updates true
-    depends_on macos: :big_sur
 
     app "DBX.app"
 
@@ -36,10 +18,20 @@ cask "dbx" do
       "~/Library/Caches/com.dbx.app",
       "~/Library/Logs/com.dbx.app",
       "~/Library/Preferences/com.dbx.app.plist",
+      "~/Library/WebKit/com.dbx.app",
     ]
   end
-
   on_linux do
     app_image "DBX_#{version}_#{arch}.AppImage", target: "DBX.AppImage"
+  end
+
+  url "https://github.com/t8y2/dbx/releases/download/v#{version}/DBX_#{version}_#{arch}.#{os}"
+  name "DBX"
+  desc "Database management tool"
+  homepage "https://dbxio.com/"
+
+  livecheck do
+    url :url
+    strategy :github_latest
   end
 end

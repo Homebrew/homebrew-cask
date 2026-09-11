@@ -1,9 +1,8 @@
 cask "lulu" do
-  version "4.3.2"
-  sha256 "651d85539cb7008b33b8571215a8b8040f4f26d77306675e9c8972294a80f541"
+  version "4.5.1"
+  sha256 "98f4d3427f4c6fccf9680fed22879be90a5ae81e80eb8616c1d758755b6bb624"
 
-  url "https://github.com/objective-see/LuLu/releases/download/v#{version}/LuLu_#{version}.dmg",
-      verified: "github.com/objective-see/LuLu/"
+  url "https://github.com/objective-see/LuLu/releases/download/v#{version}/LuLu_#{version}.dmg"
   name "LuLu"
   desc "Open-source firewall to block unknown outgoing connections"
   homepage "https://objective-see.org/products/lulu.html"

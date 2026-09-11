@@ -2,8 +2,7 @@ cask "font-monaspace" do
   version "1.400"
   sha256 "ab66d71be751495f679727332a3345597943bd4d7beebca03f5cde04bf994de7"
 
-  url "https://github.com/githubnext/monaspace/releases/download/v#{version}/monaspace-static-v#{version}.zip",
-      verified: "github.com/githubnext/monaspace/"
+  url "https://github.com/githubnext/monaspace/releases/download/v#{version}/monaspace-static-v#{version}.zip"
   name "Monaspace"
   homepage "https://monaspace.githubnext.com/"
 

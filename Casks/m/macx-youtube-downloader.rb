@@ -7,8 +7,9 @@ cask "macx-youtube-downloader" do
   desc "Tool to download videos from YouTube"
   homepage "https://www.macxdvd.com/free-youtube-video-downloader-mac/"
 
+  # https 302-redirects back to http
   livecheck do
-    url "https://www.macxdvd.com/free-youtube-video-downloader-mac/upgrade/macx-youtube-downloader#{version.major}.plist"
+    url "http://www.macxdvd.com/free-youtube-video-downloader-mac/upgrade/macx-youtube-downloader#{version.major}.plist"
     strategy :xml do |xml|
       version = xml.elements["//key[text()='LastestVersion']"]&.next_element&.text
       next if version.blank?

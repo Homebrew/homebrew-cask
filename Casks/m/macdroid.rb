@@ -2,8 +2,7 @@ cask "macdroid" do
   version "2.10"
   sha256 :no_check
 
-  url "https://cdn.electronic.us/products/macdroid/mac/download/macdroid.dmg",
-      verified: "cdn.electronic.us/products/macdroid/mac/download/"
+  url "https://cdn.electronic.us/products/macdroid/mac/download/macdroid.dmg"
   name "MacDroid"
   desc "Connect to your Android devices"
   homepage "https://www.macdroid.app/"
@@ -14,7 +13,7 @@ cask "macdroid" do
   end
 
   auto_updates true
-  depends_on macos: :big_sur
+  depends_on :macos
 
   app "MacDroid.app"
 

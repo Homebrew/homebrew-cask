@@ -1,10 +1,6 @@
 cask "microsoft-powerpoint" do
   on_ventura :or_older do
-    on_catalina :or_older do
-      version "16.66.22101101"
-      sha256 "bea8c4790445f726debd0f64d24fbdac59e3a9b51e95c092fb31da3913164540"
-    end
-    on_big_sur do
+    on_big_sur :or_older do
       version "16.77.23091703"
       sha256 "9ece350fa314584aafacfcdf559bb67b8707bc2c2e7a961f7881d1ea280aac4d"
     end
@@ -22,8 +18,8 @@ cask "microsoft-powerpoint" do
     end
   end
   on_sonoma :or_newer do
-    version "16.111.26071325"
-    sha256 "bc3cad53865183ea1fdcdd11ed0068e3dac14fb24dfb8091ac56c570e9aff6ba"
+    version "16.112.26090911"
+    sha256 "91401619ea602be784a91091fbb5c779b25d0a01285be000cc339f87a7e28744"
 
     livecheck do
       url "https://go.microsoft.com/fwlink/p/?linkid=525136"
@@ -31,8 +27,7 @@ cask "microsoft-powerpoint" do
     end
   end
 
-  url "https://res.public.onecdn.static.microsoft/mro1cdnstorage/C1297A47-86C4-4C1F-97FA-950631F94777/MacAutoupdate/Microsoft_PowerPoint_#{version}_Installer.pkg",
-      verified: "res.public.onecdn.static.microsoft/mro1cdnstorage/C1297A47-86C4-4C1F-97FA-950631F94777/"
+  url "https://res.public.onecdn.static.microsoft/mro1cdnstorage/C1297A47-86C4-4C1F-97FA-950631F94777/MacAutoupdate/Microsoft_PowerPoint_#{version}_Installer.pkg"
   name "Microsoft PowerPoint"
   desc "Presentation software"
   homepage "https://www.microsoft.com/en-US/microsoft-365/powerpoint"

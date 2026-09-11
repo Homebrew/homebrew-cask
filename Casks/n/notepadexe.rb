@@ -1,9 +1,8 @@
 cask "notepadexe" do
-  version "1.5.4"
-  sha256 "d067ad28fe3db4272ec561835183d3a64d494906c5a5e364faae165a480e4698"
+  version "1.6.2"
+  sha256 "24c0ef06023765ef6306feaa09edfae510b17af85d557935c42d0574ac8df859"
 
-  url "https://github.com/notepadhq/notepadexe-public/releases/download/#{version}/Notepad.zip",
-      verified: "github.com/notepadhq/notepadexe-public/releases/download/"
+  url "https://github.com/notepadhq/notepadexe-public/releases/download/#{version}/Notepad.zip"
   name "Notepad.exe"
   desc "Lightweight code editor"
   homepage "https://notepadexe.com/"

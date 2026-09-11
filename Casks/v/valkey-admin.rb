@@ -1,12 +1,11 @@
 cask "valkey-admin" do
   arch arm: "-arm64"
 
-  version "1.0.1"
-  sha256 arm:   "348bb49f2edbf0f48a43ae440703c23cdaecccfbe0dc797a86e44fdc02351752",
-         intel: "958f640429c8a801cc0a71c681b5cb07379ef2bc687c96cb5ab79beba16cb8db"
+  version "1.1.1"
+  sha256 arm:   "b1244e74c7feca7b1eb1c2b20582e12e9f23aa5b9cbcc0541d4b9cb2fdb19a3a",
+         intel: "01a14d0e53ab3665a421be0e7156b6a26cc7557cc5425f0a4f9ea45055b38d06"
 
-  url "https://github.com/valkey-io/valkey-admin/releases/download/v#{version}/Valkey.Admin-#{version}#{arch}.dmg",
-      verified: "github.com/valkey-io/valkey-admin/"
+  url "https://github.com/valkey-io/valkey-admin/releases/download/v#{version}/Valkey.Admin-#{version}#{arch}.dmg"
   name "Valkey Admin"
   desc "Administration tool for Valkey clusters and standalone instances"
   homepage "https://valkey-admin.valkey.io/"

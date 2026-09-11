@@ -2,8 +2,7 @@ cask "nkoda" do
   version "2.1.22"
   sha256 :no_check
 
-  url "https://nkodaprodappcenterbuilds.blob.core.windows.net/web-download/nkoda-app-mac.zip",
-      verified: "nkodaprodappcenterbuilds.blob.core.windows.net/web-download/"
+  url "https://nkodaprodappcenterbuilds.blob.core.windows.net/web-download/nkoda-app-mac.zip"
   name "nkoda"
   desc "Digital sheet music app"
   homepage "https://www.nkoda.com/download/mac"

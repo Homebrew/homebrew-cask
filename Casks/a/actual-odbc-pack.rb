@@ -2,8 +2,7 @@ cask "actual-odbc-pack" do
   version "1.0.25"
   sha256 :no_check
 
-  url "https://actualtechnologies.cachefly.net/Actual_ODBC_Pack.dmg",
-      verified: "actualtechnologies.cachefly.net/"
+  url "https://actualtechnologies.cachefly.net/Actual_ODBC_Pack.dmg"
   name "Actual ODBC Driver Pack"
   desc "Connect to enterprise databases using common desktop applications"
   homepage "https://www.actualtech.com/products.php"

@@ -14,8 +14,8 @@ cask "ckan-app" do
 
   disable! date: "2026-09-01", because: :fails_gatekeeper_check
 
-  depends_on :macos
   depends_on cask: "mono-mdk"
+  depends_on :macos
 
   app "CKAN.app"
 

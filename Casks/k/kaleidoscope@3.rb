@@ -16,14 +16,13 @@ cask "kaleidoscope@3" do
     kaleidoscope
     kaleidoscope@2
   ]
-  depends_on macos: :big_sur
+  depends_on :macos
 
   app "Kaleidoscope.app"
 
-  postflight do
-    contents = "#{appdir}/Kaleidoscope.app/Contents"
-    system_command "#{contents}/Resources/Integration/scripts/install_ksdiff",
-                   args: ["#{contents}/MacOS", "#{HOMEBREW_PREFIX}/bin"]
+  postflight_steps do
+    run "Kaleidoscope.app/Contents/Resources/Integration/scripts/install_ksdiff",
+        args: ["{{appdir}}/Kaleidoscope.app/Contents/MacOS", "{{HOMEBREW_PREFIX}}/bin"], base: :appdir
   end
 
   uninstall quit:    "app.kaleidoscope.v#{version.major}",

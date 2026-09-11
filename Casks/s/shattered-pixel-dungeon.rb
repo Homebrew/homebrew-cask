@@ -1,9 +1,8 @@
 cask "shattered-pixel-dungeon" do
-  version "3.3.8"
-  sha256 "edfa21381903f23b4ffd902e5a82f56d21901d52695bcdfd4c1821d25221cae6"
+  version "4.0.0"
+  sha256 "9578898d01de54246846cd3b77ffc931bcbe7a6ca76294fd5710acbc65cc55d7"
 
-  url "https://github.com/00-Evan/shattered-pixel-dungeon/releases/download/v#{version}/ShatteredPD-v#{version}-macOS.zip",
-      verified: "github.com/00-Evan/shattered-pixel-dungeon/"
+  url "https://github.com/00-Evan/shattered-pixel-dungeon/releases/download/v#{version}/ShatteredPD-v#{version}-macOS.zip"
   name "Shattered Pixel Dungeon"
   desc "Traditional roguelike dungeon crawler with randomised levels, enemies and items"
   homepage "https://shatteredpixel.com/shatteredpd"
@@ -17,6 +16,8 @@ cask "shattered-pixel-dungeon" do
   depends_on :macos
 
   app "Shattered Pixel Dungeon.app"
+
+  uninstall quit: "com.shatteredpixel.shatteredpixeldungeon.apple"
 
   zap trash: [
     "~/Library/Application Support/Shattered Pixel Dungeon",

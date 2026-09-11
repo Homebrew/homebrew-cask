@@ -1,12 +1,11 @@
 cask "wpsoffice-cn" do
   arch arm: "arm64", intel: "x64"
 
-  version "12.1.26035"
-  sha256 arm:   "8c8a5f56f8dfab5a4ac7d505d4d93f36809a84c5d64abd0678e3938e860ab304",
-         intel: "e35efb7fb6c340639d535702ff021899ec03043e648083008cd2f3db94b72d34"
+  version "12.1.28496"
+  sha256 arm:   "15fd015f8349325e9e512221a0cc6857f3a4a98ea3b8f9f95e8c4ed603e5a564",
+         intel: "46b6fed0812bf3155b2e27a60b21877337d4a683cb004580556da02514673281"
 
-  url "https://package.mac.wpscdn.cn/mac_wps_pkg/#{version}/WPS_Office_#{version}(#{version.patch})_#{arch}.dmg",
-      verified: "package.mac.wpscdn.cn/mac_wps_pkg/"
+  url "https://package.mac.wpscdn.cn/mac_wps_pkg/#{version}/WPS_Office_#{version}(#{version.patch})_#{arch}.dmg"
   name "WPS Office"
   desc "All-in-one office service platform in Chinese"
   homepage "https://mac.wps.cn/"

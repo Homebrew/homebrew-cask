@@ -1,6 +1,6 @@
 cask "dcp-o-matic-combiner" do
-  version "2.18.44"
-  sha256 "93cd376e2eba36d702bb9d9436019f7e4414ea6f82e6e87463a90dfaa96bd269"
+  version "2.19.1"
+  sha256 "0a9c8f3204129f65145638e3a209866fd5cd1bccc6f86365efdfe8ba7df70fa4"
 
   url "https://download.dcpomatic.com/dl.php?id=osx-10.10-combiner&version=#{version}"
   name "DCP-o-matic-combiner"
@@ -11,9 +11,9 @@ cask "dcp-o-matic-combiner" do
     cask "dcp-o-matic"
   end
 
-  depends_on macos: :big_sur
+  depends_on :macos
 
   app "DCP-o-matic #{version.major} Combiner.app"
 
-  # No zap stanza required
+  zap trash: "~/Library/Preferences/com.dcpomatic.combiner.plist"
 end

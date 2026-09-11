@@ -2,8 +2,7 @@ cask "font-noto-sans-egyptian-hieroglyphs" do
   version :latest
   sha256 :no_check
 
-  url "https://github.com/google/fonts/raw/main/ofl/notosansegyptianhieroglyphs/NotoSansEgyptianHieroglyphs-Regular.ttf",
-      verified: "github.com/google/fonts/"
+  url "https://github.com/google/fonts/raw/main/ofl/notosansegyptianhieroglyphs/NotoSansEgyptianHieroglyphs-Regular.ttf"
   name "Noto Sans Egyptian Hieroglyphs"
   homepage "https://fonts.google.com/specimen/Noto+Sans+Egyptian+Hieroglyphs"
 

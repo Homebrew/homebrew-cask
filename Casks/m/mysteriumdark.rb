@@ -2,8 +2,7 @@ cask "mysteriumdark" do
   version "10.17.10"
   sha256 "268aa1d0695aa4d6c65341c99902e0aeae85aadd8539f30aadb71e7c78057143"
 
-  url "https://github.com/mysteriumnetwork/mysterium-vpn-desktop/releases/download/#{version}/MysteriumDark-#{version}-universal.dmg",
-      verified: "github.com/mysteriumnetwork/mysterium-vpn-desktop/"
+  url "https://github.com/mysteriumnetwork/mysterium-vpn-desktop/releases/download/#{version}/MysteriumDark-#{version}-universal.dmg"
   name "Mysterium VPN"
   desc "VPN client"
   homepage "https://www.mysteriumvpn.com/"

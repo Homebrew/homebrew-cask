@@ -1,12 +1,11 @@
 cask "universal-gcode-platform" do
   arch arm: "aarch64", intel: "x64"
 
-  version "2.1.24"
-  sha256 arm:   "e8b61381d6535aaa5335f20115c3278e2903674fba14d96c860d1070d980b40e",
-         intel: "355513e3949fe22e2e187b00fe91f47ae802699c1eee093bf9082f0debe328eb"
+  version "2.1.26"
+  sha256 arm:   "14dece222cc60495edb7bcde64a8af21ad821bad25f79bfd60af0f0b1a4d3847",
+         intel: "1d298e446123caf654e23fe155c73eb17e5bc80a073d58544aace61615e5fa30"
 
-  url "https://github.com/winder/Universal-G-Code-Sender/releases/download/v#{version}/macosx-#{arch}-ugs-platform-app-#{version}.dmg",
-      verified: "github.com/winder/Universal-G-Code-Sender/"
+  url "https://github.com/winder/Universal-G-Code-Sender/releases/download/v#{version}/macosx-#{arch}-ugs-platform-app-#{version}.dmg"
   name "Universal G-code Sender (Platform version)"
   desc "G-code sender for CNC (compatible with GRBL, TinyG, g2core and Smoothieware)"
   homepage "https://winder.github.io/ugs_website/"
@@ -18,7 +17,7 @@ cask "universal-gcode-platform" do
 
   disable! date: "2026-09-01", because: :fails_gatekeeper_check
 
-  depends_on macos: :big_sur
+  depends_on :macos
 
   app "Universal Gcode Sender.app"
 

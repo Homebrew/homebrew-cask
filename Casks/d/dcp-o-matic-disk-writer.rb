@@ -1,6 +1,6 @@
 cask "dcp-o-matic-disk-writer" do
-  version "2.18.44"
-  sha256 "48e2bb608cade7bccf2973e398df769ebbd2bccf0989453d3a36522aa4b9f1de"
+  version "2.19.1"
+  sha256 "0a5307c1fa66eac75a6b8b34da8c7bd739a852b5d1bf605a1ce217dbe918bc87"
 
   url "https://download.dcpomatic.com/dl.php?id=osx-10.10-disk&version=#{version}"
   name "DCP-o-matic Disk Writer"
@@ -11,9 +11,9 @@ cask "dcp-o-matic-disk-writer" do
     cask "dcp-o-matic"
   end
 
-  depends_on macos: :big_sur
+  depends_on :macos
 
   app "DCP-o-matic #{version.major} Disk Writer.app"
 
-  # No zap stanza required
+  zap trash: "~/Library/Preferences/com.dcpomatic.disk.plist"
 end

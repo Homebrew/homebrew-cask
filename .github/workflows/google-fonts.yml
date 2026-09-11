@@ -27,33 +27,33 @@ jobs:
             mode: delete
     steps:
       - name: Checkout homebrew/cask
-        uses: actions/checkout@9c091bb21b7c1c1d1991bb908d89e4e9dddfe3e0 # v7.0.0
+        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
         with:
           persist-credentials: false
 
       - name: Checkout google/fonts
-        uses: actions/checkout@9c091bb21b7c1c1d1991bb908d89e4e9dddfe3e0 # v7.0.0
+        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
         with:
           repository: google/fonts
           path: vendor/google-fonts
           persist-credentials: false
 
       - name: Set up Python
-        uses: actions/setup-python@ece7cb06caefa5fff74198d8649806c4678c61a1 # v6.3.0
+        uses: actions/setup-python@5fda3b95a4ea91299a34e894583c3862153e4b97 # v7.0.0
         with:
           python-version: '3.10'
 
       - name: Install Python packages
-        run: pip3 install gftools html2text jinja2 protobuf
+        run: pip3 install gfmetadata html2text jinja2 protobuf
 
       - name: Configure Git user
         id: git-user-config
-        uses: Homebrew/actions/git-user-config@18fcb8e3e06b4247c676c506750dc95ea7226479 # 2026.07.13.1
+        uses: Homebrew/actions/git-user-config@f8d4222eb633e65c2a0157383cf80861fc7fae7f # 2026.09.07.1
         with:
           username: ${{ (github.event_name == 'workflow_dispatch' && github.actor) || 'BrewTestBot' }}
 
       - name: Set up commit signing
-        uses: Homebrew/actions/setup-commit-signing@18fcb8e3e06b4247c676c506750dc95ea7226479 # 2026.07.13.1
+        uses: Homebrew/actions/setup-commit-signing@f8d4222eb633e65c2a0157383cf80861fc7fae7f # 2026.09.07.1
         with:
           signing_key: ${{ secrets.BREWTESTBOT_SSH_SIGNING_KEY }}
 
@@ -94,7 +94,7 @@ jobs:
 
       - name: Push commits
         if: env.changes == 'true'
-        uses: Homebrew/actions/git-try-push@18fcb8e3e06b4247c676c506750dc95ea7226479 # 2026.07.13.1
+        uses: Homebrew/actions/git-try-push@f8d4222eb633e65c2a0157383cf80861fc7fae7f # 2026.09.07.1
         with:
           token: ${{ secrets.HOMEBREW_GITHUB_PUBLIC_REPO_TOKEN }}
           branch: "auto-${{ matrix.mode }}-google-fonts"

@@ -1,9 +1,8 @@
 cask "setapp" do
-  version "3.53.11,152,1783581855"
-  sha256 "f893a14472ccc4f8ea6ce62db9a4971aedd83dba7ff303333b884c3446ffc749"
+  version "3.55.1,157,1788525316"
+  sha256 "326adec1a6ebc43f0f849ca166c99d7d6ce44562ac7e91955d67f47af15cc052"
 
-  url "https://dl.devmate.com/com.setapp.DesktopClient/#{version.csv.second}/#{version.csv.third}/Setapp-#{version.csv.second}.zip",
-      verified: "devmate.com/com.setapp.DesktopClient/"
+  url "https://dl.devmate.com/com.setapp.DesktopClient/#{version.csv.second}/#{version.csv.third}/Setapp-#{version.csv.second}.zip"
   name "Setapp"
   desc "Collection of apps available by subscription"
   homepage "https://setapp.com/"
@@ -20,15 +19,27 @@ cask "setapp" do
   end
 
   auto_updates true
-  depends_on macos: :big_sur
+  depends_on :macos
 
   app "Setapp.app"
 
+  uninstall launchctl: [
+    "com.setapp.DesktopClient.SetappAgent",
+    "com.setapp.DesktopClient.SetappAssistant",
+    "com.setapp.DesktopClient.SetappLauncher",
+    "com.setapp.DesktopClient.SetappUpdater",
+  ]
+
   zap trash: [
     "~/Library/Application Scripts/com.setapp.DesktopClient.SetappAgent.FinderSyncExt",
+    "~/Library/Application Support/Setapp*",
     "~/Library/Caches/com.setapp.DesktopClient",
     "~/Library/Caches/com.setapp.DesktopClient.SetappAgent",
+    "~/Library/Containers/com.setapp.DesktopClient.SetappAgent.FinderSyncExt",
+    "~/Library/HTTPStorages/com.setapp.DesktopClient*",
+    "~/Library/LaunchAgents/com.setapp.DesktopClient.*plist",
     "~/Library/Logs/Setapp",
+    "~/Library/Preferences/com.setapp.DesktopClient.plist",
     "~/Library/Preferences/com.setapp.DesktopClient.SetappAgent.plist",
     "~/Library/Saved Application State/com.setapp.DesktopClient.savedState",
   ]

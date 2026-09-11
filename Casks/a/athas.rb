@@ -1,12 +1,11 @@
 cask "athas" do
   arch arm: "aarch64", intel: "x64"
 
-  version "0.9.0"
-  sha256 arm:   "6b8fdbc8a89da35491dcf3ec5fe49dcfee7d4ceb67a377470f75b28f742392f5",
-         intel: "0549189aba4e6b18fb623bf75f6817c76d18731c32006929ebcad2c5f0473429"
+  version "0.14.2"
+  sha256 arm:   "a4a3c278dbe3bfc2f6912949aff01e198a987672048194ff46d26b195beabe64",
+         intel: "74876fc3976634fcdb64876e1f7dbc4b43d1057ef16f8f1bcc541a5f6eda377b"
 
-  url "https://github.com/athasdev/athas/releases/download/v#{version}/Athas_#{version}_#{arch}.dmg",
-      verified: "github.com/athasdev/athas/"
+  url "https://github.com/athasdev/athas/releases/download/v#{version}/Athas_#{version}_#{arch}.dmg"
   name "Athas"
   desc "Lightweight code editor"
   homepage "https://athas.dev/"
@@ -19,6 +18,8 @@ cask "athas" do
   depends_on :macos
 
   app "Athas.app"
+
+  uninstall quit: "com.code.athas"
 
   zap trash: [
     "~/Library/Application Support/com.code.athas",

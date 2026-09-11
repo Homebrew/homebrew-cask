@@ -1,9 +1,9 @@
 cask "rubymine" do
   arch arm: "-aarch64"
 
-  version "2026.1.4,261.26222.67"
-  sha256 arm:   "e30127c1c3d1b70a74c3178f50c88ba30eac3318abc2775131d9892fc2c187d9",
-         intel: "04ba36c1e2092bc81001c32d02211333b14c761c3d6a81481a1e58aa3bf793bb"
+  version "2026.2.2,262.10315.129"
+  sha256 arm:   "d7b5ee24d814db206c7eb6bad8b7e31b41f137a1db751cdd490501f6fba8e153",
+         intel: "518d3fbcd201efcea270069ad2fd904fea98ca24368faa122510cb5441b4296d"
 
   url "https://download.jetbrains.com/ruby/RubyMine-#{version.csv.first}#{arch}.dmg"
   name "RubyMine"
@@ -27,16 +27,9 @@ cask "rubymine" do
   depends_on :macos
 
   app "RubyMine.app"
-  # shim script (https://github.com/Homebrew/homebrew-cask/issues/18809)
-  shimscript = "#{staged_path}/rubymine.wrapper.sh"
-  binary shimscript, target: "rubymine"
-
-  preflight do
-    File.write shimscript, <<~EOS
-      #!/bin/sh
-      open -na "RubyMine.app" --args "$@"
-    EOS
-  end
+  command_wrapper "rubymine",
+                  executable: "/usr/bin/open",
+                  args:       ["-na", "RubyMine.app", "--args"]
 
   zap trash: [
     "~/Library/Application Support/RubyMine#{version.major_minor}",

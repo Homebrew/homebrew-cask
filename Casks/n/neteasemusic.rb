@@ -3,7 +3,6 @@ cask "neteasemusic" do
   sha256 "6e117a5db6957650fff187cd6c8a3970d8784685ee72ec1cb97f957b46d4d5f7"
 
   url "https://d1.music.126.net/dmusic/NeteaseCloudMusic_Music_official_#{version.csv.join(".")}.dmg",
-      verified:   "d1.music.126.net/",
       user_agent: :fake
   name "NetEase cloud music"
   name "网易云音乐"

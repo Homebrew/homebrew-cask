@@ -2,8 +2,7 @@ cask "protonvpn" do
   version "6.5.1"
   sha256 "d50a49f14c50b0ef8ad68a89fc9685d5699ba2d4f92cb4c34317291b425435f8"
 
-  url "https://vpn.protondownload.com/download/macos/#{version}/ProtonVPN_mac_v#{version}.dmg",
-      verified: "vpn.protondownload.com/"
+  url "https://vpn.protondownload.com/download/macos/#{version}/ProtonVPN_mac_v#{version}.dmg"
   name "ProtonVPN"
   desc "VPN client focusing on security"
   homepage "https://protonvpn.com/"

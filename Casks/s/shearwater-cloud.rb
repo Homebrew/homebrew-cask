@@ -1,6 +1,6 @@
 cask "shearwater-cloud" do
   version "2.12.10"
-  sha256 "193d305b331eb1720b07fcca54af6b0fd1ec8d963ae268dccf027830e6e89a4b"
+  sha256 "f5c19f5f61db66a03cb9f71eaedae3a4a5f58c61a306c3403b61d05e868cb79e"
 
   url "https://downloads.shearwater.com/livedownloads/ShearwaterCloudInstaller_#{version}.dmg"
   name "Shearwater Cloud"
@@ -21,9 +21,13 @@ cask "shearwater-cloud" do
     end
   end
 
-  depends_on macos: :big_sur
+  depends_on :macos
 
   app "Shearwater Cloud.app"
 
-  zap trash: "~/Library/Containers/unity.Shearwater-Research.Shearwater"
+  zap trash: [
+    "~/Library/Application Scripts/research.shearwater.cloud",
+    "~/Library/Containers/research.shearwater.cloud",
+    "~/Library/Containers/unity.Shearwater-Research.Shearwater",
+  ]
 end

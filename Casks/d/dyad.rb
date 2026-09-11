@@ -1,36 +1,43 @@
 cask "dyad" do
   arch arm: "arm64", intel: "x64"
+  os macos: "-darwin-#{arch}-", linux: "_"
+  url_end = on_system_conditional macos: ".zip", linux: "_x86_64.AppImage"
 
-  version "1.6.2"
-  sha256 arm:   "356256c663770833843bba6a899859f47e778cc09986c14109cbf832efade363",
-         intel: "b04046c679f65d70ddad455689b1a27e1ef7234404d96622e021260946d4cc5a"
+  version "1.14.0"
+  sha256 arm:          "4aaf3480d88d98c994cfaa7883310f96243a1d827d6294d55f4bb1e0dba55843",
+         intel:        "fd21da95c7a19095ba8f597b284e26a1d4dd7cc2d7e83136d9de78a65a0e5b9e",
+         x86_64_linux: "9d856af669964b0cf4cf3f0910a2d59b4d2b38f7464984db380748269254f882"
 
-  url "https://github.com/dyad-sh/dyad/releases/download/v#{version}/dyad-darwin-#{arch}-#{version}.zip",
-      verified: "github.com/dyad-sh/dyad/"
+  on_macos do
+    depends_on macos: :monterey
+
+    app "dyad.app"
+
+    zap trash: [
+      "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.electron.dyad.sfl*",
+      "~/Library/Application Support/dyad",
+      "~/Library/Caches/com.electron.dyad",
+      "~/Library/Caches/com.electron.dyad.ShipIt",
+      "~/Library/HTTPStorages/com.electron.dyad",
+      "~/Library/Logs/dyad",
+      "~/Library/Preferences/com.electron.dyad.plist",
+    ], rmdir: "~/dyad-apps"
+  end
+  on_linux do
+    depends_on arch: :x86_64
+
+    app_image "dyad_#{version}_x86_64.AppImage", target: "Dyad.AppImage"
+  end
+
+  url "https://github.com/dyad-sh/dyad/releases/download/v#{version}/dyad#{os}#{version}#{url_end}"
   name "Dyad"
   desc "AI-powered app builder"
   homepage "https://dyad.sh/"
 
   livecheck do
-    url "https://api.dyad.sh/v1/update/stable/dyad-sh/dyad/darwin-#{arch}/0.0.0"
-    regex(%r{/v?(\d+(?:\.\d+)+)/}i)
-    strategy :json do |json|
-      json["url"]&.[](regex, 1)
-    end
+    url :url
+    strategy :github_latest
   end
 
   auto_updates true
-  depends_on macos: :monterey
-
-  app "dyad.app"
-
-  zap trash: [
-    "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.electron.dyad.sfl*",
-    "~/Library/Application Support/dyad",
-    "~/Library/Caches/com.electron.dyad",
-    "~/Library/Caches/com.electron.dyad.ShipIt",
-    "~/Library/HTTPStorages/com.electron.dyad",
-    "~/Library/Logs/dyad",
-    "~/Library/Preferences/com.electron.dyad.plist",
-  ], rmdir: "~/dyad-apps"
 end

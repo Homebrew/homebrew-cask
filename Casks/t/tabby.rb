@@ -1,32 +1,13 @@
 cask "tabby" do
+  arch arm: "arm64", intel: on_system_conditional(macos: "x86_64", linux: "x64")
   os macos: "macos", linux: "linux"
+  url_end = on_system_conditional macos: "zip", linux: "AppImage"
 
-  on_macos do
-    arch arm: "arm64", intel: "x86_64"
-  end
-  on_linux do
-    arch arm: "arm64", intel: "x64"
-  end
-
-  version "1.0.234"
-  sha256 arm:          "e5073aed89680a591dbb0fb34a2d7de031c792d160c5475357547234ebe29af7",
-         intel:        "3e6b6050b22060029823c5bdcbcda79015c0ea9a29f6b9b5e767da56131440b2",
-         arm64_linux:  "1c880e64edda3a3f5b2ea30e080b56a9d8db95867012b4cb4dfb6e867a7c7c25",
-         x86_64_linux: "8cc12dbf7af301b95aa738da024856aef49280e982845f42491993ef0d49a97d"
-
-  url_end = on_system_conditional linux: ".AppImage", macos: ".zip"
-
-  url "https://github.com/Eugeny/tabby/releases/download/v#{version}/tabby-#{version}-#{os}-#{arch}#{url_end}",
-      verified: "github.com/Eugeny/tabby/"
-  name "Tabby"
-  name "Terminus"
-  desc "Terminal emulator, SSH and serial client"
-  homepage "https://eugeny.github.io/tabby/"
-
-  livecheck do
-    url :url
-    strategy :github_latest
-  end
+  version "1.0.235"
+  sha256 arm:          "1080a05d44c8acfe9301ec56c5ffa3ab0e472086d1ace8fe8a5e2cbf9f71c7d5",
+         intel:        "09878c64b4c213c653310ba81655b91dc0f8063e1dd64dc57c3844a0bb58456d",
+         arm64_linux:  "746c9e301eea78af152f26c6df1d29b3eea55b30ef29ffd9fa86bcf2bd8d03be",
+         x86_64_linux: "0ca5dc015fe5ee7840f2b206864cc37c52f7c36b7a734e8653a39ae8a576dcef"
 
   on_macos do
     depends_on macos: :monterey
@@ -47,8 +28,18 @@ cask "tabby" do
       "~/Library/Services/Paste path into Tabby.workflow",
     ]
   end
-
   on_linux do
     app_image "tabby-#{version}-linux-#{arch}.AppImage", target: "Tabby.AppImage"
+  end
+
+  url "https://github.com/Eugeny/tabby/releases/download/v#{version}/tabby-#{version}-#{os}-#{arch}.#{url_end}"
+  name "Tabby"
+  name "Terminus"
+  desc "Terminal emulator, SSH and serial client"
+  homepage "https://eugeny.github.io/tabby/"
+
+  livecheck do
+    url :url
+    strategy :github_latest
   end
 end

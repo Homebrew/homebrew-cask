@@ -5,8 +5,7 @@ cask "laravel-kit" do
   sha256 arm:   "ddab08305eefb11f46009d257685b87b8649fb928afee318b1f5d7eaa7a538f8",
          intel: "5d17be67b3bfc4fedcf6de0e64e8e4a93df9b467cb8540e073c3d52b4346697d"
 
-  url "https://github.com/tmdh/laravel-kit/releases/download/v#{version}/Laravel-Kit-#{version}#{arch}-mac.zip",
-      verified: "github.com/tmdh/laravel-kit/"
+  url "https://github.com/tmdh/laravel-kit/releases/download/v#{version}/Laravel-Kit-#{version}#{arch}-mac.zip"
   name "Laravel Kit"
   desc "Desktop Laravel admin panel app"
   homepage "https://tmdh.github.io/laravel-kit"

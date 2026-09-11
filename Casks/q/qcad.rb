@@ -1,14 +1,9 @@
 cask "qcad" do
   arch arm: "-arm64"
 
-  on_arm do
-    version "3.32.9,12.7-26-qt6"
-    sha256 "8380e923a4ab1b6ec8872aa3d43e3ec78bdda6efdc83b900b3195643f0e48518"
-  end
-  on_intel do
-    version "3.32.9,11-26-qt6"
-    sha256 "8edb2fe2d22bcb56bcb654c779fda459cacb2113bb263c124f6742f51e30b410"
-  end
+  version "3.33.1,13-26-qt6"
+  sha256 arm:   "e5640499d3d790b34fccc1180b39b3e213bd13255555003701eb316b4ac94a45",
+         intel: "3c4a68c50083031d33ac6b8ec4a7e364fbb7460f94cca83080c2ade0323fcbe3"
 
   url "https://www.qcad.org/archives/qcad/qcad-#{version.csv.first}-trial-macos-#{version.csv.second}#{arch}.dmg"
   name "QCAD"
@@ -21,7 +16,7 @@ cask "qcad" do
   # can cause issues when the version/suffix differs.
   livecheck do
     url "https://www.qcad.org/en/download"
-    regex(/href=.*?qcad[._-]v?(\d+(?:\.\d+)+)[._-]trial[._-]macos[._-](\d+(?:[._-]\d+)+(?:[._-]qt\d+)?)#{arch}\.dmg/i)
+    regex(/href=.*?qcad[._-]v?(\d+(?:\.\d+)+)[._-]trial[._-]macos[._-](\d+(?:[._-]\d+)+[._-]qt\d+)#{arch}\.dmg/i)
     strategy :page_match do |page, regex|
       match = page.match(regex)
       next if match.blank?
@@ -33,6 +28,8 @@ cask "qcad" do
   depends_on macos: :monterey
 
   app "QCAD.app"
+
+  uninstall quit: "org.qcad"
 
   zap trash: [
     "~/.config/QCAD",

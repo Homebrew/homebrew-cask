@@ -18,16 +18,8 @@ cask "uniflash" do
     executable: "uniflash_sl.#{version}.app/Contents/MacOS/installbuilder.sh",
     args:       ["--mode", "unattended", "--prefix", "/Applications/TI/UniFlash"],
   }
-  # shim script (https://github.com/Homebrew/homebrew-cask/issues/18809)
-  shimscript = "#{staged_path}/dslite"
-  binary shimscript
-
-  preflight do
-    File.write shimscript, <<~EOS
-      #!/bin/sh
-      exec '/Applications/TI/UniFlash/dslite.sh' "$@"
-    EOS
-  end
+  command_wrapper "dslite",
+                  executable: "/Applications/TI/UniFlash/dslite.sh"
 
   uninstall script: {
     executable: "/Applications/TI/UniFlash/uninstall.app/Contents/MacOS/installbuilder.sh",

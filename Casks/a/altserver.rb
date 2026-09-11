@@ -1,6 +1,6 @@
 cask "altserver" do
-  version "1.7.2"
-  sha256 "e089ee6c9288e9097e3570839421226a4c467ce29817bbc5c84eb13f3c24b076"
+  version "1.7.6"
+  sha256 "ea4c47fa25abc0166bd4e9785f96f82488e6606b2e015ff046f8fceee083e6b9"
 
   url "https://cdn.altstore.io/file/altstore/altserver/#{version.dots_to_underscores}.zip"
   name "AltServer"
@@ -17,7 +17,7 @@ cask "altserver" do
   end
 
   auto_updates true
-  depends_on macos: :big_sur
+  depends_on :macos
 
   app "AltServer.app"
 

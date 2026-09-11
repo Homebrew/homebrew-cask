@@ -2,8 +2,7 @@ cask "font-noto-serif-old-uyghur" do
   version :latest
   sha256 :no_check
 
-  url "https://github.com/google/fonts/raw/main/ofl/notoserifolduyghur/NotoSerifOldUyghur-Regular.ttf",
-      verified: "github.com/google/fonts/"
+  url "https://github.com/google/fonts/raw/main/ofl/notoserifolduyghur/NotoSerifOldUyghur-Regular.ttf"
   name "Noto Serif Old Uyghur"
   homepage "https://fonts.google.com/specimen/Noto+Serif+Old+Uyghur"
 

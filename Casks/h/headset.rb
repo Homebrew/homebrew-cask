@@ -5,8 +5,7 @@ cask "headset" do
   sha256 arm:   "073fb9b79225d516edf380fc2128083fcb8773e39d50e99cc4b9f9ea8ff33a68",
          intel: "a46fde8dfebbe4e4d19a5645e79b80954f1d26e2b58696e57383b94d36a140f3"
 
-  url "https://github.com/headsetapp/headset-electron/releases/download/v#{version}/Headset-#{version}-mac-#{arch}.zip",
-      verified: "github.com/headsetapp/headset-electron/"
+  url "https://github.com/headsetapp/headset-electron/releases/download/v#{version}/Headset-#{version}-mac-#{arch}.zip"
   name "Headset"
   desc "Music player powered by YouTube and Reddit"
   homepage "https://headsetapp.co/"

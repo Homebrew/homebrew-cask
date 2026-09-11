@@ -4,8 +4,7 @@ cask "postman@canary" do
   version "11.2.14-canary240621-0734"
   sha256 :no_check
 
-  url "https://dl.pstmn.io/download/channel/canary/#{arch}",
-      verified: "dl.pstmn.io/download/channel/canary/"
+  url "https://dl.pstmn.io/download/channel/canary/#{arch}"
   name "Postman Canary"
   desc "Collaboration platform for API development"
   homepage "https://www.postman.com/"

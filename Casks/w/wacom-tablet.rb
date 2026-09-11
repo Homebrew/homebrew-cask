@@ -1,6 +1,6 @@
 cask "wacom-tablet" do
-  version "6.4.13-4"
-  sha256 "9790dc62a49e27f1a4b03f47133cbc47ae0d4975523ad387120048ad2776a17f"
+  version "6.4.14-1"
+  sha256 "446c6889ad5602827fe1a6f597067428ffdbdd9b4e0cb00930385d99b876fb06"
 
   url "https://cdn.wacom.com/u/productsupport/drivers/mac/professional/WacomTablet_#{version}.dmg"
   name "Wacom Tablet"

@@ -1,12 +1,11 @@
 cask "dbeaverteam" do
   arch arm: "aarch64", intel: "x86_64"
 
-  version "26.1.0"
-  sha256 arm:   "cff721607c32bd852261018d6e72e6e9c5bafaf286703983b10651bc355f9159",
-         intel: "ca1df9960173c16d78930475589855379f71b28b94c09adaf6c059f2be8b0fe3"
+  version "26.2.0"
+  sha256 arm:   "84a29cae302cf698ba3da92fa584a7636adf356110d1606ab49757d499d6e92b",
+         intel: "1f7f43217443533de1eb73a2f834ed94526f1e130dfa1b419720ad0d9d774dfe"
 
-  url "https://downloads.dbeaver.net/team/#{version}/dbeaver-te-#{version}-macos-#{arch}.dmg",
-      verified: "downloads.dbeaver.net/team/"
+  url "https://downloads.dbeaver.net/team/#{version}/dbeaver-te-#{version}-macos-#{arch}.dmg"
   name "DBeaver Team Edition"
   desc "Universal database tool and SQL client"
   homepage "https://dbeaver.com/dbeaver-team-edition"
@@ -18,7 +17,7 @@ cask "dbeaverteam" do
     end
   end
 
-  depends_on macos: :big_sur
+  depends_on :macos
 
   app "DBeaverTeam.app"
 

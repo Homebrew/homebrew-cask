@@ -1,9 +1,8 @@
 cask "openclaw" do
-  version "2026.7.1"
-  sha256 "d5f02b7fecb8a6125fb1f0935226b5be7c605b264a5eee156e5539089304c930"
+  version "2026.9.4"
+  sha256 "02f2395fc575db6e50eebbe2913e5c76eb184fc34afd6d0cb6f34702a254589a"
 
-  url "https://github.com/openclaw/openclaw/releases/download/v#{version}/OpenClaw-#{version}.dmg",
-      verified: "github.com/openclaw/openclaw/"
+  url "https://github.com/openclaw/openclaw/releases/download/v#{version}/OpenClaw-#{version}.dmg"
   name "OpenClaw"
   desc "Personal AI assistant"
   homepage "https://openclaw.ai/"
@@ -21,9 +20,14 @@ cask "openclaw" do
   zap trash: [
     "~/.openclaw",
     "~/Library/Application Support/OpenClaw",
+    "~/Library/Caches/ai.openclaw.mac",
+    "~/Library/HTTPStorages/ai.openclaw.mac",
     "~/Library/HTTPStorages/bot.molt.mac",
     "~/Library/Logs/DiagnosticReports/OpenClaw*",
+    "~/Library/Preferences/ai.openclaw.mac.plist",
+    "~/Library/Preferences/ai.openclaw.shared.plist",
     "~/Library/Preferences/bot.molt.mac.plist",
     "~/Library/Preferences/bot.molt.shared.plist",
+    "~/Library/WebKit/ai.openclaw.mac",
   ]
 end

@@ -1,12 +1,11 @@
 cask "freeshow@beta" do
   arch arm: "arm64", intel: "x64"
 
-  version "1.6.4-beta.2"
-  sha256 arm:   "5287a97507d2041ccab2e2a965f2534615c1da967f0ea4c015445d9ac92b2fd0",
-         intel: "9165126bd2b2039c088deb96a43c7cc34443a350f477e67424b173d56a0e1c26"
+  version "1.6.6-beta.1"
+  sha256 arm:   "2d1b8bcad47c22c38f0e13b63a1cde6f8b646fd8baa7720f27d669ff1453a08d",
+         intel: "b5dd311710d851a2427788e888735f370ce6c8e56500dcb9917da8b90a16b45c"
 
-  url "https://github.com/ChurchApps/FreeShow/releases/download/v#{version}/FreeShow-#{version}-#{arch}.zip",
-      verified: "github.com/ChurchApps/"
+  url "https://github.com/ChurchApps/FreeShow/releases/download/v#{version}/FreeShow-#{version}-#{arch}.zip"
   name "FreeShow"
   desc "Presentation software"
   homepage "https://freeshow.app/"
@@ -18,9 +17,11 @@ cask "freeshow@beta" do
 
   auto_updates true
   conflicts_with cask: "freeshow"
-  depends_on macos: :big_sur
+  depends_on :macos
 
   app "FreeShow.app"
+
+  uninstall quit: "app.freeshow"
 
   zap trash: [
         "~/Library/Application Support/freeshow",

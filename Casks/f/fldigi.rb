@@ -1,9 +1,8 @@
 cask "fldigi" do
-  version "4.2.12"
-  sha256 "4820d99af735f4d996d154b4606d8b791e89dc3ab176af54a99bd87414d01bd4"
+  version "4.2.13"
+  sha256 "7d458a6eeb863047efc48f4a234197d16231fde4ed232ed1e1d67622b91467b6"
 
-  url "https://downloads.sourceforge.net/fldigi/fldigi/fldigi-#{version}.dmg",
-      verified: "sourceforge.net/fldigi/"
+  url "https://downloads.sourceforge.net/fldigi/fldigi/fldigi-#{version}.dmg"
   name "fldigi"
   desc "Ham radio digital modem application"
   homepage "https://www.w1hkj.org/"
@@ -13,7 +12,7 @@ cask "fldigi" do
     regex(%r{url=.*?/fldigi[._-]v?(\d+(?:\.\d+)+)[^"' >]*?\.dmg}i)
   end
 
-  depends_on macos: :big_sur
+  depends_on :macos
 
   app "fldigi-#{version}.app"
 

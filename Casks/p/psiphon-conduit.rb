@@ -2,8 +2,7 @@ cask "psiphon-conduit" do
   version "1.8.0-RC.2"
   sha256 "56a6be1708a2e458965fcc31743cfd8ecd186f3b6e739baaa9e027996bbf1ae4"
 
-  url "https://github.com/Psiphon-Inc/conduit/releases/download/release-mac-#{version}/conduit.dmg",
-      verified: "github.com/Psiphon-Inc/conduit/"
+  url "https://github.com/Psiphon-Inc/conduit/releases/download/release-mac-#{version}/conduit.dmg"
   name "Psiphon Conduit"
   desc "Psiphon network proxy tool"
   homepage "https://conduit.psiphon.ca/"

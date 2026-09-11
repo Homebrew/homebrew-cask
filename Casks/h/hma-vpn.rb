@@ -2,8 +2,7 @@ cask "hma-vpn" do
   version :latest
   sha256 :no_check
 
-  url "https://s-mac-sl.avcdn.net/macosx/privax/HMA-VPN.dmg",
-      verified: "s-mac-sl.avcdn.net/"
+  url "https://s-mac-sl.avcdn.net/macosx/privax/HMA-VPN.dmg"
   name "HMA! VPN"
   desc "VPN program from Hide My Ass"
   homepage "https://www.hidemyass.com/index.html"

@@ -1,12 +1,11 @@
 cask "nimbalyst" do
   arch arm: "arm64", intel: "x64"
 
-  version "0.68.1"
-  sha256 arm:   "dcb9dea634482a04229b6118ae35bbef23336f7374a9d252e2ba8d788f9f0615",
-         intel: "57c344fbb069f3f33bfefd61179f51e704301e0721bb46d43bae8a97df381333"
+  version "0.77.5"
+  sha256 arm:   "2e5945e9fd624bdb2b54b43236930cf40959f1ea8819e4928c607303fe306043",
+         intel: "702c5782daf835080ba97c5b10bfcc28bfd3cd67a14b47535cb29f778f10cb9f"
 
-  url "https://github.com/Nimbalyst/nimbalyst/releases/download/v#{version}/Nimbalyst-macOS-#{arch}.dmg",
-      verified: "github.com/Nimbalyst/nimbalyst/"
+  url "https://github.com/Nimbalyst/nimbalyst/releases/download/v#{version}/Nimbalyst-macOS-#{arch}.dmg"
   name "Nimbalyst"
   desc "Visual workspace for building with Codex and Claude Code"
   homepage "https://nimbalyst.com/"
@@ -20,5 +19,9 @@ cask "nimbalyst" do
 
   app "Nimbalyst.app"
 
-  zap trash: "~/Library/Application Support/@nimbalyst"
+  zap trash: [
+    "~/Library/Application Support/@nimbalyst",
+    "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.nimbalyst.electron.sfl*",
+    "~/Library/Preferences/com.nimbalyst.electron.plist",
+  ]
 end

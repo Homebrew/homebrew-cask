@@ -15,8 +15,8 @@ cask "netnewswire" do
     end
   end
   on_sequoia :or_newer do
-    version "7.1.1"
-    sha256 "184279d76b76e709ca9ae4778e847b46935779a9ae1ce0643fee44dfb9ab8827"
+    version "7.1.3"
+    sha256 "b266ec3e76c118279f10a172ae740dd6feae1a69142025c44a659344c6b27367"
 
     livecheck do
       url "https://ranchero.com/downloads/netnewswire-release.xml"
@@ -24,8 +24,7 @@ cask "netnewswire" do
     end
   end
 
-  url "https://github.com/Ranchero-Software/NetNewsWire/releases/download/mac-#{version}/NetNewsWire#{version}.zip",
-      verified: "github.com/Ranchero-Software/NetNewsWire/"
+  url "https://github.com/Ranchero-Software/NetNewsWire/releases/download/mac-#{version}/NetNewsWire#{version}.zip"
   name "NetNewsWire"
   desc "Free and open-source RSS reader"
   homepage "https://netnewswire.com/"

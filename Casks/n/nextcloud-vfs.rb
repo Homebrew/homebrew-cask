@@ -2,8 +2,7 @@ cask "nextcloud-vfs" do
   version "4.0.8"
   sha256 "9cce6c6f08fab8ded66dd4e0530261f1113b74f26036d597307ddb441eab0fe3"
 
-  url "https://github.com/nextcloud-releases/desktop/releases/download/v#{version}/Nextcloud-#{version}-macOS-vfs.pkg",
-      verified: "github.com/nextcloud-releases/desktop/"
+  url "https://github.com/nextcloud-releases/desktop/releases/download/v#{version}/Nextcloud-#{version}-macOS-vfs.pkg"
   name "Nextcloud Virtual Files"
   desc "Desktop sync client for Nextcloud software products"
   homepage "https://nextcloud.com/"

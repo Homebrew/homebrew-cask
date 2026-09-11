@@ -1,9 +1,8 @@
 cask "duo-desktop" do
-  version "7.19.0.0"
-  sha256 "486af3c6bb354cc0d630429cc011da382433309adcc74ed8f4ee6a867f7210c1"
+  version "7.21.0.0"
+  sha256 "fc23141655d460ebb6bde84adc995cb5f8aa30763fdb70d1805b1b91123c412c"
 
-  url "https://dl.duosecurity.com/DuoDesktop-#{version}.pkg",
-      verified: "dl.duosecurity.com/"
+  url "https://dl.duosecurity.com/DuoDesktop-#{version}.pkg"
   name "Duo Desktop"
   desc "Endpoint health checks for Duo-protected applications"
   homepage "https://duo.com/docs/duo-desktop"

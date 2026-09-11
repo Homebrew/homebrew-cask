@@ -1,5 +1,5 @@
 cask "riverside-studio" do
-  version "1.27.1"
+  version "1.31.0"
   sha256 :no_check
 
   url "https://assets.riverside.fm/mac-desktop-app/current-release/RiversideStudio.dmg"
@@ -13,9 +13,12 @@ cask "riverside-studio" do
   end
 
   auto_updates true
+  depends_on arch: :arm64
   depends_on macos: :sequoia
 
   app "Riverside Studio.app"
+
+  uninstall launchctl: "RVS-Riverside.fm.Riverside-Helper"
 
   zap trash: [
     "~/Library/Application Scripts/RVS-Riverside.fm-Mac",

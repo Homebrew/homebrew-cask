@@ -2,8 +2,7 @@ cask "font-loved-by-the-king" do
   version :latest
   sha256 :no_check
 
-  url "https://github.com/google/fonts/raw/main/ofl/lovedbytheking/LovedbytheKing.ttf",
-      verified: "github.com/google/fonts/"
+  url "https://github.com/google/fonts/raw/main/ofl/lovedbytheking/LovedbytheKing.ttf"
   name "Loved by the King"
   homepage "https://fonts.google.com/specimen/Loved+by+the+King"
 

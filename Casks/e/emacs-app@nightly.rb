@@ -1,8 +1,8 @@
 cask "emacs-app@nightly" do
-  arch arm: "arm64-11", intel: "x86_64-10_12"
+  arch arm: "arm64-11", intel: "x86_64-11"
 
-  version "2026-07-19_00-09-17,0f086c307c12b74aeedfba07cfe5b57ef2f99808"
-  sha256 "f83b36333878a3ce5629984e823aa73fd7dd50f18dbc20ad7ec26fd80147d1c0"
+  version "2026-09-11_00-09-58,fc9cf69afa90990776526a7cf9e693893739fc45"
+  sha256 "97a5d066430599770b3fe2ff4875905e3a9ff74bbba3bd348f353566738a833a"
 
   url "https://emacsformacosx.com/emacs-builds/Emacs-#{version.csv.first}-#{version.csv.second}-universal.dmg"
   name "Emacs"
@@ -11,12 +11,14 @@ cask "emacs-app@nightly" do
 
   livecheck do
     url "https://emacsformacosx.com/atom/daily"
-    regex(/href=.*?Emacs[._-]v?(\d+-\d+-\d+_\d+-\d+-\d+)[._-](\h+)[._-]universal\.dmg/i)
-    strategy :page_match do |page, regex|
-      match = page.match(regex)
-      next if match.blank?
+    regex(/Emacs[._-]v?(\d+(?:[-_]\d+)+)[._-](\h+)[._-]universal\.dmg/i)
+    strategy :xml do |xml, regex|
+      xml.get_elements("/feed/entry/link").filter_map do |item|
+        match = item.attributes["href"]&.match(regex)
+        next unless match
 
-      "#{match[1]},#{match[2]}"
+        "#{match[1]},#{match[2]}"
+      end
     end
   end
 
@@ -24,7 +26,7 @@ cask "emacs-app@nightly" do
     "emacs-app",
     "emacs-app@pretest",
   ]
-  depends_on macos: :big_sur
+  depends_on :macos
 
   app "Emacs.app"
   binary "#{appdir}/Emacs.app/Contents/MacOS/Emacs", target: "emacs"

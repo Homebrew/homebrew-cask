@@ -2,8 +2,7 @@ cask "exactscan" do
   version "26.6"
   sha256 "9ab96214b13fb976558768799cc224326ce4f67aa441babd6b2bc3e7e8299818"
 
-  url "https://dl.exactcode.com/exactscan/ExactScan-#{version}.dmg",
-      verified: "dl.exactcode.com/"
+  url "https://dl.exactcode.com/exactscan/ExactScan-#{version}.dmg"
   name "ExactScan"
   desc "Document scanner"
   homepage "https://exactscan.com/index.html"

@@ -1,9 +1,8 @@
 cask "sourcetree@beta" do
-  version "4.2.18b28,312"
-  sha256 "d208567fddf27b55f3feebcbefd7737d91a0f30da57e94ee29aa66b303f59f37"
+  version "4.2.19b29,316"
+  sha256 "db6515069d6c9cc7cddaa9d89d5676bcf1a0fa917d0cc2548164a8c3f3f60580"
 
-  url "https://product-downloads.atlassian.com/software/sourcetree/beta/Sourcetree_#{version.csv.first}_#{version.csv.second}.zip",
-      verified: "product-downloads.atlassian.com/software/sourcetree/beta/"
+  url "https://product-downloads.atlassian.com/software/sourcetree/beta/Sourcetree_#{version.csv.first}_#{version.csv.second}.zip"
   name "Atlassian Sourctree"
   desc "Graphical client for Git version control"
   homepage "https://www.sourcetreeapp.com/"

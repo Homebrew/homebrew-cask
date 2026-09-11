@@ -1,9 +1,8 @@
 cask "plamo-translate" do
-  version "0.6.5"
-  sha256 "c12b3fb9ad09f3329142ae2ab5f8ac0ecb4cc02976a4f986f85ff47b3f554bf3"
+  version "0.6.11"
+  sha256 "c09aac65d519c477244bf8d0fa979e95af736c14813ba2ac1441fe3c76a5947d"
 
-  url "https://storage.googleapis.com/plamo-translate-web-downloads-prd/desktop/plamo-translate-desktop-#{version}.dmg",
-      verified: "storage.googleapis.com/plamo-translate-web-downloads-prd/"
+  url "https://storage.googleapis.com/plamo-translate-web-downloads-prd/desktop/plamo-translate-desktop-#{version}.dmg"
   name "PLaMo Translate"
   name "PLaMo翻訳"
   desc "Translator focused on Japanese"
@@ -14,8 +13,8 @@ cask "plamo-translate" do
     strategy :electron_builder
   end
 
-  depends_on macos: :monterey
   depends_on arch: :arm64
+  depends_on macos: :monterey
 
   app "PLaMo翻訳.app"
 

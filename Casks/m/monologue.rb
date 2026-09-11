@@ -1,9 +1,8 @@
 cask "monologue" do
-  version "1.4.0"
+  version "1.5.1"
   sha256 :no_check
 
-  url "https://updates.jottle.ai/Monologue.dmg",
-      verified: "updates.jottle.ai/"
+  url "https://updates.jottle.ai/Monologue.dmg"
   name "Monologue"
   desc "AI voice dictation that adapts to your writing style"
   homepage "https://www.monologue.to/"
@@ -17,6 +16,8 @@ cask "monologue" do
   depends_on macos: :sonoma
 
   app "Monologue.app"
+
+  uninstall quit: "com.zeitalabs.jottleai"
 
   zap trash: [
     "~/Library/Application Support/com.zeitalabs.jottleai",

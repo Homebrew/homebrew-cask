@@ -1,12 +1,11 @@
 cask "structuredlogviewer" do
   arch arm: "arm64", intel: "x64"
 
-  version "2.3.213"
-  sha256 arm:   "18d1ee4cc557a838a11bc9214aa33fa34035e279d0ae24f0a7f37b6bc5057e0a",
-         intel: "69dc706368a2004f5ca421cd700c4b2e865989b1ef6d9649de222fba97af0ff7"
+  version "2.3.246"
+  sha256 arm:   "4a4b08d1bbd706c06bffa960de435251d03ca052b882749e3f17cb03c8d1b765",
+         intel: "a04efd457b9f4d302fd49668a48da0bcdfe35dc4f43902b95483116cbf811967"
 
-  url "https://github.com/KirillOsenkov/MSBuildStructuredLog/releases/download/v#{version}/StructuredLogViewer-#{arch}.dmg",
-      verified: "github.com/KirillOsenkov/MSBuildStructuredLog/"
+  url "https://github.com/KirillOsenkov/MSBuildStructuredLog/releases/download/v#{version}/StructuredLogViewer-#{arch}.dmg"
   name "Structured Log Viewer"
   desc "Interactive log viewer for MSBuild structured logs (*.binlog)"
   homepage "https://msbuildlog.com/"

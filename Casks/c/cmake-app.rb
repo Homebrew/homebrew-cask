@@ -1,6 +1,6 @@
 cask "cmake-app" do
-  version "4.4.0"
-  sha256 "86f4f074e21d3475ee52f706c13b4adc586a0d833c1a5df81ef5bc5b66c07801"
+  version "4.4.3"
+  sha256 "0423c5c00f71fb8e7be281afa834137c5f95a5791a125beec7939eef45bcfc94"
 
   url "https://cmake.org/files/v#{version.major_minor}/cmake-#{version}-macos-universal.dmg"
   name "CMake"
@@ -46,6 +46,7 @@ cask "cmake-app" do
   manpage "#{appdir}/CMake.app/Contents/man/man7/cpack-generators.7"
 
   zap trash: [
+    "~/Library/Preferences/com.kitware.CMakeSetup.plist",
     "~/Library/Preferences/org.cmake.cmake.plist",
     "~/Library/Saved Application State/org.cmake.cmake.savedState",
   ]

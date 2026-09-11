@@ -1,9 +1,9 @@
 cask "vibeproxy" do
   arch arm: "arm64", intel: "x86_64"
 
-  version "1.8.240"
-  sha256 arm:   "dedd456fccbb1e0820bc4da81b7bc9fd530e2d94c784992d5cb9179f4f6d398d",
-         intel: "1d425c11b7563cdbf532da044de6ad2d3f3407b712d7719f4e61ff67bf604c0e"
+  version "1.8.293"
+  sha256 arm:   "6fe5401d0b27a3fe021ccb1bf8eedf221bf2d94deb4bb2cb973107c171caf82c",
+         intel: "4d07b0f3e04f1d5525cb0d27c2c3ab0f6bbbb980af1694987fa1ae71593c0cf1"
 
   url "https://github.com/automazeio/vibeproxy/releases/download/v#{version}/VibeProxy-#{arch}.dmg"
   name "VibeProxy"
@@ -20,5 +20,8 @@ cask "vibeproxy" do
 
   app "VibeProxy.app"
 
-  zap trash: "~/Library/Preferences/com.vibeproxy.app.plist"
+  zap trash: [
+    "~/Library/HTTPStorages/com.vibeproxy.app",
+    "~/Library/Preferences/com.vibeproxy.app.plist",
+  ]
 end

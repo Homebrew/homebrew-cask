@@ -2,8 +2,7 @@ cask "font-paperlogy" do
   version "1.001"
   sha256 "6ffa5c8fc7539c61f419dcd2c4dd714556412f2455d26399e83792968c7b23d6"
 
-  url "https://github.com/Freesentation/paperlogy/raw/main/Paperlogy-#{version}.zip",
-      verified: "github.com/Freesentation/paperlogy/"
+  url "https://github.com/Freesentation/paperlogy/raw/main/Paperlogy-#{version}.zip"
   name "Paperlogy"
   name "페이퍼로지"
   homepage "https://freesentation.blog/paperlogyfont"

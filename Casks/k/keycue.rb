@@ -1,6 +1,6 @@
 cask "keycue" do
-  version "11.2"
-  sha256 "4974f30dfeda32e56756d977182acabedadd82622882e3b1c1b632cbac69bfce"
+  version "11.2.1"
+  sha256 "22cd3f36c7327b92405569ab9d548e0fbc8d834d7cab99be84ef5176e0b5abff"
 
   url "https://www.ergonis.com/downloads/products/keycue/KeyCue#{version.no_dots}-Install.dmg",
       user_agent: :fake

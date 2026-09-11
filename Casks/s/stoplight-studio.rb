@@ -5,8 +5,7 @@ cask "stoplight-studio" do
   sha256 arm:   "4e2d57b4cb6471995af03e770bdec2900c8c97ebffc61beb731d47611aba24ee",
          intel: "a9c66e62b966cdcfe7e383c68fefef71f220bd7466014a24b5a1918fd2650475"
 
-  url "https://github.com/stoplightio/studio/releases/download/v#{version.csv.first}-stable.#{version.csv.second}/stoplight-studio-mac-#{arch}.dmg",
-      verified: "github.com/stoplightio/studio/"
+  url "https://github.com/stoplightio/studio/releases/download/v#{version.csv.first}-stable.#{version.csv.second}/stoplight-studio-mac-#{arch}.dmg"
   name "Stoplight Studio"
   desc "Editor for designing and documenting APIs"
   homepage "https://stoplight.io/studio/"

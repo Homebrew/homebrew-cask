@@ -1,9 +1,9 @@
 cask "gearsystem" do
   arch arm: "arm64", intel: "intel"
 
-  version "3.9.13"
-  sha256 arm:   "bf03dade4d526787de5b33c76dcbba8796200909a33c21bc0eea2baa279626a6",
-         intel: "156b86c7ddeb2d0fad99bb2e6d942b601b75485c340a47294acd256468c0d407"
+  version "3.9.18"
+  sha256 arm:   "9ba96e263377821038b754f941406dbfb6270073043a8efb6f2db73f98e38cee",
+         intel: "40761e96081ecccce0265e0ac606d2a2bf4eae92da5e651d9e2d0ee5f57e0c7a"
 
   url "https://github.com/drhelius/Gearsystem/releases/download/#{version}/Gearsystem-#{version}-desktop-macos-#{arch}.zip"
   name "Gearsystem"
@@ -14,6 +14,8 @@ cask "gearsystem" do
   container nested: "Gearsystem.app.zip"
 
   app "Gearsystem.app"
+
+  uninstall quit: "com.drhelius.Gearsystem"
 
   zap trash: "~/Library/Saved Application State/me.ignaciosanchez.Gearsystem.savedState"
 end

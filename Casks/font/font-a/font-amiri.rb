@@ -2,8 +2,7 @@ cask "font-amiri" do
   version "1.003"
   sha256 "81af0aff7d2086d8af24cea7202f7546130997982534691373485cd96744d05e"
 
-  url "https://github.com/aliftype/amiri/releases/download/#{version}/Amiri-#{version}.zip",
-      verified: "github.com/aliftype/amiri/"
+  url "https://github.com/aliftype/amiri/releases/download/#{version}/Amiri-#{version}.zip"
   name "Amiri"
   homepage "https://aliftype.com/amiri/"
 

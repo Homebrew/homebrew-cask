@@ -8,8 +8,8 @@ cask "font-average-mono" do
 
   font "AverageMono/AverageMono.otf"
   font "AverageMono/AverageMonoBold.otf"
-  font "AverageMono/AverageMonoItalic.otf"
   font "AverageMono/AverageMonoBoldItalic.otf"
+  font "AverageMono/AverageMonoItalic.otf"
 
   # No zap stanza required
 end

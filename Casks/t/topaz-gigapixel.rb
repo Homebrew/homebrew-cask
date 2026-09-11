@@ -2,9 +2,9 @@ cask "topaz-gigapixel" do
   arch arm: "arm64", intel: "x86_64"
   livecheck_arch = on_arch_conditional intel: "/intel"
 
-  version "1.3.2"
-  sha256 arm:   "3014a4ef7d8eb1388c9cd6fd019055ccb92d72254b011f790410d5bcdf4c2172",
-         intel: "23d2c99ba07c396b52a57d42306ff517de859a307fbf853f177d3a0f4d91ff5e"
+  version "1.3.6"
+  sha256 arm:   "4a07d4f248ec02aaa5459a923409c0daf89cdf5c3579072fcbe715d6ce81be54",
+         intel: "ba025cb2f8509021a93be9500d9a6f4fe7dbb23387282dba98e1c521dc139cd3"
 
   url "https://downloads.topazlabs.com/deploy/TopazGigapixel/#{version}/TopazGigapixel-#{version}-#{arch}.pkg"
   name "Topaz Gigapixel"

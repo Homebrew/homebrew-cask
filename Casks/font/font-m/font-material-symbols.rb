@@ -3,7 +3,6 @@ cask "font-material-symbols" do
   sha256 :no_check
 
   url "https://github.com/google/material-design-icons.git",
-      verified:  "github.com/google/material-design-icons",
       branch:    "master",
       only_path: "variablefont"
   name "Material Symbols"

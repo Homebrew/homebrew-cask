@@ -1,9 +1,9 @@
 cask "kreya" do
   arch arm: "arm64", intel: "x64"
 
-  version "1.20.3"
-  sha256 arm:   "a4956ddfcaf2b62f3c7cd44b48f7fcc729d9d27623d3072bb1aae26ea478ac86",
-         intel: "e6d25ff114f9bfdddcff9df083f2c4a2fbe68481b03c8982cbf1b0e10f5fa5de"
+  version "1.21.0"
+  sha256 arm:   "1787baafc8cdc8f70df10fdf92dff9b145b25690b9376c05f8def1d9d4e7bbf6",
+         intel: "145051eecc67e65daa248ed1e1e7fb14a7085b37340c4863c0daa9905041df92"
 
   url "https://stable-downloads.kreya.app/#{version}/Kreya-osx-#{arch}.zip"
   name "Kreya"

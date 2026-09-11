@@ -2,8 +2,7 @@ cask "font-henny-penny" do
   version :latest
   sha256 :no_check
 
-  url "https://github.com/google/fonts/raw/main/ofl/hennypenny/HennyPenny-Regular.ttf",
-      verified: "github.com/google/fonts/"
+  url "https://github.com/google/fonts/raw/main/ofl/hennypenny/HennyPenny-Regular.ttf"
   name "Henny Penny"
   homepage "https://fonts.google.com/specimen/Henny+Penny"
 

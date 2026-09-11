@@ -1,6 +1,6 @@
 cask "silentknight" do
-  version "2.14,2026.03"
-  sha256 "adeed760e2d4482a250b48013fde40916afc6cbcb253bce491c9bdbc64f8023b"
+  version "3.02,2026.07"
+  sha256 "41be69cccdcedb325edbe825b86bdea24b1bcfbbcde8bea9e57e7a82326ea157"
 
   # Upstream zero-pads the minor version in the no-dot filename version to two
   # digits (e.g. 2.9 is 209). We only need this workaround while the minor
@@ -10,7 +10,7 @@ cask "silentknight" do
     (i < 1 || n.length > 1) ? n : n.rjust(2, "0")
   end.join
 
-  url "https://eclecticlight.co/wp-content/uploads/#{version.csv.second.major}/#{version.csv.second.minor}/silentknight#{no_dot_version}.zip"
+  url "https://eclecticlight.co/wp-content/uploads/#{version.csv.second.major}/#{version.csv.second.minor}/sk#{no_dot_version}.zip"
   name "SilentKnight"
   desc "Automatically checks computer's security"
   homepage "https://eclecticlight.co/lockrattler-systhist/"
@@ -31,9 +31,9 @@ cask "silentknight" do
     end
   end
 
-  depends_on macos: :big_sur
+  depends_on macos: :sequoia
 
-  app "silentknight#{no_dot_version}/SilentKnight.app"
+  app "sk#{no_dot_version}/SilentKnight#{version.major}.app"
 
   zap trash: [
     "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/co.eclecticlight.silentknight.sfl*",

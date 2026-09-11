@@ -3,8 +3,7 @@ cask "fmail2" do
   version "2.8.9"
   sha256 "646f7e7aeb319692a636a1d484bf8f350dba0a256d01c3e8948afba97f10a401"
 
-  url "https://fmail.appmac.fr/update/sparkle/FMail2_#{version.no_dots}.zip",
-      verified: "fmail.appmac.fr/update/sparkle/"
+  url "https://fmail.appmac.fr/update/sparkle/FMail2_#{version.no_dots}.zip"
   name "FMail2"
   desc "Unofficial native application for Fastmail"
   homepage "https://fmail.arievanboxel.fr/"

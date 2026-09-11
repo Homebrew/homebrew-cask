@@ -42,5 +42,5 @@ cask "chef-workstation" do
             },
             pkgutil:   "com.getchef.pkg.chef-workstation"
 
-  zap trash: "~/.chef-workstation/"
+  zap trash: "~/.chef-workstation"
 end

@@ -1,6 +1,6 @@
 cask "xnconvert" do
-  version "1.112.0"
-  sha256 "65162b95a9e8a85c1aa63cea5dd0d4cd2cc94524fc2503ab8855d49cc1ec11e3"
+  version "1.116.0"
+  sha256 "4d3d4ef552155a5bf85cdfea363f88af0dbb23b697ce1ed720e0705d70a96b2d"
 
   url "https://download.xnview.com/old_versions/XnConvert/XnConvert-#{version}-mac.dmg"
   name "XnSoft XnConvert"
@@ -15,6 +15,8 @@ cask "xnconvert" do
   depends_on :macos
 
   app "XnConvert.app"
+
+  uninstall quit: "com.xnview.XnConvert"
 
   zap trash: "~/Library/Preferences/com.xnview.XnConvert.plist"
 end

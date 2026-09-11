@@ -3,20 +3,15 @@ cask "lark" do
   livecheck_arch = on_arch_conditional arm: "_m1"
 
   on_arm do
-    version "7.71.13,775f70d7"
-    sha256 "72b4a6ff48ed858e453c6bd05b6ddd4d4802b95f3c9bca6c1e1cfb8d79b09420"
-
-    depends_on macos: :big_sur
+    version "7.75.20,c22d69d1"
+    sha256 "dfd5c9fafd8cefe0147d1b0a8b8186ccef20d6b0ad227ca5c05bca7867d3e70d"
   end
   on_intel do
-    version "7.71.13,3cbbd687"
-    sha256 "7c3e6fb20ec931ea1bbaa16a62efe69570a571cc22a934ad24b49f89fb98a82f"
-
-    depends_on macos: :catalina
+    version "7.75.20,07add062"
+    sha256 "d081f05c6b97b11e38a2aa044bae6a9c82e0e90578f86d1ae429013eedf904a4"
   end
 
-  url "https://sf16-sg.larksuitecdn.com/obj/lark-version-sg/#{version.csv.second}/Lark-darwin_#{arch}-#{version.csv.first}-signed.dmg",
-      verified: "sf16-sg.larksuitecdn.com/obj/lark-version-sg/"
+  url "https://sf16-sg.larksuitecdn.com/obj/lark-version-sg/#{version.csv.second}/Lark-darwin_#{arch}-#{version.csv.first}-signed.dmg"
   name "Lark"
   desc "Project management software"
   homepage "https://www.larksuite.com/"

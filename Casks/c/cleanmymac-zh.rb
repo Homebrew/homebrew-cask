@@ -2,8 +2,7 @@ cask "cleanmymac-zh" do
   version "4.15.14"
   sha256 "c39b42a128b3b5542e7b9a6fcc51eb26d1ab2d123d991dc17e314b092ce671b4"
 
-  url "https://dl.devmate.com/com.macpaw.zh.CleanMyMac#{version.major}/CleanMyMacXChinese.dmg",
-      verified: "dl.devmate.com/"
+  url "https://dl.devmate.com/com.macpaw.zh.CleanMyMac#{version.major}/CleanMyMacXChinese.dmg"
   name "CleanMyMac X Chinese"
   desc "Tool to remove unnecessary files and folders from disk Chinese edition"
   homepage "https://www.mycleanmymac.com/"

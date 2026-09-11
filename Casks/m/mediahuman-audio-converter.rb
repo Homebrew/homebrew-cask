@@ -1,7 +1,7 @@
 cask "mediahuman-audio-converter" do
   arch arm: "-arm"
 
-  version "2.3.7"
+  version "2.3.8"
   sha256 :no_check
 
   url "https://www.mediahuman.com/files/MHAudioConverter#{arch}.dmg"
@@ -14,7 +14,7 @@ cask "mediahuman-audio-converter" do
     regex(/"softwareVersion">\s*(\d+(?:\.\d+)+)[\s<]/i)
   end
 
-  depends_on macos: :big_sur
+  depends_on :macos
 
   app "MediaHuman Audio Converter.app"
 

@@ -1,7 +1,7 @@
 cask "safari-technology-preview" do
   on_tahoe :or_older do
-    version "247,140-34382-20260630-9f5e899d-3f85-450d-ab63-4f657b833cf9"
-    sha256 "c667953f7b84226cf7985db954b6743c90b71e4b6046bd7ebda494b841ebf50d"
+    version "252,142-15045-20260910-e4690e3f-4b63-4560-962c-c584ada7ee7e"
+    sha256 "42950d149fd5a12793916732b326c5770679b625560ff44bdf854caec0558e59"
 
     livecheck do
       url :homepage
@@ -45,8 +45,14 @@ cask "safari-technology-preview" do
 
   pkg "Safari Technology Preview.pkg"
 
-  uninstall launchctl: "com.apple.SafariTechnologyPreview.History",
+  uninstall launchctl: [
+              "com.apple.AuthenticationServicesCore.AuthenticationServicesAgent-STP",
+              "com.apple.SafariTechnologyPreview.History",
+              "com.apple.SafariTechnologyPreview.SyncService",
+              "com.apple.webkit.webpushd.relocatable",
+            ],
             quit:      "com.apple.SafariTechnologyPreview",
+            pkgutil:   "com.apple.pkg.SafariTechPreviewPackage",
             delete:    "/Applications/Safari Technology Preview.app"
 
   zap trash: [

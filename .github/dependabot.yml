@@ -18,4 +18,6 @@ updates:
   - dependency-type: all
   cooldown:
     default-days: 7
+    exclude:
+    - Homebrew/actions/*
 

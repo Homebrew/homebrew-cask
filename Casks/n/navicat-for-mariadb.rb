@@ -57,7 +57,7 @@ cask "navicat-for-mariadb" do
     cask "navicat-premium"
   end
 
-  depends_on macos: :big_sur
+  depends_on :macos
 
   app "Navicat for MariaDB.app"
 

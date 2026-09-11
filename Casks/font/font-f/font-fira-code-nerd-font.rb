@@ -1,8 +1,8 @@
 cask "font-fira-code-nerd-font" do
-  version "3.4.0"
-  sha256 "7cc4ffd8f7a1fc914cdab7b149808298165ff7a7f40e40d82dea9ebe41e8ca0b"
+  version "3.5.1"
+  sha256 "68e3bd6164864b8b514605bc34e3a87ac401c8c48682fcce6478c70263340207"
 
-  url "https://github.com/ryanoasis/nerd-fonts/releases/download/v#{version}/FiraCode.zip"
+  url "https://github.com/ryanoasis/nerd-fonts/releases/download/v#{version}/FiraCode.tar.xz"
   name "FiraCode Nerd Font (Fira Code)"
   homepage "https://github.com/ryanoasis/nerd-fonts"
 

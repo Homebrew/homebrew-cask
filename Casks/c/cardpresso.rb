@@ -2,8 +2,7 @@ cask "cardpresso" do
   version "1.7.140"
   sha256 "fccb6c5de6de364136b49d84bbac9e337ab220a7e53846304cb85e6e81dcfc4c"
 
-  url "https://www.cardpressodownloads.com/downloads/cardpresso_releases/for_mac_osx/cardPresso#{version}.zip",
-      verified: "cardpressodownloads.com/downloads/cardpresso_releases/for_mac_osx/"
+  url "https://www.cardpressodownloads.com/downloads/cardpresso_releases/for_mac_osx/cardPresso#{version}.zip"
   name "cardPresso"
   desc "Card software tool for professional card production"
   homepage "https://www.cardpresso.com/"

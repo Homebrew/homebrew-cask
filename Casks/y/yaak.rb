@@ -1,22 +1,33 @@
 cask "yaak" do
+  arch arm: "aarch64", intel: on_system_conditional(macos: "x64", linux: "amd64")
+  os macos: "Yaak", linux: "yaak"
+  url_end = on_system_conditional macos: "dmg", linux: "AppImage"
+
+  version "2026.7.1"
+  sha256 arm:          "4cb8760964a6ddf51a1d8ed9b3b32bdbb61c5c2c608fb2707f4d757c228a6dff",
+         intel:        "997e18f1e116f2048d4151735b2d2e4d814efbc2f2d3192cc600b01ea0a9ab70",
+         arm64_linux:  "d6810698c61d72511a2acd319a4d0a4339e02fc16f7a578881538af053785332",
+         x86_64_linux: "6022c792246a60c50cb06ff61455deff0a7b6eeed876e9da844518a8116315e4"
+
   on_macos do
-    arch arm: "aarch64", intel: "x64"
+    auto_updates true
+    depends_on macos: :ventura
+
+    app "Yaak.app"
+
+    zap trash: [
+      "~/Library/Application Support/app.yaak.desktop",
+      "~/Library/Caches/app.yaak.desktop",
+      "~/Library/Logs/app.yaak.desktop",
+      "~/Library/Saved Application State/app.yaak.desktop.savedState",
+      "~/Library/Webkit/app.yaak.desktop",
+    ]
   end
   on_linux do
-    arch arm: "aarch64", intel: "amd64"
+    app_image "yaak_#{version}_#{arch}.AppImage", target: "Yaak.AppImage"
   end
 
-  version "2026.4.0"
-  sha256 arm:          "d2a05e7782919589564284868312bf040a4cb3d437aa78cb83258985fe65bb02",
-         intel:        "592d2580f471861a70e9c98e86e743083810b4e9b665595451cbc316974277f7",
-         arm64_linux:  "6e93a8d02559ba991d6d44cf896b554e567c53597041a337f680d0f826d17695",
-         x86_64_linux: "bc8dcc5ef79028f9e56002615718561a4d37090a645f9c9cde8f65401780ca48"
-
-  artifact = on_system_conditional macos: "Yaak_#{version}_#{arch}.dmg",
-                                   linux: "yaak_#{version}_#{arch}.AppImage"
-
-  url "https://github.com/mountain-loop/yaak/releases/download/v#{version}/#{artifact}",
-      verified: "github.com/mountain-loop/yaak/"
+  url "https://github.com/mountain-loop/yaak/releases/download/v#{version}/#{os}_#{version}_#{arch}.#{url_end}"
   name "Yaak"
   desc "REST, GraphQL and gRPC client"
   homepage "https://yaak.app/"
@@ -29,23 +40,4 @@ cask "yaak" do
   end
 
   conflicts_with cask: "yaak@beta"
-
-  on_macos do
-    auto_updates true
-    depends_on macos: :ventura
-
-    app "yaak.app"
-
-    zap trash: [
-      "~/Library/Application Support/app.yaak.desktop",
-      "~/Library/Caches/app.yaak.desktop",
-      "~/Library/Logs/app.yaak.desktop",
-      "~/Library/Saved Application State/app.yaak.desktop.savedState",
-      "~/Library/Webkit/app.yaak.desktop",
-    ]
-  end
-
-  on_linux do
-    app_image "yaak_#{version}_#{arch}.AppImage", target: "Yaak.AppImage"
-  end
 end

@@ -1,9 +1,8 @@
 cask "claude" do
-  version "1.22209.3,babe11577dfefe3e209c06bd674628d862f0dbae"
-  sha256 "b110e0fdb7b2601d80dfdd7893f7811de382de84c4586113e7873e28f17680fc"
+  version "1.52386.0,1003ca8d443708006c167ffbd0f9695343643af1"
+  sha256 "9a35677afdb02d4b0a53aa5d2c3b2ee4c96bfbfc46ee94a0faa06af21c69abc0"
 
-  url "https://downloads.claude.ai/releases/darwin/universal/#{version.csv.first}/Claude-#{version.csv.second}.zip",
-      verified: "downloads.claude.ai/releases/darwin/universal/"
+  url "https://downloads.claude.ai/releases/darwin/universal/#{version.csv.first}/Claude-#{version.csv.second}.zip"
   name "Claude"
   desc "Anthropic's official Claude AI desktop app"
   homepage "https://claude.com/download"
@@ -22,7 +21,7 @@ cask "claude" do
   end
 
   auto_updates true
-  depends_on macos: :monterey
+  depends_on macos: :ventura
 
   app "Claude.app"
 

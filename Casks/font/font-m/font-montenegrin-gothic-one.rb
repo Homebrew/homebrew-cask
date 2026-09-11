@@ -2,8 +2,7 @@ cask "font-montenegrin-gothic-one" do
   version :latest
   sha256 :no_check
 
-  url "https://github.com/google/fonts/raw/main/ofl/montenegringothicone/MontenegrinGothicOne-Regular.ttf",
-      verified: "github.com/google/fonts/"
+  url "https://github.com/google/fonts/raw/main/ofl/montenegringothicone/MontenegrinGothicOne-Regular.ttf"
   name "Montenegrin Gothic One"
   homepage "https://fonts.google.com/specimen/Montenegrin+Gothic+One"
 

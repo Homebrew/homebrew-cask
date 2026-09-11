@@ -1,20 +1,13 @@
 cask "gitcomet" do
   arch arm: "arm64", intel: "x86_64"
   os macos: "macos", linux: "linux"
+  url_end = on_system_conditional macos: "dmg", linux: "AppImage"
 
-  version "0.1.16"
-  sha256 arm:          "2cd4049ea4a8efc0e6f2ff97c9fbb480496b08f8db44de4be75fde1a26b0e822",
-         x86_64:       "3d0b67aabcf61e866215b5214f5ae98d0bf6cb2a65101034083705cd26d63bba",
-         arm64_linux:  "33b5a5221d73d1e98c853d2880173bfd8cf74d88f7384bfc003e00fed1323884",
-         x86_64_linux: "b5762a88390c3e8a5498529416252c01babedf8461aed3c65a8cea4aab9ea4ac"
-
-  url_end = on_system_conditional linux: ".AppImage", macos: ".dmg"
-
-  url "https://github.com/Auto-Explore/GitComet/releases/download/v#{version}/gitcomet-v#{version}-#{os}-#{arch}#{url_end}",
-      verified: "github.com/Auto-Explore/GitComet/"
-  name "GitComet"
-  desc "Git GUI"
-  homepage "https://gitcomet.dev/"
+  version "0.2.3"
+  sha256 arm:          "03c09bdafb3708c089fc7090d90dd6ca2fbdec0ab3fd9138aaebe44a5fb9d4b1",
+         intel:        "68e07e85678a686c0928d1b9abbc09f743dbb8860501ac6786faf7394c3a72e0",
+         arm64_linux:  "8bede3c1a1f4ecedb4f2537504cd188362dba168bca3d06a3e49affa65d9f97d",
+         x86_64_linux: "6502994a00e0a44c2a35ffaa69f10ad821d2c87c2cc147d3ad90f8fec70740e4"
 
   on_macos do
     depends_on macos: :ventura
@@ -31,8 +24,12 @@ cask "gitcomet" do
       "~/Library/Preferences/ai.autoexplore.gitcomet.plist",
     ]
   end
-
   on_linux do
     app_image "gitcomet-v#{version}-linux-#{arch}.AppImage", target: "GitComet.AppImage"
   end
+
+  url "https://github.com/Auto-Explore/GitComet/releases/download/v#{version}/gitcomet-v#{version}-#{os}-#{arch}.#{url_end}"
+  name "GitComet"
+  desc "Git GUI"
+  homepage "https://gitcomet.dev/"
 end

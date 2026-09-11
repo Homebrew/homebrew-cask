@@ -1,7 +1,7 @@
 cask "go64" do
   # NOTE: "64" is not a version number, but an intrinsic part of the product name
-  version "1.4"
-  sha256 "f12025face61f2d1c33b11445a5fb635c0bd92252d7f4e79ab791102d7c4cd78"
+  version "1.5.1"
+  sha256 "db0e22b2c38b42d464e4e7a537b110ab03487a4846604ecc3aed1194b27721c6"
 
   url "https://www.stclairsoft.com/download/Go64-#{version}.zip"
   name "Go64"
@@ -18,9 +18,12 @@ cask "go64" do
 
   app "Go64.app"
 
+  uninstall quit: "com.stclairsoft.Go64"
+
   zap trash: [
     "~/Library/Application Support/com.stclairsoft.Go64",
     "~/Library/Caches/com.stclairsoft.Go64",
+    "~/Library/HTTPStorages/com.stclairsoft.Go64",
     "~/Library/Preferences/com.stclairsoft.Go64.plist",
     "~/Library/Saved Application State/com.stclairsoft.Go64.savedState",
   ]

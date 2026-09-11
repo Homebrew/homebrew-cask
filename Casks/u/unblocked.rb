@@ -1,9 +1,9 @@
 cask "unblocked" do
   arch arm: "arm", intel: "intel"
 
-  version "1.0.2769"
-  sha256 arm:   "02502ab6f7a656832e3336bc9f80acbae392af12909eae074efbd605150d70e0",
-         intel: "73aba2811c5c6720d2ca2c5406b194b9aff33b6f1c29b3c54aa31286cbaaa1fa"
+  version "1.0.2834"
+  sha256 arm:   "3c8a447cc29d9c8f9316b14921b635c329e1bb1318b4ed50c93282187b00a8a7",
+         intel: "be2a8c8ba6589528c8ee9f8678d6bd0dc5d0d6f41a180053bf8094c2db95a18d"
 
   url "https://getunblocked.com/releases/macos/unblocked-desktop-#{arch}-#{version}.pkg"
   name "Unblocked"
@@ -30,6 +30,7 @@ cask "unblocked" do
             delete:     "/Applications/Unblocked.app"
 
   zap trash: [
+    "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.nextchaptersoftware.unblockedhub.sfl*",
     "~/Library/Application Support/Unblocked",
     "~/Library/Preferences/com.nextchaptersoftware.UnblockedHub.plist",
   ]

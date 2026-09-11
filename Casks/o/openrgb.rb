@@ -7,8 +7,7 @@ cask "openrgb" do
 
   # TODO: Remove the `candidate` part of this url when updating to the next
   # stable version, so we only match stable versions going forward.
-  url "https://codeberg.org/OpenRGB/OpenRGB/releases/download/release_candidate_#{version.csv.first}/OpenRGB_#{version.csv.first}_MacOS_#{arch}_#{version.csv.second}.zip",
-      verified: "codeberg.org/OpenRGB/OpenRGB/"
+  url "https://codeberg.org/OpenRGB/OpenRGB/releases/download/release_candidate_#{version.csv.first}/OpenRGB_#{version.csv.first}_MacOS_#{arch}_#{version.csv.second}.zip"
   name "OpenRGB"
   desc "Open source RGB lighting control that doesn't depend on manufacturer software"
   homepage "https://openrgb.org/"
@@ -25,7 +24,7 @@ cask "openrgb" do
 
   disable! date: "2026-09-01", because: :fails_gatekeeper_check
 
-  depends_on macos: :big_sur
+  depends_on :macos
 
   app "OpenRGB.app"
 

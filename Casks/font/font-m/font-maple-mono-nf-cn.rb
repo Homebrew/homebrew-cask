@@ -2,8 +2,7 @@ cask "font-maple-mono-nf-cn" do
   version "7.9"
   sha256 "ab88522932cf4015dffeaef6dedc59a22a5fefecdcc6e583d9fcd997da5b7cac"
 
-  url "https://github.com/subframe7536/Maple-font/releases/download/v#{version}/MapleMono-NF-CN-unhinted.zip",
-      verified: "github.com/subframe7536/Maple-font/"
+  url "https://github.com/subframe7536/Maple-font/releases/download/v#{version}/MapleMono-NF-CN-unhinted.zip"
   name "Maple Mono NF CN"
   homepage "https://font.subf.dev/en/"
 

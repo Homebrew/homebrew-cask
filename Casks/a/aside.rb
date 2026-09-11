@@ -1,6 +1,6 @@
 cask "aside" do
-  version "1.0.719.1"
-  sha256 "ef81377677b412a942b9cf39acf0a68ca7c845a6f5d0a8a05e61df058bee640e"
+  version "1.0.910.1"
+  sha256 "b71fc04ea5c89cd5e59f9ef50c15871e8a602bd27c3aee4d1df1a108677c8079"
 
   url "https://releases.aside.com/dev-updater/Aside-#{version}.dmg"
   name "Aside"
@@ -15,7 +15,7 @@ cask "aside" do
   end
 
   auto_updates true
-  depends_on macos: :monterey
+  depends_on macos: :ventura
 
   app "Aside.app"
 
@@ -46,8 +46,10 @@ cask "aside" do
         "~/Library/Caches/at.studio.AsideBrowser",
         "~/Library/Caches/at.studio.AsideKeystone",
         "~/Library/Caches/at.studio.AsideKeystone.Agent",
+        "~/Library/Caches/at.studio.AsideUpdater",
         "~/Library/HTTPStorages/at.studio.AsideBrowser",
         "~/Library/HTTPStorages/at.studio.AsideBrowser.binarycookies",
+        "~/Library/HTTPStorages/at.studio.AsideUpdater",
         "~/Library/LaunchAgents/at.studio.AsideKeystone.agent.plist",
         "~/Library/LaunchAgents/at.studio.AsideKeystone.xpcservice.plist",
         "~/Library/LaunchAgents/at.studio.AsideUpdater.wake.plist",

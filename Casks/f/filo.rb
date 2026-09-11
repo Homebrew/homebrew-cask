@@ -1,7 +1,7 @@
 cask "filo" do
   arch arm: "arm64", intel: "x64"
 
-  version "2.2.0"
+  version "2.3.1"
   sha256 :no_check
 
   url "https://download.filomail.com/mac_upgrade/versions/latest/prod/#{arch}/Filo-#{arch}.dmg"
@@ -17,7 +17,7 @@ cask "filo" do
   end
 
   auto_updates true
-  depends_on macos: :big_sur
+  depends_on :macos
 
   app "Filo.app"
 

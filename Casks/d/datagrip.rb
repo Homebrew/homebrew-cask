@@ -1,9 +1,9 @@
 cask "datagrip" do
   arch arm: "-aarch64"
 
-  version "2026.2,262.8665.272"
-  sha256 arm:   "27ee55d4937a26ceb25170134a7d09efbc0cd95e150591d122eca2d28da994e1",
-         intel: "ce3a4d6a244760ddcac201c1df820825b829a272b55b97e9963f9e6525ab86f4"
+  version "2026.2.5,262.10315.132"
+  sha256 arm:   "f4c85cb1a1973764f84184c5fb8e4b86c7fac9aae2731e503f6f331b1217ddc8",
+         intel: "76200b342b9484afee1be33ac3b15dc78d7f5b240531953904851ae2bda3bca0"
 
   url "https://download.jetbrains.com/datagrip/datagrip-#{version.csv.first}#{arch}.dmg"
   name "DataGrip"
@@ -27,16 +27,10 @@ cask "datagrip" do
   depends_on :macos
 
   app "DataGrip.app"
-  # shim script (https://github.com/Homebrew/homebrew-cask/issues/18809)
-  shimscript = "#{staged_path}/datagrip.wrapper.sh"
-  binary shimscript, target: "datagrip"
+  command_wrapper "datagrip",
+                  executable: "#{appdir}/DataGrip.app/Contents/MacOS/datagrip"
 
-  preflight do
-    File.write shimscript, <<~EOS
-      #!/bin/sh
-      exec '#{appdir}/DataGrip.app/Contents/MacOS/datagrip' "$@"
-    EOS
-  end
+  uninstall quit: "com.jetbrains.datagrip"
 
   zap trash: [
     "~/Library/Application Support/JetBrains/DataGrip*",

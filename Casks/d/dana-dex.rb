@@ -5,8 +5,7 @@ cask "dana-dex" do
   sha256 arm:   "0408cb958bab2e4306bcfe81aa83a5e6bd871d31a685b225df0c6f1d2e74fcd2",
          intel: "9d19121fc8382a3b4a544824e40192fdd1549a55490680ad53f87d3031c2a5a6"
 
-  url "https://download.todesktop.com/201210b49whoa4k/Dex%20#{version}-#{arch}-mac.zip",
-      verified: "download.todesktop.com/201210b49whoa4k/"
+  url "https://download.todesktop.com/201210b49whoa4k/Dex%20#{version}-#{arch}-mac.zip"
   name "Dex"
   desc "Personal CRM that reminds you to keep in touch"
   homepage "https://getdex.com/"

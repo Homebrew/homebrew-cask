@@ -2,8 +2,7 @@ cask "surge-xt" do
   version "1.3.4"
   sha256 "b56e8d51a8dc2382ae668c9ff4e96bae38dbd452af4e584d5a5ef50ab2d09b07"
 
-  url "https://github.com/surge-synthesizer/releases-xt/releases/download/#{version}/surge-xt-macOS-#{version}.dmg",
-      verified: "github.com/surge-synthesizer/releases-xt/"
+  url "https://github.com/surge-synthesizer/releases-xt/releases/download/#{version}/surge-xt-macOS-#{version}.dmg"
   name "Surge XT"
   desc "Hybrid synthesiser"
   homepage "https://surge-synthesizer.github.io/"

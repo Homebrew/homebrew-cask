@@ -1,9 +1,8 @@
 cask "utm@beta" do
-  version "5.0.3"
-  sha256 "fd44a83cf2faecf7e85691652f204a304ba6d86d7d52bfbeee73b26c63a7e3c0"
+  version "5.0.5"
+  sha256 "713afe73c711f01344b8766654be531cd391ed2e30931206f43b5159f143764f"
 
-  url "https://github.com/utmapp/UTM/releases/download/v#{version}/UTM.dmg",
-      verified: "github.com/utmapp/UTM/"
+  url "https://github.com/utmapp/UTM/releases/download/v#{version}/UTM.dmg"
   name "UTM"
   desc "Virtual machines UI using QEMU"
   homepage "https://mac.getutm.app/"
@@ -26,7 +25,7 @@ cask "utm@beta" do
   end
 
   conflicts_with cask: "utm"
-  depends_on macos: :big_sur
+  depends_on :macos
 
   app "UTM.app"
   binary "#{appdir}/UTM.app/Contents/MacOS/utmctl"
@@ -34,6 +33,7 @@ cask "utm@beta" do
   uninstall quit: "com.utmapp.UTM"
 
   zap trash: [
+    "~/Library/Application Scripts/*.com.utmapp.UTM",
     "~/Library/Application Scripts/com.utmapp.QEMUHelper",
     "~/Library/Application Scripts/com.utmapp.UTM",
     "~/Library/Containers/com.utmapp.QEMUHelper",

@@ -1,18 +1,17 @@
 cask "ulaa" do
   arch arm: "arm64", intel: "x64"
 
-  sha256 arm:   "dac75efdb49ec36513986c61ab098f1c4bf7cb94dabd37cd64ec3fcd634d1440",
-         intel: "d25fb92b192e5bc4ddf819fa127fa22a5489d0d08ed7416a6f235f2a1a20fb4f"
+  sha256 arm:   "bbd27b320125df1a04509a67a6c2b821b139a7f7409160a4943c9acab4f4f53b",
+         intel: "e8fa7d46dc0eaa3e5de1f9731ac735562a2e87e90600a1225ed8809081ff6405"
 
   on_arm do
-    version "2.45.3"
+    version "2.48.0"
   end
   on_intel do
-    version "2.45.3"
+    version "2.48.0"
   end
 
-  url "https://downloads.zohocdn.com/ulaa-browser/release/mac/stable/#{arch}/Ulaa-Browser-v#{version}-#{arch}.dmg",
-      verified: "downloads.zohocdn.com/ulaa-browser/"
+  url "https://downloads.zohocdn.com/ulaa-browser/release/mac/stable/#{arch}/Ulaa-Browser-v#{version}-#{arch}.dmg"
   name "Ulaa Browser"
   desc "Privacy-centric browser with advanced tracking protection"
   homepage "https://ulaa.com/"
@@ -23,13 +22,17 @@ cask "ulaa" do
     strategy :header_match
   end
 
-  depends_on macos: :monterey
+  depends_on macos: :ventura
 
   app "Ulaa.app"
+
+  uninstall quit: "com.primeum.Browser"
 
   zap trash: [
     "~/Library/Application Support/Ulaa",
     "~/Library/Caches/Ulaa",
+    "~/Library/HTTPStorages/com.primeum.Browser",
+    "~/Library/Preferences/com.primeum.Browser.plist",
     "~/Library/Preferences/com.zoho.ulaa.plist",
     "~/Library/Saved Application State/com.zoho.ulaa.savedState",
   ]

@@ -1,25 +1,34 @@
 cask "biscuit" do
   arch arm: "-arm64"
+  url_end = on_system_conditional macos: "#{arch}.dmg", linux: ".AppImage"
 
-  version "2.1.1"
-  sha256 arm:   "998dcc9785aea8161b6740398a460cb7a0d3d6d8c627728a14ee885dbb946c3e",
-         intel: "8dffe8207ac9056d3c3762d0703c81bb185e68402535ebfbcf982d0638441f15"
+  version "2.1.2"
+  sha256 arm:          "89609c221bb8b5ea5d027b95bed1c00dc4001b07dfec165f4e740b7da047aa69",
+         intel:        "17a841a2e753cb78bb3349b5a37f57949dae655de35bccea9faf89df30d48590",
+         x86_64_linux: "d76e582b0065127a32592fce4e918dee900b069551e3c3993d4da6b8a4732ec9"
 
-  url "https://github.com/agata/dl.biscuit/releases/download/#{version}/Biscuit-#{version}#{arch}.dmg",
-      verified: "github.com/agata/dl.biscuit/"
+  on_macos do
+    depends_on macos: :monterey
+
+    app "Biscuit.app"
+
+    zap trash: [
+      "~/Library/Application Support/biscuit",
+      "~/Library/Logs/Biscuit",
+      "~/Library/Preferences/com.eatbiscuit.biscuit.plist",
+      "~/Library/Saved Application State/com.eatbiscult.biscult.savedState",
+    ]
+  end
+  on_linux do
+    depends_on arch: :x86_64
+
+    app_image "Biscuit-#{version}.AppImage", target: "Biscuit.AppImage"
+  end
+
+  url "https://github.com/agata/dl.biscuit/releases/download/#{version}/Biscuit-#{version}#{url_end}"
   name "Biscuit"
   desc "Browser to organise apps"
   homepage "https://eatbiscuit.com/"
 
   auto_updates true
-  depends_on macos: :monterey
-
-  app "Biscuit.app"
-
-  zap trash: [
-    "~/Library/Application Support/biscuit",
-    "~/Library/Logs/Biscuit",
-    "~/Library/Preferences/com.eatbiscuit.biscuit.plist",
-    "~/Library/Saved Application State/com.eatbiscult.biscult.savedState",
-  ]
 end

@@ -1,11 +1,11 @@
 cask "quicken" do
-  version "9.1.0,901.61320.100"
-  sha256 "e92b2735fa56299c197ade0006c9f6b13a610bf748ce66c4d9bb6d2fa17cf4cc"
+  version "9.2.2,902.61860.100"
+  sha256 "e61613b2552dda5ce4f4022b0dad70138d2233e2ac194d43cb99e408b20f480b"
 
   url "https://download.quicken.com/mac/Quicken/001/Release/031A96D9-EFE6-4520-8B6A-7F465DDAA3E4/Quicken-#{version.csv.second}/Quicken-#{version.csv.second}.zip"
   name "Quicken"
   desc "Personal finance manager"
-  homepage "https://www.quicken.com/mac"
+  homepage "https://www.quicken.com/products/classic-premier-deluxe-mac/"
 
   livecheck do
     url "https://download.quicken.com/mac/Quicken/001/Release/031A96D9-EFE6-4520-8B6A-7F465DDAA3E4/appcast.xml"
@@ -18,7 +18,10 @@ cask "quicken" do
   app "Quicken.app"
 
   zap trash: [
+    "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.quicken.quicken.sfl*",
     "~/Library/Application Support/Quicken",
+    "~/Library/Caches/com.quicken.Quicken",
+    "~/Library/HTTPStorages/com.quicken.Quicken",
     "~/Library/Preferences/com.quicken.Quicken.plist",
   ]
 end

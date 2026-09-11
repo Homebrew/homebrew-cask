@@ -1,6 +1,6 @@
 cask "dcp-o-matic-batch-converter" do
-  version "2.18.44"
-  sha256 "e5364abd314c2e1545ac070032a78815d6f32e97cd4cd5bc28ae10864a39a2e0"
+  version "2.19.1"
+  sha256 "11daf30bc55c846c8fdfa4938112fde880a4468fa0aae4e4b3c4a0de405d5c8a"
 
   url "https://download.dcpomatic.com/dl.php?id=osx-10.10-batch&version=#{version}"
   name "DCP-o-matic Batch converter"
@@ -11,9 +11,9 @@ cask "dcp-o-matic-batch-converter" do
     cask "dcp-o-matic"
   end
 
-  depends_on macos: :big_sur
+  depends_on :macos
 
   app "DCP-o-matic #{version.major} Batch converter.app"
 
-  # No zap stanza required
+  zap trash: "~/Library/Preferences/com.dcpomatic.batch.plist"
 end

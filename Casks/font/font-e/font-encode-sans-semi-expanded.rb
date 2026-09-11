@@ -3,7 +3,6 @@ cask "font-encode-sans-semi-expanded" do
   sha256 :no_check
 
   url "https://github.com/google/fonts.git",
-      verified:  "github.com/google/fonts",
       branch:    "main",
       only_path: "ofl/encodesanssemiexpanded"
   name "Encode Sans Semi Expanded"

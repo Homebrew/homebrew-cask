@@ -1,9 +1,8 @@
 cask "supasidebar" do
-  version "0.21.1"
-  sha256 "a71086efa2c553f8e6d614b34015dacc52fbb626c64b3ccf28195f953484f960"
+  version "1.0.1"
+  sha256 "0b332f5530fc1ef05a040d05e8f2e5ac902be53fa027690a86fd82ce57ea3714"
 
-  url "https://github.com/auspy/supasidebar-updates/releases/download/v#{version}/supasidebar_v#{version}.dmg",
-      verified: "github.com/auspy/supasidebar-updates/"
+  url "https://github.com/auspy/supasidebar-updates/releases/download/v#{version}/supasidebar_v#{version}.dmg"
   name "SupaSidebar"
   desc "Arc-like sidebar to save links, files and folders from any browser"
   homepage "https://supasidebar.com/"
@@ -17,7 +16,9 @@ cask "supasidebar" do
 
   zap trash: [
     "~/Library/Application Support/com.supasidebar",
+    "~/Library/Application Support/supasidebar",
     "~/Library/Caches/com.supasidebar",
+    "~/Library/Caches/com.vinayak.supasidebar",
     "~/Library/HTTPStorages/com.supasidebar",
     "~/Library/HTTPStorages/com.supasidebar.binarycookies",
     "~/Library/Preferences/com.supasidebar.plist",

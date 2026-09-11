@@ -1,77 +1,76 @@
 cask "firefox@developer-edition" do
-  version "153.0b13"
+  version "156.0b5"
 
   language "ca" do
-    sha256 "cfabef57085ce30ee6782686f503efe9ff22f2f4cf5c1289faaa631a53a2da23"
+    sha256 "1667337b9773cedaf33cdb71d2af48e54e45143f37aefe8dc371a63327168023"
     "ca"
   end
   language "cs" do
-    sha256 "122ef53300046d3ded730fa910061b034d4346973bc0a3f38ad5df4cc0a301e3"
+    sha256 "fce1d1cc75b098e09c1d068da93285f8b62f8b9f3ec342b7935fb7fd03098d6c"
     "cs"
   end
   language "de" do
-    sha256 "93177ba8c56d6f823b7b19d029096be5e44a46744a2c0d33041948dd0038556c"
+    sha256 "2e68b2570451d433fb4865e6723762277d241be3ea10b805588a4ceb26f808ea"
     "de"
   end
   language "en-CA" do
-    sha256 "e74df7f69eff0868c210e40b53582e23f48c7d25ee6b6cc9ff49a94513add6ac"
+    sha256 "743b1e5eb874292272097086ea85f003ef5588a54857e8935748a2bf8308d4c1"
     "en-CA"
   end
   language "en-GB" do
-    sha256 "eccf9b3b8fc1b3d35d34c1bca2abee5d7dbfb8aa0ae4549868158f7094a0021a"
+    sha256 "c5418d77010d0f718d7f5e7bddb0db29d3c6999d81cb4b461086934c2f0884ba"
     "en-GB"
   end
   language "en", default: true do
-    sha256 "6d30d4c74a97ed2e0fea2956006a1e0d589a856061291eb8bbde95378cc806fd"
+    sha256 "a94b259db492bcd98105d029ce0a2c51227e0af11fc531f9366e83a3410bd11f"
     "en-US"
   end
   language "es" do
-    sha256 "af4664fd48a049697f16b63efadcca793c67edcb57ae0e9c6632bec99e1191bb"
+    sha256 "d02d672a14fcd2526e0c8e496fa84dd4af2046ef4a81cf4919339b65e41aa27b"
     "es-ES"
   end
   language "fr" do
-    sha256 "e0028ba8bd7e01ffaadf45149a82334863d231498945b9dc301a3c0af95115ad"
+    sha256 "ffc27dc8260d1cfd275b01a74a51547370a1ff4908a5deea27f7124dc9ddd009"
     "fr"
   end
   language "it" do
-    sha256 "b1252c01a0e6b6804122c5ad3a5b7c85ae0d99202b8c6b4c97da682b4b8d073f"
+    sha256 "3f8cab6602a2b6d92e7092162e5f8524a8cb44aec47e35fc6a3f986a3c9595de"
     "it"
   end
   language "ja" do
-    sha256 "01b90996815105b03f89d2edbc1ac7b0eccac4c71edc673b7c29b5c016e2ac65"
+    sha256 "5083912454a8aa2244ed736760c4ee5665947cf1e53bc5510b6bdc1f664c03e8"
     "ja-JP-mac"
   end
   language "ko" do
-    sha256 "07f8f24806fd32fcdb8b2b87691a042476d1673a0eb332e4844cf09a0aee1165"
+    sha256 "2e5310eef21b13db11512ce73a6ad5b0a567457a6f16425785deeb15b60c3ce6"
     "ko"
   end
   language "nl" do
-    sha256 "5b070aeeaf823bc8480bcf944184209602425f808a56a05cb7a80a7ee25bc55c"
+    sha256 "6ed7fc33f4d34ee1ca73b921125596b54ac33519dcd1c49a8b8f317ce4188d90"
     "nl"
   end
   language "pt-BR" do
-    sha256 "09900bdc92b6a275a1419b80648be7f150aca0642a5c730b00b4ed2036664f03"
+    sha256 "1be86746028fcd01162963de3e3994052682271897614274b2afda27aebc6aa3"
     "pt-BR"
   end
   language "ru" do
-    sha256 "7a3b4618cca5fee96e1bb3fe086533e437753b94f3e6f2457c7fd28a29d9822d"
+    sha256 "a771eb269495438fbdabc7cb5fc8bf0977e2e78b567efed7579fe2389967faed"
     "ru"
   end
   language "uk" do
-    sha256 "72941afc5707bd60177724f7ee17e1a0e07526e58c85f29210556cfa67df6758"
+    sha256 "0cf7a71bba23b861aeded1c1cb14b6edd77b09f09c99580a08b82e90b6225d2d"
     "uk"
   end
   language "zh-TW" do
-    sha256 "f8c32282fc1fb7ccd539dab191c7422dc4146fd468c6988199f86c2b5ed793c1"
+    sha256 "93e52450eb1c8e92840993c8dccfe9a09cb2330070e740a66f946656f2b8d149"
     "zh-TW"
   end
   language "zh" do
-    sha256 "30e9798ddcad1cf410fe83bc074c144d45fb7a7479cda362bb40e1e2edc960f3"
+    sha256 "c025880b75f2ddd7d4823d47dfa8d365d0ef0f1f60785b744873345a265c2f20"
     "zh-CN"
   end
 
-  url "https://download-installer.cdn.mozilla.net/pub/devedition/releases/#{version}/mac/#{language}/Firefox%20#{version}.dmg",
-      verified: "download-installer.cdn.mozilla.net/pub/devedition/releases/"
+  url "https://download-installer.cdn.mozilla.net/pub/devedition/releases/#{version}/mac/#{language}/Firefox%20#{version}.dmg"
   name "Mozilla Firefox Developer Edition"
   desc "Web browser"
   homepage "https://www.mozilla.org/firefox/developer/"
@@ -97,6 +96,7 @@ cask "firefox@developer-edition" do
         "~/Library/Caches/Mozilla/updates/Applications/Firefox",
         "~/Library/Caches/org.mozilla.firefox",
         "~/Library/Preferences/org.mozilla.firefox.plist",
+        "~/Library/Preferences/org.mozilla.firefoxdeveloperedition.plist",
         "~/Library/Saved Application State/org.mozilla.firefox.savedState",
         "~/Library/WebKit/org.mozilla.firefox",
       ],

@@ -1,9 +1,9 @@
 cask "jetbrains-gateway" do
   arch arm: "-aarch64"
 
-  version "2026.2,262.8665.250"
-  sha256 arm:   "154bacee68e2616022c888a11238691082d8ba92c015d8eb03cc42968bc9536a",
-         intel: "e11b174685d4bc1388201115f669919b994d598e1783b31a9e5c545bec4af002"
+  version "2026.2.2,262.10315.114"
+  sha256 arm:   "f4c129c2888e1f215cea5b1f28394bb3524267ea1b976353dba0b44902d7108b",
+         intel: "2562c9d1ec548fd89c5210286954276658a7fd0a304d8639dd8c06006f7a5b91"
 
   url "https://download.jetbrains.com/idea/gateway/JetBrainsGateway-#{version.csv.first}#{arch}.dmg"
   name "jetbrains-gateway"
@@ -28,6 +28,8 @@ cask "jetbrains-gateway" do
 
   app "JetBrains Gateway.app"
   binary "#{appdir}/JetBrains Gateway.app/Contents/MacOS/gateway"
+
+  uninstall quit: "com.jetbrains.gateway"
 
   zap trash: [
     "~/Library/Application Support/JetBrains/JetBrainsGateway#{version.major_minor}",

@@ -2,8 +2,7 @@ cask "voicenotes" do
   version "2.0.7"
   sha256 "1c87d7adf0bc526e071ecd46366c7146fc5cb42f7886f98ecdbc3e6fc8c84755"
 
-  url "https://github.com/brewdotcom/vn-apps-release/releases/download/v#{version}/Voicenotes-#{version}-mac.zip",
-      verified: "github.com/brewdotcom/vn-apps-release/"
+  url "https://github.com/brewdotcom/vn-apps-release/releases/download/v#{version}/Voicenotes-#{version}-mac.zip"
   name "Voicenotes"
   desc "AI-powered app for recording, transcribing and summarising voice notes"
   homepage "https://voicenotes.com/"

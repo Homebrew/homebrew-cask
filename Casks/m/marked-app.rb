@@ -1,8 +1,8 @@
 cask "marked-app" do
-  version "3.1.12,1192"
-  sha256 "140ae4b6b2c62c2eb8849b6b0862b9bfae48d7a3982e9da9fe289e7ba795b40f"
+  version "3.2.4,1218"
+  sha256 "8397d8e200a77e871dac565f023a8a5f875b5d01a93d964e03d20c0f5a5c4a04"
 
-  url "https://updates.markedapp.com/updates/Marked%20#{version.csv.first}.zip"
+  url "https://updates.markedapp.com/updates/Marked%20#{version.csv.first}-#{version.csv.second}.zip"
   name "Marked"
   desc "Previewer for Markdown, MultiMarkdown and other text markup languages"
   homepage "https://markedapp.com/"
@@ -20,12 +20,17 @@ cask "marked-app" do
   uninstall quit: "com.brettterpstra.marked"
 
   zap trash: [
+    "~/Library/Application Scripts/com.brettterpstra.marked.Share",
     "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.brettterpstra.marked.sfl*",
+    "~/Library/Application Support/com.brettterpstra.marked",
     "~/Library/Application Support/Marked",
     "~/Library/Caches/com.brettterpstra.marked",
     "~/Library/Caches/Marked",
+    "~/Library/Containers/com.brettterpstra.marked.Share",
+    "~/Library/HTTPStorages/com.brettterpstra.marked",
     "~/Library/Logs/Marked",
     "~/Library/Preferences/com.brettterpstra.marked.plist",
     "~/Library/Saved Application State/com.brettterpstra.marked.savedState",
+    "~/Library/WebKit/com.brettterpstra.marked",
   ]
 end

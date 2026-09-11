@@ -1,9 +1,8 @@
 cask "fluidvoice" do
-  version "1.6.4"
-  sha256 "52b51a336058f44639ad36ce254dd7ee02334e8870decf2ed12a4f6fb608c633"
+  version "1.6.9"
+  sha256 "d8fb7861d479748bb9905b34e058bc0b106efb3c1767b397f9b2cb604a9357a7"
 
-  url "https://github.com/altic-dev/FluidVoice/releases/download/v#{version}/Fluid-oss-#{version}.dmg",
-      verified: "github.com/altic-dev/FluidVoice/"
+  url "https://github.com/altic-dev/FluidVoice/releases/download/v#{version}/Fluid-oss-#{version}.dmg"
   name "FluidVoice"
   desc "Offline voice-to-text dictation app with AI enhancement"
   homepage "https://altic.dev/fluid"
@@ -17,6 +16,8 @@ cask "fluidvoice" do
   depends_on macos: :sequoia
 
   app "FluidVoice.app"
+
+  uninstall quit: "com.FluidApp.app"
 
   zap trash: [
     "~/Library/Application Support/FluidAudio",

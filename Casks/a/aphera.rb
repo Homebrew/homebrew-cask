@@ -1,9 +1,8 @@
 cask "aphera" do
-  version "1.0.1"
-  sha256 "738252cc00398d0f0fbe33549e21c22a48345be00e856e9661fe910ee7c7b962"
+  version "1.5.0"
+  sha256 "66f200e709dbd55cb4549cb5b21bc98b9eac1ccea14a518c65ecfeb3ecae91a8"
 
-  url "https://releases.aphera.app/Aphera.#{version}.dmg",
-      verified: "releases.aphera.app/"
+  url "https://releases.aphera.app/Aphera.#{version}.dmg"
   name "Aphera"
   desc "Raw photo editing software"
   homepage "https://aphera.co/"
@@ -22,8 +21,11 @@ cask "aphera" do
     "~/Library/Application Scripts/co.latentco.Aphera.QuickLook",
     "~/Library/Application Support/Aphera",
     "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/co.latentco.aphera.sfl*",
+    "~/Library/Caches/co.latentco.Aphera",
     "~/Library/Containers/co.latentco.Aphera",
     "~/Library/Containers/co.latentco.Aphera.QuickLook",
+    "~/Library/HTTPStorages/co.latentco.Aphera",
     "~/Library/Preferences/co.latentco.Aphera.plist",
+    "~/Library/WebKit/co.latentco.Aphera",
   ]
 end

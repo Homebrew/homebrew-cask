@@ -1,6 +1,6 @@
 cask "bookmacster" do
-  version "3.3.8"
-  sha256 "5cc06b006365e999ef0d16c1b3de2b911b93f56c28c1afaa39c14381c440c194"
+  version "3.3.9"
+  sha256 "beb0811eadbbc2efeef1e7a1fe157b691996faaef073561d65fdcb680cdc16cd"
 
   url "https://sheepsystems.com/bookmacster/BookMacster_#{version}.zip"
   name "BookMacster"
@@ -18,7 +18,7 @@ cask "bookmacster" do
 
   auto_updates true
   conflicts_with cask: "bookmacster@beta"
-  depends_on macos: :big_sur
+  depends_on macos: :monterey
 
   app "BookMacster.app"
 

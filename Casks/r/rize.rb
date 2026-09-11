@@ -1,12 +1,11 @@
 cask "rize" do
   arch arm: "arm64", intel: "x64"
 
-  version "3.0.15"
-  sha256 arm:   "77d01df1e49310f5dfb6958a9ed7e9e7f82ddcc96731c056eeb7231ad574d056",
-         intel: "3b62ad4a8f69feff85833a1379f201c41ca8b542d3576acf2e8a60d1ccc442ca"
+  version "3.0.45"
+  sha256 arm:   "e632dcf1155811f907a044463a0317be6ed6fcf37ad4ea8392a3d8c5cb5beb42",
+         intel: "2b23fb8915f3c0b2c30a3a78568b59b8de2cc2045fc960e9eb971ffe1a4cf441"
 
-  url "https://github.com/rize-io/lua/releases/download/v#{version}/Rize-#{version}-#{arch}.dmg",
-      verified: "github.com/rize-io/lua/"
+  url "https://github.com/rize-io/lua/releases/download/v#{version}/Rize-#{version}-#{arch}.dmg"
   name "Rize"
   desc "AI time tracker"
   homepage "https://rize.io/"
@@ -22,6 +21,7 @@ cask "rize" do
   app "Rize.app"
 
   zap trash: [
+    "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/io.rize.sfl*",
     "~/Library/Application Support/Rize",
     "~/Library/Caches/io.rize",
     "~/Library/Caches/io.rize.ShipIt",

@@ -2,8 +2,7 @@ cask "font-migu-2m" do
   version "2023.1123"
   sha256 "e7845f148772c984064c325eba70ed4dfb9a27084c2011a3a1b6194be6e439e5"
 
-  url "https://github.com/itouhiro/mixfont-mplus-ipa/releases/download/v#{version}/migu-2m-#{version.no_dots}.zip",
-      verified: "github.com/itouhiro/mixfont-mplus-ipa/"
+  url "https://github.com/itouhiro/mixfont-mplus-ipa/releases/download/v#{version}/migu-2m-#{version.no_dots}.zip"
   name "Migu 2M"
   homepage "https://itouhiro.github.io/mixfont-mplus-ipa/migu/"
 

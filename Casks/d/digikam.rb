@@ -5,8 +5,7 @@ cask "digikam" do
   sha256 arm:   "280fb7f8bd69f512946b1a5acc63a4f4fb66aed464afc2a03a3e4355150cc8ac",
          intel: "d5edf0f8e498dad0e6748c3bdc9a55433bf8b43601d8467704f47cc995b3f4a2"
 
-  url "https://download.kde.org/stable/digikam/#{version}/digiKam-#{version}-#{arch}.pkg",
-      verified: "kde.org/stable/digikam/"
+  url "https://download.kde.org/stable/digikam/#{version}/digiKam-#{version}-#{arch}.pkg"
   name "digiKam"
   desc "Digital photo manager"
   homepage "https://www.digikam.org/"

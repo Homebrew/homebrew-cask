@@ -2,8 +2,7 @@ cask "strongvpn" do
   version "2.4.5,142651"
   sha256 "ad782f44f67e6bb442a988b4deb1bdc88c7179568cfa2e92b36f6440909324ef"
 
-  url "https://static.colomovers.com/mac/StrongVPN_v#{version.csv.first}_b#{version.csv.second}.zip",
-      verified: "static.colomovers.com/mac/"
+  url "https://static.colomovers.com/mac/StrongVPN_v#{version.csv.first}_b#{version.csv.second}.zip"
   name "StrongVPN"
   desc "VPN app with support for multiple protocols"
   homepage "https://strongvpn.com/vpn-apps/macos/"

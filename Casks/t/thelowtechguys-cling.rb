@@ -1,6 +1,6 @@
 cask "thelowtechguys-cling" do
-  version "2.6.8b1"
-  sha256 "38606587b7187991e884f35b0a261a79e0e77dedc796d12a4a97feb004ea3952"
+  version "2.7.2"
+  sha256 "0dcc1093505d04ba15df6899fc0448295721ef58eb52bd6a8957f3cbf32a6429"
 
   url "https://files.lowtechguys.com/releases/Cling-#{version}.dmg"
   name "The low-tech guys Cling"
@@ -9,7 +9,9 @@ cask "thelowtechguys-cling" do
 
   livecheck do
     url "https://files.lowtechguys.com/cling/appcast.xml"
-    strategy :sparkle
+    strategy :sparkle do |items|
+      items.find { |item| item.channel.nil? }&.short_version
+    end
   end
 
   auto_updates true
@@ -19,6 +21,7 @@ cask "thelowtechguys-cling" do
 
   zap trash: [
     "~/Library/Application Scripts/com.lowtechguys.Cling",
+    "~/Library/Application Support/Cling",
     "~/Library/Caches/Cling",
     "~/Library/Caches/com.lowtechguys.Cling",
     "~/Library/HTTPStorages/com.lowtechguys.Cling",

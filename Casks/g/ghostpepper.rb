@@ -1,6 +1,6 @@
 cask "ghostpepper" do
-  version "2.4.2"
-  sha256 "fbd30db478d3477db4808b489e84be90f2a678b882d3609147bbb0bc83d84aac"
+  version "2.4.4"
+  sha256 "a8c09b24ce19613bb421c0dce06e6167d738a8295f05fa5e5a363551de6b8f06"
 
   url "https://github.com/matthartman/ghost-pepper/releases/download/v#{version}/GhostPepper.dmg"
   name "GhostPepper"

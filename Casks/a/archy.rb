@@ -1,9 +1,8 @@
 cask "archy" do
-  version "2.40.0"
-  sha256 "b86f4091e7186de89b8513b62673733201bc4da20dcd130a68237a27bac44810"
+  version "2.42.2"
+  sha256 "2811fa3ce5a3e48a5376872f702a20af95acc81713943b2c58217caef93dbee5"
 
-  url "https://sdk-cdn.mypurecloud.com/archy/#{version}/archy-macos.zip",
-      verified: "sdk-cdn.mypurecloud.com/archy/"
+  url "https://sdk-cdn.mypurecloud.com/archy/#{version}/archy-macos.zip"
   name "Archy"
   desc "YAML processor"
   homepage "https://developer.genesys.cloud/devapps/archy/"

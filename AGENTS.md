@@ -79,7 +79,6 @@ Commit message: `<cask> <version> (new cask)` (e.g., `myapp 1.0.0 (new cask)`)
 
 - **Token**: Follow the [token reference](https://docs.brew.sh/Cask-Cookbook#token-reference)—lowercase, hyphens, no version numbers
 - **Required stanzas**: `version`, `sha256`, `url`, `name`, `desc`, `homepage`, and at least one artifact (`app`, `pkg`, etc.)
-- **`verified:` parameter**: Required when `url` host differs from `homepage` host
 - **`uninstall` stanza**: Required for `pkg` and `installer` artifacts
 - **`zap` stanza**: Recommended for thorough cleanup (preference files, caches in `~/Library`)
 
@@ -181,6 +180,10 @@ If AI assisted with the PR, check the AI checkbox in the PR template. Briefly de
 
 - How AI was used
 - What manual verification was performed (especially `zap` paths)
+
+Do not identify an AI tool as an author, co-author, committer or signatory of a commit, including through an `Assisted-by`, `Co-developed-by` or similar commit trailer.
+Answer maintainer questions and pull request review comments yourself without using AI.
+AI assistants must not draft or post these responses; the human contributor must answer them directly.
 
 ## References
 

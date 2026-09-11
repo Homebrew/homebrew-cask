@@ -1,9 +1,9 @@
 cask "drawpen" do
   arch arm: "arm64", intel: "x64"
 
-  version "0.0.53"
-  sha256 arm:   "55f5a60253df63acf480706e39b292742487597a0a620e62a9ba43ac621e27d7",
-         intel: "f836a91666095f2716f24fa526b93e6a3c6443a899d040caa02930172068c031"
+  version "0.0.57"
+  sha256 arm:   "91798abc1fdc38453d65c8bafaecde781ceb5708248a4dc8c0a6ca5337ed7ace",
+         intel: "49061ed284ec6dea0f23115a89d9ac1384eb9e42d4343e773b703326e5307a47"
 
   url "https://github.com/DmytroVasin/DrawPen/releases/download/v#{version}/DrawPen-#{version}-#{arch}.dmg"
   name "DrawPen"
@@ -21,7 +21,10 @@ cask "drawpen" do
   app "DrawPen.app"
 
   zap trash: [
+    "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/dmytro.vasin.drawpen.sfl*",
     "~/Library/Application Support/DrawPen",
+    "~/Library/Caches/dmytro.vasin.drawpen*",
+    "~/Library/HTTPStorages/dmytro.vasin.drawpen",
     "~/Library/Logs/DrawPen",
     "~/Library/Preferences/*drawpen*.plist",
     "~/Library/Saved Application State/*DrawPen*.savedState",

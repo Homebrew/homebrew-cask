@@ -1,9 +1,8 @@
 cask "bilibili" do
-  version "1.17.9"
+  version "1.18.0"
   sha256 :no_check
 
   url "https://dl.hdslb.com/mobile/fixed/pc_electron_mac/bili_mac.dmg",
-      verified:   "dl.hdslb.com/",
       user_agent: :fake
   name "Bilibili"
   name "哔哩哔哩官方客户端"
@@ -16,12 +15,13 @@ cask "bilibili" do
   end
 
   auto_updates true
-  depends_on macos: :big_sur
+  depends_on :macos
 
   app "哔哩哔哩.app"
 
   zap trash: [
     "~/Library/Application Support/bilibili",
+    "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.bilibili.bilibilipc.sfl*",
     "~/Library/Logs/bilibili",
     "~/Library/Preferences/com.bilibili.bilibiliPC.plist",
     "~/Library/Saved Application State/com.bilibili.bilibiliPC.savedState",

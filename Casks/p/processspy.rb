@@ -1,6 +1,6 @@
 cask "processspy" do
-  version "1.14.0"
-  sha256 "628f72b63846547618a97c64f94efa41956ef4f5e2d95ec08b0e942964c87730"
+  version "1.15.1"
+  sha256 "7ddaf971c306decdbed1fe4b2e96f99f303d52987caa08488f23ff7e063b6f0c"
 
   url "https://process-spy.app/archive/ProcessSpy_#{version}.dmg"
   name "ProcessSpy"
@@ -16,6 +16,8 @@ cask "processspy" do
   depends_on macos: :sonoma
 
   app "ProcessSpy.app"
+
+  uninstall quit: "com.itone.ProcessSpy"
 
   zap trash: [
     "~/Library/HTTPStorages/com.itone.ProcessSpy",

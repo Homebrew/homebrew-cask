@@ -1,9 +1,8 @@
 cask "meridiem" do
-  version "1.0.21"
-  sha256 "6e284379bbf896491251925840c03700f7b44201eac0c17b9b344815d6748767"
+  version "1.0.26"
+  sha256 "7abf126ccaf1ff45d19c247ff27a2fb74ab262440c9e8603962b48688c442956"
 
-  url "https://storage.googleapis.com/markwhen_binaries/Meridiem/darwin/arm64/Meridiem-darwin-arm64-#{version}.zip",
-      verified: "storage.googleapis.com/markwhen_binaries/"
+  url "https://storage.googleapis.com/markwhen_binaries/Meridiem/darwin/arm64/Meridiem-darwin-arm64-#{version}.zip"
   name "Meridiem"
   desc "Markdown editor"
   homepage "https://meridiem.markwhen.com/"
@@ -15,8 +14,8 @@ cask "meridiem" do
     end
   end
 
-  depends_on macos: :monterey
   depends_on arch: :arm64
+  depends_on macos: :monterey
 
   app "Meridiem.app"
 

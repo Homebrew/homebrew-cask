@@ -1,9 +1,9 @@
 cask "advanced-renamer" do
   arch arm: "arm", intel: "intel"
 
-  version "4.23"
-  sha256 arm:   "2dac93ad40a4a825b7ef22d6ec099fc8f1edd38520af44521e883c36842fb2da",
-         intel: "9e901d931d427cc6f1b60e1ed4a6df40108a404dc3d8f8643d137d23690988c5"
+  version "4.25"
+  sha256 arm:   "f9a5b139c8294cbd8b58bd8b5755526d676f32444ea383e7835c89edc8deecc1",
+         intel: "d99b8f82ca162a16c8d3f9fb48c9f0f9495660be3d2ebcef7cf7aea0f40b683e"
 
   url "https://www.advancedrenamer.com/down/macos/#{arch}/AdvancedRenamer_#{version.tr(".", "_")}.dmg"
   name "Advanced Renamer"
@@ -21,11 +21,14 @@ cask "advanced-renamer" do
     end
   end
 
-  depends_on macos: :big_sur
+  depends_on :macos
 
   app "Advanced Renamer.app"
 
+  uninstall quit: "com.HulubuluSoftware.AdvancedRenamer"
+
   zap trash: [
+    "~/Library/Application Support/Advanced Renamer",
     "~/Library/Caches/com.HulubuluSoftware.AdvancedRenamer",
     "~/Library/HTTPStorages/com.HulubuluSoftware.AdvancedRenamer",
     "~/Library/Saved Application State/com.HulubuluSoftware.AdvancedRenamer.savedState",

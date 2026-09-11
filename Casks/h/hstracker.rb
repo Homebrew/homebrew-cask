@@ -1,9 +1,8 @@
 cask "hstracker" do
-  version "3.6.1"
-  sha256 "b8397ba0bd42b8a4807201e0f8060a6bbcbc368ecfe2787b96e52801692c5c1a"
+  version "3.6.9"
+  sha256 "c00b1bb7639fbd4bd54578dc7fe9882e7a4bb918560e68c955b1ba98ac28a12f"
 
-  url "https://github.com/HearthSim/HSTracker/releases/download/#{version}/HSTracker.app.zip",
-      verified: "github.com/HearthSim/HSTracker/"
+  url "https://github.com/HearthSim/HSTracker/releases/download/#{version}/HSTracker.app.zip"
   name "Hearthstone Deck Tracker"
   desc "Deck tracker and deck manager for Hearthstone"
   homepage "https://hsdecktracker.net/"
@@ -19,6 +18,8 @@ cask "hstracker" do
   depends_on :macos
 
   app "HSTracker.app"
+
+  uninstall quit: "net.hearthsim.hstracker"
 
   zap trash: [
     "~/Library/Application Support/HSTracker",

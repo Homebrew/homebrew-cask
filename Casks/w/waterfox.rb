@@ -1,6 +1,6 @@
 cask "waterfox" do
-  version "6.6.16.1"
-  sha256 "f942a926f5d1baff6764ef7b4c6db59fbe3bd8ccb9fef889e45140346a036068"
+  version "6.7.2"
+  sha256 "cba9bba453185716e150048d6e62d4a4f530ff43ddaf140340ac0d2a321a7fa7"
 
   url "https://cdn1.waterfox.net/waterfox/releases/#{version}/Darwin_x86_64-aarch64/Waterfox%20#{version}.dmg"
   name "Waterfox"
@@ -16,16 +16,10 @@ cask "waterfox" do
   depends_on :macos
 
   app "Waterfox.app"
-  # shim script (https://github.com/Homebrew/homebrew-cask/issues/18809)
-  shimscript = "#{staged_path}/waterfox.wrapper.sh"
-  binary shimscript, target: "waterfox"
+  command_wrapper "waterfox",
+                  executable: "#{appdir}/Waterfox.app/Contents/MacOS/waterfox"
 
-  preflight do
-    File.write shimscript, <<~EOS
-      #!/bin/sh
-      exec '#{appdir}/Waterfox.app/Contents/MacOS/waterfox' "$@"
-    EOS
-  end
+  uninstall quit: "net.waterfox.waterfox"
 
   zap trash: [
     "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/org.mozilla.waterfox.sfl*",

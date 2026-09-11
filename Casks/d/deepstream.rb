@@ -1,9 +1,8 @@
 cask "deepstream" do
-  version "10.1.4"
-  sha256 "6201c2a6894c26dcebb1b4754f9ffcc67b7c623ba07ab24e5471f6a003bbd593"
+  version "10.2.1"
+  sha256 "ba352f1df8002a76d7beb2298fffb30968858e422562eded36205331243d7dc9"
 
-  url "https://github.com/deepstreamIO/deepstream.io/releases/download/v#{version}/deepstream.io-mac-#{version}.pkg",
-      verified: "github.com/deepstreamIO/deepstream.io/"
+  url "https://github.com/deepstreamIO/deepstream.io/releases/download/v#{version}/deepstream.io-mac-#{version}.pkg"
   name "deepstream"
   desc "Data-sync realtime server"
   homepage "https://deepstream.io/"

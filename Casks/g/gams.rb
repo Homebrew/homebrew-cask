@@ -1,12 +1,11 @@
 cask "gams" do
   arch arm: "_arm64"
 
-  version "54.2.1"
-  sha256 arm:   "025973d6469b12c7f39a4e6c97bc24c0b8c12b7748fea65d1e09026b4ab31656",
-         intel: "8b3edfb933a98fc57e283fa7b6a9cf1fab83ad44c05bb50f8277737f4676434f"
+  version "54.4.0"
+  sha256 arm:   "415bf0ed4728f8861a2b0fdfccf2fd8a93fcd195a5514016ad8bfcd490913323",
+         intel: "ba54ff6c382a6ad7ff4abc07b7b7081a057d4811e53e9f1ca763672e4dae7933"
 
-  url "https://d37drm4t2jghv5.cloudfront.net/distributions/#{version}/macosx#{arch}/GAMS#{version}.pkg",
-      verified: "d37drm4t2jghv5.cloudfront.net/"
+  url "https://d37drm4t2jghv5.cloudfront.net/distributions/#{version}/macosx#{arch}/GAMS#{version}.pkg"
   name "GAMS"
   desc "General Algebraic Modeling System"
   homepage "https://www.gams.com/"

@@ -1,6 +1,6 @@
 cask "maa" do
-  version "6.14.2"
-  sha256 "9a83b262e826252538c159af3f15ef8d904cd070fad132a3ba949ae9899d5cc9"
+  version "6.17.5"
+  sha256 "e365fd8422976bcc212b1adb61e8bac2a2fe7ba6a6fb839c133a88c141852904"
 
   url "https://github.com/MaaAssistantArknights/MaaAssistantArknights/releases/download/v#{version}/MAA-v#{version}-macos-universal.dmg"
   name "MAA"
@@ -23,7 +23,7 @@ cask "maa" do
   end
 
   auto_updates true
-  depends_on macos: :ventura
+  depends_on macos: :sonoma
 
   app "MAA.app"
 

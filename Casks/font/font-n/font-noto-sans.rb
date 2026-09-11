@@ -2,8 +2,7 @@ cask "font-noto-sans" do
   version "2.015"
   sha256 "0c34df072a3fa7efbb7cbf34950e1f971a4447cffe365d3a359e2d4089b958f5"
 
-  url "https://github.com/notofonts/latin-greek-cyrillic/releases/download/NotoSans-v#{version}/NotoSans-v#{version}.zip",
-      verified: "github.com/notofonts/"
+  url "https://github.com/notofonts/latin-greek-cyrillic/releases/download/NotoSans-v#{version}/NotoSans-v#{version}.zip"
   name "Noto Sans"
   homepage "https://notofonts.github.io/"
 
@@ -12,8 +11,6 @@ cask "font-noto-sans" do
     regex(/^NotoSans-v?(\d+(?:\.\d+)+)$/i)
   end
 
-  font "NotoSans/unhinted/variable-ttf/NotoSans-Italic[wdth,wght].ttf"
-  font "NotoSans/unhinted/variable-ttf/NotoSans[wdth,wght].ttf"
   font "NotoSans/unhinted/ttf/NotoSans-Black.ttf"
   font "NotoSans/unhinted/ttf/NotoSans-BlackItalic.ttf"
   font "NotoSans/unhinted/ttf/NotoSans-Bold.ttf"
@@ -86,6 +83,8 @@ cask "font-noto-sans" do
   font "NotoSans/unhinted/ttf/NotoSans-SemiCondensedThinItalic.ttf"
   font "NotoSans/unhinted/ttf/NotoSans-Thin.ttf"
   font "NotoSans/unhinted/ttf/NotoSans-ThinItalic.ttf"
+  font "NotoSans/unhinted/variable-ttf/NotoSans-Italic[wdth,wght].ttf"
+  font "NotoSans/unhinted/variable-ttf/NotoSans[wdth,wght].ttf"
 
   # No zap stanza required
 end

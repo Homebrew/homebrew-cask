@@ -5,8 +5,7 @@ cask "tad" do
   sha256 arm:   "18004712674bbd7072137937f2ad02231f71b2b326d48079e72f9a536660d588",
          intel: "b942fc420a3b19240b52f798d29334bbd78f89ebbf7c7702962668eccc39011e"
 
-  url "https://github.com/antonycourtney/tad/releases/download/v#{version}/Tad-#{version}#{arch}.dmg",
-      verified: "github.com/antonycourtney/tad/"
+  url "https://github.com/antonycourtney/tad/releases/download/v#{version}/Tad-#{version}#{arch}.dmg"
   name "Tad"
   desc "Desktop application for viewing and analyzing tabular data"
   homepage "https://www.tadviewer.com/"

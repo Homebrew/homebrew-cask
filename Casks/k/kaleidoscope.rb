@@ -1,6 +1,6 @@
 cask "kaleidoscope" do
-  version "6.7,10249"
-  sha256 "c7c91e3380126d2f569036ab5a357cb878d1933711e22477ae61d267d3d26035"
+  version "7.0.1,10509"
+  sha256 "56834d2ac91c14eaf5109e37f971a03903489674e26b2c7db9d2ea7cdc834e77"
 
   url "https://updates.kaleidoscope.app/v#{version.major}/prod/Kaleidoscope-#{version.csv.first}-#{version.csv.second}.app.zip"
   name "Kaleidoscope"
@@ -21,22 +21,26 @@ cask "kaleidoscope" do
 
   app "Kaleidoscope.app"
 
-  postflight do
-    contents = "#{appdir}/Kaleidoscope.app/Contents"
-    system_command "#{contents}/Resources/Integration/scripts/install_ksdiff",
-                   args: ["#{contents}/MacOS", "#{HOMEBREW_PREFIX}/bin"]
+  postflight_steps do
+    run "Kaleidoscope.app/Contents/Resources/Integration/scripts/install_ksdiff",
+        args: ["{{appdir}}/Kaleidoscope.app/Contents/MacOS", "{{HOMEBREW_PREFIX}}/bin"], base: :appdir
   end
 
   uninstall quit:    "app.kaleidoscope.v#{version.major}",
             pkgutil: "app.kaleidoscope.uninstall_ksdiff"
 
   zap trash: [
+    "~/Library/Application Scripts/app.kaleidoscope.v*.KaleidoscopePrism",
+    "~/Library/Application Scripts/app.kaleidoscope.v*.KSShareExtension",
     "~/Library/Application Support/app.kaleidoscope.v*",
     "~/Library/Application Support/com.blackpixel.kaleidoscope",
     "~/Library/Application Support/Kaleidoscope",
     "~/Library/Caches/app.kaleidoscope.v*",
     "~/Library/Caches/com.blackpixel.kaleidoscope",
     "~/Library/Caches/com.plausiblelabs.crashreporter.data/com.blackpixel.kaleidoscope",
+    "~/Library/Containers/app.kaleidoscope.v*.KaleidoscopePrism",
+    "~/Library/Containers/app.kaleidoscope.v*.KSShareExtension",
+    "~/Library/HTTPStorages/app.kaleidoscope.v*",
     "~/Library/Preferences/app.kaleidoscope.v*.plist",
     "~/Library/Preferences/com.blackpixel.kaleidoscope.plist",
     "~/Library/Saved Application State/app.kaleidoscope.v*.savedState",

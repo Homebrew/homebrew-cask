@@ -7,8 +7,8 @@ cask "vv" do
   desc "Neovim client"
   homepage "https://github.com/vv-vim/vv"
 
-  depends_on :macos
   depends_on formula: "neovim"
+  depends_on :macos
 
   app "VV.app"
   binary "#{appdir}/VV.app/Contents/Resources/bin/vv"

@@ -1,9 +1,8 @@
 cask "paper-design" do
-  version "0.5.0,260718w0gs8apen"
-  sha256 "72ed02e48d71c71e00e765e006d5fcdc03f18ddb648992d07806137d4ca585c2"
+  version "0.5.8,260910c6c61cnhq"
+  sha256 "0c91f02366c9dc77a669204bbfe6a52fed4727cfcf69a7f0fffb6437b6256d04"
 
-  url "https://download.todesktop.com/2601167vjw8xe/Paper%20#{version.csv.first}%20-%20Build%20#{version.csv.second}-arm64.dmg",
-      verified: "download.todesktop.com/2601167vjw8xe/"
+  url "https://download.todesktop.com/2601167vjw8xe/Paper%20#{version.csv.first}%20-%20Build%20#{version.csv.second}-arm64.dmg"
   name "Paper"
   desc "Design tool for creating interfaces and prototypes"
   homepage "https://paper.design/"
@@ -30,6 +29,7 @@ cask "paper-design" do
   uninstall quit: "com.todesktop.2601167vjw8xe"
 
   zap trash: [
+    "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.todesktop.2601167vjw8xe.sfl*",
     "~/Library/Application Support/Paper",
     "~/Library/Preferences/com.todesktop.2601167vjw8xe.plist",
   ]

@@ -14,16 +14,9 @@ cask "prince" do
 
   depends_on :macos
 
-  # shim script (https://github.com/Homebrew/homebrew-cask/issues/18809)
-  shimscript = "#{staged_path}/prince-#{version}-macos/prince.wrapper.sh"
-  binary shimscript, target: "prince"
-
-  preflight do
-    File.write shimscript, <<~EOS
-      #!/bin/sh
-      exec '#{staged_path}/prince-#{version}-macos/lib/prince/bin/prince' --prefix '#{staged_path}/prince-#{version}-macos/lib/prince' "$@"
-    EOS
-  end
+  command_wrapper "prince",
+                  executable: "#{staged_path}/prince-#{version}-macos/lib/prince/bin/prince",
+                  args:       ["--prefix", "#{staged_path}/prince-#{version}-macos/lib/prince"]
 
   # No zap stanza required
 end

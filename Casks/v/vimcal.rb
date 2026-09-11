@@ -15,8 +15,7 @@ cask "vimcal" do
     depends_on macos: :big_sur
   end
 
-  url "https://vimcal-#{host_suffix}.s3.amazonaws.com/Vimcal-#{version}#{arch}.dmg",
-      verified: "vimcal-#{host_suffix}.s3.amazonaws.com/"
+  url "https://vimcal-#{host_suffix}.s3.amazonaws.com/Vimcal-#{version}#{arch}.dmg"
   name "Vimcal"
   desc "Calendar"
   homepage "https://vimcal.com/"

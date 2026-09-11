@@ -1,9 +1,8 @@
 cask "willow-voice" do
-  version "2.3.2"
-  sha256 "a251ff0fbb9835027d00bb2da86d70716018e7f2630794ec1b5e451e4911300b"
+  version "2.3.21"
+  sha256 "c1bde7620fdb3a2da5c6ed49198104d2f8bb00b39a47fd28598e4efdf453be11"
 
-  url "https://github.com/LiuLawrence45/stt-sparkle-update/releases/download/v#{version}/Willow.Installer.dmg",
-      verified: "github.com/LiuLawrence45/stt-sparkle-update/"
+  url "https://github.com/LiuLawrence45/stt-sparkle-update/releases/download/v#{version}/Willow.Installer.dmg"
   name "Willow Voice"
   desc "AI-powered voice dictation and writing assistant"
   homepage "https://willowvoice.com/"
@@ -14,7 +13,7 @@ cask "willow-voice" do
   end
 
   auto_updates true
-  depends_on macos: :ventura
+  depends_on macos: :sonoma
 
   app "Willow Voice.app"
 

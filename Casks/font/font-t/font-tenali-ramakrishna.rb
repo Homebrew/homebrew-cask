@@ -2,8 +2,7 @@ cask "font-tenali-ramakrishna" do
   version :latest
   sha256 :no_check
 
-  url "https://github.com/google/fonts/raw/main/ofl/tenaliramakrishna/TenaliRamakrishna-Regular.ttf",
-      verified: "github.com/google/fonts/"
+  url "https://github.com/google/fonts/raw/main/ofl/tenaliramakrishna/TenaliRamakrishna-Regular.ttf"
   name "Tenali Ramakrishna"
   homepage "https://fonts.google.com/specimen/Tenali+Ramakrishna"
 

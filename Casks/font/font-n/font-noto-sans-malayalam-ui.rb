@@ -2,8 +2,7 @@ cask "font-noto-sans-malayalam-ui" do
   version :latest
   sha256 :no_check
 
-  url "https://github.com/google/fonts/raw/main/ofl/notosansmalayalamui/NotoSansMalayalamUI%5Bwdth%2Cwght%5D.ttf",
-      verified: "github.com/google/fonts/"
+  url "https://github.com/google/fonts/raw/main/ofl/notosansmalayalamui/NotoSansMalayalamUI%5Bwdth%2Cwght%5D.ttf"
   name "Noto Sans Malayalam UI"
   homepage "https://fonts.google.com/specimen/Noto+Sans+Malayalam+UI"
 

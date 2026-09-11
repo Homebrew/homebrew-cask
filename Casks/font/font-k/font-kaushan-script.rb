@@ -2,8 +2,7 @@ cask "font-kaushan-script" do
   version :latest
   sha256 :no_check
 
-  url "https://github.com/google/fonts/raw/main/ofl/kaushanscript/KaushanScript-Regular.ttf",
-      verified: "github.com/google/fonts/"
+  url "https://github.com/google/fonts/raw/main/ofl/kaushanscript/KaushanScript-Regular.ttf"
   name "Kaushan Script"
   homepage "https://fonts.google.com/specimen/Kaushan+Script"
 

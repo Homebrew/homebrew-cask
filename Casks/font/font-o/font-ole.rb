@@ -2,8 +2,7 @@ cask "font-ole" do
   version :latest
   sha256 :no_check
 
-  url "https://github.com/google/fonts/raw/main/ofl/ole/Ole-Regular.ttf",
-      verified: "github.com/google/fonts/"
+  url "https://github.com/google/fonts/raw/main/ofl/ole/Ole-Regular.ttf"
   name "Ole"
   homepage "https://fonts.google.com/specimen/Ole"
 

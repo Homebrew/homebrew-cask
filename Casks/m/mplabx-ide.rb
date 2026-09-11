@@ -1,6 +1,6 @@
 cask "mplabx-ide" do
-  version "6.30"
-  sha256 "5e7c7aec1d5cb9f1bf8a4517a6e8af5f3fdac4fabc953a18b3628c1b161373a4"
+  version "6.35"
+  sha256 "3bc7fac105ac522f435e0e81eae45ac773566c6828e60f28e70df5f9b33ccfe6"
 
   url "https://ww1.microchip.com/downloads/aemDocuments/documents/DEV/ProductDocuments/SoftwareTools/MPLABX-v#{version}-osx-installer.dmg",
       referer: "https://www.microchip.com/"
@@ -34,22 +34,16 @@ cask "mplabx-ide" do
   # staged_path files are owned by root which prevents binaries from being moved
   # to appdir, as cp does not use sudo. This copies the binaries after the owner
   # is changed.
-  postflight do
-    set_ownership staged_path.to_s
-    system_command "mkdir",
-                   args: ["-p", "#{appdir}/microchip/mplabx/#{version}"],
-                   sudo: true
-
-    system_command "cp",
-                   args: [
-                     "-pR",
-                     "#{staged_path}/MPLAB IPE v#{version}.app",
-                     "#{staged_path}/MPLAB X IDE v#{version}.app",
-                     "#{appdir}/microchip/mplabx/#{version}/",
-                   ],
-                   sudo: true
-
-    set_ownership "/Applications/microchip/mplabx/#{version}"
+  postflight_steps do
+    set_ownership "."
+    run "/bin/mkdir", args: ["-p", "{{appdir}}/microchip/mplabx/{{version}}"], sudo: true
+    run "/bin/cp", args: [
+      "-pR",
+      "{{staged_path}}/MPLAB IPE v{{version}}.app",
+      "{{staged_path}}/MPLAB X IDE v{{version}}.app",
+      "{{appdir}}/microchip/mplabx/{{version}}/",
+    ], sudo: true
+    set_ownership "microchip/mplabx/{{version}}", base: :appdir
   end
 
   uninstall script: {
@@ -60,7 +54,7 @@ cask "mplabx-ide" do
             },
             delete: [
               # The below version number needs to be updated manually each time this Cask is updated
-              "/Applications/microchip/mplabcomm/3.55.00",
+              "/Applications/microchip/mplabcomm/3.56.00",
               "/Applications/microchip/mplabx/#{version}",
             ],
             rmdir:  [

@@ -1,17 +1,23 @@
 cask "koharu" do
-  version "0.61.2"
-  sha256 "915da65d5d093061757994c25ebf429b421fe6518ec666e7531f35bf63729c14"
+  version "0.81.10"
+  sha256 "01c14261dca1435c458546eccc6ae15ae7579ff1f9bd6f4dbd15e113606c174b"
 
-  url "https://github.com/mayocream/koharu/releases/download/#{version}/koharu_#{version}_aarch64.dmg",
-      verified: "github.com/mayocream/koharu/"
+  url "https://github.com/mayocream/koharu/releases/download/#{version}/koharu_#{version}_aarch64.dmg"
   name "Koharu"
   desc "ML-powered manga translator"
   homepage "https://koharu.rs/"
 
-  depends_on :macos
-  depends_on arch: :arm64
+  livecheck do
+    url :url
+    regex(/^v?(\d+(?:\.\d+)+)$/i)
+  end
 
-  app "Koharu.app"
+  depends_on arch: :arm64
+  depends_on :macos
+
+  app "koharu.app"
+
+  uninstall quit: "Koharu"
 
   zap trash: [
     "~/Library/Application Support/Koharu",

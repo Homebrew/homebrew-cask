@@ -1,12 +1,11 @@
 cask "microsoft-openjdk@25" do
   arch arm: "aarch64", intel: "x64"
 
-  version "25.0.3"
-  sha256 arm:   "0626c4c2d9d75b60aab26c83990e5e38e750d858eb203af9d8a8fda7300fe360",
-         intel: "b37697e5c67413e973b26b928dcb5786e4244b61943ea79a420682152121a493"
+  version "25.0.4.1"
+  sha256 arm:   "b18490c0df7d70e6faad7aa671f3fc180f381419fe4b2588d391aae6b2ce6948",
+         intel: "efa179bf9c28a3a03c6e2b8a463f6e3e778438cc7f8089be35c66a8b33cc6636"
 
-  url "https://aka.ms/download-jdk/microsoft-jdk-#{version}-macos-#{arch}.pkg",
-      verified: "aka.ms/download-jdk/"
+  url "https://aka.ms/download-jdk/microsoft-jdk-#{version}-macos-#{arch}.pkg"
   name "Microsoft Build of OpenJDK"
   desc "OpenJDK distribution from Microsoft"
   homepage "https://microsoft.com/openjdk"

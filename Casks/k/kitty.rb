@@ -1,48 +1,22 @@
 cask "kitty" do
   arch arm: "arm64", intel: "x86_64"
+  os macos: ".dmg", linux: "-#{arch}.txz"
 
-  version "0.48.0"
-
-  container_ext = on_system_conditional linux: "-#{arch}.txz", macos: ".dmg"
-
-  on_macos do
-    sha256 "ed8f4297a84c967e14040865ead2e24e768d67dd4f6fd0bb384a1073ca1e74b7"
-  end
-  on_linux do
-    sha256 arm64_linux:  "29d106d9bf51adf78a519ac9feab9c3f696f6edd3f1b0e6da80e2803649bbd5e",
-           x86_64_linux: "ab2009af6acf58abafbfeb1dd1cbd4a6c1aa7991c5820c2cbd9fbb2f42d8c416"
-  end
-
-  url "https://github.com/kovidgoyal/kitty/releases/download/v#{version}/kitty-#{version}#{container_ext}"
-  name "kitty"
-  desc "GPU-based terminal emulator"
-  homepage "https://github.com/kovidgoyal/kitty"
-
-  conflicts_with cask: "kitty@nightly"
+  version "0.48.2"
+  sha256 arm:          "f804f58ee4b69c76f84eb3281e140748269a63f3f4a816015a8dec2a06d2b195",
+         intel:        "f804f58ee4b69c76f84eb3281e140748269a63f3f4a816015a8dec2a06d2b195",
+         arm64_linux:  "534b214d407a05e4603da75ef02fffa592ec1bbec20a413c5e0cd3f853c928cb",
+         x86_64_linux: "967a1958e7fc67b495d279c0963bcd1a0482097151817ce6506fabc822689af7"
 
   on_macos do
     depends_on macos: :monterey
 
     app "kitty.app"
-    # shim script (https://github.com/Homebrew/homebrew-cask/issues/18809)
-    kitty_shimscript = "#{staged_path}/kitty.wrapper.sh"
-    binary kitty_shimscript, target: "kitty"
-    # shim script (https://github.com/Homebrew/homebrew-cask/issues/18809)
-    kitten_shimscript = "#{staged_path}/kitten.wrapper.sh"
-    binary kitten_shimscript, target: "kitten"
-
-    preflight do
-      File.write kitty_shimscript, <<~EOS
-        #!/bin/sh
-        exec '#{appdir}/kitty.app/Contents/MacOS/kitty' "$@"
-      EOS
-      File.write kitten_shimscript, <<~EOS
-        #!/bin/sh
-        exec '#{appdir}/kitty.app/Contents/MacOS/kitten' "$@"
-      EOS
-    end
+    command_wrapper "kitty",
+                    executable: "#{appdir}/kitty.app/Contents/MacOS/kitty"
+    command_wrapper "kitten",
+                    executable: "#{appdir}/kitty.app/Contents/MacOS/kitten"
   end
-
   on_linux do
     binary "bin/kitty"
     binary "bin/kitten"
@@ -116,6 +90,13 @@ cask "kitty" do
     manpage "share/man/man1/kitten-update-self.1"
     manpage "share/man/man5/kitty.conf.5"
   end
+
+  url "https://github.com/kovidgoyal/kitty/releases/download/v#{version}/kitty-#{version}#{os}"
+  name "kitty"
+  desc "GPU-based terminal emulator"
+  homepage "https://github.com/kovidgoyal/kitty"
+
+  conflicts_with cask: "kitty@nightly"
 
   zap trash: [
     "~/.config/kitty",

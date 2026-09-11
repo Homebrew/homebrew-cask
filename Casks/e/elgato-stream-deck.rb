@@ -1,6 +1,6 @@
 cask "elgato-stream-deck" do
-  version "7.5.0.22885"
-  sha256 "f72bb32e71540d96804c85c831e6f72ac4d86a111793f6ebb5afc15fa5b50b5a"
+  version "7.5.1.22901"
+  sha256 "8cc1f0b875839e2d50618a37cad2f46b689cad1d3fe1df1af1e373303515ffe8"
 
   url "https://edge.elgato.com/egc/macos/sd/Stream_Deck_#{version}.pkg"
   name "Elgato Stream Deck"
@@ -19,7 +19,10 @@ cask "elgato-stream-deck" do
 
   pkg "Stream_Deck_#{version}.pkg"
 
-  uninstall launchctl: "com.elgato.StreamDeck*",
+  uninstall launchctl: [
+              "com.elgato.StreamDeck*",
+              "com.elgato.StreamDeck.trampoline",
+            ],
             quit:      "com.elgato.StreamDeck",
             pkgutil:   "com.elgato.StreamDeck",
             delete:    [

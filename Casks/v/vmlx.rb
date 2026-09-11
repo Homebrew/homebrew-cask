@@ -1,9 +1,8 @@
 cask "vmlx" do
-  version "1.6.11"
-  sha256 "c1a8dcd17563a772b83e64bfb443aabedb46111a1e0e500ab69c4fc49143cb2b"
+  version "1.6.57"
+  sha256 "45f9964c53738772b1bf32fb7686d11edadec9d7abf15346ec8479b7d6468710"
 
-  url "https://github.com/jjang-ai/mlxstudio/releases/download/v#{version}/vMLX-#{version}-sequoia-arm64.dmg",
-      verified: "github.com/jjang-ai/mlxstudio/"
+  url "https://github.com/jjang-ai/mlxstudio/releases/download/v#{version}/vMLX-#{version}-sequoia-arm64.dmg"
   name "vMLX"
   desc "Run local AI models on Apple Silicon"
   homepage "https://mlx.studio/"
@@ -14,8 +13,8 @@ cask "vmlx" do
   end
 
   auto_updates true
-  depends_on macos: :sonoma
   depends_on arch: :arm64
+  depends_on macos: :sonoma
 
   app "vMLX.app"
 

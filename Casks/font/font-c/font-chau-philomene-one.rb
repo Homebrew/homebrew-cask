@@ -3,7 +3,6 @@ cask "font-chau-philomene-one" do
   sha256 :no_check
 
   url "https://github.com/google/fonts.git",
-      verified:  "github.com/google/fonts",
       branch:    "main",
       only_path: "ofl/chauphilomeneone"
   name "Chau Philomene One"

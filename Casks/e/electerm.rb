@@ -1,9 +1,9 @@
 cask "electerm" do
   arch arm: "arm64", intel: "x64"
 
-  version "3.15.138"
-  sha256 arm:   "eab648c343be05187d98cf87b30c53e07f0f35004e51939db062bd6265872026",
-         intel: "36ad0241c2fe1d237887e97b038ebb4b43ae421717cc35bcb6a4eb97d4820292"
+  version "5.5.6"
+  sha256 arm:   "e9a0ec61a5e63fe6fd34dee0cb3dd45f8ddb3f46c548ce2fa37634c6f6fc7321",
+         intel: "39bf1ce196d7c3c06d2dd8ba8dcb633ec7eea76d1d78c413ff380466eb4ff5b7"
 
   url "https://mirror.electerm.org/https://github.com/electerm/electerm/releases/download/v#{version}/electerm-#{version}-mac-#{arch}.dmg"
   name "electerm"
@@ -24,6 +24,7 @@ cask "electerm" do
   binary "#{appdir}/electerm.app/Contents/MacOS/electerm"
 
   zap trash: [
+    "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/org.electerm.electerm.sfl*",
     "~/Library/Application Support/electerm",
     "~/Library/Logs/electerm",
     "~/Library/Preferences/org.electerm.electerm.plist",

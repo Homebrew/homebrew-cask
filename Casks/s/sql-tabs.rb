@@ -8,6 +8,7 @@ cask "sql-tabs" do
   homepage "https://github.com/sasha-alias/sqltabs"
 
   deprecate! date: "2025-09-07", because: :unmaintained
+  disable! date: "2026-09-07", because: :unmaintained
 
   depends_on :macos
 

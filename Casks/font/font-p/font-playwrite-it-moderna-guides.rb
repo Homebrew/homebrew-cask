@@ -2,8 +2,7 @@ cask "font-playwrite-it-moderna-guides" do
   version :latest
   sha256 :no_check
 
-  url "https://github.com/google/fonts/raw/main/ofl/playwriteitmodernaguides/PlaywriteITModernaGuides-Regular.ttf",
-      verified: "github.com/google/fonts/"
+  url "https://github.com/google/fonts/raw/main/ofl/playwriteitmodernaguides/PlaywriteITModernaGuides-Regular.ttf"
   name "Playwrite IT Moderna Guides"
   homepage "https://fonts.google.com/specimen/Playwrite+IT+Moderna+Guides"
 

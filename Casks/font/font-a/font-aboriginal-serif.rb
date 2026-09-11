@@ -11,10 +11,10 @@ cask "font-aboriginal-serif" do
     regex(/Aboriginal\s+Serif.*?\(\s*v?(\d+(?:\.\d+)*)[^)]*\)/i)
   end
 
-  font "AboriginalSerifREGULAR.ttf"
   font "AboriginalSerifBOLD.ttf"
   font "AboriginalSerifBOLDITALIC.ttf"
   font "AboriginalSerifITALIC.ttf"
+  font "AboriginalSerifREGULAR.ttf"
 
   # No zap stanza required
 end

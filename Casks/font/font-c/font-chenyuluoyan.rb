@@ -7,8 +7,8 @@ cask "font-chenyuluoyan" do
   name "辰宇落雁體"
   homepage "https://github.com/Chenyu-otf/chenyuluoyan_thin"
 
-  font "chenyuluoyan_thin-main/ChenYuluoyan-Thin-Monospaced.ttf"
   font "chenyuluoyan_thin-main/ChenYuluoyan-2.0-Thin.ttf"
+  font "chenyuluoyan_thin-main/ChenYuluoyan-Thin-Monospaced.ttf"
 
   # No zap stanza required
 end

@@ -1,11 +1,8 @@
 cask "blender@lts" do
-  arch arm: "arm64", intel: "x64"
+  version "5.2.1"
+  sha256 "6409e21de80994db5f4c4a34486b6fd43cea21085b912f7491c53e923acb65a3"
 
-  version "4.5.11"
-  sha256 arm:   "1fad76c7da9451c7d6db99f1a5ed3c0a1a461d0aa07bf2b639e2fb4804ca4f13",
-         intel: "d5b0e77ab3baf3cfdf8a80847b3b716ec7448ecd8e299564b7f5a934427224fc"
-
-  url "https://download.blender.org/release/Blender#{version.major_minor}/blender-#{version}-macos-#{arch}.dmg"
+  url "https://download.blender.org/release/Blender#{version.major_minor}/blender-#{version}-macos-arm64.dmg"
   name "Blender LTS"
   desc "3D creation suite"
   homepage "https://www.blender.org/"
@@ -19,21 +16,15 @@ cask "blender@lts" do
   end
 
   conflicts_with cask: "blender"
-  depends_on macos: :big_sur
+  depends_on arch: :arm64
+  depends_on :macos
 
   app "Blender.app"
-  # shim script (https://github.com/Homebrew/homebrew-cask/issues/18809)
-  shimscript = "#{staged_path}/blender.wrapper.sh"
-  binary shimscript, target: "blender"
+  command_wrapper "blender",
+                  executable: "#{appdir}/Blender.app/Contents/MacOS/Blender"
 
-  preflight do
-    # make __pycache__ directories writable, otherwise uninstall fails
-    FileUtils.chmod "u+w", Dir.glob("#{staged_path}/*.app/**/__pycache__")
-
-    File.write shimscript, <<~EOS
-      #!/bin/bash
-      '#{appdir}/Blender.app/Contents/MacOS/Blender' "$@"
-    EOS
+  preflight_steps do
+    set_permissions "*.app/**/__pycache__", "u+w", recursive: false
   end
 
   zap trash: [

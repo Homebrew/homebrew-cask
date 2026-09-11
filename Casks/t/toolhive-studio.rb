@@ -1,9 +1,9 @@
 cask "toolhive-studio" do
   arch arm: "arm64", intel: "x64"
 
-  version "0.38.0"
-  sha256 arm:   "ba2064e36f49992c45d322b78b0191f819b15a9d4b8e45a6a1c41c41b2449c88",
-         intel: "efde56951962f25a67618fabf2a6bbe65a5ba72ac94d45e8054ed571d2e8deda"
+  version "0.40.0"
+  sha256 arm:   "bb91250bce9f94dc48fed6cf32c96646ae5fc4e1078d5ec8b657fd36d7eef387",
+         intel: "c501c239fd4e6a31e04c9d17fb86b130c24747a0bd129dac751609bf46d929e6"
 
   url "https://github.com/stacklok/toolhive-studio/releases/download/v#{version}/ToolHive-#{arch}.dmg"
   name "ToolHive"
@@ -19,8 +19,14 @@ cask "toolhive-studio" do
 
   app "ToolHive.app"
 
+  uninstall quit: "com.electron.toolhive"
+
   zap trash: [
+    "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.electron.toolhive.sfl*",
     "~/Library/Application Support/ToolHive",
+    "~/Library/Caches/com.electron.toolhive*",
+    "~/Library/HTTPStorages/com.electron.toolhive",
     "~/Library/Logs/ToolHive",
+    "~/Library/Preferences/com.electron.toolhive.plist",
   ]
 end

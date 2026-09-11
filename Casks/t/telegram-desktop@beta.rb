@@ -1,9 +1,8 @@
 cask "telegram-desktop@beta" do
-  version "7.0.3"
-  sha256 "b413636aa99cd8f32b41b84c66437d291c43425b866e455fafb52b72edde3542"
+  version "7.2.8"
+  sha256 "5883217d4f6f25d147ee8bf9997c984a38b3fecef3d5ab6630a1fc22d212a6bb"
 
-  url "https://github.com/telegramdesktop/tdesktop/releases/download/v#{version.major_minor_patch}/tsetup.#{version}.dmg",
-      verified: "github.com/telegramdesktop/tdesktop/"
+  url "https://github.com/telegramdesktop/tdesktop/releases/download/v#{version}/td-setup-mac-#{version}.dmg"
   name "Telegram Desktop"
   desc "Desktop client for Telegram messenger"
   homepage "https://desktop.telegram.org/"
@@ -13,7 +12,7 @@ cask "telegram-desktop@beta" do
   # omitting the newest release(s) due to a file name format change.
   livecheck do
     url :url
-    regex(/tsetup[._-]v?(\d+(?:\.\d+)+(?:[._-]beta)?)/i)
+    regex(/(?:td[._-]?setup(?:[._-]mac)?|tsetup)[._-]v?(\d+(?:\.\d+)+(?:[._-]beta)?)/i)
     strategy :github_releases do |json, regex|
       json.map do |release|
         next if release["draft"]

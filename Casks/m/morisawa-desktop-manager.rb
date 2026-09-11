@@ -1,6 +1,6 @@
 cask "morisawa-desktop-manager" do
-  version "3.1.0"
-  sha256 "81887c67f7ac4171f99ba052feedb69eb48ae07697ea9191b9dcb3cbb4c32a40"
+  version "3.2.0"
+  sha256 "7e1f81aab5faab5caaf9ffef5eda6c7afcfe66721e698bf23b58a18e85eaba7a"
 
   url "https://morisawafonts.com/resources/dm/#{version}/mac/site/MorisawaDesktopManager_#{version}.dmg"
   name "Morisawa Desktop Manager"

@@ -3,9 +3,9 @@ cask "qqnews" do
   url_arch = on_arch_conditional arm: "arm64", intel: "intel"
   livecheck_arch = on_arch_conditional arm: "arm64", intel: "intel"
 
-  version "2.3.70"
-  sha256 arm:   "9180354ecc77cd311f10aa4d0176066a8afafb96add4abfc4e66ccd1e3140ef6",
-         intel: "fc8af8c926a6e739b574b1829f038fb4eb83dac806ca6eec5c3759995780f82e"
+  version "2.4.10"
+  sha256 arm:   "3c0141e3154a5a75cd86bbf7c0bec2e4fd666372fb6273522e7effaf9a69212a",
+         intel: "31df130d3577f07844396ba0cbba679f1f3cbf57c7abb5bce24a1e2450df0137"
 
   url "https://h5.news.qq.com/qqnews-desk/mac-#{url_arch}/qqnews_#{version}_#{arch}_signed.zip"
   name "qqnews"
@@ -19,9 +19,11 @@ cask "qqnews" do
   end
 
   auto_updates true
-  depends_on macos: :catalina
+  depends_on :macos
 
   app "腾讯新闻.app"
+
+  uninstall quit: "com.tencent.macNet"
 
   zap trash: [
     "~/Library/Application Support/com.tencent.macNet",

@@ -1,9 +1,8 @@
 cask "home-assistant" do
-  version "2026.7.1,2026.2346"
-  sha256 "07f7481bbfc882018cc8230a1a5a15aca919e348b00a2901ceb13ab1673ebd90"
+  version "2026.9.2,2026.2995"
+  sha256 "840bc23f4a4911a06293156c43d3c4f58950c857d3726c9f2825e7ca61015cf6"
 
-  url "https://github.com/home-assistant/iOS/releases/download/release%2F#{version.csv.first}%2F#{version.csv.second}/home-assistant-mac.zip",
-      verified: "github.com/home-assistant/iOS/"
+  url "https://github.com/home-assistant/iOS/releases/download/release%2F#{version.csv.first}%2F#{version.csv.second}/home-assistant-mac.zip"
   name "Home Assistant"
   desc "Companion app for Home Assistant home automation software"
   homepage "https://companion.home-assistant.io/"
@@ -16,7 +15,7 @@ cask "home-assistant" do
     end
   end
 
-  depends_on macos: :monterey
+  depends_on macos: :ventura
 
   app "Home Assistant.app"
 

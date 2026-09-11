@@ -1,12 +1,11 @@
 cask "zen-privacy" do
   arch arm: "arm64", intel: "amd64"
 
-  version "0.24.0"
-  sha256 arm:   "caa72d6ac57af1b09d86fe1b1b911a5f22216490519e6611fe15149677d4ba8b",
-         intel: "911aa9c8a8678f943bfd8d14abc9e8b732e2ed3efcf7528c395db2d4ed05cf55"
+  version "0.25.1"
+  sha256 arm:   "fba2842091d28dd9c61b34576ab68173afc63562c39f8dc4fb403c0635622397",
+         intel: "bc6af0aa133e58774372840f8ddba6611ee54e2f0b7d638f5db0ea1bb9f9e780"
 
-  url "https://github.com/ZenPrivacy/zen-desktop/releases/download/v#{version}/Zen_darwin_#{arch}_noselfupdate.tar.gz",
-      verified: "github.com/ZenPrivacy/zen-desktop/"
+  url "https://github.com/ZenPrivacy/zen-desktop/releases/download/v#{version}/Zen_darwin_#{arch}_noselfupdate.tar.gz"
   name "Zen"
   desc "Ad-blocker and privacy guard"
   homepage "https://zenprivacy.net/"

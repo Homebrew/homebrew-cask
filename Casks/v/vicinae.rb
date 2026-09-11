@@ -1,9 +1,8 @@
 cask "vicinae" do
-  version "0.23.2"
-  sha256 "8e89e638f7710c0155d1c15ff9bdce94133d9c831050d0d1e9d4714d2b88b8a5"
+  version "0.28.1"
+  sha256 "6cf27bfcb83b127a3af4a3df32267e171cd58046f241d983fd166dc238617039"
 
-  url "https://github.com/vicinaehq/vicinae/releases/download/v#{version}/Vicinae.dmg",
-      verified: "github.com/vicinaehq/vicinae/"
+  url "https://github.com/vicinaehq/vicinae/releases/download/v#{version}/Vicinae.dmg"
   name "Vicinae"
   desc "Application launcher and command palette"
   homepage "https://vicinae.com/"
@@ -19,5 +18,8 @@ cask "vicinae" do
     "~/.config/vicinae",
     "~/.local/share/vicinae",
     "~/.local/state/vicinae",
+    "~/Library/Caches/com.vicinaehq.Vicinae",
+    "~/Library/Caches/vicinae",
+    "~/Library/HTTPStorages/com.vicinaehq.Vicinae",
   ]
 end

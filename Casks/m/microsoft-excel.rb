@@ -1,10 +1,6 @@
 cask "microsoft-excel" do
   on_ventura :or_older do
-    on_catalina :or_older do
-      version "16.66.22101101"
-      sha256 "94148628c6f143f07555b3d2a70cea61cef817d963539d281b092834496f8f16"
-    end
-    on_big_sur do
+    on_big_sur :or_older do
       version "16.77.23091703"
       sha256 "582fca32104e828e01c0928e674122f2d8044d84fd2dc1d7964e0a807e2f4695"
     end
@@ -22,8 +18,8 @@ cask "microsoft-excel" do
     end
   end
   on_sonoma :or_newer do
-    version "16.111.26071325"
-    sha256 "c6bdab5b9b6af040ab14680a3c3cf5fe37daa0883d1ca6eb67af07c201f5da59"
+    version "16.112.26090911"
+    sha256 "c41c0b430ca99ffe6a328797f5247fbd4be8df8ca9b5229b1253c3a4efc3891d"
 
     livecheck do
       url "https://go.microsoft.com/fwlink/p/?linkid=525135"
@@ -31,8 +27,7 @@ cask "microsoft-excel" do
     end
   end
 
-  url "https://res.public.onecdn.static.microsoft/mro1cdnstorage/C1297A47-86C4-4C1F-97FA-950631F94777/MacAutoupdate/Microsoft_Excel_#{version}_Installer.pkg",
-      verified: "res.public.onecdn.static.microsoft/mro1cdnstorage/C1297A47-86C4-4C1F-97FA-950631F94777/"
+  url "https://res.public.onecdn.static.microsoft/mro1cdnstorage/C1297A47-86C4-4C1F-97FA-950631F94777/MacAutoupdate/Microsoft_Excel_#{version}_Installer.pkg"
   name "Microsoft Excel"
   desc "Spreadsheet software"
   homepage "https://www.microsoft.com/en-US/microsoft-365/excel"

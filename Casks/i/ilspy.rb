@@ -11,6 +11,7 @@ cask "ilspy" do
   homepage "https://github.com/icsharpcode/AvaloniaILSpy"
 
   deprecate! date: "2025-07-27", because: :unmaintained
+  disable! date: "2026-07-27", because: :unmaintained
 
   depends_on :macos
 

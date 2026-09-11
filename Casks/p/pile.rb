@@ -5,8 +5,7 @@ cask "pile" do
   sha256 arm:   "2de912e6c8fb688c00ed4539a20bdf6f3f227a754487c6234fe5ec3b5822efcf",
          intel: "44e4415c80278a9a26b8ab38541d34147419d53808f37d32827f1e0a821ed320"
 
-  url "https://github.com/UdaraJay/Pile/releases/download/v#{version}/Pile-#{version}#{arch}.dmg",
-      verified: "github.com/UdaraJay/Pile/"
+  url "https://github.com/UdaraJay/Pile/releases/download/v#{version}/Pile-#{version}#{arch}.dmg"
   name "Pile"
   desc "Digital journaling app"
   homepage "https://udara.io/pile/"

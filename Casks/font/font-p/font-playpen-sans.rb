@@ -2,8 +2,7 @@ cask "font-playpen-sans" do
   version :latest
   sha256 :no_check
 
-  url "https://github.com/google/fonts/raw/main/ofl/playpensans/PlaypenSans%5Bwght%5D.ttf",
-      verified: "github.com/google/fonts/"
+  url "https://github.com/google/fonts/raw/main/ofl/playpensans/PlaypenSans%5Bwght%5D.ttf"
   name "Playpen Sans"
   homepage "https://fonts.google.com/specimen/Playpen+Sans"
 

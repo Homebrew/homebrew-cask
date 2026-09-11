@@ -30,8 +30,7 @@ cask "cave-story" do
       end
     end
 
-    url "https://www.nakiwo.com/downloads/doukutsu#{version.dots_to_underscores}.dmg",
-        verified: "nakiwo.com/downloads/"
+    url "https://www.nakiwo.com/downloads/doukutsu#{version.dots_to_underscores}.dmg"
 
     # Renamed for consistency: app name is different in the Finder and in a shell.
     app "Doukutsu.app", target: "洞窟物語.app"

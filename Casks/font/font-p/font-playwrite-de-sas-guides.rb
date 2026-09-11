@@ -2,8 +2,7 @@ cask "font-playwrite-de-sas-guides" do
   version :latest
   sha256 :no_check
 
-  url "https://github.com/google/fonts/raw/main/ofl/playwritedesasguides/PlaywriteDESASGuides-Regular.ttf",
-      verified: "github.com/google/fonts/"
+  url "https://github.com/google/fonts/raw/main/ofl/playwritedesasguides/PlaywriteDESASGuides-Regular.ttf"
   name "Playwrite DE SAS Guides"
   homepage "https://fonts.google.com/specimen/Playwrite+DE+SAS+Guides"
 

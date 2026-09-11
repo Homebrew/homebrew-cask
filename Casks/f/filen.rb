@@ -1,34 +1,17 @@
 cask "filen" do
+  arch arm: "arm64", intel: on_system_conditional(macos: "x64", linux: "x86_64")
   os macos: "mac", linux: "linux"
+  url_end = on_system_conditional macos: "dmg", linux: "AppImage"
+
+  version "3.0.53"
+  sha256 arm:          "d2a34dc111746abacdf27a684d8e7f9987e0d7279d1989d89a6dcef25842b233",
+         intel:        "e2d94ec1476b0d8b0224550f166f6edc8bd23dc70d239ab5a0e8126c0ff2f794",
+         arm64_linux:  "5821bd280e89da9cd5362df91d495bb99cd7630b85f51019033c72eb0664e89d",
+         x86_64_linux: "888298db82fa43d7be3feeeba86a2f745dbc1ffdf1efabe2cca5144a996461f2"
 
   on_macos do
-    arch arm: "arm64", intel: "x64"
-  end
-  on_linux do
-    arch arm: "arm64", intel: "x86_64"
-  end
-
-  version "3.0.52"
-  sha256 arm:          "8ce4e9cba97686b4715d3c261dd1b93a36299e90b0ade9b66ed283859ac228bd",
-         intel:        "eb466baf847706998740e6860056dfee836f750e871251844129aa35e53967dd",
-         x86_64_linux: "b07f79c4d02e5c8bea8b7762fea23f07c2d12bb336023e7ea429d288dfe63156",
-         arm64_linux:  "ca94a125d28840f64ac76f6ea5de010f8e2f7c6d5d50abc187e3d9daf6948c57"
-
-  url_end = on_system_conditional macos: ".dmg", linux: ".AppImage"
-
-  url "https://cdn.filen.io/@filen/desktop/release/v#{version}/Filen_#{os}_#{arch}#{url_end}"
-  name "Filen"
-  desc "Desktop client for Filen.io"
-  homepage "https://filen.io/"
-
-  livecheck do
-    url "https://cdn.filen.io/@filen/desktop/release/latest/latest-mac.yml"
-    strategy :electron_builder
-  end
-
-  on_macos do
-    depends_on macos: :monterey
     auto_updates true
+    depends_on macos: :monterey
 
     app "Filen.app"
 
@@ -44,8 +27,17 @@ cask "filen" do
       "~/Library/Saved Application State/io.filen.desktop.savedState",
     ]
   end
-
   on_linux do
-    app_image "Filen_#{os}_#{arch}.AppImage", target: "Filen.AppImage"
+    app_image "Filen_linux_#{arch}.AppImage", target: "Filen.AppImage"
+  end
+
+  url "https://cdn.filen.io/@filen/desktop/release/v#{version}/Filen_#{os}_#{arch}.#{url_end}"
+  name "Filen"
+  desc "Desktop client for Filen.io"
+  homepage "https://filen.io/"
+
+  livecheck do
+    url "https://cdn.filen.io/@filen/desktop/release/latest/latest-mac.yml"
+    strategy :electron_builder
   end
 end

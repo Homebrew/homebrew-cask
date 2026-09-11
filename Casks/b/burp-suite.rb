@@ -1,12 +1,11 @@
 cask "burp-suite" do
   arch arm: "MacOsArm64", intel: "MacOsx"
 
-  version "2026.6"
-  sha256 arm:   "709a014d0398da2b840a200418e0dfe51fcfb1fb70d44ebf1465973c84e17f8b",
-         intel: "3b71b4ba81de250c5589381a8f8708d5985414d49e25c0ffd4cb1e315d4ae545"
+  version "2026.8"
+  sha256 arm:   "638ff9d9c3026838798f5659904e3e9cba00ee0b26f3d616f93b1967f275d2ce",
+         intel: "6c6f0f8450179d1c3e99538fcdad7d1d764a5d7e290c8c48b9070018e08c9411"
 
-  url "https://portswigger-cdn.net/burp/releases/download?product=desktop&version=#{version}&type=#{arch}",
-      verified: "portswigger-cdn.net/burp/releases/"
+  url "https://portswigger-cdn.net/burp/releases/download?product=desktop&version=#{version}&type=#{arch}"
   name "Burp Suite Community Edition"
   desc "Web security testing toolkit"
   homepage "https://portswigger.net/burp/"
@@ -34,5 +33,10 @@ cask "burp-suite" do
 
   app "Burp Suite.app"
 
-  zap trash: "~/.BurpSuite"
+  uninstall quit: "com.install4j.6592-1155-2163-3973.70"
+
+  zap trash: [
+    "~/.BurpSuite",
+    "~/Library/Preferences/com.install4j.6592-1155-2163-3973.70.plist",
+  ]
 end

@@ -2,8 +2,7 @@ cask "font-akaya-telivigala" do
   version :latest
   sha256 :no_check
 
-  url "https://github.com/google/fonts/raw/main/ofl/akayatelivigala/AkayaTelivigala-Regular.ttf",
-      verified: "github.com/google/fonts/"
+  url "https://github.com/google/fonts/raw/main/ofl/akayatelivigala/AkayaTelivigala-Regular.ttf"
   name "Akaya Telivigala"
   homepage "https://fonts.google.com/specimen/Akaya+Telivigala"
 

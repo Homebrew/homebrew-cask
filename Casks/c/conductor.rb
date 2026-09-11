@@ -2,16 +2,15 @@ cask "conductor" do
   arch arm: "aarch64", intel: "x86_64"
 
   on_arm do
-    version "0.76.0,01KXNVDASHZ6HVC9RE75DJGNZK"
-    sha256 "1c60214ed9c1fba6daba443d031f8f1288414b1e5226de6a3c99d13668147523"
+    version "0.85.0,01M2457SNJGNM9RE4DY7C79NZJ"
+    sha256 "948d01454641b9fc11940bf4985e293c24c22a0a3f484f087a8ac1999f9e68d7"
   end
   on_intel do
-    version "0.76.0,01KXNVDM9DAY9MGRSECA0PSCS2"
-    sha256 "5686895343931a5a1f418e2685a90eabb83f118c576b60d58b2b33aaed84fb64"
+    version "0.85.0,01M2457XZ0X1P5EMGWVR6KBM32"
+    sha256 "b7c10b1b038166c00f1899c4503b70ff9115eea79681dce3ec8601a100b56116"
   end
 
-  url "https://cdn.crabnebula.app/asset/#{version.csv.second}",
-      verified: "cdn.crabnebula.app/asset/"
+  url "https://cdn.crabnebula.app/asset/#{version.csv.second}"
   name "Conductor"
   desc "Claude code parallelisation"
   homepage "https://conductor.build/"

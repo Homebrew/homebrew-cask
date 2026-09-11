@@ -27,9 +27,8 @@ cask "keybase" do
 
   app "Keybase.app"
 
-  postflight do
-    system_command "#{appdir}/Keybase.app/Contents/SharedSupport/bin/keybase",
-                   args: ["install-auto"]
+  postflight_steps do
+    run "Keybase.app/Contents/SharedSupport/bin/keybase", args: ["install-auto"], base: :appdir
   end
 
   uninstall launchctl: "keybase.Helper",

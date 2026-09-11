@@ -1,9 +1,8 @@
 cask "openshot-video-editor@daily" do
-  version "3.5.1,16416-0a68c884-48516e0b,dev-daily"
-  sha256 "de1dd6e61731af7ccb41b06758bcd2b0d64798c5fe9218c8805eac91d853d285"
+  version "4.0.0,16870-374b66a2-8f03cf89"
+  sha256 "5b48512bb0b03f806dff45ef6fc010031307916843f65ea73dfb5b3d5199dcfe"
 
-  url "https://github.com/OpenShot/openshot-qt/releases/download/daily/OpenShot-v#{version.csv.first}-#{version.csv.third || "daily"}-#{version.csv.second}-x86_64.dmg",
-      verified: "github.com/OpenShot/openshot-qt/"
+  url "https://github.com/OpenShot/openshot-qt/releases/download/daily/OpenShot-v#{version.csv.first}-#{version.csv.third || "daily"}-#{version.csv.second}-x86_64.dmg"
   name "OpenShot Video Editor (Daily Build)"
   desc "Cross-platform video editor"
   homepage "https://openshot.org/"

@@ -2,12 +2,17 @@ cask "brave-browser@beta" do
   arch arm: "arm64", intel: "x64"
   folder = on_arch_conditional arm: "beta-arm64", intel: "beta"
 
-  version "1.93.120.0"
-  sha256 arm:   "9e5c355331df276d002c71bed680effba5cccf1e358d6d2f114e237d2654908d",
-         intel: "dad41e319a160a82eefbdb731db82ddd43503b692ccc2384b9551d085c30dc07"
+  sha256 arm:   "8ba942c338b71ac96efd3b31ba7652da75a5aa5c64ae0036fabf41b74b50e5d5",
+         intel: "028522328536a95b26f76857058e076a13d2d15b2d6f503619e63e4c01ff3171"
 
-  url "https://updates-cdn.bravesoftware.com/sparkle/Brave-Browser/#{folder}/#{version.major_minor_patch.sub(".", "")}/Brave-Browser-Beta-#{arch}.dmg",
-      verified: "updates-cdn.bravesoftware.com/sparkle/Brave-Browser/"
+  on_arm do
+    version "1.96.50.0"
+  end
+  on_intel do
+    version "1.96.50.0"
+  end
+
+  url "https://updates-cdn.bravesoftware.com/sparkle/Brave-Browser/#{folder}/#{version.major_minor_patch.sub(".", "")}/Brave-Browser-Beta-#{arch}.dmg"
   name "Brave Beta"
   desc "Web browser focusing on privacy"
   homepage "https://brave.com/download-beta/"
@@ -18,7 +23,7 @@ cask "brave-browser@beta" do
   end
 
   auto_updates true
-  depends_on macos: :monterey
+  depends_on macos: :ventura
 
   app "Brave Browser Beta.app"
 

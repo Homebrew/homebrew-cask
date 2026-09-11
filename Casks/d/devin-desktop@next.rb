@@ -1,15 +1,14 @@
 cask "devin-desktop@next" do
   arch arm: "arm64", intel: "x64"
 
-  version "3.5.1015+next.ee593c178a,ee593c178a9b46dc3f9cb9d5e8d43d8e916512a6"
-  sha256 arm:   "524715835a3745155ea8b43f4ce2a8447165afe122a0d111829b273c0c8beaac",
-         intel: "3e6d19ebc9ee1281846520be3640815390b53b7418f517e4032e63a7610e558a"
+  version "3.10.1023+next.deb816008b,deb816008be02bf5f9da707b7def3ebdb53a51cd"
+  sha256 arm:   "75ee49db74d58a0f687a9fa5a305a47e527bc806ecdfa42a705cd99d735406e5",
+         intel: "e0040f65875e972ef5405ab91b975b0e0b9090bdeb30fff88832ff44b8532a03"
 
-  url "https://windsurf-stable.codeiumdata.com/darwin-#{arch}-dmg/next/#{version.csv.second}/Devin-darwin-#{arch}-#{version.csv.first}.dmg",
-      verified: "windsurf-stable.codeiumdata.com/"
+  url "https://windsurf-stable.codeiumdata.com/darwin-#{arch}-dmg/next/#{version.csv.second}/Devin-darwin-#{arch}-#{version.csv.first}.dmg"
   name "Devin Desktop Next (Beta)"
   desc "Agentic IDE with AI agent command center"
-  homepage "https://codeium.com/windsurf/download-next"
+  homepage "https://devin.ai/download?next=true", browsed: "2026-09-07"
 
   livecheck do
     url "https://windsurf-next.codeium.com/api/update/darwin-#{arch}-dmg/next/latest"
@@ -34,6 +33,7 @@ cask "devin-desktop@next" do
   zap trash: [
         "~/.devin-next",
         "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.exafunction.windsurfnext.sfl*",
+        "~/Library/Application Support/Devin - Next",
         "~/Library/Application Support/Devin Next",
         "~/Library/Caches/com.exafunction.windsurfNext",
         "~/Library/Caches/com.exafunction.windsurfNext.ShipIt",

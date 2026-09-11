@@ -5,8 +5,7 @@ cask "helo" do
   sha256 arm:   "f06465971d21e38c5a96c5d4f1689440a2673bf00bc38e963fd182af2bc0fe83",
          intel: "3c36c4f402bdaef2b999fcea24df05a44e33deec341d8b98ce709aa084cb54af"
 
-  url "https://helo.fra1.digitaloceanspaces.com/helo/HELO-#{version}#{arch}.dmg",
-      verified: "helo.fra1.digitaloceanspaces.com/helo/"
+  url "https://helo.fra1.digitaloceanspaces.com/helo/HELO-#{version}#{arch}.dmg"
   name "HELO"
   desc "Email tester and debugger"
   homepage "https://usehelo.com/"

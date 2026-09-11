@@ -1,9 +1,9 @@
 cask "routine" do
   arch arm: "-arm64"
 
-  version "1.1.2"
-  sha256 arm:   "1d6a6bc3c1be84c0949208030d4f00f0a8c609302841e7d6a150b0548d270174",
-         intel: "a2496cfbd0e8f2a3656229c9bedb5ee938515f4630d998f5107ea8676a9d3779"
+  version "2.3.1"
+  sha256 arm:   "61e4efd10acd46b5d76c724c9c3ec4f28432ef8f528177e5e7ff80d92eb515bb",
+         intel: "65952bf9851d3d2615c8b654d94b096e85aaa21f9c94e6d2550d9cbed6984696"
 
   url "https://releases.routine.co/routine/osx#{arch}/Routine-#{version}.zip"
   name "Routine"
@@ -18,7 +18,7 @@ cask "routine" do
   end
 
   auto_updates true
-  depends_on macos: :big_sur
+  depends_on :macos
 
   app "Routine.app"
 

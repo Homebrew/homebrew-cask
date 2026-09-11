@@ -1,12 +1,17 @@
 cask "temurin@17" do
   arch arm: "aarch64", intel: "x64"
 
-  version "17.0.19,10"
-  sha256 arm:   "e709b76af0a28d1a0ebffe042a6c90082ef56343508c57fa4955227d8937f6e4",
-         intel: "2c0f68b2bde4d4243bfe83f531ac0133a31dbe073301641013cce517af5ef021"
+  sha256 arm:   "6e633eb1fc27b03d20360d0f9034e1bd8cc679f0bda1a0588855349a848f7b5d",
+         intel: "86faf4db1ea453576db7eb553c22edfce9d1cd559306a9fe1b180b548ccfb500"
 
-  url "https://github.com/adoptium/temurin#{version.major}-binaries/releases/download/jdk-#{version.csv.first}%2B#{version.csv.second}/OpenJDK#{version.major}U-jdk_#{arch}_mac_hotspot_#{version.csv.first}_#{version.csv.second.major}.pkg",
-      verified: "github.com/adoptium/"
+  on_arm do
+    version "17.0.20.1,1"
+  end
+  on_intel do
+    version "17.0.20.1,1"
+  end
+
+  url "https://github.com/adoptium/temurin#{version.major}-binaries/releases/download/jdk-#{version.csv.first}%2B#{version.csv.second}/OpenJDK#{version.major}U-jdk_#{arch}_mac_hotspot_#{version.csv.first}_#{version.csv.second.major}.pkg"
   name "Eclipse Temurin Java Development Kit"
   desc "JDK from the Eclipse Foundation (Adoptium)"
   homepage "https://adoptium.net/"

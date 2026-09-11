@@ -1,9 +1,8 @@
 cask "ente" do
-  version "1.7.26"
-  sha256 "63a98b91807557d2e887b33c520c9a9610af7cee83af878d4ed21c739cf88f69"
+  version "1.7.29"
+  sha256 "9fd4e6514129188bbefef9b8ac0c4d720a72ed039f9584f5ccec7a7f30d9a850"
 
-  url "https://github.com/ente-io/photos-desktop/releases/download/v#{version}/ente-#{version}-universal.dmg",
-      verified: "github.com/ente-io/photos-desktop/"
+  url "https://github.com/ente-io/photos-desktop/releases/download/v#{version}/ente-#{version}-universal.dmg"
   name "Ente"
   desc "Desktop client for Ente Photos"
   homepage "https://ente.io/"
@@ -14,7 +13,7 @@ cask "ente" do
   end
 
   auto_updates true
-  depends_on macos: :monterey
+  depends_on macos: :ventura
 
   app "ente.app"
 

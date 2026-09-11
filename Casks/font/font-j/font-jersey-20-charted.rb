@@ -2,8 +2,7 @@ cask "font-jersey-20-charted" do
   version :latest
   sha256 :no_check
 
-  url "https://github.com/google/fonts/raw/main/ofl/jersey20charted/Jersey20Charted-Regular.ttf",
-      verified: "github.com/google/fonts/"
+  url "https://github.com/google/fonts/raw/main/ofl/jersey20charted/Jersey20Charted-Regular.ttf"
   name "Jersey 20 Charted"
   homepage "https://fonts.google.com/specimen/Jersey+20+Charted"
 

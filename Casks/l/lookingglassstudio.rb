@@ -6,8 +6,7 @@ cask "lookingglassstudio" do
     version "1.7.1"
     sha256 "94cadc89029cec59c4f2d3fec94fec505ca213e540a358a255f002b842c64825"
 
-    url "https://dhtk4bwj5r21z.cloudfront.net/HoloPlayStudio/PublicLinks/LookingGlassStudio-#{version}#{arch}.pkg",
-        verified: "dhtk4bwj5r21z.cloudfront.net/HoloPlayStudio/PublicLinks/"
+    url "https://dhtk4bwj5r21z.cloudfront.net/HoloPlayStudio/PublicLinks/LookingGlassStudio-#{version}#{arch}.pkg"
 
     pkg "LookingGlassStudio-#{version}#{arch}.pkg"
 
@@ -17,8 +16,7 @@ cask "lookingglassstudio" do
     version "1.6.0"
     sha256 "02551ba289a65fca766f4dbcf794410d3763a0a737e4d819415245055748147b"
 
-    url "https://dhtk4bwj5r21z.cloudfront.net/HoloPlayStudio/PublicLinks/LookingGlassStudio-#{version}.dmg",
-        verified: "dhtk4bwj5r21z.cloudfront.net/HoloPlayStudio/PublicLinks/"
+    url "https://dhtk4bwj5r21z.cloudfront.net/HoloPlayStudio/PublicLinks/LookingGlassStudio-#{version}.dmg"
 
     app "LookingGlassStudio.app"
   end

@@ -1,12 +1,11 @@
 cask "aws-vpn-client" do
   arch arm: "_ARM64"
 
-  version "5.4.1"
-  sha256 arm:   "fc442adb7513d355de827ef3c1bece7c1a1b7bd924003a54e6821c0b832f2837",
-         intel: "74030656dec26a2653f7e2ea3d23f19e1e8bfb1b518e4420e3c159b868a6aed7"
+  version "6.0.3"
+  sha256 arm:   "94b62371a679d05b69edc2c6768b1c2a5652676a5403ce787cbafaeec92cec5a",
+         intel: "3d96ffddbb2bfe40f3b22f5f02cff47aa23da48fb5fde1d341a2c79bc2831b2a"
 
-  url "https://d20adtppz83p9s.cloudfront.net/OSX#{arch}/#{version}/AWS_VPN_Client#{arch}.pkg",
-      verified: "d20adtppz83p9s.cloudfront.net/"
+  url "https://d3c4iklh14o4hj.cloudfront.net/OSX#{arch}/#{version}/AWS_VPN_Client#{arch}.pkg"
   name "AWS Client VPN"
   desc "Managed client-based VPN service to securely access AWS resources"
   homepage "https://aws.amazon.com/vpn/"
@@ -17,18 +16,23 @@ cask "aws-vpn-client" do
   end
 
   auto_updates true
-  depends_on macos: :big_sur
+  depends_on :macos
 
   pkg "AWS_VPN_Client#{arch}.pkg"
 
-  uninstall launchctl: "com.amazonaws.acvc.helper",
+  uninstall launchctl: [
+              "com.amazonaws.acvc.helper",
+              "com.amazonaws.acvc.osx.core",
+            ],
             quit:      "com.amazonaws.acvc.osx",
             pkgutil:   "com.amazon.awsvpnclient",
             delete:    [
               "/Applications/AWS VPN Client",
               "/Library/Application Support/AWSVPNClient",
               "/Library/LaunchDaemons/com.amazonaws.acvc.helper.plist",
+              "/Library/LaunchDaemons/com.amazonaws.acvc.osx.core.plist",
               "/Library/PrivilegedHelperTools/com.amazonaws.acvc.helper",
+              "/usr/local/bin/aws-vpn-client",
             ]
 
   zap trash: [

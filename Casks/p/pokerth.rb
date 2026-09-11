@@ -1,9 +1,8 @@
 cask "pokerth" do
-  version "2.1.3"
-  sha256 "100a60884a3d0df0a00c39efabdfcc0e230a9593eacd1bfd34e8db8a9e3ffb98"
+  version "2.1.7"
+  sha256 "12dd48e42eb6f629604bb519a79079282d74302de044283e97a7e1dea0954193"
 
-  url "https://downloads.sourceforge.net/pokerth/PokerTH-#{version}-Combined.dmg",
-      verified: "downloads.sourceforge.net/pokerth/"
+  url "https://downloads.sourceforge.net/pokerth/PokerTH-#{version}-Combined.dmg"
   name "PokerTH"
   desc "Free Texas hold'em poker"
   homepage "https://www.pokerth.net/"
@@ -19,8 +18,4 @@ cask "pokerth" do
   app "PokerTH.app"
 
   zap trash: "~/.pokerth"
-
-  caveats do
-    requires_rosetta
-  end
 end

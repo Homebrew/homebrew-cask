@@ -2,8 +2,7 @@ cask "font-shanti" do
   version :latest
   sha256 :no_check
 
-  url "https://github.com/google/fonts/raw/main/ofl/shanti/Shanti-Regular.ttf",
-      verified: "github.com/google/fonts/"
+  url "https://github.com/google/fonts/raw/main/ofl/shanti/Shanti-Regular.ttf"
   name "Shanti"
   homepage "https://fonts.google.com/specimen/Shanti"
 

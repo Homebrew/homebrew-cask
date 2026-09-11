@@ -3,8 +3,7 @@ cask "marathon-2" do
   version "20250829"
   sha256 "33a3dd12ed1415b966ed6beb564f38613cfef2ccfc53c75b1a7b16bd73516372"
 
-  url "https://github.com/Aleph-One-Marathon/alephone/releases/download/release-#{version}/Marathon2-#{version}-Mac.dmg",
-      verified: "github.com/Aleph-One-Marathon/alephone/"
+  url "https://github.com/Aleph-One-Marathon/alephone/releases/download/release-#{version}/Marathon2-#{version}-Mac.dmg"
   name "Marathon 2"
   desc "First-person shooter, second in a trilogy"
   homepage "https://alephone.lhowon.org/"

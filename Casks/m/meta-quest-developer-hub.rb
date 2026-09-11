@@ -1,6 +1,6 @@
 cask "meta-quest-developer-hub" do
-  version "6.4.1,39d919119a63419159e7dce344162dfb"
-  sha256 "68e42851337332c858d0be427ae032dda65fac6839330ff89d3952437dd56e3a"
+  version "6.5.0,48b0865e78ccffd0d622b8a2e1a712f0"
+  sha256 "268e2a63f6c6be3160f6854424eac2b319eb41873a6cfe0ae20904f192f370c4"
 
   url "https://www.oculus.com/x2asset/electron-apps/odh/#{version.csv.second}/Meta%20Quest%20Developer%20Hub-#{version.csv.first}.zip"
   name "meta-quest-developer-hub"

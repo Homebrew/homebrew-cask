@@ -1,12 +1,11 @@
 cask "consul" do
   arch arm: "arm64", intel: "amd64"
 
-  version "2.0.2"
-  sha256 arm:   "5954509aec5ed54dabc88fc8e357756c7b0dc56437bd296c1399e525e3657417",
-         intel: "4e76391b19d2e2db08cd2a910acadc6e67b9e1e9333a7434a7ea3c6c977a8889"
+  version "2.0.4"
+  sha256 arm:   "1f51416d27cf5404106e6b2d24de60d4a3677d1a99045e38986f0cc23cb78303",
+         intel: "d8c1456641dd5cb9e453bfb054e44abd8152d4e13113cd6e2093cb99b4804845"
 
-  url "https://releases.hashicorp.com/consul/#{version}/consul_#{version}_darwin_#{arch}.zip",
-      verified: "releases.hashicorp.com/consul/"
+  url "https://releases.hashicorp.com/consul/#{version}/consul_#{version}_darwin_#{arch}.zip"
   name "Consul"
   desc "Tool for service discovery, monitoring and configuration"
   homepage "https://www.consul.io/"

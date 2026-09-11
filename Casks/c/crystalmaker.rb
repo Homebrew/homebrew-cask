@@ -1,5 +1,5 @@
 cask "crystalmaker" do
-  version "11.7.1"
+  version "11.7.2"
   sha256 :no_check
 
   url "https://crystalmaker.com/downloads/crystalmaker#{version.major}_mac.zip"
@@ -14,7 +14,7 @@ cask "crystalmaker" do
     end
   end
 
-  depends_on macos: :big_sur
+  depends_on :macos
 
   app "CrystalMaker.app"
 
@@ -22,9 +22,13 @@ cask "crystalmaker" do
     "~/Library/Application Scripts/com.crystalmaker.crystalmaker.v#{version.major}",
     "~/Library/Application Scripts/group.com.crystalmaker.bundle.v#{version.major}",
     "~/Library/Application Scripts/group.com.crystalmaker.crystalmaker.v#{version.major}",
+    "~/Library/Application Scripts/N6C85LN4R2.com.crystalmaker.bundle.v#{version.major}",
+    "~/Library/Application Scripts/N6C85LN4R2.com.crystalmaker.crystalmaker.v#{version.major}",
     "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.crystalmaker.crystalmaker.v#{version.major}.sfl*",
     "~/Library/Containers/com.crystalmaker.crystalmaker.v#{version.major}",
     "~/Library/Group Containers/group.com.crystalmaker.bundle.v#{version.major}",
     "~/Library/Group Containers/group.com.crystalmaker.crystalmaker.v#{version.major}",
+    "~/Library/Group Containers/N6C85LN4R2.com.crystalmaker.bundle.v#{version.major}",
+    "~/Library/Group Containers/N6C85LN4R2.com.crystalmaker.crystalmaker.v#{version.major}",
   ]
 end

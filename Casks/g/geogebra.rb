@@ -1,6 +1,6 @@
 cask "geogebra" do
-  version "6.0.920.0"
-  sha256 "ba804ab9475826133a6547bf65701adf7ffb3fe21ee1c89c2109781bbb881726"
+  version "6.0.929.3"
+  sha256 "aea28b3ea8cb205cd505fc5f1d77335c0b6db4e6919a657af44c493d24dd54a6"
 
   url "https://download.geogebra.org/installers/#{version.major_minor}/GeoGebra-Classic-#{version.major}-MacOS-Portable-#{version.dots_to_hyphens}.zip"
   name "GeoGebra"
@@ -29,7 +29,12 @@ cask "geogebra" do
             pkgutil:    "org.geogebra#{version.major}.mac"
 
   zap trash: [
+    "~/Library/Application Scripts/org.geogebra#{version.major}.mac",
+    "~/Library/Application Scripts/W5S878FTRC.org.geogebra#{version.major}.mac",
+    "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/org.geogebra#{version.major}.mac.sfl*",
+    "~/Library/Containers/org.geogebra#{version.major}.mac",
     "~/Library/GeoGebra",
+    "~/Library/Group Containers/W5S878FTRC.org.geogebra#{version.major}.mac",
     "~/Library/Preferences/org.geogebra.mathapps.helper.plist",
     "~/Library/Preferences/org.geogebra.mathapps.plist",
     "~/Library/Saved Application State/org.geogebra.mathapps.savedState",

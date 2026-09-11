@@ -1,12 +1,11 @@
 cask "nuclear" do
   arch arm: "aarch64", intel: "x64"
 
-  version "1.43.0"
-  sha256 arm:   "cba68369bc245a37f6f3f92ed283c839576726a835a334dda0b2fdbcd3ed630c",
-         intel: "bc891bb905fb26a42c98df73e96e1096136f1b3432bc1d81b20ee4f5312ce02b"
+  version "1.47.1"
+  sha256 arm:   "a775aa5ab00c6b9d38bbb85280808eb2ace62510e7ed419f1b14f7fecf88ec2e",
+         intel: "b316d666509eaded9573f820f30a0f6093b3311d267c9a3aa616b3011e5f3e28"
 
-  url "https://github.com/nukeop/nuclear/releases/download/player%40#{version}/Nuclear_#{version}_#{arch}.dmg",
-      verified: "github.com/nukeop/nuclear/"
+  url "https://github.com/nukeop/nuclear/releases/download/player%40#{version}/Nuclear_#{version}_#{arch}.dmg"
   name "Nuclear"
   desc "Streaming music player"
   homepage "https://nuclearplayer.com/"
@@ -23,9 +22,13 @@ cask "nuclear" do
   app "Nuclear.app"
 
   zap trash: [
+    "~/Library/Application Support/com.nuclearplayer",
     "~/Library/Application Support/nuclear",
+    "~/Library/Caches/com.nuclearplayer",
+    "~/Library/Logs/com.nuclearplayer",
     "~/Library/Logs/nuclear",
     "~/Library/Preferences/nuclear.plist",
     "~/Library/Saved Application State/nuclear.savedState",
+    "~/Library/WebKit/com.nuclearplayer",
   ]
 end

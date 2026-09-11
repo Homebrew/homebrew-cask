@@ -1,6 +1,6 @@
 cask "stash" do
-  version "4.2.1,487"
-  sha256 "5530f2988e2e6c18c492d5c3e801d0dee1b131b0e2e659c383c37d1c69cff582"
+  version "4.3.0,497"
+  sha256 "fe9853715925f29d2b43254d1f35126a54f562d5f53c6f4653fac09c97e5843c"
 
   url "https://mac-release-static.stash.ws/Stash-build-#{version.csv.second}.zip"
   name "Stash"
@@ -25,6 +25,7 @@ cask "stash" do
             ]
 
   zap trash: [
+    "~/Library/Application Scripts/B36787XSBG.ws.stash.app",
     "~/Library/Application Scripts/group.ws.stash.app",
     "~/Library/Application Scripts/ws.stash.app",
     "~/Library/Application Scripts/ws.stash.app.mac-LaunchAtLoginHelper",
@@ -33,9 +34,11 @@ cask "stash" do
     "~/Library/Caches/ws.stash.app.mac",
     "~/Library/Caches/ws.stash.app.mac.dashboard",
     "~/Library/Containers/ws.stash.app.mac-LaunchAtLoginHelper",
+    "~/Library/Group Containers/B36787XSBG.ws.stash.app",
     "~/Library/Group Containers/group.ws.stash.app",
     "~/Library/HTTPStorages/ws.stash.app.mac",
     "~/Library/HTTPStorages/ws.stash.app.mac.binarycookies",
     "~/Library/Preferences/ws.stash.app.mac.plist",
+    "~/Library/WebKit/ws.stash.app.mac",
   ]
 end

@@ -2,8 +2,7 @@ cask "transocks" do
   version "3.0.9"
   sha256 "cfdcdf99b84b659f08ca4debbaf0c3d31126201acc753ebd6461abfdbdd04fc1"
 
-  url "https://download.chuansuo.io/transocks/download/mac/#{version}/Transocks_official_v#{version}.dmg",
-      verified: "download.chuansuo.io/"
+  url "https://download.chuansuo.io/transocks/download/mac/#{version}/Transocks_official_v#{version}.dmg"
   name "Transocks"
   desc "Tool to optimise access to various video music resources"
   homepage "https://www.transocks.com/"

@@ -1,5 +1,5 @@
 cask "pdf-squeezer" do
-  version "4.7.6"
+  version "4.8.3"
   sha256 :no_check
 
   url "https://www.witt-software.com/downloads/pdfsqueezer/PDF%20Squeezer.dmg"
@@ -19,6 +19,7 @@ cask "pdf-squeezer" do
   zap trash: [
     "~/Library/Application Scripts/com.witt-software.PDF-Squeezer",
     "~/Library/Application Scripts/group.witt-software.com.PDF-Squeezer",
+    "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.witt-software.pdf-squeezer.sfl*",
     "~/Library/Containers/com.witt-software.PDF-Squeezer",
     "~/Library/Group Containers/group.witt-software.com.PDF-Squeezer",
   ]

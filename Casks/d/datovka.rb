@@ -1,12 +1,11 @@
 cask "datovka" do
   arch arm: "arm64-macos13.3", intel: "64bit-macos10.12"
 
-  version "4.29.3"
-  sha256 arm:   "269cf18cc22339ee9dd647bb4d9f90221db9986572de613431734cef66e5e9ab",
-         intel: "277897df81a91e3c2126d9e2dadb50558a08190acfd47b97abf555eacb3ba3af"
+  version "4.29.5"
+  sha256 arm:   "7373c5e57fd1c21920329e1235b65188aea197a74f049d42bdbe6d5a309201be",
+         intel: "62a709201022acebf0e2a6d9c0fc9fb1d91295007c4b38bb35ed64ac4fda14b8"
 
-  url "https://datovka.nic.cz/#{version}/datovka-#{version}-#{arch}.dmg",
-      verified: "datovka.nic.cz/"
+  url "https://datovka.nic.cz/#{version}/datovka-#{version}-#{arch}.dmg"
   name "Datovka"
   desc "Access and store data messages in a local database"
   homepage "https://www.datovka.cz/"
@@ -16,9 +15,11 @@ cask "datovka" do
     regex(%r{href=.*?/datovka[._-](\d+(?:\.\d+)+)[._-]#{arch}\.dmg}i)
   end
 
-  depends_on macos: :big_sur
+  depends_on :macos
 
   app "datovka.app"
+
+  uninstall quit: "cz.nic.datovka"
 
   zap trash: "~/Library/Saved Application State/cz.nic.datovka.savedState"
 end

@@ -5,8 +5,7 @@ cask "volta-app" do
   sha256 arm:   "2f48cfa27f76b12bbbcac348cc817708c7db7279a2610b6a9991a83a461e99e1",
          intel: "334052571718e70426abcf4c291846765ace90b69c01f8c19938def8c68459db"
 
-  url "https://volta-build.s3.fr-par.scw.cloud/Volta-#{version}#{arch}.dmg",
-      verified: "volta-build.s3.fr-par.scw.cloud/"
+  url "https://volta-build.s3.fr-par.scw.cloud/Volta-#{version}#{arch}.dmg"
   name "Volta"
   desc "GitHub issues and notifications"
   homepage "https://volta.net/"

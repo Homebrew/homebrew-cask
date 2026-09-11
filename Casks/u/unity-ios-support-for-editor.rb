@@ -1,9 +1,8 @@
 cask "unity-ios-support-for-editor" do
-  version "6000.5.3f1,c2eb47b3a2a9"
-  sha256 "179b8fe0f13c9ce61da5e381fd883668ce2f01734b009c5b6ef34f6918661f96"
+  version "6000.5.10f1,3bd4f66ad299"
+  sha256 "fdff4effc227d28c8393888af7aac59e39960d0e83c110a3dc7939b2b940e052"
 
-  url "https://download.unity3d.com/download_unity/#{version.csv.second}/MacEditorTargetInstaller/UnitySetup-iOS-Support-for-Editor-#{version.csv.first}.pkg",
-      verified: "download.unity3d.com/download_unity/"
+  url "https://download.unity3d.com/download_unity/#{version.csv.second}/MacEditorTargetInstaller/UnitySetup-iOS-Support-for-Editor-#{version.csv.first}.pkg"
   name "Unity iOS Build Support"
   desc "iOS target support for Unity"
   homepage "https://unity.com/products"
@@ -12,8 +11,8 @@ cask "unity-ios-support-for-editor" do
     cask "unity"
   end
 
-  depends_on :macos
   depends_on cask: "unity"
+  depends_on :macos
 
   pkg "UnitySetup-iOS-Support-for-Editor-#{version.csv.first}.pkg"
 

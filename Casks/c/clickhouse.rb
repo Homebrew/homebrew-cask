@@ -1,13 +1,12 @@
 cask "clickhouse" do
   arch arm: "-aarch64"
 
-  version "26.6.1.1193-stable"
-  sha256 arm:   "df44acb8f1f52b8cfa9fd41bd18e07e03982c4f7f5868fca1043ce39b2e8d7ce",
-         intel: "fdc5415ba5d58ef3198573d9b7b59245410ee8441c8e18a99e2431e94b979bcb"
+  version "26.8.2.7-lts"
+  sha256 arm:   "db825ec9fd80141a8b4ed7335b5534c1801a978d33f0b7a5379533ddb9c0d8df",
+         intel: "057195d43c6025e682c57fa42f888c12d18c2f665bf6f55bf648d7e253bd8db8"
 
-  url "https://github.com/ClickHouse/ClickHouse/releases/download/v#{version}/clickhouse-macos#{arch}",
-      verified: "github.com/ClickHouse/ClickHouse/"
-  name "Clickhouse"
+  url "https://github.com/ClickHouse/ClickHouse/releases/download/v#{version}/clickhouse-macos#{arch}.zip"
+  name "ClickHouse"
   desc "Column-oriented database management system"
   homepage "https://clickhouse.com/"
 
@@ -16,11 +15,9 @@ cask "clickhouse" do
     regex(/^v?(\d+(?:\.\d+)+[._-](lts|stable))$/i)
   end
 
-  disable! date: "2026-09-01", because: :fails_gatekeeper_check
-
   depends_on :macos
 
-  binary "clickhouse-macos#{arch}", target: "clickhouse"
+  binary "clickhouse"
 
   # No zap stanza required
 end

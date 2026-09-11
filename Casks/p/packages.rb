@@ -2,8 +2,7 @@ cask "packages" do
   version "1.2.11"
   sha256 "c7d599842562b18f8dfb6e9f76fc915dde7716a263c967aaf1fe11e17d283ded"
 
-  url "https://github.com/packagesdev/packages/releases/download/v#{version}-GM/Packages.dmg",
-      verified: "github.com/packagesdev/packages/"
+  url "https://github.com/packagesdev/packages/releases/download/v#{version}-GM/Packages.dmg"
   name "Packages"
   desc "Integrated packaging environment"
   homepage "http://s.sudre.free.fr/Software/Packages/about.html"

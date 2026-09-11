@@ -1,6 +1,6 @@
 cask "snippety" do
-  version "10.3.140"
-  sha256 "3070fe09c5f0688ea32bb77fdc912696354d31d720f898a6a4ed80df1da3d371"
+  version "11.4.149"
+  sha256 "1edf0fde902c6acfe9d74dbf2a10480a4df94a0a0f8b06ae3a5b28384f0394fb"
 
   url "https://snippety.app/releases/Snippety-#{version}.dmg"
   name "Snippety"
@@ -18,12 +18,14 @@ cask "snippety" do
   app "Snippety.app"
 
   zap trash: [
+    "~/Library/Application Support/pl.wojciechkulik.Snippety*",
     "~/Library/Application Support/Snippety",
     "~/Library/Caches/pl.wojciechkulik.Snippety",
     "~/Library/Caches/pl.wojciechkulik.Snippety.revenuecat",
     "~/Library/HTTPStorages/pl.wojciechkulik.Snippety",
     "~/Library/Logs/pl.wojciechkulik.Snippety.migration-logs-*",
     "~/Library/Logs/snippety.txt",
+    "~/Library/Preferences/group.pl.wojciechkulik.Snippety.firebase.plist",
     "~/Library/Preferences/pl.wojciechkulik.Snippety.plist",
   ]
 end

@@ -2,12 +2,11 @@ cask "jetbrains-air" do
   arch arm: "-aarch64"
   folder = on_arch_conditional arm: "aarch64", intel: "x64"
 
-  version "262.132.21"
-  sha256 arm:   "ba2aefff4f45903e9673dba62884b3f43f888069d97799d18d98a74ba891153a",
-         intel: "46983f64fbed96c50419965957116a8ce1c16a37715290cd25704d18a186255d"
+  version "262.834.41"
+  sha256 arm:   "68fc5e3a5631e16a43095470fac5403c8ed9bf35ef87392e736b9c2a3687e68f",
+         intel: "f1279e2182c43c41bd9a23d474fdf59c551229c7d015632b975d8558134028d9"
 
-  url "https://download.jetbrains.com/air/installers/macos_#{folder}/Air-#{version}#{arch}.dmg",
-      verified: "download.jetbrains.com/air/installers/"
+  url "https://download.jetbrains.com/air/installers/macos_#{folder}/Air-#{version}#{arch}.dmg"
   name "JetBrains Air"
   desc "Agentic development environment"
   homepage "https://air.dev/"

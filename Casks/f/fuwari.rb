@@ -2,8 +2,7 @@ cask "fuwari" do
   version "1.0.0"
   sha256 "a294c82b3ec288b2adf828c42bdfa42144efed9aae5c66e03d0708ff9ba71acb"
 
-  url "https://github.com/kentya6/Fuwari/releases/download/v#{version}/Fuwari.v#{version}.zip",
-      verified: "github.com/kentya6/Fuwari/"
+  url "https://github.com/kentya6/Fuwari/releases/download/v#{version}/Fuwari.v#{version}.zip"
   name "Fuwari"
   desc "Floating screenshot like a sticky"
   homepage "https://fuwari-app.com/"

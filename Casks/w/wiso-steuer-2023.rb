@@ -3,8 +3,7 @@ cask "wiso-steuer-2023" do
   version "30.17.5610-HF1"
   sha256 "0af66e1b300048513f84fa6185dd6d62f765054dd8168e32004405b56a61e070"
 
-  url "https://update.buhl-data.com/Updates/Steuer/2023/Mac/Files/#{version}/SteuerMac2023-#{version.split("-").first}.dmg",
-      verified: "update.buhl-data.com/Updates/Steuer/"
+  url "https://update.buhl-data.com/Updates/Steuer/2023/Mac/Files/#{version}/SteuerMac2023-#{version.split("-").first}.dmg"
   name "WISO Steuer 2023"
   desc "Tax declaration for the fiscal year 2022"
   homepage "https://www.buhl.de/download/wiso-steuer-2023/"

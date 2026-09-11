@@ -1,12 +1,11 @@
 cask "electron" do
   arch arm: "arm64", intel: "x64"
 
-  version "43.1.1"
-  sha256 arm:   "d6d0598d042ef4d146278d08d84deac9dde145eae31eb4f32ef46206d6bd6169",
-         intel: "82789f6fbba543f9c170dd3a0f053278eeda9b4818d51aea5467c4e500e79d51"
+  version "44.1.0"
+  sha256 arm:   "9e624a8c44dee2792a532551f224ec8b8649b654a0e039416164fbf620888512",
+         intel: "1d3ca5fd78db3cd9e6c896c1d82188522f7128538e3d603b62524587e4c2213e"
 
-  url "https://github.com/electron/electron/releases/download/v#{version}/electron-v#{version}-darwin-#{arch}.zip",
-      verified: "github.com/electron/electron/"
+  url "https://github.com/electron/electron/releases/download/v#{version}/electron-v#{version}-darwin-#{arch}.zip"
   name "Electron"
   desc "Build desktop apps with JavaScript, HTML, and CSS"
   homepage "https://electronjs.org/"
@@ -18,7 +17,7 @@ cask "electron" do
 
   disable! date: "2026-09-01", because: :fails_gatekeeper_check
 
-  depends_on macos: :monterey
+  depends_on macos: :ventura
 
   app "Electron.app"
   binary "#{appdir}/Electron.app/Contents/MacOS/Electron", target: "electron"

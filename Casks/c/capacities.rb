@@ -1,12 +1,11 @@
 cask "capacities" do
   arch arm: "-arm64"
 
-  version "1.67.3"
-  sha256 arm:   "2e780398a6c64207490bae46f42f7a655239ade80ff561ed31f5a3bda6253047",
-         intel: "4f608cf01499a889051cf502b987feee3d7171ac7569eb6e702635041576c52c"
+  version "1.70.2"
+  sha256 arm:   "5ed2bc3a36343916214b9bcb88daeb252ea191c500aa00ef386fdb7c87b64e86",
+         intel: "2adf7a2c35c3f9358c8a3083f59138c6c2a85f5d185536218f2265d204302b43"
 
-  url "https://2vks4.upcloudobjects.com/capacities-desktop-app/Capacities-#{version}#{arch}.dmg",
-      verified: "2vks4.upcloudobjects.com/capacities-desktop-app/"
+  url "https://2vks4.upcloudobjects.com/capacities-desktop-app/Capacities-#{version}#{arch}.dmg"
   name "Capacities"
   desc "App to write and organise your ideas"
   homepage "https://capacities.io/"

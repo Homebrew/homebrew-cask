@@ -1,21 +1,12 @@
 cask "bdash" do
-  version "1.35.1"
+  os macos: "-universal-mac.zip", linux: ".AppImage"
 
-  url_end = on_system_conditional linux: ".AppImage", macos: "-universal-mac.zip"
-
-  url "https://github.com/bdash-app/bdash/releases/download/v#{version}/Bdash-#{version}#{url_end}"
-  name "Bdash"
-  desc "Simple SQL Client for lightweight data analysis"
-  homepage "https://github.com/bdash-app/bdash"
-
-  livecheck do
-    url :url
-    strategy :github_latest
-  end
+  version "1.35.2"
+  sha256 arm:          "31eb841fd8746bad9b8b785ec7cb04e8454a19439688ebd14f65e71e9cd28f74",
+         intel:        "31eb841fd8746bad9b8b785ec7cb04e8454a19439688ebd14f65e71e9cd28f74",
+         x86_64_linux: "f482a0ebea0d5b17d581e30b920f62fd668749c83f7347fe96c98b4c7aeaa7d9"
 
   on_macos do
-    sha256 "ba56bebc97f714a95ad5dfdcb52b49d55cfd08ebad4235211488632d1128d990"
-
     depends_on macos: :monterey
 
     app "Bdash.app"
@@ -28,12 +19,19 @@ cask "bdash" do
       "~/Library/Saved Application State/io.bdash.savedState",
     ]
   end
-
   on_linux do
-    sha256 "f1aa573012cc3a55f86ca313116b9269f94651ae815dcc5a1a5754d7df520b72"
-
     depends_on arch: :x86_64
 
     app_image "Bdash-#{version}.AppImage", target: "Bdash.AppImage"
+  end
+
+  url "https://github.com/bdash-app/bdash/releases/download/v#{version}/Bdash-#{version}#{os}"
+  name "Bdash"
+  desc "Simple SQL Client for lightweight data analysis"
+  homepage "https://github.com/bdash-app/bdash"
+
+  livecheck do
+    url :url
+    strategy :github_latest
   end
 end

@@ -1,9 +1,8 @@
 cask "raycast-glaze" do
-  version "0.10.0,016bd9e319"
-  sha256 "1b247847cd3874306f614847afecbb027f9df4266056f2c86560f5fd7cb18d2f"
+  version "0.14.2,3a82800216"
+  sha256 "0746524c98035f388120c7523d777040ee405a479380238be5404b8eb382d60c"
 
-  url "https://glaze.raycast-releases.com/Glaze_#{version.csv.first}_CI_Production_#{version.csv.second}_arm64.dmg",
-      verified: "glaze.raycast-releases.com/"
+  url "https://glaze.raycast-releases.com/Glaze_#{version.csv.first}_CI_Production_#{version.csv.second}_arm64.dmg"
   name "Glaze"
   desc "Create desktop apps by chatting with AI"
   homepage "https://www.glaze.app/"

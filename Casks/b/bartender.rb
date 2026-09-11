@@ -1,6 +1,6 @@
 cask "bartender" do
-  version "6.5.2"
-  sha256 "1f5f81c29315332ae2c19efa857454e6254159caf5f4066f556a60491db364a0"
+  version "6.6.2"
+  sha256 "e178616bc09956e39f0ab0ff9112b8fe89f744b406f8e417fb7b2aaf3524e064"
 
   url "https://downloads.macbartender.com/B2/updates/#{version.dots_to_hyphens}/Bartender%20#{version.major}.zip"
   name "Bartender"
@@ -30,8 +30,15 @@ cask "bartender" do
             ]
 
   zap trash: [
+    "~/Library/Application Scripts/24J875RH8J.com.surteesstudios.Bartender",
+    "~/Library/Application Support/Bartender #{version.major}",
+    "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.surteesstudios.bartender.sfl*",
+    "~/Library/Application Support/com.surteesstudios.Bartender.revenuecat",
     "~/Library/Caches/com.surteesstudios.Bartender",
+    "~/Library/Caches/com.surteesstudios.Bartender.revenuecat",
     "~/Library/Cookies/com.surteesstudios.Bartender.binarycookies",
+    "~/Library/Group Containers/24J875RH8J.com.surteesstudios.Bartender",
+    "~/Library/HTTPStorages/com.surteesstudios.Bartender",
     "~/Library/Preferences/com.surteesstudios.Bartender.plist",
   ]
 end

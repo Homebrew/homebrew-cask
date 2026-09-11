@@ -6,18 +6,18 @@ cask "font-sf-mono-for-powerline" do
   name "SF Mono for Powerline"
   homepage "https://github.com/Twixes/SF-Mono-Powerline"
 
-  font "SF-Mono-Powerline-#{version}/SF-Mono-Powerline-Bold.otf"
   font "SF-Mono-Powerline-#{version}/SF-Mono-Powerline-Bold-Italic.otf"
-  font "SF-Mono-Powerline-#{version}/SF-Mono-Powerline-Heavy.otf"
+  font "SF-Mono-Powerline-#{version}/SF-Mono-Powerline-Bold.otf"
   font "SF-Mono-Powerline-#{version}/SF-Mono-Powerline-Heavy-Italic.otf"
-  font "SF-Mono-Powerline-#{version}/SF-Mono-Powerline-Light.otf"
+  font "SF-Mono-Powerline-#{version}/SF-Mono-Powerline-Heavy.otf"
   font "SF-Mono-Powerline-#{version}/SF-Mono-Powerline-Light-Italic.otf"
-  font "SF-Mono-Powerline-#{version}/SF-Mono-Powerline-Medium.otf"
+  font "SF-Mono-Powerline-#{version}/SF-Mono-Powerline-Light.otf"
   font "SF-Mono-Powerline-#{version}/SF-Mono-Powerline-Medium-Italic.otf"
-  font "SF-Mono-Powerline-#{version}/SF-Mono-Powerline-Regular.otf"
+  font "SF-Mono-Powerline-#{version}/SF-Mono-Powerline-Medium.otf"
   font "SF-Mono-Powerline-#{version}/SF-Mono-Powerline-Regular-Italic.otf"
-  font "SF-Mono-Powerline-#{version}/SF-Mono-Powerline-Semibold.otf"
+  font "SF-Mono-Powerline-#{version}/SF-Mono-Powerline-Regular.otf"
   font "SF-Mono-Powerline-#{version}/SF-Mono-Powerline-Semibold-Italic.otf"
+  font "SF-Mono-Powerline-#{version}/SF-Mono-Powerline-Semibold.otf"
 
   # No zap stanza required
 end

@@ -5,8 +5,7 @@ cask "coscreen" do
   sha256 arm:   "00a91e0532ad699c3eb9b1df6bd56334e161e255026b9776bbe761f65c1e28b5",
          intel: "9f58c2e9157a8bbf57f9e48e6ac5d090b9c0420a62973a12259d7a115b83ec91"
 
-  url "https://update.coscreen.org/CoScreen-#{version}-stable-#{arch}.dmg",
-      verified: "update.coscreen.org/"
+  url "https://update.coscreen.org/CoScreen-#{version}-stable-#{arch}.dmg"
   name "CoScreen"
   desc "Collaboration tool with multi-user screen sharing"
   homepage "https://www.coscreen.co/"

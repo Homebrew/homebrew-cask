@@ -1,9 +1,8 @@
 cask "mixin" do
-  version "5.1.1"
-  sha256 "d4ce376a800f1e2e0e5ea0a5e7c31b6c7f4fb0aad27c3a00d5dabb1a79db6411"
+  version "6.1.0"
+  sha256 "e36f16f59ca040073dddc2afe0e92a6f82a6c92a5838d184e614a1146c23f21a"
 
-  url "https://github.com/MixinNetwork/flutter-app/releases/download/v#{version}/mixin-#{version}.dmg",
-      verified: "github.com/MixinNetwork/flutter-app/"
+  url "https://github.com/MixinNetwork/flutter-app/releases/download/v#{version}/mixin-#{version}.dmg"
   name "Mixin Messenger Desktop"
   desc "Cryptocurrency wallet"
   homepage "https://messenger.mixin.one/"
@@ -28,7 +27,7 @@ cask "mixin" do
   end
 
   auto_updates true
-  depends_on :macos
+  depends_on macos: :monterey
 
   app "Mixin.app"
 

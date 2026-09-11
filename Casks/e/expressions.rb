@@ -1,6 +1,6 @@
 cask "expressions" do
-  version "1.3.9"
-  sha256 "a4fd66e31d96c9317f6cce54d6b66c5854659e7a8cea50d8ba52d94ce10757cc"
+  version "1.3.10"
+  sha256 "bb6f033ca5eadb3fd60105c6c2bf2709cb987d78311e7cecdbb0ca14ee24e23a"
 
   url "https://www.apptorium.com/public/products/expressions/releases/Expressions-#{version}.zip"
   name "Expressions"
@@ -12,7 +12,7 @@ cask "expressions" do
     regex(%r{href=.*?/Expressions-(\d+(?:\.\d+)*)\.zip}i)
   end
 
-  depends_on :macos
+  depends_on macos: :monterey
 
   app "Expressions.app"
 

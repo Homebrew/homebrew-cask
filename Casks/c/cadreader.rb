@@ -2,8 +2,7 @@ cask "cadreader" do
   version "5.2.3.15"
   sha256 "1b1c1a035cd438a6cfe42f0525923cafed0d2b864119ba087e3024a2bb68e5c4"
 
-  url "https://yuntu-f.kuaicad.com/app/CADReaderMac_#{version}.dmg",
-      verified: "yuntu-f.kuaicad.com/app/"
+  url "https://yuntu-f.kuaicad.com/app/CADReaderMac_#{version}.dmg"
   name "CADReader"
   name "CAD快速看图"
   desc "CAD drawing viewer"

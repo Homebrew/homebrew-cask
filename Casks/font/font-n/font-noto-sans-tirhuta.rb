@@ -2,8 +2,7 @@ cask "font-noto-sans-tirhuta" do
   version :latest
   sha256 :no_check
 
-  url "https://github.com/google/fonts/raw/main/ofl/notosanstirhuta/NotoSansTirhuta-Regular.ttf",
-      verified: "github.com/google/fonts/"
+  url "https://github.com/google/fonts/raw/main/ofl/notosanstirhuta/NotoSansTirhuta-Regular.ttf"
   name "Noto Sans Tirhuta"
   homepage "https://fonts.google.com/specimen/Noto+Sans+Tirhuta"
 

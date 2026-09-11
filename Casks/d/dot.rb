@@ -1,9 +1,8 @@
 cask "dot" do
-  version "2.3.2"
-  sha256 "c20cb6377d2fc2897f05a2ed8af2f72f26808bb1a934fb65c119ddb631f2d267"
+  version "2.4.1"
+  sha256 "0c856e2dcc1984262dad80efd5414b641f86b6b9bc6affc56d1278a38ce712c5"
 
-  url "https://github.com/prateekkeshari/dot-releases/releases/download/v#{version}/Dot-#{version}.dmg",
-      verified: "github.com/prateekkeshari/dot-releases/"
+  url "https://github.com/prateekkeshari/dot-releases/releases/download/v#{version}/Dot-#{version}.dmg"
   name "Dot"
   desc "Menu bar calendar with meeting reminders"
   homepage "https://www.trydot.app/"
@@ -17,9 +16,11 @@ cask "dot" do
 
   app "Dot.app"
 
+  uninstall quit: "com.dot.app"
+
   zap trash: [
-    "~/Library/Application Scripts/com.dot.app/",
-    "~/Library/Caches/com.dot.app/",
-    "~/Library/Containers/com.dot.app/",
+    "~/Library/Application Scripts/com.dot.app",
+    "~/Library/Caches/com.dot.app",
+    "~/Library/Containers/com.dot.app",
   ]
 end

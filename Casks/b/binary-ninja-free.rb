@@ -1,5 +1,5 @@
 cask "binary-ninja-free" do
-  version "5.3.9757"
+  version "6.0.10601"
   sha256 :no_check
 
   url "https://cdn.binary.ninja/installers/binaryninja_free_macosx.dmg"
@@ -23,6 +23,8 @@ cask "binary-ninja-free" do
   depends_on macos: :monterey
 
   app "Binary Ninja.app"
+
+  uninstall quit: "com.vector35.binaryninja"
 
   zap trash: "~/Library/Application Support/Binary Ninja"
 end

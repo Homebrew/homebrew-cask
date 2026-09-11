@@ -1,6 +1,6 @@
 cask "linearmouse@beta" do
-  version "0.11.4-beta.3"
-  sha256 "6f213f55c614d1bcd7341a0b1418c45447626db5074d92bf5226bfe4d7f00cc8"
+  version "0.12.0-beta.4"
+  sha256 "faa9a2378e95f52103afdb3e6546f1c698c2f3b61515b0050de37beabb26cc98"
 
   url "https://dl.linearmouse.org/v#{version}/LinearMouse.dmg"
   name "LinearMouse"
@@ -23,6 +23,7 @@ cask "linearmouse@beta" do
 
   zap trash: [
     "~/.config/linearmouse",
+    "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.lujjjh.linearmouse.sfl*",
     "~/Library/Preferences/com.lujjjh.LinearMouse.plist",
   ]
 end

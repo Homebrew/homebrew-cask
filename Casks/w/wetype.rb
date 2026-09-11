@@ -1,6 +1,6 @@
 cask "wetype" do
-  version "2.2.0,617"
-  sha256 "2f8cf64f63397f719c5d76593c57ac4dd42f7e606e1137fe4a80e0d668d596b3"
+  version "2.2.3,657"
+  sha256 "8ef48bb21fe9d7b017b8a09fb9496b1b8f960ad960db27872226e08c09db264b"
 
   url "https://download.weread.qq.com/app/wxkb/mac/#{version.csv.first}/WeType_#{version.csv.first}_#{version.csv.second}.zip"
   name "WeType"
@@ -26,7 +26,9 @@ cask "wetype" do
   auto_updates true
   depends_on :macos
 
-  input_method "WeType.app"
+  # The bundle moves itself to `/Library/Input Methods` on first launch,
+  # so let's put it there to begin with to prevent uninstallation issues.
+  input_method "WeType.app", target: "/Library/Input Methods/WeType.app"
 
   zap trash: [
     "~/Library/Application Support/WeType",
@@ -35,4 +37,9 @@ cask "wetype" do
     "~/Library/HTTPStorages/com.tencent.inputmethod.wetype",
     "~/Library/Preferences/com.tencent.inputmethod.wetype.plist",
   ]
+
+  # The input method is only registered after a reboot, or logging out and back in.
+  caveats do
+    logout
+  end
 end

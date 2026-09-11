@@ -2,8 +2,7 @@ cask "shortwave" do
   version "2026.2.1"
   sha256 "69dddc3f5e51e1f571b45a22f5d382d21bfd10d4e787d29c03940066dc226620"
 
-  url "https://storage.googleapis.com/shortwave-downloads/desktop_app/darwin/universal/Shortwave-darwin-universal-#{version}.zip",
-      verified: "storage.googleapis.com/shortwave-downloads/"
+  url "https://storage.googleapis.com/shortwave-downloads/desktop_app/darwin/universal/Shortwave-darwin-universal-#{version}.zip"
   name "Shortwave"
   desc "Email client"
   homepage "https://www.shortwave.com/"

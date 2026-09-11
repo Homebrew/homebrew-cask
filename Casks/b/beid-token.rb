@@ -16,18 +16,21 @@ cask "beid-token" do
 
   pkg "eID-Quickinstaller-signed.pkg"
 
-  postflight do
+  postflight_steps do
     # Description: Ensure console variant of postinstall is non-interactive.
     # This is because `open "$APP_PATH"&` is called from the postinstall
     # script of the package and we don't want any user intervention there.
-    retries ||= 3
-    ohai "The BEIDToken package postinstall script launches the BEIDToken app" if retries >= 3
-    ohai "Attempting to close BEIDToken.app to avoid unwanted user intervention" if retries >= 3
-    return unless system_command "/usr/bin/pkill", args: ["-f", "/Applications/BEIDToken.app"]
-  rescue RuntimeError
-    sleep 1
-    retry unless (retries -= 1).zero?
-    opoo "Unable to forcibly close BEIDToken.app"
+    terminate_process(
+      "/Applications/BEIDToken.app",
+      match:           :full,
+      attempts:        3,
+      must_succeed:    false,
+      notices:         [
+        "The BEIDToken package postinstall script launches the BEIDToken app",
+        "Attempting to close BEIDToken.app to avoid unwanted user intervention",
+      ],
+      failure_message: "Unable to forcibly close BEIDToken.app",
+    )
   end
 
   uninstall quit:    [

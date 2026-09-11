@@ -1,6 +1,6 @@
 cask "mathpix-snipping-tool" do
-  version "3.4.18.2"
-  sha256 "160db2c60b5cac1f3bb5556f2d91963647b8a4f648ac2450ad63873c16a3215d"
+  version "3.4.21.4"
+  sha256 "fc197bae9c337aaccc7121dca3295e156e73613bd4af934fe0741be184e4e586"
 
   url "https://mathpix.com/dmg/SnippingTool-v#{version}.dmg"
   name "Mathpix Snipping Tool"

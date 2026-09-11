@@ -5,8 +5,7 @@ cask "gplates" do
   version "2.5.0"
   sha256 :no_check
 
-  url "https://www.earthbyte.org/download/#{livecheck_id}/",
-      verified: "earthbyte.org/"
+  url "https://www.earthbyte.org/download/#{livecheck_id}/"
   name "GPlates"
   desc "Plate tectonics program"
   homepage "https://www.gplates.org/"

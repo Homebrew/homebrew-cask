@@ -2,8 +2,7 @@ cask "darkmodebuddy" do
   version "1.2,13"
   sha256 "4a13606fa242795353b8256b0a9d0c6a1624aea47b1d2f67b55b2e52ef1a6d77"
 
-  url "https://su.darkmodebuddy.app/DarkModeBuddy_v#{version.csv.first}-#{version.csv.second}.dmg",
-      verified: "darkmodebuddy.app/"
+  url "https://su.darkmodebuddy.app/DarkModeBuddy_v#{version.csv.first}-#{version.csv.second}.dmg"
   name "DarkModeBuddy"
   desc "Automatically switch between light and dark modes based on ambient light sensor"
   homepage "https://github.com/insidegui/DarkModeBuddy"

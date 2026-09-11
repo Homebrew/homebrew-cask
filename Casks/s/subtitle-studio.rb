@@ -1,6 +1,6 @@
 cask "subtitle-studio" do
-  version "1.10.3"
-  sha256 "07589d8c997ad81df7c037b5b20796a1129d0920e78c67d0dfe140ced20b65f0"
+  version "1.11.4"
+  sha256 "db9b7b7cef39d8038c94bf317d365c3913182711890380fd29bc988f21f419f2"
 
   url "https://assets.subtitlestudio.ai/releases/Subtitle%20Studio-arm64-#{version}.dmg"
   name "Subtitle Studio"
@@ -21,6 +21,7 @@ cask "subtitle-studio" do
   app "Subtitle Studio.app"
 
   zap trash: [
+    "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.subtitle.studio.sfl*",
     "~/Library/Application Support/subtitle-studio",
     "~/Library/Preferences/com.subtitle.studio.plist",
   ]

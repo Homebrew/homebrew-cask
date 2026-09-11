@@ -1,9 +1,8 @@
 cask "teleport-suite" do
-  version "18.10.0"
-  sha256 "740d86e9a1ebad8841882b3b5ef5e34400fd7aca0a7d38ac7bc9a19d21a7201f"
+  version "18.11.0"
+  sha256 "2034eef9147b1b25c7555db5eb8ce261a816302f9ca23b0a2bd14c0245b2908f"
 
-  url "https://cdn.teleport.dev/teleport-#{version}.pkg",
-      verified: "cdn.teleport.dev/"
+  url "https://cdn.teleport.dev/teleport-#{version}.pkg"
   name "Teleport"
   desc "Modern SSH server for teams managing distributed infrastructure"
   homepage "https://goteleport.com/"

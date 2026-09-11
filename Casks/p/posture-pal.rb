@@ -2,8 +2,7 @@ cask "posture-pal" do
   version "1.3,19"
   sha256 "420d48a7cbf5a6f2585b3e4192da65d258ad3bf6beaafa4cb607b0ab15519483"
 
-  url "https://macwhisper-site.vercel.app/posturepal/releases/Posture%20Pal-#{version.csv.second}.zip",
-      verified: "macwhisper-site.vercel.app/"
+  url "https://macwhisper-site.vercel.app/posturepal/releases/Posture%20Pal-#{version.csv.second}.zip"
   name "Posture Pal"
   desc "Bad posture reminding tool"
   homepage "https://goodsnooze.gumroad.com/l/posturepal"

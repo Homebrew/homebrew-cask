@@ -1,9 +1,8 @@
 cask "cc-pocket" do
-  version "1.107.1,194"
-  sha256 "9f28669a7f7c3c7c555ced6ad0922311e222c4765f0fbf4d591e984f1c0de49b"
+  version "1.127.2,244"
+  sha256 "5d42e5f41384d2e79897902683e181ee4eb16368d76a6ef7e9c63451368c0de2"
 
-  url "https://github.com/K9i-0/ccpocket/releases/download/macos/v#{version.csv.first}%2B#{version.csv.second}/CC-Pocket-macos-v#{version.csv.first}.dmg",
-      verified: "github.com/K9i-0/ccpocket/"
+  url "https://github.com/K9i-0/ccpocket/releases/download/macos/v#{version.csv.first}%2B#{version.csv.second}/CC-Pocket-macos-v#{version.csv.first}.dmg"
   name "CC Pocket"
   desc "Remote client for Codex and Claude coding agents"
   homepage "https://k9i-0.github.io/ccpocket/install/"
@@ -24,13 +23,15 @@ cask "cc-pocket" do
   end
 
   auto_updates true
-  depends_on macos: :big_sur
+  depends_on macos: :monterey
 
   app "CC Pocket.app"
 
   zap trash: [
+    "~/Library/Application Scripts/com.k9i.ccpocket",
     "~/Library/Application Support/com.k9i.ccpocket",
     "~/Library/Caches/com.k9i.ccpocket",
+    "~/Library/Containers/com.k9i.ccpocket",
     "~/Library/HTTPStorages/com.k9i.ccpocket",
     "~/Library/Preferences/com.k9i.ccpocket.plist",
     "~/Library/Saved Application State/com.k9i.ccpocket.savedState",

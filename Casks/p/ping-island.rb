@@ -1,9 +1,8 @@
 cask "ping-island" do
-  version "0.26.0"
-  sha256 "c5df4c3ef3770c0a4081494ae445142987907b5b726131ecee17cc1b0efe4eef"
+  version "0.30.0"
+  sha256 "9134cb1bb38a6eac6777574f9b1be07911727edc0b38426e91dbff607365a8f1"
 
-  url "https://github.com/erha19/ping-island/releases/download/v#{version}/PingIsland-#{version}.dmg",
-      verified: "github.com/erha19/ping-island/"
+  url "https://github.com/erha19/ping-island/releases/download/v#{version}/PingIsland-#{version}.dmg"
   name "Ping Island"
   desc "Menu bar status for coding agent sessions"
   homepage "https://erha19.github.io/ping-island/"

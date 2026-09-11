@@ -2,8 +2,7 @@ cask "ghostvm" do
   version "2.11.0"
   sha256 "c974493ca79cf8c0071dbb72da39cedd5e35ab87f19cbd72de542989e619432d"
 
-  url "https://github.com/groundwater/GhostVM/releases/download/v#{version}/GhostVM-#{version}.dmg",
-      verified: "github.com/groundwater/GhostVM/"
+  url "https://github.com/groundwater/GhostVM/releases/download/v#{version}/GhostVM-#{version}.dmg"
   name "GhostVM"
   desc "Native macOS Virtual Machines for Apple Silicon"
   homepage "https://ghostvm.org/"
@@ -14,8 +13,8 @@ cask "ghostvm" do
   end
 
   auto_updates true
-  depends_on macos: :sequoia
   depends_on arch: :arm64
+  depends_on macos: :sequoia
 
   app "GhostVM.app"
   binary "#{appdir}/GhostVM.app/Contents/PlugIns/Helpers/vmctl.app/Contents/MacOS/vmctl"

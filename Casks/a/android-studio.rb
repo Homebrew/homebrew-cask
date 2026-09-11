@@ -1,12 +1,11 @@
 cask "android-studio" do
   arch arm: "mac_arm", intel: "mac"
 
-  version "2026.1.2.10,quail2"
-  sha256 arm:   "76206134aab3bbb096666a994f97b67ac8fa688a35c1e2c5d137a306909b3cd5",
-         intel: "c77de47ce26de51951d4d447dff4dcf4908ea025cb0507121373f344c2540194"
+  version "2026.1.4.7,quail4"
+  sha256 arm:   "bbd17ed0acc689cf88017083778537660e4a71480867fde875617fbda02a0aec",
+         intel: "cdb74f4c2a13094ad9b35130704ad79721564651225fe9bacc801a2b64bf4c43"
 
-  url "https://edgedl.me.gvt1.com/android/studio/install/#{version.csv.first}/android-studio#{"-#{version.csv.second}" if version.csv.second}-#{arch}.dmg",
-      verified: "edgedl.me.gvt1.com/android/studio/install/"
+  url "https://edgedl.me.gvt1.com/android/studio/install/#{version.csv.first}/android-studio#{"-#{version.csv.second}" if version.csv.second}-#{arch}.dmg"
   name "Android Studio"
   desc "Tools for building Android applications"
   homepage "https://developer.android.com/studio/"
@@ -26,6 +25,8 @@ cask "android-studio" do
 
   app "Android Studio.app"
   binary "#{appdir}/Android Studio.app/Contents/MacOS/studio"
+
+  uninstall quit: "com.google.android.studio"
 
   zap trash: [
         "~/.android",

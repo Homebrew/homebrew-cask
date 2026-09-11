@@ -1,6 +1,6 @@
 cask "qgis@ltr" do
-  version "3.44.12"
-  sha256 "41a2876a2d373215c9fdf3e85d791f71634983c9812f69b2fa5cfddce6529e47"
+  version "3.44.14"
+  sha256 "f7c40e46b992f136c3cb752ac7cbbe3729b7db57235fb5d883c62adc4316b089"
 
   url "https://download.qgis.org/downloads/macos/ltr/qgis_ltr_final-#{version.dots_to_underscores.csv.join("_")}.dmg"
   name "QGIS LTR"
@@ -18,7 +18,7 @@ cask "qgis@ltr" do
     end
   end
 
-  depends_on macos: :big_sur
+  depends_on :macos
 
   # The application path can change between versions,
   # renaming also allows installation alongside the main "qgis" cask.

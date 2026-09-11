@@ -1,9 +1,8 @@
 cask "sipgate" do
-  version "2.41.3"
-  sha256 "557aaf501bfca5af0ac4ef06c83d8a6cbf498f9d85af9d87f7cd393243e85d5d"
+  version "2.44.3"
+  sha256 "da4558577e9270185ef66fcfea3b02bb3a0a965e188d8ccb209e8880f83d1020"
 
-  url "https://s3-eu-central-1.amazonaws.com/desktop.download.sipgate.com/sipgate-#{version}.zip",
-      verified: "s3-eu-central-1.amazonaws.com/desktop.download.sipgate.com/"
+  url "https://s3-eu-central-1.amazonaws.com/desktop.download.sipgate.com/sipgate-#{version}.zip"
   name "sipgate"
   desc "Softphone for making telephone calls over the internet"
   homepage "https://www.sipgate.de/app"

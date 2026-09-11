@@ -2,8 +2,7 @@ cask "clocker" do
   version "26.13"
   sha256 "b649851b978850e52841778caeb7af046b071bf9881af2acdbc8580e96d2ea56"
 
-  url "https://github.com/n0shake/Clocker/releases/download/v#{version.csv.second || version.csv.first}/Clocker.zip",
-      verified: "github.com/n0shake/Clocker/"
+  url "https://github.com/n0shake/Clocker/releases/download/v#{version.csv.second || version.csv.first}/Clocker.zip"
   name "Clocker"
   desc "Menu bar timezone tracker and compact calendar"
   homepage "https://abhishekbanthia.com/clocker"

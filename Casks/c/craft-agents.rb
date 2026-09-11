@@ -2,8 +2,8 @@ cask "craft-agents" do
   arch arm: "arm64", intel: "x64"
 
   on_arm do
-    version "0.11.1"
-    sha256 "a9b47dcd4e9e42b3df66a3d4a2ee37a0d25fe46fa5747c2bb8d14963abb91a25"
+    version "0.13.3"
+    sha256 "8c122a1e30c5051068150cf72e40cdf4dfdcea53eb205da09df8f2794c6bca0b"
   end
   on_intel do
     version "0.10.1"
@@ -16,8 +16,7 @@ cask "craft-agents" do
     deprecate! date: "2026-06-12", because: :discontinued
   end
 
-  url "https://github.com/lukilabs/craft-agents-oss/releases/download/v#{version}/Craft-Agents-#{version}-mac-#{arch}.dmg",
-      verified: "github.com/lukilabs/craft-agents-oss/"
+  url "https://github.com/lukilabs/craft-agents-oss/releases/download/v#{version}/Craft-Agents-#{version}-mac-#{arch}.dmg"
   name "Craft Agents"
   desc "AI assistant for connecting and working across data sources"
   homepage "https://agents.craft.do/"

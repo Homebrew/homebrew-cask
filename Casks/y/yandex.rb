@@ -2,16 +2,15 @@ cask "yandex" do
   arch arm: "Arm64"
 
   on_arm do
-    version "26.6.0.1845,111963"
-    sha256 "ff36033d9910cdbd5769af581ccf70b8ace0279b86dd655e5e0a940ea8813891"
+    version "26.8.0.1829,116215"
+    sha256 "942e74a99ad7cd8dd8ad920cc0e0b162344a6f8abe39f8ad3266d627d527880a"
   end
   on_intel do
-    version "26.6.0.1847,111970"
-    sha256 "dce4605511d40b3b4e92c4d01083dfff1f187e3723889f35cd6c6e2b63651870"
+    version "26.8.0.1822,116128"
+    sha256 "3777b39a02d69a78bff17a82229ca9a5258a9179d22cab872d564fb65ab93ab1"
   end
 
-  url "https://download.cdn.yandex.net/browser/update/#{version.csv.first.dots_to_underscores}_#{version.csv.second}_m_s_r/yandex.dmg",
-      verified: "download.cdn.yandex.net/"
+  url "https://download.cdn.yandex.net/browser/update/#{version.csv.first.dots_to_underscores}_#{version.csv.second}_m_s_r/yandex.dmg"
   name "Yandex.Browser"
   desc "Web browser"
   homepage "https://browser.yandex.ru/"
@@ -32,6 +31,8 @@ cask "yandex" do
   depends_on macos: :monterey
 
   app "Yandex.app"
+
+  uninstall quit: "ru.yandex.desktop.yandex-browser"
 
   zap trash: [
     "~/.yandex",

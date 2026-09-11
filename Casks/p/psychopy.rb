@@ -1,34 +1,29 @@
 cask "psychopy" do
-  version "2026.1.3"
-  sha256 "90cc8d9e9b3a3d02ed149be736686aa834021889d91b0f3a03dcd830a9488fc8"
+  arch arm: "arm64", intel: "x86_64"
 
-  url "https://github.com/psychopy/psychopy/releases/download/#{version.csv.first.major_minor_patch}/StandalonePsychoPy-#{version.csv.first}-macOS#{"_#{version.csv.second}" if version.csv.second}-3.10.dmg",
-      verified: "github.com/psychopy/psychopy/"
+  version "2026.2.3"
+  sha256 arm:   "d715f35ea58ab3802f6bd8fa72ccc4969d84c051c65d80bce384dcdc4051fb6d",
+         intel: "0e0fe98bcac0910cbd8a96c4bda239a6865aa45b874c6e8c38d87b0b1019a642"
+
+  url "https://github.com/psychopy/psychopy/releases/download/#{version}/StandalonePsychoPy-#{version}-macOS-#{arch}-3.11.dmg"
   name "PsychoPy"
   desc "Create experiments in behavioral science"
   homepage "https://www.psychopy.org/"
 
   livecheck do
-    url "https://www.psychopy.org/download.html"
-    regex(/StandalonePsychoPy[._-]v?(\d+(?:\.\d+)+)[._-]macOS[._-]?(\d+(?:[._-]\d+)+)?[._-](?:py)?3\.10\.dmg/i)
-    strategy :page_match do |page, regex|
-      page.scan(regex).map do |match|
-        match[1].present? ? "#{match[0]},#{match[1]}" : match[0]
-      end
-    end
+    url :url
+    strategy :github_latest
   end
 
   depends_on :macos
 
   app "PsychoPy.app"
 
+  uninstall quit: "org.opensciencetools.psychopy"
+
   zap trash: [
     "~/.psychopy3",
     "~/Library/Preferences/org.opensciencetools.psychopy.plist",
     "~/Library/Saved Application State/org.opensciencetools.psychopy.savedState",
   ]
-
-  caveats do
-    requires_rosetta
-  end
 end

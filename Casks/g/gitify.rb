@@ -1,6 +1,6 @@
 cask "gitify" do
-  version "6.20.0"
-  sha256 "8fc383a66b7190e33b488bdd208178e35e4cbc9d22eb8bd3d3931ab9f3e77a1b"
+  version "7.8.0"
+  sha256 "c1358151eed4666e7a1514c9bcb0f50edf66821581927fa0d373af496cc811ee"
 
   url "https://github.com/gitify-app/gitify/releases/download/v#{version}/Gitify-#{version}-universal-mac.zip"
   name "Gitify"
@@ -13,7 +13,7 @@ cask "gitify" do
   end
 
   auto_updates true
-  depends_on macos: :monterey
+  depends_on macos: :ventura
 
   app "Gitify.app"
 
@@ -28,6 +28,7 @@ cask "gitify" do
     "~/Library/Caches/com.electron.gitify*",
     "~/Library/Caches/gitify-updater",
     "~/Library/HTTPStorages/com.electron.gitify",
+    "~/Library/Logs/gitify",
     "~/Library/Preferences/com.electron.gitify*.plist",
     "~/Library/Saved Application State/com.electron.gitify.savedState",
   ]

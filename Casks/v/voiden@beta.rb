@@ -1,12 +1,11 @@
 cask "voiden@beta" do
   arch arm: "arm64", intel: "x64"
 
-  version "2.2.2"
-  sha256 arm:   "a8df430637ff981bc224daa69b56fcb7f86a766da666f69580c45b6b28a79ae2",
-         intel: "bc529a6fb9ba516366bcf0fed3256c560a4eb2c6407f579e518f5ec2f984fa6f"
+  version "2.3.0-beta.4"
+  sha256 arm:   "25b461cd7a7be4642c935e32e7224361c0210563bc989b42da6deebc555e57dc",
+         intel: "8a2b2923d747bdd33788014a70305cb3ef08af7422284eac101a3c8cf9e8a2e0"
 
-  url "https://voiden-beta-releases.s3.eu-west-1.amazonaws.com/voiden/darwin/#{arch}/Voiden-darwin-#{arch}-#{version}.zip",
-      verified: "voiden-beta-releases.s3.eu-west-1.amazonaws.com/"
+  url "https://voiden-beta-releases.s3.eu-west-1.amazonaws.com/voiden/darwin/#{arch}/Voiden-darwin-#{arch}-#{version}.zip"
   name "Voiden Beta"
   desc "API development tool"
   homepage "https://voiden.md/"

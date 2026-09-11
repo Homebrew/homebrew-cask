@@ -1,9 +1,8 @@
 cask "excalidrawz" do
-  version "2.2.3"
-  sha256 "5946084b223546e0d2cb8f32723cc626ea8ebcac3c5d484dc27dbc8485d50191"
+  version "2.4.3"
+  sha256 "7cb3a00f390a10bf0793877f0c85bcfa5c9ba6951631aecae69ec36542fa012c"
 
-  url "https://github.com/chocoford/ExcalidrawZ/releases/download/v#{version.csv.first}/ExcalidrawZ.#{version}.dmg",
-      verified: "github.com/chocoford/ExcalidrawZ/releases/download/"
+  url "https://github.com/chocoford/ExcalidrawZ/releases/download/v#{version.csv.first}/ExcalidrawZ.#{version}.dmg"
   name "ExcalidrawZ"
   desc "Excalidraw client"
   homepage "https://excalidrawz.chocoford.com/"
@@ -17,6 +16,8 @@ cask "excalidrawz" do
   depends_on macos: :ventura
 
   app "ExcalidrawZ.app"
+
+  uninstall quit: "com.chocoford.excalidraw"
 
   zap trash: [
     "~/Library/Application Scripts/com.chocoford.excalidraw",

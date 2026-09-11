@@ -5,8 +5,7 @@ cask "itk-snap" do
   sha256 arm:   "9d12dc5a437e3d0979ce62ad0550fe5c150337160e5417d80bf6396f2f716ee8",
          intel: "96c56c64bfe7a89adfe3b71d55c74e4711c73cb88dd85262d3a877443cfdea8b"
 
-  url "https://downloads.sourceforge.net/itk-snap/itksnap-#{version.csv.first}-#{version.csv.second}-Darwin-#{arch}.dmg",
-      verified: "downloads.sourceforge.net/itk-snap/"
+  url "https://downloads.sourceforge.net/itk-snap/itksnap-#{version.csv.first}-#{version.csv.second}-Darwin-#{arch}.dmg"
   name "ITK-SNAP"
   desc "Segment structures in 3D medical images"
   homepage "https://www.itksnap.org/pmwiki/pmwiki.php"

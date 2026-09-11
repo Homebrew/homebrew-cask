@@ -2,8 +2,7 @@ cask "mindmac" do
   version "1.9.28"
   sha256 "cc5f87c6b53d9f332c681ab6bc02befc2e3ed86a984b222581f75877e65665c0"
 
-  url "https://github.com/MindMacApp/MindMac/releases/download/#{version}/MindMac_#{version}.dmg",
-      verified: "github.com/MindMacApp/MindMac/"
+  url "https://github.com/MindMacApp/MindMac/releases/download/#{version}/MindMac_#{version}.dmg"
   name "MindMac"
   desc "ChatGPT client"
   homepage "https://mindmac.app/"

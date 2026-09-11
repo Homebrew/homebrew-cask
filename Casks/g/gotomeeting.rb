@@ -2,8 +2,7 @@ cask "gotomeeting" do
   version "19950"
   sha256 "64c3b31b35f27027a93a092f3a1c36cf23d551b4bccd384fa45bdca4a672c91c"
 
-  url "https://builds.cdn.getgo.com/builds/g2m/#{version}/GoToMeeting.dmg",
-      verified: "builds.cdn.getgo.com/builds/g2m/"
+  url "https://builds.cdn.getgo.com/builds/g2m/#{version}/GoToMeeting.dmg"
   name "GoToMeeting"
   desc "Online meetings, desktop sharing, and video conferencing"
   homepage "https://www.goto.com/meeting"

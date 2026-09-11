@@ -1,6 +1,6 @@
 cask "tableplus" do
-  version "26.7.6,742"
-  sha256 "6cf9e32a98c370ef3d0a8e3b893ae0be5b2648c0a2903ada8dd744e65130de4a"
+  version "26.10.0,776"
+  sha256 "74172878ebcb6b9c9758c3d8d048a88d984eda7abc21eadfd70ede4da9d624e8"
 
   url "https://files.tableplus.com/macos/#{version.csv.second}/TablePlus.dmg"
   name "TablePlus"
@@ -18,9 +18,11 @@ cask "tableplus" do
   app "TablePlus.app"
 
   zap trash: [
+    "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.tinyapp.tableplus.sfl*",
     "~/Library/Application Support/com.tinyapp.TablePlus",
     "~/Library/Caches/com.tinyapp.TablePlus",
     "~/Library/Cookies/com.tinyapp.TablePlus.binarycookies",
+    "~/Library/HTTPStorages/com.tinyapp.TablePlus",
     "~/Library/Preferences/com.tinyapp.TablePlus.plist",
     "~/Library/Saved Application State/com.tinyapp.TablePlus.savedState",
   ]

@@ -1,9 +1,9 @@
 cask "signal@beta" do
   arch arm: "arm64", intel: "x64"
 
-  version "8.20.0-beta.1"
-  sha256 arm:   "e10f966c1b42ec4b9cb4450ff4c1ff2fd9807e44d919b57e572a9b752d7fcfc5",
-         intel: "03f547705b134e7fa0051ee033a11d07d8421563b27d73a1546e762f898ebf84"
+  version "8.28.0-beta.2"
+  sha256 arm:   "fc18921375836da1711b9b96b94a682f06a36b6587dbb03c01aaed329689480a",
+         intel: "1c53a8d2bc403e2c40f5808478922d97d629a170392feac1e9c4711355dc787f"
 
   url "https://updates.signal.org/desktop/signal-desktop-beta-mac-#{arch}-#{version}.zip"
   name "Signal Beta"
@@ -16,7 +16,7 @@ cask "signal@beta" do
   end
 
   auto_updates true
-  depends_on macos: :monterey
+  depends_on macos: :ventura
 
   app "Signal Beta.app"
 

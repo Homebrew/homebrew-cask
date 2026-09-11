@@ -2,12 +2,11 @@ cask "antigravity" do
   arch arm: "arm", intel: "x64"
   livecheck_arch = on_arch_conditional arm: "arm64", intel: "x64"
 
-  version "2.3.1,5358163105546240"
-  sha256 arm:   "841714173d20026d1865ea3efbe04406dfeccdda44b3eb1f2c465216bc0786b8",
-         intel: "421ccac11a15b751ff91c79bfc9aea4e13d35a1d49e494a7f8289fdcac48fcb8"
+  version "2.12.2,6298742303883264"
+  sha256 arm:   "9f22b1f7a444d3c0c99483528963381f45e287237e3ba18bedc8bf47935b3d18",
+         intel: "cf44715e997570788919909b888485eeee1dfc516efb56c17d7af4721320b5c3"
 
-  url "https://storage.googleapis.com/antigravity-public/antigravity-hub/#{version.csv.first}-#{version.csv.second}/darwin-#{arch}/Antigravity.dmg",
-      verified: "storage.googleapis.com/antigravity-public/antigravity-hub/"
+  url "https://storage.googleapis.com/antigravity-public/antigravity-hub/#{version.csv.first}-#{version.csv.second}/darwin-#{arch}/Antigravity.dmg"
   name "Google Antigravity"
   desc "Agent orchestration platform"
   homepage "https://antigravity.google/product/antigravity-2"
@@ -33,8 +32,8 @@ cask "antigravity" do
   uninstall quit: "com.google.antigravity"
 
   zap trash: [
-    "~/.antigravity/",
-    "~/.gemini/antigravity/",
+    "~/.antigravity",
+    "~/.gemini/antigravity",
     "~/Library/Application Support/Antigravity",
     "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.google.antigravity.sfl*",
     "~/Library/Caches/com.google.antigravity",

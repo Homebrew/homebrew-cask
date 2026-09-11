@@ -1,12 +1,11 @@
 cask "freelens@nightly" do
   arch arm: "arm64", intel: "amd64"
 
-  version "2.0.0-0-nightly-2026-07-19"
-  sha256 arm:   "bda4b34c5142115886d30d9a9242fb687e64babd3c6a18b638ca1851d9d3c9be",
-         intel: "dbcfc69aa58a0304137ced4599f3fa58907199b30d039eb5517d263475e7f48f"
+  version "2.0.0-0-nightly-2026-09-11"
+  sha256 arm:   "d67063ca1028ef3c2d33a3c784128ae08609522799f68b33b81f8362d3ef8fa4",
+         intel: "74eab504831f00143dca2ec289cb03ef9178a037126256690af11358bee4323a"
 
-  url "https://github.com/freelensapp/freelens-nightly-builds/releases/download/v#{version}/Freelens-#{version}-macos-#{arch}.dmg",
-      verified: "github.com/freelensapp/freelens-nightly-builds/"
+  url "https://github.com/freelensapp/freelens-nightly-builds/releases/download/v#{version}/Freelens-#{version}-macos-#{arch}.dmg"
   name "Freelens"
   desc "Kubernetes IDE"
   homepage "https://freelens.app/"
@@ -17,7 +16,11 @@ cask "freelens@nightly" do
   app "Freelens.app"
 
   zap trash: [
-    "~/Library/Application Support/Freelens",
-    "~/Library/Logs/Freelens",
-  ]
+        "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/app.freelens.freelens.sfl*",
+        "~/Library/Application Support/Freelens",
+        "~/Library/Logs/Freelens",
+        "~/Library/Preferences/app.freelens.Freelens.plist",
+        "~/Library/Saved Application State/app.freelens.Freelens.savedState",
+      ],
+      rmdir: "~/.freelens"
 end

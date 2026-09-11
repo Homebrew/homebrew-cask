@@ -1,12 +1,11 @@
 cask "codebuddy" do
   arch arm: "arm64", intel: "x64"
 
-  version "4.10.3.33593722,ed480cd7"
-  sha256 arm:   "7be70f471a0ef922d6125c5f79cc0bdd432d8cc533c8b8f9e83e83fd64c662c6",
-         intel: "ab8364daab8f0038b51cc8d9f41b20cb0a0d172c977ed7b7ea42ea09a33477ec"
+  version "4.12.0.37847260,b4c35ed0"
+  sha256 arm:   "59c61e2cd4416b66ead867f3f0918d247d26be72d226c5427713825deb0d578d",
+         intel: "30631275dc26d51e1be40764327553d4218627161fe58d1097cecfeac22b6fd5"
 
-  url "https://codebuddy-1328495429.cos.accelerate.myqcloud.com/aiide/darwin-#{arch}/CodeBuddy-darwin-#{arch}-#{version.csv.first}-#{version.csv.second}.zip",
-      verified: "codebuddy-1328495429.cos.accelerate.myqcloud.com/aiide/"
+  url "https://codebuddy-1328495429.cos.accelerate.myqcloud.com/aiide/darwin-#{arch}/CodeBuddy-darwin-#{arch}-#{version.csv.first}-#{version.csv.second}.zip"
   name "CodeBuddy"
   desc "AI-powered adaptive IDE"
   homepage "https://www.codebuddy.ai/ide/"
@@ -23,7 +22,7 @@ cask "codebuddy" do
   end
 
   auto_updates true
-  depends_on macos: :big_sur
+  depends_on :macos
 
   app "CodeBuddy.app"
 

@@ -1,9 +1,8 @@
 cask "navigator" do
-  version "1.0.5"
+  version "1.0.7"
   sha256 :no_check
 
-  url "https://oryx.nyc3.digitaloceanspaces.com/navigator-app/Navigator.dmg",
-      verified: "oryx.nyc3.digitaloceanspaces.com/navigator-app/"
+  url "https://oryx.nyc3.digitaloceanspaces.com/navigator-app/Navigator.dmg"
   name "Navigator"
   desc "Companion app for ZSA's Navigator trackpad"
   homepage "https://www.zsa.io/voyager/navigator"

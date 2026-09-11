@@ -1,6 +1,6 @@
 cask "netxms-console" do
-  version "6.2.1"
-  sha256 "69f431412d043ef2a6c8b00750917bd586c7a48f8620c199bf007eae482d0442"
+  version "6.2.3"
+  sha256 "629d243376146cdc9dbf414201833b1adc399cd3ae6b4a3f56d672aa6aa0dc85"
 
   url "https://netxms.com/download/releases/#{version.major_minor}/nxmc-#{version}.dmg"
   name "NetXMS Management Console"
@@ -12,7 +12,9 @@ cask "netxms-console" do
     regex(/href=.*?nxmc[._-]v?(\d+(?:\.\d+)+)\.dmg/i)
   end
 
-  depends_on macos: :big_sur
+  disable! date: "2026-09-01", because: :fails_gatekeeper_check
+
+  depends_on :macos
 
   app "NetXMS #{version.major_minor}.app"
 

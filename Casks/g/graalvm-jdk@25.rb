@@ -2,8 +2,8 @@ cask "graalvm-jdk@25" do
   arch arm: "aarch64", intel: "x64"
 
   on_arm do
-    version "25.0.3,9"
-    sha256 "a3f02287883d76b18b2b80de56b0be5729acb3c04b81d4b0b0fdfcfd935228f3"
+    version "25.0.4,7"
+    sha256 "0b79e23c133facbad2f7aa55a3b76d17bd59d2fa15e2735bb63391ace223fd13"
 
     livecheck do
       url "https://java.oraclecloud.com/currentJavaReleases/#{version.major}"
@@ -25,8 +25,7 @@ cask "graalvm-jdk@25" do
     end
   end
 
-  url "https://download.oracle.com/graalvm/#{version.major}/archive/graalvm-jdk-#{version.csv.first}_macos-#{arch}_bin.tar.gz",
-      verified: "download.oracle.com/"
+  url "https://download.oracle.com/graalvm/#{version.major}/archive/graalvm-jdk-#{version.csv.first}_macos-#{arch}_bin.tar.gz"
   name "GraalVM Java Development Kit"
   desc "GraalVM from Oracle"
   homepage "https://www.graalvm.org/"

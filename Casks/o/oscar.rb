@@ -20,7 +20,7 @@ cask "oscar" do
   app "OSCAR#{version.major_minor.no_dots}.app"
 
   zap trash: [
-    "~/Library/Preferences/org.oscar-team.OSCAR.plist",
+    "~/Library/Preferences/org.oscar-team.OSCAR*.plist",
     "~/Library/Saved Application State/org.oscar-team.OSCAR.savedState",
   ]
 end

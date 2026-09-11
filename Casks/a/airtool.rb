@@ -1,6 +1,6 @@
 cask "airtool" do
-  version "2.7.6"
-  sha256 "6f9896ccf477c6453be74c5eb5101d7574a25946b2eefdba1a0477fa6c6a8a11"
+  version "2.7.9"
+  sha256 "4b39127605d1a17e9b3758e4a048145a7f70ea53cdf8747c034449417ac1ec26"
 
   url "https://www.intuitibits.com/downloads/Airtool_#{version}.pkg"
   name "Airtool"
@@ -18,7 +18,7 @@ cask "airtool" do
   pkg "Airtool_#{version}.pkg"
 
   uninstall_preflight_steps do
-    set_ownership "/Library/Application Support/Airtool #{version.major}"
+    set_ownership "/Library/Application Support/Airtool {{version.major}}"
   end
 
   uninstall launchctl:  "com.intuitibits.airtool#{version.major}.airtool-bpf",

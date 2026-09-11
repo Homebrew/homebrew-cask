@@ -1,9 +1,8 @@
 cask "comfy" do
-  version "1.0.29,260714bj83fq3d3"
-  sha256 "0df206012219fd2e94797775af67392f874276f176bce3cdcedf812c649cd393"
+  version "1.0.47,260908ensm0r3cr"
+  sha256 "b6e3725799217849907b2dac5da8c2326c18885d6ca14329e0150278947f882e"
 
-  url "https://download.todesktop.com/241012ess7yxs0e/Comfy%20Desktop%20#{version.csv.first}%20-%20Build%20#{version.csv.second}-arm64-mac.zip",
-      verified: "download.todesktop.com/241012ess7yxs0e/"
+  url "https://download.todesktop.com/241012ess7yxs0e/Comfy%20Desktop%20#{version.csv.first}%20-%20Build%20#{version.csv.second}-arm64-mac.zip"
   name "Comfy Desktop"
   desc "Node-based image, video and audio generator"
   homepage "https://comfy.org/"
@@ -28,10 +27,12 @@ cask "comfy" do
   app "Comfy Desktop.app"
 
   zap trash: [
+    "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.todesktop.241012ess7yxs0e.sfl*",
     "~/Library/Application Support/Comfy Desktop",
     "~/Library/Caches/com.todesktop.241012ess7yxs0e*",
     "~/Library/Caches/comfyui-desktop-2-updater",
     "~/Library/HTTPStorages/com.todesktop.241012ess7yxs0e",
+    "~/Library/Logs/Comfy Desktop",
     "~/Library/Preferences/ByHost/com.todesktop.241012ess7yxs0e*.plist",
     "~/Library/Preferences/com.todesktop.241012ess7yxs0e.plist",
   ]

@@ -1,9 +1,8 @@
 cask "yandex-music" do
-  version "5.111.0"
-  sha256 "bcabf382f1ed83fb3a229af2c737a2a6e9bc6df13ed996498233bc894a611d94"
+  version "5.119.0"
+  sha256 "de2f06bca1de0e79b323e1fbb41e45a286a65e344e0676dcd5d343497b626841"
 
-  url "https://desktop.app.music.yandex.net/stable/Yandex_Music_universal_#{version}.dmg",
-      verified: "desktop.app.music.yandex.net/stable/"
+  url "https://desktop.app.music.yandex.net/stable/Yandex_Music_universal_#{version}.dmg"
   name "Yandex Music"
   desc "Tune in to Yandex Music and get personal recommendations"
   homepage "https://music.yandex.ru/"

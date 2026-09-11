@@ -1,17 +1,29 @@
 cask "iloader" do
-  os macos: "darwin", linux: "linux"
+  arch arm: "aarch64", intel: "amd64"
+  os macos: "iloader-darwin-universal.dmg", linux: "iloader-linux-#{arch}.AppImage"
 
+  version "2.3.3"
+  sha256 arm:          "9869447506cdbe990944f159f929b906cb71bb1d6d659efc52c8c9ca7675bcbd",
+         intel:        "9869447506cdbe990944f159f929b906cb71bb1d6d659efc52c8c9ca7675bcbd",
+         arm64_linux:  "84a3c95a0d17a56732d6c8202ac70207575cb8133c29ea95f8818e298b5b8e2a",
+         x86_64_linux: "a9e841259cfec05065dad31428dd1b27b6c3321f10d310cb0315082836b83b7e"
+
+  on_macos do
+    auto_updates true
+
+    app "iloader.app"
+
+    zap trash: [
+      "~/Library/Application Support/me.nabdev.iloader",
+      "~/Library/Caches/me.nabdev.iloader",
+      "~/Library/WebKit/me.nabdev.iloader",
+    ]
+  end
   on_linux do
-    arch arm: "aarch64", intel: "amd64"
+    app_image "iloader-linux-#{arch}.AppImage", target: "iloader.AppImage"
   end
 
-  version "2.2.6"
-
-  artifact = on_system_conditional linux: "iloader-#{os}-#{arch}.AppImage",
-                                   macos: "iloader-#{os}-universal.dmg"
-
-  url "https://github.com/nab138/iloader/releases/download/v#{version}/#{artifact}",
-      verified: "github.com/nab138/iloader/"
+  url "https://github.com/nab138/iloader/releases/download/v#{version}/#{os}"
   name "iloader"
   desc "iOS Sideloading Companion"
   homepage "https://iloader.app/"
@@ -19,21 +31,5 @@ cask "iloader" do
   livecheck do
     url :url
     strategy :github_latest
-  end
-
-  on_macos do
-    sha256 "8494c0221b5fd3efbe7100637ecbeaddfe1bb5bf29de90b01a8b9de4a580cf1e"
-
-    auto_updates true
-    app "iloader.app"
-
-    zap trash: "~/Library/Application Support/me.nabdev.iloader"
-  end
-
-  on_linux do
-    sha256 arm64_linux:  "58141b686830b3f45480278549a7e7d865c95e9c6d2135c45b7ca96ed00a1f82",
-           x86_64_linux: "acbb0355772df6116eddcc83bf98bb3505fcdb4583c4c7c510c7e250f1ab3a35"
-
-    app_image artifact, target: "iloader.AppImage"
   end
 end

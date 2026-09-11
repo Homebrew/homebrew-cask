@@ -1,14 +1,13 @@
 cask "cursor" do
   arch arm: "arm64", intel: "x64"
   os macos: "darwin", linux: "linux"
+  url_end = on_system_conditional macos: "zip", linux: "AppImage"
 
-  version "3.12.17,0fb762053c34788bb7760d5673f8a6d4c8589d52"
-  sha256 arm:          "decf56ab6b081f9506398564bc800bb1b20450ccb7436d2cbad9036a8ea28e18",
-         intel:        "0b2754a0d96cf639421b8ef3cba8762f655a87fe044a66cfc4d834c1087ff601",
-         arm64_linux:  "febea516b4aaeda49e7c6bce5aa2f0fd89b2532dd5a1c6964723941e81ee49e3",
-         x86_64_linux: "16ed34a74bda2cd3a5f706c682db1e2f086c797c66210332ca194d17b559faa3"
-
-  url_end = on_system_conditional linux: "AppImage", macos: "zip"
+  version "3.20.10,d6f462cdd0a6a6d1cff570daf980e671d0a63ded"
+  sha256 arm:          "670ecaadf75cde34af1625e98c8045771c03d66f3ca8c9487e805a7b525e0920",
+         intel:        "1548ac526c5ae7081f10ff9a43ef16eb5cf4a1bb2bab84ad80328aa7dccb6509",
+         arm64_linux:  "9df77cf14d32e389c377b8271dc7f221a8d5e77267df4a410793337a85351539",
+         x86_64_linux: "cc26343cd7a75b35f953a9d717ba24505cfe1b357713bbca57af6595f7568450"
 
   on_macos do
     url "https://downloads.cursor.com/production/#{version.csv.second}/#{os}/#{arch}/Cursor-darwin-#{arch}.#{url_end}"
@@ -23,6 +22,7 @@ cask "cursor" do
       "~/.cursor",
       "~/.cursor-tutor",
       "~/Library/Application Support/Caches/cursor-updater",
+      "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.todesktop.230313mzl4w4u92.sfl*",
       "~/Library/Application Support/Cursor",
       "~/Library/Caches/com.todesktop.*",
       "~/Library/Caches/com.todesktop.*.ShipIt",
@@ -34,7 +34,6 @@ cask "cursor" do
       "~/Library/Saved Application State/todesktop.com.ToDesktop-Installer.savedState",
     ]
   end
-
   on_linux do
     artifact_arch = on_arch_conditional arm: "aarch64", intel: "x86_64"
 
@@ -49,12 +48,15 @@ cask "cursor" do
 
   livecheck do
     url "https://api2.cursor.sh/updates/api/update/#{os}-#{arch}/cursor/0.0.0/stable"
-    regex(%r{/production/(\h+)/#{os}/#{arch}/Cursor[._-]#{os}[._-]#{arch}\.#{url_end}}i)
+    regex(%r{/production/(\h+)/}i)
     strategy :json do |json, regex|
+      ver = json["name"] || json["version"] || json["productVersion"]
+      next unless ver
+
       match = json["url"]&.match(regex)
       next if match.blank?
 
-      "#{json["name"]},#{match[1]}"
+      "#{ver},#{match[1]}"
     end
   end
 end

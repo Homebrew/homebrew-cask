@@ -1,9 +1,8 @@
 cask "chatgpt-atlas" do
-  version "1.2026.189.0,20260717210119000"
-  sha256 "84e5a5e6d39db673e8950c1038d06a755173d9f888b452fa862ceb414a68a2da"
+  version "1.2026.189.1,20260724200710000"
+  sha256 "894b60a1276c65dd220984db647963e6245e06e2211fb3c61b944f6e1a013435"
 
-  url "https://persistent.oaistatic.com/atlas/public/ChatGPT_Atlas_Desktop_public_#{version.csv.first}_#{version.csv.second}.dmg",
-      verified: "persistent.oaistatic.com/atlas/public/"
+  url "https://persistent.oaistatic.com/atlas/public/ChatGPT_Atlas_Desktop_public_#{version.csv.first}_#{version.csv.second}.dmg"
   name "ChatGPT Atlas"
   desc "OpenAI's official browser with ChatGPT built in"
   homepage "https://chatgpt.com/atlas"
@@ -17,9 +16,11 @@ cask "chatgpt-atlas" do
     end
   end
 
+  disable! date: "2026-08-26", because: :discontinued
+
   auto_updates true
-  depends_on macos: :sonoma
   depends_on arch: :arm64
+  depends_on macos: :sonoma
 
   app "ChatGPT Atlas.app"
 
@@ -33,6 +34,7 @@ cask "chatgpt-atlas" do
     "~/Library/Caches/com.openai.atlas",
     "~/Library/HTTPStorages/com.openai.atlas",
     "~/Library/HTTPStorages/com.openai.atlas.binarycookies",
+    "~/Library/LaunchAgents/com.openai.atlas.update-helper.plist",
     "~/Library/Logs/DiagnosticReports/ChatGPT Atlas (Service)*.ips",
     "~/Library/Preferences/com.openai.atlas.plist",
     "~/Library/Preferences/com.openai.atlas.web.plist",

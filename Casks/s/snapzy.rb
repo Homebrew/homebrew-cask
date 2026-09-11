@@ -1,9 +1,8 @@
 cask "snapzy" do
-  version "1.29.1"
-  sha256 "d761801001fe579144f4866f9413ba32c75d1a5dc94011f9b84ced1824f5a88c"
+  version "1.31.0"
+  sha256 "e39600eedf17434ba4f681b93a0d649472b15d72e4d900cf06d791f22ecf6382"
 
-  url "https://github.com/duongductrong/Snapzy/releases/download/v#{version}/Snapzy-v#{version}.dmg",
-      verified: "github.com/duongductrong/Snapzy/"
+  url "https://github.com/duongductrong/Snapzy/releases/download/v#{version}/Snapzy-v#{version}.dmg"
   name "Snapzy"
   desc "Native screenshots, recording, annotation, and editing from the menu bar"
   homepage "https://snapzy.app/"

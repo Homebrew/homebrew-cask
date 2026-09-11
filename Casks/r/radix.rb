@@ -1,15 +1,14 @@
 cask "radix" do
-  version "1.5.1"
-  sha256 "cc678b7bc8c0c0ab8b4f22cafc98214068fc3538bdd273e1e9e4183d89062251"
+  version "1.7.0"
+  sha256 "69eb62f9cc318bcb0f04c56c2cfd4d4b89640ccb51ed75b663970d81c87aebca"
 
-  url "https://github.com/colinvkim/Radix/releases/download/v#{version}/Radix.zip",
-      verified: "github.com/colinvkim/Radix/"
+  url "https://github.com/colinvkim/Radix/releases/download/v#{version}/Radix.zip"
   name "Radix"
   desc "Disk space analyzer"
-  homepage "https://radix.colinkim.dev/"
+  homepage "https://tryradix.app/"
 
   livecheck do
-    url "https://radix.colinkim.dev/appcast.xml"
+    url "https://tryradix.app/appcast.xml"
     strategy :sparkle, &:short_version
   end
 

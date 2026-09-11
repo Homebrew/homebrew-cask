@@ -1,6 +1,6 @@
 cask "sensei" do
-  version "2.1.1,138"
-  sha256 "f8540c66cb7cad0596892a4d60fc4ff9eab4fcd87769bd0df6514c6f93fa1b6e"
+  version "2.1.2,139"
+  sha256 "7a966316472666be061a444078bf0cf8c7c5a6837fc7ed23694691195adef5b0"
 
   url "https://cdn.cindori.com/apps/sensei/updates/#{version.csv.first}-#{version.csv.second}/Sensei.dmg"
   name "Sensei"
@@ -17,7 +17,14 @@ cask "sensei" do
 
   app "Sensei.app"
 
-  uninstall launchctl: "org.cindori.SenseiTool",
+  uninstall launchctl: [
+              "org.cindori.SenseiMonitor",
+              "org.cindori.SenseiTool",
+            ],
+            quit:      [
+              "org.cindori.Sensei",
+              "org.cindori.SenseiMonitor",
+            ],
             delete:    [
               "/Library/LaunchAgents/org.cindori.SenseiMonitor.plist",
               "/Library/LaunchDaemons/org.cindori.SenseiDaemon.plist",

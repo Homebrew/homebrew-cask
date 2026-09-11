@@ -1,35 +1,16 @@
 cask "bruno" do
+  arch arm: "arm64", intel: on_system_conditional(macos: "x64", linux: "x86_64")
   os macos: "mac", linux: "linux"
+  url_end = on_system_conditional macos: "dmg", linux: "AppImage"
 
-  on_macos do
-    arch arm: "arm64", intel: "x64"
-  end
-  on_linux do
-    arch arm: "arm64", intel: "x86_64"
-  end
-
-  version "3.5.2"
-  sha256 arm:          "8e8e52be8d255b35f0161f514e94d2aae2f5071ee94e0ad7bc9fd2373a430930",
-         intel:        "1811a1f43c3a7bef451eb4fae0a7e2b648a14ff256e87b3dbc44f37d2a209d20",
-         arm64_linux:  "1fe2d05dc7fa2ba71fb2ff3bef03ca62e0c9e47f28fb558e9fa519d7710f6a11",
-         x86_64_linux: "3900186807f2fb39794c0cb45f52c1712201df0b3d88b7c8d1091223740e0352"
-
-  url_end = on_system_conditional linux: ".AppImage", macos: ".dmg"
-
-  url "https://github.com/usebruno/bruno/releases/download/v#{version}/bruno_#{version}_#{arch}_#{os}#{url_end}",
-      verified: "github.com/usebruno/bruno/"
-  name "Bruno"
-  desc "Open source IDE for exploring and testing APIs"
-  homepage "https://www.usebruno.com/"
-
-  livecheck do
-    url :url
-    strategy :github_latest
-  end
+  version "4.1.0"
+  sha256 arm:          "31af43035099556492ce2196a87e88234caafdc897ccc2c9bfa62a321fc5df8e",
+         intel:        "f936a42ca8177386c1b392111a2bf374876c35a09e3089691f4f1a79eabf4b6e",
+         arm64_linux:  "7f08392501125d33800fa2b7762465234dce35933d38787da562b65c37197406",
+         x86_64_linux: "50deeed474542745b69ddb5bde3667dead0c93ff0d76e0d39526ae36cd234c92"
 
   on_macos do
     auto_updates true
-    depends_on macos: :big_sur
 
     app "Bruno.app"
 
@@ -39,8 +20,17 @@ cask "bruno" do
       "~/Library/Saved Application State/com.usebruno.app.savedState",
     ]
   end
-
   on_linux do
-    app_image "bruno_#{version}_#{arch}_linux.AppImage"
+    app_image "bruno_#{version}_#{arch}_linux.AppImage", target: "Bruno.AppImage"
+  end
+
+  url "https://github.com/usebruno/bruno/releases/download/v#{version}/bruno_#{version}_#{arch}_#{os}.#{url_end}"
+  name "Bruno"
+  desc "Open source IDE for exploring and testing APIs"
+  homepage "https://www.usebruno.com/"
+
+  livecheck do
+    url :url
+    strategy :github_latest
   end
 end

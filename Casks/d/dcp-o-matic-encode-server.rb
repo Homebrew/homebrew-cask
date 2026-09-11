@@ -1,6 +1,6 @@
 cask "dcp-o-matic-encode-server" do
-  version "2.18.44"
-  sha256 "9c5c3a0f386e2fbd93342ca0f1851e6828194573d57e8eeb3d45a8f61b7f16f6"
+  version "2.19.1"
+  sha256 "b29891d7ec3c7f513da65f6839839aec0de6bee807bc7b3122b0f946b1b0bf7f"
 
   url "https://download.dcpomatic.com/dl.php?id=osx-10.10-server&version=#{version}"
   name "DCP-o-matic Encode Server"
@@ -11,9 +11,9 @@ cask "dcp-o-matic-encode-server" do
     cask "dcp-o-matic"
   end
 
-  depends_on macos: :big_sur
+  depends_on :macos
 
   app "DCP-o-matic #{version.major} Encode Server.app"
 
-  # No zap stanza required
+  zap trash: "~/Library/Preferences/com.dcpomatic.server.plist"
 end

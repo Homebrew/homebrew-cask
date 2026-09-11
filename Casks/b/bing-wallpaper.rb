@@ -1,6 +1,6 @@
 cask "bing-wallpaper" do
-  version "1.1.10,45e5bd06-b77e-48d7-a4f2-ae06e39dd0b4"
-  sha256 "44a0000f1e18a0be1daaa4f1b14eedc2d2e10136a8b8a56eed88b33ce699fbe3"
+  version "1.1.12,9f265e2b-e7fa-4a5a-a9ca-4b608ed11c0c"
+  sha256 "2db703f5c124afc9ae8b1c6a41da2258c56a8cf45d45cb6f7e4ace1594627cd3"
 
   url "https://download.microsoft.com/download/#{version.csv.second}/Installer/#{version.csv.first}/var1/MW011/2/BingWallpaper.pkg"
   name "Bing Wallpaper"
@@ -18,7 +18,7 @@ cask "bing-wallpaper" do
     end
   end
 
-  depends_on macos: :big_sur
+  depends_on :macos
 
   pkg "BingWallpaper.pkg"
 

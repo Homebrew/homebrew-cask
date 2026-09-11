@@ -10,8 +10,7 @@ cask "tng-digital-mini-program-studio" do
     sha256 "a9d8d4318b49f2810e73557ae88c2acbe1c925ceb9ba36033a529fecc4a6cac4"
   end
 
-  url "https://ide-release.marmot-cloud.com/storage/miniprogram-studio/common/#{version.major_minor}/MiniProgramStudio-#{version}-#{arch}.dmg",
-      verified: "ide-release.marmot-cloud.com/storage/miniprogram-studio/common/"
+  url "https://ide-release.marmot-cloud.com/storage/miniprogram-studio/common/#{version.major_minor}/MiniProgramStudio-#{version}-#{arch}.dmg"
   name "TnG Digital Mini Program Studio"
   desc "IDE for building mini programs"
   homepage "https://miniprogram.tngdigital.com.my/index"

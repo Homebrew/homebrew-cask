@@ -1,6 +1,6 @@
 cask "bluestacks" do
-  version "5.21.782.7501,5b0c834f55b94397b03929e148072047"
-  sha256 "70408dcc920f36f4d676fa05bb3c9fe9f179616558a41fc69ce16f00688417c6"
+  version "5.21.790.7505,426aabd288b04f58a8200b751e9bcbcf"
+  sha256 "137accd707aa21028abf57412820d803fe550b07a1d5110ada291b80e10877aa"
 
   url "https://ak-build.bluestacks.com/public/app-player/mac/nxt_mac2/#{version.csv.first}/#{version.csv.second}/BlueStacksInstaller_#{version.csv.first}.pkg"
   name "BlueStacks"
@@ -19,7 +19,7 @@ cask "bluestacks" do
   end
 
   depends_on arch: :arm64
-  depends_on macos: :big_sur
+  depends_on :macos
 
   pkg "BlueStacksInstaller_#{version.csv.first}.pkg"
 

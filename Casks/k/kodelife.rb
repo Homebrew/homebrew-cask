@@ -1,6 +1,6 @@
 cask "kodelife" do
-  version "1.2.7,209"
-  sha256 "ddf5cae73c6df0715069c73eca4e5fee8b1e81cdba828ba9a592f8b1d0cf337d"
+  version "1.2.8,210"
+  sha256 "d6eabca8dcc1c30cf7e43cabfb28b5f6c74f8c18dbf3164f13a5c0bf95ce13b7"
 
   url "https://hexler.net/pub/kodelife/kodelife-#{version.csv.first}.#{version.csv.second}-macos.dmg"
   name "KodeLife"
@@ -16,6 +16,8 @@ cask "kodelife" do
   depends_on :macos
 
   app "KodeLife.app"
+
+  uninstall quit: "net.hexler.KodeLife"
 
   zap trash: [
     "~/Library/Application Support/net.hexler.KodeLife",

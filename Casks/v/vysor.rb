@@ -2,8 +2,7 @@ cask "vysor" do
   version "5.0.7"
   sha256 "b3db71a61e6b46df7242038335b0ff6be961fcfd3e31250fda0488236bcadd6f"
 
-  url "https://github.com/koush/vysor.io/releases/download/v#{version}/Vysor-mac-#{version}.zip",
-      verified: "github.com/koush/vysor.io/"
+  url "https://github.com/koush/vysor.io/releases/download/v#{version}/Vysor-mac-#{version}.zip"
   name "Vysor"
   desc "Mirror and control your phone"
   homepage "https://www.vysor.io/"

@@ -1,6 +1,6 @@
 cask "mirai" do
-  version "0.3.9"
-  sha256 "4eed45c7ed8f66328cb12ba5a174433eb05597b66d1b9212ae07c719eb5e2db4"
+  version "0.4.8"
+  sha256 "da4a5cd57d95dd486e901baa77e5b06b7cc819b8d6d2c6dbaf1e5e7be9534205"
 
   url "https://assets.trymirai.com/app/mirai-#{version}-aarch64-apple-darwin.dmg"
   name "Mirai"
@@ -24,6 +24,6 @@ cask "mirai" do
   zap trash: [
     "~/.config/com.trymirai.cli",
     "~/Library/Application Support/mirai",
-    "~/Library/Caches/com.mirai.tech.chat.ShipIt/",
+    "~/Library/Caches/com.mirai.tech.chat.ShipIt",
   ]
 end

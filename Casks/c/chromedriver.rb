@@ -1,12 +1,11 @@
 cask "chromedriver" do
   arch arm: "arm64", intel: "x64"
 
-  version "151.0.7922.34"
-  sha256 arm:   "6f9c61d45acb74a8d7a6c9d49d9fd62fe14fcfa065d7f8f191722bc4d7dd8524",
-         intel: "8d24d0d3421eeebecece5b099bf707eac0593035b1a9219d639c306b3d823949"
+  version "152.0.7977.64"
+  sha256 arm:   "9e8b67036bf3d744feb97d5711a6f6ce40855d9554e93adfa4a869aa69677ef3",
+         intel: "74728768463f6ffd63e6bfe5bd75f1e12876066745417cd6f9929704428da590"
 
-  url "https://storage.googleapis.com/chrome-for-testing-public/#{version}/mac-#{arch}/chromedriver-mac-#{arch}.zip",
-      verified: "storage.googleapis.com/chrome-for-testing-public/"
+  url "https://storage.googleapis.com/chrome-for-testing-public/#{version}/mac-#{arch}/chromedriver-mac-#{arch}.zip"
   name "ChromeDriver"
   desc "Automated testing of webapps for Google Chrome"
   homepage "https://chromedriver.chromium.org/"

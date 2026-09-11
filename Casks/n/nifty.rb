@@ -1,9 +1,8 @@
 cask "nifty" do
-  version "3.125.6"
+  version "3.132.1"
   sha256 :no_check
 
-  url "https://nifty-apps.s3.amazonaws.com/Nifty.dmg",
-      verified: "nifty-apps.s3.amazonaws.com/"
+  url "https://nifty-apps.s3.amazonaws.com/Nifty.dmg"
   name "Nifty"
   desc "Client for the Nifty project management platform"
   homepage "https://niftypm.com/"
@@ -13,7 +12,7 @@ cask "nifty" do
     strategy :extract_plist
   end
 
-  depends_on macos: :big_sur
+  depends_on :macos
 
   app "Nifty.app"
 

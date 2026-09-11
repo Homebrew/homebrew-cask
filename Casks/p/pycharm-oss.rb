@@ -1,9 +1,9 @@
 cask "pycharm-oss" do
   arch arm: "-aarch64"
 
-  version "2026.1.4"
-  sha256 arm:   "67ed540623f32ce835e875712019eadbc21512e138c65ccae2aef4851f909ef5",
-         intel: "566037ad456d2a0b62febbff410382793303652c929345b3da8fd3c5c456abf4"
+  version "2026.2.2"
+  sha256 arm:   "d748a5a69b847a2de52c521c61e8092d44d1277a002114184ec61e3d00a0977d",
+         intel: "e45c3ee3c5fd3266c80cc35f750013da1872fa2ce77c4f1cf71dce48482a877c"
 
   url "https://github.com/JetBrains/intellij-community/releases/download/pycharm%2F#{version}/pycharm-#{version}#{arch}.dmg"
   name "PyCharm OSS"
@@ -31,7 +31,9 @@ cask "pycharm-oss" do
 
   depends_on :macos
 
-  app "PyCharm CE.app"
+  app "PyCharm OSS.app"
+
+  uninstall quit: "com.jetbrains.pycharm.ce"
 
   zap trash: [
     "~/Library/Application Support/JetBrains/PyCharmCE*",

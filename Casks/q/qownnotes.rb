@@ -1,9 +1,8 @@
 cask "qownnotes" do
-  version "26.7.8"
-  sha256 "8a29fd5d38217888ee75e74998e8167ef28a1569e1aefe99a7ffb7c3cce0d41b"
+  version "26.9.0"
+  sha256 "2fe30b0aa2ddd7652204ad265f79e370b1cb7d9bd93e0c66b41e41b391ecb967"
 
-  url "https://github.com/pbek/QOwnNotes/releases/download/v#{version}/QOwnNotes.dmg",
-      verified: "github.com/pbek/QOwnNotes/"
+  url "https://github.com/pbek/QOwnNotes/releases/download/v#{version}/QOwnNotes.dmg"
   name "QOwnNotes"
   desc "Plain-text file notepad and todo-list manager"
   homepage "https://www.qownnotes.org/"
@@ -19,6 +18,8 @@ cask "qownnotes" do
   depends_on macos: :ventura
 
   app "QOwnNotes.app"
+
+  uninstall quit: "com.PBE.QOwnNotes"
 
   zap trash: [
     "~/Library/Preferences/com.pbe.QOwnNotes.plist",

@@ -2,8 +2,7 @@ cask "gpt4all" do
   version "3.10.0"
   sha256 "d0d98ab465de516af6d50fc013abbf9a8967274f2d171bbf69198873ce255b5f"
 
-  url "https://github.com/nomic-ai/gpt4all/releases/download/v#{version}/gpt4all-installer-macos-v#{version}.dmg",
-      verified: "github.com/nomic-ai/gpt4all/"
+  url "https://github.com/nomic-ai/gpt4all/releases/download/v#{version}/gpt4all-installer-macos-v#{version}.dmg"
   name "GPT4All"
   desc "Run LLMs locally"
   homepage "https://www.nomic.ai/gpt4all/"

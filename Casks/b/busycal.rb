@@ -1,6 +1,6 @@
 cask "busycal" do
-  version "2026.2.3,2026-05-13-23-21"
-  sha256 "60e7b45bc23768f3f388af532533497455de8b37dfb422fd548a3c0fb276d33f"
+  version "2026.3.1,2026-09-03-15-48-05"
+  sha256 "90d047658b64a38481c62839d7cfb9fe3ace69041e0567d036898eb452b02328"
 
   url "https://downloads.busymac.com/bcl-#{version.csv.first}-#{version.csv.second}.zip"
   name "BusyCal"
@@ -27,7 +27,9 @@ cask "busycal" do
             delete:    "/Applications/BusyCal.app"
 
   zap trash: [
-    "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.busymac.busycal#{version.major}.sfl*",
+    "~/Library/Application Scripts/com.busymac.busycal#{version.minor}*",
+    "~/Library/Application Scripts/N4RA379GBW.com.busymac.busycal#{version.minor}",
+    "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.busymac.busycal#{version.minor}.sfl*",
     "~/Library/Containers/com.busymac.busycal#{version.minor}",
     "~/Library/Containers/N4RA379GBW.com.busymac.busycal#{version.minor}.alarm",
     "~/Library/Group Containers/com.busymac.busycal#{version.minor}",

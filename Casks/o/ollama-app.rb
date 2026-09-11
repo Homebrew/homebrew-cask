@@ -1,9 +1,8 @@
 cask "ollama-app" do
-  version "0.32.1"
-  sha256 "301f87ed99822ed4d5c48ab4173c52457c09ccf25397d6a1d6cfde330444f1a8"
+  version "0.34.0"
+  sha256 "5bb6b982f74184d4b67c1829fa76851ac849a2714bf3de506be41bb1860d3ce3"
 
-  url "https://github.com/ollama/ollama/releases/download/v#{version}/Ollama-darwin.zip",
-      verified: "github.com/ollama/ollama/"
+  url "https://github.com/ollama/ollama/releases/download/v#{version}/Ollama-darwin.zip"
   name "Ollama"
   desc "Get up and running with large language models locally"
   homepage "https://ollama.com/"
@@ -18,6 +17,9 @@ cask "ollama-app" do
 
   app "Ollama.app"
   binary "#{appdir}/Ollama.app/Contents/Resources/ollama"
+
+  uninstall launchctl: "com.ollama.ollama",
+            quit:      "com.electron.ollama"
 
   zap trash: [
     "~/.ollama",

@@ -1,9 +1,8 @@
 cask "visualdiffer" do
-  version "2.1.19"
-  sha256 "5059ca25be104845a3c7d3f56a9e8801695d0b03db729236d41d43266615afbe"
+  version "2.2.0"
+  sha256 "c7f6bd36d2b469a0ed0184c97f0b338e506842e19c3372d9fa8823c5e70754dc"
 
-  url "https://github.com/visualdiffer/visualdiffer/releases/download/v#{version}/VisualDiffer-#{version}.zip",
-      verified: "github.com/visualdiffer/visualdiffer/"
+  url "https://github.com/visualdiffer/visualdiffer/releases/download/v#{version}/VisualDiffer-#{version}.zip"
   name "VisualDiffer"
   desc "Visually compare folders and files"
   homepage "https://visualdiffer.com/"

@@ -1,12 +1,11 @@
 cask "spyder" do
   arch arm: "arm64", intel: "x86_64"
 
-  version "6.1.5"
-  sha256 arm:   "6f25ce49c5421ab15a61081ab0036c251cdb9d061b0d53740092efc620e8a5f5",
-         intel: "5383bbb1820bce214be94743ea219f98f99a033c55554f16065779146056d85c"
+  version "6.1.7"
+  sha256 arm:   "2426f0e1c6119b3e2dbcbbeec62ab4cd16b068f3a21902adbafdd50a2820b200",
+         intel: "50209a51ece4d3db3b85feddc7be928e77500e8751663b521b0675a0ccf12201"
 
-  url "https://github.com/spyder-ide/spyder/releases/download/v#{version}/Spyder-macOS-#{arch}.pkg",
-      verified: "github.com/spyder-ide/spyder/"
+  url "https://github.com/spyder-ide/spyder/releases/download/v#{version}/Spyder-macOS-#{arch}.pkg"
   name "Spyder"
   desc "Scientific Python IDE"
   homepage "https://www.spyder-ide.org/"
@@ -17,7 +16,7 @@ cask "spyder" do
   end
 
   auto_updates true
-  depends_on macos: :big_sur
+  depends_on :macos
 
   pkg "Spyder-macOS-#{arch}.pkg"
 

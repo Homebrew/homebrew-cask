@@ -2,12 +2,12 @@ cask "multiviewer" do
   arch arm: "arm64", intel: "x64"
 
   on_arm do
-    version "2.7.3,415540990"
-    sha256 "c2ea6950f6821c5efeccb9c0f626116a2fc7b795974b9861170f780d3da2c411"
+    version "2.8.4,518108271"
+    sha256 "2a561e370a88e26b08cf1af0e47f486e56dde148c947a8bc7267a23fa33921ae"
   end
   on_intel do
-    version "2.7.3,415544376"
-    sha256 "d186a8fee4b1e5fb965bfc7bcef8dc85d65e7d004ac65ba9c4b2c46c4fb02fb8"
+    version "2.8.4,518115356"
+    sha256 "861acfc1caec25e76f55096720f4f84ca6cb9bb2c5dff599407d6e3d51bfbc26"
   end
 
   url "https://releases.multiviewer.app/download/#{version.csv.second}/MultiViewer.for.F1-#{version.csv.first}-#{arch}.dmg"
@@ -34,6 +34,7 @@ cask "multiviewer" do
   app "MultiViewer.app"
 
   zap trash: [
+    "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.electron.multiviewer-for-f1.sfl*",
     "~/Library/Application Support/MultiViewer",
     "~/Library/Caches/com.electron.multiviewer-for-f1",
     "~/Library/Caches/com.electron.multiviewer-for-f1.ShipIt",

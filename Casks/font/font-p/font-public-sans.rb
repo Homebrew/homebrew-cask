@@ -2,8 +2,7 @@ cask "font-public-sans" do
   version "2.001"
   sha256 "88cacdf7cd03b31af8f1f83e1f51e0eb5a6052565a6c014c90c385f1ff2d13a5"
 
-  url "https://github.com/uswds/public-sans/releases/download/v#{version}/public-sans-v#{version}.zip",
-      verified: "github.com/uswds/public-sans/"
+  url "https://github.com/uswds/public-sans/releases/download/v#{version}/public-sans-v#{version}.zip"
   name "Public Sans"
   homepage "https://public-sans.digital.gov/"
 

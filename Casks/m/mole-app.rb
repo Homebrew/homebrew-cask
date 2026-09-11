@@ -1,5 +1,5 @@
 cask "mole-app" do
-  version "1.11.0"
+  version "1.13.0"
   sha256 :no_check
 
   url "https://mole.fit/Mole.dmg"
@@ -19,7 +19,7 @@ cask "mole-app" do
 
   zap trash: [
     "/Library/Mole",
-    "~/.config/mole/",
+    "~/.config/mole",
     "~/Library/Application Support/com.tw93.MoleApp",
     "~/Library/Caches/com.tw93.MoleApp",
     "~/Library/HTTPStorages/com.tw93.MoleApp",

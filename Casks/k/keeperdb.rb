@@ -1,6 +1,6 @@
 cask "keeperdb" do
-  version "2.3.0"
-  sha256 "20ca896c3322c23d9f5bf66041ccbf7df228d9085c202719c0ba0404e098661d"
+  version "2.5.1"
+  sha256 "2bfe45f2aa48f98cfb6aaa2d24e296b66fad8c13a9e08b97f409ba2500d065a0"
 
   url "https://keepersecurity.com/pam/keeperdb/v#{version}/KeeperDB_#{version}_universal.dmg"
   name "KeeperDB"
@@ -12,7 +12,7 @@ cask "keeperdb" do
     regex(/VERSION=(\d+(?:\.\d+)+)/i)
   end
 
-  depends_on macos: :catalina
+  depends_on :macos
 
   app "KeeperDB.app"
 

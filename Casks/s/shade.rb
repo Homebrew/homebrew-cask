@@ -2,12 +2,11 @@ cask "shade" do
   arch arm: "-arm64"
   livecheck_arch = on_arch_conditional arm: "arm64", intel: "x64"
 
-  version "2.3.17"
-  sha256 arm:   "c35395816bae222501eb318366e5f697ff33a5fb1076e1906b1bed1f1c028780",
-         intel: "ad1dca1206a2746e1ba7202e3c5eae5a0b73f036c650b16493acefaa29c2a56f"
+  version "2.3.19"
+  sha256 arm:   "745bbdad49a375eade2062bd81b29c5d2f81808badd84d630d1fe35c80277bbc",
+         intel: "92f6e3cf49a625b1111af9a58e4cf2915c73be613cf8e71a1cb89ab342ce891b"
 
-  url "https://storage.googleapis.com/v2-public.shade.inc/releases/stable/mac/Shade-#{version}#{arch}.pkg",
-      verified: "storage.googleapis.com/v2-public.shade.inc/"
+  url "https://storage.googleapis.com/v2-public.shade.inc/releases/stable/mac/Shade-#{version}#{arch}.pkg"
   name "Shade"
   desc "AI-powered media storage and asset management platform"
   homepage "https://shade.inc/"

@@ -1,17 +1,16 @@
 cask "geolibre" do
   arch arm: "aarch64", intel: "x64"
 
-  version "2.2.0"
-  sha256 arm:   "514b796213973b04297d02ade45e9010d748ae7fb8c31a38881b87134447182d",
-         intel: "18ab0f4374c28314ed911ffb8a1c1e91d67d1015c40555db92281d467e409248"
+  version "2.9.0"
+  sha256 arm:   "a44dbe559ecb181baee6ab471c7795eb0f0ba085cac2f0d8e19e208595c42606",
+         intel: "83f5d6c89f30dcd906324e6cb4fa09bfedce55e6eda1a8ec66717182a9a34cad"
 
-  url "https://github.com/opengeos/GeoLibre/releases/download/v#{version}/GeoLibre.Desktop_#{version}_#{arch}.dmg",
-      verified: "github.com/opengeos/GeoLibre/"
+  url "https://github.com/opengeos/GeoLibre/releases/download/v#{version}/GeoLibre.Desktop_#{version}_#{arch}.dmg"
   name "GeoLibre Desktop"
   desc "GIS platform"
   homepage "https://geolibre.app/"
 
-  depends_on macos: :catalina
+  depends_on :macos
 
   app "GeoLibre Desktop.app"
 

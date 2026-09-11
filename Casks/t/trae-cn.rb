@@ -1,26 +1,13 @@
 cask "trae-cn" do
   arch arm: "arm64", intel: "x64"
   os macos: "darwin", linux: "linux"
+  url_end = on_system_conditional macos: "dmg", linux: "tar.gz"
 
-  version "2.3.55931"
-  sha256 arm:          "2ea293d9c69e0689dc36d68e1ecc22ee5d99f98d842373023996f56a8a45fcf4",
-         intel:        "284a3d2c44e46fa0dc1149354075e01ca97bc298c0d3844c03614a9949cb67fd",
-         arm64_linux:  "6d909e8b5b36de8fc512ab9b3bdf5f87b20bfe47fba51634682d0ca80548edb3",
-         x86_64_linux: "3f6d53b14bd22e5ca4845a622675f965ef3549d1c7c81176e0d6cbb9b23bac9d"
-
-  url_end = on_system_conditional linux: "tar.gz", macos: "dmg"
-
-  url "https://lf-cdn.trae.com.cn/obj/trae-com-cn/pkg/app/releases/stable/#{version}/#{os}/Trae_CN-#{os}-#{arch}.#{url_end}"
-  name "Trae CN"
-  desc "Adaptive AI IDE"
-  homepage "https://www.trae.com.cn/"
-
-  livecheck do
-    url "https://api.trae.ai/icube/api/v1/native/version/trae/cn/latest"
-    strategy :json do |json|
-      json.dig("data", "manifest", os, "version")
-    end
-  end
+  version "2.3.62837"
+  sha256 arm:          "b8a033c4a4ebbd4802a14d517f802e12c506504edfe2fe957ecde700ae615b64",
+         intel:        "1b805bf6f3e1fc1ffac7807e3c6ea51d9c2bed8927a96829f7d23ea163117d54",
+         arm64_linux:  "aab2675b754aea1f921bf5b0a7f19188a25aae80e4e46b0870a8069b8946ad4f",
+         x86_64_linux: "b84c558c5328e241ca35c53748bf56b098662a49989ec73c13f0f8abdd13589b"
 
   on_macos do
     depends_on macos: :monterey
@@ -43,7 +30,6 @@ cask "trae-cn" do
       "~/Library/Saved Application State/cn.trae.app.savedState",
     ]
   end
-
   on_linux do
     binary "bin/trae-cn"
     bash_completion "#{staged_path}/resources/completions/bash/trae-cn"
@@ -54,6 +40,18 @@ cask "trae-cn" do
       "~/.local/share/Trae CN",
       "~/.trae-cn",
     ]
+  end
+
+  url "https://lf-cdn.trae.com.cn/obj/trae-com-cn/pkg/app/releases/stable/#{version}/#{os}/Trae_CN-#{os}-#{arch}.#{url_end}"
+  name "Trae CN"
+  desc "Adaptive AI IDE"
+  homepage "https://www.trae.com.cn/"
+
+  livecheck do
+    url "https://api.trae.ai/icube/api/v1/native/version/trae/cn/latest"
+    strategy :json do |json|
+      json.dig("data", "manifest", os, "version")
+    end
   end
 
   auto_updates true

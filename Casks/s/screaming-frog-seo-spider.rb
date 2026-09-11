@@ -15,7 +15,7 @@ cask "screaming-frog-seo-spider" do
     regex(/(\d+(?:\.\d+)+)/i)
   end
 
-  depends_on macos: :big_sur
+  depends_on :macos
 
   app "Screaming Frog SEO Spider.app"
 

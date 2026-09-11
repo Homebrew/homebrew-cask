@@ -18,19 +18,11 @@ cask "goneovim" do
   disable! date: "2026-09-01", because: :fails_gatekeeper_check
 
   depends_on formula: "neovim"
-  depends_on macos: :big_sur
+  depends_on :macos
 
   app "goneovim-v#{version}-macos-#{arch}/goneovim.app"
-  # shim script (https://github.com/Homebrew/homebrew-cask/issues/18809)
-  shimscript = "#{staged_path}/goneovim.wrapper.sh"
-  binary shimscript, target: "goneovim"
-
-  preflight do
-    File.write shimscript, <<~EOS
-      #!/bin/sh
-      exec '#{appdir}/goneovim.app/Contents/MacOS/goneovim' "$@"
-    EOS
-  end
+  command_wrapper "goneovim",
+                  executable: "#{appdir}/goneovim.app/Contents/MacOS/goneovim"
 
   zap trash: [
     "~/.goneovim",

@@ -1,5 +1,5 @@
 cask "yandextelemost" do
-  version "2.36.4,8579"
+  version "2.42.4,9707"
   sha256 :no_check
 
   url "https://telemost.yandex.com/download-desktop"
@@ -12,9 +12,11 @@ cask "yandextelemost" do
     strategy :extract_plist
   end
 
-  depends_on macos: :big_sur
+  depends_on macos: :monterey
 
   app "Yandex.Telemost.app"
+
+  uninstall quit: "ru.yandex.desktop.telemost"
 
   zap trash: [
     "~/Library/Application Support/Yandex.Telemost",

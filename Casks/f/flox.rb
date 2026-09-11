@@ -1,9 +1,9 @@
 cask "flox" do
   arch arm: "aarch64", intel: "x86_64"
 
-  version "1.13.2"
-  sha256 arm:   "e8b1c3f5b08bb66ae4d6528c193e725977efac0de654f4a16ae6facee32402b5",
-         intel: "75bbeb3c0ab1d9adb246dc07caecc454de62965b8a46e82e0cd0e8eaea385769"
+  version "1.16.0"
+  sha256 arm:   "0a4ef5ad09c96a682ee38ce025d91ad9f674581458319149864bf31d34c540a3",
+         intel: "ab2efe3a50d1dab4eb948697a2599426bd0f4877def909238bed4577294aeb15"
 
   url "https://downloads.flox.dev/by-env/stable/osx/flox-#{version}.#{arch}-darwin.pkg"
   name "flox"
@@ -44,7 +44,7 @@ cask "flox" do
         "/usr/local/share/flox/scripts/uninstall_zap",
         "~/.cache/flox",
         "~/.config/flox",
-        "~/.local/share/flox/",
-        "~/.local/state/flox/",
+        "~/.local/share/flox",
+        "~/.local/state/flox",
       ]
 end

@@ -1,12 +1,11 @@
 cask "franz" do
   arch arm: "arm64", intel: "x64"
 
-  version "6.5.1"
-  sha256 arm:   "c45445ba7ceb531eba17851d0dabffad5d6af310367c3e8edbb80cd519c94788",
-         intel: "30aad964229b3742de946eac0f034ba74654cbab4eb83f9c522da8db01876109"
+  version "6.7.1"
+  sha256 arm:   "e822911913caf56fa7066c26722d2f366ec075b2635a0c513117beb6f5681e38",
+         intel: "27f0f12131fcca99c3cfa7846ba8d7d2cc9aca29308aae7e006219a427e8d3b4"
 
-  url "https://github.com/meetfranz/franz-6/releases/download/v#{version}/Franz-#{arch}.dmg",
-      verified: "github.com/meetfranz/franz-6/"
+  url "https://github.com/meetfranz/franz-6/releases/download/v#{version}/Franz-#{arch}.dmg"
   name "Franz"
   desc "Messaging app for WhatsApp, Facebook Messenger, Slack, Telegram and more"
   homepage "https://meetfranz.com/"
@@ -21,6 +20,7 @@ cask "franz" do
 
   zap trash: [
     "~/Library/Application Support/Caches/franz-updater",
+    "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.meetfranz.franz.sfl*",
     "~/Library/Application Support/Franz",
     "~/Library/Caches/com.meetfranz.franz",
     "~/Library/Caches/com.meetfranz.franz.ShipIt",

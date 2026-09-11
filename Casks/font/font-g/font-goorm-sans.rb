@@ -11,9 +11,9 @@ cask "font-goorm-sans" do
     regex(/href=.*?goorm[._-]sans[._-]v?(\d+(?:\.\d+)+)\.zip/i)
   end
 
-  font "goorm sans/Public/TTF/goorm-sans-regular.ttf"
-  font "goorm sans/Public/TTF/goorm-sans-medium.ttf"
   font "goorm sans/Public/TTF/goorm-sans-bold.ttf"
+  font "goorm sans/Public/TTF/goorm-sans-medium.ttf"
+  font "goorm sans/Public/TTF/goorm-sans-regular.ttf"
 
   # No zap stanza required
 end

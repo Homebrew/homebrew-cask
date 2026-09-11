@@ -2,8 +2,7 @@ cask "textmate" do
   version "2.0.23"
   sha256 "f8dba933209bd01070028892474bf0b72f36c673f7bcb8da5973f93ddc387420"
 
-  url "https://github.com/textmate/textmate/releases/download/v#{version}/TextMate_#{version}.tbz",
-      verified: "github.com/textmate/textmate/"
+  url "https://github.com/textmate/textmate/releases/download/v#{version}/TextMate_#{version}.tbz"
   name "TextMate"
   desc "General-purpose text editor"
   homepage "https://macromates.com/"

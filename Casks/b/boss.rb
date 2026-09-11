@@ -1,9 +1,8 @@
 cask "boss" do
-  version "9.2.48"
-  sha256 "15afd9031fccd57b5fc836abdbe09ae105ead885458c15ff56115e0ea463693e"
+  version "9.5.14"
+  sha256 "4efa9b8674b9a59fabda55f609ab056d813fc9a7deffda5c1bf1873eecce28dd"
 
-  url "https://github.com/risa-labs-inc/BOSS-Releases/releases/download/v#{version}/BOSS-#{version}-Universal.dmg",
-      verified: "github.com/risa-labs-inc/BOSS-Releases/"
+  url "https://github.com/risa-labs-inc/BOSS-Releases/releases/download/v#{version}/BOSS-#{version}-Universal.dmg"
   name "BOSS"
   desc "AI-powered workspace for complex business operations"
   homepage "https://www.risalabs.ai/"
@@ -14,11 +13,12 @@ cask "boss" do
   end
 
   auto_updates true
-  depends_on :macos
+  depends_on macos: :ventura
 
   app "BOSS.app"
 
   zap trash: [
+    "~/.boss",
     "~/Library/Application Support/BOSS",
     "~/Library/Caches/ai.rever.boss",
     "~/Library/Preferences/ai.rever.boss.plist",

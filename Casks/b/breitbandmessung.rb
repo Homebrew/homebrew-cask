@@ -1,6 +1,6 @@
 cask "breitbandmessung" do
-  version "3.11.0"
-  sha256 "a4a2382a0e27817633c999f39a58a32319b3a022ac85d41aa35bfd256680579d"
+  version "3.12.1"
+  sha256 "f33cec43ceae7577f835e4d8af182b6f6f0de70c11698ac002d6791ffd53e70e"
 
   url "https://download.breitbandmessung.de/bbm/Breitbandmessung-#{version}-mac.dmg"
   name "Breitbandmessung"
@@ -12,9 +12,13 @@ cask "breitbandmessung" do
     strategy :electron_builder
   end
 
-  depends_on macos: :big_sur
+  depends_on :macos
 
   app "Breitbandmessung.app"
 
-  zap trash: "~/Library/Application Support/Breitbandmessung"
+  zap trash: [
+    "~/Library/Application Support/Breitbandmessung",
+    "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.zafaco.breitbandmessung.sfl*",
+    "~/Library/Preferences/com.zafaco.breitbandmessung.plist",
+  ]
 end

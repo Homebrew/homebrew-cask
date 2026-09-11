@@ -1,24 +1,12 @@
 cask "zettlr" do
-  on_macos do
-    arch arm: "arm64", intel: "x64"
-  end
-  on_linux do
-    arch arm: "arm64", intel: "x86_64"
-  end
+  arch arm: "arm64", intel: on_system_conditional(macos: "x64", linux: "x86_64")
+  os macos: "dmg", linux: "AppImage"
 
-  url_end = on_system_conditional linux: ".AppImage", macos: ".dmg"
-
-  version "4.6.0"
-  sha256 arm:          "c0ff76d9e869eee312d7c131764fe73322344f85127ed2e5fada1076cb88cf32",
-         intel:        "051a6d34f3df17b7ec02d4b5bc3ea341d6885ee643646657518853f2ed18f730",
-         x86_64_linux: "0c7eea7263758794e48785cb0660af1d97f531447cb5ac31733864832b6f14e0",
-         arm64_linux:  "45e558ad0b1da0fb2f223258a8a22c94669625afa081773b8094d72c1a83a64b"
-
-  url "https://github.com/Zettlr/Zettlr/releases/download/v#{version}/Zettlr-#{version}-#{arch}#{url_end}",
-      verified: "github.com/Zettlr/Zettlr/"
-  name "Zettlr"
-  desc "Open-source markdown editor"
-  homepage "https://www.zettlr.com/"
+  version "4.7.0"
+  sha256 arm:          "e03e3701557707f6fa50520f4c03f8345cd65206d2810bf5ae433ef40a7ed8f8",
+         intel:        "9bb4300edafb239bf4c1e383637bfd803012e96b83eccfb59d3418c7f3ffc1a7",
+         arm64_linux:  "d4aa0b1536f06eba24f2b8b0c4e6aa651068b46f367de407bce65f8dd058e3cf",
+         x86_64_linux: "9758e9659eaf02599396ed26d74eb069e55068cd6665be700b54dcbf6212d047"
 
   on_macos do
     depends_on macos: :monterey
@@ -33,8 +21,12 @@ cask "zettlr" do
       "~/Library/Saved Application State/com.zettlr.app.savedState",
     ]
   end
-
   on_linux do
     app_image "Zettlr-#{version}-#{arch}.AppImage", target: "Zettlr.AppImage"
   end
+
+  url "https://github.com/Zettlr/Zettlr/releases/download/v#{version}/Zettlr-#{version}-#{arch}.#{os}"
+  name "Zettlr"
+  desc "Open-source markdown editor"
+  homepage "https://www.zettlr.com/"
 end

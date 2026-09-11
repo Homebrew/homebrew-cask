@@ -2,8 +2,7 @@ cask "suuntodm5" do
   version "1.5.4"
   sha256 :no_check
 
-  url "https://dm5.movescount.com/SuuntoDM5.dmg",
-      verified: "dm5.movescount.com/"
+  url "https://dm5.movescount.com/SuuntoDM5.dmg"
   name "Suunto DM5"
   desc "Create dive plans and analyze your dives"
   homepage "https://www.suunto.com/Support/software-support/dm5/"

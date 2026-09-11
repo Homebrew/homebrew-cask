@@ -1,12 +1,11 @@
 cask "applite" do
-  version "1.3.1"
-  sha256 "7c2972f21f373c1f64518212098a76604f14b05bd56eb7e56f84c25f4c9c8da2"
+  version "1.4.2"
+  sha256 "94955981298a61ae2d3094c04e2089eefa70d2ceb0099ef2ce0c9ab0af4e6306"
 
-  url "https://github.com/milanvarady/Applite/releases/download/v#{version}/Applite.dmg",
-      verified: "github.com/milanvarady/Applite/"
+  url "https://github.com/milanvarady/Applite/releases/download/v#{version}/Applite.dmg"
   name "Applite"
   desc "User-friendly GUI app for Homebrew"
-  homepage "https://aerolite.dev/applite"
+  homepage "https://applite.app/"
 
   livecheck do
     url "https://milanvarady.github.io/Applite/appcast.xml"
@@ -14,7 +13,7 @@ cask "applite" do
   end
 
   auto_updates true
-  depends_on macos: :ventura
+  depends_on macos: :sonoma
 
   app "Applite.app"
 

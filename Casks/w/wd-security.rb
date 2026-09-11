@@ -2,8 +2,7 @@ cask "wd-security" do
   version "2.1.5.427"
   sha256 :no_check
 
-  url "https://downloads.wdc.com/wdapp/WD_Security_MACOS.zip",
-      verified: "downloads.wdc.com/wdapp/"
+  url "https://downloads.wdc.com/wdapp/WD_Security_MACOS.zip"
   name "WD Security"
   desc "Lock and unlock Western Digital external drives with hardware encryption"
   homepage "https://support-en.wd.com/app/answers/detailweb/a_id/50696"

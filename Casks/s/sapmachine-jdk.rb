@@ -2,8 +2,8 @@ cask "sapmachine-jdk" do
   arch arm: "aarch64", intel: "x64"
 
   on_arm do
-    version "26.0.1"
-    sha256 "0595a1c7ae744bb0febdfe67fb86e1a517214262e8af21d52448fe0f545a90fa"
+    version "26.0.2.1"
+    sha256 "81eca288ebbc269c741640d7530f64e30a7a9e5e326cd40c28c93b566519853e"
 
     # The version information on the homepage is rendered client-side from the
     # following JSON file, so we have to check it instead.
@@ -33,8 +33,7 @@ cask "sapmachine-jdk" do
     end
   end
 
-  url "https://github.com/SAP/SapMachine/releases/download/sapmachine-#{version}/sapmachine-jdk-#{version}_macos-#{arch}_bin.dmg",
-      verified: "github.com/SAP/SapMachine/"
+  url "https://github.com/SAP/SapMachine/releases/download/sapmachine-#{version}/sapmachine-jdk-#{version}_macos-#{arch}_bin.dmg"
   name "SapMachine OpenJDK Development Kit"
   desc "OpenJDK distribution from SAP"
   homepage "https://sapmachine.io/"

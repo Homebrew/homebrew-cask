@@ -1,9 +1,9 @@
 cask "eclipse-platform" do
   arch arm: "aarch64", intel: "x86_64"
 
-  version "4.40,202606010713"
-  sha256 arm:   "fad0214f7cde2041e957a48948f12176a1b87ffc20c572f2cd64fba3da6854fd",
-         intel: "8ac8f1d8b8e5345014c92fdd4c3c25ae81fe2aabb186b7d125a17f8b537a49a9"
+  version "4.41,202608281142"
+  sha256 arm:   "5d293fc45363baf7c7d38c37a007f35a8c49b99f6c6396b98ab18b4464e59d7e",
+         intel: "702a6b2a16a84ac9f065a133623e1f626152007d2e6ffd8c11577d3960b2ce39"
 
   url "https://www.eclipse.org/downloads/download.php?file=/eclipse/downloads/drops#{version.major}/R-#{version.csv.first}-#{version.csv.second}/eclipse-SDK-#{version.csv.first}-macosx-cocoa-#{arch}.dmg&mirror_id=1"
   name "Eclipse SDK"
@@ -25,7 +25,7 @@ cask "eclipse-platform" do
     end
   end
 
-  depends_on macos: :big_sur
+  depends_on :macos
 
   # Renamed to avoid conflict with other Eclipse.
   app "Eclipse.app", target: "Eclipse Platform.app"

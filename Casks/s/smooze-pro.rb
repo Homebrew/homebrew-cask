@@ -1,5 +1,5 @@
 cask "smooze-pro" do
-  version "2.2.7"
+  version "2.2.8"
   sha256 :no_check
 
   url "https://smooze.co/pro/updates/SmoozePro.dmg"

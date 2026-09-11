@@ -1,9 +1,9 @@
 cask "deltachat" do
   arch arm: "arm64", intel: "universal"
 
-  version "2.53.0"
-  sha256 arm:   "21783c9a7f5a196f5ce8571169b1cc00d569bc48aba2233ec3652565dbf6e7a9",
-         intel: "67055c545c478bb43e1293efce25abebd79f132dc25cc217fe862a2c8ccd5e34"
+  version "2.59.1"
+  sha256 arm:   "1dc32427bbc4f4b6e133c33c9f435c254d5caf598675ccbde8846162ae54942b",
+         intel: "9199e541ad7f78d27e5f6b604072f1f2ece0eb1790844337e0ff8aad98396af3"
 
   url "https://download.delta.chat/desktop/v#{version}/DeltaChat-#{version}-#{arch}.dmg"
   name "Delta Chat"
@@ -21,6 +21,7 @@ cask "deltachat" do
 
   zap trash: [
     "~/Library/Application Scripts/chat.delta.desktop.electron",
+    "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/chat.delta.desktop.electron.sfl*",
     "~/Library/Application Support/CrashReporter/DeltaChat *_*.plist",
     "~/Library/Application Support/DeltaChat",
     "~/Library/Containers/chat.delta.desktop.electron",

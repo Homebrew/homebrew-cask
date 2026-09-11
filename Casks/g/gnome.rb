@@ -1,5 +1,5 @@
 cask "gnome" do
-  version "1.18,3"
+  version "1.25,1"
   sha256 :no_check
 
   url "https://lexfriedman.com/gnome/GAsInGnome.zip"
@@ -20,8 +20,10 @@ cask "gnome" do
   app "Gnome.app"
 
   zap trash: [
+    "~/Library/Application Scripts/group.com.lexfriedman.G-As-In-Gnome",
     "~/Library/Application Support/Gnome",
     "~/Library/Caches/com.lexfriedman.G-As-In-Gnome",
+    "~/Library/Group Containers/group.com.lexfriedman.G-As-In-Gnome",
     "~/Library/HTTPStorages/com.lexfriedman.G-As-In-Gnome",
     "~/Library/Preferences/com.lexfriedman.G-As-In-Gnome.plist",
   ]

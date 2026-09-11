@@ -2,8 +2,7 @@ cask "ricoh-theta" do
   version "3.21.0"
   sha256 "4c1d58b4bb1087c9129b99ac9cce1ff4cdc0439d1fa269b683b7f8b9e608f7a3"
 
-  url "https://theta360-statics.s3.amazonaws.com/app/viewer/SphericalViewerUpdate/RICOH%20THETA.#{version}.app.zip",
-      verified: "theta360-statics.s3.amazonaws.com/app/viewer/"
+  url "https://theta360-statics.s3.amazonaws.com/app/viewer/SphericalViewerUpdate/RICOH%20THETA.#{version}.app.zip"
   name "RICOH THETA"
   desc "Companion software for 360 degree cameras"
   homepage "https://theta360.com/en/support/download/pcmac/"

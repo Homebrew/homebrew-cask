@@ -1,9 +1,8 @@
 cask "dynamodb-local" do
-  version "2026-01-18"
-  sha256 "c05dc320f4f9a6f90c6597bc4dc7239ab8200a6df0f280d9cbe4d5775943f898"
+  version "2026-07-31"
+  sha256 "f80bcec477f85f57e2c77f8d54aa6b672a8403fceff0c450560aee1cf6c21163"
 
-  url "https://d1ni2b6xgvw0s0.cloudfront.net/v2.x/dynamodb_local_#{version}.tar.gz",
-      verified: "d1ni2b6xgvw0s0.cloudfront.net/"
+  url "https://d1ni2b6xgvw0s0.cloudfront.net/v2.x/dynamodb_local_#{version}.tar.gz"
   name "Amazon DynamoDB Local"
   desc "Development tool for DynamoDB"
   homepage "https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/DynamoDBLocal.html"
@@ -21,17 +20,13 @@ cask "dynamodb-local" do
     end
   end
 
-  # shim script (https://github.com/Homebrew/homebrew-cask/issues/18809)
-  shimscript = "#{staged_path}/dynamodb-local.wrapper.sh"
-  binary shimscript, target: "dynamodb-local"
-
-  preflight do
-    File.write shimscript, <<~EOS
-      #!/bin/sh
-      cd "$(dirname "$(readlink -n "${0}")")" && \
-        exec java -Djava.library.path='./DynamoDBLocal_lib' -jar 'DynamoDBLocal.jar' "$@"
-    EOS
-  end
+  command_wrapper "dynamodb-local",
+                  executable: "java",
+                  args:       [
+                    "-Djava.library.path=#{staged_path}/DynamoDBLocal_lib",
+                    "-jar",
+                    "#{staged_path}/DynamoDBLocal.jar",
+                  ]
 
   # No zap stanza required
 

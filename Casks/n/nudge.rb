@@ -1,6 +1,6 @@
 cask "nudge" do
-  version "2.1.2.81856"
-  sha256 "9a1850052aacc105a8c77dfc2e43e33afad673402d9781e1c107eeb98d31f30c"
+  version "2.1.3.81860"
+  sha256 "277353d03208ba12039ebd132aff704199816f5000334913f33f3696f294f19a"
 
   url "https://github.com/macadmins/nudge/releases/download/v#{version}/Nudge-#{version}.pkg"
   name "Nudge"
@@ -15,16 +15,8 @@ cask "nudge" do
   depends_on macos: :monterey
 
   pkg "Nudge-#{version}.pkg"
-  # shim script (https://github.com/Homebrew/homebrew-cask/issues/18809)
-  shimscript = "#{staged_path}/nudge.wrapper.sh"
-  binary shimscript, target: "nudge"
-
-  preflight do
-    File.write shimscript, <<~EOS
-      #!/bin/sh
-      exec '/Applications/Utilities/Nudge.app/Contents/MacOS/Nudge' "$@"
-    EOS
-  end
+  command_wrapper "nudge",
+                  executable: "/Applications/Utilities/Nudge.app/Contents/MacOS/Nudge"
 
   uninstall pkgutil: "com.github.macadmins.Nudge"
 

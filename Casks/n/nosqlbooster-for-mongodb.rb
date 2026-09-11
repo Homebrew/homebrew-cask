@@ -1,9 +1,9 @@
 cask "nosqlbooster-for-mongodb" do
   arch arm: "arm64", intel: "x64"
 
-  version "11.0.5"
-  sha256 arm:   "0d0987a9468f7de367db50bbb8aa71a821768c34c82dfc659125a9a31f29c2b7",
-         intel: "954c7a26ec54e44402b5900ad84c03e1427ca353d17f81d7aa015916acfae399"
+  version "11.1.6"
+  sha256 arm:   "8d248fca1bf868f0d38185e41be9c1aa7c8d0d7f8780fd1fad5e08a68291899b",
+         intel: "e54b86502fded198bb776b7530f23eba5fce758850d2a1ec61f5564fb751fc57"
 
   url "https://s3.nosqlbooster.com/download/releasesv#{version.major}/nosqlbooster4mongo-#{version}-#{arch}.dmg"
   name "NoSQLBooster for MongoDB"
@@ -21,6 +21,7 @@ cask "nosqlbooster-for-mongodb" do
 
   zap trash: [
     "~/Documents/NoSQLBooster",
+    "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.nosqlbooster.mongodb.sfl*",
     "~/Library/Application Support/NoSQLBooster for MongoDB",
     "~/Library/Preferences/com.nosqlbooster.mongodb.plist",
     "~/Library/Saved Application State/com.nosqlbooster.mongodb.savedState",

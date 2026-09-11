@@ -6,9 +6,6 @@ cask "iina" do
     on_arm do
       depends_on macos: :monterey
     end
-    on_intel do
-      depends_on macos: :catalina
-    end
   end
 
   url "https://dl.iina.io/IINA.v#{version}.dmg"

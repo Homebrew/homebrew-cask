@@ -5,8 +5,7 @@ cask "twake" do
   sha256 arm:   "62550ad6e9f34ce8f831019932ccbce74a39c59a585b61f24c47ad159cfce206",
          intel: "298bd6f34fd64a248387b1bbeab337780166d2753be13b29b24f9b3d1ec128fb"
 
-  url "https://github.com/cozy-labs/cozy-desktop/releases/download/v#{version}/Twake-Desktop-#{arch}.dmg",
-      verified: "github.com/cozy-labs/cozy-desktop/"
+  url "https://github.com/cozy-labs/cozy-desktop/releases/download/v#{version}/Twake-Desktop-#{arch}.dmg"
   name "Twake Desktop"
   desc "File synchronisation for Twake Workplace"
   homepage "https://twake.app/"

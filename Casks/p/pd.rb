@@ -12,12 +12,12 @@ cask "pd" do
     regex(/pd[._-]v?(\d+(?:\.\d+)+-\d+)\.macos\.zip/i)
   end
 
-  depends_on macos: :big_sur
+  depends_on :macos
 
   app "Pd-#{version}.app"
 
   postflight_steps do
-    set_permissions "Pd-#{version}.app", "u+w", base: :appdir
+    set_permissions "Pd-{{version}}.app", "u+w", base: :appdir
   end
 
   zap trash: [

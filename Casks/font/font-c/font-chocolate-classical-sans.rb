@@ -2,8 +2,7 @@ cask "font-chocolate-classical-sans" do
   version :latest
   sha256 :no_check
 
-  url "https://github.com/google/fonts/raw/main/ofl/chocolateclassicalsans/ChocolateClassicalSans-Regular.ttf",
-      verified: "github.com/google/fonts/"
+  url "https://github.com/google/fonts/raw/main/ofl/chocolateclassicalsans/ChocolateClassicalSans-Regular.ttf"
   name "Chocolate Classical Sans"
   homepage "https://fonts.google.com/specimen/Chocolate+Classical+Sans"
 

@@ -1,16 +1,15 @@
 cask "ltx-desktop" do
-  version "1.0.5"
-  sha256 "cb70a90790257b926fe25ee37b55d32b7ac16ab7727fdc5a93dc4f2deaeec4a7"
+  version "1.2.7"
+  sha256 "cb340e0c5bed4cbdc7f41c961198f7798896dd82f5ca966393ca270e59101567"
 
-  url "https://github.com/Lightricks/LTX-Desktop/releases/download/v#{version}/LTX-Desktop-arm64.dmg",
-      verified: "github.com/Lightricks/LTX-Desktop/"
+  url "https://github.com/Lightricks/LTX-Desktop/releases/download/v#{version}/LTX-Desktop-arm64.dmg"
   name "LTX Desktop"
   desc "Desktop app for generating videos with LTX models"
   homepage "https://ltx.io/ltx-desktop"
 
   auto_updates true
-  depends_on macos: :monterey
   depends_on arch: :arm64
+  depends_on macos: :monterey
 
   app "LTX Desktop.app"
 

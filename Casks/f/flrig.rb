@@ -1,9 +1,8 @@
 cask "flrig" do
-  version "2.0.10"
-  sha256 "49f325db62c889dcabe537d2fcde9d6eb9325b7e69decd1a83f51ec39f8b0514"
+  version "2.0.12"
+  sha256 "0ec96340ffb656058aefadfc54a39bcf0a2712a1768000b9db85175b9a811ff2"
 
-  url "https://downloads.sourceforge.net/fldigi/fldigi/flrig-#{version}.dmg",
-      verified: "sourceforge.net/fldigi/"
+  url "https://downloads.sourceforge.net/fldigi/fldigi/flrig-#{version}.dmg"
   name "flrig"
   desc "Ham radio rig control"
   homepage "https://www.w1hkj.org/"
@@ -13,7 +12,7 @@ cask "flrig" do
     regex(%r{url=.*?/flrig[._-]v?(\d+(?:\.\d+)+)[^"' >]*?\.dmg}i)
   end
 
-  depends_on macos: :big_sur
+  depends_on :macos
 
   app "flrig-#{version}.app"
 

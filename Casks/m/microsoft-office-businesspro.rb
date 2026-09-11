@@ -1,9 +1,8 @@
 cask "microsoft-office-businesspro" do
-  version "16.111.26071325"
-  sha256 "2a58ebfd089f4722586dfa9ebfca21803f47a47f981b982ff3f0f2c49cb4b607"
+  version "16.112.26090911"
+  sha256 "0162f98e9c3caee824b3d91f93db3e44718f3ac58135c33af91a844b15bba2ab"
 
-  url "https://res.public.onecdn.static.microsoft/mro1cdnstorage/C1297A47-86C4-4C1F-97FA-950631F94777/MacAutoupdate/Microsoft_365_and_Office_#{version}_BusinessPro_Installer.pkg",
-      verified: "res.public.onecdn.static.microsoft/mro1cdnstorage/C1297A47-86C4-4C1F-97FA-950631F94777/"
+  url "https://res.public.onecdn.static.microsoft/mro1cdnstorage/C1297A47-86C4-4C1F-97FA-950631F94777/MacAutoupdate/Microsoft_365_and_Office_#{version}_BusinessPro_Installer.pkg"
   name "Microsoft Office BusinessPro"
   desc "Office suite"
   homepage "https://www.microsoft.com/en-us/microsoft-365/mac/microsoft-365-for-mac/"

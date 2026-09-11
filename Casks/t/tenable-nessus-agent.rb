@@ -1,6 +1,6 @@
 cask "tenable-nessus-agent" do
-  version "11.2.1,29278"
-  sha256 "04e9b1d5da670b477550d4fd06d552d004775d38ae0ac35b712be28635e12547"
+  version "11.2.3,29856"
+  sha256 "819c331a456a7774ee52565ae73497ed689e3546e6829bf676c6b659a15411e2"
 
   url "https://www.tenable.com/downloads/api/v1/public/pages/nessus-agents/downloads/#{version.csv.second}/download?i_agree_to_tenable_license_agreement=true"
   name "Tenable Nessus Agent"
@@ -19,7 +19,7 @@ cask "tenable-nessus-agent" do
   end
 
   auto_updates true
-  depends_on macos: :big_sur
+  depends_on :macos
 
   pkg "Install Nessus Agent.pkg"
 

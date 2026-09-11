@@ -2,8 +2,7 @@ cask "chatgpt-classic" do
   version "1.2026.184,1784145287"
   sha256 :no_check
 
-  url "https://persistent.oaistatic.com/classic/public/ChatGPT_Classic.dmg",
-      verified: "persistent.oaistatic.com/classic/public/"
+  url "https://persistent.oaistatic.com/classic/public/ChatGPT_Classic.dmg"
   name "ChatGPT Classic"
   desc "OpenAI's previous ChatGPT desktop app"
   homepage "https://chatgpt.com/"
@@ -18,8 +17,8 @@ cask "chatgpt-classic" do
   end
 
   auto_updates true
-  depends_on macos: :sonoma
   depends_on arch: :arm64
+  depends_on macos: :sonoma
 
   app "ChatGPT Classic.app"
 

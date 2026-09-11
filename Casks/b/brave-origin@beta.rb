@@ -2,12 +2,17 @@ cask "brave-origin@beta" do
   arch arm: "arm64", intel: "x64"
   folder_arch = on_arch_conditional arm: "-arm64"
 
-  version "1.93.118.0"
-  sha256 arm:   "6efe5c84bbcd1c7751256a3ee1c061074cf714955e44e5719b4bc813c8cccf3e",
-         intel: "f00dbbda791ff633a8509f4a769373d7d0e6c2ee3fb87978cb40a32eb773110e"
+  sha256 arm:   "426a981c0ea6304a8dbe8233188cc5aa691a1fb76a4da76dcdcf3771b4574185",
+         intel: "5580abbadba2125580ac64c54c989c79d28ece1870462b45e63b07f2d5a7a76c"
 
-  url "https://updates-cdn.bravesoftware.com/sparkle/Brave-Origin/beta#{folder_arch}/#{version.major_minor_patch.sub(".", "")}/Brave-Origin-Beta-#{arch}.dmg",
-      verified: "updates-cdn.bravesoftware.com/sparkle/Brave-Origin/"
+  on_arm do
+    version "1.96.50.0"
+  end
+  on_intel do
+    version "1.96.50.0"
+  end
+
+  url "https://updates-cdn.bravesoftware.com/sparkle/Brave-Origin/beta#{folder_arch}/#{version.major_minor_patch.sub(".", "")}/Brave-Origin-Beta-#{arch}.dmg"
   name "Brave Origin Beta"
   desc "Privacy-focused web browser"
   homepage "https://brave.com/origin/#beta"
@@ -18,7 +23,7 @@ cask "brave-origin@beta" do
   end
 
   auto_updates true
-  depends_on macos: :monterey
+  depends_on macos: :ventura
 
   app "Brave Origin Beta.app"
 

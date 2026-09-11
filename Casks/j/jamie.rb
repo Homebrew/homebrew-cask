@@ -1,9 +1,8 @@
 cask "jamie" do
-  version "5.7.8"
-  sha256 "ea33739a4f08b6966a75ddcbc3b294e7a68e5ec9323312e457f03dd9f4490935"
+  version "5.7.16"
+  sha256 "53bcfcf4cc44c503d1878d1b812e1906730df5eee171e7662a4103934a58723e"
 
-  url "https://github.com/meetjamie/releases/releases/download/app-v#{version}/Jamie_universal.app.tar.gz",
-      verified: "github.com/meetjamie/releases/"
+  url "https://github.com/meetjamie/releases/releases/download/app-v#{version}/Jamie_#{version}_universal.app.tar.gz"
   name "Jamie"
   desc "AI-powered meeting notes"
   homepage "https://www.meetjamie.ai/"
@@ -18,5 +17,14 @@ cask "jamie" do
 
   app "Jamie.app"
 
-  zap trash: "~/Library/Application Support/jamie"
+  uninstall launchctl: "Jamie"
+
+  zap trash: [
+    "~/Library/Application Support/com.jamie.app",
+    "~/Library/Application Support/jamie",
+    "~/Library/Caches/com.jamie.app",
+    "~/Library/HTTPStorages/com.jamie.app.binarycookies",
+    "~/Library/LaunchAgents/Jamie.plist",
+    "~/Library/WebKit/com.jamie.app",
+  ]
 end

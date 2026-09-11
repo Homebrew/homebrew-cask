@@ -6,7 +6,7 @@ cask "font-scoutie-sans" do
       branch:    "main",
       only_path: "ofl/scoutiesans"
   name "Scoutie Sans"
-  homepage "https://github.com/sursly/scoutie"
+  homepage "https://fonts.google.com/specimen/Scoutie+Sans"
 
   font "ScoutieSans-Italic[wght].ttf"
   font "ScoutieSans[wght].ttf"

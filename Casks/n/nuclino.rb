@@ -2,8 +2,7 @@ cask "nuclino" do
   version "1.6.8"
   sha256 "dcebeef913bdb8b7f1b3badd418b3599069aac9cceb9b31916f88999d814b927"
 
-  url "https://s3-eu-central-1.amazonaws.com/repository.nuclino.com/mac/Nuclino-#{version}-universal.dmg",
-      verified: "s3-eu-central-1.amazonaws.com/repository.nuclino.com/"
+  url "https://s3-eu-central-1.amazonaws.com/repository.nuclino.com/mac/Nuclino-#{version}-universal.dmg"
   name "Nuclino"
   desc "Collaborative wiki and knowledgebase"
   homepage "https://www.nuclino.com/"

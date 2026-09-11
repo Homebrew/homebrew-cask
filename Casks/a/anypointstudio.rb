@@ -1,9 +1,9 @@
 cask "anypointstudio" do
   arch arm: "Arm", intel: "64"
 
-  version "7.26.0"
-  sha256 arm:   "04d3316b8175f7482f4b04b4b049a17db48a355bb28c2102cf0358034ff3924d",
-         intel: "86e1ac3c75c0d993ee67800af624c6974fa30864ca953b046138dba9c02b859c"
+  version "7.28.0"
+  sha256 arm:   "220e428ac78039706e64ca5a77ca510d9829eda1a58db01b6d9cc3e6b072e439",
+         intel: "b7415f1ca0dc482508d6f617de59f11270ee0186a0f15ee9aa9a6afa694ff3f5"
 
   url "https://www.mulesoft.com/downloads/studio/latest/AnypointStudio-#{version}-macos#{arch}.zip",
       referer: "https://www.mulesoft.com/api/products"
@@ -16,7 +16,7 @@ cask "anypointstudio" do
     regex(/Anypoint\s+Studio\s+v?(\d+(?:\.\d+)+)/i)
   end
 
-  depends_on macos: :big_sur
+  depends_on :macos
 
   app "AnypointStudio.app"
 

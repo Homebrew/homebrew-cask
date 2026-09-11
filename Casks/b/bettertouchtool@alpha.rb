@@ -1,6 +1,6 @@
 cask "bettertouchtool@alpha" do
-  version "6.643,2026071702"
-  sha256 "dced6ee1d147f5285306b8d572861d66ef4a6ac5c7869116d71b26f6a072986e"
+  version "6.803,2026091001"
+  sha256 "54c2bd61bb30821ddd70b9c8e5019b3a3488ecb6acb7e2b3ad4bb0fa175e0076"
 
   url "https://folivora.ai/releases/btt#{version.csv.first}-#{version.csv.second}.zip"
   name "BetterTouchTool"
@@ -33,7 +33,14 @@ cask "bettertouchtool@alpha" do
   uninstall quit: "com.hegenberg.BetterTouchTool"
 
   zap trash: [
+    "~/Library/Application Scripts/com.hegenberg.BetterTouchTool.BetterTouchTool-Widgets",
+    "~/Library/Application Scripts/com.hegenberg.BetterTouchTool.BTTFinderContextMenu",
     "~/Library/Application Support/BetterTouchTool",
+    "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.hegenberg.bettertouchtool.sfl*",
+    "~/Library/Caches/com.hegenberg.BetterTouchTool",
+    "~/Library/Containers/com.hegenberg.BetterTouchTool.BetterTouchTool-Widgets",
+    "~/Library/Containers/com.hegenberg.BetterTouchTool.BTTFinderContextMenu",
+    "~/Library/HTTPStorages/com.hegenberg.BetterTouchTool",
     "~/Library/Preferences/com.hegenberg.BetterTouchTool.plist",
   ]
 end

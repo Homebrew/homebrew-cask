@@ -1,6 +1,6 @@
 cask "unnaturalscrollwheels" do
-  version "1.4.0"
-  sha256 "28942757f5d633e2695b73b6f67c86a3ae09b5ee86c37239e1b5df15202452b7"
+  version "1.4.2"
+  sha256 "b75c3e5ebb13f94053e593d33f4e1019327d7cb60342214beae65aab7843eb88"
 
   url "https://github.com/ther0n/UnnaturalScrollWheels/releases/download/#{version}/UnnaturalScrollWheels-#{version}.dmg"
   name "UnnaturalScrollWheels"
@@ -21,5 +21,6 @@ cask "unnaturalscrollwheels" do
   zap trash: [
     "~/Library/Application Scripts/com.theron.UnnaturalScrollWheels",
     "~/Library/Containers/com.theron.UnnaturalScrollWheels",
+    "~/Library/Preferences/com.theron.UnnaturalScrollWheels.plist",
   ]
 end

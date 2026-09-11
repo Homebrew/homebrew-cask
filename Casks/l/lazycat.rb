@@ -1,12 +1,11 @@
 cask "lazycat" do
   arch arm: "arm64", intel: "x64"
 
-  version "2.0.14"
-  sha256 arm:   "081357d95dc6fdc9c9c2a45d85894931fde27199e8da0bfed279eb98a983ba45",
-         intel: "e23d04df2ea2056e35ca386fa174a78620254f7813438f6d05534b5b17b18a64"
+  version "2.0.25"
+  sha256 arm:   "2b975b903b9137e91bade6e44d62713ad206f17057c97ff08899494a5b15ad73",
+         intel: "b0d915f3cfad2cae9b72c0dea6e2c20e34a2c20cfbd9a9b041d9d624725dd6de"
 
-  url "https://dl.lazycatmicroserver.com/client/desktop/stable/lzc-client-desktop_v#{version}_#{arch}.dmg",
-      verified: "dl.lazycatmicroserver.com/client/desktop/stable/"
+  url "https://dl.lazycatmicroserver.com/client/desktop/stable/lzc-client-desktop_v#{version}_#{arch}.dmg"
   name "LazyCat"
   desc "Client for LazyCat hardware"
   homepage "https://lazycat.cloud/"

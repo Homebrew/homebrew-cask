@@ -1,17 +1,13 @@
 cask "stirling-pdf" do
-  version "2.14.2"
+  arch intel: "x86_64"
+  os macos: "macos-universal.dmg", linux: "linux-#{arch}.AppImage"
 
-  url_end = on_system_conditional macos: "macos-universal.dmg", linux: "linux-x86_64.AppImage"
-
-  url "https://github.com/Stirling-Tools/Stirling-PDF/releases/download/v#{version}/Stirling-PDF-#{url_end}",
-      verified: "github.com/Stirling-Tools/Stirling-PDF/"
-  name "Stirling-PDF"
-  desc "PDF utility"
-  homepage "https://stirling.com/"
+  version "2.14.3"
+  sha256 arm:          "25073f75260c75854af3c81b457958471142b204f3f37c1142b41c75c5704a55",
+         intel:        "25073f75260c75854af3c81b457958471142b204f3f37c1142b41c75c5704a55",
+         x86_64_linux: "9beca308e9c507a7eec804b672e3bf220728caf49a58e2cd896154a69ac82d07"
 
   on_macos do
-    sha256 "d31e0f2e8f6d06d3fd199aa47804f1e05377f9d05680377390bfdb2ac949f67c"
-
     app "Stirling PDF.app"
 
     zap trash: [
@@ -23,11 +19,14 @@ cask "stirling-pdf" do
       "~/Library/WebKit/stirling.pdf.dev",
     ]
   end
-
   on_linux do
-    sha256 "ad534e652e02536ebb1542c6f62d8a38f64a9eff7f8387525a2c8bd203c309f1"
     depends_on arch: :x86_64
 
-    app_image "Stirling-PDF-linux-x86_64.AppImage", target: "Stirling-PDF.AppImage"
+    app_image "Stirling-PDF-linux-#{arch}.AppImage", target: "Stirling-PDF.AppImage"
   end
+
+  url "https://github.com/Stirling-Tools/Stirling-PDF/releases/download/v#{version}/Stirling-PDF-#{os}"
+  name "Stirling-PDF"
+  desc "PDF utility"
+  homepage "https://stirling.com/"
 end

@@ -2,8 +2,7 @@ cask "font-oranienbaum" do
   version :latest
   sha256 :no_check
 
-  url "https://github.com/google/fonts/raw/main/ofl/oranienbaum/Oranienbaum-Regular.ttf",
-      verified: "github.com/google/fonts/"
+  url "https://github.com/google/fonts/raw/main/ofl/oranienbaum/Oranienbaum-Regular.ttf"
   name "Oranienbaum"
   homepage "https://fonts.google.com/specimen/Oranienbaum"
 

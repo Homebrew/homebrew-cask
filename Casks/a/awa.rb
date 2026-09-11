@@ -2,8 +2,7 @@ cask "awa" do
   version "1.5.7"
   sha256 "2d1bba828ca64afb19511b6d770414e06659af97a85ca05dbc7cde36d1b79e01"
 
-  url "https://download-d.awa.io/mac/stable/AWASetup-v#{version}.dmg",
-      verified: "download-d.awa.io/mac/stable/"
+  url "https://download-d.awa.io/mac/stable/AWASetup-v#{version}.dmg"
   name "AWA"
   desc "Music streaming service"
   homepage "https://awa.fm/"

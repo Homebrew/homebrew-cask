@@ -1,9 +1,8 @@
 cask "djv" do
-  version "3.4.2"
-  sha256 "051af2c559c5bcf3d92d212a6e2f0f9d11e911d4935c598b32835af046eda8ff"
+  version "3.6.0"
+  sha256 "dcd355bb39325205db74d66d8223402c24101780339a3cc6563b585a20713bfe"
 
-  url "https://github.com/grizzlypeak3d/DJV/releases/download/#{version}/DJV-#{version}-macOS-arm64.dmg",
-      verified: "github.com/grizzlypeak3d/DJV/"
+  url "https://github.com/grizzlypeak3d/DJV/releases/download/#{version}/DJV-#{version}-macOS-arm64.dmg"
   name "DJV"
   desc "Review software for VFX, animation, and film production"
   homepage "https://grizzlypeak3d.github.io/DJV/"
@@ -13,10 +12,10 @@ cask "djv" do
     strategy :github_latest
   end
 
-  depends_on :macos
   depends_on arch: :arm64
+  depends_on :macos
 
-  app "DJV.app"
+  app "djv.app"
 
   zap trash: [
         "~/Documents/DJV/djv.log",

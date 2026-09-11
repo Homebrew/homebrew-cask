@@ -1,9 +1,8 @@
 cask "nani" do
-  version "1.0.101"
-  sha256 "28ebaa517b2018d159f63ea31d637ab19fc900c2860d9c11636d277e3514e7aa"
+  version "1.1.8"
+  sha256 "c157543a17eb8278bd855c0c795615886c93b840a154a0cc51f29f4c5562d4f5"
 
-  url "https://nani-desktop.kiok.jp/artifacts/nani-#{version}.dmg",
-      verified: "nani-desktop.kiok.jp/artifacts/"
+  url "https://nani-desktop.kiok.jp/artifacts/nani-#{version}.dmg"
   name "Nani Translate"
   desc "AI-powered translator"
   homepage "https://nani.now/"

@@ -1,9 +1,9 @@
 cask "superwhisper" do
-  version "2.16.4"
-  sha256 "8dbebd6eebd61106984e82809c757f771b86e18bd9ad8a6b6c499a24052d9cc0"
+  version "2.18.3"
+  sha256 "45f52f78907ae49afc3f4729e52737591aec4b825171da709a574e61c069d1bf"
 
   url "https://builds.superwhisper.com/v#{version}/superwhisper.zip"
-  name "superwhisper"
+  name "Superwhisper"
   desc "Dictation tool including LLM reformatting"
   homepage "https://superwhisper.com/"
 

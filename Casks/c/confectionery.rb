@@ -2,8 +2,7 @@ cask "confectionery" do
   version "1.2.1"
   sha256 "8f8d8e666a9809ddb171abe68b1d341327a13e4d649873648f129fdebd93d043"
 
-  url "https://app-updates.vadimdemedes.com/confectionery/download/Confectionery-#{version}-mac.dmg",
-      verified: "app-updates.vadimdemedes.com/confectionery/download/"
+  url "https://app-updates.vadimdemedes.com/confectionery/download/Confectionery-#{version}-mac.dmg"
   name "Confectionery"
   desc "Website screenshot tool"
   homepage "https://confectioneryapp.com/"

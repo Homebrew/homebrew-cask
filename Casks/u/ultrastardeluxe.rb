@@ -1,21 +1,22 @@
 cask "ultrastardeluxe" do
   arch arm: "ARM", intel: "x86"
 
-  version "2026.6.0"
-  sha256 arm:   "5850c276cd686765d78452bb3ae3d04e2c19e7c16b73f46d46d46921a7ff9c8d",
-         intel: "b714979edccbbe8f5623abb0d86ca8c9ce40a99499ba9f4386d25553eb970bb2"
+  version "2026.8.1"
+  sha256 arm:   "b69cfe311d4ee6004db6d81596812817767b8ef59d5715f9ba08c6012a0bfb16",
+         intel: "03d488e988b325cbd4ce16a210d46144372fee463fcb92854c015829b0d7de74"
 
-  url "https://github.com/UltraStar-Deluxe/USDX/releases/download/v#{version}/UltraStarDeluxe-mac-#{arch}-#{version}.dmg",
-      verified: "github.com/UltraStar-Deluxe/USDX/"
+  url "https://github.com/UltraStar-Deluxe/USDX/releases/download/v#{version}/UltraStarDeluxe-mac-#{arch}-#{version}.dmg"
   name "UltraStar Deluxe"
   desc "Karaoke game"
   homepage "https://usdx.eu/"
 
   disable! date: "2026-09-01", because: :fails_gatekeeper_check
 
-  depends_on macos: :big_sur
+  depends_on :macos
 
   app "UltraStarDeluxe.app"
+
+  uninstall quit: "org.ultrastardeluxe.ultrastardeluxe"
 
   zap trash: "~/Library/Application Support/UltraStarDeluxe1.3"
 end

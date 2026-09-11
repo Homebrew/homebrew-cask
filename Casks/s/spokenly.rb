@@ -1,6 +1,6 @@
 cask "spokenly" do
-  version "2.25.3"
-  sha256 "facc919c9f0c316a186f155c1608ccf157e333bf84c15ac644e9f94b4fd3c3cc"
+  version "2.29.1"
+  sha256 "d960d726a73a07c82431e4fd5109198109a85048203baa00f459c3deb64abf9e"
 
   url "https://cdn.spokenly.app/releases/macos/Spokenly-#{version}.dmg"
   name "Spokenly"
@@ -13,13 +13,15 @@ cask "spokenly" do
   end
 
   auto_updates true
-  depends_on macos: :sonoma
+  depends_on macos: :ventura
 
   app "Spokenly.app"
 
   zap trash: [
+    "~/Library/Application Support/app.spokenly.revenuecat",
     "~/Library/Application Support/Spokenly",
     "~/Library/Caches/app.spokenly",
+    "~/Library/HTTPStorages/app.spokenly",
     "~/Library/Preferences/app.spokenly.plist",
   ]
 end

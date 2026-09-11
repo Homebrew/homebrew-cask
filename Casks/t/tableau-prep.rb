@@ -1,9 +1,9 @@
 cask "tableau-prep" do
   arch arm: "-arm64"
 
-  version "2026.2.0"
-  sha256 arm:   "9ca590ae9e2a77b1a8469942708465314ccda4e48a23b21e822144f1ffed42be",
-         intel: "a5fcca1e1a77f920c796f0651d8cd4fbb97af5e3a0eba22ad31f01da0f07b044"
+  version "2026.2.2"
+  sha256 arm:   "daf2965e613d274b55e636c6a439fafca36f56960de9b31949b22d13aa0cfa37",
+         intel: "1048547cd29a04301956c05134bf9504cd9feacfc6a341dc68821a92a291a089"
 
   url "https://downloads.tableau.com/esdalt/tableau_prep/#{version}/TableauPrep-#{version.dots_to_hyphens}#{arch}.dmg",
       user_agent: :curl

@@ -8,8 +8,10 @@ cask "logmein-client" do
   homepage "https://www.logmein.com/pro"
 
   livecheck do
-    url "https://secure.logmein.com/versioncheck_logmein_client.ashx?product=LogMeInClient&os=macosx&osversion=167776515"
-    regex(/Version:\s+v?(\d+(?:\.\d+)+)/i)
+    url :url
+    strategy :extract_plist do |items|
+      items["com.logmein.ignition"]&.short_version
+    end
   end
 
   depends_on :macos

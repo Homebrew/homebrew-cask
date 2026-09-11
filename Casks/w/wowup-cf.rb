@@ -1,18 +1,17 @@
 cask "wowup-cf" do
   arch arm: "-arm64"
 
-  version "2.22.0"
-  sha256 arm:   "efe7d96b2666be9ad7797794799bc5f28dea321786d0001b870598eb6aac2bb7",
-         intel: "6adc00b4247fcc63a7497aaa917c3e7ee656747162b3cd48fd198a0583f04669"
+  version "2.23.1"
+  sha256 arm:   "fd03196d792fdb71d71141f6c4f2ed6215880afc6d7d237ca066d1fe786a3c2e",
+         intel: "b6e6bdc1f7d6ac7a03009c4e024989cbf5f471914019fa80e5d519b144d88c64"
 
-  url "https://github.com/WowUp/WowUp.CF/releases/download/v#{version}/WowUp-CF-#{version}#{arch}.dmg",
-      verified: "github.com/WowUp/WowUp.CF/"
+  url "https://github.com/WowUp/WowUp.CF/releases/download/v#{version}/WowUp-CF-#{version}#{arch}.dmg"
   name "WowUp-CF"
   desc "World of Warcraft addon manager"
   homepage "https://wowup.io/"
 
   auto_updates true
-  depends_on macos: :big_sur
+  depends_on macos: :monterey
 
   app "WowUp-CF.app"
 

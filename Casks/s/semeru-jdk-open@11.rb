@@ -1,12 +1,11 @@
 cask "semeru-jdk-open@11" do
   arch arm: "aarch64", intel: "x64"
 
-  version "11.0.31.0"
-  sha256 arm:   "b828335d3732bae21a7de2b81aaf9a44a68dd60a88b3493c72351d6d158021aa",
-         intel: "366052f6c89751c9a51c3e9d4557b1b1e90bad2f71b618307b83d18a223f7883"
+  version "11.0.32.10"
+  sha256 arm:   "ba72673462403da29bede93dc669f2eafed80262fe14f8da5fb09fca79fdce95",
+         intel: "75b23b31802bae00272e8c3a42039bf11b8cd02983140311fa364199c205f315"
 
-  url "https://github.com/ibmruntimes/semeru#{version.major}-binaries/releases/download/jdk-#{version}/ibm-semeru-open-jdk_#{arch}_mac_#{version}.pkg",
-      verified: "github.com/ibmruntimes/semeru#{version.major}-binaries/"
+  url "https://github.com/ibmruntimes/semeru#{version.major}-binaries/releases/download/jdk-#{version}/ibm-semeru-open-jdk_#{arch}_mac_#{version}.pkg"
   name "IBM Semeru Runtime (JDK 11) Open Edition"
   desc "Production-ready JDK with the OpenJDK class libraries and the Eclipse OpenJ9 JVM"
   homepage "https://developer.ibm.com/languages/semeru-runtimes/"

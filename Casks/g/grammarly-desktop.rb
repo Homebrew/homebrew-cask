@@ -1,6 +1,6 @@
 cask "grammarly-desktop" do
-  version "1.175.0.0"
-  sha256 "bc43b9388da66272aac240892798e6e35a1d0230e9846622e57a74b2e24d3cc2"
+  version "1.191.0.0"
+  sha256 "ef565aa404552e2af642574e452dc301736c7acc611af0ff0d308948f6ec4ca0"
 
   url "https://download-mac.grammarly.com/versions/#{version}/Grammarly.dmg"
   name "Grammarly Desktop"
@@ -13,17 +13,25 @@ cask "grammarly-desktop" do
   end
 
   auto_updates true
-  depends_on macos: :big_sur
+  depends_on :macos
 
   app "Grammarly Installer.app", target: "Grammarly Desktop.app"
 
+  uninstall launchctl: [
+    "com.grammarly.ProjectLlama.LoginHelper",
+    "com.grammarly.ProjectLlama.Shepherd",
+    "com.grammarly.ProjectLlama.Uninstaller",
+  ]
+
   zap trash: [
+    "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.grammarly.projectllama.loginhelper.sfl*",
     "~/Library/Application Support/com.grammarly.ProjectLlama",
     "~/Library/Caches/com.grammarly.ProjectLlama",
     "~/Library/HTTPStorages/com.grammarly.GRLlamaOnboarding.binarycookies",
     "~/Library/HTTPStorages/com.grammarly.ProjectLlama",
     "~/Library/HTTPStorages/com.grammarly.ProjectLlama.binarycookies",
     "~/Library/LaunchAgents/com.grammarly.ProjectLlama.Shepherd.plist",
+    "~/Library/LaunchAgents/com.grammarly.ProjectLlama.Uninstaller.plist",
     "~/Library/Preferences/com.grammarly.ProjectLlama.plist",
     "~/Library/WebKit/com.grammarly.GRLlamaOnboarding",
     "~/Library/WebKit/com.grammarly.ProjectLlama",

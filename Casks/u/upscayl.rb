@@ -1,9 +1,34 @@
 cask "upscayl" do
-  version "2.15.0"
-  sha256 "0e53c9ee8c1800cb3e2ce0f574e4e1a35a51945e19ff2b93f33928bbd7fd4c5a"
+  os = on_system_conditional macos: "mac.dmg", linux: "linux.AppImage"
 
-  url "https://github.com/upscayl/upscayl/releases/download/v#{version}/upscayl-#{version}-mac.dmg",
-      verified: "github.com/upscayl/upscayl/"
+  version "2.15.0"
+  sha256 arm:          "0e53c9ee8c1800cb3e2ce0f574e4e1a35a51945e19ff2b93f33928bbd7fd4c5a",
+         intel:        "0e53c9ee8c1800cb3e2ce0f574e4e1a35a51945e19ff2b93f33928bbd7fd4c5a",
+         x86_64_linux: "6459457e589bcb99e779ea442dce608bacda33916b7019a8862b7c6252aa8229"
+
+  on_macos do
+    depends_on macos: :monterey
+
+    app "Upscayl.app"
+
+    zap trash: [
+      "~/Library/Application Support/Upscayl",
+      "~/Library/Preferences/org.upscayl.app.plist",
+      "~/Library/Saved Application State/org.upscayl.app.savedState",
+    ]
+  end
+  on_linux do
+    depends_on arch: :x86_64
+
+    app_image "upscayl-#{version}-linux.AppImage", target: "Upscayl.AppImage"
+
+    zap trash: [
+      "~/.config/Upscayl",
+      "~/.config/upscayl",
+    ]
+  end
+
+  url "https://github.com/upscayl/upscayl/releases/download/v#{version}/upscayl-#{version}-#{os}"
   name "Upscayl"
   desc "AI image upscaler"
   homepage "https://upscayl.org/"
@@ -13,13 +38,5 @@ cask "upscayl" do
     strategy :github_latest
   end
 
-  depends_on macos: :monterey
-
-  app "Upscayl.app"
-
-  zap trash: [
-    "~/Library/Application Support/Upscayl",
-    "~/Library/Preferences/org.upscayl.app.plist",
-    "~/Library/Saved Application State/org.upscayl.app.savedState",
-  ]
+  auto_updates true
 end

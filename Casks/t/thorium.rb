@@ -5,8 +5,7 @@ cask "thorium" do
   sha256 arm:   "2f19dcaf4b717330626ebce7148653da399945467699bef7f0843d7b5f512030",
          intel: "ef1e798792e0b2fc76348e2376453ce21cb7bb8607e8b8dff6d3c2298d69c239"
 
-  url "https://github.com/edrlab/thorium-reader/releases/download/v#{version.csv.first}/Thorium-#{version.csv.second || version.csv.first}#{arch}.dmg",
-      verified: "github.com/edrlab/thorium-reader/"
+  url "https://github.com/edrlab/thorium-reader/releases/download/v#{version.csv.first}/Thorium-#{version.csv.second || version.csv.first}#{arch}.dmg"
   name "Thorium Reader"
   desc "Epub reader"
   homepage "https://www.edrlab.org/software/thorium-reader/"

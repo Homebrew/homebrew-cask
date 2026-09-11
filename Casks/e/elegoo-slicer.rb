@@ -1,9 +1,9 @@
 cask "elegoo-slicer" do
   arch arm: "arm64", intel: "x86_64"
 
-  version "1.5.2.2"
-  sha256 arm:   "6ebd483669595aedcfe0a3fe44e28902caf2b544464d0bb6f71f855ddb633d1c",
-         intel: "35201584803446e88534eeaed9bcf4c0cd9f72fe2d29d854b50f51e749c7f0e6"
+  version "1.5.3.5"
+  sha256 arm:   "2ff9db9d398af552738f447ad63710d61407b69a7140457238d1507c978b5d9f",
+         intel: "120467d2f61ff1ed4b085a4f062ee524041e12738a6ee32da5baf53a1a943d9c"
 
   url "https://github.com/ELEGOO-3D/ElegooSlicer/releases/download/v#{version}/ElegooSlicer_Mac_#{arch}_V#{version}.dmg"
   name "ElegooSlicer"
@@ -19,10 +19,13 @@ cask "elegoo-slicer" do
 
   app "ElegooSlicer.app"
 
+  uninstall quit: "com.elegoo3d.elegoo-slicer"
+
   zap trash: [
     "~/Library/Application Support/ElegooSlicer",
     "~/Library/Caches/com.elegoo3d.elegoo-slicer",
     "~/Library/Preferences/com.elegoo3d.elegoo-slicer.plist",
     "~/Library/Saved Application State/com.elegootechsupport.elegoo-slicer.savedState",
+    "~/Library/WebKit/com.elegoo3d.elegoo-slicer",
   ]
 end

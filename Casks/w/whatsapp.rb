@@ -1,6 +1,6 @@
 cask "whatsapp" do
-  version "26.28.22"
-  sha256 "1e14976f11380bf3b9d5e3e565707845f114d7a9a581ce8f1085fa046fccd29d"
+  version "26.36.21"
+  sha256 "99804edbcd5cfc6825ac906b184b091ef9479e7fe0ea37606e0403972485d6fc"
 
   url "https://web.whatsapp.com/desktop/mac_native/release/?version=2.#{version}&extension=zip&configuration=Release&branch=master&is_buck=true"
   name "WhatsApp"
@@ -21,6 +21,10 @@ cask "whatsapp" do
   uninstall quit: "net.whatsapp.WhatsApp"
 
   zap trash: [
+    "~/Library/Application Scripts/group.net.whatsapp.family",
+    "~/Library/Application Scripts/group.net.whatsapp.WhatsApp.private",
+    "~/Library/Application Scripts/group.net.whatsapp.WhatsApp.shared",
+    "~/Library/Application Scripts/group.net.whatsapp.WhatsAppSMB.shared",
     "~/Library/Application Scripts/net.whatsapp.WhatsApp*",
     "~/Library/Caches/net.whatsapp.WhatsApp",
     "~/Library/Containers/net.whatsapp.WhatsApp*",

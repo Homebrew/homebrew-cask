@@ -2,8 +2,7 @@ cask "reikey" do
   version "1.4.2"
   sha256 "ceee2ece8dde1e1d8d498aa5d9782dbf5a62b324903732e08a97de086811446b"
 
-  url "https://bitbucket.org/objective-see/deploy/downloads/ReiKey_#{version}.zip",
-      verified: "bitbucket.org/objective-see/"
+  url "https://bitbucket.org/objective-see/deploy/downloads/ReiKey_#{version}.zip"
   name "ReiKey"
   desc "Scans, detects, and monitors keyboard taps"
   homepage "https://objective-see.org/products/reikey.html"

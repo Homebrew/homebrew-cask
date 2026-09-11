@@ -1,9 +1,8 @@
 cask "maestri" do
-  version "0.34.5"
-  sha256 "3dde988e733a29151446446df18e08720853c5e280f94d0056e4cbb133f29c1b"
+  version "0.46.5"
+  sha256 "2d89202725fcfe81437b217160e6b4f0344e950a8acec4049ab8348a8d750dc1"
 
-  url "https://pub-84eb0b1f3fb3420bbe57a88de7443b71.r2.dev/downloads/Maestri-#{version}.zip",
-      verified: "pub-84eb0b1f3fb3420bbe57a88de7443b71.r2.dev/downloads/"
+  url "https://pub-84eb0b1f3fb3420bbe57a88de7443b71.r2.dev/downloads/Maestri-#{version}.zip"
   name "Maestri"
   desc "Canvas for agent orchestration"
   homepage "https://www.themaestri.app/"
@@ -20,8 +19,10 @@ cask "maestri" do
 
   zap trash: [
     "~/.maestri",
+    "~/Library/Application Support/CrashReporter/Maestri_*.plist",
     "~/Library/Caches/com.evercraftlabs.Maestro",
     "~/Library/HTTPStorages/com.evercraftlabs.Maestro",
+    "~/Library/Logs/DiagnosticReports/Maestri-*.ips",
     "~/Library/Preferences/com.evercraftlabs.Maestro.plist",
   ]
 end

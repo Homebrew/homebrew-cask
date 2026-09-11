@@ -2,8 +2,7 @@ cask "domzilla-caffeine" do
   version "1.6.4"
   sha256 "792cf299c193b6e82d12877129844b05df8f21d4165655d4567e60291c6bd5e7"
 
-  url "https://dr-caffeine-mac.s3.amazonaws.com/Caffeine_#{version}.zip",
-      verified: "dr-caffeine-mac.s3.amazonaws.com/"
+  url "https://dr-caffeine-mac.s3.amazonaws.com/Caffeine_#{version}.zip"
   name "Caffeine"
   desc "Utility that prevents the system from going to sleep"
   homepage "https://www.caffeine-app.net/"

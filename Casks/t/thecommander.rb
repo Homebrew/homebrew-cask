@@ -1,6 +1,6 @@
 cask "thecommander" do
-  version "1.7.1"
-  sha256 "05b470328e42332302615c5dcc13261244fff505e9b010d7e617cbe44e88d1b0"
+  version "1.9.1"
+  sha256 "38ee13503d1e48bf0614df7ab5df6a0afeca894bb0625d899e68dffbdadf7325"
 
   url "https://die-gutbrods.de/thecommander/updates/TheCommander-#{version}.dmg"
   name "TheCommander"
@@ -19,6 +19,7 @@ cask "thecommander" do
 
   zap trash: [
     "~/Library/Application Support/de.die-gutbrods.TheCommander",
+    "~/Library/Application Support/TheCommander",
     "~/Library/Caches/de.die-gutbrods.TheCommander",
     "~/Library/HTTPStorages/de.die-gutbrods.TheCommander",
     "~/Library/Preferences/de.die-gutbrods.TheCommander.plist",

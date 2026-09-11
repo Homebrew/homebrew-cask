@@ -1,7 +1,7 @@
 cask "factory" do
   arch arm: "arm64", intel: "x64"
 
-  version "0.132.0"
+  version "0.174.0"
   sha256 :no_check # required as upstream package is updated in-place
 
   url "https://downloads.factory.ai/factory-desktop/releases/#{version}/darwin/#{arch}/Factory-#{version}-#{arch}.dmg"
@@ -21,9 +21,13 @@ cask "factory" do
 
   zap trash: [
     "~/Library/Application Support/ai.factory.desktop",
+    "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.electron.factory.sfl*",
+    "~/Library/Application Support/Factory",
     "~/Library/Caches/ai.factory.desktop",
     "~/Library/HTTPStorages/ai.factory.desktop",
+    "~/Library/Logs/Factory",
     "~/Library/Preferences/ai.factory.desktop.plist",
+    "~/Library/Preferences/com.electron.factory.plist",
     "~/Library/Saved Application State/ai.factory.desktop.savedState",
     "~/Library/WebKit/ai.factory.desktop",
   ]

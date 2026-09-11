@@ -2,8 +2,7 @@ cask "font-monaspace-frozen" do
   version "1.400"
   sha256 "f4a846421d1d6bb1233e5cb748d2afb85c7111b3da994a200504eaffd97a3a05"
 
-  url "https://github.com/githubnext/monaspace/releases/download/v#{version}/monaspace-frozen-v#{version}.zip",
-      verified: "github.com/githubnext/monaspace/"
+  url "https://github.com/githubnext/monaspace/releases/download/v#{version}/monaspace-frozen-v#{version}.zip"
   name "Monaspace Frozen"
   homepage "https://monaspace.githubnext.com/"
 

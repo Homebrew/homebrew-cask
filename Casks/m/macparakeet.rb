@@ -1,9 +1,8 @@
 cask "macparakeet" do
-  version "0.7.3"
-  sha256 "0c4ccb1b6f0cedae0f7994afce393094596aacdd8548af374ae18ae500ecdd8a"
+  version "0.8.0"
+  sha256 "a82b5f5e1c64272766e09a1985b627aad41960c6eba3ac7b1b9359927b8da474"
 
-  url "https://github.com/moona3k/macparakeet/releases/download/v#{version}/MacParakeet.dmg",
-      verified: "github.com/moona3k/macparakeet/"
+  url "https://github.com/moona3k/macparakeet/releases/download/v#{version}/MacParakeet.dmg"
   name "MacParakeet"
   desc "Local speech-to-text, transcription, and meeting recording"
   homepage "https://macparakeet.com/"
@@ -18,6 +17,8 @@ cask "macparakeet" do
   depends_on macos: :sonoma
 
   app "MacParakeet.app"
+
+  uninstall quit: "com.macparakeet.MacParakeet"
 
   zap trash: [
     "~/Library/Application Support/MacParakeet",

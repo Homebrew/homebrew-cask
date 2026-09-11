@@ -5,8 +5,7 @@ cask "amical" do
   sha256 arm:   "971985d4ccb3dc89d37be0a6d8661908e5a73092ab4163a9627a866f23424a02",
          intel: "4ad40083b5510d2da0695a2dc158c7b6023fe6b662adbd2b4b66ed4253c13779"
 
-  url "https://github.com/amicalhq/amical/releases/download/v#{version}/Amical-macos-#{arch}.dmg",
-      verified: "github.com/amicalhq/amical/"
+  url "https://github.com/amicalhq/amical/releases/download/v#{version}/Amical-macos-#{arch}.dmg"
   name "Amical"
   desc "AI dictation app"
   homepage "https://amical.ai/"

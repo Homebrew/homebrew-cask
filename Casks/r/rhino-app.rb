@@ -1,9 +1,8 @@
 cask "rhino-app" do
-  version "8.33.26188.13002"
-  sha256 "5e1285dab4eae43b4353197b62a9b394f6da164fc354c7dd2fbefcfa57125f6c"
+  version "8.35.26251.13002"
+  sha256 "d13dcb084ad356ab03be054e0cac510caed9f50702afcde10059b8bf0e3c805f"
 
-  url "https://files.mcneel.com/rhino/#{version.major}/mac/releases/rhino_#{version}.dmg",
-      verified: "mcneel.com/rhino/"
+  url "https://files.mcneel.com/rhino/#{version.major}/mac/releases/rhino_#{version}.dmg"
   name "Rhinoceros"
   desc "3D model creator"
   homepage "https://www.rhino3d.com/"

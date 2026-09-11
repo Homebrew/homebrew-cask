@@ -2,8 +2,7 @@ cask "font-grape-nuts" do
   version :latest
   sha256 :no_check
 
-  url "https://github.com/google/fonts/raw/main/ofl/grapenuts/GrapeNuts-Regular.ttf",
-      verified: "github.com/google/fonts/"
+  url "https://github.com/google/fonts/raw/main/ofl/grapenuts/GrapeNuts-Regular.ttf"
   name "Grape Nuts"
   homepage "https://fonts.google.com/specimen/Grape+Nuts"
 

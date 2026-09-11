@@ -5,8 +5,7 @@ cask "zulip" do
   sha256 arm:   "619cce44e8305766db464c8352f15c2ba4d7bb192fac52c30d6dd1d6d199eed6",
          intel: "27d5c08aeea4513a168a51d0f24996138f3a7d80b0a353c85828f0f4f77f4e35"
 
-  url "https://github.com/zulip/zulip-desktop/releases/download/v#{version}/Zulip-#{version}-#{arch}.dmg",
-      verified: "github.com/zulip/zulip-desktop/"
+  url "https://github.com/zulip/zulip-desktop/releases/download/v#{version}/Zulip-#{version}-#{arch}.dmg"
   name "Zulip"
   desc "Desktop client for the Zulip team chat platform"
   homepage "https://zulip.com/"

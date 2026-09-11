@@ -1,6 +1,6 @@
 cask "aptakube" do
-  version "1.18.5"
-  sha256 "2a9cfcaac2da6ce99a4ce6a2a45ed8fa5f54f94400bf696980e3566da2abb5c8"
+  version "1.20.0"
+  sha256 "646d853a4d50d19ea13a62208f93ae0e31d76b3903d13454978d7bf40affaad7"
 
   url "https://releases.aptakube.com/Aptakube_#{version}_universal.dmg"
   name "Aptakube"
@@ -15,7 +15,7 @@ cask "aptakube" do
   end
 
   auto_updates true
-  depends_on macos: :big_sur
+  depends_on :macos
 
   app "Aptakube.app"
 
@@ -23,5 +23,6 @@ cask "aptakube" do
     "~/Library/Application Support/com.aptakube.Aptakube",
     "~/Library/Caches/com.aptakube.Aptakube",
     "~/Library/Logs/com.aptakube.Aptakube",
+    "~/Library/WebKit/com.aptakube.Aptakube",
   ]
 end

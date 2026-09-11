@@ -1,9 +1,8 @@
 cask "activitywatch@beta" do
-  version "0.14.0b1"
-  sha256 "50a9cffaf7833bb0221c9b7889db50ee432310a536e9302d12d2bb9ac393c48d"
+  version "0.14.0b5"
+  sha256 "82e914c8b10e5ee7e1b06c96aa96e0b5a529f60fcb9897898c9d323a6cb6ff2d"
 
-  url "https://github.com/ActivityWatch/activitywatch/releases/download/v#{version}/activitywatch-tauri-v#{version}-macos-arm64.dmg",
-      verified: "github.com/ActivityWatch/activitywatch/"
+  url "https://github.com/ActivityWatch/activitywatch/releases/download/v#{version}/activitywatch-tauri-v#{version}-macos-arm64.dmg"
   name "ActivityWatch"
   desc "Time tracker"
   homepage "https://activitywatch.net/"
@@ -24,8 +23,8 @@ cask "activitywatch@beta" do
   end
 
   conflicts_with cask: "activitywatch"
-  depends_on macos: :big_sur
   depends_on arch: :arm64
+  depends_on macos: :monterey
 
   app "ActivityWatch.app"
 

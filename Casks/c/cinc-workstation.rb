@@ -1,7 +1,7 @@
 cask "cinc-workstation" do
   arch arm: "arm64", intel: "x86_64"
 
-  on_big_sur do
+  on_big_sur :or_older do
     version "24.4.1064"
     sha256 arm:   "4365418ae6f2387cc925fede5245bb40e8c7432629728a546bed625efe2f20bb",
            intel: "85752c80079b9a9d2038bbdaba30b764f8dd2dfb23f62652e68592e9dea917ce"
@@ -44,7 +44,7 @@ cask "cinc-workstation" do
 
   disable! date: "2026-09-01", because: :fails_gatekeeper_check
 
-  depends_on macos: :big_sur
+  depends_on :macos
 
   pkg "cinc-workstation-#{version}-1.#{arch}.pkg"
 
@@ -55,5 +55,5 @@ cask "cinc-workstation" do
             },
             pkgutil:   "com.cinc-project.pkg.cinc-workstation"
 
-  zap trash: "~/.cinc-workstation/"
+  zap trash: "~/.cinc-workstation"
 end

@@ -13,7 +13,7 @@ cask "vincelwt-chatgpt" do
   deprecate! date: "2025-06-21", because: :unmaintained
   disable! date: "2026-06-21", because: :unmaintained
 
-  depends_on macos: :big_sur
+  depends_on :macos
 
   app "Chatgpt.app"
 

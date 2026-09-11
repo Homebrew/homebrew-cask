@@ -5,8 +5,7 @@ cask "rnote" do
   sha256 arm:   "6db9e55b9a2c7ca19f4f02f779f930926da289ead4f6086915dc48e70159410b",
          intel: "fe321bdaa4c065c2ea3d757210316e6c995fa132ada484ce65ebe12586b4a902"
 
-  url "https://gitlab.com/api/v4/projects/44053427/packages/generic/rnote_macos/#{version}/Rnote-#{version}_#{arch}.dmg",
-      verified: "gitlab.com/api/v4/projects/44053427/packages/generic/rnote_macos/"
+  url "https://gitlab.com/api/v4/projects/44053427/packages/generic/rnote_macos/#{version}/Rnote-#{version}_#{arch}.dmg"
   name "Rnote"
   desc "Sketch and take handwritten notes"
   homepage "https://rnote.flxzt.net/"

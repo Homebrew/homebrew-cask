@@ -2,8 +2,7 @@ cask "boom" do
   version "1.7.20"
   sha256 :no_check
 
-  url "https://d13nae1tw8tdnq.cloudfront.net/Boom2mac/webstore/Boom2.dmg",
-      verified: "d13nae1tw8tdnq.cloudfront.net/Boom2mac/"
+  url "https://d13nae1tw8tdnq.cloudfront.net/Boom2mac/webstore/Boom2.dmg"
   name "Boom"
   desc "Transforms audio input"
   homepage "https://www.globaldelight.com/boom2/"
@@ -15,7 +14,7 @@ cask "boom" do
     end
   end
 
-  depends_on macos: :big_sur
+  depends_on :macos
 
   app "Boom 2.app"
 

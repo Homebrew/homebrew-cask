@@ -1,9 +1,9 @@
 cask "jamovi" do
   arch arm: "arm64", intel: "x64"
 
-  version "2.7.37.0"
-  sha256 arm:   "9010ab2e19b6bd30669aa757224a664dd14bf7c6201e0acdd1ace93b8a650b70",
-         intel: "63ecb036b4e4124d66f3fee5920512c7b25faceb3aae47ff43b806aaf66e7586"
+  version "28.2.0.0"
+  sha256 arm:   "d50b4040b4c4040d842c48c58b39d05a1dac0eef879f5adc189348456f19991b",
+         intel: "118b738e3d595c0812fae4c38d215ff34a91ab2be02f350f1709057e40b872fc"
 
   url "https://www.jamovi.org/downloads/jamovi-#{version}-macos-#{arch}.dmg",
       referer: "https://www.jamovi.org/download.html"
@@ -24,6 +24,7 @@ cask "jamovi" do
   app "jamovi.app"
 
   zap trash: [
+    "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/org.jamovi.jamovi.sfl*",
     "~/Library/Application Support/jamovi",
     "~/Library/Logs/jamovi",
     "~/Library/Preferences/org.jamovi.jamovi.plist",

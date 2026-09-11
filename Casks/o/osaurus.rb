@@ -1,9 +1,8 @@
 cask "osaurus" do
-  version "0.22.6"
-  sha256 "a6c2f7bddebbd2e36a8b3dd38c729ec50cd862e47a88423f88a045bd28f8bf46"
+  version "0.25.0"
+  sha256 "c12e2a7c77d6917929f16f72a472b9eae69a72b29788ea9ae283465cab662c14"
 
-  url "https://github.com/osaurus-ai/osaurus/releases/download/#{version}/Osaurus-#{version}.dmg",
-      verified: "github.com/osaurus-ai/osaurus/"
+  url "https://github.com/osaurus-ai/osaurus/releases/download/#{version}/Osaurus-#{version}.dmg"
   name "Osaurus"
   desc "LLM server built on MLX"
   homepage "https://osaurus.ai/"
@@ -13,11 +12,11 @@ cask "osaurus" do
     strategy :github_latest
   end
 
-  depends_on macos: :sequoia
   depends_on arch: :arm64
+  depends_on macos: :sequoia
 
-  app "Osaurus.app"
-  binary "#{appdir}/Osaurus.app/Contents/Helpers/osaurus"
+  app "osaurus.app"
+  binary "#{appdir}/osaurus.app/Contents/Helpers/osaurus"
 
   uninstall quit: "com.dinoki.osaurus"
 
@@ -26,6 +25,7 @@ cask "osaurus" do
     "~/Library/Application Support/Osaurus",
     "~/Library/Caches/com.dinoki.osaurus",
     "~/Library/HTTPStorages/com.dinoki.osaurus",
+    "~/Library/Logs/Osaurus",
     "~/Library/Preferences/com.dinoki.osaurus.plist",
     "~/Library/Saved Application State/com.dinoki.osaurus.savedState",
     "~/MLXModels",

@@ -1,12 +1,11 @@
 cask "spacewalker" do
-  version "1.8.4"
-  sha256 "c9544d26394c3d0f9d0f2499820a0651f61afcbad44bee4518821d9b5f03546e"
+  version "1.8.6"
+  sha256 "5b6af56070925145d2e616bd2b38bec52f6d3b1350aa9d3daeb1cec02c0bc279"
 
-  url "https://static.viture.dev/external-file/macOS/SpaceWalker-Installer_v#{version}.dmg",
-      verified: "static.viture.dev/external-file/macOS/"
+  url "https://static.viture.dev/external-file/macOS/SpaceWalker-Installer_v#{version}.dmg"
   name "SpaceWalker"
   desc "Use virtual monitors with Viture XR glasses"
-  homepage "https://academy.viture.com/xr_glasses/spacewalker_mac"
+  homepage "https://www.viture.com/academy/spacewalker/desktop"
 
   livecheck do
     url "https://static.viture.dev/external-file/macos/appstart_macos.txt"

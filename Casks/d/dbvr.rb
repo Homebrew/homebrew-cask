@@ -1,12 +1,11 @@
 cask "dbvr" do
   arch arm: "aarch64", intel: "x86_64"
 
-  version "26.1.0"
-  sha256 arm:   "c4ecbf8e58e310fa49528afafce2503fb80ec0868ad70744f21fb7ef84eb099b",
-         intel: "94001a2f6cd4b4562388385fcf91903fb2156645feb751cea82fae48b5b48d3b"
+  version "26.2.0"
+  sha256 arm:   "4d26cf7e12d8b552c5f091eefd8ea36e131efcf435b9cc74e7d600dddf274df8",
+         intel: "c2799fea12e7e451932bd909dc47fb67f6948ab757e355ebb56ff828491884d2"
 
-  url "https://downloads.dbeaver.net/dbvr/pro/#{version}/dbvr-pro-#{version}-macos-#{arch}.dmg",
-      verified: "downloads.dbeaver.net/dbvr/pro/"
+  url "https://downloads.dbeaver.net/dbvr/pro/#{version}/dbvr-pro-#{version}-macos-#{arch}.dmg"
   name "dbvr"
   desc "Lightweight CLI tool for running database operations"
   homepage "https://dbeaver.com/dbvr/"
@@ -18,7 +17,7 @@ cask "dbvr" do
     end
   end
 
-  depends_on macos: :big_sur
+  depends_on :macos
 
   app "dbvr.app"
 

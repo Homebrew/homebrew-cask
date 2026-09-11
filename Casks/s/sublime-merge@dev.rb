@@ -1,9 +1,8 @@
 cask "sublime-merge@dev" do
-  version "2124"
-  sha256 "453da973102d32d952356b3526fb1294f69cbfc412dda78424786a43f05a8f72"
+  version "2129"
+  sha256 "7b3615e29591cd5f0e383173355f53678f491cea736b1c5f773d13941d6eb752"
 
-  url "https://download.sublimetext.com/sublime_merge_build_#{version}_mac.zip",
-      verified: "download.sublimetext.com/"
+  url "https://download.sublimetext.com/sublime_merge_build_#{version}_mac.zip"
   name "Sublime Merge"
   desc "Git client"
   homepage "https://www.sublimemerge.com/dev"

@@ -5,13 +5,6 @@ cask "lemonlime" do
   sha256 arm:   "165c2f8268041f473c035493c3e5403c01e82ce22eb38fcfa3befa0017944ca1",
          intel: "4eeb11cf7c7a039959e5e30bf4f2a97522ed0ca70eceb2d4296039903f52059d"
 
-  on_arm do
-    depends_on macos: :big_sur
-  end
-  on_intel do
-    depends_on macos: :catalina
-  end
-
   url "https://github.com/Project-LemonLime/Project_LemonLime/releases/download/#{version.csv.first}/lemon-Qt#{version.csv.second}-Release-#{arch}.dmg"
   name "lemonlime"
   desc "Tiny judging environment for OI contest based on Lemon + LemonPlus"

@@ -1,6 +1,6 @@
 cask "steinberg-library-manager" do
-  version "3.2.71.322,99cc8104-3f95-35d5-b360-e0d5133ce331"
-  sha256 "8236698c1c0e7daa03c4711635d500359fc9276f8b4ddb4e44b4a1b3c89942bf"
+  version "3.2.81.60,8bf3ce2a-4217-3867-8195-9b6f3096f0a3"
+  sha256 "564c6cc6b491faef671457677bd53d783313fb4ede12c19c74dd8e41d3dd7b74"
 
   url "https://download.steinberg.net/static_content/runtime-components/steinberg-library-manager/#{version.csv.first}-#{version.csv.second}/Steinberg_Library_Manager_mac.dmg"
   name "Steinberg Library Manager"
@@ -24,7 +24,10 @@ cask "steinberg-library-manager" do
 
   uninstall launchctl: "com.steinberg.HALionLibraryInstallerHelper",
             quit:      "com.steinberg.HALionLibraryManager",
-            pkgutil:   "com.steinberg.SteinbergLibraryManager",
+            pkgutil:   [
+              "com.steinberg.HALionLibraryManager",
+              "com.steinberg.SteinbergLibraryManager",
+            ],
             delete:    "/Applications/Steinberg Library Manager.app"
 
   zap trash: [

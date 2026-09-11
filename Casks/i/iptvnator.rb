@@ -1,9 +1,9 @@
 cask "iptvnator" do
   arch arm: "arm64", intel: "x64"
 
-  version "0.22.0"
-  sha256 arm:   "1e30ca02e43f60c1233feb76a6af63b36ac4fe30321c1f642055bb69f47df799",
-         intel: "f0ed47d9eb59333440bdf1c6e4aceadc1d0c3d65fa5f56f0ee712e1531e2941a"
+  version "0.23.0"
+  sha256 arm:   "2750299219367e2773bb176aa0a3664ff89e80830ca5d24ce4397127837ca5ad",
+         intel: "8e610f8651d6207da0e32aefa0fb6b677b9385c22ba9e72f2ecd2147cc12225f"
 
   url "https://github.com/4gray/iptvnator/releases/download/v#{version}/iptvnator-#{version}-mac-#{arch}.dmg"
   name "IPTVnator"
@@ -17,7 +17,7 @@ cask "iptvnator" do
 
   depends_on macos: :monterey
 
-  app "iptvnator.app"
+  app "IPTVnator.app"
 
   zap trash: [
     "~/Library/Application Support/iptvnator",

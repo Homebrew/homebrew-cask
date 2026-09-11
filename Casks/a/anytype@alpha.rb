@@ -1,18 +1,17 @@
 cask "anytype@alpha" do
   arch arm: "arm64", intel: "x64"
 
-  version "0.55.26-beta"
-  sha256 arm:   "385327732b79bbfb1596e8567f9aa0dab1b47d725668da5075f7bbbba7b18b2b",
-         intel: "8c77a01690e0ac7ae5292480ff3a7af04bdaa2286ba985326923a57ec41fb7eb"
+  version "0.56.9-alpha"
+  sha256 arm:   "a5499f1d11cef50a7a48bf5cac1dacf49673d90056a6969038c34b1a1d88b528",
+         intel: "f782937eefcc784aac79e5f1694428f6eb8187f6a2ca822cdd0f9be8e7a359e7"
 
-  url "https://anytype-release.fra1.cdn.digitaloceanspaces.com/Anytype-#{version}-mac-#{arch}.dmg",
-      verified: "anytype-release.fra1.cdn.digitaloceanspaces.com/"
+  url "https://anytype-release.fra1.cdn.digitaloceanspaces.com/Anytype-#{version}-mac-#{arch}.dmg"
   name "Anytype"
   desc "Local-first and end-to-end encrypted notes app"
   homepage "https://anytype.io/"
 
   livecheck do
-    url "https://anytype-release.fra1.cdn.digitaloceanspaces.com/alpha-mac.yml?v=#{Time.new.to_i}"
+    url "https://anytype-release.fra1.cdn.digitaloceanspaces.com/alpha-mac.yml?v=#{Time.now.to_i}"
     strategy :electron_builder
   end
 

@@ -1,6 +1,6 @@
 cask "dcp-o-matic" do
-  version "2.18.44"
-  sha256 "8cc3ba0a8c1c8e05e51247fce054e975ceb8a60dc08b83f96a733f73fff3a0e4"
+  version "2.19.1"
+  sha256 "b98e533de6452bf4d560d9b9a05caf8cbe7301697078a9c8cfe493dad3b4b310"
 
   url "https://download.dcpomatic.com/dl.php?id=osx-10.10-main&version=#{version}"
   name "DCP-o-matic"
@@ -12,9 +12,11 @@ cask "dcp-o-matic" do
     regex(%r{href=.*?/tag/\?h=v?(\d+(?:\.\d+)+)["' >]}i)
   end
 
-  depends_on macos: :big_sur
+  depends_on :macos
 
   app "DCP-o-matic #{version.major}.app"
 
-  # No zap stanza required
+  uninstall quit: "com.dcpomatic"
+
+  zap trash: "~/Library/Preferences/com.dcpomatic"
 end

@@ -1,6 +1,6 @@
 cask "tuna" do
-  version "0.78,1563"
-  sha256 "fb378368d34f6d419bf908727831dbb5a68a497890d857c87f5b692432fc0970"
+  version "0.98,2115"
+  sha256 "a595ef4626d5e118692e01f4b2e0e485db5cac252ed1e4f6a5a7d155dc56176c"
 
   url "https://tunaformac.com/download/releases/#{version.csv.second}"
   name "Tuna"

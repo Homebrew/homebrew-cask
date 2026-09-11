@@ -1,9 +1,9 @@
 cask "adobe-creative-cloud" do
   arch arm: "macarm64", intel: "osx10"
 
-  version "6.10.0.252.3"
-  sha256 arm:   "d02fc307e32b583c0552fbbca87cfe40b098f2fc707a12b033dff726091a21d6",
-         intel: "487de8f6957730def04c2ac6d2fcbe6abb4571e7ccc5bfdb4c0223082297c8ba"
+  version "6.10.0.252.41"
+  sha256 arm:   "5115a16e2ecddade5d37e50fc55721521f92882bf3796ff0fa6fc345719801f7",
+         intel: "8ae886df0695f9206c3e89f7b54faf2972acc5431ef1d48f769bdb833b48bb8a"
 
   # If url breaks you can find the latest static urls - https://helpx.adobe.com/download-install/kb/creative-cloud-desktop-app-download.html
   url "https://ccmdls.adobe.com/AdobeProducts/StandaloneBuilds/ACCC/ESD/#{version.major_minor_patch}/#{version.split(".")[3..4].join(".")}/#{arch}/ACCCx#{version.dots_to_underscores}.dmg"
@@ -32,12 +32,6 @@ cask "adobe-creative-cloud" do
     print_stderr: false,
   }
 
-  uninstall_postflight do
-    stdout, * = system_command "/bin/launchctl", args: ["print", "gui/#{Process.uid}"]
-    ccx_processes = stdout.lines.grep(/com\.adobe\.CCXProcess\.\d{5}/) { Regexp.last_match(0) }.uniq
-    ccx_processes.each { |id| system "/bin/launchctl", "bootout", "gui/#{Process.uid}/#{id}" }
-  end
-
   uninstall early_script: {
               executable:   "/usr/bin/pluginkit",
               args:         [
@@ -53,6 +47,7 @@ cask "adobe-creative-cloud" do
               "com.adobe.AdobeCreativeCloud",
               "com.adobe.AdobeDesktopService",
               "com.adobe.ccxprocess",
+              "com.adobe.CCXProcess.*",
             ],
             quit:         "com.adobe.acc.AdobeCreativeCloud",
             signal:       ["QUIT", "com.adobe.accmac"],

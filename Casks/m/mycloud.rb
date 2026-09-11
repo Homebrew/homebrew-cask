@@ -1,5 +1,5 @@
 cask "mycloud" do
-  version "26.25.1317,20260616154010"
+  version "26.36.1417,20260903144733"
   sha256 :no_check
 
   url "https://filehostdesktopmac.mycloud.ch/myCloudDesktop.dmg"
@@ -14,7 +14,7 @@ cask "mycloud" do
 
   depends_on :macos
 
-  installer manual: "myCloud Desktop installer.app"
+  installer manual: "myCloud Desktop Installer.app"
 
   uninstall quit:       "ch.swisscom.mycloud.desktop.finder",
             signal:     ["TERM", "ch.swisscom.mycloud.desktop"],

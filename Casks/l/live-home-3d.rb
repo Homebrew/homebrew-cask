@@ -2,8 +2,7 @@ cask "live-home-3d" do
   version "4.12.1"
   sha256 :no_check
 
-  url "https://belightsoft.s3.amazonaws.com/updates/LiveHome3D.zip",
-      verified: "belightsoft.s3.amazonaws.com/"
+  url "https://belightsoft.s3.amazonaws.com/updates/LiveHome3D.zip"
   name "Live Home 3D"
   desc "Home & floorplan designer & renderer"
   homepage "https://www.livehome3d.com/mac/live-home-3d"
@@ -13,7 +12,7 @@ cask "live-home-3d" do
     strategy :sparkle, &:short_version
   end
 
-  depends_on macos: :big_sur
+  depends_on :macos
 
   app "Live Home 3D.app"
 

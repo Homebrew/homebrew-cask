@@ -12,13 +12,15 @@ jobs:
     permissions:
       contents: read
       pull-requests: write
+      statuses: write
     steps:
       - name: Check commit format
-        uses: Homebrew/actions/check-commit-format@18fcb8e3e06b4247c676c506750dc95ea7226479 # 2026.07.13.1
+        uses: Homebrew/actions/check-commit-format@f8d4222eb633e65c2a0157383cf80861fc7fae7f # 2026.09.07.1
         with:
-          token: ${{secrets.HOMEBREW_GITHUB_PUBLIC_REPO_TOKEN}}
+          token: ${{ secrets.HOMEBREW_GITHUB_PUBLIC_REPO_TOKEN }}
+
       - name: Label pull request
-        uses: Homebrew/actions/label-pull-requests@18fcb8e3e06b4247c676c506750dc95ea7226479 # 2026.07.13.1
+        uses: Homebrew/actions/label-pull-requests@f8d4222eb633e65c2a0157383cf80861fc7fae7f # 2026.09.07.1
         if: always()
         with:
           token: ${{secrets.HOMEBREW_GITHUB_PUBLIC_REPO_TOKEN}}
@@ -66,7 +68,7 @@ jobs:
 
             - label: linux cask
               path: Casks/.+
-              content: (x86_64|arm64|on)_linux
+              content: ((x86_64|arm64|on)_linux|depends_on :linux)
 
   check-base-branch:
     permissions:

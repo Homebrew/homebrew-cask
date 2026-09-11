@@ -1,6 +1,6 @@
 cask "proscoreboard" do
-  version "7.3,117637122"
-  sha256 "a8bcbaa4f994c9fd6eb47d4d13040519f7ca45a2e634939cd294739a5a9a9dcf"
+  version "7.3.1,117637377"
+  sha256 "00b177a9e818bdf41812e64113d03a301961e25a582d0652c34891d0dc5ca5ae"
 
   url "https://renewedvision.com/downloads/ProScoreboard_#{version.csv.first}_#{version.csv.second}.zip"
   name "ProScoreboard"
@@ -16,6 +16,8 @@ cask "proscoreboard" do
   depends_on macos: :sonoma
 
   app "ProScoreboard.app"
+
+  uninstall quit: "com.renewedvision.Scoreboard"
 
   zap trash: [
     "~/Library/Application Support/bugsnag-shared-com.renewedvision.Scoreboard",

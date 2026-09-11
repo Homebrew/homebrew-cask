@@ -2,8 +2,7 @@ cask "font-asta-sans" do
   version :latest
   sha256 :no_check
 
-  url "https://github.com/google/fonts/raw/main/ofl/astasans/AstaSans%5Bwght%5D.ttf",
-      verified: "github.com/google/fonts/"
+  url "https://github.com/google/fonts/raw/main/ofl/astasans/AstaSans%5Bwght%5D.ttf"
   name "Asta Sans"
   homepage "https://fonts.google.com/specimen/Asta+Sans"
 

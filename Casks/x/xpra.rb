@@ -1,12 +1,17 @@
 cask "xpra" do
   arch arm: "arm64", intel: "x86_64"
 
-  version "6.5.1,0"
-  sha256 arm:   "a64d9f06483a415f2490455f13b639af585274653a026075ecc6b4e57caa59d3",
-         intel: "5cc81b679b3f456cae4f436c607bd0a2dd8069fe18c1d9832ca3c7bf1c1f7be0"
+  sha256 arm:   "b1c76739dcb69a46a7ec25d022105f4b43ea9c7b3e2aa52072b44a9541417d84",
+         intel: "5bfaff0d6e7f6d107f8be676fdb5497f101446deed74d4a797db5fe8394af529"
 
-  url "https://xpra.org/dists/MacOS/#{arch}/Xpra-#{arch}-#{version.csv.first}-r#{version.csv.second}.dmg",
-      verified: "xpra.org/"
+  on_arm do
+    version "6.5.3,0"
+  end
+  on_intel do
+    version "6.5.3,0"
+  end
+
+  url "https://xpra.org/dists/MacOS/#{arch}/Xpra-#{arch}-#{version.csv.first}-r#{version.csv.second}.dmg"
   name "Xpra"
   desc "Screen and application forwarding system"
   homepage "https://github.com/Xpra-org/xpra/"

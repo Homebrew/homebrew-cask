@@ -2,8 +2,7 @@ cask "philips-hue-sync" do
   version "1.13.1.83,367fa136-d05e-4de6-8f9b-318fed481842,83"
   sha256 "520d2a6895ae0fee73718a9a6a1be356afe346daa1ae90783750bff3cb12d354"
 
-  url "https://firmware.meethue.com/storage/huesyncmac/#{version.csv.third}/#{version.csv.second}/HueSyncInstaller_#{version.csv.first}.pkg",
-      verified: "firmware.meethue.com/storage/huesyncmac/"
+  url "https://firmware.meethue.com/storage/huesyncmac/#{version.csv.third}/#{version.csv.second}/HueSyncInstaller_#{version.csv.first}.pkg"
   name "Philips Hue Sync"
   desc "Control your smart light system"
   homepage "https://www.philips-hue.com/en-us/explore-hue/propositions/entertainment/sync-with-pc"

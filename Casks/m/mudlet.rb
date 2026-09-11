@@ -1,12 +1,11 @@
 cask "mudlet" do
   arch arm: "arm64", intel: "x86_64"
 
-  version "4.22.0"
-  sha256 arm:   "54d976936d9ad54cc1ddd65d5e1cc2e3253d84646430636d3237455a10261bdb",
-         intel: "64371626f0af7a3ab2f276100e57f6d44344b157cd3f405601955677e64ac6d7"
+  version "5.0.1"
+  sha256 arm:   "1727fa51fe0ca388d95930bdf88be34e2d9314c148f1ee2d78331e6a4812bfd0",
+         intel: "be527a250a9fba3cac35d3e141800e2f05df11d53b524df86625e10ff6efa3e3"
 
-  url "https://github.com/Mudlet/Mudlet/releases/download/Mudlet-#{version}/Mudlet-#{version}-#{arch}.dmg",
-      verified: "github.com/Mudlet/Mudlet/"
+  url "https://github.com/Mudlet/Mudlet/releases/download/Mudlet-#{version}/Mudlet-#{version}-#{arch}.dmg"
   name "Mudlet"
   desc "Multi-User Dungeon client"
   homepage "https://www.mudlet.org/"
@@ -17,9 +16,9 @@ cask "mudlet" do
   end
 
   auto_updates true
-  depends_on :macos
+  depends_on macos: :ventura
 
-  app "Mudlet.app"
+  app "mudlet.app"
 
   zap trash: [
     "~/Library/Preferences/org.mudlet.mudlet.plist",

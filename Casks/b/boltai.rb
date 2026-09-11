@@ -1,6 +1,6 @@
 cask "boltai" do
-  version "2.14.0"
-  sha256 "f5f4275b21a67685dcf12b7cd0cb6411c93aa844ce071a21ee28e6b189a7c8d7"
+  version "2.15.0"
+  sha256 "777afdcf09ba614342b153d83d0b563a5bb8853dbfc80c43c4a2bff7258af181"
 
   url "https://updates.boltai.com/dmg/BoltAI-#{version}.dmg"
   name "BoltAI 2"
@@ -9,13 +9,15 @@ cask "boltai" do
 
   livecheck do
     url "https://updates.boltai.com/appcast.xml"
-    strategy :sparkle, &:short_version
+    strategy :sparkle do |items|
+      items.find { |item| item.channel.nil? }&.short_version
+    end
   end
 
   auto_updates true
   depends_on macos: :ventura
 
-  app "BoltAI #{version.major}.app"
+  app "BoltAI.app"
 
   zap trash: [
     "~/Library/Application Scripts/co.podzim.boltai-mobile",

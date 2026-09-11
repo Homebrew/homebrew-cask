@@ -1,6 +1,6 @@
 cask "downie" do
-  version "4.12.10,5214"
-  sha256 "9eaf4b01fac061343d965d42cdff820d80fecf16c5b6aa8f2f39221fdd33112b"
+  version "4.12.15,5256"
+  sha256 "a1e6e9347538d9e365db965d98231745bc3ce0b66402b6e1047d392386396d40"
 
   url "https://software.charliemonroe.net/trial/downie/v#{version.major}/Downie_#{version.major}_#{version.csv.second}.dmg"
   name "Downie"
@@ -13,9 +13,11 @@ cask "downie" do
   end
 
   auto_updates true
-  depends_on macos: :big_sur
+  depends_on :macos
 
   app "Downie #{version.major}.app"
+
+  uninstall quit: "com.charliemonroe.Downie-#{version.major}"
 
   zap trash: [
     "~/Library/Application Scripts/com.charliemonroe.Downie*",

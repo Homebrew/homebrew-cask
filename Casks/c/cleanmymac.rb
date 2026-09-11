@@ -1,9 +1,8 @@
 cask "cleanmymac" do
-  version "5.5.6,50506.0.2607101255"
-  sha256 "3278404d43eff5b7fa4e242266c3b1e11a7a11703953b3171a5595ef8ac4fe29"
+  version "5.6.1,50601.0.2609011534"
+  sha256 "cecafce7591a8b78307bbbd9566760136ad19988074e5bf3540fc0bfe6f4964a"
 
-  url "https://updates.cleanmymac.com/com.macpaw.cleanmymac#{version.major}/releases/CleanMyMac#{version.major}_#{version.csv.second}.zip",
-      verified: "updates.cleanmymac.com/"
+  url "https://updates.cleanmymac.com/com.macpaw.cleanmymac#{version.major}/releases/CleanMyMac#{version.major}_#{version.csv.second}.zip"
   name "CleanMyMac"
   desc "Tool to remove unnecessary files and folders from disk"
   homepage "https://macpaw.com/cleanmymac"
@@ -18,7 +17,7 @@ cask "cleanmymac" do
 
   auto_updates true
   conflicts_with cask: "cleanmymac-zh"
-  depends_on macos: :big_sur
+  depends_on :macos
 
   # Renamed for consistency: app name is different in the Finder and in a shell.
   app "CleanMyMac_#{version.major}.app", target: "CleanMyMac.app"

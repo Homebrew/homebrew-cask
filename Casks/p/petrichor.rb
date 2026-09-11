@@ -1,11 +1,11 @@
 cask "petrichor" do
-  version "1.5.2"
-  sha256 "db2dfd90e11b4ecc68f22e3b437d7563cf2352c8d4007aec5f5a458096547170"
+  version "1.7.0"
+  sha256 "196ba2d4d1a9abd5344f3e83063b66f065d2b69cc24d5a30c10ffee2d98e827c"
 
   url "https://github.com/kushalpandya/Petrichor/releases/download/v#{version}/Petrichor-#{version}-Universal.dmg"
   name "Petrichor"
   desc "Offline Music Player"
-  homepage "https://github.com/kushalpandya/Petrichor"
+  homepage "https://petrichor.page/"
 
   livecheck do
     url :url
@@ -18,6 +18,7 @@ cask "petrichor" do
   app "Petrichor.app"
 
   zap trash: [
+    "~/Library/Application Scripts/org.Petrichor",
     "~/Library/Containers/org.Petrichor",
     "~/Library/Saved Application State/org.Petrichor.savedState",
   ]

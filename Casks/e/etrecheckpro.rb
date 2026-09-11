@@ -1,5 +1,5 @@
 cask "etrecheckpro" do
-  version "6.8.15"
+  version "6.8.16"
   sha256 :no_check
 
   url "https://cdn.etrecheck.com/EtreCheckPro.zip"
@@ -24,6 +24,7 @@ cask "etrecheckpro" do
   zap trash: [
     "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.etresoft.etrecheck*.sfl*",
     "~/Library/Caches/com.etresoft.EtreCheck*",
+    "~/Library/HTTPStorages/com.etresoft.EtreCheck*",
     "~/Library/Preferences/com.etresoft.EtreCheck*.plist",
     "~/Library/WebKit/com.etresoft.EtreCheck*",
   ]

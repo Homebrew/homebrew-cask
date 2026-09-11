@@ -1,9 +1,9 @@
 cask "intellij-idea" do
   arch arm: "-aarch64"
 
-  version "2026.2,262.8665.258"
-  sha256 arm:   "33e27fa97958112b2dd6dfdfbaacd3ae8599ec9fa81322c8ad37806f0a79215b",
-         intel: "f5b07b109147c806149981bd8c5205f4be5f76aae62bacb4255d9211775ecbfe"
+  version "2026.2.2,262.10315.125"
+  sha256 arm:   "f4a45f451008c86ce4e9342d5931fd89c8553f9d3ab6e8012da7533e9fe5c249",
+         intel: "d2849855effe178f22d58025165d968179f76bb745a5a71ebf3c29e40510cd3a"
 
   url "https://download.jetbrains.com/idea/ideaIU-#{version.csv.first}#{arch}.dmg"
   name "IntelliJ IDEA Ultimate"
@@ -28,16 +28,10 @@ cask "intellij-idea" do
   depends_on :macos
 
   app "IntelliJ IDEA.app"
-  # shim script (https://github.com/Homebrew/homebrew-cask/issues/18809)
-  shimscript = "#{staged_path}/idea.wrapper.sh"
-  binary shimscript, target: "idea"
+  command_wrapper "idea",
+                  executable: "#{appdir}/IntelliJ IDEA.app/Contents/MacOS/idea"
 
-  preflight do
-    File.write shimscript, <<~EOS
-      #!/bin/sh
-      open -na "IntelliJ IDEA.app" --args "$@"
-    EOS
-  end
+  uninstall quit: "com.jetbrains.intellij"
 
   zap trash: [
     "~/Library/Application Support/JetBrains/IntelliJIdea#{version.major_minor}",

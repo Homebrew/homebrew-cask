@@ -1,9 +1,8 @@
 cask "repobar" do
-  version "0.8.6"
-  sha256 "524685154f7a639b7c9c437e9693c0571db1a176556d0438c473a2d09377d7a4"
+  version "0.9.0"
+  sha256 "2168685f4eddd5c0055be44434ec6b4486b99a6f9bdbc9c025567f5d1e0738b0"
 
-  url "https://github.com/steipete/RepoBar/releases/download/v#{version}/RepoBar-#{version}.zip",
-      verified: "github.com/steipete/RepoBar/"
+  url "https://github.com/steipete/RepoBar/releases/download/v#{version}/RepoBar-#{version}.zip"
   name "RepoBar"
   desc "Menu bar dashboard for GitHub repository health"
   homepage "https://repobar.app/"
@@ -15,6 +14,7 @@ cask "repobar" do
   zap trash: [
     "~/Library/Application Support/com.steipete.repobar",
     "~/Library/Application Support/RepoBar",
+    "~/Library/Caches/com.onevcat.Kingfisher.ImageCache.RepoBarAvatars",
     "~/Library/Caches/com.steipete.repobar",
     "~/Library/Caches/RepoBar",
     "~/Library/HTTPStorages/com.steipete.repobar",

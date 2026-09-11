@@ -1,9 +1,9 @@
 cask "wox" do
   arch arm: "arm64", intel: "amd64"
 
-  version "2.3.0"
-  sha256 arm:   "e916cfd20e59894d36794171c499048d233752486986aea8b33290d4f0a98f36",
-         intel: "dfc8b2b4254b0f3ef88a5cbcccfb785e796c9298f488c3150daf6016d044386b"
+  version "2.4.3"
+  sha256 arm:   "31dfa23575acb4b9c59b0b5338ec78a6e23fb8693cd6962e5444fab454b9610c",
+         intel: "12400c1b6380bcfe470aa716513c56902a6cb11bd380ddd48faa589f12adcb6a"
 
   url "https://github.com/Wox-launcher/Wox/releases/download/v#{version}/wox-mac-#{arch}.dmg"
   name "Wox"
@@ -15,7 +15,7 @@ cask "wox" do
     regex(/^v?(\d+(?:\.\d+)+)$/i)
   end
 
-  depends_on macos: :big_sur
+  depends_on macos: :monterey
 
   app "Wox.app"
 

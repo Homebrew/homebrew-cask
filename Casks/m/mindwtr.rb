@@ -1,9 +1,9 @@
 cask "mindwtr" do
   arch arm: "aarch64", intel: "x64"
 
-  version "1.1.0"
-  sha256 arm:   "e23613dbc31e7c036e327cd55120c2a828405599175eb81d49fcd2f489320ec8",
-         intel: "5ae369f374abb8288c5a84c2581fd268f70798c21f72e7239c8c9ac9b61e78a9"
+  version "1.2.8"
+  sha256 arm:   "3bd0aa877e6007c0ed25522a990b08e1358b683d8acb9d3c99e52108fac88426",
+         intel: "b4c08872dc9a18646d5aaf27a15c8c19b30ef484447325a8da60dd4b5f5003ef"
 
   url "https://github.com/dongdongbh/Mindwtr/releases/download/v#{version}/mindwtr_#{version}_#{arch}.dmg"
   name "Mindwtr"
@@ -15,9 +15,15 @@ cask "mindwtr" do
   app "Mindwtr.app"
 
   zap trash: [
+    "~/Library/Application Scripts/5X9JC5PL7T.tech.dongdongbh.mindwtr",
+    "~/Library/Application Scripts/tech.dongdongbh.mindwtr.MindwtrWidgets",
     "~/Library/Application Support/mindwtr",
     "~/Library/Application Support/tech.dongdongbh.mindwtr",
+    "~/Library/Caches/tech.dongdongbh.mindwtr",
+    "~/Library/Containers/tech.dongdongbh.mindwtr.MindwtrWidgets",
+    "~/Library/Group Containers/5X9JC5PL7T.tech.dongdongbh.mindwtr",
     "~/Library/Preferences/tech.dongdongbh.mindwtr.plist",
     "~/Library/Saved Application State/tech.dongdongbh.mindwtr.savedState",
+    "~/Library/WebKit/tech.dongdongbh.mindwtr",
   ]
 end

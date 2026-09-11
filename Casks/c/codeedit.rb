@@ -2,8 +2,7 @@ cask "codeedit" do
   version "0.3.6"
   sha256 "fa5478f80d591c15f08f5e7a93662b5baf33012718768bf0ae800b44ac4eeac9"
 
-  url "https://github.com/CodeEditApp/CodeEdit/releases/download/v#{version}/CodeEdit.dmg",
-      verified: "github.com/CodeEditApp/CodeEdit/"
+  url "https://github.com/CodeEditApp/CodeEdit/releases/download/v#{version}/CodeEdit.dmg"
   name "CodeEdit"
   desc "Code editor"
   homepage "https://www.codeedit.app/"

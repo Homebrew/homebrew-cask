@@ -2,8 +2,7 @@ cask "gamemaker" do
   version "2024.14.4.222"
   sha256 "8cbd33a9a92ed60ebd53734413b33afdeb8c677326ada0c80971e9f91555cc7f"
 
-  url "https://gms.yoyogames.com/GameMaker-#{version}.pkg",
-      verified: "gms.yoyogames.com/"
+  url "https://gms.yoyogames.com/GameMaker-#{version}.pkg"
   name "GameMaker"
   desc "Complete development tool for making 2D games"
   homepage "https://gamemaker.io/"
@@ -17,18 +16,21 @@ cask "gamemaker" do
 
   pkg "GameMaker-#{version}.pkg"
 
-  postflight do
+  postflight_steps do
     # Description: Ensure console variant of postinstall is non-interactive.
     # This is because `open "$APP_PATH"&` is called from the postinstall
     # script of the package and we don't want any user intervention there.
-    retries ||= 3
-    ohai "The GameMaker package postinstall script launches the GameMaker app" if retries >= 3
-    ohai "Attempting to close com.yoyogames.gms2 to avoid unwanted user intervention" if retries >= 3
-    return unless system_command "/usr/bin/pkill", args: ["-f", "/Applications/GameMaker.app"]
-  rescue RuntimeError
-    sleep 1
-    retry unless (retries -= 1).zero?
-    opoo "Unable to forcibly close GameMaker.app"
+    terminate_process(
+      "/Applications/GameMaker.app",
+      match:           :full,
+      attempts:        3,
+      must_succeed:    false,
+      notices:         [
+        "The GameMaker package postinstall script launches the GameMaker app",
+        "Attempting to close com.yoyogames.gms2 to avoid unwanted user intervention",
+      ],
+      failure_message: "Unable to forcibly close GameMaker.app",
+    )
   end
 
   uninstall pkgutil: "com.yoyogames.gms2",
