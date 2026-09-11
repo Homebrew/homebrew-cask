@@ -1,6 +1,6 @@
 cask "aphera" do
-  version "1.4.0"
-  sha256 "be6b0490a41926cff7ccd86d78ff263f2c5a6186c35211be9bd316070eefcf7e"
+  version "1.5.0"
+  sha256 "66f200e709dbd55cb4549cb5b21bc98b9eac1ccea14a518c65ecfeb3ecae91a8"
 
   url "https://releases.aphera.app/Aphera.#{version}.dmg"
   name "Aphera"
