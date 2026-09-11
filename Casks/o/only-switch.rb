@@ -17,6 +17,8 @@ cask "only-switch" do
 
   app "Only Switch.app"
 
+  uninstall quit: "jacklandrin.OnlySwitch"
+
   zap trash: [
     "~/Library/Application Scripts/*.OnlySwitch.shared",
     "~/Library/Application Scripts/jacklandrin.OnlySwitch.OnlyWidget",
