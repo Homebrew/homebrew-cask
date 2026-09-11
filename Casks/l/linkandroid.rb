@@ -1,9 +1,9 @@
 cask "linkandroid" do
   arch arm: "arm64", intel: "x64"
 
-  version "2.1.0"
-  sha256 arm:   "0c010350cb0dba1883b06d9315531e6c9aecc681a4e068a17893448f4e9ea8e9",
-         intel: "6c44433d934d0897f1d4a3fef847e59a03d963f5690dd53a6197f5eb9ebd7e53"
+  version "2.2.0"
+  sha256 arm:   "63d3561a06cc060986b8324629de631c7f9dd92122d6069ad35f2a602c41ef0b",
+         intel: "102005c2016e79aee9e1faf90b5668f721c07c425afe9333e2da4b1d6121fa85"
 
   url "https://github.com/modstart-lib/linkandroid/releases/download/v#{version}/LinkAndroid-#{version}-mac-#{arch}.dmg"
   name "LinkAndroid"
@@ -13,6 +13,8 @@ cask "linkandroid" do
   depends_on :macos
 
   app "LinkAndroid.app"
+
+  uninstall quit: "LinkAndroid"
 
   zap trash: [
     "~/Library/Application Support/linkandroid",
