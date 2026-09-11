@@ -38,7 +38,10 @@ cask "silentknight" do
   zap trash: [
     "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/co.eclecticlight.silentknight.sfl*",
     "~/Library/Caches/co.eclecticlight.SilentKnight",
+    "~/Library/Caches/co.eclecticlight.SilentKnight#{version.major}",
     "~/Library/HTTPStorages/co.eclecticlight.SilentKnight",
+    "~/Library/HTTPStorages/co.eclecticlight.SilentKnight#{version.major}",
+    "~/Library/Preferences/co.eclecticlight.SilentKnight#{version.major}.plist",
     "~/Library/Preferences/co.eclecticlight.SilentKnight.plist",
     "~/Library/Saved Application State/co.eclecticlight.SilentKnight.savedState",
   ]
