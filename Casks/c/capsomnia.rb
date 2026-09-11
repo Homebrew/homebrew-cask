@@ -4,13 +4,8 @@ cask "capsomnia" do
 
   url "https://github.com/fuji-mak/Capsomnia/releases/download/v#{version}/Capsomnia-#{version}.pkg"
   name "Capsomnia"
-  desc "Keep-awake switch for closed-lid work, toggled with Caps Lock"
+  desc "Utility that keeps your computer awake with the lid closed"
   homepage "https://github.com/fuji-mak/Capsomnia/"
-
-  livecheck do
-    url :url
-    strategy :github_latest
-  end
 
   auto_updates true
   depends_on arch: :arm64
@@ -24,4 +19,12 @@ cask "capsomnia" do
               "/etc/sudoers.d/capsomnia",
               "/Library/PrivilegedHelperTools/capsomnia-pmset",
             ]
+
+  zap trash: [
+    "~/Library/Caches/Capsomnia",
+    "~/Library/Caches/com.github.fuji-mak.capsomnia",
+    "~/Library/HTTPStorages/com.github.fuji-mak.capsomnia",
+    "~/Library/Logs/Capsomnia",
+    "~/Library/Preferences/com.github.fuji-mak.capsomnia.plist",
+  ]
 end
