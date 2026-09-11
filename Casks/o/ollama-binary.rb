@@ -10,6 +10,7 @@ cask "ollama-binary" do
          x86_64_linux: "cf95886728959aa09910bb34de5cca1cc5a8f68003b5597197d3f2c2d57c0804"
 
   on_macos do
+    conflicts_with cask: "ollama-app"
     depends_on macos: :sonoma
 
     binary "ollama"
