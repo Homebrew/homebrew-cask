@@ -14,8 +14,12 @@ cask "focusany" do
 
   app "FocusAny.app"
 
+  uninstall quit: "com.focusany.app"
+
   zap trash: [
+    "~/.focusany",
     "~/Library/Application Support/focusany",
+    "~/Library/Preferences/com.focusany.app.plist",
     "~/Library/Preferences/FocusAny.plist",
     "~/Library/Saved Application State/FocusAny.savedState",
   ]
