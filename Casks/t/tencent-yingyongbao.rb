@@ -1,14 +1,49 @@
 cask "tencent-yingyongbao" do
-  version "0.7.9,2112"
-  sha256 "2dc719ec4c6207156513573336dc822b4bfe26ee63fc3491dfe1c9bba10ef788"
+  version "0.8.0.2140,mLZ4QkeD0apbbZ4T"
+  sha256 "881f7371d754ad58c2f3ba74ee2bd3e6057b141758c1b78b8cbf62885c88e06a"
 
-  url "https://downmac.yyb.qq.com/channel/formal/raw/hJBBfZun3iTPqCMe/mac_yyb_#{version.csv.first}.2122.dmg?response-content-disposition=attachment%3Bfilename%3Dmacyyb_2102200000_8e8ca99bf44b44ff.dmg"
+  url "https://downmac.yyb.qq.com/channel/formal/raw/#{version.csv.second}/mac_yyb_#{version.csv.first}.dmg"
   name "腾讯应用宝"
   desc "Tencent application store"
   homepage "https://sj.qq.com/download/macbrand"
 
   livecheck do
-    skip "No reliable automated version detection available"
+    require "json"
+    require "digest"
+
+    # Step 1: read the access key from the public page (a field in the
+    # `__NEXT_DATA__` SSR payload).
+    page = Homebrew::Livecheck::Strategy.page_content("https://sj.qq.com/download/macbrand")[:content]
+    ak   = page[/"macServiceAccessKey":"([^"]+)"/, 1]
+    biz  = "yybmac"
+
+    # Step 2: build the signature.
+    payload = { pkg_name: "", supply_id: 2_100_200_129 }
+    body    = JSON.generate(payload)
+    ts      = (Time.now.to_f * 1000).to_i.to_s
+    nonce   = rand(10_000).to_s
+    sig     = Digest::MD5.hexdigest(body + ts + ak.to_s + nonce)
+
+    # Step 3: request the version endpoint with the signature.
+    url "https://yybadaccess.3g.qq.com/v3/yybmac_deliver",
+        post_json: payload,
+        header:    ["businessid: #{biz}",
+                    "Ual-Access-Businessid: #{biz}",
+                    "Ual-Access-Nonce: #{nonce}",
+                    "Ual-Access-Signature: #{sig}",
+                    "Ual-Access-Timestamp: #{ts}"]
+
+    # The channel ID in the download URL changes with every release, so it has
+    # to be tracked alongside the version.
+    strategy :json do |json|
+      data = json["data"]
+      next if data.blank?
+
+      channel = data["download_url"].to_s[%r{/raw/([^/]+)/}, 1]
+      next if channel.blank?
+
+      "#{data["version"]},#{channel}"
+    end
   end
 
   auto_updates true
