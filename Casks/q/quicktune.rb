@@ -1,5 +1,5 @@
 cask "quicktune" do
-  version "7.5.1"
+  version "7.6.0"
   sha256 :no_check
 
   url "https://marioaguzman.github.io/quicktune/updater/QuickTune.dmg"
@@ -13,7 +13,7 @@ cask "quicktune" do
   end
 
   auto_updates true
-  depends_on :macos
+  depends_on macos: :sonoma
 
   app "QuickTune.app"
 
