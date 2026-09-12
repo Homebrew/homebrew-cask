@@ -25,7 +25,8 @@ cask "betterdisplay" do
         strategy :sparkle do |items|
           items.filter_map do |item|
             next unless item.channel.nil?
-            next unless item.short_version&.start_with?("4.")
+            next unless item.minimum_system_version
+            next if item.minimum_system_version > :sequoia
 
             item.short_version
           end
@@ -42,7 +43,6 @@ cask "betterdisplay" do
       strategy :sparkle do |items|
         items.filter_map do |item|
           next unless item.channel.nil?
-          next if item.short_version.to_s.to_i < 5
 
           item.short_version
         end
