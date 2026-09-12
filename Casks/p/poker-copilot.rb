@@ -19,5 +19,9 @@ cask "poker-copilot" do
 
   app "Poker Copilot.app"
 
-  zap trash: "~/Library/Application Support/com.barbarysoftware.pokercopilot"
+  zap trash: [
+    "~/Library/Application Support/com.barbarysoftware.pokercopilot",
+    "~/Library/Logs/Poker Copilot.log",
+    "~/Library/Preferences/com.install4j.4318-8431-7919-3424.23.plist",
+  ]
 end
