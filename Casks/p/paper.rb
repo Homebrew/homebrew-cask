@@ -1,6 +1,6 @@
 cask "paper" do
-  version "5.5.5"
-  sha256 "ccbef03d6fecf529e34c566034d8f052d5d719d3886fd19469cf27bfd078c16c"
+  version "5.5.6"
+  sha256 "0d3e50b6179399a87123962be93317c0f85fc987b2571cf5d332d748a27cbed7"
 
   url "https://www.paperapp.net/app/pap.er_v#{version}.dmg"
   name "pap.er"
