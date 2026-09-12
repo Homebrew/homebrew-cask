@@ -12,6 +12,8 @@ cask "paper" do
     regex(/pap\.?er[._-]v?(\d+(?:\.\d+)+)\.dmg/i)
   end
 
+  disable! date: "2026-09-12", because: :fails_gatekeeper_check
+
   auto_updates true
   depends_on :macos
 
