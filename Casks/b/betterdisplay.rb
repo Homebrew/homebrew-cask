@@ -16,13 +16,36 @@ cask "betterdisplay" do
     end
   end
   on_ventura :or_newer do
-    version "4.3.7"
-    sha256 "be3ce2d57702156e1263e320a1868e6313818a78aa1b0b9ad4aee26d6e999928"
+    on_sequoia :or_older do
+      version "4.3.7"
+      sha256 "be3ce2d57702156e1263e320a1868e6313818a78aa1b0b9ad4aee26d6e999928"
+
+      livecheck do
+        url "https://betterdisplay.pro/betterdisplay/sparkle/appcast.xml"
+        strategy :sparkle do |items|
+          items.filter_map do |item|
+            next unless item.channel.nil?
+            next unless item.minimum_system_version
+            next if item.minimum_system_version > :sequoia
+
+            item.short_version
+          end
+        end
+      end
+    end
+  end
+  on_tahoe :or_newer do
+    version "5.0.5"
+    sha256 "5685565b3f07952c697b6d7884ff5c410a7070ea30b2eb282a93f831fe773752"
 
     livecheck do
       url "https://betterdisplay.pro/betterdisplay/sparkle/appcast.xml"
       strategy :sparkle do |items|
-        items.find { |item| item.channel.nil? }&.short_version
+        items.filter_map do |item|
+          next unless item.channel.nil?
+
+          item.short_version
+        end
       end
     end
   end
