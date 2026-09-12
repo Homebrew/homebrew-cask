@@ -13,6 +13,8 @@ cask "iterm2@nightly" do
     strategy :header_match
   end
 
+  disable! date: "2026-09-12", because: :fails_gatekeeper_check
+
   conflicts_with cask: [
     "iterm2",
     "iterm2@beta",
