@@ -1,7 +1,7 @@
 cask "roku-remote-tool" do
   arch arm: "arm64", intel: "x64"
 
-  version "5.0.1"
+  version "5.0.2"
   sha256 :no_check
 
   url "https://devtools.web.roku.com/RokuRemote/app/mac/roku-remote-tool-mac-#{arch}.zip"
