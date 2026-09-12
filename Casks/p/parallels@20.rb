@@ -22,10 +22,6 @@ cask "parallels@20" do
   auto_updates true
   conflicts_with cask: [
     "parallels",
-    "parallels@14",
-    "parallels@15",
-    "parallels@16",
-    "parallels@17",
     "parallels@18",
     "parallels@19",
   ]
