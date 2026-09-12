@@ -5,7 +5,7 @@ cask "fontsmoothingadjuster" do
   url "https://github.com/bouncetechnologies/Font-Smoothing-Adjuster/releases/download/v#{version}/Font.Smoothing.Adjuster.#{version}.dmg"
   name "Font Smoothing Adjuster"
   desc "Re-enable the font smoothing controls"
-  homepage "https://www.fontsmoothingadjuster.com/"
+  homepage "https://github.com/bouncetechnologies/Font-Smoothing-Adjuster"
 
   deprecate! date: "2025-07-14", because: :unmaintained
   disable! date: "2026-07-22", because: :unmaintained
