@@ -31,7 +31,7 @@ cask "creality-print" do
 
   app "Creality Print.app"
 
-  uninstall launchctl: "application.com.creality.crealityprint.2983906.2983912.62E536DA-D05A-49C0-A535-A31F1BCE299A"
+  uninstall launchctl: "application.com.creality.crealityprint.*"
 
   zap trash: [
     "~/Library/Application Support/Creality",
