@@ -8,7 +8,7 @@ cask "langdock" do
   homepage "https://langdock.com/products/desktop"
 
   livecheck do
-    skip "Upstream provides no machine-readable version listing"
+    url "https://desktop.langdock.com/global/stable/download/mac"
   end
 
   depends_on macos: :sonoma
