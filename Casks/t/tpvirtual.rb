@@ -8,7 +8,7 @@ cask "tpvirtual" do
   homepage "https://www.trainingpeaks.com/virtual/"
 
   livecheck do
-    url :homepage
+    url "https://www.trainingpeaks.com/virtual/launch/"
     regex(/href=.*?TPVirtual[._-]Installer[._-]v?(\d+(?:\.\d+)*)\.dmg/i)
   end
 
