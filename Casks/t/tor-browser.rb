@@ -12,7 +12,7 @@ cask "tor-browser" do
   # which is a problem if the newest version for macOS is lower. This checks
   # the download page instead, which links to the newest file for macOS.
   livecheck do
-    url "https://www.torproject.org/download/"
+    url "https://download.torproject.org/tor-browser-for-desktop/"
     regex(/href=.*?tor-browser(?:-macos)?[._-]v?(\d+(?:\.\d+)+)\.dmg/i)
   end
 
