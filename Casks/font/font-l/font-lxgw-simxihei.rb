@@ -7,6 +7,9 @@ cask "font-lxgw-simxihei" do
   name "新晰黑体"
   homepage "https://github.com/lxgw/SimXiZhi"
 
+  # The upstream repository was archived on 2026-08-21 and is no longer maintained.
+  deprecate! date: "2026-09-12", because: :discontinued
+
   font "SimXiHei.ttf"
 
   # No zap stanza required

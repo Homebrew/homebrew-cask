@@ -2,11 +2,11 @@ cask "claude-code@latest" do
   arch arm: "arm64", intel: "x64"
   os macos: "darwin", linux: "linux"
 
-  version "2.1.269"
-  sha256 arm:          "c942e1228b93cb4d52183b3dfbc77f28264f35aa947acd9c0853d029164cf450",
-         intel:        "5a8c02f9ff48f1917b38e86d837114b8d5cbbf534ce72bc6aa106eb17eb3a90f",
-         arm64_linux:  "4c84a33adc34c60d4de3acd43cfe7c64ba966591e51587c04867b8d589021be4",
-         x86_64_linux: "25e44883f54419569a3d739f38cbbdaebe83b09895da0f343e1b003710a4775b"
+  version "2.1.270"
+  sha256 arm:          "a506b6d970a4cf44f6abdb53a81ddcd5d3b0ce042a95c502fe9d1f946bdb8807",
+         intel:        "b3ee3237a019b8a5abb3008f1c7ddd46295a0e6e65ab94545a79c9b997dc8928",
+         arm64_linux:  "7bf9f33acc124df9abccf6f2366397a82a740378d535fa12d426fa77fdbc9946",
+         x86_64_linux: "3a624a5a7cd79bbad4d32bd7db36f1197ecf458bc5bf1e2aed81834a01ad3ef0"
 
   url "https://downloads.claude.ai/claude-code-releases/#{version}/#{os}-#{arch}/claude"
   name "Claude Code"
