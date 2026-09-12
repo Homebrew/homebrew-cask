@@ -1,6 +1,6 @@
 cask "powerpanel" do
-  version "2.7.1.1"
-  sha256 "80eac84952c6512836076f1929996b0f5b9d0b0743d9948198865e663981130a"
+  version "2.7.2"
+  sha256 "87ca61bd45f8961f63e27b2953658fc503d652588b85f793e7f7a93a37cc685a"
 
   url "https://dl4jz3rbrsfum.cloudfront.net/software/PPP_Mac_v#{version}.pkg"
   name "CyberPower PowerPanel Personal"
