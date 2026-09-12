@@ -1,6 +1,6 @@
 cask "smallstepagent" do
-  version "0.69.2"
-  sha256 "1f5c0a5b7d9abd3b4ec754af7fca244f562a2ed1d2a8d1a9fcf94a4a55ccad49"
+  version "0.69.3"
+  sha256 "1c84e66b90f778b67803e42f3d413335ba26c100f4793201ef8bfd839d49a6d9"
 
   url "https://packages.smallstep.com/stable/step-agent/darwin/#{version}/step-agent_#{version}.pkg"
   name "Smallstep Agent"
