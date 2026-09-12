@@ -20,6 +20,8 @@ cask "tablepro" do
 
   app "TablePro.app"
 
+  uninstall quit: "com.TablePro"
+
   zap trash: [
     "~/Library/Application Support/TablePro",
     "~/Library/Caches/com.TablePro",
