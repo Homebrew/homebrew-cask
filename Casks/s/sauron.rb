@@ -7,6 +7,11 @@ cask "sauron" do
   desc "Menu bar meeting assistant with local capture, transcripts, and memory"
   homepage "https://github.com/chasebank87/Sauron"
 
+  livecheck do
+    url :url
+    strategy :github_latest
+  end
+
   depends_on macos: :tahoe
 
   app "Sauron.app"
