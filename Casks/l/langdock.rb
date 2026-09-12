@@ -9,6 +9,7 @@ cask "langdock" do
 
   livecheck do
     url "https://desktop.langdock.com/global/stable/download/mac"
+    strategy :header_match
   end
 
   depends_on macos: :sonoma
