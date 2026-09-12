@@ -1,5 +1,5 @@
 cask "coteditor" do
-  on_sonoma :or_older do
+  on_sequoia :or_older do
     on_big_sur :or_older do
       version "4.3.6"
       sha256 "8c1ecf6fd66a9885d428a6303d9d1c5ecb811c1c35c97bdbccdad72359d96ad9"
@@ -16,14 +16,18 @@ cask "coteditor" do
       version "5.2.3"
       sha256 "c01fa87e31d7aafd475f72bb41a340e1e34db27cc8afb73ba2f5e2ad316739a9"
     end
+    on_sequoia do
+      version "7.0.9"
+      sha256 "b1cd481dd8f1271ffc7478dcc65d7e3a1f17893a3bc1f4afa38a9a93beaf5877"
+    end
 
     livecheck do
       skip "Legacy version"
     end
   end
-  on_sequoia :or_newer do
-    version "7.0.9"
-    sha256 "b1cd481dd8f1271ffc7478dcc65d7e3a1f17893a3bc1f4afa38a9a93beaf5877"
+  on_tahoe :or_newer do
+    version "7.1.0"
+    sha256 "55ab705fdb5806b40899c637c6232713da3c9919986016d49aab41ebadf1d88c"
 
     livecheck do
       url "https://coteditor.com/appcast.xml"
