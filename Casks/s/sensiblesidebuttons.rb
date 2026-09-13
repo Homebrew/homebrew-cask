@@ -1,6 +1,6 @@
 cask "sensiblesidebuttons" do
-  version "1.0.6"
-  sha256 "1f2b3aefc47ac1ff8ce1e83af3ddab814dd7c6e6b974b73dce3694ec7435881b"
+  version "1.0.7"
+  sha256 "fb823f17eeedf367c7af5f969d9a569a6e432440baacdc2de23d26577459e27d"
 
   url "https://github.com/archagon/sensible-side-buttons/releases/download/#{version}/SensibleSideButtons-#{version}.dmg"
   name "Sensible Side Buttons"
