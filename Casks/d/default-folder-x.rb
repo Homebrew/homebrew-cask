@@ -17,7 +17,7 @@ cask "default-folder-x" do
 
   app "Default Folder X.app"
 
-  uninstall quit: "com.stclairsoft.DefaultFolderX#{version.major}"
+  uninstall quit: "com.stclairsoft.DefaultFolderX*"
 
   zap trash: [
     "~/Library/Application Scripts/com.stclairsoft.DefaultFolderX#{version.major}.DrawerButtonExtension",
