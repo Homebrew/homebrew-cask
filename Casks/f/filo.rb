@@ -1,7 +1,7 @@
 cask "filo" do
   arch arm: "arm64", intel: "x64"
 
-  version "2.3.1"
+  version "2.3.2"
   sha256 :no_check
 
   url "https://download.filomail.com/mac_upgrade/versions/latest/prod/#{arch}/Filo-#{arch}.dmg"
@@ -20,6 +20,8 @@ cask "filo" do
   depends_on :macos
 
   app "Filo.app"
+
+  uninstall quit: "com.filo.client"
 
   zap trash: [
     "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.filo.client.sfl*",
