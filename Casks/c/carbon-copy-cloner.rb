@@ -42,6 +42,7 @@ cask "carbon-copy-cloner" do
     "/Library/LaunchDaemons/com.bombich.ccchelper.plist",
     "~/Library/Application Support/com.bombich.ccc",
     "~/Library/Caches/com.bombich.ccc",
+    "~/Library/HTTPStorages/com.bombich.ccc",
     "~/Library/Preferences/com.bombich.ccc.plist",
     "~/Library/Preferences/com.bombich.cccuseragent.plist",
     "~/Library/Saved Application State/com.bombich.ccc.savedState",
