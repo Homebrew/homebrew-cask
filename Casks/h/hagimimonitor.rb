@@ -13,8 +13,8 @@ cask "hagimimonitor" do
   app "HagimiMonitorDirect.app"
 
   zap trash: [
-    "~/Library/Application Support/HagimiMonitor",
     "~/Library/Application Support/com.acerola.hagimi-monitor.direct",
+    "~/Library/Application Support/HagimiMonitor",
     "~/Library/Preferences/com.acerola.hagimi-monitor.direct.plist",
   ]
 end
