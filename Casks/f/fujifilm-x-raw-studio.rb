@@ -8,7 +8,7 @@ cask "fujifilm-x-raw-studio" do
   homepage "https://fujifilm-x.com/global/products/software/x-raw-studio/"
 
   livecheck do
-    url "https://fujifilm-x.com/global/support/download/software/x-raw-studio/"
+    url "https://www.fujifilm-x.com/global/support/download/software/x-raw-studio/"
     regex(/Mac\s*Version\s*:\s*v?(\d+(?:\.\d+)+)/i)
     strategy :page_match do |page, regex|
       version = page[regex, 1]
