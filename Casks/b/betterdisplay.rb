@@ -41,11 +41,7 @@ cask "betterdisplay" do
     livecheck do
       url "https://betterdisplay.pro/betterdisplay/sparkle/appcast.xml"
       strategy :sparkle do |items|
-        items.filter_map do |item|
-          next unless item.channel.nil?
-
-          item.short_version
-        end
+        items.filter_map { |item| item.channel.nil? && item.short_version }
       end
     end
   end
