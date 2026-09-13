@@ -7,8 +7,15 @@ cask "virtual-ii" do
   desc "Apple II Emulator"
   homepage "https://virtualii.com/"
 
-  # The download URL is consistently unreachable in CI environment
-  disable! date: "2026-08-28", because: :unreachable
+  livecheck do
+    url "https://virtualii.com/versionlist.xml"
+    strategy :xml do |xml|
+      version = xml.elements["//key[text()='VirtualII']"]&.next_element&.text
+      next if version.blank?
+
+      version.strip
+    end
+  end
 
   depends_on macos: :monterey
 
