@@ -1,8 +1,8 @@
 cask "snapmaker-orca" do
-  version "2.3.5"
-  sha256 "2fb75ef060556ed6a67863202e767842a4f778138f9ac2b464331ae0a424a663"
+  version "2.3.6"
+  sha256 "d19a670090e23eec417aa4e15de75efc57eab993328a59ed5e1e14459c0b5614"
 
-  url "https://github.com/snapmaker/orcaslicer/releases/download/v#{version}/Snapmaker_Orca_Mac_universal_V#{version}.dmg"
+  url "https://github.com/snapmaker/orcaslicer/releases/download/V#{version}/Snapmaker_Orca_Mac_universal_V#{version}.dmg"
   name "Snapmaker Orca"
   desc "Slicing software for Snapmaker 3D printers, a fork of OrcaSlicer"
   homepage "https://www.snapmaker.com/snapmaker-orca"
