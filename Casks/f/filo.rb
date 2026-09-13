@@ -21,6 +21,8 @@ cask "filo" do
 
   app "Filo.app"
 
+  uninstall quit: "com.filo.client"
+
   zap trash: [
     "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.filo.client.sfl*",
     "~/Library/Application Support/CrashReporter/Filo_*.plist",
