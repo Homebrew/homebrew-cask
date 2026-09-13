@@ -8,8 +8,8 @@ cask "font-castoro" do
   name "Castoro"
   homepage "https://fonts.google.com/specimen/Castoro"
 
-  font "Castoro-Italic.ttf"
-  font "Castoro-Regular.ttf"
+  font "Castoro-Italic[wght].ttf"
+  font "Castoro[wght].ttf"
 
   # No zap stanza required
 end
