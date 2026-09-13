@@ -5,16 +5,18 @@ cask "wing-personal" do
   url "https://wingware.com/pub/wing-personal/#{version}/wing-personal-#{version}.dmg"
   name "Wing Personal"
   desc "Free Python IDE designed for students and hobbyists"
-  homepage "https://www.wingware.com/"
+  homepage "https://wingware.com/"
 
   livecheck do
     url "https://wingware.com/downloads/wing-personal"
-    regex(%r{href=.*?/pub/wing-personal/v?(\d+(?:\.\d+)+)}i)
+    regex(/href=.*?wing-personal[._-]v?(\d+(?:\.\d+)+)\.dmg/i)
   end
 
   depends_on :macos
 
   app "Wing Personal.app"
+
+  uninstall quit: "com.wingware.wing-personal"
 
   zap trash: [
     "~/.wingpersonal#{version.major}",
