@@ -4,10 +4,10 @@ cask "mutedeck" do
   sha256 :no_check
 
   on_arm do
-    version "4.10"
+    version "4.11"
   end
   on_intel do
-    version "4.10"
+    version "4.11"
   end
 
   url "https://releases.mutedeck.com/macos#{arch}/mutedeck-mac#{arch}.dmg"
@@ -25,10 +25,22 @@ cask "mutedeck" do
   auto_updates true
   depends_on :macos
 
-  installer manual: "MuteDeck-#{version}-Installer.app"
+  installer script: {
+    executable: "MuteDeck-#{version}-Installer.app/Contents/MacOS/MuteDeck-#{version}-Installer",
+    args:       [
+      "--root", "/Applications/MuteDeck",
+      "--accept-messages", "--accept-licenses", "--confirm-command",
+      "--cache-path", "#{staged_path}/cache",
+      "install"
+    ],
+  }
 
   uninstall launchctl: "application.com.mutedeck.mac",
             quit:      "com.mutedeck.mac",
+            script:    {
+              executable: "/Applications/MuteDeck/MuteDeckMaintenanceTool.app/Contents/MacOS/MuteDeckMaintenanceTool",
+              args:       ["--confirm-command", "remove", "com.mutedeck.client", "com.mutedeck.maintenancetool"],
+            },
             delete:    "/Applications/MuteDeck"
 
   zap trash: "~/Library/Application Support/mutedeck"
