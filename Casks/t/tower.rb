@@ -24,6 +24,8 @@ cask "tower" do
   app "Tower.app"
   binary "#{appdir}/Tower.app/Contents/MacOS/gittower"
 
+  uninstall quit: "com.fournova.Tower3"
+
   zap trash: [
     "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.fournova.tower*.sfl*",
     "~/Library/Application Support/com.fournova.Tower*",
