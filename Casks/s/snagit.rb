@@ -1,6 +1,6 @@
 cask "snagit" do
-  version "2026.3.2"
-  sha256 "13334f8d9eb1d70f9ff63ff0cba0e8e6d27c1cee93baccee433eed8977dd14db"
+  version "2026.3.3"
+  sha256 "45dc05db293a5f3e0e769ba6c8466da67da91c772a9e10b86f2675e027a23df0"
 
   url "https://download.techsmith.com/snagitmac/releases/#{version}/snagit.dmg"
   name "Snagit"
