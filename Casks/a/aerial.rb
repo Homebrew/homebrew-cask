@@ -1,16 +1,28 @@
 cask "aerial" do
-  version "4.0.16"
-  sha256 "33a6b4008b9e4b6271daf0d450363fdbddb452fd3836ff81966ba5fa80ccbfe9"
+  on_sequoia do
+    version "4.0.16"
+    sha256 "33a6b4008b9e4b6271daf0d450363fdbddb452fd3836ff81966ba5fa80ccbfe9"
+
+    livecheck do
+      url :url
+      strategy :github_releases
+      regex(/^v?(4\.0(?:\.\d+)+)$/i)
+    end
+  end
+  on_tahoe :or_newer do
+    version "4.1.0"
+    sha256 "d81dd29d7240e41cb51067946949487a306e63c80375437da6ce5a439de1e2e2"
+
+    livecheck do
+      url :url
+      strategy :github_latest
+    end
+  end
 
   url "https://github.com/AerialScreensaver/Aerial/releases/download/v#{version}/Aerial-#{version}.zip"
   name "Aerial"
   desc "Apple TV Aerial screensaver"
   homepage "https://aerialscreensaver.github.io/"
-
-  livecheck do
-    url :url
-    strategy :github_latest
-  end
 
   auto_updates true
   conflicts_with cask: "aerial@beta"
