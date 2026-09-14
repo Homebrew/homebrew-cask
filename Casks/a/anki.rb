@@ -44,6 +44,8 @@ cask "anki" do
 
   app "Anki.app"
 
+  uninstall quit: "net.ankiweb.anki"
+
   zap trash: [
     "~/Library/Application Support/Anki*",
     "~/Library/Caches/Anki",
