@@ -1,6 +1,6 @@
 cask "macsyzones" do
-  version "3.0.4"
-  sha256 "a303a484f3f9f7b5da36031ed7dce13dc630d301dce1aa850f2e3372014f6c7a"
+  version "3.1"
+  sha256 "d3f83f69d6827821e9da6e22b4a9ffe213f3231b73ba7b200ae635bd50276904"
 
   url "https://github.com/rohanrhu/MacsyZones/releases/download/v#{version}/MacsyZones.zip"
   name "MacsyZones"
@@ -13,7 +13,7 @@ cask "macsyzones" do
   end
 
   auto_updates true
-  depends_on :macos
+  depends_on macos: :sonoma
 
   app "MacsyZones.app"
 
