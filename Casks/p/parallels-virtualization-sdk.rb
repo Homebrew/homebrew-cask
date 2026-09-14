@@ -7,9 +7,8 @@ cask "parallels-virtualization-sdk" do
   desc "Desktop virtualization development kit"
   homepage "https://www.parallels.com/products/desktop/download/"
 
-  livecheck do
-    cask "parallels"
-  end
+  # Ref: https://kb.parallels.com/en/130091
+  deprecate! date: "2026-09-14", because: :discontinued
 
   depends_on macos: :ventura
 
