@@ -35,7 +35,7 @@ cask "calhash" do
     end
   end
   on_tahoe :or_newer do
-    version "1.5.7"
+    version "1.5.8"
 
     url "https://www.titanium-software.fr/download/26/CalHash.dmg"
 
