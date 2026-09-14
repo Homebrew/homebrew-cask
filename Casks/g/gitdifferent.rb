@@ -8,7 +8,7 @@ cask "gitdifferent" do
   homepage "https://vheissulabs.com/projects/gitdifferent"
 
   livecheck do
-    url "https://github.com/VheissuLabs/GitDifferent-releases/releases/latest"
+    url "https://github.com/VheissuLabs/GitDifferent-releases"
     strategy :github_latest
   end
 
