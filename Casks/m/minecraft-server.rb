@@ -1,6 +1,6 @@
 cask "minecraft-server" do
-  version "26.1.2,97ccd4c0ed3f81bbb7bfacddd1090b0c56f9bc51"
-  sha256 "cd47e7c38328f64768fd17af8fcd8b22496b40b63d4ffee81e71ae059fedcb42"
+  version "26.2,823e2250d24b3ddac457a60c92a6a941943fcd6a"
+  sha256 "cdacdfb25898de5e4b4b0e5ddcc2722f77067e46605709c2d886c000ebb63ec5"
 
   url "https://piston-data.mojang.com/v1/objects/#{version.csv.second}/server.jar"
   name "Minecraft Server"
@@ -46,11 +46,11 @@ cask "minecraft-server" do
 
   config_dir = HOMEBREW_PREFIX.join("etc", "minecraft-server")
 
-  command_wrapper "minecraft-server", content: <<~EOS
+  command_wrapper "minecraft-server", content: <<~SH
     #!/bin/sh
     cd '#{config_dir}' && \
       exec /usr/bin/java ${@:--Xms1024M -Xmx1024M} -jar '#{staged_path}/server.jar' nogui
-  EOS
+  SH
 
   preflight_steps do
     mkdir_p "{{HOMEBREW_PREFIX}}/etc/minecraft-server"
@@ -59,7 +59,7 @@ cask "minecraft-server" do
   eula_file = config_dir.join("eula.txt")
 
   postflight_steps do
-    run "minecraft-server.wrapper.sh", base: :staged_path
+    run "minecraft-server", base: :staged_path
     inreplace "{{HOMEBREW_PREFIX}}/etc/minecraft-server/eula.txt", "eula=false", "eula=TRUE", audit_result: false
   end
 
