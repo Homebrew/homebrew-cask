@@ -17,14 +17,12 @@ cask "shimo" do
 
   app "Shimo.app"
 
+  uninstall quit: "com.feingeist.Shimo"
+
   zap trash: [
     "~/Library/Application Support/Shimo",
     "~/Library/Caches/com.feingeist.Shimo",
     "~/Library/HTTPStorages/com.feingeist.Shimo.binarycookies",
     "~/Library/Preferences/com.feingeist.Shimo.plist",
   ]
-
-  caveats do
-    requires_rosetta
-  end
 end
