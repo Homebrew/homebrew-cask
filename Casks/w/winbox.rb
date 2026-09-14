@@ -1,10 +1,10 @@
 cask "winbox" do
   os macos: ".dmg", linux: "_Linux.zip"
 
-  version "4.3"
-  sha256 arm:          "5681d03e32133858b3dc541c78c1bae38cb3355b5fd98326ac725e0bd8bab570",
-         intel:        "5681d03e32133858b3dc541c78c1bae38cb3355b5fd98326ac725e0bd8bab570",
-         x86_64_linux: "573600ac24df38a7a06ea4318b12754247eec4b54c6c90b0a57100d676787a4c"
+  version "4.4"
+  sha256 arm:          "bff070fb410191d551c9988d47796ff7d245d276a981b14a90ca6f8698be4a18",
+         intel:        "bff070fb410191d551c9988d47796ff7d245d276a981b14a90ca6f8698be4a18",
+         x86_64_linux: "49b1faabab55804c491aa2947efbade967815d53df7698cc7876a0c1d636cdc1"
 
   on_macos do
     depends_on macos: :monterey
