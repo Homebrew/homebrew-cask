@@ -58,6 +58,7 @@ cask "bing-wallpaper" do
     "/Library/Logs/Microsoft/Sunfish",
     "~/Library/Application Support/com.microsoft.bing.wallpaper",
     "~/Library/Caches/com.microsoft.bing.wallpaper",
+    "~/Library/LaunchAgents/Microsoft Bing Wallpaper.plist",
     "~/Library/WebKit/com.microsoft.bing.wallpaper",
   ]
 end
