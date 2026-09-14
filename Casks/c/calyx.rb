@@ -4,13 +4,8 @@ cask "calyx" do
 
   url "https://github.com/yuuichieguchi/Calyx/releases/download/v#{version}/Calyx.zip"
   name "Calyx"
-  desc "Ghostty-based terminal for running and supervising coding agents"
+  desc "Terminal for running and supervising coding agents"
   homepage "https://github.com/yuuichieguchi/Calyx"
-
-  livecheck do
-    url :url
-    strategy :github_latest
-  end
 
   auto_updates true
   depends_on macos: :tahoe
