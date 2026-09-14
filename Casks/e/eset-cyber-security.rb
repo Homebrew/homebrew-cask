@@ -1,6 +1,6 @@
 cask "eset-cyber-security" do
-  version "9.0.6700.0"
-  sha256 "c172dcc981bac5b20038b667ff0e775a716b9deb5c09e5222c5f9f5dc900b9c0"
+  version "10.0.2100.0"
+  sha256 "4d46454a097d183f41238d1f9fb15d05bc1e6f4b06261a33d98a32c3e962197f"
 
   url "https://download.eset.com/com/eset/apps/home/eav/mac/v#{version.major}/#{version}/eset_cybersecurity.dmg"
   name "ESET Cyber Security"
