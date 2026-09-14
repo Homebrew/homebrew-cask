@@ -19,6 +19,8 @@ cask "recordly" do
 
   app "Recordly.app"
 
+  uninstall quit: "dev.recordly.app"
+
   zap trash: [
     "~/Library/Application Support/Recordly",
     "~/Library/Preferences/dev.recordly.app.plist",
