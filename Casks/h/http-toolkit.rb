@@ -2,11 +2,11 @@ cask "http-toolkit" do
   arch arm: "arm64", intel: "x64"
   os macos: "dmg", linux: "AppImage"
 
-  version "1.27.1"
-  sha256 arm:          "9fb15e0de154cb88debbc298bdc96e7c20d657c4eb138555b6c0603e1dcb07ec",
-         intel:        "9f670af93770bd85d7507e67d2ec38c85820ecd0a433a8998a090d09fcf65f8e",
-         arm64_linux:  "2a99611f77f5e8faf4b27be6fe709b6775964fed36c003dfb5c521a7f51a6a08",
-         x86_64_linux: "c901cc8ebd51689f5faec76e46e31f3f011aba1eab486d335fa782d279a203fb"
+  version "1.27.2"
+  sha256 arm:          "fef5d5b808dc1237bac93c8beb164ee0a7f2ddff028881f573303ce2c1a331b4",
+         intel:        "be1784311f19c83cf4489c33fe4de752bc291f4bb50c437c571897567701d17d",
+         arm64_linux:  "5e8eb5283572750025bc010fb7d2fd23570ce3645d3d3129e4d36c328dbc4c0c",
+         x86_64_linux: "1723a0e2951a1c36472a5cc070751e0ab0e9c3d9461919e2ea4807164edaab1d"
 
   on_macos do
     depends_on macos: :monterey
