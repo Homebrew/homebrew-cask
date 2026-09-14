@@ -1,9 +1,9 @@
 cask "recordly" do
   arch arm: "arm64", intel: "x64"
 
-  version "1.1.14"
-  sha256 arm:   "e669ab7c8bdd4596211937183ee2374545da5482702cab0dfe477c1466422b0f",
-         intel: "85f5183219de0b656400625797ff9299893bd8fbda8455b0f745878b2c729526"
+  version "1.4.0"
+  sha256 arm:   "520ee1d5570f2342e126306eda84b95e442c844b6f0e84c6e81c208445be8cc4",
+         intel: "f478afef1c37adb8d4df9e0c0cdecde99df6f3131e34629ad3f5c3c8c226d1b5"
 
   url "https://github.com/webadderallorg/Recordly/releases/download/v#{version}/Recordly-#{arch}.dmg"
   name "Recordly"
@@ -15,7 +15,7 @@ cask "recordly" do
     strategy :github_latest
   end
 
-  depends_on macos: :sonoma
+  depends_on macos: :monterey
 
   app "Recordly.app"
 
