@@ -1,0 +1,35 @@
+cask "pdf-expert@beta" do
+  version "3.13.3,1175"
+  sha256 "0370a6675cd4277533709db53ed665b1bc704db32d18cfcc95af508041bc520b"
+
+  url "https://downloads.pdfexpert.com/pem#{version.major}/versions/#{version.csv.second}/PDFExpert.zip"
+  name "PDF Expert"
+  desc "PDF reader, editor and annotator"
+  homepage "https://pdfexpert.com/"
+
+  livecheck do
+    url "https://downloads.pdfexpert.com/pem#{version.major}/beta/appcast.xml"
+    strategy :sparkle
+  end
+
+  auto_updates true
+  conflicts_with cask: "pdf-expert"
+  depends_on macos: :monterey
+
+  app "PDF Expert.app"
+
+  uninstall quit: "com.readdle.PDFExpert-Mac"
+
+  zap trash: [
+    "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.readdle.pdfexpert-mac.sfl*",
+    "~/Library/Application Support/com.readdle.PDFExpert-Mac",
+    "~/Library/Application Support/PDF Expert",
+    "~/Library/Caches/com.readdle.PDFExpert-Installer",
+    "~/Library/Caches/com.readdle.PDFExpert-Mac",
+    "~/Library/HTTPStorages/com.readdle.PDFExpert-Installer",
+    "~/Library/HTTPStorages/com.readdle.PDFExpert-Mac",
+    "~/Library/HTTPStorages/com.readdle.PDFExpert-Mac.binarycookies",
+    "~/Library/PDF Expert",
+    "~/Library/Preferences/com.readdle.PDFExpert-Mac.plist",
+  ]
+end

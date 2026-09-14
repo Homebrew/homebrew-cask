@@ -1,0 +1,37 @@
+cask "winbox" do
+  os macos: ".dmg", linux: "_Linux.zip"
+
+  version "4.3"
+  sha256 arm:          "5681d03e32133858b3dc541c78c1bae38cb3355b5fd98326ac725e0bd8bab570",
+         intel:        "5681d03e32133858b3dc541c78c1bae38cb3355b5fd98326ac725e0bd8bab570",
+         x86_64_linux: "573600ac24df38a7a06ea4318b12754247eec4b54c6c90b0a57100d676787a4c"
+
+  on_macos do
+    depends_on macos: :monterey
+
+    app "WinBox.app"
+
+    zap trash: [
+      "~/Library/Application Support/MikroTik/WinBox",
+      "~/Library/Caches/MikroTik/WinBox",
+      "~/Library/Saved Application State/com.mikrotik.winbox.savedState",
+    ]
+  end
+  on_linux do
+    depends_on arch: :x86_64
+
+    binary "WinBox", target: "winbox"
+
+    zap trash: "#{ENV.fetch("HOMEBREW_XDG_DATA_HOME", "~/.local/share")}/MikroTik/WinBox"
+  end
+
+  url "https://download.mikrotik.com/routeros/winbox/#{version}/WinBox#{os}"
+  name "WinBox"
+  desc "Administration tool for MikroTik RouterOS"
+  homepage "https://mikrotik.com/"
+
+  livecheck do
+    url "https://upgrade.mikrotik.com/routeros/winbox/LATEST.#{version.major}"
+    regex(/v?(\d+(?:\.\d+)+((?:beta|rc)\d+)?)/i)
+  end
+end

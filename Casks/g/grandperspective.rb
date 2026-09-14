@@ -1,0 +1,22 @@
+cask "grandperspective" do
+  version "3.8.0"
+  sha256 "32f04ad4d3a84511a9a9cfa2752d85a98ba365d462f80a7201635c8e249e09d3"
+
+  url "https://downloads.sourceforge.net/grandperspectiv/grandperspective/#{version}/GrandPerspective-#{version.dots_to_underscores}.dmg"
+  name "GrandPerspective"
+  desc "Graphically shows disk usage within a file system"
+  homepage "https://grandperspectiv.sourceforge.net/"
+
+  depends_on macos: :sonoma
+
+  app "GrandPerspective.app"
+
+  uninstall quit: "net.sourceforge.grandperspectiv"
+
+  zap trash: [
+    "~/Library/Application Scripts/net.courceforge.grandperspectiv",
+    "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/net.sourceforge.grandperspectiv.sfl*",
+    "~/Library/Containers/net.sourceforge.grandperspectiv",
+    "~/Library/Preferences/net.sourceforge.grandperspectiv.plist",
+  ]
+end

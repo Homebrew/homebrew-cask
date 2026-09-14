@@ -1,0 +1,27 @@
+cask "pale-moon" do
+  version "34.3.2"
+  sha256 "3850feadef4a8d474824c682e2dd8a7e23dfbd76cd5192536170cacb7b62cd2d"
+
+  url "https://rm-us.palemoon.org/release/palemoon-#{version}.arm64.dmg"
+  name "Pale Moon"
+  desc "Web browser"
+  homepage "https://www.palemoon.org/"
+
+  livecheck do
+    url "https://www.palemoon.org/download.php?mirror=us&bits=64&type=macarm"
+    regex(/palemoon[._-]v?(\d+(?:\.\d+)+)/i)
+    strategy :header_match
+  end
+
+  depends_on arch: :arm64
+  depends_on :macos
+
+  app "Pale Moon.app"
+
+  zap trash: [
+    "~/Library/Application Support/Pale Moon",
+    "~/Library/Caches/Pale Moon",
+    "~/Library/Preferences/org.mozilla.pale moon.plist",
+    "~/Library/Saved Application State/org.mozilla.white star.savedState",
+  ]
+end
