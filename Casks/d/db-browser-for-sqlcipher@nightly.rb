@@ -3,11 +3,11 @@ cask "db-browser-for-sqlcipher@nightly" do
   os macos: "universal_"
   url_end = on_system_conditional macos: ".dmg", linux: "-#{arch}.AppImage"
 
-  version "20260909"
-  sha256 arm:          "a5b5f52134376e5bda35dffad77d55788305adf4253519e1818f6bc740a257fd",
-         intel:        "a5b5f52134376e5bda35dffad77d55788305adf4253519e1818f6bc740a257fd",
-         arm64_linux:  "c33fc3fd32654d4695d787cfa65546987fcd02c3a862a4d2af33bc3ecb99aaa4",
-         x86_64_linux: "5f3e64cfbf02a53fdc23343f090ebc7713273ecd9c2a49fac3177fe7be9f2e8a"
+  version "20260914"
+  sha256 arm:          "b8d6c99b2b26a6f9e2a8966295dbf782ae7112b4a70db6fe5aa414081ff86aa6",
+         intel:        "b8d6c99b2b26a6f9e2a8966295dbf782ae7112b4a70db6fe5aa414081ff86aa6",
+         arm64_linux:  "d3b74b1c96f5fa83e618a1c33097b58cd30077f455ca50dc434dec8bb687881d",
+         x86_64_linux: "035ab0e6dcf419f01276e30beebe5cbbb8f805f24bcc66abe0a492ee35a139d8"
 
   on_macos do
     app "DB Browser for SQLCipher Nightly.app"
