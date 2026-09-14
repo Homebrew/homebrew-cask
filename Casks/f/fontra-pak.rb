@@ -1,6 +1,6 @@
 cask "fontra-pak" do
-  version "2026.8.0"
-  sha256 "c46f41704d7d641bd2628e45c197d3567ed951f82cac891678c7d6643da4a94f"
+  version "2026.9.0"
+  sha256 "c3e916f833e2ff2dacbfc982f0665a22691c19b0a58a0405281a5c2396240b67"
 
   url "https://github.com/fontra/fontra-pak/releases/download/#{version}/FontraPak-macOS.dmg"
   name "Fontra Pak"
