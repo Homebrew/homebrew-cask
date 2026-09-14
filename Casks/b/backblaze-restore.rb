@@ -1,5 +1,5 @@
 cask "backblaze-restore" do
-  version "10.0.2.1048"
+  version "10.0.3.1076"
   sha256 :no_check
 
   url "https://f000.backblazeb2.com/file/b2-computer-backup-public/macos/standalone-restore/backblaze_restore.dmg"
@@ -16,6 +16,8 @@ cask "backblaze-restore" do
 
   # Renamed for consistency: app name is different in the Finder and in a shell.
   app "BackblazeRestore.app", target: "Backblaze Restore.app"
+
+  uninstall quit: "com.backblaze.BackblazeRestore"
 
   zap trash: [
     "~/Library/Application Support/BackblazeRestore",
