@@ -1,6 +1,6 @@
 cask "ipaverse" do
-  version "2.4.0"
-  sha256 "bee5454a462a3a0c593b3209b47bfc0c1cef9f161e76a68b7a67b8237f906997"
+  version "2.5.0"
+  sha256 "4b085c498f3c32bb6beba93eb8af1a3258c00dc77a3dfb3d5da6fae6a046c832"
 
   url "https://github.com/bahattinkoc/ipaverse/releases/download/v#{version}/ipaverse.dmg"
   name "ipaverse"
