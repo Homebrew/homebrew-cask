@@ -17,6 +17,8 @@ cask "backblaze-restore" do
   # Renamed for consistency: app name is different in the Finder and in a shell.
   app "BackblazeRestore.app", target: "Backblaze Restore.app"
 
+  uninstall quit: "com.backblaze.BackblazeRestore"
+
   zap trash: [
     "~/Library/Application Support/BackblazeRestore",
     "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.backblaze.backblazerestore.sfl*",
