@@ -7,10 +7,9 @@ cask "wing-personal" do
   desc "Free Python IDE designed for students and hobbyists"
   homepage "https://wingware.com/"
 
-  livecheck do
-    url "https://wingware.com/downloads/wing-personal"
-    regex(/href=.*?wing-personal[._-]v?(\d+(?:\.\d+)+)\.dmg/i)
-  end
+  # https://wingware.com/downloads/wing-personal
+  # Wing Personal was discontinued with the release of Wing 12, but archived installers remain available.
+  deprecate! date: "2026-09-14", because: :discontinued
 
   depends_on :macos
 
