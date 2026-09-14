@@ -1,6 +1,6 @@
 cask "vmlx" do
-  version "1.6.57"
-  sha256 "45f9964c53738772b1bf32fb7686d11edadec9d7abf15346ec8479b7d6468710"
+  version "1.6.58"
+  sha256 "ce8178237f0228cfbbe66150045f87bd805cfc09a18b9bde124a355572891c03"
 
   url "https://github.com/jjang-ai/mlxstudio/releases/download/v#{version}/vMLX-#{version}-sequoia-arm64.dmg"
   name "vMLX"
