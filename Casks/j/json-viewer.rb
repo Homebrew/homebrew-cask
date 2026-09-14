@@ -1,8 +1,8 @@
 cask "json-viewer" do
-  version "1.2.2"
-  sha256 "eeb39692b214f3604e7fc344ec7b822c7934897050cc7bbd1bedb7287c259670"
+  version "2.0.0"
+  sha256 "0c642692c6a9aebc1b750a00302c93a3508c1000f21d0be56f621f380c16d506"
 
-  url "https://jsonviewer.app/JSON-Viewer-#{version}.dmg"
+  url "https://jsonviewer.app/releases/JSON-Viewer-#{version}.dmg"
   name "JSON Viewer"
   desc "App to visualise, validate and format JSON datasets"
   homepage "https://jsonviewer.app/"
@@ -12,7 +12,7 @@ cask "json-viewer" do
     regex(/JSON[._-]Viewer[._-]v?(\d+(?:\.\d+)+)\.dmg/i)
   end
 
-  depends_on :macos
+  depends_on macos: :tahoe
 
   app "JSON Viewer.app"
 
@@ -21,8 +21,4 @@ cask "json-viewer" do
     "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.pascalgiguere.json-viewer.sfl*",
     "~/Library/Containers/com.pascalgiguere.JSON-Viewer",
   ]
-
-  caveats do
-    requires_rosetta
-  end
 end
