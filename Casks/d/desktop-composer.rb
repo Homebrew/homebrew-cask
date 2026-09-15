@@ -1,6 +1,6 @@
 cask "desktop-composer" do
-  version "1.1"
-  sha256 "a80c836f17bdba844a73ee92be71076e23ef225edb1dba130e230265ea3fcb67"
+  version "1.2"
+  sha256 "37d89553ec8e0ac129d8469a1a86e7614219e770543eb3a3eaaa06dee61192d4"
 
   url "https://www.apptorium.com/public/products/desktop-composer/releases/DesktopComposer-#{version}.zip"
   name "Desktop Composer"
@@ -16,6 +16,8 @@ cask "desktop-composer" do
   depends_on macos: :tahoe
 
   app "Desktop Composer.app"
+
+  uninstall quit: "com.apptorium.DesktopComposer"
 
   zap trash: [
     "~/Library/Application Support/com.apptorium.DesktopComposer",
