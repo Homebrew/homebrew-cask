@@ -3,7 +3,7 @@ cask "onyx" do
 
   # NOTE: We use separate `url` values in each of the macOS on_system blocks
   # so that the API data correctly includes URL variants for each.
-  on_sequoia :or_older do
+  on_tahoe :or_older do
     on_big_sur :or_older do
       version "4.0.2"
 
@@ -29,21 +29,26 @@ cask "onyx" do
 
       url "https://www.titanium-software.fr/download/15/OnyX.dmg"
     end
+    on_tahoe do
+      version "5.0.5"
+
+      url "https://www.titanium-software.fr/download/26/OnyX.dmg"
+    end
 
     livecheck do
       skip "Legacy version"
     end
   end
-  on_tahoe :or_newer do
-    version "5.0.5"
+  on_golden_gate :or_newer do
+    version "5.1.0"
 
-    url "https://www.titanium-software.fr/download/26/OnyX.dmg"
+    url "https://www.titanium-software.fr/download/27/OnyX.dmg"
 
     # We check the version on the homepage, as the version in the related plist
     # file can be out of date.
     livecheck do
       url :homepage
-      regex(/>\s*OnyX\s+v?(\d+(?:\.\d+)+)\s+for\s+[\w\s]*26\s*</i)
+      regex(/>\s*OnyX\s+v?(\d+(?:\.\d+)+)\s+for\s+[\w\s]*27\s*</i)
     end
   end
 
@@ -58,6 +63,7 @@ cask "onyx" do
     :sonoma,
     :sequoia,
     :tahoe,
+    :golden_gate,
   ]
 
   app "OnyX.app"
