@@ -60,6 +60,7 @@ cask "minecraft-server" do
 
   preflight_steps do
     mkdir_p "{{HOMEBREW_PREFIX}}/etc/minecraft-server"
+    write_file "{{HOMEBREW_PREFIX}}/etc/minecraft-server/eula.txt", "eula=false\n", overwrite: false
   end
 
   eula_file = config_dir.join("eula.txt")
