@@ -19,6 +19,8 @@ cask "dbvisualizer" do
 
   app "DbVisualizer.app"
 
+  uninstall quit: "com.dbvis.DbVisualizer"
+
   zap trash: [
     "~/.dbvis",
     "~/Library/Preferences/com.dbvis.DbVisualizer.plist",
