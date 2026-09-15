@@ -2,7 +2,17 @@ cask "typora" do
   version "1.14.10"
   sha256 "a1a8e997c174577a69e33e3c1128719e886d1cd635b32f7243e9bab91ce0831c"
 
-  url "https://downloads.typora.io/mac/Typora-#{version}.dmg"
+  language "zh-Hans-CN" do # use official Chinese mirror
+    url "https://downloads.typoraio.cn/mac/Typora-#{version}.dmg"
+
+    "zh-Hans-CN"
+  end
+  language "en", default: true do
+    url "https://downloads.typora.io/mac/Typora-#{version}.dmg"
+
+    "en-US"
+  end
+
   name "Typora"
   desc "Configurable document editor that supports Markdown"
   homepage "https://typora.io/"
