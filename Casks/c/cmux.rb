@@ -1,6 +1,6 @@
 cask "cmux" do
-  version "0.64.23"
-  sha256 "80a3572cbac937149ff1638771952105fe9d685198395ffdf2addf92f525a9bd"
+  version "0.64.24"
+  sha256 "5bda5ca997a9369de45be6e34fe9c6e7b55b44cd42d0779ec6dd14c39b830924"
 
   url "https://github.com/manaflow-ai/cmux/releases/download/v#{version}/cmux-macos.dmg"
   name "cmux"
