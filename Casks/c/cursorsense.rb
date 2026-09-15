@@ -1,6 +1,6 @@
 cask "cursorsense" do
-  version "2.4.3"
-  sha256 "431f92df25412ef68c1471d85ee509beb9ca378939ce46ec9f10bb778ee0237b"
+  version "2.5"
+  sha256 "f4c13fdd02d33826867edbed605992e5b8de3de87057164d9121f936fffef3a0"
 
   url "https://plentycom.jp/ctrl/files_cs/CursorSense#{version}.dmg"
   name "CursorSense"
@@ -12,12 +12,16 @@ cask "cursorsense" do
     regex(%r{href=.*?/CursorSensev?(\d+(?:\.\d+)+)\.dmg}i)
   end
 
-  depends_on :macos
+  depends_on macos: :monterey
 
   app "CursorSense.app"
 
+  uninstall launchctl: "jp.plentycom.CursorSense.boa"
+
   zap trash: [
+    "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/jp.plentycom.cursorsense.boa.sfl*",
     "~/Library/Application Support/SteerMouse & CursorSense",
+    "~/Library/Caches/jp.plentycom.CursorSense.app",
     "~/Library/HTTPStorages/jp.plentycom.CursorSense.app",
     "~/Library/LaunchAgents/jp.plentycom.CursorSense.boa.plist",
     "~/Library/Preferences/jp.plentycom.CursorSense.app.plist",
