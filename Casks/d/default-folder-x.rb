@@ -1,6 +1,6 @@
 cask "default-folder-x" do
-  version "6.2.8"
-  sha256 "042ca1f9921537155d92caedb06059fd5bd9121d334c4da1a381f8dd23071101"
+  version "6.3"
+  sha256 "bda792c1ecc95d13fc73a3d5124d54a0b21c3b251362125d278e50f91145e395"
 
   url "https://www.stclairsoft.com/download/DefaultFolderX-#{version}.dmg"
   name "Default Folder X"
@@ -17,11 +17,20 @@ cask "default-folder-x" do
 
   app "Default Folder X.app"
 
+  uninstall quit: "com.stclairsoft.DefaultFolderX*"
+
   zap trash: [
+    "~/Library/Application Scripts/com.stclairsoft.DefaultFolderX#{version.major}.DrawerButtonExtension",
+    "~/Library/Application Scripts/com.stclairsoft.DefaultFolderX#{version.major}.MenuButtonExtension",
     "~/Library/Application Support/.com.stclairsoft",
     "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.stclairsoft.defaultfolderx#{version.major}.sfl*",
     "~/Library/Application Support/com.stclairsoft.DefaultFolderX#{version.major}",
+    "~/Library/Application Support/com.stclairsoft.DefaultFolderX#{version.major}",
     "~/Library/Caches/com.stclairsoft.DefaultFolderX#{version.major}",
+    "~/Library/Caches/com.stclairsoft.DefaultFolderX#{version.major}",
+    "~/Library/Containers/com.stclairsoft.DefaultFolderX#{version.major}.DrawerButtonExtension",
+    "~/Library/Containers/com.stclairsoft.DefaultFolderX#{version.major}.MenuButtonExtension",
+    "~/Library/Preferences/com.stclairsoft.DefaultFolderX#{version.major}.plist",
     "~/Library/Preferences/com.stclairsoft.DefaultFolderX#{version.major}.plist",
   ]
 end
