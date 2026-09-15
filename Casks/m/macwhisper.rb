@@ -1,6 +1,6 @@
 cask "macwhisper" do
-  version "15.0.1,1502"
-  sha256 "a34118e363da0f7bce2eab6546f74217873390f5e18e77f7987c8a43a97a11d1"
+  version "15.0.2,1503"
+  sha256 "3c12cb9b46ae567ea2d3b9dad3c2bc96050ac69a25368bc572b80fcab9e5f040"
 
   url "https://cdn.macwhisper.com/macwhisper/MacWhisper-#{version.csv.second}#{"_#{version.csv.third}" if version.csv.third}.zip"
   name "MacWhisper"
