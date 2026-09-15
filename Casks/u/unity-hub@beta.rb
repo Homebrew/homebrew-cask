@@ -8,7 +8,7 @@ cask "unity-hub@beta" do
          x86_64_linux: "81574dc381c0e787ff7f3431f97491d6c0deabce3737761b291a7756a3a92742"
 
   on_macos do
-    depends_on macos: :monterey
+    depends_on macos: :ventura
 
     app "Unity Hub.app"
 
