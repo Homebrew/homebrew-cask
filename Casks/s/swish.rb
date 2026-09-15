@@ -1,6 +1,6 @@
 cask "swish" do
-  version "1.13.2"
-  sha256 "1db6ddcbc950f71d869114cee5dc069485e682d1be7bce494dee2fc3cb04f333"
+  version "1.13.3"
+  sha256 "8e968454db7617b6a293f3e0e551c214c5aa86f443bc669b3e1316114a18d52c"
 
   url "https://github.com/chrenn/swish-dl/releases/download/#{version}/Swish.dmg"
   name "Swish"
@@ -13,9 +13,11 @@ cask "swish" do
   end
 
   auto_updates true
-  depends_on :macos
+  depends_on macos: :monterey
 
   app "Swish.app"
+
+  uninstall quit: "co.highlyopinionated.swish"
 
   zap trash: [
     "~/Library/Application Support/Swish",
