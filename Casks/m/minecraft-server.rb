@@ -59,7 +59,7 @@ cask "minecraft-server" do
   eula_file = config_dir.join("eula.txt")
 
   postflight_steps do
-    run "minecraft-server", base: :staged_path
+    run ".homebrew-command-wrappers/minecraft-server", base: :staged_path
     inreplace "{{HOMEBREW_PREFIX}}/etc/minecraft-server/eula.txt", "eula=false", "eula=TRUE", audit_result: false
   end
 
@@ -68,7 +68,7 @@ cask "minecraft-server" do
   zap trash: config_dir
 
   caveats do
-    depends_on_java "16+"
+    depends_on_java "25+"
     <<~EOS
       Configuration files are located in
 
