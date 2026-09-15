@@ -2,14 +2,14 @@ cask "notion" do
   arch arm: "-arm64"
   livecheck_folder = on_arch_conditional arm: "arm64", intel: "latest"
 
-  sha256 arm:   "1c1d9834d565b382aa40568a99a608afc0222528ee7b166c02ce8cfd15aa906f",
-         intel: "6e63b51abb9fe7a897eba505b8f1f8be9f8771674a734aab80e824c437ed41b2"
+  sha256 arm:   "e5808d068d9e8b6bf15c9d08c2045c7cc9f8a406398e0c164c9622e39e7ea74e",
+         intel: "44b6dd2b74cee6fa048b8d07297557d65a5d95b5cfcf4ccd1db28281411649a9"
 
   on_arm do
-    version "7.33.0"
+    version "7.34.0"
   end
   on_intel do
-    version "7.32.1"
+    version "7.34.0"
   end
 
   url "https://desktop-release.notion-static.com/Notion-#{version}#{arch}.dmg"
@@ -18,7 +18,7 @@ cask "notion" do
   homepage "https://www.notion.com/"
 
   livecheck do
-    url "https://desktop-release.notion-static.com/#{livecheck_folder}-mac.yml"
+    url "https://desktop-release.notion-static.com/#{livecheck_folder}-mac.yml?noCache=#{Time.now.to_i}"
     strategy :electron_builder
   end
 
