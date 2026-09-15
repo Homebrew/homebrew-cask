@@ -18,7 +18,7 @@ cask "notion" do
   homepage "https://www.notion.com/"
 
   livecheck do
-    url "https://desktop-release.notion-static.com/#{livecheck_folder}-mac.yml"
+    url "https://desktop-release.notion-static.com/#{livecheck_folder}-mac.yml?noCache=#{Time.now.to_i}"
     strategy :electron_builder
   end
 
