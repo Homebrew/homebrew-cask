@@ -1,6 +1,6 @@
 cask "subsurface" do
-  version "6.0.5576"
-  sha256 "e8ba59cdfe0a02b4eeab1d9588ae0fadb5639590b3595a458c794d3fe97a8d14"
+  version "6.0.5707"
+  sha256 "9fa5b1c5cc9c8f12f18ed841d3b1c60220ccd8b184d7adf5f3901703eab74901"
 
   url "https://subsurface-divelog.org/downloads/Subsurface-#{version}-CICD-release.dmg",
       user_agent: :fake
@@ -16,6 +16,8 @@ cask "subsurface" do
   depends_on macos: :monterey
 
   app "Subsurface.app"
+
+  uninstall quit: "org.subsurface-divelog"
 
   zap trash: [
     "~/Library/Application Support/Subsurface",
