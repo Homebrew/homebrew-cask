@@ -56,7 +56,7 @@ cask "sf-symbols" do
 
     pkg "SFSymbols.pkg"
 
-    uninstall pkgutil: "com.apple.SFSymbols"
+    uninstall pkgutil: "com.apple.pkg.SFSymbolsPackage"
   end
 
   url "https://devimages-cdn.apple.com/design/resources/download/SF-Symbols-#{version.major}.dmg"
