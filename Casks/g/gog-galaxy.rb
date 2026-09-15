@@ -1,7 +1,7 @@
 cask "gog-galaxy" do
   on_arm do
-    version "2.1.9.27"
-    sha256 "ac2299e50ef126d6f84a1e74d3a790f631d447a3b3e4d50a24873cf344494294"
+    version "2.1.10.56"
+    sha256 "39ebb25ffdafaab21714266a1d4832438143645fdea6ec17f3106e39c5531327"
 
     livecheck do
       url :homepage
