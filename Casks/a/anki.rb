@@ -24,9 +24,9 @@ cask "anki" do
     end
   end
   on_ventura :or_newer do
-    version "26.09"
-    sha256 arm:   "e0ce1625153bd6b252e5fe67d94436b21a2c79006a865968b614f0e88984f5f5",
-           intel: "de7a5eb5e0ad46ec3a178772eef97e23d8c87170a9a669e2ceb5178e1eb2aaa5"
+    version "26.09.2"
+    sha256 arm:   "bc6459bd3e57f2196dd48c212844e5522a71833e08271aa88a62ae5f68cda045",
+           intel: "872db3482565938dd19631294828e1eb7c8547d2b9ab30348822c643b3b8e0eb"
 
     url "https://github.com/ankitects/anki/releases/download/#{version}/anki-#{version}-mac-#{arch}.dmg"
 
