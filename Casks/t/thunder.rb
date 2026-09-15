@@ -18,6 +18,8 @@ cask "thunder" do
 
   app "Thunder.app"
 
+  uninstall quit: "com.xunlei.Thunder"
+
   zap trash: [
     "~/Library/Application Support/Thunder",
     "~/Library/Caches/com.xunlei.Thunder",
