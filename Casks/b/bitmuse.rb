@@ -18,6 +18,8 @@ cask "bitmuse" do
 
   app "BitMuse.app"
 
+  uninstall quit: "com.bitmuse.app"
+
   zap trash: [
     "~/Library/Application Scripts/com.bitmuse.app",
     "~/Library/Application Support/BitMuse",
