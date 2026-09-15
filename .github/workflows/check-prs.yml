@@ -4,7 +4,7 @@ name: Check pull requests
 on:
   # `pull_request_target` has a write token, so this workflow must only ever run trusted
   # base-branch code and must never checkout or execute pull request head code.
-  pull_request_target:
+  pull_request_target: # zizmor: ignore[dangerous-triggers] Required to manage fork PRs; no checkout or head code execution.
     types:
       - opened
       - edited
@@ -25,7 +25,7 @@ jobs:
     # Restrict this write-token workflow to repositories with supported templates.
     # The first step also fails if a repository checkout has occurred.
     if: >-
-      contains(fromJSON('["Homebrew/brew", "Homebrew/homebrew-core", "Homebrew/homebrew-cask"]'), github.repository) &&
+      contains(fromJSON('["Homebrew/BrewUI", "Homebrew/brew", "Homebrew/homebrew-core", "Homebrew/homebrew-cask"]'), github.repository) &&
       github.event.pull_request.user.login != 'BrewTestBot' &&
       github.event.pull_request.user.login != 'brew-commit-app[bot]' &&
       github.event.pull_request.user.login != 'dependabot[bot]'
@@ -112,17 +112,11 @@ jobs:
 
       - name: Find incomplete template comment
         id: comments
-        if: >-
-          (github.event.pull_request.state == 'closed' &&
-          steps.template.outputs.complete_template == 'true') ||
-          (github.event.pull_request.state != 'closed' &&
-          steps.template.outputs.complete_template == 'false')
         run: |
-          comment_ids="$(
-            gh api --paginate "repos/${GITHUB_REPOSITORY:?}/issues/${PR_NUMBER:?}/comments" \
-              --jq '.[] | select(.user.login == "github-actions[bot]" and (.body | contains("<!-- incomplete-pr-template -->"))) | .id'
-          )"
-          if [[ -n "${comment_ids}" ]]
+          gh api --paginate "repos/${GITHUB_REPOSITORY:?}/issues/${PR_NUMBER:?}/comments" \
+            --jq '.[] | select(.user.login == "github-actions[bot]" and (.body | contains("<!-- incomplete-pr-template -->"))) | .id' \
+            >"${RUNNER_TEMP:?}/check-prs/incomplete-template-comment-ids"
+          if [[ -s "${RUNNER_TEMP}/check-prs/incomplete-template-comment-ids" ]]
           then
             echo "has_incomplete_template_comment=true" >>"${GITHUB_OUTPUT:?}"
           else
@@ -147,6 +141,17 @@ jobs:
         run: |
           gh api --method PATCH "repos/${GITHUB_REPOSITORY:?}/pulls/${PR_NUMBER:?}" \
             -f state=open
+
+      - name: Remove resolved template comments
+        if: >-
+          steps.template.outputs.complete_template == 'true' &&
+          steps.comments.outputs.has_incomplete_template_comment == 'true'
+        run: |
+          # A later closure by another workflow must not reuse these markers.
+          while IFS= read -r comment_id
+          do
+            gh api --method DELETE "repos/${GITHUB_REPOSITORY:?}/issues/comments/${comment_id}"
+          done <"${RUNNER_TEMP:?}/check-prs/incomplete-template-comment-ids"
 
       - name: Comment on incomplete pull request
         if: >-
