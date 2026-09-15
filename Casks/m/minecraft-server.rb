@@ -1,6 +1,12 @@
 cask "minecraft-server" do
+  java = on_system_conditional macos: "/usr/bin/java", linux: "#{HOMEBREW_PREFIX}/opt/openjdk@25/bin/java"
+
   version "26.3,33680f5f2ac32864d6d7cf5e56a705fdb3e05f4c"
   sha256 "d052f14d7a173734fba553711e5b570162e2f2a313267ee31a21b975a679be64"
+
+  on_linux do
+    depends_on formula: "openjdk@25"
+  end
 
   url "https://piston-data.mojang.com/v1/objects/#{version.csv.second}/server.jar"
   name "Minecraft Server"
@@ -49,7 +55,7 @@ cask "minecraft-server" do
   command_wrapper "minecraft-server", content: <<~SH
     #!/bin/sh
     cd '#{config_dir}' && \
-      exec /usr/bin/java ${@:--Xms1024M -Xmx1024M} -jar '#{staged_path}/server.jar' nogui
+      exec '#{java}' ${@:--Xms1024M -Xmx1024M} -jar '#{staged_path}/server.jar' nogui
   SH
 
   preflight_steps do
