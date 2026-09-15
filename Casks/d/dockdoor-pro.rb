@@ -1,6 +1,6 @@
 cask "dockdoor-pro" do
-  version "1.4.2b1"
-  sha256 "e64ab910b976ce74eebd88c776fac00894317cd3b010efa1207e4dd5d067eddb"
+  version "1.4.2"
+  sha256 "771250392663616b0e107e2d65900cf027267340699c3c9946ae7a5e6499f765"
 
   url "https://downloads.dockdoor.net/v/#{version}/DockDoorPro.dmg"
   name "DockDoor Pro"
@@ -9,7 +9,9 @@ cask "dockdoor-pro" do
 
   livecheck do
     url "https://pro.dockdoor.net/appcast.xml"
-    strategy :sparkle
+    strategy :sparkle do |items|
+      items.find { |item| item.channel.nil? }&.short_version
+    end
   end
 
   auto_updates true
