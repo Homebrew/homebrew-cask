@@ -9,8 +9,6 @@ cask "bettermacwidgets" do
 
   livecheck do
     url "https://bettermacwidgets.de/appcast.xml"
-    # The download URL carries only the short version, so compare only that — otherwise
-    # livecheck reports "2.2.5,50" (short,build) and never matches.
     strategy :sparkle, &:short_version
   end
 
@@ -24,6 +22,7 @@ cask "bettermacwidgets" do
   zap trash: [
     "~/Library/Application Support/BetterMacWidgets",
     "~/Library/Caches/com.bettermacwidgets.app",
+    "~/Library/HTTPStorages/com.bettermacwidgets.app",
     "~/Library/Preferences/com.bettermacwidgets.app.plist",
   ]
 end
