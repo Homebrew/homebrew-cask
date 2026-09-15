@@ -1,0 +1,22 @@
+cask "dcp-o-matic" do
+  version "2.19.1"
+  sha256 "b98e533de6452bf4d560d9b9a05caf8cbe7301697078a9c8cfe493dad3b4b310"
+
+  url "https://download.dcpomatic.com/dl.php?id=osx-10.10-main&version=#{version}"
+  name "DCP-o-matic"
+  desc "Convert video, audio and subtitles into DCP (Digital Cinema Package)"
+  homepage "https://dcpomatic.com/"
+
+  livecheck do
+    url "https://git.carlh.net/cgit/dcpomatic/"
+    regex(%r{href=.*?/tag/\?h=v?(\d+(?:\.\d+)+)["' >]}i)
+  end
+
+  depends_on :macos
+
+  app "DCP-o-matic #{version.major}.app"
+
+  uninstall quit: "com.dcpomatic"
+
+  zap trash: "~/Library/Preferences/com.dcpomatic"
+end

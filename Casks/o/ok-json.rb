@@ -1,0 +1,25 @@
+cask "ok-json" do
+  version "3.0.1"
+  sha256 :no_check
+
+  url "https://okjson.app/download/okjson-latest.dmg"
+  name "OK JSON"
+  desc "Scriptable JSON formatter and editor"
+  homepage "https://okjson.app/"
+
+  livecheck do
+    url "https://okjson.app/download/appcast.xml"
+    strategy :sparkle, &:short_version
+  end
+
+  auto_updates true
+  depends_on macos: :sequoia
+
+  app "OK JSON.app"
+
+  zap trash: [
+    "~/Library/Containers/net.shinystone.OKJSON",
+    "~/Library/Group Containers/group.net.shinystone.OKJSON",
+    "~/Library/Group Containers/S8MRM84X6F.group.net.shinystone.OKJSON",
+  ]
+end

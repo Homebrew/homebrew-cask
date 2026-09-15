@@ -1,0 +1,35 @@
+cask "tidgi" do
+  arch arm: "arm64", intel: "x64"
+
+  version "0.14.2"
+  sha256 arm:   "deb71923dfe95b0ab43434705a87d95a5b92cd8ed188653f6da7a18cd7c37d86",
+         intel: "1be87322ed9925b60f5ea12f124675898845416160e6b3ec42b971d1f9c736ca"
+
+  url "https://github.com/tiddly-gittly/TidGi-Desktop/releases/download/v#{version}/TidGi-darwin-#{arch}-#{version.split("-").first}.zip"
+  name "TidGi"
+  desc "Personal knowledge-base app"
+  homepage "https://github.com/tiddly-gittly/TidGi-Desktop"
+
+  livecheck do
+    url :url
+    regex(/^\D*?(\d+(?:\.\d+)+.*)$/i)
+    strategy :github_latest
+  end
+
+  disable! date: "2026-09-01", because: :fails_gatekeeper_check
+
+  depends_on macos: :monterey
+
+  app "TidGi.app"
+
+  uninstall quit: "com.tidgi"
+
+  zap trash: [
+    "~/Library/Application Support/TidGi",
+    "~/Library/Caches/com.tidgi.app",
+    "~/Library/Caches/com.tidgi.app.ShipIt",
+    "~/Library/Preferences/com.tidgi.app.plist",
+    "~/Library/Preferences/com.tidgi.plist",
+    "~/Library/Saved Application State/com.microsoft.VSCode.savedState",
+  ]
+end

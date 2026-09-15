@@ -1,0 +1,40 @@
+cask "garmin-express" do
+  version "7.29.2"
+  sha256 :no_check
+
+  url "https://download.garmin.com/omt/express/GarminExpress.dmg"
+  name "Garmin Express"
+  desc "Update maps and software, sync with Garmin Connect and register your device"
+  homepage "https://www.garmin.com/en-US/software/express"
+
+  # From https://support.garmin.com/en-US/?productID=168768&tab=software
+  livecheck do
+    url "https://support.garmin.com/capi/faq/details/?locale=en-US&faqId=9MuiEv9c2y2wgcXvzEVEe8"
+    regex(/for\s+Mac:?[\s\u00a0]*?v?(\d+(?:\.\d+)+)/i)
+    strategy :json do |json, regex|
+      match = json["content"]&.match(regex)
+      next if match.blank?
+
+      match[1]
+    end
+  end
+
+  auto_updates true
+  depends_on :macos
+
+  pkg "Install Garmin Express.pkg"
+
+  uninstall quit:    [
+              "com.garmin.renu.client",
+              "com.garmin.renu.service",
+            ],
+            pkgutil: "com.garmin.renu.client"
+
+  zap trash: [
+    "~/Library/Application Support/Garmin/Express",
+    "~/Library/Caches/com.garmin.renu.client",
+    "~/Library/Caches/com.garmin.renu.service",
+    "~/Library/Caches/com.garmin.renu.service.crashreporter",
+    "~/Library/Preferences/com.garmin.renu*",
+  ]
+end

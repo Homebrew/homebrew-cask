@@ -1,0 +1,32 @@
+cask "entry" do
+  version "2.1.35"
+  sha256 "e8eefcc607e2177aec3aa167a7e0c4f41746e444f7918190d5ad0ffe78d82029"
+
+  url "https://playentry.org/uploads/data/installers/Entry-#{version}.pkg"
+  name "entry"
+  desc "Block-based coding platform"
+  homepage "https://playentry.org/"
+
+  livecheck do
+    url "https://playentry.org/api/checkVersion", post_json: {
+      category: "offline",
+      version:  version,
+    }
+    strategy :json do |json|
+      json["recentVersion"]
+    end
+  end
+
+  depends_on :macos
+
+  pkg "Entry-#{version}.pkg"
+
+  uninstall pkgutil: "org.playentry.entry"
+
+  zap trash: [
+    "~/Library/Application Support/Entry",
+    "~/Library/Application Support/entry-hw",
+    "~/Library/Preferences/org.playentry.entry.plist",
+    "~/Library/Saved Application State/org.playentry.entry.savedState",
+  ]
+end

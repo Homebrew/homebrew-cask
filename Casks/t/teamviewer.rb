@@ -1,0 +1,99 @@
+cask "teamviewer" do
+  on_big_sur :or_older do
+    version "15.71.4"
+    sha256 "194147bcb5a23452f974e73e0b9570b9395d9c46190f7dc8fcd867aaae9cef06"
+
+    livecheck do
+      url "https://download.teamviewer.com/download/update/macupdates.xml?id=0&lang=en&version=#{version}&os=macos&osversion=11.7&type=1&channel=1"
+      strategy :sparkle
+    end
+
+    pkg "TeamViewer.pkg"
+  end
+  on_monterey do
+    version "15.71.4"
+    sha256 "194147bcb5a23452f974e73e0b9570b9395d9c46190f7dc8fcd867aaae9cef06"
+
+    livecheck do
+      url "https://download.teamviewer.com/download/update/macupdates.xml?id=0&lang=en&version=#{version}&os=macos&osversion=12.7&type=1&channel=1"
+      strategy :sparkle
+    end
+
+    pkg "TeamViewer.pkg"
+  end
+  on_ventura :or_newer do
+    version "15.81.6"
+    sha256 "39692047e9446a1e8d07461ffb22a2ce565d290584c513302e983847816eb2d0"
+
+    livecheck do
+      url "https://download.teamviewer.com/download/update/macupdates.xml?id=0&lang=en&version=#{version}&os=macos&osversion=13.7&type=1&channel=1"
+      strategy :sparkle
+    end
+
+    pkg "TeamViewer.pkg"
+  end
+
+  url "https://dl.teamviewer.com/download/version_15x/update/#{version}/TeamViewer.pkg"
+  name "TeamViewer"
+  desc "Remote access and connectivity software focused on security"
+  homepage "https://www.teamviewer.com/"
+
+  auto_updates true
+  conflicts_with cask: "teamviewer-host"
+  depends_on :macos
+
+  postflight_steps do
+    # postinstall launches the app
+    terminate_process(
+      "/Applications/TeamViewer.app",
+      match:           :full,
+      attempts:        3,
+      must_succeed:    false,
+      notices:         [
+        "The TeamViewer package postinstall script launches the TeamViewer app",
+        "Attempting to close the TeamViewer app to avoid unwanted user intervention",
+      ],
+      failure_message: "Unable to forcibly close TeamViewer",
+    )
+  end
+
+  uninstall launchctl: [
+              "com.teamviewer.desktop",
+              "com.teamviewer.Helper",
+              "com.teamviewer.service",
+              "com.teamviewer.teamviewer",
+              "com.teamviewer.teamviewer_desktop",
+              "com.teamviewer.teamviewer_service",
+              "com.teamviewer.UninstallerHelper",
+              "com.teamviewer.UninstallerWatcher",
+            ],
+            quit:      [
+              "com.teamviewer.TeamViewer",
+              "com.teamviewer.TeamViewerUninstaller",
+            ],
+            pkgutil:   [
+              "com.teamviewer.AuthorizationPlugin",
+              "com.teamviewer.AuthorizationResources",
+              "com.teamviewer.remoteaudiodriver",
+              "com.teamviewer.teamviewer.*",
+              "TeamViewerUninstaller",
+            ],
+            delete:    [
+              "/Applications/TeamViewer.app",
+              "/Library/Preferences/com.teamviewer*",
+            ]
+
+  zap trash: [
+    "/Library/Application Support/TeamViewer",
+    "~/Library/Application Support/TeamViewer",
+    "~/Library/Caches/com.teamviewer.TeamViewer",
+    "~/Library/Caches/TeamViewer",
+    "~/Library/Cookies/com.teamviewer.TeamViewer.binarycookies",
+    "~/Library/HTTPStorages/com.teamviewer.TeamViewer",
+    "~/Library/HTTPStorages/com.teamviewer.TeamViewer.binarycookies",
+    "~/Library/Logs/TeamViewer",
+    "~/Library/Preferences/com.teamviewer*",
+    "~/Library/Saved Application State/com.teamviewer.TeamViewer.savedState",
+    "~/Library/WebKit/com.teamviewer.TeamViewer",
+  ]
+end

@@ -1,0 +1,23 @@
+cask "sqlpro-for-mssql" do
+  version "2026.238"
+  sha256 "01bc90bab8b63e0205d42edc610a7a88396052eb8d940e0ec9bda9bdd4c03ad4"
+
+  url "https://d3fwkemdw8spx3.cloudfront.net/mssql/SQLProMSSQL.#{version}.app.zip"
+  name "SQLPro for MSSQL"
+  desc "Microsoft SQL Server database client"
+  homepage "https://www.macsqlclient.com/"
+
+  livecheck do
+    url "https://www.macsqlclient.com/download.php"
+    strategy :header_match
+  end
+
+  depends_on macos: :sonoma
+
+  app "SQLPro for MSSQL.app"
+
+  zap trash: [
+    "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.hankinsoft.osx.tinysqlstudio.sfl*",
+    "~/Library/Containers/com.hankinsoft.osx.tinysqlstudio",
+  ]
+end

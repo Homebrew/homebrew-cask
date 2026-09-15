@@ -1,0 +1,60 @@
+cask "topaz-video" do
+  version "1.7.0"
+  sha256 "7a854d549b1cf2ffe9f8dfb208f954a94e0fa770ded8fb481fdd140b16a6079a"
+
+  url "https://downloads.topazlabs.com/deploy/TopazVideoStudio/#{version}/TopazVideo-#{version}.pkg"
+  name "Topaz Video"
+  desc "Video upscaler and quality enhancer"
+  homepage "https://www.topazlabs.com/topaz-video"
+
+  livecheck do
+    url "https://topazlabs.com/d/videostudio/latest/mac/full"
+    strategy :header_match
+  end
+
+  auto_updates true
+  depends_on arch: :arm64
+  depends_on :macos
+
+  pkg "TopazVideo-#{version}.pkg"
+
+  # Unlike the previous version of this app (topaz-video-ai), the .pkg installer does not contain
+  # supplementary packages to install the plugins. Additionally, the app does not contain the menu
+  # options for the user to manually install the plugins post-installation. Until this is resolved
+  # by the vendor, trigger the plugin installation scripts here so the end state is a ready-to-use
+  # installation as per the previous version users are likely to be transitioning from.
+  postflight_steps do
+    run "/bin/bash", args: ["{{appdir}}/Topaz Video.app/Contents/Resources/ae_inst.sh"], sudo: true
+    run "/bin/bash", args: ["{{appdir}}/Topaz Video.app/Contents/Resources/ofx_inst.sh"], sudo: true
+  end
+
+  uninstall launchctl: "com.topazlabs.veai.nukepath",
+            pkgutil:   [
+              "com.topazlabs.aeplugin",
+              "com.topazlabs.fcpplugin",
+              "com.topazlabs.ofxplugin",
+              "com.topazlabs.VStudioPackage",
+            ],
+            delete:    [
+              "/Applications/Adobe After Effects 2020/Plug-ins/Topaz Video AI Frame Interpolation.plugin",
+              "/Applications/Adobe After Effects 2020/Plug-ins/Topaz Video AI.plugin",
+              "/Applications/Adobe After Effects 2021/Plug-ins/Topaz Video AI Frame Interpolation.plugin",
+              "/Applications/Adobe After Effects 2021/Plug-ins/Topaz Video AI.plugin",
+              "/Applications/Adobe After Effects 2022/Plug-ins/Topaz Video AI Frame Interpolation.plugin",
+              "/Applications/Adobe After Effects 2022/Plug-ins/Topaz Video AI.plugin",
+              "/Applications/Adobe After Effects 2023/Plug-ins/Topaz Video AI Frame Interpolation.plugin",
+              "/Applications/Adobe After Effects 2023/Plug-ins/Topaz Video AI.plugin",
+              "/Applications/Adobe After Effects 2024/Plug-ins/Topaz Video AI Frame Interpolation.plugin",
+              "/Applications/Adobe After Effects 2024/Plug-ins/Topaz Video AI.plugin",
+              "/Applications/Adobe After Effects 2025/Plug-ins/Topaz Video AI Frame Interpolation.plugin",
+              "/Applications/Adobe After Effects 2025/Plug-ins/Topaz Video AI.plugin",
+              "/Library/OFX/Plugins/Topaz Video AI.ofx.bundle",
+            ]
+
+  zap trash: [
+    "~/Library/Application Support/Topaz Labs LLC/Topaz Video",
+    "~/Library/Caches/Topaz Labs LLC/Topaz Video",
+    "~/Library/Preferences/com.topazlabs.Topaz Video.plist",
+    "~/Library/Preferences/com.topazlabs.Topaz-Video.plist",
+  ]
+end
