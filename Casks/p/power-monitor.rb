@@ -1,6 +1,6 @@
 cask "power-monitor" do
-  version "1.3.3"
-  sha256 "6d2180970c09519fe3a535cfa8ded8453b38bb71f221f564b87e236f403df51e"
+  version "1.3.4"
+  sha256 "2eb052647d458d4aa5f07e3b663cda0f0df86c736b52058b7884bf2267a025e2"
 
   url "https://github.com/SAP/power-monitoring-tool-for-macos/releases/download/#{version}/PowerMonitor_#{version}.pkg"
   name "Power Monitor"
