@@ -1,6 +1,6 @@
 cask "appgridmac" do
-  version "1.2.8"
-  sha256 "58f70b86ee1e7fd3309d38eddeeac5a9a832f63df358fdb30f6fd4194903ac0a"
+  version "1.2.9"
+  sha256 "446fdf86aa20c2cb07f41e7deae63c89e701effeb5c834f738cdbe687b653a78"
 
   url "https://zekalogic.com/appgrid/app/AppGridMac-#{version}.zip"
   name "AppGridMac"
