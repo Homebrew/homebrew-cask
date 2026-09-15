@@ -1,6 +1,6 @@
 cask "airbuddy" do
-  version "3.0.1,1008"
-  sha256 "0c8e2b7349629f8176d7af8d2460cd06e37d1721edff6a925109914b53992700"
+  version "3.0.2,1023"
+  sha256 "5109aef35ab87f14581d8353c72531cbe9be7518bf2596bd8c4bbc9ea9c91fc2"
 
   url "https://su.airbuddy.app/lleMaylxgd/AirBuddy_v#{version.csv.first}-#{version.csv.second}.dmg",
       user_agent: :browser
