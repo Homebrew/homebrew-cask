@@ -5,8 +5,8 @@ cask "blender" do
   # https://www.blender.org/download/lts/ when updating this cask, as we cannot
   # identify LTS versions using livecheck.
   on_arm do
-    version "5.2.1"
-    sha256 "6409e21de80994db5f4c4a34486b6fd43cea21085b912f7491c53e923acb65a3"
+    version "5.2.2"
+    sha256 "dc4125399b8bfefe283cc1624d6cfc7809d1cac20ace51072127eb371f31f210"
 
     # The upstream download page (https://www.blender.org/download/) cannot be
     # fetched due to Cloudflare protections, so we have to naively assume a
@@ -34,8 +34,8 @@ cask "blender" do
     end
   end
   on_intel do
-    version "4.5.13"
-    sha256 "43caddd07d0917cb5bac288180e6bcb0374fac4fdc31cca9dc230a2e3dec752f"
+    version "4.5.14"
+    sha256 "613e73339e97bd113adeeb28d9155beeacf2df7119ee4dbd6bdce234843645f6"
 
     # Intel support is limited to version 4.5.x series.
     livecheck do
