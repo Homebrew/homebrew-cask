@@ -36,6 +36,8 @@ cask "popo" do
 
   app "popo_mac.app"
 
+  uninstall quit: "com.netease.game.popo"
+
   zap trash: [
     "~/Library/Application Support/Netease/Popo",
     "~/Library/Caches/com.netease.game.popo",
