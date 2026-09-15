@@ -22,13 +22,22 @@ cask "aside" do
   uninstall launchctl: [
               "at.studio.AsideBrowser.UpdaterPrivilegedHelper",
               "at.studio.AsideKeystone.agent",
+              "at.studio.asidekeystone.agent",
               "at.studio.AsideKeystone.xpcservice",
+              "at.studio.asidekeystone.xpcservice",
               "at.studio.AsideUpdater.wake",
             ],
             quit:      "at.studio.AsideBrowser",
+            signal:    [
+              ["TERM", "at.studio.AsideBrowser"],
+              ["TERM", "at.studio.AsideUpdater"],
+            ],
             delete:    [
               "/Library/LaunchDaemons/at.studio.AsideBrowser.UpdaterPrivilegedHelper.plist",
               "/Library/PrivilegedHelperTools/at.studio.AsideBrowser.UpdaterPrivilegedHelper",
+              "~/Library/LaunchAgents/at.studio.asidekeystone.agent.plist",
+              "~/Library/LaunchAgents/at.studio.asidekeystone.xpcservice.plist",
+              "~/Library/LaunchAgents/at.studio.AsideUpdater.wake.plist",
             ]
 
   zap launchctl: [
