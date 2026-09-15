@@ -2,10 +2,10 @@ cask "browseros" do
   arch arm: "arm64", intel: "x64"
   url_end = on_system_conditional macos: "dmg", linux: "AppImage"
 
-  version "0.50.3"
-  sha256 arm:          "6c6935ce2a0387ce7980f674849023869f8d700638a8a378534b4d2ffe3d8d39",
-         intel:        "b396b885b8b919c1969e3da998feb7eebd58b51495b244168fd5546cb4af3c13",
-         x86_64_linux: "168967dda944ff319160d17fa778582f9083e5dbd76a9728ba20a53de8f60da4"
+  version "0.50.5"
+  sha256 arm:          "853ac4a86ea8551b7e1091e24b6f90c5a6f21ad502a257334885363839cab70c",
+         intel:        "05fed20583c73bffd12ce50d187a7bea0fb63f52df220878cfb118adeb906191",
+         x86_64_linux: "a9f807fa190e66d3c55bc29f5c74f084ecab1abf9def4ea9ef8a3bbaae467089"
 
   on_macos do
     depends_on macos: :ventura
