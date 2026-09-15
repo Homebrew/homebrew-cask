@@ -1,6 +1,6 @@
 cask "aside" do
-  version "1.0.910.1"
-  sha256 "b71fc04ea5c89cd5e59f9ef50c15871e8a602bd27c3aee4d1df1a108677c8079"
+  version "1.0.914.1"
+  sha256 "e93b30ddd10347e11917d69a83756768a9fc7a311e4edec63c662951d78db7f7"
 
   url "https://releases.aside.com/dev-updater/Aside-#{version}.dmg"
   name "Aside"
@@ -22,13 +22,22 @@ cask "aside" do
   uninstall launchctl: [
               "at.studio.AsideBrowser.UpdaterPrivilegedHelper",
               "at.studio.AsideKeystone.agent",
+              "at.studio.asidekeystone.agent",
               "at.studio.AsideKeystone.xpcservice",
+              "at.studio.asidekeystone.xpcservice",
               "at.studio.AsideUpdater.wake",
             ],
             quit:      "at.studio.AsideBrowser",
+            signal:    [
+              ["TERM", "at.studio.AsideBrowser"],
+              ["TERM", "at.studio.AsideUpdater"],
+            ],
             delete:    [
               "/Library/LaunchDaemons/at.studio.AsideBrowser.UpdaterPrivilegedHelper.plist",
               "/Library/PrivilegedHelperTools/at.studio.AsideBrowser.UpdaterPrivilegedHelper",
+              "~/Library/LaunchAgents/at.studio.asidekeystone.agent.plist",
+              "~/Library/LaunchAgents/at.studio.asidekeystone.xpcservice.plist",
+              "~/Library/LaunchAgents/at.studio.AsideUpdater.wake.plist",
             ]
 
   zap launchctl: [
