@@ -1,6 +1,6 @@
 cask "aerial@beta" do
-  version "4.0.16"
-  sha256 "33a6b4008b9e4b6271daf0d450363fdbddb452fd3836ff81966ba5fa80ccbfe9"
+  version "4.1.0"
+  sha256 "d81dd29d7240e41cb51067946949487a306e63c80375437da6ce5a439de1e2e2"
 
   url "https://github.com/AerialScreensaver/Aerial/releases/download/v#{version}/Aerial-#{version}.zip"
   name "Aerial"
@@ -15,7 +15,7 @@ cask "aerial@beta" do
 
   auto_updates true
   conflicts_with cask: "aerial"
-  depends_on macos: :sequoia
+  depends_on macos: :tahoe
 
   app "Aerial.app"
 
