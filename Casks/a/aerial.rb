@@ -5,7 +5,6 @@ cask "aerial" do
 
     livecheck do
       url :url
-      strategy :github_releases
       regex(/^v?(4\.0(?:\.\d+)+)$/i)
     end
   end
