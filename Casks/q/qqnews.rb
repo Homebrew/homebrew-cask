@@ -3,9 +3,9 @@ cask "qqnews" do
   url_arch = on_arch_conditional arm: "arm64", intel: "intel"
   livecheck_arch = on_arch_conditional arm: "arm64", intel: "intel"
 
-  version "2.4.10"
-  sha256 arm:   "3c0141e3154a5a75cd86bbf7c0bec2e4fd666372fb6273522e7effaf9a69212a",
-         intel: "31df130d3577f07844396ba0cbba679f1f3cbf57c7abb5bce24a1e2450df0137"
+  version "2.4.20"
+  sha256 arm:   "dcee666e5ceb4b4d755cb664040cf777f3e7b329222a4851ecfb856ab2315805",
+         intel: "1f8743d17372704fff8870a71c0105bdb8660efa18fd068e321800ce4c91610d"
 
   url "https://h5.news.qq.com/qqnews-desk/mac-#{url_arch}/qqnews_#{version}_#{arch}_signed.zip"
   name "qqnews"
