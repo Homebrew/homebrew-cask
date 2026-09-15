@@ -1,6 +1,12 @@
 cask "minecraft-server" do
-  version "26.1.2,97ccd4c0ed3f81bbb7bfacddd1090b0c56f9bc51"
-  sha256 "cd47e7c38328f64768fd17af8fcd8b22496b40b63d4ffee81e71ae059fedcb42"
+  java = on_system_conditional macos: "/usr/bin/java", linux: "#{HOMEBREW_PREFIX}/opt/openjdk@25/bin/java"
+
+  version "26.3,33680f5f2ac32864d6d7cf5e56a705fdb3e05f4c"
+  sha256 "d052f14d7a173734fba553711e5b570162e2f2a313267ee31a21b975a679be64"
+
+  on_linux do
+    depends_on formula: "openjdk@25"
+  end
 
   url "https://piston-data.mojang.com/v1/objects/#{version.csv.second}/server.jar"
   name "Minecraft Server"
@@ -46,20 +52,21 @@ cask "minecraft-server" do
 
   config_dir = HOMEBREW_PREFIX.join("etc", "minecraft-server")
 
-  command_wrapper "minecraft-server", content: <<~EOS
+  command_wrapper "minecraft-server", content: <<~SH
     #!/bin/sh
     cd '#{config_dir}' && \
-      exec /usr/bin/java ${@:--Xms1024M -Xmx1024M} -jar '#{staged_path}/server.jar' nogui
-  EOS
+      exec '#{java}' ${@:--Xms1024M -Xmx1024M} -jar '#{staged_path}/server.jar' nogui
+  SH
 
   preflight_steps do
     mkdir_p "{{HOMEBREW_PREFIX}}/etc/minecraft-server"
+    write_file "{{HOMEBREW_PREFIX}}/etc/minecraft-server/eula.txt", "eula=false\n", overwrite: false
   end
 
   eula_file = config_dir.join("eula.txt")
 
   postflight_steps do
-    run "minecraft-server.wrapper.sh", base: :staged_path
+    run ".homebrew-command-wrappers/minecraft-server", base: :staged_path
     inreplace "{{HOMEBREW_PREFIX}}/etc/minecraft-server/eula.txt", "eula=false", "eula=TRUE", audit_result: false
   end
 
@@ -68,7 +75,7 @@ cask "minecraft-server" do
   zap trash: config_dir
 
   caveats do
-    depends_on_java "16+"
+    depends_on_java "25+"
     <<~EOS
       Configuration files are located in
 
