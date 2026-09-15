@@ -1,5 +1,5 @@
 cask "wins" do
-  version "3.5.1,53"
+  version "3.6,55"
   sha256 :no_check
 
   url "https://winswebsite.s3.us-east-005.backblazeb2.com/Wins.zip"
