@@ -14,7 +14,7 @@ cask "yandextelemost" do
 
   depends_on macos: :monterey
 
-  app "Yandex.Telemost.app"
+  app "Yandex.Telemost.app", target: "Yandex Telemost.app"
 
   uninstall quit: "ru.yandex.desktop.telemost"
 
