@@ -1,6 +1,6 @@
 cask "clearvpn" do
-  version "3.4.3,202607.01.1222,1782909151"
-  sha256 "945e83cb736f51a4c952a1da8d06e6ae7f6748a68c4a9f104b45db1396294294"
+  version "3.4.4,202609.04.1750,1788544753"
+  sha256 "b71c004a33136d2bd72a825c37b931d6582a4560137454cd43be4696532b2504"
 
   url "https://dl.devmate.com/com.macpaw.clearvpn.macos-site-ver/#{version.csv.second}/#{version.csv.third}/ClearVPN-#{version.csv.second}.zip"
   name "ClearVPN"
@@ -22,6 +22,8 @@ cask "clearvpn" do
   depends_on macos: :ventura
 
   app "ClearVPN.app"
+
+  uninstall launchctl: "com.macpaw.clearvpn.macos-site-ver.security-monitor"
 
   zap trash: [
     "~/Library/Caches/com.macpaw.clearvpn.macos-site-ver",
