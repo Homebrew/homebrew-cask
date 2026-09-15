@@ -23,7 +23,7 @@ jobs:
     # Restrict this write-token workflow to repositories with supported templates.
     # The first step also fails if a repository checkout has occurred.
     if: >-
-      contains(fromJSON('["Homebrew/brew", "Homebrew/homebrew-core", "Homebrew/homebrew-cask"]'), github.repository) &&
+      contains(fromJSON('["Homebrew/BrewUI", "Homebrew/brew", "Homebrew/homebrew-core", "Homebrew/homebrew-cask"]'), github.repository) &&
       github.event.issue.user.login != 'BrewTestBot' &&
       github.event.issue.user.login != 'dependabot[bot]'
     runs-on: ubuntu-latest
@@ -58,7 +58,12 @@ jobs:
           # Validate against the brew, homebrew-core and homebrew-cask templates so
           # issues transferred between these repositories are not closed for using a
           # sibling repository's (valid) template.
-          for repo in Homebrew/brew Homebrew/homebrew-core Homebrew/homebrew-cask
+          template_repositories=(Homebrew/brew Homebrew/homebrew-core Homebrew/homebrew-cask)
+          if [[ "${GITHUB_REPOSITORY}" == "Homebrew/BrewUI" ]]
+          then
+            template_repositories=("${GITHUB_REPOSITORY}")
+          fi
+          for repo in "${template_repositories[@]}"
           do
             gh api "repos/${repo}/contents/.github/ISSUE_TEMPLATE?ref=main" \
               --jq '.[] | select(.type == "file" and (.name | test("\\.ya?ml$")) and .name != "config.yml") | .path' |
@@ -78,7 +83,19 @@ jobs:
 
       - name: Check issue template
         id: template
+        env:
+          ISSUE_TITLE: ${{ github.event.issue.title }}
         run: |
+          # Released apps attach a crash report instead of filling in the issue form.
+          if [[ "${GITHUB_REPOSITORY}" == "Homebrew/BrewUI" &&
+                "${ISSUE_TITLE}" == "Crash: "* ]] &&
+             grep -q '^<summary>Automatic crash report</summary>[[:space:]]*$' "${RUNNER_TEMP}/check-issues/body" &&
+             grep -q '^Homebrew[.]app crash report[[:space:]]*$' "${RUNNER_TEMP}/check-issues/body"
+          then
+            echo "complete_template=true" >>"${GITHUB_OUTPUT:?}"
+            exit 0
+          fi
+
           complete_template="$(
             ruby "${RUNNER_TEMP:?}/check_template.rb" issue \
               "${RUNNER_TEMP}/check-issues/body" \
@@ -98,17 +115,11 @@ jobs:
 
       - name: Find incomplete template comment
         id: comments
-        if: >-
-          (github.event.issue.state == 'closed' &&
-          steps.template.outputs.complete_template == 'true') ||
-          (github.event.issue.state != 'closed' &&
-          steps.template.outputs.complete_template == 'false')
         run: |
-          comment_ids="$(
-            gh api --paginate "repos/${GITHUB_REPOSITORY:?}/issues/${ISSUE_NUMBER:?}/comments" \
-              --jq '.[] | select(.user.login == "github-actions[bot]" and (.body | contains("<!-- incomplete-issue-template -->"))) | .id'
-          )"
-          if [[ -n "${comment_ids}" ]]
+          gh api --paginate "repos/${GITHUB_REPOSITORY:?}/issues/${ISSUE_NUMBER:?}/comments" \
+            --jq '.[] | select(.user.login == "github-actions[bot]" and (.body | contains("<!-- incomplete-issue-template -->"))) | .id' \
+            >"${RUNNER_TEMP:?}/check-issues/incomplete-template-comment-ids"
+          if [[ -s "${RUNNER_TEMP}/check-issues/incomplete-template-comment-ids" ]]
           then
             echo "has_incomplete_template_comment=true" >>"${GITHUB_OUTPUT:?}"
           else
@@ -133,6 +144,17 @@ jobs:
         run: |
           gh api --method PATCH "repos/${GITHUB_REPOSITORY:?}/issues/${ISSUE_NUMBER:?}" \
             -f state=open
+
+      - name: Remove resolved template comments
+        if: >-
+          steps.template.outputs.complete_template == 'true' &&
+          steps.comments.outputs.has_incomplete_template_comment == 'true'
+        run: |
+          # A later closure by another workflow must not reuse these markers.
+          while IFS= read -r comment_id
+          do
+            gh api --method DELETE "repos/${GITHUB_REPOSITORY:?}/issues/comments/${comment_id}"
+          done <"${RUNNER_TEMP:?}/check-issues/incomplete-template-comment-ids"
 
       - name: Comment on incomplete issue
         if: >-
