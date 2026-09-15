@@ -21,8 +21,8 @@ cask "sketch" do
     end
   end
   on_sequoia :or_newer do
-    version "2026.3,233959"
-    sha256 "a868d974167ae7b7c20d5edbf71c1430c65412911d19839e9fb35ab3136f3b0e"
+    version "2026.3.1,234013"
+    sha256 "03abbfd6b3594ed6929b53c5e296aed59543f3864fbfbda7c9cf5c43473587cc"
 
     # Older versions may have a more recent `pubDate` than newer versions, so
     # we have to check all of the items in the appcast.
