@@ -1,6 +1,6 @@
 cask "thunder" do
-  version "5.80.7.66659"
-  sha256 "2d5c41dad06f2070e0496a77754be25c3848e33c4e7ddd25ca61a04f8fb5bf9c"
+  version "5.80.8.66675"
+  sha256 "820b9023348d3923b0414cb63d9f5eb253a43e832112e1e38c9eaa66e6f9a32d"
 
   url "https://down.sandai.net/mac/thunder_#{version}.dmg"
   name "Thunder"
@@ -17,6 +17,8 @@ cask "thunder" do
   depends_on :macos
 
   app "Thunder.app"
+
+  uninstall quit: "com.xunlei.Thunder"
 
   zap trash: [
     "~/Library/Application Support/Thunder",
