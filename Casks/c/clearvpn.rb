@@ -23,7 +23,7 @@ cask "clearvpn" do
 
   app "ClearVPN.app"
 
-  uninstall quit: "com.macpaw.clearvpn.macos-site-ver.security-monitor"
+  uninstall launchctl: "com.macpaw.clearvpn.macos-site-ver.security-monitor"
 
   zap trash: [
     "~/Library/Caches/com.macpaw.clearvpn.macos-site-ver",
