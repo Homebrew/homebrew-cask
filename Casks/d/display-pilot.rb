@@ -25,6 +25,7 @@ cask "display-pilot" do
   end
 
   depends_on :macos
+  container nested: "Display Pilot 2Setup-#{version.csv.first}-release.dmg"
 
   app "Display Pilot 2.app"
 
