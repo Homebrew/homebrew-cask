@@ -5,10 +5,10 @@ cask "boosteroid" do
   sha256 :no_check
 
   on_arm do
-    version "1.10.22"
+    version "1.10.23"
   end
   on_intel do
-    version "1.10.22"
+    version "1.10.23"
   end
 
   url "https://boosteroid.com/macos#{folder}/installer/boosteroid-install-#{arch}.dmg",
