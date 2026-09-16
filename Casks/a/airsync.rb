@@ -1,6 +1,6 @@
 cask "airsync" do
-  version "4.0.0"
-  sha256 "c502e935191774c6980ab64b6f54a4f88774a1905fdcfc4f1749b87a145085c0"
+  version "4.0.1"
+  sha256 "00df559b02b1ec3103abcc317fb49a4423478c41121c5dbb52244d58bbd9e9fd"
 
   url "https://github.com/sameerasw/airsync-mac/releases/download/v#{version}/AirSync.dmg"
   name "AirSync"
