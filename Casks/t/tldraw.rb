@@ -1,6 +1,6 @@
 cask "tldraw" do
-  version "1.18.0"
-  sha256 "16edee841a4949c2e72f2a4d50bbb04cf8b8d0d210a24c143f20862bf9dc4d41"
+  version "1.19.1"
+  sha256 "be40c42a2e72f1859eefe9c381cc7e536a8c291eaa4a1594805dae95869d1d39"
 
   url "https://github.com/tldraw/tldraw-offline/releases/download/v#{version}/tldraw-offline-mac-universal.dmg"
   name "tldraw offline"
