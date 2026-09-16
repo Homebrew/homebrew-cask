@@ -15,7 +15,8 @@ cask "yandex-music" do
   auto_updates true
   depends_on macos: :monterey
 
-  app "Яндекс Музыка.app"
+  # Renamed for consistency: app name is different in the Finder and in a shell.
+  app "Яндекс Музыка.app", target: "Yandex Music.app"
 
   zap trash: [
     "~/Library/Application Support/YandexMusic",
