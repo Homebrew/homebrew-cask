@@ -16,6 +16,8 @@ cask "usb-overdrive" do
 
   app "USB Overdrive.app"
 
+  uninstall quit: "com.usboverdrive.helper"
+
   zap trash: [
     "~/Library/Preferences/com.usboverdrive.app.plist",
     "~/Library/Preferences/com.usboverdrive.settings.plist",
