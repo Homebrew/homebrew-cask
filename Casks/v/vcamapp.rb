@@ -1,6 +1,6 @@
 cask "vcamapp" do
-  version "0.15.3"
-  sha256 "ea612993b4b0abbc214895973e7a290b45add7fb4c2fd34d66811830770e6045"
+  version "0.15.5"
+  sha256 "dc913671d0421b8f35604d885237b2caaab9713457fc1b6aa149a8ad85b00e4a"
 
   url "https://github.com/vcamapp/app/releases/download/#{version}/VCam.#{version}.dmg"
   name "VCam"
