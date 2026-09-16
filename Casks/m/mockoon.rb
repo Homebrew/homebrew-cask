@@ -10,7 +10,7 @@ cask "mockoon" do
          x86_64_linux: "e2e7b7aadd5c30b0dafcbcc8011bd0efe19c51dd8a59d45a97e37ece8ecf8eb5"
 
   on_macos do
-    depends_on macos: :monterey
+    depends_on macos: :ventura
 
     app "Mockoon.app"
 
