@@ -25,6 +25,8 @@ cask "hoptodesk" do
     ]
   end
   on_linux do
+    depends_on arch: :x86_64
+
     app_image "hoptodesk.AppImage", target: "HopToDesk.AppImage"
   end
 
