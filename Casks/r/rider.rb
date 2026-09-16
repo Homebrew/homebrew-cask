@@ -1,9 +1,9 @@
 cask "rider" do
   arch arm: "-aarch64"
 
-  version "2026.2.1,262.9437.287"
-  sha256 arm:   "5b565eea336499813e594a537ccf50d3f2639c00c3caa3fa9fc3686cdf22ada4",
-         intel: "3172cecfefa55581909da9d3acee8485b0f5442f4494cffe1d2c2e8e85a079d2"
+  version "2026.2.2,262.10315.191"
+  sha256 arm:   "e991026d529e31c16e1633896b8f96937f28ef78732a22a1f9aafaddd48de615",
+         intel: "910949ae8bfd73816df47f0daa34a736a8cc8715aa93d75e1adf08af41913ac2"
 
   url "https://download.jetbrains.com/rider/JetBrains.Rider-#{version.csv.first}#{arch}.dmg"
   name "JetBrains Rider"
@@ -29,6 +29,8 @@ cask "rider" do
   app "Rider.app"
   command_wrapper "rider",
                   executable: "#{appdir}/Rider.app/Contents/MacOS/rider"
+
+  uninstall quit: "com.jetbrains.rider"
 
   zap trash: [
     "~/Library/Application Support/Rider#{version.major_minor}",
