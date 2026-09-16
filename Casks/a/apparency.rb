@@ -18,8 +18,8 @@ cask "apparency" do
     end
   end
   on_sonoma :or_newer do
-    version "3.3"
-    sha256 "9f0622d654603556861baf41e4959134e3321169a90c012909dc44057f7a3dc3"
+    version "3.4"
+    sha256 "675eadfb33589e3ce6eac88265c8651f02c2db74dac85361f2034bc956e8fc61"
 
     livecheck do
       url "https://www.mothersruin.com/software/Apparency/data/ApparencyVersionInfo.plist"
