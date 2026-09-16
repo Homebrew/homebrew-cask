@@ -1,9 +1,9 @@
 cask "openpencil" do
   arch arm: "aarch64", intel: "x64"
 
-  version "0.14.0"
-  sha256 arm:   "49f368ecc7c2d3203c56a48635ff8a301142f61f4abab0dbfe8d25b6b9b3d847",
-         intel: "deb65826c980dc79d29e9cb1c73cfe3f6a84bba776909755605680639bd02cc5"
+  version "0.15.0"
+  sha256 arm:   "68fa5101648c25298bd5b4d9e3164796a5e1a430f716af2288403cb6e8592d2e",
+         intel: "3413087959089e782066489787e15682191898db8c9740b5af3d6fa5627f66e4"
 
   url "https://github.com/open-pencil/open-pencil/releases/download/v#{version}/OpenPencil_#{arch}.app.tar.gz"
   name "OpenPencil"
