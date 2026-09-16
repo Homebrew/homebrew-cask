@@ -12,6 +12,8 @@ cask "ghostex" do
     strategy :sparkle, &:short_version
   end
 
+  no_autobump! because: :bumped_by_upstream
+
   auto_updates true
   depends_on arch: :arm64
   depends_on macos: :ventura
