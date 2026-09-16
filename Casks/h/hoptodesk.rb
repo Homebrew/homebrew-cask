@@ -36,7 +36,7 @@ cask "hoptodesk" do
   livecheck do
     url "https://dl.hoptodesk.com/latest.json"
     strategy :json do |json|
-      json.dig("files", "HopToDesk.dmg", "version")
+      json.dig("files", "#{os}.#{url_end}", "version")
     end
   end
 end
