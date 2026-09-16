@@ -1,6 +1,6 @@
 cask "usb-overdrive" do
-  version "5.3.1"
-  sha256 "36d923046fca04503288449f48dd3bab299e782974900a2ddd0d2dbf81bf3e6c"
+  version "5.4"
+  sha256 "f98da45246aa8c407f523feb45efd285ad604dcd326b70633ac174f0a1096d84"
 
   url "https://www.usboverdrive.com/download/USB-Overdrive-#{version.no_dots}.dmg"
   name "USB Overdrive"
