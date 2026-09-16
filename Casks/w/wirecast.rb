@@ -1,6 +1,6 @@
 cask "wirecast" do
-  version "16.5.3"
-  sha256 "cb20cb458b6cb23d71adadd2372b618b80d46c434c0bc408cb4c017e72383170"
+  version "16.5.4"
+  sha256 "47c30a13586ab4fcd4ee7aebeaa2db8d850fd34dbbff546799add01c777503f9"
 
   url "https://www.telestream.net/download-files/wirecast/#{version.major_minor.dots_to_hyphens}/Wirecast-#{version}.dmg"
   name "Wirecast"
@@ -16,11 +16,12 @@ cask "wirecast" do
 
   app "Wirecast.app"
 
-  uninstall delete: [
-    "/Library/LaunchDaemons/net.telestream.LicensingHelper.plist",
-    "/Library/Preferences/net.telestream.wirecast.plist",
-    "/Library/PriviledgedHelperTools/net.telestream.LicensingHelper",
-  ]
+  uninstall quit:   "net.telestream.wirecast",
+            delete: [
+              "/Library/LaunchDaemons/net.telestream.LicensingHelper.plist",
+              "/Library/Preferences/net.telestream.wirecast.plist",
+              "/Library/PriviledgedHelperTools/net.telestream.LicensingHelper",
+            ]
 
   zap trash: [
     "~/Library/Caches/net.telestream.wirecast",
