@@ -1,6 +1,6 @@
 cask "a-better-finder-attributes" do
-  version "7.48"
-  sha256 "141e4d9c50ed301bffda62592f8d1e3c464f9990ae8447588427a3af48b29790"
+  version "7.49"
+  sha256 "f89a69f17a2888e5696bdb525f077356039035ab20b10b92cd8eabe3fa5464a7"
 
   url "https://www.publicspace.net/download/signedABFA#{version.major}.zip"
   name "A Better Finder Attributes"
@@ -13,7 +13,7 @@ cask "a-better-finder-attributes" do
   end
 
   auto_updates true
-  depends_on macos: :ventura
+  depends_on macos: :sequoia
 
   app "A Better Finder Attributes #{version.major}.app"
 
