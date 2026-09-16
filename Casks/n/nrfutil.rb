@@ -1,6 +1,6 @@
 cask "nrfutil" do
-  version "1.4.0-5515776"
-  sha256 "f547eec13694d04a6463066122f002029a76c709785940afc622e73e46b21cce"
+  version "1.4.1-f15ff58"
+  sha256 "866a0d9e6c8b7b3d46b219caa71e485b26bad3f53c9ba7c06d9665620f35b394"
 
   url "https://files.nordicsemi.com/artifactory/swtools/external/nrfutil/executables/universal-apple-darwin/nrfutil-universal-apple-darwin-#{version}"
   name "nrfutil"
@@ -11,8 +11,6 @@ cask "nrfutil" do
     url "https://files.nordicsemi.com/artifactory/swtools/external/nrfutil/executables/universal-apple-darwin/"
     regex(/nrfutil-universal-apple-darwin[._-]v?(\d+(?:\.\d+)+(?:[._-]\h+)?)/i)
   end
-
-  disable! date: "2026-09-01", because: :fails_gatekeeper_check
 
   depends_on :macos
 
