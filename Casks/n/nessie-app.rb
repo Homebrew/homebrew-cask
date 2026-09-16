@@ -1,6 +1,6 @@
 cask "nessie-app" do
-  version "1.4.4107"
-  sha256 "56bb204e4a6cca8d934dcdb400c06bde241e88a25353372d676c2517dbf40987"
+  version "1.4.4148"
+  sha256 "13a286c5324d5364b67fa7d8a56f2f22a894f655a60344b80f71f59ff4adfce5"
 
   url "https://nessie-notes-app-auto-updates.s3.us-west-2.amazonaws.com/Nessie_#{version}.zip"
   name "Nessie"
