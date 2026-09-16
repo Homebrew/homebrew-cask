@@ -1,6 +1,6 @@
 cask "banktivity" do
-  version "10.1.0,429"
-  sha256 "2088ece86d1a0785294f540eff18fd47763446c8e87b4cda20ee2965a5f250a5"
+  version "10.1.1,432"
+  sha256 "dba44e8488a536cdfca357267de79a6b24592b7fabbf7b1fd76a674d8a0aa8b3"
 
   url "https://www.iggsoft.com/banktivity/Banktivity#{version.csv.first}-#{version.csv.second}.dmg"
   name "Banktivity"
