@@ -8,8 +8,10 @@ cask "virtual-desktop-streamer" do
   homepage "https://www.vrdesktop.net/"
 
   livecheck do
-    url :url
-    strategy :extract_plist
+    url "https://download.vrdesktop.net/files/updatesMacOS.txt"
+    strategy :json do |json|
+      json["version"]
+    end
   end
 
   depends_on :macos
