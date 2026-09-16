@@ -13,9 +13,11 @@ cask "easymac-cleaner" do
   end
 
   auto_updates true
-  depends_on :macos
+  depends_on macos: ">= :big_sur"
 
   app "EasyMac Cleaner.app"
+
+  uninstall quit: "com.martiancat.easymaccleaner"
 
   zap trash: [
     "~/Library/Application Support/EasyMac Cleaner",
