@@ -7,11 +7,6 @@ cask "kkterm" do
   desc "Local-first administration workspace for terminals, SSH, and SFTP"
   homepage "https://github.com/ryantsai/KKTerm"
 
-  livecheck do
-    url :url
-    strategy :github_latest
-  end
-
   auto_updates true
   depends_on macos: :big_sur
 
