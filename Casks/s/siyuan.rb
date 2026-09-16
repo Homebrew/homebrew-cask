@@ -14,6 +14,7 @@ cask "siyuan" do
   depends_on macos: :monterey
 
   app "SiYuan.app"
+  binary "#{appdir}/SiYuan.app/Contents/Resources/kernel/SiYuan-Kernel", target: "siyuan"
 
   zap trash: [
     "~/.siyuan",
