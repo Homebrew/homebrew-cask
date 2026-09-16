@@ -16,6 +16,8 @@ cask "telari" do
 
   app "Telari.app"
 
+  uninstall quit: "dev.telari.reader"
+
   zap trash: [
     "~/.config/telari",
     "~/Library/Application Scripts/dev.telari.reader.quicklook",
