@@ -19,10 +19,13 @@ cask "uu-booster" do
 
   app "UUBooster.app"
 
+  uninstall quit: "com.netease.uumac"
+
   zap trash: [
     "~/Library/Application Support/com.netease.uumac",
     "~/Library/Caches/com.netease.uumac",
     "~/Library/HTTPStorages/com.netease.uumac",
+    "~/Library/Logs/UUBooster",
     "~/Library/WebKit/com.netease.uumac",
   ]
 end
