@@ -1,6 +1,6 @@
 cask "pallotron-yubiswitch" do
-  version "0.18"
-  sha256 "79eee5f238f5a49763f928cc35670b7c757ffc6d051bd6dd06435cc5487c66e9"
+  version "0.19"
+  sha256 "974d7481b388fe79b03f1eea2c39f45a2f74051b774a489a00e2fe00c9df1b31"
 
   url "https://github.com/pallotron/yubiswitch/releases/download/v#{version}/yubiswitch_#{version}.dmg"
   name "Yubiswitch"
@@ -12,7 +12,7 @@ cask "pallotron-yubiswitch" do
     strategy :github_latest
   end
 
-  depends_on :macos
+  depends_on macos: :monterey
 
   app "yubiswitch.app"
 
