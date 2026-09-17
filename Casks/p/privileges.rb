@@ -1,6 +1,6 @@
 cask "privileges" do
-  version "2.5.3"
-  sha256 "5948b4b809d05796ff09d4f064a72f049a3f895af194c146d3937f005d34401d"
+  version "2.6.0"
+  sha256 "9677eb4c035368bea3fcc26a10fe7e5044920c9fcba750760ae20ec8f2c49009"
 
   url "https://github.com/SAP/macOS-enterprise-privileges/releases/download/#{version}/Privileges_#{version}.pkg"
   name "Privileges"
