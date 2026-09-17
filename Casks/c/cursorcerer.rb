@@ -9,7 +9,7 @@ cask "cursorcerer" do
     end
   end
   on_sonoma :or_newer do
-    version "3.5"
+    version "4.0"
     sha256 :no_check
 
     url "https://www.doomlaser.com/downloads/Cursorcerer.zip"
