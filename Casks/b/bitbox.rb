@@ -28,7 +28,7 @@ cask "bitbox" do
   homepage "https://bitbox.swiss/"
 
   livecheck do
-    url "https://bitbox.swiss/download/"
-    regex(/href=.*?BitBox[._-]v?(\d+(?:\.\d+)+)(?:[._-]macOS)?\.dmg/i)
+    url :url
+    strategy :github_latest
   end
 end
