@@ -1,12 +1,10 @@
 cask "saega" do
-  arch arm: "arm64"
-
   version "1.0.19"
   sha256 "81c03691ed6ed7a0fc15ef737a91edf4b37126a06b10ab4578ba2768aad5e8d6"
 
   url "https://storage.googleapis.com/saega-downloads/Saega-#{version}.dmg"
   name "Saega"
-  desc "Privacy-first dictation app built for Swedish and Norwegian"
+  desc "Dictation app for Swedish and Norwegian"
   homepage "https://saega.app/"
 
   livecheck do
