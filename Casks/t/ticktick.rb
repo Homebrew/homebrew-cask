@@ -1,6 +1,6 @@
 cask "ticktick" do
-  version "8.2.03,920"
-  sha256 "a722f5777666afd088d02117acd1ba4285aae4c14261010a40b6e4447013f3ef"
+  version "8.2.10,921"
+  sha256 "fc1fde3247d5e17c482114e3c0405c73fe5a19ae20ffcd985232203f214f3b8a"
 
   url "https://download.ticktick.app/download/mac/TickTick_#{version.csv.first}_#{version.csv.second}.dmg"
   name "TickTick"
