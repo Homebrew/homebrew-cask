@@ -1,8 +1,12 @@
 cask "plasticscm-cloud-edition" do
-  version "11.0.16.10371"
-  sha256 "2807888445dd0d9bfc31112f4e1b8eac164a18996ff1686b341eb4576491415e"
+  arch arm: "arm64", intel: "x64"
+  zip_arch = on_arch_conditional arm: "-arm"
 
-  url "https://d26z97tczqnlef.cloudfront.net/releases/#{version}/plasticscm/osx/unity-vcs-#{version}-mac.pkg.zip"
+  version "11.0.16.10371"
+  sha256 arm:   "da963db4880910eb520fbf65ec25757d4ca569f02895b69486db392b3eb08f5e",
+         intel: "2807888445dd0d9bfc31112f4e1b8eac164a18996ff1686b341eb4576491415e"
+
+  url "https://d26z97tczqnlef.cloudfront.net/releases/#{version}/plasticscm/osx/unity-vcs-#{version}-mac#{zip_arch}.pkg.zip"
   name "PlasicSCM - a Cloud Edition"
   desc "Install PlasticSCM locally and join a Cloud Edition subscription"
   homepage "https://www.plasticscm.com/"
@@ -14,7 +18,7 @@ cask "plasticscm-cloud-edition" do
 
   depends_on :macos
 
-  pkg "unity-vcs-osx-x64-#{version}.pkg"
+  pkg "unity-vcs-osx-#{arch}-#{version}.pkg"
 
   uninstall launchctl: [
               "com.codicesoftware.plasticscm.macplastic",
@@ -33,8 +37,4 @@ cask "plasticscm-cloud-edition" do
             ]
 
   zap trash: "~/Library/Saved Application State/com.codicesoftware.plasticscm.savedState"
-
-  caveats do
-    requires_rosetta
-  end
 end
