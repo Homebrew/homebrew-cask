@@ -1,6 +1,6 @@
 cask "itsycal" do
-  version "0.15.12"
-  sha256 "b03f8f546b035b5954ffc481e4cec3b9895a60a7378aaa36cdf544581ed057da"
+  version "0.15.14"
+  sha256 "c66dc8a76dfb9d13396fc7bc3f5b18a41d8710840fb091aa849af747439bc949"
 
   url "https://itsycal.s3.amazonaws.com/Itsycal-#{version}.zip"
   name "Itsycal"
