@@ -20,7 +20,7 @@ cask "data-science-studio" do
       skip "Legacy version"
     end
 
-    depends_on macos: :big_sur
+    depends_on macos: :any
   end
 
   url "https://cdn.downloads.dataiku.com/public/launcher/macos/DataScienceStudio-#{version}#{arch}-mac.zip"

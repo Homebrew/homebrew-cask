@@ -6,7 +6,7 @@ cask "scribus" do
          intel: "69cc1b918747882395d984f0d0a3c06e965d06368299952e645b31925e284a99"
 
   on_arm do
-    depends_on macos: :big_sur
+    depends_on macos: :any
   end
   on_intel do
     depends_on macos: :monterey

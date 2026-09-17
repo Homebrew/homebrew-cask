@@ -15,7 +15,7 @@ cask "quail" do
       skip "Legacy version"
     end
 
-    depends_on macos: :big_sur
+    depends_on macos: :any
   end
 
   url "https://github.com/1000ch/quail/releases/download/v#{version}/Quail-#{version}#{arch}.dmg"

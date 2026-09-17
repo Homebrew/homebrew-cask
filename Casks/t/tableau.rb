@@ -5,13 +5,6 @@ cask "tableau" do
   sha256 arm:   "afd70c92b40a68dd34f9e1e86554b8e550e0d76507033c682068721042ec0ed9",
          intel: "4d52bd7178436aedb2fa0dc4e218b1424f38e74f5e30313c7fdace26a4507d44"
 
-  on_arm do
-    depends_on macos: :ventura
-  end
-  on_intel do
-    depends_on macos: :big_sur
-  end
-
   url "https://downloads.tableau.com/esdalt/#{version}/TableauDesktop-#{version.dots_to_hyphens}#{arch}.dmg",
       user_agent: :curl
   name "Tableau Desktop"
