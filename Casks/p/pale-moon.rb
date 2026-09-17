@@ -18,10 +18,14 @@ cask "pale-moon" do
 
   app "Pale Moon.app"
 
+  uninstall quit:   "org.mozilla.pale moon",
+            signal: ["TERM", "org.mozilla.pale moon"]
+
   zap trash: [
     "~/Library/Application Support/Pale Moon",
     "~/Library/Caches/Pale Moon",
     "~/Library/Preferences/org.mozilla.pale moon.plist",
+    "~/Library/Saved Application State/org.mozilla.pale moon.savedState",
     "~/Library/Saved Application State/org.mozilla.white star.savedState",
   ]
 end
