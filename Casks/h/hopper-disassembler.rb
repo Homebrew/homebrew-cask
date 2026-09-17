@@ -19,7 +19,8 @@ cask "hopper-disassembler" do
 
   app "Hopper Disassembler.app"
 
-  uninstall launchctl: "com.cryptic-apps.ExternalAPI"
+  uninstall launchctl: "com.cryptic-apps.ExternalAPI",
+            quit:      "com.cryptic-apps.hopper-web-4"
 
   zap trash: [
     "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.cryptic-apps.hopper-web-4.sfl*",
