@@ -1,5 +1,5 @@
 cask "uu-booster" do
-  version "2.8.19"
+  version "2.8.20"
   sha256 :no_check
 
   url "https://adl.netease.com/d/g/uu/c/gw?type=mac&direct=1"
@@ -19,10 +19,13 @@ cask "uu-booster" do
 
   app "UUBooster.app"
 
+  uninstall quit: "com.netease.uumac"
+
   zap trash: [
     "~/Library/Application Support/com.netease.uumac",
     "~/Library/Caches/com.netease.uumac",
     "~/Library/HTTPStorages/com.netease.uumac",
+    "~/Library/Logs/UUBooster",
     "~/Library/WebKit/com.netease.uumac",
   ]
 end
