@@ -1,25 +1,27 @@
 cask "ray" do
-  arch arm: "-arm64"
-  folder = on_arch_conditional arm: "arm64/"
+  arch arm: "arm64", intel: "x64"
 
-  version "2.8.2"
-  sha256 arm:   "9557ecc4e9758a499b71b324466659a7e1a42d996edf0e1d4353cd2dd6494cee",
-         intel: "f6d9fb9a2721ec72146cc43967f17714a9c0bf9bf1d4744fb930de4b82e50e00"
+  version "3.2.11"
+  sha256 arm:   "daa267627e7ae1270e1fd156784e853ae6748df7ba0d8fbc13329a360a9f2563",
+         intel: "f3780972022ca397cb012f59193592f0a4c7853df4a4c9851d6bf19eac55f39b"
 
-  url "https://ray-app.s3.amazonaws.com/#{folder}Ray-#{version}#{arch}.dmg"
+  url "https://ray-app.s3.eu-west-1.amazonaws.com/ray-app-updates-v#{version.major}/stable/ray-#{version}-latest-darwin-#{arch}.dmg"
   name "Ray"
   desc "Debug with Ray to fix problems faster"
   homepage "https://myray.app/"
 
   livecheck do
-    url "https://ray-app.s3.amazonaws.com/latest-mac.yml"
-    strategy :electron_builder
+    url "https://spatie.be/products/ray/v#{version.major}/download/macos-#{arch}/latest"
+    regex(/ray[._-]v?(\d+(?:\.\d+)+).+#{arch}\.dmg/i)
+    strategy :header_match
   end
 
   auto_updates true
-  depends_on :macos
+  depends_on macos: :monterey
 
   app "Ray.app"
+
+  uninstall quit: "be.spatie.ray"
 
   zap trash: [
     "~/Library/Application Support/Ray",
