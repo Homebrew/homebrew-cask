@@ -12,7 +12,7 @@ cask "beeper" do
          x86_64_linux: "ff7d3512488e80438aa32c81bb5b00594b8b6a75c1f9c80a5f873fb703731035"
 
   on_macos do
-    depends_on macos: :monterey
+    depends_on macos: :ventura
 
     app "Beeper Desktop.app"
 
