@@ -9,7 +9,7 @@ cask "dockfix" do
 
   livecheck do
     url "https://www.dockfix.app/appcast.xml"
-    strategy :sparkle
+    strategy :sparkle, &:short_version
   end
 
   auto_updates true
