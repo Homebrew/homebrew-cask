@@ -17,6 +17,7 @@ cask "geekbench" do
 
   app "Geekbench #{version.major}.app"
 
+  uninstall quit: "com.primatelabs.parkdale"
   zap trash: [
     "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.primatelabs.parkdale.sfl*",
     "~/Library/HTTPStorages/com.primatelabs.parkdale",
