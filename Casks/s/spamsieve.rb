@@ -25,10 +25,14 @@ cask "spamsieve" do
 
   app "SpamSieve.app"
 
+  uninstall quit: "com.c-command.SpamSieve"
+
   zap trash: [
+    "~/Library/Application Scripts/com.c-command.SpamSieve.MailAppExtension",
     "~/Library/Application Support/SpamSieve",
     "~/Library/Caches/com.apple.helpd/Generated/SpamSieve Help*",
     "~/Library/Caches/com.c-command.SpamSieve",
+    "~/Library/Containers/com.c-command.SpamSieve.MailAppExtension",
     "~/Library/HTTPStorages/com.c-command.SpamSieve",
     "~/Library/LaunchAgents/com.c-command.SpamSieve.LaunchAgent.plist",
     "~/Library/Logs/SpamSieve",
