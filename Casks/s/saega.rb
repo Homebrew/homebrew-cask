@@ -23,6 +23,7 @@ cask "saega" do
   zap trash: [
     "~/Library/Application Support/Saega",
     "~/Library/Caches/app.saega.app",
+    "~/Library/HTTPStorages/app.saega.app",
     "~/Library/Logs/Saega",
     "~/Library/Preferences/app.saega.app.plist",
   ]
