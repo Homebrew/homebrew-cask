@@ -20,6 +20,8 @@ cask "media-center" do
 
   app "Media Center #{version.major}.app"
 
+  uninstall quit: "com.jriver.MediaCenter#{version.major}"
+
   zap trash: [
     "~/Documents/JRiver",
     "~/Library/Application Support/J River",
