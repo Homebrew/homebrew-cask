@@ -25,6 +25,8 @@ cask "spamsieve" do
 
   app "SpamSieve.app"
 
+  uninstall quit: "com.c-command.SpamSieve"
+
   zap trash: [
     "~/Library/Application Scripts/com.c-command.SpamSieve.MailAppExtension",
     "~/Library/Application Support/SpamSieve",
