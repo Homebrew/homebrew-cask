@@ -16,6 +16,8 @@ cask "pallotron-yubiswitch" do
 
   app "yubiswitch.app"
 
+  uninstall quit: "com.pallotron.yubiswitch"
+
   zap trash: [
     "/Library/LaunchDaemons/com.pallotron.yubiswitch.helper.plist",
     "/Library/PrivilegedHelperTools/com.pallotron.yubiswitch.helper",
