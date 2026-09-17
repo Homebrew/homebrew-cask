@@ -26,10 +26,6 @@ cask "ngrok" do
   depends_on :macos
 
   binary "ngrok"
-  # `ngrok completion` ignores its arguments and picks the shell from `$SHELL`,
-  # which it only recognises when the value looks like a path (e.g. `/bin/zsh`).
-  # Homebrew sets `$SHELL` to the bare shell name (`zsh`), which ngrok treats as
-  # bash, so go through `env` to hand it the path-like `$SHELL` it expects.
   generate_completions_from_executable "/usr/bin/env", "SHELL=/bin/bash",
                                        "#{staged_path}/ngrok", "completion",
                                        base_name: "ngrok", shells: [:bash], shell_parameter_format: :none
