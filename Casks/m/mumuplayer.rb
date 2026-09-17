@@ -1,6 +1,6 @@
 cask "mumuplayer" do
-  version "1.8.17"
-  sha256 "ba0dd6d5b3880cfcd97a2aa151673200178300f6d60503c1ba0bc8131f702548"
+  version "1.9.3"
+  sha256 "e498a776404b461bc66afd5b8396e376b55d52b821312de76d326d7d42a3b818"
 
   url "https://a11.gdl.netease.com/MuMuUpdater_#{version}_default.tar.gz"
   name "Mumu Player Pro"
