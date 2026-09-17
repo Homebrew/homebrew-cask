@@ -1,19 +1,19 @@
 cask "dockfix" do
-  version "14.99"
+  version "5.2.0"
   sha256 :no_check
 
-  url "https://www.dockfix.app/downloads/DockFix.dmg"
+  url "https://dockfix.lubker.dk/downloads/DockFix.dmg"
   name "DockFix"
   desc "Dock replacement"
   homepage "https://www.dockfix.app/"
 
   livecheck do
-    url "https://www.dockfix.app/changelog"
-    regex(/>[^<]*?v?(\d+(?:\.\d+)+)\s*</i)
+    url "https://www.dockfix.app/appcast.xml"
+    strategy :sparkle
   end
 
   auto_updates true
-  depends_on macos: :ventura
+  depends_on macos: :sonoma
 
   app "DockFix.app"
 
