@@ -1,5 +1,5 @@
 cask "uu-booster" do
-  version "2.8.19"
+  version "2.8.20"
   sha256 :no_check
 
   url "https://adl.netease.com/d/g/uu/c/gw?type=mac&direct=1"
