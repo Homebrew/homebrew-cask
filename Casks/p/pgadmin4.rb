@@ -19,6 +19,8 @@ cask "pgadmin4" do
 
   app "pgAdmin 4.app"
 
+  uninstall quit: "org.pgadmin.pgadmin4"
+
   zap trash: [
     "~/.pgadmin",
     "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/org.pgadmin.pgadmin4.sfl*",
