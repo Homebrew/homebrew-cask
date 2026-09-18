@@ -1,6 +1,6 @@
 cask "hiddenbar" do
-  version "1.10"
-  sha256 "a8a5f5299fdfab52bdffb2f5728a76d4cba690754e9b3b12f27bd38f2e76c0bc"
+  version "1.11"
+  sha256 "8ce4d3178b3f8ebe5587ac9f259f4349ce872a458d6fbb4d0cd5c28c65712c80"
 
   url "https://github.com/dwarvesf/hidden/releases/download/v#{version}/Hidden-Bar-v#{version}-macos.zip"
   name "Hidden Bar"
@@ -12,7 +12,7 @@ cask "hiddenbar" do
     strategy :github_latest
   end
 
-  depends_on :macos
+  depends_on macos: :ventura
 
   app "Hidden Bar.app"
 
