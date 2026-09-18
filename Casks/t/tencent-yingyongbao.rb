@@ -11,13 +11,12 @@ cask "tencent-yingyongbao" do
     url "https://sj.qq.com/download/macbrand"
     strategy :page_match do |page|
       require "digest"
-      require "json"
 
-      # Step 1: read the access key from the page's `__NEXT_DATA__` payload.
-      access_key = page[/"macServiceAccessKey":"([^"]+)"/, 1]
-      next if access_key.blank?
+      # Read the access key from the page's `__NEXT_DATA__` JSON
+      access_key = page[/["']macServiceAccessKey["']:\s*["']([^"']+)["']/im, 1]
+      next unless access_key
 
-      # Step 2: build a signature over the body, timestamp and nonce.
+      # Build a signature over the body, timestamp and nonce
       payload = { pkg_name: "", supply_id: 2_100_200_129 }
       timestamp = (Time.now.to_f * 1000).to_i.to_s
       nonce = rand(10_000).to_s
@@ -25,35 +24,31 @@ cask "tencent-yingyongbao" do
         "#{JSON.generate(payload)}#{timestamp}#{access_key}#{nonce}",
       )
 
-      # Step 3: request the version endpoint with the signature.
-      options = Homebrew::Livecheck::Options.new(
-        post_json: payload,
-        header:    [
-          "businessid: yybmac",
-          "Ual-Access-Businessid: yybmac",
-          "Ual-Access-Nonce: #{nonce}",
-          "Ual-Access-Signature: #{signature}",
-          "Ual-Access-Timestamp: #{timestamp}",
-        ],
-      )
+      # Request the version endpoint with the signature
       content = Homebrew::Livecheck::Strategy.page_content(
-        "https://yybadaccess.3g.qq.com/v3/yybmac_deliver", options:
+        "https://yybadaccess.3g.qq.com/v3/yybmac_deliver",
+        options: Homebrew::Livecheck::Options.new(
+          post_json: payload,
+          header:    [
+            "businessid: yybmac",
+            "Ual-Access-Businessid: yybmac",
+            "Ual-Access-Nonce: #{nonce}",
+            "Ual-Access-Signature: #{signature}",
+            "Ual-Access-Timestamp: #{timestamp}",
+          ],
+        ),
       )[:content]
       next if content.blank?
 
-      data = begin
-        JSON.parse(content)["data"]
-      rescue JSON::ParserError
-        nil
-      end
-      next if data.blank?
+      data = Homebrew::Livecheck::Strategy::Json.parse_json(content)["data"]
+      next if data.blank? || (ver = data["version"]).blank?
 
       # The channel ID in the download URL changes with every release, so it
-      # has to be tracked alongside the version.
-      channel = data["download_url"].to_s[%r{/raw/([^/]+)/}, 1]
+      # has to be tracked alongside the version
+      channel = data["download_url"]&.[](%r{/raw/([^/]+)/}, 1)
       next if channel.blank?
 
-      "#{data["version"]},#{channel}"
+      "#{ver},#{channel}"
     end
   end
 
