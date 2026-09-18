@@ -13,6 +13,8 @@ cask "zettlr" do
 
     app "Zettlr.app"
 
+    uninstall quit: "com.zettlr.app"
+
     zap trash: [
       "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.zettlr.app.sfl*",
       "~/Library/Application Support/zettlr",
