@@ -2,11 +2,11 @@ cask "brave-browser@nightly" do
   arch arm: "arm64", intel: "x64"
   folder = on_arch_conditional arm: "nightly-arm64", intel: "nightly"
 
-  sha256 arm:   "77365964367996d44befeeefe8370fafb5250f0c9707915b35fe24f19ea1c5fd",
+  sha256 arm:   "2ec9bea9a57b41b7bc098686ad1306ca59128ef341cc0e3c6787ebe7c9126f71",
          intel: "572b6a473de74586486e5a9d0d692f01af42a1b9844e30c3f491f164d378398e"
 
   on_arm do
-    version "1.98.7.0"
+    version "1.98.9.0"
   end
   on_intel do
     version "1.97.37.0"
