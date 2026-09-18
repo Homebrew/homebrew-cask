@@ -1,14 +1,9 @@
 cask "nugget" do
   arch arm: "arm", intel: "intel"
 
-  on_arm do
-    version "7.3.2"
-    sha256 "4b5703c016c0952e9ce4e3a620f19c634ec95deee919a0f3205b645be839d423"
-  end
-  on_intel do
-    version "7.3.1"
-    sha256 "aaecaec949f9fd28e31c286c21130a36d0f73657ef62e229f7b092118fefce0c"
-  end
+  version "7.4"
+  sha256 arm:   "f48118b2e3bf4236560e769746f11e851ad124e9be7007c898eba7119c0630d8",
+         intel: "e4f212e9c886e1a6083947260ceb898a10acbe9f742f1cafc7dabe8939aa9364"
 
   url "https://github.com/leminlimez/Nugget/releases/download/v#{version}/Nugget_macOS_#{arch}.dmg"
   name "Nugget"
