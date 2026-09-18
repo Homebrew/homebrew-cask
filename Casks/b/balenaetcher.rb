@@ -1,9 +1,9 @@
 cask "balenaetcher" do
   arch arm: "arm64", intel: "x64"
 
-  version "2.1.6"
-  sha256 arm:   "ecf71fb5e74803ea8d7d16c54378a6a8d964e9808594b867c088222a8cfe3d2b",
-         intel: "a09909789aee9d6a35863bcdec069103dd4883eb45b6e5e218e66abc043a9e05"
+  version "2.1.7"
+  sha256 arm:   "7408b5c5d3382e337f27a81aec8cc122b875b47809aca9b60a5a513100292344",
+         intel: "01dfd649a9bfbab4b3d9b5c45d0b80146bc0b7c5c8077456bdf5c6d1b350bff0"
 
   url "https://github.com/balena-io/etcher/releases/download/v#{version}/balenaEtcher-#{version}-#{arch}.dmg"
   name "Etcher"
