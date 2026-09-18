@@ -10,7 +10,7 @@ cask "cherry-studio" do
          x86_64_linux: "6c03ef4daac68991b5e46df1e244ac5e594aaf98afaee5c187485d353b066126"
 
   on_macos do
-    depends_on macos: :monterey
+    depends_on macos: :ventura
 
     app "Cherry Studio.app"
     binary "#{appdir}/Cherry Studio.app/Contents/MacOS/Cherry Studio", target: "cherry-studio"
