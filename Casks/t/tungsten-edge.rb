@@ -1,6 +1,6 @@
 cask "tungsten-edge" do
-  version "0.11.5"
-  sha256 "a12f53860c8d49fc2bb5b2e0d616410463c2fb4ccc0d55dba6a89cdbdbb1e968"
+  version "0.11.6"
+  sha256 "0ca082a3fdd4e62f96b0fe90483155cd02cb7853f53e95058ce170b01df27fc7"
 
   url "https://tungstenedge.app/download/Tungsten-Edge-#{version}.zip"
   name "Tungsten Edge"
