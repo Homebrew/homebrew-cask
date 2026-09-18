@@ -21,5 +21,10 @@ cask "hbuilderx" do
 
   app "HBuilderX.app"
 
-  zap trash: "~/Library/Application Support/HBuilder X"
+  uninstall quit: "io.dcloud.HBuilderX"
+
+  zap trash: [
+    "~/Library/Application Support/HBuilder X",
+    "~/Library/Preferences/io.dcloud.HBuilderX.plist",
+  ]
 end
