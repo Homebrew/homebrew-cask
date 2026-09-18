@@ -1,9 +1,9 @@
 cask "pycharm-oss" do
   arch arm: "-aarch64"
 
-  version "2026.2.2"
-  sha256 arm:   "d748a5a69b847a2de52c521c61e8092d44d1277a002114184ec61e3d00a0977d",
-         intel: "e45c3ee3c5fd3266c80cc35f750013da1872fa2ce77c4f1cf71dce48482a877c"
+  version "2026.2.3"
+  sha256 arm:   "262c1b411ffe4df76f49db142a0ee64f69b23bc998bb56cad7c4cb4d665e056f",
+         intel: "35fc8bcdd9f0922a2351ee83bee587a7b3ea854694d4070bc58494e01974fb19"
 
   url "https://github.com/JetBrains/intellij-community/releases/download/pycharm%2F#{version}/pycharm-#{version}#{arch}.dmg"
   name "PyCharm OSS"
