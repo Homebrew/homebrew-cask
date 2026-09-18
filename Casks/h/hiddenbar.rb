@@ -1,6 +1,6 @@
 cask "hiddenbar" do
-  version "1.11"
-  sha256 "8ce4d3178b3f8ebe5587ac9f259f4349ce872a458d6fbb4d0cd5c28c65712c80"
+  version "1.11.1"
+  sha256 "2f1082bf55f8a3a4cd132617cf68c054da95c58983966fed0728e4a1dc19327b"
 
   url "https://github.com/dwarvesf/hidden/releases/download/v#{version}/Hidden-Bar-v#{version}-macos.zip"
   name "Hidden Bar"
