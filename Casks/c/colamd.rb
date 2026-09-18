@@ -7,7 +7,7 @@ cask "colamd" do
 
   url "https://github.com/marswaveai/ColaMD/releases/download/v#{version}/ColaMD-#{version}-#{arch}.dmg"
   name "ColaMD"
-  desc "Markdown editor that stays in sync with the file on disk"
+  desc "Markdown editor"
   homepage "https://colamd.com/"
 
   livecheck do
