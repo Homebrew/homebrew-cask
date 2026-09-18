@@ -1,6 +1,6 @@
 cask "network-weather" do
-  version "1.3.1,113"
-  sha256 "bc3db56273f53b384c7a0edc464676b091b04872ea24c1b7897351d7ea23d06e"
+  version "1.3.2,114"
+  sha256 "a64613bb8d471c768a736b6772ad0f13cef0c58979ee75ddaece03f43ee37281"
 
   url "https://pkgs.networkweather.com/macOS/NetworkWeather-#{version.csv.first}.#{version.csv.second}-Universal.pkg"
   name "Network Weather"
