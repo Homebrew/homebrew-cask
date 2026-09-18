@@ -1,6 +1,6 @@
 cask "rcmd" do
-  version "3.6.0"
-  sha256 "a8620b4106d7e5d282951375f76421ee05287a93a5d79e67b133f7b6568f4cad"
+  version "3.6.1"
+  sha256 "c323d5d3910478b98f210f901efb21f9349e1c7c10cb23c7e0ab9ec8b51acd88"
 
   url "https://files.lowtechguys.com/releases/rcmd-#{version}.dmg"
   name "rcmd"
