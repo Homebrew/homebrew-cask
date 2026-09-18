@@ -1,9 +1,9 @@
 cask "zulip" do
   arch arm: "arm64", intel: "x64"
 
-  version "5.12.4"
-  sha256 arm:   "619cce44e8305766db464c8352f15c2ba4d7bb192fac52c30d6dd1d6d199eed6",
-         intel: "27d5c08aeea4513a168a51d0f24996138f3a7d80b0a353c85828f0f4f77f4e35"
+  version "5.13.1"
+  sha256 arm:   "bbbcbd5eb6ddd33a9e22a71db4263a486be813f1590e387bcb932fe672be8d5f",
+         intel: "b22f154a25c492e05db4fa92b54cd817205a9c305e4decd080f5a67d9e2c1dce"
 
   url "https://github.com/zulip/zulip-desktop/releases/download/v#{version}/Zulip-#{version}-#{arch}.dmg"
   name "Zulip"
@@ -11,7 +11,7 @@ cask "zulip" do
   homepage "https://zulip.com/"
 
   auto_updates true
-  depends_on macos: :monterey
+  depends_on macos: :ventura
 
   app "Zulip.app"
 
