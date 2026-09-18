@@ -17,5 +17,7 @@ cask "retrospective" do
 
   app "Retrospective.app"
 
+  uninstall quit: "com.retrospective.product"
+
   zap trash: "~/.Retrospective"
 end
