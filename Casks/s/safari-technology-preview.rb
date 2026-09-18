@@ -57,7 +57,7 @@ cask "safari-technology-preview" do
               "com.apple.webkit.webpushd.relocatable",
             ],
             quit:      "com.apple.SafariTechnologyPreview",
-            pkgutil:   "com.apple.pkg.SafariTechPreview.*",
+            pkgutil:   "com.apple.pkg.SafariTechPreview*",
             delete:    "/Applications/Safari Technology Preview.app"
 
   zap trash: [
