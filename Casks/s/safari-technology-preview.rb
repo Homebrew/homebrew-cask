@@ -29,8 +29,6 @@ cask "safari-technology-preview" do
 
     livecheck do
       url :homepage
-      # Apple renamed the macOS 27 build's DMG at release 250, dropping
-      # "nology" and appending the release number. Tolerate both shapes.
       regex(%r{
         href=.*?/([^/]+)/Safari(?:%20|\+)?Tech(?:nology)?(?:%20|\+)?Preview\d*\.dmg
         .*?macOS(?:\s|&nbsp;)*27[\s.<]
