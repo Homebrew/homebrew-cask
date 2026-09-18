@@ -1,6 +1,6 @@
 cask "willow-voice" do
-  version "2.3.24"
-  sha256 "d6c1e09a8fde4050d5c32a1c62dcfa7b9b31ec8c8c8043b292d09a950008c714"
+  version "2.3.25"
+  sha256 "62fd3fbcf7e0f28ae353ac43acf7c448e06ddd86c1cfbd3e7620f3b57240bbe7"
 
   url "https://github.com/LiuLawrence45/stt-sparkle-update/releases/download/v#{version}/Willow.Installer.dmg"
   name "Willow Voice"
