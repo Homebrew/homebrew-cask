@@ -7,7 +7,7 @@ cask "tapmap" do
 
   url "https://github.com/olalie/tapmap/releases/download/v#{version}/TapMap-#{version}-macos-#{arch}.dmg"
   name "TapMap"
-  desc "Visualize network connections on an interactive world map"
+  desc "Visualise network connections on an interactive world map"
   homepage "https://tip.no/tapmap/"
 
   livecheck do
