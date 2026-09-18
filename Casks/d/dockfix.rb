@@ -2,7 +2,7 @@ cask "dockfix" do
   version "5.2.0"
   sha256 :no_check
 
-  url "https://dockfix.lubker.dk/downloads/DockFix.dmg"
+  url "https://www.dockfix.app/downloads/DockFix.dmg"
   name "DockFix"
   desc "Dock replacement"
   homepage "https://www.dockfix.app/"
