@@ -1,9 +1,9 @@
 cask "rubymine" do
   arch arm: "-aarch64"
 
-  version "2026.2.2,262.10315.129"
-  sha256 arm:   "d7b5ee24d814db206c7eb6bad8b7e31b41f137a1db751cdd490501f6fba8e153",
-         intel: "518d3fbcd201efcea270069ad2fd904fea98ca24368faa122510cb5441b4296d"
+  version "2026.2.3,262.10968.66"
+  sha256 arm:   "e4f301ae01c2c6ae8df05dc1617fb795b037827efcd4868a3a8c2c3b85d8e232",
+         intel: "96778e85b91f1b6245f4e575788e9605b5fd69aab69bb0453c2be480a6ec0769"
 
   url "https://download.jetbrains.com/ruby/RubyMine-#{version.csv.first}#{arch}.dmg"
   name "RubyMine"
@@ -31,10 +31,13 @@ cask "rubymine" do
                   executable: "/usr/bin/open",
                   args:       ["-na", "RubyMine.app", "--args"]
 
+  uninstall quit: "com.jetbrains.rubymine"
+
   zap trash: [
     "~/Library/Application Support/RubyMine#{version.major_minor}",
     "~/Library/Caches/RubyMine#{version.major_minor}",
     "~/Library/Logs/RubyMine#{version.major_minor}",
+    "~/Library/Preferences/com.jetbrains.rubymine.plist",
     "~/Library/Preferences/RubyMine#{version.major_minor}",
   ]
 end
