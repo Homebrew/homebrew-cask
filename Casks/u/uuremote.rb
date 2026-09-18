@@ -1,6 +1,6 @@
 cask "uuremote" do
-  version "4.41.0"
-  sha256 "db2e78b410cee6f9b1fe99cc3e0e2f2955bd6ffcc06f0c62005af85b66e37320"
+  version "4.41.1"
+  sha256 "c9d198705cfe85260c8498462f52c3ab80c6168748be0ebb29d3560f67b579d7"
 
   url "https://a56.gdl.netease.com/uuyc_#{version}.pkg"
   name "UU Remote"
