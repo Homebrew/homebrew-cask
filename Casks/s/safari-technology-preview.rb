@@ -57,9 +57,7 @@ cask "safari-technology-preview" do
               "com.apple.webkit.webpushd.relocatable",
             ],
             quit:      "com.apple.SafariTechnologyPreview",
-            # Matches the legacy macOS 26 id and the per-release macOS 27 id
-            # Apple introduced at release 250 (e.g. SafariTechPreview252).
-            pkgutil:   "com\\.apple\\.pkg\\.SafariTechPreview(?:Package|\\d+)",
+            pkgutil:   "com.apple.pkg.SafariTechPreview.*",
             delete:    "/Applications/Safari Technology Preview.app"
 
   zap trash: [
