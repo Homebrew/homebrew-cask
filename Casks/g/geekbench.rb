@@ -1,6 +1,6 @@
 cask "geekbench" do
-  version "6.7.1"
-  sha256 "0cceb31fce4f40af265292c3ffe050ceb509aeabe647240dde73842e62401008"
+  version "7.0.0"
+  sha256 "68e8e3821aa65f1b5d7e3b3e307c9f002c0f1efc02b3e62b96244a9e54bf1933"
 
   url "https://cdn.geekbench.com/Geekbench-#{version}-Mac.zip"
   name "Geekbench"
@@ -13,14 +13,15 @@ cask "geekbench" do
   end
 
   auto_updates true
-  depends_on :macos
+  depends_on macos: :sequoia
 
   app "Geekbench #{version.major}.app"
 
+  uninstall quit: "com.primatelabs.parkdale"
+
   zap trash: [
-    "~/Library/Caches/com.primatelabs.Geekbench#{version.major}",
-    "~/Library/HTTPStorages/com.primatelabs.Geekbench#{version.major}",
-    "~/Library/Preferences/com.primatelabs.Geekbench#{version.major}.plist",
-    "~/Library/Saved Application State/com.primeatelabs.Geekbench#{version.major}.savedState",
+    "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.primatelabs.parkdale.sfl*",
+    "~/Library/HTTPStorages/com.primatelabs.parkdale",
+    "~/Library/Preferences/com.primatelabs.parkdale.plist",
   ]
 end
