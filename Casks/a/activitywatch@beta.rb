@@ -1,6 +1,6 @@
 cask "activitywatch@beta" do
-  version "0.14.0b7"
-  sha256 "b3543ffdab8356dc7dd94cfe1a9a5b5d465473e97392fea3d39079fdacc6b778"
+  version "0.14.0b8"
+  sha256 "f5c5e47aad94eb9c23331386cb1c76fd4a71709c1dbe3558e4ffd1a135c4f252"
 
   url "https://github.com/ActivityWatch/activitywatch/releases/download/v#{version}/activitywatch-tauri-v#{version}-macos-arm64.dmg"
   name "ActivityWatch"
