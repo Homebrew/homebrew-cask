@@ -7,6 +7,11 @@ cask "lemonade-server" do
   desc "Local LLM server with GPU and NPU acceleration"
   homepage "https://lemonade-server.ai/"
 
+  livecheck do
+    url :url
+    strategy :github_latest
+  end
+
   depends_on arch: :arm64
   depends_on :macos
 
