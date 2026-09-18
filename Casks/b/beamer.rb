@@ -1,6 +1,6 @@
 cask "beamer" do
-  version "4.2.0"
-  sha256 "6bd4a6c84e10ce35c5d641f921d875120a2acfb9e58300ee47d63bbdeb8f547a"
+  version "4.3.6"
+  sha256 "5cb00e051355089e0b1e02feabfc6e040ac05e6869d34966a13ead67f9b115c4"
 
   url "https://ushining.softorino.com/shine_uploads/beamermac_#{version}.dmg"
   name "Beamer"
