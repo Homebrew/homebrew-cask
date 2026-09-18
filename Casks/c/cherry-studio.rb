@@ -3,14 +3,14 @@ cask "cherry-studio" do
   os macos: "mac", linux: "linux"
   url_end = on_system_conditional macos: "dmg", linux: "AppImage"
 
-  version "2.0.14"
-  sha256 arm:          "955690c2362557ddda21d66491661910be0d58aec5712945bb5b6c6ad51304b3",
-         intel:        "bc54e59eb9b84f3db2bd67c3752c965124978df400d8be25e1beff5c5251c649",
-         arm64_linux:  "365df27ed8cc58df42a19b7098f0f8736bcfef22834e957f4dd24f91a983abd7",
-         x86_64_linux: "cdedaf92c10de3c168cb50531c059f6ec1d3a03d7b17d1c0f2c3682211d404b8"
+  version "2.1.0"
+  sha256 arm:          "f2a394c2da6f72eef16b844280b4173712429c9a763fe90a7e5f606df98ac27f",
+         intel:        "a00430b0a15447a6964df3304a4b5b1968abcc68b6decec97849ddedde368f7d",
+         arm64_linux:  "ff946f8cedc361fec99904d856098f0abeeb92dfc60e45f3e8f4443be1fb21ce",
+         x86_64_linux: "6c03ef4daac68991b5e46df1e244ac5e594aaf98afaee5c187485d353b066126"
 
   on_macos do
-    depends_on macos: :monterey
+    depends_on macos: :ventura
 
     app "Cherry Studio.app"
     binary "#{appdir}/Cherry Studio.app/Contents/MacOS/Cherry Studio", target: "cherry-studio"
