@@ -17,6 +17,8 @@ cask "beamer" do
 
   app "Beamer.app"
 
+  uninstall quit: "com.softorino.beamer"
+
   zap trash: [
         "~/Library/Application Support/Beamer",
         "~/Library/Caches/com.softorino.beamer",
@@ -26,8 +28,4 @@ cask "beamer" do
         "~/Library/Saved Application State/com.softorino.beamer.savedState",
       ],
       rmdir: "/Users/Shared/Beamer"
-
-  caveats do
-    requires_rosetta
-  end
 end
