@@ -1,6 +1,6 @@
 cask "flutterflow" do
-  version "7.0.80"
-  sha256 "d4a926a5ada5835b7ef437a85190b8c7cf244cf9ab6114cb13c59cefbbc01ce5"
+  version "7.0.81"
+  sha256 "4a30e3fe732deaa00efc37c1a58d22147bc342d0f2919e03b31419622d69d487"
 
   url "https://storage.googleapis.com/flutterflow-downloads/macos/flutterflow-#{version}-macos.zip"
   name "FlutterFlow"
