@@ -9,7 +9,9 @@ cask "telari" do
 
   livecheck do
     url "https://dl.telari.app/appcast.xml"
-    strategy :sparkle, &:short_version
+    strategy :sparkle do |items|
+      items.find { |item| item.channel.nil? }&.short_version
+    end
   end
 
   depends_on macos: :ventura
