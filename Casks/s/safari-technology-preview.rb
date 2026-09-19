@@ -3,6 +3,8 @@ cask "safari-technology-preview" do
     version "252,142-15045-20260910-e4690e3f-4b63-4560-962c-c584ada7ee7e"
     sha256 "42950d149fd5a12793916732b326c5770679b625560ff44bdf854caec0558e59"
 
+    url "https://secure-appldnld.apple.com/STP/#{version.csv.second}/SafariTechnologyPreview.dmg"
+
     livecheck do
       url :homepage
       regex(%r{
@@ -15,16 +17,20 @@ cask "safari-technology-preview" do
         "#{release},#{id}"
       end
     end
+
+    pkg "Safari Technology Preview.pkg"
   end
   # when adjusting the on_{os} scoping, also update the livecheck regex
   on_golden_gate :or_newer do
-    version "247,140-34366-20260630-87ebbe6a-e3ef-4af1-9d0e-848f2ab2ec7a"
-    sha256 "65b28478653fd40a51c6488814793e785e07cc7632d7ddc337e6d1a1f4ec9e2b"
+    version "252,142-17038-20260910-67853852-c2c2-4c23-b0eb-c9953a98c390"
+    sha256 "1114d3501f68e0cfe84089efd2cf39ab595c25f0316a47e7a85a661e78ac88eb"
+
+    url "https://secure-appldnld.apple.com/STP/#{version.csv.second}/SafariTechPreview#{version.csv.first}.dmg"
 
     livecheck do
       url :homepage
       regex(%r{
-        href=.*?/([^/]+)/Safari(?:%20|\+)?Technology(?:%20|\+)?Preview\.dmg
+        href=.*?/([^/]+)/Safari(?:%20|\+)?Tech(?:nology)?(?:%20|\+)?Preview\d*\.dmg
         .*?macOS(?:\s|&nbsp;)*27[\s.<]
       }ix)
       strategy :page_match do |page, regex|
@@ -33,17 +39,16 @@ cask "safari-technology-preview" do
         "#{release},#{id}"
       end
     end
+
+    pkg "SafariTechPreview#{version.csv.first}.pkg"
   end
 
-  url "https://secure-appldnld.apple.com/STP/#{version.csv.second}/SafariTechnologyPreview.dmg"
   name "Safari Technology Preview"
   desc "Web browser"
   homepage "https://developer.apple.com/safari/resources/"
 
   auto_updates true
   depends_on macos: :tahoe
-
-  pkg "Safari Technology Preview.pkg"
 
   uninstall launchctl: [
               "com.apple.AuthenticationServicesCore.AuthenticationServicesAgent-STP",
@@ -52,7 +57,7 @@ cask "safari-technology-preview" do
               "com.apple.webkit.webpushd.relocatable",
             ],
             quit:      "com.apple.SafariTechnologyPreview",
-            pkgutil:   "com.apple.pkg.SafariTechPreviewPackage",
+            pkgutil:   "com.apple.pkg.SafariTechPreview*",
             delete:    "/Applications/Safari Technology Preview.app"
 
   zap trash: [
