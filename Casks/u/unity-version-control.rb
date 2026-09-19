@@ -10,7 +10,7 @@ cask "unity-version-control" do
   name "Unity Version Control"
   name "Unity VCS"
   name "UVCS"
-  desc "Install Unity Version Control locally and join a Cloud Edition subscription"
+  desc "Version control and source code management tool"
   homepage "https://docs.unity.com/en-us/unity-version-control"
 
   livecheck do
