@@ -1,27 +1,23 @@
------
+<!-- Before submitting a pull request, please read the contributing guidelines: -->
+<!-- https://docs.brew.sh/Contributing -->
+<!-- Please note that we require humans to read and fill out this template. -->
+<!-- Do NOT remove any of the boilerplate text unless instructed to do so. -->
 
-<!-- Do not tick a checkbox if you haven’t performed its action. Honesty is indispensable for a smooth review process. -->
-<!-- Use [x] to mark item done before creation, or just click the checkboxes with device pointer after creation -->
-<!-- In the following questions `<cask>` is the token of the cask you're editing. -->
+- [x] The submission is for a [stable version](https://docs.brew.sh/Acceptable-Casks#we-dont-accept-pull-requests-for-pre-release-versions) or [documented exception](https://docs.brew.sh/Acceptable-Casks#but-there-are-exceptions-right).
+- [x] `brew audit --cask --online cutecut-pro` is error-free.
+- [x] `brew style --fix cutecut-pro` reports no offenses.
 
-After making any changes to a cask, existing or new, verify:
+<!-- For new casks only: -->
+- [x] The cask token matches the [token reference](https://docs.brew.sh/Cask-Cookbook#token-reference).
+- [x] The `sha256` does not contain any checksum substitutions (e.g. `:no_check` unless upstream does not provide fixed checksums).
+- [x] The cask does not contain any unversioned URLs.
+- [x] The cask was submitted to the [well-known cask repo](https://github.com/Homebrew/homebrew-cask) or an [acceptable alternative repo](https://docs.brew.sh/Interesting-Taps-and-Forks).
+- [x] The cask was not previously refused (check [closed pull requests](https://github.com/Homebrew/homebrew-cask/pulls?q=is%3Apr+is%3Aclosed)).
+- [x] `brew audit --cask --new cutecut-pro` worked for you before submitting.
+- [x] `brew install --cask cutecut-pro` worked for you before submitting.
+- [x] `brew uninstall --cask cutecut-pro` worked for you before submitting.
 
-- [ ] The submission is for [a stable version](https://docs.brew.sh/Acceptable-Casks#stable-versions) or [documented exception](https://docs.brew.sh/Acceptable-Casks#but-there-is-no-stable-version).
-- [ ] `brew audit --cask --online <cask>` is error-free.
-- [ ] `brew style --fix <cask>` reports no offenses.
+<!-- If an LLM / AI tool was used to help write this pull request, please disclose it: -->
+AI was used to help draft the cask syntax. I have reviewed the output manually, including the `zap` stanza paths, and verified the cask fields.
 
-Additionally, if adding a new cask:
-
-- [ ] Named the cask according to the [token reference](https://docs.brew.sh/Cask-Cookbook#token-reference).
-- [ ] Checked the cask was not [already refused](https://github.com/search?q=repo%3AHomebrew%2Fhomebrew-cask+is%3Aclosed+is%3Aunmerged+&type=pullrequests) (add your cask's name to the end of the search field).
-- [ ] `brew audit --cask --new <cask>` worked successfully.
-- [ ] `HOMEBREW_NO_INSTALL_FROM_API=1 brew install --cask <cask>` worked successfully.
-- [ ] `brew uninstall --cask <cask>` worked successfully.
-
------
-
-- [ ] I did not use AI/LLM to create this PR, or I disclosed the tool/model below and reviewed its output, including [`zap` stanza](https://docs.brew.sh/Cask-Cookbook#stanza-zap) paths; I did not attribute commits to AI and will answer maintainer questions and review comments myself without AI/LLM.
-
-<!-- If AI was used, explain below how it was used and how you verified the changes. Non-maintainers may only have one AI-assisted PR open at a time. See https://docs.brew.sh/Responsible-AI-Usage for guidance. -->
-
------
+<!-- If there are any open issues that this pull request resolves, please include them here. -->
