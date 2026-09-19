@@ -10,12 +10,6 @@ cask "incy" do
   desc "Proxy client"
   homepage "https://incy.cc/"
 
-  livecheck do
-    url :url
-    regex(/^desktop-v?(\d+(?:\.\d+)+)$/i)
-    strategy :github_latest
-  end
-
   depends_on macos: :monterey
 
   app "incy.app"
