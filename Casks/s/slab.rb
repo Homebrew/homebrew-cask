@@ -11,7 +11,7 @@ cask "slab" do
   homepage "https://slab.com/"
 
   auto_updates true
-  depends_on macos: :monterey
+  depends_on macos: :ventura
 
   app "Slab.app"
 
