@@ -2,10 +2,10 @@ cask "clawd-on-desk" do
   arch arm: "arm64", intel: on_system_conditional(macos: "x64", linux: "x86_64")
   os macos: "dmg", linux: "AppImage"
 
-  version "1.0.0"
-  sha256 arm:          "ed044d416b9bf519aa6ecfdc0478d9ec70d47d6b0dfc4da89d0825e708ac84c0",
-         intel:        "5773fc5e2304ceceb0d489ecd9f56da90cf932a17046d6eeb79bda13af9303de",
-         x86_64_linux: "09f10264271f7095c6c6021be4bde5b977ba165031c1d8970b6d2219d8d9394e"
+  version "1.1.0"
+  sha256 arm:          "2b3554531b135a85aab9d36d94bcad13a4f5626b932dd2f45481508b81d297b6",
+         intel:        "5dc6023ceb439f7ab199b5104730099c24c7a7909fa914c35ff09d5df9cf7242",
+         x86_64_linux: "c0fcd6cde028fb40816b9f34ec2efbc38ec2a816a240e3b6e350c29ebb66b67e"
 
   on_macos do
     depends_on macos: :monterey
