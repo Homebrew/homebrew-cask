@@ -54,7 +54,6 @@ jobs:
         id: remove_disabled
         uses: Homebrew/actions/remove-disabled-packages@1e34f2e2acaa766b7efacb8c26352e6abbb023f9 # 2026.09.13.1
         env:
-          HOMEBREW_EVAL_ALL: 1
           HOMEBREW_NO_INSTALL_FROM_API: 1
 
       - name: Push commits
