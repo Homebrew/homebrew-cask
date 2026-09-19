@@ -4,7 +4,7 @@ cask "clipbook" do
 
   url "https://f005.backblazeb2.com/file/clipbook/ClipBook-#{version}.dmg"
   name "ClipBook"
-  desc "Clipboard history app for Mac"
+  desc "Clipboard history app"
   homepage "https://clipbook.app/"
 
   livecheck do
