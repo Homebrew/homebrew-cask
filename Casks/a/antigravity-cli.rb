@@ -5,11 +5,11 @@ cask "antigravity-cli" do
   os macos: "darwin", linux: "linux"
   file_os = on_system_conditional macos: "mac", linux: "linux"
 
-  version "1.2.6,5912685477494784"
-  sha256 arm:          "14e1be7ed9b35e512b6aa2f2b2ba3ad79877dbde1b2d487892d3721806ff9e59",
-         intel:        "05274e670572ec074491b0a07580734a3ce51127d61626d2cb4d63e9aabcedce",
-         arm64_linux:  "02a0a2c863113f89ac684226ef81de47b9865238fac1076e8f9aea7ec5f4914a",
-         x86_64_linux: "3d4973187c4c074e70894068053eeef1b7dfa9c0a16bfe9c3b81954de0d2cc5c"
+  version "1.2.7,6731160148115456"
+  sha256 arm:          "ce9fe3f4d6f44a2b1c83b334fc5c8f2975079959e24dd805e10eb49ab8c76a7e",
+         intel:        "2f1a82f55201fc47987b448e34d90608bb0eec48e4c45f0a27ba49625d984cd5",
+         arm64_linux:  "8ddbb669158de1d1bc4c1fe5c130dca8f51da80d62569a54a4133f06768a723b",
+         x86_64_linux: "e410dd56d8c213ef12643d3ff5eaaab57a17e05bbf72e9415322f23879fc4a18"
 
   on_macos do
     depends_on macos: :monterey
