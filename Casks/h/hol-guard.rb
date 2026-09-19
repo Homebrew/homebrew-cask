@@ -19,11 +19,11 @@ cask "hol-guard" do
   app "HOL Guard.app"
 
   zap trash: [
+    "~/.hol-guard",
     "~/Library/Application Support/org.hol.guard.desktop",
     "~/Library/Caches/org.hol.guard.desktop",
     "~/Library/Preferences/org.hol.guard.desktop.plist",
     "~/Library/Saved Application State/org.hol.guard.desktop.savedState",
     "~/Library/WebKit/org.hol.guard.desktop",
-    "~/.hol-guard",
   ]
 end
