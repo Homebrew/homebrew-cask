@@ -7,10 +7,7 @@ cask "notchnook" do
   desc "Handy utility to manage and customize the notch area"
   homepage "https://lo.cafe/notchnook"
 
-  livecheck do
-    url "https://lo.cafe/notchnook-files/appcast.xml"
-    strategy :sparkle, &:short_version
-  end
+  disable! date: "2026-09-19", because: :no_longer_available
 
   auto_updates true
   depends_on macos: :sonoma
