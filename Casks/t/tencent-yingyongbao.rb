@@ -58,10 +58,18 @@ cask "tencent-yingyongbao" do
 
   app "YYBMacApp.app"
 
+  uninstall launchctl: "com.tencent.yybmac.yybService"
+
   zap trash: [
     "~/Library/Application Support/com.tencent.yybmac",
     "~/Library/Application Support/com.tencent.yybmac.engine",
     "~/Library/Application Support/com.tencent.yybmac.wine.engine",
+    "~/Library/Caches/com.tencent.yybmac",
+    "~/Library/com.tencent.yybmac",
+    "~/Library/Containers/com.tencent.yybmac",
+    "~/Library/HTTPStorages/com.tencent.yybmac*",
     "~/Library/Logs/com.tencent.yybmac",
+    "~/Library/Preferences/com.tencent.yybmac.plist",
+    "~/Library/WebKit/com.tencent.yybmac",
   ]
 end
