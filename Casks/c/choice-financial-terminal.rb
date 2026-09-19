@@ -22,6 +22,8 @@ cask "choice-financial-terminal" do
 
   app "Choice金融终端.app"
 
+  uninstall quit: "com.eastmoney.choice"
+
   zap trash: [
     "~/Library/Application Support/Choice",
     "~/Library/Logs/Choice金融终端_debug.log",
