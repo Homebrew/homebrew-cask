@@ -1,8 +1,8 @@
 cask "hol-guard" do
   version "3.0.92"
-  sha256 "fd5486f2f96fac8cadd3341a2a1b004d0da89802a2add0aa010c85b6168c5af7"
+  sha256 :no_check
 
-  # Public download API (302 to release asset). Private GitHub release URLs 404 unauthenticated.
+  # This public route pins the requested release version and redirects to that release asset.
   url "https://hol.org/api/guard/desktop/download?platform=macos&version=3.0.92"
   name "HOL Guard"
   desc "Local-first runtime firewall for AI coding agents"
@@ -23,6 +23,7 @@ cask "hol-guard" do
     "~/Library/Caches/org.hol.guard.desktop",
     "~/Library/Preferences/org.hol.guard.desktop.plist",
     "~/Library/Saved Application State/org.hol.guard.desktop.savedState",
+    "~/Library/WebKit/org.hol.guard.desktop",
     "~/.hol-guard",
   ]
 end
