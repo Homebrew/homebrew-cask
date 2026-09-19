@@ -1,0 +1,14 @@
+Casks/t/telari.rb
+  h_9df9c32c3f321d 12-14
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.4",
+  "base_commit_sha": "2147ac2b4d077d0c8d4f78bd9f0309ee25246c6c",
+  "prompts": {},
+  "humans": {
+    "h_9df9c32c3f321d": {
+      "author": "Rui Chen <rui@chenrui.dev>"
+    }
+  }
+}
