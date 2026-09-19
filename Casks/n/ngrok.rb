@@ -26,6 +26,15 @@ cask "ngrok" do
   depends_on :macos
 
   binary "ngrok"
+  generate_completions_from_executable "/usr/bin/env", "SHELL=/bin/bash",
+                                       "#{staged_path}/ngrok", "completion",
+                                       base_name: "ngrok", shells: [:bash], shell_parameter_format: :none
+  generate_completions_from_executable "/usr/bin/env", "SHELL=/bin/zsh",
+                                       "#{staged_path}/ngrok", "completion",
+                                       base_name: "ngrok", shells: [:zsh], shell_parameter_format: :none
+  generate_completions_from_executable "/usr/bin/env", "SHELL=/bin/fish",
+                                       "#{staged_path}/ngrok", "completion",
+                                       base_name: "ngrok", shells: [:fish], shell_parameter_format: :none
 
   postflight_steps do
     set_permissions "ngrok", "0755"
@@ -35,11 +44,4 @@ cask "ngrok" do
     "~/.ngrok#{version.major}",
     "~/Library/Application Support/ngrok",
   ]
-
-  caveats <<~EOS
-    To install shell completions, add this to your profile:
-      if command -v ngrok &>/dev/null; then
-        eval "$(ngrok completion)"
-      fi
-  EOS
 end
