@@ -1,15 +1,15 @@
 cask "jiba" do
-  version "1.5.1"
-  sha256 "a17c5adde186d04aae21098feb328dfd14be212e3e0b5fa44bfcac97b190b037"
+  version "1.5.1,63"
+  sha256 "41310668b371c70d289aa0c982cfea9e4fc6127586b55e0896d00bd00a59b825"
 
-  url "https://hee.ink/updates/stable/JiBA-#{version}.dmg"
+  url "https://hee.ink/updates/stable/JiBA-#{version.csv.first}.dmg"
   name "JiBA"
   desc "Apple Music metadata localisation tool"
   homepage "https://jiba.hee.ink/"
 
   livecheck do
     url "https://hee.ink/updates/stable/appcast.xml"
-    strategy :sparkle, &:short_version
+    strategy :sparkle
   end
 
   auto_updates true
