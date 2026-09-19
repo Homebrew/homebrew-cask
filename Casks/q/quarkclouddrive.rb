@@ -10,9 +10,10 @@ cask "quarkclouddrive" do
 
   livecheck do
     url "https://pan.quark.cn/api/client_version"
-    strategy :json do |json|
+    regex(%r{QuarkCloudDriveMac[._-]v?(\d+(?:\.\d+)+)[^/]*\(Build(\d+)\)\.dmg}i)
+    strategy :json do |json, regex|
       url = json.dig("data", "origin_macDmgForArmUrl") || json.dig("data", "macDmgForArmUrl")
-      match = url&.match(%r{QuarkCloudDriveMac[._-]v?(\d+(?:\.\d+)+)[^/]*\(Build(\d+)\)\.dmg}i)
+      match = url&.match(regex)
       next if match.blank?
 
       "#{match[1]},#{match[2]}"
