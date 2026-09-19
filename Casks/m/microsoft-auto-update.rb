@@ -35,6 +35,7 @@ cask "microsoft-auto-update" do
             delete:    [
               "/Library/Caches/com.microsoft.autoupdate.fba",
               "/Library/Caches/com.microsoft.autoupdate.helper",
+              "/Library/LaunchAgents/com.microsoft.update.agent.plist",
               "/Library/LaunchDaemons/com.microsoft.autoupdate.helper.plist",
               "/Library/Preferences/com.microsoft.autoupdate2.plist",
               "/Library/PrivilegedHelperTools/com.microsoft.autoupdate.helper",
