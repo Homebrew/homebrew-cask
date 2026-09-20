@@ -4,7 +4,7 @@ cask "ruswitcher" do
 
   url "https://github.com/rashn/RuSwitcher/releases/download/v#{version}/RuSwitcher-#{version}.dmg"
   name "RuSwitcher"
-  desc "Keyboard layout switcher that fixes text typed in the wrong layout"
+  desc "Keyboard layout switcher"
   homepage "https://github.com/rashn/RuSwitcher"
 
   livecheck do
