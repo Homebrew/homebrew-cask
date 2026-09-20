@@ -1,6 +1,6 @@
 cask "miaoyan" do
-  version "4.2.0"
-  sha256 "d47cd9117800b50a427963fc396478d7ad70eb2c8d7633088f2f4d9e2bcb39a8"
+  version "4.3.0"
+  sha256 "8ce9d4dfecc2facd96faa2bb3e1dcbe9c6c337e740e72982980c2d8763cab771"
 
   url "https://github.com/tw93/MiaoYan/releases/download/V#{version}/MiaoYan_V#{version}.zip"
   name "MiaoYan"
@@ -13,7 +13,7 @@ cask "miaoyan" do
   end
 
   auto_updates true
-  depends_on :macos
+  depends_on macos: :monterey
 
   app "MiaoYan.app"
 
