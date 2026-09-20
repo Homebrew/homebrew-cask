@@ -17,5 +17,7 @@ cask "planet" do
 
   app "Planet.app"
 
+  uninstall quit: "xyz.planetable.Planet"
+
   zap trash: "~/Library/Containers/xyz.planetable.Planet"
 end
