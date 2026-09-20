@@ -17,8 +17,10 @@ cask "gridtracker2" do
   app "GridTracker2.app"
 
   zap trash: [
+    "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/org.gridtracker.gridtracker2.sfl*",
     "~/Library/Application Support/GridTracker*",
     "~/Library/Caches/GridTracker",
+    "~/Library/Logs/GridTracker2",
     "~/Library/Preferences/org.gridtracker.GridTracker*.plist",
     "~/Library/Saved Application State/org.gridtracker.GridTracker*.savedState",
   ]
