@@ -16,8 +16,8 @@ cask "sauce-connect" do
 
   binary "sc"
   bash_completion "completions/sc.bash"
-  fish_completion "completions/sc.fish"
   zsh_completion "completions/sc.zsh"
+  fish_completion "completions/sc.fish"
 
   # No zap stanza required
 end
