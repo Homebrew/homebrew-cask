@@ -1,6 +1,6 @@
 cask "macdown-se" do
   version "1.0.0"
-  sha256 "3022fd60d2a6ab78e33a2bdad90e9b788854abd3a97e4eb2acd25cb9b7d5f896"
+  sha256 "81849c62f42745ff520adaa303e0dafa383ee6a3ea7c285cd24080bedacb0631"
 
   url "https://github.com/eldris-io/macdown-se/releases/download/v#{version}/MacDown-SE-#{version}.dmg"
   name "MacDown SE"
