@@ -5,7 +5,7 @@ cask "cline-app" do
   url "https://github.com/cline/cline/releases/download/desktop-v#{version}/Cline_#{version}_universal.dmg"
   name "Cline"
   name "Cline Desktop"
-  desc "Desktop app for the Cline AI coding agent"
+  desc "AI coding agent"
   homepage "https://cline.bot/"
 
   livecheck do
@@ -18,13 +18,16 @@ cask "cline-app" do
 
   app "Cline.app"
 
-  uninstall quit:   "bot.cline.app",
-            script: {
-              executable:   "/usr/bin/pkill",
-              args:         ["-f", "^#{Regexp.escape(appdir.to_s)}/Cline[.]app/Contents/MacOS/code-sidecar( |$)"],
-              sudo:         false,
-              must_succeed: false,
-            }
+  uninstall_postflight_steps do
+    # The app leaves its bundled backend running after quitting.
+    terminate_process(
+      "{{appdir}}/Cline.app/Contents/MacOS/code-sidecar",
+      match:        :full,
+      must_succeed: false,
+    )
+  end
+
+  uninstall quit: "bot.cline.app"
 
   zap trash: [
     "~/Library/Application Support/bot.cline.app",
