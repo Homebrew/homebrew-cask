@@ -25,6 +25,7 @@ cask "macdown-se" do
     "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/io.eldris.macdown-se.sfl*",
     "~/Library/Application Support/MacDown SE",
     "~/Library/Caches/io.eldris.macdown-se",
+    "~/Library/HTTPStorages/io.eldris.macdown-se",
     "~/Library/Preferences/io.eldris.macdown-se.plist",
     "~/Library/Saved Application State/io.eldris.macdown-se.savedState",
   ]
