@@ -1,6 +1,6 @@
 cask "rewritebar" do
-  version "2.33.0"
-  sha256 "cf7c46b632e49c3e2aa391ef379bd27db375a46f636372c8d488ad9fdfaf1da1"
+  version "2.34.0"
+  sha256 "b88ad72120a9c403fcff13c717c2dc2a48dee1fb331845c9fb04fde93da51f8a"
 
   url "https://rewritebar.com/download/v#{version}.zip"
   name "RewriteBar"
