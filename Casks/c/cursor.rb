@@ -3,11 +3,11 @@ cask "cursor" do
   os macos: "darwin", linux: "linux"
   url_end = on_system_conditional macos: "zip", linux: "AppImage"
 
-  version "3.21.13,e44a49c17e334d442e58bbde931d791200f014a2"
-  sha256 arm:          "65ab5f4858e723e053657c1bd2c9dc0b8c6f9f9b40814ee27ddf7e7bb3d9f759",
-         intel:        "161e293639554697a36ae38d191a0705d5933d50157600f7f441f8f09a45a27b",
-         arm64_linux:  "f6453aae770e6eb7404fa1a56e1c3e651898ffd161d20e653fea7fedde650296",
-         x86_64_linux: "285eaa38de049c44322ec9365ff9d48337ddacf43234041248a723cb44ade25b"
+  version "3.21.16,8ae78e8eee1e63479c7e0504b664bc0a80c6800f"
+  sha256 arm:          "7191e5c9dc6f77066011df21a19d0ac7145e1378da676958957cb34f59b7b70a",
+         intel:        "21ad78e952e6d737a780d71ca1432841a2ab1635d76f84e13f4791a8771fb3c8",
+         arm64_linux:  "aaed531297a0bdd5da190996b429d2766c11db233acd5dd252fadd06531bb5f6",
+         x86_64_linux: "b82b12aecdc02bdcffb98c8cd742f33f72e1760cc3f090f7b4acb241ebaabbd0"
 
   on_macos do
     url "https://downloads.cursor.com/production/#{version.csv.second}/#{os}/#{arch}/Cursor-darwin-#{arch}.#{url_end}"
