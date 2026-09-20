@@ -7,8 +7,8 @@ cask "livefaceswap" do
   desc "Cloud-powered live face swap for OBS and video calls"
   homepage "https://livefaceswap.ai/desktop"
 
-  depends_on :linux
   depends_on arch: :x86_64
+  depends_on :linux
 
   app_image "LiveFaceSwap-Linux-#{version}-x86_64.AppImage", target: "LiveFaceSwap.AppImage"
 end
