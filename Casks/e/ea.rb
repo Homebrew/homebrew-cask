@@ -26,15 +26,18 @@ cask "ea" do
             quit:      "com.ea.mac.eaapp",
             pkgutil:   "com.ea.mac.eaapp"
 
-  zap trash: [
-    "/Library/Application Support/Electronic Arts",
-    "~/Library/Application Support/Electronic Arts",
-    "~/Library/Caches/EA app",
-    "~/Library/Caches/EACrashReporter",
-    "~/Library/Caches/EALaunchHelper",
-    "~/Library/HTTPStorages/com.EA.EA-app-Migrator",
-    "~/Library/LaunchAgents/com.ea.app.backgroundAgent.plist",
-    "~/Library/Preferences/com.ea.EACefSubProcessRenderer.plist",
-    "~/Library/Saved Application State/com.ea.mac.eaapp.savedState",
-  ]
+  zap delete: [
+        "/Library/Application Support/Electronic Arts",
+        "/Library/LaunchDaemons/com.ea.app.backgroundservice.plist",
+      ],
+      trash:  [
+        "~/Library/Application Support/Electronic Arts",
+        "~/Library/Caches/EA app",
+        "~/Library/Caches/EACrashReporter",
+        "~/Library/Caches/EALaunchHelper",
+        "~/Library/HTTPStorages/com.EA.EA-app-Migrator",
+        "~/Library/LaunchAgents/com.ea.app.backgroundAgent.plist",
+        "~/Library/Preferences/com.ea.EACefSubProcessRenderer.plist",
+        "~/Library/Saved Application State/com.ea.mac.eaapp.savedState",
+      ]
 end
