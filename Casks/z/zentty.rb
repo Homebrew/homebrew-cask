@@ -1,6 +1,6 @@
 cask "zentty" do
-  version "0.3.2"
-  sha256 "5dd34df98e2b7a91484c84714dad4c4af4e0c7403e21c59c3ef0e80c21fea721"
+  version "0.3.3"
+  sha256 "cc0246128533ba32fa69278cbbde25ccef6e0dfaee1817129fb34d9d8e732a3d"
 
   url "https://github.com/dedene/zentty/releases/download/v#{version}/Zentty.dmg"
   name "Zentty"
