@@ -18,7 +18,13 @@ cask "cline-app" do
 
   app "Cline.app"
 
-  uninstall quit: "bot.cline.app"
+  uninstall quit:   "bot.cline.app",
+            script: {
+              executable:   "/usr/bin/pkill",
+              args:         ["-f", "^#{Regexp.escape(appdir.to_s)}/Cline[.]app/Contents/MacOS/code-sidecar( |$)"],
+              sudo:         false,
+              must_succeed: false,
+            }
 
   zap trash: [
     "~/Library/Application Support/bot.cline.app",
