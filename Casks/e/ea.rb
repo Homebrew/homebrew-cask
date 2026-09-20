@@ -2,7 +2,7 @@ cask "ea" do
   version "13.791.0.6304"
   sha256 :no_check
 
-  url "https://origin-a.akamaihd.net/EA-Desktop-Client-Download/installer-releases/EA%20app.dmg"
+  url "https://origin-a.akamaihd.net/EA-Desktop-Client-Download/installer-releases/EA%20app.pkg"
   name "EA App"
   desc "Electronic Arts game launcher"
   homepage "https://www.ea.com/ea-app"
@@ -17,23 +17,24 @@ cask "ea" do
   auto_updates true
   depends_on :macos
 
-  app "EA app.app"
+  pkg "EA app.pkg"
 
-  uninstall launchctl: "com.ea.app.backgroundAgent",
-            quit:      "com.ea.mac.eaapp"
+  uninstall launchctl: [
+              "com.ea.app.backgroundAgent",
+              "com.ea.app.backgroundservice",
+            ],
+            quit:      "com.ea.mac.eaapp",
+            pkgutil:   "com.ea.mac.eaapp"
 
-  zap delete: [
-        "/Library/Application Support/Electronic Arts",
-        "/Library/LaunchDaemons/com.ea.app.backgroundservice.plist",
-      ],
-      trash:  [
-        "~/Library/Application Support/Electronic Arts",
-        "~/Library/Caches/EA app",
-        "~/Library/Caches/EACrashReporter",
-        "~/Library/Caches/EALaunchHelper",
-        "~/Library/HTTPStorages/com.EA.EA-app-Migrator",
-        "~/Library/LaunchAgents/com.ea.app.backgroundAgent.plist",
-        "~/Library/Preferences/com.ea.EACefSubProcessRenderer.plist",
-        "~/Library/Saved Application State/com.ea.mac.eaapp.savedState",
-      ]
+  zap trash: [
+    "/Library/Application Support/Electronic Arts",
+    "~/Library/Application Support/Electronic Arts",
+    "~/Library/Caches/EA app",
+    "~/Library/Caches/EACrashReporter",
+    "~/Library/Caches/EALaunchHelper",
+    "~/Library/HTTPStorages/com.EA.EA-app-Migrator",
+    "~/Library/LaunchAgents/com.ea.app.backgroundAgent.plist",
+    "~/Library/Preferences/com.ea.EACefSubProcessRenderer.plist",
+    "~/Library/Saved Application State/com.ea.mac.eaapp.savedState",
+  ]
 end
