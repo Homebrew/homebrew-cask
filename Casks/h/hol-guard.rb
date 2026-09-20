@@ -1,9 +1,8 @@
 cask "hol-guard" do
   version "3.0.92"
-  sha256 :no_check
+  sha256 "fd5486f2f96fac8cadd3341a2a1b004d0da89802a2add0aa010c85b6168c5af7"
 
-  # The public API rejects unknown versions and resolves this exact version to its release asset.
-  url "https://hol.org/api/guard/desktop/download?platform=macos&version=3.0.92"
+  url "https://hol.org/api/guard/desktop/download?platform=macos&version=#{version}"
   name "HOL Guard"
   desc "Local-first runtime firewall for AI coding agents"
   homepage "https://hol.org/guard"
@@ -17,6 +16,8 @@ cask "hol-guard" do
   depends_on macos: :monterey
 
   app "HOL Guard.app"
+
+  uninstall quit: "org.hol.guard.desktop"
 
   zap trash: [
     "~/.hol-guard",
