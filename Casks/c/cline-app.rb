@@ -18,6 +18,8 @@ cask "cline-app" do
 
   app "Cline.app"
 
+  uninstall quit: "bot.cline.app"
+
   zap trash: [
     "~/Library/Application Support/bot.cline.app",
     "~/Library/Caches/bot.cline.app",
