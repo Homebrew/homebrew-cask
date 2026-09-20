@@ -1,6 +1,6 @@
 cask "jump-desktop-connect" do
-  version "10.15.23"
-  sha256 "a15aa3049a8ba812022de79a55882f5cd12236176afcf741f4e52a8f9e325f6e"
+  version "10.15.28"
+  sha256 "7315a86963e8e2484f7d38f27f05685479bf12493918f0fc2eead402357d746d"
 
   url "https://mirror.jumpdesktop.com/downloads/connect/JumpDesktopConnect-#{version}.dmg"
   name "Jump Desktop Connect"
