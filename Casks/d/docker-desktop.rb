@@ -41,10 +41,10 @@ cask "docker-desktop" do
          target: "/usr/local/cli-plugins/docker-compose"
   bash_completion "#{appdir}/Docker.app/Contents/Resources/etc/docker-compose.bash-completion"
   bash_completion "#{appdir}/Docker.app/Contents/Resources/etc/docker.bash-completion"
-  fish_completion "#{appdir}/Docker.app/Contents/Resources/etc/docker-compose.fish-completion"
-  fish_completion "#{appdir}/Docker.app/Contents/Resources/etc/docker.fish-completion"
   zsh_completion "#{appdir}/Docker.app/Contents/Resources/etc/docker-compose.zsh-completion"
   zsh_completion "#{appdir}/Docker.app/Contents/Resources/etc/docker.zsh-completion"
+  fish_completion "#{appdir}/Docker.app/Contents/Resources/etc/docker-compose.fish-completion"
+  fish_completion "#{appdir}/Docker.app/Contents/Resources/etc/docker.fish-completion"
 
   postflight_steps do
     # Only link if `kubernetes-cli` is not installed.
