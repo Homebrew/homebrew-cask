@@ -24,9 +24,9 @@ cask "orbstack" do
   binary "#{appdir}/OrbStack.app/Contents/MacOS/bin/orb"
   binary "#{appdir}/OrbStack.app/Contents/MacOS/bin/orbctl"
   bash_completion "#{appdir}/OrbStack.app/Contents/Resources/completions/bash/orbctl.bash"
-  fish_completion "#{appdir}/OrbStack.app/Contents/Resources/completions/fish/orbctl.fish"
   zsh_completion "#{appdir}/OrbStack.app/Contents/Resources/completions/zsh/_orb"
   zsh_completion "#{appdir}/OrbStack.app/Contents/Resources/completions/zsh/_orbctl"
+  fish_completion "#{appdir}/OrbStack.app/Contents/Resources/completions/fish/orbctl.fish"
 
   postflight_steps do
     run "OrbStack.app/Contents/MacOS/bin/orbctl", args: ["_internal", "brew-postflight"], base: :appdir
