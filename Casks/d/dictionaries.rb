@@ -1,6 +1,6 @@
 cask "dictionaries" do
-  version "2.9"
-  sha256 "c4c189f0f4a80874e30777457ef089af5bafb27f5ceebec5e382d80fea99133c"
+  version "3.0"
+  sha256 "8ec8a8ba471238def7749364bdd9fe026554c00f4815f3042cdd11231c796680"
 
   url "https://download.dictionaries.io/mac/Dictionaries-#{version}.zip"
   name "Dictionaries"
