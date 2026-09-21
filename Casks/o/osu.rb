@@ -2,10 +2,10 @@ cask "osu" do
   arch arm: "Apple.Silicon", intel: "Intel"
   os macos: "app.#{arch}.zip", linux: "AppImage"
 
-  version "2026.920.0-lazer"
-  sha256 arm:          "59ffd3ef6e17542b21b01cbb0f6ce4a13b7baa532739778f5e452dbfbc918a3d",
-         intel:        "8b70d1d062c0f1f4ff3f7527f5c61ea52c765147fe4bd8b8355c382380087b1d",
-         x86_64_linux: "0fe8853a6051c7fc137c51ef83cdecb6897e865e123444b60e20b82f9a56606c"
+  version "2026.921.0-lazer"
+  sha256 arm:          "470f61581a2ba7d4bbd147efaf91cfba301c24f44c9c1e1de26760d645238087",
+         intel:        "fa4d4d6306838e5a041cc2fafce66e62e69f586aac5a5a330632fbcfa3ddf749",
+         x86_64_linux: "dced9463b501009c95dbed891abd2f0acc2efb84ee4336f5b1cc3b7c04a5fc7d"
 
   on_macos do
     app "osu!.app"
