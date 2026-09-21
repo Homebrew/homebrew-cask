@@ -16,11 +16,12 @@ cask "hotovo-aider-desk" do
   end
 
   auto_updates true
-  depends_on macos: :monterey
+  depends_on macos: :ventura
 
   app "aider-desk.app"
 
   zap trash: [
+    "~/.aider-desk",
     "~/Library/Application Support/aider-desk",
     "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.hotovo.aider-desk.sfl*",
     "~/Library/Logs/aider-desk",
