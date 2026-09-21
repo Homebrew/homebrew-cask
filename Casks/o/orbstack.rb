@@ -32,10 +32,11 @@ cask "orbstack" do
     run "OrbStack.app/Contents/MacOS/bin/orbctl", args: ["_internal", "brew-postflight"], base: :appdir
   end
 
-  uninstall script: {
-    executable: "#{appdir}/OrbStack.app/Contents/MacOS/bin/orbctl",
-    args:       ["_internal", "brew-uninstall"],
-  }
+  uninstall quit:   "dev.kdrag0n.MacVirt",
+            script: {
+              executable: "#{appdir}/OrbStack.app/Contents/MacOS/bin/orbctl",
+              args:       ["_internal", "brew-uninstall"],
+            }
 
   zap trash: [
         "~/.orbstack",
