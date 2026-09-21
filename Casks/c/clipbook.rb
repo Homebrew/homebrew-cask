@@ -18,15 +18,10 @@ cask "clipbook" do
   app "ClipBook.app"
 
   zap trash: [
-    "~/Library/Application Support/ClipBook",
-    "~/Library/Application Support/ClipBook2",
-    "~/Library/Caches/ClipBook",
-    "~/Library/Caches/ClipBook2",
-    "~/Library/HTTPStorages/com.ikryanov.clipbook",
-    "~/Library/HTTPStorages/com.ikryanov.clipbook.v2",
-    "~/Library/Preferences/com.ikryanov.clipbook.plist",
-    "~/Library/Preferences/com.ikryanov.clipbook.v2.plist",
-    "~/Library/Saved Application State/com.ikryanov.clipbook.savedState",
-    "~/Library/Saved Application State/com.ikryanov.clipbook.v2.savedState",
+    "~/Library/Application Support/ClipBook*",
+    "~/Library/Caches/ClipBook*",
+    "~/Library/HTTPStorages/com.ikryanov.clipbook*",
+    "~/Library/Preferences/com.ikryanov.clipbook*.plist",
+    "~/Library/Saved Application State/com.ikryanov.clipbook*.savedState",
   ]
 end
