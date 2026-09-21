@@ -18,6 +18,8 @@ cask "markdown-preview" do
   app "Markdown Preview.app"
   binary "#{appdir}/Markdown Preview.app/Contents/Resources/bin/markdown-preview", target: "mdp"
 
+  uninstall quit: "doc.md-preview"
+
   zap trash: [
     "~/Library/Application Scripts/doc.md-preview",
     "~/Library/Application Scripts/doc.md-preview.quick-look",
