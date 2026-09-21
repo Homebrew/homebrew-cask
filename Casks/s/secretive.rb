@@ -32,6 +32,9 @@ cask "secretive" do
 
   app "Secretive.app"
 
+  uninstall quit:   "com.maxgoedjen.Secretive.Host",
+            signal: ["TERM", "com.maxgoedjen.Secretive.Host"]
+
   zap trash: [
     "~/Library/Application Scripts/com.maxgoedjen.Secretive.Host",
     "~/Library/Application Scripts/com.maxgoedjen.Secretive.SecretAgent",
