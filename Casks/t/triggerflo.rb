@@ -1,6 +1,6 @@
 cask "triggerflo" do
-  version "2.1.0"
-  sha256 "eebaa625666da57ff720d5934cdbfd8411fc43f0767619723da07dc5c22c15c0"
+  version "2.2.0"
+  sha256 "f658e5db451acd91747d98705c67edb69dbf17ae2eededecca56ff034c65c217"
 
   url "https://triggerflo.app/downloads/TriggerFlo-#{version}.dmg"
   name "TriggerFlo"
@@ -13,7 +13,7 @@ cask "triggerflo" do
   end
 
   auto_updates true
-  depends_on :macos
+  depends_on macos: :monterey
 
   app "TriggerFlo.app"
 
