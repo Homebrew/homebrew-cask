@@ -29,14 +29,4 @@ cask "clipbook" do
     "~/Library/Saved Application State/com.ikryanov.clipbook.savedState",
     "~/Library/Saved Application State/com.ikryanov.clipbook.v2.savedState",
   ]
-
-  caveats <<~EOS
-    ClipBook 2 does not migrate clipboard history from version 1 automatically.
-
-    If you are upgrading from ClipBook 1, export your history from ClipBook 1
-    first, then import it into ClipBook 2. Your ClipBook 1 history remains on
-    disk at ~/Library/Application Support/ClipBook.
-
-    See https://clipbook.app/guides/how-to-migrate-to-clipbook-2/
-  EOS
 end
