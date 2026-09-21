@@ -1,9 +1,9 @@
 cask "quiet" do
   arch arm: "arm64", intel: "x64"
 
-  version "11.0.1"
-  sha256 arm:   "f6e80723748d0fa6fe263284393a7c604d39cb6b6e08cee88a7f6cb305d91670",
-         intel: "ffc5af2b236b74ff387414de9111bdbd0a1b74b090e297a833ed777a19f4c1de"
+  version "11.1.0"
+  sha256 arm:   "38e779c12f87fc30b2293d4601ea9ae7c942ac5b209df5841c545a691087d4d7",
+         intel: "97633a169035deb865e3def08bfbc184628f3ac109380e4b6ebca0c77c86500a"
 
   url "https://github.com/TryQuiet/quiet/releases/download/@quiet/desktop@#{version}/Quiet-#{version}-#{arch}.dmg"
   name "Quiet"
