@@ -17,6 +17,8 @@ cask "snapmaker-orca" do
 
   app "Snapmaker Orca.app"
 
+  uninstall quit: "com.snapmaker.snapmaker-orca"
+
   zap trash: [
     "~/Library/Application Support/Snapmaker_Orca",
     "~/Library/Caches/com.snapmaker.snapmaker-orca",
