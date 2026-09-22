@@ -1,9 +1,9 @@
 cask "tapmap" do
   arch arm: "arm64", intel: "x86_64"
 
-  version "1.14.1"
-  sha256 arm:   "00a6a65dddbef291d27c7e6393381fb7239954c8acdad258692051f1a25202a1",
-         intel: "84c70b9348cd16d982158a24e14d67ae08f7a6b17777d0679d08b1c60590e854"
+  version "1.14.2"
+  sha256 arm:   "0dacf061af2e5486082a0ffadff1d1d8863efdbbd6d64d0229e781ecfd2430ea",
+         intel: "62fb1dff4103b0a9fca21060350165408f16974004829333087033312b27120c"
 
   url "https://github.com/olalie/tapmap/releases/download/v#{version}/TapMap-#{version}-macos-#{arch}.dmg"
   name "TapMap"
