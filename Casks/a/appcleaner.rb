@@ -1,6 +1,6 @@
 cask "appcleaner" do
-  version "3.6.8"
-  sha256 "e012f729442473c20e7cce334b00182521e4b6672ea681b34931b180feb3d6be"
+  version "3.7"
+  sha256 "3d7fa6146fb57da955dca408587fc658ac14aeb86eda7907763ae66397c9e65e"
 
   url "https://www.freemacsoft.net/downloads/AppCleaner_#{version}.zip"
   name "FreeMacSoft AppCleaner"
@@ -9,11 +9,14 @@ cask "appcleaner" do
 
   livecheck do
     url "https://freemacsoft.net/appcleaner/Updates.xml"
-    strategy :sparkle, &:short_version
+    regex(/Version\s+v?(\d+(?:\.\d+)+)/i)
+    strategy :sparkle do |item, regex|
+      item.title&.[](regex, 1)
+    end
   end
 
   auto_updates true
-  depends_on :macos
+  depends_on macos: :sequoia
 
   app "AppCleaner.app"
 
