@@ -23,6 +23,8 @@ cask "vlc" do
   command_wrapper "vlc",
                   executable: "#{appdir}/VLC.app/Contents/MacOS/VLC"
 
+  uninstall quit: "org.videolan.vlc"
+
   zap trash: [
     "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/org.videolan.vlc.sfl*",
     "~/Library/Application Support/org.videolan.vlc",
