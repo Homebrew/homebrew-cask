@@ -6,11 +6,13 @@ cask "auto-tune-central" do
   name "Auto-Tune Central"
   desc "Software download manager for Antares products"
   homepage "https://www.antarestech.com/"
-  depends_on :macos
+
   livecheck do
     url "https://www.antarestech.com/software-download"
     regex(/Auto_Tune_Central[._-]v?(\d+(?:\.\d+)+)[._-]universal/i)
   end
+
+  depends_on :macos
 
   app "Auto-Tune Central.app"
 end
