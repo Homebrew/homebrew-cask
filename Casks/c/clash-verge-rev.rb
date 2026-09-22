@@ -20,6 +20,8 @@ cask "clash-verge-rev" do
 
   app "Clash Verge.app"
 
+  uninstall quit: "io.github.clash-verge-rev.clash-verge-rev"
+
   zap trash: [
     "~/Library/Application Support/io.github.clash-verge-rev.clash-verge-rev",
     "~/Library/Caches/io.github.clash-verge-rev.clash-verge-rev",
