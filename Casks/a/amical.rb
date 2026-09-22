@@ -1,9 +1,9 @@
 cask "amical" do
   arch arm: "arm64", intel: "x64"
 
-  version "1.11.3"
-  sha256 arm:   "971985d4ccb3dc89d37be0a6d8661908e5a73092ab4163a9627a866f23424a02",
-         intel: "4ad40083b5510d2da0695a2dc158c7b6023fe6b662adbd2b4b66ed4253c13779"
+  version "1.12.0"
+  sha256 arm:   "1c0ae4065185d6a6c1bbb25f008f698e2b8b4ec779b3602026c629ceae8a3fb7",
+         intel: "a7c8f1e68459334d78cb2d1832eaa20342677fabaee841f07096cb3d1a58bd93"
 
   url "https://github.com/amicalhq/amical/releases/download/v#{version}/Amical-macos-#{arch}.dmg"
   name "Amical"
@@ -19,7 +19,7 @@ cask "amical" do
   end
 
   auto_updates true
-  depends_on macos: :monterey
+  depends_on macos: :ventura
 
   app "Amical.app"
 
