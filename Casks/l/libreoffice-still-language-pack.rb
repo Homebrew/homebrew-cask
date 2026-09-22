@@ -30,9 +30,9 @@ cask "libreoffice-still-language-pack" do
     "be"
   end
   language "bg" do
-    sha256 arm:   "8116db32751c815f7bec3f84fb86583394bd3856d79ed46a36506c1930fce783",
+    sha256 arm:   "ef770c9ac5bc891ecee658ed59e0cfe4d293d4dded6dfa4329094e2c04c3df56",
            intel: "405a43464c1ead2474114734dda943b5ac7cc9bc721a60024921d8814f849eff"
-    "bg"
+     "bg"
   end
   language "bn-IN" do
     sha256 arm:   "8fa7c209aed5c99075ddf95128895c7fb379833e9e9e735065e022ccaadfb07f",
