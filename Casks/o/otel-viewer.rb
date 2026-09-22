@@ -7,11 +7,10 @@ cask "otel-viewer" do
   desc "OTLP/gRPC collector with DuckDB storage, REST API and SQL console"
   homepage "https://github.com/stivio00/otel-viewer"
 
-  depends_on arch: :arm
+  depends_on arch: :arm64
+  depends_on macos: :ventura
 
   app "otel-viewer.app"
 
-  zap trash: [
-    "~/Library/Application Support/com.otelviewer.desktop",
-  ]
+  zap trash: "~/Library/Application Support/com.otelviewer.desktop"
 end
