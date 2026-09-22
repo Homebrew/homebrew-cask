@@ -4,7 +4,7 @@ cask "zen@twilight" do
   livecheck_os = on_system_conditional macos: "Darwin", linux: "Linux"
   url_end = on_system_conditional macos: "dmg", linux: "AppImage"
 
-  version "1.23t,20260921110514"
+  version "1.23t,20260922014552"
   sha256 :no_check
 
   on_macos do
