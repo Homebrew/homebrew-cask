@@ -1,6 +1,6 @@
 cask "screenkite" do
-  version "2.1.1,725"
-  sha256 "30c51f70b1fb45b422e785705ada7684266fb794a35cd4d11ef1e2d0c90422f7"
+  version "2.1.2,726"
+  sha256 "52a1511d2584085ee3c429ca7fcc3b48b8d9bdec251028625ab96079e9b458c9"
 
   url "https://downloads.screenkite.com/mac-releases/ScreenKite-#{version.csv.second}.zip"
   name "ScreenKite"
