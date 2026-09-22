@@ -1,6 +1,6 @@
 cask "easymac-cleaner" do
-  version "1.5"
-  sha256 "f70cdc23028624238995a6c717b34def96bd29b0082771f7e862d465f055de63"
+  version "1.5.1"
+  sha256 "cd9be17e3fbb266f6cae9848bf206fef4ad2bda9c09764a08b4128162da2b455"
 
   url "https://updates.martiancat.space/cleaner/EasyMacCleaner-#{version}.zip"
   name "EasyMac Cleaner"
