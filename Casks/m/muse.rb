@@ -1,5 +1,5 @@
 cask "muse" do
-  version "2.0"
+  version "2.1"
   sha256 :no_check
 
   url "https://muse.ai/api/hatch/app-download/mac"
