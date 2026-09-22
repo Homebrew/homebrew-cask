@@ -1,9 +1,9 @@
 cask "freeyourmusic" do
   arch intel: "-x64"
 
-  version "9.33.0"
-  sha256 arm:   "0459b4fa216ce96696bca9d5a710c109092fe2f4f70e67df729474dfc8d37a2e",
-         intel: "748fcb2a123e54506bf2a52300f49a857eebf06f405e0121344b50c05a513e2b"
+  version "10.0.0"
+  sha256 arm:   "c1a6af52f5b66c586326679fcf6290a63d3145e9afc705a5a38b745ab9512aeb",
+         intel: "1675ef5f085ae3b2063b7ffc15ee8544548750553b26394da56a314230520acc"
 
   url "https://fym-app-production.s3.nl-ams.scw.cloud/FreeYourMusic-#{version}#{arch}.dmg"
   name "FreeYourMusic"
