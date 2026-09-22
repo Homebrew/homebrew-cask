@@ -1,6 +1,6 @@
 cask "kiwix" do
-  version "3.17.0"
-  sha256 "b1eaf0e9ab48474264d83004f261027b3fb40e517c0e2b0aa23c8b8264e83e29"
+  version "3.17.1"
+  sha256 "b3be3e988070b47dfe5a924432ef2b602cad9439d4cce61f7b9b9962ff200af4"
 
   url "https://download.kiwix.org/release/kiwix-macos/kiwix-macos_#{version}.dmg"
   name "Kiwix"
