@@ -1,6 +1,6 @@
 cask "markdown-preview" do
-  version "0.0.58"
-  sha256 "6f627a4a833c5b7f019f48c8768d5289b87d5d80046ad117f0cef54465dea336"
+  version "0.0.60"
+  sha256 "edd69c8d50a243b007bd28947597cc78bbc6a8712eb157eb71c7986d4d0798ca"
 
   url "https://github.com/pluk-inc/markdown-preview/releases/download/v#{version}/Markdown-Preview.dmg"
   name "Markdown Preview"
@@ -17,6 +17,8 @@ cask "markdown-preview" do
 
   app "Markdown Preview.app"
   binary "#{appdir}/Markdown Preview.app/Contents/Resources/bin/markdown-preview", target: "mdp"
+
+  uninstall quit: "doc.md-preview"
 
   zap trash: [
     "~/Library/Application Scripts/doc.md-preview",

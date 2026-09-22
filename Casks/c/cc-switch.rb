@@ -2,11 +2,11 @@ cask "cc-switch" do
   arch arm: "arm64", intel: "x86_64"
   url_end = on_system_conditional macos: "macOS.dmg", linux: "Linux-#{arch}.AppImage"
 
-  version "3.20.3"
-  sha256 arm:          "cff3bf8ccd06a6dacde8fd93ac88467fcba8926f96bedccba63174a7efcabde7",
-         intel:        "cff3bf8ccd06a6dacde8fd93ac88467fcba8926f96bedccba63174a7efcabde7",
-         arm64_linux:  "4b22f18c13f4cfb1405aa2217a16f6b63cb600605f853f9051bd169a6e8b1f99",
-         x86_64_linux: "206bdad08b62ad2fdb57e52eace2227ba82f40f5fb743ab9934291aee69358f3"
+  version "3.20.4"
+  sha256 arm:          "ae31df43fbd9b5d41e5640aafd4cbbe7e5abc3bff126222af5ca09a92b08c8b5",
+         intel:        "ae31df43fbd9b5d41e5640aafd4cbbe7e5abc3bff126222af5ca09a92b08c8b5",
+         arm64_linux:  "6769348295993b8fc62dcc1b7f3f1dcb94ab27ceeabd3af58e9ececba13189d3",
+         x86_64_linux: "c8d66d8193fd00fd12239bd06a8c50f517badbf50d9020a4662e95e907b318ef"
 
   on_macos do
     depends_on macos: :monterey

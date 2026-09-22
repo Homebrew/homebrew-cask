@@ -1,6 +1,6 @@
 cask "slashy" do
-  version "1.3.57"
-  sha256 "048c9fd34f772a9f4f17922bf7a0ff6ed3fcfd1d4556c5cf2e237191db8501db"
+  version "1.3.58"
+  sha256 "96b5b9671d6551997b658fe9a14cc7bd5ca957c862c4e75741e19183f7a4e726"
 
   url "https://dl.slashy.com/Slashy-#{version}-universal.dmg"
   name "Slashy"

@@ -1,6 +1,6 @@
 cask "anchor-wallet" do
-  version "1.3.12"
-  sha256 "043f92369bf5dbc41d48ce6439eb2138017bc7f21694c60e2eab9d321a819508"
+  version "1.4.0"
+  sha256 "bec00cb5f9a58883b4eabf41d5e44c7baee74940b0cb57d282a472ec52c644bb"
 
   url "https://github.com/greymass/anchor/releases/download/v#{version}/mac-anchor-wallet-#{version}-x64.dmg"
   name "Anchor Wallet"
@@ -13,7 +13,7 @@ cask "anchor-wallet" do
   end
 
   auto_updates true
-  depends_on :macos
+  depends_on macos: :monterey
 
   app "Anchor Wallet.app"
 

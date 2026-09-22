@@ -1,6 +1,6 @@
 cask "neon-vision-editor" do
-  version "1.8.1"
-  sha256 "b87624c0675c367569ab28bbc1f5e337d80794dee0204a59e6c69cb5f5e961bd"
+  version "1.8.4"
+  sha256 "36898f5333bb2b6aafb780c466cf76d4bb8af30600a579840a0b847c6ecc5258"
 
   url "https://github.com/h3pdesign/Neon-Vision-Editor/releases/download/v#{version}/Neon.Vision.Editor.app.zip"
   name "Neon Vision Editor"

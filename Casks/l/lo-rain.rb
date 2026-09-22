@@ -7,10 +7,7 @@ cask "lo-rain" do
   desc "App that makes it rain no matter where you are, even over your apps"
   homepage "https://lo.cafe/lo-rain"
 
-  livecheck do
-    url "https://lo.cafe/lo-rain-files/appcast.xml"
-    strategy :sparkle, &:short_version
-  end
+  disable! date: "2026-09-21", because: :unreachable
 
   auto_updates true
   depends_on macos: :sonoma

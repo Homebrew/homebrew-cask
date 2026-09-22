@@ -13,9 +13,17 @@ cask "secretive" do
       skip "Legacy version"
     end
   end
-  on_sonoma :or_newer do
+  on_sonoma do
     version "3.0.4"
     sha256 "696d07812e4431075234a900a0136dbad3131a91086e535fc2b07d69a1d084ba"
+
+    livecheck do
+      skip "Legacy version"
+    end
+  end
+  on_sequoia :or_newer do
+    version "4.0.0"
+    sha256 "877517e212938ffb7048bc7b6811e992194ba4b3eaa4dae36405b6303d1ac1fa"
 
     livecheck do
       url :url
@@ -31,6 +39,9 @@ cask "secretive" do
   depends_on :macos
 
   app "Secretive.app"
+
+  uninstall quit:   "com.maxgoedjen.Secretive.Host",
+            signal: ["TERM", "com.maxgoedjen.Secretive.Host"]
 
   zap trash: [
     "~/Library/Application Scripts/com.maxgoedjen.Secretive.Host",

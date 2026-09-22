@@ -1,6 +1,6 @@
 cask "telari" do
-  version "0.5.5"
-  sha256 "73ae49adfa42d0dad54661ac3def970fb3c1449223f7048da871092580c7a494"
+  version "0.5.10"
+  sha256 "16713c487303f917ddb0640dfa77d378affe4e8db3853734609db51eaac0fbfb"
 
   url "https://dl.telari.app/Telari-#{version}.dmg"
   name "Telari"
@@ -9,7 +9,9 @@ cask "telari" do
 
   livecheck do
     url "https://dl.telari.app/appcast.xml"
-    strategy :sparkle, &:short_version
+    strategy :sparkle do |items|
+      items.find { |item| item.channel.nil? }&.short_version
+    end
   end
 
   depends_on macos: :ventura

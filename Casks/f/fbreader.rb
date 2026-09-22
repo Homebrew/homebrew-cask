@@ -1,11 +1,11 @@
 cask "fbreader" do
   os macos: "macos", linux: "linux"
+  name_arch_sep = on_system_conditional linux: "_Book_Reader-"
+  url_end = on_system_conditional macos: "dmg", linux: "AppImage"
 
   on_macos do
     version "2.1.5"
     sha256 "27c05006a1b16be5219fec9aeb364d4470ffee665ea5a9d185748801d8782b73"
-
-    url "https://fbreader.org/static/packages/#{os}/FBReader-#{version}.dmg"
 
     depends_on macos: :monterey
 
@@ -26,13 +26,12 @@ cask "fbreader" do
     sha256 arm64_linux:  "2cf80dc3494c692ff8ecee908570e1186b0bca30301f47512efa75b98fbffcfe",
            x86_64_linux: "de4a5044f566a04b4c594ff043c137d7bdd99e951e41a4512e814d90f6978571"
 
-    url "https://fbreader.org/static/packages/#{os}/FBReader_Book_Reader-#{arch}-#{version}.AppImage"
-
     app_image "FBReader_Book_Reader-#{arch}-#{version}.AppImage", target: "FBReader.AppImage"
 
     zap trash: "~/.config/FBReader.ORG Limited"
   end
 
+  url "https://fbreader.org/static/packages/#{os}/FBReader#{name_arch_sep}#{arch}-#{version}.#{url_end}"
   name "FBReader"
   desc "Book reader"
   homepage "https://fbreader.org/"

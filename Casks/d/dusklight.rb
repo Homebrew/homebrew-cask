@@ -3,11 +3,11 @@ cask "dusklight" do
   os macos: "macos", linux: "linux"
   url_end = on_system_conditional macos: "zip", linux: "AppImage"
 
-  version "1.4.1"
-  sha256 arm:          "fc6086b6d4713aff24360727510dd5997f8daeae7be7da6f5c6b7ff008cdb910",
-         intel:        "76807140252bd72640c54fe063a92f58428ad567fd224600f6966f4358d73018",
-         arm64_linux:  "5d9214716ae5808b2ce40104f742534e685a4d3cf83fdd3b608c02870e68c363",
-         x86_64_linux: "f5dd1308c131430945cc12cdd44f22d31e3dd6ec5458498491924a5e9fa92d40"
+  version "2.0.1"
+  sha256 arm:          "b76dff320bb90d163280996ec06be6a094eda538c960b8d0a7817b167515c991",
+         intel:        "7c7327376d7de5cd684d509ea21bb08981d24e2fa1025bbd62792839d84b173f",
+         arm64_linux:  "b3ffe21f804bb254eb4b475f2fc446f70a47bd2c2453426a77952b8850b87d9d",
+         x86_64_linux: "bd6b016c212033c424431b087ad1b96ba7d223102188aa2994cb0d9cc657a879"
 
   on_macos do
     depends_on macos: :monterey

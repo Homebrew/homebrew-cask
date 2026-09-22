@@ -4,10 +4,10 @@ cask "appflowy" do
   name_start = on_system_conditional macos: "Appflowy", linux: "AppFlowy"
   url_end = on_system_conditional macos: "zip", linux: "AppImage"
 
-  version "0.14.3"
-  sha256 arm:          "0b2bfccf9ffba04ea1fa265f218ca0070e98be6a221afd5e3d082c1c9ca0bac2",
-         intel:        "c9dccb517cdae026168ebb0c3df5721ec5522f38333e111f4fbbbe2f92b23731",
-         x86_64_linux: "124d77c6188cc77682630a946c94af3b3b3910a84c2e7091e9bd0d7c4517f2e2"
+  version "0.14.5"
+  sha256 arm:          "844610832494c7dad0c306a39e668130b160ae74aa0fa16ae1c9ce76aa224596",
+         intel:        "2ca7f2c90998558a9bd117ca91d273350f309bf78d68c5353df037b8a5efc76c",
+         x86_64_linux: "053e1cfdab7c8cf367a02451bf20c2304b2d24e51bbca31f2eac4bc253e3e8f0"
 
   on_macos do
     depends_on macos: :monterey

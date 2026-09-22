@@ -1,6 +1,6 @@
 cask "font-fairfax-hd" do
-  version "2026-05-08"
-  sha256 "9e88ed905c84b2c5970c5cb85db65d1d586c18ce331b5b2ab19c29287cd45480"
+  version "2026-09-21"
+  sha256 "7e07da22f39c5f31f9a08aa71fbf13f144ce6c20d4c2ee7cf8eca9cd188b759f"
 
   url "https://github.com/kreativekorp/open-relay/releases/download/#{version}/FairfaxHD.zip"
   name "Fairfax HD"

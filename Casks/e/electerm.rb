@@ -1,11 +1,35 @@
 cask "electerm" do
-  arch arm: "arm64", intel: "x64"
+  arch arm: "arm64", intel: on_system_conditional(macos: "x64", linux: "x86_64")
+  os macos: "mac", linux: "linux"
+  url_end = on_system_conditional macos: "dmg", linux: "AppImage"
 
-  version "5.5.15"
-  sha256 arm:   "98cc8278d0ea9918b46f80514fe8bdea5b2a5ac0fcae054e37e70e75f0c96bdc",
-         intel: "37e6f814196f5fbabe7c1984471c16ef2542e92f028e84b35d41ca1a01affe55"
+  version "5.5.25"
+  sha256 arm:          "86c97f185a9f061e04c2bd05ce508f48ebe358a558ab5c048c7b7fe9d0cbcf6a",
+         intel:        "0b1ee1a8b6c5c040239c01211860b5776b279d83f7d64d67f95db7e159cde2b1",
+         arm64_linux:  "503703051f903a99d2782ee829b233c29b492b091253455a61c2defc718fd71c",
+         x86_64_linux: "c7729793b66743be1a8de11bc895dbe33cf20adc278766877cb81c08d1102dda"
 
-  url "https://mirror.electerm.org/https://github.com/electerm/electerm/releases/download/v#{version}/electerm-#{version}-mac-#{arch}.dmg"
+  on_macos do
+    depends_on macos: :monterey
+
+    app "electerm.app"
+    binary "#{appdir}/electerm.app/Contents/MacOS/electerm"
+
+    zap trash: [
+      "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/org.electerm.electerm.sfl*",
+      "~/Library/Application Support/electerm",
+      "~/Library/Logs/electerm",
+      "~/Library/Preferences/org.electerm.electerm.plist",
+      "~/Library/Saved Application State/org.electerm.electerm.savedState",
+    ]
+  end
+  on_linux do
+    app_image "electerm-#{version}-linux-#{arch}.AppImage", target: "electerm.AppImage"
+
+    zap trash: "~/.config/electerm"
+  end
+
+  url "https://mirror.electerm.org/https://github.com/electerm/electerm/releases/download/v#{version}/electerm-#{version}-#{os}-#{arch}.#{url_end}"
   name "electerm"
   desc "Terminal/ssh/sftp/telnet/serialport/RDP/VNC/Spice/ftp client"
   homepage "https://electerm.org/"
@@ -18,16 +42,4 @@ cask "electerm" do
   end
 
   auto_updates true
-  depends_on macos: :monterey
-
-  app "electerm.app"
-  binary "#{appdir}/electerm.app/Contents/MacOS/electerm"
-
-  zap trash: [
-    "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/org.electerm.electerm.sfl*",
-    "~/Library/Application Support/electerm",
-    "~/Library/Logs/electerm",
-    "~/Library/Preferences/org.electerm.electerm.plist",
-    "~/Library/Saved Application State/org.electerm.electerm.savedState",
-  ]
 end

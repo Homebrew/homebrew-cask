@@ -1,6 +1,6 @@
 cask "xnviewmp" do
-  version "1.11.6"
-  sha256 "1da40a995db18edf5e0a9904ffb1e0e29306f8ad6bce36853f1830f5ef084b04"
+  version "1.11.7"
+  sha256 "58b88d4f9b226d8a3c0d055ea98d6ce687c2bbb4fe9a1f67fa9d7e373be1d370"
 
   url "https://download.xnview.com/old_versions/XnView_MP/XnView_MP-#{version}-mac.dmg"
   name "XnViewMP"

@@ -2,11 +2,11 @@ cask "devtunnel" do
   arch arm: "arm64", intel: "x64"
   os macos: "osx", linux: "linux"
 
-  version "1.0.2086+eb5ddeb517"
-  sha256 arm:          "f5dc975ab464e402c3c6f6c1db8aed3488caa79e39234accb2e894d90e33e2fc",
-         intel:        "bc262c28f9bf5c764390bf72d451422b0d2dde98d2d347c17257e3bf38fe10c0",
-         arm64_linux:  "64890f9e87e846b85858a3711952f29ba90dfb12a1a0d3239a7237a118aca753",
-         x86_64_linux: "cfb813988cfa0032535622e3fe22cad33a890766db40b8aa85190e05fdb4e7e3"
+  version "1.0.2094+24665e6583"
+  sha256 arm:          "be7226ccbb0178381d6ee9cad40274e29f0e8e9405507c7d70ee65f8c0eab24e",
+         intel:        "efd673b5b36cd130f5d97e59125afeeb95caea6d646b92fb6891c6896f7b8282",
+         arm64_linux:  "efac378f9ffb40914935fbd2361543088b50cd62248372df06c243e6f7c49cc8",
+         x86_64_linux: "2aa6c41aaf7840427e84b7e1e99be5b826a9966fc027ddf61dc0f69b68db060b"
 
   url "https://tunnelsassetsprod.blob.core.windows.net/cli/#{version}/#{os}-#{arch}-devtunnel"
   name "Microsoft Dev Tunnels"

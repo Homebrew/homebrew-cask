@@ -2,8 +2,8 @@ cask "go2tv" do
   arch arm: "arm64", intel: "amd64"
 
   version "2.6.1"
-  sha256 arm:   "52b188d7f2cea934919149d63fc4a4fcf7944def7adf451b4bc7942648ae66df",
-         intel: "351bf172c1825f88f90d9f7f07b3f2e9718fdfe8a720bba59ba332c1d2c69270"
+  sha256 arm:   "d69db8495c3e0ce1c73ef3539e5a015f42ac583ef9f5e9935e80b20a8491bd8a",
+         intel: "1adfda7100c6ccb5d7019593cc4276ea4563f63aaf9884f995cc5ea0f1634fc4"
 
   url "https://github.com/alexballas/go2tv/releases/download/v#{version}/go2tv_v#{version}_macOS_#{arch}.zip"
   name "Go2TV"

@@ -1,6 +1,6 @@
 cask "planet" do
-  version "0.22.3"
-  sha256 "3edb27834d250748f1b819601310bdf33e61729066d05182a88c85ce9570a4b6"
+  version "0.22.4"
+  sha256 "2ec4e1e067ab0e1d6820d57a7a9cdaadcdecc52fa32a567ae48546930a6cb88a"
 
   url "https://github.com/Planetable/Planet/releases/download/release-#{version}/Planet.zip"
   name "Planet"
@@ -16,6 +16,8 @@ cask "planet" do
   depends_on macos: :monterey
 
   app "Planet.app"
+
+  uninstall quit: "xyz.planetable.Planet"
 
   zap trash: "~/Library/Containers/xyz.planetable.Planet"
 end
