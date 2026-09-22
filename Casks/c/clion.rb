@@ -1,9 +1,9 @@
 cask "clion" do
   arch arm: "-aarch64"
 
-  version "2026.2.2,262.10315.131"
-  sha256 arm:   "514fd03e52d3f101fc798f87f08deec216beac864b6a78b04f9095e15d5ae898",
-         intel: "506dc6afd987dbeefe5616c965665fc2f78a134432f19d32dd8b0b25278380f7"
+  version "2026.2.3,262.10968.117"
+  sha256 arm:   "94e31328a37d0e26fc684adc870db2ff1066113c018129c9a3118ddf2afddfd7",
+         intel: "c4bf76900fee302ad34154870d26381eb329b7a57fbded01c778c0aa822785fb"
 
   url "https://download.jetbrains.com/cpp/CLion-#{version.csv.first}#{arch}.dmg"
   name "CLion"
