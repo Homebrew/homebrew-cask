@@ -1,6 +1,6 @@
 cask "trimmy" do
-  version "0.11.1"
-  sha256 "a7c75d6bf4aa4b085635f0390524575d3d9d71cc744abb105c9c51209c0ccbcc"
+  version "0.11.2"
+  sha256 "b6450d549cd3e659d26131d85923219389fb9ef0e917c6c480687a4c163b502c"
 
   url "https://github.com/steipete/Trimmy/releases/download/v#{version}/Trimmy-#{version}.zip"
   name "Trimmy"
