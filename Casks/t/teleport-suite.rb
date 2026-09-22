@@ -2,7 +2,8 @@ cask "teleport-suite" do
   version "18.11.1"
   sha256 "a7998fb3a37d58977d30a49f5ccdb931bd9b4e9c9c7c3a262affecd88c57100c"
 
-  url "https://cdn.teleport.dev/teleport-#{version}.pkg"
+  url "https://cdn.teleport.dev/teleport-#{version}.pkg",
+    referer: "https://formulae.brew.sh/cask/teleport-suite"
   name "Teleport"
   desc "Modern SSH server for teams managing distributed infrastructure"
   homepage "https://goteleport.com/"

@@ -2,7 +2,8 @@ cask "teleport-connect" do
   version "18.11.1"
   sha256 "50afd680bc32a2febfc26867db38d826094049e4322ad816d58adb1885d1d7e0"
 
-  url "https://cdn.teleport.dev/Teleport%20Connect-#{version}.dmg"
+  url "https://cdn.teleport.dev/Teleport%20Connect-#{version}.dmg",
+    referer: "https://formulae.brew.sh/cask/teleport-connect"
   name "Teleport Connect"
   desc "Developer-friendly browser for cloud infrastructure"
   homepage "https://goteleport.com/"

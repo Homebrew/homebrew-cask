@@ -2,7 +2,8 @@ cask "tsh" do
   version "16.4.7"
   sha256 "b101344390382c8e3d858f2ff5fbd59658552fe0d832a946578219ec10347b20"
 
-  url "https://cdn.teleport.dev/tsh-#{version}.pkg"
+  url "https://cdn.teleport.dev/tsh-#{version}.pkg",
+    referer: "https://formulae.brew.sh/cask/tsh"
   name "Teleport TSH"
   desc "SSH server for teams managing distributed infrastructure"
   homepage "https://goteleport.com/"
