@@ -1,6 +1,6 @@
 cask "aerial@beta" do
-  version "4.1.3"
-  sha256 "3ad9e1bbbb72c036ad2c599762dc5b245912e4250c4837df3bba99c96eec9f84"
+  version "4.1.4"
+  sha256 "636c77f685a6c49dcb2b6af9cc6537f704d73185a68f3b395d98c0090c60dc2f"
 
   url "https://github.com/AerialScreensaver/Aerial/releases/download/v#{version}/Aerial-#{version}.zip"
   name "Aerial"
