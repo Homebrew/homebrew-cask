@@ -1,6 +1,6 @@
 cask "taphouse" do
-  version "1.5.8.4"
-  sha256 "3c25bbe3e9a58aa3088a139bd4db87d94650081530110549a3105c29be5c58bc"
+  version "1.5.8.5"
+  sha256 "376cbb7b06c6e1b61047b21c6f17680b4ae03752d871336f3c997db9c410fda4"
 
   url "https://taphouse.multimodalsolutions.gr/downloads/Taphouse-#{version}.dmg"
   name "Taphouse"
