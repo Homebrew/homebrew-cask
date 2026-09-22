@@ -110,7 +110,7 @@ cask "libreoffice-still-language-pack" do
     "eo"
   end
   language "es" do
-    sha256 arm:   "db72e3448de5ebe65c6bebeb0f863e9c78eeee47de653411d24388c068eaee64",
+    sha256 arm:   "ef62f31d6321569fc8e1afd98f772ab210b5d8614d3b0910efcb6e3e63f79563",
            intel: "272c90f002a0ee032afec5e4c92c1dae7dab39fec1c1059cc6339c1bd9c9f816"
     "es"
   end
