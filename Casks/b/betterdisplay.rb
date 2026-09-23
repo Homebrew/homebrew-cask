@@ -35,8 +35,8 @@ cask "betterdisplay" do
     end
   end
   on_tahoe :or_newer do
-    version "5.0.5"
-    sha256 "5685565b3f07952c697b6d7884ff5c410a7070ea30b2eb282a93f831fe773752"
+    version "5.0.6"
+    sha256 "a266c9f88244edb4895d98e0c75900cd57a0d47088f962a3d9bf5c14c5197d50"
 
     livecheck do
       url "https://betterdisplay.pro/betterdisplay/sparkle/appcast.xml"
