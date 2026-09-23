@@ -1,6 +1,6 @@
 cask "display-pilot" do
-  version "1.12.8.0,260916093237"
-  sha256 "20d0e1759afcb243c3348a241f954fa01a3b5dc77a8330c77e9cebedab09a7c4"
+  version "1.12.8.0,260917111151"
+  sha256 "2cceb55a52cb2b25de133c9f620b5f563cf486168b8c88da6d63a8a6b31ee71b"
 
   url "https://esupportdownload.benq.com/esupport/VERTICAL%20&%20PROFESSIONAL%20DISPLAY/Software/Display%20Pilot%202/Display%20Pilot%202%20for%20Mac_V#{version.csv.first}_Mac_#{version.csv.second}.zip"
   name "Display Pilot 2"
@@ -25,7 +25,6 @@ cask "display-pilot" do
   end
 
   depends_on :macos
-  container nested: "Display Pilot 2Setup-#{version.csv.first}-release.dmg"
 
   app "Display Pilot 2.app"
 
