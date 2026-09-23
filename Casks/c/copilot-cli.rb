@@ -29,4 +29,5 @@ cask "copilot-cli" do
   generate_completions_from_executable "copilot", "completion"
 
   zap trash: "~/.copilot"
+  zap trash: "~/Library/Caches/copilot"
 end
