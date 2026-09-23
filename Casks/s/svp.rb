@@ -17,6 +17,8 @@ cask "svp" do
 
   app "SVP #{version.major} Mac.app"
 
+  uninstall quit: "com.svp-team.svpmanager"
+
   zap trash: [
     "~/Library/Application Support/SVP#{version.major}",
     "~/Library/Preferences/com.svp-team.SVP#{version.major}.plist",
