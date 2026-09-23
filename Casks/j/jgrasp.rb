@@ -1,6 +1,6 @@
 cask "jgrasp" do
-  version "2.1.0_01"
-  sha256 "4178d6a987521cb6b177caed1dcd8538f0c15bfbc8ec79c63ff9e1a20d5ffe93"
+  version "2.1.0_02"
+  sha256 "0c1c60fd54edfd1c106d45b5d4bdba9d06d181eb1aa51cc2761723666ae42694"
 
   url "https://jgrasp.org/dl4g/jgrasp/jgrasp#{version.no_dots}.pkg"
   name "jgrasp"
