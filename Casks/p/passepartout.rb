@@ -1,9 +1,9 @@
 cask "passepartout" do
   arch arm: "arm64", intel: "x86_64"
 
-  version "3.11.2"
-  sha256 arm:   "534f0425d6e94e3fcb84464daefd11a042c57a20cae7ad2c442e30ed45646a25",
-         intel: "d999b8cf20228aec5f2957a21084b873242cb50fc04fb1472f9d3fae7862d190"
+  version "3.12.0"
+  sha256 arm:   "4a874476bb3d22097fa30a205e5b1f3d1c393d7660cedc12123637c805128736",
+         intel: "fc5b967e07f37f5c489508c6cb63b5cccb3969f0a6050e9b5240b5771efda752"
 
   url "https://github.com/partout-io/passepartout/releases/download/v#{version}/Passepartout.#{arch}.dmg"
   name "Passepartout"
