@@ -1,8 +1,11 @@
 cask "activitywatch@beta" do
-  version "0.14.0b8"
-  sha256 "f5c5e47aad94eb9c23331386cb1c76fd4a71709c1dbe3558e4ffd1a135c4f252"
+  arch arm: "arm64", intel: "x86_64"
 
-  url "https://github.com/ActivityWatch/activitywatch/releases/download/v#{version}/activitywatch-tauri-v#{version}-macos-arm64.dmg"
+  version "0.14.0b8"
+  sha256 arm:   "f5c5e47aad94eb9c23331386cb1c76fd4a71709c1dbe3558e4ffd1a135c4f252",
+         intel: "4353dae591a11257c48c2744d2ec32aa9d93a259ca663b4f8c39688ddece56e6"
+
+  url "https://github.com/ActivityWatch/activitywatch/releases/download/v#{version}/activitywatch-tauri-v#{version}-macos-#{arch}.dmg"
   name "ActivityWatch"
   desc "Time tracker"
   homepage "https://activitywatch.net/"
@@ -23,7 +26,6 @@ cask "activitywatch@beta" do
   end
 
   conflicts_with cask: "activitywatch"
-  depends_on arch: :arm64
   depends_on macos: :monterey
 
   app "ActivityWatch.app"
