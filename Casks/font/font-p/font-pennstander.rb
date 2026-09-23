@@ -4,7 +4,6 @@ cask "font-pennstander" do
 
   url "https://github.com/juliusross1/Pennstander/archive/refs/tags/v#{version}.tar.gz"
   name "Pennstander"
-  desc "Text and mathematics font based on Grandstander"
   homepage "https://github.com/juliusross1/Pennstander"
 
   livecheck do
