@@ -1,6 +1,6 @@
 cask "homebrew-app" do
-  version "0.4.3"
-  sha256 "831b525a2531888572086f406db270e7540ac1c1450c465ffff4b3b2d1965a42"
+  version "0.4.4"
+  sha256 "afcd2f2ab7101b3720dd17ad2833a88641517d3fd2530d4dd1a98f35544c497c"
 
   url "https://github.com/Homebrew/BrewUI/releases/download/v#{version}/Homebrew-#{version}.zip"
   name "Homebrew"
