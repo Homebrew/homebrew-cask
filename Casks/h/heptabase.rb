@@ -2,10 +2,10 @@ cask "heptabase" do
   arch arm: "-arm64"
   os macos: "#{arch}-mac.zip", linux: ".AppImage"
 
-  version "1.111.0"
-  sha256 arm:          "33aa43cb4b296ccbeb948f385bb839a8359ce11e16543be823d09bdfb5237d84",
-         intel:        "861dd24d39652d51953b1d4e49bc98685766a025c1f869d83b9dbb32ed504ec4",
-         x86_64_linux: "0d4d75082ebdbe6896d963acf65fac571adc805aeffd1c440d686cb3535fc0ae"
+  version "1.112.0"
+  sha256 arm:          "eb280fedf1f90ddc4e609154203a0d01d92472ebdf677086128afb50eda74cb2",
+         intel:        "9ed530e5ac43ea1451f8062da78a6e681a1f0725b6115ea0df1d0ce139a99270",
+         x86_64_linux: "39f3b4769cd98822efb9bebdc8bad2522cc88afc75854968fef2a0cee0620416"
 
   on_macos do
     app "Heptabase.app"
