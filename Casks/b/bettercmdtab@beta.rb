@@ -1,6 +1,6 @@
 cask "bettercmdtab@beta" do
-  version "26.8-beta.1,20260923142947"
-  sha256 "682d8650a098f8e1c6ffd11a173aa3c53dfc48499a420282282add2923117d47"
+  version "26.8-beta.2,20260923192047"
+  sha256 "f436fcc87355ea3aecfa8204db94090e7790fa55e88fcfc024d92bddfacad0c8"
 
   url "https://github.com/rokartur/BetterCmdTab/releases/download/#{version.csv.first}/BetterCmdTab-#{version.csv.first}-#{version.csv.second}.dmg"
   name "BetterCmdTab"
