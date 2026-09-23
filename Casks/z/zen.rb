@@ -4,11 +4,11 @@ cask "zen" do
   livecheck_os = on_system_conditional macos: "Darwin", linux: "Linux"
   url_end = on_system_conditional macos: "dmg", linux: "AppImage"
 
-  version "1.22.2b"
-  sha256 arm:          "2332673353551bfe4607aa6edd3c3ee3149652651a7698acabad935612c93943",
-         intel:        "2332673353551bfe4607aa6edd3c3ee3149652651a7698acabad935612c93943",
-         arm64_linux:  "2ca5d98045424628da82de3fb218a98399b7dc9ad73a0a0fff397cef3683ce5a",
-         x86_64_linux: "69c1167a67e346690c7061bab70b0caa69a632d25a8088a6cee148eed2fbe58e"
+  version "1.22.3b"
+  sha256 arm:          "71dbfe394ed2f6d1eb983ff0cc6df9763c43fc67772202879a6a40794c14e1a1",
+         intel:        "71dbfe394ed2f6d1eb983ff0cc6df9763c43fc67772202879a6a40794c14e1a1",
+         arm64_linux:  "f5459c7472be0e98093fddcf68a3a5e9131f8b915f0ba7a1906e6cba76d9aaa2",
+         x86_64_linux: "ed2a2c329066c0c2d1f1d3d7cc1cd66605d3608349c1548a62c159269a988914"
 
   on_macos do
     conflicts_with cask: "zen-privacy"
