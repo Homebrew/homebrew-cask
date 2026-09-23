@@ -2,11 +2,11 @@ cask "p2p-kiwi" do
   arch arm: "arm64", intel: "x86_64"
   url_end = on_system_conditional macos: "universal.dmg", linux: "#{arch}.AppImage"
 
-  version "3.3.0"
-  sha256 arm:          "43dfbf9488429971f7e57efd451b91c411200ddbc1d04eeac44b8404bd782b84",
-         intel:        "43dfbf9488429971f7e57efd451b91c411200ddbc1d04eeac44b8404bd782b84",
-         arm64_linux:  "5001291bc952e05298cab7c1e3592d57b6eea96666ec30f60e6c51f1596e4d68",
-         x86_64_linux: "60d9d1b8fb4473dc538833fcaa0a698c85e54dd1c18b3410b37b83d7e3155456"
+  version "3.4.0"
+  sha256 arm:          "e153a52e87ac16a5ffa7b67c450e6f3fafab2b76328977168504e37e90acf3a0",
+         intel:        "e153a52e87ac16a5ffa7b67c450e6f3fafab2b76328977168504e37e90acf3a0",
+         arm64_linux:  "168cd437e790b44d7e89120be4b19d3d45e1db88d962c6e280b380703ae7b98a",
+         x86_64_linux: "9cd29bcad1599f07fa75406080877caf7207b6be88ac66f080baa17ef744b170"
 
   on_macos do
     depends_on macos: :ventura
