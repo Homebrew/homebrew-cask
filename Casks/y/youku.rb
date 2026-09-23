@@ -1,6 +1,6 @@
 cask "youku" do
-  version "9.5.4.1001"
-  sha256 "90a7ddb4eb9d5e4179505ed60ce994c09ff331419cdf2cd5f2d8a65d3d4252c4"
+  version "9.5.5.1001"
+  sha256 "b6dfeec1fb75aa6e1ab9da0b7121de48642197776f5b2144978ebdf96ad47e44"
 
   url "https://pcclient.download.youku.com/iku_electron_client/youkuclient_setup_#{version}.dmg",
       user_agent: :fake
