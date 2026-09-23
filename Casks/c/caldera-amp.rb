@@ -7,8 +7,6 @@ cask "caldera-amp" do
   desc "Headless player for Plex music servers"
   homepage "https://caldera.homes/music/amp/"
 
-  # The Sparkle feed can contain items on the "Beta" channel, so we restrict
-  # matching to the default channel.
   livecheck do
     url "https://releases.caldera.homes/music/amp/macos/appcast.xml"
     strategy :sparkle do |items|
