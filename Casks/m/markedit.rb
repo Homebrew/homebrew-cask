@@ -1,6 +1,6 @@
 cask "markedit" do
-  version "1.35.0"
-  sha256 "15c4930969b411de98c3397094d3815b40463781dd01161581f26f54d6108e7e"
+  version "1.36.0"
+  sha256 "b997f51467fa6800623d432cb5b8780baaf1c69b55d550eba708f83cd6a42d17"
 
   url "https://github.com/MarkEdit-app/MarkEdit/releases/download/v#{version}/MarkEdit-#{version}.dmg"
   name "MarkEdit"
