@@ -17,5 +17,7 @@ cask "monal" do
 
   app "Monal.app"
 
+  uninstall quit: "org.monal-im.prod.catalyst.monal"
+
   zap trash: "~/Library/Group Containers/group.monal"
 end
