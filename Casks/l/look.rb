@@ -7,11 +7,6 @@ cask "look" do
   desc "Keyboard-first local launcher"
   homepage "https://github.com/kunkka19xx/look"
 
-  livecheck do
-    url :url
-    strategy :github_latest
-  end
-
   depends_on macos: :sequoia
 
   app "Look.app"
