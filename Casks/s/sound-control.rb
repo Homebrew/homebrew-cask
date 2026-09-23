@@ -1,6 +1,6 @@
 cask "sound-control" do
-  version "3.3.3"
-  sha256 "0d00495d22ae5e5bd25b29647023a124a02c85cb1005e9da5973a7c083f54aa9"
+  version "3.4.0"
+  sha256 "7df63fe4c0821541c665c5547a422bbc3bb08f120ffaffe4a3119f6d2bfd6300"
 
   url "https://s3.amazonaws.com/staticz.net/downloads/soundcontrol/SoundControl_#{version}.dmg"
   name "Sound Control"
@@ -13,7 +13,7 @@ cask "sound-control" do
   end
 
   auto_updates true
-  depends_on :macos
+  depends_on macos: :sonoma
 
   app "Sound Control.app"
 
