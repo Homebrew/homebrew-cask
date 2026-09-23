@@ -1,6 +1,6 @@
 cask "monal" do
-  version "1092"
-  sha256 "559da3f9bba9a6c50d3a39ff0c38b01bf86a8e7da0e11eee323cc0e835aa0764"
+  version "1094"
+  sha256 "1508c1e1a280fe5829016bbfe2750a32d3c143b8a58e168db0190591a590b22f"
 
   url "https://downloads.monal-im.org/monal-im/stable/macOS/Monal-#{version}.zip"
   name "Monal"
@@ -16,6 +16,8 @@ cask "monal" do
   depends_on :macos
 
   app "Monal.app"
+
+  uninstall quit: "org.monal-im.prod.catalyst.monal"
 
   zap trash: "~/Library/Group Containers/group.monal"
 end
