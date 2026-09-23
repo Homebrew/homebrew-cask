@@ -8,8 +8,8 @@ cask "font-pennstander" do
   homepage "https://ctan.org/pkg/pennstander-otf"
 
   livecheck do
-    url :homepage
-    regex(/Version.*?v?(\d+(?:\.\d+)+)/i)
+    url "https://github.com/juliusross1/Pennstander"
+    strategy :git
   end
 
   font "pennstander-otf/fonts/Pennstander-Black.otf"
