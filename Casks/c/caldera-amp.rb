@@ -20,6 +20,7 @@ cask "caldera-amp" do
   app "Caldera Amp.app"
 
   zap trash: [
+    "~/Library/Application Support/Caldera Amp",
     "~/Library/Caches/com.nextamp.CalderaAmp",
     "~/Library/HTTPStorages/com.nextamp.CalderaAmp",
     "~/Library/Preferences/com.nextamp.CalderaAmp.plist",
