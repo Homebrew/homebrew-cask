@@ -17,10 +17,7 @@ cask "ssl-360" do
   pkg "SSL_360_v#{version}.pkg"
 
   uninstall launchctl: "com.sslcontrolroom.daemon",
-            signal:    [
-              ["SIGINT", "SSL360Core"],
-              ["TERM", "SSL360Gui"],
-            ],
+            quit:      "com.solidstatelogic.ssl360",
             pkgutil:   "com.sslcontrolroominstaller.pkg",
             delete:    [
               "/Applications/SSL 360.app",
