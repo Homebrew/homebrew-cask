@@ -38,5 +38,8 @@ cask "copilot-cli@prerelease" do
   binary "copilot"
   generate_completions_from_executable "copilot", "completion"
 
-  zap trash: "~/.copilot"
+  zap trash: [
+    "~/.copilot",
+    "~/Library/Caches/copilot",
+  ]
 end
