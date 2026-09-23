@@ -1,6 +1,6 @@
 cask "imazing-converter" do
-  version "2.0.14,586"
-  sha256 "351acae944926f6fcc0888e34c0c1b44765e64ae57223c2440e607ec813f1961"
+  version "2.0.15,591"
+  sha256 "9fcef750577c1ae369a3329981f8034643608343ce648a9d398fc3908ccd8950"
 
   url "https://downloads.imazing.com/mac/iMazing-Converter/#{version.csv.first}.#{version.csv.second}/iMazing_Converter_#{version.csv.first}.#{version.csv.second}.dmg"
   name "iMazing Converter"
