@@ -1,6 +1,6 @@
 cask "wifispoof" do
-  version "4.2"
-  sha256 "8c73f8e7794eefd59a05006ed01904ac43c7555b7b6316bcafb42e168e71fd6f"
+  version "4.3"
+  sha256 "0fd95e9ce7ca9707185b84c698117099acc8e1382cb9975cc16fe34133f86ee5"
 
   url "https://sweetpproductions.com/products/wifispoof#{version.major}/WiFiSpoof.dmg"
   name "WiFiSpoof"
@@ -13,14 +13,15 @@ cask "wifispoof" do
   end
 
   auto_updates true
-  depends_on :macos
+  depends_on macos: :sonoma
 
   app "WiFiSpoof.app"
 
-  uninstall delete: [
-    "/Library/LaunchDaemons/com.sweetpproductions.WiFiSpoofHelperTool.plist",
-    "/Library/PrivilegedHelperTools/com.sweetpproductions.WiFiSpoofHelperTool",
-  ]
+  uninstall quit:   "com.sweetpproductions.WiFiSpoof#{version.major}",
+            delete: [
+              "/Library/LaunchDaemons/com.sweetpproductions.WiFiSpoofHelperTool.plist",
+              "/Library/PrivilegedHelperTools/com.sweetpproductions.WiFiSpoofHelperTool",
+            ]
 
   zap trash: [
     "~/Library/Application Scripts/com.sweetpproductions.WiFiSpoofApp",
