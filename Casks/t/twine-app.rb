@@ -12,9 +12,10 @@ cask "twine-app" do
   app "Twine.app"
 
   zap trash: [
+    "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/org.twinery.twine.sfl*",
     "~/Library/Application Support/Twine",
     "~/Library/Logs/Twine",
-    "~/Library/Preferences/com.electron.twine.plist",
-    "~/Library/Saved Application State/com.electron.twine.savedState",
+    "~/Library/Preferences/org.twinery.twine.plist",
+    "~/Library/Saved Application State/org.twinery.twine.savedState",
   ]
 end
