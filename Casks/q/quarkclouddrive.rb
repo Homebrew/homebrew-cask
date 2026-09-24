@@ -31,13 +31,15 @@ cask "quarkclouddrive" do
     ],
   }
 
-  uninstall quit:  "com.quark.clouddrive.desktop",
-            trash: "/Applications/QuarkCloudDrive.app"
+  uninstall launchctl: "application.com.quark.clouddrive.desktop.*",
+            quit:      "com.quark.clouddrive.desktop",
+            trash:     "/Applications/QuarkCloudDrive.app"
 
   zap trash: [
     "~/Library/Application Support/QuarkCloudDrive",
     "~/Library/Caches/com.quark.clouddrive.desktop",
     "~/Library/Caches/com.quark.clouddrive.macinstaller",
+    "~/Library/Caches/QuarkCloudDriveInstaller",
     "~/Library/Logs/QuarkCloudDrive",
     "~/Library/Preferences/com.quark.clouddrive.desktop.plist",
     "~/Library/Saved Application State/com.quark.clouddrive.desktop.savedState",
