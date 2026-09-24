@@ -17,6 +17,8 @@ cask "spokenly" do
 
   app "Spokenly.app"
 
+  uninstall quit: "app.spokenly"
+
   zap trash: [
     "~/Library/Application Support/app.spokenly.revenuecat",
     "~/Library/Application Support/Spokenly",
