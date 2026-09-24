@@ -15,7 +15,7 @@ cask "quiet" do
     regex(/href=.*?Quiet[._-]v?(\d+(?:\.\d+)+)[._-]#{arch}\.dmg/i)
   end
 
-  depends_on :macos
+  depends_on macos: :ventura
 
   app "Quiet.app"
 
