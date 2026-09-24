@@ -19,6 +19,7 @@ cask "sensei" do
 
   uninstall launchctl: [
               "org.cindori.SenseiMonitor",
+              "org.cindori.SenseiMonitor.agent",
               "org.cindori.SenseiTool",
             ],
             quit:      [
@@ -46,6 +47,7 @@ cask "sensei" do
     "~/Library/HTTPStorages/org.cindori.Sensei",
     "~/Library/HTTPStorages/org.cindori.Sensei.binarycookies",
     "~/Library/Preferences/org.cindori.Sensei.plist",
+    "~/Library/Preferences/org.cindori.SenseiMonitor.plist",
     "~/Library/Saved Application State/org.cindori.Sensei.savedState",
   ]
 end
