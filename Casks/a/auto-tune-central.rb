@@ -15,4 +15,14 @@ cask "auto-tune-central" do
   depends_on :macos
 
   app "Auto-Tune Central.app"
+
+  zap trash: [
+    "~/Library/Application Support/Auto-Tune Central",
+    "~/Library/Application Support/CrashReporter/Auto-Tune Central_*.plist",
+    "~/Library/Caches/com.Antares.AutoTuneCentral*",
+    "~/Library/HTTPStorages/com.Antares.AutoTuneCentral",
+    "~/Library/Logs/Auto-Tune Central",
+    "~/Library/Preferences/ByHost/com.Antares.AutoTuneCentral.ShipIt.*.plist",
+    "~/Library/Preferences/com.Antares.AutoTuneCentral.plist",
+  ]
 end
