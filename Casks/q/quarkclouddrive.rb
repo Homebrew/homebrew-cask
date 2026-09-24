@@ -1,6 +1,6 @@
 cask "quarkclouddrive" do
-  version "7.2.2.806,3004627"
-  sha256 "faeedba86b24085e9cc24d4105d37599b7b23f036e21152c5198c98b30d67c37"
+  version "7.3.5.810,3004627"
+  sha256 "b8cd730e9e5ae570d562e6c9d5041b0b65e2962d6711b2a04870c050310bfb8f"
 
   url "https://umcdn.quark.cn/download/37213/quarkclouddrivemac/pckk@product_guanwang_macmini/QuarkCloudDriveMac_V#{version.csv.first}_mac_pf30003_(zh-cn)_releasemini_(Build#{version.csv.second}).dmg"
   name "Quark Cloud Drive"
@@ -31,13 +31,15 @@ cask "quarkclouddrive" do
     ],
   }
 
-  uninstall quit:  "com.quark.clouddrive.desktop",
-            trash: "/Applications/QuarkCloudDrive.app"
+  uninstall launchctl: "application.com.quark.clouddrive.desktop.*",
+            quit:      "com.quark.clouddrive.desktop",
+            trash:     "/Applications/QuarkCloudDrive.app"
 
   zap trash: [
     "~/Library/Application Support/QuarkCloudDrive",
     "~/Library/Caches/com.quark.clouddrive.desktop",
     "~/Library/Caches/com.quark.clouddrive.macinstaller",
+    "~/Library/Caches/QuarkCloudDriveInstaller",
     "~/Library/Logs/QuarkCloudDrive",
     "~/Library/Preferences/com.quark.clouddrive.desktop.plist",
     "~/Library/Saved Application State/com.quark.clouddrive.desktop.savedState",
