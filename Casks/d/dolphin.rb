@@ -1,6 +1,6 @@
 cask "dolphin" do
-  version "2606a"
-  sha256 "15df1afeac686951647d81b0b62e11d82e8715c92927b849e2858379cee6b5ca"
+  version "2609"
+  sha256 "b8910a6f8710cbe93b916f5b3867a46e67e49aa8272657d282d4accae359cd6b"
 
   url "https://dl.dolphin-emu.org/releases/#{version}/dolphin-#{version}-universal.dmg"
   name "Dolphin"
@@ -19,6 +19,8 @@ cask "dolphin" do
   depends_on :macos
 
   app "Dolphin.app"
+
+  uninstall quit: "org.dolphin-emu.dolphin"
 
   zap trash: [
     "~/Library/Application Support/Dolphin",
