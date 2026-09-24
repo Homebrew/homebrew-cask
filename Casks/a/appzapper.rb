@@ -7,7 +7,7 @@ cask "appzapper" do
   desc "Tool to uninstall unwanted applications and their support files"
   homepage "https://appzapper.com/"
 
-  depends_on :macos
+  depends_on macos: :sequoia
 
   app "AppZapper 3000.app"
 
