@@ -16,6 +16,8 @@ cask "axure-rp" do
 
   app "Axure RP #{version.major}.app"
 
+  uninstall quit: "com.axure.AxureRP#{version.major}"
+
   zap trash: [
     "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.axure.axurerp#*.sfl*",
     "~/Library/Preferences/com.axure.AxureRP#*.plist",
