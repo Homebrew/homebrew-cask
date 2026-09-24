@@ -1,7 +1,7 @@
 cask "safari-technology-preview" do
   on_tahoe :or_older do
-    version "252,142-15045-20260910-e4690e3f-4b63-4560-962c-c584ada7ee7e"
-    sha256 "42950d149fd5a12793916732b326c5770679b625560ff44bdf854caec0558e59"
+    version "253,142-24187-20260923-6196541d-da39-4524-a01c-0fab0cea6a08"
+    sha256 "d1c7592d3f33e3f1f8925b11bd6b236b744d37ac113a3d517c8d6bd1575f0347"
 
     url "https://secure-appldnld.apple.com/STP/#{version.csv.second}/SafariTechnologyPreview.dmg"
 
@@ -22,8 +22,8 @@ cask "safari-technology-preview" do
   end
   # when adjusting the on_{os} scoping, also update the livecheck regex
   on_golden_gate :or_newer do
-    version "252,142-17038-20260910-67853852-c2c2-4c23-b0eb-c9953a98c390"
-    sha256 "1114d3501f68e0cfe84089efd2cf39ab595c25f0316a47e7a85a661e78ac88eb"
+    version "253,142-27948-20260923-e61cf471-d516-4ac4-9b4c-f08e459272dc"
+    sha256 "dbfcc270a845b9a7ac74b13b762808ef19a5652eabadc5b7719291754dc01c8e"
 
     url "https://secure-appldnld.apple.com/STP/#{version.csv.second}/SafariTechPreview#{version.csv.first}.dmg"
 
@@ -51,9 +51,12 @@ cask "safari-technology-preview" do
   depends_on macos: :tahoe
 
   uninstall launchctl: [
+              "com.apple.AuthenticationServicesCore.AuthenticationServicesAgent",
               "com.apple.AuthenticationServicesCore.AuthenticationServicesAgent-STP",
+              "com.apple.SafariSyncService",
               "com.apple.SafariTechnologyPreview.History",
               "com.apple.SafariTechnologyPreview.SyncService",
+              "com.apple.webkit.webpushd",
               "com.apple.webkit.webpushd.relocatable",
             ],
             quit:      "com.apple.SafariTechnologyPreview",
