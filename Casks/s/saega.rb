@@ -1,6 +1,6 @@
 cask "saega" do
-  version "1.0.25"
-  sha256 "f1a101db3621691f1b5ae66287f7bcd264fa4234d1be80ed6662ae97c61878de"
+  version "1.0.26"
+  sha256 "cbd823fbe06bff691486e82a1d20e969e12d801d784a2a3f5623d975f4d6cd83"
 
   url "https://storage.googleapis.com/saega-downloads/Saega-#{version}.dmg"
   name "Saega"
@@ -14,7 +14,7 @@ cask "saega" do
 
   auto_updates true
   depends_on arch:  :arm64
-  depends_on macos: :ventura
+  depends_on macos: :sonoma
 
   app "Saega.app"
 
