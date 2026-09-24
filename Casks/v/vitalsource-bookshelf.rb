@@ -16,6 +16,8 @@ cask "vitalsource-bookshelf" do
 
   app "VitalSource Bookshelf.app"
 
+  uninstall quit: "com.vitalsource.bookshelf"
+
   zap trash: [
     "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.vitalsource.bookshelf.sfl*",
     "~/Library/Application Support/com.vitalsource.bookshelf",
