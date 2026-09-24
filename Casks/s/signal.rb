@@ -10,7 +10,7 @@ cask "signal" do
          x86_64_linux: "13732625b37248206b304db6f81516f52d019f0880361be22b41533ec1ba50d1"
 
   on_macos do
-    depends_on macos: :monterey
+    depends_on macos: :ventura
 
     app "Signal.app"
 
