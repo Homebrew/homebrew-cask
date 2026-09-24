@@ -7,7 +7,23 @@ cask "sitesucker-pro" do
       skip "Legacy version"
     end
   end
-  on_monterey :or_newer do
+  on_monterey do
+    version "6.2.1"
+    sha256 "01439505e8b15bfe7831f238737a0c95ab8d6553454fcaeeb65dc54ee733bb16"
+
+    livecheck do
+      skip "Legacy version"
+    end
+  end
+  on_ventura do
+    version "6.2.1"
+    sha256 "01439505e8b15bfe7831f238737a0c95ab8d6553454fcaeeb65dc54ee733bb16"
+
+    livecheck do
+      skip "Legacy version"
+    end
+  end
+  on_sonoma :or_newer do
     version "6.2.2"
     sha256 "6f5c01e4fe85cf4a62c9adaa4d4412d38781b9df455260bad5d3e5af93e3db5a"
 
