@@ -7,11 +7,6 @@ cask "mindroom" do
   desc "Self-hostable AI stack for multi-user, multi-agent workflows on Matrix"
   homepage "https://github.com/mindroom-ai/mindroom"
 
-  livecheck do
-    url :url
-    strategy :github_latest
-  end
-
   auto_updates true
   depends_on macos: :sonoma
 
