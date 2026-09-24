@@ -3,11 +3,11 @@ cask "yaak@beta" do
   os macos: "Yaak", linux: "yaak"
   url_end = on_system_conditional macos: "dmg", linux: "AppImage"
 
-  version "2026.8.1"
-  sha256 arm:          "5ed4797ffbda5424d73271b2e5c6c73b0ed7ebca7f8f9772b3494af29d09c84d",
-         intel:        "29e0866f57d42673d6e8ce7521e1a789d6948c8a97532c5937c5a93e62ec1e41",
-         arm64_linux:  "d3409d8e8f7dbfdc53642b443b941b0a66fbd5988f8d55dacfa6322b05c01b51",
-         x86_64_linux: "9d9597db83477246065ed436627b5d14087f6513da70747f6004650946dbe8d6"
+  version "2026.9.0-beta.1"
+  sha256 arm:          "1d858eca0b7d4e11298d302d2dff3da1a5c8394fcfdc1d79126359794a5f41f4",
+         intel:        "33bef24ccf4c864339afb54aabcd9b6cd8bff9b368b6d034d74416c514b21768",
+         arm64_linux:  "1b7973574fd204acd66e0527c9059c134d6d84dbd60003ed957fb9077ad89586",
+         x86_64_linux: "af5136d5491b869a951842dda3b732465263c165b63348cdd8a1a60ce55108d3"
 
   on_macos do
     auto_updates true
