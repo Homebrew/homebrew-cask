@@ -16,6 +16,8 @@ cask "garagesale" do
 
   app "GarageSale.app"
 
+  uninstall quit: "com.iwascoding.garagesale#{version.major}"
+
   zap trash: [
     "~/Library/Application Scripts/com.iwascoding.garagesale*",
     "~/Library/Caches/com.apple.helpd/Generated/com.iwascoding.garagesale*",
