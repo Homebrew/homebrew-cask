@@ -1,6 +1,6 @@
 cask "textsniper" do
-  version "1.12.1"
-  sha256 "1169237a1fd8bb1055c9e6bc62a098d2e6f5ee218dfcca963e2eb99e34ef48fe"
+  version "1.13.0"
+  sha256 "8266bbac6a96613bac92494995221788e23ff45e3aae8f464b22bd705f2852a2"
 
   url "https://s3.amazonaws.com/textsniper.app/Gumroad/TextSniper#{version}.dmg"
   name "TextSniper"
@@ -13,7 +13,7 @@ cask "textsniper" do
   end
 
   auto_updates true
-  depends_on :macos
+  depends_on macos: :monterey
 
   app "TextSniper.app"
 
