@@ -16,13 +16,14 @@ cask "ssl-download-manager" do
 
   app "SSL Download Manager.app"
 
-  zap trash: [
-    "~/Library/Application Support/CrashReporter/SSL Download Manager_*.plist",
-    "~/Library/Application Support/SSL Download Manager",
-    "~/Library/Caches/com.solidstatelogic.downloadmanager*",
-    "~/Library/HTTPStorages/com.solidstatelogic.downloadmanager",
-    "~/Library/Logs/SSL Download Manager",
-    "~/Library/Preferences/ByHost/com.solidstatelogic.downloadmanager.ShipIt.*.plist",
-    "~/Library/Preferences/com.solidstatelogic.downloadmanager.plist",
-  ]
+  zap launchctl: "com.solidstatelogic.analytics",
+      trash:     [
+        "~/Library/Application Support/CrashReporter/SSL Download Manager_*.plist",
+        "~/Library/Application Support/SSL Download Manager",
+        "~/Library/Caches/com.solidstatelogic.downloadmanager*",
+        "~/Library/HTTPStorages/com.solidstatelogic.downloadmanager",
+        "~/Library/Logs/SSL Download Manager",
+        "~/Library/Preferences/ByHost/com.solidstatelogic.downloadmanager.ShipIt.*.plist",
+        "~/Library/Preferences/com.solidstatelogic.downloadmanager.plist",
+      ]
 end
