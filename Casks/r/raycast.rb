@@ -39,8 +39,8 @@ cask "raycast" do
       end
     end
     on_tahoe :or_newer do
-      version "2.4.1.0"
-      sha256 "5bb09adafcf8070605264bb29fcf496e4d615da3a6a0ce88eab70653d186a795"
+      version "2.5.0.0"
+      sha256 "4e8abf69251a4fabc69363e510e41b075f0f07983629e260f90ca5e6e5cbf3ff"
 
       url "https://x.raycast-releases.com/download?platform=macos&architecture=arm64&version=#{version}"
 
