@@ -3,11 +3,11 @@ cask "drawio" do
   os macos: "draw.io", linux: "drawio"
   url_end = on_system_conditional macos: "dmg", linux: "AppImage"
 
-  version "31.4.5"
-  sha256 arm:          "9f73e9970f0a720c1b9a553c7caf0c1160cabbb03c7b90e968ff3b704aaf56a9",
-         intel:        "a07e3025542e554cc029d35a027e8b3c73a963d1b04550afff38592e0f91b6b9",
-         arm64_linux:  "776463dc9b1233a4ab550d5021bd9a39ed20eb2268d0d1a800a86026c9ff9021",
-         x86_64_linux: "9d39e815151296a55b1e95f68476ef999c2ca6b0673b64a03096b4117cda15c0"
+  version "31.5.2"
+  sha256 arm:          "1b02be59feeab21ee13dd966d99d39b952abf7ddb1154d9869c29f5257d25502",
+         intel:        "b924085d761e3fcd76987698c309a7442dbdc29eacbf54d8f8a8ec76e86fd866",
+         arm64_linux:  "87a6638e55683755a8507537e4d2ff66e143a3f171b39df32ca7977c38b58a4e",
+         x86_64_linux: "c0b37ee00307d7112c29b28ea33686103f47af620415d710663497459bdf927f"
 
   on_macos do
     depends_on macos: :ventura
