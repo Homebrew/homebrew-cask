@@ -1,6 +1,6 @@
 cask "dfu-blaster-pro" do
-  version "5.0,3567"
-  sha256 "9084c38301beb24a232377984f9f0f909f91c8f79c10f09c6e1c100ede2a2cf9"
+  version "5.1,3621"
+  sha256 "f0e3347d219589bd248917cd02a55beb3bbc78de8650927ea642e4be8a89093f"
 
   url "https://twocanoes-software-updates.s3.amazonaws.com/DFU_Blaster_Pro_Build-#{version.csv.second}_Version-#{version.csv.first}.dmg"
   name "DFU Blaster Pro"
