@@ -39,5 +39,11 @@ cask "recaf" do
 
   caveats do
     depends_on_java "22+"
+    <<~EOS
+      If you use Homebrew's openjdk formula, register it with macOS to allow launching
+      Recaf.jar from Finder:
+        sudo ln -sfn #{HOMEBREW_PREFIX}/opt/openjdk/libexec/openjdk.jdk \\
+          /Library/Java/JavaVirtualMachines/openjdk.jdk
+    EOS
   end
 end
