@@ -1,0 +1,14 @@
+Casks/v/vitalsource-bookshelf.rb
+  h_9df9c32c3f321d 19-20
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.4",
+  "base_commit_sha": "5aa3750631eff449599a1fb02f269210b037aa07",
+  "prompts": {},
+  "humans": {
+    "h_9df9c32c3f321d": {
+      "author": "Rui Chen <rui@chenrui.dev>"
+    }
+  }
+}
