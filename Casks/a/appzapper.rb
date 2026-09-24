@@ -16,7 +16,7 @@ cask "appzapper" do
 
   app "AppZapper 3000.app"
 
-  uninstall launchctl: "application.com.appzapper.appzapper#{version}*",
+  uninstall launchctl: "application.com.appzapper.appzapper3000*",
             quit:      "com.appzapper.appzapper3000"
 
   zap trash: [
