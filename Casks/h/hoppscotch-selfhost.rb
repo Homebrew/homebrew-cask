@@ -3,10 +3,10 @@ cask "hoppscotch-selfhost" do
   os macos: "mac", linux: "linux"
   url_end = on_system_conditional macos: "dmg", linux: "AppImage"
 
-  version "26.8.1-0"
-  sha256 arm:          "e91c3c57b15a019066a70213d7298cd81024a770289137effb3949a32340b5f8",
-         intel:        "578e4337a70da8525368e11b238c946e1a34cf040e8741f2535c6712337364e7",
-         x86_64_linux: "46167dff338ef1883188266e2ed7bb798ab1d9331343d1b2f40f164dc53a3bed"
+  version "26.8.2-0"
+  sha256 arm:          "12529633e68a331e6a17bbebc047e6ce9f7438e0ecd2d3a5e16c235e74723bd9",
+         intel:        "c65d14acd6a6d207c77e94ad04aebd214f39131413b2e43c71b21d8a60900626",
+         x86_64_linux: "21320818df140b8cf4d4363b55e4f272b4b7f694152ebabc8935b1730fe3e4cc"
 
   on_macos do
     app "Hoppscotch.app"
