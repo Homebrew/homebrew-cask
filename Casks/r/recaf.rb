@@ -26,7 +26,6 @@ cask "recaf" do
     end
   end
 
-  depends_on cask: "temurin@25"
   depends_on :macos
   container type: :naked
 
@@ -37,4 +36,8 @@ cask "recaf" do
     "~/Library/Application Support/Recaf",
     "~/Library/Preferences/Recaf",
   ]
+
+  caveats do
+    depends_on_java "22+"
+  end
 end
