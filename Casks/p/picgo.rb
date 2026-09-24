@@ -8,7 +8,7 @@ cask "picgo" do
   url "https://github.com/Molunerfinn/PicGo/releases/download/v#{version}/PicGo-#{version}-#{arch}.dmg"
   name "PicGo"
   desc "Tool for uploading images"
-  homepage "https://github.com/Molunerfinn/PicGo"
+  homepage "https://picgo.app/"
 
   livecheck do
     url :url
