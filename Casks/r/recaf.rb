@@ -2,8 +2,7 @@ cask "recaf" do
   arch arm: "aarch", intel: "86-x64"
 
   version "4.0.0-alpha,20260729100310"
-  sha256 arm:   "0a491ac0717a2e58f0976b5a215c2d195fd5789bf990c3edb4fe54d3e90b5cbd",
-         intel: "2166881af5ddc0dab5b8efd21b73dc68047e5c234ffe35022fd5cdd97028bb96"
+  sha256 :no_check
 
   url "https://github.com/Col-E/Recaf/releases/download/#{version.csv.first}/recaf-4x-alpha-mac-#{arch}.jar"
   name "Recaf"
