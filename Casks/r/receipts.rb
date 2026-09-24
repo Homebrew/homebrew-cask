@@ -8,8 +8,10 @@ cask "receipts" do
   homepage "https://receipts-app.com/"
 
   livecheck do
-    url "https://receipts-app.com/updater.php"
-    regex(/href=.*?Receipts[._-]v?(\d+(?:[.-]\d+)+)\.zip/i)
+    url "https://receipts-app.com/updater-macos"
+    strategy :sparkle do |item|
+      "#{item.short_version}-#{item.version}"
+    end
   end
 
   depends_on :macos
