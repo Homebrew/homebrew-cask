@@ -1,6 +1,6 @@
 cask "launchie" do
-  version "1.6.1"
-  sha256 "f4278ef54c9ad99ee505c6c7a51ab49cf72d9016c4d681ec5729092213faace3"
+  version "1.6.2"
+  sha256 "91c54de57c66fb06ac9ab16a847f906ebdca25aee246060f6e73ebf738627897"
 
   url "https://github.com/nick-friedrich/launchie-launchpad-replacement-mac-os/releases/download/#{version}/Launchie_#{version}.dmg"
   name "Launchie"
