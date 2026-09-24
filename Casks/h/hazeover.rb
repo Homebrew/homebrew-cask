@@ -1,5 +1,5 @@
 cask "hazeover" do
-  version "1.9.7"
+  version "1.9.8"
   sha256 :no_check
 
   url "https://hazeover.com/HazeOver.dmg"
@@ -19,7 +19,7 @@ cask "hazeover" do
   end
 
   auto_updates true
-  depends_on :macos
+  depends_on macos: :ventura
 
   app "HazeOver.app"
 
