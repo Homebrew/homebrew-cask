@@ -2,9 +2,9 @@ cask "antigravity" do
   arch arm: "arm", intel: "x64"
   livecheck_arch = on_arch_conditional arm: "arm64", intel: "x64"
 
-  version "2.15.1,5880727900913664"
-  sha256 arm:   "0cb97e80a1f6f5d378335821917cd7a1bb9ef50dc1a1593ab418e732bcb6752f",
-         intel: "7268c0761a0ab72f0e24a942916001d0e6e9c96ec0fdd292d4597d29051e1cdd"
+  version "2.16.0,4917332007583744"
+  sha256 arm:   "60447b04d61c8feee1ed066939594a9f4a45d6cb1212717d4162b3238a929cbf",
+         intel: "da98a4e792546410f5eefc8803395c30f49335f5f214df7f4713857a5736f2cc"
 
   url "https://storage.googleapis.com/antigravity-public/antigravity-hub/#{version.csv.first}-#{version.csv.second}/darwin-#{arch}/Antigravity.dmg"
   name "Google Antigravity"
@@ -25,7 +25,7 @@ cask "antigravity" do
   end
 
   auto_updates true
-  depends_on macos: :monterey
+  depends_on macos: :ventura
 
   app "Antigravity.app"
 
