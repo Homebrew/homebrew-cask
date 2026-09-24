@@ -1,33 +1,25 @@
 cask "appzapper" do
-  version "2.0.5"
-  sha256 "cfca80dd9deabb9fc5168397ec5467ec60f348a778b19f3596927e47742544d7"
+  version "3000"
+  sha256 "eff16e4f7a9d8498cf10f6d29ce78a38b89e043b07f57848a250f61fee4a84a7"
 
-  url "https://appzapper.com/downloads/appzapper#{version.no_dots}.zip"
+  url "https://appzapper.com/AppZapper-#{version}.zip"
   name "AppZapper"
   desc "Tool to uninstall unwanted applications and their support files"
   homepage "https://appzapper.com/"
 
-  # The upstream website doesn't provide any version information, so we have to
-  # naively add dots to the dotless version in the file name.
-  livecheck do
-    url "https://appzapper.com/downloads/latest.zip"
-    regex(/appzapper[._-]?v?(\d+(?:\.\d+)*)\.zip/i)
-    strategy :header_match do |headers, regex|
-      match = headers["location"]&.match(regex)
-      next unless match
-
-      ver = match[1]
-      ver.include?(".") ? ver : ver.chars.join(".")
-    end
-  end
-
-  auto_updates true
   depends_on :macos
 
-  app "AppZapper.app"
+  app "AppZapper 3000.app"
+
+  uninstall launchctl: "application.com.appzapper.appzapper#{version}*",
+            quit:      "com.appzapper.appzapper3000"
 
   zap trash: [
     "~/Library/Application Support/AppZapper",
+    "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.appzapper.appzapper3000.sfl*",
+    "~/Library/Caches/com.appzapper.appzapper3000",
+    "~/Library/HTTPStorages/com.appzapper.appzapper3000",
     "~/Library/Preferences/com.appzapper.appzapper2.plist",
+    "~/Library/Preferences/com.appzapper.appzapper3000.plist",
   ]
 end
