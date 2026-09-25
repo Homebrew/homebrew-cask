@@ -2,10 +2,10 @@ cask "activitywatch@beta" do
   arch arm: "arm64", intel: "x86_64"
 
   version "0.14.0b8"
-  sha256 arm:   "f5c5e47aad94eb9c23331386cb1c76fd4a71709c1dbe3558e4ffd1a135c4f252",
-         intel: "4353dae591a11257c48c2744d2ec32aa9d93a259ca663b4f8c39688ddece56e6"
+  sha256 arm:   "06b4f523ef9d7c63dbe54c1836e28a19aec68e350ead2855a5810c33f4a4f026",
+         intel: "303e38da3a5fc91c297ee111dc9c007ccb2b40ba6c44978aee60b3328fa27c8e"
 
-  url "https://github.com/ActivityWatch/activitywatch/releases/download/v#{version}/activitywatch-tauri-v#{version}-macos-#{arch}.dmg"
+  url "https://github.com/ActivityWatch/activitywatch/releases/download/v#{version}/activitywatch-v#{version}-macos-#{arch}.dmg"
   name "ActivityWatch"
   desc "Time tracker"
   homepage "https://activitywatch.net/"
