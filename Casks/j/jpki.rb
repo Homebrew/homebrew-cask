@@ -45,11 +45,5 @@ cask "jpki" do
   caveats do
     requires_rosetta
     files_in_usr_local
-    <<~EOS
-      To use the My Number Card in a browser, install the "JPKI利用者ソフト"
-      extension from the Chrome Web Store. The bundled Safari extension is
-      only supported by upstream on macOS 15 or earlier; enable it in
-      Safari > Settings > Extensions.
-    EOS
   end
 end
