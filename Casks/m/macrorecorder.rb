@@ -16,6 +16,8 @@ cask "macrorecorder" do
 
   app "MacroRecorder.app"
 
+  uninstall quit: "MacroRecorder"
+
   zap trash: "~/Library/Preferences/MacroRecorder.plist"
 
   caveats do
