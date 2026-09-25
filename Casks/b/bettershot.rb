@@ -1,9 +1,9 @@
 cask "bettershot" do
   arch arm: "arm64", intel: "x86_64"
 
-  version "0.5.6"
-  sha256 arm:   "f5a7b40cfc2f2d4610b10c3b447685207ed72ea970a323374f8ae245617e58bf",
-         intel: "2ad5e2b0876eb54ec775cbeefaa8ad2bfe4f271bb8abd2b26fa0d1f2c5fbc32e"
+  version "0.5.7"
+  sha256 arm:   "53f917810d8dd57afdd7f39ad8b7827064f6e0c01a58976e2e3810e80cfe0bff",
+         intel: "31a9795c39b9c242cd6da321231d1c4501b460cb3f5a89dd78efaa43a8a3fa2d"
 
   url "https://github.com/KartikLabhshetwar/better-shot/releases/download/v#{version}/BetterShot-#{version}_#{arch}.dmg"
   name "Better Shot"
