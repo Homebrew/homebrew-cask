@@ -1,5 +1,5 @@
 cask "macrorecorder" do
-  version "4.0.51"
+  version "5.0.40"
   sha256 :no_check
 
   url "https://www.macrorecorder.com/MacroRecorderSetup.dmg"
@@ -15,6 +15,8 @@ cask "macrorecorder" do
   depends_on :macos
 
   app "MacroRecorder.app"
+
+  uninstall quit: "MacroRecorder"
 
   zap trash: "~/Library/Preferences/MacroRecorder.plist"
 
