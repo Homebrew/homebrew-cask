@@ -1,14 +1,14 @@
 cask "readmoreading" do
   arch arm: "arm64", intel: "x64"
 
-  version "1.8.3"
-  sha256 arm:   "c0440c17556e9a2cffc60b4d1dbff5cfe4bee355834551108cc1125bdc69fa6e",
-         intel: "0ed1b598fc2fce4243396aaf68a942879d4a6e5c236276dd80170611e8c44d5a"
+  version "1.9.0"
+  sha256 arm:   "91619667bd7cda8084ff495738a747d82df37649402f177ef97bea92f2eb568e",
+         intel: "91c6f0413c85737d1ae28084a5664a0cbebe82a2f6cf3f5eed88ab5dc0599390"
 
   url "https://github.com/eCrowdMedia/remake/releases/download/v#{version}/Readmoo.-#{version}-#{arch}.dmg"
   name "Readmo Reading"
   desc "Traditional Chinese eBook service"
-  homepage "https://readmoo.com/"
+  homepage "https://readmoo.com/", browsed: "2026-09-25"
 
   livecheck do
     url :url
