@@ -1,6 +1,6 @@
 cask "shimo" do
-  version "6.0.8b13,9161"
-  sha256 "5825024b85aa5ad58bf782ffa8c93564c1036f88bf3b56a90e3a1b84c7ddc716"
+  version "6.0.8b15,9166"
+  sha256 "bdeae4f5b57e070624e313a03657cf640bd518083d5ea2f7a798de29dc87c9a1"
 
   url "https://s3.eu-central-1.amazonaws.com/shimo.jaeger.apps/Shimo_#{version.csv.first}_#{version.csv.second}.zip"
   name "Shimo"
