@@ -19,7 +19,12 @@ cask "json-viewer" do
 
   zap trash: [
     "~/Library/Application Scripts/com.pascalgiguere.JSON-Viewer",
+    "~/Library/Application Scripts/dev.pascalgiguere.jsonviewer",
     "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.pascalgiguere.json-viewer.sfl*",
+    "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/dev.pascalgiguere.jsonviewer.sfl*",
+    "~/Library/Caches/dev.pascalgiguere.jsonviewer",
     "~/Library/Containers/com.pascalgiguere.JSON-Viewer",
+    "~/Library/Containers/dev.pascalgiguere.jsonviewer",
+    "~/Library/Preferences/dev.pascalgiguere.jsonviewer.plist",
   ]
 end
