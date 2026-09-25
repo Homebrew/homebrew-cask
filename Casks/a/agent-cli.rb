@@ -18,7 +18,20 @@ cask "agent-cli" do
 
   app "AgentCLI.app"
 
-  uninstall quit: "lt.nijho.agent-cli.menubar"
+  uninstall quit:   "lt.nijho.agent-cli.menubar",
+            script: {
+              executable: "/bin/sh",
+              args:       ["-c", <<~SH, "--", "#{appdir}/AgentCLI.app/Contents/Resources/bin/uv"],
+                plist="$HOME/Library/LaunchAgents/com.agent_cli.whisper.plist"
+                owner=$(/usr/libexec/PlistBuddy -c 'Print :EnvironmentVariables:AGENTCLI_BUNDLED_UV' "$plist" 2>/dev/null) || exit 0
+                [ "$owner" = "$1" ] || exit 0
+                service="gui/$(/usr/bin/id -u)/com.agent_cli.whisper"
+                if /bin/launchctl print "$service" >/dev/null 2>&1; then
+                  /bin/launchctl bootout "$service" || exit $?
+                fi
+                /bin/rm -f "$plist"
+              SH
+            }
 
   zap trash: [
     "~/Library/Application Support/AgentCLI",
