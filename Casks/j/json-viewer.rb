@@ -8,17 +8,23 @@ cask "json-viewer" do
   homepage "https://jsonviewer.app/"
 
   livecheck do
-    url :homepage
-    regex(/JSON[._-]Viewer[._-]v?(\d+(?:\.\d+)+)\.dmg/i)
+    url "https://jsonviewer.app/updates/appcast.xml"
+    strategy :sparkle, &:short_version
   end
 
+  auto_updates true
   depends_on macos: :tahoe
 
   app "JSON Viewer.app"
 
   zap trash: [
     "~/Library/Application Scripts/com.pascalgiguere.JSON-Viewer",
+    "~/Library/Application Scripts/dev.pascalgiguere.jsonviewer",
     "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.pascalgiguere.json-viewer.sfl*",
+    "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/dev.pascalgiguere.jsonviewer.sfl*",
+    "~/Library/Caches/dev.pascalgiguere.jsonviewer",
     "~/Library/Containers/com.pascalgiguere.JSON-Viewer",
+    "~/Library/Containers/dev.pascalgiguere.jsonviewer",
+    "~/Library/Preferences/dev.pascalgiguere.jsonviewer.plist",
   ]
 end
