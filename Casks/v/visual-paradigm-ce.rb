@@ -1,11 +1,11 @@
 cask "visual-paradigm-ce" do
   arch arm: "AArch64", intel: "WithJRE"
 
-  version "18.0,20260521"
-  sha256 arm:   "a717bf96d53aacd45f9cbacbbf33e5513deb08e4a1deef4cf2dbb18379950ece",
-         intel: "40a7a1218a3dd73f6e529ca089b035aafa3efe40ec8f6618ee9436bcd9e53731"
+  version "18.1,20260913"
+  sha256 arm:   "039f031570c0d541b97639b268f306884bf5753f521cd01d29fffc6ef8b13c4d",
+         intel: "0b3f2129d0565721db307fa57836aeaeb110afd5cac270610a16ddc03a3c16a4"
 
-  url "https://www.visual-paradigm.com/downloads/vpce/Visual_Paradigm_CE_#{version.csv.first.dots_to_underscores}_#{version.csv.second}_OSX_#{arch}.dmg"
+  url "https://eu8.dl.visual-paradigm.com/visual-paradigm/vpce#{version.csv.first}/#{version.csv.second}/Visual_Paradigm_CE_#{version.csv.first.dots_to_underscores}_#{version.csv.second}_OSX_#{arch}.dmg"
   name "Visual Paradigm Community Edition"
   desc "UML, SysML, BPMN modelling platform"
   homepage "https://www.visual-paradigm.com/"
