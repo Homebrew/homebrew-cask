@@ -9,7 +9,7 @@ cask "franz" do
          x86_64_linux: "69eb019043fba696a735e5cdeda4d25ffca649a3a1cbf0b13a0beb9f82c1dc81"
 
   on_macos do
-    depends_on macos: :monterey
+    depends_on macos: :ventura
 
     app "Franz.app"
 
