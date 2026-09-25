@@ -2,7 +2,7 @@ cask "pandora" do
   version "16.0.3"
   sha256 "04412c09f13416b8ad66ca5123e48b9803cfb627f09892434af66a40ed3a41b8"
 
-  url "https://s3-us-west-2.amazonaws.com/p-desktop-app/releases/Pandora-#{version}-universal.dmg"
+  url "https://p-desktop-app.s3.amazonaws.com/releases/Pandora-#{version}.dmg"
   name "Pandora"
   desc "Desktop client for the Pandora web radio service"
   homepage "https://www.pandora.com/desktop"
