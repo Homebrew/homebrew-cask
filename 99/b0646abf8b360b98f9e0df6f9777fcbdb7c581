@@ -1,0 +1,19 @@
+Casks/m/macrorecorder.rb
+  s_0586f4cc6abb98::t_e4a1d11f5384dd 19-20
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.4",
+  "base_commit_sha": "99b0646abf8b360b98f9e0df6f9777fcbdb7c581",
+  "prompts": {},
+  "sessions": {
+    "s_0586f4cc6abb98": {
+      "agent_id": {
+        "tool": "codex",
+        "id": "01a0d8f7-6613-7050-bd12-093cc0249d96",
+        "model": "gpt-6-luna"
+      },
+      "human_author": "Rui Chen <rui@chenrui.dev>"
+    }
+  }
+}
