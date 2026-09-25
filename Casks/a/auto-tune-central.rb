@@ -8,8 +8,8 @@ cask "auto-tune-central" do
   homepage "https://www.antarestech.com/"
 
   livecheck do
-    url "https://www.antarestech.com/software-download"
-    regex(/Auto_Tune_Central[._-]v?(\d+(?:\.\d+)+)[._-]universal/i)
+    url "https://antares.sfo2.digitaloceanspaces.com/auto-tune-central/auto-update/mac/latest-mac.yml"
+    strategy :electron_builder
   end
 
   depends_on :macos
