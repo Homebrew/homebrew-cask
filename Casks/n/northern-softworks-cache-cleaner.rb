@@ -18,6 +18,8 @@ cask "northern-softworks-cache-cleaner" do
 
   app "Golden Gate Cache Cleaner.app"
 
+  uninstall quit: "com.northernsw.nswCacheCleaner"
+
   zap trash: [
     "~/Library/Application Support/com.northernsw.nswCacheCleaner",
     "~/Library/Preferences/Sonoma Cache Cleaner Preferences",
