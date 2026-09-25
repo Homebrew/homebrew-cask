@@ -23,6 +23,8 @@ cask "longplay" do
 
   app "Longplay.app"
 
+  uninstall quit: "app.longplay.Longplay-Mac"
+
   zap trash: [
     "~/Library/Application Scripts/app.longplay.Longplay-Mac",
     "~/Library/Application Scripts/group.app.longplay.Longplay",
