@@ -1,9 +1,9 @@
 cask "trilium-notes" do
   arch arm: "arm64", intel: "x64"
 
-  version "0.105.0"
-  sha256 arm:   "8c282f94c3e5c1243e3ec1f41ad4d6990a07bf6dce2f9eb8aee04f64deb35dc1",
-         intel: "fbc21207bfc573da933d32f7cb6373d217cc90891756b19dff546aaa26e085e6"
+  version "0.106.0"
+  sha256 arm:   "1453b7d14cf4c22d461addbad3ca73f43c6c0fa622c9449e969ea83bf54493ff",
+         intel: "6fee4d0489356fd11c323f9ab7d625f06b9aa142f1a96987f8893b4f49a89a99"
 
   url "https://github.com/TriliumNext/Trilium/releases/download/v#{version}/TriliumNotes-v#{version}-macos-#{arch}.dmg"
   name "TriliumNext Notes"
@@ -15,7 +15,7 @@ cask "trilium-notes" do
     strategy :github_latest
   end
 
-  depends_on macos: :monterey
+  depends_on macos: :ventura
 
   app "Trilium Notes.app"
 
