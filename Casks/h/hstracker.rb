@@ -1,6 +1,6 @@
 cask "hstracker" do
-  version "3.6.12"
-  sha256 "bd795116775b854fa956da6af884f3b3fe9c1ed3b704ebe8b9a84197b671198d"
+  version "3.6.13"
+  sha256 "90208b8f3268229be9776fa276cb728b6d5b84c9ca6ec8bd1bda68cebb4f553d"
 
   url "https://github.com/HearthSim/HSTracker/releases/download/#{version}/HSTracker.app.zip"
   name "Hearthstone Deck Tracker"
