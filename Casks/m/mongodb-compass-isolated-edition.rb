@@ -23,7 +23,7 @@ cask "mongodb-compass-isolated-edition" do
     end
   end
 
-  depends_on macos: :monterey
+  depends_on macos: :ventura
 
   app "MongoDB Compass Isolated Edition.app"
 
