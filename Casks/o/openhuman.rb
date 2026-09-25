@@ -3,11 +3,11 @@ cask "openhuman" do
   os macos: "darwin", linux: "linux"
   url_end = on_system_conditional macos: "dmg", linux: "AppImage"
 
-  version "0.63.12"
-  sha256 arm:          "048c589582df5d63c053ac6e171fe0f3d59e653823f31ab8b74fc49957f720e2",
-         intel:        "1d4cceab6477a8d80e40453f5fa1525a5d08c6d271f1fd2027ba9c19efe95a0d",
-         arm64_linux:  "5c24d76482e8b25ba291500f4bafb57c875f0dca2ac2f779fa1941c7f0ada652",
-         x86_64_linux: "aeda8aa7fa9b4a479a7fc8a94afff0dde99a408a1b04cbc4fea2f64139cc9e5b"
+  version "0.64.0"
+  sha256 arm:          "d8eb06c1d5312ec6dcca2ce911e01e68dbac0423950a2f093663dd07eb402212",
+         intel:        "d9a75ea4dd982e5f838b3371f1c7432f46e68648454c0abea00e25090ab4ce3f",
+         arm64_linux:  "ce4e93ed2aa973afb2039df4ce045a10df6cfaa3a00be9cf79c1f8e9db66088c",
+         x86_64_linux: "8bf2a7484cabf06b5b4608ce3d56b34a3470f1834f52895482a048d096d89b42"
 
   on_macos do
     auto_updates true
@@ -34,4 +34,6 @@ cask "openhuman" do
     url :url
     strategy :github_latest
   end
+
+  depends_on macos: :monterey
 end
