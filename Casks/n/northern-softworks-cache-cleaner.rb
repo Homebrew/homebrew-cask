@@ -1,5 +1,5 @@
 cask "northern-softworks-cache-cleaner" do
-  version "26.6"
+  version "27.0.1"
   sha256 :no_check
 
   # Homepage, livecheck regex, and app change with major macOS releases
@@ -7,16 +7,16 @@ cask "northern-softworks-cache-cleaner" do
   url "https://www.northernsoftworks.com/downloads/nscc.dmg"
   name "Northern Softworks Cache Cleaner"
   desc "General purpose system maintenance tool"
-  homepage "https://www.northernsoftworks.com/tahoecachecleaner.html"
+  homepage "https://www.northernsoftworks.com/goldengatecachecleaner.html"
 
   livecheck do
     url :homepage
-    regex(/Download\s*Tahoe\s*Cache\s*Cleaner\s*v?(\d+(?:\.\d+)+)/i)
+    regex(/Download\s*Golden\s*Gate\s*Cache\s*Cleaner\s*v?(\d+(?:\.\d+)+)/i)
   end
 
   depends_on :macos
 
-  app "Tahoe Cache Cleaner.app"
+  app "Golden Gate Cache Cleaner.app"
 
   zap trash: [
     "~/Library/Application Support/com.northernsw.nswCacheCleaner",
