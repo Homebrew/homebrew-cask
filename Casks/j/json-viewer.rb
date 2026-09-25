@@ -8,8 +8,8 @@ cask "json-viewer" do
   homepage "https://jsonviewer.app/"
 
   livecheck do
-    url :homepage
-    regex(/JSON[._-]Viewer[._-]v?(\d+(?:\.\d+)+)\.dmg/i)
+    url "https://jsonviewer.app/updates/appcast.xml"
+    strategy :sparkle, &:short_version
   end
 
   auto_updates true
