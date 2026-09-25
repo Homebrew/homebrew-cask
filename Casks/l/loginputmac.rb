@@ -1,6 +1,6 @@
 cask "loginputmac" do
-  version "3.6.9,17611"
-  sha256 "91ba3a0257f5d1639ee0183b1159fb02dcfcea8095d5d936395b3fa1a33c421f"
+  version "3.7.1,17722"
+  sha256 "0799e4d81d78636ac72fd5cdf543ccba3e4b6bfbe01b43a36c1845d449609c7a"
 
   url "https://loginput-mac2.totest.top/LogInputMac#{version.csv.first.major}.app#{version.csv.second}.zip"
   name "LoginputMac"
@@ -13,7 +13,7 @@ cask "loginputmac" do
   end
 
   auto_updates true
-  depends_on :macos
+  depends_on macos: :monterey
 
   app "LogInputMac#{version.csv.first.major}.app"
 
