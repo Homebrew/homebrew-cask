@@ -12,6 +12,7 @@ cask "json-viewer" do
     regex(/JSON[._-]Viewer[._-]v?(\d+(?:\.\d+)+)\.dmg/i)
   end
 
+  auto_updates true
   depends_on macos: :tahoe
 
   app "JSON Viewer.app"
