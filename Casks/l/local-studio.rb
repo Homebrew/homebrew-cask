@@ -7,11 +7,6 @@ cask "local-studio" do
   desc "Local workstation for running and managing language models"
   homepage "https://localstudio.ai/"
 
-  livecheck do
-    url "https://github.com/sybil-solutions/local-studio.git"
-    strategy :git
-  end
-
   auto_updates true
   depends_on arch: :arm64
   depends_on macos: :monterey
@@ -21,6 +16,7 @@ cask "local-studio" do
   uninstall quit: "org.local.studio.desktop"
 
   zap trash: [
+    "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/org.local.studio.desktop.sfl*",
     "~/Library/Application Support/CrashReporter/Local Studio_*.plist",
     "~/Library/Application Support/Local Studio",
     "~/Library/Caches/org.local.studio.desktop",
