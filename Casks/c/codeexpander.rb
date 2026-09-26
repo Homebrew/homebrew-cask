@@ -1,5 +1,5 @@
 cask "codeexpander" do
-  version "7.0.5"
+  version "7.0.6"
   sha256 :no_check
 
   url "https://download.floweb.cn/CodeExpander_latest_universal.dmg"
