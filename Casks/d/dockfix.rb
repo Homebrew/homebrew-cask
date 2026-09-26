@@ -1,5 +1,5 @@
 cask "dockfix" do
-  version "5.2.0"
+  version "5.3.0-beta"
   sha256 :no_check
 
   url "https://www.dockfix.app/downloads/DockFix.dmg"
@@ -13,7 +13,7 @@ cask "dockfix" do
   end
 
   auto_updates true
-  depends_on macos: :sonoma
+  depends_on macos: :sequoia
 
   app "DockFix.app"
 
