@@ -1,6 +1,6 @@
 cask "kaku" do
-  version "0.20.0"
-  sha256 "5801d14ff80cf69fd59655ae9529a50ffc827f57555661bd525eb65f862df8a4"
+  version "0.21.0"
+  sha256 "7c8b752e9c015e4f33b00d0552c25861745dbbb9a795bdb25e3a1004193021c4"
 
   url "https://github.com/tw93/Kaku/releases/download/V#{version}/Kaku.dmg"
   name "Kaku"
