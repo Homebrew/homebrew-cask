@@ -27,8 +27,8 @@ cask "alacritty" do
   manpage "#{appdir}/Alacritty.app/Contents/Resources/alacritty-msg.1.gz"
   manpage "#{appdir}/Alacritty.app/Contents/Resources/alacritty-bindings.5.gz"
   bash_completion "#{appdir}/Alacritty.app/Contents/Resources/completions/alacritty.bash"
-  fish_completion "#{appdir}/Alacritty.app/Contents/Resources/completions/alacritty.fish"
   zsh_completion "#{appdir}/Alacritty.app/Contents/Resources/completions/_alacritty"
+  fish_completion "#{appdir}/Alacritty.app/Contents/Resources/completions/alacritty.fish"
 
   zap trash: [
     "~/Library/Preferences/org.alacritty.plist",
