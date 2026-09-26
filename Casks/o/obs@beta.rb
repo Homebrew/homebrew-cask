@@ -25,13 +25,14 @@ cask "obs@beta" do
 
   auto_updates true
   conflicts_with cask: "obs"
-  depends_on macos: :monterey
+  depends_on macos: :ventura
 
   app "OBS.app"
   command_wrapper "obs",
                   executable: "#{appdir}/OBS.app/Contents/MacOS/OBS"
 
-  uninstall delete: "/Library/CoreMediaIO/Plug-Ins/DAL/obs-mac-virtualcam.plugin"
+  uninstall quit:   "com.obsproject.obs-studio",
+            delete: "/Library/CoreMediaIO/Plug-Ins/DAL/obs-mac-virtualcam.plugin"
 
   zap trash: [
     "~/Library/Application Support/obs-studio",
