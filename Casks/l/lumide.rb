@@ -1,13 +1,13 @@
 cask "lumide" do
-  version "0.21.0"
-  sha256 "0e5bb29e349fd54ff97183e977180a617be82c18b5d9945c1c44e2b0b07f58c5"
+  version "0.22.0"
+  sha256 "d9b04502573974321e7dc8105b46c1c3c9e9d33548c249dfbfa7af87a05e945b"
 
   url "https://github.com/SoFluffyOS/lumide/releases/download/#{version}/Lumide-macOS-#{version}.dmg"
   name "Lumide"
   desc "Agent-native code editor"
   homepage "https://lumide.dev/"
 
-  depends_on :macos
+  depends_on macos: :monterey
 
   app "Lumide.app"
 
