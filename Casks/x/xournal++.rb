@@ -4,11 +4,11 @@ cask "xournal++" do
   os macos: "macOS-"
   url_end = on_system_conditional macos: "dmg", linux: "AppImage"
 
-  version "1.3.7"
-  sha256 arm:          "b13e5229e113da630946826ddc37e25d33d24fe1192ab0d3327468e319ccf4d4",
-         intel:        "cb474a78fe65a5d59b9774d37f0f04e7da4340535ee8d50983fb0b5df9cee313",
-         arm64_linux:  "8de51abae9a4fb3e2984ee5c7819805eb1d3520e6071c4967d82b58ed1d16276",
-         x86_64_linux: "b1f4122b496c5595a93ff94b57f774eacd223d0da9d56fa615e1e637728a636f"
+  version "1.3.8"
+  sha256 arm:          "7d992ef097afd6db304cb9df70615e67f1a1de412e06f7dc8f907fcde3b7d6d7",
+         intel:        "e61a58f9dea32805f87c9a0310aa319809a1045b06600afc0a55e79a097cc4eb",
+         arm64_linux:  "b3da34917ad5e8604a4269f149e456803afb2fca038ee535e922b8055d7e3441",
+         x86_64_linux: "fda3587ace5504275a227d4013ba5da0988bac52be281d04a4040e5e1abd5682"
 
   on_macos do
     disable! date: "2026-09-01", because: :fails_gatekeeper_check
