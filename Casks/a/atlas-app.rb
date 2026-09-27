@@ -1,9 +1,9 @@
 cask "atlas-app" do
   arch arm: "aarch64", intel: "x86_64"
 
-  version "0.3.3"
-  sha256 arm:   "a11694ea1e0a1de613c47023588c6299dacd619bd0f1b7dec913fad675b07d4b",
-         intel: "df03dd9df42c7de53eb41b55164518cb108b959117a71158ebe511ab9af31e21"
+  version "0.3.4"
+  sha256 arm:   "8d19c35f414e5f29a707efefcb602dd8b0258c653a09b2bff4c2e2d79f347bd6",
+         intel: "896a2896a629611cae5502bc5db6017726545cf428fec6063b2f5549bdf95139"
 
   url "https://github.com/pacifio/atlas/releases/download/alpha-#{version}/Atlas_#{version}_#{arch}.dmg"
   name "Atlas"
