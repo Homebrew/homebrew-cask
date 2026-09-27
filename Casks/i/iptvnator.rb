@@ -35,4 +35,6 @@ cask "iptvnator" do
     url :url
     strategy :github_latest
   end
+
+  auto_updates true
 end
