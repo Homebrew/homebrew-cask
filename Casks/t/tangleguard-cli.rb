@@ -22,5 +22,5 @@ cask "tangleguard-cli" do
     regex(/v?(\d+(?:\.\d+)+)/i)
   end
 
-  binary "tangleguard-cli"
+  binary "tangleguard"
 end
