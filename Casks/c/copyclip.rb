@@ -19,7 +19,7 @@ cask "copyclip" do
 
   uninstall quit: "com.fiplab.copyclip#{version.major}"
 
-  zap delete: [
+  zap trash: [
     "~/Library/Application Scripts/com.fiplab.copyclip*",
     "~/Library/Containers/com.fiplab.copyclip*",
   ]
