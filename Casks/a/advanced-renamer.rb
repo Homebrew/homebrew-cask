@@ -5,7 +5,7 @@ cask "advanced-renamer" do
   sha256 arm:   "f9a5b139c8294cbd8b58bd8b5755526d676f32444ea383e7835c89edc8deecc1",
          intel: "d99b8f82ca162a16c8d3f9fb48c9f0f9495660be3d2ebcef7cf7aea0f40b683e"
 
-  url "https://www.advancedrenamer.com/down/macos/#{arch}/AdvancedRenamer_#{version.tr(".", "_")}.dmg"
+  url "https://www.advancedrenamer.com/down/macos/#{arch}/AdvancedRenamer_#{version.dots_to_underscores}.dmg"
   name "Advanced Renamer"
   desc "Batch file renaming utility"
   homepage "https://www.advancedrenamer.com/"
