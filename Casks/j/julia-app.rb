@@ -23,7 +23,7 @@ cask "julia-app" do
     end
   end
 
-  depends_on macos: :tahoe
+  depends_on macos: :golden_gate
 
   app "Julia-#{version.major_minor}.app"
   binary "#{appdir}/Julia-#{version.major_minor}.app/Contents/Resources/julia/bin/julia"
