@@ -31,7 +31,7 @@ cask "surge" do
   uninstall launchctl: "com.nssurge.surge-mac.helper",
             delete:    "/Library/PrivilegedHelperTools/com.nssurge.surge-mac.helper"
 
-  zap delete: [
+  zap trash: [
     "~/Library/Application Support/bugsnag-shared-com.nssurge.surge-mac",
     "~/Library/Application Support/com.bugsnag.Bugsnag/com.nssurge.surge-mac",
     "~/Library/Application Support/com.nssurge.surge-mac",
