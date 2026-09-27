@@ -10,6 +10,8 @@ cask "stirling-pdf" do
   on_macos do
     app "Stirling PDF.app"
 
+    uninstall quit: "stirling.pdf.dev"
+
     zap trash: [
       "~/Library/Application Support/Stirling-PDF",
       "~/Library/Application Support/stirling.pdf.dev",
