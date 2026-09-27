@@ -15,8 +15,14 @@ cask "thaw" do
   uninstall quit: ["com.stonerl.Thaw", "com.stonerl.Thaw.MenuBarItemService"]
 
   zap trash: [
+    "~/Library/Application Scripts/*.com.stonerl.Thaw",
+    "~/Library/Application Scripts/com.stonerl.Thaw.ThawControls",
+    "~/Library/Application Support/Thaw",
     "~/Library/Caches/com.stonerl.Thaw",
+    "~/Library/Containers/com.stonerl.Thaw.ThawControls",
+    "~/Library/Group Containers/*.com.stonerl.Thaw",
     "~/Library/HTTPStorages/com.stonerl.Thaw",
+    "~/Library/Logs/Thaw",
     "~/Library/Preferences/com.stonerl.Thaw.plist",
     "~/Library/WebKit/com.stonerl.Thaw",
   ]
