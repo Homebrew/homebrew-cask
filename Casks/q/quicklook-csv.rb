@@ -8,6 +8,7 @@ cask "quicklook-csv" do
   homepage "https://github.com/p2/quicklook-csv"
 
   deprecate! date: "2025-09-22", because: :no_longer_meets_criteria
+  disable! date: "2026-09-27", because: :no_longer_meets_criteria
 
   depends_on :macos
 
