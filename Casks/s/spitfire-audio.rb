@@ -29,7 +29,7 @@ cask "spitfire-audio" do
     "/Library/PrivilegedHelperTools/com.spitfireaudio.LibraryManagerHelper",
   ]
 
-  zap delete: [
+  zap trash: [
     "~/Library/Caches/com.spitfireaudio.spitfireaudio",
     "~/Library/Preferences/com.spitfireaudio.spitfireaudio.plist",
   ]
