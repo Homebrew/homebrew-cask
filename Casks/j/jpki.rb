@@ -2,7 +2,7 @@ cask "jpki" do
   version "3.9,01-01"
   sha256 "ee7eddf29860eacd7406c91c5113c32a11e51a0e0a8abda387dd728f43255d80"
 
-  url "https://www.jpki.go.jp/client/download/101/JPKIMac_#{version.csv.first.major.rjust(2, "0")}-#{version.csv.first.minor.rjust(2, "0")}_#{version.csv.second}.dmg"
+  url "https://www.jpki.go.jp/client/download/101/JPKIMac_#{version.csv.first.split(".").map { |str| str.rjust(2, "0") }.join("-")}#{"_#{version.csv.second}" if version.csv.second}.dmg"
   name "JPKI User Client Software"
   name "公的個人認証サービス 利用者クライアントソフト"
   desc "Digital signature and authentication client for the My Number Card (JPKI)"
@@ -10,9 +10,12 @@ cask "jpki" do
 
   livecheck do
     url "https://www.jpki.go.jp/download/mac.html"
-    regex(/JPKIMac_(\d+)-(\d+)_(\d+-\d+)\.dmg/i)
+    regex(/href=.*?JPKIMac[._-]v?(\d+(?:[.-]\d+)+)(?:_(\d+(?:[.-]\d+)+))?\.dmg/i)
     strategy :page_match do |page, regex|
-      page.scan(regex).map { |match| "#{match[0].to_i}.#{match[1].to_i},#{match[2]}" }
+      page.scan(regex).map do |match|
+        ver = match[0].tr("-", ".").split(".").map(&:to_i).join(".")
+        match[1].present? ? "#{ver},#{match[1]}" : ver
+      end
     end
   end
 
