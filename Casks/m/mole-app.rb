@@ -1,5 +1,5 @@
 cask "mole-app" do
-  version "1.15.0"
+  version "1.16.0"
   sha256 :no_check
 
   url "https://mole.fit/Mole.dmg"
