@@ -12,13 +12,13 @@ cask "plane" do
 
   livecheck do
     url "https://download.todesktop.com/260130r75i625/latest-mac.yml"
-    regex(/Plane\s+v?(\d+(?:\.\d+)+).*?Build\s+([a-z0-9]+)[._-]#{arch}\.dmg/i)
+    regex(/Build[ ._-]([^-]+)[._-]/i)
     strategy :electron_builder do |yaml, regex|
       yaml["files"]&.map do |item|
         match = item["url"]&.match(regex)
         next if match.blank?
 
-        "#{match[1]},#{match[2]}"
+        "#{yaml["version"]},#{match[1]}"
       end
     end
   end
