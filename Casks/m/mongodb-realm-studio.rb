@@ -17,7 +17,7 @@ cask "mongodb-realm-studio" do
 
   app "Realm Studio.app"
 
-  zap delete: [
+  zap trash: [
     "~/Library/Application Support/Realm Studio",
     "~/Library/Caches/io.realm.realm-studio",
     "~/Library/Caches/io.realm.realm-studio.ShipIt",
