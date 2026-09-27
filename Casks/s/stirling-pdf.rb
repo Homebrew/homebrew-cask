@@ -2,13 +2,15 @@ cask "stirling-pdf" do
   arch intel: "x86_64"
   os macos: "macos-universal.dmg", linux: "linux-#{arch}.AppImage"
 
-  version "3.0.0"
-  sha256 arm:          "057fad6f16c3091ac902d93ba6a63243f1f90c3a77b82c1cb0e68da4bd0ece66",
-         intel:        "057fad6f16c3091ac902d93ba6a63243f1f90c3a77b82c1cb0e68da4bd0ece66",
-         x86_64_linux: "7d864966f65e19f5955bb1dbb5cd02f480ed6fa9e701bb760ac2d8bf4313e965"
+  version "3.0.1"
+  sha256 arm:          "4e535f35c16d59e4ef7e25a58e11e32f6bbdd39d3141ba234cfc4c7431e2ef2d",
+         intel:        "4e535f35c16d59e4ef7e25a58e11e32f6bbdd39d3141ba234cfc4c7431e2ef2d",
+         x86_64_linux: "e8be1c4a437eac5a23c8a36011cbb49619ea0a4a339c688fd09099b5fb78b4c8"
 
   on_macos do
     app "Stirling PDF.app"
+
+    uninstall quit: "stirling.pdf.dev"
 
     zap trash: [
       "~/Library/Application Support/Stirling-PDF",
