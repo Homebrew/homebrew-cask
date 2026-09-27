@@ -10,6 +10,10 @@ on:
     # Every 3 hours 23 minutes past the hour
     - cron: "23 */3 * * *"
 
+concurrency:
+  group: autobump-${{ inputs.casks && github.run_id || 'scheduled' }}
+  cancel-in-progress: true
+
 permissions:
   contents: read
 
