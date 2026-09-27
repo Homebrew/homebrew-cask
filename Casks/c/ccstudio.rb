@@ -8,6 +8,7 @@ cask "ccstudio" do
   homepage "https://calibrite.com/us/software-downloads/"
 
   deprecate! date: "2025-09-09", because: :no_longer_available, replacement_cask: "calibrite-profiler"
+  disable! date: "2026-09-27", because: :no_longer_available, replacement_cask: "calibrite-profiler"
 
   depends_on :macos
 
