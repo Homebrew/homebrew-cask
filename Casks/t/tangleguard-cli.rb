@@ -14,7 +14,7 @@ cask "tangleguard-cli" do
 
   url "https://tangleguard-cli-builds.s3.eu-central-1.amazonaws.com/v#{version}/tangleguard-cli_#{version}_#{arch}-#{os}.tar.gz"
   name "Tangleguard CLI"
-  desc "Codebase Architecture Context via the CLI for LLMs and Humans"
+  desc "Code architecture context for LLMs and humans"
   homepage "https://tangleguard.com/"
 
   livecheck do
