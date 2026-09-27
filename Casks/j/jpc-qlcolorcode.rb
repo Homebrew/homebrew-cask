@@ -8,6 +8,7 @@ cask "jpc-qlcolorcode" do
   homepage "https://github.com/jpc/QLColorCode"
 
   deprecate! date: "2025-09-22", because: :no_longer_meets_criteria
+  disable! date: "2026-09-27", because: :no_longer_meets_criteria
 
   depends_on :macos
 
