@@ -2,7 +2,7 @@ cask "desmume" do
   version "0.9.13"
   sha256 "d42e4bbf8f96b6bfdb3c8be6cf469b606a3b105352460636b1051b8dd0365ebc"
 
-  url "https://github.com/TASEmulators/desmume/releases/download/release_#{version.tr(".", "_")}/desmume-#{version}-macOS.dmg"
+  url "https://github.com/TASEmulators/desmume/releases/download/release_#{version.dots_to_underscores}/desmume-#{version}-macOS.dmg"
   name "DeSmuME"
   desc "Nintendo DS emulator"
   homepage "https://desmume.org/"
