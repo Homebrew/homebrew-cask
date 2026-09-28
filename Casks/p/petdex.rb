@@ -1,9 +1,9 @@
 cask "petdex" do
   arch arm: "arm64", intel: "x64"
 
-  version "0.9.1"
-  sha256 arm:   "6eb74b775c635d20a6f9645afa680198b89491f1f8e974cff5b942a798740f8a",
-         intel: "a9d86b7f87f7c1ab27c27a4b398376be47a7fb3d07cc1d1b9fcf0bbdc5fba58b"
+  version "0.9.2"
+  sha256 arm:   "a22e07c20c1fa8b15304e7734982550f54e1cf72a4ff794feb99e59a832477c2",
+         intel: "d1a85167e78d5a7e2f59a642ed99d92938aee4fc2a956b07a91784452825ee6d"
 
   url "https://github.com/crafter-station/petdex/releases/download/desktop-v#{version}/Petdex-#{arch}.dmg"
   name "Petdex"
