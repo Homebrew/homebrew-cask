@@ -1,6 +1,6 @@
 cask "shottr" do
-  version "1.9.2"
-  sha256 "89a64c6615cd3955336228e94ffaf1d74cc69def88c70016e57df9b48dac23a5"
+  version "1.9.3b"
+  sha256 "9debebb9b91a9dfe2c493dc1f5ddc78a2ad25ad5ebbacfca60b7985dc15820de"
 
   url "https://shottr.cc/dl/Shottr-#{version}.dmg"
   name "Shottr"
@@ -9,11 +9,11 @@ cask "shottr" do
 
   livecheck do
     url "https://shottr.cc/newversion.html"
-    regex(/href=.*?Shottr[._-]v?(\d+(?:\.\d+)+)\.dmg/i)
+    regex(/href=.*?Shottr[._-]v?(\d+(?:\.\d+)+[a-z]?)\.dmg/i)
   end
 
   auto_updates true
-  depends_on :macos
+  depends_on macos: :monterey
 
   app "Shottr.app"
 
