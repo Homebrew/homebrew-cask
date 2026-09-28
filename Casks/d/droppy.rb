@@ -1,6 +1,6 @@
 cask "droppy" do
-  version "16.0.0"
-  sha256 "c088ef907a4fcde537fda083859cc1dfe0d7f5d3d50273e3e044238ef1c6a259"
+  version "16.0.1"
+  sha256 "727f1a5876dc5a99cbc0a9bc2008e2089b3615ab44d04fd6958c13f1455e0093"
 
   url "https://droppy-releases.jordylegrand.workers.dev/app-releases/Droppy-#{version}.dmg"
   name "Droppy"
