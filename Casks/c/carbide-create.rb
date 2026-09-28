@@ -10,7 +10,7 @@ cask "carbide-create" do
       end
     end
 
-    depends_on macos: :monterey
+    depends_on macos: :ventura
   end
   on_intel do
     version "842"
