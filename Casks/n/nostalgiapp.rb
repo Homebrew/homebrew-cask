@@ -32,8 +32,11 @@ cask "nostalgiapp" do
   zap trash: [
     "~/Library/Application Support/NostalgiApp",
     "~/Library/Caches/com.nostalgi.app",
+    "~/Library/Caches/com.nostalgi.app.*.json",
+    "~/Library/Caches/NostalgiApp",
     "~/Library/HTTPStorages/com.nostalgi.app",
     "~/Library/Logs/NostalgiApp",
     "~/Library/Preferences/com.nostalgi.app.plist",
+    "~/Library/WebKit/com.nostalgi.app",
   ]
 end
