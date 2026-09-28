@@ -2,10 +2,10 @@ cask "hoptodesk" do
   os macos: "HopToDesk", linux: "hoptodesk"
   url_end = on_system_conditional macos: "dmg", linux: "AppImage"
 
-  version "1.46.52"
-  sha256 arm:          "3e730eaa8f40d485229d0f0a4cce86dbe388558373abcbbf7ff3f5c3af83cfaa",
-         intel:        "3e730eaa8f40d485229d0f0a4cce86dbe388558373abcbbf7ff3f5c3af83cfaa",
-         x86_64_linux: "8794da799716b2dca0c43f2a2bf0a7e0230498f9a786df28e8eec69f2c2dfd2b"
+  version "1.46.55"
+  sha256 arm:          "bc4d3f8c46e70ec75e0d562476fe8f104664bddc1f04e9c4192aea1fed1510f9",
+         intel:        "bc4d3f8c46e70ec75e0d562476fe8f104664bddc1f04e9c4192aea1fed1510f9",
+         x86_64_linux: "583cf31d1d938f32a3a808017681b4be9437a3d486be89696ad209cfbcea4ff0"
 
   on_macos do
     app "HopToDesk.app"
