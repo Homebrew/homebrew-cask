@@ -7,11 +7,6 @@ cask "markpad" do
   desc "Markdown viewer and editor"
   homepage "https://markpad.dev/"
 
-  livecheck do
-    url :url
-    strategy :github_latest
-  end
-
   auto_updates true
   depends_on :macos
 
