@@ -1,6 +1,6 @@
 cask "paper-design" do
-  version "0.5.12,260923mbui5shcl"
-  sha256 "01963c49efd6bf1b5e6f752edb77c5fc4fefc6fae37aa7be6518c58f9b75e4fd"
+  version "0.5.13,260928cvv9p60wr"
+  sha256 "ae140abcfadad106691653b30bbb965aaab9a0104209a135ca23c5b431b12515"
 
   url "https://download.todesktop.com/2601167vjw8xe/Paper%20#{version.csv.first}%20-%20Build%20#{version.csv.second}-arm64.dmg"
   name "Paper"
