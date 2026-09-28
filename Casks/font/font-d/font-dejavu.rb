@@ -10,6 +10,8 @@ cask "font-dejavu" do
     url "https://sourceforge.net/projects/dejavu/rss?path=/dejavu"
   end
 
+  conflicts_with cask: "font-dejavu-sans"
+
   font "dejavu-fonts-ttf-#{version}/ttf/DejaVuMathTeXGyre.ttf"
   font "dejavu-fonts-ttf-#{version}/ttf/DejaVuSans-Bold.ttf"
   font "dejavu-fonts-ttf-#{version}/ttf/DejaVuSans-BoldOblique.ttf"

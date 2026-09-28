@@ -13,6 +13,7 @@ cask "pika" do
   end
 
   auto_updates true
+  conflicts_with cask: "pika@beta"
   depends_on macos: :sonoma
 
   app "Pika.app"

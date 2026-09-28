@@ -37,4 +37,6 @@ cask "tabularis" do
     url :url
     strategy :github_latest
   end
+
+  conflicts_with cask: "tabularis@nightly"
 end

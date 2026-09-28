@@ -13,6 +13,7 @@ cask "amethyst" do
   end
 
   auto_updates true
+  conflicts_with cask: "amethyst-nostr"
   depends_on :macos
 
   app "Amethyst.app"

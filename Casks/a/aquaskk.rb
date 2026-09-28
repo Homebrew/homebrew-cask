@@ -12,6 +12,7 @@ cask "aquaskk" do
     strategy :github_latest
   end
 
+  conflicts_with cask: "aquaskk@prerelease"
   depends_on :macos
 
   pkg "AquaSKK-#{version}.pkg"

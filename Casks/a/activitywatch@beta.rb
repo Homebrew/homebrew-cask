@@ -25,7 +25,10 @@ cask "activitywatch@beta" do
     end
   end
 
-  conflicts_with cask: "activitywatch"
+  conflicts_with cask: [
+    "activitywatch",
+    "activitywatch@experimental",
+  ]
   depends_on macos: :monterey
 
   app "ActivityWatch.app"

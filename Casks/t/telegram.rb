@@ -17,6 +17,7 @@ cask "telegram" do
   end
 
   auto_updates true
+  conflicts_with cask: "telegram@beta"
   depends_on :macos
 
   app "Telegram.app"

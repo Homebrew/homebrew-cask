@@ -56,6 +56,7 @@ cask "onyx" do
   desc "Verify system files structure, run miscellaneous maintenance and more"
   homepage "https://www.titanium-software.fr/en/onyx.html"
 
+  conflicts_with cask: "onyx@beta"
   depends_on macos: [
     :big_sur,
     :monterey,
