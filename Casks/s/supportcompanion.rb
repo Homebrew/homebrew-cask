@@ -1,6 +1,6 @@
 cask "supportcompanion" do
-  version "2.3.1.81039"
-  sha256 "596e5adad68b823bfe740bdeeb72be1e213e3207c40108c4b8bda49c93301a69"
+  version "3.0.0.81153"
+  sha256 "7a8e02eab999c597a591cf401f14fd0147dc520a39d9c1895db52666f96cf795"
 
   url "https://github.com/macadmins/SupportCompanion/releases/download/v#{version}/SupportCompanion-#{version}.pkg"
   name "Support Companion"
