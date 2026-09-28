@@ -1,10 +1,10 @@
 cask "openshot-video-editor" do
   os macos: "dmg", linux: "AppImage"
 
-  version "4.0.0"
-  sha256 arm:          "bfad1a866265f05024ffee90e5a770d4e584424f2ee6952812c55fcd2133177a",
-         intel:        "bfad1a866265f05024ffee90e5a770d4e584424f2ee6952812c55fcd2133177a",
-         x86_64_linux: "277b27aae97080a1dae8831be8c6d2c576377292f559fb1b94675f6db24aa70f"
+  version "4.0.1"
+  sha256 arm:          "32d5e55b447fd155f3f193ec36efe47e1f57f02a5f2090bdf3ef7b0bc7c8bcfd",
+         intel:        "32d5e55b447fd155f3f193ec36efe47e1f57f02a5f2090bdf3ef7b0bc7c8bcfd",
+         x86_64_linux: "cbeaaaf1de5afe8b3cdb55f50680e5d8f37ff0c2ea5052ddb012c01c9cca7a3f"
 
   on_macos do
     app "OpenShot Video Editor.app"
