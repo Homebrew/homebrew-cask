@@ -1,6 +1,6 @@
 cask "agent-cli" do
-  version "0.108.0"
-  sha256 "671f60dfc79f9467a6bc37d1ea0c013c5bfa30e94fde9c0d51017f26d87e5c13"
+  version "0.108.3"
+  sha256 "85819162d5f79ea26fa4d9d836fd28dc3eb045d58d38f385d9cd75562e5d10c3"
 
   url "https://github.com/basnijholt/agent-cli/releases/download/v#{version}/AgentCLI.dmg"
   name "Agent CLI"
@@ -20,17 +20,8 @@ cask "agent-cli" do
 
   uninstall quit:   "lt.nijho.agent-cli.menubar",
             script: {
-              executable: "/bin/sh",
-              args:       ["-c", <<~SH, "--", "#{appdir}/AgentCLI.app/Contents/Resources/bin/uv"],
-                plist="$HOME/Library/LaunchAgents/com.agent_cli.whisper.plist"
-                owner=$(/usr/libexec/PlistBuddy -c 'Print :EnvironmentVariables:AGENTCLI_BUNDLED_UV' "$plist" 2>/dev/null) || exit 0
-                [ "$owner" = "$1" ] || exit 0
-                service="gui/$(/usr/bin/id -u)/com.agent_cli.whisper"
-                if /bin/launchctl print "$service" >/dev/null 2>&1; then
-                  /bin/launchctl bootout "$service" || exit $?
-                fi
-                /bin/rm -f "$plist"
-              SH
+              executable: "#{appdir}/AgentCLI.app/Contents/Resources/uninstall.sh",
+              sudo:       false,
             }
 
   zap trash: [
