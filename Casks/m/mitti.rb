@@ -17,6 +17,8 @@ cask "mitti" do
 
   app "Mitti.app"
 
+  uninstall quit: "com.imimot.Mitti.#{version.major}"
+
   zap trash: [
     "~/Library/Application Scripts/com.imimot.Mitti.*.MittiQuicklook",
     "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.imimot.mitti.*.sfl*",
