@@ -15,6 +15,7 @@ cask "glaze-app" do
     regex(/href=.*?Glaze[._-]v?(\d+(?:\.\d+)+)[._-]#{arch}\.dmg/i)
   end
 
+  conflicts_with cask: "raycast-glaze"
   depends_on macos: :ventura
 
   app "Glaze.app"
