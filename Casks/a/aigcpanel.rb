@@ -3,11 +3,11 @@ cask "aigcpanel" do
   os macos: "mac", linux: "linux"
   url_end = on_system_conditional macos: "dmg", linux: "AppImage"
 
-  version "2.3.0"
-  sha256 arm:          "7964cd2c083f5f1daa5a5493ad7007a21da9807e08af9def8bb3d0f82b8a1203",
-         intel:        "bb1096936fb2ba56395ad4108fa946e67fce3683689d774c143e8af37483fa21",
-         arm64_linux:  "a305fe1e084a29c5e1ef16ed80fb400457f1542744bd7a009006c5efbfd14480",
-         x86_64_linux: "7064574c72f5867c2f50b47103ab7663c55462ad13fa08349cc2ea3a8c6be8b1"
+  version "2.5.0"
+  sha256 arm:          "0875d847e6ee490ba91027abc3c1abcccdf4a718de86d2f009c4087b4b51cd3e",
+         intel:        "c359f0ae384c5e5276b5405e3a93d90960f3e64202e02d52ef851cf82675c5bd",
+         arm64_linux:  "4973651fdcdb798ba0aee71397becdcd32663a8cc61c7b4949f696c1124c109c",
+         x86_64_linux: "68b76c288644c5e0e0a86bd75d2ea15d97c169d3645c0fd4b7ad754ccfaea084"
 
   on_macos do
     app "AigcPanel.app"
