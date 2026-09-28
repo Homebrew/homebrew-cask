@@ -20,7 +20,12 @@ cask "glide" do
   app "Glide.app"
   binary "#{appdir}/Glide.app/Contents/MacOS/glide"
 
-  uninstall login_item: "Glide"
+  uninstall quit:       "org.glidewm.glide",
+            login_item: "Glide"
 
-  zap trash: "~/.glide/layout.ron", rmdir: "~/.glide"
+  zap trash: [
+        "~/.glide/layout.ron",
+        "~/Library/Saved Application State/org.glidewm.glide.savedState",
+      ],
+      rmdir: "~/.glide"
 end
