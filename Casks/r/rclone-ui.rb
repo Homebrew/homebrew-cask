@@ -4,10 +4,10 @@ cask "rclone-ui" do
   os macos: "dmg", linux: "AppImage"
 
   version "3.7.5"
-  sha256 arm:          "0fe8367034b14a9ed28a4fedfd1cda17c75c3a531ac159ef6eb0ea92f9ae500b",
-         intel:        "3322e9dc7c0d704cd7234ddf43b8ffcc631250e57110d067f15d591fb925989d",
-         arm64_linux:  "b4279112d32178693ffa01fec3a25618923ab0b28f0da43e2678173bcd81db20",
-         x86_64_linux: "0f781240c6cbaa142e9b534957a920d661e842439ecc19df6acaa50692b09417"
+  sha256 arm:          "f2f315d82671e122da7182a62e4abbac2d04bbfce8a0460fc0b6b6e23b1f481d",
+         intel:        "db376085a15265d1a9133a7f9b08850ff961b44a4645597fbba7002dba0b8c81",
+         arm64_linux:  "4466fb1b24131323e4518492fbc4c5e672b7c98131b801e74061df80f9301502",
+         x86_64_linux: "68a8b0c9f5fa9510f9093a9b60c6674715953a49bbec84f0cc31c4d524c609db"
 
   on_macos do
     depends_on macos: :ventura
