@@ -1,8 +1,8 @@
 cask "open-data-editor" do
-  version "1.7.1"
-  sha256 "4a0eb1d422caa7fc03edf129f88a10187c5469cea4a64f2f4e9aaa8a0c58d58e"
+  version "1.8.0"
+  sha256 "e21dfc9b3983e49c367f6ba81b87615bae6071943cac5a8e4a07c8862440f013"
 
-  url "https://github.com/okfn/opendataeditor/releases/download/v#{version}/opendataeditor-macos-#{version}.dmg"
+  url "https://github.com/okfn/opendataeditor/releases/download/v#{version}/distribution-files-macos.zip"
   name "Open Data Editor"
   desc "No-code application to explore, validate and publish data in a simple way"
   homepage "https://okfn.org/en/projects/open-data-editor/"
@@ -17,8 +17,4 @@ cask "open-data-editor" do
   app "Open Data Editor.app"
 
   # No zap stanza required
-
-  caveats do
-    requires_rosetta
-  end
 end
