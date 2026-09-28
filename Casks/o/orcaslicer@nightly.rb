@@ -1,6 +1,4 @@
 cask "orcaslicer@nightly" do
-  arch arm: "arm64", intel: "x86_64"
-
   version :latest
   sha256 :no_check
 
