@@ -1,6 +1,6 @@
 cask "agentide" do
-  version "0.9.7"
-  sha256 "f29e5615a664c01cf66bcef7777d54b6d125664f534e606c23626e5415d9ffcd"
+  version "0.9.8"
+  sha256 "0206daaf67fc983e227da158488cd3829ea49c00de3e290c45b1273aae1aa6fa"
 
   url "https://github.com/MikeMcQuaid/AgentIDE/releases/download/#{version}/AgentIDE-#{version}.zip"
   name "AgentIDE"
@@ -9,7 +9,7 @@ cask "agentide" do
 
   depends_on arch: :arm64
   depends_on formula: ["herdr", "ripgrep", "gh"]
-  depends_on macos: :golden_gate
+  depends_on macos: :tahoe
 
   app "AgentIDE.app"
   binary "#{appdir}/AgentIDE.app/Contents/Resources/bin/agentide"
