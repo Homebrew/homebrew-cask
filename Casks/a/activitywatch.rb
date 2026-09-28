@@ -43,4 +43,9 @@ cask "activitywatch" do
     url :url
     strategy :github_latest
   end
+
+  conflicts_with cask: [
+    "activitywatch@beta",
+    "activitywatch@experimental",
+  ]
 end
