@@ -9,11 +9,7 @@ cask "iterm2@beta" do
   homepage "https://iterm2.com/"
 
   livecheck do
-    # workaround for
-    # - https://github.com/Homebrew/homebrew-cask/pull/104019
-    # - https://github.com/gnachman/iterm2-website/issues/82
-    # url "https://iterm2.com/appcasts/testing_modern.xml"
-    url "https://raw.githubusercontent.com/gnachman/iterm2-website/master/source/appcasts/testing_modern.xml"
+    url "https://iterm2.com/appcasts/testing_modern.xml"
     strategy :sparkle, &:version
   end
 
