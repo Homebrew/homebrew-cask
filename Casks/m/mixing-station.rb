@@ -1,7 +1,7 @@
 cask "mixing-station" do
   arch arm: "-aarch64"
 
-  version "3.1.3"
+  version "3.2.0"
   sha256 :no_check
 
   url "https://mixingstation.app/backend/api/web/download/attachment/mixing-station-pc/release/macos#{arch}"
@@ -23,6 +23,8 @@ cask "mixing-station" do
   depends_on :macos
 
   app "Mixing Station.app"
+
+  uninstall quit: "org.devcore.mixingstation.pc"
 
   zap trash: [
     "~/Library/Saved Application State/org.devcore.mixingstation.pc.savedState",
