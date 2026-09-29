@@ -1,6 +1,6 @@
 cask "dbngin" do
-  version "26.1.0,100"
-  sha256 "d0b9f341647f57f6c0f4dc1d6623d035313bb55ee7bebd92744e01c8bd9a4215"
+  version "27.0.1,101"
+  sha256 "f052bd110b16078d10e7d690978f6042e424077ef756fbe3cfe5e57d8ca1f3f7"
 
   url "https://files.dbngin.com/macos/#{version.csv.second}/DBngin.dmg"
   name "DBngin"
