@@ -58,7 +58,8 @@ cask "tencent-yingyongbao" do
 
   app "YYBMacApp.app"
 
-  uninstall launchctl: "com.tencent.yybmac.yybService"
+  uninstall launchctl: "com.tencent.yybmac.yybService",
+            quit:      "com.tencent.yybmac.healthagent"
 
   zap trash: [
     "~/Library/Application Support/com.tencent.yybmac",
@@ -68,7 +69,9 @@ cask "tencent-yingyongbao" do
     "~/Library/com.tencent.yybmac",
     "~/Library/Containers/com.tencent.yybmac",
     "~/Library/HTTPStorages/com.tencent.yybmac*",
+    "~/Library/LaunchAgents/com.tencent.yybmac.yybService.plist",
     "~/Library/Logs/com.tencent.yybmac",
+    "~/Library/Preferences/com.tencent.yybmac.healthagent.plist",
     "~/Library/Preferences/com.tencent.yybmac.plist",
     "~/Library/WebKit/com.tencent.yybmac",
   ]
