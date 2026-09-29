@@ -45,7 +45,7 @@ cask "istat-menus" do
     "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.bjango.istatmenus.agent.sfl*",
     "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.bjango.istatmenus.status.sfl*",
     "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/y93tk974at.com.bjango.istatmenus.agent.mas.sfl*",
-    "~/Library/Application Support/iStat Menus #{version.major}",
+    "~/Library/Application Support/iStat Menus*",
     "~/Library/Caches/com.bjango.istatmenus",
     "~/Library/Caches/com.bjango.istatmenus.agent",
     "~/Library/Caches/com.bjango.istatmenus.status",
