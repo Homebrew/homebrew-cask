@@ -6,7 +6,13 @@ cask "font-agave" do
   name "Agave"
   homepage "https://b.agaric.net/page/agave"
 
+  font "agave-#{version}/dist/Agave-Bold-parenbulged.ttf"
+  font "agave-#{version}/dist/Agave-Bold-zeroslashed-parenbulged.ttf"
+  font "agave-#{version}/dist/Agave-Bold-zeroslashed.ttf"
   font "agave-#{version}/dist/Agave-Bold.ttf"
+  font "agave-#{version}/dist/Agave-Regular-parenbulged.ttf"
+  font "agave-#{version}/dist/Agave-Regular-zeroslashed-parenbulged.ttf"
+  font "agave-#{version}/dist/Agave-Regular-zeroslashed.ttf"
   font "agave-#{version}/dist/Agave-Regular.ttf"
 
   # No zap stanza required
