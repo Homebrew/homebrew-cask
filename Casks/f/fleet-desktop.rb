@@ -8,7 +8,7 @@ cask "fleet-desktop" do
   homepage "https://github.com/fleetdm/fleet/tree/main/apps/fleet-desktop-macos"
 
   livecheck do
-    url "https://github.com/fleetdm/fleet.git"
+    url "https://github.com/fleetdm/fleet"
     regex(/^fleet-desktop-macos[._-]v?(\d+(?:\.\d+)+)$/i)
     strategy :git
   end
@@ -30,10 +30,4 @@ cask "fleet-desktop" do
     "~/Library/Saved Application State/com.fleetdm.fleet-desktop.savedState",
     "~/Library/WebKit/com.fleetdm.fleet-desktop",
   ]
-
-  caveats <<~EOS
-    Fleet Desktop requires the Mac to be enrolled in MDM with the
-    com.fleetdm.fleetd.config managed preferences profile. The installer
-    will fail with "Installation Failed" otherwise.
-  EOS
 end
