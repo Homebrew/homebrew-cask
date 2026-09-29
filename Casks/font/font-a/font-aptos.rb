@@ -35,4 +35,6 @@ cask "font-aptos" do
   font "Aptos-Serif-Bold.ttf"
   font "Aptos-Serif-Bold-Italic.ttf"
   font "Aptos-Serif-Italic.ttf"
+
+  # No zap stanza required
 end
