@@ -8,6 +8,8 @@ cask "font-liga-comic-mono" do
 
   font "comic-mono-font-master/LigaComicMono-Bold.ttf"
   font "comic-mono-font-master/LigaComicMono.ttf"
+  font "comic-mono-font-master/LigaComicMonoNerdFont-Bold.ttf"
+  font "comic-mono-font-master/LigaComicMonoNerdFont-Regular.ttf"
 
   # No zap stanza required
 end
