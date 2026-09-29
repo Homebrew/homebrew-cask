@@ -4,7 +4,6 @@ cask "font-aptos" do
 
   url "https://download.microsoft.com/download/8/6/0/860a94fa-7feb-44ef-ac79-c072d9113d69/Microsoft%20Aptos%20Fonts.zip"
   name "Microsoft Aptos font family"
-  desc "Default font family for Microsoft Office"
   homepage "https://learn.microsoft.com/en-us/typography/font-list/aptos"
 
   font "Aptos-Black-Italic.ttf"
