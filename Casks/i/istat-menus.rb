@@ -65,6 +65,7 @@ cask "istat-menus" do
     "~/Library/Preferences/com.bjango.istatmenus.plist",
     "~/Library/Preferences/com.bjango.istatmenus.status.plist",
     "~/Library/WebKit/com.bjango.istatmenus",
+    "~/Library/WebKit/com.bjango.istatmenus.agent",
     "~/Library/WebKit/com.bjango.istatmenus.updater",
   ]
 end
