@@ -1,6 +1,6 @@
 cask "tencent-yingyongbao" do
-  version "0.8.1.2162,v86aPbKEPoXhM6CV"
-  sha256 "749d3bae14f36bd7256e22bb81e0403402e4052122fd77d6657cf7b0ce3af0d6"
+  version "0.8.2.2196,6Ru04TCFPzhENWCH"
+  sha256 "572aa2325ffcdddcce6f4cbba6b423221b024887c1fecece9535c7bd9f1101e6"
 
   url "https://downmac.yyb.qq.com/channel/formal/raw/#{version.csv.second}/mac_yyb_#{version.csv.first}.dmg"
   name "腾讯应用宝"
@@ -58,7 +58,8 @@ cask "tencent-yingyongbao" do
 
   app "YYBMacApp.app"
 
-  uninstall launchctl: "com.tencent.yybmac.yybService"
+  uninstall launchctl: "com.tencent.yybmac.yybService",
+            quit:      "com.tencent.yybmac.healthagent"
 
   zap trash: [
     "~/Library/Application Support/com.tencent.yybmac",
@@ -68,7 +69,9 @@ cask "tencent-yingyongbao" do
     "~/Library/com.tencent.yybmac",
     "~/Library/Containers/com.tencent.yybmac",
     "~/Library/HTTPStorages/com.tencent.yybmac*",
+    "~/Library/LaunchAgents/com.tencent.yybmac.yybService.plist",
     "~/Library/Logs/com.tencent.yybmac",
+    "~/Library/Preferences/com.tencent.yybmac.healthagent.plist",
     "~/Library/Preferences/com.tencent.yybmac.plist",
     "~/Library/WebKit/com.tencent.yybmac",
   ]
