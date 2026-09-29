@@ -15,6 +15,8 @@ cask "firezone" do
   depends_on macos: :ventura
 
   app "Firezone.app"
+  binary "#{appdir}/Firezone.app/Contents/Resources/bin/firezone"
+  generate_completions_from_executable "#{HOMEBREW_PREFIX}/bin/firezone", "--generate-completion-script"
 
   uninstall launchctl: "dev.firezone.firezone.keep-app-running"
 
