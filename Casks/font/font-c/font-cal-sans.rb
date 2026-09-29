@@ -14,6 +14,14 @@ cask "font-cal-sans" do
   font "calsans-static-essentials/CalSans-Regular.ttf"
   font "calsans-static-essentials/CalSans-SemiBold.ttf"
   font "calsans-static-essentials/CalSans-SemiBoldItalic.ttf"
+  font "calsans-static-essentials/CalSansTextUI-Bold.ttf"
+  font "calsans-static-essentials/CalSansTextUI-BoldItalic.ttf"
+  font "calsans-static-essentials/CalSansTextUI-Italic.ttf"
+  font "calsans-static-essentials/CalSansTextUI-Medium.ttf"
+  font "calsans-static-essentials/CalSansTextUI-MediumItalic.ttf"
+  font "calsans-static-essentials/CalSansTextUI-Regular.ttf"
+  font "calsans-static-essentials/CalSansTextUI-SemiBold.ttf"
+  font "calsans-static-essentials/CalSansTextUI-SemiBoldItalic.ttf"
 
   # No zap stanza required
 end
