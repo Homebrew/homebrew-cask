@@ -15,6 +15,8 @@ cask "font-sn-pro" do
   font "SNPro/SNPro-BlackItalic.otf"
   font "SNPro/SNPro-Bold.otf"
   font "SNPro/SNPro-BoldItalic.otf"
+  font "SNPro/SNPro-Book.otf"
+  font "SNPro/SNPro-BookItalic.otf"
   font "SNPro/SNPro-Heavy.otf"
   font "SNPro/SNPro-HeavyItalic.otf"
   font "SNPro/SNPro-Light.otf"
