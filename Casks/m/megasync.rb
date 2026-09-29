@@ -1,7 +1,7 @@
 cask "megasync" do
   arch arm: "Arm64"
 
-  version "6.6.2.0"
+  version "6.6.2"
   sha256 :no_check
 
   url "https://mega.nz/MEGAsyncSetup#{arch}.dmg"
@@ -11,7 +11,7 @@ cask "megasync" do
 
   livecheck do
     url "https://github.com/meganz/MEGAsync"
-    regex(/^v?(\d+(?:\.\d+)+)[._-]OSX$/i)
+    regex(/^v?(\d+(?:\.\d+){2})(?:\.\d+)?[._-]OSX$/i)
   end
 
   auto_updates true
