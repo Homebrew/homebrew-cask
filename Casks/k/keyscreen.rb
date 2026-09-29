@@ -19,7 +19,9 @@ cask "keyscreen" do
   app "KeyScreen.app"
 
   zap trash: [
+    "~/Library/Application Scripts/io.softal.KeyScreen",
     "~/Library/Caches/io.softal.KeyScreen",
+    "~/Library/Containers/io.softal.KeyScreen",
     "~/Library/HTTPStorages/io.softal.KeyScreen",
     "~/Library/Preferences/io.softal.KeyScreen.plist",
     "~/Library/Saved Application State/io.softal.KeyScreen.savedState",
