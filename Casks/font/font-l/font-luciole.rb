@@ -6,8 +6,8 @@ cask "font-luciole" do
   name "Luciole"
   homepage "https://luciole-vision.com/en/"
 
-  font "Luciole/Luciole-BoldItalic.ttf"
   font "Luciole/Luciole-Bold.ttf"
+  font "Luciole/Luciole-BoldItalic.ttf"
   font "Luciole/Luciole-Italic.ttf"
   font "Luciole/Luciole-Regular.ttf"
 
