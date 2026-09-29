@@ -1,7 +1,7 @@
 cask "orion" do
   on_big_sur :or_older do
-    version "1.1.2,151"
-    sha256 "192d941c929a4961071f6c2e2e947c8388d200d42655dd4ddcd0b460d6a1171d"
+    version "1.1.3,152"
+    sha256 "d1b60aba2460a1955dea8636d890d4445eb1f1edce4f736d44a0f6d72dddcc4c"
 
     url "https://cdn.kagi.com/updates/11_0/#{version.csv.second}.zip"
 
@@ -11,8 +11,8 @@ cask "orion" do
     end
   end
   on_monterey do
-    version "1.1.2,151"
-    sha256 "112ff323803a42b5d83f7d1b1773c9d9b10e4a4d9e428429f363de581668e052"
+    version "1.1.3,152"
+    sha256 "095e42e3d24f6ff9ee77b01a9a0cf9f752c7702f41000100f092c99423c4932e"
 
     url "https://cdn.kagi.com/updates/12_0/#{version.csv.second}.zip"
 
@@ -22,8 +22,8 @@ cask "orion" do
     end
   end
   on_ventura do
-    version "1.1.2,151"
-    sha256 "0f39315d8268ab3bfbd557f0e0d7bf94a317563eaca43f4f622918dc265450c5"
+    version "1.1.3,152"
+    sha256 "75cd1ea059cf667adc83212719d3887472390613ef6bd96abbe657b58fdb708c"
 
     url "https://cdn.kagi.com/updates/13_0/#{version.csv.second}.zip"
 
@@ -33,8 +33,8 @@ cask "orion" do
     end
   end
   on_sonoma do
-    version "1.1.2,151"
-    sha256 "0e72b0c5414af0918f82c093701b3e5dabf42e870686f9b91a53548f032c18b0"
+    version "1.1.3,152"
+    sha256 "d6becf7d541538869b42c217e076818992e407a931c8b6e9e709245940e2b951"
 
     url "https://cdn.kagi.com/updates/14_0/#{version.csv.second}.zip"
 
@@ -44,8 +44,8 @@ cask "orion" do
     end
   end
   on_sequoia do
-    version "1.1.2,151"
-    sha256 "e70077198c91936696e4479ec78e885c08eb9e1a0ff8d3db77bfef81aabe05ed"
+    version "1.1.3,152"
+    sha256 "e31b52e34ef220aedca18e1c503d183f83c3a6694f764c6249025c82dc151dc2"
 
     url "https://cdn.kagi.com/updates/15_0/#{version.csv.second}.zip"
 
@@ -55,8 +55,8 @@ cask "orion" do
     end
   end
   on_tahoe :or_newer do
-    version "1.1.2,151"
-    sha256 "77a55ae66c0dfae9406856e8e1d20a10dcd06a699175f9059ea395db398f8100"
+    version "1.1.3,152"
+    sha256 "63f6f640c43fe2f857b6ac461785518decd475375fcdf1ffd470c3758623b830"
 
     url "https://cdn.kagi.com/updates/26_0/#{version.csv.second}.zip"
 
