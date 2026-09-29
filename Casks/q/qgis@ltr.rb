@@ -26,6 +26,8 @@ cask "qgis@ltr" do
 
   app "QGIS-LTR.app"
 
+  uninstall quit: "org.qgis.qgis3"
+
   zap trash: [
     "~/Library/Application Support/QGIS",
     "~/Library/Caches/QGIS",
