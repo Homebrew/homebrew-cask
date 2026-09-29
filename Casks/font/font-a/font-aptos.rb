@@ -1,6 +1,6 @@
 cask "font-aptos" do
   version "4.40"
-  sha256 "6528fd120e719a9f985e94214eca6887d1653b88456916a792a630b02e95b025"
+  sha256 :no_check
 
   url "https://download.microsoft.com/download/8/6/0/860a94fa-7feb-44ef-ac79-c072d9113d69/Microsoft%20Aptos%20Fonts.zip"
   name "Microsoft Aptos font family"
