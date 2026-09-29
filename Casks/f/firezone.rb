@@ -15,6 +15,7 @@ cask "firezone" do
   depends_on macos: :ventura
 
   app "Firezone.app"
+  binary "#{appdir}/Firezone.app/Contents/Resources/bin/firezone"
 
   uninstall launchctl: "dev.firezone.firezone.keep-app-running"
 
