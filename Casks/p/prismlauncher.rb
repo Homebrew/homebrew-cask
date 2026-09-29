@@ -10,8 +10,8 @@ cask "prismlauncher" do
     end
   end
   on_monterey :or_newer do
-    version "11.1.0"
-    sha256 "b6ae145a02dd9bbc7c44ce3fa42ec942daca8c829584e21c66290a8e6ca89af8"
+    version "11.1.1"
+    sha256 "15126a7df57acb4f37fe581dad68cb03c7bb60b70eb82345f8bb3246235600c6"
 
     url "https://github.com/PrismLauncher/PrismLauncher/releases/download/#{version}/PrismLauncher-macOS-#{version}.zip"
 
@@ -35,9 +35,9 @@ cask "prismlauncher" do
   on_linux do
     arch arm: "aarch64", intel: "x86_64"
 
-    version "11.1.0"
-    sha256 arm64_linux:  "9655afa384a4900dee80c1fe34be407146bc852cdf2aac09a66788d7f6f44842",
-           x86_64_linux: "07d0987fd46b3ec442c15b25b6ab78b29737d33a8095039f488f301103bca463"
+    version "11.1.1"
+    sha256 arm64_linux:  "88fce57f75405092dac69e21968537083aa2881dbca0bfb3b0d85d9c05f8085b",
+           x86_64_linux: "bb81038c56a09e944659e4b808dbfbc52d52d5e3a3ffe32216689a3ca1508d3d"
 
     url "https://github.com/PrismLauncher/PrismLauncher/releases/download/#{version}/PrismLauncher-Linux-#{arch}.AppImage"
 
