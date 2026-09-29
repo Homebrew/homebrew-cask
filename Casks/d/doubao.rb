@@ -1,6 +1,6 @@
 cask "doubao" do
-  version "2.19.9"
-  sha256 "7ef9fee0d1b0202a4ad60a316ce9b9d06aab188203b983cae122cdaae1382a5b"
+  version "2.31.4"
+  sha256 "d139381c64f99a281fc5aff13669d351f417db9f7d645a498767075f47806eae"
 
   url "https://lf-flow-web-cdn.doubao.com/obj/flow-doubao/doubao_pc/#{version}/Doubao_universal_#{version}.dmg"
   name "doubao"
@@ -15,9 +15,11 @@ cask "doubao" do
   end
 
   auto_updates true
-  depends_on :macos
+  depends_on macos: :monterey
 
-  app "doubao.app"
+  app "Doubao.app"
+
+  uninstall delete: "/Applications/Doubao Browser.app"
 
   zap trash: [
     "~/Library/Application Scripts/com.bot.pc.doubao.FinderSyncExtension",
