@@ -30,6 +30,11 @@ cask "p4v" do
   command_wrapper "p4merge",
                   executable: "#{appdir}/p4merge.app/Contents/Resources/launchp4merge"
 
+  uninstall quit: [
+    "com.perforce.p4admin",
+    "com.perforce.p4v",
+  ]
+
   zap trash: [
     "~/Library/Preferences/com.perforce.p4v",
     "~/Library/Preferences/com.perforce.p4v.plist",
