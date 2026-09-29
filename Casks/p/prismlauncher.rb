@@ -30,6 +30,7 @@ cask "prismlauncher" do
       "~/Library/Application Support/PrismLauncher/prismlauncher.cfg",
       "~/Library/Preferences/org.prismlauncher.PrismLauncher.plist",
       "~/Library/Saved Application State/org.prismlauncher.PrismLauncher.savedState",
+      "~/Library/WebKit/org.prismlauncher.PrismLauncher",
     ]
   end
   on_linux do
