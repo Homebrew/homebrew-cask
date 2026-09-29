@@ -1,11 +1,11 @@
-cask "fujitsu-scansnap-home" do
-  version "4.0.0"
-  sha256 "02a42ef28f902a7c1fb87555572bf3694180a4f8f9ca5d55ee1a515bd50af61f"
+cask "scansnap-home" do
+  version "4.1.0"
+  sha256 "7b5c5ad3caa7a9f7d370d6be2057fc571319407e34f8159250f06d40bb0f7a82"
 
   url "https://origin.pfultd.com/downloads/ss/sshinst/m-#{version.no_dots}/MacSSHOfflineInstaller_#{version.dots_to_underscores}.dmg"
   name "ScanSnap Home"
-  desc "Fujitsu ScanSnap Scanner software"
-  homepage "https://www.fujitsu.com/global/products/computing/peripheral/scanners/soho/sshome/"
+  desc "ScanSnap Scanner software"
+  homepage "https://www.pfu.ricoh.com/global/scanners/scansnap/sshome/"
 
   livecheck do
     url "https://www.pfu.ricoh.com/imaging/ssacc/en/sshoffline.html"
