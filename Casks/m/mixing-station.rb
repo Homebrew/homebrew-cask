@@ -24,6 +24,8 @@ cask "mixing-station" do
 
   app "Mixing Station.app"
 
+  uninstall quit: "org.devcore.mixingstation.pc"
+
   zap trash: [
     "~/Library/Saved Application State/org.devcore.mixingstation.pc.savedState",
     "~/MixingStation",
