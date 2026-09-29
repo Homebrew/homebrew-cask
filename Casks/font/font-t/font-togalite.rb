@@ -12,12 +12,13 @@ cask "font-togalite" do
     regex(/トガリテ\s+VER\s+v?(\d+(?:\.\d+)+)/i)
   end
 
-  font "togalite/togalite-black.otf"
-  font "togalite/togalite-bold.otf"
-  font "togalite/togalite-heavy.otf"
-  font "togalite/togalite-light.otf"
-  font "togalite/togalite-medium.otf"
-  font "togalite/togalite-regular.otf"
+  font "togalite/Togalite-Black.otf"
+  font "togalite/Togalite-Bold.otf"
+  font "togalite/Togalite-Heavy.otf"
+  font "togalite/Togalite-Light.otf"
+  font "togalite/Togalite-Medium.otf"
+  font "togalite/Togalite-Regular.otf"
+  font "togalite/Togalite-Thin.otf"
 
   # No zap stanza required
 end
