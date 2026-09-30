@@ -1,14 +1,17 @@
 cask "unity-hub" do
   arch arm: "arm64", intel: on_system_conditional(macos: "x64", linux: "x86_64")
-  url_end = on_system_conditional macos: "dmg", linux: "AppImage"
+  os macos: "mac", linux: "linux"
 
-  version "3.21.3"
-  sha256 arm:          "15c1c3b03f036845d727047364358ca821c88ee4108b666db5368417053a154e",
-         intel:        "23d466b14ecebee5276956b06036715e194319b4d28b980785d5961634594c72",
-         x86_64_linux: "470d6e914c5f317fcc2989cb8b32e034b10d64c335ed9f556da9d8a3ef251cae"
+  version "3.22.0"
+  sha256 arm:          "8ca51a97afddc23a6f0e6c2aed65c7ccfa26f9bde8ada39dda89b787a49107f0",
+         intel:        "22bc5015822adf6fceec0153f50710f942ea3e81eccad6ea71adabc1b300f186",
+         arm64_linux:  "96233cf0fb744156b69f81d7fde2e498d38ea841e53f6aba17f10c6d013930bd",
+         x86_64_linux: "b6204e097c4eb09875ca6d5c39fce7f7d4fd1040089170a0715a7bc616326560"
 
   on_macos do
-    depends_on macos: :monterey
+    url "https://public-cdn.cloud.unity3d.com/hub/prod/#{version}/UnityHubSetup-#{version}-#{arch}.dmg"
+
+    depends_on macos: :ventura
 
     app "Unity Hub.app"
 
@@ -22,20 +25,19 @@ cask "unity-hub" do
         rmdir: "/Applications/Unity/Hub"
   end
   on_linux do
-    depends_on arch: :x86_64
+    url "https://public-cdn.cloud.unity3d.com/hub/prod/#{version}/UnityHub-#{version}-#{arch}.AppImage"
 
-    app_image "UnityHubSetup-#{version}-#{arch}.AppImage", target: "Unity Hub.AppImage"
+    app_image "UnityHub-#{version}-#{arch}.AppImage", target: "Unity Hub.AppImage"
 
     zap trash: "~/.config/unityhub"
   end
 
-  url "https://public-cdn.cloud.unity3d.com/hub/prod/#{version}/UnityHubSetup-#{version}-#{arch}.#{url_end}"
   name "Unity Hub"
   desc "Management tool for Unity"
   homepage "https://docs.unity.com/en-us/hub"
 
   livecheck do
-    url "https://public-cdn.cloud.unity3d.com/hub/prod/latest-mac.yml"
+    url "https://public-cdn.cloud.unity3d.com/hub/prod/latest-#{os}.yml"
     strategy :electron_builder
   end
 
