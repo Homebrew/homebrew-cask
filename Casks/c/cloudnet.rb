@@ -1,6 +1,6 @@
 cask "cloudnet" do
-  version "1.36.2.22"
-  sha256 "c8f685ff4414c9660068da2b060041ab929e7459a48992db1f8327f1f64fa332"
+  version "1.36.2.23"
+  sha256 "e09509271aef7b2a79b0d1f28788c8fe7417b029ac4e802179d39e69a8ec2bb2"
 
   url "https://pkgs.cloudnet.world/stable/macos/CloudNet_v#{version}.dmg"
   name "CloudNet for Mac client"
@@ -9,11 +9,11 @@ cask "cloudnet" do
 
   livecheck do
     url "https://pkgs.cloudnet.world/stable/appcast.xml"
-    strategy :sparkle
+    strategy :sparkle, &:short_version
   end
 
   auto_updates true
-  depends_on :macos
+  depends_on macos: :monterey
 
   app "CloudNet.app"
   installer script: {
