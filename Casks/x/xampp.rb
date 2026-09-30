@@ -27,7 +27,7 @@ cask "xampp" do
               args:       ["--mode", "unattended"],
               sudo:       true,
             },
-            delete: "/Applications/XAMPP/"
+            delete: "/Applications/XAMPP"
 
   # No zap stanza required
 end

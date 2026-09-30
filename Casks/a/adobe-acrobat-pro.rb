@@ -35,7 +35,7 @@ cask "adobe-acrobat-pro" do
               "com.adobe.armdc.app.pkg",
               "com.adobe.PDApp.AdobeApplicationManager.installer.pkg",
             ],
-            delete:    "/Applications/Adobe Acrobat DC/"
+            delete:    "/Applications/Adobe Acrobat DC"
 
   zap trash: [
     "~/Library/Application Support/Adobe/Acrobat",
