@@ -72,6 +72,8 @@ cask "onyx" do
   zap trash: [
     "~/Library/Caches/com.apple.helpd/Generated/com.titanium.OnyX.help*",
     "~/Library/Caches/com.apple.helpd/SDMHelpData/Other/English/HelpSDMIndexFile/com.titanium.OnyX.help*",
+    "~/Library/Caches/com.titanium.OnyX",
+    "~/Library/HTTPStorages/com.titanium.OnyX",
     "~/Library/Logs/OnyX.log",
     "~/Library/Preferences/com.titanium.OnyX.plist",
     "~/Library/Preferences/com.titanium.OnyX.update.plist",
