@@ -17,6 +17,8 @@ cask "marsedit" do
 
   app "MarsEdit.app"
 
+  uninstall quit: "com.red-sweater.marsedit5"
+
   zap trash: [
     "~/Library/Application Scripts/com.red-sweater.*",
     "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.red-sweater.marsedit*",
