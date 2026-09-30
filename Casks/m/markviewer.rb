@@ -1,6 +1,6 @@
 cask "markviewer" do
-  version "1.8.11"
-  sha256 "87175b5a7a268b0826e9dc1b70bc7578abf814914333d373b9f4351fd90b934d"
+  version "1.8.12"
+  sha256 "fd98548d86d4f3903d36a2095aad638f69d3134cb0998df0930a07fab13411db"
 
   url "https://github.com/SeungbinBaik/markviewer-releases/releases/download/v#{version}/MarkViewer.dmg"
   name "MarkViewer"
