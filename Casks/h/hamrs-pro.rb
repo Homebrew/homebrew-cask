@@ -20,6 +20,8 @@ cask "hamrs-pro" do
 
   app "HAMRS Pro.app"
 
+  uninstall quit: "app.hamrs.pro"
+
   zap trash: [
     "~/Library/Application Support/hamrs-pro",
     "~/Library/Logs/hamrs-pro",
