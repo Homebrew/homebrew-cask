@@ -22,6 +22,12 @@ cask "steinberg-library-manager" do
 
   pkg "Library Manager.pkg"
 
+  postflight_steps do
+    run "/Applications/Steinberg Library Manager.app/Contents/MacOS/Steinberg Library Manager",
+        args: ["-installHelper"],
+        sudo: true
+  end
+
   uninstall launchctl: "com.steinberg.HALionLibraryInstallerHelper",
             quit:      "com.steinberg.HALionLibraryManager",
             pkgutil:   [
