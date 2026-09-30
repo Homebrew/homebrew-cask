@@ -17,7 +17,12 @@ cask "reverso" do
 
   app "Reverso.app"
 
-  uninstall quit: "com.softissimo.ReversoContext.macosapp"
+  uninstall launchctl: "com.softissimo.ReversoContext.Auto-Launcher-Reverso",
+            quit:      [
+              "com.softissimo.ReversoContext.macosapp",
+              "com.softissimo.ReversoContext.macosapp.helper",
+              "com.softissimo.ReversoContext.Reverso-Quick-Search",
+            ]
 
   zap trash: [
     "~/Library/Application Scripts/com.softissimo.ReversoContext.*",
