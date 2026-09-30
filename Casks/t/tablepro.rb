@@ -23,6 +23,7 @@ cask "tablepro" do
   uninstall quit: "com.TablePro"
 
   zap trash: [
+    "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.tablepro.sfl*",
     "~/Library/Application Support/TablePro",
     "~/Library/Caches/com.TablePro",
     "~/Library/HTTPStorages/com.TablePro",
