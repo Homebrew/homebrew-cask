@@ -30,7 +30,7 @@ cask "realvnc-connect-viewer" do
 
   zap trash: [
         "~/Library/Application Support/rvnc",
-        "~/Library/Logs/vnc/",
+        "~/Library/Logs/vnc",
         "~/Library/Preferences/com.realvnc.rvncconnect.plist",
         "~/Library/Preferences/com.realvnc.vncviewer.plist",
         "~/Library/Saved Application State/com.realvnc.vncviewer.savedState",
