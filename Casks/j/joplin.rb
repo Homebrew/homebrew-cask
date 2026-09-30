@@ -17,6 +17,7 @@ cask "joplin" do
       "~/Library/Preferences/net.cozic.joplin-desktop.helper.plist",
       "~/Library/Preferences/net.cozic.joplin-desktop.plist",
       "~/Library/Saved Application State/net.cozic.joplin-desktop.savedState",
+      "~/.config/joplin-desktop",
     ]
   end
   on_linux do
