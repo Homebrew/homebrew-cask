@@ -3,11 +3,11 @@ cask "bruno" do
   os macos: "mac", linux: "linux"
   url_end = on_system_conditional macos: "dmg", linux: "AppImage"
 
-  version "4.2.0"
-  sha256 arm:          "1365c987971bae2ef323214605fc3e4d73a5f9f11eda451e6f82cd67725de484",
-         intel:        "7b83316b71fc76114cd84604f3d45609ebff7c34ebb81f27ec1be177e37b7d50",
-         arm64_linux:  "007d1e39c25db4c5492c32b961bac0b42238edae6b689a6d7f705466b8b65db0",
-         x86_64_linux: "2b0e36969acc093e44e73aba39cac24e395228a68531b1a41944fb7f9b8a9524"
+  version "4.2.1"
+  sha256 arm:          "357eabcc8c422a5d62bd64f5c4075a74dd6b72c40135141a521d54a170b0778d",
+         intel:        "4316d0f19c983e52c22e6dfd8cabe503865761f8210d9a45dba4fb3e1be7f502",
+         arm64_linux:  "3f5d0f5bebd3d7cf34d3301ba2fed9ccabd866d0ad615faf7307da9e9b56f18d",
+         x86_64_linux: "f6b77dc322dd57b953781589a44688723cf3c06a3513c5c34d077cd75d64a941"
 
   on_macos do
     auto_updates true
