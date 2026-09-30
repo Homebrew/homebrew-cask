@@ -16,11 +16,11 @@ cask "logseq" do
 
     zap trash: [
       "~/.logseq",
-      "~/logseq",
       "~/Library/Application Support/Logseq",
       "~/Library/Logs/Logseq",
       "~/Library/Preferences/com.electron.logseq.plist",
       "~/Library/Saved Application State/com.electron.logseq.savedState",
+      "~/logseq",
     ]
   end
   on_linux do
