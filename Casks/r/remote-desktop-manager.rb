@@ -1,6 +1,6 @@
 cask "remote-desktop-manager" do
-  version "2026.3.0.5"
-  sha256 "945b1d1ff44a31f28e2312e1da83c71a2c3ea7ff81e4c65c0298299648371204"
+  version "2026.3.1.2"
+  sha256 "03c9e9bec7e28add3efdfd339f922f88d825cfef775d536e1cb0b6a763190032"
 
   url "https://cdn.devolutions.net/download/Mac/Devolutions.RemoteDesktopManager.Mac.#{version}.dmg"
   name "Remote Desktop Manager"
