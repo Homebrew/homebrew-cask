@@ -1,6 +1,6 @@
 cask "stash" do
-  version "4.3.0,549"
-  sha256 "35c92a0d2b1829946476d658c5b2b9fc1a955d8c2a0e0032bf9e6a3bc2465e8a"
+  version "4.3.0,550"
+  sha256 "7e7264440bbf7732162416e78ba46123c9130ccce4abd17f64065bc2341c01a2"
 
   url "https://mac-release-static.stash.ws/Stash-build-#{version.csv.second}.zip"
   name "Stash"
