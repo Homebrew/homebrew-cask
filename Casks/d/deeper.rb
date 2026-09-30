@@ -46,6 +46,16 @@ cask "deeper" do
       regex(/>\s*Deeper\s+v?(\d+(?:\.\d+)+)\s+for\s+[\w\s]*26\s*</i)
     end
   end
+  on_golden_gate :or_newer do
+    version "3.4.0"
+
+    url "https://www.titanium-software.fr/download/27/Deeper.dmg"
+
+    livecheck do
+      url :homepage
+      regex(/>\s*Deeper\s+v?(\d+(?:\.\d+)+)\s+for\s+[\w\s]*27\s*</i)
+    end
+  end
 
   name "Deeper"
   desc "Tool to enable and disable hidden functions of Finder and other apps"
