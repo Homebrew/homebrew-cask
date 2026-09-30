@@ -5,7 +5,7 @@ cask "ssl-download-manager" do
   url "https://softwareupdate.solidstatelogic.com/DownloadManager/appReleases/latest/SSL%20Download%20Manager-#{version}-universal.dmg"
   name "SSL Download Manager"
   desc "Software manager for SSL plug-ins"
-  homepage "https://www.solidstatelogic.com/ssl-download-manager"
+  homepage "https://www.solidstatelogic.com"
 
   livecheck do
     url :homepage
