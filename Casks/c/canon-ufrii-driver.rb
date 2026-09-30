@@ -1,6 +1,6 @@
 cask "canon-ufrii-driver" do
-  version "10.19.25,2026"
-  sha256 "103a190b3b689799ddf7921548e317f4ae9ac72d41a1c0e2df0182c26a659024"
+  version "10.19.26,2026"
+  sha256 "ce504e79a2a396cf706a5785ac0a08adccac03dd07f212f29a6530bb259963a4"
 
   url "https://downloads.canon.com/sss#{version.csv.second}/drivers/UFRII_v#{version.csv.first}_mac.zip"
   name "Canon UFR II/UFRII LT/LIPSLX/CARPS2 Printer Driver"
