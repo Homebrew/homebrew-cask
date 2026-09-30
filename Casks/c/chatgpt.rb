@@ -25,6 +25,7 @@ cask "chatgpt" do
 
   zap trash: [
         "/Library/Application Support/CodexComputerUseAuthorizationPlugin",
+        "~/Library/Application Scripts/*.com.openai.sky.CUAService",
         "~/Library/Application Support/Codex",
         "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.openai.codex.sfl*",
         "~/Library/Application Support/com.openai.codex",
