@@ -19,6 +19,8 @@ cask "logseq" do
       "~/Library/Logs/Logseq",
       "~/Library/Preferences/com.electron.logseq.plist",
       "~/Library/Saved Application State/com.electron.logseq.savedState",
+      "~/.logseq",
+      "~/logseq",
     ]
   end
   on_linux do
