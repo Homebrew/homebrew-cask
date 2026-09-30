@@ -1,6 +1,6 @@
 cask "minmaxcal" do
-  version "0.9.2"
-  sha256 "44600f99be2f92963a5da66d46d0117d6581a7ac11d1ce3630ed440acac71a62"
+  version "0.9.3"
+  sha256 "708dcb3183c19412339fc95543768bffd674edcba9a99bbd8e4918a1c87c86c6"
 
   url "https://github.com/MikeMcQuaid/MinMaxCal/releases/download/#{version}/MinMaxCal-#{version}.zip"
   name "MinMaxCal"
@@ -8,7 +8,7 @@ cask "minmaxcal" do
   homepage "https://github.com/MikeMcQuaid/MinMaxCal"
 
   depends_on arch: :arm64
-  depends_on macos: :golden_gate
+  depends_on macos: :tahoe
 
   app "MinMaxCal.app"
 
