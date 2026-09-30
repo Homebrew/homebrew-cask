@@ -20,6 +20,8 @@ cask "replit" do
 
   app "Replit.app"
 
+  uninstall quit: "com.electron.replit"
+
   zap trash: [
     "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.electron.replit.*",
     "~/Library/Application Support/Replit",
