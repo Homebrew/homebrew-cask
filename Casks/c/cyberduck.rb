@@ -20,6 +20,7 @@ cask "cyberduck" do
   uninstall quit: "ch.sudo.cyberduck"
 
   zap trash: [
+    "~/Library/Application Scripts/G69SCX94XU.duck",
     "~/Library/Application Support/Cyberduck",
     "~/Library/Caches/ch.sudo.cyberduck",
     "~/Library/Group Containers/G69SCX94XU.duck",
