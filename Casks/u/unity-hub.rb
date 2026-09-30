@@ -1,5 +1,6 @@
 cask "unity-hub" do
   arch arm: "arm64", intel: on_system_conditional(macos: "x64", linux: "x86_64")
+  os macos: "mac", linux: "linux"
 
   version "3.22.0"
   sha256 arm:          "8ca51a97afddc23a6f0e6c2aed65c7ccfa26f9bde8ada39dda89b787a49107f0",
@@ -9,11 +10,6 @@ cask "unity-hub" do
 
   on_macos do
     url "https://public-cdn.cloud.unity3d.com/hub/prod/#{version}/UnityHubSetup-#{version}-#{arch}.dmg"
-
-    livecheck do
-      url "https://public-cdn.cloud.unity3d.com/hub/prod/latest-mac.yml"
-      strategy :electron_builder
-    end
 
     depends_on macos: :ventura
 
@@ -31,11 +27,6 @@ cask "unity-hub" do
   on_linux do
     url "https://public-cdn.cloud.unity3d.com/hub/prod/#{version}/UnityHub-#{version}-#{arch}.AppImage"
 
-    livecheck do
-      url "https://public-cdn.cloud.unity3d.com/hub/prod/latest-linux.yml"
-      strategy :electron_builder
-    end
-
     app_image "UnityHub-#{version}-#{arch}.AppImage", target: "Unity Hub.AppImage"
 
     zap trash: "~/.config/unityhub"
@@ -44,6 +35,11 @@ cask "unity-hub" do
   name "Unity Hub"
   desc "Management tool for Unity"
   homepage "https://docs.unity.com/en-us/hub"
+
+  livecheck do
+    url "https://public-cdn.cloud.unity3d.com/hub/prod/latest-#{os}.yml"
+    strategy :electron_builder
+  end
 
   auto_updates true
   conflicts_with cask: "unity-hub@beta"
