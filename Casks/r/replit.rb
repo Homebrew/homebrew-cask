@@ -1,5 +1,5 @@
 cask "replit" do
-  version "1.1.12"
+  version "1.1.15"
   sha256 :no_check
 
   url "https://desktop.replit.com/download/mac"
@@ -19,6 +19,8 @@ cask "replit" do
   depends_on macos: :monterey
 
   app "Replit.app"
+
+  uninstall quit: "com.electron.replit"
 
   zap trash: [
     "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.electron.replit.*",
