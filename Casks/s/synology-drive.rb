@@ -1,16 +1,25 @@
 cask "synology-drive" do
-  version "4.2.0,20058"
-  sha256 "a059321b58a9dfe7dff618516a90f86bf1e3f99aca7045ae7482abe0e32d6094"
+  version "4.0.3,17892"
+  sha256 "f99240eebd31621a6eeb5e08d66a882c27d837ff1875d1308168259a6a5f07ea"
 
   url "https://global.download.synology.com/download/Utility/SynologyDriveClient/#{version.tr(",", "-")}/Mac/Installer/synology-drive-client-#{version.csv.second}.dmg"
   name "Synology Drive"
   desc "Sync and backup service to Synology NAS drives"
   homepage "https://www.synology.com/"
 
+  # The release notes also list builds for DSM Enterprise, which are not
+  # compatible with regular DSM, so check the downloads for a regular DSM model
   livecheck do
-    url "https://www.synology.com/api/releaseNote/findChangeLog?identify=SynologyDriveClient&lang=en-us"
+    url "https://www.synology.com/api/support/findDownloadInfo?lang=en-us&product=DS923%2B"
     strategy :json do |json|
-      json.dig("info", "versions", "", "all_versions")&.map { |item| item["version"]&.tr("-", ",") }
+      json.dig("info", "utilities", "detail")&.map do |group|
+        group["items"]&.map do |item|
+          next if item["identify"] != "SynologyDriveClient"
+          next if item.dig("files", "Mac").blank?
+
+          item["version"]&.tr("-", ",")
+        end
+      end&.flatten
     end
   end
 
