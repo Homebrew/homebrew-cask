@@ -1,6 +1,6 @@
 cask "tunnelblick@beta" do
-  version "10.0beta03,6520"
-  sha256 "e8caa595078f1756c1f186987271264b0adb9ce5c42070e0d33c94cc9d5787d9"
+  version "10.0beta04,6530"
+  sha256 "5d0f10d99bc5de4a7f0357a40f278ededdabf751d05873226a205b55c3fc9402"
 
   url "https://tunnelblick.net/iprelease/Tunnelblick_#{version.csv.first}_build_#{version.csv.second}.dmg"
   name "Tunnelblick"
