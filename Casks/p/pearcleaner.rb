@@ -22,12 +22,16 @@ cask "pearcleaner" do
 
   zap trash: [
     "~/Library/Application Scripts/com.alienator88.Pearcleaner*",
+    "~/Library/Application Scripts/group.com.alienator88.Pearcleaner",
     "~/Library/Application Support/Pearcleaner",
     "~/Library/Caches/com.alienator88.Pearcleaner",
     "~/Library/Containers/com.alienator88.Pearcleaner*",
     "~/Library/Group Containers/com.alienator88.Pearcleaner",
+    "~/Library/Group Containers/group.com.alienator88.Pearcleaner",
     "~/Library/HTTPStorages/com.alienator88.Pearcleaner",
     "~/Library/Preferences/com.alienator88.Pearcleaner.plist",
+    "~/Library/Preferences/group.com.alienator88.Pearcleaner.plist",
+    "~/Library/Preferences/pearcleaner.plist",
     "~/Library/Saved Application State/com.alienator88.Pearcleaner.savedState",
   ]
 end
