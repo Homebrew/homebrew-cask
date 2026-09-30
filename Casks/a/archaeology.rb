@@ -24,8 +24,10 @@ cask "archaeology" do
   binary "#{appdir}/Archaeology.app/Contents/MacOS/trowel"
 
   zap trash: [
+    "~/Library/Application Scripts/*.com.mothersruin.MRSFoundation.ASN1AnnotationStore",
     "~/Library/Application Scripts/com.mothersruin.Archaeology",
     "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.mothersruin.archaeology.sfl*",
     "~/Library/Containers/com.mothersruin.Archaeology",
+    "~/Library/Group Containers/*.com.mothersruin.MRSFoundation.ASN1AnnotationStore",
   ]
 end
