@@ -84,6 +84,8 @@ cask "gpgfrontend" do
     "~/Library/Application Scripts/pub.gpgfrontend.gpgfrontend",
     "~/Library/Application Support/GpgFrontend",
     "~/Library/Containers/pub.gpgfrontend.gpgfrontend",
+    "~/Library/Preferences/com.bktus.gpgfrontend.GpgFrontend.plist",
+    "~/Library/Preferences/com.bktus.GpgFrontend.plist",
     "~/Library/Preferences/GpgFrontend",
     "~/Library/Preferences/GpgFrontend.plist",
     "~/Library/Preferences/pub.gpgfrontend.gpgfrontend.plist",
