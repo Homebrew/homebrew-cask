@@ -1,6 +1,6 @@
 cask "manus-cue" do
-  version "1.0.1"
-  sha256 "55ee16923e73911d3f7b63f2e8e4e736f0a564503e0e778654e7ff8c6c112eb9"
+  version "1.0.3"
+  sha256 "871298be947d95804202931906158aec91c86ef7f074df03f17657b6ab7c4ea9"
 
   url "https://download.cue.im/Cue-#{version}-mac-arm64.dmg"
   name "Cue"
@@ -21,6 +21,7 @@ cask "manus-cue" do
   uninstall quit: "ai.manus.agents"
 
   zap trash: [
+    "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/ai.manus.agents.sfl*",
     "~/Library/Application Support/Cue",
     "~/Library/Preferences/ai.manus.agents.plist",
   ]
