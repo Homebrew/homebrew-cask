@@ -19,6 +19,8 @@ cask "panoply" do
 
   app "Panoply.app"
 
+  uninstall quit: "gov.nasa.giss.panoply"
+
   zap trash: [
     "~/Library/Caches/gov.nasa.giss.panoply",
     "~/Library/Preferences/gov.nasa.giss.panoply.plist",
