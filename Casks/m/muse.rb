@@ -7,10 +7,7 @@ cask "muse" do
   desc "AI assistant for managing tasks, projects, and long-term goals"
   homepage "https://muse.ai/"
 
-  livecheck do
-    url "https://www.facebook.com/endo/release/appcast.xml?channel=production"
-    strategy :sparkle, &:short_version
-  end
+  disable! date: "2026-10-01", because: "requires a signed download URL, which is not supported by Homebrew"
 
   auto_updates true
   depends_on macos: :sonoma
