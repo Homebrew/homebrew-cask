@@ -1,6 +1,6 @@
 cask "power-manager" do
-  version "5.15.0"
-  sha256 "e5e27a6fa7c85f306077797d1b7f3848dea79e341997379fd0d0bdb51750c00d"
+  version "5.15.1"
+  sha256 "0c039d5d8e98e793349eb4a72bbb59f218148616475d4814750841a2517ad449"
 
   url "https://www.dssw.co.uk/powermanager/dsswpowermanager-#{version.no_dots}.dmg"
   name "Power Manager"
