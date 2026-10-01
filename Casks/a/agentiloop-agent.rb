@@ -1,6 +1,6 @@
 cask "agentiloop-agent" do
-  version "1.1.33.233"
-  sha256 "32272119b869f06b8377341f3a3cc7894649bc799a1dd021b3fb56eb058e27db"
+  version "1.1.87.287"
+  sha256 "ea2bf3a88c1573d2aaecde6dfcbf982a7aad8282b2a1190b53a347d12b710928"
 
   url "https://github.com/AgentiLoop/Agent/releases/download/v#{version}/Agent-v#{version}-macOS.dmg"
   name "Agent!"
@@ -14,7 +14,7 @@ cask "agentiloop-agent" do
   end
 
   depends_on arch: :arm64
-  depends_on macos: :tahoe
+  depends_on macos: :sonoma
 
   app "Agent!.app"
 
