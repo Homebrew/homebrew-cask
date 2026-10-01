@@ -19,8 +19,6 @@ cask "napari" do
 
   pkg "napari-#{version}-macOS-#{arch}.pkg"
 
-  # pkgutil receipts only cover the staged package cache; the conda environment
-  # and the app bundle are created by the installer's post-install scripts.
   uninstall pkgutil: "org.napari.pkg.*",
             delete:  [
               "/Applications/napari (#{version}).app",
