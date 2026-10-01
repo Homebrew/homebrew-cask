@@ -1,9 +1,9 @@
 cask "geolibre" do
   arch arm: "aarch64", intel: "x64"
 
-  version "3.1.0"
-  sha256 arm:   "5b44b0e0e4dd05fc4a93d0bdb5971dea0ed700b16e4bf172ce59cbe4b8b909e5",
-         intel: "3e85b842661a2f5591668d0ee71b9b3e0b2e1233a972d8b3d05c6738d7867afc"
+  version "3.2.0"
+  sha256 arm:   "edc7155b37bb149f30f01c76c37eff14964628976d875102865be5d1ef3b7102",
+         intel: "8c44b4c22b1d5ce526cd06621b7161140b7f4ebb8134df4a91b33958f103b363"
 
   url "https://github.com/opengeos/GeoLibre/releases/download/v#{version}/GeoLibre.Desktop_#{version}_#{arch}.dmg"
   name "GeoLibre Desktop"
