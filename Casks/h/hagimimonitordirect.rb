@@ -5,7 +5,7 @@ cask "hagimimonitordirect" do
   url "https://github.com/Acerola-1/hagimi-monitor/releases/download/v#{version}/HagimiMonitor.dmg"
   name "Hagimi Monitor"
   desc "Menu bar monitor for system performance and hardware"
-  homepage "https://acerola-1.github.io/hagimi-monitor/en/"
+  homepage "https://acerola-1.github.io/hagimi-monitor/"
 
   auto_updates true
   depends_on arch: :arm64
