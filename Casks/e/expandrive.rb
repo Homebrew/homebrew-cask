@@ -1,5 +1,5 @@
 cask "expandrive" do
-  version "2026.09.30.898"
+  version "2026.10.01.900"
   sha256 :no_check
 
   url "https://www.expandrive.com/api/download/expandrive?platform=macos"
