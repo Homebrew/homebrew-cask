@@ -25,6 +25,8 @@ cask "eaglefiler" do
 
   app "EagleFiler.app"
 
+  uninstall quit: "com.apple.helpviewer"
+
   zap trash: [
     "~/Library/Application Scripts/com.c-command.EagleFiler.EagleFilerShare",
     "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.c-command.eaglefiler.sfl*",
