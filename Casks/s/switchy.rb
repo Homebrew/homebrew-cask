@@ -9,7 +9,9 @@ cask "switchy" do
 
   livecheck do
     url "https://mangobuns.com/switchy/appcast.xml"
-    strategy :sparkle
+    strategy :sparkle do |items|
+      items.find { |item| item.channel.nil? }&.nice_version
+    end
   end
 
   auto_updates true
