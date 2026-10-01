@@ -10,6 +10,8 @@ cask "librewolf" do
          x86_64_linux: "02f8f9c7d5108e5e386a0645ce1111e92e46e9e28fa41c6a5b5af3969c4cba5d"
 
   on_macos do
+    auto_updates true
+    
     app "LibreWolf.app"
     command_wrapper "librewolf",
                     executable: "#{appdir}/LibreWolf.app/Contents/MacOS/librewolf"
