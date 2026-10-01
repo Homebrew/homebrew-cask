@@ -14,6 +14,8 @@ cask "meru" do
 
   app "Meru.app"
 
+  uninstall quit: "sh.zoid.meru"
+
   zap trash: [
     "~/Library/Application Support/Meru",
     "~/Library/Caches/meru-updater",
