@@ -39,7 +39,9 @@ cask "orbstack" do
 
   zap trash: [
         "~/.orbstack",
+        "~/Library/Application Scripts/*.dev.orbstack",
         "~/Library/Caches/dev.kdrag0n.MacVirt",
+        "~/Library/Caches/SentryCrash/OrbStack",
         "~/Library/Group Containers/*.dev.orbstack",
         "~/Library/HTTPStorages/dev.kdrag0n.MacVirt",
         "~/Library/HTTPStorages/dev.kdrag0n.MacVirt.binarycookies",
