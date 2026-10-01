@@ -10,6 +10,11 @@ cask "luxury-yacht" do
   desc "Desktop app for managing Kubernetes clusters"
   homepage "https://luxury-yacht.app/"
 
+  livecheck do
+    url :url
+    strategy :github_latest
+  end
+
   depends_on macos: :monterey
 
   app "Luxury Yacht.app"
