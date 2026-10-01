@@ -10,7 +10,7 @@ cask "meru" do
   desc "Gmail desktop app"
   homepage "https://meru.so/"
 
-  depends_on macos: :monterey
+  depends_on macos: :ventura
 
   app "Meru.app"
 
