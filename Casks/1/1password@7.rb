@@ -1,6 +1,6 @@
 cask "1password@7" do
-  version "7.9.11"
-  sha256 "11b14910a2cf0e544e317e49f4a62491e5190545ed684236a295f51d722f30db"
+  version "7.10.4"
+  sha256 "e4f5cdaee7fc9b92b229fbf4cc8a38cc80382fd31e4d03cc6719a0b87d7aac3a"
 
   url "https://c.1password.com/dist/1P/mac#{version.major}/1Password-#{version}.zip"
   name "1Password"
@@ -15,7 +15,7 @@ cask "1password@7" do
   end
 
   auto_updates true
-  depends_on :macos
+  depends_on macos: :monterey
 
   app "1Password #{version.major}.app"
 
