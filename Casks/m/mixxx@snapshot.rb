@@ -1,14 +1,14 @@
 cask "mixxx@snapshot" do
   arch arm: "arm", intel: "intel"
 
-  sha256 arm:   "a3c064d8a6d03accef38c0b61e872f8a6c43389d70c2a6dfa1941e6aff3d8243",
-         intel: "e36e301b546ad8bfdac462d3721917ec2b7614bd2497ba6411b3eb90b63dbdd4"
+  sha256 arm:   "e27c3e7f0f276d6cd02c59e84bbf36d62184f1bd777af5a82f5ea90ed9578c1f",
+         intel: "a5de46773b8439af864d6de20c23f94cf7332c5486173502e01574b916e5dd2e"
 
   on_arm do
-    version "2.7-alpha-408-g53ada03f50"
+    version "2.7-alpha-409-g414699c2f0"
   end
   on_intel do
-    version "2.7-alpha-408-g53ada03f50"
+    version "2.7-alpha-409-g414699c2f0"
   end
 
   url "https://downloads.mixxx.org/snapshots/main/mixxx-#{version}-macos#{arch}.dmg"
