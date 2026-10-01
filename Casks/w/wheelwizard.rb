@@ -10,11 +10,6 @@ cask "wheelwizard" do
   desc "Mod manager for Mario Kart Wii and Retro Rewind"
   homepage "https://github.com/TeamWheelWizard/WheelWizard"
 
-  livecheck do
-    url :url
-    strategy :github_latest
-  end
-
   depends_on macos: :monterey
 
   app "WheelWizard.app"
