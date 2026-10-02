@@ -1,6 +1,6 @@
 cask "meetmic" do
-  version "1.36.555"
-  sha256 "d68bd6d8e4c5bdfe67aa5fb51b660fd0f8b8a150d06e5fa4ccc3af4dec3185a2"
+  version "1.36.560"
+  sha256 "ab00d27a9886fd861a9d7ead4fddf39d63565f3cece953b25260261bcb3a02a2"
 
   url "https://meetmicdev.s3.us-west-002.backblazeb2.com/MeetMic-#{version}.zip"
   name "MeetMic"
