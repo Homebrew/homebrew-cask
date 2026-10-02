@@ -12,7 +12,7 @@ cask "argo-books" do
 
   livecheck do
     url "https://argorobots.com/avalonia-update.xml"
-    strategy :sparkle
+    regex(/ArgoBooks[._-]v?(\d+(?:\.\d+)+)-osx/i)
   end
 
   auto_updates true
