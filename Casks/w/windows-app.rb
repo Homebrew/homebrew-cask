@@ -12,7 +12,6 @@ cask "windows-app" do
     strategy :header_match
   end
 
-  conflicts_with cask: "microsoft-remote-desktop"
   depends_on macos: :sonoma
 
   pkg "Windows_App_#{version}_installer.pkg",
