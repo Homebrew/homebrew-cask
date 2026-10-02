@@ -9,7 +9,7 @@ cask "folo" do
          x86_64_linux: "58ecc7b8bc2df47dbaae5fb4d2a03029d19dacf9f364b2d8d8f38e42ab5a0d31"
 
   on_macos do
-    depends_on macos: :monterey
+    depends_on macos: :ventura
 
     app "Folo.app"
 
