@@ -1,6 +1,6 @@
 cask "novation-components" do
-  version "1.72.0"
-  sha256 "c9871d2747f4aa03e56de5cfe9ad9675a7d18a63ce934cc9e903c6dcb9756b0e"
+  version "1.72.1"
+  sha256 "38a18324a989151f1dba633fe4cc59ae450960044f8ba1cc380db1bd93b8ab1f"
 
   url "https://components-updates.novationmusic.com/download/version/#{version}/osx_64?filetype=zip"
   name "Novation Components"
