@@ -7,10 +7,7 @@ cask "app-fair" do
   desc "Catalogue of free and commercial native desktop applications"
   homepage "https://appfair.app/"
 
-  livecheck do
-    url :url
-    strategy :github_latest
-  end
+  deprecate! date: "2026-10-02", because: :discontinued
 
   depends_on macos: :monterey
 
