@@ -20,8 +20,10 @@ cask "ghostty" do
   manpage "#{appdir}/Ghostty.app/Contents/Resources/man/man1/ghostty.1"
   manpage "#{appdir}/Ghostty.app/Contents/Resources/man/man5/ghostty.5"
   bash_completion "#{appdir}/Ghostty.app/Contents/Resources/bash-completion/completions/ghostty.bash"
-  fish_completion "#{appdir}/Ghostty.app/Contents/Resources/fish/vendor_completions.d/ghostty.fish"
   zsh_completion "#{appdir}/Ghostty.app/Contents/Resources/zsh/site-functions/_ghostty"
+  fish_completion "#{appdir}/Ghostty.app/Contents/Resources/fish/vendor_completions.d/ghostty.fish"
+
+  uninstall quit: "com.mitchellh.ghostty"
 
   zap trash: [
     "~/.cache/ghostty",
