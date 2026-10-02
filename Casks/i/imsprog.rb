@@ -9,8 +9,6 @@ cask "imsprog" do
 
   container nested: "imsprog-macos-arm64.dmg"
 
-  depends_on macos: :catalina
-
   app "IMSProg.app"
   app "IMSProg_editor.app"
   app "IMSProg_database_update.app"
