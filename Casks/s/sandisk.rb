@@ -5,15 +5,14 @@ cask "sandisk" do
   url "https://downloads.sandisk.com/downloads/sandiskapp-mac.dmg"
   name "sandisk"
   desc "Managing SanDisk external drives"
-  homepage "https://www.sandisk.com/"
+  homepage "https://www.sandisk.com/topics/accessories/sandisk-app-for-backups"
 
   depends_on arch: :arm64
-  depends_on macos: :big_sur
 
   app "SANDISK.app"
 
   zap trash: [
-        "~/Library/HTTPStorages/com.sandisk.smz2.mac",
         "~/Library/Application Support/com.sandisk.smz2.mac",
+        "~/Library/HTTPStorages/com.sandisk.smz2.mac",
       ]
 end
