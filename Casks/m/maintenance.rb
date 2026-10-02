@@ -42,7 +42,7 @@ cask "maintenance" do
   on_golden_gate :or_newer do
     version "3.6.0"
 
-    url "https//www.titanium-software.fr/download/27/Maintenance.dmg"
+    url "https://www.titanium-software.fr/download/27/Maintenance.dmg"
 
     # We check the version on the homepage, as the version in the related plist
     # file can be out of date.
