@@ -7,7 +7,7 @@ cask "imsprog" do
   desc "GUI utility for SPI Flash, EEPROM, and FeRAM"
   homepage "https://github.com/bigbigmdm/IMSProg"
 
-  depends_on macos:
+  depends_on macos: ">= :big_sur"
 
   app "IMSProg.app"
   app "IMSProg_database_update.app"
