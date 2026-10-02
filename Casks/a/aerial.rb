@@ -9,8 +9,8 @@ cask "aerial" do
     end
   end
   on_tahoe :or_newer do
-    version "4.1.5"
-    sha256 "08e8ee1bd8fe74d80042590aa7e923b2385e797bd233d41f269176210665008a"
+    version "4.1.6"
+    sha256 "e9b7d69fb38f477a13b8ef38559dbe2d1ecb7789b83f47bbbf60197453de2b6c"
 
     livecheck do
       url :url
