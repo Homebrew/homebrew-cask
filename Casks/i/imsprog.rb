@@ -4,11 +4,13 @@ cask "imsprog" do
 
   url "https://github.com/bigbigmdm/IMSProg/releases/download/v#{version}/macos-arm64-dmg.zip"
   name "IMSProg"
-  desc "Linux/cross-platform GUI utility for SPI Flash, EEPROM, and FeRAM"
+  desc "GUI utility for SPI Flash, EEPROM, and FeRAM"
   homepage "https://github.com/bigbigmdm/IMSProg"
 
   container nested: "imsprog-macos-arm64.dmg"
-  
+
+  depends_on macos: ">= :catalina"
+
   app "IMSProg.app"
   app "IMSProg_editor.app"
   app "IMSProg_database_update.app"
