@@ -1,5 +1,5 @@
 cask "sandisk" do
-  version "3.4.1"
+  version "3.4.1,2601"
   sha256 :no_check
 
   url "https://downloads.sandisk.com/downloads/sandiskapp-mac.dmg"
@@ -18,6 +18,8 @@ cask "sandisk" do
 
   zap trash: [
     "~/Library/Application Support/com.sandisk.smz2.mac",
+    "~/Library/Caches/com.sandisk.smz2.mac",
     "~/Library/HTTPStorages/com.sandisk.smz2.mac",
+    "~/Library/Preferences/com.sandisk.smz2.mac.plist",
   ]
 end
