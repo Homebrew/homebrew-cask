@@ -7,6 +7,11 @@ cask "proxy-audio-device" do
   desc "Sound and audio controller"
   homepage "https://github.com/briankendall/proxy-audio-device"
 
+  livecheck do
+    url :url
+    regex(/^v?(\d+(?:\.\d+)+)$/i)
+  end
+
   depends_on :macos
 
   app "Proxy Audio Device Settings.app"
