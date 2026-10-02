@@ -8,8 +8,8 @@ cask "imsprog" do
   homepage "https://github.com/bigbigmdm/IMSProg"
 
   app "IMSProg.app"
-  app "IMSProg_editor.app"
   app "IMSProg_database_update.app"
+  app "IMSProg_editor.app"
 
   zap trash: [
     "~/.config/imsprog",
