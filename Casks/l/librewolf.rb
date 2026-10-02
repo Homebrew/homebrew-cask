@@ -11,7 +11,7 @@ cask "librewolf" do
 
   on_macos do
     auto_updates true
-    
+
     app "LibreWolf.app"
     command_wrapper "librewolf",
                     executable: "#{appdir}/LibreWolf.app/Contents/MacOS/librewolf"
