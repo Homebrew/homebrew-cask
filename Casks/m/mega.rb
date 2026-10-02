@@ -1,6 +1,6 @@
 cask "mega" do
-  version "12.1.2"
-  sha256 "f77e003d8597d8827052e2fb787b3b0b3cc64825d6d4b8c468d3d7dbfab271e6"
+  version "12.1.3"
+  sha256 "92c0257845f960d0c383bcd27079d52f74c44c28759e333948b30f1db8fefaee"
 
   url "https://megasoftware.net/releases/MEGA_#{version}_installer.pkg"
   name "MEGA"
