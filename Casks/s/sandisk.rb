@@ -8,7 +8,6 @@ cask "sandisk" do
   homepage "https://www.sandisk.com/topics/accessories/sandisk-app-for-backups"
 
   depends_on :macos
-  depends_on arch: :arm64
 
   app "SANDISK.app"
 
