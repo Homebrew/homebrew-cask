@@ -14,7 +14,6 @@ cask "teleport-suite" do
   end
 
   conflicts_with cask: [
-    "teleport-suite@16",
     "teleport-suite@17",
     "tsh",
   ]
