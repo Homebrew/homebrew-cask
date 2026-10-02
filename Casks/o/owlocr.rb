@@ -1,6 +1,6 @@
 cask "owlocr" do
-  version "7.21.1"
-  sha256 "06aa8c848d2944f9bf7e596da130a15bdb52afd4a0d4713626341ff773ab40b1"
+  version "7.21.2"
+  sha256 "a10ca6f2b953eec3c4aaf4dfcb2b54e8329df04e6ca3cdd6d327c517bb9e7418"
 
   url "https://owlocr.com/updates/mac/OwlOCR-#{version}-universal.dmg"
   name "OwlOCR"
