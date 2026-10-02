@@ -3,7 +3,7 @@ cask "sandisk" do
   sha256 :no_check
 
   url "https://downloads.sandisk.com/downloads/sandiskapp-mac.dmg"
-  name "sandisk"
+  name "SANDISK"
   desc "Managing SanDisk external drives"
   homepage "https://www.sandisk.com/topics/accessories/sandisk-app-for-backups"
 
