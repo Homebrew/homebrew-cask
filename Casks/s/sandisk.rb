@@ -7,6 +7,11 @@ cask "sandisk" do
   desc "Managing SanDisk external drives"
   homepage "https://www.sandisk.com/topics/accessories/sandisk-app-for-backups"
 
+  livecheck do
+    url :url
+    strategy :extract_plist
+  end
+
   depends_on :macos
 
   app "SANDISK.app"
