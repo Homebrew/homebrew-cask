@@ -24,9 +24,11 @@ cask "argo-books" do
 
   zap trash: [
     "~/Library/Application Support/ArgoBooks",
+    "~/Library/Caches/ArgoBooks",
     "~/Library/Caches/com.argobooks.ArgoBooks",
     "~/Library/HTTPStorages/com.argobooks.ArgoBooks",
     "~/Library/Preferences/com.argobooks.ArgoBooks.plist",
     "~/Library/Saved Application State/com.argobooks.ArgoBooks.savedState",
+    "~/Library/WebKit/com.argobooks.ArgoBooks",
   ]
 end
