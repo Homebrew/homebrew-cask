@@ -2,12 +2,13 @@ cask "shotcut" do
   os = on_system_conditional macos: "macos", linux: "linux-x86_64"
   url_end = on_system_conditional macos: "dmg", linux: "AppImage"
 
-  version "26.9.27"
-  sha256 arm:          "629b056bfee1670c1669dd73f19f76fe48e0cdf90e184dc1aa1bdd6d09aa2548",
-         intel:        "629b056bfee1670c1669dd73f19f76fe48e0cdf90e184dc1aa1bdd6d09aa2548",
+  sha256 arm:          "0e4c95ad41f26d96c442642e03e0c107bf98abfceea78724e2b05aa704ef79c6",
+         intel:        "0e4c95ad41f26d96c442642e03e0c107bf98abfceea78724e2b05aa704ef79c6",
          x86_64_linux: "a3da4b409d29b31294fe5097bb8c3f031d1e2cb0c14ff71717d1a7d4658e62de"
 
   on_macos do
+    version "26.9.28,26.9.27"
+
     depends_on macos: :monterey
 
     app "Shotcut.app"
@@ -19,6 +20,8 @@ cask "shotcut" do
     ]
   end
   on_linux do
+    version "26.9.27"
+
     depends_on arch: :x86_64
 
     app_image "shotcut-linux-x86_64-#{version.csv.second || version.csv.first}.AppImage", target: "Shotcut.AppImage"
@@ -30,7 +33,7 @@ cask "shotcut" do
     ]
   end
 
-  url "https://github.com/mltframework/shotcut/releases/download/v#{version.csv.first}/shotcut-#{os}-#{version.csv.second || version.csv.first}.#{url_end}"
+  url "https://github.com/mltframework/shotcut/releases/download/v#{version.csv.second || version.csv.first}/shotcut-#{os}-#{version.csv.first}.#{url_end}"
   name "Shotcut"
   desc "Video editor"
   homepage "https://www.shotcut.org/"
@@ -39,15 +42,13 @@ cask "shotcut" do
   # the `version` when necessary.
   livecheck do
     url :url
-    regex(%r{/v?(\d+(?:\.\d+)+)/shotcut[._-]macos[._-]v?(\d+(?:\.\d+)*)\.dmg$}i)
+    regex(%r{/v?(\d+(?:\.\d+)+)/shotcut[._-]#{os}[._-]v?(\d+(?:\.\d+)*)\.#{url_end}$}i)
     strategy :github_latest do |json, regex|
       json["assets"]&.map do |asset|
         match = asset["browser_download_url"]&.match(regex)
         next if match.blank?
 
-        next match[1] if match[1].tr(".", "") == match[2].tr(".", "")
-
-        "#{match[1]},#{match[2]}"
+        (match[1] == match[2]) ? match[1] : "#{match[2]},#{match[1]}"
       end
     end
   end
