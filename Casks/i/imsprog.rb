@@ -20,4 +20,3 @@ cask "imsprog" do
     "~/Library/Preferences/com.imsprog.plist",
   ]
 end
-
