@@ -1,6 +1,6 @@
 cask "markpad" do
-  version "2.8.2"
-  sha256 "ac419066ed1782e3e93666953a42bb9688b8d86710ca13a3e6a0a778b1557cec"
+  version "2.8.3"
+  sha256 "454f9ced0cb924a5d1c382187bb3e87a80a7bbec7afc4245f8a398ffbe04fbf1"
 
   url "https://github.com/sftwrdotdev/Markpad/releases/download/v#{version}/Markpad_#{version}_universal.dmg"
   name "Markpad"
