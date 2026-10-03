@@ -2,7 +2,8 @@ cask "youdaodict" do
   version "11.3.20,1083"
   sha256 :no_check
 
-  url "https://codown.youdao.com/cidian/download/MacDict.dmg"
+  url "https://codown.youdao.com/cidian/download/MacDict.dmg",
+      referer: "https://fanyi.youdao.com/"
   name "YoudaoDict"
   name "网易有道词典"
   desc "Youdao Dictionary"
