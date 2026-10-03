@@ -1,6 +1,6 @@
 cask "ua-connect" do
-  version "1.10.0,3844"
-  sha256 "9d0ca1af99bd7c16148f96f05f6f33aecc5ee2089c0554219f888b2331598470"
+  version "1.11.0,3866"
+  sha256 "d46e5a379c7cf66feaae2849827cc70218781fb1a0f3ab2b1021a4759af8680d"
 
   url "https://builds.uaudio.com/apps/UA_Connect/UA_Connect_#{version.csv.first.dots_to_underscores}_#{version.csv.second}_Mac.dmg"
   name "UA Connect"
