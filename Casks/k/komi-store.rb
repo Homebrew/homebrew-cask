@@ -6,7 +6,6 @@ cask "komi-store" do
 
     url "https://github.com/komi-store/komi-store/releases/download/v#{version}/Komi-Store-#{version}-arm64.dmg"
   end
-
   on_intel do
     sha256 "2d95aa11a273528978cb2dad427e592d0705bb8e67c099a91a3216677abc4315"
 
@@ -17,5 +16,12 @@ cask "komi-store" do
   desc "App store for open-source software releases"
   homepage "https://www.komistore.app/"
 
-  app "Komi Store.app"
+  depends_on :macos
+
+  app "Komi-Store.app"
+
+  zap trash: [
+    "~/Library/Application Support/Komi-Store",
+    "~/Library/Logs/Komi-Store",
+  ]
 end
