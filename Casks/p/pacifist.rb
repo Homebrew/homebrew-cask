@@ -18,6 +18,8 @@ cask "pacifist" do
   app "Pacifist.app"
   binary "#{appdir}/Pacifist.app/Contents/Resources/usr/bin/pacifist"
 
+  uninstall quit: "com.charlessoft.pacifist"
+
   zap trash: [
     "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.charlessoft.pacifist.sfl*",
     "~/Library/Preferences/com.charlessoft.pacifist.plist",
