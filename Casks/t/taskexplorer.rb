@@ -1,6 +1,6 @@
 cask "taskexplorer" do
-  version "3.0.0"
-  sha256 "4a97769ce5d185c45545e1fe8b5652774baf5ec29bf41a865c5b2a7bec961a02"
+  version "3.1.0"
+  sha256 "536bda55f06e45bd7edc6cbed29aeb230db0f003675388a78f45d714a9ca8705"
 
   url "https://github.com/objective-see/TaskExplorer/releases/download/v#{version}/TaskExplorer_#{version}.zip"
   name "TaskExplorer"
