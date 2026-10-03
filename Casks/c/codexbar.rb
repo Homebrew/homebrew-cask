@@ -1,6 +1,6 @@
 cask "codexbar" do
-  version "0.71.0"
-  sha256 "ddbdbe22cc338bb9120a5d2a36a393e6909497370c525f25ab27686c24817f50"
+  version "0.71.1"
+  sha256 "9aceec218496d84ec287016839950461fd25214359f97de94c69296ce757b154"
 
   url "https://github.com/steipete/CodexBar/releases/download/v#{version}/CodexBar-macos-universal-#{version}.zip"
   name "CodexBar"
