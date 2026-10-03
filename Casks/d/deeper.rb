@@ -3,7 +3,7 @@ cask "deeper" do
 
   # NOTE: We use separate `url` values in each of the macOS on_system blocks
   # so that the API data correctly includes URL variants for each.
-  on_sequoia :or_older do
+  on_tahoe :or_older do
     on_big_sur :or_older do
       version "2.7.1"
 
@@ -29,21 +29,26 @@ cask "deeper" do
 
       url "https://www.titanium-software.fr/download/15/Deeper.dmg"
     end
+    on_tahoe do
+      version "3.3.2"
+
+      url "https://www.titanium-software.fr/download/26/Deeper.dmg"
+    end
 
     livecheck do
       skip "Legacy version"
     end
   end
-  on_tahoe :or_newer do
-    version "3.3.2"
+  on_golden_gate :or_newer do
+    version "3.4.0"
 
-    url "https://www.titanium-software.fr/download/26/Deeper.dmg"
+    url "https://www.titanium-software.fr/download/27/Deeper.dmg"
 
     # We check the version on the homepage, as the version in the related plist
     # file can be out of date.
     livecheck do
       url :homepage
-      regex(/>\s*Deeper\s+v?(\d+(?:\.\d+)+)\s+for\s+[\w\s]*26\s*</i)
+      regex(/>\s*Deeper\s+v?(\d+(?:\.\d+)+)\s+for\s+[\w\s]*27\s*</i)
     end
   end
 
@@ -58,6 +63,7 @@ cask "deeper" do
     :sonoma,
     :sequoia,
     :tahoe,
+    :golden_gate,
   ]
 
   app "Deeper.app"

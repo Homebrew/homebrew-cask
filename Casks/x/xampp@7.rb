@@ -27,7 +27,7 @@ cask "xampp@7" do
               args:       ["--mode", "unattended"],
               sudo:       true,
             },
-            delete: "/Applications/XAMPP/"
+            delete: "/Applications/XAMPP"
 
   zap trash: "~/Library/Saved Application State/com.bitnami.manager.savedState"
 end

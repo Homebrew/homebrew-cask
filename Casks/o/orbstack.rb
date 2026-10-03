@@ -24,22 +24,25 @@ cask "orbstack" do
   binary "#{appdir}/OrbStack.app/Contents/MacOS/bin/orb"
   binary "#{appdir}/OrbStack.app/Contents/MacOS/bin/orbctl"
   bash_completion "#{appdir}/OrbStack.app/Contents/Resources/completions/bash/orbctl.bash"
-  fish_completion "#{appdir}/OrbStack.app/Contents/Resources/completions/fish/orbctl.fish"
   zsh_completion "#{appdir}/OrbStack.app/Contents/Resources/completions/zsh/_orb"
   zsh_completion "#{appdir}/OrbStack.app/Contents/Resources/completions/zsh/_orbctl"
+  fish_completion "#{appdir}/OrbStack.app/Contents/Resources/completions/fish/orbctl.fish"
 
   postflight_steps do
     run "OrbStack.app/Contents/MacOS/bin/orbctl", args: ["_internal", "brew-postflight"], base: :appdir
   end
 
-  uninstall script: {
-    executable: "#{appdir}/OrbStack.app/Contents/MacOS/bin/orbctl",
-    args:       ["_internal", "brew-uninstall"],
-  }
+  uninstall quit:   "dev.kdrag0n.MacVirt",
+            script: {
+              executable: "#{appdir}/OrbStack.app/Contents/MacOS/bin/orbctl",
+              args:       ["_internal", "brew-uninstall"],
+            }
 
   zap trash: [
         "~/.orbstack",
+        "~/Library/Application Scripts/*.dev.orbstack",
         "~/Library/Caches/dev.kdrag0n.MacVirt",
+        "~/Library/Caches/SentryCrash/OrbStack",
         "~/Library/Group Containers/*.dev.orbstack",
         "~/Library/HTTPStorages/dev.kdrag0n.MacVirt",
         "~/Library/HTTPStorages/dev.kdrag0n.MacVirt.binarycookies",

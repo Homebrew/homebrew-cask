@@ -21,7 +21,7 @@ cask "battlescribe" do
               "net.battlescribe.desktop.rostereditor",
             ],
             delete:  [
-              "/Applications/BattleScribe Tools/",
+              "/Applications/BattleScribe Tools",
               "/Applications/BattleScribe.app",
             ]
 

@@ -2,11 +2,11 @@ cask "donut" do
   arch arm: "aarch64", intel: on_system_conditional(macos: "x64", linux: "amd64")
   url_end = on_system_conditional macos: "dmg", linux: "AppImage"
 
-  version "0.31.2"
-  sha256 arm:          "50eee0f66ffdb720b888f2dd03913cf6c67d1969b6cdd0417f4fd5c93aae78b7",
-         intel:        "5a26ad024e0fc7899414df49e5df1904bcbda3ec24563b04a8df2c5f0ba5c1e2",
-         arm64_linux:  "2b4502757cce30e2907975851fd6e1317731b50f772b8da07fb3af852c5db727",
-         x86_64_linux: "29082fb8a9dbf41f95fae432b0aec0bfeaccbadcafeee57b26a87394cd48bbed"
+  version "0.31.3"
+  sha256 arm:          "45d69e0c0a1ed6d07629b4c322e445c1b054f276b4ed424acdd2414f147a5e54",
+         intel:        "b5c636d117c9912cf582ebbf019a7427f0b67fda7c7d150f3386001c112d0487",
+         arm64_linux:  "944d9bb626efabde9b6732952908a87f04c8c2b9aed3efd2198a3788b856e678",
+         x86_64_linux: "f4033f64f9c58a10ab5bd1dcd3bd9eebddbf255f2f3372146bb91332bec1de3b"
 
   on_macos do
     app "Donut.app"

@@ -9,8 +9,12 @@ cask "font-gnu-unifont" do
   font "unifont-#{version}/font/precompiled/unifont-#{version}.otf"
   font "unifont-#{version}/font/precompiled/unifont_csur-#{version}.otf"
   font "unifont-#{version}/font/precompiled/unifont_jp-#{version}.otf"
+  font "unifont-#{version}/font/precompiled/unifont_jp_sample-#{version}.otf"
   font "unifont-#{version}/font/precompiled/unifont_sample-#{version}.otf"
+  font "unifont-#{version}/font/precompiled/unifont_t-#{version}.otf"
+  font "unifont-#{version}/font/precompiled/unifont_t_sample-#{version}.otf"
   font "unifont-#{version}/font/precompiled/unifont_upper-#{version}.otf"
+  font "unifont-#{version}/font/precompiled/unifont_upper_sample-#{version}.otf"
 
   # No zap stanza required
 end

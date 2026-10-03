@@ -2,11 +2,11 @@ cask "handy" do
   arch arm: "aarch64", intel: on_system_conditional(macos: "x64", linux: "amd64")
   os macos: "dmg", linux: "AppImage"
 
-  version "0.9.7"
-  sha256 arm:          "f8a2ed7bbc8f6e814ae620609a184212fc9f49dac19a8921bd80ab0f4bd5783c",
-         intel:        "b857810636d27a7c2f2448b9af6c203565b6fcd1c7d9f1bf96127b2f3e62ccd8",
-         arm64_linux:  "df8055001634dcf83860239040b012f4f5345dce1e7f98009555edb1019b06c4",
-         x86_64_linux: "e0625120b5a5c1d45e1e536b9d20f5220e7558e50c701e72e014f99c948e363a"
+  version "0.9.8"
+  sha256 arm:          "81ac05aaaf4fafa62826bb40c5cf0bc0c813fb6fc8255497480e762620779417",
+         intel:        "03b3edb44eef448187643c40af8626202881374f952c9cc3039848ff6f9c1b1b",
+         arm64_linux:  "0b6d2194cc33d6c6747558c42b4b2e820b3335d3a8b18b66b44d1c3d45fa9391",
+         x86_64_linux: "d683dc96762f9a47975045ab480392d33a5b491968fb336dcac47e2f65e7184f"
 
   on_macos do
     depends_on macos: :ventura

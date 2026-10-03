@@ -1,9 +1,9 @@
 cask "tablepro" do
   arch arm: "arm64", intel: "x86_64"
 
-  version "0.76.1"
-  sha256 arm:   "67bf75d0e5e5fb25965ce9ca34c8ea8566942ad8b5658dc9f86601785a8fd2c4",
-         intel: "a0a7787ba8e1bec6091dbf1bfe0e6b12440be7b936d29a89af3a8b9882b7ce46"
+  version "0.77.1"
+  sha256 arm:   "00a1ece89a4abb3750a04228fa03e631f79220dadfc7527c824b17d92f27e398",
+         intel: "d3269286d8f3d0ff67b2b8f3c2eef9db6a96324ba805610da20acf953e61d321"
 
   url "https://github.com/TableProApp/TablePro/releases/download/v#{version}/TablePro-#{version}-#{arch}.dmg"
   name "TablePro"
@@ -23,6 +23,7 @@ cask "tablepro" do
   uninstall quit: "com.TablePro"
 
   zap trash: [
+    "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.tablepro.sfl*",
     "~/Library/Application Support/TablePro",
     "~/Library/Caches/com.TablePro",
     "~/Library/HTTPStorages/com.TablePro",

@@ -1,8 +1,9 @@
 cask "hol-guard" do
-  version "3.0.108"
-  sha256 "ab6c852e0f19e825fd94fb2756b53f5725dc7d3ff50349d3dce31a493307d69d"
+  version "3.0.120"
+  sha256 "8dad8206258292a3d716b8888e1b937e91764abd8dc38edb4e60e5b94fdbd72d"
 
-  url "https://hol.org/api/guard/desktop/download?platform=macos&version=#{version}"
+  url "https://hol.org/api/guard/desktop/download?platform=macos&version=#{version}",
+      user_agent: :browser
   name "HOL Guard"
   desc "Local-first runtime firewall for AI coding agents"
   homepage "https://hol.org/guard"

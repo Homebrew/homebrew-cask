@@ -13,6 +13,7 @@
   "copilot-cli@prerelease": "any",
   "creality-print": "any",
   "crypter": "all",
+  "cuadriver": "all",
   "db-browser-for-sqlcipher@nightly": "any",
   "db-browser-for-sqlite@nightly": "any",
   "defold@alpha": "any",

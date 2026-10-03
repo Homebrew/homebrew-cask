@@ -3,9 +3,9 @@ cask "openhuman" do
   os macos: "darwin", linux: "linux"
   url_end = on_system_conditional macos: "dmg", linux: "AppImage"
 
-  version "0.64.7"
-  sha256 arm:          "372dc9c036b6d58b41e9bdc384a4771e0dda95c10f7c8bad9e4b46af34f9f97d",
-         intel:        "ad832e99c93cc13a682214f317b7d245743630390866350f6369cb3d03d334af",
+  version "0.64.10"
+  sha256 arm:          "ec06a4d5958c3b41d5260b44b60f0f82a0349aaa31f402f5c8105fd615dfe68c",
+         intel:        "5d1e7f24da2292e7b84b6ab5b363005f50f5414ae19c190a5700d2341c23b733",
          arm64_linux:  "ce4e93ed2aa973afb2039df4ce045a10df6cfaa3a00be9cf79c1f8e9db66088c",
          x86_64_linux: "8bf2a7484cabf06b5b4608ce3d56b34a3470f1834f52895482a048d096d89b42"
 

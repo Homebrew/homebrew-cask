@@ -2,10 +2,10 @@ cask "android-cli" do
   arch arm: "arm64", intel: "x86_64"
   os macos: "darwin", linux: "linux"
 
-  version "1.0.16457483"
-  sha256 arm:          "99623a9252a90585c8e977c20811cb1f8b220be826e6d6e555faa802b60bc02d",
-         intel:        "d352652929e8899608549dd6aa74607e513d4be58f5c648ab8122cc3eb448efc",
-         x86_64_linux: "02e04ae27ee7b5bbd479468d037def1096f84836d418e7f6bbcd893e044508b4"
+  version "1.0.16500706"
+  sha256 arm:          "52618946fb521fa08de5729181d12cb9190a5d6a2e8e869f71799808bc82792e",
+         intel:        "003a4b7d8e2f282010afdc47a9856dc66a3ed688204549e762d868abbd87c624",
+         x86_64_linux: "54b6e2d382444b91511fcc7ab34ddec6561f257d6d1cdce16bb91af6789b6de2"
 
   on_linux do
     depends_on arch: :x86_64

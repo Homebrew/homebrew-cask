@@ -2,12 +2,12 @@ cask "es-de" do
   arch arm: "macOSApple", intel: "macOSIntel"
 
   on_arm do
-    version "3.4.1,288889626"
-    sha256 "e7b2f404a3df47f299884177d2b76cd45c2d1550807b32e7829f37a25a53776f"
+    version "3.5.0,357717468"
+    sha256 "060bd289fa17f8f07bac2eb688698047f7be79b80495983f08580b5f1a046e1e"
   end
   on_intel do
-    version "3.4.1,288889701"
-    sha256 "2bab445b3efef263b54fedc4c0cbac76c477f72221130f49fc11796d0294bf6a"
+    version "3.5.0,357717755"
+    sha256 "36418337e9f499506ee4fed6f8c880665abfb24eda1fde0b23f224f0ca69cd39"
   end
 
   url "https://gitlab.com/es-de/emulationstation-de/-/package_files/#{version.csv.second}/download"
@@ -38,6 +38,8 @@ cask "es-de" do
   depends_on :macos
 
   app "ES-DE.app"
+
+  uninstall quit: version.csv.first.to_s
 
   zap trash: [
     "~/ES-DE",

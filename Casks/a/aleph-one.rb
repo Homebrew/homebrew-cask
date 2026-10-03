@@ -1,6 +1,6 @@
 cask "aleph-one" do
-  version "20250829"
-  sha256 "0231ea75b24835ce421ed36af24623edeed711cf6a045863fe2eaf57ef4dfc9e"
+  version "20260930"
+  sha256 "5029dd771344a76a9897b17e4726c071292c8168d655c6a7fda10076b618f464"
 
   url "https://github.com/Aleph-One-Marathon/alephone/releases/download/release-#{version}/AlephOne-#{version}-Mac.dmg"
   name "Aleph One"
@@ -15,6 +15,8 @@ cask "aleph-one" do
   depends_on :macos
 
   app "Aleph One.app"
+
+  uninstall quit: "org.bungie.source.AlephOne"
 
   zap trash: [
     "~/Library/Logs/Aleph One Log.txt",

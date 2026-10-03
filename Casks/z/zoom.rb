@@ -4,12 +4,12 @@ cask "zoom" do
   url_file = on_system_conditional macos: "#{arch}zoomusInstallerFull.pkg",
                                    linux: "zoom_x86_64.tar.xz"
 
-  sha256 arm:          "3ef3b1fd131f0ef4bcc8a1ded23fb69a928b370dfe4201343fb316c8fedfbfcd",
-         intel:        "32acf4eb2fdb186b311e425c32665fc95acedb2bdfb2c593e3f1d94e25afc4af",
+  sha256 arm:          "ff15d926ef5a714c6683cc23ed628a7c2fc43d080a88ac54af4e200ba03a2456",
+         intel:        "492c91d78e5f6e2a4a4228f6e8c5a9e01103d10dbd3465ededc7284e13548e91",
          x86_64_linux: "c2a492de44513d7533f4ddccea380248ca960a69b937327f647a536b88d6959b"
 
   on_macos do
-    version "7.2.1.88329"
+    version "7.2.2.88465"
 
     livecheck do
       url "https://www.zoom.us/client/latest/zoomusInstallerFull.pkg#{livecheck_folder}"

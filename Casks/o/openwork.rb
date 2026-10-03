@@ -3,11 +3,11 @@ cask "openwork" do
   os macos: "mac", linux: "linux"
   url_end = on_system_conditional macos: "dmg", linux: "AppImage"
 
-  version "0.18.54"
-  sha256 arm:          "d86ad6cd8db181f43cfb53a294078cf543f91c15a3cd630fc1c83d3097cd9ce8",
-         intel:        "e6759e5e8594348cd5d2ee3fecd3300050d5130c52f29e72fd0b277d682238fa",
-         arm64_linux:  "d91b8c4acc39377675e34e5868f27362ef9858682be4cf2e7e7750bb95ad5811",
-         x86_64_linux: "926f554181381e7d911e5ba35c5f0094aaaf44c23f4c7af005342c06175b074c"
+  version "0.18.56"
+  sha256 arm:          "2cf35fc3aaa2a83857813dd9bbf836b0b336971432e44ae54c180ee1c2d5eacc",
+         intel:        "729c4430bd20ab0a8c64817e1e76a9b9c35729d8674a6f7d91a9a9f3d990574b",
+         arm64_linux:  "1a5d8e4e795db14082e13a37e260c31dcb6482fd45125658759a0eef0acc24a1",
+         x86_64_linux: "9212d35125a539d8d08ef13050132c450ebccc9ff9449ae74368d7040fcf56b2"
 
   on_macos do
     auto_updates true

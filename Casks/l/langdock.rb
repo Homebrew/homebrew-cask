@@ -1,8 +1,8 @@
 cask "langdock" do
-  version "1.0.7"
-  sha256 "af59ee0f749a72d6f45be30c7aaab2c2acebf6f172e1fb80a27790e22a81767b"
+  version "1.0.8"
+  sha256 "25c7966c3eaeed6fd8cc52ea015bd400161b35aab1f440ab7dcd252028f1a3ae"
 
-  url "https://desktop.langdock.com/global/stable/Langdock-#{version}-universal.dmg"
+  url "https://desktop.langdock.com/global/stable/Langdock-#{version}.dmg"
   name "Langdock"
   desc "Platform for AI Adoption"
   homepage "https://langdock.com/products/desktop"

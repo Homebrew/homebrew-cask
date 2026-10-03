@@ -1,6 +1,6 @@
 cask "ghostty@tip" do
-  version "17998,4ddf1f79d3490c93506fc41601dcaff6d4d4f134"
-  sha256 "13d307d4d8f583cb99cba303d4a8987f25b768296a1dd3d1eeb64315047352a6"
+  version "18042,33da6848d63b3bba2b4f31ab1531d618f2795192"
+  sha256 "3bdc4a9fa4700aa7b78a20b41e7e214cd20439563576e2d9029043928a886396"
 
   url "https://tip.files.ghostty.org/#{version.csv.second}/Ghostty.dmg"
   name "Ghostty"
@@ -31,8 +31,8 @@ cask "ghostty@tip" do
   manpage "#{appdir}/Ghostty.app/Contents/Resources/man/man1/ghostty.1"
   manpage "#{appdir}/Ghostty.app/Contents/Resources/man/man5/ghostty.5"
   bash_completion "#{appdir}/Ghostty.app/Contents/Resources/bash-completion/completions/ghostty.bash"
-  fish_completion "#{appdir}/Ghostty.app/Contents/Resources/fish/vendor_completions.d/ghostty.fish"
   zsh_completion "#{appdir}/Ghostty.app/Contents/Resources/zsh/site-functions/_ghostty"
+  fish_completion "#{appdir}/Ghostty.app/Contents/Resources/fish/vendor_completions.d/ghostty.fish"
 
   uninstall quit: "com.mitchellh.ghostty"
 

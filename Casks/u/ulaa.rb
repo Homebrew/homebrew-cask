@@ -1,14 +1,14 @@
 cask "ulaa" do
   arch arm: "arm64", intel: "x64"
 
-  sha256 arm:   "98c3ee30f520571abedeee2592eed92ce706f40de75dae1cdc9309eaf4284f13",
-         intel: "9c52fd0f1e98ee7afd87a5ee2c3ee3d5de95c2f8bbd747d395565f5f3f9aad19"
+  sha256 arm:   "3c9ddbed12d92a5ee1e1737a0101daf393b413ad335e78bdaef8956e80a04a25",
+         intel: "e09183dd5f79bb37288b662cd14c16f3b0c82a13c065504850e64897b14476e5"
 
   on_arm do
-    version "2.49.0"
+    version "2.49.2"
   end
   on_intel do
-    version "2.49.0"
+    version "2.49.2"
   end
 
   url "https://downloads.zohocdn.com/ulaa-browser/release/mac/stable/#{arch}/Ulaa-Browser-v#{version}-#{arch}.dmg"

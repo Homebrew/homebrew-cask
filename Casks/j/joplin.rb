@@ -13,6 +13,7 @@ cask "joplin" do
     app "Joplin.app"
 
     zap trash: [
+      "~/.config/joplin-desktop",
       "~/Library/Application Support/Joplin",
       "~/Library/Preferences/net.cozic.joplin-desktop.helper.plist",
       "~/Library/Preferences/net.cozic.joplin-desktop.plist",

@@ -34,16 +34,21 @@ cask "maintenance" do
 
     url "https://www.titanium-software.fr/download/15/Maintenance.dmg"
   end
-  on_tahoe :or_newer do
+  on_tahoe do
     version "3.5.3"
 
     url "https://www.titanium-software.fr/download/26/Maintenance.dmg"
+  end
+  on_golden_gate :or_newer do
+    version "3.6.0"
+
+    url "https://www.titanium-software.fr/download/27/Maintenance.dmg"
 
     # We check the version on the homepage, as the version in the related plist
     # file can be out of date.
     livecheck do
       url :homepage
-      regex(/>\s*Maintenance\s+v?(\d+(?:\.\d+)+)\s+for\s+[\w\s]*26\s*</i)
+      regex(/>\s*Maintenance\s+v?(\d+(?:\.\d+)+)\s+for\s+[\w\s]*27\s*</i)
     end
   end
 
@@ -58,6 +63,7 @@ cask "maintenance" do
     :sonoma,
     :sequoia,
     :tahoe,
+    :golden_gate,
   ]
 
   app "Maintenance.app"

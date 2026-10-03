@@ -1,18 +1,20 @@
 cask "meru" do
   arch arm: "-arm64"
 
-  version "3.61.0"
-  sha256 arm:   "afba189afe79b288aace99910ef39f3a8a3e4a3a9f1c78d61b73e748f460e3b5",
-         intel: "f5fd6f01a4d5d38ff20e3926a4c38d80bff4ff2b3a24f85359a67361848f195b"
+  version "3.62.1"
+  sha256 arm:   "f686f7322b45a61c1224054182d22ca9d2b0408327e4d3f1a83f5382e7a9fb89",
+         intel: "55fc41361493d8e9c6621ddcdaa481d0b36862d2fa0a1439e5f86003f8295815"
 
   url "https://github.com/zoidsh/meru/releases/download/v#{version}/Meru-#{version}#{arch}.dmg"
   name "Meru"
   desc "Gmail desktop app"
   homepage "https://meru.so/"
 
-  depends_on macos: :monterey
+  depends_on macos: :ventura
 
   app "Meru.app"
+
+  uninstall quit: "sh.zoid.meru"
 
   zap trash: [
     "~/Library/Application Support/Meru",

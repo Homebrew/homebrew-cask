@@ -3,11 +3,11 @@ cask "actual" do
   os macos: "mac", linux: "linux"
   url_end = on_system_conditional macos: "dmg", linux: "AppImage"
 
-  version "26.9.0"
-  sha256 arm:          "d6c01a7fc830d28ef6e476073a1574ae356222cc524c9097e74387017212247b",
-         intel:        "73f3b239f1a937c7c5f8ca03504800115a92175796cbe71b043c4358593ed176",
-         arm64_linux:  "5375f889ec614665f54a029fa8c7537e511d90a67398fb6e0c3ec8b0b66c86d3",
-         x86_64_linux: "fb3e5dbe756bfa614be3d0714c182ac9af977d77749d105535f7068aeeb38171"
+  version "26.10.0"
+  sha256 arm:          "db3df92ab6febc0c4c682df7dd2c8b74dd4f47cc7035ca154d98ff883b318cfe",
+         intel:        "80f478a19085540c4b0f24e38b404111b019e5596c9590d53e00b8a11ba50e73",
+         arm64_linux:  "b1c4f0792af5273acd81bc6b3ec05e6530f5f3b408a2c3de597ee9622394c17d",
+         x86_64_linux: "21455ba3bfb985e969ed2b5aeebde8a0aeec8836351813c07ea63267e1f47b7b"
 
   on_macos do
     depends_on macos: :monterey

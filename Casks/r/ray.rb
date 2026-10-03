@@ -1,9 +1,9 @@
 cask "ray" do
   arch arm: "arm64", intel: "x64"
 
-  version "3.2.12"
-  sha256 arm:   "f265d2f6b27e21a75e15f7d95083dc1a702d666d8dcda480b965ca266f07b4da",
-         intel: "cbf3c3db464c5c4043542d86c9f2a590441dcc2e06b5fa0b5d920240255c6a29"
+  version "3.2.13"
+  sha256 arm:   "5b8036ed7e5ab7559e231f37f9bdcb3b298bc9a0dcadd13568e5ef430db36e14",
+         intel: "ce0846335e0e1791654b809c031fee0d0d5bbde74bf7b9758eb62dfaf12eb60f"
 
   url "https://ray-app.s3.eu-west-1.amazonaws.com/ray-app-updates-v#{version.major}/stable/ray-#{version}-latest-darwin-#{arch}.dmg"
   name "Ray"

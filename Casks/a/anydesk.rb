@@ -31,6 +31,7 @@ cask "anydesk" do
             ]
 
   zap trash: [
+    "/etc/anydesk",
     "~/.anydesk",
     "~/Library/Preferences/com.philandro.anydesk.plist",
   ]

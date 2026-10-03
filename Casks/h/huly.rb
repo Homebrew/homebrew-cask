@@ -10,10 +10,7 @@ cask "huly" do
   desc "All-in-One Project Management Platform"
   homepage "https://huly.io/"
 
-  livecheck do
-    url "https://dist.huly.io/huly-mac.yml"
-    strategy :electron_builder
-  end
+  disable! date: "2026-10-03", because: :no_longer_available
 
   auto_updates true
   depends_on macos: :monterey

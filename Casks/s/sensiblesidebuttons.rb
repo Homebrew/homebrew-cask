@@ -7,6 +7,11 @@ cask "sensiblesidebuttons" do
   desc "Utilise mouse side navigation buttons"
   homepage "https://sensible-side-buttons.archagon.net/"
 
+  livecheck do
+    url :url
+    strategy :github_latest
+  end
+
   depends_on :macos
 
   app "SensibleSideButtons.app"

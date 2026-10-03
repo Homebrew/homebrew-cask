@@ -1,6 +1,6 @@
 cask "thaw@beta" do
-  version "2.1.0-beta.5"
-  sha256 "a1411f486ca01b8321d3a67ea41401c20690c196ae88ac9caf515ed418086005"
+  version "3.0.0-beta.1"
+  sha256 "37af2954481a6fdd4e6cb926a6b6895097fefdb15adf54a194af2a16a82ab353"
 
   url "https://github.com/thaw-app/Thaw/releases/download/#{version}/Thaw_#{version}.zip"
   name "Thaw"
@@ -13,7 +13,7 @@ cask "thaw@beta" do
   end
 
   auto_updates true
-  depends_on macos: :tahoe
+  depends_on macos: :golden_gate
 
   app "Thaw.app"
 

@@ -2,9 +2,9 @@ cask "chatgpt" do
   arch arm: "arm64", intel: "x64"
   livecheck_arch = on_arch_conditional intel: "-x64"
 
-  version "26.928.20755"
-  sha256 arm:   "ac129ebf2e908696dce449e33592edc16b90b173f454227148dd10df9d8ec100",
-         intel: "62b05b7c7d22c8d04c605919f4b09e1b6dc896c8c1613ecb36b7657a12d67f29"
+  version "26.930.31730"
+  sha256 arm:   "bfda661a7c9ca44dac3168134058dd6007947cde318ade37d570c484329f6d41",
+         intel: "5cd717fdb8348332677fb2a82c82f6240fe95c0ef3dad04e6ef5e709479de0f4"
 
   url "https://persistent.oaistatic.com/codex-app-prod/ChatGPT-darwin-#{arch}-#{version}.zip"
   name "ChatGPT"
@@ -25,6 +25,7 @@ cask "chatgpt" do
 
   zap trash: [
         "/Library/Application Support/CodexComputerUseAuthorizationPlugin",
+        "~/Library/Application Scripts/*.com.openai.sky.CUAService",
         "~/Library/Application Support/Codex",
         "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.openai.codex.sfl*",
         "~/Library/Application Support/com.openai.codex",

@@ -21,9 +21,13 @@ cask "skim" do
   binary "#{appdir}/Skim.app/Contents/SharedSupport/skimpdf"
 
   zap trash: [
+    "~/Library/Application Scripts/net.sourceforge.skim-app.skim.quicklook-preview",
+    "~/Library/Application Scripts/net.sourceforge.skim-app.skim.quicklook-thumbnails",
     "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/net.sourceforge.skim-app.skim.sfl*",
     "~/Library/Caches/com.apple.helpd/Generated/net.sourceforge.skim-app.skim.help*",
     "~/Library/Caches/net.sourceforge.skim-app.skim",
+    "~/Library/Containers/net.sourceforge.skim-app.skim.quicklook-preview",
+    "~/Library/Containers/net.sourceforge.skim-app.skim.quicklook-thumbnails",
     "~/Library/Cookies/net.sourceforge.skim-app.skim.binarycookies",
     "~/Library/HTTPStorages/net.sourceforge.skim-app.skim",
     "~/Library/Preferences/net.sourceforge.skim-app.skim.bookmarks.plist",
