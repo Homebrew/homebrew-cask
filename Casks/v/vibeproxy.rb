@@ -1,9 +1,9 @@
 cask "vibeproxy" do
   arch arm: "arm64", intel: "x86_64"
 
-  version "1.8.321"
-  sha256 arm:   "e2b8fa4a276af5b8bb2c78d4c702f1073a7556b561ca8720601d73ba7cf7e177",
-         intel: "cf737ebdf1987cd2cbdbe78cf961acb0b3be35eccb418974ac361c9822373870"
+  version "1.8.322"
+  sha256 arm:   "13dba18e8801376c835071ffcff0f92814f76cde97ad532a00f741be3609c298",
+         intel: "cb9db3b926bcac41a8dff79aec2474dea222f11e06fffa4da8e88d46ff344549"
 
   url "https://github.com/automazeio/vibeproxy/releases/download/v#{version}/VibeProxy-#{arch}.dmg"
   name "VibeProxy"
