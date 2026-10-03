@@ -8,7 +8,7 @@ cask "ssl-download-manager" do
   homepage "https://www.solidstatelogic.com/ssl-download-manager"
 
   livecheck do
-    url :homepage
+    url "https://www.solidstatelogic.com"
     regex(/SSL%20Download%20Manager[._-](\d+(?:\.\d+)+)-universal/i)
   end
 
