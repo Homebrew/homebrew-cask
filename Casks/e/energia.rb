@@ -7,10 +7,7 @@ cask "energia" do
   desc "Electronics prototyping platform"
   homepage "https://energia.nu/"
 
-  livecheck do
-    url "https://energia.nu/download/"
-    regex(/file=energia[._-]?v?(\d+(?:\.[\dE]+)+)[._-]macosx[._-]signed\.zip/i)
-  end
+  disable! date: "2026-10-03", because: :no_longer_available
 
   depends_on :macos
 
