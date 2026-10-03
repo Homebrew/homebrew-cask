@@ -2,7 +2,8 @@ cask "ocenaudio" do
   version "3.21.0"
   sha256 :no_check
 
-  url "https://www.ocenaudio.com/downloads/index.php/ocenaudio_universal.dmg"
+  url "https://www.ocenaudio.com/downloads/index.php/ocenaudio_universal.dmg?",
+      using: :post
   name "ocenaudio"
   desc "Audio editor"
   homepage "https://www.ocenaudio.com/en"
