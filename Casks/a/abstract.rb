@@ -7,12 +7,7 @@ cask "abstract" do
   desc "Collaborative design tool with support for Sketch files"
   homepage "https://www.goabstract.com/"
 
-  livecheck do
-    url "https://api.goabstract.com/releases/latest"
-    strategy :json do |json|
-      json["version"]
-    end
-  end
+  disable! date: "2026-10-03", because: :no_longer_available
 
   auto_updates true
   depends_on :macos
