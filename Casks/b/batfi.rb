@@ -1,5 +1,5 @@
 cask "batfi" do
-  version "4.0.2"
+  version "4.0.3"
   sha256 :no_check
 
   url "https://files.micropixels.software/batfi/BatFi-latest.zip"
