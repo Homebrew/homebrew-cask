@@ -1,6 +1,6 @@
 cask "local-studio" do
-  version "2.16.0"
-  sha256 "fa057b06194c7ecece04f96a86ca44e1db34333ed94a06b0624091b937523691"
+  version "3.0.0"
+  sha256 "3956668a088ea2b296323d3b34403d7c73405baa76314a80a003b5d3b2f59397"
 
   url "https://github.com/sybil-solutions/local-studio/releases/download/v#{version}/Local-Studio-#{version}-arm64.dmg"
   name "Local Studio"
@@ -9,7 +9,7 @@ cask "local-studio" do
 
   auto_updates true
   depends_on arch: :arm64
-  depends_on macos: :monterey
+  depends_on macos: :ventura
 
   app "Local Studio.app"
 
