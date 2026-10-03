@@ -1,6 +1,6 @@
 cask "glyphs" do
-  version "3.5.1,3534"
-  sha256 "93b3bc3379a90afa91048865eb53f237b8e47639484683f42bea8185c0847886"
+  version "4.2,4200"
+  sha256 "7c7d724448328a8f3570e2cad171a8a380439b146e0a10c0e1310ca1365922e4"
 
   url "https://updates.glyphsapp.com/Glyphs#{version.csv.first}-#{version.csv.second}.zip"
   name "Glyphs"
@@ -13,11 +13,11 @@ cask "glyphs" do
   end
 
   auto_updates true
-  depends_on :macos
+  depends_on macos: :monterey
 
   app "Glyphs #{version.major}.app"
 
-  uninstall quit: "com.GeorgSeifert.Glyphs3"
+  uninstall quit: "com.GeorgSeifert.Glyphs*"
 
   zap trash: [
     "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.georgseifert.glyphs#{version.major}.sfl*",
