@@ -1,9 +1,9 @@
 cask "gitx" do
   arch arm: "arm64", intel: "x86_64"
 
-  version "1.6"
-  sha256 arm:   "6645fa2b59564475b04dc41f867c12777665496a83cc941d8dd86a2f9b090de7",
-         intel: "80df1015e45da67402c7030d914da3b31d7ff9c9b5deffc1c9665532e6794ce1"
+  version "1.7"
+  sha256 arm:   "aae135d59e9d760bb4b438bb3635aae1d0537b4e6590fa1d0bad539589318cb0",
+         intel: "05e025aa24ec5a730fba0c18e9859ca26ad31aed8593de32726f4f89d07bd206"
 
   url "https://github.com/gitx/gitx/releases/download/#{version}/GitX-#{arch}.dmg"
   name "GitX"
