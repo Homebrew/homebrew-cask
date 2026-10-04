@@ -1,10 +1,10 @@
 cask "gitify" do
   os macos: "-universal-mac.zip", linux: ".AppImage"
 
-  version "7.8.0"
-  sha256 arm:          "c1358151eed4666e7a1514c9bcb0f50edf66821581927fa0d373af496cc811ee",
-         intel:        "c1358151eed4666e7a1514c9bcb0f50edf66821581927fa0d373af496cc811ee",
-         x86_64_linux: "093eee01569a397a4f9d8e06c93d10873b98ac22dd49be36f210e03d6f5cbbe1"
+  version "7.9.0"
+  sha256 arm:          "486d0a3e798425e417ff458bc612b4bbb2518eb7cd833d77f727726acf2a6372",
+         intel:        "486d0a3e798425e417ff458bc612b4bbb2518eb7cd833d77f727726acf2a6372",
+         x86_64_linux: "7c8f65967b0575c101da070b2cb67598a68be78e0ef41cf7d721c4c8aa57215f"
 
   on_macos do
     depends_on macos: :ventura
