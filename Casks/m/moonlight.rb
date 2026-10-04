@@ -1,10 +1,10 @@
 cask "moonlight" do
   os macos: ".dmg", linux: "-x86_64.AppImage"
 
-  version "6.1.0"
-  sha256 arm:          "d494740eead8ad4e620cdc8feedb56083bc29cabbbeef34cb82585fd87725fa2",
-         intel:        "d494740eead8ad4e620cdc8feedb56083bc29cabbbeef34cb82585fd87725fa2",
-         x86_64_linux: "0e855ffd22d407e18ab5fdb575fed5f01ca119a3f91993c5f0213f15ac80b400"
+  version "6.2.0"
+  sha256 arm:          "43617e5210d53968fcfb4a46526d1625a9056c6fe97e731673c31193dae776fc",
+         intel:        "43617e5210d53968fcfb4a46526d1625a9056c6fe97e731673c31193dae776fc",
+         x86_64_linux: "787b0dcbd42ae90620e76fb8d77d7c441ba6473a91c2d7fc3a0fc2466f992437"
 
   on_macos do
     app "Moonlight.app"
