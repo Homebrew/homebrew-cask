@@ -17,6 +17,13 @@ cask "1password@nightly" do
 
   app "1Password.app"
 
+  postflight_steps do
+    # The MCP integration requires a searchable directory for its executable symlink.
+    unless_path_exists "/usr/local/bin" do
+      run "/usr/bin/install", args: ["-d", "-m", "755", "/usr/local/bin"], sudo: true
+    end
+  end
+
   zap trash: [
     "~/Library/Application Scripts/2BUA8C4S2C.com.1password",
     "~/Library/Application Scripts/2BUA8C4S2C.com.1password.browser-helper",
