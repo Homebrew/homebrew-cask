@@ -6,10 +6,7 @@ cask "wacom-inkspace" do
   name "Wacom Inkspace"
   homepage "https://www.wacom.com/en-us/products/inkspace"
 
-  livecheck do
-    url "https://www.wacom.com/en-us/overlays/products/wacom-inkspace-2019"
-    regex(/href=.*?wacominkspaceappsetup[._-]v?(\d+(?:\.\d+)+)\.dmg/i)
-  end
+  deprecate! date: "2026-10-04", because: :discontinued
 
   depends_on :macos
 
