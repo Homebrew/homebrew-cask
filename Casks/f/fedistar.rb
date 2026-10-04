@@ -1,10 +1,10 @@
 cask "fedistar" do
   url_end = on_system_conditional macos: "universal.dmg", linux: "amd64.AppImage"
 
-  version "1.13.2"
-  sha256 arm:          "e2f2f520918abe3c730c78f5a3e4bf0acab57aa58f3db6c9551260ddee14f9ef",
-         intel:        "e2f2f520918abe3c730c78f5a3e4bf0acab57aa58f3db6c9551260ddee14f9ef",
-         x86_64_linux: "77186bae503402286b9ef389d3503e18db6395552e4843460c67f0e7d90d8e95"
+  version "1.13.3"
+  sha256 arm:          "b870479014611fcb795673cfcb9321a9a805375b28f6e3a931bbacc85c5d7591",
+         intel:        "b870479014611fcb795673cfcb9321a9a805375b28f6e3a931bbacc85c5d7591",
+         x86_64_linux: "88d166524444179f92796c8483d3b319927b72acd2a94d78fab273ab894e542b"
 
   on_macos do
     depends_on macos: :sonoma
