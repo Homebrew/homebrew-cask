@@ -1,6 +1,6 @@
 cask "meetingrecorder" do
-  version "1.6.3"
-  sha256 "4b0dc1f472866dea0362bdda7583bb5f68964140fa36fe170cc8118b552a3f26"
+  version "1.6.5"
+  sha256 "21fcc502460f39c68fa8d4fb1da25c5f1fdbe6f4d1f553daad18171a20ed32e5"
 
   url "https://meetingsrecorder.com/downloads/MeetingRecorder-#{version}.dmg"
   name "MeetingRecorder"
