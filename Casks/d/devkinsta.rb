@@ -15,6 +15,7 @@ cask "devkinsta" do
     strategy :electron_builder
   end
 
+  auto_updates true
   depends_on :macos
 
   app "DevKinsta.app"
