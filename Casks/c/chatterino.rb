@@ -1,6 +1,6 @@
 cask "chatterino" do
-  version "2.5.5"
-  sha256 "eb2b4f48f1a96ad362c21bec6bec9ab02c662c652c963b8884dcad171ddad000"
+  version "2.5.6"
+  sha256 "38c14d1023f57716e30f09e0c28f931eb80404b21fe7ff7736136b63893653b5"
 
   url "https://chatterino.fra1.digitaloceanspaces.com/bin/#{version}/Chatterino.dmg"
   name "Chatterino"
@@ -14,7 +14,7 @@ cask "chatterino" do
     end
   end
 
-  depends_on :macos
+  depends_on macos: :monterey
 
   app "chatterino.app"
 
