@@ -6,6 +6,11 @@ cask "font-cal-sans" do
   name "Cal Sans"
   homepage "https://github.com/calcom/sans"
 
+  livecheck do
+    url :url
+    strategy :github_latest
+  end
+
   font "calsans-static-essentials/CalSans-Bold.ttf"
   font "calsans-static-essentials/CalSans-BoldItalic.ttf"
   font "calsans-static-essentials/CalSans-Italic.ttf"

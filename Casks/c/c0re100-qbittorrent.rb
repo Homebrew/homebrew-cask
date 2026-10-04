@@ -1,11 +1,11 @@
 cask "c0re100-qbittorrent" do
   arch arm: "aarch64", intel: "x86_64"
 
-  version "5.2.3.10"
-  sha256 arm:          "bff0dce3571ffd8ead2c55adcb44baec40a696f8fec7e422ff7908b98bd624ea",
-         intel:        "bff0dce3571ffd8ead2c55adcb44baec40a696f8fec7e422ff7908b98bd624ea",
-         arm64_linux:  "3f917741152be233220c874e07ffd37af910c091275cfc9c9ffebb0286afa460",
-         x86_64_linux: "c7bb487afd06daf4628c1f652f8e627ac5afbae755b8b1feea23e4583f07ca65"
+  version "5.2.4.10"
+  sha256 arm:          "992313bf75509dbc1435a90bedf659921b54b1999e86f0247651c746112f7098",
+         intel:        "992313bf75509dbc1435a90bedf659921b54b1999e86f0247651c746112f7098",
+         arm64_linux:  "27d6edcf160a298b1f7e2c22fe51340940266ee145013843b6322d20e1cdfc6d",
+         x86_64_linux: "648502c598e974f538a79c878e7bff506d968b4acbb33f751d23b9d51074a20d"
 
   on_macos do
     url "https://github.com/c0re100/qBittorrent-Enhanced-Edition/releases/download/release-#{version}/qBittorrent-Enhanced-Edition-release-#{version}-macOS-universal.dmg"

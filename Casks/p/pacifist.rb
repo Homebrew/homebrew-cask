@@ -1,6 +1,6 @@
 cask "pacifist" do
-  version "4.1.4"
-  sha256 "d76e51f10a98460809c7f5711e7f44742a7cc7ed7372d7f1f4c14a8e41c249ea"
+  version "4.1.5"
+  sha256 "ffba2574ba69f01faf45880b922001d96df48291018a3a3bd6e0b17dcf74a410"
 
   url "https://www.charlessoft.com/pacifist_download/Pacifist_#{version}.dmg"
   name "Pacifist"
@@ -13,10 +13,12 @@ cask "pacifist" do
   end
 
   auto_updates true
-  depends_on :macos
+  depends_on macos: :monterey
 
   app "Pacifist.app"
   binary "#{appdir}/Pacifist.app/Contents/Resources/usr/bin/pacifist"
+
+  uninstall quit: "com.charlessoft.pacifist"
 
   zap trash: [
     "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.charlessoft.pacifist.sfl*",
