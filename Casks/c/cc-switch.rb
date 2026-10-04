@@ -31,5 +31,10 @@ cask "cc-switch" do
   desc "Configuration manager for AI coding agents"
   homepage "https://github.com/farion1231/cc-switch"
 
+  livecheck do
+    url :url
+    strategy :github_latest
+  end
+
   auto_updates true
 end
