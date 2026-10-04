@@ -7,6 +7,11 @@ cask "changes" do
   desc "Git GUI"
   homepage "https://github.com/maoyama/Changes"
 
+  livecheck do
+    url :url
+    strategy :github_latest
+  end
+
   depends_on macos: :tahoe
 
   app "Changes.app"
