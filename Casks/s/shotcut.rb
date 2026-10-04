@@ -4,7 +4,7 @@ cask "shotcut" do
 
   sha256 arm:          "0e4c95ad41f26d96c442642e03e0c107bf98abfceea78724e2b05aa704ef79c6",
          intel:        "0e4c95ad41f26d96c442642e03e0c107bf98abfceea78724e2b05aa704ef79c6",
-         x86_64_linux: "a3da4b409d29b31294fe5097bb8c3f031d1e2cb0c14ff71717d1a7d4658e62de"
+         x86_64_linux: "a876d10ea083d2d61e62045c410d8951936264978bdd39f46b0a5ae380e0bc47"
 
   on_macos do
     version "26.9.28,26.9.27"
@@ -20,11 +20,11 @@ cask "shotcut" do
     ]
   end
   on_linux do
-    version "26.9.27"
+    version "26.10.3,26.9.27"
 
     depends_on arch: :x86_64
 
-    app_image "shotcut-linux-x86_64-#{version.csv.second || version.csv.first}.AppImage", target: "Shotcut.AppImage"
+    app_image "shotcut-linux-x86_64-#{version.csv.first}.AppImage", target: "Shotcut.AppImage"
 
     zap trash: [
       "~/.cache/Meltytech",
