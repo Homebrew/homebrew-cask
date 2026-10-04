@@ -9,7 +9,7 @@ cask "sonos" do
 
   livecheck do
     url "https://update.sonos.com/firmware/swgen/2/latest/update.upm?sonosid=Anonymous&householdid=nohhid&cmaj=81&cmin=0&cbld=52"
-    regex(%r{-([^-/]+)-RC-\d+/}i)
+    regex(%r{-([^-/]+)-[A-Z]{2}-\d+/}i)
     strategy :xml do |xml, regex|
       xml.get_elements("//image[@model='4' and not(@submodel_min) and not(@fromver_min)]").filter_map do |item|
         version = item.attributes["version"]
