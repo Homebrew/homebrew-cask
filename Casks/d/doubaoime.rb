@@ -20,6 +20,7 @@ cask "doubaoime" do
     end
   end
 
+  auto_updates true
   depends_on :macos
   container nested: "DoubaoImeInstaller_v#{version.csv.second}.app/Contents/Resources/DoubaoIme.zip"
 
