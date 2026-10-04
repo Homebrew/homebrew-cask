@@ -16,6 +16,8 @@ cask "energiza" do
 
   app "Energiza.app"
 
+  uninstall quit: "de.appgineers.energiza"
+
   zap trash: [
     "~/Library/Application Support/Energiza",
     "~/Library/Caches/de.appgineers.energiza",
