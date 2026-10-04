@@ -1,11 +1,11 @@
 cask "mixxx@snapshot" do
   arch arm: "arm", intel: "intel"
 
-  sha256 arm:   "9e547399d380f40dbfff071990141690f054195c367376b22fe2711266c6be58",
+  sha256 arm:   "98e003bad03d192dcbfe1471fb8753d7c2e7e538fbf7303dc6249fe3811b9aeb",
          intel: "9e1721012e1f7c811dfa611835e85ef33d6b1d7167bb5fbc5c23850eb9b91ce3"
 
   on_arm do
-    version "2.7-alpha-416-ge9a6171dde"
+    version "2.7-alpha-417-gc8c6450b9a"
   end
   on_intel do
     version "2.7-alpha-416-ge9a6171dde"
