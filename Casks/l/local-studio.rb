@@ -1,6 +1,6 @@
 cask "local-studio" do
-  version "3.0.0"
-  sha256 "3956668a088ea2b296323d3b34403d7c73405baa76314a80a003b5d3b2f59397"
+  version "3.0.1"
+  sha256 "379a6bfa3fb9a87023637edee81662492c58f1e3d5966bf3d13a11766db1e7a8"
 
   url "https://github.com/sybil-solutions/local-studio/releases/download/v#{version}/Local-Studio-#{version}-arm64.dmg"
   name "Local Studio"
