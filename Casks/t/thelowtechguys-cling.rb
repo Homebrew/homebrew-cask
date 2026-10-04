@@ -1,6 +1,6 @@
 cask "thelowtechguys-cling" do
-  version "2.7.4"
-  sha256 "20fabfacbff7e89074d60932af439b2a7d392443af6dfbeb22388347142090a8"
+  version "2.8.0"
+  sha256 "1feaee0eb1697ee3457ada4963f689a2217e9b80b464f1bebb37c66c9f8e8ace"
 
   url "https://files.lowtechguys.com/releases/Cling-#{version}.dmg"
   name "The low-tech guys Cling"
@@ -18,6 +18,8 @@ cask "thelowtechguys-cling" do
   depends_on macos: :sonoma
 
   app "Cling.app"
+
+  uninstall launchctl: "com.lowtechguys.Cling.catch-up"
 
   zap trash: [
     "~/Library/Application Scripts/com.lowtechguys.Cling",
