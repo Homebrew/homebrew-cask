@@ -10,11 +10,6 @@ cask "keyecho" do
   desc "Mechanical keyboard sounds for every keystroke"
   homepage "https://keyecho.app/"
 
-  livecheck do
-    url :url
-    strategy :github_latest
-  end
-
   auto_updates true
   depends_on :macos
 
