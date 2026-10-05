@@ -4,11 +4,11 @@ cask "maestro" do
   name_prefix = on_system_conditional macos: "Maestro", linux: "maestro"
   url_end = on_system_conditional macos: "-mac.dmg", linux: ".AppImage"
 
-  version "0.17.7"
-  sha256 arm:          "39f5c37f18c6da326154bb62be8e15ecc746c36515ed427694ed2c7fe456a09a",
-         intel:        "9372d0a1d489d77b14dcffb390c423b1ab99c36cec5ac362d4b1c14bc68bac4d",
-         arm64_linux:  "55e9f31a08ec31f07e846ce3657268c9faed6cb0cd4b560910ee659d43397088",
-         x86_64_linux: "9b4ab7e9f66f5f55f2428c6e4d75a67b4869843bd1cde7adf4c48c74bede8d5a"
+  version "0.17.8"
+  sha256 arm:          "0a29ee233c0fdeda4522790657f9cb6ebc6d350486f94b97976be046120baad2",
+         intel:        "583038fad53e2849baafca02d5bce742911b1956c811fe85e2e56bb72fecacec",
+         arm64_linux:  "55ea37d3486aa07bee0c1bc0af259b8d7be4c84a6703a547941b31a8cd4a843d",
+         x86_64_linux: "35b73a335ac12701676b749cc4d0814bd9526b93af101fdfb78017cb6516c4e6"
 
   on_macos do
     depends_on macos: :monterey
