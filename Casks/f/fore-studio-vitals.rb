@@ -20,5 +20,8 @@ cask "fore-studio-vitals" do
 
   uninstall quit: "com.forestudio.Vitals"
 
-  zap trash: "~/Library/Preferences/com.forestudio.Vitals.plist"
+  zap trash: [
+    "~/Library/Application Support/Vitals",
+    "~/Library/Preferences/com.forestudio.Vitals.plist",
+  ]
 end
