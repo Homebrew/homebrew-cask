@@ -19,6 +19,8 @@ cask "querious" do
 
   app "Querious.app"
 
+  uninstall quit: "com.araeliumgroup.querious"
+
   zap trash: [
     "~/Library/Application Support/Querious",
     "~/Library/Caches/com.apple.helpd/Generated/com.araeliumgroup.querious.help*",
