@@ -1,6 +1,6 @@
 cask "speechify-voice-ai" do
-  version "3.18.0,618"
-  sha256 "10381777e07a8664ee216bc6ab4cabee829050d98c24e3145c6cdcaea45396fc"
+  version "3.19.0,622"
+  sha256 "35da921202ed66ed8d5d37c6f9eaffa2262cfbebe6acb67368c5a776a9ad7bc3"
 
   url "https://lfs-cdn.speechify.com/mac/dmgs/#{version.tr(",", "-")}/SpeechifyVoiceAssistant-#{version.tr(",", "-")}.dmg"
   name "Speechify AI Assistant"
