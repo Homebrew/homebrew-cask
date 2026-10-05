@@ -21,17 +21,35 @@ cask "stellarium" do
       strategy :github_latest
     end
   end
+  on_macos do
+    app "Stellarium.app"
+
+    uninstall quit: "org.stellarium.Stellarium"
+
+    zap trash: [
+      "~/Library/Application Support/Stellarium",
+      "~/Library/Preferences/Stellarium",
+    ]
+  end
+  on_linux do
+    version "26.3"
+    sha256 "c1297da651217b2566d00f934d300ce9c666e3ee94a6bcb26832cf1a42641e94"
+
+    url "https://github.com/Stellarium/stellarium/releases/download/v#{version.major_minor}/Stellarium-#{version}-qt6-x86_64.AppImage"
+
+    livecheck do
+      url :url
+      strategy :github_latest
+    end
+
+    depends_on arch: :x86_64
+
+    app_image "Stellarium-#{version}-qt6-x86_64.AppImage", target: "Stellarium.AppImage"
+
+    zap trash: "~/.stellarium"
+  end
 
   name "Stellarium"
   desc "Tool to render realistic skies in real time on the screen"
   homepage "https://stellarium.org/"
-
-  depends_on :macos
-
-  app "Stellarium.app"
-
-  zap trash: [
-    "~/Library/Application Support/Stellarium",
-    "~/Library/Preferences/Stellarium",
-  ]
 end
