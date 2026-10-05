@@ -1,11 +1,10 @@
 cask "cmtrace-open" do
   url_end = on_system_conditional macos: "aarch64.dmg", linux: "amd64.AppImage"
 
-  version "1.6.0"
-  sha256 arm:          "e0a5b55d64bf5d0c5aa2e62fad4aced7ee95865f89683a3cbd8fe4a8bcbe1ac1",
-         x86_64_linux: "bb2190300b7b90690f77ae0425e40fef4a0fed340d69417ca4d6c9d20e7f466d"
-
   on_macos do
+    version "1.6.2"
+    sha256 "ba9dd76823612370c58ad6881e4da6efd826ac565f63e5701b334f6bca84b02e"
+
     depends_on arch: :arm64
 
     app "CMTrace Open.app"
@@ -19,6 +18,9 @@ cask "cmtrace-open" do
     ]
   end
   on_linux do
+    version "1.6.0"
+    sha256 "bb2190300b7b90690f77ae0425e40fef4a0fed340d69417ca4d6c9d20e7f466d"
+
     depends_on arch: :x86_64
 
     app_image "CMTrace.Open_#{version}_amd64.AppImage", target: "CMTrace Open.AppImage"
