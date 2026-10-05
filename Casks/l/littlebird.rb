@@ -2,18 +2,10 @@ cask "littlebird" do
   arch arm: "arm64", intel: "x64"
 
   version "0.86.21"
+  sha256 arm:   "d000db757a35545668bd24f155f30c10bcb61c8cf81c7d4b0adf89abcdc0a3f9",
+         intel: "beee50ef7a14c4e6fc2a1d1a71237ef4cff264d552c218c17d3880cfb70215a2"
 
-  on_arm do
-    sha256 "d000db757a35545668bd24f155f30c10bcb61c8cf81c7d4b0adf89abcdc0a3f9"
-
-    url "https://downloads.littlebird.ai/#{arch}/Littlebird-Mac-#{arch}-#{version}-Installer.dmg"
-  end
-  on_intel do
-    sha256 "beee50ef7a14c4e6fc2a1d1a71237ef4cff264d552c218c17d3880cfb70215a2"
-
-    url "https://downloads.lilbirdai.com/#{arch}/Littlebird-Mac-#{arch}-#{version}-Installer.dmg"
-  end
-
+  url "https://downloads.littlebird.ai/#{arch}/Littlebird-Mac-#{arch}-#{version}-Installer.dmg"
   name "Littlebird"
   desc "AI assistant that captures meetings and work context"
   homepage "https://littlebird.ai/"
