@@ -20,7 +20,10 @@ cask "pd" do
     set_permissions "Pd-{{version}}.app", "u+w", base: :appdir
   end
 
+  uninstall quit: "info.puredata.pd.pd-gui"
+
   zap trash: [
+    "~/Library/Preferences/info.puredata.pd.pd-gui.plist",
     "~/Library/Preferences/org.puredata.pd.pd-gui.plist",
     "~/Library/Saved Application State/org.puredata.pd.pd-gui.savedState",
   ]
