@@ -11,7 +11,7 @@ cask "sononym" do
   end
 
   name "Sononym"
-  desc "Sononym is a sample browser that offers a fresh perspective on how sounds can be explored and organized."
+  desc "AI-powered sample browser for exploring audio samples"
   homepage "https://www.sononym.net/"
 
   livecheck do
