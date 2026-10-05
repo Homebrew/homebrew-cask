@@ -5,6 +5,11 @@ cask "cmtrace-open" do
     version "1.6.2"
     sha256 "ba9dd76823612370c58ad6881e4da6efd826ac565f63e5701b334f6bca84b02e"
 
+    livecheck do
+      url :url
+      strategy :github_latest
+    end
+
     depends_on arch: :arm64
 
     app "CMTrace Open.app"
@@ -21,6 +26,10 @@ cask "cmtrace-open" do
     version "1.6.0"
     sha256 "bb2190300b7b90690f77ae0425e40fef4a0fed340d69417ca4d6c9d20e7f466d"
 
+    livecheck do
+      skip "Linux 1.6.2 compatibility verification remains unresolved"
+    end
+
     depends_on arch: :x86_64
 
     app_image "CMTrace.Open_#{version}_amd64.AppImage", target: "CMTrace Open.AppImage"
@@ -30,9 +39,4 @@ cask "cmtrace-open" do
   name "CMTrace Open"
   desc "Log viewer for ConfigMgr, Intune, and Windows diagnostic logs"
   homepage "https://cmtraceopen.com/"
-
-  livecheck do
-    url :url
-    strategy :github_latest
-  end
 end
