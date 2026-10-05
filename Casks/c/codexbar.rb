@@ -4,7 +4,7 @@ cask "codexbar" do
 
   url "https://github.com/steipete/CodexBar/releases/download/v#{version}/CodexBar-macos-universal-#{version}.zip"
   name "CodexBar"
-  desc "Menu bar usage monitor for Codex and Claude"
+  desc "Menu bar app for tracking agentic coding limits and usage"
   homepage "https://codexbar.app/"
 
   depends_on macos: :sonoma
