@@ -1,6 +1,6 @@
 cask "mujoco" do
-  version "3.14.0"
-  sha256 "00cb0126d4d5770d010048628e8ce973ea2d95f2e0bf3345054d4adcb63a90d3"
+  version "3.15.0"
+  sha256 "40bacaafeb335dae384ab1fddbac7d75b4f47162fca4639014e92c6c52ba7deb"
 
   url "https://github.com/google-deepmind/mujoco/releases/download/#{version}/mujoco-#{version}-macos-universal2.dmg"
   name "MuJoCo"
