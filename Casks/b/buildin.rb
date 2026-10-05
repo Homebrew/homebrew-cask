@@ -21,6 +21,7 @@ cask "buildin" do
 
   zap trash: [
     "~/Library/Application Support/Buildin",
+    "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.coasis.buildin.ai.sfl*",
     "~/Library/Preferences/com.coasis.buildin.ai.plist",
   ]
 end
