@@ -1,5 +1,5 @@
 cask "google-gemini" do
-  version "1.124.3.956"
+  version "1.128.1.995"
   sha256 :no_check
 
   url "https://dl.google.com/release2/j33ro/release/Gemini.dmg"
