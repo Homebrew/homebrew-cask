@@ -17,6 +17,8 @@ cask "satellite-eyes" do
 
   app "Satellite Eyes.app"
 
+  uninstall quit: "uk.co.tomtaylor.SatelliteEyes"
+
   zap trash: [
     "~/Library/Application Support/Satellite Eyes",
     "~/Library/Caches/uk.co.tomtaylor.SatelliteEyes",
