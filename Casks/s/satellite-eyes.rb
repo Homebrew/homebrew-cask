@@ -1,6 +1,6 @@
 cask "satellite-eyes" do
-  version "2.1.2"
-  sha256 "2975aeed754ed060ff5bc7bfd05856e5d9bb90a37b08b1c4c80c0fe315fa828e"
+  version "2.1.3"
+  sha256 "ab51e47eb36f64b5259c5e1a8d0dd98ba93bfab82e31416af559f0e1e2633061"
 
   url "https://satellite-eyes.s3.amazonaws.com/satellite-eyes-#{version}.zip"
   name "Satellite Eyes"
@@ -16,6 +16,8 @@ cask "satellite-eyes" do
   depends_on macos: :ventura
 
   app "Satellite Eyes.app"
+
+  uninstall quit: "uk.co.tomtaylor.SatelliteEyes"
 
   zap trash: [
     "~/Library/Application Support/Satellite Eyes",
