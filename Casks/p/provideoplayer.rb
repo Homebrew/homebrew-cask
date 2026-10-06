@@ -17,6 +17,8 @@ cask "provideoplayer" do
 
   app "ProVideoPlayer.app"
 
+  uninstall quit: "com.renewedvision.pvp#{version.major}"
+
   zap trash: [
     "~/Library/Application Support/bugsnag-shared-com.renewedvision.pvp*",
     "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.renewedvision.pvp*.sfl*",
