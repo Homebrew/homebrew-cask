@@ -1,8 +1,8 @@
 cask "pandora" do
-  version "16.0.3"
-  sha256 "04412c09f13416b8ad66ca5123e48b9803cfb627f09892434af66a40ed3a41b8"
+  version "16.1.0"
+  sha256 "af7c19d79dd9f02f638faf64efae3df76843ffa83ac4e978758147d47578d54f"
 
-  url "https://p-desktop-app.s3.amazonaws.com/releases/Pandora-#{version}-universal.dmg"
+  url "https://s3-us-west-2.amazonaws.com/p-desktop-app/releases-v2/Pandora-#{version}-universal.dmg"
   name "Pandora"
   desc "Desktop client for the Pandora web radio service"
   homepage "https://www.pandora.com/desktop"
@@ -13,7 +13,7 @@ cask "pandora" do
     strategy :page_match
   end
 
-  depends_on :macos
+  depends_on macos: :monterey
 
   app "Pandora.app"
 
