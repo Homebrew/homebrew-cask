@@ -7,7 +7,7 @@ cask "masscode" do
 
   url "https://github.com/massCodeIO/massCode/releases/download/v#{version}/massCode-#{version}#{arch}.dmg"
   name "massCode"
-  desc "Code snippets manager for developers"
+  desc "Developer workspace for code snippets, notes and HTTP requests"
   homepage "https://masscode.io/"
 
   livecheck do
