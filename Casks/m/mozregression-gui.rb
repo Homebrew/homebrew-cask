@@ -16,5 +16,8 @@ cask "mozregression-gui" do
 
   app "mozregression GUI.app"
 
+  uninstall launchctl: "application.mozregression",
+            signal:    ["TERM", "mozregression GUI"]
+
   zap trash: "~/Library/Preferences/org.mozilla.mozregression-gui.plist"
 end
