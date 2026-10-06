@@ -22,7 +22,7 @@ cask "tower" do
   depends_on macos: :sonoma
 
   app "Tower.app"
-  binary "#{appdir}/Tower.app/Contents/MacOS/gittower"
+  binary "#{appdir}/Tower.app/Contents/Helpers/gittower"
 
   uninstall quit: "com.fournova.Tower3"
 
