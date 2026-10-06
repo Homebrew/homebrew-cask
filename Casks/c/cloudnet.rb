@@ -37,6 +37,8 @@ cask "cloudnet" do
   zap trash: [
     "~/Library/Containers/world.cloudnet.client",
     "~/Library/Group Containers/$(TeamIdentifierPrefix)world.cloudnet.client",
+    "~/Library/HTTPStorages/world.cloudnet.client",
     "~/Library/Preferences/world.cloudnet.client.cloudnetd.plist",
+    "~/Library/Preferences/world.cloudnet.client.plist",
   ]
 end
