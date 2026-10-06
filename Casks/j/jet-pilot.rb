@@ -3,11 +3,11 @@ cask "jet-pilot" do
        intel: on_system_conditional(macos: "x64", linux: "amd64")
   os macos: "dmg", linux: "AppImage"
 
-  version "1.39.0"
-  sha256 arm:          "aac3b959a12e56949c7f883ac62e36a8d7fd9f1951f10022174fcfdd4fd8a266",
-         intel:        "d5c9eccad73abf5832e2f66f54294f4581631dbee35298f7334ce2a06afb474e",
-         arm64_linux:  "2e76cc62d1aa7efd6d4ae13abd4c7cbd5c66c7be0f5fe245105cf68dc253636f",
-         x86_64_linux: "90298cceda4d494cf4569abdaacc4f7aa3aa68571ef59546cc9e7874d6eae5d9"
+  version "2.0.0"
+  sha256 arm:          "166c88d18bddcfdf3f5db25554f996497b956bf14e0719f12e39505f911fba70",
+         intel:        "923096ca1fdfdc99f2bdaa32edf5f4b237c121027c41743b03f1792671d07edf",
+         arm64_linux:  "b9faa58920dfa513ead5c294a3f0e05726711764a07ed198e1e7b9254662a782",
+         x86_64_linux: "76b9bf49ce4d61ba006cfd84cf1c684f5cbf35e94a8206c3022731215e920b32"
 
   on_macos do
     disable! date: "2026-10-04", because: :fails_gatekeeper_check
