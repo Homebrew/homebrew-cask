@@ -22,8 +22,4 @@ cask "flock-app" do
     "~/Library/Preferences/to.go.osx.plist",
     "~/Library/Saved Application State/to.go.osx.savedState",
   ]
-
-  caveats do
-    requires_rosetta
-  end
 end
