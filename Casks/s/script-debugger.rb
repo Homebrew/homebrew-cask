@@ -16,6 +16,8 @@ cask "script-debugger" do
 
   app "Script Debugger.app"
 
+  uninstall quit: "com.latenightsw.ScriptDebugger8"
+
   zap trash: [
     "~/Library/Application Support/Script Debugger #{version.major}",
     "~/Library/Caches/com.latenightsw.ScriptDebugger#{version.major}",
