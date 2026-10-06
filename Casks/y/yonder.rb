@@ -21,7 +21,7 @@ cask "yonder" do
   app "Yonder.app"
 
   zap trash: [
-    "~/Library/Application Support/com.vladartym.yonder",
+    "~/.config/yonder",
     "~/Library/Caches/com.vladartym.yonder",
     "~/Library/Preferences/com.vladartym.yonder.plist",
     "~/Library/WebKit/com.vladartym.yonder",
