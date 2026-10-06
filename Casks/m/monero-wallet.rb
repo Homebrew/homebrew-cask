@@ -16,12 +16,15 @@ cask "monero-wallet" do
     strategy :header_match
   end
 
-  depends_on :macos
+  depends_on macos: :ventura
 
   app "monero-wallet-gui.app"
 
+  uninstall quit: "org.monero-project.monero-wallet-gui"
+
   zap trash: [
     "~/.bitmonero",
+    "~/Library/Logs/monero-wallet-gui.log",
     "~/Library/Preferences/org.getmonero.monero-core.plist",
     "~/Library/Preferences/org.monero-project.monero-wallet-gui.plist",
     "~/Library/Saved Application State/com.yourcompany.monero-wallet-gui.savedState",
