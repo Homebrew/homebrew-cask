@@ -25,6 +25,7 @@ cask "pcoipclient" do
 
   zap trash: [
     "~/Library/Preferences/com.teradici.PCoIP Client Connection Info.plist",
+    "~/Library/Preferences/com.teradici.pcoipclient.plist",
     "~/Library/Preferences/com.teradici.swiftclient.plist",
     "~/Library/Preferences/com.teradici.Teradici PCoIP Client.plist",
   ]
