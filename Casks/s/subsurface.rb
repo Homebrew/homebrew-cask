@@ -1,8 +1,11 @@
 cask "subsurface" do
-  version "6.0.5707"
-  sha256 "9fa5b1c5cc9c8f12f18ed841d3b1c60220ccd8b184d7adf5f3901703eab74901"
+  arch arm: "arm", intel: "intel"
 
-  url "https://subsurface-divelog.org/downloads/Subsurface-#{version}-CICD-release.dmg",
+  version "6.0.5738"
+  sha256 arm:   "5c786a6253887e900e1c7d070d9e014f94e1843df1ffc6e267d09acd4f7a19c3",
+         intel: "120a4e890d6cfb9e4fc80039c13b936767c776cc7b8e83988b7a8efac8033f15"
+
+  url "https://subsurface-divelog.org/downloads/Subsurface-#{version}-#{arch}-CICD-release.dmg",
       user_agent: :fake
   name "Subsurface"
   desc "Open source divelog program"
@@ -10,7 +13,7 @@ cask "subsurface" do
 
   livecheck do
     url "https://subsurface-divelog.org/current-release/"
-    regex(/href=.*?Subsurface[._-]v?(\d+(?:\.\d+)+)[._-]CICD[._-]release\.dmg/i)
+    regex(/href=.*?Subsurface[._-]v?(\d+(?:\.\d+)+)[._-]#{arch}[._-]CICD[._-]release\.dmg/i)
   end
 
   depends_on macos: :monterey
@@ -24,8 +27,4 @@ cask "subsurface" do
     "~/Library/Caches/Subsurface",
     "~/Library/Preferences/org.hohndel.subsurface.Subsurface.plist",
   ]
-
-  caveats do
-    requires_rosetta
-  end
 end
