@@ -1,10 +1,10 @@
 cask "activitywatch" do
   os macos: "macos-x86_64.dmg", linux: "linux-x86_64.AppImage"
 
-  version "0.13.2"
-  sha256 arm:          "22f3bce0e169457902b2c8d2967701cde887171f737d281dd414a210bd3090ed",
-         intel:        "22f3bce0e169457902b2c8d2967701cde887171f737d281dd414a210bd3090ed",
-         x86_64_linux: "fda7a9bd13d5d5902210c6552bf5693d4b2a30fce5aed3fef30a21ea8f47fc55"
+  version "0.14.0"
+  sha256 arm:          "02c57f5c8fd63bf27191154a2f5181bb9bbca9ab4191f57f75a6b09d9dcc8ddd",
+         intel:        "02c57f5c8fd63bf27191154a2f5181bb9bbca9ab4191f57f75a6b09d9dcc8ddd",
+         x86_64_linux: "5a94338bf1e0f6d9d9f960d9e423cea2d1affd0a8b7eb21f96d3c19711f38346"
 
   on_macos do
     url "https://github.com/ActivityWatch/activitywatch/releases/download/v#{version}/activitywatch-v#{version}-#{os}"
