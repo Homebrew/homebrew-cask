@@ -1,6 +1,6 @@
 cask "tower" do
-  version "17.3,558,d611d30c"
-  sha256 "1aa7f9f461ea6d1bd3f89982223f6fba0da4be54018086d6a5ab9d07d966f492"
+  version "18.0,564,dc219b7f"
+  sha256 "fb1c031f3cf151a8d59368e27a227d5f63358c65db77f4698cf3b374359112dc"
 
   url "https://www.git-tower.com/apps/tower3-mac/#{version.csv.second}-#{version.csv.third}/Tower-#{version.csv.first}-#{version.csv.second}.zip"
   name "Tower"
@@ -22,7 +22,7 @@ cask "tower" do
   depends_on macos: :sonoma
 
   app "Tower.app"
-  binary "#{appdir}/Tower.app/Contents/MacOS/gittower"
+  binary "#{appdir}/Tower.app/Contents/Helpers/gittower"
 
   uninstall quit: "com.fournova.Tower3"
 
