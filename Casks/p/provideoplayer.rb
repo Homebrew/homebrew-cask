@@ -1,6 +1,6 @@
 cask "provideoplayer" do
-  version "3.8,50855942"
-  sha256 "40c9f6397d6a3613906629f8fce70eafa5a342677c5c43436247d027f8f11911"
+  version "3.9,50921506"
+  sha256 "ce29eea5aa768b0f351703d6b63145e0d0a720b7b3e1813f7805f689cf5ab6d3"
 
   url "https://renewedvision.com/downloads/ProVideoPlayer_#{version.csv.first}_#{version.csv.second}.zip"
   name "ProVideoPlayer"
@@ -13,7 +13,7 @@ cask "provideoplayer" do
   end
 
   auto_updates true
-  depends_on macos: :monterey
+  depends_on macos: :sonoma
 
   app "ProVideoPlayer.app"
 
