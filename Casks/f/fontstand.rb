@@ -23,8 +23,12 @@ cask "fontstand" do
 
   app "Fontstand.app"
 
+  uninstall launchctl: "com.fontstand-bv.mac.Fontstand-Agent",
+            quit:      "com.fontstand-bv.mac.Fontstand"
+
   zap trash: [
     "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.fontstand-bv.mac.fontstand.sfl*",
+    "~/Library/Application Support/com.fontstand-bv.mac.Fontstand",
     "~/Library/Application Support/com.fontstand-bv.mac.Fontstand-Agent",
     "~/Library/Application Support/Fontstand Agent",
     "~/Library/Application Support/Fontstand",
