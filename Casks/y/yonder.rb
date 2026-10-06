@@ -1,6 +1,6 @@
 cask "yonder" do
-  version "1.823.0"
-  sha256 "419e7b1561459026d32ddd070865cbbc67fdecd1c5c1e4309db0714217bc443d"
+  version "1.876.0"
+  sha256 "6f9e28ad410a8bc33bda69b5dcb5b6727c894945fb06800c73e371190c7c5b2f"
 
   url "https://download.yonder.so/Yonder-#{version}.dmg"
   name "Yonder"
@@ -22,8 +22,8 @@ cask "yonder" do
 
   zap trash: [
     "~/.config/yonder",
-    "~/Library/Caches/com.vladartym.yonder",
-    "~/Library/Preferences/com.vladartym.yonder.plist",
-    "~/Library/WebKit/com.vladartym.yonder",
+    "~/Library/Caches/so.yonder.mac",
+    "~/Library/Preferences/so.yonder.mac.plist",
+    "~/Library/WebKit/so.yonder.mac",
   ]
 end
