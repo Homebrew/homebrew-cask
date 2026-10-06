@@ -1,9 +1,9 @@
 cask "lens" do
   arch arm: "-arm64"
 
-  version "2026.9.181013"
-  sha256 arm:   "3bd65fd0cdc2b40b97bab171fc83bd759de6b9cbb092498a84fbc63d7b6ffdbf",
-         intel: "6502de3c5075197026c87f8b86855a480b9d0832815cde9be1d4952550b4fc33"
+  version "2026.10.51501"
+  sha256 arm:   "35766b356edf2bc9d82061d059cb7bc43e3eb80bb54050cb0f49466228d78a61",
+         intel: "9768902a3f831d04ccdbb48673c64f5e1d4ccfec5bdc76fb300c9017f801175c"
 
   url "https://api.k8slens.dev/binaries/Lens-#{version}-latest#{arch}.dmg"
   name "Lens"
@@ -18,7 +18,7 @@ cask "lens" do
   end
 
   auto_updates true
-  depends_on macos: :monterey
+  depends_on macos: :ventura
 
   app "Lens.app"
 
