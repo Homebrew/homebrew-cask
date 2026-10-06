@@ -1,6 +1,6 @@
 cask "xnconvert" do
-  version "1.116.0"
-  sha256 "4d3d4ef552155a5bf85cdfea363f88af0dbb23b697ce1ed720e0705d70a96b2d"
+  version "1.117.0"
+  sha256 "53ab78eb6bae4132efa91d0fc94d9c62e544795bd90c3bc7294d1e8a6bae2de6"
 
   url "https://download.xnview.com/old_versions/XnConvert/XnConvert-#{version}-mac.dmg"
   name "XnSoft XnConvert"
