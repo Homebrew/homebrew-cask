@@ -3,10 +3,10 @@ cask "zoho-mail" do
   os macos: "mac", linux: "linux"
   livecheck_ext = on_system_conditional macos: "dmg", linux: "AppImage"
 
-  version "1.10.4"
-  sha256 arm:          "c8eb16a274fb090b6f8efefcb076441173c168c4e79b011a2b8f1375b66ac49d",
-         intel:        "0e42386f42eed1958d7691055da6c02eecf08e6c05c7c21b00953ae04bde5a67",
-         x86_64_linux: "74d730480e4559a7a1ec0be4099bc3b9c62bb1cddad7acd1a0b309c1048a5135"
+  version "1.10.5"
+  sha256 arm:          "3d5213c419a3ecaeee6a02d626533fe83eea8f34547d50baddc89a6346f44ea6",
+         intel:        "bb984ecf94a89228021d48143185523e7d888015188a9bdf60cb5f07965c673a",
+         x86_64_linux: "f1f6d761de502e4bdd1e3fac3da1573d1b6ad24c3707b19eb3f7df302513826b"
 
   on_macos do
     arch arm: "arm64-"
