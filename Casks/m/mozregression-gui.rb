@@ -1,6 +1,6 @@
 cask "mozregression-gui" do
-  version "7.3.0"
-  sha256 "9270673f7e78540f482ff04ba66bfb392bd6095d5a693f32023129188625e157"
+  version "7.5.0"
+  sha256 "ff7afe74e968d6faa14dc4d1184157377b116da24043f4bcbc1ce276333ae183"
 
   url "https://github.com/mozilla/mozregression/releases/download/#{version}/mozregression-gui.dmg"
   name "mozregression-gui"
@@ -15,6 +15,9 @@ cask "mozregression-gui" do
   depends_on :macos
 
   app "mozregression GUI.app"
+
+  uninstall launchctl: "application.mozregression",
+            signal:    ["TERM", "mozregression GUI"]
 
   zap trash: "~/Library/Preferences/org.mozilla.mozregression-gui.plist"
 end
