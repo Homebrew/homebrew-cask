@@ -35,10 +35,12 @@ cask "google-gemini" do
       ],
       pkgutil:   "com.google.pkg.Keystone",
       trash:     [
+        "~/Library/Application Scripts/com.google.GeminiMacOS.FinderSync",
         "~/Library/Application Support/com.google.GeminiMacOS",
         "~/Library/Application Support/com.google.GeminiMacOS.launcher",
         "~/Library/Caches/com.google.GeminiMacOS",
         "~/Library/Caches/com.google.GeminiMacOS.launcher",
+        "~/Library/Containers/com.google.GeminiMacOS.FinderSync",
         "~/Library/Google/GoogleSoftwareUpdate/Actives/com.google.GeminiMacOS",
         "~/Library/Group Containers/group.com.google.gemini",
         "~/Library/HTTPStorages/com.google.GeminiMacOS",
