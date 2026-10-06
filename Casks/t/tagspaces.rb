@@ -3,11 +3,11 @@ cask "tagspaces" do
   os macos: "mac", linux: "linux"
   url_end = on_system_conditional macos: "dmg", linux: "AppImage"
 
-  version "6.14.0"
-  sha256 arm:          "b9227ede2a112b01b9675b314cbbba0126a75c2bf931d935c1811b10d54b6e85",
-         intel:        "dba0a839cc0f7bbac4322cd20f426c2abca686c9dc463af7d6ad461cd82b7076",
-         arm64_linux:  "eba67ebd8576361909e7ec902821f528b6f08feaae69b67c664e9fbcf0a8b5d9",
-         x86_64_linux: "cfb299b44dedbce0e74dd639f41d9001b3b199e85accb058c96b9e5daf7f1d65"
+  version "6.14.1"
+  sha256 arm:          "ada9624362c65d4815c0ed783217fd51e3afd5fb2d9680c08a7d5d6de1488e8f",
+         intel:        "02803ef0c4919cb63520fb3d62e5ea7ed4917b1eb0de96006dcdc1397325811c",
+         arm64_linux:  "a08c122ae0e3994df89e57e6702a9be4b6eb7d232aa2bdb778364c4c5c5c4d5f",
+         x86_64_linux: "27437d3aa60052c6d009761f1f8f0419af11831b4e9bde5197cb4d2f94f33e7e"
 
   on_macos do
     depends_on macos: :ventura
