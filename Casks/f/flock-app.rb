@@ -1,6 +1,6 @@
 cask "flock-app" do
-  version "2.2.513"
-  sha256 "610d73f1792905a4dd6c0dbbd27dd83a40e3c7d482784a298d4623ada8621ff6"
+  version "2.2.526"
+  sha256 "3ed88e7134a86b744715221237454cdb2097bddb6c77fb6adae3485f25b51ceb"
 
   url "https://updates.flock.co/fl_mac_electron/Flock-macOS-#{version}.dmg"
   name "Flock"
@@ -12,7 +12,7 @@ cask "flock-app" do
     strategy :header_match
   end
 
-  depends_on :macos
+  depends_on macos: :monterey
 
   app "Flock.app"
 
