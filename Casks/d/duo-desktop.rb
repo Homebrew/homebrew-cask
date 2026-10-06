@@ -1,6 +1,6 @@
 cask "duo-desktop" do
-  version "7.21.0.0"
-  sha256 "fc23141655d460ebb6bde84adc995cb5f8aa30763fdb70d1805b1b91123c412c"
+  version "7.22.0.0"
+  sha256 "9c79252b49856e297d01b2d289dfe5af28036c947da7f6eefb8e4b58fec0414c"
 
   url "https://dl.duosecurity.com/DuoDesktop-#{version}.pkg"
   name "Duo Desktop"
