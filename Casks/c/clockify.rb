@@ -9,7 +9,9 @@ cask "clockify" do
 
   livecheck do
     url "https://clockify.me/downloads/appcast.xml"
-    strategy :sparkle, &:short_version
+    strategy :sparkle do |items|
+      items.map(&:short_version)
+    end
   end
 
   auto_updates true
