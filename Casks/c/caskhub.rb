@@ -17,6 +17,8 @@ cask "caskhub" do
 
   app "CaskHub.app"
 
+  uninstall quit: "com.mag.caskhub"
+
   zap trash: [
     "~/Library/Application Support/CaskHub",
     "~/Library/Application Support/com.mag.caskhub",
