@@ -1,6 +1,6 @@
 cask "fontstand" do
-  version "3.0.11,16"
-  sha256 "c8f688de49cc7d06779d65087f9f684369d4d0c9beb84bebac95cab29a53feed"
+  version "3.0.12,17"
+  sha256 "0bca73cb9fc87a95e1fa43a5cc780b79f3be1abaee9ac858af27992bb9ef94d0"
 
   url "https://api.fontstand.com/assets/Uploads/Website/App/Fontstand-v#{version.csv.second}.zip"
   name "Fontstand"
