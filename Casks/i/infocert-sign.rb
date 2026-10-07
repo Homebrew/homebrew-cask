@@ -1,5 +1,5 @@
 cask "infocert-sign" do
-  version "3.1.1.358"
+  version "3.1.2.686"
   sha256 :no_check
 
   url "https://rinnovofirma.infocert.it/infocertsign/international/download/darwin/latest"
@@ -14,10 +14,9 @@ cask "infocert-sign" do
 
   depends_on macos: :monterey
 
-  pkg "InfocertSign-installer-international.pkg"
+  app "InfocertSignDesktop.app"
 
-  uninstall quit:    "it.infocert.desktop.gosign",
-            pkgutil: "it.infocert.desktop.gosign"
+  uninstall quit: "it.infocert.desktop.gosign"
 
   zap trash: [
     "~/.infocertsign",
