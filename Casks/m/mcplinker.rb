@@ -10,18 +10,12 @@ cask "mcplinker" do
   desc "Manage and sync MCP server configurations across AI clients"
   homepage "https://github.com/milisp/mcp-linker"
 
-  livecheck do
-    url :url
-    strategy :github_latest
-  end
-
   depends_on :macos
 
   app "MCPLinker.app"
 
   zap trash: [
     "~/.cache/mcp-linker",
-    "~/.claude.disabled.json",
     "~/.config/mcplinker",
     "~/Library/Caches/dev.milisp.mcplinker",
     "~/Library/HTTPStorages/dev.milisp.mcplinker.binarycookies",
