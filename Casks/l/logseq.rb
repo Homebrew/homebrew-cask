@@ -3,11 +3,11 @@ cask "logseq" do
   os macos: "darwin", linux: "linux"
   url_end = on_system_conditional macos: "dmg", linux: "AppImage"
 
-  version "2.0.1"
-  sha256 arm:          "b76af25384f8aaa0ba322f8b5523aea712d9750d9f3e79cac55dc783796439cd",
-         intel:        "d94ab1223db5e6d75d073b938eb0bf4606f3b2a9b37f307b91dba1322c8d34c2",
-         arm64_linux:  "a701e13a1e392e4eac1d1f73cdf20a04fdb26bd3a155360f2345741ebf1f64b4",
-         x86_64_linux: "49de367078b37670febdb987e562b75dee1e1ae96c28bfb8738779c42297dd0c"
+  version "2.0.2"
+  sha256 arm:          "b9a16b6ddef1659aa3c2301ce37a0336377644bbf1016051e3d19d1a66776314",
+         intel:        "7c3682b2e73ac69f531012e37f09633a4200abc3de54efca630fa6aafefc27a9",
+         arm64_linux:  "371d1c9e66e6ade39e71bc60ab4d49458c83812f143b939ae26ba39663651634",
+         x86_64_linux: "1335725626f6cbfbf3b00b7743a60356d2d7dad123cf00bbf974a9beef556870"
 
   on_macos do
     depends_on macos: :monterey
