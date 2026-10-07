@@ -3,11 +3,11 @@ cask "tabby" do
   os macos: "macos", linux: "linux"
   url_end = on_system_conditional macos: "zip", linux: "AppImage"
 
-  version "1.0.237"
-  sha256 arm:          "af86b421f39a5f881e8dbac72744528b612ceb3bf9f9811f108969ecfeff4bc6",
-         intel:        "4a4e327ef6fd0351cbed69e1aaf405752a18228e986812b6bc8e6dd642f8024d",
-         arm64_linux:  "e501bdb57aea752089e0fceda43b25d3d569ab1ff4218926af5f863c5e60df9c",
-         x86_64_linux: "de5dc12466ad49b7ac5fb493e7fbb8a4df0d2c23265996a8c55f490367ca6be4"
+  version "1.0.238"
+  sha256 arm:          "c877d8962f63a67baf40f3400b2d57a195f97d7b3547d7e804adae0e7df6754c",
+         intel:        "93935cc99fed5ff76a4cceaef15fdd15802aa7f49e9227f9c883df6eeebee9b4",
+         arm64_linux:  "3d8ead2292efef68514432493817f11be0aa1efeb68d81134ba6d2e7e4bc80ef",
+         x86_64_linux: "79efb773fef45f97cd3be200a70cb9dc690fcef8d6faa2dbc29679aa8f687d85"
 
   on_macos do
     depends_on macos: :monterey
