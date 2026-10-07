@@ -21,6 +21,10 @@ cask "codebuddy" do
     end
   end
 
+  # The URL https://www.codebuddy.ai/ is not reachable in the autobump environment
+  # so we have to skip it in those instances for now.
+  no_autobump! because: "Livecheck is unreachable in autobump environment"
+
   auto_updates true
   depends_on :macos
 
