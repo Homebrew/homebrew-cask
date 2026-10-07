@@ -2,11 +2,11 @@ cask "koodo-reader" do
   arch arm: "arm64", intel: on_system_conditional(macos: "x64", linux: "x86_64")
   os macos: "dmg", linux: "AppImage"
 
-  version "2.4.5"
-  sha256 arm:          "a57972137620e94ec86ea732b5a7b1b1fe5c32d1630526649acc0d1c0c55c97d",
-         intel:        "91c88d6e4f5c8faa4afdb38f3ff3e67b435ad7ffabca7b1a55e5f1dfc685fc86",
-         arm64_linux:  "de8ae99f0388aac7e8b08b4bc7cdf833897fdd020ae387724a69f3925538b217",
-         x86_64_linux: "dbdfd34509023f6ee00694cb2afdde0e6e3bba5071491340208a7c770a48d53f"
+  version "2.4.6"
+  sha256 arm:          "a4ed495ba090c06fdfe832acdad1af12a3ffcd40725078855c9568092031acac",
+         intel:        "092ff130d48b35141f1e8b542e0cfb18a0bbac3d107255a2830c41b35ef06403",
+         arm64_linux:  "04215f600efe7f5c0ad3a94ae9e5772f59382ba6a0d6ef7595039b58316167b4",
+         x86_64_linux: "c9efb1cb47533a0d7bdafc079363befbb544d187da4e0311cfd1b1e33e139229"
 
   on_macos do
     disable! date: "2026-09-01", because: :fails_gatekeeper_check
