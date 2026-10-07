@@ -2,10 +2,10 @@ cask "sidequest" do
   arch arm: "-arm64"
   os macos: "dmg", linux: "AppImage"
 
-  version "1.4.0"
-  sha256 arm:          "9edce53a0afe47e63062132fadd9eaac94e7ebb63cbc85d3252425e9a5b7f253",
-         intel:        "c9bb16d1d5520a2c9e6a0d4345dcf62c3b9c624a7f764248eee52094b9220858",
-         x86_64_linux: "b36e54073c3bd6b63bc5c95cfc993fe2d74ea432747f8a55a9203f93309becbb"
+  version "1.4.1"
+  sha256 arm:          "512b5f75ef90ae6cc9972f479585715c21d52de4e2985ffc4cc28173652a1faf",
+         intel:        "0725f35208e76f702a34561e2adb217dfde37c50f33a1169afc570d3faf58c08",
+         x86_64_linux: "5f253bd522c421cea3eba441f7064af9a40cdd43f5575f0318fd89e818f21620"
 
   on_macos do
     depends_on macos: :monterey
