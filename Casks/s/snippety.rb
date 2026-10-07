@@ -1,6 +1,6 @@
 cask "snippety" do
-  version "11.4.149"
-  sha256 "1edf0fde902c6acfe9d74dbf2a10480a4df94a0a0f8b06ae3a5b28384f0394fb"
+  version "11.5.153"
+  sha256 "250cb4c7ed8ab4b8c21f9989467a33b8cad95e59cf95b33c64da88079e6aa9af"
 
   url "https://snippety.app/releases/Snippety-#{version}.dmg"
   name "Snippety"
@@ -13,7 +13,7 @@ cask "snippety" do
   end
 
   auto_updates true
-  depends_on macos: :ventura
+  depends_on macos: :sequoia
 
   app "Snippety.app"
 
