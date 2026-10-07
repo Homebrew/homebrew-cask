@@ -4,7 +4,7 @@ cask "crest" do
 
   url "https://crestnotch.app/downloads/Crest-#{version}.dmg"
   name "Crest"
-  desc "Notch utility with widget pages, music controls and Claude Code prompts"
+  desc "Notch utility with widgets"
   homepage "https://crestnotch.app/"
 
   livecheck do
