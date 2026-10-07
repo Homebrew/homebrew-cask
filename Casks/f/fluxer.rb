@@ -11,6 +11,7 @@ cask "fluxer" do
          x86_64_linux: "d6cc98ddca50ecbd599f48cfdc82da4747eecbb1223dcb049b4fbf11eefcad12"
 
   on_macos do
+    auto_updates true
     depends_on macos: :ventura
 
     app "Fluxer.app"
@@ -39,7 +40,7 @@ cask "fluxer" do
   homepage "https://fluxer.app/"
 
   livecheck do
-    url "https://pkgs.fluxer.com/desktop/stable/darwin/arm64/latest.json"
+    url "https://pkgs.fluxer.com/desktop/stable/#{os}/#{arch}/latest.json"
     strategy :json do |json|
       json["version"]
     end
