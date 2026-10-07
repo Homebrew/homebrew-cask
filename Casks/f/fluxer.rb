@@ -16,7 +16,8 @@ cask "fluxer" do
 
     app "Fluxer.app"
 
-    uninstall quit: "app.fluxer"
+    uninstall launchctl: "app.fluxer.ShipIt",
+              quit:      "app.fluxer"
 
     zap trash: [
       "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/app.fluxer.sfl*",
@@ -26,6 +27,7 @@ cask "fluxer" do
       "~/Library/Logs/Fluxer",
       "~/Library/Logs/fluxer_desktop",
       "~/Library/Preferences/app.fluxer.plist",
+      "~/Library/Preferences/ByHost/app.fluxer.ShipIt.*.plist",
     ]
   end
   on_linux do
