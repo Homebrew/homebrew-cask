@@ -15,7 +15,7 @@ cask "camunda-modeler" do
     regex(%r{href=.*?/camunda[._-]modeler[._-]v?(\d+(?:\.\d+)+)[._-]mac[._-]#{arch}\.dmg}i)
   end
 
-  depends_on macos: :monterey
+  depends_on macos: :ventura
 
   app "Camunda Modeler.app"
 
