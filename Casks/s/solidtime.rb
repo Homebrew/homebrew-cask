@@ -10,11 +10,6 @@ cask "solidtime" do
   desc "Open-source time tracker"
   homepage "https://www.solidtime.io/"
 
-  livecheck do
-    url :url
-    strategy :github_latest
-  end
-
   auto_updates true
   depends_on macos: :monterey
 
