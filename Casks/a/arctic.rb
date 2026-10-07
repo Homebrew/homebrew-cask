@@ -23,6 +23,8 @@ cask "arctic" do
 
   app "Arctic.app"
 
+  uninstall quit: "video.hedge.Arctic.Mac"
+
   zap trash: [
     "~/Library/Application Support/Arctic",
     "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/video.hedge.arctic.mac.sfl*",
