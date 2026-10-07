@@ -1,6 +1,6 @@
 cask "holst" do
-  version "0.0.6"
-  sha256 "be4138e2ea413e234965b2227eaeb193f7f08463485bd63fea9bda2be7458fe2"
+  version "0.0.7"
+  sha256 "6310c88757875a20db162a320da583140d258c5793bba3cfd6ef8c79c36832de"
 
   url "https://storage.yandexcloud.net/holst-desktop-application/mac/Holst-#{version}-universal.dmg"
   name "Holst"
