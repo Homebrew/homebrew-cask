@@ -1,7 +1,7 @@
 cask "publii" do
   arch arm: "arm64", intel: "intel"
 
-  version "0.47.9,17481"
+  version "0.48.0,17556"
   sha256 :no_check # required as upstream package is updated in-place
 
   url "https://getpublii.com/download/Publii-#{version.csv.first}-#{arch}.dmg"
@@ -17,7 +17,7 @@ cask "publii" do
     end
   end
 
-  depends_on :macos
+  depends_on macos: :monterey
 
   app "Publii.app"
 
