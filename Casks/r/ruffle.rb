@@ -3,11 +3,11 @@ cask "ruffle" do
        intel: on_system_conditional(macos: "universal", linux: "x86_64")
   os macos: "macos", linux: "linux"
 
-  version "0.7.0"
-  sha256 arm:          "07f957c29c0be6874d10c7e12b493bbe41ecbfc9623b00af84a064fa9205e616",
-         intel:        "07f957c29c0be6874d10c7e12b493bbe41ecbfc9623b00af84a064fa9205e616",
-         arm64_linux:  "791fae5b30bbeb301e50afee09a2d29bfd71c95c591001ca9e5c1f2e905b6524",
-         x86_64_linux: "f302930fa184661b550b2c09e08b0cc765497e789e29844863c75c74df0dacf7"
+  version "0.7.1"
+  sha256 arm:          "7a86a09b0ca1d5756abcbb093108265019d77edad79e91c98689126c940bea4e",
+         intel:        "7a86a09b0ca1d5756abcbb093108265019d77edad79e91c98689126c940bea4e",
+         arm64_linux:  "36b222a53062709772c8dcd454fdd1dafa67ab743497e38a0a5d2ed8c0a6597f",
+         x86_64_linux: "67950dfdde643f9087ae478eb3637fe52e0deefc79bdb55fe43cd69dab9fdd99"
 
   on_macos do
     app "Ruffle.app"
