@@ -7,6 +7,11 @@ cask "omniwm" do
   desc "Tiling window manager"
   homepage "https://omniwm.app/"
 
+  livecheck do
+    url :url
+    strategy :github_latest
+  end
+
   depends_on arch: :arm64
   depends_on macos: :tahoe
 
