@@ -1,6 +1,6 @@
 cask "herd" do
-  version "1.30.1"
-  sha256 "eff7d322597e0128a9f7f120a7f89a00adcfb950f0fb3cddc76fe4a54681990b"
+  version "1.30.2"
+  sha256 "399a548d2e7cb838c9e8be1f5f0d54b42634ac132ef52c9370f5fd5a507f512b"
 
   url "https://download.herdphp.com/app_versions/Herd_#{version}.dmg"
   name "Laravel Herd"
