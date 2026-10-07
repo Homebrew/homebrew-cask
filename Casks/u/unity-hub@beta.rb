@@ -22,6 +22,7 @@ cask "unity-hub@beta" do
     uninstall quit: "com.unity3d.unityhub"
 
     zap trash: [
+          "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.unity3d.unityhub.sfl*",
           "~/Library/Application Support/UnityHub",
           "~/Library/Preferences/com.unity3d.unityhub.helper.plist",
           "~/Library/Preferences/com.unity3d.unityhub.plist",
