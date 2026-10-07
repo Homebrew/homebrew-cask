@@ -9,8 +9,9 @@ cask "stashcat" do
 
   livecheck do
     url "https://cc.edyou.eu/desktop/update?channel=release&version=0.0.1&app_id=null&platform=darwin&product=stashcat"
-    strategy :json do |json|
-      json["name"]&.[](/stashcat[._-]v?(\d+(?:\.\d+)+)-darwin\.zip/i, 1)
+    regex(/stashcat[._-]v?(\d+(?:\.\d+)+)-darwin\.zip/i)
+    strategy :json do |json, regex|
+      json["name"]&.[](regex, 1)
     end
   end
 
