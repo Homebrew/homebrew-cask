@@ -24,6 +24,29 @@ env:
 permissions: {}
 
 jobs:
+  brew_ruby:
+    name: No brew ruby
+    if: github.repository_owner == 'Homebrew'
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          persist-credentials: false
+
+      - name: Check for `brew ruby`
+        run: |
+          status=0
+          git grep --line-number --word-regexp --extended-regexp 'brew[[:space:]]+ruby' -- \
+            .github ':(glob)**/action.yml' ':(glob)**/action.yaml' ':!.github/workflows/actionlint.yml' || status=$?
+          if [[ "${status}" -eq 0 ]]
+          then
+            echo "::error::Use a dedicated brew command or Homebrew/actions/setup-ruby instead of \`brew ruby\`."
+            exit 1
+          fi
+          [[ "${status}" -eq 1 ]]
+
   workflow_syntax:
     if: github.repository_owner == 'Homebrew'
     runs-on: ubuntu-latest
