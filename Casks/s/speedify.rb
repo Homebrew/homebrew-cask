@@ -22,5 +22,12 @@ cask "speedify" do
     "SwitchboardService",
   ]
 
-  zap trash: "~/Library/Speedify"
+  zap trash: [
+    "~/Library/Application Scripts/42L9495X72.speedify",
+    "~/Library/Application Scripts/com.connectify.Speedify",
+    "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.connectify.speedify.sfl*",
+    "~/Library/Containers/com.connectify.Speedify",
+    "~/Library/Group Containers/42L9495X72.speedify",
+    "~/Library/Speedify",
+  ]
 end
