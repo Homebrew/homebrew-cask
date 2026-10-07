@@ -9,7 +9,7 @@ cask "lobehub" do
          x86_64_linux: "beb4d58312ef6f2272bab8b5c2ec0e4922afc9bf5097af1f389869a2416f32db"
 
   on_macos do
-    depends_on macos: :monterey
+    depends_on macos: :ventura
 
     app "LobeHub.app"
 
