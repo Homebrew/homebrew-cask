@@ -1,6 +1,6 @@
 cask "pastenow" do
-  version "2.33,764"
-  sha256 "280f9b21c6de53af3899211c37a7c4feb6ec9e89b140ae8aeb1aa9361f11a3bb"
+  version "2.34,765"
+  sha256 "bac5dbdc7204e7c03da52f5c109b0d932a4bb5b1bcc58ac7e84d2977fa16ed24"
 
   url "https://pastenow.app/api/release_manager/downloads/app.pastenow.PasteNow/#{version.csv.second}.zip"
   name "PasteNow"
@@ -13,7 +13,7 @@ cask "pastenow" do
   end
 
   auto_updates true
-  depends_on macos: :sonoma
+  depends_on macos: :sequoia
 
   app "PasteNow.app"
 
