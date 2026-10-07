@@ -1,6 +1,6 @@
 cask "arctic" do
-  version "26.1.1,71,20260709162100"
-  sha256 "0ec879d446670e127582c645b530f7b9ab9fcfb08d76e966bd1ccc5bb241abfc"
+  version "26.1.2,73,20261007195555"
+  sha256 "e121831502f5a0f95c352c9103972cb2fd23e5e98e0e211239e15ff895993498"
 
   url "https://updates.hedge.video/arctic/macos/updates/production/Arctic_#{version.csv.third}_v#{version.csv.first}b#{version.csv.second}/Arctic-#{version.csv.second}.zip"
   name "Arctic"
@@ -19,7 +19,7 @@ cask "arctic" do
   end
 
   auto_updates true
-  depends_on :macos
+  depends_on macos: :monterey
 
   app "Arctic.app"
 
