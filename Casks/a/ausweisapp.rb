@@ -17,9 +17,8 @@ cask "ausweisapp" do
 
   app "AusweisApp.app"
 
-  zap trash: "~/Library/Application Scripts/com.governikus.ausweisapp2"
-
-  caveats do
-    requires_rosetta
-  end
+  zap trash: [
+    "~/Library/Application Scripts/com.governikus.ausweisapp2",
+    "~/Library/Containers/com.governikus.ausweisapp2",
+  ]
 end
