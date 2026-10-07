@@ -3,11 +3,11 @@ cask "git-credential-manager" do
   os macos: "osx", linux: "linux"
   url_end = on_system_conditional macos: "pkg", linux: "tar.gz"
 
-  version "2.9.1"
-  sha256 arm:          "3b499fb5d580359d30a21b0aacc9f3314ed4df29a747b52425f647c095e37828",
-         intel:        "2eaa8829d064b381023ebe4202a3ca3883ff2441e799c885dcd78318b6cdf183",
-         arm64_linux:  "cf3806b7528b5a5af16bd4bd0683202fc432d9008dd91d20c4c6744b24a033b5",
-         x86_64_linux: "31fc151c3b111ffe25616a4356bd9a50bdcdbd0922c5e11990fb220c6caf1ce1"
+  version "3.0.1"
+  sha256 arm:          "0da49073ee2ae0a632d2990964795fb7ba245f2e61ec9c2d0a1d73f0bdc141b1",
+         intel:        "631a24fcd33a16364ae62e65fa020677d3c156e832dd7fd9fa1f35451290bc83",
+         arm64_linux:  "e211d6fcda12ac1e2ca4ff634eeedc8da792fa80e66d009b5de34f81c7516dce",
+         x86_64_linux: "f35e2b5a819b52bee2eaeed7da7226a3c04c75a3b3d23052580c2240f9029981"
 
   on_macos do
     pkg "gcm-osx-#{arch}-#{version}.pkg"
