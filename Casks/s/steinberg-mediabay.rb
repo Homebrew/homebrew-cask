@@ -24,6 +24,7 @@ cask "steinberg-mediabay" do
 
   uninstall pkgutil: [
               "com.steinberg.MediaClient",
+              "com.steinberg.mediaclient",
               "com.steinberg.mediaserver",
               "net.steinberg.vstsounds.vstsoundcontentupdate",
             ],
