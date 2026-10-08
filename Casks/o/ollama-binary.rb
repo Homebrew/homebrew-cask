@@ -3,11 +3,11 @@ cask "ollama-binary" do
   os macos: "darwin", linux: "linux"
   url_end = on_system_conditional macos: ".tgz", linux: "-#{arch}.tar.zst"
 
-  version "0.40.0"
-  sha256 arm:          "b490b4925a95c5f3dfcd889e566cf3dcd727848d59057fb00b03f1d6630326dc",
-         intel:        "b490b4925a95c5f3dfcd889e566cf3dcd727848d59057fb00b03f1d6630326dc",
-         arm64_linux:  "4d27cb1d8f46176a3c0ce10aea2a16e4ad73dfe1599f2ed13468f29e5b8aba0d",
-         x86_64_linux: "c94aa4156b3d13e64ebc2efe5ea53f015384c882be776e6695cfb37fb180d5ad"
+  version "0.40.1"
+  sha256 arm:          "66e1587711f3a06315b23782ba74897001da6c8b8edf6c0371f7533015a076dd",
+         intel:        "66e1587711f3a06315b23782ba74897001da6c8b8edf6c0371f7533015a076dd",
+         arm64_linux:  "f5cbd9a97e0de9502ef928cb993f6d16468e25be6d55a8529d7fd2b67a130bcb",
+         x86_64_linux: "a7aebbe3dd76ccf1351a56a3e57218ad4863cb5f9a9938c58de87a37555e355d"
 
   on_macos do
     conflicts_with cask: "ollama-app"
