@@ -29,6 +29,8 @@ cask "warp-agent-cli" do
   zap trash: [
     "~/.local/bin/warp",
     "~/.warp",
+    "~/Library/Logs/oz/warp.log*",
     "~/Library/Logs/warp-cli",
+    "~/Library/Logs/warp.log*",
   ]
 end
