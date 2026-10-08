@@ -17,6 +17,8 @@ cask "lightcraft" do
   end
   on_linux do
     app_image "lightcraft-#{version}-linux-#{arch}.AppImage", target: "LightCraft.AppImage"
+
+    zap trash: "~/.config/lightcraft"
   end
 
   url "https://github.com/storytold/lightcraft/releases/download/v#{version}/lightcraft-#{version}-#{os}-#{arch}.#{url_end}"
