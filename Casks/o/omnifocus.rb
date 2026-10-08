@@ -34,8 +34,8 @@ cask "omnifocus" do
     end
   end
   on_sequoia :or_newer do
-    version "4.9.2"
-    sha256 "3574f794b608f7cc9a4a504b09888be920419655514ed77af195738206030680"
+    version "4.9.3"
+    sha256 "4c0f7f1783c5f30be99b0c48c8a57df70e58652878edbf801a968640fb7cec3f"
 
     url "https://downloads.omnigroup.com/software/macOS/15/OmniFocus-#{version}.dmg"
 
