@@ -1,6 +1,6 @@
 cask "tailscale-app" do
-  version "1.102.4"
-  sha256 "b40b733af76233fd1e4af7acaeb325268e55e6818c15c6e9aa9e78f427245c5b"
+  version "1.104.1"
+  sha256 "67ec55f18ee2afac0a8fb57f7811977f4ad6df1debd4a187fa0db3dbb5d401d5"
 
   url "https://pkgs.tailscale.com/stable/Tailscale-#{version}-macos.pkg"
   name "Tailscale"
@@ -13,7 +13,7 @@ cask "tailscale-app" do
   end
 
   auto_updates true
-  depends_on macos: :monterey
+  depends_on macos: :ventura
 
   pkg "Tailscale-#{version}-macos.pkg"
 
