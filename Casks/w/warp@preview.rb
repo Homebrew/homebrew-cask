@@ -20,8 +20,13 @@ cask "warp@preview" do
   app "WarpPreview.app"
 
   zap trash: [
+    "~/.warp",
+    "~/Library/Application Scripts/2BBY89MBSN.dev.warp",
     "~/Library/Application Support/dev.warp.Warp-Preview",
-    "~/Library/Logs/warp_preview.log",
+    "~/Library/Caches/dev.warp.Warp-Preview",
+    "~/Library/Group Containers/2BBY89MBSN.dev.warp",
+    "~/Library/Logs/oz/warp.log*",
+    "~/Library/Logs/warp_preview.log*",
     "~/Library/Preferences/dev.warp.Warp-Preview.plist",
     "~/Library/Saved Application State/dev.warp.Warp-Preview.savedState",
   ]
