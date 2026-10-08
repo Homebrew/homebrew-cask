@@ -1,6 +1,6 @@
 cask "devonagent" do
-  version "3.11.11"
-  sha256 "470cb01ae5543fd60c846973437610a0c90c3ffd62999bdb9df560f51d5a5cde"
+  version "3.12"
+  sha256 "17a05a737fb02a2f6f7f2241dca30c6a8b5a5f67e1231626fafd352728534f18"
 
   url "https://download.devontechnologies.com/download/devonagent/#{version}/DEVONagent_Pro.app.zip"
   name "DEVONagent Pro"
@@ -15,7 +15,7 @@ cask "devonagent" do
   end
 
   auto_updates true
-  depends_on :macos
+  depends_on macos: :ventura
 
   app "DEVONagent.app"
 
