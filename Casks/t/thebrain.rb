@@ -20,6 +20,8 @@ cask "thebrain" do
 
   app "TheBrain #{version.major}.app"
 
+  uninstall quit: "com.thebrain.dekutron"
+
   zap trash: [
     "~/Library/Caches/com.thebrain.TheBrain",
     "~/Library/HTTPStorages/com.thebrain.TheBrain",
