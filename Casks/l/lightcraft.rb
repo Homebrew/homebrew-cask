@@ -21,6 +21,6 @@ cask "lightcraft" do
 
   url "https://github.com/storytold/lightcraft/releases/download/v#{version}/lightcraft-#{version}-#{os}-#{arch}.#{url_end}"
   name "LightCraft"
-  desc "Photo library and raw developer"
+  desc "Photo library manager and raw image developer"
   homepage "https://getartcraft.com/apps/lightcraft"
 end
