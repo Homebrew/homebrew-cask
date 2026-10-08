@@ -3,10 +3,10 @@ cask "blockbench" do
   url_end = on_system_conditional macos: "dmg", linux: "AppImage"
   url_arch = on_system_conditional macos: "#{arch}_"
 
-  version "5.2.1"
-  sha256 arm:          "20fd51a18c7a757d9cb03bb0b89c99874d2d5bdbae733817a7877b15043aa78c",
-         intel:        "c737134ec4e825f4ed2e6ade5ee553ffcb375fb6541d99b7dfff06298cd98bcc",
-         x86_64_linux: "abc3980ad1f1308a2352f7f920c57de8ff61fc2433ea8a64b81aa504c97987bf"
+  version "5.2.2"
+  sha256 arm:          "0d072bf863ee3e0bcaecbd0de67a5ffd29dfbf6ee2e8fe5eeb872a14331c5c03",
+         intel:        "d743fa5d92db3e5081a450ca91ab0536c7a62ac12b9c1a7374040e2524a15469",
+         x86_64_linux: "375fb8da33b8b9ad0f1f790836ed83020b6e987a56e23184d31d6ccf3132ac3b"
 
   on_macos do
     depends_on macos: :monterey
