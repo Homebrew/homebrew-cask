@@ -1,6 +1,6 @@
 cask "devonsphere-express" do
-  version "1.9.9"
-  sha256 "2c09a34fa71398e6f248bc0c6bd34a8278d5d19a4ba8e0f4a9b3864070d962e9"
+  version "1.9.10"
+  sha256 "9e3da18965f7543d5c07a29a54666725d2a7cda82591ada68eee9221816a53cf"
 
   url "https://download.devontechnologies.com/download/devonsphere/#{version}/DEVONsphere_Express.app.zip"
   name "DEVONsphere Express"
@@ -13,7 +13,7 @@ cask "devonsphere-express" do
   end
 
   auto_updates true
-  depends_on :macos
+  depends_on macos: :ventura
 
   app "DEVONsphere Express.app"
 
