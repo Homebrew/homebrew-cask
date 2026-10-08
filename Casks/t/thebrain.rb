@@ -1,9 +1,9 @@
 cask "thebrain" do
   arch arm: "arm64", intel: "x64"
 
-  version "15.0.625"
-  sha256 arm:   "60733f0423b2f0ab395fd54526e0f0377e288173874c6dd8f46e2b02ed434fbb",
-         intel: "b4515d38d93866e749ab2007f1345c04b284d4ed8211e1432f5e57c3f7fb564d"
+  version "15.0.640"
+  sha256 arm:   "3141bbb766dfb6fa70b45a12e2fa7c6fbaaceda69bdaa571e58a44cde429c533",
+         intel: "e5b921bda7f53767469c2446c5c6a9518c31da8093a8ef6ca0054b1d9295e5e1"
 
   url "https://updater.thebrain.com/files/TheBrain-#{version}-#{arch}.dmg"
   name "TheBrain"
@@ -19,6 +19,8 @@ cask "thebrain" do
   depends_on :macos
 
   app "TheBrain #{version.major}.app"
+
+  uninstall quit: "com.thebrain.dekutron"
 
   zap trash: [
     "~/Library/Caches/com.thebrain.TheBrain",
