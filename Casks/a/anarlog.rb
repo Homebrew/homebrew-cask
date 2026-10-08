@@ -3,17 +3,19 @@ cask "anarlog" do
   os macos: "macos", linux: "linux"
   url_end = on_system_conditional macos: "dmg", linux: "AppImage"
 
-  version "1.4.28"
-  sha256 arm:          "9d5a4b9ba8aeb5d024b056b3b5990a5292608aa04e464a9858aa23bac5df06b0",
-         intel:        "11a68e17f8ba0ec694318d10d66de7d15776faa5e3accff6ee2eb221e430c34e",
-         arm64_linux:  "1e62ce65aac82082638aac3f25b83552fc37309680ba73e7c7b4b0e413b1c393",
-         x86_64_linux: "8e3d22258ecf94330a413316b3c92d9e1ce3a791a05bc77d9a70e22d718750ba"
+  version "1.4.29"
+  sha256 arm:          "847fdbdd128dc1518fedae5e87e3846f80cdc65974990947757d0cc3191bc454",
+         intel:        "60a4a07400b78ae492ff8e89ae5ca012ed91246594408cd3edb0575e41c20398",
+         arm64_linux:  "37f4fe864f87fb00ee2ad98a4fcf5cbe4208d7fc3ed5486ea30ae2935cf616dd",
+         x86_64_linux: "3db25ec9a6628de49398d7017def80b62c2b60904ec371c32cb2631c25850d4d"
 
   on_macos do
     auto_updates true
     depends_on macos: :sequoia
 
     app "Anarlog.app"
+
+    uninstall quit: "com.hyprnote.stable"
 
     zap trash: [
       "~/.local/bin/.anarlog-cli",
