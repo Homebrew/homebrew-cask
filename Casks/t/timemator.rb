@@ -1,6 +1,6 @@
 cask "timemator" do
-  version "3.2.2"
-  sha256 "8450093db94e3ad856a820b2849a3c8f64abbf4d7427ae524a823462344a00c7"
+  version "3.3"
+  sha256 "371cedcea4fc5f5b83ffe1dff3b4c8612b9a0b0c282a1a4eb0b9d6a4992106b8"
 
   url "https://timemator.s3.amazonaws.com/releases/Timemator_#{version}.dmg"
   name "Timemator"
@@ -13,7 +13,7 @@ cask "timemator" do
   end
 
   auto_updates true
-  depends_on :macos
+  depends_on macos: :monterey
 
   app "Timemator.app"
 
