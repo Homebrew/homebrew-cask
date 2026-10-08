@@ -26,6 +26,7 @@ cask "musicbrainz-picard" do
 
   zap trash: [
     "~/.config/MusicBrainz",
+    "~/Library/Application Support/org.musicbrainz.Picard",
     "~/Library/Caches/MusicBrainz",
     "~/Library/Preferences/org.musicbrainz.picard.plist",
     "~/Library/Saved Application State/org.musicbrainz.picard.savedState",
