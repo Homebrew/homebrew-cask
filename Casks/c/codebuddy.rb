@@ -8,7 +8,7 @@ cask "codebuddy" do
   url "https://codebuddy-1328495429.cos.accelerate.myqcloud.com/aiide/darwin-#{arch}/CodeBuddy-darwin-#{arch}-#{version.csv.first}-#{version.csv.second}.zip"
   name "CodeBuddy"
   desc "AI-powered adaptive IDE"
-  homepage "https://www.codebuddy.ai/ide/"
+  homepage "https://www.codebuddy.ai/ide/", browsed: "2026-10-08"
 
   livecheck do
     url "https://www.codebuddy.ai/v2/update?platform=ide-darwin-#{arch}&version=1.0.0&x-machine-id=default"
