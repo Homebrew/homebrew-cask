@@ -9,6 +9,8 @@ cask "jan" do
 
     app "Jan.app"
 
+    uninstall quit: "jan.ai.app"
+
     zap trash: [
       "~/Library/Application Support/Jan",
       "~/Library/Preferences/jan.ai.app.plist",
