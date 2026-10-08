@@ -1,6 +1,6 @@
 cask "superduper" do
-  version "4.0.9"
-  sha256 "a388445684e0af70b4062101da3399e85e5d2f38ef686c8fefd2e13352cdc438"
+  version "4.0.10"
+  sha256 "3cda2d775eb4895c7a4e6d4bd4cd7640d89c257296ddca7506b54d8a6693a801"
 
   url "https://www.shirt-pocket.com/downloads/SuperDuper-#{version}.dmg"
   name "SuperDuper!"
