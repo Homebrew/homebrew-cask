@@ -1,6 +1,6 @@
 cask "swiftcord" do
-  version "1.7.1,71"
-  sha256 "a04d3c2204ffe61b1f94457ebb93c00d484e67a09c29eab5405148372e7ba3e9"
+  version "1.7.2,73"
+  sha256 "15c0e4ad715d593e86691066fc4062d7cd63ba57daa4e079943444a8457f6d99"
 
   url "https://cdn.swiftcord.app/Swiftcord-#{version.csv.second}.dmg"
   name "Swiftcord"
