@@ -1,6 +1,6 @@
 cask "versions" do
-  version "2.4.5,2042"
-  sha256 "38cd533eff8669046f9d4a886c5ebabfdb93e8c51f9bb94e43fa5f3d31af9ae4"
+  version "3.0.0,3000"
+  sha256 "0957dd7248e97f85cbba1f51cf70badd3baeca7d9a6efbb091e51bed323bcc9d"
 
   url "https://updates.versionsapp.com/v#{version.major}/prod/Versions-#{version.csv.first}-#{version.csv.second}.zip"
   name "Versions"
@@ -12,7 +12,7 @@ cask "versions" do
     strategy :sparkle
   end
 
-  depends_on :macos
+  depends_on macos: :sonoma
 
   app "Versions.app"
 
