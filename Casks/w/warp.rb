@@ -14,7 +14,11 @@ cask "warp" do
 
     zap trash: [
       "~/.warp",
+      "~/Library/Application Scripts/2BBY89MBSN.dev.warp",
       "~/Library/Application Support/dev.warp.Warp-Stable",
+      "~/Library/Caches/dev.warp.Warp-Stable",
+      "~/Library/Group Containers/2BBY89MBSN.dev.warp",
+      "~/Library/Logs/oz/warp.log*",
       "~/Library/Logs/warp.log*",
       "~/Library/Preferences/dev.warp.Warp-Stable.plist",
       "~/Library/Saved Application State/dev.warp.Warp-Stable.savedState",
