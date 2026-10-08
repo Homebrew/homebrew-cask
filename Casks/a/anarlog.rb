@@ -15,6 +15,8 @@ cask "anarlog" do
 
     app "Anarlog.app"
 
+    uninstall quit: "com.hyprnote.stable"
+
     zap trash: [
       "~/.local/bin/.anarlog-cli",
       "~/.local/bin/anarlog",
