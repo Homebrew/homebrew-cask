@@ -1,6 +1,6 @@
 cask "doubaoime" do
-  version "1.0.1,1000103"
-  sha256 "03c4443c564fa3cda49e8f31ebdb79df855cd23e1267c1806f1a58de9dd4b7fc"
+  version "1.0.2,1000206"
+  sha256 "a5eb5297cda0f1ce65a5640c6ecf48a3c4c591704e5d52be52e1a10360b6aa39"
 
   url "https://lf-wave.doubaocdn.com/obj/doubao-ime/app/macos/DoubaoImeInstaller_v#{version.csv.second}_release.zip"
   name "Doubao Input Method"
