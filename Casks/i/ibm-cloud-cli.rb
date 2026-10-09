@@ -1,11 +1,17 @@
 cask "ibm-cloud-cli" do
-  arch arm: "_arm64"
+  arch arm: "_arm64", intel: on_system_conditional(linux: "_amd64")
+  os macos: "_macos"
+  binaries = on_system_conditional macos: "/binaries"
+  dir_name = on_system_conditional macos: "IBM_Cloud_CLI", linux: "Bluemix_CLI"
+  url_end = on_system_conditional macos: "tgz", linux: "tar.gz"
 
-  version "2.47.1"
-  sha256 arm:   "e92dcc33244edaac277a3b3bc4263b39a5e048e15719d5c8bbc66ba1802c3d96",
-         intel: "c10ce4cb1da92d487f611d6d7f8c18dd010d368017234e4b9385f9abe4137263"
+  version "2.48.0"
+  sha256 arm:          "f6a7769233c7e90232e1690bf1701f5cc8931aa95e663e0aef56cc26eb9898dd",
+         intel:        "56df3660acae9f11ad4b9626c711388327efbdeb845e672670640b63a48c53e8",
+         arm64_linux:  "d2ea7beaddf00f432219f7f55721faaa2fd97e1110909d6a27bd430f638949a9",
+         x86_64_linux: "a16e52960a573fdec94d0b91ab261129834043bc5cab4c5fe754ea73d69d67a9"
 
-  url "https://download.clis.cloud.ibm.com/ibm-cloud-cli/#{version}/IBM_Cloud_CLI_#{version}#{arch}.pkg"
+  url "https://download.clis.cloud.ibm.com/ibm-cloud-cli-dn/#{version}#{binaries}/IBM_Cloud_CLI_#{version}#{os}#{arch}.#{url_end}"
   name "IBM Cloud CLI"
   desc "Command-line API client"
   homepage "https://cloud.ibm.com/docs/cli/index.html"
@@ -14,16 +20,15 @@ cask "ibm-cloud-cli" do
     url "https://github.com/IBM-Cloud/ibm-cloud-cli-release"
   end
 
-  depends_on :macos
+  installer script: {
+    executable: "#{dir_name}/install",
+    sudo:       true,
+  }
 
-  pkg "IBM_Cloud_CLI_#{version}#{arch}.pkg"
-
-  uninstall pkgutil: "com.ibm.cloud.cli",
-            delete:  [
-              "/usr/local/bin/bluemix",
-              "/usr/local/bin/bx",
-              "/usr/local/ibmcloud",
-            ]
+  uninstall script: {
+    executable: "/usr/local/ibmcloud/uninstall",
+    sudo:       true,
+  }
 
   zap trash: "~/.bluemix"
 
