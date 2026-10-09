@@ -17,6 +17,8 @@ cask "harbordrop" do
 
   app "HarborDrop.app"
 
+  uninstall quit: "com.hjm.harbordrop"
+
   zap trash: [
     "~/Library/Caches/com.hjm.harbordrop",
     "~/Library/HTTPStorages/com.hjm.harbordrop",
