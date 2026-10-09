@@ -20,7 +20,11 @@ cask "harbordrop" do
   uninstall quit: "com.hjm.harbordrop"
 
   zap trash: [
+    "~/Library/Application Support/.harbordrop-state",
+    "~/Library/Application Support/HarborDrop",
+    "~/Library/Caches/.com.harbordrop.metrics",
     "~/Library/Caches/com.hjm.harbordrop",
     "~/Library/HTTPStorages/com.hjm.harbordrop",
+    "~/Library/Preferences/com.hjm.harbordrop.plist",
   ]
 end
