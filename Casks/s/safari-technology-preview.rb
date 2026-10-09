@@ -1,7 +1,7 @@
 cask "safari-technology-preview" do
   on_tahoe :or_older do
-    version "253,142-24187-20260923-6196541d-da39-4524-a01c-0fab0cea6a08"
-    sha256 "d1c7592d3f33e3f1f8925b11bd6b236b744d37ac113a3d517c8d6bd1575f0347"
+    version "254,142-29069-20261008-2015600e-8f9b-41ba-8709-ce9bc77a1fa0"
+    sha256 "b3274c1673653451e7146de0584277493a4ee2af9dde694adba7004cfe80c022"
 
     url "https://secure-appldnld.apple.com/STP/#{version.csv.second}/SafariTechnologyPreview.dmg"
 
@@ -22,8 +22,8 @@ cask "safari-technology-preview" do
   end
   # when adjusting the on_{os} scoping, also update the livecheck regex
   on_golden_gate :or_newer do
-    version "253,142-27948-20260923-e61cf471-d516-4ac4-9b4c-f08e459272dc"
-    sha256 "dbfcc270a845b9a7ac74b13b762808ef19a5652eabadc5b7719291754dc01c8e"
+    version "254,142-36179-20261008-3c90402e-c681-4700-bb14-4265744f1038"
+    sha256 "5b2bb12269d5a851f074eb0519b2e7c29997721d2bf31453ecdfd387141c91f8"
 
     url "https://secure-appldnld.apple.com/STP/#{version.csv.second}/SafariTechPreview#{version.csv.first}.dmg"
 
