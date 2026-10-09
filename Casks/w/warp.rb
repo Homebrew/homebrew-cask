@@ -1,5 +1,7 @@
 cask "warp" do
-  arch arm: "aarch64", intel: "x86_64"
+  arch arm:   on_system_conditional(linux: "-aarch64"),
+       intel: on_system_conditional(linux: "-x86_64")
+  os macos: "dmg", linux: "AppImage"
 
   version "0.2026.10.07.08.29.stable_00"
   sha256 arm:          "8ff1a7ca3a6ce6e79b9c693741e9f00b0aa13403fc48c05c57ca404a9f604fac",
