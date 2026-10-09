@@ -11,6 +11,8 @@ cask "freepdf" do
 
   app "FreePDF.app"
 
+  uninstall quit: "com.zstar.freepdf"
+
   zap trash: [
     "~/Library/Application Support/FreePDF",
     "~/Library/Caches/FreePDF",
