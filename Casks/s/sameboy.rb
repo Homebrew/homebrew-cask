@@ -16,6 +16,8 @@ cask "sameboy" do
 
   app "SameBoy.app"
 
+  uninstall quit: "com.github.liji32.sameboy"
+
   zap trash: [
     "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.github.liji32.sameboy.sfl*",
     "~/Library/Caches/com.github.liji32.sameboy",
