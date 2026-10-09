@@ -18,9 +18,9 @@ cask "oscar" do
   depends_on macos: :sonoma
 
   app "OSCAR20.app"
-  
+
   uninstall quit: "org.oscar-team.OSCAR20"
-  
+
   zap trash: [
     "~/Library/Preferences/org.oscar-team.OSCAR*.plist",
     "~/Library/Saved Application State/org.oscar-team.OSCAR.savedState",
