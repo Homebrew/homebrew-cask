@@ -14,4 +14,6 @@ cask "dpanel" do
   depends_on :macos
 
   app "dpanel-desktop.app"
+
+  zap trash: "~/.dpanel"
 end
