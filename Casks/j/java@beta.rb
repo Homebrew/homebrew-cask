@@ -1,11 +1,11 @@
 cask "java@beta" do
   arch arm: "aarch64", intel: "x64"
 
-  sha256 arm:   "f23b73cd48b010f7b6879f27e8517dfbffad7331d870e425ff9508b9e69f6794",
+  sha256 arm:   "ca55e804e04a80df5dfeba79ba27238a63e076a6db93a42ef3951e6dbca0f0c7",
          intel: "9a4028a08994fa37f6cabfcf70683464b6f56b7b001601286192d90cf000b7fa"
 
   on_arm do
-    version "28,18"
+    version "28,19"
   end
   on_intel do
     version "27,22"
