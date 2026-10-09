@@ -4,10 +4,10 @@ cask "mutedeck" do
   sha256 :no_check
 
   on_arm do
-    version "4.12"
+    version "4.12.1"
   end
   on_intel do
-    version "4.12"
+    version "4.12.1"
   end
 
   url "https://releases.mutedeck.com/macos#{arch}/mutedeck-mac#{arch}.dmg"
