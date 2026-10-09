@@ -1,37 +1,36 @@
 cask "secure-pipes" do
-  version "0.99.11,c67223c50be3604"
-  sha256 "de8b6ad6c42509f2c394997694c13a161dcb4f74edfa87f5a63d7362897538f5"
+  version "2.0.10"
+  sha256 "7bd92608515bc70967e7821beb54c5445fa7f8cd2454247515695a698869a033"
 
-  url "https://www.opoet.com/pyro/index.php/files/download/#{version.csv.second}"
+  url "https://secure-pipes.app/api/v1/releases/versions/#{version}/download"
   name "Secure Pipes"
-  desc "Manage SSH tunnels"
-  homepage "https://www.opoet.com/pyro/index.php/"
+  desc "Manage SSH connections and port forwarding"
+  homepage "https://secure-pipes.app/"
 
   livecheck do
-    url :homepage
-    regex(/filename.*?Secure\s+Pipes\s+v?(\d+(?:\.\d+)+)\.dmg/i)
-    strategy :page_match do |page, regex|
-      download_hash = page.scan(%r{opoet\.com/pyro/index.php/files/download/(.+)["'< ]}i).flatten.first
-      next if download_hash.blank?
-
-      merged_headers = Homebrew::Livecheck::Strategy.page_headers(
-        "https://www.opoet.com/pyro/index.php/files/download/#{download_hash}",
-      ).reduce(&:merge)
-
-      match = merged_headers["content-disposition"]&.match(regex)
-      next if match.blank?
-
-      "#{match[1]},#{download_hash}"
+    url "https://secure-pipes.app/api/v1/releases/latest"
+    strategy :json do |json|
+      json.dig("release", "version")
     end
   end
 
-  disable! date: "2026-09-01", because: :fails_gatekeeper_check
-
-  depends_on :macos
+  depends_on macos: :monterey
 
   app "Secure Pipes.app"
 
-  caveats do
-    requires_rosetta
-  end
+  uninstall quit: "net.edgeservices.secure-pipes"
+
+  zap trash: [
+    "~/Library/Application Scripts/group.net.edgeservices.secure-pipes",
+    "~/Library/Application Support/Secure Pipes",
+    "~/Library/Caches/net.edgeservices.secure-pipes",
+    "~/Library/Caches/Secure Pipes",
+    "~/Library/Group Containers/group.net.edgeservices.secure-pipes",
+    "~/Library/HTTPStorages/net.edgeservices.secure-pipes",
+    "~/Library/Preferences/net.edgeservices-config.plist",
+    "~/Library/Preferences/net.edgeservices.connections.plist",
+    "~/Library/Preferences/net.edgeservices.Secure-Pipes.plist",
+    "~/Library/Preferences/net.edgeservices.secure-pipes.plist",
+    "~/Library/WebKit/net.edgeservices.secure-pipes",
+  ]
 end
