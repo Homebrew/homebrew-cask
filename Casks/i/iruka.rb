@@ -17,6 +17,8 @@ cask "iruka" do
 
   app "Iruka.app"
 
+  uninstall quit: "dorienherremans.com.Iruka"
+
   zap trash: [
     "~/Library/Application Scripts/dorienherremans.com.Iruka",
     "~/Library/Application Scripts/dorienherremans.com.Iruka.FinderSync",
