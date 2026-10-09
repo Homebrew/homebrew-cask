@@ -10,7 +10,6 @@ cask "dpanel" do
   desc "Desktop app for managing Docker and Podman containers"
   homepage "https://dpanel.cc/"
 
-  conflicts_with cask: "dpanel-pe"
   depends_on :macos
 
   app "dpanel-desktop.app"
