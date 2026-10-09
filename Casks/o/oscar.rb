@@ -1,6 +1,6 @@
 cask "oscar" do
   arch arm: "ARM", intel: "Intel"
-  url_start = on_arch_conditional intel: "20"
+  url_start = on_arch_conditional arm: "OSCAR-", intel: "oscar20_"
 
   version "2.1.0"
   sha256 arm:   "84abe85da8b75d2ea66840c3c8cbc43547f14420f062d79efa07e4e81fd8f296",
