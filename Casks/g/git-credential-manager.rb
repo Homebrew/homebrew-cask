@@ -16,7 +16,7 @@ cask "git-credential-manager" do
                 executable: "/usr/local/share/gcm-core/uninstall.sh",
                 sudo:       true,
               },
-              pkgutil: "com.microsoft.GitCredentialManager"
+              pkgutil: "com.microsoft.gitcredentialmanager"
 
     zap trash: [
       "~/Library/Preferences/git-credential-manager-ui.plist",
