@@ -1,23 +1,23 @@
 cask "oscar" do
-  arch arm: "ARM", intel: "Intel"
+  arch arm: "OSCAR", intel: "OSCAR20"
 
-  version "2.0.1"
-  sha256 arm:   "78cd674ba7755ddcf505dd870c6e1d366c6e658a57482d91593eb191e611c769",
-         intel: "b44aedb2855583457985fd9fc4467983254a24ce51bfb43134e72be64e12194e"
+  version "2.1.0"
+  sha256 arm:   "84abe85da8b75d2ea66840c3c8cbc43547f14420f062d79efa07e4e81fd8f296",
+         intel: "6201904ce62ed05e223c3bd205c7bd3c16806af2ed0acb852124a7c78830a5b6"
 
-  url "https://www.sleepfiles.com/OSCAR/#{version}/OSCAR#{version.major_minor.no_dots}-#{version}-#{arch}.dmg"
+  url "https://www.sleepfiles.com/OSCAR/#{version.major_minor}/#{arch}-#{version}-#{on_arch_conditional(arm: "ARM", intel: "Intel")}.dmg"
   name "OSCAR"
   desc "CPAP Analysis Reporter"
   homepage "https://www.sleepfiles.com/OSCAR/"
 
   livecheck do
     url :homepage
-    regex(%r{href=.*?/OSCAR.*?v?(\d+(?:\.\d+)+)(?:[._-]#{arch})?\.dmg}i)
+    regex(%r{href=.*?/OSCAR.*?v?(\d+(?:\.\d+)+)(?:[._-](?:ARM|Intel))?\.dmg}i)
   end
 
-  depends_on macos: :ventura
+  depends_on macos: :sonoma
 
-  app "OSCAR#{version.major_minor.no_dots}.app"
+  app "OSCAR20.app"
 
   zap trash: [
     "~/Library/Preferences/org.oscar-team.OSCAR*.plist",
