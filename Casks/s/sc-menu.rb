@@ -16,6 +16,8 @@ cask "sc-menu" do
 
   app "SC Menu.app"
 
+  uninstall quit: "com.ttinc.sc-menu"
+
   zap trash: [
     "~/Library/Application Scripts/com.bob.sc-menu",
     "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.bob.sc-menu.sfl*",
