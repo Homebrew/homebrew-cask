@@ -8,7 +8,7 @@ cask "sacnview" do
   homepage "https://sacnview.org/"
 
   livecheck do
-    url "https://github.com/docsteer/sacnview"
+    url :url
     strategy :github_latest
   end
 
