@@ -23,6 +23,7 @@ cask "getoutline" do
     end
   end
 
+  conflicts_with cask: "outline"
   depends_on macos: :monterey
 
   app "Outline.app"
