@@ -1,9 +1,9 @@
 cask "linkandroid" do
   arch arm: "arm64", intel: "x64"
 
-  version "2.3.0"
-  sha256 arm:   "3107388eb8057d7c18cbd3c0478128dd76d7b4eef7c943c64035a080c7a96320",
-         intel: "9d99b161fdd388f33901fe736d80b2431872fe6ee126a42bf48d109db1b6ea8e"
+  version "2.4.0"
+  sha256 arm:   "3d83dfdc328a13ee0e587c238333483458f0478ac1ba6b0f68a77d6841eec9d6",
+         intel: "7e5c2860e3cf3dbad690dd7198f94ab44b90cc3540cac4c720e863b176a27236"
 
   url "https://github.com/modstart-lib/linkandroid/releases/download/v#{version}/LinkAndroid-#{version}-mac-#{arch}.dmg"
   name "LinkAndroid"
