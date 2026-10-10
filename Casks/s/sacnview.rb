@@ -16,6 +16,8 @@ cask "sacnview" do
 
   app "sACNView.app"
 
+  uninstall quit: "net.tomsteer.sacnview"
+
   zap trash: [
     "~/Library/Application Scripts/com.carallon.sacnview",
     "~/Library/Containers/com.carallon.sacnview",
