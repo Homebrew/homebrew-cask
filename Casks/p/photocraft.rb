@@ -11,7 +11,10 @@ cask "photocraft" do
   on_macos do
     app "PhotoCraft.app"
 
-    zap trash: "~/Library/Preferences/ai.storyteller.photocraft.plist"
+    zap trash: [
+      "~/Library/Application Support/Photocraft",
+      "~/Library/Preferences/ai.storyteller.photocraft.plist",
+    ]
   end
   on_linux do
     app_image "photocraft-#{version}-linux-#{arch}.AppImage", target: "PhotoCraft.AppImage"
