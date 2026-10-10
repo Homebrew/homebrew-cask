@@ -1,6 +1,6 @@
 cask "freepdf" do
-  version "5.1.2"
-  sha256 "82a762465d00b4a7dd15f8c36cb724fabc3f5e2180d6f4b61c662a3cb8488a6e"
+  version "5.1.3"
+  sha256 "bbea8a4bf8c218fb8b90975e69c12f1bf2e51d3741e69039c6e8ce48fbeaae6a"
 
   url "https://github.com/zstar1003/FreePDF/releases/download/v#{version}/FreePDF_v#{version}_macOS.dmg"
   name "FreePDF"
@@ -10,6 +10,8 @@ cask "freepdf" do
   depends_on :macos
 
   app "FreePDF.app"
+
+  uninstall quit: "com.zstar.freepdf"
 
   zap trash: [
     "~/Library/Application Support/FreePDF",
