@@ -13,6 +13,7 @@ cask "accordance" do
   end
 
   auto_updates true
+  conflicts_with cask: "accordance@13"
   depends_on :macos
 
   app "Accordance.app"
