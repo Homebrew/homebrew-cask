@@ -6,15 +6,14 @@ cask "gcc-aarch64-embedded" do
   pkg_version = nil
   gcc_version = nil
   on_arm do
-    version "15.2.rel1"
-    pkg_version = "15.2.rel1"
-    gcc_version = "15.2.1"
-    sha256 "a616eb0a32738cbddc7b8653a20abbddc487712714d57ac993b8987a7451dbce"
+    version "15.3.rel2"
+    pkg_version = "15.3.rel2"
+    gcc_version = "15.3.1"
+    sha256 "c0f5dad1ead0c711a38e4b44ea724deb770517257af14f33917d9b6a37f33215"
 
     livecheck do
-      url "https://developer.arm.com/downloads/-/arm-gnu-toolchain-downloads",
-          user_agent: :curl
-      regex(/href=.*?arm-gnu-toolchain-(\d+\.\d+\.\w+)-darwin-(?:\w+)-aarch64-none-elf\.pkg/i)
+      url "https://gitlab.arm.com/tooling/gnu-toolchains-for-arm/-/raw/main/README.md"
+      regex(%r{\([^)]*?releases/v?(\d+(?:\.\d+)+(?:[._-]rel\d+)?)[?)]}i)
     end
 
     binary "/Applications/ArmGNUToolchain/#{pkg_version}/aarch64-none-elf/bin/aarch64-none-elf-gstack"
@@ -30,11 +29,10 @@ cask "gcc-aarch64-embedded" do
     end
   end
 
-  url "https://developer.arm.com/-/media/Files/downloads/gnu/#{version}/binrel/arm-gnu-toolchain-#{version}-darwin-#{arch}-aarch64-none-elf.pkg",
-      user_agent: :curl
+  url "https://gitlab.arm.com/api/v4/projects/tooling%2Fgnu-toolchains-for-arm/packages/generic/gnu-toolchain/#{version}/arm-gnu-toolchain-#{version}-darwin-#{arch}-aarch64-none-elf.pkg"
   name "GCC ARM Embedded"
   desc "Pre-built GNU bare-metal toolchain for 64-bit Arm processors"
-  homepage "https://developer.arm.com/Tools%20and%20Software/GNU%20Toolchain"
+  homepage "https://developer.arm.com/tools-and-software/gnu-toolchain"
 
   depends_on :macos
 
