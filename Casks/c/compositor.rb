@@ -13,6 +13,7 @@ cask "compositor" do
   end
 
   auto_updates true
+  conflicts_with cask: "robbietilton-compositor"
   depends_on :macos
 
   app "Compositor.app"

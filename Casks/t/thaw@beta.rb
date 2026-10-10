@@ -13,6 +13,7 @@ cask "thaw@beta" do
   end
 
   auto_updates true
+  conflicts_with cask: "thaw"
   depends_on macos: :golden_gate
 
   app "Thaw.app"

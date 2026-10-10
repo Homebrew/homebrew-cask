@@ -7,6 +7,7 @@ cask "robbietilton-compositor" do
   desc "Photoshop alternative"
   homepage "https://github.com/robbietilton/Compositor"
 
+  conflicts_with cask: "compositor"
   depends_on macos: :tahoe
 
   app "Compositor.app"

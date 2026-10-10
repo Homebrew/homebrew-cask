@@ -13,6 +13,7 @@ cask "outline" do
   end
 
   auto_updates true
+  conflicts_with cask: "getoutline"
   depends_on macos: :tahoe
 
   app "Outline.app"
