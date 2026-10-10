@@ -34,7 +34,7 @@ cask "warp" do
     ]
   end
 
-  url "https://app.warp.dev/download?version=v#{version}&package=#{os}"
+  url "https://app.warp.dev/download/brew?version=v#{version}&package=#{os}"
   name "Warp"
   desc "Rust-based terminal"
   homepage "https://www.warp.dev/terminal"
