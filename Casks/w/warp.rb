@@ -1,11 +1,13 @@
 cask "warp" do
-  os macos: "dmg", linux: on_arch_conditional(arm: "appimage_arm64", intel: "appimage")
+  arch arm:   on_system_conditional(linux: "-aarch64"),
+       intel: on_system_conditional(linux: "-x86_64")
+  os macos: "dmg", linux: "AppImage"
 
-  version "0.2026.09.30.08.29.stable_01"
-  sha256 arm:          "35718b4ce8749dce96e763605b8c02517643524f46590c8d7861493fa15c9e9c",
-         intel:        "35718b4ce8749dce96e763605b8c02517643524f46590c8d7861493fa15c9e9c",
-         arm64_linux:  "9cc95cffac199b2168c4ca0c7ee4af995499f4bb508680565a6269cf1df2e060",
-         x86_64_linux: "7ec2b8aec662eda14ba3f5bd5f9f4365d8aca9ed08232cc27c0832660af02458"
+  version "0.2026.10.07.08.29.stable_00"
+  sha256 arm:          "8ff1a7ca3a6ce6e79b9c693741e9f00b0aa13403fc48c05c57ca404a9f604fac",
+         intel:        "8ff1a7ca3a6ce6e79b9c693741e9f00b0aa13403fc48c05c57ca404a9f604fac",
+         arm64_linux:  "61196e4e823c7963a206d1432608678408cb524be572998538b7cc66e0b4ae07",
+         x86_64_linux: "4e2f005f8a92b6cc96b96766f54703f4fff847552a38afe7dbb375ea2727e55f"
 
   on_macos do
     auto_updates true
@@ -14,15 +16,17 @@ cask "warp" do
 
     zap trash: [
       "~/.warp",
+      "~/Library/Application Scripts/2BBY89MBSN.dev.warp",
       "~/Library/Application Support/dev.warp.Warp-Stable",
+      "~/Library/Caches/dev.warp.Warp-Stable",
+      "~/Library/Group Containers/2BBY89MBSN.dev.warp",
+      "~/Library/Logs/oz/warp.log*",
       "~/Library/Logs/warp.log*",
       "~/Library/Preferences/dev.warp.Warp-Stable.plist",
       "~/Library/Saved Application State/dev.warp.Warp-Stable.savedState",
     ]
   end
   on_linux do
-    arch arm: "aarch64", intel: "x86_64"
-
     app_image "Warp-#{arch}.AppImage", target: "Warp.AppImage"
 
     zap trash: [
@@ -34,7 +38,7 @@ cask "warp" do
     ]
   end
 
-  url "https://app.warp.dev/download?version=v#{version}&package=#{os}"
+  url "https://releases.warp.dev/stable/v#{version}/#{on_system_conditional(macos: "Warp.dmg", linux: "Warp-#{arch}.AppImage")}"
   name "Warp"
   desc "Rust-based terminal"
   homepage "https://www.warp.dev/terminal"
