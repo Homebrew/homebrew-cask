@@ -1,6 +1,6 @@
 cask "gopher64" do
-  version "1.1.38"
-  sha256 "26a2343ec6253afc5a9c2cafc91ccfb5a5ee7472fa5fcbc0dad5086ac179428d"
+  version "1.1.40"
+  sha256 "af21a52ebde87c1339e4f5256ae08add1be5c684f362b128c164fe660e1c87f8"
 
   url "https://github.com/gopher64/gopher64/releases/download/v#{version}/gopher64-macos-aarch64.zip"
   name "Gopher64"
