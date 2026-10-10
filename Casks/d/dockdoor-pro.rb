@@ -1,6 +1,6 @@
 cask "dockdoor-pro" do
-  version "1.7.0"
-  sha256 "59f10601900c0d35f9c77e2acce6c443c328b481e7634152c037d7799cf83c6f"
+  version "1.7.1"
+  sha256 "c9386102b8429e00cac8b9dea7445dff3b0113d4a497bb4198068b6a877bc53a"
 
   url "https://downloads.dockdoor.net/v/#{version}/DockDoorPro.dmg"
   name "DockDoor Pro"
