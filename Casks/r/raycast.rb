@@ -70,12 +70,16 @@ cask "raycast" do
   zap trash: [
     "~/.config/raycast",
     "~/Library/Application Scripts/com.raycast.macos.BrowserExtension",
+    "~/Library/Application Scripts/SY64MV22J9.com.raycast.macos.shared",
     "~/Library/Application Support/com.raycast.macos",
+    "~/Library/Application Support/com.raycast.shared",
     "~/Library/Caches/com.raycast.macos",
     "~/Library/Caches/SentryCrash/Raycast",
     "~/Library/Containers/com.raycast.macos.BrowserExtension",
     "~/Library/Cookies/com.raycast.macos.binarycookies",
+    "~/Library/Group Containers/SY64MV22J9.com.raycast.macos.shared",
     "~/Library/HTTPStorages/com.raycast.macos",
+    "~/Library/Logs/com.raycast.macos",
     "~/Library/Preferences/com.raycast.macos.plist",
     "~/Library/WebKit/com.raycast.macos",
   ]
