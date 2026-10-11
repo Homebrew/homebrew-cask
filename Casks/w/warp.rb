@@ -27,7 +27,7 @@ cask "warp" do
     ]
   end
   on_linux do
-    app_image "Warp-#{arch}.AppImage", target: "Warp.AppImage"
+    app_image "Warp#{arch}.AppImage", target: "Warp.AppImage"
 
     zap trash: [
       "~/.cache/warp-terminal",
@@ -38,7 +38,7 @@ cask "warp" do
     ]
   end
 
-  url "https://releases.warp.dev/stable/v#{version}/#{on_system_conditional(macos: "Warp.dmg", linux: "Warp-#{arch}.AppImage")}"
+  url "https://releases.warp.dev/stable/v#{version}/Warp#{arch}.#{os}"
   name "Warp"
   desc "Rust-based terminal"
   homepage "https://www.warp.dev/terminal"
