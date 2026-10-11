@@ -20,10 +20,14 @@ cask "cleanshot" do
   uninstall quit: "pl.maketheweb.cleanshotx"
 
   zap trash: [
+    "~/Library/Application Scripts/pl.maketheweb.cleanshotx.*",
     "~/Library/Application Support/CleanShot",
     "~/Library/Caches/pl.maketheweb.cleanshotx",
     "~/Library/Caches/SentryCrash/CleanShot X",
+    "~/Library/Containers/pl.maketheweb.cleanshotx.*",
+    "~/Library/HTTPStorages/pl.maketheweb.cleanshotx",
     "~/Library/Preferences/com.getcleanshot.app.plist",
     "~/Library/Preferences/pl.maketheweb.cleanshotx.plist",
+    "~/Library/WebKit/pl.maketheweb.cleanshotx",
   ]
 end
