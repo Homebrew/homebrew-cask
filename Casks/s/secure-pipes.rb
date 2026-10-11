@@ -1,6 +1,6 @@
 cask "secure-pipes" do
-  version "2.0.11"
-  sha256 "76d7b4b759cb1ea856f3073b9fb9a5e5f17bbe96b462684e1956c9e11b0f11d5"
+  version "2.0.12"
+  sha256 "8c6752017a48070ba8f70eaf254c6d37be73baf5f11ab1106c6dc25e18a0c253"
 
   url "https://secure-pipes.app/api/v1/releases/versions/#{version}/download"
   name "Secure Pipes"
