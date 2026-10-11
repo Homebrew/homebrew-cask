@@ -4,14 +4,14 @@ cask "opencode-desktop" do
                                    linux: on_arch_conditional(arm: "arm64", intel: "x86_64")
   url_ext = on_system_conditional macos: "dmg", linux: "AppImage"
 
-  version "1.19.0"
-  sha256 arm:          "6f5a379faa1118bcb465f9a800a8f6835f91660001f6b1e3be09efafab8a7ea4",
-         intel:        "7d6bca790ae0f6cf4c73da8451ebd2ef6384b90d3ad6b9c4f91f7d04a647b293",
-         arm64_linux:  "6cf93ea1817b6887e683712aa803e7f4d9d042b715be94197d10e749249f8a67",
-         x86_64_linux: "7c1149ca758789886679e5eba0bb244da041681b9320f162ce06d1bfd160b9ad"
+  version "2.0.26"
+  sha256 arm:          "cd6b4bcfb7b357855d8928b0e2681a9e217bc9648639524148cf0d4c97733696",
+         intel:        "12907be598383058827a7452c49c44287ac3849150d6b6fb9e88a0f89d26bac6",
+         arm64_linux:  "a1389c595cccd5ff757569cd88876aaa14db852dfbcadf2f0cae779d7660b030",
+         x86_64_linux: "3d88002742a230bf0e8b49fbb1190f7667986fa7dbce75b2206ecb75cabf1491"
 
   on_macos do
-    depends_on macos: :monterey
+    depends_on macos: :ventura
 
     app "OpenCode.app"
 
@@ -36,16 +36,14 @@ cask "opencode-desktop" do
     ]
   end
 
-  url "https://github.com/anomalyco/opencode/releases/download/v#{version}/opencode-desktop-#{os}-#{url_arch}.#{url_ext}"
+  url "https://opencode.ai/files/bin/#{version}/opencode-desktop-#{os}-#{url_arch}.#{url_ext}"
   name "OpenCode"
   desc "AI coding agent desktop client"
   homepage "https://opencode.ai/"
 
   livecheck do
-    url "https://github.com/anomalyco/opencode/releases/latest/download/latest.json"
-    strategy :json do |json|
-      json["version"]
-    end
+    url "https://opencode.ai/update/api/latest/desktop/opencode/latest-mac.yml"
+    strategy :electron_builder
   end
 
   auto_updates true
