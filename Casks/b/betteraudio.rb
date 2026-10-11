@@ -16,6 +16,8 @@ cask "betteraudio" do
 
   app "BetterAudio.app"
 
+  uninstall quit: "pro.betteraudio.BetterAudio"
+
   zap trash: [
     "~/Library/Application Support/BetterAudio",
     "~/Library/Caches/pro.betteraudio.BetterAudio",
