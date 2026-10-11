@@ -12,6 +12,7 @@ cask "betteraudio" do
     strategy :github_latest
   end
 
+  conflicts_with cask: "betteraudio@beta"
   depends_on macos: :sonoma
 
   app "BetterAudio.app"
