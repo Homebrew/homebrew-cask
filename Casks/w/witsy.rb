@@ -8,7 +8,7 @@ cask "witsy" do
   url "https://github.com/Kochava-Studios/witsy/releases/download/v#{version}/Witsy-#{version}-darwin-#{arch}.dmg"
   name "Witsy"
   desc "BYOK (Bring Your Own Keys) AI assistant"
-     homepage "https://github.com/Kochava-Studios/witsy"
+homepage "https://github.com/Kochava-Studios/witsy"
 
   livecheck do
     url :url
