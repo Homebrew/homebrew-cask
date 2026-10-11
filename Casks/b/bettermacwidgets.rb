@@ -1,6 +1,6 @@
 cask "bettermacwidgets" do
-  version "2.3.20"
-  sha256 "459dc4d430c8d3cda868de184b1d1a3ff7e36212a19a8eff1906341c252aa24b"
+  version "2.3.21"
+  sha256 "f0006e4a54eb2ddd3241142c966b684fac21b9d18901416539f606c80709f4e8"
 
   url "https://bettermacwidgets.de/BetterMacWidgets-#{version}.dmg"
   name "BetterMacWidgets"
