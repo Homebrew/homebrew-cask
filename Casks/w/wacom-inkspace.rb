@@ -4,6 +4,7 @@ cask "wacom-inkspace" do
 
   url "https://cdn.wacom.com/i/m/mac/wacominkspaceappsetup-#{version}.dmg"
   name "Wacom Inkspace"
+  desc "Digitize, organize, and export handwritten notes and sketches"
   homepage "https://www.wacom.com/en-us/products/inkspace"
 
   deprecate! date: "2026-10-04", because: :discontinued
