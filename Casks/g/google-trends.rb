@@ -4,6 +4,7 @@ cask "google-trends" do
 
   url "https://dl.google.com/dl/trends/screensaver/GoogleTrendsScreensaver.dmg"
   name "Google Trends Screensaver"
+  desc "Screensaver displaying trending Google searches"
   homepage "https://trends.google.com/trends/hottrends/visualize"
 
   livecheck do
