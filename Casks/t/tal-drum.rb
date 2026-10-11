@@ -1,5 +1,5 @@
 cask "tal-drum" do
-  version "3.1.8"
+  version "3.2.1"
   sha256 :no_check
 
   url "https://tal-software.com/downloads/plugins/TAL-Drum-installer_macos.zip"
