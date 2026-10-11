@@ -2,10 +2,10 @@ cask "t3-code@nightly" do
   arch arm: "arm64", intel: on_system_conditional(macos: "x64", linux: "x86_64")
   os macos: "dmg", linux: "AppImage"
 
-  version "0.0.46-nightly.20261010.2948"
-  sha256 arm:          "2372faf9118bea4d3daa002a5f01ac9514507cff585979ae1b830f8ffe39d039",
-         intel:        "aed68405d2ecb7c98791e68738075995d98bcff2fc5b5d9d7e0888b2104f0030",
-         x86_64_linux: "5208437f5dca3e32b703a9b3b4b2051f7a208bf33af2fe07b1307aaa151e3faf"
+  version "0.0.46-nightly.20261011.2955"
+  sha256 arm:          "ec21a931f90fd072785195c9571afa7a62be4bb357e429fde50d273de002dc4d",
+         intel:        "2aa471ba1058ad1f1e113f9a65b5c408af94a92e71eecf3935b750efe0f7b31b",
+         x86_64_linux: "870a6deb9a968e585b060693e9031c7b6ba09d07d24aa2ad116b63665e2b32da"
 
   on_macos do
     auto_updates true
