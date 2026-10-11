@@ -8,9 +8,9 @@ cask "witsy" do
   url "https://github.com/Kochava-Studios/witsy/releases/download/v#{version}/Witsy-#{version}-darwin-#{arch}.dmg"
   name "Witsy"
   desc "BYOK (Bring Your Own Keys) AI assistant"
-  homepage  .Great. If you see a fork button, tap it first. Then in the editor, find line 11, which reads homepage "https://witsyai.com/". Change it to exactly this, keeping the two spaces at the start:
-homepage "https://github.com/Kochava-Studios/witsy"
-Then tap the green "Commit changes" button, type witsy: update homepage as the commit message, and confirm. What does the next screen show?
+  homepage   .  homepage "https://github.com/Kochava-Studios/witsy"
+homepage 
+
 
 
   livecheck do
