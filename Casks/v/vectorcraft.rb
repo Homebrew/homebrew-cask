@@ -4,11 +4,11 @@ cask "vectorcraft" do
   os macos: "macos", linux: "linux"
   url_end = on_system_conditional macos: "dmg", linux: "AppImage"
 
-  version "0.8.0"
-  sha256 arm:          "fae8d902309536873b9aa3c6521b28d8c7026cfe93a515ada4ee5e548bb9197c",
-         intel:        "fae8d902309536873b9aa3c6521b28d8c7026cfe93a515ada4ee5e548bb9197c",
-         arm64_linux:  "30c56b607cc9c7f8779724dc9ed1f5de64dc675f49925e20df2f6dfe3300adde",
-         x86_64_linux: "8b1eb66ddac77c39c00a5f591759d8e7a49547a6e2e107706e7418b928e236aa"
+  version "0.9.0"
+  sha256 arm:          "ac37cdff79f4bf75107c75ec78d65fd23cd8bc9ed7d895dca220acdc15b386e9",
+         intel:        "ac37cdff79f4bf75107c75ec78d65fd23cd8bc9ed7d895dca220acdc15b386e9",
+         arm64_linux:  "dd1bb31e40e5e492a9d1655bb35e0b64e5a460d3e0dec8f4f793bb0bdd798d22",
+         x86_64_linux: "77eefa2c1ca7681e4b9aede638db314636da8d504aea107d48fb3367b6f61238"
 
   on_macos do
     app "VectorCraft.app"
