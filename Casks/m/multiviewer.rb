@@ -2,15 +2,15 @@ cask "multiviewer" do
   arch arm: "arm64", intel: "x64"
 
   on_arm do
-    version "2.9.3,609429848"
-    sha256 "f0f4ac7326b13c9fd34cfd1c99e00bf86bc3501d07c74e542e692093e1150dd2"
+    version "2.10.0,wMxXRsrzWRVe6iERmYGwhNiwsD1Eobuc"
+    sha256 "3b9ecfd515daf340333a61308d33d29931d2d60607f695a08b7b27318fe9e3cf"
   end
   on_intel do
-    version "2.9.3,609440245"
-    sha256 "14c94cf72f9ad9dc7c7b540c48ca63a6de6b903e350ce0db7a1fc43e3614356f"
+    version "2.10.0,5y7ulOnzQ_qCPCgTJVCmK1hp2PJ8JGzJ"
+    sha256 "7416570c5ff00a41e9cc44b8e2f0dfec9cfedd4a2190724268b68c829a9c7dc8"
   end
 
-  url "https://releases.multiviewer.app/download/#{version.csv.second}/MultiViewer.for.F1-#{version.csv.first}-#{arch}.dmg"
+  url "https://releases.multiviewer.app/v/#{version.csv.first}/1/#{version.csv.second}/MultiViewer-#{version.csv.first}-#{arch}.dmg"
   name "MultiViewer"
   desc "Unofficial desktop client for F1 TV"
   homepage "https://multiviewer.app/"
