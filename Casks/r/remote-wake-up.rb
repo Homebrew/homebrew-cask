@@ -16,6 +16,8 @@ cask "remote-wake-up" do
 
   app "Remote Wake Up.app"
 
+  uninstall quit: "com.mac-attender.Remote-Wake-Up"
+
   zap trash: [
     "~/Library/Application Support/com.mac-attender.Remote-Wake-Up",
     "~/Library/Application Support/com.mac-attender.Remote_Wake_Up",
