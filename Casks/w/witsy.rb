@@ -9,9 +9,6 @@ cask "witsy" do
   name "Witsy"
   desc "BYOK (Bring Your Own Keys) AI assistant"
   homepage   .  homepage "https://github.com/Kochava-Studios/witsy"
-homepage 
-
-
 
   livecheck do
     url :url
