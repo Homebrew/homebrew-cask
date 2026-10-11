@@ -1,6 +1,6 @@
 cask "moves" do
-  version "1.10.3"
-  sha256 "66d3d88eab40d188e2c66d0c044e5810a0af2375f234b6d50cecb554f1327bf7"
+  version "1.10.4"
+  sha256 "0ed11e8d424b1df88ae3238f33678c05ecabd86cdbb054220fdcab8c28b49f31"
 
   url "https://github.com/mikker/Moves.app/releases/download/v#{version}/Moves.app.zip"
   name "Moves"
