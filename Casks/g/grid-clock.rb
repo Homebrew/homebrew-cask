@@ -4,6 +4,7 @@ cask "grid-clock" do
 
   url "https://github.com/chrstphrknwtn/grid-clock-screensaver/releases/download/#{version}/Grid.Clock.#{version}.saver.zip"
   name "Grid Clock Screensaver"
+  desc "Screensaver displaying a grid clock"
   homepage "https://github.com/chrstphrknwtn/grid-clock-screensaver"
 
   depends_on :macos
