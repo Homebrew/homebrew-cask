@@ -1,6 +1,6 @@
 cask "lunar" do
-  version "6.11.0"
-  sha256 "a45ad3e4b06a4729eac8c75714fe43067ebd4c750d9d729b27897de831f1237d"
+  version "6.11.1"
+  sha256 "d5473217c0ca167a0fa6a02cd54be71ee83596084c035cb1e0414eab74e4265e"
 
   url "https://files.lunar.fyi/releases/Lunar-#{version}.dmg"
   name "Lunar"
@@ -8,7 +8,7 @@ cask "lunar" do
   homepage "https://lunar.fyi/"
 
   livecheck do
-    url "https://static.lunar.fyi/appcast.xml"
+    url "https://files.lunar.fyi/appcast2.xml"
     strategy :sparkle do |items|
       items.find { |item| item.channel.nil? }&.short_version
     end
