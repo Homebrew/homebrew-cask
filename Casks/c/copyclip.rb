@@ -1,6 +1,6 @@
 cask "copyclip" do
-  version "3.993"
-  sha256 "0435b30b802887fe5259169c45742ab4cdbce87a5966e8bba8e102a5d041c38b"
+  version "3.994"
+  sha256 "92767de322a774b79fe6da0157f7b270b6a730e8c6b0b53b91abb0409e68225e"
 
   url "https://fiplab.com/updates/copyclip2/CopyClip-2-#{version}.zip"
   name "CopyClip"
@@ -13,7 +13,7 @@ cask "copyclip" do
   end
 
   auto_updates true
-  depends_on :macos
+  depends_on macos: :monterey
 
   app "CopyClip 2.app"
 
