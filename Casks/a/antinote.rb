@@ -20,5 +20,6 @@ cask "antinote" do
   zap trash: [
     "~/Library/Application Scripts/com.chabomakers.Antinote",
     "~/Library/Containers/com.chabomakers.Antinote",
+    "~/Library/Preferences/com.chabomakers.Antinote.plist",
   ]
 end
