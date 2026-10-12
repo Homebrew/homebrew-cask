@@ -25,6 +25,8 @@ cask "j" do
     end
   end
 
+  disable! date: "2026-10-12", because: :fails_gatekeeper_check
+
   apps = %w[jbrk jcon jqt]
   apps.each do |a|
     app "j#{version.major_minor}/#{a}.app"

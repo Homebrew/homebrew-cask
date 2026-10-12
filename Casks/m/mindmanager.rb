@@ -21,7 +21,11 @@ cask "mindmanager" do
 
   zap trash: [
     "~/Library/Application Support/Mindjet",
+    "~/Library/Application Support/MindManager",
     "~/Library/Caches/com.mindjet.mindmanager.*",
+    "~/Library/HTTPStorages/com.mindjet.mindmanager.*.binarycookies",
+    "~/Library/Preferences/ByHost/com.mindjet.mindmanager.*.plist",
     "~/Library/Preferences/com.mindjet.mindmanager.*.plist",
+    "~/Library/WebKit/com.mindjet.mindmanager.*",
   ]
 end

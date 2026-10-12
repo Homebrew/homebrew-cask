@@ -12,6 +12,8 @@ cask "webviewscreensaver" do
     strategy :github_latest
   end
 
+  disable! date: "2026-10-12", because: :fails_gatekeeper_check
+
   depends_on :macos
 
   screen_saver "WebViewScreenSaver.saver"
