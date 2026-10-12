@@ -5,7 +5,6 @@ cask "font-fira-sans" do
   url "https://github.com/google/fonts.git",
       branch:    "main",
       only_path: "ofl/firasans"
-
   name "Fira Sans"
   homepage "https://mozilla.github.io/Fira/"
 
