@@ -12,6 +12,8 @@ cask "isabelle" do
     regex(/href=.*?Isabelle[._-]?v?(\d+(?:[.-]\d+)*)[._-]macos\.t/i)
   end
 
+  disable! date: "2026-10-12", because: :fails_gatekeeper_check
+
   depends_on :macos
 
   binary "#{appdir}/Isabelle#{version}.app/bin/isabelle"
