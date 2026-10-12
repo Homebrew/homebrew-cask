@@ -20,6 +20,8 @@ cask "input-source-pro" do
   zap trash: [
     "~/Library/Application Support/Input Source Pro",
     "~/Library/Caches/com.runjuu.Input-Source-Pro",
+    "~/Library/HTTPStorages/com.runjuu.Input-Source-Pro",
     "~/Library/Preferences/com.runjuu.Input-Source-Pro.plist",
+    "~/Library/WebKit/com.runjuu.Input-Source-Pro",
   ]
 end
