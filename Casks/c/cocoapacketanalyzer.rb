@@ -1,6 +1,6 @@
 cask "cocoapacketanalyzer" do
-  version "4.0.3"
-  sha256 "117707b79f6069233354a81a91ee1989394da4bcfcaa64c0917c3987cd14d267"
+  version "4.0.4"
+  sha256 "2496a2df1b1b22a235b72f79ad9b8d00a150cf845cea5c9dba78f9f27871fb4a"
 
   url "https://appcast.tastycocoabytes.com/cpa/downloads/CPA_#{version.no_dots}.dmg"
   name "Cocoa Packet Analyzer"
