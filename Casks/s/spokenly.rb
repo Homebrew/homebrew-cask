@@ -1,6 +1,6 @@
 cask "spokenly" do
-  version "2.31.0"
-  sha256 "fcd122de68814fc1dee40418acbcf5bac7f90ebde8fd58adbd4449ce8d5a9112"
+  version "2.31.1"
+  sha256 "05719bd1f7e06bf76e29dc8a406b1186eb2fddff82819fa8bcf8f944840dd95a"
 
   url "https://cdn.spokenly.app/releases/macos/Spokenly-#{version}.dmg"
   name "Spokenly"
