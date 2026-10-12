@@ -1,6 +1,6 @@
 cask "vallum" do
-  version "5.1"
-  sha256 "039e951b65eee1a7e3cc55c387c58861d450e217cc946f975733d056822d6e91"
+  version "6.0"
+  sha256 "7393e5e46c41bc432f85e6b08746dace362776c32f058c2961d63674f3a7824e"
 
   url "https://github.com/TheMurusTeam/Vallum/releases/download/v#{version}/vallum-#{version}.zip"
   name "Vallum"
@@ -12,7 +12,7 @@ cask "vallum" do
     regex(/^v?(\d+(?:\.\d+)+)$/i)
   end
 
-  depends_on :macos
+  depends_on macos: :sonoma
 
   app "Vallum.app"
 
@@ -20,7 +20,12 @@ cask "vallum" do
               "it.murus.afw.core",
               "it.murus.afw.helper",
             ],
+            quit:      "it.murus.Vallum",
             pkgutil:   "it.murus.afw.Vallum"
 
-  zap trash: "~/Library/Preferences/it.murus.Vallum.plist"
+  zap trash: [
+    "~/Library/Application Scripts/RNLG254GCK.it.murus.Vallum",
+    "~/Library/Group Containers/RNLG254GCK.it.murus.Vallum",
+    "~/Library/Preferences/it.murus.Vallum.plist",
+  ]
 end
