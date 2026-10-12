@@ -7,17 +7,24 @@ cask "armsx2" do
   desc "PlayStation 2 emulator for ARM64 platforms"
   homepage "https://armsx2.net/"
 
-  app "armsx2-macos-arm64-sha[31654bc].app"
+  livecheck do
+    url :url
+    strategy :github_latest
+  end
 
-  caveats <<~EOS
-    This app is unsigned. You may need to right-click and choose Open,
-    or run:
-      xattr -d com.apple.quarantine /Applications/armsx2-macos-arm64-sha[31654bc].app
-  EOS
+  depends_on :macos
+
+  app "armsx2-macos-arm64-sha[31654bc].app"
 
   zap trash: [
     "~/Library/Application Support/ARMSX2",
     "~/Library/Preferences/net.armsx2.armsx2.plist",
     "~/Library/Saved Application State/net.armsx2.armsx2.savedState",
   ]
+
+  caveats <<~EOS
+    This app is unsigned. You may need to right-click and choose Open,
+    or run:
+      xattr -d com.apple.quarantine "/Applications/armsx2-macos-arm64-sha[31654bc].app"
+  EOS
 end
