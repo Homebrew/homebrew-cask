@@ -26,8 +26,8 @@ cask "coteditor" do
     end
   end
   on_tahoe :or_newer do
-    version "7.1.1"
-    sha256 "d3ae05e54e4fc68149dd0ce02ae2d6a76febff68e59e451b64c5069912b9dfaf"
+    version "7.1.2"
+    sha256 "ee9bd48a0c923f046509798cf87422207e47d30077ecb6cdf2737a8f2d88a626"
 
     livecheck do
       url "https://coteditor.com/appcast.xml"
