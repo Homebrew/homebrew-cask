@@ -11,8 +11,6 @@ cask "zed" do
          x86_64_linux: "cabddd5af2b26a19633ea39f5dde070e2aad204bb815bfa74cb65073ffd5ff39"
 
   on_macos do
-    auto_updates true
-
     app "Zed.app"
     binary "#{appdir}/Zed.app/Contents/MacOS/cli", target: "zed"
 
@@ -45,7 +43,6 @@ cask "zed" do
     zap trash: [
       "~/.cache/zed",
       "~/.config/zed",
-      "~/.local/share/applications/dev.zed.Zed.desktop",
       "~/.local/share/zed",
     ]
   end
@@ -61,6 +58,8 @@ cask "zed" do
       json["version"]
     end
   end
+
+  auto_updates true
 
   generate_completions_from_executable "#{HOMEBREW_PREFIX}/bin/zed", "--completions",
                                        shells: [:bash, :zsh, :fish, :pwsh]

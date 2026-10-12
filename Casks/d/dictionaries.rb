@@ -18,7 +18,10 @@ cask "dictionaries" do
   app "Dictionaries.app"
 
   zap trash: [
+    "~/Library/Application Scripts/io.dictionaries.Dictionaries.Helper",
+    "~/Library/Application Support/io.dictionaries.Dictionaries",
     "~/Library/Containers/io.dictionaries.Dictionaries",
+    "~/Library/HTTPStorages/io.dictionaries.Dictionaries",
     "~/Library/Preferences/io.dictionaries.Dictionaries.plist",
   ]
 end

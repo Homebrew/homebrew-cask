@@ -5,6 +5,7 @@ cask "baiduinput" do
   url "https://imeres.baidu.com/mac/baiduinput_mac_v#{version.csv.first}_#{version.csv.second}.dmg"
   name "Baidu Input"
   name "安装百度输入法"
+  desc "Chinese input method"
   homepage "https://srf.baidu.com/input/mac.html"
 
   livecheck do
