@@ -12,6 +12,8 @@ cask "freesurfer" do
     regex(/v(\d+(?:\.\d+)+)/i)
   end
 
+  disable! date: "2026-10-11", because: :fails_gatekeeper_check
+
   depends_on :macos
 
   suite "freesurfer"

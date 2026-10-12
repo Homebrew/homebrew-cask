@@ -15,6 +15,7 @@ cask "glide" do
     strategy :github_latest
   end
 
+  conflicts_with cask: "glide-browser"
   depends_on :macos
 
   app "Glide.app"

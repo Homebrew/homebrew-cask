@@ -12,6 +12,8 @@ cask "cinder" do
     regex(/href=.*?cinder[._-]v?(\d+(?:\.\d+)+)[._-]mac\.zip/i)
   end
 
+  disable! date: "2026-10-12", because: :fails_gatekeeper_check
+
   depends_on :macos
 
   suite "cinder_#{version}_mac"

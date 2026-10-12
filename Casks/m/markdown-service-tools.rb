@@ -12,6 +12,8 @@ cask "markdown-service-tools" do
     regex(%r{href=.*?/MarkdownServiceTools(\d+(?:\.\d+)*)\.zip}i)
   end
 
+  disable! date: "2026-10-12", because: :fails_gatekeeper_check
+
   depends_on formula: "multimarkdown"
   depends_on :macos
 

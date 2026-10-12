@@ -1,8 +1,8 @@
 cask "mark-text" do
-  version "0.21.1"
-  sha256 arm:          "329f608bbfc93d7bda33b6c570495d4d3aeffd33f5ed040ff764d1737189362c",
-         intel:        "40bc50d4bf24f1f3cfdf2b81c47eae6d3b97c9c28c65fab149eac3e1eb3a6650",
-         x86_64_linux: "b2986bed1415a215c5d0f8be378b5fb14f134d3c15c319d120eb254d28bf205f"
+  version "0.21.2"
+  sha256 arm:          "6c07b697ba3262e8b130ab3ee85bdc621077cf4035c8cc339098cdb2892142c1",
+         intel:        "597e09bd3d350e1535fb5df00e59e328fb618aac915e19db8e00ed6e4f2e800a",
+         x86_64_linux: "78babe51c1c305dbfc2d61d0880919c20f48ca171663dbe1266932ed39bde09a"
 
   on_macos do
     arch arm: "arm64", intel: "x64"
