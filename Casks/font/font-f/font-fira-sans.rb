@@ -6,6 +6,9 @@ cask "font-fira-sans" do
   name "Fira Sans"
   homepage "https://mozilla.github.io/Fira/"
 
+  # The upstream repository was archived on 2026-05-14 and is no longer maintained.
+  deprecate! date: "2026-10-12", because: :discontinued
+
   font "Fira-#{version}/otf/FiraSans-Bold.otf"
   font "Fira-#{version}/otf/FiraSans-BoldItalic.otf"
   font "Fira-#{version}/otf/FiraSans-Book.otf"
