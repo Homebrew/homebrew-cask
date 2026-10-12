@@ -12,6 +12,8 @@ cask "tigerjython" do
     regex(/version\s+(\d+(?:\.\d+)+)/i)
   end
 
+  disable! date: "2026-10-12", because: :fails_gatekeeper_check
+
   depends_on :macos
 
   suite "TigerJython"

@@ -2,16 +2,19 @@ cask "photocraft" do
   arch arm: "aarch64", intel: "x86_64"
   url_end = on_system_conditional macos: "macos-universal.dmg", linux: "linux-#{arch}.AppImage"
 
-  version "0.5.0"
-  sha256 arm:          "dff8c8105d5938d46fa4ba29559d3efc0f1ea195a5392d36cf62bc14ea2de5e7",
-         intel:        "dff8c8105d5938d46fa4ba29559d3efc0f1ea195a5392d36cf62bc14ea2de5e7",
-         arm64_linux:  "f87fa09cb5a0f51e57aaa0383800446d469bbb0ade79c69c6bc4f38899b9b309",
-         x86_64_linux: "f54d863807053bbdfcffa0d624ef7e49d3fd41310c7bb1ede48536f69929d22f"
+  version "0.7.0"
+  sha256 arm:          "cd04389f15518c6208ef3a1e4b9b16f9edbbd1ece3fa63f7876b5d8d411c8a4a",
+         intel:        "cd04389f15518c6208ef3a1e4b9b16f9edbbd1ece3fa63f7876b5d8d411c8a4a",
+         arm64_linux:  "0aea5a09cf85d5eb49f58a45bed89da57962d8f3ec38e19b5fe48ffb445c335f",
+         x86_64_linux: "87ebce36bcdf6b31d16a9ca22ce29f9ad8db68185e4d98118800d1c2de78ac42"
 
   on_macos do
     app "PhotoCraft.app"
 
-    zap trash: "~/Library/Preferences/ai.storyteller.photocraft.plist"
+    zap trash: [
+      "~/Library/Application Support/Photocraft",
+      "~/Library/Preferences/ai.storyteller.photocraft.plist",
+    ]
   end
   on_linux do
     app_image "photocraft-#{version}-linux-#{arch}.AppImage", target: "PhotoCraft.AppImage"

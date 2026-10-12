@@ -17,6 +17,8 @@ cask "shottr" do
 
   app "Shottr.app"
 
+  uninstall quit: "cc.ffitch.shottr"
+
   zap trash: [
     "~/Library/Application Scripts/cc.ffitch.shottr",
     "~/Library/Application Scripts/cc.ffitch.shottr-LaunchAtLoginHelper",

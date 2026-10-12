@@ -13,6 +13,8 @@ cask "ampps" do
     strategy :header_match
   end
 
+  disable! date: "2026-10-12", because: :fails_gatekeeper_check
+
   depends_on :macos
 
   suite "AMPPS"

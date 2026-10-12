@@ -11,6 +11,8 @@ cask "google-trends" do
     strategy :extract_plist
   end
 
+  disable! date: "2026-10-12", because: :fails_gatekeeper_check
+
   depends_on :macos
 
   screen_saver "Google Trends.saver"

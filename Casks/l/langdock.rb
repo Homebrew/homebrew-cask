@@ -1,6 +1,6 @@
 cask "langdock" do
-  version "1.0.8"
-  sha256 "25c7966c3eaeed6fd8cc52ea015bd400161b35aab1f440ab7dcd252028f1a3ae"
+  version "1.0.11"
+  sha256 "f768131e3db3de1dc1b12238288a62602913765a3d5464c356febcff858672ce"
 
   url "https://desktop.langdock.com/global/stable/Langdock-#{version}.dmg"
   name "Langdock"
@@ -8,8 +8,8 @@ cask "langdock" do
   homepage "https://langdock.com/products/desktop"
 
   livecheck do
-    url "https://desktop.langdock.com/global/stable/download/mac"
-    strategy :header_match
+    url "https://desktop.langdock.com/global/stable/latest-mac.yml"
+    strategy :electron_builder
   end
 
   depends_on macos: :sonoma

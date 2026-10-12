@@ -2,10 +2,10 @@ cask "openrct2" do
   # NOTE: "2" is not a version number, but an intrinsic part of the product name
   os macos: "macos-universal.zip", linux: "linux-x86_64.AppImage"
 
-  version "0.5.5"
-  sha256 arm:          "d02f0a3054106e60186805268828cc80068485ffa324aca7363ae1d69081fb0d",
-         intel:        "d02f0a3054106e60186805268828cc80068485ffa324aca7363ae1d69081fb0d",
-         x86_64_linux: "f3debb61bd9b6cc4c85e4ca4f17c46f76834a1e89f1faac2b694e0a563d9ad7c"
+  version "0.5.6"
+  sha256 arm:          "5f57e48dbe438fd6fd5059954afe521a01365a36c11085b190067ea3204b6565",
+         intel:        "5f57e48dbe438fd6fd5059954afe521a01365a36c11085b190067ea3204b6565",
+         x86_64_linux: "8198b5ef8b9b07685fc860f3f04ce88a5f07ce6c1e5a9e2badffa811ed0f2eba"
 
   on_macos do
     disable! date: "2026-09-01", because: :fails_gatekeeper_check

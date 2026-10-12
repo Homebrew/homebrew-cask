@@ -1,6 +1,6 @@
 cask "dcp-o-matic" do
-  version "2.19.1"
-  sha256 "b98e533de6452bf4d560d9b9a05caf8cbe7301697078a9c8cfe493dad3b4b310"
+  version "2.19.2"
+  sha256 "ae54cfcd309b38c68c058a657949d463010a3f8e023f4922ae794badaf48d158"
 
   url "https://download.dcpomatic.com/dl.php?id=osx-10.10-main&version=#{version}"
   name "DCP-o-matic"
@@ -8,8 +8,8 @@ cask "dcp-o-matic" do
   homepage "https://dcpomatic.com/"
 
   livecheck do
-    url "https://git.carlh.net/cgit/dcpomatic/"
-    regex(%r{href=.*?/tag/\?h=v?(\d+(?:\.\d+)+)["' >]}i)
+    url "https://git.carlh.net/git/dcpomatic.git"
+    regex(/^v?(\d+(?:\.\d+)+)$/i)
   end
 
   depends_on :macos
