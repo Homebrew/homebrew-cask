@@ -12,6 +12,8 @@ cask "rnnoise" do
     strategy :github_latest
   end
 
+  disable! date: "2026-10-12", because: :fails_gatekeeper_check
+
   depends_on :macos
 
   audio_unit_plugin "macos-rnnoise/rnnoise.component"

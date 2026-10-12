@@ -12,6 +12,8 @@ cask "dwarf-fortress-lmp" do
     regex(/Lazy\+Mac\+Pack\+v(.+)\.dmg/i)
   end
 
+  disable! date: "2026-10-12", because: :fails_gatekeeper_check
+
   depends_on :macos
 
   # Renamed for clarity: suite name is inconsistent with branding

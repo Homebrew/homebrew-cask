@@ -12,6 +12,8 @@ cask "openforis-collect" do
     regex(%r{<version>v?(\d+(?:\.\d+)+)</version>}i)
   end
 
+  disable! date: "2026-10-12", because: :fails_gatekeeper_check
+
   depends_on :macos
 
   rename "OpenForisCollect-*-osx-installer.app", "OpenForisCollect-osx-installer.app"

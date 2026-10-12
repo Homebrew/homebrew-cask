@@ -74,6 +74,8 @@ cask "klayout" do
   desc "IC design layout viewer and editor"
   homepage "https://www.klayout.de/"
 
+  disable! date: "2026-10-12", because: :fails_gatekeeper_check
+
   depends_on :macos
 
   suite "KLayout"

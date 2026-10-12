@@ -2,11 +2,14 @@ cask "font-tiny5" do
   version :latest
   sha256 :no_check
 
-  url "https://github.com/google/fonts/raw/main/ofl/tiny5/Tiny5-Regular.ttf"
+  url "https://github.com/google/fonts.git",
+      branch:    "main",
+      only_path: "ofl/tiny5"
   name "Tiny5"
   homepage "https://fonts.google.com/specimen/Tiny5"
 
-  font "Tiny5-Regular.ttf"
+  font "Tiny5-Italic[BLED,JITT,ROND,wdth,wght].ttf"
+  font "Tiny5[BLED,JITT,ROND,wdth,wght].ttf"
 
   # No zap stanza required
 end

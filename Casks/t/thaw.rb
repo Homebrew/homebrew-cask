@@ -8,6 +8,7 @@ cask "thaw" do
   homepage "https://github.com/thaw-app/Thaw/"
 
   auto_updates true
+  conflicts_with cask: "thaw@beta"
   depends_on macos: :tahoe
 
   app "Thaw.app"

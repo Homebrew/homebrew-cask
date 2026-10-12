@@ -9,7 +9,7 @@ cask "automounterhelper" do
 
   livecheck do
     url :homepage
-    regex(/Version:\s+v?(\d+(?:\.\d+)+)/i)
+    regex(%r{Version\s*</dt>\s*<dd[^>]*>\s*v?(\d+(?:\.\d+)+)}i)
   end
 
   depends_on macos: :monterey

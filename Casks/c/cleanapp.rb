@@ -4,6 +4,7 @@ cask "cleanapp" do
 
   url "https://download.syniumsoftware.com/CleanApp/CleanApp%20#{version}.dmg"
   name "Synium Software CleanApp"
+  desc "Application uninstaller and system cleanup utility"
   homepage "https://www.syniumsoftware.com/cleanapp"
 
   livecheck do

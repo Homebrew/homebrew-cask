@@ -18,6 +18,7 @@ cask "glide-browser" do
   end
 
   auto_updates true
+  conflicts_with cask: "glide"
   depends_on :macos
 
   app "Glide.app"

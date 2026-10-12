@@ -1,9 +1,9 @@
 cask "activitywatch@experimental" do
   arch arm: "arm64", intel: "x86_64"
 
-  version "0.14.0"
-  sha256 arm:   "af0f735e78d734ab3131dc9b67b4256221bc8b0245f65fed22d5e80fe5d5e734",
-         intel: "1b8aeb2e8cb667fd29700054042f537ffebd9f2ad3cfb5aab70394033ab2d8e0"
+  version "0.14.1"
+  sha256 arm:   "0bfd055cd369681d796f86049b08870239fcd10833702109dee8343b0b6db1c0",
+         intel: "02f49e474f5df019e559bb6f795ef545841f6b0dd0d047b18c6a4a9a8cbeb8bc"
 
   url "https://github.com/ActivityWatch/activitywatch/releases/download/v#{version}/activitywatch-tauri-v#{version}-macos-#{arch}.dmg"
   name "ActivityWatch"

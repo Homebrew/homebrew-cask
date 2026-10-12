@@ -1,6 +1,6 @@
 cask "changes" do
-  version "2.4"
-  sha256 "c44227da1c465dd901c04eff944a88a40a37e0ea6036d3c1e7428357f51b50cf"
+  version "2.5"
+  sha256 "7b1577b8cf34d3eb8cb52154675d32d2876b4b9c5d9d25546b932cb226b04189"
 
   url "https://github.com/maoyama/Changes/releases/download/v#{version}/Changes.zip"
   name "Changes"

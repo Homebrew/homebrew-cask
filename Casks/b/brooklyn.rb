@@ -7,6 +7,8 @@ cask "brooklyn" do
   desc "Screen saver based on animations presented during Apple Special Event Brooklyn"
   homepage "https://github.com/pedrommcarrasco/Brooklyn"
 
+  disable! date: "2026-10-12", because: :fails_gatekeeper_check
+
   depends_on :macos
 
   screen_saver "Brooklyn.saver"

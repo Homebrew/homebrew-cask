@@ -2,11 +2,11 @@ cask "filmcraft" do
   arch arm: "aarch64", intel: "x86_64"
   url_end = on_system_conditional macos: "macos-universal.dmg", linux: "linux-#{arch}.AppImage"
 
-  version "0.4.0"
-  sha256 arm:          "81feeedd6294579fe51f07acff2f8bac57c2ca72a0b49977ef76be67c7c45237",
-         intel:        "81feeedd6294579fe51f07acff2f8bac57c2ca72a0b49977ef76be67c7c45237",
-         arm64_linux:  "c4ca4251b509dc3a8dccc5c41b7122be82c6072518ae501f7766c3312e72c530",
-         x86_64_linux: "d8410dea7b2b064ede1ead87dd894bca3537a4dfda1a44297158849f56ba2d4c"
+  version "0.6.0"
+  sha256 arm:          "3e8d92a082c98aa3477c00313d0784c18f681e94ed91a494712d4d8b36297e3b",
+         intel:        "3e8d92a082c98aa3477c00313d0784c18f681e94ed91a494712d4d8b36297e3b",
+         arm64_linux:  "d6994dd3e25c5505119eb2763eb34b590a736ac90dcaec608b77aac4d3305b37",
+         x86_64_linux: "c0b5a5d0f0e71176aa806c895f8ca513f2d505b70fef85b874bbe23c91232bc7"
 
   on_macos do
     app "FilmCraft.app"

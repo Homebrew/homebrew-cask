@@ -3,10 +3,10 @@ cask "reqable" do
   os macos: "macos", linux: "linux"
   url_end = on_system_conditional macos: "dmg", linux: "AppImage"
 
-  version "3.2.23"
-  sha256 arm:          "894def95a02a53fc0fbdbf9ae2f5291ccc25ba1e8cda2fd87c31dc80fe34fe4c",
-         intel:        "feb96a2ab938bb118119fec97666682f5b06d79195f6ffffef29fb5227ab2b9e",
-         x86_64_linux: "b7cdceb6fc2b7eb6e5b31b47076d32bfa6c69ff8e545cc493ae357fbfa58b469"
+  version "3.3.1"
+  sha256 arm:          "d02839bbe48271f1e72df724ccabc99c9000df772f5f5f88749aef61aad530eb",
+         intel:        "64bf5d44f98209bc55e5f83e3a3459195cb74c630203727fcf3897ef4039046a",
+         x86_64_linux: "bb8e1c80a30809fa0ba3ef2da282b7ce59ff71cc81d5984ba6faadd9939b8c12"
 
   on_macos do
     app "Reqable.app"

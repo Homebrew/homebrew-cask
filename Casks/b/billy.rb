@@ -1,6 +1,6 @@
 cask "billy" do
-  version "1.2.0,43"
-  sha256 "96c9e0e3a0b8d26fd6d4b298b5d06271f2c9120aa0d23e85eedf18a5b2916982"
+  version "1.2.1,44"
+  sha256 "c785c8d9d3863b5969334940470523daebde37d3004584abfd64fbb22586a862"
 
   url "https://cdn.amore.computer/releases/com.simonlou.Billy/#{version.csv.first}-#{version.csv.second}/Billy.dmg"
   name "Billy"

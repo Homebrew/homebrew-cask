@@ -1,9 +1,9 @@
 cask "activitywatch@beta" do
   arch arm: "arm64", intel: "x86_64"
 
-  version "0.14.0"
-  sha256 arm:   "55013abc41747e6e7575f35740eeeacd6d70013f581c2a4dd585a51f6603f32b",
-         intel: "02c57f5c8fd63bf27191154a2f5181bb9bbca9ab4191f57f75a6b09d9dcc8ddd"
+  version "0.14.1"
+  sha256 arm:   "225916c1e641151638a062c796743ea21ba29c5d1bc162d84fc5591473d822db",
+         intel: "d10abf59d0c86a4cbf137b455326201b4fc6691a84d63b47c58779c90e1169ff"
 
   url "https://github.com/ActivityWatch/activitywatch/releases/download/v#{version}/activitywatch-v#{version}-macos-#{arch}.dmg"
   name "ActivityWatch"

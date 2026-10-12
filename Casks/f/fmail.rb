@@ -7,10 +7,7 @@ cask "fmail" do
   desc "Unofficial native application for Fastmail"
   homepage "https://arievanboxel.fr/fmail/en/"
 
-  livecheck do
-    url "https://arievanboxel.fr/fmail/sparkle/appcast.xml"
-    strategy :sparkle, &:short_version
-  end
+  disable! date: "2026-10-11", because: :no_longer_available
 
   auto_updates true
   depends_on :macos

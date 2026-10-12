@@ -19,6 +19,7 @@ cask "tunnelblick" do
   end
 
   auto_updates true
+  conflicts_with cask: "tunnelblick@beta"
   depends_on macos: :ventura
 
   app "Tunnelblick.app"

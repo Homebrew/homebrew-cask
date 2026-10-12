@@ -4,6 +4,7 @@ cask "bwana" do
 
   url "https://www.bruji.com/bwana/bwana.dmg"
   name "Bwana"
+  desc "Unix manual page reader for web browsers"
   homepage "https://www.bruji.com/bwana/"
 
   livecheck do

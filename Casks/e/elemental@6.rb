@@ -12,6 +12,7 @@ cask "elemental@6" do
     regex(/^elemental[._-]v?(6(?:\.\d+)+)$/i)
   end
 
+  conflicts_with cask: "elemental"
   depends_on :macos
 
   app "Elemental.app"

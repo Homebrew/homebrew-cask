@@ -7,6 +7,8 @@ cask "colorpicker-materialdesign" do
   desc "Colour picker"
   homepage "https://github.com/CodeCatalyst/MaterialDesignColorPicker"
 
+  disable! date: "2026-10-12", because: :fails_gatekeeper_check
+
   depends_on :macos
 
   colorpicker "MaterialDesignColorPicker.colorPicker"

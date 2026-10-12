@@ -1,6 +1,6 @@
 cask "moonfin" do
-  version "2.6.0"
-  sha256 "354391a46f79458de9a77327f342672308bd755aba6c665af784c2461bd99be2"
+  version "2.7.0"
+  sha256 "519a3b3c615c949a963b3152347e5cdfe9fa6234dab07bab9c09063be4ec1cde"
 
   url "https://github.com/Moonfin-Client/Moonfin-Core/releases/download/#{version}/Moonfin_macOS_v#{version}.dmg"
   name "Moonfin"

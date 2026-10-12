@@ -13,6 +13,10 @@ cask "istat-menus@5" do
   end
 
   auto_updates true
+  conflicts_with cask: [
+    "istat-menus",
+    "istat-menus@6",
+  ]
   depends_on :macos
 
   app "iStat Menus.app"

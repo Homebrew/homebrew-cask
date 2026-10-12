@@ -4,6 +4,7 @@ cask "runescape" do
 
   url "https://content.runescape.com/downloads/osx/RuneScape.dmg"
   name "RuneScape"
+  desc "Massively multiplayer online fantasy role-playing game"
   homepage "https://www.runescape.com/"
 
   livecheck do

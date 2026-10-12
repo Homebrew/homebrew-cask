@@ -39,8 +39,8 @@ cask "raycast" do
       end
     end
     on_tahoe :or_newer do
-      version "2.7.2.0"
-      sha256 "3fc4064198ae8d3ff88f15b48ff8db67171ef3cbb3ff805a38371e28ff99a60c"
+      version "2.7.3.0"
+      sha256 "edbdb431cf775b8f0d4ce9bfebc77e6305d02d33c525f05d11faca173b6286ec"
 
       url "https://x.raycast-releases.com/download?platform=macos&architecture=arm64&version=#{version}"
 
@@ -70,12 +70,16 @@ cask "raycast" do
   zap trash: [
     "~/.config/raycast",
     "~/Library/Application Scripts/com.raycast.macos.BrowserExtension",
+    "~/Library/Application Scripts/SY64MV22J9.com.raycast.macos.shared",
     "~/Library/Application Support/com.raycast.macos",
+    "~/Library/Application Support/com.raycast.shared",
     "~/Library/Caches/com.raycast.macos",
     "~/Library/Caches/SentryCrash/Raycast",
     "~/Library/Containers/com.raycast.macos.BrowserExtension",
     "~/Library/Cookies/com.raycast.macos.binarycookies",
+    "~/Library/Group Containers/SY64MV22J9.com.raycast.macos.shared",
     "~/Library/HTTPStorages/com.raycast.macos",
+    "~/Library/Logs/com.raycast.macos",
     "~/Library/Preferences/com.raycast.macos.plist",
     "~/Library/WebKit/com.raycast.macos",
   ]

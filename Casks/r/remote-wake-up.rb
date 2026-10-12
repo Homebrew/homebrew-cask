@@ -1,5 +1,5 @@
 cask "remote-wake-up" do
-  version "2.1.1"
+  version "2.2"
   sha256 :no_check
 
   url "https://witt-software.com/downloads/remotewakeup/Remote%20Wake%20Up.dmg"
@@ -15,6 +15,8 @@ cask "remote-wake-up" do
   depends_on macos: :sequoia
 
   app "Remote Wake Up.app"
+
+  uninstall quit: "com.mac-attender.Remote-Wake-Up"
 
   zap trash: [
     "~/Library/Application Support/com.mac-attender.Remote-Wake-Up",

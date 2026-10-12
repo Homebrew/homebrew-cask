@@ -8,8 +8,8 @@ cask "gpg-suite" do
   homepage "https://gpgtools.org/"
 
   livecheck do
-    url :homepage
-    regex(/href=.*?GPG_Suite[._-]v?(\d+(?:\.\d+)+)\.dmg/i)
+    url "https://gpgtools.org/releases/gpgsuite/release-notes.html"
+    regex(/data-version=["']?v?(\d+(?:\.\d+)+)["' >]/i)
   end
 
   auto_updates true

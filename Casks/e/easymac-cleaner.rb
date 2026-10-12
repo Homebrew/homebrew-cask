@@ -1,6 +1,6 @@
 cask "easymac-cleaner" do
-  version "1.5.1"
-  sha256 "cd9be17e3fbb266f6cae9848bf206fef4ad2bda9c09764a08b4128162da2b455"
+  version "1.6"
+  sha256 "85e618414ca36622a5c9c2a9d1cc761137718adbd7092762af1f4b94581298d4"
 
   url "https://updates.martiancat.space/cleaner/EasyMacCleaner-#{version}.zip"
   name "EasyMac Cleaner"
@@ -13,7 +13,7 @@ cask "easymac-cleaner" do
   end
 
   auto_updates true
-  depends_on :macos
+  depends_on macos: :monterey
 
   app "EasyMac Cleaner.app"
 
