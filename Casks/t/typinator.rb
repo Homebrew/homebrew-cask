@@ -18,9 +18,14 @@ cask "typinator" do
 
   app "Typinator.app"
 
+  uninstall quit: "com.macility.typinator2"
+
   zap trash: [
     "~/Desktop/Typinator Tutorial.rtfd",
+    "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.macility.typinator2.sfl*",
     "~/Library/Application Support/Typinator",
+    "~/Library/Caches/com.macility.typinator2",
+    "~/Library/HTTPStorages/com.macility.typinator2",
     "~/Library/Preferences/com.macility.typinator2.plist",
   ]
 end
