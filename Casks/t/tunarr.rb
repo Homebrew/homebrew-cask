@@ -1,9 +1,9 @@
 cask "tunarr" do
   arch arm: "arm64", intel: "x64"
 
-  version "2026.10.1"
-  sha256 arm:   "1fc428a6af1442501f8eedbff94dfed402a6505142ecdeccf74773701baa9e85",
-         intel: "a05264e131934c264cb2d97af5fe6b58bd90f31684b3dce77e1bb4a7db533dbc"
+  version "2026.10.2"
+  sha256 arm:   "87b8ef48351aee8fa3de9c8b1f65ac5eea31e62af3e0d9d4b7bc7dd5a3cd2b40",
+         intel: "f692275988b3a93843160edac9243f740c7377767240f4606b57801357e58793"
 
   url "https://github.com/chrisbenincasa/tunarr/releases/download/v#{version}/Tunarr-v#{version}-macos-#{arch}.dmg"
   name "tunarr"
