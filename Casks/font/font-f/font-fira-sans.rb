@@ -2,9 +2,9 @@ cask "font-fira-sans" do
   version "4.202"
   sha256 "d86269657387f144d77ba12011124f30f423f70672e1576dc16f918bb16ddfe4"
 
-  url "https://github.com/mozilla/Fira/archive/refs/tags/#{version}.tar.gz"
+  url "https://github.com/google/fonts"
   name "Fira Sans"
-  homepage "https://mozilla.github.io/Fira/"
+  homepage "https://fonts.google.com/specimen/Fira+Sans"
 
   font "Fira-#{version}/otf/FiraSans-Bold.otf"
   font "Fira-#{version}/otf/FiraSans-BoldItalic.otf"
