@@ -12,9 +12,12 @@ cask "paintcode" do
     strategy :sparkle, &:short_version
   end
 
+  auto_updates true
   depends_on macos: :monterey
 
   app "PaintCode.app"
+
+  uninstall quit: "com.pixelcut.paintcode*"
 
   zap trash: [
     "~/Library/Application Support/com.pixelcut.paintcode*",
