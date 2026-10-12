@@ -11,7 +11,8 @@ cask "murus" do
 
   app "Murus.app"
 
-  uninstall launchctl: "it.murus.murusfirewallrules"
+  uninstall launchctl: "it.murus.murusfirewallrules",
+            quit:      "it.murus.Murus-Menulet"
 
   zap trash: [
     "/etc/murus",
