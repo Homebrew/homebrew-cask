@@ -1,6 +1,6 @@
 cask "zush" do
-  version "3.16.0"
-  sha256 "558519396a315f5de48e234b260386cfe3e220c7b875daf01dac5f55d983c90f"
+  version "3.16.1"
+  sha256 "fb90f87f19c928b142b879a3fcfffcdb84a9e5bca2a0cd51177c31d93522120a"
 
   url "https://zushapp.com/releases/Zush-#{version}.dmg"
   name "Zush"
