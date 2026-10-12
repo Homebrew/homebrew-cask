@@ -1,7 +1,7 @@
 cask "carbide-create" do
   on_arm do
-    version "875"
-    sha256 "7d8db15a5951cd1a657f207a7522cad6e4482ae2724d796ea85cba6dad589750"
+    version "876"
+    sha256 "d430027fe869d9c8d8ad0c788e68243a91301e12a7dfb2b8853c85be88897e35"
 
     livecheck do
       url "https://carbide-downloads.website-us-east-1.linodeobjects.com/builds.json"
