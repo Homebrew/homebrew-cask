@@ -1,9 +1,9 @@
 cask "grayjay" do
   arch arm: "arm64", intel: "x64"
 
-  version "17"
-  sha256 arm:   "d19c6a57cd925424a92806d96796ab1a031b7e9ae9deaa312fe411a5b3d456aa",
-         intel: "14986dbe9a712a442351750778d50420d8c5d6d08200553667564961cdd3f757"
+  version "19"
+  sha256 arm:   "a73d7d25c450ef8e0d63744e1cabad412ab83651b18b4c1dc03f3d6c01fd051a",
+         intel: "4a6ce8dd6d64e30023046e6b0e84af66d639dae908836db8dd4367ded9f65193"
 
   url "https://updater.grayjay.app/Apps/Grayjay.Desktop/#{version}/Grayjay.Desktop-osx-#{arch}-v#{version}.zip"
   name "Grayjay desktop"
