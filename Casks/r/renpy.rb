@@ -12,6 +12,8 @@ cask "renpy" do
     regex(/href=.*?renpy[._-]v?(\d+(?:\.\d+)+)[._-]sdk\.dmg/i)
   end
 
+  disable! date: "2026-10-12", because: :fails_gatekeeper_check
+
   depends_on :macos
 
   suite "renpy-#{version}-sdk"
