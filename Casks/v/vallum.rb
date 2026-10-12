@@ -20,7 +20,12 @@ cask "vallum" do
               "it.murus.afw.core",
               "it.murus.afw.helper",
             ],
+            quit:      "it.murus.Vallum",
             pkgutil:   "it.murus.afw.Vallum"
 
-  zap trash: "~/Library/Preferences/it.murus.Vallum.plist"
+  zap trash: [
+    "~/Library/Application Scripts/RNLG254GCK.it.murus.Vallum",
+    "~/Library/Group Containers/RNLG254GCK.it.murus.Vallum",
+    "~/Library/Preferences/it.murus.Vallum.plist",
+  ]
 end
