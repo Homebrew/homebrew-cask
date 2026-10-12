@@ -1,5 +1,5 @@
 cask "readwise-ibooks" do
-  version "1.0"
+  version "1.1,4"
   sha256 :no_check
 
   url "https://readwise.io/ibooks/download"
@@ -12,9 +12,11 @@ cask "readwise-ibooks" do
     strategy :extract_plist
   end
 
-  depends_on :macos
+  depends_on macos: :monterey
 
   app "Readwise_iBooks.app"
+
+  uninstall quit: "readwise.Readwise-iBooks"
 
   zap trash: [
     "~/Library/Caches/readwise.Readwise-iBooks",
