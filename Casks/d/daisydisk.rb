@@ -23,6 +23,7 @@ cask "daisydisk" do
   zap trash: [
     "~/Library/Application Support/DaisyDisk",
     "~/Library/Caches/com.daisydiskapp.DaisyDiskStandAlone",
+    "~/Library/HTTPStorages/com.daisydiskapp.DaisyDiskStandAlone",
     "~/Library/Preferences/com.daisydiskapp.DaisyDiskStandAlone.plist",
   ]
 end
