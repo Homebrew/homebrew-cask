@@ -4,11 +4,11 @@ cask "opencode-desktop" do
                                    linux: on_arch_conditional(arm: "arm64", intel: "x86_64")
   url_ext = on_system_conditional macos: "dmg", linux: "AppImage"
 
-  version "2.0.26"
-  sha256 arm:          "cd6b4bcfb7b357855d8928b0e2681a9e217bc9648639524148cf0d4c97733696",
-         intel:        "12907be598383058827a7452c49c44287ac3849150d6b6fb9e88a0f89d26bac6",
-         arm64_linux:  "a1389c595cccd5ff757569cd88876aaa14db852dfbcadf2f0cae779d7660b030",
-         x86_64_linux: "3d88002742a230bf0e8b49fbb1190f7667986fa7dbce75b2206ecb75cabf1491"
+  version "2.0.27"
+  sha256 arm:          "bb355162f2d5ea66d8df62ed1cd1d139f5117fce628291f7430b7c7b8ec49179",
+         intel:        "e43487cd7882249129852ee2518c77ece8ab64e5bd65cf5d11d023f8d0a0b483",
+         arm64_linux:  "9a173a0890c7f9459b578a91483426f495fb3081d621c874403c55b2831969fb",
+         x86_64_linux: "cc0ac3b16b29fd38b077a665b582e7d8e80becaf9f2b16538c541fa09329e9ab"
 
   on_macos do
     depends_on macos: :ventura
@@ -42,7 +42,8 @@ cask "opencode-desktop" do
   homepage "https://opencode.ai/"
 
   livecheck do
-    url "https://opencode.ai/update/api/latest/desktop/opencode/latest-mac.yml"
+    url "https://opencode.ai/update/api/latest/desktop/opencode/latest-mac.yml",
+        user_agent: :browser
     strategy :electron_builder
   end
 
