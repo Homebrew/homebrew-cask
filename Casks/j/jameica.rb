@@ -15,6 +15,8 @@ cask "jameica" do
     regex(%r{href=.*?/jameica[._-]macos64[._-]v?(\d+(?:\.\d+)+)\.zip}i)
   end
 
+  disable! date: "2026-10-12", because: :fails_gatekeeper_check
+
   depends_on :macos
 
   # `audit_rosetta` assumes that an app contains at least one binary in the
