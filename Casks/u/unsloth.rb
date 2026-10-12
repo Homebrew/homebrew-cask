@@ -1,9 +1,9 @@
 cask "unsloth" do
   os macos: "MacOS.dmg", linux: "Linux.AppImage"
 
-  version "0.1.905-beta"
-  sha256 arm:          "7e4184a66b3a60d666927bd85ecf4efbde32a295b113ab6c1a0f071a83e132c1",
-         x86_64_linux: "0afaedb084a1d7961d2a5c568cbf01e75a479f1bfeba024f540e14bac2014787"
+  version "0.1.906-beta"
+  sha256 arm:          "3f8140c8be17417be624f8b27b378c8106df733abb67e0cee1a3513f2477dc1b",
+         x86_64_linux: "1ff9daa837f0b15d892a35ad07e4bdfad5f78b20a0732692c17a299d491a9790"
 
   on_macos do
     auto_updates true
