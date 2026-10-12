@@ -1,6 +1,6 @@
 cask "nitro-pdf-pro" do
-  version "26.0"
-  sha256 "5f1e9f846bca80a95b0faa43b11f6daf04d40be5301a3a9b8255541a5cf0f0f2"
+  version "26.4"
+  sha256 "e5872a524a90d49bb520165aa1d54dffcada7a488d96699b94e701542752fe2e"
 
   url "https://downloads.gonitro.com/macos/Nitro%20PDF%20Pro_#{version}.dmg"
   name "Nitro PDF Pro"
@@ -8,11 +8,11 @@ cask "nitro-pdf-pro" do
   homepage "https://www.gonitro.com/pdf"
 
   livecheck do
-    url "https://www.gonitro.com/documentation/product-downloads"
-    regex(/href=.*Nitro%20PDF%20Pro[._-]v?(\d+(?:\.\d+)+)\.dmg/i)
+    url "https://downloads.gonitro.com/macos/pro.rss"
+    strategy :sparkle, &:short_version
   end
 
-  depends_on macos: :monterey
+  depends_on macos: :tahoe
 
   app "Nitro PDF Pro.app"
 
