@@ -20,6 +20,8 @@ cask "apache-couchdb" do
 
   app "Apache CouchDB.app"
 
+  uninstall quit: "org.apache.couchdb"
+
   zap trash: [
     "~/Library/Application Support/CouchDB",
     "~/Library/Caches/org.apache.couchdb",
