@@ -1,6 +1,6 @@
 cask "ghostex" do
-  version "10.15.5"
-  sha256 "f347ad59a031b0f29fe4df9a2f86feead40e098bbff5d8eb78893096ef877ef8"
+  version "10.20.1"
+  sha256 "c7fef73fed6d10b7ea77649ab81c0de4ce85bc9ce431a095c2d860222e8ffdd2"
 
   url "https://github.com/maddada/Ghostex/releases/download/v#{version}/ghostex-#{version}-arm64.dmg"
   name "Ghostex"

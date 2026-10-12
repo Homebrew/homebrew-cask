@@ -1,6 +1,6 @@
 cask "telegram-desktop@beta" do
-  version "7.2.10-beta,7.2.10"
-  sha256 "3ed9a3016d9297814a6bdd56b30ab2a762b434925de8c28462d258fb991d72d9"
+  version "7.3.1"
+  sha256 "0173b189bab1d5839055246551453a739495daabdfda0e58adac3656e48b9b50"
 
   url "https://github.com/telegramdesktop/tdesktop/releases/download/v#{version.csv.second || version.csv.first}/td-setup-mac-#{version.csv.first}.dmg"
   name "Telegram Desktop"

@@ -3,11 +3,11 @@ cask "altair-graphql-client" do
   os macos: "mac", linux: "linux"
   url_end = on_system_conditional macos: "zip", linux: "AppImage"
 
-  version "8.5.9"
-  sha256 arm:          "5dbf5a58be50922965bc30d5ed5dc38ee3607b89b01c3777827aeab8a27d7d3c",
-         intel:        "189d4c57e293845d80f225e7ecdfa5e806a6caf468963f4a6b39d5680ba6566b",
-         arm64_linux:  "9f371b65f1b197bb9cc0d70c160ab12c59b0f9e23e4588ca4035389f0c3ec9f2",
-         x86_64_linux: "f12d800ec9cfa1f5153bcbd41a1da9152edfe76141dced42c9e188570d1213aa"
+  version "8.5.11"
+  sha256 arm:          "d74cf19dee99c46cceede89e5165011362e2eef17f1cb0000c1b52f8eff317a0",
+         intel:        "520ddbe1c32634c54c787f48b4401047c4ad0eeceda20b40736db780df33113a",
+         arm64_linux:  "8dce62ca484d9c54109c094abff47febbc9913b4d7c0614d75a519dcd13bde20",
+         x86_64_linux: "591025b2b0dcc3fc4dc1b16f115bd1fc4ad96b86b29df8fc74144c11536b23bf"
 
   on_macos do
     depends_on macos: :monterey

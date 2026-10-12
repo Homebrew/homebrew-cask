@@ -7,6 +7,11 @@ cask "remanager" do
   desc "Desktop app for managing mods on reMarkable tablets"
   homepage "https://github.com/rmitchellscott/reManager"
 
+  livecheck do
+    url :url
+    strategy :github_latest
+  end
+
   depends_on :macos
 
   app "reManager.app"

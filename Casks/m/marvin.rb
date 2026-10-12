@@ -2,9 +2,9 @@ cask "marvin" do
   arch arm: "-arm64"
   hostname_arch = on_arch_conditional arm: "amarm", intel: "amazingmarvin"
 
-  version "1.71.0"
-  sha256 arm:   "4909548202867fbaecbe95033ad739e7aa69ee55def8b3511aac355adb868d1e",
-         intel: "c83369069535de2f5081edd95812f1804cc5b4020bc0cc47a10e13a27571dc14"
+  version "1.71.1"
+  sha256 arm:   "6a8044e73522e735adccfbb743ee617cacb4d73b39d219007dd2a3b1cdfc771d",
+         intel: "04395556f50b8a5db4c9caf37394fdd5228d9ea25412eb5aead5fc2aef640bb8"
 
   url "https://#{hostname_arch}.s3.amazonaws.com/Marvin-#{version}#{arch}-mac.zip"
   name "Amazing Marvin"

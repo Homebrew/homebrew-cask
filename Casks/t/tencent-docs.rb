@@ -15,6 +15,7 @@ cask "tencent-docs" do
   # there doesn't appear to be any usable upstream dmg file to continue updating
   # this cask beyond the current version.
   deprecate! date: "2025-10-05", because: :unreachable
+  disable! date: "2026-10-10", because: :unreachable
 
   auto_updates true
   depends_on :macos

@@ -27,6 +27,7 @@ cask "qt-creator" do
     end
   end
 
+  conflicts_with cask: "qt-creator@dev"
   depends_on macos: :ventura
 
   app "Qt Creator.app"

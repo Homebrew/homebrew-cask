@@ -1,5 +1,5 @@
 cask "sip-app" do
-  on_ventura :or_older do
+  on_sonoma :or_older do
     on_big_sur :or_older do
       version "2.8"
       sha256 "95e2bd14ce3de9743304efee4fb9964f00fc9505401f1e036de8175616ca58dd"
@@ -12,14 +12,18 @@ cask "sip-app" do
       version "3.6.2"
       sha256 "d8c43036940aefee8d9f632f2e5fd78939edebac0e658534729c226b7619af25"
     end
+    on_sonoma do
+      version "5.1"
+      sha256 "349ebb7e9bcf26a883287fd28053f532a6804fab39e229f7c27dc5180791e8b0"
+    end
 
     livecheck do
       skip "Legacy version"
     end
   end
-  on_sonoma :or_newer do
-    version "5.1"
-    sha256 "349ebb7e9bcf26a883287fd28053f532a6804fab39e229f7c27dc5180791e8b0"
+  on_sequoia :or_newer do
+    version "5.1.1"
+    sha256 "f5309cb25a183bd58e28939a937e663848c6b28454afb9ca68418decea260212"
 
     # Some older items in the Sparkle feed have a more recent pubDate, so it's necessary to
     # work with all of the items in the feed (not just the newest one).

@@ -1,10 +1,10 @@
 cask "insomnia" do
   os macos: "dmg", linux: "AppImage"
 
-  version "13.3.0"
-  sha256 arm:          "11c1b222bfa1d9203292cbedd2b142f00aae3b3b5702fbed738cdc0db1cf582f",
-         intel:        "11c1b222bfa1d9203292cbedd2b142f00aae3b3b5702fbed738cdc0db1cf582f",
-         x86_64_linux: "abbe41e5fefea1b162a0d0dd93ff4eadd197428327d68c6c74c52cc4007fe348"
+  version "13.3.1"
+  sha256 arm:          "ad6e6260f083162e61e879b99f27d69b934ae3cdbf6817ddb284acd8a4302650",
+         intel:        "ad6e6260f083162e61e879b99f27d69b934ae3cdbf6817ddb284acd8a4302650",
+         x86_64_linux: "ccaadb23d5c0be2ddeb817865da1a7fbc342d9ea66efa9b9443f8108044125d6"
 
   on_macos do
     depends_on macos: :monterey

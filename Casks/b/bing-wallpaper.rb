@@ -41,17 +41,17 @@ cask "bing-wallpaper" do
     end
   end
   on_sonoma :or_newer do
-    version "2.0.13.245,2c0667fa-cb6f-4d52-a1fb-dcc20755516e"
-    sha256 "f24d356aa315779b50905ad57c385a3174e33fb62585dd5678876e9bf14e0073"
+    version "2.0.14.273,2cf6074a-7b4c-4976-8073-7e07815ea3f6"
+    sha256 "466480b1271c3d68c9085f7a722f2cbca3c20061000600bf55f4fa9251d3763c"
 
-    url "https://download.microsoft.com/download/#{version.csv.second}/MW011/#{version.csv.first}/MicrosoftBingWallpaper_#{version.csv.first}.pkg"
+    url "https://download.microsoft.com/download/#{version.csv.second}/MicrosoftBingWallpaper_#{version.csv.first}.pkg"
 
     livecheck do
       # The download endpoint only redirects to the current installer when the
       # client reports macOS 14 or newer; otherwise it serves the legacy 1.x app.
       url "https://www.bing.com/apps/api/wallpaper/downloadMacPackage?pc=mw011&brand=bing",
           header: "Sec-CH-UA-Platform-Version: \"26.0.0\""
-      regex(%r{/([\h-]+)/MW011/v?(\d+(?:\.\d+)+)/MicrosoftBingWallpaper[._-]v?\d+(?:\.\d+)*\.pkg}i)
+      regex(%r{/([\h-]+)/MicrosoftBingWallpaper[._-]v?(\d+(?:\.\d+)+)\.pkg}i)
       strategy :header_match do |headers, regex|
         match = headers["location"]&.match(regex)
         next unless match

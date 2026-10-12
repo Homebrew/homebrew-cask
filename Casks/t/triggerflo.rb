@@ -1,6 +1,6 @@
 cask "triggerflo" do
-  version "2.3.0"
-  sha256 "186fb9610c15b1b7e60507b441fc8964d766a6d45bddd5d230ce547f3a42ad97"
+  version "2.4.0"
+  sha256 "c276890dc90bd214ef27a20a7ef0be14ad6c8b8f2e6fc284c1bdc935d7f696a6"
 
   url "https://triggerflo.app/downloads/TriggerFlo-#{version}.dmg"
   name "TriggerFlo"
