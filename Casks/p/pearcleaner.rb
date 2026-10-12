@@ -29,6 +29,7 @@ cask "pearcleaner" do
     "~/Library/Group Containers/com.alienator88.Pearcleaner",
     "~/Library/Group Containers/group.com.alienator88.Pearcleaner",
     "~/Library/HTTPStorages/com.alienator88.Pearcleaner",
+    "~/Library/HTTPStorages/com.alienator88.Pearcleaner.binarycookies",
     "~/Library/Preferences/com.alienator88.Pearcleaner.plist",
     "~/Library/Preferences/group.com.alienator88.Pearcleaner.plist",
     "~/Library/Preferences/pearcleaner.plist",
