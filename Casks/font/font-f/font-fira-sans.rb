@@ -4,7 +4,7 @@ cask "font-fira-sans" do
 
   url "https://github.com/mozilla/Fira/archive/refs/tags/#{version}.tar.gz"
   name "Fira Sans"
-  homepage "https://mozilla.github.io/Fira/"
+  homepage "https://fonts.google.com/specimen/Fira+Sans"
 
   # The upstream repository was archived on 2026-05-14 and is no longer maintained.
   deprecate! date: "2026-10-12", because: :discontinued
