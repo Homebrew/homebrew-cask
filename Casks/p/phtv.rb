@@ -1,9 +1,9 @@
 cask "phtv" do
   arch arm: "arm64", intel: "intel"
 
-  version "3.6.5"
-  sha256 arm:   "ecc58dd6bcd75af8ecb8ea82f6d38257f974f63a30cfdc2ee30719987f299568",
-         intel: "f9fce1481a10f566b0aafaa98dc0a3b80aa52c3b3dc432d58b5404b23fb91f85"
+  version "3.6.6"
+  sha256 arm:   "db72614bfe64beeda28170b8dabfd3c6f9b1ce9ccfb03dc3e8633ea76fc193c1",
+         intel: "843d82e99d30af9fb0b4224870913ddc8da1c7ad55ceec42a14f50dc74961409"
 
   url "https://github.com/PhamHungTien/PHTV/releases/download/v#{version}/PHTV-#{version}-#{arch}.dmg"
   name "PHTV"
@@ -15,6 +15,8 @@ cask "phtv" do
   depends_on macos: :sonoma
 
   app "PHTV.app"
+
+  uninstall quit: "com.phamhungtien.phtv"
 
   zap trash: [
     "~/Library/Application Support/PHTV",

@@ -4,6 +4,7 @@ cask "pdfextractor" do
 
   url "https://pdfextractor-app.com/PDFExtractor.dmg"
   name "PDFExtractor"
+  desc "Extract images, fonts, and text from PDF files"
   homepage "https://pdfextractor-app.com/"
 
   livecheck do
