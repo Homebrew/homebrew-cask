@@ -16,6 +16,8 @@ cask "nitro-pdf-pro" do
 
   app "Nitro PDF Pro.app"
 
+  uninstall quit: "com.gonitro.NitroPDFPro"
+
   zap trash: [
     "~/Library/Application Scripts/com.gonitro.NitroPDFPro",
     "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.gonitro.nitropdfpro.sfl*",
