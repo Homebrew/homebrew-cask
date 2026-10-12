@@ -20,7 +20,7 @@ cask "uniclipboard" do
   app "UniClipboard.app"
 
   zap trash: [
-    "~/Library/Application Support/app.uniclipboard.desktop*",
+    "~/Library/Application Support/app.uniclipboard.desktop",
     "~/Library/Application Support/app.uniclipboard.desktop-upgrade-backups",
     "~/Library/Caches/app.uniclipboard.desktop",
     "~/Library/Logs/app.uniclipboard.desktop",
