@@ -4,6 +4,7 @@ cask "teambition" do
 
   url "https://tongyongxiezuo.oss-cn-zhangjiakou.aliyuncs.com/desktop/Teambition/#{version}/installer/darwin/x64/Teambition-#{version}-mac.dmg"
   name "Teambition"
+  desc "Team collaboration and project management platform"
   homepage "https://www.teambition.com/"
 
   livecheck do
