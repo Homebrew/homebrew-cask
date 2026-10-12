@@ -17,5 +17,7 @@ cask "babeledit" do
 
   app "BabelEdit.app"
 
+  uninstall quit: "de.code-and-web.BabelEdit"
+
   zap trash: "~/Library/Preferences/de.code-and-web.BabelEdit.plist"
 end
