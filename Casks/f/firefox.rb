@@ -438,6 +438,20 @@ cask "firefox" do
   command_wrapper "firefox",
                   executable: "#{appdir}/Firefox.app/Contents/MacOS/firefox"
 
+  postflight_steps do
+    symlink "Library/Preferences", "user-preferences", source_base: :home, remove_on_uninstall: true
+    run "/usr/bin/defaults",
+        args:           ["write", "{{staged_path}}/user-preferences/org.mozilla.firefox", "DisableAppUpdate",
+                         "-bool", "true"],
+        writable_paths: ["Library/Preferences"],
+        writable_base:  :home
+    run "/usr/bin/defaults",
+        args:           ["write", "{{staged_path}}/user-preferences/org.mozilla.firefox",
+                         "EnterprisePoliciesEnabled", "-bool", "true"],
+        writable_paths: ["Library/Preferences"],
+        writable_base:  :home
+  end
+
   uninstall quit: "org.mozilla.firefox"
 
   zap trash: [
