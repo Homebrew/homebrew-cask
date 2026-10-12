@@ -20,6 +20,8 @@ cask "dashcam-viewer" do
 
   app "Dashcam Viewer.app"
 
+  uninstall quit: "com.earthshinesw.DashcamViewer"
+
   zap trash: [
     "~/Library/Application Support/earthshinesw",
     "~/Library/Caches/earthshinesw",
