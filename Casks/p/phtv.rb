@@ -16,6 +16,8 @@ cask "phtv" do
 
   app "PHTV.app"
 
+  uninstall quit: "com.phamhungtien.phtv"
+
   zap trash: [
     "~/Library/Application Support/PHTV",
     "~/Library/Caches/com.phamhungtien.phtv",
