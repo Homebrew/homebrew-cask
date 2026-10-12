@@ -21,7 +21,7 @@ cask "defold" do
     "defold@alpha",
     "defold@beta",
   ]
-  depends_on :macos
+  depends_on macos: :monterey
 
   app "Defold.app"
 
