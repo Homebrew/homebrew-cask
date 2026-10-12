@@ -1,13 +1,13 @@
 cask "murus" do
-  version "2.7"
-  sha256 "e226ec090e678e2c2f7b8ccb49e32990b59e54fcf268eaa2bce443ecca902a4b"
+  version "3.0"
+  sha256 "897baee8100b04019fabbeb4afade0e34e8c98d5e37b0f3390cb3031d0c2ecd2"
 
   url "https://github.com/TheMurusTeam/Murus/releases/download/v#{version}/murus-#{version}.zip"
   name "Murus Firewall"
   desc "Firewall app"
   homepage "https://www.murusfirewall.com/"
 
-  depends_on :macos
+  depends_on macos: :sonoma
 
   app "Murus.app"
 
