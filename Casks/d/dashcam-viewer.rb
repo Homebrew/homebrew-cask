@@ -1,9 +1,9 @@
 cask "dashcam-viewer" do
   arch arm: "_AppleCPU"
 
-  version "4.0.8"
-  sha256 arm:   "4eb8ecd1f4f57700b94232025d38a6cbb978ad05cb99a3a0e3edff3b2d02a7a1",
-         intel: "a0b9d103030178ffce30c3946f317b48fa8f970883887466b933080cd0ab63cb"
+  version "4.0.9"
+  sha256 arm:   "7efaa98037d82bd6915debbe7f9647493149b43653f80dfc779d3e4d6d08baf2",
+         intel: "aabd7710674a1f0d887757121d44c49b25beaa65b68cf2b04c31290694ec240e"
 
   url "https://filedn.com/l2s8TAtm4VASBX72ds0zYD8/dcv/Dashcam_Viewer_v#{version}#{arch}.dmg"
   name "Dashcam Viewer"
