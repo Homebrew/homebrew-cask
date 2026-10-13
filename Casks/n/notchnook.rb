@@ -1,6 +1,6 @@
 cask "notchnook" do
-  version "1.6.3,53,6cfd1241"
-  sha256 "6cfd1241ba99c89e2711ac4c5dc0ffa49fa4587aa3edcaaf9de14edc64350f53"
+  version "1.6.5,57,746f5387"
+  sha256 "746f53875e089b430e78f790dd9c5f42c45bf32cd0614ab08e616d8a78aba0d6"
 
   url "https://downloads.getnotchnook.com/NotchNook-#{version.csv.first}-build#{version.csv.second}-#{version.csv.third}.dmg"
   name "NotchNook"
@@ -15,6 +15,7 @@ cask "notchnook" do
     end
   end
 
+  auto_updates true
   depends_on macos: :sonoma
 
   app "NotchNook.app"
