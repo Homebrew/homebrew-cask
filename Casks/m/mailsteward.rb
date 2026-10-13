@@ -17,7 +17,7 @@ cask "mailsteward" do
 
   app "MailSteward.app"
 
-  uninstall quit: ["com.apple.mail", "com.pubblog.MailSteward"]
+  uninstall quit: "com.pubblog.MailSteward"
 
   zap trash: [
     "~/Library/Caches/com.apple.helpd/Generated/MailSteward Help*",
