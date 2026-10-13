@@ -15,7 +15,7 @@ cask "dcv-viewer" do
     regex(%r{href=.*?/nice-dcv-viewer[._-]v?(\d+(?:\.\d+)+)[._-]#{arch}\.dmg}i)
   end
 
-  depends_on :macos
+  depends_on macos: :sonoma
 
   app "DCV Viewer.app"
 
