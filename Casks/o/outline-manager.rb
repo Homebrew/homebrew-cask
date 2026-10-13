@@ -1,6 +1,6 @@
 cask "outline-manager" do
-  version "1.21.0,1"
-  sha256 "9a0298fb5a6f434443146500a3fb43281d8bc2522586689f563094419c15cd4b"
+  version "1.22.0,1"
+  sha256 "96ab69131feb8d0ae482e3b0b70931f57c8cce403c859e5863919806a77f94c9"
 
   url "https://s3.amazonaws.com/outline-releases/manager/macos/#{version.csv.first}/#{version.csv.second}/Outline-Manager.dmg"
   name "Outline Manager"
