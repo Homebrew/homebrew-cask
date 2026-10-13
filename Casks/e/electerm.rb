@@ -10,7 +10,7 @@ cask "electerm" do
          x86_64_linux: "f3f345787d679e594fa468a2c388ae389761c7fc46c39cd0a68a6d0a56b05f71"
 
   on_macos do
-    depends_on macos: :monterey
+    depends_on macos: :ventura
 
     app "electerm.app"
     binary "#{appdir}/electerm.app/Contents/MacOS/electerm"
