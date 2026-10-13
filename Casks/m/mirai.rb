@@ -2,7 +2,7 @@ cask "mirai" do
   version "0.6.3"
   sha256 "86b57309d80cdc519fb6de4ec9ed0a884441e6725c344ccf203a5309353e0eae"
 
-  url "https://assets.trymirai.com/app/mirai-#{version}-aarch64-apple-darwin.dmg"
+  url "https://github.com/trymirai/uzu/releases/download/#{version}/mirai-#{version}-aarch64-apple-darwin.dmg"
   name "Mirai"
   desc "Inference engine for AI models"
   homepage "https://trymirai.com/"
