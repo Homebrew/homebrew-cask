@@ -16,6 +16,8 @@ cask "ivideonserver" do
 
   app "IvideonServer.app"
 
+  uninstall quit: "com.ivideon.IvideonServer"
+
   zap trash: "~/Library/Saved Application State/com.ivideon.IvideonServer.savedState"
 
   caveats do
