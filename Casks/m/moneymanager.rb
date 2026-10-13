@@ -1,8 +1,11 @@
 cask "moneymanager" do
-  version "1.8.19"
-  sha256 "d445c7cb2c51baf07b38363411d3ed86894898acdecc90473306dd732624ed79"
+  arch arm: "arm64", intel: "x64"
 
-  url "https://download.realbyteapps.com/MoneyManager-#{version}.dmg"
+  version "1.9.0"
+  sha256 arm:   "c0b28d2b73d82185f88276a7c330d1f6c17e7d18eebc24614b001c63e223b0ba",
+         intel: "8868bc6502448a94f99c5b7f2814a9f471673a7d850d805c0a5b26eca96dc25b"
+
+  url "https://download.realbyteapps.com/MoneyManager-#{version}-#{arch}.dmg"
   name "MoneyManager"
   desc "Finance manager"
   homepage "https://realbyteapps.com/"
