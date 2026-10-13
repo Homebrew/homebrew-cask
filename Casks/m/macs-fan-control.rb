@@ -1,6 +1,6 @@
 cask "macs-fan-control" do
-  version "1.5.21"
-  sha256 "91590ed71b8981e89109969c0b5bd9788d781b059b24b2fc256e5a8b57803f0d"
+  version "1.5.22"
+  sha256 "d4c1cce8e183d656621bf0e6690f1678a844e88d5e4c61661c1c8a39fc92d55e"
 
   url "https://github.com/crystalidea/macs-fan-control/releases/download/v#{version}/macsfancontrol.zip"
   name "Macs Fan Control"
@@ -17,7 +17,7 @@ cask "macs-fan-control" do
 
   app "Macs Fan Control.app"
 
-  uninstall signal: ["TERM", "com.crystalidea.MacsFanControl"]
+  uninstall signal: ["TERM", "com.crystalidea.macsfancontrol"]
 
   zap trash: "~/Library/Preferences/com.crystalidea.macsfancontrol.plist"
 end
