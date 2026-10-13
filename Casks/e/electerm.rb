@@ -3,14 +3,14 @@ cask "electerm" do
   os macos: "mac", linux: "linux"
   url_end = on_system_conditional macos: "dmg", linux: "AppImage"
 
-  version "5.5.76"
-  sha256 arm:          "afd6473ee3a2e5d397544595e958c04e538ed5f8242f6f99637761c0484a55ee",
-         intel:        "b6836c8f2ca6d4f09e45ce114fcde51fd02e2c1620d703048f8ed8a510172d61",
-         arm64_linux:  "f286ed15083c340c7f8da00d4be930cf2601a8ffbb34217fadd30f4f57035c55",
-         x86_64_linux: "872f315884b008e30d1bd5eed90a39db76b4a83b34598979b0e3578df18b5fe1"
+  version "5.6.0"
+  sha256 arm:          "5ae3902f680ba2849478d6095b0520acfe177d0abc31227dd5ed97966ed5213b",
+         intel:        "61692d256a7bfd31f4c30869a3c85af4ef0bda5b91005c071527949202e18a93",
+         arm64_linux:  "74a3c84cae3e324e2a47ed619cb7f82ecf649245797bc4ca43e66c99dc2b1830",
+         x86_64_linux: "f3f345787d679e594fa468a2c388ae389761c7fc46c39cd0a68a6d0a56b05f71"
 
   on_macos do
-    depends_on macos: :monterey
+    depends_on macos: :ventura
 
     app "electerm.app"
     binary "#{appdir}/electerm.app/Contents/MacOS/electerm"
