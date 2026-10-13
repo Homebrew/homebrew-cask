@@ -1,7 +1,7 @@
 cask "songkong" do
   arch arm: "-m1"
 
-  version "12.9.3"
+  version "12.10"
   sha256 :no_check
 
   url "https://www.jthink.net/songkong/downloads/current/songkong-osx#{arch}.dmg"
