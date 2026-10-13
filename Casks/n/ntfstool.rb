@@ -18,7 +18,6 @@ cask "ntfstool" do
   pkg "Ntfstool_#{version}_release.pkg"
 
   uninstall launchctl: [
-              "com.apple.ntfs.system",
               "com.ntfsservice.helper",
               "com.ntfstool.ntfsservice",
             ],
@@ -26,7 +25,6 @@ cask "ntfstool" do
             pkgutil:   "com.ntfstool.aile",
             delete:    [
               "/Applications/Ntfstool.app",
-              "/Library/LaunchDaemons/com.apple.ntfs.system.plist",
               "/Library/LaunchDaemons/com.ntfsservice.helper.plist",
               "/Library/LaunchDaemons/com.ntfstool.ntfsservice.plist",
               "/Library/PrivilegedHelperTools/com.apple.ntfs.system-helper",
