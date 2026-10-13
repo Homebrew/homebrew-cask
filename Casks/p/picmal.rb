@@ -17,6 +17,8 @@ cask "picmal" do
 
   app "Picmal.app"
 
+  uninstall quit: "com.cantimplorastudio.picmal"
+
   zap trash: [
     "~/Library/Application Support/com.cantimplorastudio.picmal",
     "~/Library/Application Support/Picmal",
