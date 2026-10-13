@@ -1,9 +1,9 @@
 cask "buildin" do
   arch arm: "-arm64"
 
-  version "2.0.4"
-  sha256 arm:   "95b932e0aca932604611ddd6a13eeeeb469ad190189bfa4f84e6ab8eb1cd4cb9",
-         intel: "29713356a52ecc94c92430cf6b0e5e606811e19cb809ed6a93023f7ef4c72f57"
+  version "2.1.4"
+  sha256 arm:   "ac2b915e1eb125f53724062ef30603234e26fb48c2affd72ab9f58efd1755ac3",
+         intel: "0d3c92366743f8ca6f7b64e9cee1dc913d8b9cfdbe087de4ac9ed4679a3da1e1"
 
   url "https://cdn2.buildin.ai/website-oversea/download/Buildin-#{version}#{arch}.dmg"
   name "Buildin"
