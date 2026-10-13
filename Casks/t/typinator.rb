@@ -1,6 +1,6 @@
 cask "typinator" do
-  version "10.2"
-  sha256 "381d0a71931f08de2f588185ae9647d59692389d04735c0835322ed5fb3b9694"
+  version "10.3"
+  sha256 "7251fcfa50a9922f6d36c159400d3608e724a31e9bbb37660ceff1f0da353b3d"
 
   url "https://storage.ergonis.com/apps/production/typinator/archive/Typinator_#{version.no_dots}.dmg"
   name "Typinator"
@@ -18,9 +18,14 @@ cask "typinator" do
 
   app "Typinator.app"
 
+  uninstall quit: "com.macility.typinator2"
+
   zap trash: [
     "~/Desktop/Typinator Tutorial.rtfd",
+    "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.macility.typinator2.sfl*",
     "~/Library/Application Support/Typinator",
+    "~/Library/Caches/com.macility.typinator2",
+    "~/Library/HTTPStorages/com.macility.typinator2",
     "~/Library/Preferences/com.macility.typinator2.plist",
   ]
 end
