@@ -1,6 +1,6 @@
 cask "rowel" do
-  version "1.0.1"
-  sha256 "028b5345868eb06a2f3127fec2813dbf9652126092fb24934881bb177fd2a42d"
+  version "1.0.2"
+  sha256 "3071746cc13532dc6e436c412b9a238db8806591a95675f51925812d5f818a70"
 
   url "https://github.com/fwdai/rowel/releases/download/v#{version}/Rowel_#{version}_universal.dmg"
   name "Rowel"
