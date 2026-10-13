@@ -1,6 +1,6 @@
 cask "amore" do
-  version "0.1,48"
-  sha256 "c5c3a5aa735749ff389a7e01c7152822ff3a5e787be58f0a5eeeca38954f930d"
+  version "0.1,49"
+  sha256 "4d01ca815d0bc44862abab1a4469ee3bfa43fe8dbefb3b5d5f3ac5958c898ebe"
 
   url "https://cdn.amore.computer/releases/com.lucas-fischer.Amore/#{version.csv.first}-#{version.csv.second}/Amore.dmg"
   name "Amore"
