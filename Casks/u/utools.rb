@@ -19,7 +19,10 @@ cask "utools" do
 
   app "uTools.app"
 
+  uninstall quit: "org.yuanli.utools"
+
   zap trash: [
+    "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/org.yuanli.utools.sfl*",
     "~/Library/Application Support/uTools",
     "~/Library/Logs/uTools",
     "~/Library/Preferences/org.yuanli.utools.plist",
