@@ -7,11 +7,6 @@ cask "ntfstool" do
   desc "Utility that provides NTFS read and write support"
   homepage "https://ntfstool.com/"
 
-  livecheck do
-    url :url
-    strategy :github_latest
-  end
-
   auto_updates true
   depends_on :macos
 
