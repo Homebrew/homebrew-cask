@@ -1,5 +1,5 @@
 cask "almighty" do
-  version "2.11.0"
+  version "2.12.0"
   sha256 :no_check
 
   url "https://almighty-app.s3.amazonaws.com/Almighty.zip"
@@ -13,7 +13,7 @@ cask "almighty" do
   end
 
   auto_updates true
-  depends_on macos: :ventura
+  depends_on macos: :sonoma
 
   app "Almighty.app"
 
