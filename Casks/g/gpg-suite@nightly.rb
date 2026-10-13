@@ -40,7 +40,6 @@ cask "gpg-suite@nightly" do
               "org.gpgtools.updater",
             ],
             quit:      [
-              "com.apple.mail",
               "org.gpgtools.gpgkeychain",
               "org.gpgtools.gpgkeychainaccess",
               "org.gpgtools.gpgmail.upgrader",
