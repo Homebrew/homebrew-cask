@@ -2,9 +2,9 @@ cask "jasp" do
   arch arm: "arm64", intel: "x86_64"
   livecheck_folder = on_arch_conditional arm: "-apple-silicon"
 
-  version "0.98.1.0"
-  sha256 arm:   "e980236d1ec6d58571b1f120d48f6c4c8ffc71bc893250a4988e96637220f257",
-         intel: "d39665e1c1478ae04c1b1c5c92754806b0824f31dcb65d4c5f7497b9e1f2fb07"
+  version "0.98.8.0"
+  sha256 arm:   "402a56bf0e3a50194197e6ee6f47e925f830043c1a94464d8aca243c14d11b98",
+         intel: "1cf937576494effcd0912258198005b4a5420cd1750c13b7ca50c6cfe83620ea"
 
   on_intel do
     disable! date: "2026-09-01", because: :fails_gatekeeper_check
@@ -28,6 +28,8 @@ cask "jasp" do
   depends_on macos: :monterey
 
   app "JASP.app"
+
+  uninstall quit: "org.jaspstats.jasp"
 
   zap trash: [
     "~/.JASP",
