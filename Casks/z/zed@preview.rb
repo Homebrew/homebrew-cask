@@ -11,8 +11,6 @@ cask "zed@preview" do
          x86_64_linux: "b759aa4a8e8b5f352b9a3a2b990fdeca40fa112426042fea629354f14db8350e"
 
   on_macos do
-    auto_updates true
-
     app "Zed Preview.app"
     binary "#{appdir}/Zed Preview.app/Contents/MacOS/cli", target: "zed-preview"
 
@@ -60,6 +58,8 @@ cask "zed@preview" do
       json["version"]
     end
   end
+
+  auto_updates true
 
   generate_completions_from_executable "#{HOMEBREW_PREFIX}/bin/zed-preview", "--completions",
                                        shells: [:bash, :zsh, :fish, :pwsh]
