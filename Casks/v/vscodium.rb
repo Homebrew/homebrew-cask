@@ -12,9 +12,9 @@ cask "vscodium" do
     end
   end
   on_monterey :or_newer do
-    version "1.135.06055"
-    sha256 arm:   "61ff9ebc3ac5563c63a0a9e1b479822647e7f2c3303b0629f15fefe9e291f7cc",
-           intel: "2fce180317a011576dc7e0910e1033d3287472b56e362b33175f5416415b604a"
+    version "1.140.06880"
+    sha256 arm:   "3a0ba1a13b6d743f79ffc20bebd7a2ef8bab2b40e54bcc80fae123da9ed552e0",
+           intel: "e828c20847f4c00f0d9396f168a6cd536d0df5e32903b880541ddc8022264a97"
 
     livecheck do
       url "https://raw.githubusercontent.com/VSCodium/versions/refs/heads/master/stable/darwin/#{arch}/latest.json"
@@ -44,9 +44,9 @@ cask "vscodium" do
     ]
   end
   on_linux do
-    version "1.135.06055"
-    sha256 arm64_linux:  "1e6df4d01fa1cc7fa0605a5ecd3505e26eac195574a997858ab79841b9706b7c",
-           x86_64_linux: "2424142d6261b09ab243847e1ed9dbab3eebbca5816877d200de6e47d7660706"
+    version "1.140.06880"
+    sha256 arm64_linux:  "f79748725a1cb952f91416d1d72b818d19b434b9003b05346a0b8c1e3b710179",
+           x86_64_linux: "b08aa079b6b20339cb78324161cc8c9bcbcdd866767b950385b28c9f4275086c"
 
     url "https://github.com/VSCodium/vscodium/releases/download/#{version}/VSCodium-#{version}-anylinux-#{arch}.AppImage"
 
