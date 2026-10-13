@@ -29,6 +29,8 @@ cask "jasp" do
 
   app "JASP.app"
 
+  uninstall quit: "org.jaspstats.jasp"
+
   zap trash: [
     "~/.JASP",
     "~/Library/Application Support/JASP",
