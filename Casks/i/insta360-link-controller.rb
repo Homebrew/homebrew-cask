@@ -1,8 +1,8 @@
 cask "insta360-link-controller" do
-  version "2.2.4,build14,f5d12724880a43bbb77753d6daa1e9cd"
-  sha256 "04a247dce00ac46a14bfd9051e768dd0c5c21d20890f41d0705067ac389438a6"
+  version "2.2.5,build14,_20260821_122701_signed_1787286886085,a7e367cce4da483a973d15216128b2d4"
+  sha256 "506e7b4a2d5791bb1f296d101964e76a5635ba4e0a638e9dffa397a01bae87ee"
 
-  url "https://wassets.insta360.com/common/#{version.csv.third}/Insta360LinkController_#{version.csv.first}(#{version.csv.second}).pkg"
+  url "https://wassets.insta360.com/common/#{version.csv.last}/Insta360LinkController_#{version.csv.first}(#{version.csv.second})#{version.csv.third if version.csv.length > 3}.pkg"
   name "Insta360 Link Controller"
   desc "Controller for Insta360 webcams"
   homepage "https://www.insta360.com/"
@@ -33,7 +33,7 @@ cask "insta360-link-controller" do
 
   depends_on :macos
 
-  pkg "Insta360LinkController_#{version.csv.first}(#{version.csv.second}).pkg"
+  pkg "Insta360LinkController_#{version.csv.first}(#{version.csv.second})#{version.csv.third if version.csv.length > 3}.pkg"
 
   uninstall quit:    "com.insta360.linkcontroller",
             pkgutil: "com.insta360.webcam"
