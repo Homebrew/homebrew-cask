@@ -4,11 +4,11 @@ cask "keyguard" do
   os linux: "linux-"
   url_end = on_system_conditional macos: "dmg", linux: "AppImage"
 
-  version "3.3.0,20261012.2"
-  sha256 arm:          "77d9fcb1bbaf54bc992b55190e8318ae6b7c392771d0528a251aa4679576bf96",
-         intel:        "9592195115fbf49cc4edc79ce737626da7cd3d7dde1b7840c6c3e5841cd81b02",
-         arm64_linux:  "dd43ad7050d707aa8d35fff434ab4648a7a399c5d9a096742fd8c4bc9e38242d",
-         x86_64_linux: "3bdd325a89257ce2e7741b90e036f7e8ca599b408745db020fd84d11458323c6"
+  version "3.4.0,20261013"
+  sha256 arm:          "1a4f1c8468d2bbf200332c1186bb7d633066a27039b0cd09069dcd3100d7602e",
+         intel:        "97b0303d0f55c0aa07f198af165c7d09f4921f37b74590decca84bd8e009d7bc",
+         arm64_linux:  "703047eab7b9103aed2ed514546503dda22838f59dc405416a9f0e2395b64458",
+         x86_64_linux: "b1aebe97a2c74ce4ea37a29973a346c7f0c58d4feea42f9da80899aa63d5ac67"
 
   on_macos do
     app "Keyguard.app"
