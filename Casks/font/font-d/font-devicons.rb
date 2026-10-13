@@ -1,6 +1,6 @@
 cask "font-devicons" do
-  version "2.1.0"
-  sha256 "cebeb31b08fe704df95da479595d7db96ee1abd284594724b7a98b8ce955c515"
+  version "2.3.0"
+  sha256 "8ce1f600992c7c8b182f550b3b9a78560e27d1945f442cf846b150e9ad2e19c9"
 
   url "https://registry.npmjs.org/devicons/-/devicons-#{version}.tgz"
   name "Devicons"
