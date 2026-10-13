@@ -1,8 +1,8 @@
 cask "kde-connect" do
-  version "26.08.1"
-  sha256 "e481cad9046c129e9fd7ea64e665c141b5764db16da16d3b85fe36beb23574bc"
+  version "26.08.2"
+  sha256 "1c6328fca363af229b48b238717ab176747b06b57714e2bb968a041c38ced153"
 
-  url "https://download.kde.org/stable/release-service/#{version}/macos/kdeconnect-kde-#{version.major_minor}-macos-clang-arm64.dmg"
+  url "https://download.kde.org/stable/release-service/#{version}/macos/kdeconnect-kde-macos-clang-arm64.dmg"
   name "KDE Connect"
   desc "Communicate with your handheld devices"
   homepage "https://kdeconnect.kde.org/"
