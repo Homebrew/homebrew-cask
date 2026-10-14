@@ -13,7 +13,7 @@ cask "mailsteward" do
   end
 
   auto_updates true
-  depends_on :macos
+  depends_on macos: :monterey
 
   app "MailSteward.app"
 
