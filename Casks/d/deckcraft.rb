@@ -2,11 +2,11 @@ cask "deckcraft" do
   arch arm: "aarch64", intel: "x86_64"
   url_end = on_system_conditional macos: "macos-universal.dmg", linux: "linux-#{arch}.AppImage"
 
-  version "0.6.1"
-  sha256 arm:          "7f9dcb6dc235cc605dfff31a68c4c75fd2ace8a5117cd3b4ef31deaee941619a",
-         intel:        "7f9dcb6dc235cc605dfff31a68c4c75fd2ace8a5117cd3b4ef31deaee941619a",
-         arm64_linux:  "72523202a8dc07577af0b417973e3ed47723b999dfe8e94437a66cb7e7573619",
-         x86_64_linux: "821650d3f87a7212306f33b8b7b05cf19d13390a31359ef3b74a3c33cf18ed21"
+  version "0.7.0"
+  sha256 arm:          "9591b14641d089c1ce36c7f57247e92f0488e90a70d047bb6fa09a12c3453bd9",
+         intel:        "9591b14641d089c1ce36c7f57247e92f0488e90a70d047bb6fa09a12c3453bd9",
+         arm64_linux:  "6e9086067c3372f5361c9eafb2735dd24ebcdaebb4159cfdd7151ff2509e4354",
+         x86_64_linux: "535afd1e7f6d389ecfe78f4a702b5a36719217c4cec556ae5d7f0fd775ae5584"
 
   on_macos do
     app "DeckCraft.app"
