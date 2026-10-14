@@ -1,9 +1,9 @@
 cask "socialstream" do
   arch arm: "arm64", intel: "x64"
 
-  version "0.4.18"
-  sha256 arm:   "6f45d36dff6ae4ace9e2b3b51ba326d17a4c32f2cc502bf1e4938b5e31629395",
-         intel: "d978fdb1475dfef0a73434d43880c1548e6f7715248c89efc9271722b10db83a"
+  version "0.4.35"
+  sha256 arm:   "be947de28621c0e96418af16399b7f56be0b01b68d661cb8bb6b8712a2bc2d65",
+         intel: "7a105af9f03b2edfbdb91115dd9636fe257187d5ee33ed873b7ec0f8311a0f9c"
 
   url "https://github.com/steveseguin/social_stream/releases/download/v#{version}/socialstreamninja_mac_v#{version}_#{arch}.dmg"
   name "Social Stream"
