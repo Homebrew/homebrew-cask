@@ -4,11 +4,11 @@ cask "tldraw" do
   arch_end = on_system_conditional macos: "universal", linux: arch
   url_end = on_system_conditional macos: "dmg", linux: "AppImage"
 
-  version "1.21.0"
-  sha256 arm:          "6f9e0764750ad716f551969ac38845b36ecc1de26b3fc677658707d47f868dbb",
-         intel:        "6f9e0764750ad716f551969ac38845b36ecc1de26b3fc677658707d47f868dbb",
-         arm64_linux:  "6a6b64a4e30f2bf435fc05092e76759700b8847f8d737f41d5c5cd9c9e4c0806",
-         x86_64_linux: "1693d92d17502c6fb7a45839b27c48ff2404ecb1acd17c6f3db29f5da3c1119b"
+  version "1.22.0"
+  sha256 arm:          "add82e859ee813f03be8778ce26564a2276c601285e1816ffc0252aa6d850f4a",
+         intel:        "add82e859ee813f03be8778ce26564a2276c601285e1816ffc0252aa6d850f4a",
+         arm64_linux:  "07af6c84bd722423f1b4c7e775b82e616c13cc36c54ba6e8518e06de642116b1",
+         x86_64_linux: "a0daca48f5bbfbcfb85c2b2d4a0e7ad97e75710497a5ef1bb12e6de1bb2e6978"
 
   on_macos do
     auto_updates true
