@@ -1,6 +1,6 @@
 cask "seafile-client" do
-  version "9.0.21"
-  sha256 "7af0726a075ea4280383a5191011e840729aef9fbe1554faa6924a4545e7f1b3"
+  version "9.0.22"
+  sha256 "c2c587daab5be250668740f092adc8a3808cce47af5f3f345c88e9e27615d11b"
 
   url "https://sos-ch-dk-2.exo.io/seafile-downloads/seafile-client-#{version}.dmg"
   name "Seafile Client"
