@@ -1,9 +1,9 @@
 cask "iconset" do
   arch arm: "arm64-"
 
-  version "2.5.0"
-  sha256 arm:   "ed567c877bb0b7ba6889edc857f7cc83deb1f4e8c6bfc692ae7eb97e9ef9452c",
-         intel: "20ec982a39fc513ade4526a1f87f30067931b70072b6cc2395cf5c17d4a28809"
+  version "2.5.2"
+  sha256 arm:   "136f3b13c11e532af68ec2dc789905aa40e6737d7af06985ff44fd3fbc29a54f",
+         intel: "10c20b85b2b5b6c8cd0f841db39b76fc2b7e558ad545fd9bb27088459938b9c7"
 
   url "https://github.com/IconsetApp/iconset/releases/download/v#{version}/Iconset-#{version}-#{arch}mac.zip"
   name "Iconset"
