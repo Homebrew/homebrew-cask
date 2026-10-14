@@ -1,6 +1,6 @@
 cask "volume-control" do
-  version "2.5.1"
-  sha256 "150dae69ce3051ca844a2931e152184bcf0840f9b5df82c5b1400fe632235271"
+  version "2.6.0"
+  sha256 "b7d2b2ac621bc9e3d9dfaba01acad16958fb2370cf8b85f9b0eaf94c6bd1ace9"
 
   url "https://github.com/alberti42/Volume-Control/releases/download/v#{version}/VolumeControl.zip"
   name "Volume Control"
