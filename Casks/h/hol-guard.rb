@@ -1,6 +1,6 @@
 cask "hol-guard" do
-  version "3.0.133"
-  sha256 "514bb48b09ed4df71d2a0e776c08192d90423904280613c8589902867f8a7607"
+  version "3.0.134"
+  sha256 "2a5bf4f75c869231e5c10f0691013ea6a287ff4e0ed0ddf23841cb6e5e051f7e"
 
   url "https://hol.org/api/guard/desktop/download?platform=macos&version=#{version}",
       user_agent: :browser
