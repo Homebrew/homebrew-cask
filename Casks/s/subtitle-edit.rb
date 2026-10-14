@@ -3,11 +3,11 @@ cask "subtitle-edit" do
   os macos: "macOS", linux: "Linux"
   url_end = on_system_conditional macos: "dmg", linux: "tar.gz"
 
-  version "5.2.0"
-  sha256 arm:          "40e1dd630d35c97914ef6d828293e6c0ee61097eb6d4b7d2032239d5ad123b2f",
-         intel:        "4a4aa038b344cde19ed8c8083eef0967f35f07a97a84c1198a2c3de2a96ceb01",
-         arm64_linux:  "2b7e967d53213737027d4a29a8ef35eafce9fa56327cbbc3b91b157f967e01da",
-         x86_64_linux: "6e2d46e66522759df32ef10fad3b753e10eacfbb184b6ab7351209514957e54e"
+  version "5.3.0"
+  sha256 arm:          "8cf1535b1984f10557076324245f716d6abd858f71c59ef2ca2f474079fc404b",
+         intel:        "73e8f484118ccb96739e72935250140a0fa266cca6bb0e5c5c7e0dd37ac09d55",
+         arm64_linux:  "7e67a5c98c6a666a62b7e94a679108d7a767ae0d2ec949f1f2412b5b3f9adc6d",
+         x86_64_linux: "93b487e115560da33c4557c780d387e311d93a6ab6abe000093576ccb9d44889"
 
   on_macos do
     depends_on macos: :monterey
