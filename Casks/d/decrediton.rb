@@ -3,10 +3,10 @@ cask "decrediton" do
   os macos: "darwin", linux: "linux"
   url_end = on_system_conditional macos: "dmg", linux: "AppImage"
 
-  version "2.1.6"
-  sha256 arm:          "1d9daf9a0ec5df743b516738c7a8842cbc79724be595e4ba0f97bbfd7d5365b5",
-         intel:        "d0e6bd5aa874d74e2d607e52ae29c12a2f525a68ca37e7616336e0d14b33a6e6",
-         x86_64_linux: "326efece642afca2a2ce9803d0493141e5e80096c00b68a6219fabdd79b6476f"
+  version "2.1.7"
+  sha256 arm:          "bf27ebb27fcbb2f4a7888d29ae0c725490a3c76bb894f65b78b51c0e95027558",
+         intel:        "f125fbbbf194f64d4c494110939cca50d6318c9a4cfb46809f7659c47a597d08",
+         x86_64_linux: "8eef6cbb291b2a8b6604c582ea3a0b40e95096b0199b0831007211555cd5e06d"
 
   on_macos do
     app "Decrediton.app"
