@@ -19,8 +19,8 @@ cask "omnigraffle" do
     end
   end
   on_sonoma :or_newer do
-    version "7.26"
-    sha256 "2f7432ab290969413dfa6ab95f22797a7abef3eb44ec556fb8b95adb021b9ddf"
+    version "7.26.1"
+    sha256 "4ec5b75abfc7102ffe10df09ce479a95a2d3ee60a1fd828e996dc291b2c0d898"
 
     url "https://downloads.omnigroup.com/software/macOS/14/OmniGraffle-#{version}.dmg"
 
