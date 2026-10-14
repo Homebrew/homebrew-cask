@@ -13,7 +13,7 @@ cask "nvidia-pair" do
 
   depends_on macos: :ventura
 
-  app "PAIR.app"
+  app "NVIDIA PAIR.app"
 
   uninstall quit: "com.nvidia.nvpair"
 
