@@ -2,11 +2,11 @@ cask "brave-origin@nightly" do
   arch arm: "arm64", intel: "x64"
   folder_arch = on_arch_conditional arm: "-arm64"
 
-  sha256 arm:   "ca31cc65412235871d77756f5d1983f0149c199f5fb3cc423bf42080279bded3",
+  sha256 arm:   "26c2e881e77c5a1d5cded3fb3185862ed53981b43bc1804bcd174d4b26db285d",
          intel: "376e50793e20c1ffbb9f0a80da908ea19464e64c7bdd4b48f487b17a0d0e4f26"
 
   on_arm do
-    version "1.99.40.0"
+    version "1.99.41.0"
   end
   on_intel do
     version "1.99.35.0"
