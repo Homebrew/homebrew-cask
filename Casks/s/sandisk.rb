@@ -1,5 +1,5 @@
 cask "sandisk" do
-  version "3.4.1,2601"
+  version "3.4.2,2717"
   sha256 :no_check
 
   url "https://downloads.sandisk.com/downloads/sandiskapp-mac.dmg"
@@ -12,7 +12,7 @@ cask "sandisk" do
     strategy :extract_plist
   end
 
-  depends_on :macos
+  depends_on macos: :monterey
 
   app "SANDISK.app"
 
