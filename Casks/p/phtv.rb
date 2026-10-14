@@ -1,9 +1,9 @@
 cask "phtv" do
   arch arm: "arm64", intel: "intel"
 
-  version "3.6.6"
-  sha256 arm:   "db72614bfe64beeda28170b8dabfd3c6f9b1ce9ccfb03dc3e8633ea76fc193c1",
-         intel: "843d82e99d30af9fb0b4224870913ddc8da1c7ad55ceec42a14f50dc74961409"
+  version "3.6.8"
+  sha256 arm:   "d4a341bf39ec6aa2c46bacec219518b69742318ecf2a94f4e61bb436b7a1ebfc",
+         intel: "379790224f5faf3783150487c166db090bd050966ae6c5546a01f841948b7d29"
 
   url "https://github.com/PhamHungTien/PHTV/releases/download/v#{version}/PHTV-#{version}-#{arch}.dmg"
   name "PHTV"
