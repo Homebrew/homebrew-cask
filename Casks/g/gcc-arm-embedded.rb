@@ -9,7 +9,7 @@ cask "gcc-arm-embedded" do
     version "15.3.rel2"
     pkg_version = "15.3.rel2"
     gcc_version = "15.3.1"
-    sha256 "284f16b9867d16e690b4ce82a123a5e25dc3d8726133fd0ce71996ae81d1fce5"
+    sha256 "779972fa545f738bfbba2ff0ae44d5ad7510b00cfb414702974844ba625412f3"
 
     livecheck do
       url "https://gitlab.arm.com/tooling/gnu-toolchains-for-arm/-/raw/main/README.md"
