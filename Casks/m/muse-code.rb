@@ -2,11 +2,11 @@ cask "muse-code" do
   arch arm: "aarch64", intel: "x86"
   os macos: "macos", linux: "linux"
 
-  version "1.4.7-R6101.1"
-  sha256 arm:          "87ff5a31b63e30b6ac04d3e8298285517e753c126fb6f3aee80accf28c4562f1",
-         intel:        "6d766da6601a0aae8bd22294c0854970286e1b9ade3009f0d0289b7875a10c58",
-         arm64_linux:  "48db3c7468cd4f401eff9b415fb7e0cdfe0351fb1730649ceae2a0f766e23b85",
-         x86_64_linux: "36e3dac91f56c15572b95be55d70ee9fd9685cd9ab49f747bab4746c8d7c2518"
+  version "1.4.8-R6256.1"
+  sha256 arm:          "5721763b4723f961709cd28f69aa049763965b46c4d4d70f883a0a90e5ddf39c",
+         intel:        "94ea8fd1c73664c22e5c6157d8706945b667b11bd1c7c51691811e79f17dfcf1",
+         arm64_linux:  "592aabe306186794e05d9329ccef7d49116abf0a8bcbc1e07703d22ef1b34f3a",
+         x86_64_linux: "416eaa520e6bf98c7d67f8d2772a2464d41839c1cb7a75d299845400f484fd4b"
 
   on_macos do
     depends_on macos: :monterey
