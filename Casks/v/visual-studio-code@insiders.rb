@@ -1,9 +1,9 @@
 cask "visual-studio-code@insiders" do
   arch arm: "-arm64"
 
-  version "1.143.0-insider,1791954371577,c03d2e4a25d1437c62e985a9006a5af6bad463a3"
-  sha256 arm:   "a14760d6aa7f50f18b7d7eeef02bdbd4829486fb29e2dabcc288c1298cc78cd5",
-         intel: "4460f31517e7d0cc8ba1419b599348139a2d4e15d432faa4491c80651ab22ff7"
+  version "1.143.0-insider,1791973203500,16d22415b62f4bd6b056011027f53c3e9978fbf4"
+  sha256 arm:   "0f02e569ff73944e7559bd0921b8638a02a446bc68b1fd67b2ef5ada06296dc3",
+         intel: "58d5db8a38b3d0ffab014cb90d22ccae91fd75066fe8ed6bb510afd3a7f7b86f"
 
   url "https://vscode.download.prss.microsoft.com/dbazure/download/insider/#{version.csv.third}/VSCode-darwin#{arch}.zip"
   name "Microsoft Visual Studio Code Insiders"
