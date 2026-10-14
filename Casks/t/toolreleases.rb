@@ -17,10 +17,7 @@ cask "toolreleases" do
 
   app "ToolReleases.app"
 
-  uninstall quit:       [
-              "com.apple.systemevents",
-              "com.developermaris.ToolReleases",
-            ],
+  uninstall quit:       "com.developermaris.ToolReleases",
             login_item: "ToolReleases"
 
   zap trash: [

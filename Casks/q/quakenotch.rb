@@ -12,8 +12,6 @@ cask "quakenotch" do
 
   app "QuakeNotch.app"
 
-  uninstall quit: "com.apple.Music"
-
   zap trash: [
     "~/Library/Application Support/MeowingCat.QuakeNotch",
     "~/Library/Caches/MeowingCat.QuakeNotch",
