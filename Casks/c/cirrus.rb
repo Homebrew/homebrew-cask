@@ -1,6 +1,6 @@
 cask "cirrus" do
-  version "1.16,2025.06"
-  sha256 "bcdeeaaf734fa9359336f65033d81a51bf405a91b431fe7f33d7626d1ad46ccf"
+  version "1.17,2026.10"
+  sha256 "ac50ab7223fc3a1f95538c9639cd1ff56a4be0aae17e9a8f5368f74309418ab8"
 
   url "https://eclecticlight.co/wp-content/uploads/#{version.csv.second.major}/#{version.csv.second.minor}/cirrus#{version.csv.first.no_dots}.zip"
   name "Cirrus"
@@ -23,7 +23,7 @@ cask "cirrus" do
     end
   end
 
-  depends_on :macos
+  depends_on macos: :sonoma
 
   app "cirrus#{version.csv.first.major}#{version.csv.first.minor}/Cirrus.app"
 
