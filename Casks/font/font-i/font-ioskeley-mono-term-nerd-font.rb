@@ -8,7 +8,6 @@ cask "font-ioskeley-mono-term-nerd-font" do
 
   livecheck do
     url :url
-    regex(/v?(\d+(?:\.\d+)+(?:-beta\.\d+)?)/i)
     strategy :github_latest
   end
 
