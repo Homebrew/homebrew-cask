@@ -4,17 +4,13 @@ cask "tine" do
 
   url "https://github.com/martinkoutecky/tine/releases/download/v#{version}/Tine_#{version}_universal.dmg"
   name "Tine"
-  desc "Local-first outliner compatible with Logseq Markdown and Org graphs"
+  desc "Outliner for Markdown and Org notes"
   homepage "https://tine.page/"
-
-  livecheck do
-    url :url
-    strategy :github_latest
-  end
 
   depends_on macos: :monterey
 
   app "Tine.app"
+  binary "#{appdir}/Tine.app/Contents/MacOS/tine"
 
   zap trash: [
     "~/Library/Application Support/page.tine.Tine",
