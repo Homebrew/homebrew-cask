@@ -32,7 +32,7 @@ cask "gcc-arm-embedded" do
   url "https://gitlab.arm.com/api/v4/projects/tooling%2Fgnu-toolchains-for-arm/packages/generic/gnu-toolchain/#{version}/arm-gnu-toolchain-#{version}-darwin-#{arch}-arm-none-eabi.pkg"
   name "GCC ARM Embedded"
   desc "Pre-built GNU bare-metal toolchain for 32-bit Arm processors"
-  homepage "https://developer.arm.com/tools-and-software/gnu-toolchain"
+  homepage "https://developer.arm.com/tools-and-software/gnu-toolchain", browsed: "2026-10-15"
 
   depends_on :macos
 
