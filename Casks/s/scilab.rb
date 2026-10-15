@@ -23,6 +23,8 @@ cask "scilab" do
 
   zap trash: "~/.Scilab"
 
+  uninstall quit: "org.scilab.modules.jvm.Scilab"
+
   caveats do
     depends_on_java "8"
   end
