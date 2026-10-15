@@ -18,9 +18,12 @@ cask "receipts-space" do
   app "Receipts Space.app"
 
   zap trash: [
+    "~/Library/Application Scripts/de.holtwick.mac.homebrew.Receipts2.ReceiptsShareExtension",
+    "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/de.holtwick.mac.homebrew.receipts2.sfl*",
     "~/Library/Application Support/de.holtwick.mac.homebrew.Receipts2",
     "~/Library/Caches/de.holtwick.mac.homebrew.Receipts2",
     "~/Library/Caches/ReceiptsExport",
+    "~/Library/Containers/de.holtwick.mac.homebrew.Receipts2.ReceiptsShareExtension",
     "~/Library/HTTPStorages/de.holtwick.mac.homebrew.Receipts2",
     "~/Library/Logs/Receipts/de_holtwick_mac_homebrew_Receipts2*",
     "~/Library/Preferences/de.holtwick.mac.homebrew.Receipts2.plist",
