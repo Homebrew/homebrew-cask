@@ -4,7 +4,7 @@ cask "receipts-space" do
 
   url "https://receipts-space.com/download/macos/Receipts%20Space-#{version.csv.first}-#{version.csv.second}.zip"
   name "Receipts Space"
-  desc "Organize receipts, invoices and other documents"
+  desc "Organise receipts, invoices and other documents"
   homepage "https://receipts-space.com/"
 
   livecheck do
