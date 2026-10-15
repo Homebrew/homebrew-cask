@@ -26,7 +26,7 @@ cask "kaleidoscope" do
         args: ["{{appdir}}/Kaleidoscope.app/Contents/MacOS", "{{HOMEBREW_PREFIX}}/bin"], base: :appdir
   end
 
-  uninstall quit:    "app.kaleidoscope.v#{version.major}",
+  uninstall quit:    "app.kaleidoscope.v*",
             pkgutil: "app.kaleidoscope.uninstall_ksdiff"
 
   zap trash: [
