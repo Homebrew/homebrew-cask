@@ -12,7 +12,7 @@ cask "thorium" do
   homepage "https://www.edrlab.org/software/thorium-reader/"
 
   livecheck do
-    url "https://thorium.edrlab.org/en/"
+    url "https://www.thoriumreader.com/en/download/"
     regex(%r{/v?(\d+(?:\.\d+)+)/Thorium[._-]v?(\d+(?:[.-]\d+)+)#{arch}\.dmg}i)
     strategy :page_match do |page, regex|
       match = page.match(regex)
