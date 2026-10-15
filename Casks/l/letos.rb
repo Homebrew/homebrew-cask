@@ -11,6 +11,8 @@ cask "letos" do
 
   app "Letos.app"
 
+  uninstall quit: "org.letos.Letos"
+
   zap trash: [
     "~/Library/Preferences/letos.org",
     "~/Library/Preferences/org.letos.Letos.plist",
