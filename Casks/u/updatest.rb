@@ -1,8 +1,8 @@
 cask "updatest" do
-  version "2.4.2"
-  sha256 :no_check
+  version "3.0.0"
+  sha256 "dae305f0bbcb1b6b0e5cd8927daedb245484ec3889a88f99a1c559cb93e1d20a"
 
-  url "https://updatest.app/download/Updatest.zip"
+  url "https://updatest.app/download/Updatest-#{version}.zip"
   name "Updatest"
   desc "Utility that shows the latest app updates"
   homepage "https://updatest.app/"
