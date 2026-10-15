@@ -14,6 +14,8 @@ cask "receipts" do
     end
   end
 
+  deprecate! date: "2026-10-14", because: :discontinued, replacement_cask: "receipts-space"
+
   depends_on :macos
 
   app "Receipts.app"
