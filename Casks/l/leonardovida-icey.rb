@@ -12,7 +12,7 @@ cask "leonardovida-icey" do
   conflicts_with cask: "jordanbaird-ice@beta"
   depends_on macos: :sonoma
 
-  app "Icey.app"
+  app "Ice.app"
 
   uninstall quit:       "com.jordanbaird.Ice",
             login_item: "Ice"
