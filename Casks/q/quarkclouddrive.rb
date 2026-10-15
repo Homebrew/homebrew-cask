@@ -1,6 +1,6 @@
 cask "quarkclouddrive" do
-  version "7.3.5.810,3004627"
-  sha256 "b8cd730e9e5ae570d562e6c9d5041b0b65e2962d6711b2a04870c050310bfb8f"
+  version "7.4.0.818,3004627"
+  sha256 "7f92087c73d91cd9566f84a26aa682dea37b0f6dbd4a1bb003c2028c39262155"
 
   url "https://umcdn.quark.cn/download/37213/quarkclouddrivemac/pckk@product_guanwang_macmini/QuarkCloudDriveMac_V#{version.csv.first}_mac_pf30003_(zh-cn)_releasemini_(Build#{version.csv.second}).dmg"
   name "Quark Cloud Drive"
