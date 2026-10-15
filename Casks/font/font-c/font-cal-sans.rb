@@ -1,6 +1,6 @@
 cask "font-cal-sans" do
-  version "2.010"
-  sha256 "f499444cd625e57dce674874a4f0c2a524e6bf80e9df33f879c53f1f3a485e34"
+  version "2.011"
+  sha256 "3b8978f7a5b884ad3095337ee234b19f1b9ace79c9f1b59b42759e64e316185e"
 
   url "https://github.com/calcom/sans/releases/download/v#{version}/calsans-static-essentials.zip"
   name "Cal Sans"
