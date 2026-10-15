@@ -29,9 +29,11 @@ cask "bbedit" do
   manpage "#{appdir}/BBEdit.app/Contents/Resources/bbresults.1"
 
   zap trash: [
+    "~/Library/Application Scripts/com.barebones.bbedit",
     "~/Library/Application Support/BBEdit",
     "~/Library/BBEdit",
     "~/Library/Caches/com.barebones.bbedit",
+    "~/Library/Containers/com.barebones.bbedit",
     "~/Library/Preferences/com.barebones.bbedit.plist",
   ]
 end
