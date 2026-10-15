@@ -1,6 +1,6 @@
 cask "ubar" do
-  version "4.2.5"
-  sha256 "a42e291dd832e773a4be194cb70106c19e18f2ca765781b7c71b57cc37b20938"
+  version "4.2.6"
+  sha256 "9626d70dd3b90c65ee68c159ee41864f582be1fca0f2c020b56a558bd6abfe50"
 
   url "https://data.brawersoftware.com/downloads/ubar/ubar#{version.no_dots}.zip"
   name "uBar"
