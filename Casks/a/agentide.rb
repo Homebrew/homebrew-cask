@@ -1,6 +1,6 @@
 cask "agentide" do
-  version "0.9.10"
-  sha256 "7fb2d5bb4bbd659225b8e6ddbf5db8f30786f1d7b12a9565dc24dab10382fe80"
+  version "0.9.11"
+  sha256 "af4e767cb4181df77502e2c5ae1a4b535ec02814c3897490eaad88e0084e4433"
 
   url "https://github.com/MikeMcQuaid/AgentIDE/releases/download/#{version}/AgentIDE-#{version}.zip"
   name "AgentIDE"
