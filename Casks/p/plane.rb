@@ -1,9 +1,9 @@
 cask "plane" do
   arch arm: "arm64", intel: "x64"
 
-  version "3.0.2,261005uheqkym9s"
-  sha256 arm:   "d2e4fc673912d247ff405b6e24562197c35ab464428e2bc13a95d7358c8cbfff",
-         intel: "f362737dae965f39519ee0dbd0d25b1c8a25226362bc3074d2eac683d32c49a8"
+  version "3.0.3,26101525r29j4d5"
+  sha256 arm:   "73d711d16d2ba7f47899617cc4867abec85e5841ad60542a0a7d6f65e0975d34",
+         intel: "d52996588fd86da0c9ca7e163e4475af7a3e6c33148a992dc4596f17698c6a87"
 
   url "https://download.todesktop.com/260130r75i625/Plane%20#{version.csv.first}%20-%20Build%20#{version.csv.second}-#{arch}.dmg"
   name "Plane"
