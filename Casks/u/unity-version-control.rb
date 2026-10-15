@@ -2,9 +2,9 @@ cask "unity-version-control" do
   arch arm: "arm64", intel: "x64"
   zip_arch = on_arch_conditional arm: "-arm"
 
-  version "11.0.16.10468"
-  sha256 arm:   "e70876670a5e52a9b2593f9ad790d168e22c0a6e174c785d54dc211d1b407bc0",
-         intel: "eefa0d4aae2f7899f28151cb0a94ef10a8c35068cac5321967250b859c349a51"
+  version "11.0.16.10484"
+  sha256 arm:   "4790382952b724b0bc3f0c0c520f85a9e3d926b182fd41a86d29b67c3aefaa6f",
+         intel: "74645bde37c9c4938858542783b54b7898ab8bf27c277ff9086069ae9b572ab9"
 
   url "https://d26z97tczqnlef.cloudfront.net/releases/#{version}/plasticscm/osx/unity-vcs-#{version}-mac#{zip_arch}.pkg.zip"
   name "Unity Version Control"
