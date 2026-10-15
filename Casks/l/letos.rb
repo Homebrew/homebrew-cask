@@ -1,6 +1,6 @@
 cask "letos" do
-  version "4.0.3"
-  sha256 "86a6ccfaa110fcdb570c245f15986a7e79c462457128c5450ebb669a252f20fb"
+  version "4.0.4"
+  sha256 "f62a9592b9f5ed07eec0c581162738708b91754e9d3b96c3d319513ec32b7b5b"
 
   url "https://github.com/pawelsalawa/letos/releases/download/#{version}/letos-#{version}-macos-universal.dmg"
   name "Letos"
