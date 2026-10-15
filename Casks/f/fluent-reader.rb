@@ -1,6 +1,6 @@
 cask "fluent-reader" do
-  version "1.2.2"
-  sha256 "f966116db2ad855c30d5c710ec3c9d8408d867b81ca156b639539010e56ad906"
+  version "1.3.0"
+  sha256 "2ddaedcff4e96cfc6ec1189f5bef11160a219a5c6af595238fa4dd46d74eb672"
 
   url "https://github.com/yang991178/fluent-reader/releases/download/v#{version}/Fluent.Reader.#{version}.dmg"
   name "Fluent Reader"
@@ -12,7 +12,7 @@ cask "fluent-reader" do
     regex(/^v?(\d+(?:\.\d+)+)$/i)
   end
 
-  depends_on macos: :monterey
+  depends_on macos: :ventura
 
   app "Fluent Reader.app"
 
