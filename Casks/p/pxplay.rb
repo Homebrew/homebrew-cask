@@ -1,9 +1,9 @@
 cask "pxplay" do
   arch arm: "arm64", intel: "amd64"
 
-  version "3.0.0,8.1.1"
-  sha256 arm:   "a4d3f56f326112e8aeab3cb801a1a9990e64a8add39ac8c979e77173550e28b0",
-         intel: "7af053f308189e56d373c13126061f84c6d0c59abb99cd0dcb249ffac18fb246"
+  version "3.1.0,8.1.1"
+  sha256 arm:   "19c2ec342a02948cd5ecdd0004b08dd0434dcd73f1c56895c61a2deb220fd2c8",
+         intel: "4cf2c5dfe9af9dac35c550920631381f7acaee24dde9870632ee111fd6bfc242"
 
   url "https://github.com/streamingdv/PSPlay-Application-Hosting/releases/download/v#{version.csv.first}_v#{version.csv.second}/PXPlay_#{version.csv.first}_macOSX_#{arch}.dmg"
   name "PXPlay"
