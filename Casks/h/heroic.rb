@@ -3,10 +3,10 @@ cask "heroic" do
   os macos: "macOS", linux: "linux"
   url_end = on_system_conditional macos: "dmg", linux: "AppImage"
 
-  version "2.22.3"
-  sha256 arm:          "23017ee6ce6e982ae2b4513656b887b693414b51e7205c8ac54b3cb52f26e019",
-         intel:        "2e5b320339a76483a3cf95b478c8329f1465be51f8007915b23879976be254c1",
-         x86_64_linux: "39a702abf5d3e5d31b3d0d22bf0ed5646fb99d2fe2b572976c89c8743aee78c3"
+  version "2.22.4"
+  sha256 arm:          "29d5476a4bf1aea4dd3c907253a49ba3272223b420c5bac8c72995b36b57cd89",
+         intel:        "20f99a94ae49068c9a79f3f2ee79932fcf1d0bdc903e19e9a5a09d1683733c08",
+         x86_64_linux: "1664fc3c8e746325f049273272a0eae5a7f653bd3eb4534c2e2a26ef90086e99"
 
   on_macos do
     depends_on macos: :monterey
