@@ -10,6 +10,8 @@ cask "bazecor" do
   on_macos do
     app "Bazecor.app"
 
+    uninstall quit: "com.dygmalab.bazecor"
+
     zap trash: [
       "~/Library/Application Support/BAZECOR",
       "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.dygmalab.bazecor.sfl*",
