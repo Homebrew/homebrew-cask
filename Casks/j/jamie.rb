@@ -1,6 +1,6 @@
 cask "jamie" do
-  version "5.7.21"
-  sha256 "8371e98214ea6b04ce7292f8cec23785099a3aa5aa27ca2626c2b2bb8270a574"
+  version "5.7.26"
+  sha256 "6361bf0ad7998cd5d3aae45613a3188533e34ebd684d0e5dd6b13cbedb9c4875"
 
   url "https://github.com/meetjamie/releases/releases/download/app-v#{version}/Jamie_#{version}_universal.app.tar.gz"
   name "Jamie"
