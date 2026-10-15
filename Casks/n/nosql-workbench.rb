@@ -1,9 +1,9 @@
 cask "nosql-workbench" do
   arch arm: "arm64", intel: "x64"
 
-  version "3.20.3"
-  sha256 arm:   "726ec7b443748caa4f7a8bc4d5bc9a79e78da943359db0e34728884b0b5f5f45",
-         intel: "93e4b438dcc2451e0049fc125af35f50450f0e8cdeb51feeaa7291012cebea78"
+  version "3.20.4"
+  sha256 arm:   "99c791508024fb7c289a9833eaaa7398401fe43bb824f6740853ea46c3c908c3",
+         intel: "d21c330baea86a7df5dc269ad80870818481db2bb709fce168fe3df66babd09d"
 
   url "https://nosql-workbench.s3.amazonaws.com/NoSQL%20Workbench-mac-#{arch}-#{version}.dmg"
   name "NoSQL Workbench"
@@ -19,6 +19,8 @@ cask "nosql-workbench" do
   depends_on :macos
 
   app "NoSQL Workbench.app"
+
+  uninstall quit: "com.dynamodb.workbench"
 
   zap trash: [
     "~/Library/Application Support/Caches/nosql-workbench-updater",
