@@ -1,6 +1,6 @@
 cask "leonardovida-icey" do
   version "0.11.12"
-  sha256 "sha256:07af133adfb4ba32f9f4d544e08413edcfcb61b7fccd585038aabdd829806d4d"
+  sha256 "c88046e7211076748c10a4c518c5b3e9d9c1e542f1b24f8f14e21c7e234cdfce"
 
   url "https://github.com/leonardovida/icey/releases/download/v#{version}-icey.1/Icey-#{version}-icey.1.zip"
   name "Icey"
