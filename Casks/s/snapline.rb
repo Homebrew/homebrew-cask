@@ -1,6 +1,6 @@
 cask "snapline" do
-  version "3.6.0"
-  sha256 "625f2c1befb2e4c442d54e67a7641e5a3e7aea344d722bd0eb6387c8d9f3df5c"
+  version "3.7.0"
+  sha256 "2748e726472ae7b432ba7d7616c671c87b8bb12368d73713171813a396ae7d7e"
 
   url "https://snap-line.app/updates/Snapline-#{version}.zip"
   name "Snapline"
