@@ -1,6 +1,6 @@
 cask "onexrayse" do
-  version "26.10.2"
-  sha256 "a373a35af6b4f987e861c1f8854dad74d0be56e3334f0c22fd5a3467326a703f"
+  version "26.10.3"
+  sha256 "9808c9d86cd8831d5b3730f7d7143efc90e81a3f70a1549781793796b3c5fe2d"
 
   url "https://github.com/YuanDevTeam/OneXray/releases/download/v#{version}/OneXray-macos-universal.zip"
   name "OneXray"
