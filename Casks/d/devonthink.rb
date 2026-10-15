@@ -1,7 +1,7 @@
 cask "devonthink" do
   on_monterey :or_older do
     version "3.9.16"
-    sha256 "00babf3e3a32eeeeb8440c0f4cb2c1189433ddaddf1ee2243ce8c60436f367c3"
+    sha256 "986cf1b1caf2b1bd1052da18891e6b44eb91bceb5346f3d907e5560c11dca88d"
 
     url "https://download.devontechnologies.com/download/devonthink/#{version}/DEVONthink_#{version.major}.app.zip"
 
@@ -12,8 +12,8 @@ cask "devonthink" do
     app "DEVONthink #{version.major}.app"
   end
   on_ventura :or_newer do
-    version "4.4.1"
-    sha256 "00babf3e3a32eeeeb8440c0f4cb2c1189433ddaddf1ee2243ce8c60436f367c3"
+    version "4.4.2"
+    sha256 "986cf1b1caf2b1bd1052da18891e6b44eb91bceb5346f3d907e5560c11dca88d"
 
     url "https://download.devontechnologies.com/download/devonthink/#{version}/DEVONthink.app.zip"
 
