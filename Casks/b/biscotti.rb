@@ -1,6 +1,6 @@
 cask "biscotti" do
-  version "0.3.0"
-  sha256 "3d3b8c9b5e95e24f2eb6d0dd39319cc33dfcfa6573adb8ce6bb3eae10179fa9f"
+  version "1.0.0"
+  sha256 "a519a352c612f6461cd5b68d4b296fdd17e0c94277b048c675cd23f6f2466fc7"
 
   url "https://github.com/scosman/Biscotti/releases/download/v#{version}/Biscotti.dmg"
   name "Biscotti"
@@ -19,5 +19,8 @@ cask "biscotti" do
 
   uninstall quit: "net.scosman.biscotti"
 
-  zap trash: "~/Library/Application Support/Biscotti"
+  zap trash: [
+    "~/Library/Application Support/Biscotti",
+    "~/Library/Preferences/net.scosman.biscotti.plist",
+  ]
 end
