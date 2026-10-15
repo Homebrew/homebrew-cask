@@ -2,9 +2,9 @@ cask "tnas-pc" do
   arch arm: "arm64", intel: "amd64"
   folder = on_arch_conditional arm: "arm", intel: "X86"
 
-  version "5.2.548"
-  sha256 arm:   "e88f58fbff948d9aa2bc4bfb3606a0c2bffad6366f02c1351c210687a2643e58",
-         intel: "8cc43064c5843440944cd8845ed009e6943d1d06b0f7c276f7510e23aa539aea"
+  version "5.2.560"
+  sha256 arm:   "88c8451307c718869618c95603fb0d5c2157f1ca83893211b2c7085769e5683d",
+         intel: "fd1aa5933cfca860195d9c1aed3194c0af13c6660e3765b17c6cda6d6c594d28"
 
   url "https://download3.terra-master.com/Apps/TNAS%20PC/macOS/#{folder}/TNAS%20PC-#{arch}-#{version}.pkg"
   name "TNAS PC"
