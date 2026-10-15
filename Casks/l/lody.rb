@@ -8,7 +8,7 @@ cask "lody" do
          x86_64_linux: "619cb5d136bc0fbaad5a021f45326549b327f31e61928266f71a1ce82ea842a6"
 
   on_macos do
-    depends_on macos: :monterey
+    depends_on macos: :ventura
 
     app "Lody.app"
 
