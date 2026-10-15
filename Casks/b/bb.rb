@@ -1,9 +1,9 @@
 cask "bb" do
   os macos: "arm64.dmg", linux: "x86_64.AppImage"
 
-  version "0.46.0"
-  sha256 arm:          "cd41bbae48f231b88077419908cccc8de06d5e3ce119694c1bfc05847fb89b76",
-         x86_64_linux: "43fe313d70219f9657dfc86e194e76d472b72aa46f160aeb07f507865548cd89"
+  version "0.46.1"
+  sha256 arm:          "b0d0e723f110d54c218f5b70c51a6cfa8bad8955330c7723543e5d16834c6fa6",
+         x86_64_linux: "27104d59e26cef4ed62ba8ff67823713a755bd9fee5196d40604b65437ba2335"
 
   on_macos do
     depends_on arch: :arm64
