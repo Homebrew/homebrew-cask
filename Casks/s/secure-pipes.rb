@@ -4,7 +4,7 @@ cask "secure-pipes" do
 
   url "https://secure-pipes.app/api/v1/releases/versions/#{version}/download"
   name "Secure Pipes"
-  desc "Manage SSH connections and port forwarding"
+  desc "Manage SSH tunnels, port forwarding, proxies, rule-based routing, SFTP, consoles"
   homepage "https://secure-pipes.app/"
 
   livecheck do
