@@ -21,6 +21,7 @@ cask "canva" do
     "~/Library/Application Support/Canva",
     "~/Library/Caches/com.canva.CanvaDesktop",
     "~/Library/Caches/com.canva.CanvaDesktop.ShipIt",
+    "~/Library/HTTPStorages/com.canva.CanvaDesktop",
     "~/Library/LaunchAgents/com.canva.availability-check-agent.plist",
     "~/Library/Logs/Canva",
     "~/Library/Preferences/com.canva.CanvaDesktop.plist",
