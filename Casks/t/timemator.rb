@@ -1,6 +1,6 @@
 cask "timemator" do
-  version "3.3.1"
-  sha256 "b18bbb70ec829536a0589e14498a29213143c8ad8dbda6e140d30ba9c313c3aa"
+  version "3.3.2"
+  sha256 "00eee152e179afca717c83b2bedcc1be0e41f2afb746e8cb4f179b4c075495de"
 
   url "https://timemator.s3.amazonaws.com/releases/Timemator_#{version}.dmg"
   name "Timemator"
