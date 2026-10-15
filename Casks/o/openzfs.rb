@@ -17,10 +17,9 @@ cask "openzfs" do
   on_ventura do
     arch arm: "Ventura-13-arm64", intel: "Ventura-13"
 
-    # The ventura package for 2.4.1 is broken, so we keep the last working version for ventura
-    version "2.3.1"
-    sha256 arm:   "dc56d95c7875659ba32396bd7406ced5895c9f9959c8fc77a6ee2e6157207f8d",
-           intel: "e05f14f7c02512da10d0115e0e0712ac2cabbb5f0c3924831ae13af35abaf42b"
+    version "2.4.1p1"
+    sha256 arm:   "9d2c9719cc124eb62c495e12b34ddbf0ab798ffde226581566de99cd8b73c74b",
+           intel: "08d7f3ce61e52715d5cc91ad48e86eb859392461714be4998f76f6784acbf361"
   end
   on_sonoma do
     arch arm: "Sonoma-14-arm64", intel: "Sonoma-14"
