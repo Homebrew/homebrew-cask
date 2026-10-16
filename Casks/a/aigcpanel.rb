@@ -16,6 +16,7 @@ cask "aigcpanel" do
 
     zap trash: [
       "~/Library/Application Support/aigcpanel",
+      "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/aigcpanel.sfl*",
       "~/Library/Preferences/AigcPanel.plist",
       "~/Library/Saved Application State/AigcPanel.savedState",
     ]
