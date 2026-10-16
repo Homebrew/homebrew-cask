@@ -1,9 +1,9 @@
 cask "mcplinker" do
   arch arm: "aarch64", intel: "x64"
 
-  version "2.6.1"
-  sha256 arm:   "b00821f78b5b5971e18ece342da4a601fa7012bca90f6e2b60dcb51191e081be",
-         intel: "a7a1e7c9dfdd9af461a245af884241f2ac5de75c0ae549842c586ab5173136a3"
+  version "2.7.0"
+  sha256 arm:   "105f835f49864b8f743e1675f0645544a8433ed97390f866aa2eb1aefe14d007",
+         intel: "c73d1ddb0f2390d35c7b3b33e59cb0c62405af77ccf0ba660d358833018df36e"
 
   url "https://github.com/milisp/mcp-linker/releases/download/v#{version}/MCPLinker_#{version}_#{arch}.dmg"
   name "MCP Linker"
