@@ -1,6 +1,6 @@
 cask "siliconscope" do
-  version "4.5.2"
-  sha256 "f08f6c611454bcdd07fdd0e751a7ff30b315e4082d52f6ad8d7e27531c7679ca"
+  version "4.6.0"
+  sha256 "ba48b2ed638d6ee90aa841b882299d19f16d0c3b65e10a86e82b299bb80dcdc7"
 
   url "https://github.com/kennss/SiliconScope/releases/download/v#{version}/SiliconScope-#{version}.dmg"
   name "SiliconScope"
