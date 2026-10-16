@@ -1,6 +1,6 @@
 cask "mozregression-gui" do
-  version "7.5.0"
-  sha256 "ff7afe74e968d6faa14dc4d1184157377b116da24043f4bcbc1ce276333ae183"
+  version "7.6.0"
+  sha256 "6ea59371a2f9b75b5b7b9e3d2a945ecdcdd47542046beb63c3eca710081b07c7"
 
   url "https://github.com/mozilla/mozregression/releases/download/#{version}/mozregression-gui.dmg"
   name "mozregression-gui"
