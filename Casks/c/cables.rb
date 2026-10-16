@@ -2,10 +2,10 @@ cask "cables" do
   arch arm: "-arm64", intel: "-x64"
   url_end = on_system_conditional macos: "mac#{arch}.dmg", linux: "linux-x64.AppImage"
 
-  version "0.12.0"
-  sha256 arm:          "dfc377a76cecf99155a6e65ff09da47666909cf30ba0ed8d7561ed8a808b002e",
-         intel:        "5d31ab49a893cd5565d88a2162ad679c1ded10408d9be3aa1b91e5fcfecee00e",
-         x86_64_linux: "9847e3d33b4e9a4e76b768745427fab69788e1e11887d45bc5c8df016cc45e0c"
+  version "0.12.1"
+  sha256 arm:          "38c0baebc7b783ced56252d64dd56f5a545fbe1694d370bc7a5afa32a96ec2ac",
+         intel:        "3a84192cd3f9ec07bec075e4fc72288e7467fabae9a309bdc8ee0cb6096f1ee6",
+         x86_64_linux: "8a41c21c08e17fd39b06b781f6cebbd783c6c6af4ca0b2ea7aef716956a7c4d8"
 
   on_macos do
     depends_on macos: :monterey
