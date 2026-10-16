@@ -1,4 +1,4 @@
-cask "shadow-do" do
+cask "taperlabs-shadow" do
   version "2.3.8,133"
   sha256 "1a32a7d2c6b946ab133064000123d04829feb092d100e78bfe9cb9ba33a9b7ab"
 
@@ -20,6 +20,7 @@ cask "shadow-do" do
     end
   end
 
+  auto_updates true
   depends_on arch: :arm64
   depends_on macos: :sonoma
 
