@@ -1,5 +1,5 @@
 cask "adobe-creative-cloud-cleaner-tool" do
-  version "4.3.0.1322"
+  version "4.3.0.1404"
   sha256 :no_check
 
   url "https://swupmf.adobe.com/webfeed/CleanerTool/mac/AdobeCreativeCloudCleanerTool.dmg"
@@ -23,8 +23,4 @@ cask "adobe-creative-cloud-cleaner-tool" do
     "~/Library/Logs/Adobe Creative Cloud Cleaner Tool.log",
     "~/Library/Saved Application State/com.Adobe.Installers.AdobeCreativeCloudCleanerTool.savedState",
   ]
-
-  caveats do
-    requires_rosetta
-  end
 end
