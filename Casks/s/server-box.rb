@@ -15,6 +15,7 @@ cask "server-box" do
   app "Server Box.app"
 
   zap trash: [
+    "~/Library/Application Support/com.lollipopkit.toolbox",
     "~/Library/Application Support/ServerBox",
     "~/Library/Caches/com.lollipopkit.toolbox",
     "~/Library/Preferences/com.lollipopkit.toolbox.plist",
