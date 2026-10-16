@@ -143,11 +143,31 @@ jobs:
           contains(fromJSON('["success", "skipped"]'), steps.tap-syntax.outcome) &&
           matrix.cask
 
-      - name: Run sudo purge
+      - name: Pre-mount cached disk image
         run: |
-          memory_pressure -Q
-          sudo purge
-          memory_pressure -Q
+          dmg="$(brew --cache --cask '${{ matrix.cask.path }}')"
+          echo "${dmg}"
+          xattr -l "${dmg}" || true
+          case "${dmg}" in
+            *.dmg) ;;
+            *) echo "Not a DMG, skipping."; exit 0 ;;
+          esac
+          mnt="$(mktemp -d "${RUNNER_TEMP}/premount.XXXXXX")/mnt"
+          start="$(date '+%Y-%m-%d %H:%M:%S')"
+          hdiutil attach -nobrowse -readonly -mountpoint "${mnt}" "${dmg}" || echo "::warning::pre-mount attach failed"
+          for i in $(seq 1 30); do
+            if realpath "${mnt}" >/dev/null 2>&1 && mount | grep -qF " on ${mnt} ("; then
+              sleep 2
+            else
+              echo "::warning::pre-mount volume gone after $((i * 2))s"
+              break
+            fi
+          done
+          ls -la "${mnt}" || true
+          hdiutil detach "${mnt}" || hdiutil detach -force "${mnt}" || true
+          sudo log show --start "${start}" --style compact --predicate \
+            'process IN {"diskarbitrationd", "diskimagesiod", "diskimagescontroller", "syspolicyd", "XprotectService", "hdiutil"} OR subsystem BEGINSWITH "com.apple.DiskImages" OR subsystem BEGINSWITH "com.apple.xprotect"' \
+            | tail -n 300
         if: always() && runner.os == 'macOS' && steps.fetch.outcome == 'success'
 
       - name: Run brew audit --cask${{ (matrix.cask && ' ') || ' --tap ' }}${{ matrix.cask.token || matrix.tap }}
@@ -160,6 +180,14 @@ jobs:
           contains(fromJSON('["success", "skipped"]'), steps.tap-syntax.outcome) &&
           (!matrix.cask || steps.fetch.outcome == 'success') &&
           !matrix.skip_audit
+
+      - name: Disk image logs after audit failure
+        run: |
+          hdiutil info
+          sudo log show --last 10m --style compact --predicate \
+            'process IN {"diskarbitrationd", "diskimagesiod", "diskimagescontroller", "syspolicyd", "XprotectService", "hdiutil"} OR subsystem BEGINSWITH "com.apple.DiskImages" OR subsystem BEGINSWITH "com.apple.xprotect"' \
+            | tail -n 400
+        if: always() && runner.os == 'macOS' && steps.audit.outcome == 'failure'
 
       - name: Gather cask information
         id: info
