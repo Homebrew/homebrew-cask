@@ -17,6 +17,7 @@ cask "mcplinker" do
   zap trash: [
     "~/.cache/mcp-linker",
     "~/.config/mcplinker",
+    "~/Library/Application Support/dev.milisp.mcplinker",
     "~/Library/Caches/dev.milisp.mcplinker",
     "~/Library/HTTPStorages/dev.milisp.mcplinker.binarycookies",
     "~/Library/Preferences/dev.milisp.mcplinker.plist",
