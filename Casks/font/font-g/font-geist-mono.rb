@@ -1,6 +1,6 @@
 cask "font-geist-mono" do
-  version "1.7.2"
-  sha256 "7fc800d2ac6b92844895196e5041aca55d814c15db70c44f79b3b83ab82b04e2"
+  version "1.8.1"
+  sha256 "70f42c1452fb6df12ea183e20a65999157354f91d11dac18b4c713e383808ec2"
 
   url "https://github.com/vercel/geist-font/releases/download/v#{version}/geist-font-v#{version}.zip"
   name "Geist Mono"
