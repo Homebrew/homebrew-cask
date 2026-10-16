@@ -33,7 +33,6 @@ cask "taperlabs-shadow" do
   # Markdown meeting notes) and "~/Library/Application Support/Shadow/Backups"
   # are the user's own meeting data and are deliberately left in place.
   zap trash: [
-    "~/Library/Application Support/com.taperlabs.shadow.v23",
     "~/Library/Application Support/Shadow/App Runtime",
     "~/Library/Application Support/Shadow/Logs",
     "~/Library/Application Support/Shadow/Models",
@@ -41,7 +40,6 @@ cask "taperlabs-shadow" do
     "~/Library/Caches/com.taperlabs.shadow.ShipIt",
     "~/Library/Caches/shadow-desktop-updater",
     "~/Library/HTTPStorages/com.taperlabs.shadow",
-    "~/Library/HTTPStorages/com.taperlabs.shadow.v23",
     "~/Library/Preferences/com.taperlabs.shadow.plist",
     "~/Library/Preferences/com.taperlabs.shadow.v23.plist",
     "~/Library/Saved Application State/com.taperlabs.shadow.savedState",
