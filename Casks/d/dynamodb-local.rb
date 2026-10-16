@@ -1,6 +1,6 @@
 cask "dynamodb-local" do
-  version "2026-07-31"
-  sha256 "f80bcec477f85f57e2c77f8d54aa6b672a8403fceff0c450560aee1cf6c21163"
+  version "2026-10-14"
+  sha256 "7a94eb65f81aee270738751a4e5e3e6a7ad02a5d25194f55b83e08ec2ba6342b"
 
   url "https://d1ni2b6xgvw0s0.cloudfront.net/v2.x/dynamodb_local_#{version}.tar.gz"
   name "Amazon DynamoDB Local"
