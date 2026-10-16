@@ -20,7 +20,10 @@ cask "pika@beta" do
 
   zap trash: [
     "~/Library/Application Scripts/com.superhighfives.Pika-LaunchAtLoginHelper",
+    "~/Library/Application Support/Pika",
+    "~/Library/Caches/com.superhighfives.Pika",
     "~/Library/Containers/com.superhighfives.Pika-LaunchAtLoginHelper",
+    "~/Library/HTTPStorages/com.superhighfives.Pika",
     "~/Library/Preferences/com.superhighfives.Pika.plist",
   ]
 end
