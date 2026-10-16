@@ -3,10 +3,10 @@ cask "folo" do
   os macos: "macos", linux: "linux"
   url_end = on_system_conditional macos: "dmg", linux: "AppImage"
 
-  version "1.15.0"
-  sha256 arm:          "971a75f2e6a71a5f1cebabbe425a5f94c7b5a62b02029359f954c18726cf390d",
-         intel:        "7f4e71e8f767732cf62ca0ab2d01b1f02d6918a52560e1f1689e641c62ff9c58",
-         x86_64_linux: "58ecc7b8bc2df47dbaae5fb4d2a03029d19dacf9f364b2d8d8f38e42ab5a0d31"
+  version "1.16.0"
+  sha256 arm:          "0b44b8d39115ec6d1c0f88e0f47abb0da5d866a4dc19248c22ac51b4e6922673",
+         intel:        "dcb80f402143f065839b80caf91d67eb8ec59039c770f376a79e747735623682",
+         x86_64_linux: "604565f9bedcfd64b3682e62dc765ebe07d05a4658503826bf4a2d8295125610"
 
   on_macos do
     depends_on macos: :ventura
