@@ -1,6 +1,6 @@
 cask "yap-app" do
-  version "0.1.13"
-  sha256 "177858d18ac7d6680c22b37ca1239bed111e6bb220f374a43d5d3465c45f2aca"
+  version "0.1.14"
+  sha256 "7d9bbf238c6d9f59d0ef30ccb2f296f9c224e65b877d5b92a5f517aa7537939c"
 
   url "https://github.com/FrigadeHQ/yap/releases/download/v#{version}/Yap.dmg"
   name "Yap"
