@@ -37,12 +37,11 @@ cask "openzfs" do
            intel: "e4c0608131fa050bd5813e957e95ffe0204e895eddbf7a696b317a3fb55d40cd"
   end
   on_tahoe :or_newer do
-    arch arm: "Tahoe.26-arm64", intel: "Tahoe.26-26"
+    arch arm: "Tahoe-26-arm64", intel: "Tahoe-26"
 
-    # Since there was no 2.4.1p1 version available for Tahoe, I went with the latest stable release.
-    version "2.3.1p1"
-    sha256 arm:   "9f0bb55e65aed506eacf79047bae823420b7c434f87fc3ae915b5e707d7f1658",
-           intel: "5fde8d3317a3f5b9d8cd12a54436b2c927c3f24c621eb932931c3a3e1120d794"
+    version "2.4.1p1"
+    sha256 arm:   "222a5c091c3e1252bd886fa5b0e793a8c978421d60951ba9a36af4339c9a1b57",
+           intel: "f37865a0bc06a6a6e913550be44454ab7b6b9c7135fafc0159e5cdd30ff1a987"
   end
 
   url "https://github.com/openzfsonosx/openzfs-fork/releases/download/zfs-macOS-#{version}/OpenZFSonOsX-#{version}-#{arch}.pkg"
