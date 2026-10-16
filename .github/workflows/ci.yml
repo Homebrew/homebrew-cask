@@ -143,6 +143,13 @@ jobs:
           contains(fromJSON('["success", "skipped"]'), steps.tap-syntax.outcome) &&
           matrix.cask
 
+      - name: Run sudo purge
+        run: |
+          memory_pressure -Q
+          sudo purge
+          memory_pressure -Q
+        if: always() && runner.os == 'macOS' && steps.fetch.outcome == 'success'
+
       - name: Run brew audit --cask${{ (matrix.cask && ' ') || ' --tap ' }}${{ matrix.cask.token || matrix.tap }}
         id: audit
         run: |
