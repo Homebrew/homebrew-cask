@@ -1,9 +1,9 @@
 cask "monotype" do
   arch arm: "Arm", intel: "Intel"
 
-  version "7.7.0"
-  sha256 arm:   "9c462812d2440afff4cbd3673b9f1d9865f7f6e70dc41d001cdc22623a15dc1e",
-         intel: "c3f7dea86d87e186e836902bb92e43984ffe23512653acb643894b74222ca205"
+  version "7.8.0"
+  sha256 arm:   "868587a5eb100a8e6ce9f7fe2096fb1cfcb684ed1b5824038e4ee4f12df3d29d",
+         intel: "9b851b40fc8a7770b896dee74c25025931b10e0c500542bf3188289fa4a099bb"
 
   url "https://monotypeapp.monotype.com/release/#{version.no_dots}/mac/#{arch.downcase}/MTFInstallerMacOs#{arch}.zip"
   name "Monotype Desktop App"
