@@ -11,7 +11,9 @@ cask "localsend" do
 
     zap trash: [
       "~/Library/Application Scripts/org.localsend.localsendApp",
+      "~/Library/Application Scripts/org.localsend.localsendApp.ShareExtension",
       "~/Library/Containers/org.localsend.localsendApp",
+      "~/Library/Containers/org.localsend.localsendApp.ShareExtension",
       "~/Library/Preferences/org.localsend.localsendApp.plist",
       "~/Library/Saved Application State/org.localsend.localsendApp.savedState",
     ]
