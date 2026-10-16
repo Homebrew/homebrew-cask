@@ -20,6 +20,7 @@ cask "groove-omnidialer" do
   uninstall quit: "com.electron.dialer"
 
   zap trash: [
+    "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.electron.dialer.sfl*",
     "~/Library/Application Support/com.electron.dialer",
     "~/Library/Caches/com.electron.dialer",
     "~/Library/HTTPStorages/com.electron.dialer",
