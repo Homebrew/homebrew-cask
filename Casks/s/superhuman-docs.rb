@@ -5,7 +5,7 @@ cask "superhuman-docs" do
   url "https://docs-desktop.superhuman.com/releases/Superhuman-Docs-#{version}-universal.dmg"
   name "Superhuman Docs"
   desc "Desktop client for team documents"
-  homepage "https://docs.superhuman.com/"
+  homepage "https://superhuman.com/docs"
 
   livecheck do
     url "https://docs-desktop.superhuman.com/releases/latest-mac.yml"
