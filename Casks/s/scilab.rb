@@ -21,9 +21,9 @@ cask "scilab" do
   binary "#{appdir}/scilab-#{version}.app/Contents/bin/scilab"
   binary "#{appdir}/scilab-#{version}.app/Contents/bin/scilab-cli"
 
-  zap trash: "~/.Scilab"
-
   uninstall quit: "org.scilab.modules.jvm.Scilab"
+
+  zap trash: "~/.Scilab"
 
   caveats do
     depends_on_java "8"
