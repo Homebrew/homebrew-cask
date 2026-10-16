@@ -109,6 +109,13 @@ jobs:
         if: runner.os == 'macOS' && !matrix.stable
         run: brew test-bot --cleanup --only-cleanup-before
 
+      # Xcode 27.1 RC's simdiskimaged intercepts DMG attaches, causing
+      # intermittent "no mountable file systems" or vanishing mount points.
+      # TODO: remove once the xcode-27 runner image no longer needs this.
+      - name: Stop simdiskimaged
+        if: matrix.runner == 'xcode-27'
+        run: sudo launchctl bootout system/com.apple.CoreSimulator.simdiskimaged || true
+
       - name: Cache Homebrew Gems
         id: cache
         uses: actions/cache@55cc8345863c7cc4c66a329aec7e433d2d1c52a9 # v6.1.0
