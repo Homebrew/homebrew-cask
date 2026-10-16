@@ -1,14 +1,14 @@
 cask "ray" do
   arch arm: "arm64", intel: "x64"
 
-  sha256 arm:   "e726923ba1f67ad2031b76087d0a67d64531730db90d8f1633856958dc955429",
-         intel: "b9c27727bd1ec86a11848d178346a952f81ea83d995be7581da46ac0cddefa76"
+  sha256 arm:   "77c3b3f2599c9ac98b13cdba67438b56fd61d55b9aff39775da1b219144a09cf",
+         intel: "fac4b1cafcd929401f888628b303f79960cbfc2b8f764f1b40ab0eef19fb785b"
 
   on_arm do
     version "3.2.15"
   end
   on_intel do
-    version "3.2.14"
+    version "3.2.15"
   end
 
   url "https://ray-app.s3.eu-west-1.amazonaws.com/ray-app-updates-v#{version.major}/stable/ray-#{version}-latest-darwin-#{arch}.dmg"
