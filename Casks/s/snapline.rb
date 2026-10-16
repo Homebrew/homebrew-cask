@@ -19,7 +19,9 @@ cask "snapline" do
 
   zap trash: [
     "~/Library/Application Support/Snapline",
+    "~/Library/Caches/com.ziadeh.Snapline",
     "~/Library/Caches/Snapline",
+    "~/Library/HTTPStorages/com.ziadeh.Snapline",
     "~/Library/Preferences/com.ziadeh.Snapline.plist",
     "~/Library/Saved Application State/com.ziadeh.Snapline.savedState",
   ]
