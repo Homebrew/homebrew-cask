@@ -1,8 +1,8 @@
 cask "uuremote" do
-  version "4.42.0"
-  sha256 "42f8fe6b1c89dec253070737e10b2601cb26a2aff67633a05e1eb4a40491b652"
+  version "4.43.0"
+  sha256 "9ec5d9f68ba458e20484a1bf1edb9901370b259a005c42e811170fa22f0e6a8c"
 
-  url "https://a56.gdl.netease.com/uuyc_#{version}.pkg"
+  url "https://a56.gdl.netease.com/uuyc_#{version}_nochannel.pkg"
   name "UU Remote"
   name "网易UU远程"
   desc "NetEase UU remote desktop access and control tool"
@@ -16,7 +16,7 @@ cask "uuremote" do
 
   depends_on :macos
 
-  pkg "uuyc_#{version}.pkg"
+  pkg "uuyc_#{version}_nochannel.pkg"
 
   postflight_steps do
     # The postinstall script automatically opens the app. Therefore, we must
