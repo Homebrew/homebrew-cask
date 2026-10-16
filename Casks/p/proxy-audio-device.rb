@@ -1,6 +1,6 @@
 cask "proxy-audio-device" do
-  version "1.0.7"
-  sha256 "6bdfca3e8a61f6931770de3f6813fa787891dfa8cad674f1af1f7011909c323c"
+  version "1.1.0"
+  sha256 "f19003beaf92ab083c2851660742d822a65e44b30359203ff903e15333d5278f"
 
   url "https://github.com/briankendall/proxy-audio-device/releases/download/v#{version}/ProxyAudioDevice_v#{version}.zip"
   name "Proxy Audio Device"
