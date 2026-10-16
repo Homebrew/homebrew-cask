@@ -1,8 +1,8 @@
 cask "clipbook" do
-  version "2.3.3"
-  sha256 "6494aa7d3b30f98c2d4cc8aec6a324f3545eee47f36866b80461a7db109a3f9e"
+  version "2.4.0"
+  sha256 "a9926438cb6a9641eafdb700ba0671453386ba94ae59c280ea41ead762e7b63c"
 
-  url "https://pub-7a3325a76558410385d3c0d479c0b1b4.r2.dev/ClipBook-#{version}.dmg"
+  url "https://f005.backblazeb2.com/file/clipbook/ClipBook-#{version}.dmg"
   name "ClipBook"
   desc "Clipboard history app"
   homepage "https://clipbook.app/"
