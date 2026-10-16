@@ -4,7 +4,7 @@ cask "shadow-do" do
 
   url "https://cdn.shadow.do/releases/v23/latest/#{version.csv.first}-build#{version.csv.second}/Shadow-#{version.csv.first}-arm64.dmg"
   name "Shadow"
-  desc "AI meeting notetaker that transcribes on-device and saves notes as Markdown"
+  desc "AI meeting notetaker"
   homepage "https://www.shadow.do/"
 
   livecheck do
