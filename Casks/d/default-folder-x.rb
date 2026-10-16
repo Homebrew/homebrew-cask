@@ -1,5 +1,5 @@
 cask "default-folder-x" do
-  version "6.3.2"
+  version "6.3.3"
   sha256 :no_check # required as upstream package is updated in-place
 
   url "https://www.stclairsoft.com/download/DefaultFolderX-#{version}.dmg"
