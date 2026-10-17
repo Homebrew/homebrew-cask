@@ -20,6 +20,7 @@ cask "readmoreading" do
   app "Readmoo看書.app"
 
   zap trash: [
+    "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.electron.readmoo.sfl*",
     "~/Library/Application Support/Readmoo看書",
     "~/Library/Caches/com.electron.readmoo",
     "~/Library/Caches/com.electron.readmoo.ShipIt",
