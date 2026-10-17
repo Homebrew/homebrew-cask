@@ -33,5 +33,9 @@ cask "block-goose" do
 
   app "Goose.app"
 
-  zap trash: "~/Library/Application Support/Goose"
+  zap trash: [
+    "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.electron.goose.sfl*",
+    "~/Library/Application Support/Goose",
+    "~/Library/Preferences/com.electron.goose.plist",
+  ]
 end
