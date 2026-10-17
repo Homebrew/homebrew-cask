@@ -25,12 +25,8 @@ cask "chrysalis" do
   desc "Graphical configurator for Kaleidoscope-powered keyboards"
   homepage "https://github.com/keyboardio/Chrysalis"
 
-  # This uses a regex that specifically matches versions from release tag links
-  # for this repository only. A description for a previous release linked to a
-  # tag in a different repository, which led to an incorrect version match.
   livecheck do
     url :url
-    regex(/v?(\d+(?:\.\d+)+)/i)
     strategy :github_latest
   end
 end

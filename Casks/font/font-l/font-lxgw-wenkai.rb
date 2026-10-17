@@ -9,7 +9,7 @@ cask "font-lxgw-wenkai" do
 
   livecheck do
     url :url
-    strategy :github_releases
+    strategy :github_latest
   end
 
   font "lxgw-wenkai-v#{version}/LXGWWenKai-Light.ttf"
