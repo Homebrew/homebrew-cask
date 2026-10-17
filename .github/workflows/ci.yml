@@ -150,6 +150,38 @@ jobs:
           contains(fromJSON('["success", "skipped"]'), steps.tap-syntax.outcome) &&
           matrix.cask
 
+      - name: Start disk image monitors
+        if: always() && matrix.runner == 'xcode-27' && steps.fetch.outcome == 'success'
+        run: |
+          mon="${RUNNER_TEMP}/dmg-monitor"
+          mkdir -p "${mon}"
+          sw_vers
+          echo "ImageVersion=${ImageVersion:-unknown}"
+          pgrep -lf simdiskimaged || echo "simdiskimaged not running"
+          sudo launchctl print system/com.apple.CoreSimulator.simdiskimaged 2>&1 | head -n 5 || true
+          hdiutil info
+          # shellcheck disable=SC2024
+          sudo nohup eslogger mount unmount remount exec > "${mon}/eslogger.jsonl" 2> "${mon}/eslogger.err" &
+          # shellcheck disable=SC2024
+          sudo nohup log stream --level debug --style compact --predicate \
+            'process IN {"diskarbitrationd", "diskimages-helper", "hdiutil", "hdiejectd", "simdiskimaged", "diskimagescontroller", "diskimagesiod", "cryptexd", "CoreSimulatorService", "sandboxd", "ditto", "mkbom", "diskutil"} OR subsystem BEGINSWITH "com.apple.DiskImages" OR subsystem BEGINSWITH "com.apple.diskimages" OR (process == "kernel" AND (eventMessage CONTAINS[c] "sandbox" OR eventMessage CONTAINS "homebrew-dmg" OR eventMessage CONTAINS[c] "unmount"))' \
+            > "${mon}/log.txt" 2>&1 &
+          # shellcheck disable=SC2016
+          nohup perl -MTime::HiRes=time,sleep -e '
+            $| = 1; my $prev = "";
+            while (1) {
+              my $cur = join "", grep { /homebrew-dmg/ } `/sbin/mount`;
+              if ($cur ne $prev) {
+                my $t = time; my @l = localtime $t;
+                printf "%02d:%02d:%06.3f %s", $l[2], $l[1], $l[0] + $t - int($t), ($cur eq "" ? "<no homebrew-dmg mounts>\n" : $cur);
+                $prev = $cur;
+              }
+              sleep 0.05;
+            }' > "${mon}/mounts.txt" 2>&1 &
+          echo $! > "${mon}/mounts.pid"
+          sleep 3
+          cat "${mon}/eslogger.err"
+
       - name: Run brew audit --cask${{ (matrix.cask && ' ') || ' --tap ' }}${{ matrix.cask.token || matrix.tap }}
         id: audit
         run: |
@@ -226,6 +258,47 @@ jobs:
       - name: Compare installed and running apps and services with snapshot (macOS only)
         run: brew cask-ci check '${{ matrix.cask.path }}'
         if: always() && steps.snapshot.outcome == 'success' && steps.install.outcome == 'success' && runner.os == 'macOS'
+
+      - name: Disk image monitor output
+        if: always() && matrix.runner == 'xcode-27' && steps.fetch.outcome == 'success'
+        run: |
+          mon="${RUNNER_TEMP}/dmg-monitor"
+          sleep 2
+          kill "$(cat "${mon}/mounts.pid")" || true
+          sudo pkill -x eslogger || true
+          sudo pkill -f "log stream --level debug" || true
+          sudo chown -R "$(id -u)" "${mon}"
+
+          echo "::group::simdiskimaged at end of job"
+          pgrep -lf simdiskimaged || echo "simdiskimaged not running"
+          sudo launchctl print system/com.apple.CoreSimulator.simdiskimaged 2>&1 | head -n 5 || true
+          echo "::endgroup::"
+
+          echo "::group::homebrew-dmg mount timeline"
+          cat "${mon}/mounts.txt"
+          echo "::endgroup::"
+
+          echo "::group::eslogger mount/unmount and disk tool execs"
+          cat "${mon}/eslogger.err"
+          jq -c '
+            select((.event // {}) | (has("mount") or has("unmount") or has("remount") or
+              (has("exec") and ((.exec.target.executable.path // "") | test("diskutil|umount|hdiutil|ditto|mkbom|simdiskimaged|diskimages")))))
+            | {time, pid: .process.audit_token.pid, ppid: .process.ppid, proc: .process.executable.path,
+               event: (.event | tostring | .[0:800])}
+          ' "${mon}/eslogger.jsonl" || grep -E 'unmount|"mount"' "${mon}/eslogger.jsonl" | head -n 50 || true
+          echo "::endgroup::"
+
+          echo "::group::unified log (filtered)"
+          grep -vE 'CoreAnalytics|xpc:connection|libimage4|cfprefsd' "${mon}/log.txt" | tail -n 1500 || true
+          echo "::endgroup::"
+
+      - name: Upload disk image monitor files
+        if: always() && matrix.runner == 'xcode-27' && steps.fetch.outcome == 'success'
+        uses: actions/upload-artifact@cf430e030ddbb5b0abf93d22962f4752f3646cd9 # v7.0.2
+        with:
+          name: dmg-monitor-${{ matrix.cask.token }}-${{ github.run_attempt }}
+          path: ${{ runner.temp }}/dmg-monitor
+          if-no-files-found: ignore
 
   conclusion:
     name: conclusion
