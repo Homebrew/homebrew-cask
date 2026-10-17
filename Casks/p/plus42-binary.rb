@@ -23,5 +23,6 @@ cask "plus42-binary" do
     "~/Library/HTTPStorages/com.thomasokken.Plus42b.binarycookies",
     "~/Library/Preferences/com.thomasokken.Plus42b.plist",
     "~/Library/Saved Application State/com.thomasokken.Plus42b",
+    "~/Library/WebKit/com.thomasokken.Plus42b",
   ]
 end
