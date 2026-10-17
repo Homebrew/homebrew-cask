@@ -1,6 +1,6 @@
 cask "itsycal" do
-  version "0.15.14"
-  sha256 "c66dc8a76dfb9d13396fc7bc3f5b18a41d8710840fb091aa849af747439bc949"
+  version "0.27.3"
+  sha256 "4b13c059298c8c7744557eb8389a64b31be1fac6221b807574fb15c15d64f30b"
 
   url "https://itsycal.s3.amazonaws.com/Itsycal-#{version}.zip"
   name "Itsycal"
@@ -13,7 +13,7 @@ cask "itsycal" do
   end
 
   auto_updates true
-  depends_on :macos
+  depends_on macos: :golden_gate
 
   app "Itsycal.app"
 
