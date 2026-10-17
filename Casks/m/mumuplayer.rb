@@ -1,8 +1,8 @@
 cask "mumuplayer" do
-  version "1.9.8"
-  sha256 "7d6888dc35e004dad13f403585d59d44255f53d82a8c78e1e3c23432edf9bc48"
+  version "1.9.9"
+  sha256 "ce687f8df225a49d536b9549db5484f421e5616121b3d29a8ba9bbd08935a5f1"
 
-  url "https://a11.gdl.netease.com/MuMuUpdater_#{version}_default.tar.gz"
+  url "https://a11.gdl.netease.com/MuMuPlayer_#{version}_default.tar.gz"
   name "Mumu Player Pro"
   name "MuMu模拟器Pro"
   desc "Android emulator"
