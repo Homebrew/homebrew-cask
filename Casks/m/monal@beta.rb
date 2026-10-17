@@ -22,6 +22,7 @@ cask "monal@beta" do
   zap trash: [
     "~/Library/Application Scripts/group.monal",
     "~/Library/Application Scripts/org.monal-im.prod.catalyst.monal",
+    "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/org.monal-im.prod.catalyst.monal.sfl*",
     "~/Library/Containers/org.monal-im.prod.catalyst.monal",
     "~/Library/Group Containers/group.monal",
   ]
