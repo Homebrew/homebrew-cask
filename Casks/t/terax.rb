@@ -2,10 +2,10 @@ cask "terax" do
   arch arm: "aarch64", intel: on_system_conditional(macos: "x64", linux: "amd64")
   os macos: "dmg", linux: "AppImage"
 
-  version "0.8.6"
-  sha256 arm:          "7aca12b515a6916e5b3b1411ac59934d66e1d008685c2a9ce850663f4c23a67e",
-         intel:        "7fc6894982109cb9438e119a13f892b28c512629662b17e40e77961f6eba9f51",
-         x86_64_linux: "32d7ebddabf6ef49f92634f5a8a34cfdf8ea75b042dceb298975ca8b6f5b67c3"
+  version "0.9.0"
+  sha256 arm:          "e87dcaf5b50d6afc7fd42bb024404c06326e7ec5f41c0d0e0be5c3824ba3e25e",
+         intel:        "3d7bcecebb59ef3b7cadaac41ad1f2fd7ee2c958c7110def05571d63ac26a739",
+         x86_64_linux: "3b1ec084e24ee3b41d00a55a552455d53887094acd37858f7dae4aac7052cf5b"
 
   on_macos do
     depends_on macos: :ventura
