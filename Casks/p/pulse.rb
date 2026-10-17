@@ -20,5 +20,8 @@ cask "pulse" do
 
   uninstall quit: "com.egoist.pulse"
 
-  zap trash: "~/Library/Application Support/Pulse"
+  zap trash: [
+    "~/Library/Application Support/Pulse",
+    "~/Library/Preferences/com.egoist.pulse.plist",
+  ]
 end
