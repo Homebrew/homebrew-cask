@@ -30,7 +30,10 @@ cask "o+connect" do
       # key is a public constant in the site's JS bundle, so resolve the bundle
       # that is currently being served instead of pinning the key (and the
       # timestamp) inside the cask.
-      entry = page[%r{src="\.?/?static/(index-[\w-]+\.js)"}i, 1]
+      # The site serves separate builds per region and writes the script `src`
+      # as a relative path on one and an absolute URL on the other, so match the
+      # path in either form.
+      entry = page[%r{src=["'][^"']*?/static/(index-[\w-]+\.js)["']}i, 1]
       next if entry.blank?
 
       index = Homebrew::Livecheck::Strategy.page_content("#{base}/static/#{entry}")[:content]
@@ -66,7 +69,10 @@ cask "o+connect" do
       file_name = Homebrew::Livecheck::Strategy::Json.parse_json(content).dig("data", "fileName")
       next if file_name.blank?
 
-      match = file_name.match(/OppoConnect_v?(\d+(?:\.\d+)+)_arm64_domestic_(\w+)_(\w+)\.dmg/i)
+      # The region token in the file name differs between builds ("domestic" and
+      # its international counterpart), so only the version and build IDs are
+      # captured.
+      match = file_name.match(/OppoConnect_v?(\d+(?:\.\d+)+)_arm64_[a-z]+_(\w+)_(\w+)\.dmg/i)
       next unless match
 
       "#{match[1]},#{match[2]},#{match[3]}"
