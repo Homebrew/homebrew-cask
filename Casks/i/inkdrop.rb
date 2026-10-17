@@ -20,6 +20,7 @@ cask "inkdrop" do
   app "Inkdrop.app"
 
   zap trash: [
+    "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/info.pkpk.inkdrop.sfl*",
     "~/Library/Application Support/inkdrop",
     "~/Library/Caches/info.pkpk.inkdrop",
     "~/Library/Preferences/info.pkpk.inkdrop.helper.plist",
