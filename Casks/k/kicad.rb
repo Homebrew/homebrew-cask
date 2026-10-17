@@ -24,7 +24,6 @@ cask "kicad" do
 
   zap delete: "/Library/Application Support/kicad",
       trash:  [
-        "~/Documents/KiCad",
         "~/Library/Application Support/kicad",
         "~/Library/Caches/KiCad",
         "~/Library/Preferences/kicad",
