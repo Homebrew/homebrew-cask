@@ -33,6 +33,7 @@ cask "swiftformat-for-xcode" do
   zap trash: [
     "~/Library/Application Scripts/com.charcoaldesign.SwiftFormat-for-Xcode",
     "~/Library/Application Scripts/com.charcoaldesign.SwiftFormat-for-Xcode.SourceEditorExtension",
+    "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.charcoaldesign.swiftformat-for-xcode.sfl*",
     "~/Library/Containers/com.charcoaldesign.SwiftFormat-for-Xcode",
     "~/Library/Group Containers/com.charcoaldesign.SwiftFormat",
   ]

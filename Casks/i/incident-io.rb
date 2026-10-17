@@ -17,5 +17,9 @@ cask "incident-io" do
 
   app "incident.io.app"
 
-  zap trash: "~/Library/Application Support/incident.io"
+  zap trash: [
+    "~/Library/Application Support/incident.io",
+    "~/Library/Caches/com.incidentio.desktop",
+    "~/Library/Preferences/com.incidentio.desktop.plist",
+  ]
 end

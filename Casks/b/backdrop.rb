@@ -28,13 +28,16 @@ cask "backdrop" do
 
   zap trash: [
     "~/Library/Application Scripts/*.group.com.cindori.Backdrop",
+    "~/Library/Application Scripts/com.cindori.Backdrop.WallpaperExtension",
     "~/Library/Application Support/Backdrop",
     "~/Library/Application Support/BackdropWallpaper",
     "~/Library/Application Support/com.cindori.Backdrop*",
     "~/Library/Caches/com.cindori.Backdrop*",
+    "~/Library/Containers/com.cindori.Backdrop.WallpaperExtension",
     "~/Library/Group Containers/*.group.com.cindori.Backdrop",
     "~/Library/HTTPStorages/com.cindori.Backdrop",
     "~/Library/HTTPStorages/com.cindori.Backdrop.Wallpaper",
     "~/Library/Preferences/com.cindori.Backdrop.plist",
+    "~/Library/Preferences/com.cindori.Backdrop.Wallpaper.plist",
   ]
 end

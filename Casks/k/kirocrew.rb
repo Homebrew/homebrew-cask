@@ -34,7 +34,9 @@ cask "kirocrew" do
     "~/.config/kirocrew-desktop",
     "~/.kirocrew.breadcrumb",
     "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.amazon.kiro.crew.sfl*",
+    "~/Library/Application Support/kirocrew-desktop",
     "~/Library/Application Support/kirocrew-electron-mac",
+    "~/Library/Logs/kirocrew-desktop",
     "~/Library/Preferences/com.amazon.kiro.crew.plist",
   ]
 end

@@ -33,8 +33,9 @@ cask "conductor" do
   app "Conductor.app"
 
   zap trash: [
-    "~/Library/Application Support/com.conductor.app",
-    "~/Library/Caches/com.conductor.app",
-    "~/Library/WebKit/com.conductor.app",
-  ]
+        "~/Library/Application Support/com.conductor.app",
+        "~/Library/Caches/com.conductor.app",
+        "~/Library/WebKit/com.conductor.app",
+      ],
+      rmdir: "~/.conductor"
 end

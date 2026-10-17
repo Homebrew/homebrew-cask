@@ -20,6 +20,7 @@ cask "element" do
   app "Element.app"
 
   zap trash: [
+    "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/im.riot.app.sfl*",
     "~/Library/Application Support/Element",
     "~/Library/Application Support/Riot",
     "~/Library/Caches/im.riot.app",

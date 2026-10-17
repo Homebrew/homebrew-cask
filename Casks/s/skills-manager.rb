@@ -17,6 +17,8 @@ cask "skills-manager" do
 
   zap trash: [
     "~/.skills-manager",
+    "~/Library/Application Support/com.agentskills.desktop",
+    "~/Library/Application Support/skills-manager",
     "~/Library/Caches/com.agentskills.desktop",
     "~/Library/Logs/com.agentskills.desktop",
     "~/Library/Preferences/com.agentskills.desktop.plist",

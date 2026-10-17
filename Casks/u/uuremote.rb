@@ -50,12 +50,14 @@ cask "uuremote" do
   zap trash: [
     "/Users/Shared/UURemote",
     "~/Library/Application Support/com.netease.uuremote",
+    "~/Library/Application Support/UURemote",
     "~/Library/Caches/com.netease.uuremote",
     "~/Library/Caches/com.netease.uuremote.server",
     "~/Library/HTTPStorages/com.netease.uuremote",
     "~/Library/HTTPStorages/com.netease.uuremote.server",
     "~/Library/Preferences/com.netease.uuremote.plist",
     "~/Library/Preferences/com.netease.uuremote.server.plist",
+    "~/Library/sensorsanalytics-com.netease.uuremote.server-first_day.plist",
     "~/Library/WebKit/com.netease.uuremote",
   ]
 end

@@ -35,6 +35,8 @@ cask "lark" do
   zap trash: [
     "~/Library/Caches/com.electron.lark",
     "~/Library/Caches/com.electron.lark.helper",
+    "~/Library/Caches/com.larksuite.larkApp.helper",
+    "~/Library/HTTPStorages/com.larksuite.larkApp.helper",
     "~/Library/Preferences/com.electron.lark.helper.plist",
     "~/Library/Preferences/com.larksuite.larkApp.plist",
     "~/Library/Saved Application State/com.electron.lark.savedState",

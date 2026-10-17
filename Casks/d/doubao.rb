@@ -28,6 +28,8 @@ cask "doubao" do
     "~/Library/Caches/Doubao",
     "~/Library/Containers/com.bot.pc.doubao.FinderSyncExtension",
     "~/Library/HTTPStorages/com.bot.pc.doubao",
+    "~/Library/Preferences/com.bot.pc.doubao.browser.helper.plist",
+    "~/Library/Preferences/com.bot.pc.doubao.browser.plist",
     "~/Library/Preferences/com.bot.pc.doubao.helper.plist",
     "~/Library/Preferences/com.bot.pc.doubao.plist",
   ]

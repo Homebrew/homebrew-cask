@@ -17,6 +17,7 @@ cask "nextcloud-talk" do
   app "Nextcloud Talk.app"
 
   zap trash: [
+    "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.nextcloud.talk.mac.sfl*",
     "~/Library/Application Support/Nextcloud Talk",
     "~/Library/Preferences/com.nextcloud.talk.mac.plist",
   ]

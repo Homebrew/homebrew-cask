@@ -21,6 +21,7 @@ cask "capacities" do
 
   zap trash: [
     "~/Library/Application Support/Capacities",
+    "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/io.capacities.app.sfl*",
     "~/Library/Logs/Capacities",
     "~/Library/Preferences/io.capacities.app.plist",
     "~/Library/Saved Application State/io.capacities.app.savedState",

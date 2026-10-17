@@ -13,7 +13,10 @@ cask "vectorcraft" do
   on_macos do
     app "VectorCraft.app"
 
-    zap trash: "~/Library/Preferences/ai.storyteller.vectorcraft.plist"
+    zap trash: [
+      "~/Library/Application Support/VectorCraft",
+      "~/Library/Preferences/ai.storyteller.vectorcraft.plist",
+    ]
   end
   on_linux do
     app_image "vectorcraft-#{version}-linux-#{arch}.AppImage", target: "VectorCraft.AppImage"

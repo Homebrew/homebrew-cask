@@ -43,6 +43,7 @@ cask "google-chrome@dev" do
         "~/Library/LaunchAgents/com.google.keystone.agent.plist",
         "~/Library/LaunchAgents/com.google.keystone.xpcservice.plist",
         "~/Library/Logs/GoogleSoftwareUpdateAgent.log",
+        "~/Library/Preferences/com.google.Chrome.dev.plist",
         "~/Library/Preferences/com.google.Chrome.plist",
         "~/Library/Preferences/com.google.Keystone.Agent.plist",
         "~/Library/Saved Application State/com.google.Chrome.app.*.savedState",

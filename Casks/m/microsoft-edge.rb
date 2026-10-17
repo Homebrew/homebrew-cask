@@ -28,12 +28,14 @@ cask "microsoft-edge" do
 
   zap trash: [
         "~/Library/Application Scripts/com.microsoft.edgemac.wdgExtension",
+        "~/Library/Application Scripts/UBF8T346G9.com.microsoft.edgemac.widgets",
         "~/Library/Application Support/Microsoft Edge",
         "~/Library/Application Support/Microsoft/EdgeUpdater",
         "~/Library/Caches/com.microsoft.edgemac",
         "~/Library/Caches/com.microsoft.EdgeUpdater",
         "~/Library/Caches/Microsoft Edge",
         "~/Library/Containers/com.microsoft.edgemac.wdgExtension",
+        "~/Library/Group Containers/UBF8T346G9.com.microsoft.edgemac.widgets",
         "~/Library/HTTPStorages/com.microsoft.edgemac",
         "~/Library/HTTPStorages/com.microsoft.EdgeUpdater",
         "~/Library/LaunchAgents/com.microsoft.EdgeUpdater.*.plist",

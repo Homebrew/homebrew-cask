@@ -25,7 +25,11 @@ cask "fathom" do
   ]
 
   zap trash: [
+    "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/video.fathom.electron.sfl*",
     "~/Library/Application Support/Fathom",
+    "~/Library/Caches/video.fathom.electron*",
+    "~/Library/HTTPStorages/video.fathom.electron",
     "~/Library/Logs/Fathom",
+    "~/Library/Preferences/video.fathom.electron.plist",
   ]
 end

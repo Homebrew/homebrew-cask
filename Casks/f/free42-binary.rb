@@ -23,5 +23,6 @@ cask "free42-binary" do
     "~/Library/HTTPStorages/com.thomasokken.Free42b.binarycookies",
     "~/Library/Preferences/com.thomasokken.Free42b.plist",
     "~/Library/Saved Application State/com.thomasokken.Free42b",
+    "~/Library/WebKit/com.thomasokken.Free42b",
   ]
 end

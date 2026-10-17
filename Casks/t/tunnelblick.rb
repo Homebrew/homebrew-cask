@@ -37,6 +37,7 @@ cask "tunnelblick" do
 
   zap trash: [
     "~/Library/Application Support/Tunnelblick",
+    "~/Library/Caches/com.apple.helpd/Generated/Tunnelblick Help*",
     "~/Library/Caches/com.apple.helpd/SDMHelpData/Other/English/HelpSDMIndexFile/Tunnelblick*",
     "~/Library/Caches/net.tunnelblick.tunnelblick",
     "~/Library/Cookies/net.tunnelblick.tunnelblick.binarycookies",
