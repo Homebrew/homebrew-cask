@@ -1,6 +1,6 @@
 cask "adobe-air" do
-  version "51.3.3.1"
-  sha256 "e766a4030ace3a4d154f80de5d39d3d2a518732ce27fd781ac0ba738a63d0f1e"
+  version "51.4.1.2"
+  sha256 "e8051b9051724406a1627de8593b16a135aa411413745aee6bd23379c88de261"
 
   url "https://airsdk.wxlift.com/assets/downloads/#{version}/AdobeAIR.dmg"
   name "Adobe AIR"
