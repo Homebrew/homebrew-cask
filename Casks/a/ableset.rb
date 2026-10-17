@@ -20,6 +20,8 @@ cask "ableset" do
 
   app "AbleSet.app"
 
+  uninstall quit: "org.leolabs.ableset"
+
   zap trash: [
     "~/Library/Application Support/ableset",
     "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/org.leolabs.ableset.sfl*",
