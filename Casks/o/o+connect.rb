@@ -45,7 +45,7 @@ cask "o+connect" do
       timestamp = Time.now.to_i.to_s
       signature = Digest::SHA256.hexdigest("#{params}#{timestamp}#{key}")
 
-      res = Homebrew::Livecheck::Strategy.page_content(
+      arm = Homebrew::Livecheck::Strategy.page_content(
         "#{base}/api/v2/updatePackage/queryUrl?#{params}",
         options: Homebrew::Livecheck::Options.new(
           referer:    "https://connect.oppo.com/",
@@ -56,17 +56,30 @@ cask "o+connect" do
             "sign: #{signature}",
           ],
         ),
-      )
-      next "0.0.0-s6-#{res[:status]}" if res[:content].blank?
+      )[:content]
+      next "0.0.0-s6" if arm.blank?
 
-      file_name = Homebrew::Livecheck::Strategy::Json.parse_json(res[:content]).dig("data", "fileName")
-      next "0.0.0-s7-#{res[:content].length}" if file_name.blank?
+      params = "platform=macos-x64&serverName=connect.oppo.com"
+      timestamp = Time.now.to_i.to_s
+      signature = Digest::SHA256.hexdigest("#{params}#{timestamp}#{key}")
 
-      parts = file_name.sub(/\.dmg\z/i, "").split("_")
-      parts[1] = parts[1].delete_prefix("v") if parts[1]
-      next "0.0.0-f-#{file_name}" if parts.length < 6 || parts[1] !~ /\A\d+(?:\.\d+)+\z/
+      intel = Homebrew::Livecheck::Strategy.page_content(
+        "#{base}/api/v2/updatePackage/queryUrl?#{params}",
+        options: Homebrew::Livecheck::Options.new(
+          referer:    "https://connect.oppo.com/",
+          user_agent: :browser,
+          header:     [
+            "appId: pc-web",
+            "ts: #{timestamp}",
+            "sign: #{signature}",
+          ],
+        ),
+      )[:content]
+      next "0.0.0-s7" if intel.blank?
 
-      "#{parts[1]},#{parts[-2]},#{parts[-1]}"
+      arm = Homebrew::Livecheck::Strategy::Json.parse_json(arm)["data"] || {}
+      intel = Homebrew::Livecheck::Strategy::Json.parse_json(intel)["data"] || {}
+      next "0.0.0-x-#{arm["downloadUrl"]}|#{intel["downloadUrl"]}"
     end
   end
 
