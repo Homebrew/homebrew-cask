@@ -26,10 +26,12 @@ cask "workbuddy-cn" do
 
   zap trash: [
     "~/.workbuddy",
+    "~/Library/Application Scripts/com.tencent.workbuddy.mac.WechatShare",
     "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.tencent.workbuddy.mac.sfl*",
     "~/Library/Application Support/com.tencent.workbuddy.mac",
     "~/Library/Application Support/WorkBuddy",
     "~/Library/Caches/com.tencent.workbuddy.mac",
+    "~/Library/Containers/com.tencent.workbuddy.mac.WechatShare",
     "~/Library/HTTPStorages/com.tencent.workbuddy.mac",
     "~/Library/Preferences/com.tencent.workbuddy.mac.plist",
     "~/Library/WebKit/com.tencent.workbuddy.mac",
