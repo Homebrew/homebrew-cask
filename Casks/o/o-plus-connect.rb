@@ -28,16 +28,29 @@ cask "o-plus-connect" do
 
   app "O+Connect.app"
 
+  # The app registers launchd jobs whose names vary by macOS version,
+  # including dynamically generated `.probe` variants.
+  uninstall launchctl: [
+              "com.oplus.dsp.core*",
+              "com.oplus.dsp.rc*",
+            ],
+            quit:      "com.oplus.devicespace"
+
   zap trash: [
-    "/Library/Application Support/devicespace",
     "/Library/Application Support/O+Connect",
+    "/Library/Application Support/O+ConnectRoot",
+    "/Library/LaunchAgents/com.oplus.dsp.rc.plist",
     "/Library/LaunchDaemons/com.oplus.dsp.core.plist",
-    "/Library/LaunchDaemons/com.oplus.dsp.rc.plist",
+    "/Library/LaunchDaemons/com.oplus.dsp.rc.legacy.plist",
+    "/Library/LaunchDaemons/com.oplus.O+Connect.uninstall.plist",
     "/Library/Logs/devicespace",
+    "~/Library/Application Scripts/com.oplus.devicespace.remotehelper",
     "~/Library/Application Support/O+Connect",
     "~/Library/Caches/com.oplus.devicespace",
     "~/Library/Caches/O+Connect",
     "~/Library/HTTPStorages/com.oplus.devicespace",
+    "~/Library/Logs/devicespace",
+    "~/Library/Logs/devicespace-daemon",
     "~/Library/Logs/O+Connect",
     "~/Library/Preferences/com.oplus.devicespace.plist",
     "~/Library/Saved Application State/com.oplus.devicespace.savedState",
