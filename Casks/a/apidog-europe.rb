@@ -23,6 +23,7 @@ cask "apidog-europe" do
 
   zap trash: [
     "~/Library/Application Support/apidog-eu",
+    "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.apidog.eu.app.sfl*",
     "~/Library/Preferences/com.apidog.eu.app.plist",
     "~/Library/Saved Application State/com.apidog.eu.app.savedState",
   ]
