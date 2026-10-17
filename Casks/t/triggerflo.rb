@@ -19,10 +19,12 @@ cask "triggerflo" do
 
   zap trash: [
     "~/Library/Application Scripts/app.triggerflo",
+    "~/Library/Application Scripts/app.triggerflo.TriggerFloTimerWidget",
     "~/Library/Application Scripts/group.app.triggerflo",
     "~/Library/Application Support/app.triggerflo",
     "~/Library/Caches/app.triggerflo",
     "~/Library/Containers/app.triggerflo",
+    "~/Library/Containers/app.triggerflo.TriggerFloTimerWidget",
     "~/Library/Group Containers/group.app.triggerflo",
     "~/Library/HTTPStorages/app.triggerflo",
     "~/Library/Preferences/app.triggerflo.plist",
