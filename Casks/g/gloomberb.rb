@@ -1,11 +1,16 @@
 cask "gloomberb" do
-  version "0.17.5"
-  sha256 "384ef95123957e28bd849ad5cb06ac493a306a4b842db9e825aca2c0e5f747cc"
+  version "0.17.6"
+  sha256 "7d0996575aea325bacc2c4c7733aca2d2c5a430e3ef0d8858ae804e2518efa07"
 
   url "https://github.com/gloom-sh/gloomberb/releases/download/v#{version}/stable-macos-arm64-Gloomberb.app.zip"
   name "Gloomberb"
   desc "Finance terminal"
   homepage "https://gloom.sh/"
+
+  livecheck do
+    url :url
+    strategy :github_latest
+  end
 
   auto_updates true
   depends_on arch: :arm64
