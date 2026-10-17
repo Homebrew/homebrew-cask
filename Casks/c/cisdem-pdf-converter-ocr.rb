@@ -1,5 +1,5 @@
 cask "cisdem-pdf-converter-ocr" do
-  version "9.7.0"
+  version "10.0.0"
   sha256 :no_check
 
   url "https://download.cisdem.com/cisdem-pdfconverterocr.dmg",
@@ -18,16 +18,16 @@ cask "cisdem-pdf-converter-ocr" do
   app "Cisdem PDF Converter OCR.app"
 
   zap trash: [
-    "~/Documents/Cisdem PDF Converter OCR",
-    "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.cisdem.pdfconverterocr.sfl*",
-    "~/Library/Application Support/com.cisdem.pdfconverterocr",
-    "~/Library/Caches/com.cisdem.pdfconverterocr",
-    "~/Library/HTTPStorages/com.cisdem.pdfconverterocr",
-    "~/Library/Preferences/com.cisdem.pdfconverterocr.plist",
-    "~/Library/Saved Application State/com.cisdem.pdfconverterocr.savedState",
-  ]
-
-  caveats do
-    requires_rosetta
-  end
+        "~/Documents/Cisdem PDF Converter OCR",
+        "~/Library/Application Support/Cisdem PDF Converter OCR",
+        "~/Library/Application Support/Cisdem/PDF Converter OCR",
+        "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.cisdem.pdfconverterocr.sfl*",
+        "~/Library/Application Support/com.cisdem.pdfconverterocr",
+        "~/Library/Caches/com.cisdem.pdfconverterocr",
+        "~/Library/HTTPStorages/com.cisdem.pdfconverterocr",
+        "~/Library/Preferences/com.cisdem.Cisdem PDF Converter OCR.plist",
+        "~/Library/Preferences/com.cisdem.pdfconverterocr.plist",
+        "~/Library/Saved Application State/com.cisdem.pdfconverterocr.savedState",
+      ],
+      rmdir: "~/Library/Application Support/Cisdem"
 end
