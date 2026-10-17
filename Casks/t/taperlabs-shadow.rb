@@ -2,13 +2,13 @@ cask "taperlabs-shadow" do
   version "2.3.8,133"
   sha256 "1a32a7d2c6b946ab133064000123d04829feb092d100e78bfe9cb9ba33a9b7ab"
 
-  url "https://cdn.shadow.do/releases/v23/latest/#{version.csv.first}-build#{version.csv.second}/Shadow-#{version.csv.first}-arm64.dmg"
+  url "https://cdn.shadow.do/releases/mac/latest/#{version.csv.first}-build#{version.csv.second}/Shadow-#{version.csv.first}-arm64.dmg"
   name "Shadow"
   desc "AI meeting notetaker"
   homepage "https://www.shadow.do/"
 
   livecheck do
-    url "https://cdn.shadow.do/releases/v23/latest/latest-mac.yml"
+    url "https://cdn.shadow.do/releases/mac/latest/latest-mac.yml"
     regex(%r{^(\d+(?:\.\d+)+)-build(\d+)/Shadow[._-]v?\d+(?:\.\d+)+-arm64\.dmg$}i)
     strategy :electron_builder do |yaml, regex|
       yaml["files"]&.filter_map do |file|
