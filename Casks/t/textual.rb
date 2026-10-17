@@ -13,14 +13,14 @@ cask "textual" do
 
     livecheck do
       url "https://www.textualapp.com/docs/legacy/guides/direct-download-links"
-      regex(/href=.*?Textual[._-]v?(\d+(?:\.\d+)+).dmg/i)
+      regex(/href=.*?Textual[._-]v?(\d+(?:\.\d+)+)\.dmg/i)
     end
   end
 
   url "https://www.textualapp.com/downloads/Textual-#{version}.dmg"
   name "Textual"
   desc "Application for interacting with Internet Relay Chat (IRC) chatrooms"
-  homepage "https://www.codeux.com/textual/"
+  homepage "https://www.textualapp.com/"
 
   auto_updates true
   depends_on :macos
