@@ -20,16 +20,37 @@ cask "o+connect" do
   homepage "https://connect.oppo.com/"
 
   livecheck do
-    url "https://connect.oppo.com/api/v2/updatePackage/queryUrl?platform=macos-arm&serverName=connect.oppo.com"
-    strategy :page_match do |_page|
+    url "https://connect.oppo.com/"
+    strategy :page_match do |page|
       require "digest"
+
+      base = "https://connect.oppo.com"
+
+      # The release endpoint requires an `appId`/`ts`/`sign` triple. The signing
+      # key is a public constant in the site's JS bundle, so resolve the bundle
+      # that is currently being served instead of pinning the key (and the
+      # timestamp) inside the cask.
+      entry = page[%r{src="\.?/?static/(index-[\w-]+\.js)"}i, 1]
+      next if entry.blank?
+
+      index = Homebrew::Livecheck::Strategy.page_content("#{base}/static/#{entry}")[:content]
+      next if index.blank?
+
+      request_js = index[%r{\./(request-[\w-]+\.js)}i, 1]
+      next if request_js.blank?
+
+      request = Homebrew::Livecheck::Strategy.page_content("#{base}/static/#{request_js}")[:content]
+      next if request.blank?
+
+      key = request[/"pc-web"\s*,\s*\w+\s*=\s*"([0-9a-f]{32})"/i, 1]
+      next if key.blank?
 
       params = "platform=macos-arm&serverName=connect.oppo.com"
       timestamp = Time.now.to_i.to_s
-      signature = Digest::SHA256.hexdigest("#{params}#{timestamp}c9412a3fc35f465ca5abe7001bc48d20")
+      signature = Digest::SHA256.hexdigest("#{params}#{timestamp}#{key}")
 
       content = Homebrew::Livecheck::Strategy.page_content(
-        "https://connect.oppo.com/api/v2/updatePackage/queryUrl?#{params}",
+        "#{base}/api/v2/updatePackage/queryUrl?#{params}",
         options: Homebrew::Livecheck::Options.new(
           referer:    "https://connect.oppo.com/",
           user_agent: :browser,
