@@ -9,7 +9,7 @@ cask "adguard" do
 
   livecheck do
     url "https://static.adguard.com/mac/adguard-release-appcast.xml"
-    regex(/AdGuard-(\d+(?:\.\d+)+)\.dmg/i)
+    regex(/AdGuard[._-]v?(\d+(?:\.\d+)+)\.dmg/i)
     strategy :sparkle do |item, regex|
       match = item.url&.match(regex)
       next if match.blank?
