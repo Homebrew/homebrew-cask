@@ -1,16 +1,16 @@
 cask "o+connect" do
-  version "17.20.0,260916200816,794ab31695"
+  version "16.2.10,2ad6568"
 
   on_arm do
-    sha256 "52789642c8c6f9f20fed264d19a268fabcb8cdbc9d7130e7b785833392ae09ed"
+    sha256 "81ca1c12b6fd7087906faa966452ecc444e6dbe06518779cdfc00d6b9e866fb7"
 
-    url "https://pc-assistant-cn.allawnfs.com/uploads/web/dmg/2026/09/21/19/57/34/OppoConnect_#{version.csv.first}_arm64_domestic_#{version.csv.second}_#{version.csv.third}.dmg",
+    url "https://pc-assistant-us.allawnofs.com/uploads/web/dmg/2026/06/13/17/07/57/OplusConnect_#{version.csv.first.tr(".", "_")}_arm64_export_260612211223_#{version.csv.second}.dmg",
         referer: "https://connect.oppo.com/"
   end
   on_intel do
-    sha256 "96cbf85bdf193036a95898a2135f88f344feb22f52eb93f76a655d5db5be67cd"
+    sha256 "cb446e3109f6873965b4c881108a822c0ed0b0547633524b91f3bd3f16e5f260"
 
-    url "https://pc-assistant-cn.allawnfs.com/uploads/web/dmg/2026/09/21/19/58/15/OppoConnect_#{version.csv.first}_x64_domestic_#{version.csv.second}_#{version.csv.third}.dmg",
+    url "https://pc-assistant-us.allawnofs.com/uploads/web/dmg/2026/06/13/17/06/45/OplusConnect_#{version.csv.first.tr(".", "_")}_x64_export_260612213743_#{version.csv.second}.dmg",
         referer: "https://connect.oppo.com/"
   end
 
@@ -26,26 +26,33 @@ cask "o+connect" do
 
       base = "https://connect.oppo.com"
 
-      entry = page.to_s[%r{src=["'][^"']*?/static/(index-[\w-]+\.js)["']}i, 1]
-      next "0.0.0-s1-#{page.to_s.length}-#{page.to_s.scan(%r{static/}).length}" if entry.blank?
+      # The release endpoint requires an `appId`/`ts`/`sign` triple and the
+      # signing key is a public constant in the site's JS bundle, so resolve the
+      # bundle that is currently served and sign with a fresh timestamp rather
+      # than pinning either the key or the timestamp in the cask.
+      # The site serves separate builds per region and writes the entry script
+      # as a relative path in one and an absolute URL in the other, so match the
+      # path in either form.
+      entry = page[%r{src=["'][^"']*?/static/(index-[\w-]+\.js)["']}i, 1]
+      next if entry.blank?
 
-      res = Homebrew::Livecheck::Strategy.page_content("#{base}/static/#{entry}")
-      next "0.0.0-s2-#{res[:status]}" if res[:content].blank?
+      index = Homebrew::Livecheck::Strategy.page_content("#{base}/static/#{entry}")[:content]
+      next if index.blank?
 
-      request_js = res[:content][%r{\./(request-[\w-]+\.js)}i, 1]
-      next "0.0.0-s3" if request_js.blank?
+      request_js = index[%r{\./(request-[\w-]+\.js)}i, 1]
+      next if request_js.blank?
 
-      res = Homebrew::Livecheck::Strategy.page_content("#{base}/static/#{request_js}")
-      next "0.0.0-s4-#{res[:status]}" if res[:content].blank?
+      request = Homebrew::Livecheck::Strategy.page_content("#{base}/static/#{request_js}")[:content]
+      next if request.blank?
 
-      key = res[:content][/"pc-web"\s*,\s*\w+\s*=\s*"([0-9a-f]{32})"/i, 1]
-      next "0.0.0-s5" if key.blank?
+      key = request[/"pc-web"\s*,\s*\w+\s*=\s*"([0-9a-f]{32})"/i, 1]
+      next if key.blank?
 
       params = "platform=macos-arm&serverName=connect.oppo.com"
       timestamp = Time.now.to_i.to_s
       signature = Digest::SHA256.hexdigest("#{params}#{timestamp}#{key}")
 
-      arm = Homebrew::Livecheck::Strategy.page_content(
+      content = Homebrew::Livecheck::Strategy.page_content(
         "#{base}/api/v2/updatePackage/queryUrl?#{params}",
         options: Homebrew::Livecheck::Options.new(
           referer:    "https://connect.oppo.com/",
@@ -57,29 +64,19 @@ cask "o+connect" do
           ],
         ),
       )[:content]
-      next "0.0.0-s6" if arm.blank?
+      next if content.blank?
 
-      params = "platform=macos-x64&serverName=connect.oppo.com"
-      timestamp = Time.now.to_i.to_s
-      signature = Digest::SHA256.hexdigest("#{params}#{timestamp}#{key}")
+      file_name = Homebrew::Livecheck::Strategy::Json.parse_json(content).dig("data", "fileName")
+      next if file_name.blank?
 
-      intel = Homebrew::Livecheck::Strategy.page_content(
-        "#{base}/api/v2/updatePackage/queryUrl?#{params}",
-        options: Homebrew::Livecheck::Options.new(
-          referer:    "https://connect.oppo.com/",
-          user_agent: :browser,
-          header:     [
-            "appId: pc-web",
-            "ts: #{timestamp}",
-            "sign: #{signature}",
-          ],
-        ),
-      )[:content]
-      next "0.0.0-s7" if intel.blank?
+      # `OplusConnect_<version>_<arch>_<region>_<build>_<hash>.dmg`, where the
+      # version is dot-separated in some builds and underscore-separated in
+      # others, so split either way around the architecture token.
+      parts = file_name.sub(/\.dmg\z/i, "").split("_")
+      arch = parts.index("arm64")
+      next if arch.nil? || arch < 2
 
-      arm = Homebrew::Livecheck::Strategy::Json.parse_json(arm)["data"] || {}
-      intel = Homebrew::Livecheck::Strategy::Json.parse_json(intel)["data"] || {}
-      next "0.0.0-x-#{arm["downloadUrl"]}|#{intel["downloadUrl"]}"
+      "#{parts[1...arch].join(".")},#{parts[-1]}"
     end
   end
 
@@ -102,9 +99,9 @@ cask "o+connect" do
     "/Library/LaunchDaemons/com.oplus.dsp.rc.legacy.plist",
     "/Library/LaunchDaemons/com.oplus.O+Connect.uninstall.plist",
     "/Library/Logs/devicespace",
-    "~/Library/Application Scripts/com.oplus.devicespace",
     "~/Library/Application Scripts/com.oplus.devicespace.extension",
     "~/Library/Application Scripts/com.oplus.devicespace.remotehelper",
+    "~/Library/Application Scripts/group.com.oplus.devicespace",
     "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.oplus.devicespace.sfl*",
     "~/Library/Application Support/O+Connect",
     "~/Library/Caches/com.oplus.devicespace",
