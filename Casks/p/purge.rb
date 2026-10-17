@@ -1,6 +1,6 @@
 cask "purge" do
-  version "1.11.0"
-  sha256 "18827478cb1be73bd727832dc48acd12053099204c39bffeadb60e4d747c7a49"
+  version "1.11.1"
+  sha256 "a21f2e5599a1531701306e47f6226363588006b94a3590d506adc9656c059e62"
 
   url "https://github.com/jithin-sabu/purge-app/releases/download/v#{version}/Purgev#{version}.dmg"
   name "Purge"
