@@ -25,11 +25,13 @@ cask "manus" do
             quit:      "im.manus.desktop"
 
   zap trash: [
+    "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/im.manus.desktop.sfl*",
     "~/Library/Application Support/Manus",
     "~/Library/Caches/im.manus.desktop",
     "~/Library/Caches/im.manus.desktop.ShipIt",
     "~/Library/Caches/manus-updater",
     "~/Library/HTTPStorages/im.manus.desktop",
+    "~/Library/Logs/Manus Studio",
     "~/Library/Logs/Manus",
     "~/Library/Preferences/im.manus.desktop.plist",
     "~/Library/Saved Application State/im.manus.desktop.savedState",
