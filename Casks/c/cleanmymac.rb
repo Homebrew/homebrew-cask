@@ -9,7 +9,6 @@ cask "cleanmymac" do
 
   livecheck do
     url "https://updates.cleanmymac.com/com.macpaw.cleanmymac#{version.major}/updates.xml"
-    regex(%r{/([^/]+)/CleanMyMac#{version.major}[._-]v?(?:\d+(?:\.\d+)+)\.zip}i)
     strategy :sparkle do |item|
       "#{item.short_version},#{item.version}"
     end
