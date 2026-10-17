@@ -20,6 +20,7 @@ cask "power-manager" do
   zap trash: [
     "~/Library/Application Scripts/uk.co.dssw.powermanager.standard",
     "~/Library/Application Scripts/uk.co.dssw.powermanager.update.download",
+    "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/uk.co.dssw.powermanager.standard.sfl*",
     "~/Library/Containers/uk.co.dssw.powermanager.standard",
     "~/Library/Containers/uk.co.dssw.powermanager.update.download",
   ]
