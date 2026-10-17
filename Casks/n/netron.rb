@@ -13,6 +13,7 @@ cask "netron" do
   app "Netron.app"
 
   zap trash: [
+    "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.lutzroeder.netron.sfl*",
     "~/Library/Application Support/Netron",
     "~/Library/Preferences/com.lutzroeder.netron.plist",
     "~/Library/Saved Application State/com.lutzroeder.netron.savedState",
