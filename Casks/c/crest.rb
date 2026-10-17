@@ -13,6 +13,7 @@ cask "crest" do
   end
 
   auto_updates true
+  conflicts_with cask: "crest-browser"
   depends_on macos: :sonoma
 
   app "Crest.app"
