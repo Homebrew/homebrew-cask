@@ -62,10 +62,11 @@ cask "o+connect" do
       file_name = Homebrew::Livecheck::Strategy::Json.parse_json(res[:content]).dig("data", "fileName")
       next "0.0.0-s7-#{res[:content].length}" if file_name.blank?
 
-      match = file_name.match(/OppoConnect_v?(\d+(?:\.\d+)+)_arm64_[a-z]+_(\w+)_(\w+)\.dmg/i)
-      next "0.0.0-s8-#{file_name.length}" unless match
+      parts = file_name.sub(/\.dmg\z/i, "").split("_")
+      parts[1] = parts[1].delete_prefix("v") if parts[1]
+      next "0.0.0-f-#{file_name}" if parts.length < 6 || parts[1] !~ /\A\d+(?:\.\d+)+\z/
 
-      "#{match[1]},#{match[2]},#{match[3]}"
+      "#{parts[1]},#{parts[-2]},#{parts[-1]}"
     end
   end
 
@@ -88,9 +89,9 @@ cask "o+connect" do
     "/Library/LaunchDaemons/com.oplus.dsp.rc.legacy.plist",
     "/Library/LaunchDaemons/com.oplus.O+Connect.uninstall.plist",
     "/Library/Logs/devicespace",
+    "~/Library/Application Scripts/com.oplus.devicespace",
     "~/Library/Application Scripts/com.oplus.devicespace.extension",
     "~/Library/Application Scripts/com.oplus.devicespace.remotehelper",
-    "~/Library/Application Scripts/com.oplus.devicespace",
     "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.oplus.devicespace.sfl*",
     "~/Library/Application Support/O+Connect",
     "~/Library/Caches/com.oplus.devicespace",
