@@ -1,6 +1,6 @@
 cask "mellel" do
-  version "6.7.1,67102"
-  sha256 "c29a8f555a43b504fa4ecbfa186cfa526ac29a1f1a67a6b25d48014f4af7400d"
+  version "6.8.0,68037"
+  sha256 "89c201f4d9c6f918772840b98081fcacd6a95e00575a02ecf6c9cd70c0e9788a"
 
   url "https://d1riogbqt3a9uw.cloudfront.net/mellel_#{version.csv.second}.dmg"
   name "Mellel"
@@ -25,15 +25,22 @@ cask "mellel" do
 
   app "Mellel #{version.major}.app"
 
+  uninstall quit: "com.redlex.mellel.mac"
+
   zap trash: [
     "~/Library/Application Scripts/com.redlex.mellel",
     "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.redlex.mellel#{version.major}.sfl*",
+    "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.redlex.mellel.mac.sfl*",
     "~/Library/Application Support/com.redlex.mellel#{version.major}",
+    "~/Library/Application Support/com.redlex.mellel.mac",
     "~/Library/Application Support/Mellel #{version.major}",
     "~/Library/Caches/com.redlex.mellel#{version.major}",
+    "~/Library/Caches/com.redlex.mellel.mac",
     "~/Library/HTTPStorages/com.redlex.mellel#{version.major}",
     "~/Library/HTTPStorages/com.redlex.mellel#{version.major}.binarycookies",
+    "~/Library/HTTPStorages/com.redlex.mellel.mac",
     "~/Library/Preferences/com.redlex.mellel#{version.major}.plist",
+    "~/Library/Preferences/com.redlex.mellel.mac.plist",
     "~/Library/Saved Application State/com.redlex.mellel#{version.major}.savedState",
     "~/Library/Saved Application State/com.redlex.MellelUpdater.savedState",
   ]
