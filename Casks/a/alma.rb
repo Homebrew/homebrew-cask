@@ -12,7 +12,6 @@ cask "alma" do
 
   livecheck do
     url "https://github.com/yetone/alma-releases"
-    strategy :github_releases
     throttle 15
   end
 
