@@ -17,5 +17,6 @@ cask "amethyst-nostr" do
     "~/.amethyst",
     "~/Library/Application Support/Amethyst",
     "~/Library/Caches/AmethystDesktop",
+    "~/Library/Preferences/com.vitorpamplona.amethyst.plist",
   ]
 end
