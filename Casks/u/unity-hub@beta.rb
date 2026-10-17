@@ -33,8 +33,11 @@ cask "unity-hub@beta" do
     url "https://public-cdn.cloud.unity3d.com/hub/prod/#{version}/UnityHub-#{version}-#{arch}.AppImage"
 
     livecheck do
-      url "https://public-cdn.cloud.unity3d.com/hub/prod/beta-linux.yml"
-      strategy :electron_builder
+      url "https://hub.unity3d.com/linux/repos/deb/dists/unstable/main/binary-amd64/Packages"
+      regex(/^Package:\s*unityhub\n(?:.+\n)*?Version:\s*v?(\d+(?:\.\d+)+(?:~[\w.]+)?)$/i)
+      strategy :page_match do |page, regex|
+        page.scan(regex).map { |match| match[0].tr("~", "-") }
+      end
     end
 
     app_image "UnityHub-#{version}-#{arch}.AppImage", target: "Unity Hub.AppImage"
