@@ -112,10 +112,6 @@ jobs:
       # Xcode 27.1 RC's simdiskimaged intercepts DMG attaches, causing
       # intermittent "no mountable file systems" or vanishing mount points.
       # TODO: remove once the xcode-27 runner image no longer needs this.
-      - name: Stop simdiskimaged
-        if: matrix.runner == 'xcode-27'
-        run: sudo launchctl bootout system/com.apple.CoreSimulator.simdiskimaged || true
-
       - name: Cache Homebrew Gems
         id: cache
         uses: actions/cache@55cc8345863c7cc4c66a329aec7e433d2d1c52a9 # v6.1.0
@@ -149,6 +145,20 @@ jobs:
           always() &&
           contains(fromJSON('["success", "skipped"]'), steps.tap-syntax.outcome) &&
           matrix.cask
+
+      - name: Stop simdiskimaged
+        if: always() && matrix.runner == 'xcode-27' && steps.fetch.outcome == 'success'
+        run: |
+          pgrep -lf 'simdiskimaged|CoreSimulatorService' || true
+          sudo launchctl disable system/com.apple.CoreSimulator.simdiskimaged || true
+          sudo launchctl bootout system/com.apple.CoreSimulator.simdiskimaged || true
+          sudo pkill -x simdiskimaged || true
+          sleep 1
+          if pgrep -lf simdiskimaged; then
+            echo "::warning::simdiskimaged is still running"
+          else
+            echo "simdiskimaged stopped"
+          fi
 
       - name: Start disk image monitors
         if: always() && matrix.runner == 'xcode-27' && steps.fetch.outcome == 'success'
@@ -270,7 +280,7 @@ jobs:
           sudo chown -R "$(id -u)" "${mon}"
 
           echo "::group::simdiskimaged at end of job"
-          pgrep -lf simdiskimaged || echo "simdiskimaged not running"
+          pgrep -lf 'simdiskimaged|CoreSimulatorService' || echo "simdiskimaged and CoreSimulatorService not running"
           sudo launchctl print system/com.apple.CoreSimulator.simdiskimaged 2>&1 | head -n 5 || true
           echo "::endgroup::"
 
