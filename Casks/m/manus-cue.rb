@@ -23,6 +23,8 @@ cask "manus-cue" do
   zap trash: [
     "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/ai.manus.agents.sfl*",
     "~/Library/Application Support/Cue",
+    "~/Library/Application Support/cue-desktop",
+    "~/Library/Logs/Cue",
     "~/Library/Preferences/ai.manus.agents.plist",
   ]
 end
