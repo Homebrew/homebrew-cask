@@ -26,33 +26,26 @@ cask "o+connect" do
 
       base = "https://connect.oppo.com"
 
-      # The release endpoint requires an `appId`/`ts`/`sign` triple. The signing
-      # key is a public constant in the site's JS bundle, so resolve the bundle
-      # that is currently being served instead of pinning the key (and the
-      # timestamp) inside the cask.
-      # The site serves separate builds per region and writes the script `src`
-      # as a relative path on one and an absolute URL on the other, so match the
-      # path in either form.
-      entry = page[%r{src=["'][^"']*?/static/(index-[\w-]+\.js)["']}i, 1]
-      next if entry.blank?
+      entry = page.to_s[%r{src=["'][^"']*?/static/(index-[\w-]+\.js)["']}i, 1]
+      next "0.0.0-s1-#{page.to_s.length}-#{page.to_s.scan(%r{static/}).length}" if entry.blank?
 
-      index = Homebrew::Livecheck::Strategy.page_content("#{base}/static/#{entry}")[:content]
-      next if index.blank?
+      res = Homebrew::Livecheck::Strategy.page_content("#{base}/static/#{entry}")
+      next "0.0.0-s2-#{res[:status]}" if res[:content].blank?
 
-      request_js = index[%r{\./(request-[\w-]+\.js)}i, 1]
-      next if request_js.blank?
+      request_js = res[:content][%r{\./(request-[\w-]+\.js)}i, 1]
+      next "0.0.0-s3" if request_js.blank?
 
-      request = Homebrew::Livecheck::Strategy.page_content("#{base}/static/#{request_js}")[:content]
-      next if request.blank?
+      res = Homebrew::Livecheck::Strategy.page_content("#{base}/static/#{request_js}")
+      next "0.0.0-s4-#{res[:status]}" if res[:content].blank?
 
-      key = request[/"pc-web"\s*,\s*\w+\s*=\s*"([0-9a-f]{32})"/i, 1]
-      next if key.blank?
+      key = res[:content][/"pc-web"\s*,\s*\w+\s*=\s*"([0-9a-f]{32})"/i, 1]
+      next "0.0.0-s5" if key.blank?
 
       params = "platform=macos-arm&serverName=connect.oppo.com"
       timestamp = Time.now.to_i.to_s
       signature = Digest::SHA256.hexdigest("#{params}#{timestamp}#{key}")
 
-      content = Homebrew::Livecheck::Strategy.page_content(
+      res = Homebrew::Livecheck::Strategy.page_content(
         "#{base}/api/v2/updatePackage/queryUrl?#{params}",
         options: Homebrew::Livecheck::Options.new(
           referer:    "https://connect.oppo.com/",
@@ -63,17 +56,14 @@ cask "o+connect" do
             "sign: #{signature}",
           ],
         ),
-      )[:content]
-      next if content.blank?
+      )
+      next "0.0.0-s6-#{res[:status]}" if res[:content].blank?
 
-      file_name = Homebrew::Livecheck::Strategy::Json.parse_json(content).dig("data", "fileName")
-      next if file_name.blank?
+      file_name = Homebrew::Livecheck::Strategy::Json.parse_json(res[:content]).dig("data", "fileName")
+      next "0.0.0-s7-#{res[:content].length}" if file_name.blank?
 
-      # The region token in the file name differs between builds ("domestic" and
-      # its international counterpart), so only the version and build IDs are
-      # captured.
       match = file_name.match(/OppoConnect_v?(\d+(?:\.\d+)+)_arm64_[a-z]+_(\w+)_(\w+)\.dmg/i)
-      next unless match
+      next "0.0.0-s8-#{file_name.length}" unless match
 
       "#{match[1]},#{match[2]},#{match[3]}"
     end
@@ -100,7 +90,7 @@ cask "o+connect" do
     "/Library/Logs/devicespace",
     "~/Library/Application Scripts/com.oplus.devicespace.extension",
     "~/Library/Application Scripts/com.oplus.devicespace.remotehelper",
-    "~/Library/Application Scripts/group.com.oplus.devicespace",
+    "~/Library/Application Scripts/com.oplus.devicespace",
     "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.oplus.devicespace.sfl*",
     "~/Library/Application Support/O+Connect",
     "~/Library/Caches/com.oplus.devicespace",
