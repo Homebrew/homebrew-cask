@@ -21,6 +21,7 @@ cask "superhuman" do
   app "Superhuman.app"
 
   zap trash: [
+    "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.superhuman.electron.sfl*",
     "~/Library/Application Support/Superhuman",
     "~/Library/Caches/com.superhuman.electron*",
     "~/Library/Caches/Superhuman",
