@@ -2,11 +2,11 @@ cask "legcord" do
   arch arm: "arm64", intel: "x86_64"
   os macos: "mac-universal.dmg", linux: "linux-#{arch}.AppImage"
 
-  version "1.3.0"
-  sha256 arm:          "02b3a74e859feaeaf4a872e096ba2dba2da72fa7d970215b8efe71edd32298b5",
-         intel:        "02b3a74e859feaeaf4a872e096ba2dba2da72fa7d970215b8efe71edd32298b5",
-         arm64_linux:  "00056df070e2470d57c67348ab783de934cd73badf22f0ed0fca3733196180c5",
-         x86_64_linux: "226937a481f507f9aa92a6066b68a986e4cfdc5b04dfbb6f4ceb2773a19bd489"
+  version "1.3.1"
+  sha256 arm:          "8e74c6087a7ddfdbba1b856dde7c02466c1189072022ff5bd7dcef8c1d685667",
+         intel:        "8e74c6087a7ddfdbba1b856dde7c02466c1189072022ff5bd7dcef8c1d685667",
+         arm64_linux:  "3700e5b7c93f819f670cc4ed93cc9979dd6b20eb4b2d2f99952f83f1ed167dcc",
+         x86_64_linux: "a4bd04f54424545f027e93ebee46fd1afaadc6e1e4cd152972d3bfafbc87ff95"
 
   on_macos do
     depends_on macos: :monterey
