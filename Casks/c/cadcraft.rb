@@ -14,6 +14,8 @@ cask "cadcraft" do
     app "CADCraft.app"
 
     zap trash: [
+      "~/Library/Application Support/ai.storyteller.cadcraft",
+      "~/Library/Application Support/CADCraft",
       "~/Library/Preferences/ai.storyteller.cadcraft.plist",
       "~/Library/Saved Application State/ai.storyteller.cadcraft.savedState",
     ]
