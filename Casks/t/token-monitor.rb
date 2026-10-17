@@ -23,10 +23,14 @@ cask "token-monitor" do
   uninstall quit: "com.javis.tokenmonitor"
 
   zap trash: [
+    "~/Library/Application Scripts/com.javis.tokenmonitor.widget",
+    "~/Library/Application Scripts/group.com.javis.tokenmonitor.macos",
     "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.javis.tokenmonitor.sfl*",
     "~/Library/Application Support/Token Monitor",
     "~/Library/Caches/com.javis.tokenmonitor",
     "~/Library/Caches/com.javis.tokenmonitor.ShipIt",
+    "~/Library/Containers/com.javis.tokenmonitor.widget",
+    "~/Library/Group Containers/group.com.javis.tokenmonitor.macos",
     "~/Library/HTTPStorages/com.javis.tokenmonitor",
     "~/Library/Logs/Token Monitor",
     "~/Library/Preferences/com.javis.tokenmonitor.plist",
