@@ -1,6 +1,6 @@
 cask "deepseek-harness" do
-  version "0.2.1-rc.1"
-  sha256 "564f6052649bf19b4cd8d20572928a516eb053ee79ecc61e928e8515a44ff32e"
+  version "0.2.1-rc.2"
+  sha256 "1131da00d7474b5373f3ffc580686b4b009464b68bd35d761c4352824f964604"
 
   url "https://download.deepseek.com/dsh-desk/bin/mac-arm64/deepseek-harness-#{version}-mac-arm64.zip"
   name "DeepSeek Harness"
@@ -23,6 +23,7 @@ cask "deepseek-harness" do
   zap trash: [
     "~/.dsh",
     "~/Library/Application Support/@deepseek-ai/dsh-desktop",
+    "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.deepseek.dsh.sfl*",
     "~/Library/Caches/@deepseek-ai/dsh-desktop",
     "~/Library/Caches/@deepseek-aidsh-desktop-updater",
     "~/Library/Caches/com.deepseek.dsh",
@@ -30,6 +31,7 @@ cask "deepseek-harness" do
     "~/Library/HTTPStorages/com.deepseek.dsh",
     "~/Library/HTTPStorages/com.deepseek.dsh.binarycookies",
     "~/Library/Logs/@deepseek-ai/dsh-desktop",
+    "~/Library/Logs/DeepSeek Harness",
     "~/Library/Preferences/com.deepseek.dsh.plist",
     "~/Library/Saved Application State/com.deepseek.dsh.savedState",
   ]
