@@ -24,6 +24,7 @@ cask "webull" do
   zap trash: [
     "~/.config/Webull Desktop",
     "~/Library/Application Support/Webull Desktop",
+    "~/Library/Preferences/com.webull.desktop.v1.plist",
     "~/Library/Preferences/com.webulldesktop.*",
     "~/Library/Saved Application State/com.webull.desktop.v1.savedState",
   ]
