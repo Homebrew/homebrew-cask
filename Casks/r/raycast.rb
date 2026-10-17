@@ -71,6 +71,7 @@ cask "raycast" do
     "~/.config/raycast",
     "~/Library/Application Scripts/com.raycast.macos.BrowserExtension",
     "~/Library/Application Scripts/SY64MV22J9.com.raycast.macos.shared",
+    "~/Library/Application Support/.com.raycast.macos.backups",
     "~/Library/Application Support/com.raycast.macos",
     "~/Library/Application Support/com.raycast.shared",
     "~/Library/Caches/com.raycast.macos",
