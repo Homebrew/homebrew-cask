@@ -23,8 +23,10 @@ cask "mindroom" do
             quit:      "chat.mindroom.menubar"
 
   zap trash: [
+    "~/Library/Caches/chat.mindroom.menubar",
     "~/Library/LaunchAgents/chat.mindroom.local.plist",
     "~/Library/Logs/mindroom",
     "~/Library/Preferences/chat.mindroom.menubar.plist",
+    "~/Library/WebKit/chat.mindroom.menubar",
   ]
 end
