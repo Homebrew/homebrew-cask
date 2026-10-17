@@ -1,16 +1,16 @@
-cask "o-plus-connect" do
-  version "17.20.0"
+cask "o+connect" do
+  version "17.20.0,260916200816,794ab31695"
 
   on_arm do
     sha256 "52789642c8c6f9f20fed264d19a268fabcb8cdbc9d7130e7b785833392ae09ed"
 
-    url "https://pc-assistant-cn.allawnfs.com/uploads/web/dmg/2026/09/21/19/57/34/OppoConnect_#{version}_arm64_domestic_260916200816_794ab31695.dmg",
+    url "https://pc-assistant-cn.allawnfs.com/uploads/web/dmg/2026/09/21/19/57/34/OppoConnect_#{version.csv.first}_arm64_domestic_#{version.csv.second}_#{version.csv.third}.dmg",
         referer: "https://connect.oppo.com/"
   end
   on_intel do
     sha256 "96cbf85bdf193036a95898a2135f88f344feb22f52eb93f76a655d5db5be67cd"
 
-    url "https://pc-assistant-cn.allawnfs.com/uploads/web/dmg/2026/09/21/19/58/15/OppoConnect_#{version}_x64_domestic_260916200816_794ab31695.dmg",
+    url "https://pc-assistant-cn.allawnfs.com/uploads/web/dmg/2026/09/21/19/58/15/OppoConnect_#{version.csv.first}_x64_domestic_#{version.csv.second}_#{version.csv.third}.dmg",
         referer: "https://connect.oppo.com/"
   end
 
@@ -20,7 +20,18 @@ cask "o-plus-connect" do
   homepage "https://connect.oppo.com/"
 
   livecheck do
-    skip "Latest version is only published through a signed API request"
+    url "https://connect.oppo.com/api/v2/updatePackage/queryUrl?platform=macos-arm&serverName=connect.oppo.com",
+        header: [
+          "appId: pc-web",
+          "ts: 1792231685",
+          "sign: 7ff84324be75242e9608239263995477bca346f3b12831c2651e14fc45d48106",
+        ]
+    strategy :json do |json|
+      match = json.dig("data", "fileName")&.match(/OppoConnect_v?(\d+(?:\.\d+)+)_arm64_domestic_(\w+)_(\w+)\.dmg/i)
+      next unless match
+
+      "#{match[1]},#{match[2]},#{match[3]}"
+    end
   end
 
   auto_updates true
@@ -28,8 +39,6 @@ cask "o-plus-connect" do
 
   app "O+Connect.app"
 
-  # The app registers launchd jobs whose names vary by macOS version,
-  # including dynamically generated `.probe` variants.
   uninstall launchctl: [
               "com.oplus.dsp.core*",
               "com.oplus.dsp.rc*",
