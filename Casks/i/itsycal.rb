@@ -20,6 +20,7 @@ cask "itsycal" do
   uninstall quit: "com.mowglii.ItsycalApp"
 
   zap trash: [
+    "~/Library/Application Support/com.mowglii.ItsycalApp",
     "~/Library/HTTPStorages/com.mowglii.ItsycalApp",
     "~/Library/Preferences/com.mowglii.ItsycalApp.plist",
   ]
