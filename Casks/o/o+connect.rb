@@ -20,14 +20,32 @@ cask "o+connect" do
   homepage "https://connect.oppo.com/"
 
   livecheck do
-    url "https://connect.oppo.com/api/v2/updatePackage/queryUrl?platform=macos-arm&serverName=connect.oppo.com",
-        header: [
-          "appId: pc-web",
-          "ts: 1792231685",
-          "sign: 7ff84324be75242e9608239263995477bca346f3b12831c2651e14fc45d48106",
-        ]
-    strategy :json do |json|
-      match = json.dig("data", "fileName")&.match(/OppoConnect_v?(\d+(?:\.\d+)+)_arm64_domestic_(\w+)_(\w+)\.dmg/i)
+    url "https://connect.oppo.com/api/v2/updatePackage/queryUrl?platform=macos-arm&serverName=connect.oppo.com"
+    strategy :page_match do |_page|
+      require "digest"
+
+      params = "platform=macos-arm&serverName=connect.oppo.com"
+      timestamp = Time.now.to_i.to_s
+      signature = Digest::SHA256.hexdigest("#{params}#{timestamp}c9412a3fc35f465ca5abe7001bc48d20")
+
+      content = Homebrew::Livecheck::Strategy.page_content(
+        "https://connect.oppo.com/api/v2/updatePackage/queryUrl?#{params}",
+        options: Homebrew::Livecheck::Options.new(
+          referer:    "https://connect.oppo.com/",
+          user_agent: :browser,
+          header:     [
+            "appId: pc-web",
+            "ts: #{timestamp}",
+            "sign: #{signature}",
+          ],
+        ),
+      )[:content]
+      next if content.blank?
+
+      file_name = Homebrew::Livecheck::Strategy::Json.parse_json(content).dig("data", "fileName")
+      next if file_name.blank?
+
+      match = file_name.match(/OppoConnect_v?(\d+(?:\.\d+)+)_arm64_domestic_(\w+)_(\w+)\.dmg/i)
       next unless match
 
       "#{match[1]},#{match[2]},#{match[3]}"
@@ -53,10 +71,15 @@ cask "o+connect" do
     "/Library/LaunchDaemons/com.oplus.dsp.rc.legacy.plist",
     "/Library/LaunchDaemons/com.oplus.O+Connect.uninstall.plist",
     "/Library/Logs/devicespace",
+    "~/Library/Application Scripts/com.oplus.devicespace.extension",
     "~/Library/Application Scripts/com.oplus.devicespace.remotehelper",
+    "~/Library/Application Scripts/group.com.oplus.devicespace",
+    "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.oplus.devicespace.sfl*",
     "~/Library/Application Support/O+Connect",
     "~/Library/Caches/com.oplus.devicespace",
     "~/Library/Caches/O+Connect",
+    "~/Library/Containers/com.oplus.devicespace.extension",
+    "~/Library/Group Containers/group.com.oplus.devicespace",
     "~/Library/HTTPStorages/com.oplus.devicespace",
     "~/Library/Logs/devicespace",
     "~/Library/Logs/devicespace-daemon",
