@@ -1,6 +1,6 @@
 cask "macfuse@dev" do
-  version "5.4.0"
-  sha256 "861814f0ac7fa8f6547ea40cdd49a36ac84bcc7d34f38a1fa74e8cf68b0401c5"
+  version "5.5.0"
+  sha256 "92c21ef2db4199bcf5bddc8e6efb57b23ecb9715f74ab38cba2c77ab226d3830"
 
   url "https://github.com/macfuse/macfuse/releases/download/macfuse-#{version}/macfuse-#{version}.dmg"
   name "macFUSE"
