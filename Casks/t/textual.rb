@@ -28,7 +28,14 @@ cask "textual" do
   app "Textual.app"
 
   zap trash: [
+    "~/Library/Application Scripts/8482Q6EPL6.com.codeux.apps.textual",
+    "~/Library/Application Scripts/8482Q6EPL6.com.codeux.irc.textual",
+    "~/Library/Application Scripts/com.codeux.apps.textual*",
     "~/Library/Application Support/Textual",
+    "~/Library/Containers/com.codeux.apps.textual",
+    "~/Library/Group Containers/8482Q6EPL6.com.codeux.apps.textual",
+    "~/Library/Group Containers/8482Q6EPL6.com.codeux.irc.textual",
+    "~/Library/Group Containers/com.codeux.apps.textual*",
     "~/Library/Preferences/com.codeux.apps.textual.plist",
   ]
 end
