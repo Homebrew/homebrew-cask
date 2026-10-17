@@ -13,6 +13,7 @@ cask "crest-browser" do
   end
 
   auto_updates true
+  conflicts_with cask: "crest"
   depends_on arch: :arm64
   depends_on macos: :tahoe
 
