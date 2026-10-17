@@ -7,11 +7,6 @@ cask "status-trio" do
   desc "Menu bar and Dock monitor for Wi-Fi, battery, and volume"
   homepage "https://github.com/lingyired/status-trio"
 
-  livecheck do
-    url :url
-    strategy :github_latest
-  end
-
   auto_updates true
   depends_on macos: :ventura
 
