@@ -1,6 +1,6 @@
 cask "openframeworks" do
   version "0.12.1"
-  sha256 "170d24422e53bef30297f8154604f10343fae58f7a84d42b37d7d00350ac2192"
+  sha256 "e4a2dd6e75805320aac905f9f82f7b85e67a8b799137d47f35d40f7c4c195c9b"
 
   url "https://github.com/openframeworks/openFrameworks/releases/download/#{version}/of_v#{version}_osx_release.tar.gz"
   name "Openframeworks"
