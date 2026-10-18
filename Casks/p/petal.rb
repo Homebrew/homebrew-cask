@@ -1,6 +1,6 @@
 cask "petal" do
-  version "0.9.32"
-  sha256 "56e24dc1992280db7961461e2bc1c2db4530d22badca521b44371a5b909180dc"
+  version "0.9.33"
+  sha256 "8268a5953ecb476f7737cf5a9b0d931d0ccee2b9425c3a23ade2f10a88aed30f"
 
   url "https://l882xxepjgu15ol2.public.blob.vercel-storage.com/Petal_#{version}_universal.dmg"
   name "Petal"
