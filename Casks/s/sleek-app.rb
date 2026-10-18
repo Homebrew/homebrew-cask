@@ -20,6 +20,7 @@ cask "sleek-app" do
   app "sleek.app"
 
   zap trash: [
+    "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.todotxt.sleek.sfl*",
     "~/Library/Application Support/sleek",
     "~/Library/Preferences/com.todotxt.sleek.plist",
     "~/Library/Saved Application State/com.todotxt.sleek.savedState",
