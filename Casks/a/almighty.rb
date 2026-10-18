@@ -1,8 +1,9 @@
 cask "almighty" do
   version "2.13.2"
-  sha256 :no_check
+  sha256 "c3077fc07c2b4e4fe97a6b6fd576252d465fe4a2c97bde4ac63c29ed97163152"
 
-  url "https://almighty-app.s3.amazonaws.com/Almighty.zip"
+  url "https://github.com/IndieGoodies/Almighty/releases/download/#{version}/Almighty.zip",
+      verified: "github.com/IndieGoodies/Almighty/"
   name "Almighty"
   desc "Settings and tweaks configurator"
   homepage "https://indiegoodies.com/almighty"
