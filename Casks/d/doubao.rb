@@ -22,6 +22,7 @@ cask "doubao" do
   uninstall delete: "/Applications/Doubao Browser.app"
 
   zap trash: [
+    "~/Doubao",
     "~/Library/Application Scripts/com.bot.pc.doubao.FinderSyncExtension",
     "~/Library/Application Support/Doubao",
     "~/Library/Caches/com.bot.pc.doubao",
