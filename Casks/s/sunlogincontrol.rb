@@ -2,11 +2,11 @@ cask "sunlogincontrol" do
   arch arm: "arm64", intel: "x86_64"
   livecheck_id = on_arch_conditional arm: "211", intel: "17"
 
-  version "6.6.1.28025"
-  sha256 arm:   "fb2386173da8a00bc7cd75bfb5b01bc938d5e3857bc885f12447db4a1fa6c950",
-         intel: "48e40ab23744c3307392a5310104a706fae41299c07c26659ef4c0caa6528ace"
+  version "6.7.1.30758"
+  sha256 arm:   "b9a92035a4956bfbfaf6c51cdcf7c61dd5a499046b31b630e45642a3a592a96e",
+         intel: "421c3a0d2ed80cdbcd125edbc3a382f6ce23c1174d6e87503b7fb762b2f6ef67"
 
-  url "https://down.oray.com/sl/mac/SunloginRemote_#{version}_#{arch}.dmg"
+  url "https://down.oray.com/sl/mac/SunloginRemote_#{arch}_#{version}.dmg"
   name "SunloginControl"
   name "向日葵控制端"
   desc "Target component of remote desktop control and monitoring tool"
@@ -14,7 +14,6 @@ cask "sunlogincontrol" do
 
   livecheck do
     url "https://sunlogin.oray.com/zh_CN/download/download?id=#{livecheck_id}"
-    regex(/SunloginRemote[._-]?(\d+(?:\.\d+)+)[._-]#{arch}\.dmg/i)
     strategy :header_match
   end
 
