@@ -26,6 +26,7 @@ cask "llama-app" do
     "~/Library/HTTPStorages/app.llama.Llama",
     "~/Library/HTTPStorages/app.llamabarn.LlamaBarn",
     "~/Library/HTTPStorages/app.llamabarn.LlamaBarn.binarycookies",
+    "~/Library/Logs/Llama",
     "~/Library/Preferences/app.llama.Llama.plist",
     "~/Library/Preferences/app.llamabarn.LlamaBarn.plist",
     "~/Library/WebKit/app.llamabarn.LlamaBarn",
