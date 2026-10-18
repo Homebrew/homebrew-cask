@@ -1,9 +1,9 @@
 cask "ghost-downloader" do
   arch arm: "arm64", intel: "x86_64"
 
-  version "4.4.0"
-  sha256 arm:   "54758fd4fad44cb298d1402c4a6da96fafbf48de588c88b85545b1f534a2ed93",
-         intel: "32c87e9d043f94a94de5a60e4f263f45c7ad477d04fc5b36a8d51a47584f8400"
+  version "4.4.2"
+  sha256 arm:   "040ab2165bb0ed7418304c26a7cee119502f993870bd0f1b53f9841d47f88d1d",
+         intel: "65461b986bf36e564bd1e4c5f522ab92d544bf82a1cf6608f1207fdbb8ecd453"
 
   url "https://github.com/XiaoYouChR/Ghost-Downloader-3/releases/download/v#{version}/Ghost-Downloader-v#{version}-macOS-#{arch}.dmg"
   name "Ghost Downloader"
