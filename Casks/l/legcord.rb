@@ -9,7 +9,7 @@ cask "legcord" do
          x86_64_linux: "a4bd04f54424545f027e93ebee46fd1afaadc6e1e4cd152972d3bfafbc87ff95"
 
   on_macos do
-    depends_on macos: :monterey
+    depends_on macos: :ventura
 
     app "Legcord.app"
 
