@@ -1,6 +1,6 @@
 cask "subtitle-studio" do
-  version "1.11.8"
-  sha256 "a28328bbee6288a9651cc779903014b696dec98c27f3e3816d74c0038e43446b"
+  version "1.11.10"
+  sha256 "f50ddac4b5ba5fc4a005fc47dc49c8837e1afbb0fdae4776bbd815f926665b1c"
 
   url "https://assets.subtitlestudio.ai/releases/Subtitle%20Studio-arm64-#{version}.dmg"
   name "Subtitle Studio"
@@ -16,7 +16,7 @@ cask "subtitle-studio" do
 
   auto_updates true
   depends_on arch: :arm64
-  depends_on macos: :monterey
+  depends_on macos: :ventura
 
   app "Subtitle Studio.app"
 
