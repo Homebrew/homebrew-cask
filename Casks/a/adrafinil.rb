@@ -15,6 +15,7 @@ cask "adrafinil" do
   uninstall quit: "glass.kagerou.adrafinil"
 
   zap trash: [
+    "~/Library/Application Support/Adrafinil",
     "~/Library/Caches/glass.kagerou.adrafinil",
     "~/Library/Preferences/glass.kagerou.adrafinil.plist",
     "~/Library/Saved Application State/glass.kagerou.adrafinil.savedState",
