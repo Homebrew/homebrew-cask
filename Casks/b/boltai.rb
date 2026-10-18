@@ -20,8 +20,10 @@ cask "boltai" do
   app "BoltAI.app"
 
   zap trash: [
-    "~/Library/Application Scripts/co.podzim.boltai-mobile",
-    "~/Library/Containers/co.podzim.boltai-mobile",
-    "~/Library/Saved Application State/co.podzim.boltai-mobile.savedState",
-  ]
+        "~/Library/Application Scripts/co.podzim.boltai-mobile",
+        "~/Library/Application Support/BoltAI",
+        "~/Library/Containers/co.podzim.boltai-mobile",
+        "~/Library/Saved Application State/co.podzim.boltai-mobile.savedState",
+      ],
+      rmdir: "~/.boltai"
 end

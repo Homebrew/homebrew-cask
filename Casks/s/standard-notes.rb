@@ -13,9 +13,11 @@ cask "standard-notes" do
     app "Standard Notes.app"
 
     zap trash: [
+      "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/org.standardnotes.standardnotes.sfl*",
       "~/Library/Application Support/Standard Notes",
       "~/Library/Caches/org.standardnotes.standardnotes",
       "~/Library/Caches/org.standardnotes.standardnotes.ShipIt",
+      "~/Library/Logs/Standard Notes",
       "~/Library/Preferences/org.standardnotes.standardnotes.helper.plist",
       "~/Library/Preferences/org.standardnotes.standardnotes.plist",
       "~/Library/Saved Application State/org.standardnotes.standardnotes.savedState",

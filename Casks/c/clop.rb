@@ -20,10 +20,12 @@ cask "clop" do
   app "Clop.app"
 
   zap trash: [
+    "~/.clop-debug-logs",
     "~/Library/Application Scripts/com.lowtechguys.Clop",
     "~/Library/Application Scripts/com.lowtechguys.Clop.FinderOptimiser",
     "~/Library/Application Support/Clop",
     "~/Library/Caches/Clop",
+    "~/Library/Caches/com.lowtechguys.Clop",
     "~/Library/Containers/com.lowtechguys.Clop.FinderOptimiser",
     "~/Library/Daemon Containers/54F7B6C1*/Data/com.apple.kvs/ChangeTokens/NoEncryption/Clop/*.com.lowtechguys.Clop",
     "~/Library/HTTPStorages/com.lowtechguys.Clop",

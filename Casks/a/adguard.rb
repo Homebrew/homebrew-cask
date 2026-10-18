@@ -39,7 +39,10 @@ cask "adguard" do
             ],
             rmdir:     "/Library/Application Support/AdGuard Software"
 
-  zap delete: "/Library/Logs/com.adguard.mac.adguard",
+  zap delete: [
+        "/Library/Logs/com.adguard.mac.adguard",
+        "/Library/Preferences/com.adguard.mac.adguard.helper.plist",
+      ],
       trash:  [
         "~/Library/Application Scripts/*com.adguard.mac*",
         "~/Library/Application Support/Adguard",

@@ -26,9 +26,12 @@ cask "cog-app" do
   uninstall quit: "org.cogx.cog"
 
   zap trash: [
+    "~/Library/Application Scripts/group.org.cogx.cog",
     "~/Library/Application Scripts/org.cogx.cog",
     "~/Library/Application Support/Cog",
     "~/Library/Caches/org.cogx.cog",
+    "~/Library/Containers/org.cogx.cog",
+    "~/Library/Group Containers/group.org.cogx.cog",
     "~/Library/Preferences/org.cogx.cog.plist",
   ]
 end

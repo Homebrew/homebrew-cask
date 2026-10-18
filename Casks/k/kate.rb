@@ -45,7 +45,10 @@ cask "kate" do
   zap trash: [
     "~/Library/Application Support/kate",
     "~/Library/Caches/kate",
+    "~/Library/Preferences/kate*",
     "~/Library/Preferences/org.kde.kate.plist",
+    "~/Library/Preferences/State/katestaterc",
+    "~/Library/Preferences/State/UserFeedback.org.kde.kate",
     "~/Library/Saved Application State/org.kde.kate.savedState",
   ]
 end

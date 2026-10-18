@@ -19,6 +19,7 @@ cask "microblog" do
 
   zap trash: [
     "~/Library/Application Support/blog.micro.mac",
+    "~/Library/Application Support/Micro.blog",
     "~/Library/Caches/blog.micro.mac",
     "~/Library/Caches/com.crashlytics.data/blog.micro.mac",
     "~/Library/Caches/io.fabric.sdk.mac.data/blog.micro.mac",

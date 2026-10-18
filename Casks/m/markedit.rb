@@ -18,8 +18,10 @@ cask "markedit" do
 
   zap trash: [
     "~/Library/Application Scripts/app.cyan.markedit*",
+    "~/Library/Application Scripts/group.app.cyan.markedit",
     "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/app.cyan.markedit.sfl*",
     "~/Library/Containers/app.cyan.markedit*",
+    "~/Library/Group Containers/group.app.cyan.markedit",
     "~/Library/Saved Application State/app.cyan.markedit.savedState",
   ]
 end

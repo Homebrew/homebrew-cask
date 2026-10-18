@@ -19,8 +19,10 @@ cask "yandex-music" do
   app "Яндекс Музыка.app", target: "Yandex Music.app"
 
   zap trash: [
+    "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/ru.yandex.desktop.music.sfl*",
     "~/Library/Application Support/YandexMusic",
     "~/Library/Logs/YandexMusic",
+    "~/Library/Preferences/ru.yandex.desktop.music.plist",
     "~/Library/Saved Application State/ru.yandex.desktop.music.savedState",
   ]
 end

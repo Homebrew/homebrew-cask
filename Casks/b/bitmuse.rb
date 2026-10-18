@@ -23,6 +23,7 @@ cask "bitmuse" do
   zap trash: [
     "~/Library/Application Scripts/com.bitmuse.app",
     "~/Library/Application Support/BitMuse",
+    "~/Library/Application Support/com.bitmuse.audio",
     "~/Library/Caches/BitMuse",
     "~/Library/Caches/com.bitmuse.app",
     "~/Library/Containers/com.bitmuse.app",
