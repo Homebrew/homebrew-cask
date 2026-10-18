@@ -1,0 +1,14 @@
+Casks/l/legcord.rb
+  h_9df9c32c3f321d 12
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.5",
+  "base_commit_sha": "fbdb33415721f83c672704c8476ea77cbfe142ff",
+  "prompts": {},
+  "humans": {
+    "h_9df9c32c3f321d": {
+      "author": "Rui Chen <rui@chenrui.dev>"
+    }
+  }
+}
