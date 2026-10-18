@@ -1,6 +1,6 @@
 cask "phosphene" do
-  version "1.11.0"
-  sha256 "eed15bce66b371a407e2bc0e9c7ab2b3356ad042106b0b83b375b23760806e5b"
+  version "1.11.1"
+  sha256 "d2aef6cf18f031a3c415f1a58d41011e9c8c5599715abeae06285d84a9fe5908"
 
   url "https://github.com/kageroumado/phosphene/releases/download/v#{version}/Phosphene-#{version}.dmg"
   name "Phosphene"
