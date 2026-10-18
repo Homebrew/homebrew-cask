@@ -20,6 +20,9 @@ cask "flowdown" do
   uninstall quit: "wiki.qaq.flow"
 
   zap trash: [
+    "~/Library/Application Scripts/wiki.qaq.flow",
+    "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/wiki.qaq.flow.sfl*",
+    "~/Library/Containers/wiki.qaq.flow",
     "~/Library/Containers/wiki.qaq.flow.FlowDownWidget",
     "~/Library/Containers/wiki.qaq.FlowDown.Community",
   ]
