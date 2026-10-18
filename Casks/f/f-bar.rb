@@ -18,9 +18,13 @@ cask "f-bar" do
   app "F-Bar.app"
 
   zap trash: [
+    "~/Library/Application Support/bugsnag-shared-se.eastwest.F-Bar",
     "~/Library/Application Support/F-Bar",
     "~/Library/Application Support/se.eastwest.F-Bar",
+    "~/Library/Caches/bugsnag-shared-se.eastwest.F-Bar",
     "~/Library/Caches/se.eastwest.F-Bar",
+    "~/Library/HTTPStorages/se.eastwest.F-Bar*",
     "~/Library/Preferences/se.eastwest.F-Bar.plist",
+    "~/Library/WebKit/se.eastwest.F-Bar",
   ]
 end
