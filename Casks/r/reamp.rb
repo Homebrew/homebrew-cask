@@ -16,6 +16,8 @@ cask "reamp" do
 
   app "Reamp.app"
 
+  uninstall quit: "ru.alexfreud.ReAmp"
+
   zap trash: [
     "~/Library/Application Scripts/ru.alexfreud.ReAmp.ReAmpQuickLook",
     "~/Library/Application Support/REAmp",
