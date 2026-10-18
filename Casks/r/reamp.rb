@@ -1,6 +1,6 @@
 cask "reamp" do
-  version "1.7.0,996"
-  sha256 "599706af852bbf305252827be85ba36a7cbfbb67829c4fed94c3ad43ca36cb61"
+  version "2.0.0,1077"
+  sha256 "e415d00abf06efdcf0c99e9d8e2d9c2b3e5b65245648934183ff6610e74750d9"
 
   url "https://update.re-amp.ru/downloads/Reamp-#{version.csv.first}(#{version.csv.second}).zip"
   name "re:AMP"
@@ -14,7 +14,9 @@ cask "reamp" do
 
   depends_on :macos
 
-  app "reAMP.app"
+  app "Reamp.app"
+
+  uninstall quit: "ru.alexfreud.ReAmp"
 
   zap trash: [
     "~/Library/Application Scripts/ru.alexfreud.ReAmp.ReAmpQuickLook",
