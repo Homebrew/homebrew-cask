@@ -1,6 +1,6 @@
 cask "impactor" do
-  version "2.7.0"
-  sha256 "e3ad16681f69b2d1f5c9a2d407c11695509cc6ad669e68694e2fbafc8b3ce61e"
+  version "2.7.1"
+  sha256 "5186e4d330a281847b3723bb0e6fe31f4f8369394f8e2ca34be97580b527ea57"
 
   url "https://github.com/khcrysalis/Impactor/releases/download/v#{version}/Impactor-macos-universal.dmg"
   name "Impactor"
