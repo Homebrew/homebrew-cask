@@ -6,7 +6,7 @@ cask "font-fira-sans" do
       branch:    "main",
       only_path: "ofl/firasans"
   name "Fira Sans"
-  homepage "https://mozilla.github.io/Fira/"
+  homepage "https://fonts.google.com/specimen/Fira+Sans"
 
   font "FiraSans-Black.ttf"
   font "FiraSans-BlackItalic.ttf"
