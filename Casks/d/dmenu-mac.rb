@@ -1,6 +1,6 @@
 cask "dmenu-mac" do
-  version "0.8.0"
-  sha256 "e922338acc509a35882026fb66f6b94679e588cd867fa4eb5729420b6c59a8b0"
+  version "0.9.0"
+  sha256 "5dea2941858de1ee7f37d45e86ae4ed2a0bb017a526126fa12a69e8f925d8547"
 
   url "https://github.com/oNaiPs/dmenu-mac/releases/download/#{version}/dmenu-mac.zip"
   name "dmenu-mac"
