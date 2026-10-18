@@ -1,17 +1,16 @@
 cask "polymail" do
-  arch arm: "-arm64"
+  arch arm: "arm", intel: "intel"
 
   version "2.4.3006"
-  sha256 arm:   "620a1a5b0ed5923b86c7be1541df1566242a26c411eaf426b9cfcfa7ab46c539",
-         intel: "9bd1601af3d8c77246ed6d26c420f6e69e0d74c66f00e04c6dca845f4dd93185"
+  sha256 :no_check
 
-  url "https://sparkle-updater.polymail.io/macos#{arch}/builds/Polymail-v#{version}.dmg"
+  url "https://builds.polymail.io/macos-#{arch}/current"
   name "Polymail"
   desc "Email productivity application"
   homepage "https://polymail.io/"
 
   livecheck do
-    url "https://sparkle-updater.polymail.io/macos#{arch}/Polymail-Latest.zip"
+    url "https://builds.polymail.io/macos-arm/current"
     strategy :header_match
   end
 
