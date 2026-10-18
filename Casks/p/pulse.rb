@@ -1,6 +1,6 @@
 cask "pulse" do
-  version "0.1.25"
-  sha256 "897334e767974e4afbdf9bee8cd57bddaf241c9936c3c7e5994ccad3375f0fec"
+  version "0.1.27"
+  sha256 "b2411ece3b9d55572a63747b474298f3719561d7534e0b03b8e48a82d4ba5d50"
 
   url "https://github.com/egoist/pulse-feedback/releases/download/v#{version}/Pulse.#{version}.arm64.dmg"
   name "Pulse"
