@@ -16,5 +16,6 @@ cask "openaudible" do
 
   app "OpenAudible.app"
 
-  zap trash: "/Library/OpenAudible"
+  zap trash: "~/Library/Preferences/org.openaudible.openaudible.plist",
+      rmdir: "~/Library/OpenAudible"
 end
