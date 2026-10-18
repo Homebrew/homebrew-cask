@@ -20,6 +20,7 @@ cask "rotato" do
   app "Rotato.app"
 
   zap trash: [
+    "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.mortenjust.rendermock.sfl*",
     "~/Library/Application Support/com.mortenjust.Rendermock",
     "~/Library/Application Support/Rotato",
     "~/Library/Caches/com.mortenjust.Rendermock",
