@@ -22,6 +22,7 @@ cask "flexoptix" do
   app "FLEXOPTIX App.app"
 
   zap trash: [
+    "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/net.flexoptix.flexoptix.app.sfl*",
     "~/Library/Application Support/flexoptix-app",
     "~/Library/Preferences/net.flexoptix.flexoptix.app.plist",
     "~/Library/Saved Application State/net.flexoptix.flexoptix.app.savedState",
