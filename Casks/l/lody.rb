@@ -2,10 +2,10 @@ cask "lody" do
   arch arm: "arm64", intel: on_system_conditional(macos: "x64", linux: "x86_64")
   url_end = on_system_conditional macos: "dmg", linux: "AppImage"
 
-  version "0.107.1"
-  sha256 arm:          "4ee57bc073863e9d5e22eee87e6de7f1ab1e4fa6eff69fe536a3c8dacc4968a6",
-         intel:        "6a80f404607eb183279dc0f76c0be4a6b1909a22e79904bec4c1e424bc13ced1",
-         x86_64_linux: "63756c5c3f2b11fbf2da5082759f7cb0c4a5c5e140252115cb923f70e15be601"
+  version "0.107.2"
+  sha256 arm:          "0124c553a36d6943da3b4550ea5376085999f79c2439cd4b1f59d2a5c93cba0e",
+         intel:        "d9fdb91e8a381b8dc368b0d13472e6c2c67a6f87542dae470defd62383b2d580",
+         x86_64_linux: "c8f9edbfbea2b6a1caf10449bf96b2278309a8dd1ca649fc38087f72031d1d09"
 
   on_macos do
     depends_on macos: :ventura
