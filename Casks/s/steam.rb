@@ -1,19 +1,21 @@
 cask "steam" do
-  version "6.0"
-  sha256 :no_check
+  version "984652b88a9737e3f4e77c656d9ffa67d5042c2c"
+  sha256 "8bf4ce8b4bcbc50f642988c955559f605e7a877372116e7a2b3fd1355004bedb"
 
-  url "https://cdn.cloudflare.steamstatic.com/client/installer/steam.dmg"
+  url "https://client-update.steamstatic.com/appdmg_osx.zip.#{version}",
+      verified: "client-update.steamstatic.com/"
   name "Steam"
   desc "Video game digital distribution service"
   homepage "https://store.steampowered.com/about/"
 
   livecheck do
-    url :url
-    strategy :extract_plist
+    url "https://client-update.steamstatic.com/steam_client_osx"
+    regex(/"file"\s+"appdmg_osx\.zip\.(\h+)"/i)
   end
 
   auto_updates true
   depends_on :macos
+  container type: :zip, nested: "SteamMacBootstrapper.tar.gz"
 
   app "Steam.app"
 
@@ -34,8 +36,4 @@ cask "steam" do
     "~/Library/Preferences/com.valvesoftware.steam.helper.plist",
     "~/Library/Saved Application State/com.valvesoftware.steam.savedState",
   ]
-
-  caveats do
-    requires_rosetta
-  end
 end
