@@ -1,9 +1,9 @@
 cask "qobuz" do
   arch arm: "arm64/bigsur", intel: "x64/elCapitan_sierra"
 
-  version "8.2.0,033"
-  sha256 arm:   "a33b008770682ac90c1faa2f6b4a0886ca632f6043c5819389ad5bb5de259e19",
-         intel: "9535d930aa82e9e19034cc74c02d93a9e62996a4f3da66fc7367d1e28c9fb205"
+  version "8.3.0,028"
+  sha256 arm:   "f4b42458017347442ea60da90060e0c27638741cb6c4d35d412430ea1bfa73ab",
+         intel: "246a4cdb8a2dae69ca5459a530823505907317837c770846ff4a394fc4cd4897"
 
   url "https://desktop.qobuz.com/releases/darwin/#{arch}/#{version.csv.first}-b#{version.csv.second}/Qobuz.dmg"
   name "Qobuz"
@@ -21,6 +21,8 @@ cask "qobuz" do
   depends_on :macos
 
   app "Qobuz.app"
+
+  uninstall quit: "com.qobuz.desktop"
 
   zap trash: [
     "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.qobuz.qobuzdesktop.sfl*",
