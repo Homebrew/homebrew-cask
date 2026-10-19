@@ -19,8 +19,10 @@ cask "butterkit" do
 
   zap trash: [
     "~/Library/Application Scripts/app.butterkit.direct",
+    "~/Library/Application Scripts/group.app.butterkit",
     "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/app.butterkit.direct.sfl*",
     "~/Library/Caches/app.butterkit.direct",
     "~/Library/Containers/app.butterkit.direct",
+    "~/Library/Group Containers/group.app.butterkit",
   ]
 end
