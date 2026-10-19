@@ -26,9 +26,12 @@ cask "longplay" do
   uninstall quit: "app.longplay.Longplay-Mac"
 
   zap trash: [
+    "~/Library/Application Scripts/7N3B54ALZK.app.longplay.Longplay",
     "~/Library/Application Scripts/app.longplay.Longplay-Mac",
     "~/Library/Application Scripts/group.app.longplay.Longplay",
+    "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/app.longplay.longplay-mac.sfl*",
     "~/Library/Containers/app.longplay.Longplay-Mac",
+    "~/Library/Group Containers/7N3B54ALZK.app.longplay.Longplay",
     "~/Library/Group Containers/group.app.longplay.Longplay",
   ]
 end
