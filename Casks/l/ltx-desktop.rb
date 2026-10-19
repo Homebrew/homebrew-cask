@@ -1,6 +1,6 @@
 cask "ltx-desktop" do
-  version "1.3.0"
-  sha256 "3293017349d11607c765b3be9161999d74e898ad9cfb34e74829bb43008db7e2"
+  version "1.3.1"
+  sha256 "89ed265656684aeb1fc7d49e39993834edf9aa821182312b77f49294a000dbd5"
 
   url "https://github.com/Lightricks/LTX-Desktop/releases/download/v#{version}/LTX-Desktop-arm64.dmg"
   name "LTX Desktop"
@@ -9,7 +9,7 @@ cask "ltx-desktop" do
 
   auto_updates true
   depends_on arch: :arm64
-  depends_on macos: :monterey
+  depends_on macos: :sonoma
 
   app "LTX Desktop.app"
 
