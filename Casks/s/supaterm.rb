@@ -1,33 +1,32 @@
 cask "supaterm" do
-  version "26.4.0"
-  sha256 "10b02a1b93ee618462dd6dce7664848d6ffb8a37a4acbb68ead7e7c903de07e4"
+  arch arm: "arm64", intel: "x64"
 
-  url "https://supaterm.com/download/v#{version}/supaterm.dmg"
+  version "26.10.2"
+  sha256 arm:   "916a8717f4e1c8b0eb613b6eab5d2996dc916d2a31a6e487b5e9fbf2bbe8aa42",
+         intel: "1bc435efb2a9ab88e8ae552e6aebdb11cf0e15a0b16794e0d5c6de8cc3a92137"
+
+  url "https://github.com/supabitapp/supaterm/releases/download/v#{version}/supaterm-#{version}-#{arch}.dmg"
   name "Supaterm"
-  desc "Terminal emulator with built-in agent automation"
+  desc "Minimal GUI for coding agents"
   homepage "https://supaterm.com/"
 
   livecheck do
-    url "https://supaterm.com/download/latest/appcast.xml"
-    strategy :sparkle do |items|
-      items.map do |item|
-        next unless item.channel.nil?
-
-        item.short_version
-      end
-    end
+    url :url
+    strategy :github_latest
   end
 
   auto_updates true
-  depends_on macos: :tahoe
+  depends_on macos: :ventura
 
-  app "supaterm.app"
+  app "Supaterm.app"
 
   zap trash: [
-    "~/Library/Application Support/app.supabit.supaterm",
-    "~/Library/Caches/app.supabit.supaterm",
-    "~/Library/Caches/SentryCrash/supaterm",
-    "~/Library/HTTPStorages/app.supabit.supaterm",
-    "~/Library/Preferences/app.supabit.supaterm.plist",
+    "~/.supaterm",
+    "~/Library/Application Support/supaterm-v2",
+    "~/Library/Caches/com.supaterm.desktop",
+    "~/Library/Caches/com.supaterm.desktop.ShipIt",
+    "~/Library/Caches/supaterm-updater",
+    "~/Library/HTTPStorages/com.supaterm.desktop",
+    "~/Library/Preferences/com.supaterm.desktop.plist",
   ]
 end
