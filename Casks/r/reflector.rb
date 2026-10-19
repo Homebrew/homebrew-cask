@@ -1,6 +1,6 @@
 cask "reflector" do
-  version "4.1.2"
-  sha256 "343c74569d8e6f5a0c33c76cd2fc6b7c4eb98db568e633d40c6f177b36294ce3"
+  version "4.1.3"
+  sha256 "8e8ab4a0d5c4d73ad144fb4c94e972a1748aad4587fd12849eca03ea64171e34"
 
   url "https://download.airsquirrels.com/Reflector#{version.major}/Mac/Reflector-#{version}.dmg"
   name "Reflector"
@@ -12,7 +12,7 @@ cask "reflector" do
     strategy :sparkle, &:short_version
   end
 
-  depends_on :macos
+  depends_on macos: :monterey
 
   app "Reflector #{version.major}.app"
 
