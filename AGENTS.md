@@ -81,7 +81,7 @@ Commit message: `<cask> <version> (new cask)` (e.g., `myapp 1.0.0 (new cask)`)
 - **Required stanzas**: `version`, `sha256`, `url`, `name`, `desc`, `homepage`, and at least one artifact (`app`, `pkg`, etc.)
 - **`uninstall` stanza**: Required for `pkg` and `installer` artifacts
 - **`zap` stanza**: Recommended for thorough cleanup (preference files, caches in `~/Library`)
-- **`livecheck` stanza**: Don't add `strategy :github_latest` by default. GitHub release asset URLs default to the lightweight `Git` strategy, so first check `brew livecheck --cask <cask>` without a `livecheck` block, adding only `url :url` and a `regex` if tags need filtering. Use `strategy :github_latest` only if the repository uses pre-releases or `Git` then returns a tag with no matching release. See [`livecheck` guidelines](https://docs.brew.sh/Brew-Livecheck#general-guidelines)
+- **`livecheck` stanza**: Don't add `strategy :github_latest` by default. GitHub release asset URLs use the `Git` strategy by default, so first check `brew livecheck --debug --cask <cask>` without a `livecheck` block, adding only `url :url` and a `regex` if tags need filtering. GitHub rate-limits API requests, so only use `strategy :github_latest` when `Git` can't adequately identify the latest version (e.g. tags using a stable version format are marked as pre-release or not all tags receive a release) or there's a notable time gap between a tag and release. The "latest" release must also reliably be the correct latest version. See [`livecheck` guidelines](https://docs.brew.sh/Brew-Livecheck#general-guidelines)
 
 ## Required Validation
 
