@@ -22,6 +22,8 @@ cask "qobuz" do
 
   app "Qobuz.app"
 
+  uninstall quit: "com.qobuz.desktop"
+
   zap trash: [
     "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.qobuz.qobuzdesktop.sfl*",
     "~/Library/Application Support/QobuzDesktop",
