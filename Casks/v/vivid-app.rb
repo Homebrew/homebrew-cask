@@ -17,6 +17,9 @@ cask "vivid-app" do
   app "Vivid.app"
 
   zap trash: [
+    "~/Library/Application Support/bugsnag-shared-com.goodsnooze.vivid",
+    "~/Library/Caches/bugsnag-shared-com.goodsnooze.vivid",
+    "~/Library/Caches/com.goodsnooze.vivid",
     "~/Library/HTTPStorages/com.goodsnooze.vivid",
     "~/Library/Preferences/com.goodsnooze.vivid.plist",
   ]
