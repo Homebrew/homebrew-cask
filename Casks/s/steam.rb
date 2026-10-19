@@ -1,5 +1,5 @@
 cask "steam" do
-  version "6.1,984652b88a9737e3f4e77c656d9ffa67d5042c2c"
+  version "984652b88a9737e3f4e77c656d9ffa67d5042c2c"
   sha256 "8bf4ce8b4bcbc50f642988c955559f605e7a877372116e7a2b3fd1355004bedb"
 
   url "https://client-update.steamstatic.com/appdmg_osx.zip.#{version.csv.second}"
@@ -10,12 +10,6 @@ cask "steam" do
   livecheck do
     url "https://client-update.steamstatic.com/steam_client_osx"
     regex(/"file"\s+"appdmg_osx\.zip\.(\h+)"/i)
-    strategy :page_match do |page, regex|
-      match = page.match(regex)
-      next if match.blank?
-
-      "#{version.csv.first},#{match[1]}"
-    end
   end
 
   auto_updates true
