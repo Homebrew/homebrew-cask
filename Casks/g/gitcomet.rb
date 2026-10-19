@@ -3,11 +3,11 @@ cask "gitcomet" do
   os macos: "macos", linux: "linux"
   url_end = on_system_conditional macos: "dmg", linux: "AppImage"
 
-  version "0.3.0"
-  sha256 arm:          "53dcf84fdc388c4ada69abae58c76dddf8e0f18f032195085b4b6b917b9de583",
-         intel:        "4daad18eb43dcde504baedefd1224d972555656c27a3adff9f181371394f5b51",
-         arm64_linux:  "b75731d5678a91fae75d521fae7883c4d92848be4127370a10aeae548b4e3dd7",
-         x86_64_linux: "0a1aa11f1f1611e53cdeb157f0e118fd5b155d9d337254fc9fb235d1ca9b83fa"
+  version "0.3.1"
+  sha256 arm:          "5c2decb3b54ed37841713607b4bdd479acdf19f8b2f43a94892d5cfafa23175e",
+         intel:        "0baf6beabd81393d3a7e3738460809e910b9a00b8c87a68501e3becd2d47f186",
+         arm64_linux:  "3b01e5373e3c0efdcd3c8932acec81cdfd4f29a05b3abbef66bdf36b4a29c9e1",
+         x86_64_linux: "b25f61ec69a78abe5d5c6613c69b67784a2a8ca649cf990b82e4dbdd4d5ef6ad"
 
   on_macos do
     depends_on macos: :ventura
