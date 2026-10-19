@@ -37,6 +37,8 @@ cask "turbotax-2024" do
 
   app "TurboTax 2024.app"
 
+  uninstall quit: "com.intuit.turbotax.2024"
+
   zap trash: [
     "~/Library/Application Support/TurboTax 2024",
     "~/Library/Caches/com.intuit.turbotax.2024",
