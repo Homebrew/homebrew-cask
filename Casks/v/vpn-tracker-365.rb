@@ -33,6 +33,9 @@ cask "vpn-tracker-365" do
 
   zap trash: [
     "~/Library/Application Support/VPN Tracker 365",
+    "~/Library/Caches/com.vpntracker.365mac",
+    "~/Library/HTTPStorages/com.vpntracker.365mac",
     "~/Library/Preferences/com.equinux.VPNTracker365.plist",
+    "~/Library/Preferences/com.vpntracker.365mac.plist",
   ]
 end
