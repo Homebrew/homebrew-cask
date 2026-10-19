@@ -2,7 +2,7 @@ cask "steam" do
   version "984652b88a9737e3f4e77c656d9ffa67d5042c2c"
   sha256 "8bf4ce8b4bcbc50f642988c955559f605e7a877372116e7a2b3fd1355004bedb"
 
-  url "https://client-update.steamstatic.com/appdmg_osx.zip.#{version.csv.second}"
+  url "https://client-update.steamstatic.com/appdmg_osx.zip.#{version}"
   name "Steam"
   desc "Video game digital distribution service"
   homepage "https://store.steampowered.com/about/"
