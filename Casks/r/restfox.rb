@@ -11,7 +11,7 @@ cask "restfox" do
   homepage "https://restfox.dev/"
 
   auto_updates true
-  depends_on :macos
+  depends_on macos: :ventura
 
   app "Restfox.app"
 
