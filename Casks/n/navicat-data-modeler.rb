@@ -22,6 +22,8 @@ cask "navicat-data-modeler" do
 
   app "Navicat Data Modeler.app"
 
+  uninstall quit: "com.navicat.NavicatDataModeler"
+
   zap trash: [
     "~/Library/Group Containers/*.com.preact.Navicat.launcherGroup",
     "~/Library/HTTPStorages/com.navicat.NavicatDataModeler",
