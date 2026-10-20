@@ -17,5 +17,7 @@ cask "sound-studio" do
 
   app "Sound Studio.app"
 
+  uninstall quit: "com.felttip.SoundStudio.trial"
+
   zap trash: "~/Library/Preferences/com.felttip.SoundStudio.trial.plist"
 end
