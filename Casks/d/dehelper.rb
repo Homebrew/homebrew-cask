@@ -9,6 +9,11 @@ cask "dehelper" do
   desc "Chinese-German dictionary"
   homepage "https://www.eudic.net/v4/de/app/dehelper"
 
+  livecheck do
+    url :url
+    strategy :extract_plist
+  end
+
   depends_on :macos
 
   app "Dehelper.app"
