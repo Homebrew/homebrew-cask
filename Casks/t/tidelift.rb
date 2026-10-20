@@ -2,11 +2,11 @@ cask "tidelift" do
   arch arm: "_arm"
   os macos: "darwin", linux: "linux"
 
-  version "1.16.75"
-  sha256 arm:          "5564f8ec8fb0093140c2ddbc8e2d8ed25e09ceffdd3f57106ebc65688bd1b273",
-         intel:        "224b8cfe825737b7f2cc79b58080cadbefad88ceb3dc6981299359f2427c397c",
-         arm64_linux:  "0200268d148af4973854d8147abca144984d2259552b3dab027c319bbe9de980",
-         x86_64_linux: "32f924a46a2329a77a6a1458f806b9eb50baeabb99ce57d88ee407a39c3935de"
+  version "1.16.77"
+  sha256 arm:          "bf174481dbd332d1d014082393c5da6b59a6f5f84a05010b3b35404b90f41c74",
+         intel:        "91cbf29f13cc10321c94279ac690fa22487fb5ea6d9517437b6993160866f953",
+         arm64_linux:  "b93b06549d134f470830b62bc05480cd861363a9dac3d2a5ec869200af17070c",
+         x86_64_linux: "0e1247f28ff81807b2dc14df2473984a62c8fdeeee2ca8a8b0b05eb8c317b672"
 
   on_macos do
     disable! date: "2026-09-01", because: :fails_gatekeeper_check
