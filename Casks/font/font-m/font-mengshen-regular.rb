@@ -1,8 +1,8 @@
 cask "font-mengshen-regular" do
   version "2.0.0,20261020-153012"
-  sha256 "25e63fd506e21914946120f71e1a755d1031b198b71ce27f5a8529de551c4068"
+  sha256 "0f2a8b0b4ffb6f8610e2d957ac0e79af3a1415b7b22a93c719c88d550ed2328b"
 
-  url "https://github.com/MaruTama/Mengshen-pinyin-font/archive/refs/tags/v#{version.csv.second}.tar.gz"
+  url "https://github.com/MaruTama/Mengshen-pinyin-font/releases/download/v#{version.csv.second}/Mengshen-HanSerif.ttf"
   name "Mengshen Pinyin"
   name "萌神拼音"
   homepage "https://github.com/MaruTama/Mengshen-pinyin-font"
@@ -22,8 +22,7 @@ cask "font-mengshen-regular" do
     end
   end
 
-  font "Mengshen-pinyin-font-#{version.csv.second}/outputs/Mengshen-HanSerif.ttf"
-  font "Mengshen-pinyin-font-#{version.csv.second}/outputs/Mengshen-Handwritten.ttf"
+  font "Mengshen-HanSerif.ttf"
 
   # No zap stanza required
 end
