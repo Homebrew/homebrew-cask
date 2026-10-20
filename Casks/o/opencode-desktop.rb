@@ -4,11 +4,11 @@ cask "opencode-desktop" do
                                    linux: on_arch_conditional(arm: "arm64", intel: "x86_64")
   url_ext = on_system_conditional macos: "dmg", linux: "AppImage"
 
-  version "2.1.0"
-  sha256 arm:          "911307bc6089860a1f8e793e6ec8a8d079a613e3501652b5d200cd4c3871d1de",
-         intel:        "ceb73e39647193a6d77143063b34ad09e4668385d6d91f7fff923284e0ac95ad",
-         arm64_linux:  "21618e85847f3884e6c5634eea7077b5a6ed89c97e1fd99ad4899d70c22c6454",
-         x86_64_linux: "90dc101ab6882a71126750756bae6669c778f84af4bf2457e5ca9878f3de1f12"
+  version "2.1.1"
+  sha256 arm:          "71a9c747ebc485c9dbcb0fb127919b8e3850c7c5f1bdbc9ca3065e7f58197f73",
+         intel:        "3084049887f4fb8e0c3a2f81a3cb4b9ca6812f4f871e1a3f6b2e9378e475530a",
+         arm64_linux:  "3fac58a1c50281a4dbf4d49ae83317ebaaf0ccd1a55fb3f61c40ebbefb38db39",
+         x86_64_linux: "24062bb9b8e5511330fc58552360c30ad1a90cf96245bd8ca663e7ca28b341ae"
 
   on_macos do
     depends_on macos: :ventura
