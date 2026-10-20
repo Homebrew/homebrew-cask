@@ -3,11 +3,11 @@ cask "switchhosts" do
   os macos: "mac", linux: "linux"
   url_end = on_system_conditional macos: "dmg", linux: "AppImage"
 
-  version "5.0.2"
-  sha256 arm:          "1443343955edcee58b4c0618df622dc7f6790499ab3ac78b2a0f702f3869fba7",
-         intel:        "1ffcf789665112700444b491748254fb3d5d1f9dba2c8716413f37ea2d124438",
-         arm64_linux:  "4a07ba577ca633c8961b559469fa53eed033762f7c3bc04967b515bb4940aa20",
-         x86_64_linux: "c411b5d7d91fe9d3af34efd6063f75f3d1d3ab4371c340c02d5a1082536fa7be"
+  version "5.0.3"
+  sha256 arm:          "dcc3feabcea1906941532150f13fd6d8a30e52d21d7dcccd6df65704ffc0792c",
+         intel:        "8ca7c6b309cee80a30b076c713e8da25e0daf23c01b7bc57405807331e94bf31",
+         arm64_linux:  "f313d7e431826034a20e564ecc41ff6ebf8eb262736dd51e251dc6c5ba53b6ab",
+         x86_64_linux: "fa6b2ac5eed7163eed2f7a777b5294e30b651c7a3afc7dc367bbad6f471960f0"
 
   on_macos do
     app "SwitchHosts.app"
