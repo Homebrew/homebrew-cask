@@ -1,6 +1,6 @@
 cask "gloomberb" do
-  version "0.17.6"
-  sha256 "7d0996575aea325bacc2c4c7733aca2d2c5a430e3ef0d8858ae804e2518efa07"
+  version "0.18.0"
+  sha256 "468ddb4ef27ffaa8635144e1a514d0c53f267128f10344b058e357c46d3281a6"
 
   url "https://github.com/gloom-sh/gloomberb/releases/download/v#{version}/stable-macos-arm64-Gloomberb.app.zip"
   name "Gloomberb"
