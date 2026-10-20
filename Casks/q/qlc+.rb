@@ -18,8 +18,9 @@ cask "qlc+" do
   homepage "https://www.qlcplus.org/"
 
   livecheck do
-    url "https://api.github.com/repos/mcallegari/qlcplus/releases/latest"
-    regex(/QLC\+[_-]v?(\d+(?:\.\d+)+)/i)
+    url "https://github.com/mcallegari/qlcplus.git"
+    regex(/^QLC\+[_-]v?(\d+(?:\.\d+)+)$/i)
+    strategy :git
   end
 
   app "QLC+.app"
