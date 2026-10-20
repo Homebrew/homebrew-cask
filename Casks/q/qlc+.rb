@@ -25,5 +25,7 @@ cask "qlc+" do
 
   app "QLC+.app"
 
+  uninstall launchctl: "application.QLC.app.*"
+
   zap trash: "~/Library/Application Support/QLC+"
 end
