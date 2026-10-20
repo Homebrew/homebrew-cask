@@ -1,5 +1,5 @@
 cask "navicat-data-modeler" do
-  version "4.3.12,040"
+  version "4.3.13,040"
   sha256 :no_check
 
   url "https://download3.navicat.com/updater/navicatdatamodeler#{version.csv.second}_mac_en.zip"
@@ -21,6 +21,8 @@ cask "navicat-data-modeler" do
   depends_on :macos
 
   app "Navicat Data Modeler.app"
+
+  uninstall quit: "com.navicat.NavicatDataModeler"
 
   zap trash: [
     "~/Library/Group Containers/*.com.preact.Navicat.launcherGroup",
