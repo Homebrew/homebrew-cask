@@ -21,6 +21,8 @@ cask "djstudio@next" do
 
   app "DJ.Studio Next.app"
 
+  uninstall quit: "dj.studio.next.app"
+
   zap trash: [
     "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/dj.studio.app.sfl*",
     "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/dj.studio.next.app.sfl*",
