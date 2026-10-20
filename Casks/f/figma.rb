@@ -22,7 +22,8 @@ cask "figma" do
 
   app "Figma.app"
 
-  uninstall quit: "com.figma.agent"
+  uninstall launchctl: "com.figma.Desktop.ShipIt",
+            quit:      "com.figma.agent"
 
   zap trash: [
     "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.figma.desktop.sfl*",
