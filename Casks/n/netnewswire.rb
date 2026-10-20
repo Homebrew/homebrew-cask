@@ -15,8 +15,8 @@ cask "netnewswire" do
     end
   end
   on_sequoia :or_newer do
-    version "7.2"
-    sha256 "4de651c0f1fefe5d5ff1e5f6731f011ce0fb84e3850b5ea25710b514ec87def6"
+    version "7.2.1"
+    sha256 "9459896e516ac6c34685b38111dc456a3d1a4e49c964e40bc8f8af8fdc3b17db"
 
     livecheck do
       url "https://ranchero.com/downloads/netnewswire-release.xml"
