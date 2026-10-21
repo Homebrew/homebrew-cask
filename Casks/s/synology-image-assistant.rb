@@ -15,7 +15,7 @@ cask "synology-image-assistant" do
     strategy :electron_builder
   end
 
-  depends_on :macos
+  depends_on macos: :monterey
 
   pkg "SynologyImageAssistant-#{version}-#{arch}.pkg"
 
