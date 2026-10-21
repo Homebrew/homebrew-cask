@@ -1,6 +1,6 @@
 cask "altserver" do
-  version "1.8.1"
-  sha256 "8f48728c64ad776580939ce05ee99e979d457226fb82b1d42f95a8c1bd73e3c1"
+  version "1.8.2"
+  sha256 "0286391d9c749aa68115411cd390940d089d533b8a1546f1a7766f95cae8b128"
 
   url "https://cdn.altstore.io/file/altstore/altserver/#{version.dots_to_underscores}.zip"
   name "AltServer"
