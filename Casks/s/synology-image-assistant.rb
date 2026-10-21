@@ -1,9 +1,9 @@
 cask "synology-image-assistant" do
   arch arm: "arm64", intel: "x64"
 
-  version "1.0.2-56"
-  sha256 arm:   "2f4379724aad0ba09c5af2520c1f4a9dbb6732df31c55b11a25721ff2472a673",
-         intel: "12d296d740412affac661ddb3e081ccb91977a4e4f5b0339ee8db68b6f6613e8"
+  version "1.0.3-76"
+  sha256 arm:   "38d0f92c2c4b564c9e469fea8345cd651a7cfdd5468794f1de8dbb163209a01f",
+         intel: "704ef5289c54a6e6dea5287aade999bae553cf05dec70fbfec16c7452c14bed3"
 
   url "https://global.download.synology.com/download/Utility/SynologyImageAssistant/#{version}/Mac/SynologyImageAssistant-#{version}-#{arch}.pkg"
   name "Synology Image Assistant"
@@ -15,7 +15,7 @@ cask "synology-image-assistant" do
     strategy :electron_builder
   end
 
-  depends_on :macos
+  depends_on macos: :monterey
 
   pkg "SynologyImageAssistant-#{version}-#{arch}.pkg"
 
