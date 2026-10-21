@@ -1,6 +1,6 @@
 cask "font-ioskeley-mono-term-nerd-font" do
-  version "2.1.0"
-  sha256 "2eb905184e40602f6711d84c28448a0056a77de96881bbdee55b9595d40f2265"
+  version "2.2.0"
+  sha256 "25c601b1a561f73cbb0366931148861451a972463718d25e76bf869fd3d54754"
 
   url "https://github.com/ahatem/IoskeleyMono/releases/download/v#{version}/IoskeleyMono-Term-NerdFont.zip"
   name "Ioskeley Mono Term Nerd Font"
