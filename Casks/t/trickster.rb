@@ -17,6 +17,8 @@ cask "trickster" do
 
   app "Trickster.app"
 
+  uninstall quit: "com.apparentsoft.trickster"
+
   zap trash: [
     "~/Library/Application Scripts/com.apparentsoft.trickster",
     "~/Library/Application Scripts/com.apparentsoft.TricksterLauncher",
