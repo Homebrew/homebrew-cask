@@ -1,6 +1,6 @@
 cask "trickster" do
-  version "3.9.11"
-  sha256 "3d0026adac43bf8d40584ee6150cbe327b46c609508f07f2ecc2a19692495232"
+  version "4.0"
+  sha256 "847f26d19172c9c8550ab4624958f01b02bc7f6d8ae132b30fe66226ecee2a55"
 
   url "https://dl.apparentsoft.com/TricksterUpdates/Trickster_#{version}.zip"
   name "Trickster"
@@ -13,7 +13,7 @@ cask "trickster" do
   end
 
   auto_updates true
-  depends_on macos: :monterey
+  depends_on macos: :tahoe
 
   app "Trickster.app"
 
