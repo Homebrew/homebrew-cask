@@ -1,6 +1,6 @@
 cask "yojimbo" do
-  version "4.6.3"
-  sha256 "1496c28e14c86ef501d9e66caf1620abd2f80acb15ca78eb42a9cc03f1aba50f"
+  version "4.7"
+  sha256 "c87a916bd226939094f5d8f2740f1eda323fc330f2a687fea33b4c5f5fcb66b3"
 
   url "https://s3.amazonaws.com/BBSW-download/Yojimbo_#{version}.dmg"
   name "Yojimbo"
