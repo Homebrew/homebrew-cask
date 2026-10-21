@@ -18,6 +18,7 @@ cask "missive" do
   app "Missive.app"
 
   zap trash: [
+    "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.missiveapp.osx.sfl*",
     "~/Library/Application Support/Missive",
     "~/Library/Logs/Missive",
     "~/Library/Preferences/com.missiveapp.osx.plist",
