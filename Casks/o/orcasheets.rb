@@ -19,5 +19,9 @@ cask "orcasheets" do
 
   app "orcasheets.app"
 
-  zap trash: "~/Library/Application Support/OrcaSheets"
+  zap trash: [
+    "~/Library/Application Support/OrcaSheets",
+    "~/Library/Caches/ai.orcasheets.OrcaSheets",
+    "~/Library/WebKit/ai.orcasheets.OrcaSheets",
+  ]
 end
