@@ -29,7 +29,7 @@ cask "losslesscut" do
   url "https://github.com/mifi/lossless-cut/releases/download/v#{version}/LosslessCut-#{os}-#{arch}.#{url_end}"
   name "LosslessCut"
   desc "Trims video and audio files losslessly"
-  homepage "https://github.com/mifi/lossless-cut"
+  homepage "https://losslesscut.app/"
 
   livecheck do
     url :url
