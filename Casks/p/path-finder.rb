@@ -18,7 +18,10 @@ cask "path-finder" do
   app "Path Finder.app"
 
   zap trash: [
+    "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.cocoatech.pathfinder.sfl*",
     "~/Library/Application Support/Path Finder",
+    "~/Library/Caches/com.cocoatech.PathFinder",
+    "~/Library/HTTPStorages/com.cocoatech.PathFinder",
     "~/Library/Preferences/com.cocoatech.PathFinder.plist",
   ]
 end
