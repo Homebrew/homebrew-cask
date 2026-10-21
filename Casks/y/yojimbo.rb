@@ -18,6 +18,8 @@ cask "yojimbo" do
 
   app "Yojimbo.app"
 
+  uninstall quit: "com.barebones.yojimbo#{version.major}"
+
   zap trash: [
     "~/Library/Caches/com.apple.helpd/Generated/Yojimbo Help*#{version}",
     "~/Library/Caches/com.barebones.yojimbo4",
