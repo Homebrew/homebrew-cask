@@ -16,8 +16,10 @@ cask "mailspring" do
   app "Mailspring.app"
 
   zap trash: [
+    "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.mailspring.mailspring.sfl*",
     "~/Library/Application Support/Mailspring",
     "~/Library/Caches/com.mailspring.*",
+    "~/Library/HTTPStorages/com.mailspring.mailspring",
     "~/Library/Logs/Mailspring",
     "~/Library/Preferences/com.mailspring.*",
     "~/Library/Saved Application State/com.mailspring.*",
