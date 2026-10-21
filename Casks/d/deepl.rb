@@ -1,5 +1,5 @@
 cask "deepl" do
-  on_ventura :or_older do
+  on_sonoma :or_older do
     on_big_sur :or_older do
       version "24.2.1798840"
       sha256 "dacbf3dbd42eab3b1d3c4b48e0f0672146d07d94627b7ad073985fe41e9e9217"
@@ -18,13 +18,19 @@ cask "deepl" do
 
       url "https://www.deepl.com/macos/download/#{version.major_minor}/#{version.patch}/DeepL.dmg"
     end
+    on_sonoma do
+      version "26.6.14916780"
+      sha256 "e5507b544654795fc06d6a73090b3c15421913f6acba0bcbf81f6066bb50917c"
+
+      url "https://www.deepl.com/macos/download/#{version.major_minor}/#{version.patch}/DeepL.dmg"
+    end
     livecheck do
       skip "Legacy version"
     end
   end
-  on_sonoma :or_newer do
-    version "26.6.14916780"
-    sha256 "e5507b544654795fc06d6a73090b3c15421913f6acba0bcbf81f6066bb50917c"
+  on_sequoia :or_newer do
+    version "26.10.12962491689"
+    sha256 "e87c1069b0ddef1c54b0aaf183483453da1efaf1dbb1b877be0bef224b74e079"
 
     url "https://www.deepl.com/macos/download/#{version.major_minor}/#{version.patch}/DeepL.dmg"
     livecheck do
@@ -42,11 +48,15 @@ cask "deepl" do
 
   app "DeepL.app"
 
-  uninstall quit: [
-    "com.linguee.DeepLCopyTranslator",
-    "com.linguee.DeepLLauncher",
-    "com.linguee.DeepLStatusBar",
-  ]
+  uninstall launchctl: [
+              "com.linguee.DeepLLauncher",
+              "com.linguee.DeepLUninstall",
+            ],
+            quit:      [
+              "com.linguee.DeepLCopyTranslator",
+              "com.linguee.DeepLLauncher",
+              "com.linguee.DeepLStatusBar",
+            ]
 
   zap trash: [
     "~/Library/Caches/com.linguee.DeepLCopyTranslator*",
