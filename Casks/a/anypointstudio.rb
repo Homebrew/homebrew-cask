@@ -1,9 +1,9 @@
 cask "anypointstudio" do
   arch arm: "Arm", intel: "64"
 
-  version "7.28.0"
-  sha256 arm:   "220e428ac78039706e64ca5a77ca510d9829eda1a58db01b6d9cc3e6b072e439",
-         intel: "b7415f1ca0dc482508d6f617de59f11270ee0186a0f15ee9aa9a6afa694ff3f5"
+  version "7.29.0"
+  sha256 arm:   "06c2b4b8691ddaae6bdf66263491351d53e67919e14db570daf0a2143befe021",
+         intel: "babeb31667d2ba00d0c7eab75a91105a81c008aa29001fb1e95ee5719f8e2f98"
 
   url "https://www.mulesoft.com/downloads/studio/latest/AnypointStudio-#{version}-macos#{arch}.zip",
       referer: "https://www.mulesoft.com/api/products"
