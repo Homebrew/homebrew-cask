@@ -22,9 +22,9 @@ cask "slack" do
     end
   end
   on_ventura :or_newer do
-    version "4.52.178"
-    sha256 arm:   "8a5bd759b91478c19f23deef1f21b870a5c3c55b631e3341be32f1c297260331",
-           intel: "3d68c32bbb0b279c8481060017d0069bf2c6231b91c5199aa71e6c2a4132d2c1"
+    version "4.52.182"
+    sha256 arm:   "c069f3a29ee962d6c0392949a9db6539e2eb9d959dd3a4fed796fe83ce3ab2e3",
+           intel: "facf107d0b3f3ec7d93c94db6d73d5016c9aa2f60b1f8177453b5fe6e564be6e"
 
     url "https://downloads.slack-edge.com/desktop-releases/mac/#{arch}/#{version}/Slack-#{version}-macOS.dmg"
 

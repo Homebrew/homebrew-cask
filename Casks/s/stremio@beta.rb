@@ -11,9 +11,9 @@ cask "stremio@beta" do
     end
   end
   on_tahoe :or_newer do
-    version "5.1.28"
-    sha256 arm:   "cd1963dbf0c26900d8880f440a2e7e0c3841c8f58b7e23e6491f9f66d066fd3d",
-           intel: "2110d399447e8bad567096b72628fe3fdbd7e1c517cd96a84eebddf4d6302d0c"
+    version "5.1.30"
+    sha256 arm:   "f8e46050e76642d81792bc357f071289cf700dfcef9f4b18650a26fafc1f7ed3",
+           intel: "b1c5b5c15bf3a246a16a134e979add06f72533ffac39d3fa015d9f6c63300b1f"
 
     livecheck do
       url "https://www.stremio.com/updater/check?product=stremio-shell-macos&arch=#{arch}"

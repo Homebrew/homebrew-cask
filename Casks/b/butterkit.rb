@@ -1,6 +1,6 @@
 cask "butterkit" do
-  version "3.0.06"
-  sha256 "d72cd3a7eb07496396d7160749b27f413cf82f0c2bdd7a5bf90bf53e50df8ea6"
+  version "3.1.01"
+  sha256 "0c5f346eb8d56fa323cc7755910ae98a53d1adbfefe8c7fb5c3089b739ad47f0"
 
   url "https://download.butterkit.app/updates/ButterKit-Direct-#{version}-macOS.zip"
   name "ButterKit"
@@ -19,8 +19,10 @@ cask "butterkit" do
 
   zap trash: [
     "~/Library/Application Scripts/app.butterkit.direct",
+    "~/Library/Application Scripts/group.app.butterkit",
     "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/app.butterkit.direct.sfl*",
     "~/Library/Caches/app.butterkit.direct",
     "~/Library/Containers/app.butterkit.direct",
+    "~/Library/Group Containers/group.app.butterkit",
   ]
 end

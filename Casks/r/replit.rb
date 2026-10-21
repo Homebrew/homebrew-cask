@@ -1,16 +1,22 @@
 cask "replit" do
-  version "1.1.15"
-  sha256 :no_check
+  version "1.1.18,1792533155901098"
+  sha256 "4e370d8ccb62955e20d8452350ae55b9faaf22c4e0ddfeb34a62a40c05e742b1"
 
-  url "https://desktop.replit.com/download/mac"
+  url "https://desktop-updates.replit.com/desktop-app/updates/stable/darwin/arm64/artifacts/#{version.csv.first}/#{version.csv.second}/Replit-#{version.csv.first}-arm64-mac.zip"
   name "Replit"
   desc "Software development and deployment platform"
   homepage "https://replit.com/"
 
   livecheck do
-    url "https://desktop.replit.com/latest"
-    strategy :json do |json|
-      json["version"]
+    url "https://desktop-updates.replit.com/desktop-app/updates/stable/darwin/arm64/latest-mac.yml"
+    regex(%r{artifacts/v?(\d+(?:\.\d+)+)/(\d+)/Replit[^/]*?\.zip}i)
+    strategy :electron_builder do |yaml, regex|
+      yaml["files"]&.map do |item|
+        match = item["url"]&.match(regex)
+        next if match.blank?
+
+        "#{match[1]},#{match[2]}"
+      end
     end
   end
 

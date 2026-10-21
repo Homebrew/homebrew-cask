@@ -1,9 +1,9 @@
 cask "qlc+" do
   arch arm: "arm64", intel: "x86_64"
 
-  version "5.2.2"
-  sha256 arm:   "116b83e96be1bbc66b89f3bbc98dc79be8766f4a123bb7347658b34d07eb1c18",
-         intel: "6e07bb853e115655db8447ac7f5123f38f233426f27a8d4dfe77e5c59dcb2146"
+  version "5.3.0"
+  sha256 arm:   "edae14cbc2138e197296d1e4615631273bd0673af4ce97c885467f28f69d51ea",
+         intel: "6067ef7c8310b3c670f21ed880d6f10b063ea9b161209352f1de10ebd8bf6dbd"
 
   on_arm do
     depends_on macos: :ventura
@@ -18,11 +18,14 @@ cask "qlc+" do
   homepage "https://www.qlcplus.org/"
 
   livecheck do
-    url "https://www.qlcplus.org/download"
-    regex(/href=.*?QLC\+[._-]v?(\d+(?:[.-]\d+)+)[._-]#{arch}\.dmg/i)
+    url "https://github.com/mcallegari/qlcplus.git"
+    regex(/^QLC\+[_-]v?(\d+(?:\.\d+)+)$/i)
+    strategy :git
   end
 
   app "QLC+.app"
+
+  uninstall launchctl: "application.QLC.app.*"
 
   zap trash: "~/Library/Application Support/QLC+"
 end

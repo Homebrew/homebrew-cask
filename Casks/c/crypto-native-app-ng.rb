@@ -1,9 +1,9 @@
 cask "crypto-native-app-ng" do
   arch arm: "arm64", intel: "x64"
 
-  version "26.1.20558"
-  sha256  arm:   "4d7e79ccafe8db6a29d18fcb67ac1ad405933a0f54ccdd0d2acea83d7d1b06d2",
-          intel: "8938cbf3e082e0005fe7ccdf644f07973390cc311c882763de7003c3ca6c4c91"
+  version "26.2.20745"
+  sha256  arm:   "ac270c50e0568debaf55937712d73d368fc4e36eee83574fc2a8e8113f6ab9e6",
+          intel: "30f6d254ef58f925dc47b0ed6e2479c9201d929bdfd6cc2c8252723b93b5d8bb"
 
   url "https://download.tescosw.cz/crypto/files/cryptong/Crypto-Native-App-NG-v#{version}-#{arch}-MUI.dmg"
   name "Crypto Native App NG"

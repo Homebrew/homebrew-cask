@@ -1,6 +1,6 @@
 cask "elgato-control-center" do
-  version "1.9,20829"
-  sha256 "0bb521ee9413ca48aa0fa85db07fd98f1301490bab9001d003a06960681fc0a1"
+  version "1.9.1,21030"
+  sha256 "ab95a395a257c87fecb23d509a4a66934189df6418af4ea2edeba6665e433acf"
 
   url "https://edge.elgato.com/egc/macos/eccm/#{version.csv.first}/ElgatoControlCenter-#{version.csv.first}.#{version.csv.second}.app.zip"
   name "Elgato Control Center"
@@ -15,7 +15,7 @@ cask "elgato-control-center" do
   auto_updates true
   depends_on macos: :sonoma
 
-  app "Elgato Control Center.app"
+  app "ControlCenter.app"
 
   uninstall quit: "com.corsair.ControlCenter"
 

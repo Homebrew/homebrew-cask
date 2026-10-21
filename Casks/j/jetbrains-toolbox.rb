@@ -2,11 +2,11 @@ cask "jetbrains-toolbox" do
   arch arm: "-arm64"
   os macos: "dmg", linux: "tar.gz"
 
-  version "3.8.1,3.8.1.88030"
-  sha256 arm:          "2f07b78168913476cdae4ea1c1fa74bb075a4bcb70c598a85de099785a6e9c73",
-         intel:        "a7ddaaaa0c01429ac64eeac3b30531104b79faf9402fa1429068b3f4a946659f",
-         arm64_linux:  "47dd2a112b2e169a072de01abc482a6a6341fcf8ce14acb62f7713963e78833e",
-         x86_64_linux: "25cbe2ad027f5a5749bf8d8ae7c2215a8665403cfe94ff5d05cd48b25daac345"
+  version "3.9,3.9.0.88839"
+  sha256 arm:          "af1a2e14be46e1bbca0e310a865029b0694d44c062105b9b847d557f3aa66760",
+         intel:        "6824ea74093e5e0db208d3a510725ea520fe225470db53dd5300453820b22ad6",
+         arm64_linux:  "dee1bdb310a561d80a87bb52251843fb5f4d577ea8ae2144b817538af53b9690",
+         x86_64_linux: "e578d49627da13a6e196e234bfb6325db02a64a07fd22414909daae378ab4049"
 
   on_macos do
     auto_updates true

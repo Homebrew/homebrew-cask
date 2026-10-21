@@ -2,11 +2,11 @@ cask "copilot-cli" do
   arch arm: "arm64", intel: "x64"
   os macos: "darwin", linux: "linux"
 
-  version "1.0.98"
-  sha256 arm:          "a87018a0194789313c979906e45e8874699fee50549ea11d0be7bdde88b6b3c8",
-         intel:        "dfa26894b0c178239daaac527d5aac0a6cfce4bc1ede6fa33d54ccf77a5bb3b5",
-         arm64_linux:  "a7509dcac0e5f22886788ba4c1e2f8b9b07367e84714e42b9e7cee4d8f9fa5f2",
-         x86_64_linux: "87ddb4b3f98462b7cb13c0a6857c68ee410ec9673e2e5f64ee5bedad45825b05"
+  version "1.0.101"
+  sha256 arm:          "efce4325f7fd95945ef42f552ff7832f281307b2c63541b23f9b257e171bfe32",
+         intel:        "f271b3f2f26e90460baa4791018f3864032621fa1c4484d387f8c822853a46ba",
+         arm64_linux:  "14f7a68725866eac987f813b6b485595c280ea58b4ad351e08b0051de40794de",
+         x86_64_linux: "5fc08295c464e4c7de763fbb29c5d4cf4720d8265d3ded3781a2be655f554f74"
 
   on_macos do
     depends_on macos: :ventura

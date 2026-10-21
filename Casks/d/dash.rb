@@ -1,6 +1,6 @@
 cask "dash" do
-  version "8.1.1"
-  sha256 "bf66b0fa12fa8b800e5233c06aa41373f6444d3c8cf9635aca1eb6a528a01513"
+  version "8.2.0"
+  sha256 "cbf3043980c21de346bbcb5d3e5a50956330525a175aaba76b11c49196f933db"
 
   url "https://kapeli.com/downloads/v#{version.major}/Dash.zip"
   name "Dash"

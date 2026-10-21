@@ -1,6 +1,6 @@
 cask "pitch" do
-  version "2.149.0,stable.4,8564507"
-  sha256 "16855f595a8138582afbf50db51db74bcb2774c7981e407aface0b374ec2447b"
+  version "2.150.0,stable.1,8575003"
+  sha256 "28846f3d553ff149544fdab776c157b7b9e63b805d4ee1b95c4e93fa99ecede8"
 
   url "https://desktop-app-builds.pitch.com/Pitch-#{version.csv.first}-#{version.csv.second}-ci#{version.csv.third}.dmg"
   name "Pitch"
@@ -20,7 +20,7 @@ cask "pitch" do
     end
   end
 
-  depends_on macos: :monterey
+  depends_on macos: :ventura
 
   app "Pitch.app"
 
