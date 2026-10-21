@@ -18,10 +18,12 @@ cask "neo4j-desktop" do
   app "Neo4j Desktop #{version.major}.app"
 
   zap trash: [
+    "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.neo4j.neo4j-desktop-2.sfl*",
     "~/Library/Application Support/com.Neo4j.Relate",
     "~/Library/Application Support/Neo4j Desktop",
     "~/Library/Caches/com.Neo4j.Relate",
     "~/Library/Logs/Neo4j Desktop",
+    "~/Library/Preferences/com.neo4j.neo4j-desktop-2.plist",
     "~/Library/Preferences/com.neo4j.neo4j-desktop.plist",
     "~/Library/Saved Application State/com.neo4j.neo4j-desktop.savedState",
   ]
