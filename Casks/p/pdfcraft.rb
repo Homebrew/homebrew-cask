@@ -2,11 +2,11 @@ cask "pdfcraft" do
   arch arm: "aarch64", intel: "x86_64"
   url_end = on_system_conditional macos: "macos-universal.dmg", linux: "linux-#{arch}.AppImage"
 
-  version "0.10.1"
-  sha256 arm:          "910434879121f5c74b846e0b149a5537958d29684edc810037443af8e40e6397",
-         intel:        "910434879121f5c74b846e0b149a5537958d29684edc810037443af8e40e6397",
-         arm64_linux:  "79c76bab95bc5e5bfd3849bf44d3048d9125afc00fcf9c515a9a9495c06864d2",
-         x86_64_linux: "e337b718626adb34c20328feba0456352a58f8156ada9b469cc5f5dba2352e56"
+  version "0.11.0"
+  sha256 arm:          "8774df32a4ddc356029b133d7d860ed4723c968b8b018e2062b39da0fb05e752",
+         intel:        "8774df32a4ddc356029b133d7d860ed4723c968b8b018e2062b39da0fb05e752",
+         arm64_linux:  "988cffd850088b1b2b792bb8b52ca4adc453c3eb84d8ce7d2ffe13c12ac23813",
+         x86_64_linux: "d85810e236f095aa900af20e0276793b28435726cabdd4e21f34ad1049d3cc32"
 
   on_macos do
     app "PdfCraft.app"
