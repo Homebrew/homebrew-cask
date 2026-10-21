@@ -1,6 +1,6 @@
 cask "font-geist-pixel" do
-  version "1.8.1"
-  sha256 "70f42c1452fb6df12ea183e20a65999157354f91d11dac18b4c713e383808ec2"
+  version "1.8.2"
+  sha256 "43ffb66912b1c49e40c371d96e86b3b3dab42db83eb2d0c8a17321210394c4c7"
 
   url "https://github.com/vercel/geist-font/releases/download/v#{version}/geist-font-v#{version}.zip"
   name "Geist Pixel"
