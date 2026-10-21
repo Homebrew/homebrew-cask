@@ -21,10 +21,14 @@ cask "tracexy" do
             quit:      "com.amunx.tracexy.community"
 
   zap trash: [
+    "~/Library/Application Scripts/com.amunx.tracexy.community.spotlight",
     "~/Library/Application Support/com.amunx.tracexy.community",
+    "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.amunx.tracexy.community.sfl*",
     "~/Library/Caches/com.amunx.tracexy.community",
+    "~/Library/Containers/com.amunx.tracexy.community.spotlight",
     "~/Library/HTTPStorages/com.amunx.tracexy.community",
     "~/Library/Preferences/com.amunx.tracexy.community.plist",
+    "~/Library/Preferences/com.amunx.tracexy.community.project.*.plist",
     "~/Library/Saved Application State/com.amunx.tracexy.community.savedState",
   ]
 end
