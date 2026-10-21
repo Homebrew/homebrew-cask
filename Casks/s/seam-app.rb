@@ -1,6 +1,6 @@
 cask "seam-app" do
-  version "1.18.3"
-  sha256 "352cd2d50361003566b940dfd1ef13d5004ecc3cc930a19da5e02a5deda73a5a"
+  version "1.18.4"
+  sha256 "bcbedfcbbbed22ddfff8395592c564ba2f046dff53bb73c027744c983aef262b"
 
   url "https://releases.getseam.app/#{version}/Seam.dmg"
   name "Seam"
