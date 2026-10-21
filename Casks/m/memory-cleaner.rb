@@ -1,6 +1,6 @@
 cask "memory-cleaner" do
-  version "5.5.3,271"
-  sha256 "6b1097ccc760723e1c521a851ceef68b92c4a5647e1e1d5426f644f02d7517f3"
+  version "5.5.4,276"
+  sha256 "7115196e0a529dca67b401247a69416666fa54ccc423dc107237c445b8124957"
 
   url "https://download.nektony.com/download/memory-cleaner/dmg/memory-cleaner.dmg?build=#{version.csv.second}"
   name "Memory Cleaner"
