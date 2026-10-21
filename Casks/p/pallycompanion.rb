@@ -1,6 +1,6 @@
 cask "pallycompanion" do
-  version "0.1.59,324.1"
-  sha256 "995ff890cfb4db255fce75a3499d9d2ae92f328fb553531c197402089842f199"
+  version "0.1.60,331.1"
+  sha256 "eb26cf05193f1152b5413ea7a0a5397c7ce8d9534d0fcb2ab55e2049f581c8b5"
 
   url "https://downloads.pally.com/companion/Pally-#{version.csv.first}-#{version.csv.second}.dmg"
   name "Pally Companion"
