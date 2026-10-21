@@ -2,10 +2,10 @@ cask "keepassxc" do
   arch arm: "arm64", intel: "x86_64"
   os macos: "dmg", linux: "AppImage"
 
-  version "2.7.12"
-  sha256 arm:          "65f4f63607180c0a15794b4a4068f85e99ed5391c87c1fb9312648f1b36fed40",
-         intel:        "f55737bf759b7ea622967ae979e8fd0ef06a8133104124c24861fd11a3fe14b5",
-         x86_64_linux: "564fe8b751b9ef7aa057e4d3d0b2878db24eaa0f6b1c855c82e699ab0913ae49"
+  version "2.8.0"
+  sha256 arm:          "223d5c71ae6c11d48192c69fd582fd5f10047e91ebcebc014de33a42539b9519",
+         intel:        "002b805ede4d9755b554987b9c482fb8bab79ec01d18d1f70dbf3114e2f9469a",
+         x86_64_linux: "b52889fd627ae7a1c609b91b2526ccd5d847ec6707ac6eb634553186dee4f705"
 
   on_macos do
     depends_on macos: :monterey
