@@ -1,6 +1,6 @@
 cask "sipgate" do
-  version "2.44.12"
-  sha256 "21bc6d2b9cf1f90f18edae326376b7f3df9e82634402b13acb91aec20d80aa16"
+  version "2.45.0"
+  sha256 "f4c31f175e5e3216f0693177455f0f338a6ff166efb84bf5d5fc76443698278c"
 
   url "https://s3-eu-central-1.amazonaws.com/desktop.download.sipgate.com/sipgate-#{version}.zip"
   name "sipgate"
@@ -13,7 +13,7 @@ cask "sipgate" do
   end
 
   auto_updates true
-  depends_on macos: :monterey
+  depends_on macos: :ventura
 
   app "sipgate.app"
 
