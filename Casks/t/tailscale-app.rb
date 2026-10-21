@@ -38,7 +38,7 @@ cask "tailscale-app" do
     "~/Library/Containers/io.tailscale.ipn.macsys",
     "~/Library/Containers/io.tailscale.ipn.macsys.login-item-helper",
     "~/Library/Containers/io.tailscale.ipn.macsys.share-extension",
-    "~/Library/Containers/io.tailscale.ipn.macsys.widgets,",
+    "~/Library/Containers/io.tailscale.ipn.macsys.widgets",
     "~/Library/Containers/Tailscale",
     "~/Library/Group Containers/*.io.tailscale.ipn.macsys",
     "~/Library/Group Containers/group.W5364U7YZB.io.tailscale.shared",
