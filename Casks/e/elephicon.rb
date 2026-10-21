@@ -1,6 +1,6 @@
 cask "elephicon" do
-  version "4.2.1"
-  sha256 "b24835698a3fc548f147b0603e560e3e0f0f1915b0ea961b2ed0222b1c6342ef"
+  version "4.3.0"
+  sha256 "a9d7602a738fa631140d728296eea385b60655af9398175cd349339a1cb36a68"
 
   url "https://github.com/sprout2000/elephicon/releases/download/v#{version}/Elephicon-#{version}-darwin-arm64.dmg"
   name "Elephicon"
