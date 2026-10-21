@@ -1,6 +1,6 @@
 cask "missive" do
-  version "11.37.0"
-  sha256 "30b0116454569d2ad80635a7b6e94b84cab6bc0d806aa0bf381676f0591a086f"
+  version "11.37.1"
+  sha256 "de74f51cb9afe85a259b573246aaa124a9218de1d84ac87106ece9e509f719aa"
 
   url "https://downloads.missiveapp.com/#{version}/Missive-#{version}.dmg"
   name "Missive"
@@ -13,7 +13,7 @@ cask "missive" do
   end
 
   auto_updates true
-  depends_on macos: :monterey
+  depends_on macos: :ventura
 
   app "Missive.app"
 
