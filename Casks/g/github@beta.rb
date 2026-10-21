@@ -33,6 +33,7 @@ cask "github@beta" do
         "~/Library/Application Support/ShipIt_stdout.log",
         "~/Library/Caches/com.github.GitHubClient",
         "~/Library/Caches/com.github.GitHubClient.ShipIt",
+        "~/Library/HTTPStorages/com.github.GitHubClient",
         "~/Library/Logs/GitHub Desktop",
         "~/Library/Preferences/ByHost/com.github.GitHubClient.ShipIt.*.plist",
         "~/Library/Preferences/com.github.GitHubClient.helper.plist",
