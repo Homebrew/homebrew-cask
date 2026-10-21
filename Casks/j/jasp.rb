@@ -2,9 +2,9 @@ cask "jasp" do
   arch arm: "arm64", intel: "x86_64"
   livecheck_folder = on_arch_conditional arm: "-apple-silicon"
 
-  version "0.98.8.0"
-  sha256 arm:   "402a56bf0e3a50194197e6ee6f47e925f830043c1a94464d8aca243c14d11b98",
-         intel: "1cf937576494effcd0912258198005b4a5420cd1750c13b7ca50c6cfe83620ea"
+  version "0.99.0.0"
+  sha256 arm:   "f67c1279c40440ee94860382866fc5681756d08c3338d95f52d87faff3a0afec",
+         intel: "b78dc537bfcc26d068efe0f25a1737429208bb28f6a3c568aacc8d13878866d2"
 
   on_intel do
     disable! date: "2026-09-01", because: :fails_gatekeeper_check
