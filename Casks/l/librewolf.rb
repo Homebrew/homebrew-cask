@@ -3,11 +3,11 @@ cask "librewolf" do
   os macos: "macos", linux: "linux"
   url_end = on_system_conditional macos: "package.dmg", linux: "appimage.AppImage"
 
-  version "158.0,1"
-  sha256 arm:          "d78ac3457b2e05001eb880437c8f989e96c05599fda4758c8d489ba397993085",
-         intel:        "ee2265eff41cc370b855b7bf62c5cbad698b89a62b3c17fe725db64bb7fbe280",
-         arm64_linux:  "5a2ca7c8f897e8ab2ad827ce9d31271276851a2103a8e307fc5611fb3e457905",
-         x86_64_linux: "6426e30fd7c66e7855dc17626e7d2dcc1d99e8bf7568d4ad25e3955981510843"
+  version "158.0.1,1"
+  sha256 arm:          "196c30edd4f3e2499a8d959967a6944fc2fb4784e09bab01cf569daf682dac0f",
+         intel:        "c06c0b2908d890b45a6a97aabdedff705c45f2ded896f6ce01c2e912cbace6e5",
+         arm64_linux:  "35b430958e0f753a1db9c01835f664aeaec29532ead2519613f4f43aac84fac8",
+         x86_64_linux: "9df3e8733572730b5610a21cf4ab095b5023d1bdd9688767156a4bc5cef98fab"
 
   on_macos do
     auto_updates true
