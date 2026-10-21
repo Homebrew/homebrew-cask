@@ -1,9 +1,9 @@
 cask "aptible" do
   arch arm: "arm64", intel: "amd64"
 
-  version "1.0.4"
-  sha256 arm:   "eab8b036d9b1657f45db95a743ed7437d80c1548b4a780179e0b7b969b489bf1",
-         intel: "64eb1435b4917534a3acfd85003d5d1dae34331f92f434a2bb6a30b6240e748e"
+  version "1.0.5"
+  sha256 arm:   "43f99a665592a2c4059266663d4fcff953da1fbd361fa75a64c597866fafd4cf",
+         intel: "1dd67fc3c58b812993f92214f824626edb8ef9d0e49a45c361fe7a91b4cbe1d3"
 
   url "https://omnibus-aptible-toolbelt.s3.amazonaws.com/release/aptible-cli-go/aptible-cli-go_#{version}_darwin_#{arch}.pkg"
   name "Aptible Toolbelt"
