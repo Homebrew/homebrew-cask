@@ -1,6 +1,6 @@
 cask "stability-matrix" do
-  version "2.16.4"
-  sha256 "3920d2a6bf2abc29bc6859a251556e7dc3f909b8c46ea72fe1091f2f30759ab0"
+  version "2.16.5"
+  sha256 "7dd93e93bf9632ed7d66e160292297375069cb5c33438805dc41d3700375e765"
 
   url "https://github.com/LykosAI/StabilityMatrix/releases/download/v#{version}/StabilityMatrix-macos-arm64.dmg"
   name "Stability Matrix"
