@@ -1,9 +1,9 @@
 cask "android-studio-preview@beta" do
   arch arm: "mac_arm", intel: "mac"
 
-  version "2026.2.1.7,rabbit1-rc2"
-  sha256 arm:   "8fb71c27a0feb96384aa951512eba5bf58e39c1a8e8f6392fd20218f255176ca",
-         intel: "05de967d4a1bc5d1fab88736ba0ea640581c79c7f8369704926506842edca844"
+  version "2026.2.2.6,rabbit2-rc1"
+  sha256 arm:   "04811f205be6aa7e6dd80bb36f356931464bf632858ccae406f888f0c76d3f5c",
+         intel: "5c1cda00d8af8ca803bbc19d9a76fd6d3e668777f2c3cbafc2dbd62bd6002a05"
 
   url "https://edgedl.me.gvt1.com/android/studio/install/#{version.csv.first}/android-studio#{"-#{version.csv.second}" if version.csv.second}-#{arch}.dmg"
   name "Android Studio Preview (Beta)"
