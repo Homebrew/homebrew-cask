@@ -32,6 +32,8 @@ cask "figma" do
     "~/Library/Caches/com.figma.agent",
     "~/Library/Caches/com.figma.Desktop",
     "~/Library/HTTPStorages/com.figma.agent",
+    "~/Library/HTTPStorages/com.figma.Desktop",
+    "~/Library/Preferences/ByHost/com.figma.Desktop.ShipIt.*.plist",
     "~/Library/Preferences/com.figma.Desktop.plist",
     "~/Library/Saved Application State/com.figma.Desktop.savedState",
   ]
