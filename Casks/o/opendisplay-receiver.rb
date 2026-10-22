@@ -1,6 +1,6 @@
 cask "opendisplay-receiver" do
-  version "1.25.0"
-  sha256 "7243312177caa1335789521b02ff5d37c0e875f58b2c06d96f7dd524f6bfbbbb"
+  version "1.26.0"
+  sha256 "995fe899486d4fc500551f8ef024ccdef1731b66cb82863820a3a1a6cf8daca6"
 
   url "https://github.com/peetzweg/opendisplay/releases/download/v#{version}/OpenDisplayReceiver.dmg"
   name "OpenDisplay Receiver"
