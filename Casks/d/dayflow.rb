@@ -23,6 +23,11 @@ cask "dayflow" do
   zap trash: [
     "~/Library/Application Scripts/teleportlabs.com.Dayflow",
     "~/Library/Application Support/Dayflow",
+    "~/Library/Application Support/teleportlabs.com.Dayflow",
+    "~/Library/Caches/teleportlabs.com.Dayflow",
     "~/Library/Containers/teleportlabs.com.Dayflow",
+    "~/Library/HTTPStorages/teleportlabs.com.Dayflow",
+    "~/Library/Preferences/teleportlabs.com.Dayflow.plist",
+    "~/Library/WebKit/teleportlabs.com.Dayflow",
   ]
 end
