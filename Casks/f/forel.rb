@@ -1,6 +1,6 @@
 cask "forel" do
-  version "1.0.9"
-  sha256 "dc99deddc6feba08f04ceda451bf4677bbb7ac646a6b3c28f3e054b102fd65f3"
+  version "1.1.0"
+  sha256 "2d7cda993b69ea794dd64a80c737d9cd5bc5d1d46e4dfa09c5cb382148ced7d5"
 
   url "https://github.com/lab421/forel/releases/download/v#{version}/Forel-v#{version}.dmg"
   name "Forel"
@@ -8,7 +8,7 @@ cask "forel" do
   homepage "https://forel-app.github.io/"
 
   auto_updates true
-  depends_on macos: :ventura
+  depends_on macos: :sonoma
 
   app "Forel.app"
 
