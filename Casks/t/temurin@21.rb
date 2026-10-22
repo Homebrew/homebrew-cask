@@ -1,11 +1,11 @@
 cask "temurin@21" do
   arch arm: "aarch64", intel: "x64"
 
-  sha256 arm:   "575bb8d9d604821d8f350325b28a35e49bcffd7ec33727b41edc8d709537dada",
+  sha256 arm:   "7c4cd71ec227fcff5e30d35816c2fe7d82ce2808b9ac6cc7adbd3272af3d9182",
          intel: "9294fd37c0d38d75bf8b0d3e5a74f11c90006dc65b25bf1dd5a3b887e53f5bb9"
 
   on_arm do
-    version "21.0.12.1,1"
+    version "21.0.13,9"
   end
   on_intel do
     version "21.0.12.1,1"
