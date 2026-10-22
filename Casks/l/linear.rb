@@ -1,6 +1,6 @@
 cask "linear" do
-  version "1.32.4"
-  sha256 "bae1078fabf5b72d884c3bbba4235117e92070adcba407cdc30afb3933f14d31"
+  version "1.32.7"
+  sha256 "99919aef3ea3c3f62e2900372ce4a2f63777095b835664ef6a78332e24ae5065"
 
   url "https://releases.linear.app/Linear-#{version}-universal.dmg"
   name "Linear"
@@ -13,7 +13,7 @@ cask "linear" do
   end
 
   auto_updates true
-  depends_on macos: :monterey
+  depends_on macos: :ventura
 
   app "Linear.app"
 
