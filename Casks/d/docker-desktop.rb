@@ -31,8 +31,6 @@ cask "docker-desktop" do
          target: "/usr/local/bin/docker"
   binary "#{appdir}/Docker.app/Contents/Resources/bin/docker-credential-desktop",
          target: "/usr/local/bin/docker-credential-desktop"
-  binary "#{appdir}/Docker.app/Contents/Resources/bin/docker-credential-ecr-login",
-         target: "/usr/local/bin/docker-credential-ecr-login"
   binary "#{appdir}/Docker.app/Contents/Resources/bin/docker-credential-osxkeychain",
          target: "/usr/local/bin/docker-credential-osxkeychain"
   binary "#{appdir}/Docker.app/Contents/Resources/bin/kubectl",
