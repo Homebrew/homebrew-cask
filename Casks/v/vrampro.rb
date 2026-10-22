@@ -1,6 +1,6 @@
 cask "vrampro" do
-  version "2.1.4"
-  sha256 "2edaf0c8f1053a6c7cde80dbaad9d9d62d29951291754f1d82ebf95bd8029c95"
+  version "2.3.0"
+  sha256 "69092840478379c6d0035b204067040046bda7ae40ffce8014914c0ea3a709b9"
 
   url "https://vrampro.com/updates/VRAMPro-#{version}.zip"
   name "VRAM Pro"
