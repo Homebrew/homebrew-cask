@@ -12,6 +12,8 @@ cask "arc" do
     strategy :sparkle
   end
 
+  disable! date: "2026-12-22", because: :discontinued
+
   auto_updates true
   depends_on macos: :ventura
 
