@@ -1,6 +1,6 @@
 cask "dorso" do
-  version "1.15.1"
-  sha256 "1daabab81b3b0233a5664ec1133f5d0c6706699f66e9dc6a9547d0575c849d6a"
+  version "1.16.0"
+  sha256 "ef86ac0e8ec11c4d5e3db99f999380c33ea9537447247f5a67bb250e070584dc"
 
   url "https://github.com/tldev/dorso/releases/download/v#{version}/Dorso-v#{version}.dmg"
   name "Dorso"
