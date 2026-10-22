@@ -20,8 +20,12 @@ cask "crest-browser" do
   app "Crest.app"
 
   zap trash: [
+    "~/Library/Application Scripts/com.zack40x.crest.safari",
+    "~/Library/Application Scripts/SA6A94K2Y4.com.zack40x.crest",
     "~/Library/Application Support/Crest",
     "~/Library/Caches/com.pauldavis.crest",
+    "~/Library/Containers/com.zack40x.crest.safari",
+    "~/Library/Group Containers/SA6A94K2Y4.com.zack40x.crest",
     "~/Library/HTTPStorages/com.pauldavis.crest",
     "~/Library/Preferences/com.pauldavis.crest.plist",
     "~/Library/Preferences/com.pauldavis.crest.sync-journal.plist",
