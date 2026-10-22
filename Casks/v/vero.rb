@@ -17,7 +17,9 @@ cask "vero" do
   app "VERO.app"
 
   zap trash: [
+    "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/co.vero.desktop.sfl*",
     "~/Library/Application Support/VERO",
+    "~/Library/Logs/VERO",
     "~/Library/Preferences/co.vero.desktop.plist",
     "~/Library/Saved Application State/co.vero.desktop.savedState",
   ]
