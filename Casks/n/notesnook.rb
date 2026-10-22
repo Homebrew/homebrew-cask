@@ -4,11 +4,11 @@ cask "notesnook" do
   url_end = on_system_conditional macos: "dmg", linux: "AppImage"
   livecheck_folder = on_system_conditional macos: "darwin", linux: "linux"
 
-  version "3.4.9"
-  sha256 arm:          "be12769bbd74eceac121a9eb92414c2264b85c2b1ca8ea218b0703b8a25663e1",
-         intel:        "6945971633d8bce923a145e166b35473c56abab75b6f0f1ccfcedd970a38c5c3",
-         arm64_linux:  "3b60969aec90f482e3b4346cf43aa77aa1066f20fd0d6317db516c1bf5b5a8da",
-         x86_64_linux: "2bb6e42d97240156099cba498e4e17a4635c8e2981b50fb03d84ea46e0fbaafe"
+  version "3.4.10"
+  sha256 arm:          "e05df807ca74acea1b0b93dead73e93151808ac6be73538b020978c461b556e1",
+         intel:        "5e9fac9692d5760a9e629220d11f93caa8ac57a3816a7dda77317cdbfb087165",
+         arm64_linux:  "631085b7eadd83af8f19ee9fc2fa15471d82b57176d58354adf58b489e67d630",
+         x86_64_linux: "891a11e79015ec98b0365ef0c4944b96251ca501c1846cda5a4075766282a1df"
 
   on_macos do
     app "Notesnook.app"
