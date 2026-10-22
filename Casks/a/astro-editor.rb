@@ -2,10 +2,10 @@ cask "astro-editor" do
   os macos: "universal", linux: "amd64"
   url_end = on_system_conditional macos: "dmg", linux: "AppImage"
 
-  version "1.0.17"
-  sha256 arm:          "f7ed25372e8c4279ba950ed46445bc709ca52d63c84350882888a64ae1e5715b",
-         intel:        "f7ed25372e8c4279ba950ed46445bc709ca52d63c84350882888a64ae1e5715b",
-         x86_64_linux: "0622030b83a5c33724b9356dfc3d571e4b2d6aa84a977b754cc2f9dff38ec5e6"
+  version "1.0.19"
+  sha256 arm:          "3650d535fbabf6a0490d8ff7cd059a13ea6ef962a033cf1c9ed83c8e69999c85",
+         intel:        "3650d535fbabf6a0490d8ff7cd059a13ea6ef962a033cf1c9ed83c8e69999c85",
+         x86_64_linux: "c770305273338f1a257883570ba1cfbc7b92c9c7bc06367d506ba0ead2962439"
 
   on_macos do
     app "Astro Editor.app"
