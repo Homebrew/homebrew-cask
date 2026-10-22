@@ -16,6 +16,7 @@ cask "forel" do
     "~/Library/Application Support/com.lab421.forel",
     "~/Library/Caches/com.lab421.forel",
     "~/Library/HTTPStorages/com.lab421.forel",
+    "~/Library/Preferences/com.lab421.forel.licensing.plist",
     "~/Library/Preferences/com.lab421.forel.plist",
   ]
 end
