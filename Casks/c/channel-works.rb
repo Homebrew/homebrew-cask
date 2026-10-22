@@ -21,6 +21,7 @@ cask "channel-works" do
 
   zap trash: [
     "~/Library/Application Support/Channel Works",
+    "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.zoyi.channel.desk.osx.sfl*",
     "~/Library/Containers/com.zoyi.channel.desk.osx",
     "~/Library/Group Containers/8278Q64QFC.com.zoyi.channel.desk.osx",
     "~/Library/Logs/Channel Works",
