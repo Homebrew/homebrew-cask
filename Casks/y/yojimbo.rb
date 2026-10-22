@@ -1,6 +1,6 @@
 cask "yojimbo" do
-  version "4.6.3"
-  sha256 "1496c28e14c86ef501d9e66caf1620abd2f80acb15ca78eb42a9cc03f1aba50f"
+  version "4.7"
+  sha256 "53d4776a1b90c18f76a264ae21cad29d725078a38a6fb9e761648ef873e78dc2"
 
   url "https://s3.amazonaws.com/BBSW-download/Yojimbo_#{version}.dmg"
   name "Yojimbo"
@@ -17,6 +17,8 @@ cask "yojimbo" do
   depends_on :macos
 
   app "Yojimbo.app"
+
+  uninstall quit: "com.barebones.yojimbo#{version.major}"
 
   zap trash: [
     "~/Library/Caches/com.apple.helpd/Generated/Yojimbo Help*#{version}",
