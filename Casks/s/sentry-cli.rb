@@ -2,11 +2,11 @@ cask "sentry-cli" do
   arch arm: on_system_conditional(macos: "arm64", linux: "aarch64"), intel: "x86_64"
   os macos: "Darwin", linux: "Linux"
 
-  version "3.8.1"
-  sha256 arm:          "b117c50c99371e68c21544fada0f5f90a713acda8b090fdeef648417b231ce51",
-         intel:        "6bee493e528e303d395221c17c38307dbe0974f6914a3700b8ff1986bcd629c6",
-         arm64_linux:  "95b4530ca3723d79def0928731534b75db0213130e8681892f19c4e57ab258f9",
-         x86_64_linux: "f08a638e6e979a3c4f9c230bdd496dd88e7a0a0847d3e704ad8a733b189bb029"
+  version "3.8.2"
+  sha256 arm:          "c80d92b6d34eb64fe7402f56cc7968fbb15aab1c763254ad428b55cc98ec7dcf",
+         intel:        "084591ee1f0a43ba8696ccde30d4a79cd9a70d0fa294c5a10143a340f8f332ff",
+         arm64_linux:  "b6e49fca868a36d20da2ada1832a0ce2f9ac7012c128207518b09d6b6c991f4d",
+         x86_64_linux: "c958865f9d4000183509ea21b1f04925d5390de6d8d87386b9e69f2b305070c3"
 
   url "https://github.com/getsentry/sentry-cli/releases/download/#{version}/sentry-cli-#{os}-#{arch}"
   name "Sentry CLI"
