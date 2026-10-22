@@ -1,9 +1,9 @@
 cask "mkvtoolnix-app" do
   arch arm: "arm64", intel: "x86_64"
 
-  version "102.0-2"
-  sha256 arm:   "10ebd3b424fd5f4987d50563fc43b5956bf3d4f3bbfa24fa870db956c96578b8",
-         intel: "43ca3ed10f8035552fe38de24d9c40a99af53b40f9caa4dabccabcf58f89bf42"
+  version "103.0-1"
+  sha256 arm:   "05670ef070783a4afa23b9a289373472ac168112c83926dae17e29ab32198501",
+         intel: "0d1cbc3fc4d5930d2013e945230a72c90eefa7b565546da557382e3e67459552"
 
   url "https://mkvtoolnix.download/macos/releases/#{version.split("-").first}/MKVToolNix-#{version}-#{arch}.dmg"
   name "MKVToolNix"
