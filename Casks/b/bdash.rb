@@ -1,10 +1,10 @@
 cask "bdash" do
   os macos: "-universal-mac.zip", linux: ".AppImage"
 
-  version "1.35.3"
-  sha256 arm:          "1c219a5020984a7230aac5c9ea171ad6e208bda9c0209913bd1ef8971574d69b",
-         intel:        "1c219a5020984a7230aac5c9ea171ad6e208bda9c0209913bd1ef8971574d69b",
-         x86_64_linux: "b8829ff7d1af4d26079b0f99223daa028323e9a148adcde697f2356bb04c4e4c"
+  version "1.35.4"
+  sha256 arm:          "45db49d7029c8919ff150335823a60a2dca84699904029a5c6071a564109c614",
+         intel:        "45db49d7029c8919ff150335823a60a2dca84699904029a5c6071a564109c614",
+         x86_64_linux: "efb6f80bea765707d002e7bc1f97037cf3bb9f745b5645e06f81694157a51499"
 
   on_macos do
     depends_on macos: :monterey
