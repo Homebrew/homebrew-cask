@@ -3,11 +3,11 @@ cask "cursor" do
   os macos: "darwin", linux: "linux"
   url_end = on_system_conditional macos: "zip", linux: "AppImage"
 
-  version "3.26.16,8fcb8ace5c73fa31f2e2707fd6783160e4ed3e49"
-  sha256 arm:          "c25c9bf61b29c76c2daecc3e626884c746cf8476bbc0be450b52cdfd8c27a192",
-         intel:        "2c2fcad780e28bef5f0d076d2976c74cbc1b5d5ee31b514614d8fb9f59d1e996",
-         arm64_linux:  "4a3a2007ec238d8854269f81af90591fc361fcb667d8ad71a8be946542375b1a",
-         x86_64_linux: "46fde4c35765d3d1805eed94d815f324f7293cea6e58671c9fafd5f235aa568e"
+  version "3.27.6,f7119520544accb8dcf6d27119b9f1963d8ee5ae"
+  sha256 arm:          "7ea54c8f9bafdee5e939d5c2e8a625a77c1b5c5aed2d313ccdee91c47956f3c8",
+         intel:        "891ea339be559f4a6d402718269c3498dd884d3cb5a877acc89246c38cdba7a4",
+         arm64_linux:  "95b35130d3648e6c74f23a1d0df361d155b56c01d4114b4017faa8cd6ac478a5",
+         x86_64_linux: "ae27ce5eb561d24d4957e0bbfe7f6a47c3a9dbf8c436c00a57b82579a0f7d2dd"
 
   on_macos do
     url "https://downloads.cursor.com/production/#{version.csv.second}/#{os}/#{arch}/Cursor-darwin-#{arch}.#{url_end}"
