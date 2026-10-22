@@ -2,11 +2,11 @@ cask "obsidian" do
   arch arm: on_system_conditional(linux: "-arm64")
   os macos: "dmg", linux: "AppImage"
 
-  version "1.14.4"
-  sha256 arm:          "dcf818dd20ee5d9dd3e782eee0c0c4c47cc225383b051c2fc9af7d5772f59f70",
-         intel:        "dcf818dd20ee5d9dd3e782eee0c0c4c47cc225383b051c2fc9af7d5772f59f70",
-         arm64_linux:  "721829a4f0ffadf7674f396aed58a5699e116b76b78747873d1751193efb66a9",
-         x86_64_linux: "6362ddbeeeebb7bbccb48fae009572cf2284ef92f5c919c1332aba48de6ffeaa"
+  version "1.14.5"
+  sha256 arm:          "be79e6410d80fa705218aa4e8cb24ce8418cf16e13be4036227a5659b1f6aab2",
+         intel:        "be79e6410d80fa705218aa4e8cb24ce8418cf16e13be4036227a5659b1f6aab2",
+         arm64_linux:  "378d88c6c01c26783d3565c4b7a8de865e163e67c8ffb447ae06675d52623665",
+         x86_64_linux: "306815f60d15dea8610d72886ef5e50ef4b7e7185e952ffc3bb21bee1582d952"
 
   on_macos do
     depends_on macos: :monterey
