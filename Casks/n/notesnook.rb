@@ -14,9 +14,11 @@ cask "notesnook" do
     app "Notesnook.app"
 
     zap trash: [
+      "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/org.streetwriters.notesnook.sfl*",
       "~/Library/Application Support/Notesnook",
       "~/Library/Logs/Notesnook",
       "~/Library/Preferences/com.streetwriters.notesnook.plist",
+      "~/Library/Preferences/org.streetwriters.notesnook.plist",
     ]
   end
   on_linux do
