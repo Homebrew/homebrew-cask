@@ -4,11 +4,11 @@ cask "cadcraft" do
   os macos: "macos", linux: "linux"
   url_end = on_system_conditional macos: "dmg", linux: "AppImage"
 
-  version "0.10.0"
-  sha256 arm:          "6417b10c317418e50b4f5bf7c90eb7066aca18e29d32763bc7b3a5cce5bec394",
-         intel:        "6417b10c317418e50b4f5bf7c90eb7066aca18e29d32763bc7b3a5cce5bec394",
-         arm64_linux:  "7cb1fc25fe88e6f5c5ac1217d26136be7fd54fae5cc440873589c1d28c2ac4c7",
-         x86_64_linux: "f26c2c05da223c3189d08c50ac431b9d0738622a4b3d8b4435cb7eca99caa607"
+  version "0.11.0"
+  sha256 arm:          "f5be9adce05760e666396f67a7499ed72658fef0ece5ea88ff310c60ffb78603",
+         intel:        "f5be9adce05760e666396f67a7499ed72658fef0ece5ea88ff310c60ffb78603",
+         arm64_linux:  "4b016c05e84f2d6e86e741e6d6ab1a75bd1214229e77974b8a86de3e0452a279",
+         x86_64_linux: "7952a9f938448f2ca379474b6003a52a8ced333141aacb237a4e54ae7e95f8c1"
 
   on_macos do
     app "CADCraft.app"
