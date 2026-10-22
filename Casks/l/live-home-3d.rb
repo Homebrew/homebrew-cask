@@ -18,10 +18,13 @@ cask "live-home-3d" do
 
   zap trash: [
     "~/Library/Application Scripts/com.belightsoft.LiveHome3D.ThumbnailProvider",
+    "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.belightsoft.livehome3d.sfl*",
     "~/Library/Application Support/Live Home 3D",
     "~/Library/Caches/com.belightsoft.LiveHome3D",
     "~/Library/Containers/com.belightsoft.LiveHome3D.ThumbnailProvider",
+    "~/Library/HTTPStorages/com.belightsoft.LiveHome3D",
     "~/Library/Preferences/com.belightsoft.LiveHome3D.plist",
     "~/Library/Saved Application State/com.belightsoft.LiveHome3D.savedState",
+    "~/Library/WebKit/com.belightsoft.LiveHome3D",
   ]
 end
