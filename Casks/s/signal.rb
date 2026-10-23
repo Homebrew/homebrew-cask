@@ -15,6 +15,7 @@ cask "signal" do
     app "Signal.app"
 
     zap trash: [
+      "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/org.whispersystems.signal-desktop.sfl*",
       "~/Library/Application Support/Signal",
       "~/Library/Preferences/org.whispersystems.signal-desktop.helper.plist",
       "~/Library/Preferences/org.whispersystems.signal-desktop.plist",
