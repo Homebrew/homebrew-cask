@@ -18,6 +18,7 @@ cask "beeper" do
 
     zap trash: [
       "~/Library/Application Support/BeeperTexts",
+      "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.automattic.beeper.desktop.sfl*",
       "~/Library/Caches/com.automattic.beeper.desktop",
       "~/Library/Caches/com.automattic.beeper.desktop.ShipIt",
       "~/Library/Preferences/com.automattic.beeper.desktop.plist",
