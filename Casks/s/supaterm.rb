@@ -22,6 +22,7 @@ cask "supaterm" do
 
   zap trash: [
     "~/.supaterm",
+    "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.supaterm.desktop.sfl*",
     "~/Library/Application Support/supaterm-v2",
     "~/Library/Caches/com.supaterm.desktop",
     "~/Library/Caches/com.supaterm.desktop.ShipIt",
