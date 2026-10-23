@@ -24,6 +24,7 @@ cask "foxglove" do
     "~/Library/Application Scripts/dev.foxglove.studio.quicklook",
     "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/dev.foxglove.studio.sfl*",
     "~/Library/Application Support/Foxglove Studio",
+    "~/Library/Application Support/Foxglove",
     "~/Library/Caches/dev.foxglove.studio",
     "~/Library/Caches/dev.foxglove.studio.ShipIt",
     "~/Library/Containers/dev.foxglove.studio.quicklook",
