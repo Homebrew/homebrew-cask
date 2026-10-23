@@ -23,6 +23,8 @@ cask "dockflow" do
     "~/Library/Application Support/DockFlow",
     "~/Library/Caches/com.appit.DockFlow",
     "~/Library/Group Containers/com.appit.DockFlowGroup",
+    "~/Library/Preferences/com.appit.DockFlow.licensing-admission.plist",
+    "~/Library/Preferences/com.appit.DockFlow.lifecycle.plist",
     "~/Library/Preferences/com.appit.DockFlow.plist",
     "~/Library/Preferences/com.appit.DockFlowHelper.plist",
     "~/Library/Saved Application State/com.appit.DockFlow.savedState",
