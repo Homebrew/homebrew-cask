@@ -21,9 +21,15 @@ cask "surfshark" do
 
   zap trash: [
     "~/Library/Application Scripts/com.surfshark.vpnclient.macos*",
+    "~/Library/Application Scripts/YHUG37CKN8.com.surfshark.vpn.direct",
+    "~/Library/Application Support/com.surfshark.vpnclient.macos.direct",
     "~/Library/Application Support/CrashReporter/Surfshark.OpenVPN_*.plist",
+    "~/Library/Caches/com.surfshark.vpnclient.macos.direct",
     "~/Library/Containers/com.surfshark.vpnclient.macos*",
     "~/Library/Group Containers/YHUG37CKN8.com.surfshark.vpn",
+    "~/Library/Group Containers/YHUG37CKN8.com.surfshark.vpn.direct",
+    "~/Library/HTTPStorages/com.surfshark.vpnclient.macos.direct*",
+    "~/Library/Preferences/com.surfshark.vpnclient.macos.direct.plist",
     "~/Library/Saved Application State/com.surfshark.vpnclient.macos.savedState",
   ]
 end
