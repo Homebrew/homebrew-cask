@@ -14,6 +14,8 @@ cask "avogadro" do
 
   app "Avogadro2.app"
 
+  uninstall quit: "cc.avogadro"
+
   zap trash: [
     "~/Library/Application Support/OpenChemistry/Avogadro",
     "~/Library/Preferences/org.openchemistry.Avogadro.plist",
