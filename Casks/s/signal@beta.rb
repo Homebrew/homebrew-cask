@@ -21,7 +21,10 @@ cask "signal@beta" do
   app "Signal Beta.app"
 
   zap trash: [
+    "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/org.whispersystems.signal-desktop-beta.sfl*",
+    "~/Library/Application Support/Signal Beta",
     "~/Library/Application Support/Signal",
+    "~/Library/Preferences/org.whispersystems.signal-desktop-beta.plist",
     "~/Library/Preferences/org.whispersystems.signal-desktop.helper.plist",
     "~/Library/Preferences/org.whispersystems.signal-desktop.plist",
     "~/Library/Saved Application State/org.whispersystems.signal-desktop.savedState",
