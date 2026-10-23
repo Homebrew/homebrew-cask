@@ -18,11 +18,17 @@ cask "app-cleaner" do
   app "App Cleaner #{version.major}.app"
 
   zap trash: [
+    "~/Library/Application Scripts/8DKG4XB37M.group.com.nektony.App-Cleaner-SIII",
     "~/Library/Application Scripts/com.nektony.App-Cleaner-Pro",
     "~/Library/Application Support/com.nektony.App-Cleaner-Pro",
+    "~/Library/Application Support/com.nektony.App-Cleaner-SIII",
     "~/Library/Caches/com.nektony.App-Cleaner-Pro",
+    "~/Library/Caches/com.nektony.App-Cleaner-SIII",
     "~/Library/Containers/com.nektony.StartupDiskFull",
+    "~/Library/Group Containers/8DKG4XB37M.group.com.nektony.App-Cleaner-SIII",
+    "~/Library/HTTPStorages/com.nektony.App-Cleaner-SIII",
     "~/Library/Preferences/com.nektony.App-Cleaner-Pro.plist",
+    "~/Library/Preferences/com.nektony.App-Cleaner-SIII.plist",
     "~/Library/Saved Application State/com.nektony.App-Cleaner-Pro.savedState",
   ]
 end
