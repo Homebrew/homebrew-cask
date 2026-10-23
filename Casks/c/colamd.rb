@@ -23,6 +23,7 @@ cask "colamd" do
   zap trash: [
     "~/.colamd",
     "~/Library/Application Support/colamd",
+    "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/ai.marswave.colamd.sfl*",
     "~/Library/Preferences/ai.marswave.colamd.plist",
   ]
 end
