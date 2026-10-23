@@ -7,10 +7,8 @@ cask "mate-translate" do
   desc "Select text in any app and translate it"
   homepage "https://gikken.co/mate-translate/mac/"
 
-  livecheck do
-    url "https://gikken.co/mate/appcast-sub.xml"
-    strategy :sparkle, &:short_version
-  end
+  # Download url is unreachable due to Cloudflare protections
+  disable! date: "2026-10-24", because: :unreachable
 
   depends_on :macos
 
