@@ -23,6 +23,7 @@ cask "elgato-control-center" do
     "~/Library/Application Scripts/com.corsair.ControlCenterLauncher",
     "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.corsair.controlcenter.sfl*",
     "~/Library/Application Support/com.corsair.ControlCenter",
+    "~/Library/Application Support/com.elgato.controlcenter-mac",
     "~/Library/Application Support/Elgato Control Center",
     "~/Library/Caches/com.corsair.ControlCenter",
     "~/Library/Caches/com.plausiblelabs.crashreporter.data/com.corsair.ControlCenter",
