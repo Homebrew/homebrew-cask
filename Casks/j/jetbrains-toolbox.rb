@@ -21,6 +21,7 @@ cask "jetbrains-toolbox" do
           "~/Library/Application Support/JetBrains/Toolbox",
           "~/Library/Caches/JetBrains/Toolbox",
           "~/Library/Logs/JetBrains/Toolbox",
+          "~/Library/Preferences/com.jetbrains.toolbox.plist",
           "~/Library/Preferences/com.jetbrains.toolbox.renderer.plist",
           "~/Library/Saved Application State/com.jetbrains.toolbox.savedState",
         ],
