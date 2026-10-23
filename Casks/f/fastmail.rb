@@ -25,6 +25,7 @@ cask "fastmail" do
     "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.fastmail.mac.fastmail.sfl*",
     "~/Library/Application Support/Fastmail",
     "~/Library/HTTPStorages/com.fastmail.mac.Fastmail",
+    "~/Library/Logs/Fastmail",
     "~/Library/Preferences/com.fastmail.mac.Fastmail.plist",
   ]
 end
