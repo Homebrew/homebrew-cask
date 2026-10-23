@@ -33,7 +33,8 @@ cask "intellij-idea@eap" do
   app "IntelliJ IDEA.app"
   binary "#{appdir}/IntelliJ IDEA.app/Contents/MacOS/idea"
 
-  uninstall quit: ["com.jetbrains.intellij-EAP", "com.jetbrains.intellij"]
+  uninstall launchctl: "application.com.jetbrains.app.daemon.*",
+            quit:      ["com.jetbrains.intellij-EAP", "com.jetbrains.intellij"]
 
   zap trash: [
     "~/Library/Application Support/JetBrains/IntelliJIdea#{version.csv.first}",
