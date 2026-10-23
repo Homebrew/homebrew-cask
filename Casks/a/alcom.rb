@@ -4,11 +4,11 @@ cask "alcom" do
   arch_end = on_system_conditional macos: "universal", linux: arch
   url_end = on_system_conditional macos: "dmg", linux: "AppImage"
 
-  version "1.1.8"
-  sha256 arm:          "583167060ed4369f7f16fe64db3bf25a115add6232eec5cab1f5cb2578bae65c",
-         intel:        "583167060ed4369f7f16fe64db3bf25a115add6232eec5cab1f5cb2578bae65c",
-         arm64_linux:  "162547b2cceffeb87881bf42e452044d2f9991b744f7a860fcae05051870f2c8",
-         x86_64_linux: "e1cff837547e43e93c23e8d23164ade36f8b0df4a1244b3bebf3e5e668d009bc"
+  version "1.1.9"
+  sha256 arm:          "fc6c873830194433fd572f917cb4efb30d61de6202507b7e7cf4545debf2d044",
+         intel:        "fc6c873830194433fd572f917cb4efb30d61de6202507b7e7cf4545debf2d044",
+         arm64_linux:  "7cc0c9a84dc857110d415fe7854b809043073b269f5bf345e1f67a3c3c2b5aee",
+         x86_64_linux: "18cd5358ac38efffcc7e1310798a4f6b733f50d585b715c0663aa81d56c59bf8"
 
   on_macos do
     app "ALCOM.app"
