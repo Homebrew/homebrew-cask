@@ -21,6 +21,7 @@ cask "picsart-ai-playground" do
 
   zap trash: [
     "~/Library/Application Support/AI Playground",
+    "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.picsart.apps.aiplayground.sfl*",
     "~/Library/Preferences/com.picsart.apps.aiplayground.plist",
   ]
 end
