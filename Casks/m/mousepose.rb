@@ -1,6 +1,6 @@
 cask "mousepose" do
-  version "4.5.1,10309"
-  sha256 "fb9f44b6e80300c949f074410b730cb24373407daf4e19fe8fcbefbc0cc48ad4"
+  version "4.6,10311"
+  sha256 "845cbfbf2a26abd076175a7318b2b5032cb83f404410addd3101d6f1e9dc8300"
 
   url "https://cdn.boinx.com/software/mousepose/Boinx_Mousepose_#{version.csv.first}-#{version.csv.second}.app.zip"
   name "Mouseposé"
