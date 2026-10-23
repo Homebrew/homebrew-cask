@@ -23,6 +23,7 @@ cask "sizzy" do
   uninstall quit: "com.kitze.sizzy"
 
   zap trash: [
+    "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.kitze.sizzy.sfl*",
     "~/Library/Application Support/Sizzy",
     "~/Library/Logs/Sizzy",
     "~/Library/Preferences/com.kitze.sizzy.plist",
