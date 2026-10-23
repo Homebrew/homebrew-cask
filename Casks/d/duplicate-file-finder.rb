@@ -19,6 +19,7 @@ cask "duplicate-file-finder" do
 
   zap trash: [
     "~/Library/Application Scripts/com.nektony.Duplicate-File-Finder-SII*",
+    "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.nektony.duplicate-file-finder-siii.sfl*",
     "~/Library/Application Support/com.nektony.Duplicate-File-Finder-SII*",
     "~/Library/Caches/com.nektony.Duplicate-File-Finder-SII*",
     "~/Library/Cookies/com.nektony.Duplicate-File-Finder-SII.binarycookies",
