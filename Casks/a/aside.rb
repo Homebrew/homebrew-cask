@@ -55,6 +55,7 @@ cask "aside" do
         "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/at.studio.AsideBrowser.sfl*",
         "~/Library/Aside",
         "~/Library/Caches/Aside",
+        "~/Library/Caches/aside-memory",
         "~/Library/Caches/at.studio.AsideBrowser",
         "~/Library/Caches/at.studio.AsideKeystone",
         "~/Library/Caches/at.studio.AsideKeystone.Agent",
