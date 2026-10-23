@@ -26,6 +26,7 @@ cask "yuanbao" do
   uninstall quit: "com.tencent.yuanbao"
 
   zap trash: [
+    "~/Library/Application Scripts/com.tencent.yuanbao.shareextension",
     "~/Library/Application Support/com.tencent.yuanbao",
     "~/Library/Caches/com.tencent.yuanbao",
     "~/Library/Containers/com.tencent.yuanbao",
