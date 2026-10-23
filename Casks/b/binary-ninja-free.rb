@@ -26,5 +26,8 @@ cask "binary-ninja-free" do
 
   uninstall quit: "com.vector35.binaryninja"
 
-  zap trash: "~/Library/Application Support/Binary Ninja"
+  zap trash: [
+    "~/Library/Application Support/Binary Ninja",
+    "~/Library/Preferences/com.vector35.Binary Ninja.plist",
+  ]
 end
