@@ -1,15 +1,15 @@
 cask "truetree" do
-  version "0.8"
-  sha256 "10fcc907a053b8d89f31de2695a714f06732cc539b4af4f7cf22c0ce198b9098"
+  version "0.9"
+  sha256 "9260c8c274cf83ef33a6f5c1aff06b0593843c5ec79189bc40997cacda09ee03"
 
-  url "https://github.com/themittenmac/TrueTree/releases/download/V#{version}/TrueTree.zip"
+  url "https://github.com/themittenmac/TrueTree/releases/download/v#{version}/TrueTree#{version}.zip"
   name "TrueTree"
   desc "Command-line tool for pstree-like output"
   homepage "https://themittenmac.com/the-truetree-concept/"
 
   depends_on :macos
 
-  binary "TrueTree"
+  binary "TrueTree/TrueTree"
 
   # No zap stanza required
 end
