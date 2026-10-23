@@ -21,12 +21,14 @@ cask "markdown-preview" do
   uninstall quit: "doc.md-preview"
 
   zap trash: [
+    "~/Library/Application Scripts/5P3TSMNV42.doc.md-preview",
     "~/Library/Application Scripts/doc.md-preview",
     "~/Library/Application Scripts/doc.md-preview.quick-look",
     "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/doc.md-preview.sfl*",
     "~/Library/Caches/doc.md-preview",
     "~/Library/Containers/doc.md-preview",
     "~/Library/Containers/doc.md-preview.quick-look",
+    "~/Library/Group Containers/5P3TSMNV42.doc.md-preview",
     "~/Library/HTTPStorages/doc.md-preview",
     "~/Library/Preferences/doc.md-preview.plist",
   ]
