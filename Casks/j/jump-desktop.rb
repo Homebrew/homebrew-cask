@@ -19,7 +19,11 @@ cask "jump-desktop" do
 
   zap trash: [
     "~/Documents/JumpDesktop",
+    "~/Library/Application Support/Jump Desktop",
     "~/Library/Caches/com.p5sys.jump.mac.viewer.web",
     "~/Library/Cookies/com.p5sys.jump.mac.viewer.web.binarycookies",
+    "~/Library/HTTPStorages/com.p5sys.jump.mac.viewer.web",
+    "~/Library/Logs/Jump Desktop",
+    "~/Library/Preferences/com.p5sys.jump.mac.viewer.web.plist",
   ]
 end
