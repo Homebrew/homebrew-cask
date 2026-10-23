@@ -21,6 +21,8 @@ cask "excalidrawz" do
 
   zap trash: [
     "~/Library/Application Scripts/com.chocoford.excalidraw",
+    "~/Library/Application Scripts/group.com.chocoford.excalidraw",
     "~/Library/Containers/com.chocoford.excalidraw",
+    "~/Library/Group Containers/group.com.chocoford.excalidraw",
   ]
 end
