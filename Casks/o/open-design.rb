@@ -21,6 +21,7 @@ cask "open-design" do
   app "Open Design.app"
 
   zap trash: [
+    "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/io.open-design.desktop.sfl*",
     "~/Library/Application Support/Open Design",
     "~/Library/Preferences/io.open-design.desktop.plist",
   ]
