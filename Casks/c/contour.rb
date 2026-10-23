@@ -1,11 +1,11 @@
 cask "contour" do
   arch arm: "arm", intel: "x86"
 
-  sha256 arm:   "fa71252eff85ef5b223861d3aa9918440a684fe3e71418698eacad538b40a383",
+  sha256 arm:   "d04f908ca49cf0b8e3f975c7cef37fbee460f291723bd81ba39086f7f09456c4",
          intel: "fd560a5e58f55ac20cd0d440b136365428126ba6fac8edde69b4d36d98467c7e"
 
   on_arm do
-    version "0.7.0.8982"
+    version "0.8.0.9335"
 
     depends_on macos: :ventura
   end
