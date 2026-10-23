@@ -40,12 +40,14 @@ cask "turbotax-2024" do
   uninstall quit: "com.intuit.turbotax.2024"
 
   zap trash: [
+    "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.intuit.turbotax.2024.sfl*",
     "~/Library/Application Support/TurboTax 2024",
     "~/Library/Caches/com.intuit.turbotax.2024",
     "~/Library/Caches/KSCrash/TurboTax",
     "~/Library/Caches/TurboTax 2024",
     "~/Library/HTTPStorages/com.intuit.turbotax.2024",
     "~/Library/HTTPStorages/com.intuit.turbotax.2024.binarycookies",
+    "~/Library/Logs/com.intuit.turbotax.2024*.log",
     "~/Library/Preferences/com.intuit.turbotax.2024.plist",
     "~/Library/WebKit/com.intuit.turbotax.2024",
   ]
