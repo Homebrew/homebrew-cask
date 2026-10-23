@@ -29,13 +29,18 @@ cask "monotype" do
             quit:      "com.monotype.monotype-fonts",
             pkgutil:   "com.monotype.monotype-fonts"
 
-  zap trash: [
-    "~/Library/Application Scripts/com.monotype.notification-service",
-    "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.monotype.*.sfl*",
-    "~/Library/Application Support/Monotype Fonts",
-    "~/Library/Containers/com.monotype.notification-service",
-    "~/Library/Logs/Monotype Fonts",
-    "~/Library/Preferences/com.monotype.*.plist",
-    "~/Library/Saved Application State/com.monotype.*.savedState",
-  ]
+  zap delete: [
+        "/Library/Application Support/Monotype Fonts",
+        "/Library/Logs/Monotype Fonts",
+        "/Library/Preferences/com.monotype.fonts.plist",
+      ],
+      trash:  [
+        "~/Library/Application Scripts/com.monotype.notification-service",
+        "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.monotype.*.sfl*",
+        "~/Library/Application Support/Monotype Fonts",
+        "~/Library/Containers/com.monotype.notification-service",
+        "~/Library/Logs/Monotype Fonts",
+        "~/Library/Preferences/com.monotype.*.plist",
+        "~/Library/Saved Application State/com.monotype.*.savedState",
+      ]
 end
