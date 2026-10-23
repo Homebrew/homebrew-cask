@@ -18,6 +18,7 @@ cask "superhuman-docs" do
   app "Superhuman Docs.app"
 
   zap trash: [
+    "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.superhuman.codaapp.desktop.sfl*",
     "~/Library/Application Support/Superhuman Docs",
     "~/Library/Caches/com.superhuman.CodaApp.Desktop",
     "~/Library/Logs/Superhuman Docs",
