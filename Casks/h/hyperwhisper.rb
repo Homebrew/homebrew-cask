@@ -29,6 +29,7 @@ cask "hyperwhisper" do
     "~/Library/Application Support/HyperWhisper",
     "~/Library/Caches/com.hyperwhisper.hyperwhisper",
     "~/Library/HTTPStorages/com.hyperwhisper.hyperwhisper",
+    "~/Library/Logs/HyperWhisper",
     "~/Library/Preferences/com.hyperwhisper.hyperwhisper.plist",
     "~/Library/Saved Application State/com.hyperwhisper.hyperwhisper.savedState",
   ]
