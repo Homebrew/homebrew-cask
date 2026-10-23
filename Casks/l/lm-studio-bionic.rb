@@ -30,10 +30,12 @@ cask "lm-studio-bionic" do
   ]
 
   zap trash: [
+    "~/Library/Application Scripts/D65G88RHWN.ai.elementlabs.bionic.office-document-preview",
     "~/Library/Application Support/Bionic",
     "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/ai.elementlabs.bionic.sfl*",
     "~/Library/Caches/ai.elementlabs.bionic",
     "~/Library/Caches/ai.elementlabs.bionic.ShipIt",
+    "~/Library/Group Containers/D65G88RHWN.ai.elementlabs.bionic.office-document-preview",
     "~/Library/HTTPStorages/ai.elementlabs.bionic",
     "~/Library/Logs/Bionic",
     "~/Library/Preferences/ai.elementlabs.bionic.plist",

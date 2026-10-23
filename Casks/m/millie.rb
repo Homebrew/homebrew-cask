@@ -22,6 +22,7 @@ cask "millie" do
     "~/Library/Application Support/kr.co.millie.MillieShelf",
     "~/Library/Caches/kr.co.millie.MillieShelf",
     "~/Library/HTTPStorages/kr.co.millie.MillieShelf.binarycookies",
+    "~/Library/Preferences/kr.co.millie.MillieShelf.plist",
     "~/Library/Saved Application State/kr.co.millie.MillieShelf.savedState",
     "~/Library/WebKit/kr.co.millie.MillieShelf",
   ]

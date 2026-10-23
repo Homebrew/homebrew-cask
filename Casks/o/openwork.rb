@@ -18,6 +18,7 @@ cask "openwork" do
     uninstall quit: "com.differentai.openwork"
 
     zap trash: [
+      "~/Library/Application Support/@openwork",
       "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.differentai.openwork.sfl*",
       "~/Library/Application Support/com.differentai.openwork",
       "~/Library/Application Support/OpenWork",

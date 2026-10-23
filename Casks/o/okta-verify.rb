@@ -42,7 +42,9 @@ cask "okta-verify" do
             ]
 
   zap trash: [
+    "~/Library/Application Scripts/com.okta.mobile.auth-service-extension",
     "~/Library/Containers/com.okta.mobile",
+    "~/Library/Containers/com.okta.mobile.auth-service-extension",
     "~/Library/Preferences/B7F62B65BN.group.okta.verify.shared.plist",
     "~/Library/Preferences/com.okta.mobile.plist",
     "~/Library/Preferences/group.com.okta.mobile.firebase.plist",

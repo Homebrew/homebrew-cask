@@ -20,6 +20,8 @@ cask "memory-cleaner" do
   zap trash: [
     "~/Library/Application Scripts/com.nektony.Memory-Cleaner-SII*",
     "~/Library/Application Scripts/com.nektony.Memory-Cleaner-SII*.launcher",
+    "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.nektony.memory-cleaner-siii.sfl*",
+    "~/Library/Application Support/com.nektony.Memory-Cleaner-SII*",
     "~/Library/Application Support/Memory Cleaner",
     "~/Library/Caches/com.nektony.Memory-Cleaner-SII*",
     "~/Library/Cookies/com.nektony.Memory-Cleaner-SII.binarycookies",

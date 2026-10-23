@@ -17,6 +17,7 @@ cask "opendisplay-receiver" do
   zap trash: [
     "~/Library/Caches/com.peetzweg.opensidecar.mac.receiver",
     "~/Library/HTTPStorages/com.peetzweg.opensidecar.mac.receiver",
+    "~/Library/Logs/OpenDisplay Receiver",
     "~/Library/Preferences/com.peetzweg.opensidecar.mac.receiver.plist",
   ]
 end

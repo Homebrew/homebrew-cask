@@ -16,6 +16,7 @@ cask "ltx-desktop" do
   uninstall quit: "com.lightricks.ltx-desktop"
 
   zap trash: [
+    "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.lightricks.ltx-desktop.sfl*",
     "~/Library/Preferences/com.lightricks.ltx-desktop.plist",
     "~/Library/Saved Application State/com.lightricks.ltx-desktop.savedState",
   ]

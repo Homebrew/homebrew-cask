@@ -25,6 +25,7 @@ cask "navicat-data-modeler" do
   uninstall quit: "com.navicat.NavicatDataModeler"
 
   zap trash: [
+    "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.navicat.navicatdatamodeler.sfl*",
     "~/Library/Group Containers/*.com.preact.Navicat.launcherGroup",
     "~/Library/HTTPStorages/com.navicat.NavicatDataModeler",
     "~/Library/Preferences/com.navicat.NavicatDataModeler.plist",

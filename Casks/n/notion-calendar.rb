@@ -22,6 +22,7 @@ cask "notion-calendar" do
 
   # Renamed from Cron to Notion Calendar on 2024-01-18, but some files still use the old name
   zap trash: [
+    "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.cron.electron.sfl*",
     "~/Library/Application Support/Notion Calendar",
     "~/Library/Preferences/com.cron.electron.plist",
     "~/Library/Saved Application State/com.cron.electron.savedState",

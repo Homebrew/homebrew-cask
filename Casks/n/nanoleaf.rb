@@ -21,6 +21,7 @@ cask "nanoleaf" do
   app "Nanoleaf Desktop.app"
 
   zap trash: [
+    "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/me.nanoleaf.desktop-app.sfl*",
     "~/Library/Application Support/Nanoleaf Desktop",
     "~/Library/Preferences/me.nanoleaf.desktop-app.plist",
     "~/Library/Saved Application State/me.nanoleaf.desktop-app.savedState",
