@@ -46,9 +46,10 @@ cask "trader-workstation" do
             }
 
   zap trash: [
-    "#{appdir}/Trader Workstation",
-    "~/Applications/Trader Workstation",
-    "~/Jts",
-    "~/Library/Application Support/Trader Workstation",
-  ]
+        "#{appdir}/Trader Workstation",
+        "~/Applications/Trader Workstation",
+        "~/Jts",
+        "~/Library/Application Support/Trader Workstation",
+      ],
+      rmdir: "~/Desktop/Trader Workstation"
 end
