@@ -12,7 +12,7 @@ cask "steam" do
   # when the hash changes.
   livecheck do
     url "https://client-update.steamstatic.com/steam_client_osx"
-    regex(/"file"\s+"appdmg_osx\.zip\.(\h+)"/i)
+    regex(/["']file["']\s+["']appdmg[._-]osx\.zip\.(\h+)["']/i)
     strategy :page_match do |page, regex|
       hash = page[regex, 1]
       next if hash.blank?
