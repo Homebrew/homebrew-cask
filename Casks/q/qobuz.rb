@@ -25,11 +25,14 @@ cask "qobuz" do
   uninstall quit: "com.qobuz.desktop"
 
   zap trash: [
+    "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.qobuz.desktop.sfl*",
     "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.qobuz.qobuzdesktop.sfl*",
+    "~/Library/Application Support/Qobuz",
     "~/Library/Application Support/QobuzDesktop",
     "~/Library/Caches/com.plausiblelabs.crashreporter.data/com.qobuz.QobuzDesktop",
     "~/Library/Caches/com.qobuz.QobuzDesktop",
     "~/Library/Logs/QobuzDesktop",
+    "~/Library/Preferences/com.qobuz.desktop.plist",
     "~/Library/Preferences/com.qobuz.QobuzDesktop.plist",
   ]
 end
