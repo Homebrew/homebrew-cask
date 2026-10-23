@@ -28,12 +28,21 @@ cask "tuple" do
 
   zap trash: [
     "~/Library/Application Scripts/app.tuple.app-LaunchAtLoginHelper",
+    "~/Library/Application Scripts/app.tuple.log",
+    "~/Library/Application Scripts/app.tuple.webcam-capturer",
+    "~/Library/Application Scripts/DQYU7DR9Q7.app.tuple.app",
     "~/Library/Application Support/app.tuple.app",
+    "~/Library/Application Support/Tuple",
     "~/Library/Caches/app.tuple.app",
     "~/Library/Caches/com.crashlytics.data/app.tuple.app",
     "~/Library/Caches/io.fabric.sdk.mac.data/app.tuple.app",
     "~/Library/Containers/app.tuple.app-LaunchAtLoginHelper",
+    "~/Library/Containers/app.tuple.log",
+    "~/Library/Containers/app.tuple.webcam-capturer",
+    "~/Library/Group Containers/DQYU7DR9Q7.app.tuple.app",
+    "~/Library/HTTPStorages/app.tuple.app",
     "~/Library/Preferences/app.tuple.app.plist",
+    "~/Library/Preferences/app.tuple.app.web.plist",
     "~/Library/WebKit/app.tuple.app",
   ]
 end
