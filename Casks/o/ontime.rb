@@ -23,6 +23,7 @@ cask "ontime" do
   uninstall quit: "no.lightdev.ontime"
 
   zap trash: [
+    "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/no.lightdev.ontime.sfl*",
     "~/Library/Application Support/ontime",
     "~/Library/Application Support/ontime-electron",
     "~/Library/Preferences/no.lightdev.ontime.plist",
