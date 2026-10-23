@@ -25,6 +25,7 @@ cask "altserver" do
 
   zap trash: [
     "~/Library/Application Scripts/com.rileytestut.AltServer-LaunchAtLoginHelper",
+    "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.rileytestut.altserver.sfl*",
     "~/Library/Application Support/com.rileytestut.AltServer",
     "~/Library/Caches/com.rileytestut.AltServer",
     "~/Library/Containers/com.rileytestut.AltServer-LaunchAtLoginHelper",
