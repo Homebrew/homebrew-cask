@@ -12,12 +12,13 @@ cask "workflowy" do
     app "WorkFlowy.app"
 
     zap trash: [
-      "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.workflowy.desktop.sfl*",
-      "~/Library/Application Support/WorkFlowy",
-      "~/Library/Logs/WorkFlowy",
-      "~/Library/Preferences/com.workflowy.desktop.plist",
-      "~/Library/Saved Application State/com.workflowy.desktop.savedState",
-    ]
+          "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.workflowy.desktop.sfl*",
+          "~/Library/Application Support/WorkFlowy",
+          "~/Library/Logs/WorkFlowy",
+          "~/Library/Preferences/com.workflowy.desktop.plist",
+          "~/Library/Saved Application State/com.workflowy.desktop.savedState",
+        ],
+        rmdir: "~/.workflowy"
   end
   on_linux do
     depends_on arch: :x86_64
