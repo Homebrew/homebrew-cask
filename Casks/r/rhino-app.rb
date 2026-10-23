@@ -18,8 +18,8 @@ cask "rhino-app" do
   app "Rhino #{version.major}.app"
 
   zap trash: [
-    "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.mcneel.rhinoceros.sfl*",
+    "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.mcneel.rhinoceros*.sfl*",
     "~/Library/Caches/com.mcneel.rhinoceros",
-    "~/Library/Preferences/com.mcneel.rhinoceros.plist",
+    "~/Library/Preferences/com.mcneel.rhinoceros*.plist",
   ]
 end
