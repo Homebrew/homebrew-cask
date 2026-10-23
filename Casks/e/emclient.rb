@@ -23,7 +23,9 @@ cask "emclient" do
             delete:  "/Applications/eM Client.app"
 
   zap trash: [
+    "~/Library/Application Scripts/com.emclient.mail.client.share",
     "~/Library/Caches/com.emclient.mail.client",
+    "~/Library/Containers/com.emclient.mail.client.share",
     "~/Library/Preferences/com.emclient.mail.*.plist",
     "~/Library/Saved Application State/com.emclient.mail.client.savedState",
   ]
