@@ -1,10 +1,10 @@
 cask "kkterm" do
   os macos: "macos-universal.dmg", linux: "linux-x86_64.AppImage"
 
-  version "3000.0.26"
-  sha256 arm:          "2bf28788752d48046e053a1b988665bc57f3173aaa982ff909cc33de163de783",
-         intel:        "2bf28788752d48046e053a1b988665bc57f3173aaa982ff909cc33de163de783",
-         x86_64_linux: "d6dc61d87131595c187ffd553d33795ebd313ef6ed46c32a95c0ee15b35ef8b5"
+  version "3000.0.27"
+  sha256 arm:          "44224fb9803137f46cc0447f449695c82c6f78c1785be61b1c526799ba201dcd",
+         intel:        "44224fb9803137f46cc0447f449695c82c6f78c1785be61b1c526799ba201dcd",
+         x86_64_linux: "bd03546a64a1be5e833da7effc0acc8eeedff17594e2cafcf03cf7e396770d80"
 
   on_macos do
     app "KKTerm.app"
