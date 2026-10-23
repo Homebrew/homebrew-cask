@@ -8,7 +8,7 @@ cask "super-productivity" do
          x86_64_linux: "3e058c1a0ebdaf946c3bdf304fddb34e3870528d5cac29b62df064508b28176c"
 
   on_macos do
-    depends_on macos: :monterey
+    depends_on macos: :ventura
 
     app "Super Productivity.app"
 
