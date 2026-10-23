@@ -21,8 +21,10 @@ cask "to-audio-converter" do
   app "To Audio Converter.app"
 
   zap trash: [
-    "~/Library/Application Scripts/com.amvidia.To-Audio-Converter-FS",
-    "~/Library/Containers/To Audio Converter",
-    "~/Library/Saved Application State/com.amvidia.To-Audio-Converter-FS.savedState",
-  ]
+        "~/Library/Application Scripts/com.amvidia.To-Audio-Converter-FS",
+        "~/Library/Containers/com.amvidia.To-Audio-Converter-FS",
+        "~/Library/Containers/To Audio Converter",
+        "~/Library/Saved Application State/com.amvidia.To-Audio-Converter-FS.savedState",
+      ],
+      rmdir: "~/Music/To Audio Converter 2"
 end

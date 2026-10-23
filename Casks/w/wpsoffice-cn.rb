@@ -31,5 +31,6 @@ cask "wpsoffice-cn" do
     "~/Library/Containers/com.kingsoft.wpsoffice.mac.recentfiles",
     "~/Library/Containers/com.kingsoft.wpsoffice.mac.WPSFinderMenu",
     "~/Library/Containers/YK4WKE5WAM.wpsoffice",
+    "~/Library/Group Containers/YK4WKE5WAM.wpsoffice",
   ]
 end

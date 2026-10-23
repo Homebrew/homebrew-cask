@@ -14,6 +14,7 @@ cask "vesktop" do
     app "vesktop.app"
 
     zap trash: [
+      "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/dev.vencord.vesktop.sfl*",
       "~/Library/Application Support/vesktop",
       "~/Library/Caches/dev.vencord.vesktop",
       "~/Library/Caches/dev.vencord.vesktop.Shipit",

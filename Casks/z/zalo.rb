@@ -17,9 +17,12 @@ cask "zalo" do
   app "Zalo.app"
 
   zap trash: [
+    "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.vng.zalo.sfl*",
     "~/Library/Application Support/Zalo",
+    "~/Library/Application Support/ZaloData",
     "~/Library/Application Support/ZaloPC",
     "~/Library/Preferences/com.vng.zalo.*.plist",
+    "~/Library/Preferences/com.vng.zalo.plist",
     "~/Library/Saved Application State/com.vng.zalo.savedState",
   ]
 end

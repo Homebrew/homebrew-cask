@@ -22,6 +22,7 @@ cask "trezor-suite" do
 
   zap trash: [
     "~/Library/Application Support/@trezor/suite-desktop",
+    "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/io.trezor.trezorsuite.sfl*",
     "~/Library/Preferences/io.trezor.TrezorSuite.plist",
   ]
 end

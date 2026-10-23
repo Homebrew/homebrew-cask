@@ -65,6 +65,7 @@ cask "virtualbox" do
   zap trash: [
         "/Library/Application Support/VirtualBox",
         "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/org.virtualbox.app.virtualbox*",
+        "~/Library/LaunchAgents/org.virtualbox.vboxwebsrv.plist",
         "~/Library/Preferences/org.virtualbox.app.VirtualBox*",
         "~/Library/Saved Application State/org.virtualbox.app.VirtualBox*",
         "~/Library/VirtualBox",

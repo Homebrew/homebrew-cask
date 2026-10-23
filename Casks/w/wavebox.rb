@@ -26,6 +26,7 @@ cask "wavebox" do
     "~/Library/Application Support/WaveboxApp",
     "~/Library/Caches/com.bookry.wavebox",
     "~/Library/Caches/WaveboxApp",
+    "~/Library/HTTPStorages/com.bookry.wavebox",
     "~/Library/Preferences/com.bookry.wavebox.plist",
     "~/Library/Saved Application State/com.bookry.wavebox.savedState",
   ]

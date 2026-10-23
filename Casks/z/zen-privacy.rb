@@ -29,6 +29,7 @@ cask "zen-privacy" do
 
   zap trash: [
     "~/Library/Application Support/Zen",
+    "~/Library/Caches/net.zenprivacy.zen",
     "~/Library/Caches/Zen",
     "~/Library/LaunchAgents/net.zenprivacy.zen.plist",
     "~/Library/Logs/Zen",

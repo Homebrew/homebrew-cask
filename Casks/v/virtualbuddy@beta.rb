@@ -21,6 +21,7 @@ cask "virtualbuddy@beta" do
 
   zap trash: [
     "~/Library/Application Support/VirtualBuddy",
+    "~/Library/Caches/codes.rambo.VirtualBuddy",
     "~/Library/HTTPStorages/codes.rambo.VirtualBuddy",
     "~/Library/Preferences/codes.rambo.VirtualBuddy.plist",
   ]

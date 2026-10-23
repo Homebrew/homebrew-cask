@@ -25,6 +25,7 @@ cask "whatroute" do
             delete:    "/Library/PrivilegedHelperTools/net.whatroute.whatroute#{version.major}helper"
 
   zap trash: [
+    "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/net.whatroute.whatroute#{version.major}.sfl*",
     "~/Library/Caches/net.whatroute.whatroute#{version.major}",
     "~/Library/Logs/net.whatroute.whatroute#{version.major}",
     "~/Library/Preferences/net.whatroute.whatroute#{version.major}.plist",

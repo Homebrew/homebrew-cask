@@ -17,9 +17,13 @@ cask "versions" do
   app "Versions.app"
 
   zap trash: [
+    "~/Library/Application Scripts/4G35KLFD64.com.versionsapp.shared",
+    "~/Library/Application Scripts/com.versionsapp.v#{version.major}.finder",
     "~/Library/Application Support/com.versionsapp.v#{version.major}",
     "~/Library/Application Support/Versions",
     "~/Library/Caches/com.versionsapp.v#{version.major}",
+    "~/Library/Containers/com.versionsapp.v#{version.major}.finder",
+    "~/Library/Group Containers/4G35KLFD64.com.versionsapp.shared",
     "~/Library/HTTPStorages/com.versionsapp.v#{version.major}",
     "~/Library/Preferences/com.versionsapp.v#{version.major}.plist",
     "~/Library/WebKit/com.versionsapp.v#{version.major}",
