@@ -1,6 +1,6 @@
 cask "minmaxcal" do
-  version "0.9.3"
-  sha256 "708dcb3183c19412339fc95543768bffd674edcba9a99bbd8e4918a1c87c86c6"
+  version "0.9.4"
+  sha256 "d5ead7bc3db6f2e31f908a5ea28a4a7df488065023c156a3cc2c145e89f01dce"
 
   url "https://github.com/MikeMcQuaid/MinMaxCal/releases/download/#{version}/MinMaxCal-#{version}.zip"
   name "MinMaxCal"
