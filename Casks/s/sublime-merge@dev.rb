@@ -1,6 +1,6 @@
 cask "sublime-merge@dev" do
-  version "2131"
-  sha256 "3efe2bb2d29535e67fe68f8abcc848a3d7950a97aa12e1bd80a31dbcdf748693"
+  version "2133"
+  sha256 "8edee71d6f04bba86a42f955259db0b93c610fd67eb8479e6faf6918d848e3c8"
 
   url "https://download.sublimetext.com/sublime_merge_build_#{version}_mac.zip"
   name "Sublime Merge"
