@@ -34,9 +34,13 @@ cask "feishu" do
   app "Lark.app", target: "Feishu.app"
 
   zap trash: [
+    "~/Library/Application Support/com.electron.lark.font_workaround",
     "~/Library/Caches/com.bytedance.lark.helper",
     "~/Library/Caches/com.electron.lark",
+    "~/Library/Caches/com.electron.lark.helper",
+    "~/Library/HTTPStorages/com.electron.lark.helper",
     "~/Library/Preferences/com.bytedance.lark.helper.plist",
+    "~/Library/Preferences/com.electron.lark.plist",
     "~/Library/Saved Application State/com.electron.lark.savedState",
   ]
 end
