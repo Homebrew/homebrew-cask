@@ -28,8 +28,10 @@ cask "ipvanish-vpn" do
   app "IPVanish VPN.app"
 
   zap trash: [
+    "~/Library/Application Scripts/com.ipvanish.IPVanish.secure-browser.action-extension",
     "~/Library/Application Support/com.ipvanish.IPVanish",
     "~/Library/Caches/com.ipvanish.IPVanish",
+    "~/Library/Containers/com.ipvanish.IPVanish.secure-browser.action-extension",
     "~/Library/HTTPStorages/com.ipvanish.IPVanish",
     "~/Library/Logs/IPVanish VPN",
     "~/Library/Preferences/com.ipvanish.IPVanish.plist",
