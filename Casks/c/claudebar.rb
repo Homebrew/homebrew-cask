@@ -17,12 +17,13 @@ cask "claudebar" do
   app "ClaudeBar.app"
 
   zap trash: [
-    "~/Library/Application Support/ClaudeBar",
-    "~/Library/Caches/ClaudeBar",
-    "~/Library/Caches/com.tddworks.claudebar",
-    "~/Library/HTTPStorages/com.tddworks.claudebar",
-    "~/Library/Logs/ClaudeBar",
-    "~/Library/Preferences/ClaudeBar.plist",
-    "~/Library/Preferences/com.tddworks.claudebar.plist",
-  ]
+        "~/Library/Application Support/ClaudeBar",
+        "~/Library/Caches/ClaudeBar",
+        "~/Library/Caches/com.tddworks.claudebar",
+        "~/Library/HTTPStorages/com.tddworks.claudebar",
+        "~/Library/Logs/ClaudeBar",
+        "~/Library/Preferences/ClaudeBar.plist",
+        "~/Library/Preferences/com.tddworks.claudebar.plist",
+      ],
+      rmdir: "~/.claudebar"
 end
