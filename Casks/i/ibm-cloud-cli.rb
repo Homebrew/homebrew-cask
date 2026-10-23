@@ -1,11 +1,11 @@
 cask "ibm-cloud-cli" do
   arch arm: "_arm64"
 
-  version "2.47.1"
-  sha256 arm:   "e92dcc33244edaac277a3b3bc4263b39a5e048e15719d5c8bbc66ba1802c3d96",
-         intel: "c10ce4cb1da92d487f611d6d7f8c18dd010d368017234e4b9385f9abe4137263"
+  version "2.48.1"
+  sha256 arm:   "d6d122b3ecddc37bba260a1c2ae410d6bdd6bc8e438b6ea86b3c983339df91f0",
+         intel: "411d01f9f11ed774501cc9bc00b9f0e31160579fbb58f5224159098e556fe5f1"
 
-  url "https://download.clis.cloud.ibm.com/ibm-cloud-cli/#{version}/IBM_Cloud_CLI_#{version}#{arch}.pkg"
+  url "https://download.clis.cloud.ibm.com/ibm-cloud-cli-dn/#{version}/IBM_Cloud_CLI_#{version}#{arch}.pkg"
   name "IBM Cloud CLI"
   desc "Command-line API client"
   homepage "https://cloud.ibm.com/docs/cli/index.html"
