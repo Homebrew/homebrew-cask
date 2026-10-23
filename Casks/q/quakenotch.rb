@@ -16,5 +16,6 @@ cask "quakenotch" do
     "~/Library/Application Support/MeowingCat.QuakeNotch",
     "~/Library/Caches/MeowingCat.QuakeNotch",
     "~/Library/HTTPStorages/MeowingCat.QuakeNotch",
+    "~/Library/Preferences/MeowingCat.QuakeNotch.plist",
   ]
 end
