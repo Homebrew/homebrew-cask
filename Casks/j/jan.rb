@@ -13,8 +13,11 @@ cask "jan" do
 
     zap trash: [
       "~/Library/Application Support/Jan",
+      "~/Library/Application Support/jan.ai.app",
+      "~/Library/Caches/jan.ai.app",
       "~/Library/Preferences/jan.ai.app.plist",
       "~/Library/Saved Application State/jan.ai.app.savedState",
+      "~/Library/WebKit/jan.ai.app",
     ]
   end
   on_linux do
