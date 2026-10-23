@@ -21,7 +21,8 @@ cask "touch-portal" do
 
   app "TouchPortal.app"
 
-  uninstall pkgutil: "org.eclipse.jdt.internal.jarinjarloader"
+  uninstall quit:    "org.eclipse.jdt.internal.jarinjarloader",
+            pkgutil: "org.eclipse.jdt.internal.jarinjarloader"
 
   zap trash: "~/Documents/TouchPortal"
 end
