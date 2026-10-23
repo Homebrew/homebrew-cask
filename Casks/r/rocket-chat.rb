@@ -30,10 +30,12 @@ cask "rocket-chat" do
   app "Rocket.Chat.app"
 
   zap trash: [
+    "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/chat.rocket.sfl*",
     "~/Library/Application Support/Rocket.Chat",
     "~/Library/Caches/chat.rocket",
     "~/Library/Caches/chat.rocket.electron.helper",
     "~/Library/Caches/chat.rocket.ShipIt",
+    "~/Library/Logs/Rocket.Chat",
     "~/Library/Preferences/chat.rocket.electron.helper.plist",
     "~/Library/Preferences/chat.rocket.plist",
     "~/Library/Saved Application State/chat.rocket.savedState",
