@@ -16,5 +16,10 @@ cask "qidistudio" do
 
   app "QIDIStudio.app"
 
-  zap trash: "~/Library/Application Support/QIDIStudio"
+  zap trash: [
+    "~/Library/Application Support/QIDIStudio",
+    "~/Library/Caches/com.qiditech.qidi-studio",
+    "~/Library/Preferences/com.qiditech.qidi-studio.plist",
+    "~/Library/WebKit/com.qiditech.qidi-studio",
+  ]
 end
