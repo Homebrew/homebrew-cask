@@ -21,6 +21,7 @@ cask "socialstream" do
   app "socialstream.app"
 
   zap trash: [
+    "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/socialstream.electron.sfl*",
     "~/Library/Application Support/socialstream",
     "~/Library/Preferences/socialstream.electron.plist",
     "~/Library/Saved Application State/socialstream.electron.savedState",
