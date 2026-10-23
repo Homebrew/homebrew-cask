@@ -15,9 +15,13 @@ cask "lookaway" do
   uninstall quit: "com.mysticalbits.lookaway"
 
   zap trash: [
+    "~/Library/Application Scripts/D35B5Y6JX8.com.mysticalbits.lookaway.shared",
     "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.mysticalbits.lookaway.sfl*",
     "~/Library/Application Support/LookAway",
+    "~/Library/Caches/com.mysticalbits.lookaway",
     "~/Library/Caches/SentryCrash/LookAway",
+    "~/Library/Group Containers/D35B5Y6JX8.com.mysticalbits.lookaway.shared",
+    "~/Library/HTTPStorages/com.mysticalbits.lookaway*",
     "~/Library/Preferences/com.mysticalbits.lookaway.plist",
   ]
 end
