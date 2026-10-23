@@ -1,6 +1,6 @@
 cask "equibop" do
-  version "3.3.1"
-  sha256 "32023d2a0b92be7d347d1ddd4e0fb8fa021b8923c1a79382f1e01cacd91b8fb6"
+  version "3.3.2"
+  sha256 "c8b886b9a28e1842627ece313cebe33d04be8d3cd7fadf6daf46b30e305ec24c"
 
   url "https://github.com/Equicord/Equibop/releases/download/v#{version}/Equibop-#{version}-universal.dmg"
   name "Equibop"
@@ -13,7 +13,7 @@ cask "equibop" do
   end
 
   auto_updates true
-  depends_on macos: :monterey
+  depends_on macos: :ventura
 
   app "equibop.app"
 
