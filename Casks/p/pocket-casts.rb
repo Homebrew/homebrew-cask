@@ -25,6 +25,7 @@ cask "pocket-casts" do
     "~/Library/Caches/au.com.shiftyjelly.PocketCasts",
     "~/Library/Caches/com.electron.pocket-casts*",
     "~/Library/HTTPStorages/com.electron.pocket-casts",
+    "~/Library/Logs/Pocket Casts",
     "~/Library/Preferences/au.com.shiftyjelly.PocketCasts.plist",
     "~/Library/Preferences/com.electron.pocket-casts.plist",
     "~/Library/Saved Application State/com.electron.pocket-casts.savedState",

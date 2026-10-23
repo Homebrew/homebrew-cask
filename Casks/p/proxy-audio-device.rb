@@ -29,5 +29,8 @@ cask "proxy-audio-device" do
     terminate_process "coreaudiod", sudo: true, must_succeed: true
   end
 
-  zap trash: "~/Library/Saved Application State/net.briankendall.Proxy-Audio-Device-Settings.savedState"
+  zap trash: [
+    "~/Library/Preferences/net.briankendall.Proxy-Audio-Device-Settings.plist",
+    "~/Library/Saved Application State/net.briankendall.Proxy-Audio-Device-Settings.savedState",
+  ]
 end

@@ -20,7 +20,10 @@ cask "plasticity" do
   app "Plasticity.app"
 
   zap trash: [
-    "~/Library/Application Support/Plasticity",
-    "~/Library/Preferences/com.electron.plasticity.plist",
-  ]
+        "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.electron.plasticity.sfl*",
+        "~/Library/Application Support/Plasticity",
+        "~/Library/Logs/Plasticity",
+        "~/Library/Preferences/com.electron.plasticity.plist",
+      ],
+      rmdir: "~/.plasticity"
 end

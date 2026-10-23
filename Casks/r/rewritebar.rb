@@ -22,7 +22,9 @@ cask "rewritebar" do
   zap trash: [
     "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.m91michel.rewritebar.*",
     "~/Library/Application Support/RewriteBar",
+    "~/Library/Caches/com.m91michel.rewritebar",
     "~/Library/Caches/RewriteBar",
+    "~/Library/HTTPStorages/com.m91michel.rewritebar",
     "~/Library/HTTPStorages/RewriteBar",
     "~/Library/Preferences/com.m91michel.rewritebar.plist",
     "~/Library/Saved Application State/com.m91michel.rewritebar.savedState",

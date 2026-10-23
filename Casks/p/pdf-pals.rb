@@ -18,9 +18,11 @@ cask "pdf-pals" do
   app "PDF Pals.app"
 
   zap trash: [
+    "~/Library/Application Scripts/6D5N473QP3.co.podzim.PDFPals",
     "~/Library/Application Scripts/co.podzim.PDFPals",
     "~/Library/Caches/co.podzim.PDFPals",
     "~/Library/Containers/co.podzim.PDFPals",
+    "~/Library/Group Containers/6D5N473QP3.co.podzim.PDFPals",
     "~/Library/HTTPStorages/co.podzim.PDFPals",
     "~/Library/Preferences/co.podzim.PDFPals.plist",
     "~/Library/WebKit/co.podzim.PDFPals",

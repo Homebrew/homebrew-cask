@@ -20,6 +20,7 @@ cask "rotki" do
   app "rotki.app"
 
   zap trash: [
+    "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.rotki.app.sfl*",
     "~/Library/Application Support/rotki",
     "~/Library/Preferences/com.rotki.app.plist",
     "~/Library/Saved Application State/com.rotki.app.savedState",

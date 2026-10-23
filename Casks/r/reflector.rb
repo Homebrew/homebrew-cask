@@ -18,7 +18,9 @@ cask "reflector" do
 
   zap trash: [
     "~/Library/Application Support/Logs/Reflector*.log*",
+    "~/Library/Application Support/Reflector #{version.major}",
     "~/Library/Caches/com.squirrels.Reflector-*",
+    "~/Library/HTTPStorages/com.squirrels.Reflector-*",
     "~/Library/Preferences/com.squirrels.Reflector-*.plist",
   ]
 end

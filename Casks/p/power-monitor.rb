@@ -20,6 +20,7 @@ cask "power-monitor" do
             pkgutil:   "corp.sap.PowerMonitor.pkg"
 
   zap trash: [
+    "/Users/Shared/Power Monitor",
     "~/Library/Caches/corp.sap.PowerMonitor",
     "~/Library/HTTPStorages/corp.sap.PowerMonitor",
     "~/Library/Preferences/corp.sap.PowerMonitor.plist",

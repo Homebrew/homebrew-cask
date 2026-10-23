@@ -21,6 +21,7 @@ cask "phtv" do
   zap trash: [
     "~/Library/Application Support/PHTV",
     "~/Library/Caches/com.phamhungtien.phtv",
+    "~/Library/HTTPStorages/com.phamhungtien.phtv",
     "~/Library/Logs/PHTV",
     "~/Library/Preferences/com.phamhungtien.phtv.plist",
   ]

@@ -20,6 +20,8 @@ cask "roam-research" do
   app "Roam Research.app"
 
   zap trash: [
+    "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.roam-research.desktop-app.sfl*",
+    "~/Library/Application Support/Roam Research",
     "~/Library/Preferences/com.roam-research.desktop-app.plist",
     "~/Library/Saved Application State/com.roam-research.desktop-app.savedState",
   ]

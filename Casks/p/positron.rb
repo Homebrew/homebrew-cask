@@ -23,7 +23,9 @@ cask "positron" do
 
   zap trash: [
     "~/.positron",
+    "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/co.posit.positron.sfl*",
     "~/Library/Application Support/Positron",
+    "~/Library/Preferences/co.posit.positron.plist",
     "~/Library/Preferences/com.rstudio.positron.plist",
     "~/Library/Saved Application State/com.rstudio.positron.savedState",
   ]

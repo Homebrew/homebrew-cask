@@ -13,6 +13,7 @@ cask "rambox" do
   app "Rambox.app"
 
   zap trash: [
+    "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.rambox.sfl*",
     "~/Library/Application Support/CrashReporter/Rambox Helper_*.plist",
     "~/Library/Application Support/CrashReporter/Rambox_*.plist",
     "~/Library/Application Support/Rambox",
@@ -23,6 +24,7 @@ cask "rambox" do
     "~/Library/Preferences/ByHost/com.grupovrs.ramboxce.ShipIt.*.plist",
     "~/Library/Preferences/com.grupovrs.ramboxce.helper.plist",
     "~/Library/Preferences/com.grupovrs.ramboxce.plist",
+    "~/Library/Preferences/com.rambox.plist",
     "~/Library/Preferences/com.saenzramiro.rambox.helper.plist",
     "~/Library/Preferences/com.saenzramiro.rambox.plist",
     "~/Library/Saved Application State/com.grupovrs.ramboxce.savedState",

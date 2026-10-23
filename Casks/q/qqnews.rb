@@ -26,6 +26,7 @@ cask "qqnews" do
   uninstall quit: "com.tencent.macNet"
 
   zap trash: [
+    "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.tencent.macnet.sfl*",
     "~/Library/Application Support/com.tencent.macNet",
     "~/Library/Caches/com.tencent.macNet",
     "~/Library/HTTPStorages/com.tencent.macNet",
