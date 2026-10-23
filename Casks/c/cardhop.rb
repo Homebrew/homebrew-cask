@@ -21,12 +21,14 @@ cask "cardhop" do
             quit:      "com.flexibits.cardhop.mac"
 
   zap trash: [
+    "~/Library/Application Scripts/85C27NK92C.com.flexibits.cardhop.mac",
     "~/Library/Application Scripts/com.flexibits.cardhop.mac",
     "~/Library/Application Scripts/com.flexibits.cardhop.mac.BluetoothDialer",
     "~/Library/Application Scripts/com.flexibits.cardhop.mac.launcher",
     "~/Library/Containers/com.flexibits.cardhop.mac",
     "~/Library/Containers/com.flexibits.cardhop.mac.BluetoothDialer",
     "~/Library/Containers/com.flexibits.cardhop.mac.launcher",
+    "~/Library/Group Containers/85C27NK92C.com.flexibits.cardhop.mac",
     "~/Library/Preferences/com.flexibits.cardhop.mac.plist",
   ]
 end

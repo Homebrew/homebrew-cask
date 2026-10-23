@@ -24,6 +24,7 @@ cask "bookmacster@beta" do
 
   zap trash: [
     "~/Library/Application Support/BookMacster",
+    "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.sheepsystems.bookmacster.sfl*",
     "~/Library/Caches/com.sheepsystems.BookMacster",
     "~/Library/Preferences/com.sheepsystems.BookMacster.plist",
     "~/Library/Saved Application State/com.sheepsystems.BookMacster.savedState",

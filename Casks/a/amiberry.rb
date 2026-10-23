@@ -16,5 +16,6 @@ cask "amiberry" do
 
   app "Amiberry.app"
 
-  zap trash: "~/Library/Application Support/Amiberry"
+  zap trash: "~/Library/Application Support/Amiberry",
+      rmdir: "~/Documents/Amiberry"
 end

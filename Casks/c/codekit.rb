@@ -21,7 +21,9 @@ cask "codekit" do
     "~/Library/Application Support/com.incident57.CodeKit#{version.major}",
     "~/Library/Caches/com.incident57.CodeKit#{version.major}",
     "~/Library/Cookies/com.incident57.CodeKit#{version.major}.binarycookies",
+    "~/Library/HTTPStorages/com.incident57.CodeKit#{version.major}",
     "~/Library/Preferences/com.incident57.CodeKit#{version.major}.plist",
     "~/Library/Saved Application State/com.incident57.CodeKit#{version.major}.savedState",
+    "~/Library/WebKit/com.incident57.CodeKit#{version.major}",
   ]
 end

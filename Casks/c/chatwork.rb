@@ -23,6 +23,7 @@ cask "chatwork" do
 
   zap trash: [
     "~/Library/Application Support/Chatwork",
+    "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.electron.chatwork.sfl*",
     "~/Library/Caches/com.electron.chatwork",
     "~/Library/Caches/com.electron.chatwork.ShipIt",
     "~/Library/HTTPStorages/com.electron.chatwork",

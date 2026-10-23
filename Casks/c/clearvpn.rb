@@ -26,7 +26,10 @@ cask "clearvpn" do
   uninstall launchctl: "com.macpaw.clearvpn.macos-site-ver.security-monitor"
 
   zap trash: [
+    "~/Library/Application Scripts/com.macpaw.clearvpn.macos-site-ver.widget",
+    "~/Library/Application Scripts/S8EX82NJP6.com.macpaw.clearvpn.macos-site-ver",
     "~/Library/Caches/com.macpaw.clearvpn.macos-site-ver",
+    "~/Library/Containers/com.macpaw.clearvpn.macos-site-ver.widget",
     "~/Library/Group Containers/S8EX82NJP6.com.macpaw.clearvpn.macos-site-ver",
     "~/Library/HTTPStorages/com.macpaw.clearvpn.macos-site-ver*",
     "~/Library/Preferences/com.macpaw.clearvpn.macos-site-ver.plist",

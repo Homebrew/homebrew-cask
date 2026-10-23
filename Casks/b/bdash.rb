@@ -14,6 +14,7 @@ cask "bdash" do
     zap trash: [
       "~/.bdash",
       "~/Library/Application Support/Bdash",
+      "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/io.bdash.sfl*",
       "~/Library/Logs/Bdash",
       "~/Library/Preferences/io.bdash.plist",
       "~/Library/Saved Application State/io.bdash.savedState",

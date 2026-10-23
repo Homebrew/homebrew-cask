@@ -24,6 +24,8 @@ cask "chitubox" do
 
   zap trash: [
     "~/Library/Application Support/chitubox2_0",
+    "~/Library/Application Support/Chitubox_*",
     "~/Library/Application Support/chituboxResource",
+    "~/Library/Caches/Chitubox_*",
   ]
 end

@@ -26,5 +26,11 @@ cask "airparrot" do
               "com.squirrels.driver.AirParrotSpeakers",
             ]
 
-  zap trash: "~/Library/Preferences/com.squirrels.AirParrot-*.plist"
+  zap trash: [
+    "~/Library/Application Support/AirParrot #{version.major}",
+    "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.squirrels.airparrot-#{version.major}.sfl*",
+    "~/Library/Caches/com.squirrels.AirParrot-#{version.major}",
+    "~/Library/HTTPStorages/com.squirrels.AirParrot-#{version.major}*",
+    "~/Library/Preferences/com.squirrels.AirParrot-*.plist",
+  ]
 end

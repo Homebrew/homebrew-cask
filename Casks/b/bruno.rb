@@ -15,10 +15,13 @@ cask "bruno" do
     app "Bruno.app"
 
     zap trash: [
-      "~/Library/Application Support/bruno",
-      "~/Library/Preferences/com.usebruno.app.plist",
-      "~/Library/Saved Application State/com.usebruno.app.savedState",
-    ]
+          "~/Library/Application Support/bruno",
+          "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.usebruno.app.sfl*",
+          "~/Library/Logs/bruno",
+          "~/Library/Preferences/com.usebruno.app.plist",
+          "~/Library/Saved Application State/com.usebruno.app.savedState",
+        ],
+        rmdir: "~/Documents/bruno"
   end
   on_linux do
     app_image "bruno_#{version}_#{arch}_linux.AppImage", target: "Bruno.AppImage"
