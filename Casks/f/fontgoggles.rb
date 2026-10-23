@@ -11,5 +11,8 @@ cask "fontgoggles" do
 
   app "FontGoggles.app"
 
-  zap trash: "~/Library/Preferences/com.github.justvanrossum.FontGoggles.plist"
+  zap trash: [
+    "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.github.justvanrossum.fontgoggles.sfl*",
+    "~/Library/Preferences/com.github.justvanrossum.FontGoggles.plist",
+  ]
 end
