@@ -29,7 +29,9 @@ cask "robloxstudio" do
   uninstall quit: "com.Roblox.RobloxStudio"
 
   zap trash: [
+    "~/Library/Caches/com.Roblox.RobloxStudio",
     "~/Library/Preferences/com.roblox.RobloxStudio.plist",
     "~/Library/Preferences/com.roblox.RobloxStudioChannel.plist",
+    "~/Library/WebKit/com.Roblox.RobloxStudio",
   ]
 end
