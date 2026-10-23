@@ -1,6 +1,6 @@
 cask "ishare" do
-  version "5.1.0"
-  sha256 "d270be3321cbfc09058aae144fe6cb70e383b24dae896522ab6acf45e1983d65"
+  version "5.2.1"
+  sha256 "96aaa1d9639e5457f664f9f3b11e64c1f2d9cd049a2989c7802bb06b30b78e17"
 
   url "https://github.com/castdrian/ishare/releases/download/v#{version}/ishare.dmg"
   name "ishare"
