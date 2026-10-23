@@ -20,6 +20,7 @@ cask "textexpander" do
   uninstall quit: "com.smileonmymac.textexpander"
 
   zap trash: [
+    "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.smileonmymac.textexpander.sfl*",
     "~/Library/Application Support/Google/Chrome/NativeMessagingHosts/com.smileonmymac.textexpander.json",
     "~/Library/Application Support/TextExpander",
     "~/Library/Caches/com.smileonmymac.textexpander",
