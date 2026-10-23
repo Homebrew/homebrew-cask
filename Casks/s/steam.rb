@@ -18,7 +18,7 @@ cask "steam" do
       next if hash.blank?
       next version if hash == version.csv.third
 
-      manifest_version = page[/^\s*"version"\s+"(\d+)"/i, 1]
+      manifest_version = page[/["']version["']\s+["']([^"']+)["']/i, 1]
       next if manifest_version.blank?
 
       cask = CaskLoader.load(__FILE__)
