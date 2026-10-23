@@ -36,11 +36,15 @@ cask "kdrive" do
   zap trash: [
     "~/Library/Application Scripts/864VDCS2QY.com.infomaniak.drive.desktopclient.LoginItemAgent",
     "~/Library/Application Scripts/com.infomaniak.drive.desktopclient.Extension",
+    "~/Library/Application Support/kDrive",
     "~/Library/Caches/com.infomaniak.drive.desktopclient",
+    "~/Library/Caches/com.infomaniak.drive.desktopclient.gui",
     "~/Library/Containers/864VDCS2QY.com.infomaniak.drive.desktopclient.LoginItemAgent",
     "~/Library/Containers/com.infomaniak.drive.desktopclient.Extension",
     "~/Library/Cookies/com.infomaniak.drive.desktopclient.binarycookies",
     "~/Library/Group Containers/864VDCS2QY.com.infomaniak.drive.desktopclient",
+    "~/Library/Logs/kDrive",
+    "~/Library/Preferences/com.infomaniak.drive.desktopclient.gui.plist",
     "~/Library/Preferences/com.infomaniak.drive.desktopclient.plist",
     "~/Library/Preferences/kDrive",
   ]
