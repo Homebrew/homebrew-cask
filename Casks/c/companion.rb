@@ -37,5 +37,6 @@ cask "companion" do
     "~/Library/Application Support/companion-launcher",
     "~/Library/Preferences/companion-nodejs",
     "~/Library/Preferences/companion.bitfocus.no.plist",
+    "~/Library/Preferences/test-companion.bitfocus.no.plist",
   ]
 end
