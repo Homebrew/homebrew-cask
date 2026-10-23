@@ -16,13 +16,15 @@ cask "open-science" do
     uninstall quit: "com.aipoch.open-science"
 
     zap trash: [
-      "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.aipoch.open-science.sfl*",
-      "~/Library/Application Support/Open Science",
-      "~/Library/Caches/com.aipoch.open-science",
-      "~/Library/Logs/Open Science",
-      "~/Library/Preferences/com.aipoch.open-science.plist",
-      "~/Library/Saved Application State/com.aipoch.open-science.savedState",
-    ]
+          "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.aipoch.open-science.sfl*",
+          "~/Library/Application Support/Open Science",
+          "~/Library/Application Support/Open-Science",
+          "~/Library/Caches/com.aipoch.open-science",
+          "~/Library/Logs/Open Science",
+          "~/Library/Preferences/com.aipoch.open-science.plist",
+          "~/Library/Saved Application State/com.aipoch.open-science.savedState",
+        ],
+        rmdir: "~/.open-science*"
   end
   on_linux do
     depends_on arch: :x86_64
