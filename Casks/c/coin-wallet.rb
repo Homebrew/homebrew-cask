@@ -21,7 +21,10 @@ cask "coin-wallet" do
 
   zap trash: [
     "~/Library/Application Support/Coin Wallet",
+    "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.coinspace.wallet.sfl*",
     "~/Library/Caches/com.coinspace.wallet*",
+    "~/Library/HTTPStorages/com.coinspace.wallet",
+    "~/Library/Logs/Coin Wallet",
     "~/Library/Preferences/ByHost/com.coinspace.wallet.*.plist",
     "~/Library/Preferences/com.coinspace.wallet*.plist",
     "~/Library/Saved Application State/com.coinspace.wallet.savedState",
