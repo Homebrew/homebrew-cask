@@ -14,8 +14,10 @@ cask "losslesscut" do
     app "LosslessCut.app"
 
     zap trash: [
+      "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/no.mifi.losslesscut-mac.sfl*",
       "~/Library/Application Support/LosslessCut",
       "~/Library/Logs/LosslessCut",
+      "~/Library/Preferences/no.mifi.losslesscut-mac.plist",
     ]
   end
   on_linux do
