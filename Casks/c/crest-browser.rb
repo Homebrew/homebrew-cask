@@ -1,6 +1,6 @@
 cask "crest-browser" do
-  version "0.8.1"
-  sha256 "88e489ce6003e8274e892491766bff96e4d8d15d5fa010b24494e9eee6fa3d02"
+  version "0.8.50"
+  sha256 "355f4d3a5d2f2441770a77d2a52afc6e4c52fcfd97fb16e0fc3c6f7a6f4d8551"
 
   url "https://github.com/pauljoda/Crest/releases/download/v#{version}/Installer-Crest-#{version}-arm64.dmg"
   name "Crest"
