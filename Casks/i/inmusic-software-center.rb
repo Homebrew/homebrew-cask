@@ -1,8 +1,8 @@
 cask "inmusic-software-center" do
-  version "1.39.2"
-  sha256 "373bb1ab5a67f97ed2723460d69d74848cf616926d8900de1abc7640f13042c6"
+  version "1.40.0"
+  sha256 "8e7e0c188ee7d391ef8a0e00d490431f9983cc3c6ba61eb59d31733cf20c4eec"
 
-  url "https://cdn.inmusicbrands.com/Software/SI04/inMusic%20Software%20Center-darwin-universal-#{version}.zip"
+  url "https://cdn.inmusicbrands.com/SI04/#{version.no_dots}/inMusic%20Software%20Center-darwin-universal-#{version}.zip"
   name "inMusic Software Center"
   desc "Administration tool for inMusic brand creative software"
   homepage "https://www.airmusictech.com/downloads/"
