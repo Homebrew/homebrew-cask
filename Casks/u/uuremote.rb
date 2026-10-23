@@ -57,6 +57,7 @@ cask "uuremote" do
     "~/Library/HTTPStorages/com.netease.uuremote.server",
     "~/Library/Preferences/com.netease.uuremote.plist",
     "~/Library/Preferences/com.netease.uuremote.server.plist",
+    "~/Library/sensorsanalytics-com.netease.uuremote.server-distinct_id.plist",
     "~/Library/sensorsanalytics-com.netease.uuremote.server-first_day.plist",
     "~/Library/WebKit/com.netease.uuremote",
   ]
