@@ -21,6 +21,7 @@ cask "bootstrap-studio" do
   app "Bootstrap Studio.app"
 
   zap trash: [
+    "~/Library/Application Support/Bootstrap Studio",
     "~/Library/Application Support/bstudio",
     "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/bg.zine.bootstrapstudio.sfl*",
     "~/Library/Application Support/CrashReporter/Bootstrap Studio*",
