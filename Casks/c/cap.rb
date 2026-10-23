@@ -34,8 +34,11 @@ cask "cap" do
 
   zap trash: [
     "~/Library/Application Support/cap",
+    "~/Library/Application Support/so.cap.desktop",
     "~/Library/Caches/com.cap.desktop",
+    "~/Library/Logs/so.cap.desktop",
     "~/Library/Preferences/com.cap.desktop.plist",
+    "~/Library/Preferences/so.cap.desktop.plist",
     "~/Library/Saved Application State/com.cap.desktop.savedState",
     "~/Library/WebKit/com.cap.desktop",
   ]
