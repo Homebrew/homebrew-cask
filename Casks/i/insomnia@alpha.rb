@@ -26,10 +26,13 @@ cask "insomnia@alpha" do
   app "Insomnia.app"
 
   zap trash: [
+    "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.insomnia.app.sfl*",
     "~/Library/Application Support/Insomnia",
     "~/Library/Caches/com.insomnia.app",
     "~/Library/Caches/com.insomnia.app.ShipIt",
     "~/Library/Cookies/com.insomnia.app.binarycookies",
+    "~/Library/HTTPStorages/com.insomnia.app",
+    "~/Library/Logs/Insomnia",
     "~/Library/Preferences/ByHost/com.insomnia.app.ShipIt.*.plist",
     "~/Library/Preferences/com.insomnia.app.helper.plist",
     "~/Library/Preferences/com.insomnia.app.plist",

@@ -28,6 +28,7 @@ cask "gitkraken" do
 
   zap trash: [
     "~/.gitkraken",
+    "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.axosoft.gitkraken.sfl*",
     "~/Library/Application Support/com.axosoft.gitkraken.ShipIt",
     "~/Library/Application Support/GitKraken",
     "~/Library/Caches/com.axosoft.gitkraken",

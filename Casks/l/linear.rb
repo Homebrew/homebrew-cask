@@ -18,6 +18,7 @@ cask "linear" do
   app "Linear.app"
 
   zap trash: [
+    "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.linear.sfl*",
     "~/Library/Application Support/Linear",
     "~/Library/Caches/com.linear",
     "~/Library/Caches/com.linear.ShipIt",

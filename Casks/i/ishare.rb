@@ -18,7 +18,9 @@ cask "ishare" do
 
   zap trash: [
     "~/Library/Application Scripts/dev.adrian.ishare.sharemenuext",
+    "~/Library/Caches/dev.adrian.ishare",
     "~/Library/Containers/dev.adrian.ishare.sharemenuext",
+    "~/Library/HTTPStorages/dev.adrian.ishare",
     "~/Library/Preferences/dev.adrian.ishare.plist",
   ]
 end

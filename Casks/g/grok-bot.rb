@@ -25,6 +25,7 @@ cask "grok-bot" do
 
   zap trash: [
     "~/Library/Application Support/com.anysphere.sand",
+    "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.anysphere.sand.sfl*",
     "~/Library/Application Support/Grok Bot",
     "~/Library/Caches/com.anysphere.sand",
     "~/Library/HTTPStorages/com.anysphere.sand",

@@ -24,14 +24,15 @@ cask "houdahspot" do
   app "HoudahSpot.app"
 
   zap trash: [
-    "~/Library/Application Scripts/com.houdah.HoudahSpot#{version.major}.FinderExtension",
-    "~/Library/Application Scripts/com.houdah.HoudahSpot#{version.major}.HoudahSpotQuickAction",
-    "~/Library/Application Support/com.houdah.HoudahSpot#{version.major}",
-    "~/Library/Caches/com.houdah.HoudahSpot#{version.major}",
-    "~/Library/Containers/com.houdah.HoudahSpot#{version.major}.FinderExtension",
-    "~/Library/Containers/com.houdah.HoudahSpot#{version.major}.HoudahSpotQuickAction",
-    "~/Library/HTTPStorages/com.houdah.HoudahSpot#{version.major}",
+    "~/Library/Application Scripts/com.houdah.HoudahSpot4.FinderExtension",
+    "~/Library/Application Scripts/com.houdah.HoudahSpot4.HoudahSpotQuickAction",
+    "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.houdah.houdahspot4.sfl*",
+    "~/Library/Application Support/com.houdah.HoudahSpot4",
+    "~/Library/Caches/com.houdah.HoudahSpot4",
+    "~/Library/Containers/com.houdah.HoudahSpot4.FinderExtension",
+    "~/Library/Containers/com.houdah.HoudahSpot4.HoudahSpotQuickAction",
+    "~/Library/HTTPStorages/com.houdah.HoudahSpot4",
     "~/Library/Mail/Bundles/HoudahSpotMailPlugin.mailbundle",
-    "~/Library/Preferences/com.houdah.HoudahSpot#{version.major}.plist",
+    "~/Library/Preferences/com.houdah.HoudahSpot4.plist",
   ]
 end

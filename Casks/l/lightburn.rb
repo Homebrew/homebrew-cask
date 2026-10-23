@@ -19,8 +19,9 @@ cask "lightburn" do
   uninstall quit: "com.LightBurnSoftware.LightBurn"
 
   zap trash: [
-    "~/Library/Preferences/com.LightBurnSoftware.LightBurn.plist",
-    "~/Library/Preferences/LightBurn",
-    "~/Library/Saved Application State/com.LightBurnSoftware.LightBurn.savedState",
-  ]
+        "~/Library/Preferences/com.LightBurnSoftware.LightBurn.plist",
+        "~/Library/Preferences/LightBurn",
+        "~/Library/Saved Application State/com.LightBurnSoftware.LightBurn.savedState",
+      ],
+      rmdir: "~/.LightBurn"
 end

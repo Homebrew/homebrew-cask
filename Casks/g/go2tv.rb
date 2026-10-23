@@ -19,5 +19,8 @@ cask "go2tv" do
 
   app "go2tv.app"
 
-  zap trash: "~/Library/Preferences/fyne/app.go2tv.go2tv"
+  zap trash: [
+    "~/Library/Caches/go2tv",
+    "~/Library/Preferences/fyne/app.go2tv.go2tv",
+  ]
 end

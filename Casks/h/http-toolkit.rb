@@ -14,6 +14,7 @@ cask "http-toolkit" do
     app "HTTP Toolkit.app"
 
     zap trash: [
+      "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/tech.httptoolkit.desktop.sfl*",
       "~/Library/Application Support/HTTP Toolkit",
       "~/Library/Caches/httptoolkit-server",
       "~/Library/Logs/HTTP Toolkit",

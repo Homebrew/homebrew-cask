@@ -21,6 +21,7 @@ cask "funter" do
     "~/Library/Application Scripts/8DKG4XB37M.group.com.nektony.Funter-SIII",
     "~/Library/Application Scripts/8DKG4XB37M.group.com.nektony.MacCleaner-PRO-SIII",
     "~/Library/Application Scripts/com.nektony.Funter-SIII*",
+    "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.nektony.funter-siii.sfl*",
     "~/Library/Application Support/com.nektony.Funter-SIII",
     "~/Library/Caches/com.nektony.Funter-SIII",
     "~/Library/Containers/com.nektony.Funter-SIII.FinderSyncExt*",

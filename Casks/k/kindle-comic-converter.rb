@@ -20,5 +20,8 @@ cask "kindle-comic-converter" do
 
   app "Kindle Comic Converter.app"
 
-  zap trash: "~/Library/Preferences/com.kindlecomicconverter.KindleComicConverter.plist"
+  zap trash: [
+    "~/Library/Preferences/com.kindlecomicconverter.KindleComicConverter.plist",
+    "~/Library/Preferences/Kindle Comic Converter.plist",
+  ]
 end

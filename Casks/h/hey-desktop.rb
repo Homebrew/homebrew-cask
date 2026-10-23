@@ -25,7 +25,9 @@ cask "hey-desktop" do
   app "HEY.app"
 
   zap trash: [
+    "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.hey.app.desktop.sfl*",
     "~/Library/Application Support/HEY",
+    "~/Library/Logs/HEY",
     "~/Library/Preferences/com.hey.app.desktop.plist",
   ]
 end
