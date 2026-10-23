@@ -1,6 +1,6 @@
 cask "channel-works" do
-  version "12.1.1"
-  sha256 "bfb118b46febba90ea7583b5ed1d8265585ff7d10c16e0e0a061a81bc8027120"
+  version "12.2.0"
+  sha256 "a81e8fc113909c05db78027215eb44818fa7ee37202b1992f77e202c6696dd0d"
 
   url "https://github.com/channel-io/channel-works-macos/releases/download/v#{version}/Channel.Works-darwin-universal-#{version}.zip"
   name "Channel Works"
@@ -15,7 +15,7 @@ cask "channel-works" do
   end
 
   auto_updates true
-  depends_on :macos
+  depends_on macos: :monterey
 
   app "Channel Works.app"
 
