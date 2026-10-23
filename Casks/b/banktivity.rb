@@ -30,7 +30,9 @@ cask "banktivity" do
 
   zap trash: [
     "~/Library/Application Scripts/com.iggsoftware.banktivity",
+    "~/Library/Application Scripts/group.com.iggsoftware.banktivity.library",
     "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.iggsoftware.banktivity.sfl*",
     "~/Library/Containers/com.iggsoftware.banktivity",
+    "~/Library/Group Containers/group.com.iggsoftware.banktivity.library",
   ]
 end
