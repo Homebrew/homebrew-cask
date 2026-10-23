@@ -23,6 +23,8 @@ cask "swish" do
     "~/Library/Application Support/Swish",
     "~/Library/Caches/co.highlyopinionated.swish",
     "~/Library/Cookies/co.highlyopinionated.swish.binarycookies",
+    "~/Library/HTTPStorages/co.highlyopinionated.swish",
+    "~/Library/HTTPStorages/co.highlyopinionated.swish.binarycookies",
     "~/Library/Preferences/co.highlyopinionated.swish.plist",
   ]
 end
