@@ -18,6 +18,7 @@ cask "inmusic-software-center" do
   app "inMusic Software Center.app"
 
   zap trash: [
+    "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.electron.inmusic-software-center.sfl*",
     "~/Library/Application Support/com.inmusicbrands.softwareunlock",
     "~/Library/Application Support/inMusic Software Center",
     "~/Library/Caches/com.electron.inmusic-software-center",
