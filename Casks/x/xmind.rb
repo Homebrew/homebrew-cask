@@ -19,6 +19,9 @@ cask "xmind" do
   app "Xmind.app"
 
   zap trash: [
+    "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/net.xmind.vana.app.sfl*",
+    "~/Library/Application Support/Xmind",
+    "~/Library/Preferences/net.xmind.vana.app.plist",
     "~/Library/Saved Application State/org.xmind.cathy.application.savedState",
     "~/Library/XMind",
   ]
