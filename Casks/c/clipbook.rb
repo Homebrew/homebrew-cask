@@ -20,6 +20,7 @@ cask "clipbook" do
   zap trash: [
     "~/Library/Application Support/ClipBook*",
     "~/Library/Caches/ClipBook*",
+    "~/Library/Caches/com.ikryanov.clipbook*",
     "~/Library/HTTPStorages/com.ikryanov.clipbook*",
     "~/Library/Preferences/com.ikryanov.clipbook*.plist",
     "~/Library/Saved Application State/com.ikryanov.clipbook*.savedState",
