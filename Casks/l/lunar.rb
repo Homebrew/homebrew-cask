@@ -24,7 +24,9 @@ cask "lunar" do
   zap trash: [
     "~/Library/Application Support/fyi.lunar.Lunar",
     "~/Library/Application Support/Lunar",
+    "~/Library/Caches/fyi.lunar.Lunar",
     "~/Library/Caches/Lunar",
+    "~/Library/HTTPStorages/fyi.lunar.Lunar*",
     "~/Library/Preferences/fyi.lunar.Lunar.plist",
   ]
 end
