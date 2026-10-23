@@ -30,10 +30,15 @@ cask "macwhisper" do
   uninstall quit: "com.goodsnooze.MacWhisper"
 
   zap trash: [
+    "~/Library/Application Scripts/8Q7TMPA46J.group.com.goodsnooze.macwhisper.share",
     "~/Library/Application Scripts/com.goodsnooze.MacWhisper",
+    "~/Library/Application Scripts/com.goodsnooze.MacWhisper.ShareExtension",
+    "~/Library/Application Support/com.goodsnooze.MacWhisper",
     "~/Library/Application Support/MacWhisper",
     "~/Library/Caches/com.goodsnooze.MacWhisper",
     "~/Library/Containers/com.goodsnooze.MacWhisper",
+    "~/Library/Containers/com.goodsnooze.MacWhisper.ShareExtension",
+    "~/Library/Group Containers/8Q7TMPA46J.group.com.goodsnooze.macwhisper.share",
     "~/Library/HTTPStorages/com.goodsnooze.MacWhisper",
     "~/Library/HTTPStorages/com.goodsnooze.MacWhisper.binarycookies",
     "~/Library/Preferences/com.goodsnooze.MacWhisper.plist",
