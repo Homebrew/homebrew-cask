@@ -28,4 +28,10 @@ cask "dnclient-server" do
     "/etc/defined",
     "/Library/LaunchDaemons/dnclient.plist",
   ]
+
+  caveats <<~EOS
+    If dnclient runs as a service, restart it after upgrading so it runs the new version:
+      sudo "#{HOMEBREW_PREFIX}/bin/dnclient" stop
+      sudo "#{HOMEBREW_PREFIX}/bin/dnclient" start
+  EOS
 end
