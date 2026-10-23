@@ -14,6 +14,7 @@ cask "kkterm" do
       "~/Library/Caches/com.kkterm.app",
       "~/Library/Preferences/com.kkterm.app.plist",
       "~/Library/Saved Application State/com.kkterm.app.savedState",
+      "~/Library/WebKit/com.kkterm.app",
     ]
   end
   on_linux do
