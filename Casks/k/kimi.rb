@@ -20,10 +20,12 @@ cask "kimi" do
   zap trash: [
     "~/.kimi-webbridge",
     "~/.kimi-work",
+    "~/Library/Application Scripts/com.moonshot.kimichat.share",
     "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.moonshot.kimichat.sfl*",
     "~/Library/Application Support/kimi",
     "~/Library/Application Support/kimi-desktop",
     "~/Library/Caches/KimiAppCache",
+    "~/Library/Containers/com.moonshot.kimichat.share",
     "~/Library/HTTPStorages/com.moonshot.kimichat",
     "~/Library/Logs/kimi-desktop",
     "~/Library/Preferences/com.moonshot.kimichat.plist",
