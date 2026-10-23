@@ -13,6 +13,7 @@ cask "elephicon" do
   app "Elephicon.app"
 
   zap trash: [
+    "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/jp.wassabie64.elephicon.sfl*",
     "~/Library/Application Support/Elephicon",
     "~/Library/Caches/jp.wassabie64.Elephicon",
     "~/Library/Caches/jp.wassabie64.Elephicon.ShipIt",
