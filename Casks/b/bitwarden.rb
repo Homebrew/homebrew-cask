@@ -1,10 +1,10 @@
 cask "bitwarden" do
   url_end = on_system_conditional macos: "universal.dmg", linux: "x86_64.AppImage"
 
-  version "2026.10.0"
-  sha256 arm:          "24920c56d9464ad3de6e50eb78399641cf79eb006eb3f46885a49f85632cb96a",
-         intel:        "24920c56d9464ad3de6e50eb78399641cf79eb006eb3f46885a49f85632cb96a",
-         x86_64_linux: "1b2d2a56399df0a5de8b51696ca0dcf8a8b26786ffe836bc28d85ddb3fff795f"
+  version "2026.10.1"
+  sha256 arm:          "fddc07cd2d97aae9831eefc7586d98913c0773e6f60f5589ba140c44b49e768c",
+         intel:        "fddc07cd2d97aae9831eefc7586d98913c0773e6f60f5589ba140c44b49e768c",
+         x86_64_linux: "bc6f918d4a1a99d004215dd824b3b7c031c4102f68074090431010d84439bc23"
 
   on_macos do
     depends_on macos: :monterey
