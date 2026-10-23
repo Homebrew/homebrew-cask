@@ -19,6 +19,7 @@ cask "scroll-reverser" do
 
   zap trash: [
     "~/Library/Caches/com.pilotmoon.scroll-reverser",
+    "~/Library/HTTPStorages/com.pilotmoon.scroll-reverser",
     "~/Library/Preferences/com.pilotmoon.scroll-reverser.plist",
   ]
 end
