@@ -32,10 +32,11 @@ cask "jasp" do
   uninstall quit: "org.jaspstats.jasp"
 
   zap trash: [
-    "~/.JASP",
-    "~/Library/Application Support/JASP",
-    "~/Library/Caches/JASP",
-    "~/Library/Preferences/org.jasp-stats.JASP.plist",
-    "~/Library/Saved Application State/org.jasp-stats.jasp.savedState",
-  ]
+        "~/.JASP",
+        "~/Library/Application Support/JASP",
+        "~/Library/Caches/JASP",
+        "~/Library/Preferences/org.jasp-stats.JASP.plist",
+        "~/Library/Saved Application State/org.jasp-stats.jasp.savedState",
+      ],
+      rmdir: "~/Documents/JASP_Sandbox"
 end
