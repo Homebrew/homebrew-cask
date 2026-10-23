@@ -59,8 +59,17 @@ cask "deepl" do
             ]
 
   zap trash: [
+    "~/Library/Application Scripts/com.linguee.DeepLCopyTranslator.DeepLTranslatorFinderExt",
+    "~/Library/Application Scripts/group.com.linguee.DeepL",
+    "~/Library/Application Support/DeepL",
     "~/Library/Caches/com.linguee.DeepLCopyTranslator*",
+    "~/Library/Caches/com.linguee.DeepLUninstall",
+    "~/Library/Containers/com.linguee.DeepLCopyTranslator.DeepLTranslatorFinderExt",
     "~/Library/Group Containers/*.com.linguee.DeepL",
+    "~/Library/HTTPStorages/com.linguee.DeepLCopyTranslator*",
+    "~/Library/HTTPStorages/com.linguee.DeepLUninstall*",
     "~/Library/Preferences/com.linguee.DeepLCopyTranslator.plist",
+    "~/Library/Preferences/com.linguee.DeepLUninstall.plist",
+    "~/Library/WebKit/com.linguee.DeepLCopyTranslator",
   ]
 end
