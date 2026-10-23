@@ -46,6 +46,7 @@
   "mullvad-vpn@beta": "any",
   "netnewswire@beta": "any",
   "olive": "any",
+  "omniwm@canary": "all",
   "opencloud": "any",
   "openra@playtest": "all",
   "openshot-video-editor@daily": "all",
