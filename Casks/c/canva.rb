@@ -19,6 +19,7 @@ cask "canva" do
 
   zap trash: [
     "~/Library/Application Support/Canva",
+    "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.canva.canvadesktop.sfl*",
     "~/Library/Caches/com.canva.CanvaDesktop",
     "~/Library/Caches/com.canva.CanvaDesktop.ShipIt",
     "~/Library/HTTPStorages/com.canva.CanvaDesktop",
