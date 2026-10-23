@@ -20,6 +20,7 @@ cask "shadow@beta" do
   app "Shadow PC Beta.app"
 
   zap trash: [
+    "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.electron.shadow-beta.sfl*",
     "~/Library/Application Support/shadow-preprod",
     "~/Library/Preferences/com.electron.shadow-beta.plist",
   ]

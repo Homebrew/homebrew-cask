@@ -15,8 +15,11 @@ cask "switchhosts" do
     zap trash: [
       "~/.SwitchHosts",
       "~/Library/Application Support/SwitchHosts",
+      "~/Library/Caches/net.oldj.switchhosts",
+      "~/Library/Logs/net.oldj.switchhosts",
       "~/Library/Preferences/SwitchHosts.plist",
       "~/Library/Saved Application State/SwitchHosts.savedState",
+      "~/Library/WebKit/net.oldj.switchhosts",
     ]
   end
   on_linux do

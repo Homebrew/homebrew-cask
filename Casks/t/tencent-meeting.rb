@@ -39,7 +39,10 @@ cask "tencent-meeting" do
   zap trash: [
     "~/Library/Application Scripts/com.tencent.meeting",
     "~/Library/Application Scripts/FN2V63AD2J.com.tencent.meeting",
+    "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.tencent.meeting.services.wmexternal.sfl*",
+    "~/Library/Application Support/com.tencent.meeting*",
     "~/Library/Caches/com.tencent.meeting*",
+    "~/Library/com.tencent.meeting",
     "~/Library/Containers/com.tencent.meeting*",
     "~/Library/Containers/com.tencent.wemeet.FileDelta",
     "~/Library/Group Containers/FN2V63AD2J.com.tencent.meeting",

@@ -17,8 +17,13 @@ cask "spatterlight" do
   app "Spatterlight.app"
 
   zap trash: [
+    "~/Library/Application Scripts/6U7YY3724Y.group.net.ccxvii.spatterlight",
+    "~/Library/Application Scripts/net.ccxvii.spatterlight",
     "~/Library/Application Scripts/net.ccxvii.spatterlight.*",
+    "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/net.ccxvii.spatterlight.sfl*",
+    "~/Library/Containers/net.ccxvii.spatterlight",
     "~/Library/Containers/net.ccxvii.spatterlight.*",
+    "~/Library/Group Containers/6U7YY3724Y.group.net.ccxvii.spatterlight",
     "~/Library/Preferences/net.ccxvii.spatterlight.plist",
   ]
 end

@@ -23,8 +23,12 @@ cask "thebrain" do
   uninstall quit: "com.thebrain.dekutron"
 
   zap trash: [
+    "~/Library/Application Scripts/com.thebrain.dekutron.QuickThoughtShare",
+    "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.thebrain.dekutron.sfl*",
     "~/Library/Caches/com.thebrain.TheBrain",
+    "~/Library/Containers/com.thebrain.dekutron.QuickThoughtShare",
     "~/Library/HTTPStorages/com.thebrain.TheBrain",
+    "~/Library/Preferences/com.thebrain.dekutron.plist",
     "~/Library/Preferences/com.thebrain.TheBrain.plist",
   ]
 end

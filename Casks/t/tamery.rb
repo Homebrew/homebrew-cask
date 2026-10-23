@@ -21,6 +21,7 @@ cask "tamery" do
   app "Tamery.app"
 
   zap trash: [
+    "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.wannabespace.tamery.sfl*",
     "~/Library/Application Support/Tamery",
     "~/Library/Caches/@tamerydesktop-updater",
     "~/Library/HTTPStorages/com.wannabespace.tamery",

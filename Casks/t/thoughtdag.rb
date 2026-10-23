@@ -18,6 +18,7 @@ cask "thoughtdag" do
   uninstall quit: "io.github.chenxiachan.thoughtdag"
 
   zap trash: [
+    "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/io.github.chenxiachan.thoughtdag.sfl*",
     "~/Library/Application Support/thoughtdag-desktop",
     "~/Library/Caches/io.github.chenxiachan.thoughtdag",
     "~/Library/HTTPStorages/io.github.chenxiachan.thoughtdag",

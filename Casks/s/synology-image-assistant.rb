@@ -28,5 +28,7 @@ cask "synology-image-assistant" do
     "~/Library/Application Scripts/Synology/SynologyImageAssistantStartup.*",
     "~/Library/Application Scripts/Synology/SynologyImageAssistantUninstaller.*",
     "~/Library/Application Support/Synology Image Assistant",
+    "~/Library/Logs/Synology Image Assistant",
+    "~/Library/Preferences/com.synology.Photos.plist",
   ]
 end

@@ -18,6 +18,7 @@ cask "sipgate" do
   app "sipgate.app"
 
   zap trash: [
+    "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.sipgate.desktop.sfl*",
     "~/Library/Application Support/sipgate-desktop",
     "~/Library/Caches/com.sipgate.desktop",
     "~/Library/Caches/com.sipgate.desktop.ShipIt",
