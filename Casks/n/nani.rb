@@ -17,5 +17,9 @@ cask "nani" do
 
   app "Nani.app"
 
-  zap trash: "~/Library/Application Support/Nani"
+  zap trash: [
+    "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/jp.kiok.nani.sfl*",
+    "~/Library/Application Support/Nani",
+    "~/Library/Preferences/jp.kiok.nani.plist",
+  ]
 end
