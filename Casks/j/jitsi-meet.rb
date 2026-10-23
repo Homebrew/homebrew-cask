@@ -13,7 +13,9 @@ cask "jitsi-meet" do
   app "Jitsi Meet.app"
 
   zap trash: [
+    "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/org.jitsi.jitsi-meet.sfl*",
     "~/Library/Application Support/Jitsi Meet",
     "~/Library/Logs/Jitsi Meet",
+    "~/Library/Preferences/org.jitsi.jitsi-meet.plist",
   ]
 end
