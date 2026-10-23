@@ -18,7 +18,9 @@ cask "whodb" do
 
   zap trash: [
     "~/Library/Application Support/whodb",
+    "~/Library/Caches/com.clidey.whodb",
     "~/Library/Preferences/com.clidey.whodb.plist",
     "~/Library/Saved Application State/com.clidey.whodb.savedState",
+    "~/Library/WebKit/com.clidey.whodb",
   ]
 end
