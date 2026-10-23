@@ -20,6 +20,7 @@ cask "progressive-downloader" do
     "~/Library/Application Support/Progressive Downloader Data",
     "~/Library/Caches/com.PS.Downloader",
     "~/Library/Caches/com.PS.PSD",
+    "~/Library/HTTPStorages/com.PS.PSD",
     "~/Library/Preferences/com.PS.PSD.plist",
   ]
 end
