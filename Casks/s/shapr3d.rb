@@ -18,6 +18,7 @@ cask "shapr3d" do
 
   zap trash: [
     "~/Library/Application Scripts/com.shapr3d.shapr",
+    "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.shapr3d.shapr.sfl*",
     "~/Library/Containers/com.shapr3d.shapr",
   ]
 end
