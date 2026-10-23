@@ -1,8 +1,8 @@
 cask "textexpander" do
-  version "8.4.8,848.4"
-  sha256 "b587de0724684329f33e5dfdb0b7842cf70d1e4e2d83f55b68cc4669daecdeb7"
+  version "8.5,908.5.999"
+  sha256 "b4c05c05699dc2bfb76521f76bb31230b972133904d67bc8c30f95cdf529c49d"
 
-  url "https://cdn.textexpander.com/mac/#{version.csv.second}/TextExpander_#{version.csv.first}.dmg"
+  url "https://cdn.textexpander.com/electron-mac/#{version.csv.second}/TextExpander_#{version.csv.first}.dmg"
   name "TextExpander"
   desc "Inserts pre-made snippets of text anywhere"
   homepage "https://textexpander.com/"
@@ -13,9 +13,11 @@ cask "textexpander" do
   end
 
   auto_updates true
-  depends_on :macos
+  depends_on macos: :monterey
 
   app "TextExpander.app"
+
+  uninstall quit: "com.smileonmymac.textexpander"
 
   zap trash: [
     "~/Library/Application Support/Google/Chrome/NativeMessagingHosts/com.smileonmymac.textexpander.json",
