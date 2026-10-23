@@ -1,8 +1,11 @@
 cask "aside" do
-  version "1.0.928.1"
-  sha256 "c6997299dc1ea7c0b15e3efbc6ebca104f331205c9bb83fb2b424c2c5500258c"
+  arch arm: "arm64", intel: "x64"
 
-  url "https://releases.aside.com/dev-updater/Aside-#{version}.dmg"
+  version "1.0.1022.1"
+  sha256 arm:   "0ecd3f192482dcf76c72b7488d01fc33dd989fc766e86e0c832b9742bbbc650e",
+         intel: "fd9bbe633da1898e360f261a815cb70148be8da40166843cfc658830b0b83fa5"
+
+  url "https://releases.aside.com/dev-updater/Aside-#{version}-#{arch}.dmg"
   name "Aside"
   desc "Web browser with built-in AI assistant"
   homepage "https://aside.com/"
@@ -10,7 +13,7 @@ cask "aside" do
   livecheck do
     url "https://ptqgesmtzwdmeiknncqc.supabase.co/functions/v1/omaha/version_info.json"
     strategy :json do |json|
-      json.dig("platforms", "mac", "version")
+      json.dig("platforms", "mac", "architectures", arch, "version")
     end
   end
 
