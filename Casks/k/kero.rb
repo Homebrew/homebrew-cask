@@ -1,19 +1,14 @@
 cask "kero" do
   arch arm: "arm64", intel: "amd64"
 
-  version "2.1.10"
-  sha256 arm:   "fe7375d83f3aa97512040cdaa6fe8f184e9b72e0d310e3df5c4c4e9a84b50eae",
-         intel: "9f47b957dc03d52f0eaa21652c21ed18c2fccd0ee91f90875eff0908f0332f7c"
+  version "2.1.11"
+  sha256 arm:   "5780e18f26abac6e396238de3a70b8b4777c8aa4083036dca841b7bd14e5f763",
+         intel: "cda6d709182c38a270ebe6553c7884f383254658bf7d94ef0d12272f7ac3979b"
 
   url "https://github.com/egoist/kero/releases/download/v#{version}/Kero.#{version}.#{arch}.dmg"
   name "Kero"
   desc "Terminal app optimised for agents"
   homepage "https://kero.sh/"
-
-  livecheck do
-    url :url
-    strategy :github_latest
-  end
 
   auto_updates true
   depends_on macos: :monterey
