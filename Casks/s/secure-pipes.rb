@@ -22,6 +22,7 @@ cask "secure-pipes" do
 
   zap trash: [
     "~/Library/Application Scripts/group.net.edgeservices.secure-pipes",
+    "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/net.edgeservices.secure-pipes.sfl*",
     "~/Library/Application Support/Secure Pipes",
     "~/Library/Caches/net.edgeservices.secure-pipes",
     "~/Library/Caches/Secure Pipes",
