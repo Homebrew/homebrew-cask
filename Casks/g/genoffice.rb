@@ -18,11 +18,13 @@ cask "genoffice" do
               quit:      "com.genoffice.app"
 
     zap trash: [
-      "~/.genoffice",
-      "~/.local/bin/genoffice",
-      "~/Library/Application Support/GenOffice",
-      "~/Library/Preferences/com.genoffice.app.plist",
-    ]
+          "~/.genoffice",
+          "~/.local/bin/genoffice",
+          "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.genoffice.app.sfl*",
+          "~/Library/Application Support/GenOffice",
+          "~/Library/Preferences/com.genoffice.app.plist",
+        ],
+        rmdir: "~/Documents/GenOffice"
   end
   on_linux do
     depends_on arch: :x86_64
