@@ -27,5 +27,6 @@ cask "dbschema" do
     args:       ["-q"],
   }
 
-  zap trash: "~/Library/Preferences/com.dbschema.dbschema.plist"
+  zap trash: "~/Library/Preferences/com.dbschema.dbschema.plist",
+      rmdir: "~/Desktop/DbSchema*"
 end

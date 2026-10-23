@@ -28,13 +28,16 @@ cask "forklift" do
             delete:    "/Library/PrivilegedHelperTools/com.binarynights.ForkLiftHelper"
 
   zap trash: [
+    "~/Library/Application Scripts/J3CP9BBBN6.com.binarynights.ForkLift",
     "~/Library/Application Support/ForkLift",
     "~/Library/Caches/com.binarynights.ForkLift-#{version.major}",
     "~/Library/Cookies/com.binarynights.ForkLift-#{version.major}.binarycookies",
+    "~/Library/Group Containers/J3CP9BBBN6.com.binarynights.ForkLift",
     "~/Library/HTTPStorages/com.binarynights.ForkLift-#{version.major}",
     "~/Library/Logs/ForkLift",
     "~/Library/Logs/ForkLiftMini",
     "~/Library/Preferences/com.binarynights.ForkLift-#{version.major}.plist",
+    "~/Library/Preferences/com.binarynights.ForkLift.plist",
     "~/Library/Preferences/com.binarynights.ForkLiftMini.plist",
     "~/Library/Saved Application State/com.binarynights.ForkLift-#{version.major}.savedState",
   ]

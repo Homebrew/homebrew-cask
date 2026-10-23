@@ -21,6 +21,7 @@ cask "cyberghost-vpn" do
   app "CyberGhost VPN.app"
 
   zap trash: [
+    "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.cyberghostsrl.cyberghostmac.sfl*",
     "~/Library/Caches/com.cyberghostsrl.cyberghostmac",
     "~/Library/HTTPStorages/com.cyberghostsrl.cyberghostmac",
     "~/Library/Logs/com.cyberghostsrl.cyberghostmac",

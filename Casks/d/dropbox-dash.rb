@@ -25,6 +25,7 @@ cask "dropbox-dash" do
             quit:      "io.hypertools.Dropbox-Dash"
 
   zap trash: [
+    "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/io.hypertools.dropbox-dash.sfl*",
     "~/Library/Application Support/Dropbox Dash",
     "~/Library/Group Containers/com.dash",
     "~/Library/Preferences/io.hypertools.Dropbox-Dash.plist",

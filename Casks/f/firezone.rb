@@ -24,7 +24,10 @@ cask "firezone" do
   # could be used to uninstall the extension.
   zap trash: [
     "~/Library/Application Scripts/*.dev.firezone.firezone",
-    "~/Library/Containers/dev.firezone.firezone,",
+    "~/Library/Application Scripts/dev.firezone.firezone",
+    "~/Library/Application Scripts/dev.firezone.keep-firezone-running",
+    "~/Library/Containers/dev.firezone.firezone",
+    "~/Library/Containers/dev.firezone.keep-firezone-running",
     "~/Library/Group Containers/*.dev.firezone.firezone",
   ]
 end

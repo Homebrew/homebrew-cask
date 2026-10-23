@@ -20,8 +20,12 @@ cask "crest" do
 
   zap trash: [
     "~/.copilot/hooks/crest.json",
+    "~/Library/Application Scripts/com.zack40x.crest.safari",
+    "~/Library/Application Scripts/SA6A94K2Y4.com.zack40x.crest",
     "~/Library/Application Support/Crest",
     "~/Library/Caches/com.zack40x.crest",
+    "~/Library/Containers/com.zack40x.crest.safari",
+    "~/Library/Group Containers/SA6A94K2Y4.com.zack40x.crest",
     "~/Library/HTTPStorages/com.zack40x.crest",
     "~/Library/HTTPStorages/com.zack40x.crest.binarycookies",
     "~/Library/Preferences/com.zack40x.crest.plist",

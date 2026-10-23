@@ -21,6 +21,7 @@ cask "dangerzone" do
 
   zap trash: [
     "~/Library/Application Support/dangerzone",
+    "~/Library/Caches/dangerzone",
     "~/Library/Saved Application State/press.freedom.dangerzone.savedState",
   ]
 end

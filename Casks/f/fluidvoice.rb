@@ -20,10 +20,12 @@ cask "fluidvoice" do
   uninstall quit: "com.FluidApp.app"
 
   zap trash: [
+    "~/Library/Application Support/com.FluidApp.app",
     "~/Library/Application Support/FluidAudio",
     "~/Library/Application Support/FluidVoice",
     "~/Library/Caches/com.FluidApp.app",
     "~/Library/Caches/FluidAudio",
+    "~/Library/HTTPStorages/com.FluidApp.app",
     "~/Library/Logs/Fluid",
     "~/Library/Preferences/com.FluidApp.app.plist",
   ]

@@ -30,6 +30,7 @@ cask "ecamm-live" do
   zap trash: [
     "~/Library/Application Support/com.ecamm.EcammLive",
     "~/Library/Application Support/EcammLive",
+    "~/Library/Caches/com.ecamm.EcammLive",
     "~/Library/HTTPStorages/com.ecamm.EcammLive",
     "~/Library/HTTPStorages/com.ecamm.EcammLive.binarycookies",
     "~/Library/Preferences/com.ecamm.EcammLive.plist",

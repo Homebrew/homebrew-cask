@@ -12,5 +12,8 @@ cask "dorso" do
 
   app "Dorso.app"
 
-  zap trash: "~/Library/Preferences/com.thelazydeveloper.posturr.plist"
+  zap trash: [
+    "~/Library/Application Support/Dorso",
+    "~/Library/Preferences/com.thelazydeveloper.posturr.plist",
+  ]
 end

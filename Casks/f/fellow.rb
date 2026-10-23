@@ -18,7 +18,9 @@ cask "fellow" do
   app "Fellow.app"
 
   zap trash: [
+    "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.electron.fellow.sfl*",
     "~/Library/Application Support/Fellow",
+    "~/Library/Logs/Fellow",
     "~/Library/Preferences/com.electron.fellow.plist",
   ]
 end
