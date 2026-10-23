@@ -19,6 +19,8 @@ cask "mesh" do
 
   zap trash: [
     "~/Library/Application Support/Clay",
+    "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.clay.mac.sfl*",
+    "~/Library/Application Support/com.clay.mac",
     "~/Library/Application Support/Mesh",
     "~/Library/Caches/Clay",
     "~/Library/Caches/Mesh",
