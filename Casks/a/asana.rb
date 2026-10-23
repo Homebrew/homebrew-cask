@@ -24,8 +24,11 @@ cask "asana" do
 
   zap trash: [
     "~/Library/Application Support/Asana",
+    "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.electron.asana.sfl*",
     "~/Library/Caches/com.electron.asana",
     "~/Library/Caches/com.electron.asana.ShipIt",
+    "~/Library/HTTPStorages/com.electron.asana",
+    "~/Library/Logs/Asana",
     "~/Library/Preferences/com.electron.asana.plist",
     "~/Library/Saved Application State/com.electron.asana.savedState",
   ]
