@@ -1,6 +1,6 @@
 cask "flock-app" do
-  version "2.2.526"
-  sha256 "3ed88e7134a86b744715221237454cdb2097bddb6c77fb6adae3485f25b51ceb"
+  version "2.2.527"
+  sha256 "a3dbc3bcffcd54d5c909a9048b9d0738523654e424d4c28b8378c2e46dea6786"
 
   url "https://updates.flock.co/fl_mac_electron/Flock-macOS-#{version}.dmg"
   name "Flock"
