@@ -1,6 +1,6 @@
 cask "electrum" do
-  version "4.8.2"
-  sha256 "d0715488995ea671a3ac3f382a0ebf9aefb0c1430871940b35718a56a01d5311"
+  version "4.8.3"
+  sha256 "27d73fba5dcc0f46f14849e965a93fb720833d7fdf002dabe13b127d6d7ff67f"
 
   url "https://download.electrum.org/#{version}/electrum-#{version}.dmg"
   name "Electrum"
