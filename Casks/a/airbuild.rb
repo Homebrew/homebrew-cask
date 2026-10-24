@@ -20,13 +20,9 @@ cask "airbuild" do
   app "AirBuild.app"
 
   zap trash: [
+    "~/Library/Application Support/plus.yellow.AirBuild",
     "~/Library/Caches/plus.yellow.AirBuild",
-    "~/Library/Containers/plus.yellow.AirBuild",
-    "~/Library/Group Containers/group.plus.yellow.AirBuild",
     "~/Library/HTTPStorages/plus.yellow.AirBuild",
-    "~/Library/HTTPStorages/plus.yellow.AirBuild.binarycookies",
     "~/Library/Preferences/plus.yellow.AirBuild.plist",
-    "~/Library/Saved Application State/plus.yellow.AirBuild.savedState",
-    "~/Library/WebKit/plus.yellow.AirBuild",
   ]
 end
