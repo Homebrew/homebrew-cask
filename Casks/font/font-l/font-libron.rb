@@ -1,6 +1,6 @@
 cask "font-libron" do
-  version "0.31"
-  sha256 "ce9a355b46b11c2cbe158e9149ee13a3fa813ca28661d878723d72f477324033"
+  version "0.32"
+  sha256 "41686314e349fd80326149b9d7d791ffb7cb547a5e8356dae819831b47b1fd9f"
 
   url "https://github.com/nicoverbruggen/libron/releases/download/v#{version}/Libron.zip"
   name "Libron"
