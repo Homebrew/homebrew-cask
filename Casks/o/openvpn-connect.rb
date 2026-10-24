@@ -1,31 +1,33 @@
 cask "openvpn-connect" do
   arch arm: "arm64", intel: "x86_64"
 
-  version "3.8.2,6009"
-  sha256 "8d50036510859956d20d1f50e43171be53417431104c6befb1352ff5187c248a"
+  version "3.9.0,6050"
+  sha256 arm:   "7b8b5696b0cae8dec7b1371bf8c505b764188162437bc5cd53e622b35c74b027",
+         intel: "e92c8b03a1b01a3f3c0b08d8e6360719995c00f85b10675ebdf68c4dd8c5c327"
 
-  url "https://swupdate.openvpn.net/downloads/connect/openvpn-connect-#{version.csv.first}.#{version.csv.second}_signed.dmg"
+  url "https://packages.openvpn.net/connect/v3/OpenVPN_Connect_#{version.csv.first.dots_to_underscores}(#{version.csv.second})_#{arch}_Installer_signed.pkg"
   name "OpenVPN Connect client"
   desc "Client program for the OpenVPN Access Server"
-  homepage "https://openvpn.net/client-connect-vpn-for-mac-os/"
+  homepage "https://openvpn.net/client/"
 
   livecheck do
-    url "https://openvpn.net/downloads/openvpn-connect-v#{version.major}-macos.dmg"
-    regex(%r{/openvpn[._-]connect[._-]v?(\d+(?:\.\d+)+)\.(\d+)[._-]signed\.dmg}i)
+    url "https://openvpn.net/downloads/openvpn-connect-v#{version.major}-macos-#{arch}.pkg"
+    regex(%r{/OpenVPN[._-]Connect[._-]v?(\d+(?:_\d+)+)\((\d+)\)[._-]#{arch}[._-]Installer[._-]signed\.pkg}i)
     strategy :header_match do |headers, regex|
       match = headers["location"]&.match(regex)
       next if match.blank?
 
-      "#{match[1]},#{match[2]}"
+      "#{match[1].tr("_", ".")},#{match[2]}"
     end
   end
 
-  depends_on :macos
+  depends_on macos: :monterey
 
   pkg "OpenVPN_Connect_#{version.csv.first.dots_to_underscores}(#{version.csv.second})_#{arch}_Installer_signed.pkg"
 
   uninstall launchctl:  [
               "org.openvpn.client",
+              "org.openvpn.client.app.ovpnuseragent",
               "org.openvpn.helper",
             ],
             quit:       "org.openvpn.client.app",
