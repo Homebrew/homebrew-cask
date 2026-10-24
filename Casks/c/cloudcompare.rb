@@ -13,7 +13,7 @@ cask "cloudcompare" do
 
   livecheck do
     url "https://www.simulation.openfields.fr/index.php/cloudcompare-downloads/7-cloudcompare-macos-binaries"
-    regex(/href=.*CloudCompare[._-]v?(\d+(?:\.\d+)+)[._-]#{arch}\.dmg/i)
+    regex(/href=.*?CloudCompare[._-]v?(\d+(?:\.\d+)+)[._-]#{arch}\.dmg/i)
   end
 
   depends_on :macos
