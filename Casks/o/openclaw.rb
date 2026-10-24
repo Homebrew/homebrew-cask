@@ -1,10 +1,10 @@
 cask "openclaw" do
   os macos: ".dmg", linux: "-amd64.AppImage"
 
-  version "2026.10.6"
-  sha256 arm:          "3b532ba32761d9eeb0cb46cf1e8caf2b696e18e45dd94e5b33bfd5c8c550b982",
-         intel:        "3b532ba32761d9eeb0cb46cf1e8caf2b696e18e45dd94e5b33bfd5c8c550b982",
-         x86_64_linux: "66440e80af7405fccc54fb587de99639dd700702d363b98911cfa1a62e297058"
+  version "2026.10.7"
+  sha256 arm:          "f1e6fea7785280cb4b327fb511b773e305a8bf68933c94756f64b585f4de38f7",
+         intel:        "f1e6fea7785280cb4b327fb511b773e305a8bf68933c94756f64b585f4de38f7",
+         x86_64_linux: "b80d8606ef23047c6243869f4750d4cb858114a98e4f7ac12c352e8c165031e2"
 
   on_macos do
     depends_on macos: :sequoia
