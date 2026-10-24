@@ -21,6 +21,8 @@ cask "transmission" do
 
   app "Transmission.app"
 
+  uninstall quit: "org.m0k.transmission"
+
   zap trash: [
     "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/org.m0k.transmission.sfl*",
     "~/Library/Application Support/Transmission",
