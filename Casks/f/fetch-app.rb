@@ -9,7 +9,7 @@ cask "fetch-app" do
 
   livecheck do
     url :homepage
-    regex(/href=.*Fetch[._-]v?(\d+(?:\.\d+)+)\.zip"/i)
+    regex(/href=.*?Fetch[._-]v?(\d+(?:\.\d+)+)\.zip"/i)
   end
 
   depends_on :macos
