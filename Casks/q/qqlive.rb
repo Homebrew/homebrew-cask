@@ -27,9 +27,13 @@ cask "qqlive" do
   uninstall quit: "com.tencent.tenvideo"
 
   zap trash: [
+    "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.tencent.tenvideo.sfl*",
+    "~/Library/Application Support/com.tencent.tenvideo",
     "~/Library/Caches/com.tencent.tenvideo",
+    "~/Library/com.tencent.tenvideo",
     "~/Library/Containers/com.tencent.tenvideo",
     "~/Library/Cookies/com.tencent.tenvideo.binarycookies",
+    "~/Library/HTTPStorages/com.tencent.tenvideo",
     "~/Library/Logs/QQLive",
     "~/Library/Preferences/com.tencent.tenvideo.plist",
     "~/Library/Saved Application State/com.tencent.tenvideo.savedState",
