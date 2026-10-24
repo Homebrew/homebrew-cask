@@ -9,7 +9,7 @@ cask "atok" do
 
   livecheck do
     url "https://mypassport.atok.com/install/install_mac.html"
-    regex(/href=.*at[._-]?v?(\d+(?:[._]\d+)+)\.dmg/i)
+    regex(/href=.*?at[._-]?v?(\d+(?:[._]\d+)+)\.dmg/i)
     strategy :page_match do |page, regex|
       page.scan(regex).map { |match| match[0].tr("_", ".") }
     end
