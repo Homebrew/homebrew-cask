@@ -1,9 +1,9 @@
 cask "beatunes" do
   arch arm: "arm64", intel: "x86_64"
 
-  version "6.0.0"
-  sha256 arm:   "d7349300adefbd7a2f59ac6420c876106cee05976ea624a1f05a6c047fb91276",
-         intel: "ef8084f893d4f80a0b1f49fd68743b74173a4bc9af7aa1d70dcf09b47aea54f0"
+  version "6.0.1"
+  sha256 arm:   "afb087619657cfcce487debaa1e20d344d3d5c9dacf63b8bdaab3507c619a044",
+         intel: "0b32ad2f910182e7d436bfb5236f6c5526f99a805f4c05558afe0f94cb5fddcc"
 
   url "https://coxy.beatunes.com/download/beaTunes-#{version.dots_to_hyphens}-#{arch}.dmg"
   name "beaTunes"
