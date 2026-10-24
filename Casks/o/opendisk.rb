@@ -1,6 +1,6 @@
 cask "opendisk" do
-  version "1.3.0"
-  sha256 "a5318365698a15ee42614cb1a19b61df2744ce68f2f3f53842e7e81269088e44"
+  version "1.3.1"
+  sha256 "fbd6f48f2521d0ba248eb2ab63d79658fc8f5cf3245e37de274651a5fa83bbc7"
 
   url "https://github.com/137137137/OpenDisk/releases/download/v#{version}/OpenDisk-#{version}.zip"
   name "OpenDisk"
@@ -13,7 +13,7 @@ cask "opendisk" do
   end
 
   auto_updates true
-  depends_on macos: :sequoia
+  depends_on macos: :sonoma
 
   app "OpenDisk.app"
 
