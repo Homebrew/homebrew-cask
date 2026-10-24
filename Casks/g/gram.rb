@@ -1,7 +1,7 @@
 cask "gram" do
   arch arm: "aarch64", intel: "x86_64"
-  os macos: "dmg", linux: "tar.gz"
-  app_name = on_system_conditional macos: "Gram", linux: "gram-linux"
+  os macos: "Gram", linux: "gram-linux"
+  url_end = on_system_conditional macos: "dmg", linux: "tar.gz"
 
   version "3.4.1"
   sha256 arm:          "fe694f5fd2415cfbfb612029bb8daf7c99969bd6da7b8fd3bad89b9e155d3d7c",
@@ -28,7 +28,7 @@ cask "gram" do
     binary "#{staged_path}/gram.app/bin/gram"
   end
 
-  url "https://codeberg.org/GramEditor/gram/releases/download/#{version}/#{app_name}-#{arch}-#{version}.#{os}"
+  url "https://codeberg.org/GramEditor/gram/releases/download/#{version}/#{os}-#{arch}-#{version}.#{url_end}"
   name "Gram"
   desc "Code editor focused on stability, without AI, subscriptions, or telemetry"
   homepage "https://gram-editor.com/"
