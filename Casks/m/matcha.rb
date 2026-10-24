@@ -4,10 +4,10 @@ cask "matcha" do
 
   url "https://github.com/jakeantelis/Matcha/releases/download/v#{version}/Matcha.zip"
   name "Matcha"
-  desc "Keep your Mac awake for builds, exports, and AI coding agents"
+  desc "Keep awake for builds, exports, and AI coding agents"
   homepage "https://github.com/jakeantelis/Matcha"
 
-  depends_on macos: ">= :big_sur"
+  depends_on :macos
 
   app "Matcha.app"
 
