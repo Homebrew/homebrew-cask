@@ -14,8 +14,10 @@ cask "biscuit" do
 
     zap trash: [
       "~/Library/Application Support/biscuit",
+      "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.eatbiscult.biscult.sfl*",
       "~/Library/Logs/Biscuit",
       "~/Library/Preferences/com.eatbiscuit.biscuit.plist",
+      "~/Library/Preferences/com.eatbiscult.biscult.plist",
       "~/Library/Saved Application State/com.eatbiscult.biscult.savedState",
     ]
   end
