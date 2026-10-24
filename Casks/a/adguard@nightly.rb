@@ -1,6 +1,6 @@
 cask "adguard@nightly" do
-  version "2.20.0.2402"
-  sha256 "ac47ecc9024af396b713ea233f6902dab45c10aa8826eee9e9a8a8188ee9572f"
+  version "2.21.0.2632"
+  sha256 "6010669c38cd47ca1c6e631a2f70f26af18db7bf011fe0ee5189e7632ef81dac"
 
   url "https://static.adguard.com/mac/nightly/AdGuard-#{version}.dmg"
   name "Adguard"
@@ -9,14 +9,18 @@ cask "adguard@nightly" do
 
   livecheck do
     url "https://static.adguard.com/mac/adguard-nightly-appcast.xml"
+    regex(/AdGuard[._-]v?(\d+(?:\.\d+)+)\.dmg/i)
     strategy :sparkle do |item|
-      item.short_version.delete_suffix(" nightly")
+      match = item.url.match(regex)
+      next unless match
+
+      match[1]
     end
   end
 
   auto_updates true
   conflicts_with cask: "adguard"
-  depends_on macos: :monterey
+  depends_on macos: :ventura
 
   pkg "AdGuard.pkg"
 
