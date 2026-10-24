@@ -17,6 +17,7 @@ cask "flock-app" do
   app "Flock.app"
 
   zap trash: [
+    "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/to.go.osx.sfl*",
     "~/Library/Application Support/Flock",
     "~/Library/Logs/Flock",
     "~/Library/Preferences/to.go.osx.plist",
