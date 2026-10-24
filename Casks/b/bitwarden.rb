@@ -18,6 +18,7 @@ cask "bitwarden" do
 
     zap trash: [
       "~/Library/Application Support/Bitwarden",
+      "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.bitwarden.desktop.sfl*",
       "~/Library/Caches/com.bitwarden.desktop",
       "~/Library/Caches/com.bitwarden.desktop.ShipIt",
       "~/Library/Logs/Bitwarden",
