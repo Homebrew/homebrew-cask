@@ -23,6 +23,7 @@ cask "marvin" do
 
   zap trash: [
     "~/Library/Application Support/Caches/marvin-updater",
+    "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.amazingmarvin.marvindesktop.sfl*",
     "~/Library/Application Support/Marvin",
     "~/Library/Logs/Marvin",
     "~/Library/Preferences/com.amazingmarvin.marvindesktop.plist",
