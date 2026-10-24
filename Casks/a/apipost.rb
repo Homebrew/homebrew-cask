@@ -12,13 +12,13 @@ cask "apipost" do
 
   livecheck do
     url :homepage
-    regex(/href=.*client=Mac&arch=#{arch}&version=(\d+(?:\.\d+)+)[<" ]/i)
+    regex(/href=.*?client=Mac&arch=#{arch}&version=(\d+(?:\.\d+)+)[<" ]/i)
   end
 
   auto_updates true
   depends_on :macos
 
-  app "ApiPost.app"
+  app "Apipost.app"
 
   zap trash: [
     "~/Library/Application Support/ApiPost#{version.major}",
