@@ -21,7 +21,9 @@ cask "proxygen-app" do
 
   zap trash: [
     "~/Library/Application Scripts/freshbits.Proxygen",
+    "~/Library/Application Scripts/group.freshbits.Proxygen",
     "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/freshbits.proxygen.sfl*",
     "~/Library/Containers/freshbits.Proxygen",
+    "~/Library/Group Containers/group.freshbits.Proxygen",
   ]
 end
