@@ -8,7 +8,7 @@ cask "font-genshingothic" do
 
   livecheck do
     url :homepage
-    regex(/href=.*genshingothic[._-]v?(\d+(?:\.\d+)*)\.zip"/i)
+    regex(/href=.*?genshingothic[._-]v?(\d+(?:\.\d+)*)\.zip"/i)
   end
 
   font "GenShinGothic-Bold.ttf"
