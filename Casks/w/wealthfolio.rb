@@ -25,6 +25,7 @@ cask "wealthfolio" do
   zap trash: [
     "~/Library/Application Support/com.teymz.wealthfolio",
     "~/Library/Caches/com.teymz.wealthfolio",
+    "~/Library/Logs/com.teymz.wealthfolio",
     "~/Library/WebKit/com.teymz.wealthfolio",
   ]
 end
