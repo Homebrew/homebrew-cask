@@ -9,7 +9,7 @@ cask "shureplus-motiv" do
 
   livecheck do
     url "https://www.shure.com/en-US/support/downloads/software-firmware-archive/shure_plus_motiv_desktop"
-    regex(/href=.*MOTIV[._-]Desktop[._-]macOS[._-]v?(\d+(?:\.\d+)+)\.dmg/i)
+    regex(/href=.*?MOTIV[._-]Desktop[._-]macOS[._-]v?(\d+(?:\.\d+)+)\.dmg/i)
   end
 
   depends_on :macos
