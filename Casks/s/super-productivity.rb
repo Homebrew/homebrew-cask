@@ -13,6 +13,7 @@ cask "super-productivity" do
     app "Super Productivity.app"
 
     zap trash: [
+      "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.super-productivity.app.sfl*",
       "~/Library/Application Support/superProductivity",
       "~/Library/Logs/superProductivity",
       "~/Library/Preferences/com.super-productivity.app.plist",
