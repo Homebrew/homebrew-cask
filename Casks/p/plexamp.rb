@@ -25,10 +25,12 @@ cask "plexamp" do
   zap trash: [
     "~/Library/Application Support/Caches/plexamp-updater",
     "~/Library/Application Support/Plexamp",
+    "~/Library/Application Support/tv.plex.plexamp",
     "~/Library/Caches/Plexamp",
     "~/Library/Caches/tv.plex.plexamp*",
     "~/Library/Logs/Plexamp",
     "~/Library/Preferences/tv.plex.plexamp.plist",
     "~/Library/Saved Application State/tv.plex.plexamp.savedState",
+    "~/Library/WebKit/tv.plex.plexamp",
   ]
 end
