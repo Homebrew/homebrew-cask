@@ -12,6 +12,8 @@ cask "robbietilton-compositor" do
 
   app "Compositor.app"
 
+  uninstall quit: "com.wonderassembly.compositor"
+
   zap trash: [
     "~/Library/Application Support/Compositor",
     "~/Library/Preferences/com.robbietilton.Compositor.plist",
