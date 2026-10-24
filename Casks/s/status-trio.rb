@@ -1,6 +1,6 @@
 cask "status-trio" do
-  version "1.7.2"
-  sha256 "1d5749472b4605ed3735da3c669700009e150ae83096e54ab689bd57feec860f"
+  version "1.7.4"
+  sha256 "1f5b84039c731800c41a883297c57aa2c74c09780f4f816525942ac6378afc0c"
 
   url "https://github.com/lingyired/status-trio/releases/download/v#{version}/StatusTrio-#{version}.dmg"
   name "Status Trio"
