@@ -22,6 +22,7 @@ cask "todoist-app" do
 
   zap trash: [
     "~/Library/Application Scripts/*com.todoist.mac*",
+    "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.todoist.mac.todoist.sfl*",
     "~/Library/Application Support/Todoist",
     "~/Library/Containers/com.todoist.mac.Todoist*",
     "~/Library/Group Containers/*com.todoist.mac*",
