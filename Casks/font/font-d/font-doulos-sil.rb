@@ -8,7 +8,7 @@ cask "font-doulos-sil" do
 
   livecheck do
     url "https://software.sil.org/doulos/download/"
-    regex(/href=.*DoulosSIL[._-]v?(\d+(?:\.\d+)+)\.zip/i)
+    regex(/href=.*?DoulosSIL[._-]v?(\d+(?:\.\d+)+)\.zip/i)
   end
 
   font "DoulosSIL-#{version}/DoulosSIL-Regular.ttf"
