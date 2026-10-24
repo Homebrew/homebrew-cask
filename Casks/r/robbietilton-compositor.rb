@@ -5,12 +5,14 @@ cask "robbietilton-compositor" do
   url "https://github.com/robbietilton/Compositor/releases/download/v#{version}/Compositor.dmg"
   name "Compositor"
   desc "Photoshop alternative"
-  homepage "https://github.com/robbietilton/Compositor"
+  homepage "https://robbietilton.com/compositor"
 
   conflicts_with cask: "compositor"
   depends_on macos: :tahoe
 
   app "Compositor.app"
+
+  uninstall quit: "com.wonderassembly.compositor"
 
   zap trash: [
     "~/Library/Application Support/Compositor",
