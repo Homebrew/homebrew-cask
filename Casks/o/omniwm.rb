@@ -12,6 +12,7 @@ cask "omniwm" do
     strategy :github_latest
   end
 
+  conflicts_with cask: "omniwm@canary"
   depends_on arch: :arm64
   depends_on macos: :tahoe
 
