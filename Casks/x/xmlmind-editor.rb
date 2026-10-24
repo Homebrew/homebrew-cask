@@ -9,7 +9,7 @@ cask "xmlmind-editor" do
 
   livecheck do
     url "https://www.xmlmind.com/xmleditor/download.shtml"
-    regex(/href=.*xxe-perso[._-]v?(\d+(?:_\d+)+).dmg/i)
+    regex(/href=.*?xxe-perso[._-]v?(\d+(?:_\d+)+)\.dmg/i)
     strategy :page_match do |page, regex|
       match = page.match(regex)
       next if match.blank?
