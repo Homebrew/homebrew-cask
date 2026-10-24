@@ -26,5 +26,6 @@ cask "uniclipboard" do
     "~/Library/Logs/app.uniclipboard.desktop",
     "~/Library/Preferences/app.uniclipboard.desktop.plist",
     "~/Library/WebKit/app.uniclipboard.desktop",
+    "~/Library/WebKit/app.uniclipboard.desktop.ui",
   ]
 end
