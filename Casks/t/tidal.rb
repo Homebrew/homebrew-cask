@@ -24,9 +24,11 @@ cask "tidal" do
   app "TIDAL.app"
 
   zap trash: [
+    "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.tidal.desktop.sfl*",
     "~/Library/Application Support/TIDAL",
     "~/Library/Caches/com.tidal.desktop",
     "~/Library/Caches/com.tidal.desktop.ShipIt",
+    "~/Library/HTTPStorages/com.tidal.desktop",
     "~/Library/Logs/TIDAL",
     "~/Library/Preferences/com.tidal.*",
     "~/Library/Saved Application State/com.tidal.desktop.savedState",
