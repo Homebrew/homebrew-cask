@@ -62,13 +62,14 @@ cask "calibre" do
 
   uninstall quit: "net.kovidgoyal.calibre"
 
-  zap trash: [
-    "~/Library/Application Support/calibre-ebook.com",
-    "~/Library/Caches/calibre",
-    "~/Library/Preferences/calibre",
-    "~/Library/Preferences/com.calibre-ebook.ebook-viewer.plist",
-    "~/Library/Preferences/net.kovidgoyal.calibre.plist",
-    "~/Library/Saved Application State/com.calibre-ebook.ebook-viewer.savedState",
-    "~/Library/Saved Application State/net.kovidgoyal.calibre.savedState",
-  ]
+  zap delete: "/Library/Caches/calibre-singleinstance-*.lock",
+      trash:  [
+        "~/Library/Application Support/calibre-ebook.com",
+        "~/Library/Caches/calibre",
+        "~/Library/Preferences/calibre",
+        "~/Library/Preferences/com.calibre-ebook.ebook-viewer.plist",
+        "~/Library/Preferences/net.kovidgoyal.calibre.plist",
+        "~/Library/Saved Application State/com.calibre-ebook.ebook-viewer.savedState",
+        "~/Library/Saved Application State/net.kovidgoyal.calibre.savedState",
+      ]
 end

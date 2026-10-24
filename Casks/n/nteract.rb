@@ -32,6 +32,7 @@ cask "nteract" do
   zap trash: [
     "~/Library/Application Support/nteract",
     "~/Library/Application Support/org.nteract.desktop",
+    "~/Library/Caches/nteract",
     "~/Library/Caches/org.nteract.desktop",
     "~/Library/WebKit/org.nteract.desktop",
   ]

@@ -20,8 +20,10 @@ cask "trilium-notes" do
   app "Trilium Notes.app"
 
   zap trash: [
+    "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.electron.trilium-notes.sfl*",
     "~/Library/Application Support/trilium-data",
     "~/Library/Application Support/TriliumNext Notes",
+    "~/Library/Preferences/com.electron.trilium-notes.plist",
     "~/Library/Preferences/com.electron.triliumnext-notes.plist",
     "~/Library/Saved Application State/com.electron.triliumnext-notes.savedState",
   ]

@@ -42,5 +42,6 @@ cask "wechatwork" do
     "~/Library/Containers/88L2Q4487U.com.tencent.WeWorkMacDebug",
     "~/Library/Containers/88L2Q4487U.com.tencent.WeWorkMacUIDev",
     "~/Library/Containers/com.tencent.WeWorkMac",
+    "~/Library/Group Containers/88L2Q4487U.com.tencent.WeWorkMac*",
   ]
 end

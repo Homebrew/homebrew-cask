@@ -17,9 +17,10 @@ cask "replaywebpage" do
   app "ReplayWeb.page.app"
 
   zap trash: [
+    "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/net.webrecorder.replaywebpage.sfl*",
     "~/Library/Application Support/ReplayWeb.page",
     "~/Library/Logs/ReplayWeb.page",
-    "~/Library/Preferences/net.webrecorder.replaywebpage.plst",
+    "~/Library/Preferences/net.webrecorder.replaywebpage.plist",
     "~/Library/Saved Application State/net.webrecorder.replaywebpage.savedState",
   ]
 end

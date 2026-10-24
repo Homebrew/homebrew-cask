@@ -21,6 +21,7 @@ cask "mace" do
     "~/Library/Application Support/MACE",
     "~/Library/Caches/com.mace.app",
     "~/Library/HTTPStorages/com.mace.app",
+    "~/Library/Logs/MACE",
     "~/Library/Preferences/com.mace.app.plist",
   ]
 end

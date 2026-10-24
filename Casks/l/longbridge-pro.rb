@@ -22,6 +22,7 @@ cask "longbridge-pro" do
   uninstall quit: "global.longbridge.app.desktop"
 
   zap trash: [
+    "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/global.longbridge.app.desktop.sfl*",
     "~/Library/Application Support/Longbridge Pro",
     "~/Library/Caches/global.longbridge.app.desktop",
     "~/Library/Caches/global.longbridge.app.desktop.ShipIt",

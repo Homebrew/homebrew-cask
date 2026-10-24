@@ -18,6 +18,7 @@ cask "equibop" do
   app "equibop.app"
 
   zap trash: [
+    "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/org.equicord.equibop.sfl*",
     "~/Library/Application Support/equibop",
     "~/Library/Caches/org.equicord.equibop",
     "~/Library/Caches/org.equicord.equibop.ShipIt",

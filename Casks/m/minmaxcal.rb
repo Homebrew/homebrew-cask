@@ -12,5 +12,8 @@ cask "minmaxcal" do
 
   app "MinMaxCal.app"
 
-  # No zap stanza required
+  zap trash: [
+    "~/Library/Application Scripts/com.mikemcquaid.MinMaxCal",
+    "~/Library/Containers/com.mikemcquaid.MinMaxCal",
+  ]
 end

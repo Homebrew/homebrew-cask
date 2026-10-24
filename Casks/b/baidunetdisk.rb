@@ -25,12 +25,15 @@ cask "baidunetdisk" do
 
   zap trash: [
         "~/Library/Application Scripts/com.baidu.BaiduNetdisk-mac.FinderSync",
+        "~/Library/Application Scripts/group.com.baidu.BaiduNetdisk-Mac",
         "~/Library/Application Support/baidunetdisk",
+        "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.baidu.baidunetdisk-mac.sfl*",
         "~/Library/Application Support/com.baidu.BaiduNetdisk-mac",
         "~/Library/Caches/com.baidu.BaiduNetdisk-mac",
         "~/Library/Caches/com.plausiblelabs.crashreporter.data/com.baidu.BaiduNetdisk-mac",
         "~/Library/Containers/com.baidu.BaiduNetdisk-mac.FinderSync",
         "~/Library/Cookies/com.baidu.BaiduNetdisk-mac.binarycookies",
+        "~/Library/Group Containers/group.com.baidu.BaiduNetdisk-Mac",
         "~/Library/HTTPStorages/com.baidu.BaiduNetdisk-mac",
         "~/Library/Preferences/com.baidu.BaiduNetdisk-mac.plist",
         "~/Library/sapi/wappass.baidu.com",

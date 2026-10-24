@@ -23,6 +23,7 @@ cask "extradock" do
     "~/Library/Application Support/ExtraDock",
     "~/Library/Caches/dignicy.extraDock",
     "~/Library/HTTPStorages/dignicy.extraDock",
+    "~/Library/Preferences/dignicy.extraDock.lifecycle.plist",
     "~/Library/Preferences/dignicy.extraDock.plist",
     "~/Library/Saved Application State/dignicy.extraDock.savedState",
   ]

@@ -22,6 +22,7 @@ cask "preform" do
   uninstall quit: "com.formlabs.PreForm"
 
   zap trash: [
+    "~/Library/HTTPStorages/com.formlabs.PreForm",
     "~/Library/Preferences/com.formlabs.PreForm.plist",
     "~/Library/Saved Application State/com.formlabs.PreForm.savedState",
   ]

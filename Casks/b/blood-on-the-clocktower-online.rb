@@ -16,9 +16,12 @@ cask "blood-on-the-clocktower-online" do
 
   zap trash: [
     "~/Library/Application Support/botc-app",
+    "~/Library/Application Support/com.thepandemoniuminstitute.botc-app",
     "~/Library/Application Support/com.thepandemoniuminstitute.botc.app",
+    "~/Library/Caches/com.thepandemoniuminstitute.botc-app",
     "~/Library/Caches/com.thepandemoniuminstitute.botc.app",
     "~/Library/Saved Application State/com.thepandemoniuminstitute.botc.app.savedState",
+    "~/Library/WebKit/com.thepandemoniuminstitute.botc-app",
     "~/Library/WebKit/com.thepandemoniuminstitute.botc.app",
   ]
 end

@@ -24,6 +24,7 @@ cask "brainfm" do
 
   zap trash: [
     "~/Library/Application Support/Brain.fm",
+    "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.electron.brain.fm.sfl*",
     "~/Library/Caches/com.electron.brain.fm",
     "~/Library/Caches/com.electron.brain.fm.ShipIt",
     "~/Library/HTTPStorages/com.electron.brain.fm",

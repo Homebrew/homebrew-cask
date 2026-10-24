@@ -20,6 +20,7 @@ cask "neat" do
   app "Neat.app"
 
   zap trash: [
+    "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.electron.neat.sfl*",
     "~/Library/Application Support/Neat",
     "~/Library/Preferences/com.electron.neat.plist",
   ]
