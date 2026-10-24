@@ -11,7 +11,7 @@ cask "rcloneview" do
   # https://rcloneview.com/appcast/appcast-mac.xml
   livecheck do
     url "https://rcloneview.com/src/download"
-    regex(/href=.*RcloneView[._-]v?(\d+(?:\.\d+)+)\.dmg/i)
+    regex(/href=.*?RcloneView[._-]v?(\d+(?:\.\d+)+)\.dmg/i)
   end
 
   auto_updates true

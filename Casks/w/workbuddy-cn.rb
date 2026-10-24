@@ -12,7 +12,7 @@ cask "workbuddy-cn" do
 
   livecheck do
     url "https://www.workbuddy.cn/v2/update?platform=workbuddy-darwin-#{arch}"
-    regex(/WorkBuddy-darwin-#{arch}-(.+)\.zip$/)
+    regex(/WorkBuddy-darwin-#{arch}-(.+)\.zip$/i)
     strategy :json do |json, regex|
       json["url"]&.[](regex, 1)
     end

@@ -13,7 +13,7 @@ cask "adobe-connect" do
     regex(/Download\s+for\s+macOS.*?v?(\d+(?:\.\d+)+)[< "]/im)
     strategy :page_match do |page, regex|
       version = page.scan(regex)&.flatten&.first
-      directory = page.scan(/href=.*ConnectMac(\d+)Plus/i)&.flatten&.first
+      directory = page.scan(/href=.*?ConnectMac(\d+)Plus/i)&.flatten&.first
       next if version.blank? || directory.blank?
 
       "#{version},#{directory}"

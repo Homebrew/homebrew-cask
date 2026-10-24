@@ -8,7 +8,7 @@ cask "font-hanamin" do
 
   livecheck do
     url :homepage
-    regex(/href=.*hanazono[._-]v?(\d+(?:\.\d+)*)\.zip"/i)
+    regex(/href=.*?hanazono[._-]v?(\d+(?:\.\d+)*)\.zip"/i)
   end
 
   font "HanaMinA.ttf"

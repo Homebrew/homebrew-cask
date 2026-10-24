@@ -9,7 +9,7 @@ cask "kde-connect" do
 
   livecheck do
     url "https://kdeconnect.kde.org/download.html"
-    regex(%r{href=.*?release-service/(\d+(?:\.\d+)+)(?:/macos/kdeconnect-kde-macos-clang-arm64.dmg)}i)
+    regex(%r{href=.*?release-service/(\d+(?:\.\d+)+)(?:/macos/kdeconnect-kde-macos-clang-arm64\.dmg)}i)
   end
 
   depends_on macos: :ventura, arch: :arm64

@@ -8,7 +8,7 @@ cask "font-genjyuugothic" do
 
   livecheck do
     url :homepage
-    regex(/href=.*genjyuugothic[._-]v?(\d+(?:\.\d+)*)\.zip"/i)
+    regex(/href=.*?genjyuugothic[._-]v?(\d+(?:\.\d+)*)\.zip"/i)
   end
 
   font "GenJyuuGothic-Bold.ttf"

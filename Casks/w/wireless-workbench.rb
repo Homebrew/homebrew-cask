@@ -9,7 +9,7 @@ cask "wireless-workbench" do
 
   livecheck do
     url "https://www.shure.com/en-US/sw/wwb-mac"
-    regex(/ShureWWB(?:_x64)?-mac\.(\d+(?:\.\d+){1,2})((?:\.\d+)*)?\.pkg/)
+    regex(/ShureWWB(?:_x64)?-mac\.(\d+(?:\.\d+){1,2})((?:\.\d+)*)?\.pkg/i)
     strategy :header_match do |headers, regex|
       match = headers["location"]&.match(regex)
       next unless match
