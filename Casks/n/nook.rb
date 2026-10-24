@@ -1,6 +1,6 @@
 cask "nook" do
-  version "1.2.4"
-  sha256 "b9d2135b8a165f4710af5c4d0255e3e4e0b0389b62ff579e7c9aeda8f57358bd"
+  version "1.3.0"
+  sha256 "422daaef0183f30609d1adebf54fe3226133203079db0d48f0475e59a8a63266"
 
   url "https://github.com/nook-browser/Nook/releases/download/v#{version}/Nook-v#{version}.dmg"
   name "Nook"
@@ -12,7 +12,7 @@ cask "nook" do
     regex(/^v?(\d+(?:\.\d+)+)$/i)
   end
 
-  depends_on macos: :tahoe
+  depends_on macos: :sequoia
 
   app "Nook.app"
 
