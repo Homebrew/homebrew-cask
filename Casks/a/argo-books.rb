@@ -1,9 +1,9 @@
 cask "argo-books" do
   arch arm: "arm64", intel: "x64"
 
-  version "2.0.21"
-  sha256 arm:   "606a58fbff42fdbdb0889cf43ab3336193892ae71589b51a1b68ae091de2e44f",
-         intel: "bcbb354defbcd70bbdf26b41b5c63423bbe9a04d56cff18871600404ae560ea5"
+  version "2.0.22"
+  sha256 arm:   "ddfc5e9108d224062013f88a5d767793e34745a040a5c0be5e44fca54f74e6fd",
+         intel: "2d46c80031fd71d46d27466d6e124caeadc02abc2299bb174ede47877f729504"
 
   url "https://argorobots.com/resources/downloads/#{version}/ArgoBooks-#{version}-osx-#{arch}.zip"
   name "Argo Books"
@@ -11,8 +11,10 @@ cask "argo-books" do
   homepage "https://argorobots.com/"
 
   livecheck do
-    url "https://argorobots.com/avalonia-update.xml"
-    regex(/ArgoBooks[._-]v?(\d+(?:\.\d+)+)-osx/i)
+    url "https://argorobots.com/resources/updates/release.json"
+    strategy :json do |json|
+      json["version"]
+    end
   end
 
   auto_updates true
