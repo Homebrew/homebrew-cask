@@ -26,6 +26,7 @@ cask "airi" do
 
   zap trash: [
     "~/Library/Application Support/ai.moeru.airi",
+    "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/ai.moeru.airi.sfl*",
     "~/Library/Preferences/ai.moeru.airi.plist",
   ]
 end
