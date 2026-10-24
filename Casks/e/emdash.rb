@@ -23,6 +23,7 @@ cask "emdash" do
 
   zap trash: [
     "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.emdash.sfl*",
+    "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.emdash.stable.sfl*",
     "~/Library/Application Support/Emdash",
     "~/Library/Logs/emdash",
     "~/Library/Preferences/com.emdash.plist",
