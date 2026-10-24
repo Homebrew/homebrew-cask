@@ -12,7 +12,9 @@ cask "argo-books" do
 
   livecheck do
     url "https://argorobots.com/resources/updates/release.json"
-    regex(/"version"\s*:\s*"(\d+(?:\.\d+)+)"/i)
+    strategy :json do |json|
+      json["version"]
+    end
   end
 
   auto_updates true
