@@ -31,6 +31,7 @@ cask "zspace" do
   app "极空间.app"
 
   zap trash: [
+    "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.zentraedi.zspacemacapp.sfl*",
     "~/Library/Application Support/zspace",
     "~/Library/Logs/zspace",
     "~/Library/Preferences/com.zentraedi.zspaceMacApp.plist",
