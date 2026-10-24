@@ -1,6 +1,6 @@
 cask "transmission@beta" do
-  version "4.1.3"
-  sha256 "d622736c19990262f2ab12183e1acaa5b0dad5777ddc7db0a187c06e035a7e1a"
+  version "4.1.4"
+  sha256 "495c5d21d515c8deb859b0db6692fd5606644a1613c2cac87c1d3e7672755a59"
 
   url "https://github.com/transmission/transmission/releases/download/#{version}/Transmission-#{version}.dmg"
   name "Transmission"
@@ -29,9 +29,11 @@ cask "transmission@beta" do
     "transmission",
     "transmission@nightly",
   ]
-  depends_on :macos
+  depends_on macos: :monterey
 
   app "Transmission.app"
+
+  uninstall quit: "org.m0k.transmission"
 
   zap trash: [
     "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/org.m0k.transmission.sfl*",
