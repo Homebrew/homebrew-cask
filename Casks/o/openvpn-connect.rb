@@ -5,7 +5,7 @@ cask "openvpn-connect" do
   sha256 arm:   "7b8b5696b0cae8dec7b1371bf8c505b764188162437bc5cd53e622b35c74b027",
          intel: "e92c8b03a1b01a3f3c0b08d8e6360719995c00f85b10675ebdf68c4dd8c5c327"
 
-  url "https://packages.openvpn.net/connect/v3/OpenVPN_Connect_#{version.csv.first.dots_to_underscores}(#{version.csv.second})_#{arch}_Installer_signed.pkg"
+  url "https://packages.openvpn.net/connect/v#{version.major}/OpenVPN_Connect_#{version.csv.first.dots_to_underscores}(#{version.csv.second})_#{arch}_Installer_signed.pkg"
   name "OpenVPN Connect client"
   desc "Client program for the OpenVPN Access Server"
   homepage "https://openvpn.net/client/"
