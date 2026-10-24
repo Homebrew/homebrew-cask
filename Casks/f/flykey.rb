@@ -11,7 +11,7 @@ cask "flykey" do
   # so we match the values from the file name in the URL.
   livecheck do
     url "https://www.better365.cn/flykeyofflineupdate.xml"
-    regex(/FlyKey[._-]?v?(\d+(?:\.\d+)+)[_-](\d+)/)
+    regex(/FlyKey[._-]?v?(\d+(?:\.\d+)+)[_-](\d+)/i)
     strategy :sparkle do |item, regex|
       match = item.url&.match(regex)
       next unless match
