@@ -2,11 +2,11 @@ cask "crosspaste" do
   arch arm: "aarch64", intel: "amd64"
   url_end = on_system_conditional macos: "mac-#{arch}.zip", linux: "#{arch}.AppImage"
 
-  version "2.2.1.2706"
-  sha256 arm:          "778fb26e36b3c70eeda75220103f5f2874cbf3627d3a300f01d9626f86cc3b64",
-         intel:        "211c66696980bce54824c001aa18d39cf8af8d7095ef3ee139ce652b47120fd6",
-         arm64_linux:  "1584d39a338e2243ce0d08e589703ac1c265e7a2ab9a9090e2e2ff8e431977e1",
-         x86_64_linux: "c333b6545c2e47463df26494c7c5496adf4d9a0c1dd8be5bcba654b04348b46c"
+  version "2.3.0.2767"
+  sha256 arm:          "2d3846f63c492acc47e0d43a0541fc1057e7841e4657e74dbc48e5bfe8230dfe",
+         intel:        "59e9399a41439833aea01947a17ed4397e616daa7f3f8db31260205848915724",
+         arm64_linux:  "956c3c770a13735f7caaddb2d52a9af9bdf6ec1345861147c34693e2b9c88dd2",
+         x86_64_linux: "7e78627a649fde795fa27d8c8bf1fa713fe69aa11b144b53dd21aa5f1730043d"
 
   on_macos do
     depends_on macos: :sonoma
