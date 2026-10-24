@@ -12,7 +12,7 @@ cask "sononym" do
 
   livecheck do
     url :homepage
-    regex(/href=.*?Sononym[._-]v?(\d+(?:\.\d+)+)#{arch}\.dmg/)
+    regex(/href=.*?Sononym[._-]v?(\d+(?:\.\d+)+)#{arch}\.dmg/i)
   end
 
   depends_on :macos
