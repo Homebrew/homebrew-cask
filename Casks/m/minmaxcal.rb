@@ -5,7 +5,7 @@ cask "minmaxcal" do
   url "https://github.com/MikeMcQuaid/MinMaxCal/releases/download/#{version}/MinMaxCal-#{version}.zip"
   name "MinMaxCal"
   desc "Minimal menu bar calendar, maximal full-screen notifications"
-  homepage "https://github.com/MikeMcQuaid/MinMaxCal"
+  homepage "https://mikemcquaid.com/minmaxcal/"
 
   depends_on arch: :arm64
   depends_on macos: :tahoe
