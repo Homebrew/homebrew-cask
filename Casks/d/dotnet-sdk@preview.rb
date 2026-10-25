@@ -2,9 +2,9 @@ cask "dotnet-sdk@preview" do
   # Differs from the `dotnet` formula by including additional closed-source components
   arch arm: "arm64", intel: "x64"
 
-  version "11.0.100-rc.2.26504.105"
-  sha256 arm:   "0d3d2f88a476b69d9b7c7d0b92a218fc63b415d52d49e4698d739b2b877f98ec",
-         intel: "45c1c0b9f3d975ca6b0554297079516b00f55ef55096818f100648fdcdf1a77f"
+  version "11.0.100-rc.3.26522.148"
+  sha256 arm:   "87422304aa5911a703ae784746579df74020c621665fc5c4ef937161d6c5147d",
+         intel: "f16037a9caddc2c1731b62b6648a4377dcd11487356680cce4ed4b323a5b4708"
 
   url "https://builds.dotnet.microsoft.com/dotnet/Sdk/#{version}/dotnet-sdk-#{version}-osx-#{arch}.pkg"
   name ".NET SDK"
