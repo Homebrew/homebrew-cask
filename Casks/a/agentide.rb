@@ -5,7 +5,7 @@ cask "agentide" do
   url "https://github.com/MikeMcQuaid/AgentIDE/releases/download/#{version}/AgentIDE-#{version}.zip"
   name "AgentIDE"
   desc "IDE for agent-based development"
-  homepage "https://github.com/MikeMcQuaid/AgentIDE"
+  homepage "https://mikemcquaid.com/agentide/"
 
   depends_on arch: :arm64
   depends_on formula: ["herdr", "ripgrep", "gh"]
