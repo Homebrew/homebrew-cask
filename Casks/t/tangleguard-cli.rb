@@ -2,11 +2,11 @@ cask "tangleguard-cli" do
   arch arm: "aarch64", intel: "x86_64"
   os macos: "apple-darwin", linux: "unknown-linux-gnu"
 
-  version "0.22.0"
-  sha256 arm:          "db5cc33a3e657f698840137813953a2968a0a282afcb88be897f5af443366a09",
-         intel:        "b07c86bdb50eab67578295da1df55082ba4d22dc6383c323fc549a3905d86d48",
-         arm64_linux:  "f2b605abb1b8fd71212592a8f8fb5aeac46c88666787891ccdb08f43c5dd6719",
-         x86_64_linux: "7f848e1b3cc4ab9eb5b41545c264128e6ae9241be6705fe3cbcff28bb740ff21"
+  version "0.23.0"
+  sha256 arm:          "cea46c0f94ad037d103c5c1272e8b77fdec2e11f58b6ee4bb56a1e8705b90034",
+         intel:        "3a21043bd8e387e13fd3bf478069a1ef0ca01860708d58b5be9c80cab91c44d7",
+         arm64_linux:  "05497386802e2a33fe1f9164513c2a3e10caf8ec0f94e415afd5a85274453d1c",
+         x86_64_linux: "a39c71c305f0015d34fa0c69f710b4548f25d4227004e888fdded55b7eb34476"
 
   on_macos do
     zap trash: "~/Library/Application Support/CrashReporter/tangleguard*"
