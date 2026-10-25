@@ -1,6 +1,6 @@
 cask "typora" do
-  version "1.14.10"
-  sha256 "a1a8e997c174577a69e33e3c1128719e886d1cd635b32f7243e9bab91ce0831c"
+  version "1.14.15"
+  sha256 "6f376ef9a61f06470650d24c2e6478947a9a5dc4e30fe641ae266b06bd892451"
 
   language "zh-Hans-CN" do # use official Chinese mirror
     url "https://downloads.typoraio.cn/mac/Typora-#{version}.dmg"
@@ -24,7 +24,7 @@ cask "typora" do
 
   auto_updates true
   conflicts_with cask: "typora@dev"
-  depends_on :macos
+  depends_on macos: :monterey
 
   app "Typora.app"
 
