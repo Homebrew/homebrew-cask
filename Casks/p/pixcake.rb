@@ -24,7 +24,7 @@ cask "pixcake" do
 
   depends_on :macos
 
-  app "pixcake.app", target: "像素蛋糕.app"
+  app "pixcake.app"
 
   uninstall quit: "com.xiangtian.pixcakepc"
 
