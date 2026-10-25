@@ -1,24 +1,41 @@
 cask "adobe-connect" do
-  version "2026.01.39,11"
-  sha256 "e1f1d1497b2bea65b77729771fc304e4792a9fa0db92e179e836039e02b35392"
+  on_arm do
+    version "2026.10.66,11"
+    sha256 "f3f70e8451806394e5385d77ee653c54ec4ad79ab00e228de9e9d4addacbbc68"
+
+    livecheck do
+      url "https://www.adobe.com/go/ConnectMac11Plus",
+          user_agent: :curl
+      regex(%r{/v?(\d+(?:\.\d+)*)/AdobeConnect[._-]v?(\d+(?:[._]\d+)+)\.dmg}i)
+      strategy :header_match do |headers, regex|
+        match = headers["location"]&.match(regex)
+        next unless match
+
+        "#{match[2].tr("_", ".")},#{match[1]}"
+      end
+    end
+  end
+  on_intel do
+    version "2026.01.39,11"
+    sha256 "e1f1d1497b2bea65b77729771fc304e4792a9fa0db92e179e836039e02b35392"
+
+    livecheck do
+      url "https://www.adobe.com/go/ConnectMac11PlusIntel",
+          user_agent: :curl
+      regex(%r{/v?(\d+(?:\.\d+)*)/AdobeConnect[._-]v?(\d+(?:[._]\d+)+)\.dmg}i)
+      strategy :header_match do |headers, regex|
+        match = headers["location"]&.match(regex)
+        next unless match
+
+        "#{match[2].tr("_", ".")},#{match[1]}"
+      end
+    end
+  end
 
   url "https://download.adobe.com/pub/connect/updaters/meeting/#{version.csv.second}/AdobeConnect_#{version.csv.first.major}_#{version.csv.first.minor}_#{version.csv.first.patch}.dmg"
   name "Adobe Connect"
   desc "Virtual meeting client"
   homepage "https://www.adobe.com/products/adobeconnect.html"
-
-  livecheck do
-    url "https://helpx.adobe.com/adobe-connect/connect-downloads-updates.html",
-        user_agent: :browser
-    regex(/Download\s+for\s+macOS.*?v?(\d+(?:\.\d+)+)[< "]/im)
-    strategy :page_match do |page, regex|
-      version = page.scan(regex)&.flatten&.first
-      directory = page.scan(/href=.*ConnectMac(\d+)Plus/i)&.flatten&.first
-      next if version.blank? || directory.blank?
-
-      "#{version},#{directory}"
-    end
-  end
 
   auto_updates true
   depends_on :macos
