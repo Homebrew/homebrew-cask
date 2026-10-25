@@ -20,18 +20,23 @@ cask "secure-pipes" do
 
   uninstall quit: "net.edgeservices.secure-pipes"
 
-  zap trash: [
-    "~/Library/Application Scripts/group.net.edgeservices.secure-pipes",
-    "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/net.edgeservices.secure-pipes.sfl*",
-    "~/Library/Application Support/Secure Pipes",
-    "~/Library/Caches/net.edgeservices.secure-pipes",
-    "~/Library/Caches/Secure Pipes",
-    "~/Library/Group Containers/group.net.edgeservices.secure-pipes",
-    "~/Library/HTTPStorages/net.edgeservices.secure-pipes",
-    "~/Library/Preferences/net.edgeservices-config.plist",
-    "~/Library/Preferences/net.edgeservices.connections.plist",
-    "~/Library/Preferences/net.edgeservices.Secure-Pipes.plist",
-    "~/Library/Preferences/net.edgeservices.secure-pipes.plist",
-    "~/Library/WebKit/net.edgeservices.secure-pipes",
-  ]
+  zap launchctl: "net.edgeservices.secure-pipes.gateway-helper",
+      delete:    [
+        "/Library/LaunchDaemons/net.edgeservices.secure-pipes.gateway-helper.plist",
+        "/Library/PrivilegedHelperTools/net.edgeservices.secure-pipes.gateway-helper",
+      ],
+      trash:     [
+        "~/Library/Application Scripts/group.net.edgeservices.secure-pipes",
+        "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/net.edgeservices.secure-pipes.sfl*",
+        "~/Library/Application Support/Secure Pipes",
+        "~/Library/Caches/net.edgeservices.secure-pipes",
+        "~/Library/Caches/Secure Pipes",
+        "~/Library/Group Containers/group.net.edgeservices.secure-pipes",
+        "~/Library/HTTPStorages/net.edgeservices.secure-pipes",
+        "~/Library/Preferences/net.edgeservices-config.plist",
+        "~/Library/Preferences/net.edgeservices.connections.plist",
+        "~/Library/Preferences/net.edgeservices.Secure-Pipes.plist",
+        "~/Library/Preferences/net.edgeservices.secure-pipes.plist",
+        "~/Library/WebKit/net.edgeservices.secure-pipes",
+      ]
 end
