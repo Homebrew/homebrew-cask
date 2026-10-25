@@ -3,11 +3,11 @@ cask "kando" do
        intel: on_system_conditional(macos: "x64", linux: "x86_64")
   url_end = on_system_conditional macos: "dmg", linux: "AppImage"
 
-  version "3.0.0"
-  sha256 arm:          "4b6542e0e6191b742603f3577c599f137b127520b465289c522b23d1d31f71c0",
-         intel:        "42d36215b259e7e928cfc24aa1a9793230867f78b93028c2ef375ff234572879",
-         arm64_linux:  "a8dd80bcd0b64f2b8882a61f97b37f3de216a5872c721a22721e0fc49223f45c",
-         x86_64_linux: "cd91caebc7e027fec8f4ad00c5451879858095967676a9604dc196e420a2687d"
+  version "3.0.1"
+  sha256 arm:          "da33fde36a63766e1d646c5ebfaaf62865dcb764b835c0c38873d18c45d642c2",
+         intel:        "b6fda2860691752e670b088000a5f5e9c6878ea6f6d486089ebbf42dddfba66c",
+         arm64_linux:  "36a1369b84683384aa625e5e046ad85c703e39f14e553e931df68d907fbc6e0c",
+         x86_64_linux: "bbd322eda95543e41f27d05dac838e7a46d4de190e501668ce37edda2185169a"
 
   on_macos do
     depends_on macos: :monterey
