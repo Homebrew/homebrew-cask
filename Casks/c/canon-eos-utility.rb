@@ -1,8 +1,8 @@
 cask "canon-eos-utility" do
-  version "3.20.21.3,0200007654,4"
-  sha256 "b79117d4971e344ff1688a9794fd0ae3a907a65c3a2a1e95d3071aded81b2e9f"
+  version "3.21.11.2,0200007754,4"
+  sha256 "099f546215d3797cad5928300d061770393a49336ba7278d4e4154e1edf54f12"
 
-  url "https://gdlp01.c-wss.com/gds/#{version.csv.third}/#{version.csv.second}/01/EU#{version.csv.first.major}Installer-M#{version.csv.first}.dmg.zip"
+  url "https://gdlp01.c-wss.com/gds/#{version.csv.third}/#{version.csv.second}/01/EU#{version.csv.first.major}Installer-M#{version.csv.first}.zip"
   name "Canon EOS Utility"
   desc "Communication with Canon EOS cameras"
   homepage "https://app.ssw.imaging-saas.canon/app/en/eu.html"
@@ -12,7 +12,7 @@ cask "canon-eos-utility" do
   # parts from the file URL in the `location` header of the response.
   livecheck do
     url "https://gdlp01.c-wss.com/rmds/ic/autoupdate/common/tls_eu_updater_url.xml"
-    regex(%r{/(\d+)/(\d+)/\d+/EU\d*[._-]?Install(?:er|set)[._-]v?M?(\d+(?:\.\d+)+)\.dmg\.zip}i)
+    regex(%r{/(\d+)/(\d+)/\d+/EU\d*[._-]?Install(?:er|set)[._-]v?M?(\d+(?:\.\d+)+)\.zip}i)
     strategy :xml do |xml, regex|
       # NOTE: The macOS identifier will need to be manually updated when
       # releases become available for newer macOS versions.
@@ -31,7 +31,7 @@ cask "canon-eos-utility" do
   auto_updates true
   depends_on :macos
 
-  pkg "EU3Installer-M#{version.csv.first}.pkg"
+  pkg "EU3Installer-M#{version.csv.first}/EU3Installer-M#{version.csv.first}.pkg"
 
   uninstall pkgutil: [
     "com.canon.EOS-Lens-Registration-Tool",
