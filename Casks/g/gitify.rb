@@ -37,7 +37,7 @@ cask "gitify" do
 
   url "https://github.com/gitify-app/gitify/releases/download/v#{version}/Gitify-#{version}#{os}"
   name "Gitify"
-  desc "GitHub notifications on your menu bar"
+  desc "Git notifications for GitHub, GitLab, Gitea and Bitbucket"
   homepage "https://github.com/gitify-app/gitify"
 
   livecheck do
