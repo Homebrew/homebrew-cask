@@ -1,9 +1,9 @@
 cask "wheelwizard" do
   arch arm: "arm64", intel: "intel"
 
-  version "2.6.2"
-  sha256 arm:   "88789d66b5fa46472e1a29c01cfc6416a03426470913709b161bdb9c3811e8fc",
-         intel: "6063df47f927afbe4b42bfbb79d503f7fdbb000fd4ae83046e5574ed2d942ef1"
+  version "2.6.3"
+  sha256 arm:   "f84fc0bf19aca04178bfca8090ca17c7d4bb1cbc17adf8ae495b5a9663f8bf9d",
+         intel: "ba6480e7a201b7ed3a82ad07003880ebe6b4eb914eb648e43395ae4ecd5db3de"
 
   url "https://github.com/TeamWheelWizard/WheelWizard/releases/download/v#{version}/WheelWizard-macOS#{arch}.dmg"
   name "Wheel Wizard"
