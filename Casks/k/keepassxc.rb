@@ -2,10 +2,10 @@ cask "keepassxc" do
   arch arm: "arm64", intel: "x86_64"
   os macos: "dmg", linux: "AppImage"
 
-  version "2.8.0"
-  sha256 arm:          "223d5c71ae6c11d48192c69fd582fd5f10047e91ebcebc014de33a42539b9519",
-         intel:        "002b805ede4d9755b554987b9c482fb8bab79ec01d18d1f70dbf3114e2f9469a",
-         x86_64_linux: "b52889fd627ae7a1c609b91b2526ccd5d847ec6707ac6eb634553186dee4f705"
+  version "2.8.0-1"
+  sha256 arm:          "85f0e75e258ef513f0fc7f5bf470cad0943b7d7e8191b2171f9898ad32e62b9c",
+         intel:        "28492c5535570020179150b2871b3c54abd032cbb8cdee2f1b3fa7c46cdba43e",
+         x86_64_linux: "3ab1bfbb422272334b48057e6bfc984c839375d9a1cd9350c4ea62ca0b55ca5f"
 
   on_macos do
     depends_on macos: :monterey
@@ -39,7 +39,7 @@ cask "keepassxc" do
     ]
   end
 
-  url "https://github.com/keepassxreboot/keepassxc/releases/download/#{version}/KeePassXC-#{version}-#{arch}.#{os}"
+  url "https://github.com/keepassxreboot/keepassxc/releases/download/#{version.split("-").first}/KeePassXC-#{version}-#{arch}.#{os}"
   name "KeePassXC"
   desc "Password manager app"
   homepage "https://keepassxc.org/"
