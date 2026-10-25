@@ -2,11 +2,11 @@ cask "dbx" do
   arch arm: "arm64", intel: on_system_conditional(macos: "x64", linux: "amd64")
   os macos: "dmg", linux: "AppImage"
 
-  version "0.6.54"
-  sha256 arm:          "2c3f4e2b4dda6200f845581d7dcfe75dfa0ce23f0af3388343efbd9c9424dbd9",
-         intel:        "033b3c07e7042595d74b0b1b1e8105d6769c4ab30910c213263a7489ba7976ab",
-         arm64_linux:  "7514b8b18d1a9c76234a0cea8afadd97194fbd23ba8f897449cf62c214cd9269",
-         x86_64_linux: "7fe2ab87d27bd553e8b31faa15c715c3aca65dab75bf6613595936a7a3c21fdd"
+  version "0.6.55"
+  sha256 arm:          "e4922847ddfeec40b2aa8a38331719ce6d47f3842d4962e3fa52c43c918fc465",
+         intel:        "6d7494eb25d2811dc16f9d5fc00df8f2cc490dd071ebad777a1eac87f85517cf",
+         arm64_linux:  "81e8c6ed075ba79a9179e319af8ad65e0645d1f194945342a0378c62f8f5deea",
+         x86_64_linux: "b5e33c7311b0baf1e2408a857ff7add5f5ecb42d7b47c47195e8376129f0d5e2"
 
   on_macos do
     auto_updates true
