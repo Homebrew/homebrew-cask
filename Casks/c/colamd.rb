@@ -1,9 +1,9 @@
 cask "colamd" do
   arch arm: "arm64", intel: "x64"
 
-  version "2.7.7"
-  sha256 arm:   "e9a4f36541cc078a14a6282d82327c82fff7619ceb17c34fc43eb4c9446d0274",
-         intel: "4b34cf4a651279cea8db3fa8b7926cf4f3d758f44331dec37c69ee72ebf49657"
+  version "2.7.8"
+  sha256 arm:   "cbf09ca40d4c12b7eb0bf9a1185b017f7bfe7baef70615b022cca8fffd63a187",
+         intel: "05741593a8b25745d4ac83a503c00f9c4e9b8898ebaae47b20d423e8ded7b00f"
 
   url "https://github.com/marswaveai/ColaMD/releases/download/v#{version}/ColaMD-#{version}-#{arch}.dmg"
   name "ColaMD"
