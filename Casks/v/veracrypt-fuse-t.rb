@@ -1,8 +1,8 @@
 cask "veracrypt-fuse-t" do
-  version "1.26.29"
-  sha256 "86bbc492fc2d77c1e36495eb9b101aed0799ba46a13b086cca1082bc2d43a3b4"
+  version "1.26.30"
+  sha256 "7d99a5bde0df74df357131d3eae50b89b4d943f13058044fc66269ef53c3a7ff"
 
-  url "https://launchpad.net/veracrypt/trunk/#{version}/+download/VeraCrypt_FUSE-T_#{version}.dmg"
+  url "https://github.com/veracrypt/VeraCrypt/releases/download/VeraCrypt_#{version}/VeraCrypt_FUSE-T_#{version}.dmg"
   name "VeraCrypt Fuse-T"
   desc "Disk encryption software focusing on security based on TrueCrypt"
   homepage "https://www.veracrypt.fr/"
