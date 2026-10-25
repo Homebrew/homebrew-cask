@@ -2,14 +2,14 @@ cask "zettlr" do
   arch arm: "arm64", intel: on_system_conditional(macos: "x64", linux: "x86_64")
   os macos: "dmg", linux: "AppImage"
 
-  version "4.8.0"
-  sha256 arm:          "3144b95199df77e3ca97a04546bf16a60f917107061331c31b3c35bc46b7d3f5",
-         intel:        "6984a5c30bdb8825cb38e5223292aa53fed5febf029c3f9d15f86bec63f6aae5",
-         arm64_linux:  "2de2f876fb6e882a7277d29d53a4df0a12fca1a621cd00cbd6f689cb2085fa7f",
-         x86_64_linux: "0c80ac3a9e688ce99c2c9a05254daf32aaf9aaac4a40f2307e695ebe98d0bdfb"
+  version "4.9.0"
+  sha256 arm:          "dca807ccec54cc341df5fc495e9ce502d08b679a136118041efc8f1173de8c3c",
+         intel:        "d0d8eae079c68f343401c50ce157c32960c0a4cdde28062fa34b1fa4ca6311ab",
+         arm64_linux:  "1c2b6f9f9479e688c4ebed3bb62e47794c9c001b6d35388544dbfbd631e6a0e7",
+         x86_64_linux: "d9639a6eef83475f2997716c15ceed5f1d47f7cca732465b52cf3ce507c06873"
 
   on_macos do
-    depends_on macos: :monterey
+    depends_on macos: :ventura
 
     app "Zettlr.app"
 
