@@ -4,11 +4,11 @@ cask "wordcraft" do
   os macos: "macos", linux: "linux"
   url_end = on_system_conditional macos: "dmg", linux: "AppImage"
 
-  version "0.10.0"
-  sha256 arm:          "342e37473db29cd671a10a340cc7484af86516fd63731a545fd93cef207fe86a",
-         intel:        "342e37473db29cd671a10a340cc7484af86516fd63731a545fd93cef207fe86a",
-         arm64_linux:  "2f6dd878019b569425f32921a4d642110172610b8f065c345c2bf0b81093be5b",
-         x86_64_linux: "2eb8eaaf6be989a46f5a125286a99f5c2f6efa5c8bb23ba50a4423bbea107a20"
+  version "0.11.0"
+  sha256 arm:          "0e2030b27157a42be151a28bae03a11589c08404d166d55d6d0bdded65b0d22b",
+         intel:        "0e2030b27157a42be151a28bae03a11589c08404d166d55d6d0bdded65b0d22b",
+         arm64_linux:  "d5af2e9f69730896283ba6c68beb760369364547101e5cf659e2c9c74fbba9c6",
+         x86_64_linux: "d92d5d37752b95f08904cc8328f3a73c2979361337ff260d23518f4024cd5c64"
 
   on_macos do
     app "WordCraft.app"
