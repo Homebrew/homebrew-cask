@@ -8,12 +8,15 @@ cask "valhalla-space-modulator" do
   homepage "https://valhalladsp.com/shop/modulation/valhalla-space-modulator/"
 
   livecheck do
-    url "https://valhalladsp.com/demos-downloads/"
+    url "https://valhalladsp.com/demos-downloads/",
+        user_agent: :browser
     regex(/ValhallaSpaceModulatorOSX[._-]v?(\d+(?:[._]\d+)+)v?\d?\.dmg/i)
     strategy :page_match do |page, regex|
       page.scan(regex).map { |match| match&.first&.tr("_", ".") }
     end
   end
+
+  no_autobump! because: "livecheck is unreachable in autobump environment"
 
   depends_on :macos
 
