@@ -9,7 +9,7 @@ cask "xnconvert" do
 
   livecheck do
     url "https://download.xnview.com/old_versions/XnConvert/"
-    regex(/href=.*XnConvert[._-]v?(\d+(?:\.\d+)+)[._-]mac\.dmg/i)
+    regex(/href=.*?XnConvert[._-]v?(\d+(?:\.\d+)+)[._-]mac\.dmg/i)
   end
 
   depends_on macos: :monterey

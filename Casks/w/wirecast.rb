@@ -9,7 +9,7 @@ cask "wirecast" do
 
   livecheck do
     url "https://www.telestream.net/telestream-support/wire-cast/versions.htm"
-    regex(/href=.*Wirecast[._-]v?(\d+(?:\.\d+)+)\.dmg/i)
+    regex(/href=.*?Wirecast[._-]v?(\d+(?:\.\d+)+)\.dmg/i)
   end
 
   depends_on macos: :sonoma

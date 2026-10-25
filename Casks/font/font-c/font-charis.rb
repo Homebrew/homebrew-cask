@@ -8,7 +8,7 @@ cask "font-charis" do
 
   livecheck do
     url "https://software.sil.org/charis/download/"
-    regex(/href=.*Charis[._-]v?(\d+(?:\.\d+)+)\.zip/i)
+    regex(/href=.*?Charis[._-]v?(\d+(?:\.\d+)+)\.zip/i)
   end
 
   font "Charis-#{version}/Charis-Bold.ttf"
