@@ -2,14 +2,14 @@ cask "donut" do
   arch arm: "aarch64", intel: on_system_conditional(macos: "x64", linux: "amd64")
   url_end = on_system_conditional macos: "dmg", linux: "AppImage"
 
-  sha256 arm:          "26a9e6fabf66cee8f4c0c37115dc861df5546d0f23bdf5bd67b1bd7f3bd87d92",
+  sha256 arm:          "19e78a64b7c6dc0a20c4c0c22ecc0f7b9e5eddeea00e7e59ef35a01a7438f983",
          intel:        "082ee5c53582b54f6e8df010860b7444011351bcc21d604b459707779451fa1c",
-         arm64_linux:  "20b00c6b6409a16284b7a5cb968cba0509e5b1ff9ba5ca1d27d876a914b8adb0",
-         x86_64_linux: "e2ab63fe6046c51516c6963505a1480ffbb8229af2eee8f0d3c952a9ec85ad37"
+         arm64_linux:  "bf6657c1010cb05e6281ba1b1a879cb1d7ab44fb8bc36678cc75bb3470e0a4a7",
+         x86_64_linux: "f5bc8b5259ec9855c5ef825b051908b6aa282576c8f62e55c879b40d127e5806"
 
   on_macos do
     on_arm do
-      version "0.34.0"
+      version "0.35.5"
 
       livecheck do
         url :url
@@ -42,7 +42,7 @@ cask "donut" do
     ]
   end
   on_linux do
-    version "0.34.0"
+    version "0.35.5"
 
     livecheck do
       url :url
