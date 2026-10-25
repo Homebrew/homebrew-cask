@@ -1,9 +1,9 @@
 cask "feedflow" do
   url_end = on_system_conditional macos: ".dmg", linux: "-x86_64.AppImage"
 
-  version "1.18.0,all"
-  sha256 arm:          "f87fd713c3c4cc606865a1609a3ad4e7e95ca902a91fe02d3f73bc3a49379a79",
-         x86_64_linux: "898f0fb49ed65eb4b63b4693013f0bc68de56b97e96e4b8af0e6656006b7ea61"
+  version "1.19.0,all"
+  sha256 arm:          "d0f5e2498ecd67d1103fa853964ba6a0a7ab96ce719697ca284605284fd9745e",
+         x86_64_linux: "7714bbaa4fcbfa70bfd2cd9fb859138a71739c65ec94fd61ecb276f1abd09cba"
 
   on_macos do
     depends_on arch: :arm64
