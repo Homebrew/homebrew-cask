@@ -21,6 +21,7 @@ cask "mouseless" do
 
   zap trash: [
     "~/Library/Application Scripts/net.sonuscape.mouseless",
+    "~/Library/Application Support/Mouseless",
     "~/Library/Containers/net.sonuscape.mouseless",
   ]
 end
