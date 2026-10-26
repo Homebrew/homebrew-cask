@@ -2,11 +2,11 @@ cask "musescore" do
   arch arm: "aarch64", intel: "x86_64"
   os macos: ".dmg", linux: "-#{arch}.AppImage"
 
-  version "4.7.5.260831071,4.7.5"
-  sha256 arm:          "5a8cc26994d3f346d3e7d88c6a1583959e990ee9346b00d7b1d3f9498de6473a",
-         intel:        "5a8cc26994d3f346d3e7d88c6a1583959e990ee9346b00d7b1d3f9498de6473a",
-         arm64_linux:  "034f0257fd21ed6b7d4863714dbf8e97cc86d454beb79aaa845a5ade3ff99e36",
-         x86_64_linux: "a31b2da2dbcc2191bcc98beb7be5c15f2f517bedb3444def96fe3088b74d3a1e"
+  version "4.7.6.261022093,4.7.6"
+  sha256 arm:          "dd78357e652a4df6ec074b9bd63a79e09eedb7c1c9dd6262eb7d9304508dec9c",
+         intel:        "dd78357e652a4df6ec074b9bd63a79e09eedb7c1c9dd6262eb7d9304508dec9c",
+         arm64_linux:  "e16c4e307f786ed7720d9d4d244213b6640d7e82ecbeb930959964c594f6ea04",
+         x86_64_linux: "5fcbd1f292270eca5c3867d56b767c31a173a155216a415f5caee22553f8e7a6"
 
   on_macos do
     app "MuseScore #{version.major}.app"
