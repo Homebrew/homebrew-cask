@@ -1,9 +1,9 @@
 cask "r-rig-app" do
   arch arm: "arm64", intel: "x86_64"
 
-  version "0.11.0"
-  sha256 arm:   "751654ba7b47bd142ba777aaa1b7d38a6737bd55c892e837996b69c4de65e693",
-         intel: "1a1e879084eb13bdb45ad63b3eda70ab66d0e10fc9a85827f6d491a53dc7c658"
+  version "0.11.1"
+  sha256 arm:   "cbb7adb7fa26075c60937129d97230bf3d5d120e1aab2879462c3413a61b3d25",
+         intel: "969e7872dfb4af5494f988966aafe17d28cb182da1be41ab7b0826300f6c3ebe"
 
   url "https://github.com/r-lib/rig/releases/download/v#{version}/rig-#{version}-macOS-#{arch}.pkg"
   name "r-rig-app"
