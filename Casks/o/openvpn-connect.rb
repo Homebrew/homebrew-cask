@@ -1,9 +1,9 @@
 cask "openvpn-connect" do
   arch arm: "arm64", intel: "x86_64"
 
-  version "3.9.0,6050"
-  sha256 arm:   "7b8b5696b0cae8dec7b1371bf8c505b764188162437bc5cd53e622b35c74b027",
-         intel: "e92c8b03a1b01a3f3c0b08d8e6360719995c00f85b10675ebdf68c4dd8c5c327"
+  version "3.9.1,6051"
+  sha256 arm:   "b10a33cb868d0ad5ff62460928a1c77f740d23450289c92c86358133b20baee7",
+         intel: "256389440844ad408ab8da380118ccee6fbf1dee744fd1bad842089c22891ea3"
 
   url "https://packages.openvpn.net/connect/v#{version.major}/OpenVPN_Connect_#{version.csv.first.dots_to_underscores}(#{version.csv.second})_#{arch}_Installer_signed.pkg"
   name "OpenVPN Connect client"
