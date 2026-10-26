@@ -2,11 +2,11 @@ cask "mqttx" do
   arch arm: "-arm64"
   os macos: "dmg", linux: "AppImage"
 
-  version "1.13.1"
-  sha256 arm:          "253a636a0d32f136c3822616373dd7cfb2e89363e39a3257e9ccfe4813b55b40",
-         intel:        "e65f76d629969a6312fec6fe9527d186833ac433bf3d25288ed037075e262704",
-         arm64_linux:  "73875905d8f5a62a956d3666a35424629bf8fae3ee71ace7f2e270a916dcc1ad",
-         x86_64_linux: "c2e400487277bd31dbd280066a3c127373baa09079ed7c12abd8b9c8c5b9dbb0"
+  version "1.13.2"
+  sha256 arm:          "3bd495aef415930821b0f8a758566fd519f28c28b2421e948bf5b8e485e9dba1",
+         intel:        "03614359259f8966e950ae6da680d117ca52823a8f9e98990899713a1899e650",
+         arm64_linux:  "08c4b6bb346ff40ab03ee94300dfe096fd219541c35360e15fccf17ce956d591",
+         x86_64_linux: "86ee3068eab3537fd6f64e3ade02064cdc05e2d58100e16b18a427f45ad38a33"
 
   on_macos do
     depends_on macos: :monterey
