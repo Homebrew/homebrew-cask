@@ -1,9 +1,9 @@
 cask "alma" do
   arch arm: "arm64", intel: "x64"
 
-  version "0.4.210"
-  sha256 arm:   "d38917b26819aed8fd0facacaa8afecb82b21eb67e2044b01129549ca236d632",
-         intel: "1e037801d6d2c2a8a23972678ff59951f45e8787d21b3a2e46767c7273a7b1a6"
+  version "0.4.214"
+  sha256 arm:   "b53ca0549e72b4865a9b430f8e7b07121aaf23bba50636ed96183d3ea261f4e8",
+         intel: "e8099af62d7f10773af38427751a7701d144f1863eb167c37bdbad5f3d9ab827"
 
   url "https://updates.alma.now/alma-#{version}-mac-#{arch}.dmg"
   name "Alma"
@@ -12,7 +12,7 @@ cask "alma" do
 
   livecheck do
     url "https://github.com/yetone/alma-releases"
-    throttle 15
+    throttle days: 1
   end
 
   auto_updates true
