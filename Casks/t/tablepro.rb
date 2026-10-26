@@ -1,6 +1,6 @@
 cask "tablepro" do
-  version "0.82.2"
-  sha256 "f17d474ed76c9a2e3f9cfedc6173390b0d9ce9ec8c4d6c679b4139dabb4c7030"
+  version "0.83.0"
+  sha256 "539abe2be3cf35ddd553e5f1ddf3174fe2ce405e88951584c5f21c4ed7b0920a"
 
   url "https://github.com/TableProApp/TablePro/releases/download/v#{version}/TablePro-#{version}.dmg"
   name "TablePro"
