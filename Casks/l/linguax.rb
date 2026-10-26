@@ -19,6 +19,7 @@ cask "linguax" do
 
   zap trash: [
     "~/Library/Application Support/com.deepzz.LinguaX",
+    "~/Library/Application Support/LinguaX",
     "~/Library/Caches/com.deepzz.LinguaX",
     "~/Library/Cookies/com.deepzz.LinguaX.binarycookies",
     "~/Library/HTTPStorages/com.deepzz.LinguaX",
