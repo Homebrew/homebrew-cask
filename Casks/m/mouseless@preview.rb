@@ -1,6 +1,6 @@
 cask "mouseless@preview" do
-  version "1.1.0-preview.1"
-  sha256 "87d2d357638f52fe7431e9b14f0b8cb3546f15eedd0a9f9f7075f85f64a1af1b"
+  version "1.1.0"
+  sha256 "1e3fb57febaff24f3a62e81ac14b0351167d95fcd2e446bfc688100f4b77d8b0"
 
   url "https://github.com/croian/mouseless/releases/download/v#{version}/mouseless-installer_v#{version}.dmg"
   name "Mouseless preview channel"
