@@ -1,9 +1,9 @@
 cask "psychopy" do
   arch arm: "arm64", intel: "x86_64"
 
-  version "2026.2.4"
-  sha256 arm:   "1a99836dc552964693cb824e1d0d9e0e1fe39c3b4e202859181dc4a4c63f1487",
-         intel: "01c3a32db263a9927e94c147b2acaab6563c5d54e79233ebaae5e3ec76f28f2f"
+  version "2026.2.5"
+  sha256 arm:   "99118eb78017197a1576e313ed486b035d0b04fdd0bddc97bc3e7485dc084707",
+         intel: "c532546c422b82056d2888a6b302e371d40ca3fd3418d912bd125a27f051d3b0"
 
   url "https://github.com/psychopy/psychopy/releases/download/#{version}/StandalonePsychoPy-#{version}-macOS-#{arch}-3.11.dmg"
   name "PsychoPy"
