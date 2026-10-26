@@ -1,8 +1,8 @@
 cask "zipic" do
-  version "1.10.6"
-  sha256 "e28c2397ca07a66b76fb92d485d776979b733bcf7c7d8000c76c4ec4923ee898"
+  version "1.10.7"
+  sha256 "d37c39ea1e1eb404e081797eb4459769512e377cd463f383bd37e83ecd1b2cf1"
 
-  url "https://releases.5km.tech/zipic/Zipic%20#{version}.dmg"
+  url "https://releases.5km.tech/zipic/Zipic%20#{version}.dmg?r=2"
   name "Zipic"
   desc "Image compression tool"
   homepage "https://zipic.app/"
