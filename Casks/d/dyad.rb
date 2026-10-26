@@ -3,10 +3,10 @@ cask "dyad" do
   os macos: "-darwin-#{arch}-", linux: "_"
   url_end = on_system_conditional macos: ".zip", linux: "_x86_64.AppImage"
 
-  version "1.20.0"
-  sha256 arm:          "08793424520cdaf56c5eeaf9546591649b5f5444d1ccdc03f138b09d6b0709b4",
-         intel:        "d3b82fbbe92712060517c569777ab37dac246e563762fb56707170bda2890a6d",
-         x86_64_linux: "415a0f9debf4365ecfa05d348d5fb71d7508fc3c1febe5822778c69bc6f87c9a"
+  version "1.21.0"
+  sha256 arm:          "8796c688fde7c615a4361fe0b5dd1550665a90c38456aa566cf9921c59958c35",
+         intel:        "568bbd41b6e834ddf9d7a2dfaf98d84ef6e8a1b0b38c83de3c33ff97193c0da3",
+         x86_64_linux: "3c1ad5da54fc2f2e8c96a15c4bf5454d8534058bac2ab4977368012ac815f83f"
 
   on_macos do
     depends_on macos: :monterey
