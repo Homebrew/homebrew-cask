@@ -63,6 +63,12 @@ cask "navicat-premium" do
 
   app "Navicat Premium.app"
 
+  uninstall quit:   "com.navicat.NavicatPremium",
+            signal: [
+              ["TERM", "com.navicat.NavicatPremium"],
+              ["KILL", "com.navicat.NavicatPremium"],
+            ]
+
   zap trash: [
     "~/Library/Application Support/PremiumSoft CyberTech/Navicat CC/Navicat Premium",
     "~/Library/Caches/com.apple.helpd/Generated/Navicat Help*",
