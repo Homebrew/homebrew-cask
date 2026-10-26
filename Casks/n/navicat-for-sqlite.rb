@@ -61,6 +61,12 @@ cask "navicat-for-sqlite" do
 
   app "Navicat for SQLite.app"
 
+  uninstall quit:   "com.navicat.NavicatForSQLite",
+            signal: [
+              ["TERM", "com.navicat.NavicatForSQLite"],
+              ["KILL", "com.navicat.NavicatForSQLite"],
+            ]
+
   zap trash: [
     "~/Library/Application Support/PremiumSoft CyberTech/Navicat CC/Navicat for SQLite",
     "~/Library/Caches/com.apple.helpd/Generated/Navicat Help*",
