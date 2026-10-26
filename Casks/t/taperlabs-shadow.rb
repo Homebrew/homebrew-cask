@@ -1,6 +1,6 @@
 cask "taperlabs-shadow" do
-  version "2.4.0,135"
-  sha256 "1677e34aa2a8e82a6fa7b73b5ae6fe399202526e6d7af5d445ca7ecd6599936b"
+  version "2.4.1,154"
+  sha256 "13c0f0864155334441067ae8f2346bc094ba2b5172150cab7a9da1dbee2b987e"
 
   url "https://cdn.shadow.do/releases/mac/latest/#{version.csv.first}-build#{version.csv.second}/Shadow-#{version.csv.first}-arm64.dmg"
   name "Shadow"
