@@ -15,7 +15,10 @@ cask "robbietilton-compositor" do
   uninstall quit: "com.wonderassembly.compositor"
 
   zap trash: [
+    "~/Library/Application Scripts/com.wonderassembly.compositor",
+    "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.wonderassembly.compositor.sfl*",
     "~/Library/Application Support/Compositor",
+    "~/Library/Containers/com.wonderassembly.compositor",
     "~/Library/Preferences/com.robbietilton.Compositor.plist",
   ]
 end
