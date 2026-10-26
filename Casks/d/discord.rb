@@ -25,7 +25,7 @@ cask "discord" do
   homepage "https://discord.com/"
 
   auto_updates true
-  depends_on :macos
+  depends_on macos: :ventura
 
   app "Discord.app"
 
