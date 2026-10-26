@@ -8,12 +8,15 @@ cask "valhalla-freq-echo" do
   homepage "https://valhalladsp.com/shop/delay/valhalla-freq-echo/"
 
   livecheck do
-    url "https://valhalladsp.com/demos-downloads/"
+    url "https://valhalladsp.com/demos-downloads/",
+        user_agent: :browser
     regex(/ValhallaFreqEchoOSX[._-]v?(\d+(?:[._]\d+)+)v?\d?\.dmg/i)
     strategy :page_match do |page, regex|
       page.scan(regex).map { |match| match&.first&.tr("_", ".") }
     end
   end
+
+  no_autobump! because: "livecheck is unreachable in autobump environment"
 
   depends_on :macos
 
