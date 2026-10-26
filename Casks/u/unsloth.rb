@@ -23,6 +23,46 @@ cask "unsloth" do
     depends_on arch: :x86_64
 
     app_image "Unsloth-Desktop-Linux.AppImage", target: "Unsloth.AppImage"
+    binary "#{appdir}/Unsloth.AppImage", target: "unsloth"
+
+    postflight_steps do
+      run "/bin/bash", args: [
+        "-c",
+        <<~EOS.squish,
+          set -euo pipefail
+          apps="${HOME}/.local/share/applications"
+          mkdir -p "${apps}"
+          desktop="${apps}/unsloth-studio.desktop"
+          {
+            echo "[Desktop Entry]"
+            echo "Version=1.0"
+            echo "Type=Application"
+            echo "Name=Unsloth Desktop"
+            echo "Comment=Desktop application for Unsloth Studio"
+            echo "Exec=\\"{{appdir}}/Unsloth.AppImage\\" %U"
+            echo "Icon={{appdir}}/Unsloth.AppImage"
+            echo "Terminal=false"
+            echo "Categories=Development;Science;"
+            echo "StartupNotify=true"
+          } > "${desktop}"
+          chmod 755 "${desktop}"
+          if command -v update-desktop-database >/dev/null 2>&1; then
+            update-desktop-database "${apps}" || true
+          fi
+        EOS
+      ]
+    end
+
+    uninstall_postflight_steps do
+      run "/bin/bash", args: [
+        "-c",
+        'rm -f "$HOME/.local/share/applications/unsloth-studio.desktop"',
+      ]
+    end
+
+    zap trash: [
+      "~/.local/share/applications/unsloth-studio.desktop",
+    ]
   end
 
   url "https://github.com/unslothai/unsloth/releases/download/v#{version}/Unsloth-Desktop-#{os}"
