@@ -11,7 +11,7 @@ cask "super" do
   url "https://github.com/superdb/super/releases/download/v#{version}/super-v#{version}.#{os}-#{arch}.tar.gz"
   name "SuperDB"
   desc "Analytics database that fuses structured and semi-structured data"
-  homepage "https://github.com/superdb/super"
+  homepage "https://superdb.org/"
 
   binary "super"
 
