@@ -21,8 +21,10 @@ cask "gitx" do
   binary "#{appdir}/GitX.app/Contents/Resources/gitx"
 
   zap trash: [
+    "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/net.phere.gitx.sfl*",
     "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/nl.frim.gitx.sfl*",
     "~/Library/Caches/nl.frim.GitX",
+    "~/Library/Preferences/net.phere.GitX.plist",
     "~/Library/Preferences/nl.frim.GitX.plist",
     "~/Library/Saved Application State/nl.frim.GitX.savedState",
   ]
