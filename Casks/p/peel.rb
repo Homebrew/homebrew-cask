@@ -4,7 +4,7 @@ cask "peel" do
 
   url "https://github.com/TuguiDragos/Peel/releases/download/v#{version}/Peel-#{version}.zip"
   name "Peel"
-  desc "App uninstaller and disk space cleaner, with system tweaks and Terminal setup"
+  desc "App uninstaller and disk space cleaner"
   homepage "https://peel.tuguidragos.com/"
 
   livecheck do
