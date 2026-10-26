@@ -61,6 +61,12 @@ cask "navicat-for-postgresql" do
 
   app "Navicat for PostgreSQL.app"
 
+  uninstall quit:   "com.navicat.NavicatForPostgreSQL",
+            signal: [
+              ["TERM", "com.navicat.NavicatForPostgreSQL"],
+              ["KILL", "com.navicat.NavicatForPostgreSQL"],
+            ]
+
   zap trash: [
     "~/Library/Application Support/PremiumSoft CyberTech/Navicat CC/Navicat for PostgreSQL",
     "~/Library/Caches/com.apple.helpd/Generated/Navicat Help*",
