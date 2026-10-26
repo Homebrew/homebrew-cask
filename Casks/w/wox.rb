@@ -19,5 +19,8 @@ cask "wox" do
 
   app "Wox.app"
 
-  zap trash: "~/.wox"
+  zap trash: [
+    "~/.wox",
+    "~/Library/Preferences/com.github.wox.plist",
+  ]
 end
