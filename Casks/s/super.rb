@@ -8,10 +8,10 @@ cask "super" do
          arm64_linux:  "81384df59e7ca8d2a59855e03040c58a7402539b75dc55e78de46bf68cb49257",
          x86_64_linux: "2bbc1fab55be4124a4ffa253eba806590b73509935ac8740599a47caf9d3185d"
 
-  url "https://github.com/brimdata/super/releases/download/v#{version}/super-v#{version}.#{os}-#{arch}.tar.gz"
+  url "https://github.com/superdb/super/releases/download/v#{version}/super-v#{version}.#{os}-#{arch}.tar.gz"
   name "SuperDB"
   desc "Analytics database that fuses structured and semi-structured data"
-  homepage "https://github.com/brimdata/super"
+  homepage "https://github.com/superdb/super"
 
   binary "super"
 
