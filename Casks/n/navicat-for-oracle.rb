@@ -1,5 +1,5 @@
 cask "navicat-for-oracle" do
-  version "17.3.12"
+  version "17.3.13"
   sha256 :no_check
 
   language "zh-CN" do
@@ -60,6 +60,12 @@ cask "navicat-for-oracle" do
   depends_on :macos
 
   app "Navicat for Oracle.app"
+
+  uninstall quit:   "com.navicat.NavicatForOracle",
+            signal: [
+              ["TERM", "com.navicat.NavicatForOracle"],
+              ["KILL", "com.navicat.NavicatForOracle"],
+            ]
 
   zap trash: [
     "~/Library/Application Support/PremiumSoft CyberTech/Navicat CC/Navicat for Oracle",
