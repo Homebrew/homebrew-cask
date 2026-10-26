@@ -9,7 +9,7 @@ cask "superset" do
          x86_64_linux: "4857f1f625503d0d8048ac5500a7f19062ed261cd5c1be787cc4a879bf6296c2"
 
   on_macos do
-    depends_on macos: :monterey
+    depends_on macos: :ventura
 
     app "Superset.app"
 
