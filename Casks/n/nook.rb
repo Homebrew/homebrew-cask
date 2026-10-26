@@ -17,8 +17,13 @@ cask "nook" do
   app "Nook.app"
 
   zap trash: [
+    "~/Library/Application Support/com.gstudios.nook",
     "~/Library/Application Support/Nook",
+    "~/Library/Caches/com.gstudios.nook",
     "~/Library/Caches/io.browsewithnook.nook",
+    "~/Library/HTTPStorages/com.gstudios.nook*",
+    "~/Library/Preferences/com.gstudios.nook.plist",
     "~/Library/Preferences/io.browsewithnook.nook.plist",
+    "~/Library/WebKit/com.gstudios.nook",
   ]
 end
