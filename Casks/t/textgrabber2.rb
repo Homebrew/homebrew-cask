@@ -1,7 +1,7 @@
 cask "textgrabber2" do
   # NOTE: "2" is not a version number, but an intrinsic part of the product name
-  version "1.11.1"
-  sha256 "161fb268d79e19fb46d4bfbe2443963391a44da25cf72d87d7b7a1f26dc18360"
+  version "1.12.0"
+  sha256 "3294d464cda1652be11c1cbd960cd8aaafc447e3c1561549051aaf6243e19157"
 
   url "https://github.com/TextGrabber2-app/TextGrabber2/releases/download/v#{version}/TextGrabber2-#{version}.dmg"
   name "TextGrabber2"
@@ -13,7 +13,7 @@ cask "textgrabber2" do
     strategy :github_latest
   end
 
-  depends_on macos: :sequoia
+  depends_on macos: :tahoe
 
   app "TextGrabber2.app"
 
