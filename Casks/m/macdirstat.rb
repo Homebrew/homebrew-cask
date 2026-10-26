@@ -4,7 +4,7 @@ cask "macdirstat" do
 
   url "https://github.com/phalladar/MacDirStat/releases/download/v#{version}/MacDirStat.zip"
   name "MacDirStat"
-  desc "Disk space analyzer inspired by WinDirStat"
+  desc "Disk space analyser"
   homepage "https://github.com/phalladar/MacDirStat"
 
   depends_on macos: :sequoia
