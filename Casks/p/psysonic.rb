@@ -2,10 +2,10 @@ cask "psysonic" do
   arch arm: "aarch64", intel: on_system_conditional(macos: "x64", linux: "amd64")
   url_end = on_system_conditional macos: "dmg", linux: "AppImage"
 
-  version "1.55.0"
-  sha256 arm:          "86645d3669edd884c4532b5e277fc86867bd6ee2d54efe51af9db7ec90c86f93",
-         intel:        "48135091bdc9690b2c4be90b5a449bbeca166ab59ebef262f72f38987872d50c",
-         x86_64_linux: "71995df1210e8e469b81b1227a34387f00a03871037907d8ca876bb6fa841efc"
+  version "1.56.0"
+  sha256 arm:          "b748b6b76fece78df681dac7a97b15a1002f557ccae753256f174d81a96e743e",
+         intel:        "65341489c765a7120615de12c8e9fd1abbbb592d9f0bad0c38db16a959d15b9a",
+         x86_64_linux: "cae2a7290f5de3e332cc240e5ab3867d2dadaa58ec5fe05cb77dbfc59709fd99"
 
   on_macos do
     auto_updates true
