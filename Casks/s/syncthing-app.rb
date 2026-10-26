@@ -19,6 +19,8 @@ cask "syncthing-app" do
 
   app "Syncthing.app"
 
+  uninstall quit: "com.github.xor-gate.syncthing-macosx"
+
   zap trash: [
     "~/Library/Application Support/Syncthing-macOS",
     "~/Library/Caches/com.github.xor-gate.syncthing-macosx",
