@@ -61,6 +61,12 @@ cask "navicat-for-oracle" do
 
   app "Navicat for Oracle.app"
 
+  uninstall quit:   "com.navicat.NavicatForOracle",
+            signal: [
+              ["TERM", "com.navicat.NavicatForOracle"],
+              ["KILL", "com.navicat.NavicatForOracle"],
+            ]
+
   zap trash: [
     "~/Library/Application Support/PremiumSoft CyberTech/Navicat CC/Navicat for Oracle",
     "~/Library/Caches/com.apple.helpd/Generated/Navicat Help*",
