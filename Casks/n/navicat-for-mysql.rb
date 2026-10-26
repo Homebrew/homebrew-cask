@@ -61,6 +61,12 @@ cask "navicat-for-mysql" do
 
   app "Navicat for MySQL.app"
 
+  uninstall quit:   "com.navicat.NavicatForMySQL",
+            signal: [
+              ["TERM", "com.navicat.NavicatForMySQL"],
+              ["KILL", "com.navicat.NavicatForMySQL"],
+            ]
+
   zap trash: [
     "~/Library/Application Support/PremiumSoft CyberTech/Navicat CC/Navicat for MySQL",
     "~/Library/Caches/com.apple.helpd/Generated/Navicat Help*",
