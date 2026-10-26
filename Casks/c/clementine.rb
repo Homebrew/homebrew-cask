@@ -1,27 +1,27 @@
 cask "clementine" do
-  version "1.3.1"
-  sha256 "825aa66996237e1d3ea2723b24188ead203f298d0bec89f4c3bc6582d9e63e3a"
+  version "1.4.3"
+  sha256 "226a9a4e7ea27e96f89e384f52970e316364e256b05ead94c8ff7b8b5ad14c58"
 
   url "https://github.com/clementine-player/Clementine/releases/download/#{version}/clementine-#{version}.dmg"
   name "Clementine"
   desc "Music player and library organiser"
   homepage "https://www.clementine-player.org/"
 
-  deprecate! date: "2024-11-30", because: :discontinued
-  disable! date: "2025-12-01", because: :discontinued
+  livecheck do
+    url :url
+    strategy :github_latest
+  end
 
-  depends_on :macos
+  auto_updates true
+  depends_on arch: :arm64
+  depends_on macos: :tahoe
 
-  app "clementine.app"
+  app "Clementine.app"
 
   zap trash: [
     "~/Library/Application Support/Clementine",
-    "~/Library/Caches/org.clementine-player.Clementine",
-    "~/Library/Preferences/org.clementine-player.Clementine.plist",
-    "~/Library/Saved Application State/org.clementine-player.Clementine.savedState",
+    "~/Library/Caches/org.clementine-player.clementine",
+    "~/Library/Preferences/org.clementine-player.clementine.plist",
+    "~/Library/Saved Application State/org.clementine-player.clementine.savedState",
   ]
-
-  caveats do
-    requires_rosetta
-  end
 end
