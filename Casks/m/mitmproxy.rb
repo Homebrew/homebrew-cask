@@ -2,11 +2,11 @@ cask "mitmproxy" do
   arch arm: on_system_conditional(macos: "arm64", linux: "aarch64"), intel: "x86_64"
   os macos: "macos", linux: "linux"
 
-  version "12.3.0"
-  sha256 arm:          "ce2bccfb20bd75e38647dae35445b0c6d4f8fd7232bed250e9a939de8a6312c2",
-         intel:        "58fa1a3fe720cb52b203a8f0b0d2ae963edd6ba545113363cfc0338322526d5c",
-         arm64_linux:  "f8756fa831c4abe431dd922ae7291b158b465285562b35d12e5669cbfc29d1f3",
-         x86_64_linux: "d52bacb30012023c7e920f322a97a6bc3b0553a7944b520e9aa02278c910b938"
+  version "12.3.1"
+  sha256 arm:          "9b7f7a8e3fd1b1544089c937c579ef1f0f503f0ea598c25bda9eab077c735b93",
+         intel:        "f4cf5e563e7068af297a27be97686f58917760d3c0dcc6a997ca83f6f5ffb3db",
+         arm64_linux:  "97a21d57b2288f7e293e63d3b11af34f394a8bbf760e6cf101ed1d57057a1f40",
+         x86_64_linux: "f7b4237f5702f6cd21357fe6e4680a7e905f8f9b816b872230d018ea696c34d5"
 
   on_macos do
     binary "mitmproxy.app/Contents/MacOS/mitmdump"
