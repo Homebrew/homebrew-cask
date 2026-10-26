@@ -21,6 +21,8 @@ cask "hedy" do
 
   zap trash: [
     "~/Library/Application Scripts/bot.hedy.mobile",
+    "~/Library/Application Scripts/group.bot.hedy",
     "~/Library/Containers/bot.hedy.mobile",
+    "~/Library/Group Containers/group.bot.hedy",
   ]
 end
