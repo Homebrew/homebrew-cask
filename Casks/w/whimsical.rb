@@ -29,6 +29,7 @@ cask "whimsical" do
   app "Whimsical.app"
 
   zap trash: [
+    "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.whimsical.desktop.sfl*",
     "~/Library/Application Support/Whimsical",
     "~/Library/Caches/com.whimsical.desktop",
     "~/Library/Caches/com.whimsical.desktop.ShipIt",
