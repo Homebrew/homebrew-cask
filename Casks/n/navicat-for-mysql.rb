@@ -1,5 +1,5 @@
 cask "navicat-for-mysql" do
-  version "17.3.12"
+  version "17.3.13"
   sha256 :no_check
 
   language "zh-CN" do
@@ -60,6 +60,12 @@ cask "navicat-for-mysql" do
   depends_on :macos
 
   app "Navicat for MySQL.app"
+
+  uninstall quit:   "com.navicat.NavicatForMySQL",
+            signal: [
+              ["TERM", "com.navicat.NavicatForMySQL"],
+              ["KILL", "com.navicat.NavicatForMySQL"],
+            ]
 
   zap trash: [
     "~/Library/Application Support/PremiumSoft CyberTech/Navicat CC/Navicat for MySQL",
