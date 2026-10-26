@@ -1,11 +1,11 @@
 cask "copilot" do
-  version "152.0.4191.58,c132468f-79b5-4af7-bb52-65309f6b3cc5"
-  sha256 "0a6223466b2b765e90bd700a86ccb106c75c7fbe6fd575e6c879ff8408d8648e"
+  version "156.0.4314.41,dde69ffb-af77-4d45-96a4-41945ba0a036"
+  sha256 "de8a2c0f99cc1a09dbf586e47688ce1adff3de311c78ba179b73ed7157c2f857"
 
   url "https://msedge.sf.dl.delivery.mp.microsoft.com/filestreamingservice/files/#{version.csv.second}/Copilot-#{version.csv.first}.pkg"
   name "Copilot"
-  desc "AI assistant"
-  homepage "https://copilot.microsoft.com/"
+  desc "AI-first productivity assistant for Microsoft"
+  homepage "https://www.microsoft.com/en-us/copilot/download-copilot-app"
 
   livecheck do
     url "https://go.microsoft.com/fwlink/?linkid=2325114"
