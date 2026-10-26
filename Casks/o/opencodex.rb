@@ -17,13 +17,19 @@ cask "opencodex" do
 
   app "OpenCodex.app"
 
-  uninstall launchctl: "com.opencodex.proxy",
+  uninstall launchctl: [
+              "com.opencodex.proxy",
+              "OpenCodex",
+            ],
             quit:      "com.opencodex.desktop"
 
   zap trash: [
     "~/.opencodex",
+    "~/Library/Application Scripts/com.opencodex.desktop.widget",
     "~/Library/Application Support/com.opencodex.desktop",
     "~/Library/Caches/com.opencodex.desktop",
+    "~/Library/Containers/com.opencodex.desktop.widget",
+    "~/Library/LaunchAgents/OpenCodex.plist",
     "~/Library/Preferences/com.opencodex.desktop.plist",
     "~/Library/Saved Application State/com.opencodex.desktop.savedState",
     "~/Library/WebKit/com.opencodex.desktop",
