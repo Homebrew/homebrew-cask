@@ -22,6 +22,7 @@ cask "holavpn" do
   zap trash: [
     "~/Documents/holavpn2e.db*",
     "~/Library/Application Support/Hola2E",
+    "~/Library/Application Support/org.hola.hola2e",
     "~/Library/Caches/org.hola.hola2e*",
     "~/Library/HTTPStorages/org.hola.hola2e*",
     "~/Library/LaunchAgents/org.hola.svc.plist",
