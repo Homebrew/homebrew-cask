@@ -16,9 +16,7 @@ cask "rode-central" do
 
   depends_on :macos
 
-  rename "RØDE Central*.pkg", "RØDE Central.pkg"
-
-  pkg "RØDE Central.pkg"
+  pkg "RODE_Central_MACOS.pkg"
 
   uninstall pkgutil: "com.rodecentral.installer"
 
