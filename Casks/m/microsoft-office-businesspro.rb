@@ -1,6 +1,6 @@
 cask "microsoft-office-businesspro" do
-  version "16.114.26102031"
-  sha256 "2788b02a9b8f9b220ddc0f5e29f75410e574ee3c236e3b782f1403e27adf3047"
+  version "16.114.26102345"
+  sha256 "c659e1dad6e1b0283bd78a8653ad37e92546d9b1f33d03405c27a06eafa8f339"
 
   url "https://res.public.onecdn.static.microsoft/mro1cdnstorage/C1297A47-86C4-4C1F-97FA-950631F94777/MacAutoupdate/Microsoft_365_and_Office_#{version}_BusinessPro_Installer.pkg"
   name "Microsoft Office BusinessPro"
@@ -38,6 +38,7 @@ cask "microsoft-office-businesspro" do
   uninstall launchctl: [
               "com.microsoft.office.licensing.helper",
               "com.microsoft.office.licensingV2.helper",
+              "com.microsoft.office.licensingV3.helper",
               "com.microsoft.OneDriveStandaloneUpdater",
               "com.microsoft.OneDriveStandaloneUpdaterDaemon",
               "com.microsoft.OneDriveUpdaterDaemon",
@@ -58,6 +59,7 @@ cask "microsoft-office-businesspro" do
               "com.microsoft.package.Microsoft_Word.app",
               "com.microsoft.package.Proofing_Tools",
               "com.microsoft.pkg.licensing",
+              "com.microsoft.pkg.licensing.v3",
               "com.microsoft.teams",
               "com.microsoft.teams2",
               "com.microsoft.wdav",
