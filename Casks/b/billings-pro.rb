@@ -1,6 +1,6 @@
 cask "billings-pro" do
-  version "1.8.1,39116,2026-04-06-1244"
-  sha256 "e98801c189677736216217753a5b2355c8a613fbfa42c45b6e45aedee118a24a"
+  version "1.8.2,39121,2026-10-27-1410"
+  sha256 "c64a651a7e487f1f98c23b96e64731a24928c10dfc336f4729ac356e98316ecf"
 
   url "https://www.marketcircle.com/appcasts/releases/billingspro-releases-#{version.csv.first}.b#{version.csv.second}.#{version.csv.third}.zip"
   name "Billings Pro"
@@ -25,6 +25,8 @@ cask "billings-pro" do
   depends_on macos: :monterey
 
   app "Billings Pro.app"
+
+  uninstall launchctl: "com.marketcircle.BPSyncHelper"
 
   zap trash: [
     "~/Library/Application Support/Billings Pro",
