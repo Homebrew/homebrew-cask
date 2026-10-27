@@ -1,4 +1,4 @@
-cask "copilot" do
+cask "microsoft-copilot" do
   version "156.0.4314.41,dde69ffb-af77-4d45-96a4-41945ba0a036"
   sha256 "de8a2c0f99cc1a09dbf586e47688ce1adff3de311c78ba179b73ed7157c2f857"
 
