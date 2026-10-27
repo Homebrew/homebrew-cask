@@ -1,6 +1,6 @@
 cask "rive" do
-  version "0.9.349"
-  sha256 "d9a1500c8d3df9fcc0879ced6836266de4792460454cd41c4ac4c8760bec15b6"
+  version "0.9.415"
+  sha256 "7d30628306871fadfb2590f9b45532bf6e566bb05284926d33b6f531e94d9096"
 
   url "https://releases.rive.app/macos/#{version}/Rive.dmg"
   name "Rive"
@@ -13,7 +13,7 @@ cask "rive" do
   end
 
   auto_updates true
-  depends_on :macos
+  depends_on macos: :monterey
 
   app "Rive.app"
 
