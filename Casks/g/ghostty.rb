@@ -1,6 +1,6 @@
 cask "ghostty" do
-  version "1.3.1"
-  sha256 "18cff2b0a6cee90eead9c7d3064e808a252a40baf214aa752c1ecb793b8f5f69"
+  version "1.4.0"
+  sha256 "3a02075dbd24318d778426af41dee5507d53ecc4578ede96912ec9ce6d18d3e8"
 
   url "https://release.files.ghostty.org/#{version}/Ghostty.dmg"
   name "Ghostty"
