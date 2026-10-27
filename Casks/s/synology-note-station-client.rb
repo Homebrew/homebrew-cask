@@ -1,6 +1,6 @@
 cask "synology-note-station-client" do
-  version "2.2.5,804"
-  sha256 "a15b2ac632dfff5faa63c5e56cf32c2a118ee8c95846830e67a400dacbb2f377"
+  version "2.2.6,813"
+  sha256 "bcd7ff6dcd246405620507b3cfcb25651a890280c6cbf5d9f291642142f92cde"
 
   url "https://global.download.synology.com/download/Utility/NoteStationClient/#{version.tr(",", "-")}/Mac/x86_64/synology-note-station-client-#{version.tr(",", "-")}-mac-x64.dmg"
   name "Synology Note Station Client"
