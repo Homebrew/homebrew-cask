@@ -19,5 +19,9 @@ cask "anythingllm" do
 
   app "AnythingLLM.app"
 
-  zap trash: "~/Library/Application Support/anythingllm-desktop"
+  zap trash: [
+    "~/Library/Application Support/anythingllm-desktop",
+    "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.anythingllm.sfl*",
+    "~/Library/Preferences/com.anythingllm.plist",
+  ]
 end
