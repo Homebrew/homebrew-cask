@@ -1,10 +1,10 @@
 cask "workflowy" do
   url_end = on_system_conditional macos: ".zip", linux: "-x86_64.AppImage"
 
-  version "4.3.2610221515"
-  sha256 arm:          "6edf7694954d15c48171f9c2af6bb4a3d599c7def15c1be12536ce566d851cca",
-         intel:        "6edf7694954d15c48171f9c2af6bb4a3d599c7def15c1be12536ce566d851cca",
-         x86_64_linux: "6b718193f5e36a4d161aece5e063ead7fc1b16bcd42f923edc56827b4e6f352d"
+  version "4.3.2610271109"
+  sha256 arm:          "ea9056ba8f0bece6359fc5c4a9f8d5485d72047bf1f1b6ffa3948bdcf73577fb",
+         intel:        "ea9056ba8f0bece6359fc5c4a9f8d5485d72047bf1f1b6ffa3948bdcf73577fb",
+         x86_64_linux: "853d559ec9fdd446b6002fc6cd9b496b84a9f446cb0b3ce2399399a7e128cb31"
 
   on_macos do
     depends_on macos: :monterey
