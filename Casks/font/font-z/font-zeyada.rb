@@ -8,5 +8,5 @@ cask "font-zeyada" do
 
   font "Zeyada.ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

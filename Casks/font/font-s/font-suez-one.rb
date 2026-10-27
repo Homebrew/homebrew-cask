@@ -8,5 +8,5 @@ cask "font-suez-one" do
 
   font "SuezOne-Regular.ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

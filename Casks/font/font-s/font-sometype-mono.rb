@@ -13,5 +13,5 @@ cask "font-sometype-mono" do
   font "Sometype-Mono-master/fonts/otf/SometypeMono-Regular.otf"
   font "Sometype-Mono-master/fonts/otf/SometypeMono-RegularItalic.otf"
 
-  # No zap stanza required
+  zap :not_required
 end

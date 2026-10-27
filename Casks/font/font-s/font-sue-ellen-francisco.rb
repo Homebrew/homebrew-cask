@@ -8,5 +8,5 @@ cask "font-sue-ellen-francisco" do
 
   font "SueEllenFrancisco-Regular.ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

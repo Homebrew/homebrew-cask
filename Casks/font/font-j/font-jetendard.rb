@@ -23,5 +23,5 @@ cask "font-jetendard" do
   font "ttf/Jetendard-Thin.ttf"
   font "ttf/Jetendard-ThinItalic.ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

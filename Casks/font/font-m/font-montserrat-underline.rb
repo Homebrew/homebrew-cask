@@ -11,5 +11,5 @@ cask "font-montserrat-underline" do
   font "MontserratUnderline-Italic[wght].ttf"
   font "MontserratUnderline[wght].ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

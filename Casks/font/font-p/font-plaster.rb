@@ -8,5 +8,5 @@ cask "font-plaster" do
 
   font "Plaster-Regular.ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

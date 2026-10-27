@@ -8,5 +8,5 @@ cask "font-vina-sans" do
 
   font "VinaSans-Regular.ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

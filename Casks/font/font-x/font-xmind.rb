@@ -11,5 +11,5 @@ cask "font-xmind" do
   font "Xmind-Italic[wght].ttf"
   font "Xmind[wght].ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

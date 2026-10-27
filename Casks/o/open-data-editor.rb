@@ -16,5 +16,5 @@ cask "open-data-editor" do
 
   app "Open Data Editor.app"
 
-  # No zap stanza required
+  zap :not_required
 end

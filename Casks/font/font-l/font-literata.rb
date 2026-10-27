@@ -11,5 +11,5 @@ cask "font-literata" do
   font "Literata-Italic[opsz,wght].ttf"
   font "Literata[opsz,wght].ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

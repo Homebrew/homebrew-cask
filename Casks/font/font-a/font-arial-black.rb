@@ -8,5 +8,5 @@ cask "font-arial-black" do
 
   font "AriBlk.TTF"
 
-  # No zap stanza required
+  zap :not_required
 end

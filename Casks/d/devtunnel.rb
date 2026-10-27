@@ -24,5 +24,5 @@ cask "devtunnel" do
 
   binary "#{os}-#{arch}-devtunnel", target: "devtunnel"
 
-  # No zap stanza required
+  zap :not_required
 end

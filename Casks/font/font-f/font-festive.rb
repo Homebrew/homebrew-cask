@@ -8,5 +8,5 @@ cask "font-festive" do
 
   font "Festive-Regular.ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

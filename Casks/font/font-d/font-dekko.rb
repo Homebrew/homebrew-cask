@@ -8,5 +8,5 @@ cask "font-dekko" do
 
   font "Dekko-Regular.ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

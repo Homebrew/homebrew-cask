@@ -13,5 +13,5 @@ cask "font-lobster-two" do
   font "LobsterTwo-Italic.ttf"
   font "LobsterTwo-Regular.ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

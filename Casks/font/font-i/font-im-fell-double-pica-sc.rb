@@ -8,5 +8,5 @@ cask "font-im-fell-double-pica-sc" do
 
   font "IMFeDPsc28P.ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

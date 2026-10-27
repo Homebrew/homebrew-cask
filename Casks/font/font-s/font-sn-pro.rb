@@ -30,5 +30,5 @@ cask "font-sn-pro" do
   font "SNPro/SNPro-Thin.otf"
   font "SNPro/SNPro-ThinItalic.otf"
 
-  # No zap stanza required
+  zap :not_required
 end

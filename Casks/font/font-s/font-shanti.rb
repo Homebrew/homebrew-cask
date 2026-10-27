@@ -8,5 +8,5 @@ cask "font-shanti" do
 
   font "Shanti-Regular.ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

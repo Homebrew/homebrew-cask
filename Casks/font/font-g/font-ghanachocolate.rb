@@ -11,5 +11,5 @@ cask "font-ghanachocolate" do
 
   font "Ghanachocolate.otf"
 
-  # No zap stanza required
+  zap :not_required
 end

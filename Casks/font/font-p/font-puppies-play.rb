@@ -8,5 +8,5 @@ cask "font-puppies-play" do
 
   font "PuppiesPlay-Regular.ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

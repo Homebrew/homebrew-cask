@@ -11,5 +11,5 @@ cask "font-amarna" do
   font "Amarna-Italic[wght].ttf"
   font "Amarna[wght].ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

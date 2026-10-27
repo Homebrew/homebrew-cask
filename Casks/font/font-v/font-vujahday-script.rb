@@ -8,5 +8,5 @@ cask "font-vujahday-script" do
 
   font "VujahdayScript-Regular.ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

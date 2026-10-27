@@ -27,7 +27,7 @@ cask "android-ndk" do
 
   uninstall delete: "#{HOMEBREW_PREFIX}/share/android-ndk"
 
-  # No zap stanza required
+  zap :not_required
 
   caveats <<~EOS
     You may want to add to your profile:

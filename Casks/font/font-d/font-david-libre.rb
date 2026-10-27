@@ -12,5 +12,5 @@ cask "font-david-libre" do
   font "DavidLibre-Medium.ttf"
   font "DavidLibre-Regular.ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

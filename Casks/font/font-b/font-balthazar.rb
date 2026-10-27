@@ -8,5 +8,5 @@ cask "font-balthazar" do
 
   font "Balthazar-Regular.ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

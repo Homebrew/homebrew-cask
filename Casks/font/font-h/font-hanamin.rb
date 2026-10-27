@@ -14,5 +14,5 @@ cask "font-hanamin" do
   font "HanaMinA.ttf"
   font "HanaMinB.ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

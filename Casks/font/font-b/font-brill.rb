@@ -15,5 +15,5 @@ cask "font-brill" do
   font "Brill-Italic.ttf"
   font "Brill-Roman.ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

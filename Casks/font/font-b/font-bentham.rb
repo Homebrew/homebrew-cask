@@ -8,5 +8,5 @@ cask "font-bentham" do
 
   font "Bentham-Regular.ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

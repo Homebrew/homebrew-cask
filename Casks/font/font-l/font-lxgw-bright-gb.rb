@@ -13,5 +13,5 @@ cask "font-lxgw-bright-gb" do
   font "LXGWBrightGB/LXGWBrightGB-MediumItalic.ttf"
   font "LXGWBrightGB/LXGWBrightGB-Regular.ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

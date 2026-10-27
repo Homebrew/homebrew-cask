@@ -10,5 +10,5 @@ cask "font-chiron-sung-hk" do
   font "chiron-sung-hk-#{version}/VAR_OTF/ChironSungHKItVF.otf"
   font "chiron-sung-hk-#{version}/VAR_OTF/ChironSungHKVF.otf"
 
-  # No zap stanza required
+  zap :not_required
 end

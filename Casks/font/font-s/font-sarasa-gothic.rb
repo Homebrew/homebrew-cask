@@ -12,5 +12,5 @@ cask "font-sarasa-gothic" do
 
   font "Sarasa-SuperTTC.ttc"
 
-  # No zap stanza required
+  zap :not_required
 end

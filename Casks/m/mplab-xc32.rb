@@ -53,5 +53,5 @@ cask "mplab-xc32" do
     sudo:       true,
   }
 
-  # No zap stanza required
+  zap :not_required
 end

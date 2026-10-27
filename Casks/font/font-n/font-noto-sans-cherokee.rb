@@ -8,5 +8,5 @@ cask "font-noto-sans-cherokee" do
 
   font "NotoSansCherokee[wght].ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

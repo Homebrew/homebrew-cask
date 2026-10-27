@@ -8,5 +8,5 @@ cask "font-patua-one" do
 
   font "PatuaOne-Regular.ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

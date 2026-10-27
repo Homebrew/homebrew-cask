@@ -11,5 +11,5 @@ cask "font-comic-relief" do
   font "ComicRelief-Bold.ttf"
   font "ComicRelief-Regular.ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

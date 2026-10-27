@@ -8,5 +8,5 @@ cask "font-constructium" do
 
   font "Constructium.ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

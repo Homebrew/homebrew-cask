@@ -20,5 +20,5 @@ cask "font-inconsolata-go-nerd-font" do
   font "InconsolataGoNerdFontPropo-Bold.ttf"
   font "InconsolataGoNerdFontPropo-Regular.ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

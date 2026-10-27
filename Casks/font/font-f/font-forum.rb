@@ -8,5 +8,5 @@ cask "font-forum" do
 
   font "Forum-Regular.ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

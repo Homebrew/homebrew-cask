@@ -8,5 +8,5 @@ cask "font-ruge-boogie" do
 
   font "RugeBoogie-Regular.ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

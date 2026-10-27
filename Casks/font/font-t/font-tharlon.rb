@@ -8,5 +8,5 @@ cask "font-tharlon" do
 
   font "Tharlon-Regular.ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

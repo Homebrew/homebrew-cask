@@ -8,5 +8,5 @@ cask "font-warnes" do
 
   font "Warnes-Regular.ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

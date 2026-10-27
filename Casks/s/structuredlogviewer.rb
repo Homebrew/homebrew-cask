@@ -14,5 +14,5 @@ cask "structuredlogviewer" do
 
   app "StructuredLogViewer.app"
 
-  # No zap stanza required
+  zap :not_required
 end

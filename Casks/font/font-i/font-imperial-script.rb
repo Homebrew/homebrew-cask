@@ -8,5 +8,5 @@ cask "font-imperial-script" do
 
   font "ImperialScript-Regular.ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

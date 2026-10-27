@@ -62,5 +62,5 @@ cask "font-recursive-mono-nerd-font" do
   font "RecMonoSmCasualNerdFontPropo-Italic.ttf"
   font "RecMonoSmCasualNerdFontPropo-Regular.ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

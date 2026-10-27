@@ -14,5 +14,5 @@ cask "font-atma" do
   font "Atma-Regular.ttf"
   font "Atma-SemiBold.ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

@@ -8,5 +8,5 @@ cask "font-gilda-display" do
 
   font "GildaDisplay-Regular.ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

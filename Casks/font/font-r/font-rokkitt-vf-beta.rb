@@ -8,5 +8,5 @@ cask "font-rokkitt-vf-beta" do
 
   font "RokkittVFBeta.ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

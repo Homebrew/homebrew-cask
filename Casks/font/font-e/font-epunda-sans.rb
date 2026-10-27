@@ -11,5 +11,5 @@ cask "font-epunda-sans" do
   font "EpundaSans-Italic[wght].ttf"
   font "EpundaSans[wght].ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

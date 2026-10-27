@@ -17,5 +17,5 @@ cask "font-iosevka-charon-mono" do
   font "IosevkaCharonMono-MediumItalic.ttf"
   font "IosevkaCharonMono-Regular.ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

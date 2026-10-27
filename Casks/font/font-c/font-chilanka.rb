@@ -8,5 +8,5 @@ cask "font-chilanka" do
 
   font "Chilanka-Regular.ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

@@ -19,5 +19,5 @@ cask "consul" do
 
   binary "consul"
 
-  # No zap stanza required
+  zap :not_required
 end

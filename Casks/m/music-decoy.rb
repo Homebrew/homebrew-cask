@@ -16,5 +16,5 @@ cask "music-decoy" do
 
   app "Music Decoy.app"
 
-  # No zap stanza required
+  zap :not_required
 end

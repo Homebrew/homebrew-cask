@@ -8,5 +8,5 @@ cask "font-ledger" do
 
   font "Ledger-Regular.ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

@@ -8,5 +8,5 @@ cask "font-ramaraja" do
 
   font "Ramaraja-Regular.ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

@@ -13,5 +13,5 @@ cask "font-unna" do
   font "Unna-Italic.ttf"
   font "Unna-Regular.ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

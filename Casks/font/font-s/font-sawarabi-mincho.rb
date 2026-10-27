@@ -8,5 +8,5 @@ cask "font-sawarabi-mincho" do
 
   font "SawarabiMincho-Regular.ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

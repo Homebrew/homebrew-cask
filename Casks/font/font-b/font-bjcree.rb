@@ -13,5 +13,5 @@ cask "font-bjcree" do
   font "BJCree-Regular.ttf"
   font "BJCree-SemiBold.ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

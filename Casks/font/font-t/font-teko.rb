@@ -8,5 +8,5 @@ cask "font-teko" do
 
   font "Teko[wght].ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

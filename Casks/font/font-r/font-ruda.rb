@@ -8,5 +8,5 @@ cask "font-ruda" do
 
   font "Ruda[wght].ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

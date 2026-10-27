@@ -24,5 +24,5 @@ cask "chromedriver" do
 
   binary "chromedriver-mac-#{arch}/chromedriver"
 
-  # No zap stanza required
+  zap :not_required
 end

@@ -8,5 +8,5 @@ cask "font-sono" do
 
   font "Sono[MONO,wght].ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

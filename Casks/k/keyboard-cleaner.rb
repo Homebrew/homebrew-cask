@@ -16,5 +16,5 @@ cask "keyboard-cleaner" do
 
   app "Keyboard Cleaner.app"
 
-  # No zap stanza required
+  zap :not_required
 end

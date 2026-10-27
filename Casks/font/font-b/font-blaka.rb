@@ -8,5 +8,5 @@ cask "font-blaka" do
 
   font "Blaka-Regular.ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

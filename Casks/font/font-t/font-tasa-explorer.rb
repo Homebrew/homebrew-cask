@@ -8,5 +8,5 @@ cask "font-tasa-explorer" do
 
   font "TASAExplorer[wght].ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

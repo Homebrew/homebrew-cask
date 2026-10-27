@@ -15,5 +15,5 @@ cask "font-bellota" do
   font "Bellota-LightItalic.ttf"
   font "Bellota-Regular.ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

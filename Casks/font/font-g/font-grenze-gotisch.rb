@@ -8,5 +8,5 @@ cask "font-grenze-gotisch" do
 
   font "GrenzeGotisch[wght].ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

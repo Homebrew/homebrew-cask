@@ -16,5 +16,5 @@ cask "font-inconsolata-lgc" do
   font "InconsolataLGC/Inconsolata-LGC-Italic.ttf"
   font "InconsolataLGC/Inconsolata-LGC.ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

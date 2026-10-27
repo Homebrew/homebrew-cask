@@ -8,5 +8,5 @@ cask "font-jura" do
 
   font "Jura[wght].ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

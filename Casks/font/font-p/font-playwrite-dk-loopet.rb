@@ -8,5 +8,5 @@ cask "font-playwrite-dk-loopet" do
 
   font "PlaywriteDKLoopet[wght].ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

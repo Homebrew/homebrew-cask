@@ -8,5 +8,5 @@ cask "font-just-me-again-down-here" do
 
   font "JustMeAgainDownHere.ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

@@ -8,5 +8,5 @@ cask "font-zen-antique-soft" do
 
   font "ZenAntiqueSoft-Regular.ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

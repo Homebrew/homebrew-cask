@@ -8,5 +8,5 @@ cask "font-kranky" do
 
   font "Kranky-Regular.ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

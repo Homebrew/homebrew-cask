@@ -14,5 +14,5 @@ cask "ttscoff-mmd-quicklook" do
 
   qlplugin "MultiMarkdown QuickLook.qlgenerator"
 
-  # No zap stanza required
+  zap :not_required
 end

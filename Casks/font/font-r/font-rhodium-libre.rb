@@ -8,5 +8,5 @@ cask "font-rhodium-libre" do
 
   font "RhodiumLibre-Regular.ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

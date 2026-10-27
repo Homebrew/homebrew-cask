@@ -9,5 +9,5 @@ cask "font-plangothic" do
   font "Plangothic-OTF-V#{version}/PlangothicP1-Regular.otf"
   font "Plangothic-OTF-V#{version}/PlangothicP2-Regular.otf"
 
-  # No zap stanza required
+  zap :not_required
 end

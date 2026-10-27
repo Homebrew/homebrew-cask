@@ -11,5 +11,5 @@ cask "brightness-sync" do
 
   app "Brightness Sync.app"
 
-  # No zap stanza required
+  zap :not_required
 end

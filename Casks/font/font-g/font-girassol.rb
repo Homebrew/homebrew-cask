@@ -8,5 +8,5 @@ cask "font-girassol" do
 
   font "Girassol-Regular.ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

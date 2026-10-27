@@ -11,5 +11,5 @@ cask "font-nexon-kart-gothic" do
   font "OTF/ALL/NEXON Kart Gothic OTF ExtraBold.otf"
   font "OTF/ALL/NEXON Kart Gothic OTF Medium.otf"
 
-  # No zap stanza required
+  zap :not_required
 end

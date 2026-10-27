@@ -8,5 +8,5 @@ cask "font-do-hyeon" do
 
   font "DoHyeon-Regular.ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

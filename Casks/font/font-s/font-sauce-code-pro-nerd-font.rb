@@ -56,5 +56,5 @@ cask "font-sauce-code-pro-nerd-font" do
   font "SauceCodeProNerdFontPropo-SemiBold.ttf"
   font "SauceCodeProNerdFontPropo-SemiBoldItalic.ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

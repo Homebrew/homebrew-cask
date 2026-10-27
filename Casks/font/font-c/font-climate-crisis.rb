@@ -8,5 +8,5 @@ cask "font-climate-crisis" do
 
   font "ClimateCrisis[YEAR].ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

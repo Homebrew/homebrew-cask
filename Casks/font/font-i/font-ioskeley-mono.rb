@@ -53,5 +53,5 @@ cask "font-ioskeley-mono" do
   font "SemiCondensed/Unhinted/IoskeleyMono-SemiCondensedThin.ttf"
   font "SemiCondensed/Unhinted/IoskeleyMono-SemiCondensedThinItalic.ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

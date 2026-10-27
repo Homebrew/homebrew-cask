@@ -8,5 +8,5 @@ cask "font-princess-sofia" do
 
   font "PrincessSofia-Regular.ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

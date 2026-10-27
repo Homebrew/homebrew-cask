@@ -8,5 +8,5 @@ cask "font-open-iconic" do
 
   font "open-iconic-#{version}/font/fonts/open-iconic.ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

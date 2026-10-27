@@ -8,5 +8,5 @@ cask "font-glass-antiqua" do
 
   font "GlassAntiqua-Regular.ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

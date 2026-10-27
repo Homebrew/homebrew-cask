@@ -22,5 +22,5 @@ cask "corretto@25" do
 
   uninstall pkgutil: "com.amazon.corretto.#{version.major}"
 
-  # No zap stanza required
+  zap :not_required
 end

@@ -8,5 +8,5 @@ cask "font-akshar" do
 
   font "Akshar[CTRS,wght].ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

@@ -8,5 +8,5 @@ cask "font-neucha" do
 
   font "Neucha.ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

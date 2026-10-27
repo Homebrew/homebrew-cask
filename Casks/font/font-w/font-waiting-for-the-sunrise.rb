@@ -8,5 +8,5 @@ cask "font-waiting-for-the-sunrise" do
 
   font "WaitingfortheSunrise.ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

@@ -16,5 +16,5 @@ cask "font-paper-mono" do
   font "paper-mono-v#{version}/fonts/otf/PaperMono-Thin.otf"
   font "paper-mono-v#{version}/fonts/variable/PaperMono[wght].ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

@@ -12,5 +12,5 @@ cask "font-fira-mono-for-powerline" do
   font "FuraMono-Medium Powerline.otf"
   font "FuraMono-Regular Powerline.otf"
 
-  # No zap stanza required
+  zap :not_required
 end

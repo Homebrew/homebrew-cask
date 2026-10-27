@@ -19,5 +19,5 @@ cask "font-chakra-petch" do
   font "ChakraPetch-SemiBold.ttf"
   font "ChakraPetch-SemiBoldItalic.ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

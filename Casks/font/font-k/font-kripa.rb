@@ -8,5 +8,5 @@ cask "font-kripa" do
 
   font "Kripa[wght].ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

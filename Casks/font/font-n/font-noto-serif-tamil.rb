@@ -11,5 +11,5 @@ cask "font-noto-serif-tamil" do
   font "NotoSerifTamil-Italic[wdth,wght].ttf"
   font "NotoSerifTamil[wdth,wght].ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

@@ -8,5 +8,5 @@ cask "font-noto-serif-hk" do
 
   font "NotoSerifHK[wght].ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

@@ -16,5 +16,5 @@ cask "keysafe" do
 
   binary "miln-keysafe-v#{version}-darwin-universal/keysafe"
 
-  # No zap stanza required
+  zap :not_required
 end

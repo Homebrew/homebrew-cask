@@ -8,5 +8,5 @@ cask "font-monsieur-la-doulaise" do
 
   font "MonsieurLaDoulaise-Regular.ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

@@ -50,5 +50,5 @@ cask "font-caskaydia-cove-nerd-font" do
   font "CaskaydiaCoveNerdFontPropo-SemiLight.ttf"
   font "CaskaydiaCoveNerdFontPropo-SemiLightItalic.ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

@@ -8,5 +8,5 @@ cask "font-wire-one" do
 
   font "WireOne-Regular.ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

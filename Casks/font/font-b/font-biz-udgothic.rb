@@ -11,5 +11,5 @@ cask "font-biz-udgothic" do
   font "BIZUDGothic-Bold.ttf"
   font "BIZUDGothic-Regular.ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

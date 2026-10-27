@@ -8,5 +8,5 @@ cask "font-souliyo" do
 
   font "Souliyo-Regular.ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

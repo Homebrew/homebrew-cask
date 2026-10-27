@@ -19,5 +19,5 @@ cask "clickhouse" do
 
   binary "clickhouse"
 
-  # No zap stanza required
+  zap :not_required
 end

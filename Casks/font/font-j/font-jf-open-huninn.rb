@@ -9,5 +9,5 @@ cask "font-jf-open-huninn" do
 
   font "jf-openhuninn-#{version}.ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

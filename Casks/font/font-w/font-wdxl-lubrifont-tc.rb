@@ -8,5 +8,5 @@ cask "font-wdxl-lubrifont-tc" do
 
   font "WDXLLubrifontTC-Regular.ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

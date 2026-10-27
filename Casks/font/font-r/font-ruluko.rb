@@ -8,5 +8,5 @@ cask "font-ruluko" do
 
   font "Ruluko-Regular.ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

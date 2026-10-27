@@ -13,5 +13,5 @@ cask "font-sf-pro" do
 
   uninstall pkgutil: "com.apple.pkg.SFProFonts"
 
-  # No zap stanza required
+  zap :not_required
 end

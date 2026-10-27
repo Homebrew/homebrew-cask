@@ -18,5 +18,5 @@ cask "font-geist-pixel" do
   font "geist-font/GeistPixel/otf/GeistPixel-Triangle.otf"
   font "geist-font/GeistPixel/variable/GeistPixel[ELSH].ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

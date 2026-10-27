@@ -8,5 +8,5 @@ cask "font-andale-mono" do
 
   font "AndaleMo.TTF"
 
-  # No zap stanza required
+  zap :not_required
 end

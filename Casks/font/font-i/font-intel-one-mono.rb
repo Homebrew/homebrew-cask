@@ -15,5 +15,5 @@ cask "font-intel-one-mono" do
   font "otf/IntelOneMono-MediumItalic.otf"
   font "otf/IntelOneMono-Regular.otf"
 
-  # No zap stanza required
+  zap :not_required
 end

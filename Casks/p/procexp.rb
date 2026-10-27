@@ -19,5 +19,5 @@ cask "procexp" do
 
   binary "procexp"
 
-  # No zap stanza required
+  zap :not_required
 end

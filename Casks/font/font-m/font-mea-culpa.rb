@@ -8,5 +8,5 @@ cask "font-mea-culpa" do
 
   font "MeaCulpa-Regular.ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

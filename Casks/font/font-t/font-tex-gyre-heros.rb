@@ -26,5 +26,5 @@ cask "font-tex-gyre-heros" do
   font "texgyreheroscn-italic.otf"
   font "texgyreheroscn-regular.otf"
 
-  # No zap stanza required
+  zap :not_required
 end

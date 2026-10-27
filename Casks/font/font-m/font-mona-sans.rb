@@ -207,5 +207,5 @@ cask "font-mona-sans" do
   font "mona-sans-#{version}/fonts/static/otf/MonaSansSemiExpanded-SemiBold.otf"
   font "mona-sans-#{version}/fonts/static/otf/MonaSansSemiExpanded-SemiBoldItalic.otf"
 
-  # No zap stanza required
+  zap :not_required
 end

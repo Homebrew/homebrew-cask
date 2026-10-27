@@ -8,5 +8,5 @@ cask "font-sankofa-display" do
 
   font "SankofaDisplay-Regular.ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

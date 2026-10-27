@@ -8,5 +8,5 @@ cask "font-cherish" do
 
   font "Cherish-Regular.ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

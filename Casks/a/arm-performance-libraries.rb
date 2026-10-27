@@ -30,7 +30,7 @@ cask "arm-performance-libraries" do
             ],
             rmdir:  "/opt/arm"
 
-  # No zap stanza required
+  zap :not_required
 
   caveats do
     license "https://developer.arm.com/documentation/109686/latest"

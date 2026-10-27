@@ -32,5 +32,5 @@ cask "font-geist" do
   font "geist-font/Geist/variable/Geist-Italic[wght].ttf"
   font "geist-font/Geist/variable/Geist[wght].ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

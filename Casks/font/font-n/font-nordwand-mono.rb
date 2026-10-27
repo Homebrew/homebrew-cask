@@ -21,5 +21,5 @@ cask "font-nordwand-mono" do
   font "NordwandMono-Thin.ttf"
   font "NordwandMono-ThinItalic.ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

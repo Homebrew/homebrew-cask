@@ -21,5 +21,5 @@ cask "silnite" do
 
   uninstall pkgutil: "co.eclecticlight.pkg.silniteInstaller"
 
-  # No zap stanza required
+  zap :not_required
 end

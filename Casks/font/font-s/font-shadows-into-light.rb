@@ -8,5 +8,5 @@ cask "font-shadows-into-light" do
 
   font "ShadowsIntoLight.ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

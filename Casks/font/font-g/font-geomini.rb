@@ -8,5 +8,5 @@ cask "font-geomini" do
 
   font "Geomini[wght].ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

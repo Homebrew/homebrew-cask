@@ -8,5 +8,5 @@ cask "font-grechen-fuemen" do
 
   font "GrechenFuemen-Regular.ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

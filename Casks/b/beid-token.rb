@@ -42,5 +42,6 @@ cask "beid-token" do
               "be.eid.middleware",
               "be.fedict.BEIDToken.BEIDTokenApp",
             ]
-  # No zap stanza required
+
+  zap :not_required
 end

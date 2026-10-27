@@ -11,5 +11,5 @@ cask "font-sura" do
   font "Sura-Bold.ttf"
   font "Sura-Regular.ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

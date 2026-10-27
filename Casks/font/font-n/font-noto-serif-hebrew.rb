@@ -8,5 +8,5 @@ cask "font-noto-serif-hebrew" do
 
   font "NotoSerifHebrew[wdth,wght].ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

@@ -16,5 +16,5 @@ cask "parallels-virtualization-sdk" do
 
   uninstall pkgutil: "com.parallels.pkg.sdk"
 
-  # No zap stanza required
+  zap :not_required
 end

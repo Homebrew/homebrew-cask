@@ -54,5 +54,5 @@ cask "font-ubuntu-sans-nerd-font" do
   font "UbuntuSansNerdFontPropo-SemiBold.ttf"
   font "UbuntuSansNerdFontPropo-SemiBoldItalic.ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

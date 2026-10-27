@@ -8,5 +8,5 @@ cask "font-reenie-beanie" do
 
   font "ReenieBeanie.ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

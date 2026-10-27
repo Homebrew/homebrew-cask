@@ -8,5 +8,5 @@ cask "font-cactus-classical-serif" do
 
   font "CactusClassicalSerif-Regular.ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

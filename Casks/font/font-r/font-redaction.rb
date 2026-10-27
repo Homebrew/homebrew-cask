@@ -12,5 +12,5 @@ cask "font-redaction" do
   font "Redaction-Italic.ttf"
   font "Redaction-Regular.ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

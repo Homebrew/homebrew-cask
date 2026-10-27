@@ -8,5 +8,5 @@ cask "font-nothing-you-could-do" do
 
   font "NothingYouCouldDo.ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

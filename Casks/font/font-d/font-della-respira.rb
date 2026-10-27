@@ -8,5 +8,5 @@ cask "font-della-respira" do
 
   font "DellaRespira-Regular.ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

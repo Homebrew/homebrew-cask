@@ -8,5 +8,5 @@ cask "font-pangolin" do
 
   font "Pangolin-Regular.ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

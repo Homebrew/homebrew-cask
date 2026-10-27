@@ -13,5 +13,5 @@ cask "font-quattrocento-sans" do
   font "QuattrocentoSans-Italic.ttf"
   font "QuattrocentoSans-Regular.ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

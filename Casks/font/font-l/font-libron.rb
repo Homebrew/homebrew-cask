@@ -11,5 +11,5 @@ cask "font-libron" do
   font "Libron-Italic.ttf"
   font "Libron-Regular.ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

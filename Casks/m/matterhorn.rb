@@ -21,5 +21,5 @@ cask "matterhorn" do
 
   binary "matterhorn-#{version}-Darwin-#{arch}/matterhorn"
 
-  # No zap stanza required
+  zap :not_required
 end

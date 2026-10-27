@@ -8,5 +8,5 @@ cask "font-homenaje" do
 
   font "Homenaje-Regular.ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

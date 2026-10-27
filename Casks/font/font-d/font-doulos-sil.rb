@@ -13,5 +13,5 @@ cask "font-doulos-sil" do
 
   font "DoulosSIL-#{version}/DoulosSIL-Regular.ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

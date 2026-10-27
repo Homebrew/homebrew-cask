@@ -17,5 +17,5 @@ cask "font-droid-sans-mono-nerd-font" do
   font "DroidSansMNerdFontMono-Regular.otf"
   font "DroidSansMNerdFontPropo-Regular.otf"
 
-  # No zap stanza required
+  zap :not_required
 end

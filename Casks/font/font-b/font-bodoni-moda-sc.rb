@@ -11,5 +11,5 @@ cask "font-bodoni-moda-sc" do
   font "BodoniModaSC-Italic[opsz,wght].ttf"
   font "BodoniModaSC[opsz,wght].ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

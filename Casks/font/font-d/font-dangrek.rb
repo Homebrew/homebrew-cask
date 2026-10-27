@@ -8,5 +8,5 @@ cask "font-dangrek" do
 
   font "Dangrek-Regular.ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

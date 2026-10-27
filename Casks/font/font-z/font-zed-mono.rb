@@ -63,5 +63,5 @@ cask "font-zed-mono" do
   font "zed-mono-thinitalic.ttf"
   font "zed-mono-thinoblique.ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

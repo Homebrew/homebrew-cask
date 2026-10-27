@@ -8,5 +8,5 @@ cask "font-nico-moji" do
 
   font "NicoMoji-Regular.ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

@@ -12,5 +12,5 @@ cask "corelocationcli" do
   app "CoreLocationCLI.app"
   binary "#{appdir}/CoreLocationCLI.app/Contents/MacOS/CoreLocationCLI"
 
-  # no zap stanza required
+  zap :not_required
 end

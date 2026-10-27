@@ -19,5 +19,5 @@ cask "font-medio" do
 
   font "medio.otf"
 
-  # No zap stanza required
+  zap :not_required
 end

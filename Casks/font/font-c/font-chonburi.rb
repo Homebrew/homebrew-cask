@@ -8,5 +8,5 @@ cask "font-chonburi" do
 
   font "Chonburi-Regular.ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

@@ -8,5 +8,5 @@ cask "font-original-surfer" do
 
   font "OriginalSurfer-Regular.ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

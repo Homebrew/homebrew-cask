@@ -8,5 +8,5 @@ cask "font-arbutus-slab" do
 
   font "ArbutusSlab-Regular.ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

@@ -8,5 +8,5 @@ cask "font-barrio" do
 
   font "Barrio-Regular.ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

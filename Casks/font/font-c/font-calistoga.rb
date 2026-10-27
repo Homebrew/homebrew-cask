@@ -8,5 +8,5 @@ cask "font-calistoga" do
 
   font "Calistoga-Regular.ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

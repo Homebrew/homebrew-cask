@@ -14,5 +14,5 @@ cask "font-genyomin" do
   font "GenYoMin#{version.major}-R.ttc"
   font "GenYoMin#{version.major}-SB.ttc"
 
-  # No zap stanza required
+  zap :not_required
 end

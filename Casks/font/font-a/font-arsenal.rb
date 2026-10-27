@@ -13,5 +13,5 @@ cask "font-arsenal" do
   font "Arsenal-Italic.ttf"
   font "Arsenal-Regular.ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

@@ -8,5 +8,5 @@ cask "font-risque" do
 
   font "Risque-Regular.ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

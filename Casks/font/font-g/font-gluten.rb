@@ -8,5 +8,5 @@ cask "font-gluten" do
 
   font "Gluten[slnt,wght].ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

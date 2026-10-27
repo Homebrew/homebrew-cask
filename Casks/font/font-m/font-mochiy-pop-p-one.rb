@@ -8,5 +8,5 @@ cask "font-mochiy-pop-p-one" do
 
   font "MochiyPopPOne-Regular.ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

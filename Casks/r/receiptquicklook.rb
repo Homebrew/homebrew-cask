@@ -14,5 +14,5 @@ cask "receiptquicklook" do
 
   qlplugin "ReceiptQuickLook.qlgenerator"
 
-  # No zap stanza required
+  zap :not_required
 end

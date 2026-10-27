@@ -16,5 +16,5 @@ cask "font-african-serif" do
   font "African Serif ITALIC #{version.no_dots}.ttf"
   font "African Serif REGULAR #{version.no_dots}.ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

@@ -8,5 +8,5 @@ cask "font-notable" do
 
   font "Notable-Regular.ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

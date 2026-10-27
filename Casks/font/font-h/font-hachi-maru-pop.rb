@@ -8,5 +8,5 @@ cask "font-hachi-maru-pop" do
 
   font "HachiMaruPop-Regular.ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

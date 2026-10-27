@@ -11,5 +11,5 @@ cask "font-libre-caslon-condensed" do
   font "LibreCaslonCondensed-Italic[wght].ttf"
   font "LibreCaslonCondensed[wght].ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

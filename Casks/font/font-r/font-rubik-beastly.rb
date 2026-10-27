@@ -8,5 +8,5 @@ cask "font-rubik-beastly" do
 
   font "RubikBeastly-Regular.ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

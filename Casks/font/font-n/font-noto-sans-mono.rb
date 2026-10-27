@@ -13,5 +13,5 @@ cask "font-noto-sans-mono" do
 
   font "NotoSansMono/unhinted/variable/NotoSansMono[wdth,wght].ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

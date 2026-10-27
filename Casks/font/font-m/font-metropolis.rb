@@ -25,5 +25,5 @@ cask "font-metropolis" do
   font "Metropolis-Thin.otf"
   font "Metropolis-ThinItalic.otf"
 
-  # No zap stanza required
+  zap :not_required
 end

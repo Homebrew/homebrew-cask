@@ -12,5 +12,5 @@ cask "font-nexon-lv2-gothic" do
   font "OTF/NEXON Lv2 Gothic OTF Medium.otf"
   font "OTF/NEXON Lv2 Gothic OTF.otf"
 
-  # No zap stanza required
+  zap :not_required
 end

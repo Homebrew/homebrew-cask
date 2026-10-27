@@ -37,5 +37,5 @@ cask "font-meltho" do
   font "melthofonts-#{version.csv.first.major}/melthofonts-#{version.csv.first}/SyrCOMUrhoy.otf"
   font "melthofonts-#{version.csv.first.major}/melthofonts-#{version.csv.first}/SyrCOMUrhoyBold.otf"
 
-  # No zap stanza required
+  zap :not_required
 end

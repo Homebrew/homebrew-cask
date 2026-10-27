@@ -14,5 +14,5 @@ cask "font-abhaya-libre" do
   font "AbhayaLibre-Regular.ttf"
   font "AbhayaLibre-SemiBold.ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

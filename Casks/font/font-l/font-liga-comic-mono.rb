@@ -11,5 +11,5 @@ cask "font-liga-comic-mono" do
   font "comic-mono-font-master/LigaComicMonoNerdFont-Bold.ttf"
   font "comic-mono-font-master/LigaComicMonoNerdFont-Regular.ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

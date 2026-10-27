@@ -8,5 +8,5 @@ cask "font-kotta-one" do
 
   font "KottaOne-Regular.ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

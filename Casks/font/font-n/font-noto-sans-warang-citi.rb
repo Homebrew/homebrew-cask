@@ -8,5 +8,5 @@ cask "font-noto-sans-warang-citi" do
 
   font "NotoSansWarangCiti-Regular.ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

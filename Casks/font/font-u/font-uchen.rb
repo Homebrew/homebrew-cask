@@ -8,5 +8,5 @@ cask "font-uchen" do
 
   font "Uchen-Regular.ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

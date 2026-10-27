@@ -8,5 +8,5 @@ cask "font-poor-story" do
 
   font "PoorStory-Regular.ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

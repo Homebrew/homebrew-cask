@@ -18,5 +18,5 @@ cask "font-noto-sans-devanagari-ui" do
   font "NotoSansDevanagariUI-SemiBold.ttf"
   font "NotoSansDevanagariUI-Thin.ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

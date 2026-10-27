@@ -8,5 +8,5 @@ cask "font-unbounded" do
 
   font "Unbounded[wght].ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

@@ -8,5 +8,5 @@ cask "font-typographer-woodcut-initials-one" do
 
   font "TypographerWoodcut01.ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

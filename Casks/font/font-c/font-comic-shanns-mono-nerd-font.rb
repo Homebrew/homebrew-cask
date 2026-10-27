@@ -20,5 +20,5 @@ cask "font-comic-shanns-mono-nerd-font" do
   font "ComicShannsMonoNerdFontPropo-Bold.otf"
   font "ComicShannsMonoNerdFontPropo-Regular.otf"
 
-  # No zap stanza required
+  zap :not_required
 end

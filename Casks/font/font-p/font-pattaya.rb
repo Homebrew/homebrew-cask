@@ -8,5 +8,5 @@ cask "font-pattaya" do
 
   font "Pattaya-Regular.ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

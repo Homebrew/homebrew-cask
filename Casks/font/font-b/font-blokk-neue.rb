@@ -8,5 +8,5 @@ cask "font-blokk-neue" do
 
   font "BLOKKNeue-Regular.otf"
 
-  # No zap stanza required
+  zap :not_required
 end

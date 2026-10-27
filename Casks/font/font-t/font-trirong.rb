@@ -27,5 +27,5 @@ cask "font-trirong" do
   font "Trirong-Thin.ttf"
   font "Trirong-ThinItalic.ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

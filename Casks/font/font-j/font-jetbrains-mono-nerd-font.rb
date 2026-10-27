@@ -110,5 +110,5 @@ cask "font-jetbrains-mono-nerd-font" do
   font "JetBrainsMonoNerdFontPropo-Thin.ttf"
   font "JetBrainsMonoNerdFontPropo-ThinItalic.ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

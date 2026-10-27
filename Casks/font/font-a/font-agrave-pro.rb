@@ -8,5 +8,5 @@ cask "font-agrave-pro" do
 
   font "AgravePro[wght].ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

@@ -8,5 +8,5 @@ cask "font-kode-mono" do
 
   font "KodeMono[ROND,wdth,wght].ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

@@ -12,5 +12,5 @@ cask "font-old-standard-tt" do
   font "OldStandard-Italic.ttf"
   font "OldStandard-Regular.ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

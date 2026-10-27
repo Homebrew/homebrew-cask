@@ -8,5 +8,5 @@ cask "font-syne-mono" do
 
   font "SyneMono-Regular.ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

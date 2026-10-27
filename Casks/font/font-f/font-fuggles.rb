@@ -8,5 +8,5 @@ cask "font-fuggles" do
 
   font "Fuggles-Regular.ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

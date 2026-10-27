@@ -8,5 +8,5 @@ cask "font-text-me-one" do
 
   font "TextMeOne-Regular.ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

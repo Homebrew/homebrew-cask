@@ -13,5 +13,5 @@ cask "font-sf-compact" do
 
   uninstall pkgutil: "com.apple.pkg.SFCompactFonts"
 
-  # No zap stanza required
+  zap :not_required
 end

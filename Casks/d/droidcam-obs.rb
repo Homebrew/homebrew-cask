@@ -21,5 +21,5 @@ cask "droidcam-obs" do
             delete:  "/Library/Application Support/obs-studio/plugins/droidcam-obs",
             rmdir:   "/Library/Application Support/obs-studio/plugins"
 
-  # No zap stanza required
+  zap :not_required
 end

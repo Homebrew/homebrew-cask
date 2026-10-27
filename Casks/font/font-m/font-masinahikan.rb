@@ -10,5 +10,5 @@ cask "font-masinahikan" do
   font "Masinahikan_h_Bold.ttf"
   font "Masinahikan_h_Semi.ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

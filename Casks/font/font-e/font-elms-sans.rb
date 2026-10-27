@@ -11,5 +11,5 @@ cask "font-elms-sans" do
   font "ElmsSans-Italic[wght].ttf"
   font "ElmsSans[wght].ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

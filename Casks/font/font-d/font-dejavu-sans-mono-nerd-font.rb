@@ -26,5 +26,5 @@ cask "font-dejavu-sans-mono-nerd-font" do
   font "DejaVuSansMNerdFontPropo-Oblique.ttf"
   font "DejaVuSansMNerdFontPropo-Regular.ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

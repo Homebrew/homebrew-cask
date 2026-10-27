@@ -8,5 +8,5 @@ cask "font-chiron-goround-tc" do
 
   font "ChironGoRoundTC[wght].ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

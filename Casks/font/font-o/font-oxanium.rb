@@ -8,5 +8,5 @@ cask "font-oxanium" do
 
   font "Oxanium[wght].ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

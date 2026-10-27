@@ -14,5 +14,5 @@ cask "qlcommonmark" do
 
   qlplugin "QLCommonMark.qlgenerator"
 
-  # No zap stanza required
+  zap :not_required
 end

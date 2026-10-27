@@ -13,5 +13,5 @@ cask "font-cambay" do
   font "Cambay-Italic.ttf"
   font "Cambay-Regular.ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

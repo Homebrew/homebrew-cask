@@ -8,5 +8,5 @@ cask "font-anton" do
 
   font "Anton-Regular.ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

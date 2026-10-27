@@ -10,5 +10,5 @@ cask "font-makinas4" do
   font "makinas4/Makinas-4-Flat.otf"
   font "makinas4/Makinas-4-Square.otf"
 
-  # No zap stanza required
+  zap :not_required
 end

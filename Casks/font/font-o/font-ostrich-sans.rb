@@ -16,5 +16,5 @@ cask "font-ostrich-sans" do
   font "ostrich-sans-master/OstrichSansInline-Regular.otf"
   font "ostrich-sans-master/OstrichSansRounded-Medium.otf"
 
-  # No zap stanza required
+  zap :not_required
 end

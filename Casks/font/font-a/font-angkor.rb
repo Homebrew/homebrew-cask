@@ -8,5 +8,5 @@ cask "font-angkor" do
 
   font "Angkor-Regular.ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

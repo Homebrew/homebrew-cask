@@ -28,5 +28,5 @@ cask "canon-ufrii-driver" do
   uninstall pkgutil: "jp.co.canon.CUPSPrinter.*",
             rmdir:   "/Library/Printers/Canon"
 
-  # No zap stanza required
+  zap :not_required
 end

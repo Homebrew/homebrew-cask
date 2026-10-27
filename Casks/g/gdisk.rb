@@ -15,5 +15,5 @@ cask "gdisk" do
 
   uninstall pkgutil: "com.rodsbooks.pkg.gdisk"
 
-  # No zap stanza required
+  zap :not_required
 end

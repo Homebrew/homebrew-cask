@@ -8,5 +8,5 @@ cask "font-habibi" do
 
   font "Habibi-Regular.ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

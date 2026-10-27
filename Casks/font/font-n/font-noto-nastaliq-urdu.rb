@@ -8,5 +8,5 @@ cask "font-noto-nastaliq-urdu" do
 
   font "NotoNastaliqUrdu[wght].ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

@@ -8,5 +8,5 @@ cask "font-dr-sugiyama" do
 
   font "DrSugiyama-Regular.ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

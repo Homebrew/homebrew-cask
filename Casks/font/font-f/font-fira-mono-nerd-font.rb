@@ -23,5 +23,5 @@ cask "font-fira-mono-nerd-font" do
   font "FiraMonoNerdFontPropo-Medium.otf"
   font "FiraMonoNerdFontPropo-Regular.otf"
 
-  # No zap stanza required
+  zap :not_required
 end

@@ -11,5 +11,5 @@ cask "font-stoke" do
   font "Stoke-Light.ttf"
   font "Stoke-Regular.ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

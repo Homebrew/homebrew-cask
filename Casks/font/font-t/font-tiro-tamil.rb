@@ -11,5 +11,5 @@ cask "font-tiro-tamil" do
   font "TiroTamil-Italic.ttf"
   font "TiroTamil-Regular.ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

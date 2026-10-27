@@ -33,5 +33,5 @@ cask "font-genjyuugothic-l" do
   font "GenJyuuGothicL-P-Regular.ttf"
   font "GenJyuuGothicL-Regular.ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

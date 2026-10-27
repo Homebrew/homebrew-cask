@@ -21,5 +21,5 @@ cask "yubihsm2-sdk" do
 
   uninstall pkgutil: "com.yubico.yubihsm2-sdk"
 
-  # No zap stanza required
+  zap :not_required
 end

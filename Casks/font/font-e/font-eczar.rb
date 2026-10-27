@@ -8,5 +8,5 @@ cask "font-eczar" do
 
   font "Eczar[wght].ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

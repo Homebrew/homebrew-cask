@@ -48,5 +48,5 @@ cask "font-annotation-mono" do
   font "dist/otf/Thin_Upright_Italic.otf"
   font "dist/variable/AnnotationMono-VF.ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

@@ -11,5 +11,5 @@ cask "font-xanh-mono" do
   font "XanhMono-Italic.ttf"
   font "XanhMono-Regular.ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

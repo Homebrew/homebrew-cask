@@ -28,7 +28,7 @@ cask "dynamodb-local" do
                     "#{staged_path}/DynamoDBLocal.jar",
                   ]
 
-  # No zap stanza required
+  zap :not_required
 
   caveats do
     depends_on_java "17+"

@@ -8,5 +8,5 @@ cask "font-heebo" do
 
   font "Heebo[wght].ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

@@ -8,5 +8,5 @@ cask "font-kings" do
 
   font "Kings-Regular.ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

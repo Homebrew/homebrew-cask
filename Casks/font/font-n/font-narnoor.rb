@@ -14,5 +14,5 @@ cask "font-narnoor" do
   font "Narnoor-Regular.ttf"
   font "Narnoor-SemiBold.ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

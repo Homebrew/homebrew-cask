@@ -20,5 +20,5 @@ cask "font-fandol" do
   font "fandol/FandolSong-Bold.otf"
   font "fandol/FandolSong-Regular.otf"
 
-  # No zap stanza required
+  zap :not_required
 end

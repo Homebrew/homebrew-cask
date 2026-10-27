@@ -8,5 +8,5 @@ cask "font-dynapuff" do
 
   font "DynaPuff[wdth,wght].ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

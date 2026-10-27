@@ -14,5 +14,5 @@ cask "font-tengwar-telcontar" do
   font "tengtelc.ttf"
   font "tengtelcb.ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

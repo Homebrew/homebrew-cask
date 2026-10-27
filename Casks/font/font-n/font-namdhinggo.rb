@@ -14,5 +14,5 @@ cask "font-namdhinggo" do
   font "Namdhinggo-Regular.ttf"
   font "Namdhinggo-SemiBold.ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

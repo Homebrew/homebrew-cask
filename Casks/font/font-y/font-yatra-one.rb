@@ -8,5 +8,5 @@ cask "font-yatra-one" do
 
   font "YatraOne-Regular.ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

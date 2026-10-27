@@ -18,5 +18,5 @@ cask "peninsula" do
 
   uninstall quit: "Celve.Peninsula"
 
-  # No zap stanza required
+  zap :not_required
 end

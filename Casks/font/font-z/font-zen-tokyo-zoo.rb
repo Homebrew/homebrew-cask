@@ -8,5 +8,5 @@ cask "font-zen-tokyo-zoo" do
 
   font "ZenTokyoZoo-Regular.ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

@@ -8,5 +8,5 @@ cask "font-league-script" do
 
   font "LeagueScript-Regular.ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

@@ -8,5 +8,5 @@ cask "font-chokokutai" do
 
   font "Chokokutai-Regular.ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

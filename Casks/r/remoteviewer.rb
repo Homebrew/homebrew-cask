@@ -16,5 +16,5 @@ cask "remoteviewer" do
 
   app "RemoteViewer.app"
 
-  # No zap stanza required
+  zap :not_required
 end

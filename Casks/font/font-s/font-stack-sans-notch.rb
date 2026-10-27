@@ -8,5 +8,5 @@ cask "font-stack-sans-notch" do
 
   font "StackSansNotch[wght].ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

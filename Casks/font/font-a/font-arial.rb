@@ -11,5 +11,5 @@ cask "font-arial" do
   font "Arialbi.TTF"
   font "Ariali.TTF"
 
-  # No zap stanza required
+  zap :not_required
 end

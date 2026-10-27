@@ -8,5 +8,5 @@ cask "font-noto-sans-inscriptional-pahlavi" do
 
   font "NotoSansInscriptionalPahlavi-Regular.ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

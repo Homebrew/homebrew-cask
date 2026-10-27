@@ -11,7 +11,7 @@ cask "eurkey-next" do
 
   keyboard_layout "EurKEY-Next.bundle"
 
-  # No zap stanza required
+  zap :not_required
 
   caveats do
     reboot

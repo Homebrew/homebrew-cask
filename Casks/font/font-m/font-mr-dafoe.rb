@@ -8,5 +8,5 @@ cask "font-mr-dafoe" do
 
   font "MrDafoe-Regular.ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

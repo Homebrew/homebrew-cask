@@ -8,5 +8,5 @@ cask "font-seymour-one" do
 
   font "SeymourOne-Regular.ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

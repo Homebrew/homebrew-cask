@@ -14,9 +14,9 @@ cask "liquibase-secure" do
 
   binary "liquibase"
 
+  zap :not_required
+
   caveats do
     depends_on_java "17+"
   end
-
-  # No zap stanza required
 end

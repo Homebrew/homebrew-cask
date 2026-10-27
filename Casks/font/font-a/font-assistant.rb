@@ -8,5 +8,5 @@ cask "font-assistant" do
 
   font "Assistant[wght].ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

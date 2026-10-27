@@ -12,5 +12,5 @@ cask "font-manjari" do
   font "Manjari-Regular.ttf"
   font "Manjari-Thin.ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

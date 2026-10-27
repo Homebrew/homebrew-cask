@@ -17,5 +17,5 @@ cask "font-faune" do
   font "Faune_Fonts/Otf/Faune-TextItalic.otf"
   font "Faune_Fonts/Otf/Faune-TextRegular.otf"
 
-  # No zap stanza required
+  zap :not_required
 end

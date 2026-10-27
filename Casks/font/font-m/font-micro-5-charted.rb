@@ -8,5 +8,5 @@ cask "font-micro-5-charted" do
 
   font "Micro5Charted-Regular.ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

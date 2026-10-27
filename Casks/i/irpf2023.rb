@@ -22,7 +22,7 @@ cask "irpf2023" do
 
   uninstall delete: "/Applications/IRPF2023"
 
-  # No zap stanza required
+  zap :not_required
 
   caveats <<~EOS
     IRPF2023 will store data in ~/Documents/ProgramasRFB/IRPF2023.

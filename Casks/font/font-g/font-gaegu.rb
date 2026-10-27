@@ -12,5 +12,5 @@ cask "font-gaegu" do
   font "Gaegu-Light.ttf"
   font "Gaegu-Regular.ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

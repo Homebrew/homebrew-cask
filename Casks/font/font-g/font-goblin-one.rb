@@ -8,5 +8,5 @@ cask "font-goblin-one" do
 
   font "GoblinOne.ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

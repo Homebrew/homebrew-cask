@@ -8,5 +8,5 @@ cask "font-optician-sans" do
 
   font "Optician-Sans.otf"
 
-  # No zap stanza required
+  zap :not_required
 end

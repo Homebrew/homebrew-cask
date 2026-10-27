@@ -24,5 +24,5 @@ cask "objectivesharpie" do
 
   uninstall pkgutil: "com.xamarin.ObjectiveSharpie"
 
-  # No zap stanza required
+  zap :not_required
 end

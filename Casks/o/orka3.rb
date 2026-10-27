@@ -27,5 +27,5 @@ cask "orka3" do
 
   uninstall pkgutil: "com.macstadium.orka3.pkg"
 
-  # No zap stanza required
+  zap :not_required
 end

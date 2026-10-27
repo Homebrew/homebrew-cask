@@ -8,5 +8,5 @@ cask "font-marko-one" do
 
   font "MarkoOne-Regular.ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

@@ -13,5 +13,5 @@ cask "font-almendra" do
   font "Almendra-Italic.ttf"
   font "Almendra-Regular.ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

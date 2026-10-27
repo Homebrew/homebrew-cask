@@ -11,5 +11,5 @@ cask "font-winky-rough" do
   font "WinkyRough-Italic[wght].ttf"
   font "WinkyRough[wght].ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

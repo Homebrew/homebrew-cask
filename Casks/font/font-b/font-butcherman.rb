@@ -8,5 +8,5 @@ cask "font-butcherman" do
 
   font "Butcherman-Regular.ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

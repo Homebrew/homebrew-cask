@@ -45,5 +45,5 @@ cask "font-dream-han-sans" do
   font "DreamHanSans-W8.ttc"
   font "DreamHanSans-W9.ttc"
 
-  # No zap stanza required
+  zap :not_required
 end

@@ -8,5 +8,5 @@ cask "font-antic-didone" do
 
   font "AnticDidone-Regular.ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

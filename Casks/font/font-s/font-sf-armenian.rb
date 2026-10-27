@@ -13,5 +13,5 @@ cask "font-sf-armenian" do
 
   uninstall pkgutil: "com.apple.pkg.SFArmenianFonts"
 
-  # No zap stanza required
+  zap :not_required
 end

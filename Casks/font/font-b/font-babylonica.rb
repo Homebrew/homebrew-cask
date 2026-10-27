@@ -8,5 +8,5 @@ cask "font-babylonica" do
 
   font "Babylonica-Regular.ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

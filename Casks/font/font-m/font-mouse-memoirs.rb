@@ -8,5 +8,5 @@ cask "font-mouse-memoirs" do
 
   font "MouseMemoirs-Regular.ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

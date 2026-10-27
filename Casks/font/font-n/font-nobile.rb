@@ -15,5 +15,5 @@ cask "font-nobile" do
   font "Nobile-MediumItalic.ttf"
   font "Nobile-Regular.ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

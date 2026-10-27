@@ -8,5 +8,5 @@ cask "font-great-vibes" do
 
   font "GreatVibes-Regular.ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

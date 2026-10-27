@@ -12,5 +12,5 @@ cask "font-lxgw-heartserif" do
 
   font "LXGWHeartSerif.ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

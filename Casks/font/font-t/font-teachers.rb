@@ -11,5 +11,5 @@ cask "font-teachers" do
   font "Teachers-Italic[wght].ttf"
   font "Teachers[wght].ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

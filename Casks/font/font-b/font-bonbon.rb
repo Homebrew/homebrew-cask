@@ -8,5 +8,5 @@ cask "font-bonbon" do
 
   font "Bonbon-Regular.ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

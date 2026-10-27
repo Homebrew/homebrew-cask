@@ -20,5 +20,5 @@ cask "sentinel" do
 
   binary "sentinel"
 
-  # No zap stanza required
+  zap :not_required
 end

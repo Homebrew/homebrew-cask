@@ -8,5 +8,5 @@ cask "font-song-myung" do
 
   font "SongMyung-Regular.ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

@@ -12,5 +12,5 @@ cask "font-pt-astra-serif" do
   font "PT/PT/PT-Astra-Serif/pt-astra-serif_italic.ttf"
   font "PT/PT/PT-Astra-Serif/pt-astra-serif_regular.ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

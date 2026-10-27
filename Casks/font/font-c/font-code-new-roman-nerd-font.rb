@@ -23,5 +23,5 @@ cask "font-code-new-roman-nerd-font" do
   font "CodeNewRomanNerdFontPropo-Italic.otf"
   font "CodeNewRomanNerdFontPropo-Regular.otf"
 
-  # No zap stanza required
+  zap :not_required
 end

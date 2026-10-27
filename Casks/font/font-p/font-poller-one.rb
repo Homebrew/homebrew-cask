@@ -8,5 +8,5 @@ cask "font-poller-one" do
 
   font "PollerOne.ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

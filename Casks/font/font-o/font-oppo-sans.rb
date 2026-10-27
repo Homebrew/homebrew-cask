@@ -24,5 +24,5 @@ cask "font-oppo-sans" do
 
   font "OPPO_Sans_#{version.csv.first}/OPPO Sans #{version.csv.first}.ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

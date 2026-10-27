@@ -19,5 +19,5 @@ cask "baseline" do
               "/usr/local/Baseline",
             ]
 
-  # No zap stanza required
+  zap :not_required
 end

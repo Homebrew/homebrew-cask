@@ -8,5 +8,5 @@ cask "font-kite-one" do
 
   font "KiteOne-Regular.ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

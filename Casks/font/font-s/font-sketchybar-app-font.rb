@@ -8,5 +8,5 @@ cask "font-sketchybar-app-font" do
 
   font "sketchybar-app-font.ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

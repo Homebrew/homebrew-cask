@@ -11,5 +11,5 @@ cask "font-alumni-sans-collegiate-one-sc" do
   font "AlumniSansCollegiateOneSC-Italic.ttf"
   font "AlumniSansCollegiateOneSC-Regular.ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

@@ -16,5 +16,5 @@ cask "font-iming" do
   font "I.Ming-#{version}/#{version}/PMingI.U-#{version}.ttf"
   font "I.Ming-#{version}/#{version}/PMingI.UVar-#{version}.ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

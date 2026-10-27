@@ -8,5 +8,5 @@ cask "font-bowlby-one-sc" do
 
   font "BowlbyOneSC-Regular.ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

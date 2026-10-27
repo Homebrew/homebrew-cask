@@ -14,5 +14,5 @@ cask "ipynb-quicklook" do
 
   qlplugin "ipynb-quicklook.qlgenerator"
 
-  # No zap stanza required
+  zap :not_required
 end

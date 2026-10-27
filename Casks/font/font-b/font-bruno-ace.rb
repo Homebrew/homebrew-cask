@@ -8,5 +8,5 @@ cask "font-bruno-ace" do
 
   font "BrunoAce-Regular.ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

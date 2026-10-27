@@ -8,5 +8,5 @@ cask "font-el-messiri" do
 
   font "ElMessiri[wght].ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

@@ -8,5 +8,5 @@ cask "font-mystery-quest" do
 
   font "MysteryQuest-Regular.ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

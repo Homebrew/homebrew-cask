@@ -16,5 +16,5 @@ cask "font-miriam-mono-clm" do
   font "culmus-#{version}/MiriamMonoCLM-Book.ttf"
   font "culmus-#{version}/MiriamMonoCLM-BookOblique.ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

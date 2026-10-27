@@ -8,5 +8,5 @@ cask "font-workbench" do
 
   font "Workbench[BLED,SCAN].ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

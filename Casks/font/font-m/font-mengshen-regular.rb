@@ -24,5 +24,5 @@ cask "font-mengshen-regular" do
 
   font "Mengshen-HanSerif.ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

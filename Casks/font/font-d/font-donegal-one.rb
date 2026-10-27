@@ -8,5 +8,5 @@ cask "font-donegal-one" do
 
   font "DonegalOne-Regular.ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

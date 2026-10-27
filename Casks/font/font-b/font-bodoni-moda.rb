@@ -9,5 +9,5 @@ cask "font-bodoni-moda" do
   font "Bodoni-master/fonts/variable/Bodoni-Italic-VF.ttf"
   font "Bodoni-master/fonts/variable/Bodoni-VF.ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

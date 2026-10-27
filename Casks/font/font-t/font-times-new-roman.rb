@@ -11,5 +11,5 @@ cask "font-times-new-roman" do
   font "Timesbi.TTF"
   font "Timesi.TTF"
 
-  # No zap stanza required
+  zap :not_required
 end

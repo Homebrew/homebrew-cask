@@ -8,5 +8,5 @@ cask "font-yeon-sung" do
 
   font "YeonSung-Regular.ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

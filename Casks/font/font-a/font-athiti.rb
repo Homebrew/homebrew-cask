@@ -15,5 +15,5 @@ cask "font-athiti" do
   font "Athiti-Regular.ttf"
   font "Athiti-SemiBold.ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

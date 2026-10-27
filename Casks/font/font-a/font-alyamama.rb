@@ -8,5 +8,5 @@ cask "font-alyamama" do
 
   font "Alyamama[wght].ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

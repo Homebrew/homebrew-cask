@@ -17,5 +17,5 @@ cask "font-blinker" do
   font "Blinker-SemiBold.ttf"
   font "Blinker-Thin.ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

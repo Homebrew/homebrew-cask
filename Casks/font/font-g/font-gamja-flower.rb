@@ -8,5 +8,5 @@ cask "font-gamja-flower" do
 
   font "GamjaFlower-Regular.ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

@@ -21,5 +21,5 @@ cask "alisma" do
 
   uninstall pkgutil: "co.eclecticlight.pkg.alismaInstaller"
 
-  # No zap stanza required
+  zap :not_required
 end

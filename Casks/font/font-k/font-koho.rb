@@ -21,5 +21,5 @@ cask "font-koho" do
   font "KoHo-SemiBold.ttf"
   font "KoHo-SemiBoldItalic.ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

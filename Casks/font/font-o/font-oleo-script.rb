@@ -11,5 +11,5 @@ cask "font-oleo-script" do
   font "OleoScript-Bold.ttf"
   font "OleoScript-Regular.ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

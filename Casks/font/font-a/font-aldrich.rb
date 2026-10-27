@@ -8,5 +8,5 @@ cask "font-aldrich" do
 
   font "Aldrich-Regular.ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

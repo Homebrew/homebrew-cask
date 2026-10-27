@@ -11,5 +11,5 @@ cask "font-archivo-narrow" do
   font "ArchivoNarrow-Italic[wght].ttf"
   font "ArchivoNarrow[wght].ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

@@ -8,5 +8,5 @@ cask "font-meie-script" do
 
   font "MeieScript-Regular.ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

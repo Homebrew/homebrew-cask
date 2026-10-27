@@ -8,5 +8,5 @@ cask "font-jacquard-24" do
 
   font "Jacquard24-Regular.ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

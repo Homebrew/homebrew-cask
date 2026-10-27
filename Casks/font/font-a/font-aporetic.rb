@@ -23,5 +23,5 @@ cask "font-aporetic" do
   font "aporetic-#{version}/aporetic-serif/TTF/aporetic-serif-normalregularitalic.ttf"
   font "aporetic-#{version}/aporetic-serif/TTF/aporetic-serif-normalregularupright.ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

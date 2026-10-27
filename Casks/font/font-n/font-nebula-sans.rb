@@ -24,5 +24,5 @@ cask "font-nebula-sans" do
   font "OTF/NebulaSans-Semibold.otf"
   font "OTF/NebulaSans-SemiboldItalic.otf"
 
-  # No zap stanza required
+  zap :not_required
 end

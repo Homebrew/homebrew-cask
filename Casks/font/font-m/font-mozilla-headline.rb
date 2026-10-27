@@ -8,5 +8,5 @@ cask "font-mozilla-headline" do
 
   font "MozillaHeadline[wdth,wght].ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

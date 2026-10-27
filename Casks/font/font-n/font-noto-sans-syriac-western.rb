@@ -8,5 +8,5 @@ cask "font-noto-sans-syriac-western" do
 
   font "NotoSansSyriacWestern[wght].ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

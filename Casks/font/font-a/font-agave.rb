@@ -15,5 +15,5 @@ cask "font-agave" do
   font "agave-#{version}/dist/Agave-Regular-zeroslashed.ttf"
   font "agave-#{version}/dist/Agave-Regular.ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

@@ -11,5 +11,5 @@ cask "font-menlo-for-powerline" do
   font "Menlo-for-Powerline-master/Menlo Italic for Powerline.ttf"
   font "Menlo-for-Powerline-master/Menlo for Powerline.ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

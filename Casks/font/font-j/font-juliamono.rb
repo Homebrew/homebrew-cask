@@ -21,5 +21,5 @@ cask "font-juliamono" do
   font "JuliaMono-SemiBold.ttf"
   font "JuliaMono-SemiBoldItalic.ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

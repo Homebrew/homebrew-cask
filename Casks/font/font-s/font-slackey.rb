@@ -8,5 +8,5 @@ cask "font-slackey" do
 
   font "Slackey-Regular.ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

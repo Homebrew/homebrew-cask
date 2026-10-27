@@ -13,5 +13,5 @@ cask "font-volkhov" do
   font "Volkhov-Italic.ttf"
   font "Volkhov-Regular.ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

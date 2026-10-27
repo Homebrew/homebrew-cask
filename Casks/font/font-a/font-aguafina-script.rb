@@ -8,5 +8,5 @@ cask "font-aguafina-script" do
 
   font "AguafinaScript-Regular.ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

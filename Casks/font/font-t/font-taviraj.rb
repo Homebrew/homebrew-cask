@@ -27,5 +27,5 @@ cask "font-taviraj" do
   font "Taviraj-Thin.ttf"
   font "Taviraj-ThinItalic.ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

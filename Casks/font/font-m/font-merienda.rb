@@ -8,5 +8,5 @@ cask "font-merienda" do
 
   font "Merienda[wght].ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

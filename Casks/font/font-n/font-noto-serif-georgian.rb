@@ -8,5 +8,5 @@ cask "font-noto-serif-georgian" do
 
   font "NotoSerifGeorgian[wdth,wght].ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

@@ -8,5 +8,5 @@ cask "font-alkatra" do
 
   font "Alkatra[wght].ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

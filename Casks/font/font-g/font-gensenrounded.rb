@@ -14,5 +14,5 @@ cask "font-gensenrounded" do
   font "GenSenRounded#{version.major}-M.ttc"
   font "GenSenRounded#{version.major}-R.ttc"
 
-  # No zap stanza required
+  zap :not_required
 end

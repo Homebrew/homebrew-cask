@@ -9,5 +9,5 @@ cask "font-server-mono" do
   font "public/fonts/ServerMono-Regular.otf"
   font "public/fonts/ServerMono-RegularOblique.otf"
 
-  # No zap stanza required
+  zap :not_required
 end

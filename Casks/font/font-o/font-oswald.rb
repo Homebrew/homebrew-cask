@@ -8,5 +8,5 @@ cask "font-oswald" do
 
   font "Oswald[wght].ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

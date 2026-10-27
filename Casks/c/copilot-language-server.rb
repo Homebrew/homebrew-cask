@@ -15,5 +15,5 @@ cask "copilot-language-server" do
 
   binary "copilot-language-server"
 
-  # No zap stanza required
+  zap :not_required
 end

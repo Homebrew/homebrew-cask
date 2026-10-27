@@ -13,5 +13,5 @@ cask "font-harmattan" do
   font "Harmattan-Regular.ttf"
   font "Harmattan-SemiBold.ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

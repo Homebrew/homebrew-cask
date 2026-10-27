@@ -11,5 +11,5 @@ cask "font-noto-sans-display" do
   font "NotoSansDisplay-Italic[wdth,wght].ttf"
   font "NotoSansDisplay[wdth,wght].ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

@@ -8,5 +8,5 @@ cask "font-convergence" do
 
   font "Convergence-Regular.ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

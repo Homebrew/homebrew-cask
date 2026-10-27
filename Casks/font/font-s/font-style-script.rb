@@ -8,5 +8,5 @@ cask "font-style-script" do
 
   font "StyleScript-Regular.ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

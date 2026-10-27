@@ -33,5 +33,5 @@ cask "sshfs-mac" do
 
   uninstall pkgutil: "io.macfuse.installer.components.sshfs"
 
-  # No zap stanza required
+  zap :not_required
 end

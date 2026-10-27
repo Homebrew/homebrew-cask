@@ -8,5 +8,5 @@ cask "font-noto-traditional-nushu" do
 
   font "NotoTraditionalNushu[wght].ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

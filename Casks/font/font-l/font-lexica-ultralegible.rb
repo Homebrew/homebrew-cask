@@ -15,5 +15,5 @@ cask "font-lexica-ultralegible" do
   font "lexica-ultralegible-#{version}/fonts/ttf/LexicaUltralegible-Italic.ttf"
   font "lexica-ultralegible-#{version}/fonts/ttf/LexicaUltralegible-Regular.ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

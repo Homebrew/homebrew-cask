@@ -8,5 +8,5 @@ cask "font-caacupe-one" do
 
   font "CaacupeOne-Regular.ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

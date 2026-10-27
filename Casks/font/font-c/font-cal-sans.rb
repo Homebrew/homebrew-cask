@@ -28,5 +28,5 @@ cask "font-cal-sans" do
   font "calsans-static-essentials/CalSansTextUI-SemiBold.ttf"
   font "calsans-static-essentials/CalSansTextUI-SemiBoldItalic.ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

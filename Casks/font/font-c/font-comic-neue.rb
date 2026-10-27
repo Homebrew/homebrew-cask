@@ -15,5 +15,5 @@ cask "font-comic-neue" do
   font "ComicNeue-LightItalic.ttf"
   font "ComicNeue-Regular.ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

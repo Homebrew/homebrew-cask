@@ -33,5 +33,5 @@ cask "distroav" do
     "org.distroav.distroav",
   ]
 
-  # No zap stanza required
+  zap :not_required
 end

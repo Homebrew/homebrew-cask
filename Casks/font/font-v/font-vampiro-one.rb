@@ -8,5 +8,5 @@ cask "font-vampiro-one" do
 
   font "VampiroOne-Regular.ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

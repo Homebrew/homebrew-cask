@@ -42,5 +42,5 @@ cask "font-liberation-nerd-font" do
   font "LiterationSerifNerdFontPropo-Italic.ttf"
   font "LiterationSerifNerdFontPropo-Regular.ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

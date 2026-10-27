@@ -11,5 +11,5 @@ cask "anybar" do
 
   app "AnyBar.app"
 
-  # No zap stanza required
+  zap :not_required
 end

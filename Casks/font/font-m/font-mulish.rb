@@ -11,5 +11,5 @@ cask "font-mulish" do
   font "Mulish-Italic[wght].ttf"
   font "Mulish[wght].ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

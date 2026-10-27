@@ -8,5 +8,5 @@ cask "font-faculty-glyphic" do
 
   font "FacultyGlyphic-Regular.ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

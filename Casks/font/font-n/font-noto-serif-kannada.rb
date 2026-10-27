@@ -8,5 +8,5 @@ cask "font-noto-serif-kannada" do
 
   font "NotoSerifKannada[wght].ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

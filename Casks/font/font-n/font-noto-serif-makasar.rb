@@ -8,5 +8,5 @@ cask "font-noto-serif-makasar" do
 
   font "NotoSerifMakasar-Regular.ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

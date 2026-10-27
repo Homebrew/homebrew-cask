@@ -8,5 +8,5 @@ cask "font-bukyvede-regular" do
 
   font "BukyVede-Regular.ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

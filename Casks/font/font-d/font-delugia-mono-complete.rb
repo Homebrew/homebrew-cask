@@ -13,5 +13,5 @@ cask "font-delugia-mono-complete" do
   font "delugia-mono-complete/DelugiaMonoCompleteLight-Italic.ttf"
   font "delugia-mono-complete/DelugiaMonoCompleteLight.ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

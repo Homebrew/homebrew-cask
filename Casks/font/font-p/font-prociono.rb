@@ -8,5 +8,5 @@ cask "font-prociono" do
 
   font "Prociono-Regular.ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

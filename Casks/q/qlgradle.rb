@@ -14,5 +14,5 @@ cask "qlgradle" do
 
   qlplugin "QLGradle.qlgenerator"
 
-  # No zap stanza required
+  zap :not_required
 end

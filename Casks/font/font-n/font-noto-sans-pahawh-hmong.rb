@@ -8,5 +8,5 @@ cask "font-noto-sans-pahawh-hmong" do
 
   font "NotoSansPahawhHmong-Regular.ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

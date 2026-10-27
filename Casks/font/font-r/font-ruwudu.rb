@@ -13,5 +13,5 @@ cask "font-ruwudu" do
   font "Ruwudu-Regular.ttf"
   font "Ruwudu-SemiBold.ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

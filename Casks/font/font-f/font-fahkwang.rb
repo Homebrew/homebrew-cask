@@ -21,5 +21,5 @@ cask "font-fahkwang" do
   font "Fahkwang-SemiBold.ttf"
   font "Fahkwang-SemiBoldItalic.ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

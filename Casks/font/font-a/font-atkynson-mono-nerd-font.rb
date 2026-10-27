@@ -38,5 +38,5 @@ cask "font-atkynson-mono-nerd-font" do
   font "AtkynsonMonoNerdFontPropo-MediumItalic.otf"
   font "AtkynsonMonoNerdFontPropo-Regular.otf"
 
-  # No zap stanza required
+  zap :not_required
 end

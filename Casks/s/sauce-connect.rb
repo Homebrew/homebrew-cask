@@ -19,5 +19,5 @@ cask "sauce-connect" do
   zsh_completion "completions/sc.zsh"
   fish_completion "completions/sc.fish"
 
-  # No zap stanza required
+  zap :not_required
 end

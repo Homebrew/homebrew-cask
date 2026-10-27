@@ -8,5 +8,5 @@ cask "font-island-moments" do
 
   font "IslandMoments-Regular.ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

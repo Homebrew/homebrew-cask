@@ -62,5 +62,5 @@ cask "font-annotationmono-nerd-font" do
   font "AnnotationMNerdFontPropo-Regular.ttf"
   font "AnnotationMNerdFontPropo-RegularOblique.ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

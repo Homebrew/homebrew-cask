@@ -12,5 +12,5 @@ cask "font-dongle" do
   font "Dongle-Light.ttf"
   font "Dongle-Regular.ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

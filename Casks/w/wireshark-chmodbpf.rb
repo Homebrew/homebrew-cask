@@ -24,7 +24,7 @@ cask "wireshark-chmodbpf" do
             },
             pkgutil:      "org.wireshark.ChmodBPF.pkg"
 
-  # No zap stanza required
+  zap :not_required
 
   caveats do
     reboot

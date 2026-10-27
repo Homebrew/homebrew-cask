@@ -11,5 +11,5 @@ cask "font-firgenerd" do
   font "FirgeNerd_v#{version}/FirgeNerdConsole-Bold.ttf"
   font "FirgeNerd_v#{version}/FirgeNerdConsole-Regular.ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

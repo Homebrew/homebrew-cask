@@ -20,5 +20,5 @@ cask "kotlin-lsp" do
 
   binary "kotlin-server-#{version}/kotlin-lsp.sh", target: "kotlin-lsp"
 
-  # No zap stanza required
+  zap :not_required
 end

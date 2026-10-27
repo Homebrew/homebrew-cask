@@ -8,5 +8,5 @@ cask "font-tilt-neon" do
 
   font "TiltNeon[XROT,YROT].ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

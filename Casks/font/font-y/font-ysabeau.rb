@@ -91,5 +91,5 @@ cask "font-ysabeau" do
   font "Ysabeau_Install_v#{version}/YsabeauSC-SemiBold.otf"
   font "Ysabeau_Install_v#{version}/YsabeauSC-Thin.otf"
 
-  # No zap stanza required
+  zap :not_required
 end

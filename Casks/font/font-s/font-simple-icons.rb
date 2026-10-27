@@ -9,5 +9,5 @@ cask "font-simple-icons" do
   font "font/SimpleIcons-Fit.otf"
   font "font/SimpleIcons.otf"
 
-  # No zap stanza required
+  zap :not_required
 end

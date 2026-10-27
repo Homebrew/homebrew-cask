@@ -8,5 +8,5 @@ cask "font-boogaloo" do
 
   font "Boogaloo-Regular.ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

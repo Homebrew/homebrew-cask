@@ -8,5 +8,5 @@ cask "font-beiruti" do
 
   font "Beiruti[wght].ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

@@ -8,5 +8,5 @@ cask "font-caprasimo" do
 
   font "Caprasimo-Regular.ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

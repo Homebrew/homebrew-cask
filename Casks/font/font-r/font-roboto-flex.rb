@@ -8,5 +8,5 @@ cask "font-roboto-flex" do
 
   font "RobotoFlex[GRAD,XOPQ,XTRA,YOPQ,YTAS,YTDE,YTFI,YTLC,YTUC,opsz,slnt,wdth,wght].ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

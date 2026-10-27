@@ -52,5 +52,5 @@ cask "font-cormorant" do
   font "Cormorant_Install_v#{version}/CormorantUpright-Regular.otf"
   font "Cormorant_Install_v#{version}/CormorantUpright-SemiBold.otf"
 
-  # No zap stanza required
+  zap :not_required
 end

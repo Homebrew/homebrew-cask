@@ -8,5 +8,5 @@ cask "font-anta" do
 
   font "Anta-Regular.ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

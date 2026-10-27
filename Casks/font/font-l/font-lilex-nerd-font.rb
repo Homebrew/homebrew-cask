@@ -44,5 +44,5 @@ cask "font-lilex-nerd-font" do
   font "LilexNerdFontPropo-Thin.ttf"
   font "LilexNerdFontPropo-ThinItalic.ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

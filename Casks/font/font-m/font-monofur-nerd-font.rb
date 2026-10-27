@@ -23,5 +23,5 @@ cask "font-monofur-nerd-font" do
   font "MonofurNerdFontPropo-Italic.ttf"
   font "MonofurNerdFontPropo-Regular.ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

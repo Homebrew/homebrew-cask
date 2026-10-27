@@ -18,5 +18,5 @@ cask "monofocus" do
 
   app "MonoFocus.app"
 
-  # No zap stanza required
+  zap :not_required
 end

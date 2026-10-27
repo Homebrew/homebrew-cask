@@ -18,5 +18,5 @@ cask "font-noto-serif-cjk-kr" do
   font "OTF/Korean/NotoSerifCJKkr-Regular.otf"
   font "OTF/Korean/NotoSerifCJKkr-SemiBold.otf"
 
-  # No zap stanza required
+  zap :not_required
 end

@@ -17,5 +17,5 @@ cask "font-daddy-time-mono-nerd-font" do
   font "DaddyTimeMonoNerdFontMono-Regular.ttf"
   font "DaddyTimeMonoNerdFontPropo-Regular.ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

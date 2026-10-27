@@ -8,5 +8,5 @@ cask "font-delicious-handrawn" do
 
   font "DeliciousHandrawn-Regular.ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

@@ -13,5 +13,5 @@ cask "font-line-seed-jp" do
   font "LINESeedJP-Regular.ttf"
   font "LINESeedJP-Thin.ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

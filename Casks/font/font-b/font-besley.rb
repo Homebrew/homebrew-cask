@@ -11,5 +11,5 @@ cask "font-besley" do
   font "Besley-Italic[wght].ttf"
   font "Besley[wght].ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

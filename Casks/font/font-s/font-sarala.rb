@@ -11,5 +11,5 @@ cask "font-sarala" do
   font "Sarala-Bold.ttf"
   font "Sarala-Regular.ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

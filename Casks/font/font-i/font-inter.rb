@@ -45,5 +45,5 @@ cask "font-inter" do
   font "extras/otf/InterDisplay-Thin.otf"
   font "extras/otf/InterDisplay-ThinItalic.otf"
 
-  # No zap stanza required
+  zap :not_required
 end

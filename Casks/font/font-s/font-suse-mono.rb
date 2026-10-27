@@ -11,5 +11,5 @@ cask "font-suse-mono" do
   font "SUSEMono-Italic[wght].ttf"
   font "SUSEMono[wght].ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

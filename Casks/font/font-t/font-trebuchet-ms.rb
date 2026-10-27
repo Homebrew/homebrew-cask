@@ -11,5 +11,5 @@ cask "font-trebuchet-ms" do
   font "trebucbi.ttf"
   font "trebucit.ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

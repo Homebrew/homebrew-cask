@@ -14,5 +14,5 @@ cask "aws-vault-binary" do
 
   binary "aws-vault"
 
-  # No zap stanza required
+  zap :not_required
 end

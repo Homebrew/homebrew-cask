@@ -13,5 +13,5 @@ cask "font-nanum-square-neo" do
   font "NanumSquareNeo/TTF/NanumSquareNeo-dEb.ttf"
   font "NanumSquareNeo/TTF/NanumSquareNeo-eHv.ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

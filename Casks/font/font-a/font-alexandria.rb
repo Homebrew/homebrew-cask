@@ -8,5 +8,5 @@ cask "font-alexandria" do
 
   font "Alexandria[wght].ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

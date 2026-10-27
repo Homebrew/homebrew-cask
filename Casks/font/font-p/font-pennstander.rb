@@ -39,5 +39,5 @@ cask "font-pennstander" do
   font "Pennstander-#{version}/fonts/opentype/PennstanderMath-SemiBold.otf"
   font "Pennstander-#{version}/fonts/opentype/PennstanderMath-Thin.otf"
 
-  # No zap stanza required
+  zap :not_required
 end

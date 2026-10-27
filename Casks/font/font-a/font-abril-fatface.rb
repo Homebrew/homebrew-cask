@@ -8,5 +8,5 @@ cask "font-abril-fatface" do
 
   font "AbrilFatface-Regular.ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

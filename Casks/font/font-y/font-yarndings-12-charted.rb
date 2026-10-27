@@ -8,5 +8,5 @@ cask "font-yarndings-12-charted" do
 
   font "Yarndings12Charted-Regular.ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

@@ -8,5 +8,5 @@ cask "font-photonico-code" do
 
   font "Photonico.#{version}.Regular.ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

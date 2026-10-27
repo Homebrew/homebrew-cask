@@ -8,5 +8,5 @@ cask "font-phudu" do
 
   font "Phudu[wght].ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

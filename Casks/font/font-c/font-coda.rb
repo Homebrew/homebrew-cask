@@ -11,5 +11,5 @@ cask "font-coda" do
   font "Coda-ExtraBold.ttf"
   font "Coda-Regular.ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

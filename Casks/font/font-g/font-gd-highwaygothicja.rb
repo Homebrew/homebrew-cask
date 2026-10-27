@@ -14,5 +14,5 @@ cask "font-gd-highwaygothicja" do
 
   font "GDHighwayGoJA-Rev#{version}-OTF/GDhwGoJA-OTF#{version}.otf"
 
-  # No zap stanza required
+  zap :not_required
 end

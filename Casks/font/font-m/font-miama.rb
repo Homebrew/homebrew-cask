@@ -8,5 +8,5 @@ cask "font-miama" do
 
   font "Miama-Regular.ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

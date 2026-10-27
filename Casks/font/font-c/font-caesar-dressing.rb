@@ -8,5 +8,5 @@ cask "font-caesar-dressing" do
 
   font "CaesarDressing-Regular.ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

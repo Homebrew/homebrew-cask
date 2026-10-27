@@ -16,5 +16,5 @@ cask "font-aboriginal-sans" do
   font "AboriginalSansITALIC.ttf"
   font "AboriginalSansREGULAR.ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

@@ -23,5 +23,5 @@ cask "font-lilex" do
   font "variable/Lilex-Italic[wght].ttf"
   font "variable/Lilex[wght].ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

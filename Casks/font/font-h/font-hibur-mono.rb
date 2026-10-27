@@ -8,5 +8,5 @@ cask "font-hibur-mono" do
 
   font "HiburMono-Regular.ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

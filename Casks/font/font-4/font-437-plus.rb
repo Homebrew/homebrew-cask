@@ -1023,5 +1023,5 @@ cask "font-437-plus" do
   font "ttf - Px (pixel outline)/PxPlus_ToshibaTxL1_8x16.ttf"
   font "ttf - Px (pixel outline)/PxPlus_ToshibaTxL2_8x16.ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

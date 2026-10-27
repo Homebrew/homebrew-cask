@@ -11,5 +11,5 @@ cask "font-alumni-sans-sc" do
   font "AlumniSansSC-Italic[wght].ttf"
   font "AlumniSansSC[wght].ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

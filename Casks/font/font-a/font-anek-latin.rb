@@ -8,5 +8,5 @@ cask "font-anek-latin" do
 
   font "AnekLatin[wdth,wght].ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

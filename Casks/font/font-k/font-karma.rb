@@ -12,5 +12,5 @@ cask "font-karma" do
   font "Karma-Regular.otf"
   font "Karma-SemiBold.otf"
 
-  # No zap stanza required
+  zap :not_required
 end

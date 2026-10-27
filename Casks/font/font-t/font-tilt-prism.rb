@@ -8,5 +8,5 @@ cask "font-tilt-prism" do
 
   font "TiltPrism[XROT,YROT].ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

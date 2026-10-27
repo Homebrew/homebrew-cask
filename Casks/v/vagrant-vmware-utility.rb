@@ -24,5 +24,5 @@ cask "vagrant-vmware-utility" do
             pkgutil: "com.vagrant.vagrant-vmware-utility",
             delete:  "/Library/Application Support/vagrant-vmware-utility"
 
-  # No zap stanza required
+  zap :not_required
 end

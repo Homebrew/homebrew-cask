@@ -21,5 +21,5 @@ cask "font-krub" do
   font "Krub-SemiBold.ttf"
   font "Krub-SemiBoldItalic.ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

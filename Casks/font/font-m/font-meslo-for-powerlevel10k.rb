@@ -11,5 +11,5 @@ cask "font-meslo-for-powerlevel10k" do
   font "MesloLGS NF Italic.ttf"
   font "MesloLGS NF Regular.ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

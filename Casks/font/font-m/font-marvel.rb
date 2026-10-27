@@ -13,5 +13,5 @@ cask "font-marvel" do
   font "Marvel-Italic.ttf"
   font "Marvel-Regular.ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

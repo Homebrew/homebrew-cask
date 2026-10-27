@@ -8,5 +8,5 @@ cask "font-last-resort" do
 
   font "LastResort-Regular.ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

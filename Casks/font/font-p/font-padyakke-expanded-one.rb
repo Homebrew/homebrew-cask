@@ -8,5 +8,5 @@ cask "font-padyakke-expanded-one" do
 
   font "PadyakkeExpandedOne-Regular.ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

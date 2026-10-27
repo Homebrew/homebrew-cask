@@ -11,5 +11,5 @@ cask "truetree" do
 
   binary "TrueTree/TrueTree"
 
-  # No zap stanza required
+  zap :not_required
 end

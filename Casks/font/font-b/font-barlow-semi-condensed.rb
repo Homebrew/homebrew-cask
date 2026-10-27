@@ -27,5 +27,5 @@ cask "font-barlow-semi-condensed" do
   font "BarlowSemiCondensed-Thin.ttf"
   font "BarlowSemiCondensed-ThinItalic.ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

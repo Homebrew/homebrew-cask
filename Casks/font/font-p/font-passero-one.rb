@@ -8,5 +8,5 @@ cask "font-passero-one" do
 
   font "PasseroOne-Regular.ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

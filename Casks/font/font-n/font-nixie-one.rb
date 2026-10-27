@@ -8,5 +8,5 @@ cask "font-nixie-one" do
 
   font "NixieOne-Regular.ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

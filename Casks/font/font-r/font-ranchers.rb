@@ -8,5 +8,5 @@ cask "font-ranchers" do
 
   font "Ranchers-Regular.ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

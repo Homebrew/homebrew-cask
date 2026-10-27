@@ -11,5 +11,5 @@ cask "font-nevermind" do
   font "Nevermind-Italic[wght].ttf"
   font "Nevermind[wght].ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

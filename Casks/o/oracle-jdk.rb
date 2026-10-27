@@ -23,7 +23,7 @@ cask "oracle-jdk" do
 
   uninstall pkgutil: "com.oracle.jdk-#{version}"
 
-  # No zap stanza required
+  zap :not_required
 
   caveats do
     license "https://www.oracle.com/downloads/licenses/no-fee-license.html"

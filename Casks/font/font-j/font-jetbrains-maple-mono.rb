@@ -30,5 +30,5 @@ cask "font-jetbrains-maple-mono" do
   font "JetBrainsMapleMono-Thin.ttf"
   font "JetBrainsMapleMono-ThinItalic.ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

@@ -20,5 +20,5 @@ cask "openframeworks" do
 
   suite "of_v#{version}_osx_release"
 
-  # No zap stanza required
+  zap :not_required
 end

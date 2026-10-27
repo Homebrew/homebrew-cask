@@ -8,5 +8,5 @@ cask "font-diphylleia" do
 
   font "Diphylleia-Regular.ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

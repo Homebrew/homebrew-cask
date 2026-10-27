@@ -8,5 +8,5 @@ cask "font-yaldevi" do
 
   font "Yaldevi[wght].ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

@@ -15,7 +15,7 @@ cask "moscow-ml" do
 
   uninstall pkgutil: "org.mosml"
 
-  # No zap stanza required
+  zap :not_required
 
   caveats do
     requires_rosetta

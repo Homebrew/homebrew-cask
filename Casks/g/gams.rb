@@ -42,7 +42,7 @@ cask "gams" do
     sudo:       true,
   }
 
-  # No zap stanza required
+  zap :not_required
 
   caveats do
     license "https://gams.com/GAMS_EULA.pdf"

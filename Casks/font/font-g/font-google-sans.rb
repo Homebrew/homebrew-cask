@@ -11,5 +11,5 @@ cask "font-google-sans" do
   font "GoogleSans-Italic[GRAD,opsz,wght].ttf"
   font "GoogleSans[GRAD,opsz,wght].ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

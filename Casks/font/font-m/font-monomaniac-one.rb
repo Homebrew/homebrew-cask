@@ -8,5 +8,5 @@ cask "font-monomaniac-one" do
 
   font "MonomaniacOne-Regular.ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

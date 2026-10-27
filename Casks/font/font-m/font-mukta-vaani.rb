@@ -16,5 +16,5 @@ cask "font-mukta-vaani" do
   font "MuktaVaani-Regular.ttf"
   font "MuktaVaani-SemiBold.ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

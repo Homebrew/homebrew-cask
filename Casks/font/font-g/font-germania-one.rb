@@ -8,5 +8,5 @@ cask "font-germania-one" do
 
   font "GermaniaOne-Regular.ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

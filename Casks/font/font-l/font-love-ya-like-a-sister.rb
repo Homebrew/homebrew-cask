@@ -8,5 +8,5 @@ cask "font-love-ya-like-a-sister" do
 
   font "LoveYaLikeASister.ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

@@ -17,5 +17,5 @@ cask "helpwire-operator" do
 
   app "HelpWire Operator.app"
 
-  # No zap stanza required
+  zap :not_required
 end

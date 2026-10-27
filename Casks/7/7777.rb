@@ -18,7 +18,7 @@ cask "7777" do
 
   binary "7777"
 
-  # No zap stanza required
+  zap :not_required
 
   caveats do
     requires_rosetta

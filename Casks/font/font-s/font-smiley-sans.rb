@@ -8,5 +8,5 @@ cask "font-smiley-sans" do
 
   font "SmileySans-Oblique.ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

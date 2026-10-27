@@ -8,5 +8,5 @@ cask "font-digohweli-old-do" do
 
   font "OldDODigohweli.ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

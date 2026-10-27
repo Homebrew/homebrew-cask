@@ -19,5 +19,5 @@ cask "isabelle" do
   binary "#{appdir}/Isabelle#{version}.app/bin/isabelle"
   artifact "Isabelle#{version}.app", target: "#{appdir}/Isabelle#{version}.app"
 
-  # No zap stanza required
+  zap :not_required
 end

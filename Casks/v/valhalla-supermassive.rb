@@ -24,5 +24,5 @@ cask "valhalla-supermassive" do
 
   uninstall pkgutil: "com.valhalladsp.supermassive.pkg.*"
 
-  # No zap stanza required
+  zap :not_required
 end

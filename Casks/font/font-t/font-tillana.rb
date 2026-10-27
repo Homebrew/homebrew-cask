@@ -14,5 +14,5 @@ cask "font-tillana" do
   font "Tillana-Regular.ttf"
   font "Tillana-SemiBold.ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

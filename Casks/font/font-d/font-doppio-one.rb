@@ -8,5 +8,5 @@ cask "font-doppio-one" do
 
   font "DoppioOne-Regular.ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

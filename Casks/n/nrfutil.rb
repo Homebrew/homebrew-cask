@@ -15,5 +15,6 @@ cask "nrfutil" do
   depends_on :macos
 
   binary "nrfutil-universal-apple-darwin-#{version}", target: "nrfutil"
-  # No zap stanza required
+
+  zap :not_required
 end

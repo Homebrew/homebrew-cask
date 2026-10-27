@@ -8,5 +8,5 @@ cask "font-flow-rounded" do
 
   font "FlowRounded-Regular.ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

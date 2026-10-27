@@ -8,5 +8,5 @@ cask "font-miriam-libre" do
 
   font "MiriamLibre[wght].ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

@@ -8,5 +8,5 @@ cask "font-noto-emoji" do
 
   font "NotoEmoji[wght].ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

@@ -8,5 +8,5 @@ cask "font-trocchi" do
 
   font "Trocchi-Regular.ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

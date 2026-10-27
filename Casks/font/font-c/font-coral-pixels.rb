@@ -8,5 +8,5 @@ cask "font-coral-pixels" do
 
   font "CoralPixels-Regular.ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

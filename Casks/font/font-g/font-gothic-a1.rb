@@ -18,5 +18,5 @@ cask "font-gothic-a1" do
   font "GothicA1-SemiBold.ttf"
   font "GothicA1-Thin.ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

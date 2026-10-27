@@ -28,5 +28,5 @@ cask "android-platform-tools" do
   binary "#{staged_path}/platform-tools/make_f2fs_casefold"
   binary "#{staged_path}/platform-tools/mke2fs"
 
-  # No zap stanza required
+  zap :not_required
 end

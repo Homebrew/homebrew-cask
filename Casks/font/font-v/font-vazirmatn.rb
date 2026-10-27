@@ -8,5 +8,5 @@ cask "font-vazirmatn" do
 
   font "Vazirmatn[wght].ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

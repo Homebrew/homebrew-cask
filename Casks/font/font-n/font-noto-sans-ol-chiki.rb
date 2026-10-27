@@ -8,5 +8,5 @@ cask "font-noto-sans-ol-chiki" do
 
   font "NotoSansOlChiki[wght].ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

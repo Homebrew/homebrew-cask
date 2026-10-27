@@ -26,5 +26,5 @@ cask "font-urbanist" do
   font "Urbanist-fonts/fonts/otf/Urbanist-ThinItalic.otf"
   font "Urbanist-fonts/fonts/variable/Urbanist[ital,wght].ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

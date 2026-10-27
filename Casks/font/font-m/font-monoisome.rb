@@ -12,5 +12,5 @@ cask "font-monoisome" do
 
   font "Monoisome-Regular.ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

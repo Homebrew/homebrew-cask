@@ -8,5 +8,5 @@ cask "font-gulzar" do
 
   font "Gulzar-Regular.ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

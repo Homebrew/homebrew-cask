@@ -27,5 +27,5 @@ cask "font-moralerspace" do
   font "Moralerspace_v#{version}/MoralerspaceXenon-Italic.ttf"
   font "Moralerspace_v#{version}/MoralerspaceXenon-Regular.ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

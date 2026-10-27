@@ -8,5 +8,5 @@ cask "font-explora" do
 
   font "Explora-Regular.ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

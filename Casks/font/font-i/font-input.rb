@@ -182,11 +182,11 @@ cask "font-input" do
   font "Input_Fonts/InputSerif/InputSerifNarrow/InputSerifNarrow-Thin.ttf"
   font "Input_Fonts/InputSerif/InputSerifNarrow/InputSerifNarrow-ThinItalic.ttf"
 
+  zap :not_required
+
   caveats <<~EOS
     To use the Input fonts, you must agree to the terms of the license.
 
       https://input.djr.com/license/
   EOS
-
-  # No zap stanza required
 end

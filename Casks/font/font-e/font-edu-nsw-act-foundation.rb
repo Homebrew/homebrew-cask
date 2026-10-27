@@ -8,5 +8,5 @@ cask "font-edu-nsw-act-foundation" do
 
   font "EduNSWACTFoundation[wght].ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

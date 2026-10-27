@@ -8,5 +8,5 @@ cask "font-rubik-gemstones" do
 
   font "RubikGemstones-Regular.ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

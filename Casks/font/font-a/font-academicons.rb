@@ -8,5 +8,5 @@ cask "font-academicons" do
 
   font "academicons-#{version}/fonts/academicons.ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

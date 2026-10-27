@@ -17,5 +17,5 @@ cask "font-zain" do
   font "Zain-LightItalic.ttf"
   font "Zain-Regular.ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

@@ -33,5 +33,5 @@ cask "font-genshingothic" do
   font "GenShinGothic-P-Regular.ttf"
   font "GenShinGothic-Regular.ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

@@ -20,5 +20,5 @@ cask "font-ibm-plex-sans-devanagari" do
   font "ibm-plex-sans-devanagari/fonts/complete/otf/IBMPlexSansDevanagari-Text.otf"
   font "ibm-plex-sans-devanagari/fonts/complete/otf/IBMPlexSansDevanagari-Thin.otf"
 
-  # No zap stanza required
+  zap :not_required
 end

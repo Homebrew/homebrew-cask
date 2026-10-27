@@ -30,5 +30,5 @@ cask "go-server" do
 
   binary "go-server-#{version.csv.first}/bin/go-server"
 
-  # No zap stanza required
+  zap :not_required
 end

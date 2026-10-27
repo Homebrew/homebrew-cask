@@ -8,5 +8,5 @@ cask "font-isometra" do
 
   font "Isometra-Regular.ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

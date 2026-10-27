@@ -8,5 +8,5 @@ cask "font-gidugu" do
 
   font "Gidugu-Regular.ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

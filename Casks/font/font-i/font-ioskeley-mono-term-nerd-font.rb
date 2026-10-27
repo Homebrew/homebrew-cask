@@ -52,5 +52,5 @@ cask "font-ioskeley-mono-term-nerd-font" do
   font "SemiCondensed/IoskeleyMonoTermNerdFontMono-SemiCondensedThin.ttf"
   font "SemiCondensed/IoskeleyMonoTermNerdFontMono-SemiCondensedThinItalic.ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

@@ -20,5 +20,5 @@ cask "font-togalite" do
   font "togalite/Togalite-Regular.otf"
   font "togalite/Togalite-Thin.otf"
 
-  # No zap stanza required
+  zap :not_required
 end

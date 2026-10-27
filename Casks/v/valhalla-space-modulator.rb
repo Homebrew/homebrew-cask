@@ -24,5 +24,5 @@ cask "valhalla-space-modulator" do
 
   uninstall pkgutil: "com.valhalladsp.SpaceModulator.pkg.*"
 
-  # No zap stanza required
+  zap :not_required
 end

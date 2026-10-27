@@ -8,5 +8,5 @@ cask "font-maven-pro-vf-beta" do
 
   font "MavenProVFBeta.ttf"
 
-  # No zap stanza required
+  zap :not_required
 end
