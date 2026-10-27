@@ -1,9 +1,9 @@
 cask "gams" do
   arch arm: "_arm64"
 
-  version "54.6.0"
-  sha256 arm:   "559d32034e7a359cad77ea964d56f45a00cc8dcffb50c21cfc8583f322afd946",
-         intel: "6f6ecc70fd4e45d0b44027d378aa645be145b03b146177ee2d08904e370a3889"
+  version "54.6.1"
+  sha256 arm:   "0cb71b9682952afac7a203bdad310c1090765435f4d92960ae680c029ed1223b",
+         intel: "f02a339236ad969abe6e161eda0ee39422360d33249ab9d15fa667ce191e8276"
 
   url "https://d37drm4t2jghv5.cloudfront.net/distributions/#{version}/macosx#{arch}/GAMS#{version}.pkg"
   name "GAMS"
