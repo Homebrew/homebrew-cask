@@ -1,6 +1,6 @@
 cask "rhino-app" do
-  version "8.36.26293.11002"
-  sha256 "8fdad2b403645eafdb954a67949938c22d69c5b6aa6ee22427c131ef1f28a5ab"
+  version "8.36.26296.17002"
+  sha256 "73879543c2a54ed9f940b79c5d76ea2a09ea2bb1a2f771eecd06426c3f2e4605"
 
   url "https://files.mcneel.com/rhino/#{version.major}/mac/releases/rhino_#{version}.dmg"
   name "Rhinoceros"
