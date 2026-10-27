@@ -18,10 +18,14 @@ cask "omniwm" do
 
   app "OmniWM.app"
   binary "#{appdir}/OmniWM.app/Contents/MacOS/omniwmctl"
+  generate_completions_from_executable "#{appdir}/OmniWM.app/Contents/MacOS/omniwmctl", "completion"
+
+  uninstall quit: "com.barut.OmniWM"
 
   zap trash: [
     "~/.config/omniwm",
     "~/.local/state/omniwm",
+    "~/Library/Application Support/com.barut.OmniWM",
     "~/Library/Caches/com.barut.OmniWM",
     "~/Library/HTTPStorages/com.barut.OmniWM",
     "~/Library/Preferences/com.barut.OmniWM.plist",
