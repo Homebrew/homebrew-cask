@@ -20,13 +20,13 @@ cask "gcloud-cli" do
   ]
 
   on_macos do
-    depends_on formula: "python@3.13"
+    depends_on formula: "python@3.14"
 
     args << "--install-python" << "false"
   end
   on_linux do
     on_arm do
-      depends_on formula: "python@3.13"
+      depends_on formula: "python@3.14"
     end
   end
 
@@ -72,26 +72,26 @@ cask "gcloud-cli" do
                                                  args: ["config", "virtualenv", "delete", "-q"],
                                                  env:  {
                                                    "CLOUDSDK_PYTHON" => "{{HOMEBREW_PREFIX}}/opt/" \
-                                                                        "python@3.13/libexec/bin/python",
+                                                                        "python@3.14/libexec/bin/python",
                                                  }
       end
       run "share/google-cloud-sdk/bin/gcloud", base:           :homebrew_prefix,
                                                args:           ["config", "virtualenv", "create", "--python-to-use",
                                                                 "{{HOMEBREW_PREFIX}}/opt/" \
-                                                                "python@3.13/libexec/bin/python"],
+                                                                "python@3.14/libexec/bin/python"],
                                                env:            {
                                                  "CLOUDSDK_PYTHON" => "{{HOMEBREW_PREFIX}}/opt/" \
-                                                                      "python@3.13/libexec/bin/python",
+                                                                      "python@3.14/libexec/bin/python",
                                                },
                                                network_access: true
       run "share/google-cloud-sdk/bin/gcloud", base: :homebrew_prefix,
                                                args: ["config", "virtualenv", "enable"],
                                                env:  {
                                                  "CLOUDSDK_PYTHON" => "{{HOMEBREW_PREFIX}}/opt/" \
-                                                                      "python@3.13/libexec/bin/python",
+                                                                      "python@3.14/libexec/bin/python",
                                                }
       run "share/google-cloud-sdk/bin/gcloud", args: ["version"], base: :homebrew_prefix,
-          env: { "CLOUDSDK_PYTHON" => "{{HOMEBREW_PREFIX}}/opt/python@3.13/libexec/bin/python" }
+          env: { "CLOUDSDK_PYTHON" => "{{HOMEBREW_PREFIX}}/opt/python@3.14/libexec/bin/python" }
     end
   end
 
