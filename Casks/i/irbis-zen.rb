@@ -1,4 +1,4 @@
-cask "zen-privacy" do
+cask "irbis-zen" do
   arch arm: "arm64", intel: "amd64"
 
   version "0.28.0"
