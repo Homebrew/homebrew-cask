@@ -15,6 +15,7 @@ cask "sidequest" do
     uninstall launchctl: "com.sidequestvr.app.ShipIt"
 
     zap trash: [
+      "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.sidequestvr.app.sfl*",
       "~/Library/Application Support/SideQuest",
       "~/Library/Application Support/SideQuestDesktop",
       "~/Library/Caches/com.sidequestvr.app*",
