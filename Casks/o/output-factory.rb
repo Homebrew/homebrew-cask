@@ -26,5 +26,6 @@ cask "output-factory" do
   zap trash: [
     "~/Library/Caches/com.zevrix.OutputFactory",
     "~/Library/Preferences/com.zevrix.OutputFactory.plist",
+    "~/Library/WebKit/com.zevrix.OutputFactory",
   ]
 end
