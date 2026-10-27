@@ -7,6 +7,11 @@ cask "whalebird" do
   desc "Mastodon, Pleroma, and Misskey client"
   homepage "https://whalebird.social/"
 
+  livecheck do
+    url :url
+    strategy :github_latest
+  end
+
   depends_on macos: :sonoma
 
   app "Whalebird.app"
