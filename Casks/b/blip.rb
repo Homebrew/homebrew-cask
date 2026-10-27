@@ -1,6 +1,6 @@
 cask "blip" do
-  version "1.2.3,20260927200815"
-  sha256 "778b777557e508d65aa91e55305397958418dd25e2ea8090aa70d3c12e04ffa2"
+  version "1.2.7,20261027002206"
+  sha256 "9e1d9136997f2c6edd97572b59c3395939cc5716509d0196d90dfdb88d4c9a59"
 
   url "https://f000.backblazeb2.com/file/push-mac/Blip-#{version.csv.second}.zip"
   name "blip"
@@ -15,6 +15,8 @@ cask "blip" do
   depends_on macos: :monterey
 
   app "Blip.app"
+
+  uninstall quit: "net.blip.macos"
 
   zap trash: [
     "~/Library/Application Scripts/AY8UB8KTUX.blip",
