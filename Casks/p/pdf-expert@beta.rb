@@ -21,15 +21,19 @@ cask "pdf-expert@beta" do
   uninstall quit: "com.readdle.PDFExpert-Mac"
 
   zap trash: [
+    "~/Library/Application Scripts/com.readdle.PDFExpert-Mac.Widgets",
     "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.readdle.pdfexpert-mac.sfl*",
     "~/Library/Application Support/com.readdle.PDFExpert-Mac",
     "~/Library/Application Support/PDF Expert",
     "~/Library/Caches/com.readdle.PDFExpert-Installer",
     "~/Library/Caches/com.readdle.PDFExpert-Mac",
+    "~/Library/Containers/com.readdle.PDFExpert-Mac.Widgets",
     "~/Library/HTTPStorages/com.readdle.PDFExpert-Installer",
     "~/Library/HTTPStorages/com.readdle.PDFExpert-Mac",
     "~/Library/HTTPStorages/com.readdle.PDFExpert-Mac.binarycookies",
     "~/Library/PDF Expert",
     "~/Library/Preferences/com.readdle.PDFExpert-Mac.plist",
+    "~/Library/Preferences/group.com.readdle.PDFExpert-Mac.appsflyer.remotecontrol.plist",
+    "~/Library/Preferences/group.com.readdle.PDFExpert-Mac.firebase.plist",
   ]
 end
