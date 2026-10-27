@@ -20,7 +20,9 @@ cask "rescuetime" do
   zap trash: [
     "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.rescuetime.rescuetime.sfl*",
     "~/Library/Caches/com.rescuetime.RescueTime",
+    "~/Library/HTTPStorages/com.rescuetime.RescueTime*",
     "~/Library/Preferences/com.rescuetime.RescueTime.plist",
     "~/Library/RescueTime.com",
+    "~/Library/WebKit/com.rescuetime.RescueTime",
   ]
 end
