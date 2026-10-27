@@ -1,11 +1,11 @@
 cask "vscodium@insiders" do
   arch arm: "arm64", intel: "x64"
 
-  sha256 arm:   "ac146e7dc94794974b0a7419fdf854de3fc7e68fe022bc433708a4fe246d7a4b",
+  sha256 arm:   "a755de3306318e530250535564470f7e264797c606fb7895a35311dcad4cbeba",
          intel: "46e7e3d5034600d3995b213dba831a065f6d8f3ea29bfa38164f8d1fa521f763"
 
   on_arm do
-    version "1.143.17171-insider"
+    version "1.143.17220-insider"
   end
   on_intel do
     version "1.143.17171-insider"
