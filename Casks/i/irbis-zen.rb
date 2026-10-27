@@ -5,10 +5,10 @@ cask "irbis-zen" do
   sha256 arm:   "9deed05a35b5daa3e05827bb5b04fc33e76eccc08b1476d5537a077d8e6bc0d6",
          intel: "98c54ee50e417c51ad555fd8d51a759497281e47563df5743229fd1bf529873a"
 
-  url "https://github.com/ZenPrivacy/zen-desktop/releases/download/v#{version}/Zen_darwin_#{arch}_noselfupdate.tar.gz"
+  url "https://github.com/irbis-sh/zen-desktop/releases/download/v#{version}/Zen_darwin_#{arch}_noselfupdate.tar.gz"
   name "Zen"
-  desc "Ad-blocker and privacy guard"
-  homepage "https://zenprivacy.net/"
+  desc "System-wide ad-blocker and privacy guard"
+  homepage "https://irbis.sh/zen/"
 
   livecheck do
     url :url
