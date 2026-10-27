@@ -16,6 +16,8 @@ cask "blip" do
 
   app "Blip.app"
 
+  uninstall quit: "net.blip.macos"
+
   zap trash: [
     "~/Library/Application Scripts/AY8UB8KTUX.blip",
     "~/Library/Application Scripts/net.blip.macos.preview-provider",
