@@ -1,8 +1,9 @@
-cask "breitbandmessung" do
-  version "3.12.1"
-  sha256 "f33cec43ceae7577f835e4d8af182b6f6f0de70c11698ac002d6791ffd53e70e"
+cask "festnetz-check" do
+  version "3.13.0"
+  sha256 "72c243851075fcf2fe20c17d00b66d91e1a2cfe9a1bebb74217d9b3847d780e9"
 
-  url "https://download.breitbandmessung.de/bbm/Breitbandmessung-#{version}-mac.dmg"
+  url "https://download.breitbandmessung.de/bbm/Festnetz-Check-#{version}-mac.zip"
+  name "Festnetz-Check"
   name "Breitbandmessung"
   desc "Official internet speed test from the German Bundesnetzagentur"
   homepage "https://www.breitbandmessung.de/"
@@ -14,7 +15,7 @@ cask "breitbandmessung" do
 
   depends_on :macos
 
-  app "Breitbandmessung.app"
+  app "Festnetz-Check.app"
 
   zap trash: [
     "~/Library/Application Support/Breitbandmessung",
