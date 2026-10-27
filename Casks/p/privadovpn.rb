@@ -1,5 +1,5 @@
 cask "privadovpn" do
-  version "4.2.0"
+  version "4.3.0"
   sha256 :no_check
 
   url "https://privadovpn.com/apps/osx/PrivadoVPN.dmg"
@@ -15,6 +15,8 @@ cask "privadovpn" do
   depends_on :macos
 
   app "PrivadoVPN.app"
+
+  uninstall quit: "io.privado.main"
 
   zap trash: [
     "~/Documents/PrivadoVPN",
