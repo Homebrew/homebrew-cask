@@ -23,6 +23,7 @@ cask "blip" do
     "~/Library/Application Scripts/net.blip.macos.preview-provider",
     "~/Library/Application Scripts/net.blip.macos.share",
     "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/net.blip.macos.sfl*",
+    "~/Library/Caches/net.blip.macos",
     "~/Library/Containers/net.blip.macos.preview-provider",
     "~/Library/Containers/net.blip.macos.share",
     "~/Library/Group Containers/AY8UB8KTUX.blip",
