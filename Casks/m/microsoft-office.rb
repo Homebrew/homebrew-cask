@@ -37,6 +37,7 @@ cask "microsoft-office" do
   uninstall launchctl: [
               "com.microsoft.office.licensing.helper",
               "com.microsoft.office.licensingV2.helper",
+              "com.microsoft.office.licensingV3.helper",
               "com.microsoft.OneDriveStandaloneUpdater",
               "com.microsoft.OneDriveStandaloneUpdaterDaemon",
               "com.microsoft.OneDriveUpdaterDaemon",
@@ -54,6 +55,7 @@ cask "microsoft-office" do
               "com.microsoft.package.Microsoft_Word.app",
               "com.microsoft.package.Proofing_Tools",
               "com.microsoft.pkg.licensing",
+              "com.microsoft.pkg.licensing.v3",
               "com.microsoft.wdav",
               "com.microsoft.wdav.shim",
             ],
