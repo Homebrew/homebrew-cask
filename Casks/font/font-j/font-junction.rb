@@ -10,5 +10,5 @@ cask "font-junction" do
   font "junction-master/Junction-light.otf"
   font "junction-master/Junction-regular.otf"
 
-  # No zap stanza required
+  zap :not_required
 end

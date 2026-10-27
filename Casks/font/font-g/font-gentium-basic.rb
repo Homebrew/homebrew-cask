@@ -14,5 +14,5 @@ cask "font-gentium-basic" do
   font "GentiumBasic_#{version.no_dots}/GenBasI.ttf"
   font "GentiumBasic_#{version.no_dots}/GenBasR.ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

@@ -8,5 +8,5 @@ cask "font-mada" do
 
   font "Mada[wght].ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

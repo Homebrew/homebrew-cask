@@ -8,5 +8,5 @@ cask "font-buenard" do
 
   font "Buenard[wght].ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

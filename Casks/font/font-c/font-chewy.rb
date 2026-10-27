@@ -8,5 +8,5 @@ cask "font-chewy" do
 
   font "Chewy-Regular.ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

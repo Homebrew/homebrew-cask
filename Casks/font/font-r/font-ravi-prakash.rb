@@ -8,5 +8,5 @@ cask "font-ravi-prakash" do
 
   font "RaviPrakash-Regular.ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

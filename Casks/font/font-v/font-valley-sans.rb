@@ -11,5 +11,5 @@ cask "font-valley-sans" do
   font "ValleySans-Italic[wght].ttf"
   font "ValleySans[wght].ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

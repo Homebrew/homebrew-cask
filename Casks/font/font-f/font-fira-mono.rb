@@ -12,5 +12,5 @@ cask "font-fira-mono" do
   font "FiraMono-Medium.ttf"
   font "FiraMono-Regular.ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

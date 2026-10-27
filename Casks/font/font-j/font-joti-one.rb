@@ -8,5 +8,5 @@ cask "font-joti-one" do
 
   font "JotiOne-Regular.ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

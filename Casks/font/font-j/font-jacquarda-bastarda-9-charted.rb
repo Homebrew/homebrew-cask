@@ -8,5 +8,5 @@ cask "font-jacquarda-bastarda-9-charted" do
 
   font "JacquardaBastarda9Charted-Regular.ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

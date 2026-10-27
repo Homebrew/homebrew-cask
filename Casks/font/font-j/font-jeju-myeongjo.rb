@@ -8,5 +8,5 @@ cask "font-jeju-myeongjo" do
 
   font "JejuMyeongjo-Regular.ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

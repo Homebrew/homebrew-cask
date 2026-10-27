@@ -9,5 +9,5 @@ cask "font-iranian-sans" do
   font "irsans.ttf"
   font "irsansb.ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

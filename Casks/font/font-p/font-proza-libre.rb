@@ -17,5 +17,5 @@ cask "font-proza-libre" do
   font "Proza-Libre-#{version}/Fonts/ProzaLibre-SemiBold.ttf"
   font "Proza-Libre-#{version}/Fonts/ProzaLibre-SemiBoldItalic.ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

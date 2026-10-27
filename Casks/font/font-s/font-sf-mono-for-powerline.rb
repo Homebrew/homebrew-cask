@@ -19,5 +19,5 @@ cask "font-sf-mono-for-powerline" do
   font "SF-Mono-Powerline-#{version}/SF-Mono-Powerline-Semibold-Italic.otf"
   font "SF-Mono-Powerline-#{version}/SF-Mono-Powerline-Semibold.otf"
 
-  # No zap stanza required
+  zap :not_required
 end

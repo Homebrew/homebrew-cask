@@ -11,5 +11,5 @@ cask "font-chivo-mono" do
   font "ChivoMono-Italic[wght].ttf"
   font "ChivoMono[wght].ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

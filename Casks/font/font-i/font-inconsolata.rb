@@ -8,5 +8,5 @@ cask "font-inconsolata" do
 
   font "Inconsolata[wdth,wght].ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

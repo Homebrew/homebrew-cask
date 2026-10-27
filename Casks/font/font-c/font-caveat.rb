@@ -8,5 +8,5 @@ cask "font-caveat" do
 
   font "Caveat[wght].ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

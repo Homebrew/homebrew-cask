@@ -222,5 +222,5 @@ cask "font-monaspace-frozen" do
   font "Frozen Fonts/Monaspace Xenon/MonaspaceXenonFrozen-WideSemiBold.ttf"
   font "Frozen Fonts/Monaspace Xenon/MonaspaceXenonFrozen-WideSemiBoldItalic.ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

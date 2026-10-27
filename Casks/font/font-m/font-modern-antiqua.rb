@@ -8,5 +8,5 @@ cask "font-modern-antiqua" do
 
   font "ModernAntiqua-Regular.ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

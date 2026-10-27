@@ -8,5 +8,5 @@ cask "font-devonshire" do
 
   font "Devonshire-Regular.ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

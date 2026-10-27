@@ -8,5 +8,5 @@ cask "font-noto-sans-meetei-mayek" do
 
   font "NotoSansMeeteiMayek[wght].ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

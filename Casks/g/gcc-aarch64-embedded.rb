@@ -76,5 +76,5 @@ cask "gcc-aarch64-embedded" do
               "/Applications/ArmGNUToolchain/#{pkg_version}",
             ]
 
-  # No zap stanza required
+  zap :not_required
 end

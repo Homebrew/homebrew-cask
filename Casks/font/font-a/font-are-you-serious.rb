@@ -8,5 +8,5 @@ cask "font-are-you-serious" do
 
   font "AreYouSerious-Regular.ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

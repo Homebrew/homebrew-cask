@@ -8,5 +8,5 @@ cask "font-reem-kufi-ink" do
 
   font "ReemKufiInk-Regular.ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

@@ -8,5 +8,5 @@ cask "font-comforter-brush" do
 
   font "ComforterBrush-Regular.ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

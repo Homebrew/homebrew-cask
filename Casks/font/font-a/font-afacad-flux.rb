@@ -8,5 +8,5 @@ cask "font-afacad-flux" do
 
   font "AfacadFlux[slnt,wght].ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

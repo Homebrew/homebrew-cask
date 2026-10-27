@@ -8,5 +8,5 @@ cask "font-qwigley" do
 
   font "Qwigley-Regular.ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

@@ -9,5 +9,5 @@ cask "font-wenjin-mincho" do
 
   font "ttc/WenJinMincho-OTF.ttc"
 
-  # No zap stanza required
+  zap :not_required
 end

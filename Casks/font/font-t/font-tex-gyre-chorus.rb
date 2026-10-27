@@ -19,5 +19,5 @@ cask "font-tex-gyre-chorus" do
 
   font "texgyrechorus-mediumitalic.otf"
 
-  # No zap stanza required
+  zap :not_required
 end

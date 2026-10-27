@@ -15,5 +15,5 @@ cask "font-nimbus-sans-l" do
   font "nimbus-sans-l/NimbusSanL-ReguCondItal.ttf"
   font "nimbus-sans-l/NimbusSanL-ReguItal.ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

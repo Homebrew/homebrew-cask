@@ -11,5 +11,5 @@ cask "font-cica" do
   font "Cica-Regular.ttf"
   font "Cica-RegularItalic.ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

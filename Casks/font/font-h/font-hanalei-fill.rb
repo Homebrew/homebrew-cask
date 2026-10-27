@@ -8,5 +8,5 @@ cask "font-hanalei-fill" do
 
   font "HanaleiFill-Regular.ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

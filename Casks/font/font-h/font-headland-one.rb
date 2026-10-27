@@ -8,5 +8,5 @@ cask "font-headland-one" do
 
   font "HeadlandOne-Regular.ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

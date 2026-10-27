@@ -11,5 +11,5 @@ cask "font-magra" do
   font "Magra-Bold.ttf"
   font "Magra-Regular.ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

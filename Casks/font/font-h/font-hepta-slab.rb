@@ -8,5 +8,5 @@ cask "font-hepta-slab" do
 
   font "HeptaSlab[wght].ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

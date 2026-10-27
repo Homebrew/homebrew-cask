@@ -8,5 +8,5 @@ cask "font-playwrite-mx-guides" do
 
   font "PlaywriteMXGuides-Regular.ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

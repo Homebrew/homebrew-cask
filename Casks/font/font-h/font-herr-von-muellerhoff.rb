@@ -8,5 +8,5 @@ cask "font-herr-von-muellerhoff" do
 
   font "HerrVonMuellerhoff-Regular.ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

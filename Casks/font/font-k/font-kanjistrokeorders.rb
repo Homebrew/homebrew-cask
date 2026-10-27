@@ -19,9 +19,9 @@ cask "font-kanjistrokeorders" do
 
   font "KanjiStrokeOrders_v#{version.before_comma}.ttf"
 
+  zap :not_required
+
   caveats do
     license "https://drive.google.com/file/d/1HOybxFTh2aD6zoLoh-ixHf2vTSgqFs6f/preview"
   end
-
-  # No zap stanza required
 end

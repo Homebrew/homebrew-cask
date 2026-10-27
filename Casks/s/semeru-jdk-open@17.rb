@@ -21,5 +21,5 @@ cask "semeru-jdk-open@17" do
 
   uninstall pkgutil: "net.ibm-semeru-open.#{version.major}.jdk"
 
-  # No zap stanza required
+  zap :not_required
 end

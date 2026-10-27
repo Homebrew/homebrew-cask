@@ -16,5 +16,5 @@ cask "font-gnu-unifont" do
   font "unifont-#{version}/font/precompiled/unifont_upper-#{version}.otf"
   font "unifont-#{version}/font/precompiled/unifont_upper_sample-#{version}.otf"
 
-  # No zap stanza required
+  zap :not_required
 end

@@ -12,5 +12,5 @@ cask "font-selawik" do
   font "selawksb.ttf"
   font "selawksl.ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

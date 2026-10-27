@@ -8,5 +8,5 @@ cask "font-joscelyn" do
 
   font "Joscelyn/Joscelyn.otf"
 
-  # No zap stanza required
+  zap :not_required
 end

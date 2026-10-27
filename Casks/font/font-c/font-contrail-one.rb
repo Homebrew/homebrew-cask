@@ -8,5 +8,5 @@ cask "font-contrail-one" do
 
   font "ContrailOne-Regular.ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

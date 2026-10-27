@@ -11,5 +11,5 @@ cask "font-agdasima" do
   font "Agdasima-Bold.ttf"
   font "Agdasima-Regular.ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

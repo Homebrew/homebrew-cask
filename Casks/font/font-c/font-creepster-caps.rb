@@ -8,5 +8,5 @@ cask "font-creepster-caps" do
 
   font "CreepsterCaps-Regular.ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

@@ -23,5 +23,5 @@ cask "font-proggy-clean-tt-nerd-font" do
   font "ProggyCleanSZNerdFontMono-Regular.ttf"
   font "ProggyCleanSZNerdFontPropo-Regular.ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

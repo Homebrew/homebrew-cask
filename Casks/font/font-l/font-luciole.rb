@@ -11,5 +11,5 @@ cask "font-luciole" do
   font "Luciole/Luciole-Italic.ttf"
   font "Luciole/Luciole-Regular.ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

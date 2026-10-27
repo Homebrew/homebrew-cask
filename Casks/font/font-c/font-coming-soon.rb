@@ -8,5 +8,5 @@ cask "font-coming-soon" do
 
   font "ComingSoon-Regular.ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

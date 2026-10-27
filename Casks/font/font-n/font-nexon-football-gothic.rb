@@ -10,5 +10,5 @@ cask "font-nexon-football-gothic" do
   font "OTF/NEXON Football Gothic B.otf"
   font "OTF/NEXON Football Gothic L.otf"
 
-  # No zap stanza required
+  zap :not_required
 end

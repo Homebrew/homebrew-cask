@@ -8,5 +8,5 @@ cask "font-rock-salt" do
 
   font "RockSalt-Regular.ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

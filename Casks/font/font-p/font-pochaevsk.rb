@@ -8,5 +8,5 @@ cask "font-pochaevsk" do
 
   font "Pochaevsk-Regular.ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

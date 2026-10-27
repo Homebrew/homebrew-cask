@@ -10,5 +10,5 @@ cask "font-noto-mono-for-powerline" do
 
   font "Noto Mono for Powerline.ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

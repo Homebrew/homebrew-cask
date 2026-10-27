@@ -13,5 +13,5 @@ cask "font-sf-arabic" do
 
   uninstall pkgutil: "com.apple.pkg.SFArabicFonts"
 
-  # No zap stanza required
+  zap :not_required
 end

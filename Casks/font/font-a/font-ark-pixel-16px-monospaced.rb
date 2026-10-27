@@ -16,5 +16,5 @@ cask "font-ark-pixel-16px-monospaced" do
   font "ark-pixel-16px-monospaced-zh_tr.otf"
   font "ark-pixel-16px-monospaced-zh_tw.otf"
 
-  # No zap stanza required
+  zap :not_required
 end

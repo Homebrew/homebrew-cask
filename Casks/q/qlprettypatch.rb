@@ -14,5 +14,5 @@ cask "qlprettypatch" do
 
   qlplugin "QLPrettyPatch.qlgenerator"
 
-  # No zap stanza required
+  zap :not_required
 end

@@ -11,7 +11,7 @@ cask "ukrainian-typographic-keyboard" do
 
   keyboard_layout "ukrainian-typographic-keyboard-#{version}/ukrainian-typographic-keyboard.bundle"
 
-  # No zap stanza required
+  zap :not_required
 
   caveats do
     reboot

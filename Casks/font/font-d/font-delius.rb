@@ -8,5 +8,5 @@ cask "font-delius" do
 
   font "Delius-Regular.ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

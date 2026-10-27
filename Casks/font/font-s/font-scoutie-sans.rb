@@ -11,5 +11,5 @@ cask "font-scoutie-sans" do
   font "ScoutieSans-Italic[wght].ttf"
   font "ScoutieSans[wght].ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

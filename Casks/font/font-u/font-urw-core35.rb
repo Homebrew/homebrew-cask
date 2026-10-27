@@ -85,5 +85,5 @@ cask "font-urw-core35" do
   font "urw-core35-fonts-#{version}/Z003-MediumItalic.otf"
   font "urw-core35-fonts-#{version}/Z003-MediumItalic.ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

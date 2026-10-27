@@ -8,5 +8,5 @@ cask "font-smooch-sans" do
 
   font "SmoochSans[wght].ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

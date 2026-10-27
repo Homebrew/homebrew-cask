@@ -11,5 +11,5 @@ cask "font-tourney" do
   font "Tourney-Italic[wdth,wght].ttf"
   font "Tourney[wdth,wght].ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

@@ -12,5 +12,5 @@ cask "font-libertinus-sans" do
   font "LibertinusSans-Italic.ttf"
   font "LibertinusSans-Regular.ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

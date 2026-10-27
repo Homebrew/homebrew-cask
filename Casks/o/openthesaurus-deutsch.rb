@@ -16,5 +16,5 @@ cask "openthesaurus-deutsch" do
 
   dictionary "OpenThesaurus Deutsch.dictionary"
 
-  # No zap stanza required
+  zap :not_required
 end

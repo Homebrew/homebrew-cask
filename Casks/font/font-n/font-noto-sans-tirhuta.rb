@@ -8,5 +8,5 @@ cask "font-noto-sans-tirhuta" do
 
   font "NotoSansTirhuta-Regular.ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

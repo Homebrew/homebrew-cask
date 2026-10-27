@@ -11,5 +11,5 @@ cask "font-tiro-gurmukhi" do
   font "TiroGurmukhi-Italic.ttf"
   font "TiroGurmukhi-Regular.ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

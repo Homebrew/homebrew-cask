@@ -18,5 +18,5 @@ cask "fabfilter-twin" do
 
   uninstall pkgutil: "com.fabfilter.Twin.*"
 
-  # No zap stanza required
+  zap :not_required
 end

@@ -11,5 +11,5 @@ cask "font-finlandica" do
   font "Finlandica-Italic[wght].ttf"
   font "Finlandica[wght].ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

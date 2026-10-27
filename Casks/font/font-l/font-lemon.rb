@@ -8,5 +8,5 @@ cask "font-lemon" do
 
   font "Lemon-Regular.ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

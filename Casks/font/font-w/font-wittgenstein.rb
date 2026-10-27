@@ -11,5 +11,5 @@ cask "font-wittgenstein" do
   font "Wittgenstein-Italic[wght].ttf"
   font "Wittgenstein[wght].ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

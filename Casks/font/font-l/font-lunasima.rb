@@ -11,5 +11,5 @@ cask "font-lunasima" do
   font "Lunasima-Bold.ttf"
   font "Lunasima-Regular.ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

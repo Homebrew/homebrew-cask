@@ -23,5 +23,5 @@ cask "font-recursive-code" do
   font "ArrowType-Recursive-#{version}/Recursive_Code/RecMonoSemicasual/RecMonoSemicasual-Italic-#{version}.ttf"
   font "ArrowType-Recursive-#{version}/Recursive_Code/RecMonoSemicasual/RecMonoSemicasual-Regular-#{version}.ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

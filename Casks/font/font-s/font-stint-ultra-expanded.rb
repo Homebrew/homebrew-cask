@@ -8,5 +8,5 @@ cask "font-stint-ultra-expanded" do
 
   font "StintUltraExpanded-Regular.ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

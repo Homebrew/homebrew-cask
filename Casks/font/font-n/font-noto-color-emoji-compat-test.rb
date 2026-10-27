@@ -8,5 +8,5 @@ cask "font-noto-color-emoji-compat-test" do
 
   font "NotoColorEmojiCompatTest-Regular.ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

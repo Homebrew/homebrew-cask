@@ -13,5 +13,5 @@ cask "font-maple-mono-normal" do
   font "MapleMonoNormal-Italic[wght].ttf"
   font "MapleMonoNormal[wght].ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

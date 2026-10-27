@@ -20,7 +20,7 @@ cask "oracle-data-modeler" do
 
   app "OracleDataModeler.app"
 
-  # No zap stanza required
+  zap :not_required
 
   caveats do
     depends_on_java "17+"

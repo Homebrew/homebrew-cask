@@ -8,5 +8,5 @@ cask "font-noto-sans-medefaidrin" do
 
   font "NotoSansMedefaidrin[wght].ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

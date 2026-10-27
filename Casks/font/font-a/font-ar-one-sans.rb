@@ -8,5 +8,5 @@ cask "font-ar-one-sans" do
 
   font "AROneSans[ARRR,wght].ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

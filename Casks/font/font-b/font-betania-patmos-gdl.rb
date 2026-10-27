@@ -8,5 +8,5 @@ cask "font-betania-patmos-gdl" do
 
   font "BetaniaPatmosGDL-Regular.ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

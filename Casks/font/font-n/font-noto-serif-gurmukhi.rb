@@ -8,5 +8,5 @@ cask "font-noto-serif-gurmukhi" do
 
   font "NotoSerifGurmukhi[wght].ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

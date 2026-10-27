@@ -8,5 +8,5 @@ cask "font-sixtyfour" do
 
   font "Sixtyfour[BLED,SCAN].ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

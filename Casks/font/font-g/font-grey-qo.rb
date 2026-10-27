@@ -8,5 +8,5 @@ cask "font-grey-qo" do
 
   font "GreyQo-Regular.ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

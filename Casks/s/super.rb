@@ -15,5 +15,5 @@ cask "super" do
 
   binary "super"
 
-  # No zap stanza required
+  zap :not_required
 end

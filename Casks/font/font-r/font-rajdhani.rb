@@ -12,5 +12,5 @@ cask "font-rajdhani" do
   font "Rajdhani-Regular.otf"
   font "Rajdhani-SemiBold.otf"
 
-  # No zap stanza required
+  zap :not_required
 end

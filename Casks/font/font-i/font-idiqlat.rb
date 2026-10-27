@@ -12,5 +12,5 @@ cask "font-idiqlat" do
   font "Idiqlat-Light.ttf"
   font "Idiqlat-Regular.ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

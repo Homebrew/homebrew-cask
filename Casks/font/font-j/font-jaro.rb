@@ -8,5 +8,5 @@ cask "font-jaro" do
 
   font "Jaro[opsz].ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

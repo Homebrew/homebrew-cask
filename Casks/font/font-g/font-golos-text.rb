@@ -8,5 +8,5 @@ cask "font-golos-text" do
 
   font "GolosText[wght].ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

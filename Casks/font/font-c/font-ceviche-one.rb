@@ -8,5 +8,5 @@ cask "font-ceviche-one" do
 
   font "CevicheOne-Regular.ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

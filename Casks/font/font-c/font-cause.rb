@@ -8,5 +8,5 @@ cask "font-cause" do
 
   font "Cause[wght].ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

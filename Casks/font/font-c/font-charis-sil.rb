@@ -13,5 +13,5 @@ cask "font-charis-sil" do
   font "CharisSIL-Italic.ttf"
   font "CharisSIL-Regular.ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

@@ -45,5 +45,5 @@ cask "font-urw-base35" do
   font "urw-base35-fonts-#{version}/fonts/URWGothic-DemiOblique.otf"
   font "urw-base35-fonts-#{version}/fonts/Z003-MediumItalic.otf"
 
-  # No zap stanza required
+  zap :not_required
 end

@@ -8,5 +8,5 @@ cask "font-joan" do
 
   font "Joan-Regular.ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

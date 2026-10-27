@@ -12,5 +12,5 @@ cask "font-gayathri" do
   font "Gayathri-Regular.ttf"
   font "Gayathri-Thin.ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

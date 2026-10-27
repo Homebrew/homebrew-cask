@@ -8,5 +8,5 @@ cask "font-nanum-brush-script" do
 
   font "NanumBrushScript-Regular.ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

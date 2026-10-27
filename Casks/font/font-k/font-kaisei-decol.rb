@@ -12,5 +12,5 @@ cask "font-kaisei-decol" do
   font "KaiseiDecol-Medium.ttf"
   font "KaiseiDecol-Regular.ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

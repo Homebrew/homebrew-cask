@@ -8,5 +8,5 @@ cask "font-capriola" do
 
   font "Capriola[wght].ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

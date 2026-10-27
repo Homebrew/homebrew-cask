@@ -12,5 +12,5 @@ cask "font-fairfax-hd" do
   font "FairfaxPulaHD.ttf"
   font "FairfaxSMHD.ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

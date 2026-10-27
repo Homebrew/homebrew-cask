@@ -8,5 +8,5 @@ cask "font-amethysta" do
 
   font "Amethysta-Regular.ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

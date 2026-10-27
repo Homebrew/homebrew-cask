@@ -113,5 +113,5 @@ cask "font-m+-nerd-font" do
   font "M+CodeLat60NerdFontPropo-SemiBold.ttf"
   font "M+CodeLat60NerdFontPropo-Thin.ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

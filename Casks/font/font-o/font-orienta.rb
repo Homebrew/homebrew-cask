@@ -8,5 +8,5 @@ cask "font-orienta" do
 
   font "Orienta-Regular.ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

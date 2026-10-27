@@ -11,5 +11,5 @@ cask "font-charmonman" do
   font "Charmonman-Bold.ttf"
   font "Charmonman-Regular.ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

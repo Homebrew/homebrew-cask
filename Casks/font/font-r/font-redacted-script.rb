@@ -12,5 +12,5 @@ cask "font-redacted-script" do
   font "RedactedScript-Light.ttf"
   font "RedactedScript-Regular.ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

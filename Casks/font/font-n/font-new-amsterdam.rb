@@ -8,5 +8,5 @@ cask "font-new-amsterdam" do
 
   font "NewAmsterdam-Regular.ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

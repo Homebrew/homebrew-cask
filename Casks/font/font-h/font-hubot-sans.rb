@@ -55,5 +55,5 @@ cask "font-hubot-sans" do
   font "Hubot Sans/OTF/HubotSansExpanded-SemiBold.otf"
   font "Hubot Sans/OTF/HubotSansExpanded-SemiBoldItalic.otf"
 
-  # No zap stanza required
+  zap :not_required
 end

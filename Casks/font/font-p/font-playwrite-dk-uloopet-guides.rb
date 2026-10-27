@@ -8,5 +8,5 @@ cask "font-playwrite-dk-uloopet-guides" do
 
   font "PlaywriteDKUloopetGuides-Regular.ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

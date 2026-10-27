@@ -8,5 +8,5 @@ cask "font-miracode" do
 
   font "Miracode.ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

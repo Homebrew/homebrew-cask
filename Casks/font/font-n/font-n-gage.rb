@@ -8,5 +8,5 @@ cask "font-n-gage" do
 
   font "N-Gage.ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

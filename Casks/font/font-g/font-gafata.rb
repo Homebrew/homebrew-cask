@@ -8,5 +8,5 @@ cask "font-gafata" do
 
   font "Gafata-Regular.ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

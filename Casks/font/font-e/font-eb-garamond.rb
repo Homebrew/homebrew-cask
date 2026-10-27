@@ -24,5 +24,5 @@ cask "font-eb-garamond" do
   font "EBGaramond-#{version}/otf/EBGaramondSC08-Regular.otf"
   font "EBGaramond-#{version}/otf/EBGaramondSC12-Regular.otf"
 
-  # No zap stanza required
+  zap :not_required
 end

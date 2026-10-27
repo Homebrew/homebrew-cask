@@ -16,5 +16,5 @@ cask "itermbrowserplugin" do
 
   app "iTermBrowserPlugin.app"
 
-  # No zap stanza required
+  zap :not_required
 end

@@ -32,5 +32,5 @@ cask "font-hurmit-nerd-font" do
   font "HurmitNerdFontPropo-LightItalic.otf"
   font "HurmitNerdFontPropo-Regular.otf"
 
-  # No zap stanza required
+  zap :not_required
 end

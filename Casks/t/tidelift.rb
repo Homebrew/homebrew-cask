@@ -28,5 +28,5 @@ cask "tidelift" do
     set_permissions "tidelift", "+x"
   end
 
-  # No zap stanza required
+  zap :not_required
 end

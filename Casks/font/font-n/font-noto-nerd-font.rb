@@ -413,5 +413,5 @@ cask "font-noto-nerd-font" do
   font "NotoSerifNerdFontPropo-Thin.ttf"
   font "NotoSerifNerdFontPropo-ThinItalic.ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

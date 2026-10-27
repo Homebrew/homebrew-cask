@@ -8,5 +8,5 @@ cask "font-euphoria-script" do
 
   font "EuphoriaScript-Regular.ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

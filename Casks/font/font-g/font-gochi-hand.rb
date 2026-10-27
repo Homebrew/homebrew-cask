@@ -8,5 +8,5 @@ cask "font-gochi-hand" do
 
   font "GochiHand-Regular.ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

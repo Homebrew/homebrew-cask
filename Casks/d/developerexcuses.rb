@@ -13,5 +13,5 @@ cask "developerexcuses" do
 
   screen_saver "DeveloperExcuses.saver"
 
-  # No zap stanza required
+  zap :not_required
 end

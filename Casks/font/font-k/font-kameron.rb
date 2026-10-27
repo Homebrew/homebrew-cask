@@ -8,5 +8,5 @@ cask "font-kameron" do
 
   font "Kameron[wght].ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

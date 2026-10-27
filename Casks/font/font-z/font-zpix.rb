@@ -8,5 +8,5 @@ cask "font-zpix" do
 
   font "zpix.ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

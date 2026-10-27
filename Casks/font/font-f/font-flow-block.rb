@@ -8,5 +8,5 @@ cask "font-flow-block" do
 
   font "FlowBlock-Regular.ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

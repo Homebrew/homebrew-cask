@@ -10,5 +10,5 @@ cask "font-fontawesome" do
   font "fontawesome-free-#{version}-desktop/otfs/Font Awesome #{version.major} Free-Regular-400.otf"
   font "fontawesome-free-#{version}-desktop/otfs/Font Awesome #{version.major} Free-Solid-900.otf"
 
-  # No zap stanza required
+  zap :not_required
 end

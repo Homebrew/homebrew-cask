@@ -14,5 +14,5 @@ cask "font-harmonyos-sans-tc" do
   font "HarmonyOS Sans/HarmonyOS_SansTC/HarmonyOS_SansTC_Semibold.ttf"
   font "HarmonyOS Sans/HarmonyOS_SansTC/HarmonyOS_SansTC_Thin.ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

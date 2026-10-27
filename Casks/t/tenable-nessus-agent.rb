@@ -32,7 +32,7 @@ cask "tenable-nessus-agent" do
               "/private/etc/tenable_tag",
             ]
 
-  # No zap stanza required
+  zap :not_required
 
   caveats do
     license "https://static.tenable.com/prod_docs/tenable_slas.html"

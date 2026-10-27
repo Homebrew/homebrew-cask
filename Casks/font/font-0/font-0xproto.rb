@@ -16,5 +16,5 @@ cask "font-0xproto" do
   font "fonts/ZxProto/ZxProto-Italic.otf"
   font "fonts/ZxProto/ZxProto-Regular.otf"
 
-  # No zap stanza required
+  zap :not_required
 end

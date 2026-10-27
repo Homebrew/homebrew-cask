@@ -11,5 +11,5 @@ cask "font-gelasio" do
   font "Gelasio-Italic[wght].ttf"
   font "Gelasio[wght].ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

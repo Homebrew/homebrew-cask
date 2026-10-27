@@ -13,5 +13,5 @@ cask "font-dejavu-sans-mono-for-powerline" do
   font "DejaVu Sans Mono Oblique for Powerline.ttf"
   font "DejaVu Sans Mono for Powerline.ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

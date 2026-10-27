@@ -11,5 +11,5 @@ cask "font-flamenco" do
   font "Flamenco-Light.ttf"
   font "Flamenco-Regular.ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

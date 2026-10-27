@@ -8,5 +8,5 @@ cask "font-smythe" do
 
   font "Smythe-Regular.ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

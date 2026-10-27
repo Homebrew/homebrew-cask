@@ -16,5 +16,5 @@ cask "font-atkinson-hyperlegible" do
   font "Atkinson-Hyperlegible-Font-Print-and-Web-#{version}/Print Fonts/Atkinson-Hyperlegible-Italic-102.otf"
   font "Atkinson-Hyperlegible-Font-Print-and-Web-#{version}/Print Fonts/Atkinson-Hyperlegible-Regular-102.otf"
 
-  # No zap stanza required
+  zap :not_required
 end

@@ -16,5 +16,5 @@ cask "font-martel-sans" do
   font "MartelSans-Regular.ttf"
   font "MartelSans-SemiBold.ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

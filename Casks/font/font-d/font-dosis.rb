@@ -8,5 +8,5 @@ cask "font-dosis" do
 
   font "Dosis[wght].ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

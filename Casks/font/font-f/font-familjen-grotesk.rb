@@ -11,5 +11,5 @@ cask "font-familjen-grotesk" do
   font "FamiljenGrotesk-Italic[wght].ttf"
   font "FamiljenGrotesk[wght].ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

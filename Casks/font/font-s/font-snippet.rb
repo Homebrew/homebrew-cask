@@ -8,5 +8,5 @@ cask "font-snippet" do
 
   font "Snippet.ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

@@ -18,5 +18,5 @@ cask "font-opendyslexic" do
   font "opendyslexic/otf/OpenDyslexicAlta-Regular.otf"
   font "opendyslexic/otf/OpenDyslexicMono-Regular.otf"
 
-  # No zap stanza required
+  zap :not_required
 end

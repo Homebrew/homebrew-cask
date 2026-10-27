@@ -11,5 +11,5 @@ cask "font-brygada-1918" do
   font "Brygada1918-Italic[wght].ttf"
   font "Brygada1918[wght].ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

@@ -27,5 +27,5 @@ cask "font-bungee" do
   font "Bungee-fonts/Bungee_Rotated/BungeeRotatedOutline-Regular.ttf"
   font "Bungee-fonts/Bungee_Rotated/BungeeRotatedShade-Regular.ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

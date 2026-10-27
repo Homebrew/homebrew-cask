@@ -8,5 +8,5 @@ cask "font-jaini-purva" do
 
   font "JainiPurva-Regular.ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

@@ -27,5 +27,5 @@ cask "font-montserrat-alternates" do
   font "MontserratAlternates-Thin.ttf"
   font "MontserratAlternates-ThinItalic.ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

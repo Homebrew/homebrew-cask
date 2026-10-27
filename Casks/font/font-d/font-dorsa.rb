@@ -8,5 +8,5 @@ cask "font-dorsa" do
 
   font "Dorsa-Regular.ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

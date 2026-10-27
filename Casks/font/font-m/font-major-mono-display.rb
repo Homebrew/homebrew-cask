@@ -8,5 +8,5 @@ cask "font-major-mono-display" do
 
   font "MajorMonoDisplay-Regular.ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

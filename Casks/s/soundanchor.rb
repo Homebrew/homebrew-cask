@@ -19,5 +19,5 @@ cask "soundanchor" do
 
   uninstall quit: "me.kopiro.soundanchor"
 
-  # No zap stanza required
+  zap :not_required
 end

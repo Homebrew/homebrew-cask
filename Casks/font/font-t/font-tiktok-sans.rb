@@ -8,5 +8,5 @@ cask "font-tiktok-sans" do
 
   font "TikTokSans[opsz,slnt,wdth,wght].ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

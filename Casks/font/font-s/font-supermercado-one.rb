@@ -8,5 +8,5 @@ cask "font-supermercado-one" do
 
   font "SupermercadoOne-Regular.ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

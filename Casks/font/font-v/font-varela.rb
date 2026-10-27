@@ -8,5 +8,5 @@ cask "font-varela" do
 
   font "Varela-Regular.ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

@@ -56,5 +56,5 @@ cask "font-junicode" do
   font "Junicode/VAR/JunicodeVF-Italic.ttf"
   font "Junicode/VAR/JunicodeVF-Roman.ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

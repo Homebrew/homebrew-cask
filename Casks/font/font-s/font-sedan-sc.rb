@@ -8,5 +8,5 @@ cask "font-sedan-sc" do
 
   font "SedanSC-Regular.ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

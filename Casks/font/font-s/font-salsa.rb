@@ -8,5 +8,5 @@ cask "font-salsa" do
 
   font "Salsa-Regular.ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

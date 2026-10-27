@@ -8,5 +8,5 @@ cask "font-darker-grotesque" do
 
   font "DarkerGrotesque[wght].ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

@@ -8,5 +8,5 @@ cask "font-italiana" do
 
   font "Italiana-Regular.ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

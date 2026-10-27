@@ -18,5 +18,5 @@ cask "fabfilter-micro" do
 
   uninstall pkgutil: "com.fabfilter.Micro.*"
 
-  # No zap stanza required
+  zap :not_required
 end

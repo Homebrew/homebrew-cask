@@ -19,5 +19,5 @@ cask "automounterhelper" do
   uninstall launchctl: "nz.co.pixeleyes.AutoMounterHelper",
             trash:     "~/Library/AutoMounterHelper"
 
-  # No zap stanza required
+  zap :not_required
 end

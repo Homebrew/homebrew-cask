@@ -30,7 +30,7 @@ cask "perforce" do
   binary "p4d"
   binary "p4p"
 
-  # No zap stanza required
+  zap :not_required
 
   caveats <<~EOS
     Instructions on using the Helix Versioning Engine are available in

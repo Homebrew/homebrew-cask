@@ -8,5 +8,5 @@ cask "font-yesteryear" do
 
   font "Yesteryear-Regular.ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

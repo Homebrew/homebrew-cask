@@ -17,5 +17,5 @@ cask "font-shure-tech-mono-nerd-font" do
   font "ShureTechMonoNerdFontMono-Regular.ttf"
   font "ShureTechMonoNerdFontPropo-Regular.ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

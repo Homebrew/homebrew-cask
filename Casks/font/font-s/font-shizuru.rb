@@ -8,5 +8,5 @@ cask "font-shizuru" do
 
   font "Shizuru-Regular.ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

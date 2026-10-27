@@ -20,5 +20,5 @@ cask "font-bigblue-terminal-nerd-font" do
   font "BigBlueTermPlusNerdFontMono-Regular.ttf"
   font "BigBlueTermPlusNerdFontPropo-Regular.ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

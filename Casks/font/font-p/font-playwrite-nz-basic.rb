@@ -8,5 +8,5 @@ cask "font-playwrite-nz-basic" do
 
   font "PlaywriteNZBasic[wght].ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

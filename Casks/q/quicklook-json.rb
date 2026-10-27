@@ -14,5 +14,5 @@ cask "quicklook-json" do
 
   qlplugin "QuickLookJSON.qlgenerator"
 
-  # No zap stanza required
+  zap :not_required
 end

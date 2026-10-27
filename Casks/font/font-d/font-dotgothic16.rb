@@ -8,5 +8,5 @@ cask "font-dotgothic16" do
 
   font "DotGothic16-Regular.ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

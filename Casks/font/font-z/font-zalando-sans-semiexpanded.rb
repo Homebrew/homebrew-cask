@@ -11,5 +11,5 @@ cask "font-zalando-sans-semiexpanded" do
   font "ZalandoSansSemiExpanded-Italic[wght].ttf"
   font "ZalandoSansSemiExpanded[wght].ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

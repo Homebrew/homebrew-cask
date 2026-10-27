@@ -8,5 +8,5 @@ cask "font-devicons" do
 
   font "package/dist/devicons.ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

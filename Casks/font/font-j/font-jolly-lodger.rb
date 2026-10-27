@@ -8,5 +8,5 @@ cask "font-jolly-lodger" do
 
   font "JollyLodger-Regular.ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

@@ -95,5 +95,5 @@ cask "font-iosevka-nerd-font" do
   font "IosevkaNerdFontPropo-ThinItalic.ttf"
   font "IosevkaNerdFontPropo-ThinOblique.ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

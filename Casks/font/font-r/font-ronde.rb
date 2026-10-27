@@ -8,5 +8,5 @@ cask "font-ronde" do
 
   font "ronde_square/Ronde-B_square.otf"
 
-  # No zap stanza required
+  zap :not_required
 end

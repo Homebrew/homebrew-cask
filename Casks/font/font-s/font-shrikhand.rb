@@ -8,5 +8,5 @@ cask "font-shrikhand" do
 
   font "Shrikhand-Regular.ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

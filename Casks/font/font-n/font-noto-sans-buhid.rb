@@ -8,5 +8,5 @@ cask "font-noto-sans-buhid" do
 
   font "NotoSansBuhid-Regular.ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

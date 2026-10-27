@@ -8,5 +8,5 @@ cask "font-freckle-face" do
 
   font "FreckleFace-Regular.ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

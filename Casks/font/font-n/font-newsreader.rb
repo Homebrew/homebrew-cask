@@ -11,5 +11,5 @@ cask "font-newsreader" do
   font "Newsreader-Italic[opsz,wght].ttf"
   font "Newsreader[opsz,wght].ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

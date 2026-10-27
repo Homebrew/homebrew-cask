@@ -11,5 +11,5 @@ cask "font-rubik" do
   font "Rubik-Italic[wght].ttf"
   font "Rubik[wght].ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

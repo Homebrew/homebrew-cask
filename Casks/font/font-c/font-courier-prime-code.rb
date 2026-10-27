@@ -9,5 +9,5 @@ cask "font-courier-prime-code" do
   font "ttf/Courier Prime Code Italic.ttf"
   font "ttf/Courier Prime Code.ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

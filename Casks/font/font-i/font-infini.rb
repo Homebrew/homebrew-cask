@@ -15,5 +15,5 @@ cask "font-infini" do
   font "Infini-cnap-engl_fonts-specimen-v2/01_Fonts/03_Bold/infini-bold.otf"
   font "Infini-cnap-engl_fonts-specimen-v2/01_Fonts/04_Pictos/infini-picto.otf"
 
-  # No zap stanza required
+  zap :not_required
 end

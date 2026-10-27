@@ -15,5 +15,5 @@ cask "font-sansation" do
   font "Sansation-LightItalic.ttf"
   font "Sansation-Regular.ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

@@ -11,5 +11,5 @@ cask "font-psudofont-liga-mono" do
   font "psudoFont_Liga_Mono_V.#{version}/psudoFont_Liga_Mono_-_Italic.ttf"
   font "psudoFont_Liga_Mono_V.#{version}/psudoFont_Liga_Mono_-_Regular.ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

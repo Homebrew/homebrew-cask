@@ -8,5 +8,5 @@ cask "font-pigmo01" do
 
   font "pigmo01/Pigmo-01.otf"
 
-  # No zap stanza required
+  zap :not_required
 end

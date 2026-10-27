@@ -13,5 +13,5 @@ cask "font-thasadith" do
   font "Thasadith-Italic.ttf"
   font "Thasadith-Regular.ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

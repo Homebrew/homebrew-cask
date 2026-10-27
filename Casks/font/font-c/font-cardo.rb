@@ -15,5 +15,5 @@ cask "font-cardo" do
   font "Cardob101.ttf"
   font "Cardoi99.ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

@@ -11,5 +11,5 @@ cask "idevice-pair" do
 
   app "idevice_pair.app"
 
-  # No zap stanza required
+  zap :not_required
 end

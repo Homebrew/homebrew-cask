@@ -14,5 +14,5 @@ cask "font-khand" do
   font "Khand-Regular.ttf"
   font "Khand-SemiBold.ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

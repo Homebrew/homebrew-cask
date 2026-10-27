@@ -11,5 +11,5 @@ cask "font-oregano" do
   font "Oregano-Italic.ttf"
   font "Oregano-Regular.ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

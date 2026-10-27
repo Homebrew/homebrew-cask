@@ -8,5 +8,5 @@ cask "font-peddana" do
 
   font "Peddana-Regular.ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

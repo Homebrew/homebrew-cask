@@ -8,5 +8,5 @@ cask "font-anek-devanagari" do
 
   font "AnekDevanagari[wdth,wght].ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

@@ -26,5 +26,5 @@ cask "font-satoshi" do
   font "Satoshi_Complete/Fonts/TTF/Satoshi-Variable.ttf"
   font "Satoshi_Complete/Fonts/TTF/Satoshi-VariableItalic.ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

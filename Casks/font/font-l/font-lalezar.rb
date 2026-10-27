@@ -8,5 +8,5 @@ cask "font-lalezar" do
 
   font "Lalezar-Regular.ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

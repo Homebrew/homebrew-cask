@@ -8,5 +8,5 @@ cask "font-yanone-kaffeesatz" do
 
   font "YanoneKaffeesatz[wght].ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

@@ -8,5 +8,5 @@ cask "font-noto-serif-tangut" do
 
   font "NotoSerifTangut-Regular.ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

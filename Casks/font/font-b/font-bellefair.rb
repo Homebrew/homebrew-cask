@@ -8,5 +8,5 @@ cask "font-bellefair" do
 
   font "Bellefair-Regular.ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

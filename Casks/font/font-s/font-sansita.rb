@@ -17,5 +17,5 @@ cask "font-sansita" do
   font "Sansita-Italic.ttf"
   font "Sansita-Regular.ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

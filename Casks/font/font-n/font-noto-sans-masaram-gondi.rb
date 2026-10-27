@@ -8,5 +8,5 @@ cask "font-noto-sans-masaram-gondi" do
 
   font "NotoSansMasaramGondi-Regular.ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

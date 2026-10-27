@@ -18,5 +18,5 @@ cask "topcat" do
   binary "#{appdir}/TOPCAT.app/Contents/Resources/app/topcat"
   binary "#{appdir}/TOPCAT.app/Contents/Resources/app/stilts"
 
-  # No zap stanza required
+  zap :not_required
 end

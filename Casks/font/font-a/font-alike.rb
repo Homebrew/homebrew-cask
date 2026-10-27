@@ -8,5 +8,5 @@ cask "font-alike" do
 
   font "Alike-Regular.ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

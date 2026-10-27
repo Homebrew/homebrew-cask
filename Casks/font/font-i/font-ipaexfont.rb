@@ -14,5 +14,5 @@ cask "font-ipaexfont" do
   font "IPAexfont#{version.no_dots}/ipaexg.ttf"
   font "IPAexfont#{version.no_dots}/ipaexm.ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

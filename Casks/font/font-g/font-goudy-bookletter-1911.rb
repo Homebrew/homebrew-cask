@@ -8,5 +8,5 @@ cask "font-goudy-bookletter-1911" do
 
   font "GoudyBookletter1911.ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

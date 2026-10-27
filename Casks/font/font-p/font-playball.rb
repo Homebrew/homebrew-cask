@@ -8,5 +8,5 @@ cask "font-playball" do
 
   font "Playball-Regular.ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

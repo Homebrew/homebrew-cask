@@ -8,5 +8,5 @@ cask "font-megrim" do
 
   font "Megrim.ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

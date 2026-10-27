@@ -8,5 +8,5 @@ cask "font-henny-penny" do
 
   font "HennyPenny-Regular.ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

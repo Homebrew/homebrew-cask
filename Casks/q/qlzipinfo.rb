@@ -14,5 +14,5 @@ cask "qlzipinfo" do
 
   qlplugin "qlZipInfo.qlgenerator"
 
-  # No zap stanza required
+  zap :not_required
 end

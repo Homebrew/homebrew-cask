@@ -11,5 +11,5 @@ cask "font-delius-unicase" do
   font "DeliusUnicase-Bold.ttf"
   font "DeliusUnicase-Regular.ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

@@ -8,5 +8,5 @@ cask "font-noto-serif-grantha" do
 
   font "NotoSerifGrantha-Regular.ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

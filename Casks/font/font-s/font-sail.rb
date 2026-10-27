@@ -8,5 +8,5 @@ cask "font-sail" do
 
   font "Sail-Regular.ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

@@ -8,5 +8,5 @@ cask "font-libertinus-mono" do
 
   font "LibertinusMono-Regular.ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

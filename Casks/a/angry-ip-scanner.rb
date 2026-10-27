@@ -16,5 +16,5 @@ cask "angry-ip-scanner" do
 
   app "Angry IP Scanner.app"
 
-  # No zap stanza required
+  zap :not_required
 end

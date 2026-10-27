@@ -13,5 +13,5 @@ cask "colorpicker-materialdesign" do
 
   colorpicker "MaterialDesignColorPicker.colorPicker"
 
-  # No zap stanza required
+  zap :not_required
 end

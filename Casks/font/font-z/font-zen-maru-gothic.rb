@@ -14,5 +14,5 @@ cask "font-zen-maru-gothic" do
   font "ZenMaruGothic-Medium.ttf"
   font "ZenMaruGothic-Regular.ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

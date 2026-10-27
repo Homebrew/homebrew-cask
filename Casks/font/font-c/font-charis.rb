@@ -20,5 +20,5 @@ cask "font-charis" do
   font "Charis-#{version}/Charis-SemiBold.ttf"
   font "Charis-#{version}/Charis-SemiBoldItalic.ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

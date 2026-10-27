@@ -8,5 +8,5 @@ cask "font-days-one" do
 
   font "DaysOne-Regular.ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

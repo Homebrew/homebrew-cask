@@ -16,5 +16,5 @@ cask "font-heavy-data-nerd-font" do
   font "HeavyDataNerdFont-Regular.ttf"
   font "HeavyDataNerdFontPropo-Regular.ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

@@ -11,5 +11,5 @@ cask "font-im-fell-great-primer" do
   font "IMFeGPit28P.ttf"
   font "IMFeGPrm28P.ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

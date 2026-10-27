@@ -21,7 +21,7 @@ cask "blackhole-2ch" do
   uninstall quit:    "com.apple.audio.AudioMIDISetup",
             pkgutil: "audio.existential.BlackHole2ch"
 
-  # No zap stanza required
+  zap :not_required
 
   caveats do
     reboot

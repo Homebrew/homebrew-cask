@@ -13,5 +13,5 @@ cask "font-caudex" do
   font "Caudex-Italic.ttf"
   font "Caudex-Regular.ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

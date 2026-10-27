@@ -8,5 +8,5 @@ cask "font-bayon" do
 
   font "Bayon-Regular.ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

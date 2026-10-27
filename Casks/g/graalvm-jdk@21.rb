@@ -34,7 +34,7 @@ cask "graalvm-jdk@21" do
 
   artifact "graalvm-jdk-#{version.csv.first}+#{version.csv.second}.1", target: "/Library/Java/JavaVirtualMachines/graalvm-#{version.major}.jdk"
 
-  # No zap stanza required
+  zap :not_required
 
   caveats do
     license "https://www.oracle.com/downloads/licenses/graal-free-license.html"

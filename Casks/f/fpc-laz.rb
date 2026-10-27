@@ -27,7 +27,7 @@ cask "fpc-laz" do
     "org.freepascal.freePascalCompiler322.fpcinstintelarm64",
   ]
 
-  # No zap stanza required
+  zap :not_required
 
   caveats do
     files_in_usr_local

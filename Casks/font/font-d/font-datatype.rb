@@ -8,5 +8,5 @@ cask "font-datatype" do
 
   font "Datatype[wdth,wght].ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

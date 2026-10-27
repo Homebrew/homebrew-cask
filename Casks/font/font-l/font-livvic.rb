@@ -25,5 +25,5 @@ cask "font-livvic" do
   font "Livvic-Thin.ttf"
   font "Livvic-ThinItalic.ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

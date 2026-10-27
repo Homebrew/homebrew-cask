@@ -27,5 +27,5 @@ cask "font-maple-mono-normal-cn" do
   font "MapleMonoNormal-CN-Thin.ttf"
   font "MapleMonoNormal-CN-ThinItalic.ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

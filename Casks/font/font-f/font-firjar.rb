@@ -8,5 +8,5 @@ cask "font-firjar" do
 
   font "Firjar[wdth,wght].ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

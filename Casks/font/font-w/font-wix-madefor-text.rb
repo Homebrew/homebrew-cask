@@ -9,5 +9,5 @@ cask "font-wix-madefor-text" do
   font "wixmadefor-fonts/fonts/variable/WixMadeforText-Italic[wght].ttf"
   font "wixmadefor-fonts/fonts/variable/WixMadeforText[wght].ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

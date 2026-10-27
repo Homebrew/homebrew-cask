@@ -8,5 +8,5 @@ cask "font-holtwood-one-sc" do
 
   font "HoltwoodOneSC-Regular.ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

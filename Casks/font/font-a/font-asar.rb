@@ -8,5 +8,5 @@ cask "font-asar" do
 
   font "Asar-Regular.ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

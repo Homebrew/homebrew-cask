@@ -8,5 +8,5 @@ cask "font-inconsolata-for-powerline-bold" do
 
   font "Inconsolata Bold for Powerline.ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

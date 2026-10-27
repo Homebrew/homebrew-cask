@@ -8,5 +8,5 @@ cask "font-chela-one" do
 
   font "ChelaOne-Regular.ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

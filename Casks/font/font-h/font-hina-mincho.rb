@@ -8,5 +8,5 @@ cask "font-hina-mincho" do
 
   font "HinaMincho-Regular.ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

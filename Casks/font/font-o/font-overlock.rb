@@ -15,5 +15,5 @@ cask "font-overlock" do
   font "Overlock-Italic.ttf"
   font "Overlock-Regular.ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

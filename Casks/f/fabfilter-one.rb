@@ -18,5 +18,5 @@ cask "fabfilter-one" do
 
   uninstall pkgutil: "com.fabfilter.One.*"
 
-  # No zap stanza required
+  zap :not_required
 end

@@ -14,5 +14,5 @@ cask "font-chathura" do
   font "Chathura-Regular.ttf"
   font "Chathura-Thin.ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

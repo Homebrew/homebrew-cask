@@ -8,5 +8,5 @@ cask "font-almendra-sc" do
 
   font "AlmendraSC-Regular.ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

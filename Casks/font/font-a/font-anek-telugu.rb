@@ -8,5 +8,5 @@ cask "font-anek-telugu" do
 
   font "AnekTelugu[wdth,wght].ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

@@ -18,7 +18,7 @@ cask "semeru-jdk-open@8" do
 
   uninstall pkgutil: "net.ibm-semeru-open.#{version.major}.jdk"
 
-  # No zap stanza required
+  zap :not_required
 
   caveats do
     requires_rosetta

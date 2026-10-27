@@ -8,5 +8,5 @@ cask "font-protest-strike" do
 
   font "ProtestStrike-Regular.ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

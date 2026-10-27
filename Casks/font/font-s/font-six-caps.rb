@@ -8,5 +8,5 @@ cask "font-six-caps" do
 
   font "SixCaps.ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

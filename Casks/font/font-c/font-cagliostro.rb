@@ -8,5 +8,5 @@ cask "font-cagliostro" do
 
   font "Cagliostro-Regular.ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

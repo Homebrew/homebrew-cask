@@ -16,5 +16,5 @@ cask "font-charter" do
   font "Charter #{version}/OTF format (best for Mac OS)/Charter/Charter Italic.otf"
   font "Charter #{version}/OTF format (best for Mac OS)/Charter/Charter Regular.otf"
 
-  # No zap stanza required
+  zap :not_required
 end

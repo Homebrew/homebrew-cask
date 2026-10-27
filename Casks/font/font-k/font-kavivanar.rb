@@ -8,5 +8,5 @@ cask "font-kavivanar" do
 
   font "Kavivanar-Regular.ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

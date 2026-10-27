@@ -8,5 +8,5 @@ cask "font-tenali-ramakrishna" do
 
   font "TenaliRamakrishna-Regular.ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

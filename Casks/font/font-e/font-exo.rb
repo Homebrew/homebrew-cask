@@ -11,5 +11,5 @@ cask "font-exo" do
   font "Exo-Italic[wght].ttf"
   font "Exo[wght].ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

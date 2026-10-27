@@ -8,5 +8,5 @@ cask "font-playwrite-hr" do
 
   font "PlaywriteHR[wght].ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

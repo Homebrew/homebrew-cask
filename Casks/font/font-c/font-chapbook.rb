@@ -10,5 +10,5 @@ cask "font-chapbook" do
   font "Chapbook OTF/Chapbook-Italic.otf"
   font "Chapbook OTF/Chapbook-Regular.otf"
 
-  # No zap stanza required
+  zap :not_required
 end

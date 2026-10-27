@@ -8,5 +8,5 @@ cask "font-sarina" do
 
   font "Sarina-Regular.ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

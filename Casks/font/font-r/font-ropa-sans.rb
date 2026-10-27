@@ -11,5 +11,5 @@ cask "font-ropa-sans" do
   font "RopaSans-Italic.ttf"
   font "RopaSans-Regular.ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

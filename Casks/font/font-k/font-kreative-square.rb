@@ -9,5 +9,5 @@ cask "font-kreative-square" do
   font "KreativeSquare.ttf"
   font "KreativeSquareSM.ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

@@ -11,5 +11,5 @@ cask "font-luculent" do
   font "luculent/luculentbi.ttf"
   font "luculent/luculenti.ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

@@ -45,5 +45,5 @@ cask "font-computer-modern" do
   font "cm-unicode-#{version}/cmunvi.ttf"
   font "cm-unicode-#{version}/cmunvt.ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

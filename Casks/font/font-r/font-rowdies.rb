@@ -12,5 +12,5 @@ cask "font-rowdies" do
   font "Rowdies-Light.ttf"
   font "Rowdies-Regular.ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

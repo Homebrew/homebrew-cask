@@ -8,5 +8,5 @@ cask "font-sofadi-one" do
 
   font "SofadiOne-Regular.ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

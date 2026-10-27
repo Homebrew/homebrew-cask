@@ -11,5 +11,5 @@ cask "font-tiny5" do
   font "Tiny5-Italic[BLED,JITT,ROND,wdth,wght].ttf"
   font "Tiny5[BLED,JITT,ROND,wdth,wght].ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

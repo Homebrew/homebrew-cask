@@ -11,5 +11,5 @@ cask "font-source-code-pro" do
   font "SourceCodePro-Italic[wght].ttf"
   font "SourceCodePro[wght].ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

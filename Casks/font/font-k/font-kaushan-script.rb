@@ -8,5 +8,5 @@ cask "font-kaushan-script" do
 
   font "KaushanScript-Regular.ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

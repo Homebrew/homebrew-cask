@@ -8,5 +8,5 @@ cask "font-fascinate" do
 
   font "Fascinate-Regular.ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

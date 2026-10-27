@@ -8,5 +8,5 @@ cask "font-black-ops-one" do
 
   font "BlackOpsOne-Regular.ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

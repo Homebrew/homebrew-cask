@@ -26,5 +26,5 @@ cask "fuse-t" do
               "org.fuse-t.fskit.#{version}",
             ]
 
-  # No zap stanza required
+  zap :not_required
 end

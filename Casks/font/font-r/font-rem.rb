@@ -11,5 +11,5 @@ cask "font-rem" do
   font "REM-Italic[wght].ttf"
   font "REM[wght].ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

@@ -8,5 +8,5 @@ cask "font-noto-sans-nko-unjoined" do
 
   font "NotoSansNKoUnjoined[wght].ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

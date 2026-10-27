@@ -11,5 +11,5 @@ cask "font-fondamento" do
   font "Fondamento-Italic.ttf"
   font "Fondamento-Regular.ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

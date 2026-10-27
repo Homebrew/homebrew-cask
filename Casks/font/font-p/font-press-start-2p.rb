@@ -8,5 +8,5 @@ cask "font-press-start-2p" do
 
   font "PressStart2P-Regular.ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

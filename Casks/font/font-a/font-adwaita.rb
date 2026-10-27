@@ -13,5 +13,5 @@ cask "font-adwaita" do
   font "adwaita-fonts-#{version}/sans/AdwaitaSans-Italic.ttf"
   font "adwaita-fonts-#{version}/sans/AdwaitaSans-Regular.ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

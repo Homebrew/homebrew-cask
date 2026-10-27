@@ -11,5 +11,5 @@ cask "font-source-sans-3" do
   font "SourceSans3-Italic[wght].ttf"
   font "SourceSans3[wght].ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

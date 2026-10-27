@@ -8,5 +8,5 @@ cask "font-noto-sans-egyptian-hieroglyphs" do
 
   font "NotoSansEgyptianHieroglyphs-Regular.ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

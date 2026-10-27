@@ -35,5 +35,5 @@ cask "font-dejavu" do
   font "dejavu-fonts-ttf-#{version}/ttf/DejaVuSerifCondensed-Italic.ttf"
   font "dejavu-fonts-ttf-#{version}/ttf/DejaVuSerifCondensed.ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

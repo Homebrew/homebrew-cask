@@ -8,5 +8,5 @@ cask "font-momo-signature" do
 
   font "MomoSignature-Regular.ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

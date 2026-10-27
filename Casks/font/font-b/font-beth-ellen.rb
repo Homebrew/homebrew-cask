@@ -8,5 +8,5 @@ cask "font-beth-ellen" do
 
   font "BethEllen-Regular.ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

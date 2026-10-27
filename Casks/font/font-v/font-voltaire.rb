@@ -8,5 +8,5 @@ cask "font-voltaire" do
 
   font "Voltaire-Regular.ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

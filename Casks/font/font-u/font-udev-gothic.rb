@@ -31,5 +31,5 @@ cask "font-udev-gothic" do
   font "UDEVGothic_v#{version}/UDEVGothicLG-Italic.ttf"
   font "UDEVGothic_v#{version}/UDEVGothicLG-Regular.ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

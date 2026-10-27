@@ -8,5 +8,5 @@ cask "font-noto-sans-hanifi-rohingya" do
 
   font "NotoSansHanifiRohingya[wght].ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

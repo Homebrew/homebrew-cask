@@ -8,5 +8,5 @@ cask "font-allerta-stencil" do
 
   font "AllertaStencil-Regular.ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

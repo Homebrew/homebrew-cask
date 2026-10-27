@@ -8,5 +8,5 @@ cask "font-kumar-one" do
 
   font "KumarOne-Regular.ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

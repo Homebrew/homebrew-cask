@@ -27,5 +27,5 @@ cask "font-3270" do
   font "3270Condensed-Regular.otf"
   font "3270SemiCondensed-Regular.otf"
 
-  # No zap stanza required
+  zap :not_required
 end

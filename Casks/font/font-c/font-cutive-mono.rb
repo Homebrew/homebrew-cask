@@ -8,5 +8,5 @@ cask "font-cutive-mono" do
 
   font "CutiveMono-Regular.ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

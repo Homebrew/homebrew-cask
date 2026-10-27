@@ -11,5 +11,5 @@ cask "font-crete-round" do
   font "CreteRound-Italic.ttf"
   font "CreteRound-Regular.ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

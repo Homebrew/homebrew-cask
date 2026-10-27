@@ -8,5 +8,5 @@ cask "font-long-cang" do
 
   font "LongCang-Regular.ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

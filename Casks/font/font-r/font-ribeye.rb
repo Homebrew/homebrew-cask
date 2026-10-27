@@ -8,5 +8,5 @@ cask "font-ribeye" do
 
   font "Ribeye-Regular.ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

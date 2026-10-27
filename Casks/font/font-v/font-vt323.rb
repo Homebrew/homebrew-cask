@@ -8,5 +8,5 @@ cask "font-vt323" do
 
   font "VT323-Regular.ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

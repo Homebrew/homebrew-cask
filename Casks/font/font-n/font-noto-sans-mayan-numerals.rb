@@ -8,5 +8,5 @@ cask "font-noto-sans-mayan-numerals" do
 
   font "NotoSansMayanNumerals-Regular.ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

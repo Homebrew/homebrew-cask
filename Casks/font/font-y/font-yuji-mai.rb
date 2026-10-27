@@ -8,5 +8,5 @@ cask "font-yuji-mai" do
 
   font "YujiMai-Regular.ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

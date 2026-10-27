@@ -11,5 +11,5 @@ cask "font-inter-tight" do
   font "InterTight-Italic[wght].ttf"
   font "InterTight[wght].ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

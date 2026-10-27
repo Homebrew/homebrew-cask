@@ -8,5 +8,5 @@ cask "font-trykker" do
 
   font "Trykker-Regular.ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

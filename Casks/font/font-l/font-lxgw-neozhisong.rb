@@ -9,5 +9,5 @@ cask "font-lxgw-neozhisong" do
 
   font "LXGWNeoZhiSong.ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

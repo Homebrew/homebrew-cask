@@ -9,5 +9,5 @@ cask "font-nexon-bazzi" do
 
   font "OFT/Bazzi OTF.otf"
 
-  # No zap stanza required
+  zap :not_required
 end

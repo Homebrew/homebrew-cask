@@ -8,5 +8,5 @@ cask "font-decovar-alpha" do
 
   font "DecovarAlpha-VF.ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

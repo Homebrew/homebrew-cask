@@ -11,5 +11,5 @@ cask "emojipedia" do
 
   dictionary "Emojipedia.dictionary"
 
-  # No zap stanza required
+  zap :not_required
 end

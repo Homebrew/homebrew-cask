@@ -8,5 +8,5 @@ cask "font-mynerve" do
 
   font "Mynerve-Regular.ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

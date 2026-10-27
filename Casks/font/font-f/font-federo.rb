@@ -8,5 +8,5 @@ cask "font-federo" do
 
   font "Federo-Regular.ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

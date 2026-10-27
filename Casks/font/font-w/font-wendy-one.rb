@@ -8,5 +8,5 @@ cask "font-wendy-one" do
 
   font "WendyOne-Regular.ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

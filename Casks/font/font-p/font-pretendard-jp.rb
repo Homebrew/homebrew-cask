@@ -16,5 +16,5 @@ cask "font-pretendard-jp" do
   font "public/static/PretendardJP-SemiBold.otf"
   font "public/static/PretendardJP-Thin.otf"
 
-  # No zap stanza required
+  zap :not_required
 end

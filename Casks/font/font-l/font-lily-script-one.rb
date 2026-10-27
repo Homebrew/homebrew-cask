@@ -8,5 +8,5 @@ cask "font-lily-script-one" do
 
   font "LilyScriptOne-Regular.ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

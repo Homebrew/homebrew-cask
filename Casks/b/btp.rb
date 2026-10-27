@@ -26,7 +26,7 @@ cask "btp" do
                                        shell_parameter_format: "--autocomplete=init:",
                                        shells:                 [:bash, :zsh, :pwsh]
 
-  # No zap stanza required
+  zap :not_required
 
   caveats do
     license "https://tools.hana.ondemand.com/developer-license-3_2.txt"

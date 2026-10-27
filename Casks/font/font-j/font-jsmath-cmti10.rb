@@ -8,5 +8,5 @@ cask "font-jsmath-cmti10" do
 
   font "jsMath-cmti10.ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

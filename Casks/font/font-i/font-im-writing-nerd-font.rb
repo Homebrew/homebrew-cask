@@ -42,5 +42,5 @@ cask "font-im-writing-nerd-font" do
   font "iMWritingQuatNerdFontPropo-Italic.ttf"
   font "iMWritingQuatNerdFontPropo-Regular.ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

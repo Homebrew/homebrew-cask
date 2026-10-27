@@ -8,5 +8,5 @@ cask "font-montez" do
 
   font "Montez-Regular.ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

@@ -8,5 +8,5 @@ cask "font-molengo" do
 
   font "Molengo-Regular.ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

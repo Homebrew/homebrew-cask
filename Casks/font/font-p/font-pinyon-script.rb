@@ -8,5 +8,5 @@ cask "font-pinyon-script" do
 
   font "PinyonScript-Regular.ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

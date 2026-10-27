@@ -8,5 +8,5 @@ cask "font-mooli" do
 
   font "Mooli-Regular.ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

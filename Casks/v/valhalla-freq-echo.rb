@@ -24,5 +24,5 @@ cask "valhalla-freq-echo" do
 
   uninstall pkgutil: "com.valhalladsp.FreqEcho.pkg.*"
 
-  # No zap stanza required
+  zap :not_required
 end

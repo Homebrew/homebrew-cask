@@ -8,5 +8,5 @@ cask "font-noto-sans-thai-looped" do
 
   font "NotoSansThaiLooped[wdth,wght].ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

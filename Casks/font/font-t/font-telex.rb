@@ -8,5 +8,5 @@ cask "font-telex" do
 
   font "Telex-Regular.ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

@@ -8,5 +8,5 @@ cask "font-caveat-brush" do
 
   font "CaveatBrush-Regular.ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

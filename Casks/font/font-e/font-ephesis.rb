@@ -8,5 +8,5 @@ cask "font-ephesis" do
 
   font "Ephesis-Regular.ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

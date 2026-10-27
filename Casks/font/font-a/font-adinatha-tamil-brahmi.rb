@@ -8,5 +8,5 @@ cask "font-adinatha-tamil-brahmi" do
 
   font "Adinatha-Tamil-Brahmi/Adinatha-Tamil-Brahmi.otf"
 
-  # No zap stanza required
+  zap :not_required
 end

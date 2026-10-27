@@ -11,5 +11,5 @@ cask "font-syncopate" do
   font "Syncopate-Bold.ttf"
   font "Syncopate-Regular.ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

@@ -15,5 +15,5 @@ cask "font-kedebideri" do
   font "Kedebideri-Regular.ttf"
   font "Kedebideri-SemiBold.ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

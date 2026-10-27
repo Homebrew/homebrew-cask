@@ -20,5 +20,5 @@ cask "font-andika" do
   font "Andika-#{version}/Andika-SemiBold.ttf"
   font "Andika-#{version}/Andika-SemiBoldItalic.ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

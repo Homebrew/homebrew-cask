@@ -34,5 +34,5 @@ cask "starnet++" do
     set_permissions "StarNetv*CLI_MacOS/starnet++", "0755"
   end
 
-  # No zap stanza required
+  zap :not_required
 end

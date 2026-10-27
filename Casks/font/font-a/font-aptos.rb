@@ -35,5 +35,5 @@ cask "font-aptos" do
   font "Aptos-Serif.ttf"
   font "Aptos.ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

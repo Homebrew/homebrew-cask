@@ -13,5 +13,5 @@ cask "font-farro" do
   font "Farro-Medium.ttf"
   font "Farro-Regular.ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

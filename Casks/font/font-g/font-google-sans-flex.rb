@@ -8,5 +8,5 @@ cask "font-google-sans-flex" do
 
   font "GoogleSansFlex[ROND,opsz,slnt,wdth,wght].ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

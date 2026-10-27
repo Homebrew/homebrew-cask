@@ -12,5 +12,5 @@ cask "font-nanum-myeongjo" do
   font "NanumMyeongjo-ExtraBold.ttf"
   font "NanumMyeongjo-Regular.ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

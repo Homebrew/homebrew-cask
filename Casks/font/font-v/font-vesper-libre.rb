@@ -13,5 +13,5 @@ cask "font-vesper-libre" do
   font "VesperLibre-Medium.ttf"
   font "VesperLibre-Regular.ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

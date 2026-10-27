@@ -11,5 +11,5 @@ cask "font-castoro" do
   font "Castoro-Italic[wght].ttf"
   font "Castoro[wght].ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

@@ -11,5 +11,5 @@ cask "font-pt-sans-caption" do
   font "PT_Sans-Caption-Web-Bold.ttf"
   font "PT_Sans-Caption-Web-Regular.ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

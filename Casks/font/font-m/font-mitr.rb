@@ -15,5 +15,5 @@ cask "font-mitr" do
   font "Mitr-Regular.ttf"
   font "Mitr-SemiBold.ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

@@ -20,5 +20,5 @@ cask "font-d2coding-nerd-font" do
   font "D2KodingLigatureNerdFontPropo-Bold.ttf"
   font "D2KodingLigatureNerdFontPropo-Regular.ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

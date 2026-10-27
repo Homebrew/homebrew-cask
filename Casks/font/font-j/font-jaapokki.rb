@@ -14,5 +14,5 @@ cask "font-jaapokki" do
   font "Jaapokkienchance-Regular.otf"
   font "Jaapokkisubtract-Regular.otf"
 
-  # No zap stanza required
+  zap :not_required
 end

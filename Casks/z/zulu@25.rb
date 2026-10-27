@@ -30,5 +30,5 @@ cask "zulu@25" do
 
   uninstall pkgutil: "com.azulsystems.zulu.#{version.major}"
 
-  # No zap stanza required
+  zap :not_required
 end

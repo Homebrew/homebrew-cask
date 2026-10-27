@@ -77,5 +77,5 @@ cask "font-victor-mono-nerd-font" do
   font "VictorMonoNerdFontPropo-ThinItalic.ttf"
   font "VictorMonoNerdFontPropo-ThinOblique.ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

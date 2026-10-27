@@ -16,5 +16,5 @@ cask "font-routed-gothic" do
   font "routed-gothic-#{version}/dist/ttf/routed-gothic-wide.ttf"
   font "routed-gothic-#{version}/dist/ttf/routed-gothic.ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

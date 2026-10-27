@@ -8,5 +8,5 @@ cask "font-coiny" do
 
   font "Coiny-Regular.ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

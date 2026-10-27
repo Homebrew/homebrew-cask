@@ -21,5 +21,5 @@ cask "cmpxat" do
 
   uninstall pkgutil: "co.eclecticlight.pkg.cmpxatInstaller"
 
-  # No zap stanza required
+  zap :not_required
 end

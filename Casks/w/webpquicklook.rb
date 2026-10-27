@@ -14,5 +14,5 @@ cask "webpquicklook" do
 
   qlplugin "WebpQuickLook.qlgenerator"
 
-  # No zap stanza required
+  zap :not_required
 end

@@ -8,5 +8,5 @@ cask "font-wellfleet" do
 
   font "Wellfleet-Regular.ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

@@ -12,7 +12,7 @@ cask "swiftdefaultappsprefpane" do
   binary "swda"
   prefpane "SwiftDefaultApps.prefpane"
 
-  # No zap stanza required
+  zap :not_required
 
   caveats do
     requires_rosetta

@@ -8,5 +8,5 @@ cask "font-wavefont" do
 
   font "Wavefont[ROND,YELA,wght].ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

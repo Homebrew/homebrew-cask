@@ -8,5 +8,5 @@ cask "font-modak" do
 
   font "Modak-Regular.ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

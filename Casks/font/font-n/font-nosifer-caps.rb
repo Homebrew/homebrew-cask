@@ -8,5 +8,5 @@ cask "font-nosifer-caps" do
 
   font "NosiferCaps-Regular.ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

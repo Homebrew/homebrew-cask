@@ -45,5 +45,5 @@ cask "prolific-pl2303" do
               "/var/db/receipts/*ProlificUSbSerial*.*",
             ]
 
-  # No zap stanza required
+  zap :not_required
 end

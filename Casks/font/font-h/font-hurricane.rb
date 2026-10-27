@@ -8,5 +8,5 @@ cask "font-hurricane" do
 
   font "Hurricane-Regular.ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

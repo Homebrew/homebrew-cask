@@ -21,5 +21,5 @@ cask "font-bai-jamjuree" do
   font "BaiJamjuree-SemiBold.ttf"
   font "BaiJamjuree-SemiBoldItalic.ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

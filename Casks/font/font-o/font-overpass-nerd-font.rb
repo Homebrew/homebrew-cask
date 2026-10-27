@@ -58,5 +58,5 @@ cask "font-overpass-nerd-font" do
   font "OverpassNerdFontPropo-Thin.otf"
   font "OverpassNerdFontPropo-ThinItalic.otf"
 
-  # No zap stanza required
+  zap :not_required
 end

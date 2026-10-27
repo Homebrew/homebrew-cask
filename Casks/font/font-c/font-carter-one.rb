@@ -8,5 +8,5 @@ cask "font-carter-one" do
 
   font "CarterOne.ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

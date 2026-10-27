@@ -8,5 +8,5 @@ cask "font-cherry-bomb-one" do
 
   font "CherryBombOne-Regular.ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

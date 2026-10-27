@@ -8,5 +8,5 @@ cask "font-aubrey" do
 
   font "Aubrey-Regular.ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

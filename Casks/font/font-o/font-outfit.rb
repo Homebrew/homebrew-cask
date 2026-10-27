@@ -8,5 +8,5 @@ cask "font-outfit" do
 
   font "Outfit[wght].ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

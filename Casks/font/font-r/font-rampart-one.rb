@@ -8,5 +8,5 @@ cask "font-rampart-one" do
 
   font "RampartOne-Regular.ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

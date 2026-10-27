@@ -11,5 +11,5 @@ cask "font-saira" do
   font "Saira-Italic[wdth,wght].ttf"
   font "Saira[wdth,wght].ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

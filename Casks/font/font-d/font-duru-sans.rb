@@ -8,5 +8,5 @@ cask "font-duru-sans" do
 
   font "DuruSans-Regular.ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

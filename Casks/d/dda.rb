@@ -27,5 +27,5 @@ cask "dda" do
     args:       ["self", "remove"],
   }
 
-  # No zap stanza required
+  zap :not_required
 end

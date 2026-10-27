@@ -19,5 +19,5 @@ cask "font-sf-mono-nerd-font-ligaturized" do
   font "SFMono-Nerd-Font-Ligaturized-main/LigaSFMonoNerdFont-Semibold.otf"
   font "SFMono-Nerd-Font-Ligaturized-main/LigaSFMonoNerdFont-SemiboldItalic.otf"
 
-  # No zap stanza required
+  zap :not_required
 end

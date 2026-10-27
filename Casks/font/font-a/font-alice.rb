@@ -8,5 +8,5 @@ cask "font-alice" do
 
   font "Alice-Regular.ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

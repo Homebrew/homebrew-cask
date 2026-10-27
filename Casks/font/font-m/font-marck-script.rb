@@ -8,5 +8,5 @@ cask "font-marck-script" do
 
   font "MarckScript-Regular.ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

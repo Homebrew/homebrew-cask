@@ -8,5 +8,5 @@ cask "font-rubik-maps" do
 
   font "RubikMaps-Regular.ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

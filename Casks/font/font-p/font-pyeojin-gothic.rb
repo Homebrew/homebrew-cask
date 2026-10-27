@@ -15,5 +15,5 @@ cask "font-pyeojin-gothic" do
   font "static/otf/PyeojinGothic-Regular.otf"
   font "static/otf/PyeojinGothic-Semibold.otf"
 
-  # No zap stanza required
+  zap :not_required
 end

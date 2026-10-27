@@ -8,5 +8,5 @@ cask "font-badeen-display" do
 
   font "BadeenDisplay-Regular.ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

@@ -8,5 +8,5 @@ cask "font-lovers-quarrel" do
 
   font "LoversQuarrel-Regular.ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

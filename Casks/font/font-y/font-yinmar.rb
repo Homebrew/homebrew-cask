@@ -8,5 +8,5 @@ cask "font-yinmar" do
 
   font "Yinmar-Regular.ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

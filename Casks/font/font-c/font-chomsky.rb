@@ -8,5 +8,5 @@ cask "font-chomsky" do
 
   font "Chomsky.otf"
 
-  # No zap stanza required
+  zap :not_required
 end

@@ -31,5 +31,5 @@ cask "xampp" do
             },
             delete: "/Applications/XAMPP"
 
-  # No zap stanza required
+  zap :not_required
 end

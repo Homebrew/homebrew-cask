@@ -13,5 +13,5 @@ cask "font-sf-hebrew" do
 
   uninstall pkgutil: "com.apple.pkg.SFHebrewFonts"
 
-  # No zap stanza required
+  zap :not_required
 end

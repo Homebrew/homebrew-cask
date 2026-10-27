@@ -12,5 +12,5 @@ cask "font-kiwi-maru" do
   font "KiwiMaru-Medium.ttf"
   font "KiwiMaru-Regular.ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

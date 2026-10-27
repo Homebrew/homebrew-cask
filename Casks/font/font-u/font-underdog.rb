@@ -8,5 +8,5 @@ cask "font-underdog" do
 
   font "Underdog-Regular.ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

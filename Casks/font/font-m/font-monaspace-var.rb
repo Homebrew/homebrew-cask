@@ -17,5 +17,5 @@ cask "font-monaspace-var" do
   font "Variable Fonts/Monaspace Radon/Monaspace Radon Var.ttf"
   font "Variable Fonts/Monaspace Xenon/Monaspace Xenon Var.ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

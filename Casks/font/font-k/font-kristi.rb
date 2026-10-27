@@ -8,5 +8,5 @@ cask "font-kristi" do
 
   font "Kristi-Regular.ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

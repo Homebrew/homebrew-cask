@@ -31,7 +31,7 @@ cask "ransomwhere" do
     sudo:       true,
   }
 
-  # No zap stanza required
+  zap :not_required
 
   caveats do
     requires_rosetta

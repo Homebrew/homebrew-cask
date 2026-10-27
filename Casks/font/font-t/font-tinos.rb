@@ -13,5 +13,5 @@ cask "font-tinos" do
   font "Tinos-Italic.ttf"
   font "Tinos-Regular.ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

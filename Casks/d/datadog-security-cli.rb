@@ -27,5 +27,5 @@ cask "datadog-security-cli" do
 
   binary "datadog-security-cli"
 
-  # No zap stanza required
+  zap :not_required
 end

@@ -8,5 +8,5 @@ cask "font-domine" do
 
   font "Domine[wght].ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

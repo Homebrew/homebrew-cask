@@ -22,5 +22,5 @@ cask "font-tex-gyre-bonum" do
   font "texgyrebonum-italic.otf"
   font "texgyrebonum-regular.otf"
 
-  # No zap stanza required
+  zap :not_required
 end

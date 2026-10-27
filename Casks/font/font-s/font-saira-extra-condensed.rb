@@ -18,5 +18,5 @@ cask "font-saira-extra-condensed" do
   font "SairaExtraCondensed-SemiBold.ttf"
   font "SairaExtraCondensed-Thin.ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

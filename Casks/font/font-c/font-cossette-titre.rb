@@ -11,5 +11,5 @@ cask "font-cossette-titre" do
   font "CossetteTitre-Bold.ttf"
   font "CossetteTitre-Regular.ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

@@ -22,5 +22,5 @@ cask "osquery" do
               "io.osquery.agent",
             ]
 
-  # No zap stanza required
+  zap :not_required
 end

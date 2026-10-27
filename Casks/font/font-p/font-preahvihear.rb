@@ -8,5 +8,5 @@ cask "font-preahvihear" do
 
   font "Preahvihear-Regular.ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

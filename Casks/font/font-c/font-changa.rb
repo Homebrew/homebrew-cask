@@ -8,5 +8,5 @@ cask "font-changa" do
 
   font "Changa[wght].ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

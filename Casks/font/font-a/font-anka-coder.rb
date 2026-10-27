@@ -24,5 +24,5 @@ cask "font-anka-coder" do
   font "AnkaCoder-i.ttf"
   font "AnkaCoder-r.ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

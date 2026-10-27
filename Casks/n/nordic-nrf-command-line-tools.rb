@@ -21,5 +21,5 @@ cask "nordic-nrf-command-line-tools" do
 
   uninstall pkgutil: "com.Nordic Semiconductor.nRF-Command-Line-Tools.*"
 
-  # No zap stanza required
+  zap :not_required
 end

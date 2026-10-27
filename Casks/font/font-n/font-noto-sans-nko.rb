@@ -8,5 +8,5 @@ cask "font-noto-sans-nko" do
 
   font "NotoSansNKo-Regular.ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

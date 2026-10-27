@@ -16,5 +16,5 @@ cask "zprint" do
 
   binary "zprintm#{arch}-#{version}", target: "zprint"
 
-  # No zap stanza required
+  zap :not_required
 end

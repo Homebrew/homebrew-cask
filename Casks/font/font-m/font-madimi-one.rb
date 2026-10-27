@@ -8,5 +8,5 @@ cask "font-madimi-one" do
 
   font "MadimiOne-Regular.ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

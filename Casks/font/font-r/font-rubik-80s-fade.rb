@@ -8,5 +8,5 @@ cask "font-rubik-80s-fade" do
 
   font "Rubik80sFade-Regular.ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

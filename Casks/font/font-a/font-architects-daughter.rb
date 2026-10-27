@@ -8,5 +8,5 @@ cask "font-architects-daughter" do
 
   font "ArchitectsDaughter-Regular.ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

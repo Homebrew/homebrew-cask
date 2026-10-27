@@ -8,5 +8,5 @@ cask "font-jeju-gothic" do
 
   font "JejuGothic-Regular.ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

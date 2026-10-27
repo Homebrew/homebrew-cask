@@ -18,5 +18,5 @@ cask "font-encode-sans-semi-condensed" do
   font "EncodeSansSemiCondensed-SemiBold.ttf"
   font "EncodeSansSemiCondensed-Thin.ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

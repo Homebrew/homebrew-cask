@@ -11,5 +11,5 @@ cask "font-sumana" do
   font "Sumana-Bold.ttf"
   font "Sumana-Regular.ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

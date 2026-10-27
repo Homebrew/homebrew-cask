@@ -8,5 +8,5 @@ cask "font-kosugi" do
 
   font "Kosugi-Regular.ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

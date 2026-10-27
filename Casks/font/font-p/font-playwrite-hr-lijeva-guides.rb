@@ -8,5 +8,5 @@ cask "font-playwrite-hr-lijeva-guides" do
 
   font "PlaywriteHRLijevaGuides-Regular.ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

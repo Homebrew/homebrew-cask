@@ -24,5 +24,5 @@ cask "p4" do
 
   binary "bin.macosx#{arch}", target: "p4"
 
-  # No zap stanza required
+  zap :not_required
 end

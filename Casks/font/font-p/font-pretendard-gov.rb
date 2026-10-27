@@ -16,5 +16,5 @@ cask "font-pretendard-gov" do
   font "public/static/PretendardGOV-SemiBold.otf"
   font "public/static/PretendardGOV-Thin.otf"
 
-  # No zap stanza required
+  zap :not_required
 end

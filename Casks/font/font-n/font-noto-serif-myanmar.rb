@@ -18,5 +18,5 @@ cask "font-noto-serif-myanmar" do
   font "NotoSerifMyanmar-SemiBold.ttf"
   font "NotoSerifMyanmar-Thin.ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

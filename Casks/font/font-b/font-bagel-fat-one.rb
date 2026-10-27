@@ -8,5 +8,5 @@ cask "font-bagel-fat-one" do
 
   font "BagelFatOne-Regular.ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

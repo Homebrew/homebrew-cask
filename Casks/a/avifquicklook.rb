@@ -14,5 +14,5 @@ cask "avifquicklook" do
 
   qlplugin "AVIFQuickLook.qlgenerator"
 
-  # No zap stanza required
+  zap :not_required
 end

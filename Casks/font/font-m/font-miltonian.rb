@@ -8,5 +8,5 @@ cask "font-miltonian" do
 
   font "Miltonian-Regular.ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

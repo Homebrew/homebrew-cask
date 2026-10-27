@@ -8,5 +8,5 @@ cask "font-qahiri" do
 
   font "Qahiri-Regular.ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

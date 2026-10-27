@@ -11,5 +11,5 @@ cask "font-vollkorn" do
   font "Vollkorn-Italic[wght].ttf"
   font "Vollkorn[wght].ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

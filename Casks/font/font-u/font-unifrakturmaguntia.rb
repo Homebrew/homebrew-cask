@@ -8,5 +8,5 @@ cask "font-unifrakturmaguntia" do
 
   font "UnifrakturMaguntia-Book.ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

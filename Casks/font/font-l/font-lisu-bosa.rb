@@ -25,5 +25,5 @@ cask "font-lisu-bosa" do
   font "LisuBosa-SemiBold.ttf"
   font "LisuBosa-SemiBoldItalic.ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

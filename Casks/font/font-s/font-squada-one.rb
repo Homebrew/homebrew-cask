@@ -8,5 +8,5 @@ cask "font-squada-one" do
 
   font "SquadaOne-Regular.ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

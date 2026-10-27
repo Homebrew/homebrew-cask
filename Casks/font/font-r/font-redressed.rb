@@ -8,5 +8,5 @@ cask "font-redressed" do
 
   font "Redressed-Regular.ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

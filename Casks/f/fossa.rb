@@ -19,5 +19,5 @@ cask "fossa" do
 
   binary "fossa"
 
-  # No zap stanza required
+  zap :not_required
 end

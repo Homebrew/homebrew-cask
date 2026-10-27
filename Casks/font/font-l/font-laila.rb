@@ -12,5 +12,5 @@ cask "font-laila" do
   font "Laila-Regular.otf"
   font "Laila-SemiBold.otf"
 
-  # No zap stanza required
+  zap :not_required
 end

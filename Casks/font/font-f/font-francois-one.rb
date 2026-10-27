@@ -8,5 +8,5 @@ cask "font-francois-one" do
 
   font "FrancoisOne-Regular.ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

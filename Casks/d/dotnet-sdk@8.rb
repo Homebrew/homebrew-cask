@@ -34,5 +34,5 @@ cask "dotnet-sdk@8" do
 
   uninstall pkgutil: "com.microsoft.dotnet.*#{version.major_minor}*#{arch}"
 
-  # No zap stanza required
+  zap :not_required
 end

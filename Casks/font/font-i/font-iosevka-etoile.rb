@@ -13,5 +13,5 @@ cask "font-iosevka-etoile" do
 
   font "IosevkaEtoile.ttc"
 
-  # No zap stanza required
+  zap :not_required
 end

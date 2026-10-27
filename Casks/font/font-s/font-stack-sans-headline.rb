@@ -8,5 +8,5 @@ cask "font-stack-sans-headline" do
 
   font "StackSansHeadline[wght].ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

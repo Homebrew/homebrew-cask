@@ -8,5 +8,5 @@ cask "font-readex-pro" do
 
   font "ReadexPro[HEXP,wght].ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

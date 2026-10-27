@@ -25,5 +25,5 @@ cask "font-poppins" do
   font "Poppins-Thin.otf"
   font "Poppins-ThinItalic.otf"
 
-  # No zap stanza required
+  zap :not_required
 end

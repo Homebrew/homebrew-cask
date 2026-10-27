@@ -8,5 +8,5 @@ cask "font-amarante" do
 
   font "Amarante-Regular.ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

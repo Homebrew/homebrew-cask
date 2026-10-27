@@ -15,5 +15,5 @@ cask "font-genyogothic" do
   font "GenYoGothic#{version.major}-N.ttc"
   font "GenYoGothic#{version.major}-R.ttc"
 
-  # No zap stanza required
+  zap :not_required
 end

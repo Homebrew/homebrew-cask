@@ -14,5 +14,5 @@ cask "quicknfo" do
 
   qlplugin "QuickNFO.qlgenerator"
 
-  # No zap stanza required
+  zap :not_required
 end

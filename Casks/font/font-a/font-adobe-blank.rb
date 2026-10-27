@@ -8,5 +8,5 @@ cask "font-adobe-blank" do
 
   font "AdobeBlank-Regular.ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

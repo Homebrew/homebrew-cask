@@ -8,5 +8,5 @@ cask "font-lavishly-yours" do
 
   font "LavishlyYours-Regular.ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

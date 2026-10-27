@@ -31,5 +31,5 @@ cask "font-kikai-chokoku-jis" do
 
   font "fkKikaiChokoku.otf"
 
-  # No zap stanza required
+  zap :not_required
 end

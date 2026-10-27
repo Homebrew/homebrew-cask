@@ -11,5 +11,5 @@ cask "font-im-fell-double-pica" do
   font "IMFELLDoublePica-Italic.ttf"
   font "IMFELLDoublePica-Regular.ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

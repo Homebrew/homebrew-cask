@@ -8,5 +8,5 @@ cask "font-agu-display" do
 
   font "AguDisplay[MORF].ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

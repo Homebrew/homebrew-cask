@@ -26,7 +26,7 @@ cask "temurin@8" do
 
   uninstall pkgutil: "net.temurin.#{version.csv.first}.jdk"
 
-  # No zap stanza required
+  zap :not_required
 
   caveats do
     requires_rosetta

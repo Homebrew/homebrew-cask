@@ -21,5 +21,5 @@ cask "font-libertinus" do
   font "Libertinus-#{version}/static/OTF/LibertinusSerifDisplay-Regular.otf"
   font "Libertinus-#{version}/static/OTF/LibertinusSerifInitials-Regular.otf"
 
-  # No zap stanza required
+  zap :not_required
 end

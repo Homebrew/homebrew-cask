@@ -8,5 +8,5 @@ cask "font-noto-serif-balinese" do
 
   font "NotoSerifBalinese-Regular.ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

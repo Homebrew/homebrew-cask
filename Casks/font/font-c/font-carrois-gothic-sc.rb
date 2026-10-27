@@ -8,5 +8,5 @@ cask "font-carrois-gothic-sc" do
 
   font "CarroisGothicSC-Regular.ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

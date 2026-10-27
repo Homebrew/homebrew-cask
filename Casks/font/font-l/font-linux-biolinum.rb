@@ -24,5 +24,5 @@ cask "font-linux-biolinum" do
   font "LinBiolinum_RIah.ttf"
   font "LinBiolinum_Rah.ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

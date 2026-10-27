@@ -8,5 +8,5 @@ cask "font-metal-mania" do
 
   font "MetalMania-Regular.ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

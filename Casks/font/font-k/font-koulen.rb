@@ -8,5 +8,5 @@ cask "font-koulen" do
 
   font "Koulen-Regular.ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

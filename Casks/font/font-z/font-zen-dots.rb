@@ -8,5 +8,5 @@ cask "font-zen-dots" do
 
   font "ZenDots-Regular.ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

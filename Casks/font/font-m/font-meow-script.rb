@@ -8,5 +8,5 @@ cask "font-meow-script" do
 
   font "MeowScript-Regular.ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

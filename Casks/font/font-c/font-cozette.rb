@@ -18,5 +18,5 @@ cask "font-cozette" do
   font "CozetteFonts/cozette.dfont"
   font "CozetteFonts/cozette_hidpi.dfont"
 
-  # No zap stanza required
+  zap :not_required
 end

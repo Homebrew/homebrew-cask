@@ -8,5 +8,5 @@ cask "font-xkcd-script" do
 
   font "xkcd-script.ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

@@ -21,5 +21,5 @@ cask "r-rig-app" do
 
   uninstall pkgutil: "com.gaborcsardi.rig"
 
-  # No zap stanza required
+  zap :not_required
 end

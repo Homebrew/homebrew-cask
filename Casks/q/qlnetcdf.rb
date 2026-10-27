@@ -14,5 +14,5 @@ cask "qlnetcdf" do
 
   qlplugin "QLNetcdf.qlgenerator"
 
-  # No zap stanza required
+  zap :not_required
 end

@@ -8,5 +8,5 @@ cask "font-cute-font" do
 
   font "CuteFont-Regular.ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

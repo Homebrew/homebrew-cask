@@ -25,5 +25,5 @@ cask "turbovnc-viewer" do
             },
             pkgutil: "com.virtualgl.turbovnc"
 
-  # No zap stanza required
+  zap :not_required
 end

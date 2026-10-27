@@ -8,5 +8,5 @@ cask "font-mrs-sheppards" do
 
   font "MrsSheppards-Regular.ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

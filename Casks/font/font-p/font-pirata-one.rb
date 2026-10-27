@@ -8,5 +8,5 @@ cask "font-pirata-one" do
 
   font "PirataOne-Regular.ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

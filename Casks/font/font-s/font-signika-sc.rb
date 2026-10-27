@@ -8,5 +8,5 @@ cask "font-signika-sc" do
 
   font "SignikaSC[wght].ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

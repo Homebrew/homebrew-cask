@@ -26,5 +26,5 @@ cask "font-adwaita-mono-nerd-font" do
   font "AdwaitaMonoNerdFontPropo-Italic.ttf"
   font "AdwaitaMonoNerdFontPropo-Regular.ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

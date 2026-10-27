@@ -8,5 +8,5 @@ cask "font-kimberella" do
 
   font "kimberella/Kimberella-Regular.otf"
 
-  # No zap stanza required
+  zap :not_required
 end

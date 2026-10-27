@@ -8,5 +8,5 @@ cask "font-gungsuhche" do
 
   font "GungsuhChe-Regular.ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

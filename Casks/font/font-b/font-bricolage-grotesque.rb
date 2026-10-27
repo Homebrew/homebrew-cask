@@ -8,5 +8,5 @@ cask "font-bricolage-grotesque" do
 
   font "BricolageGrotesque[opsz,wdth,wght].ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

@@ -11,5 +11,5 @@ cask "font-silkscreen" do
   font "Silkscreen-Bold.ttf"
   font "Silkscreen-Regular.ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

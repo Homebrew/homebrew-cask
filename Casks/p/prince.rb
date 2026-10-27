@@ -18,5 +18,5 @@ cask "prince" do
                   executable: "#{staged_path}/prince-#{version}-macos/lib/prince/bin/prince",
                   args:       ["--prefix", "#{staged_path}/prince-#{version}-macos/lib/prince"]
 
-  # No zap stanza required
+  zap :not_required
 end

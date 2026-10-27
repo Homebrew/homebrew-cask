@@ -8,5 +8,5 @@ cask "font-sree-krushnadevaraya" do
 
   font "SreeKrushnadevaraya-Regular.ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

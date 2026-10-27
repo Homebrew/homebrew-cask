@@ -8,5 +8,5 @@ cask "font-gugi" do
 
   font "Gugi-Regular.ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

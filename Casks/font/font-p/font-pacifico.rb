@@ -8,5 +8,5 @@ cask "font-pacifico" do
 
   font "Pacifico-Regular.ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

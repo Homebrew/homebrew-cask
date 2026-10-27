@@ -8,5 +8,5 @@ cask "font-cinzel" do
 
   font "Cinzel[wght].ttf"
 
-  # No zap stanza required
+  zap :not_required
 end
