@@ -48,11 +48,15 @@ cask "microsoft-excel" do
         },
       ]
 
-  uninstall launchctl: "com.microsoft.office.licensingV2.helper",
+  uninstall launchctl: [
+              "com.microsoft.office.licensingV2.helper",
+              "com.microsoft.office.licensingV3.helper",
+            ],
             quit:      "com.microsoft.autoupdate2",
             pkgutil:   [
               "com.microsoft.package.Microsoft_Excel.app",
               "com.microsoft.pkg.licensing",
+              "com.microsoft.pkg.licensing.v3",
             ]
 
   zap trash: [
