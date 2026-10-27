@@ -1,6 +1,6 @@
 cask "replit" do
-  version "1.1.19,1792649287877966"
-  sha256 "67fa406411c37aa488122eb5bdbc47aa292e87ed801de0dcf1cb13a09a5ee5a1"
+  version "1.1.21,1793056874797478"
+  sha256 "3fc7cd1ac05c83eea3ad29eab88692c1832f92d7ed0f96d2abb89d7c870688f9"
 
   url "https://desktop-updates.replit.com/desktop-app/updates/stable/darwin/arm64/artifacts/#{version.csv.first}/#{version.csv.second}/Replit-#{version.csv.first}-arm64-mac.zip"
   name "Replit"
@@ -22,7 +22,7 @@ cask "replit" do
 
   auto_updates true
   depends_on arch: :arm64
-  depends_on macos: :monterey
+  depends_on macos: :ventura
 
   app "Replit.app"
 
