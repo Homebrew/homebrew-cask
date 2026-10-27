@@ -10,7 +10,7 @@ cask "dbgate" do
          x86_64_linux: "cf494b5c0ee19568d4b8584b412b2302d5d52633a95a37f3270cd063df3b4c81"
 
   on_macos do
-    depends_on macos: :monterey
+    depends_on macos: :ventura
 
     app "DbGate.app"
 
