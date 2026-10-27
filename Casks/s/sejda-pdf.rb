@@ -1,9 +1,9 @@
 cask "sejda-pdf" do
   arch arm: "_arm64"
 
-  version "7.9.10"
-  sha256 arm:   "8ad1a8fd744f36e2684ca024375acf96dec16b32a3a4fb190284a8779fded24b",
-         intel: "68225c407e76c8585336a68c52b6a50412de942f3fda77226312a6972b733f76"
+  version "7.9.12"
+  sha256 arm:   "94bcb5705be67570373541ec7d0d412d1b43892f84d0044985a88a8f4a2b8afc",
+         intel: "f474f511eea37849b2df3a4d735fffbe1810ea4fa6478c43d2c037f6f726beda"
 
   url "https://downloads.sejda-cdn.com/sejda-desktop_#{version}#{arch}.dmg"
   name "Sejda PDF Desktop"
