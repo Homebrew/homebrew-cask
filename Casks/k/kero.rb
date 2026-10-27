@@ -1,11 +1,11 @@
 cask "kero" do
   arch arm: "arm64", intel: "amd64"
 
-  version "2.1.21"
-  sha256 arm:   "a572943b84c964a2e055125eef2a5242af583816681857a8c009dfdb6043b682",
-         intel: "353224b053e41dfc672ca84ad64427e595e2e8a340a41b11dfd80b2da654c4fe"
+  version "2.1.24"
+  sha256 arm:   "5aea0125f840887b0d1fb25d08603b2900b8a988b6476b8c2ed209304eb60c77",
+         intel: "b1dc071f9d1e47bde06f6caf8a48a67ca32494e44656349b6cc319f7d57879f1"
 
-  url "https://github.com/egoist/kero/releases/download/v#{version}/Kero.#{version}.#{arch}.dmg"
+  url "https://github.com/egoist/kero/releases/download/v#{version}/kero-#{version}-#{arch}.dmg"
   name "Kero"
   desc "Terminal app optimised for agents"
   homepage "https://kero.sh/"
