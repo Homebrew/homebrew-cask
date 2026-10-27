@@ -30,8 +30,5 @@ cask "codexia" do
   desc "GUI and toolkit for Codex CLI and Claude Code"
   homepage "https://github.com/milisp/codexia"
 
-  livecheck do
-    url :url
-    strategy :github_latest
-  end
+  disable! date: "2026-10-27", because: :no_longer_available
 end
