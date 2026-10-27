@@ -30,7 +30,9 @@ cask "pixcake" do
 
   zap trash: [
     "~/Library/Application Support/com.xiangtian.pixcakepc",
+    "~/Library/Application Support/PixCake-qt_pro",
     "~/Library/Caches/com.xiangtian.pixcakepc",
+    "~/Library/Logs/DiagnosticReports/pixcake",
     "~/Library/Preferences/com.xiangtian.pixcakepc.plist",
     "~/Library/Saved Application State/com.xiangtian.pixcakepc.savedState",
   ]
