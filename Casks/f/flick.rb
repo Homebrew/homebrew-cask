@@ -1,6 +1,6 @@
 cask "flick" do
-  version "1.1.3"
-  sha256 "d675b9b807ff9a5eb736fb921a7aa03ea1b4ce8666f3638e6fb1549f0f15fcd7"
+  version "1.2.0"
+  sha256 "a38e215ee3fb489de465847e33f2f22ca165d3e43cc3da2f421e87d21275a8f4"
 
   url "https://getflick.dev/Flick-#{version}.dmg"
   name "Flick"
