@@ -2,9 +2,9 @@ cask "chatgpt" do
   arch arm: "arm64", intel: "x64"
   livecheck_arch = on_arch_conditional intel: "-x64"
 
-  version "26.1021.31345"
-  sha256 arm:   "2afcd58e0484a76479cca23174e085127a9d9e63466b75739eb6825a5ff613f4",
-         intel: "d0e4ad9e1a0dea3d5eccd4b36af9f8f0c087a48e94c444d793acead808156f60"
+  version "26.1023.50603"
+  sha256 arm:   "abaef00360f1ac78b920e51d681feb030209663da3f2ed60a461fd227f5a6211",
+         intel: "d1ea19091dc7fc7679b4c26d038b018ae487a230024fafe68c344a062a699a2b"
 
   url "https://persistent.oaistatic.com/codex-app-prod/ChatGPT-darwin-#{arch}-#{version}.zip"
   name "ChatGPT"
