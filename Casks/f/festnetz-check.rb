@@ -3,6 +3,7 @@ cask "festnetz-check" do
   sha256 "72c243851075fcf2fe20c17d00b66d91e1a2cfe9a1bebb74217d9b3847d780e9"
 
   url "https://download.breitbandmessung.de/bbm/Festnetz-Check-#{version}-mac.zip"
+  name "Festnetz-Check"
   name "Breitbandmessung"
   desc "Official internet speed test from the German Bundesnetzagentur"
   homepage "https://www.breitbandmessung.de/"
