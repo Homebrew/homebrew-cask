@@ -3,11 +3,11 @@ cask "smoothcsv" do
        intel: on_system_conditional(macos: "universal", linux: "amd64")
   os macos: "dmg", linux: "AppImage"
 
-  version "3.26.0"
-  sha256 arm:          "75f8428947c86c91a70c19eed001f8bbd71a84c2a605af77fcba69bf09ea6681",
-         intel:        "75f8428947c86c91a70c19eed001f8bbd71a84c2a605af77fcba69bf09ea6681",
-         arm64_linux:  "63663a24617575e0a650cf822fbbe767c62124ed8b1653c5407c8e84152f9e38",
-         x86_64_linux: "f2abb18df6199155243f10b516cfadd3b8c5e145c69d69abb6029b8dbdc3f6ab"
+  version "3.26.1"
+  sha256 arm:          "d79d13dd8915e6e3058d3cec261eff41620217a620f86defd64da3a4249af9b5",
+         intel:        "d79d13dd8915e6e3058d3cec261eff41620217a620f86defd64da3a4249af9b5",
+         arm64_linux:  "bf54af16f2d7761f6d8fb4fb140be068a6cab9d2ce049954786c1f8e32d7e44e",
+         x86_64_linux: "4d06560d1f10958df8bb84ce2232763f48d03075415335fb15ec471a67333816"
 
   on_macos do
     app "SmoothCSV.app"
