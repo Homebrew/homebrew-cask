@@ -21,6 +21,7 @@ cask "glean" do
   zap trash: [
     "~/Library/Application Scripts/877XN49FUQ.com.glean.desktop",
     "~/Library/Application Scripts/com.glean.desktop",
+    "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.glean.desktop.sfl*",
     "~/Library/Application Support/CrashReporter/Glean_*.plist",
     "~/Library/Application Support/Glean",
     "~/Library/Containers/com.glean.desktop",
