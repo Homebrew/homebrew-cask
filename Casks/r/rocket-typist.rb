@@ -1,5 +1,5 @@
 cask "rocket-typist" do
-  version "3.4.1"
+  version "3.4.2"
   sha256 :no_check
 
   url "https://witt-software.com/downloads/rockettypist/Rocket%20Typist.dmg"
