@@ -4,10 +4,10 @@ cask "signal" do
   separator = on_system_conditional macos: "-mac-#{arch}-", linux: "_"
   url_end = on_system_conditional macos: ".zip", linux: "_#{arch}.AppImage"
 
-  version "8.32.0"
-  sha256 arm:          "64fab9ae0cae94caade6e1791caf0de6a0346ec49fe6f36f0af3b9a42eb63d8e",
-         intel:        "c42507981acf9ba2a56939d43f5bcd21da312e818bd74e69e1bfc7b4c908e897",
-         x86_64_linux: "67dc5a9487121d32dc85ae70178dadf655cc0a01d9894de06b86b45192d35cf0"
+  version "8.33.0"
+  sha256 arm:          "4cb13e49041388c70cf7d9603c0c28cf62d7b6d12687418b39316bbe6ff1eb1a",
+         intel:        "06750eef06060c70488051fe71c1dc46faabe2432dd279e660881c81176bc655",
+         x86_64_linux: "436924ea7440aa7b3a7dfbd6028616873b0deabe51bbbc4e362741b4e3ab3368"
 
   on_macos do
     depends_on macos: :ventura
