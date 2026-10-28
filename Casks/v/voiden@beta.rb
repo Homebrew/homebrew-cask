@@ -28,6 +28,7 @@ cask "voiden@beta" do
     "~/Library/Caches/com.electron.voiden",
     "~/Library/Caches/com.electron.voiden.ShipIt",
     "~/Library/HTTPStorages/com.electron.voiden",
+    "~/Library/Logs/Voiden",
     "~/Library/Preferences/com.electron.voiden.plist",
   ]
 end
