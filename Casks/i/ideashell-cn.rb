@@ -1,6 +1,6 @@
 cask "ideashell-cn" do
-  version "0.9.23"
-  sha256 "e763ef05d9a343966db575a31a0acd8b82fbe5de9871661fc6b961e92f290d1a"
+  version "0.9.24"
+  sha256 "f97c883f0c076b819a5bd70356780350a29168c00869e9cc9b29c5e14c84dd2b"
 
   url "https://static.ideashell.cn/desktop/artifacts/stable/darwin/arm64/#{version}/ideaShell-darwin-arm64-#{version}.zip"
   name "ideaShell CN"
