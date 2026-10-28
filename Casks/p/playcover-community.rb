@@ -8,8 +8,8 @@ cask "playcover-community" do
   homepage "https://github.com/PlayCover/PlayCover"
 
   livecheck do
-    url "https://raw.githubusercontent.com/PlayCover/PlayCover/update/appcast.xml"
-    strategy :sparkle, &:short_version
+    url :url
+    strategy :github_latest
   end
 
   auto_updates true
