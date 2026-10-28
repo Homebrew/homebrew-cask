@@ -1,6 +1,6 @@
 cask "ableton-live-intro" do
-  version "12.4.7"
-  sha256 "8db62734645357d4d3aa79c38f0d9d92673e8d296b8c65d0414680b562e1bc69"
+  version "12.4.15"
+  sha256 "bb3f88e77b91ec6bcb6fceffffa50902830d3d2f005a1c014acab62d7440458f"
 
   url "https://cdn-downloads.ableton.com/channels/#{version}/ableton_live_intro_#{version}_universal.dmg"
   name "Ableton Live Intro"
