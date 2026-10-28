@@ -2,11 +2,11 @@ cask "photocraft" do
   arch arm: "aarch64", intel: "x86_64"
   url_end = on_system_conditional macos: "macos-universal.dmg", linux: "linux-#{arch}.AppImage"
 
-  version "0.16.0"
-  sha256 arm:          "489e00a7fd19f7e924a3a05ec33c7b057ea4766129b4eef132ce82ff42c10619",
-         intel:        "489e00a7fd19f7e924a3a05ec33c7b057ea4766129b4eef132ce82ff42c10619",
-         arm64_linux:  "dde10fe1311e66bb0f82ae8ad237e112716ebd0daed483243a1e12f2bc33f853",
-         x86_64_linux: "fc670139091e661e948a6de1ff2219a6dd04232e6ac8616349ee238a7a49d54e"
+  version "0.17.0"
+  sha256 arm:          "6e0903172a7440ce4e71002f5585ba4eff588fa3fc99b78cd9811180cabd5b80",
+         intel:        "6e0903172a7440ce4e71002f5585ba4eff588fa3fc99b78cd9811180cabd5b80",
+         arm64_linux:  "8f6f34dba1a68802a154139172d80e6a310759a78a75f02d39d5b26ccf3384eb",
+         x86_64_linux: "ce77299f243534ac1d248aa81c9a9fd278ae407c024cb931e03931eb70be54af"
 
   on_macos do
     app "PhotoCraft.app"
