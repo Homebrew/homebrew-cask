@@ -19,6 +19,8 @@ cask "010-editor" do
 
   app "010 Editor.app"
 
+  uninstall quit: "com.SweetScape.010Editor"
+
   zap trash: [
         "~/.config/SweetScape",
         "~/Library/Application Support/SweetScape",
