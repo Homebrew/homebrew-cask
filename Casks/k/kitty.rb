@@ -16,6 +16,13 @@ cask "kitty" do
                     executable: "#{appdir}/kitty.app/Contents/MacOS/kitty"
     command_wrapper "kitten",
                     executable: "#{appdir}/kitty.app/Contents/MacOS/kitten"
+
+    zap trash: [
+      "~/Library/Caches/kitty",
+      "~/Library/Preferences/kitty",
+      "~/Library/Preferences/net.kovidgoyal.kitty.plist",
+      "~/Library/Saved Application State/net.kovidgoyal.kitty.savedState",
+    ]
   end
   on_linux do
     binary "bin/kitty"
@@ -89,6 +96,8 @@ cask "kitty" do
     manpage "share/man/man1/kitten-unicode-input.1"
     manpage "share/man/man1/kitten-update-self.1"
     manpage "share/man/man5/kitty.conf.5"
+
+    zap trash: "~/.cache/kitty"
   end
 
   url "https://github.com/kovidgoyal/kitty/releases/download/v#{version}/kitty-#{version}#{os}"
@@ -97,12 +106,4 @@ cask "kitty" do
   homepage "https://github.com/kovidgoyal/kitty"
 
   conflicts_with cask: "kitty@nightly"
-
-  zap trash: [
-    "~/.config/kitty",
-    "~/Library/Caches/kitty",
-    "~/Library/Preferences/kitty",
-    "~/Library/Preferences/net.kovidgoyal.kitty.plist",
-    "~/Library/Saved Application State/net.kovidgoyal.kitty.savedState",
-  ]
 end
