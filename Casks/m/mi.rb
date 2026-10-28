@@ -19,6 +19,7 @@ cask "mi" do
 
   zap trash: [
     "~/Library/Caches/net.mimikaki.mi",
+    "~/Library/HTTPStorages/net.mimikaki.mi",
     "~/Library/Preferences/net.mimikaki.mi.plist",
   ]
 end
