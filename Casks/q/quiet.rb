@@ -19,5 +19,9 @@ cask "quiet" do
 
   app "Quiet.app"
 
-  zap trash: "~/Library/Application Support/Quiet*"
+  zap trash: [
+    "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/quiet.sfl*",
+    "~/Library/Application Support/Quiet*",
+    "~/Library/Preferences/Quiet.plist",
+  ]
 end
