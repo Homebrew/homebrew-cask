@@ -12,7 +12,7 @@ cask "aion" do
 
   livecheck do
     url "https://github.com/monkey-sking/aion-downloads/releases/latest"
-    regex(/releases\/tag\/v?(\d+(?:\.\d+)+)/i)
+    regex(%r{releases/tag/v?(\d+(?:\.\d+)+)}i)
   end
 
   auto_updates true
