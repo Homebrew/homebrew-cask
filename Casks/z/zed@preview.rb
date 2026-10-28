@@ -4,11 +4,11 @@ cask "zed@preview" do
   filename_start = on_system_conditional macos: "Zed", linux: "zed-linux"
   filename_ext = on_system_conditional macos: "dmg", linux: "tar.gz"
 
-  version "1.26.2"
-  sha256 arm:          "3965c4b3f701d407e53b3ac654d94a1d1066e0fdd1f59890bccdb98dba6bef36",
-         intel:        "528174c0a7d307b74aab0ab05504e3ca78dcda08fad63e5d067fae23f3afbbf6",
-         arm64_linux:  "6c91610f2f228be1f155e0937e66a734c9820903f681891891dbd730a3014b4d",
-         x86_64_linux: "45f35e842268458f84c42f92df5c02dec670a49153f4ac9b815793693c6d9c08"
+  version "1.27.0"
+  sha256 arm:          "3d1fbaa2cff93b2ecd1058fa87acf98ed9a3c7ed13b400c5aeffb9bb8668a579",
+         intel:        "74033b77223ffb5050fe19e38fe5bccaf0b7fd5d05b31bc67e400a029ba10979",
+         arm64_linux:  "7fb54d540cd5070451414487c74c083730cd06555a43ccc5bead02e41caf6954",
+         x86_64_linux: "cbd5dd86734b2accd14d12d8a8c4d2e94851c5dcf19c16fb27b14fcf3738bb63"
 
   on_macos do
     app "Zed Preview.app"
