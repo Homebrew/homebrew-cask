@@ -36,15 +36,14 @@ cask "opencode-desktop" do
     ]
   end
 
-  url "https://opencode.ai/files/bin/#{version}/opencode-desktop-#{os}-#{url_arch}.#{url_ext}"
+  url "https://github.com/anomalyco/opencode/releases/download/v#{version}/opencode-desktop-#{os}-#{url_arch}.#{url_ext}"
   name "OpenCode"
   desc "AI coding agent desktop client"
   homepage "https://opencode.ai/"
 
   livecheck do
-    url "https://opencode.ai/update/api/latest/desktop/opencode/latest-mac.yml",
-        user_agent: :browser
-    strategy :electron_builder
+    url :url
+    regex(/^v?(\d+(?:\.\d+)+)$/i)
   end
 
   auto_updates true
