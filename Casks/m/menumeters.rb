@@ -20,7 +20,9 @@ cask "menumeters" do
   uninstall quit: "com.yujitach.MenuMeters"
 
   zap trash: [
+    "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.yujitach.menumeters.sfl*",
     "~/Library/Caches/com.yujitach.MenuMeters",
+    "~/Library/HTTPStorages/com.yujitach.MenuMeters",
     "~/Library/Preferences/com.ragingmenace.MenuMeters.plist",
     "~/Library/Preferences/com.yujitach.MenuMeters.plist",
     "~/Library/PreferencesPanes/MenuMeters.prefPane",
