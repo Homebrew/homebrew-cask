@@ -19,6 +19,7 @@ cask "nvalt" do
 
   zap trash: [
     "~/Library/Application Support/nvALT",
+    "~/Library/Caches/net.elasticthreads.nv",
     "~/Library/Preferences/net.elasticthreads.nv.plist",
   ]
 end
