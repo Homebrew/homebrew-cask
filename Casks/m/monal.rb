@@ -19,5 +19,11 @@ cask "monal" do
 
   uninstall quit: "org.monal-im.prod.catalyst.monal"
 
-  zap trash: "~/Library/Group Containers/group.monal"
+  zap trash: [
+    "~/Library/Application Scripts/group.monal",
+    "~/Library/Application Scripts/org.monal-im.prod.catalyst.monal",
+    "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/org.monal-im.prod.catalyst.monal.sfl*",
+    "~/Library/Containers/org.monal-im.prod.catalyst.monal",
+    "~/Library/Group Containers/group.monal",
+  ]
 end
