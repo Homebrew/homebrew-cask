@@ -15,8 +15,7 @@ cask "junie" do
     binary "junie/bin/junie"
   end
 
-  url "https://github.com/JetBrains/junie/releases/download/#{version}/junie-release-#{version}-#{os}-#{arch}.zip",
-      verified: "github.com/JetBrains/junie/"
+  url "https://github.com/JetBrains/junie/releases/download/#{version}/junie-release-#{version}-#{os}-#{arch}.zip"
   name "Junie"
   desc "AI coding agent by JetBrains"
   homepage "https://junie.jetbrains.com/"
