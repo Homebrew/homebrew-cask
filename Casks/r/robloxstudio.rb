@@ -30,6 +30,7 @@ cask "robloxstudio" do
 
   zap trash: [
     "~/Library/Caches/com.Roblox.RobloxStudio",
+    "~/Library/HTTPStorages/com.Roblox.RobloxStudio.binarycookies",
     "~/Library/Preferences/com.roblox.RobloxStudio.plist",
     "~/Library/Preferences/com.roblox.RobloxStudioChannel.plist",
     "~/Library/WebKit/com.Roblox.RobloxStudio",
