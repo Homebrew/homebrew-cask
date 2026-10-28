@@ -70,6 +70,7 @@ cask "cockatrice" do
 
   zap trash: [
     "~/Library/Application Support/Cockatrice",
+    "~/Library/Caches/Cockatrice",
     "~/Library/Preferences/com.cockatrice.Cockatrice.plist",
     "~/Library/Preferences/com.cockatrice.oracle.plist",
     "~/Library/Preferences/de.cockatrice.Cockatrice.plist",
