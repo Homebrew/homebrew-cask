@@ -19,6 +19,7 @@ cask "spacejump" do
 
   zap trash: [
     "~/Library/Application Support/com.ideabridge.spacejump",
+    "~/Library/Application Support/SpaceJump",
     "~/Library/Caches/com.ideabridge.spacejump",
     "~/Library/HTTPStorages/com.ideabridge.spacejump*",
     "~/Library/Logs/SpaceJump",
