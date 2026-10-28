@@ -1,0 +1,14 @@
+Casks/a/android-studio-preview@beta.rb
+  h_9df9c32c3f321d 30-31
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.6.22",
+  "base_commit_sha": "166ec3c78cbe48d8a5ac3e14198caaf0d589712f",
+  "prompts": {},
+  "humans": {
+    "h_9df9c32c3f321d": {
+      "author": "Rui Chen <rui@chenrui.dev>"
+    }
+  }
+}

@@ -1,0 +1,19 @@
+Casks/e/elgato-stream-deck.rb
+  s_35d5cda18ab012::t_ed365e525a126d 22-25
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.6.16",
+  "base_commit_sha": "cb6754f42639f17668969a37263752ca22ec99ea",
+  "prompts": {},
+  "sessions": {
+    "s_35d5cda18ab012": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "eeacdf22-145d-4cda-bd45-7828d3f1dcc5",
+        "model": "claude-opus-4-8"
+      },
+      "human_author": "Rui Chen <rui@chenrui.dev>"
+    }
+  }
+}

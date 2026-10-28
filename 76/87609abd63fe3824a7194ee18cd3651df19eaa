@@ -1,0 +1,19 @@
+Casks/c/connect-fonts.rb
+  s_9586829ca27b65::t_19e652b6bc95a5 20-21
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.6.22",
+  "base_commit_sha": "7687609abd63fe3824a7194ee18cd3651df19eaa",
+  "prompts": {},
+  "sessions": {
+    "s_9586829ca27b65": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "a67c9ae7-1c53-422c-be52-7e6880648d3e",
+        "model": "unknown"
+      },
+      "human_author": "Rui Chen <rui@chenrui.dev>"
+    }
+  }
+}

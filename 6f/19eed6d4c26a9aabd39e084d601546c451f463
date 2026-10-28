@@ -1,0 +1,19 @@
+Casks/t/tencent-yingyongbao.rb
+  s_c7478b2c662445::t_33d1a953c98531 61-62,67-70,72-73
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.4",
+  "base_commit_sha": "6f19eed6d4c26a9aabd39e084d601546c451f463",
+  "prompts": {},
+  "sessions": {
+    "s_c7478b2c662445": {
+      "agent_id": {
+        "tool": "codex",
+        "id": "01a0b7e6-b18d-7563-9e19-b04dc35d3068",
+        "model": "gpt-6-astra"
+      },
+      "human_author": "Rui Chen <rui@chenrui.dev>"
+    }
+  }
+}

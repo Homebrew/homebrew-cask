@@ -1,0 +1,14 @@
+Casks/w/wordpresscom.rb
+  h_9df9c32c3f321d 20
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.5.6",
+  "base_commit_sha": "98b8f7492f8964282cafd221af9bb9a965d4bf96",
+  "prompts": {},
+  "humans": {
+    "h_9df9c32c3f321d": {
+      "author": "Rui Chen <rui@chenrui.dev>"
+    }
+  }
+}

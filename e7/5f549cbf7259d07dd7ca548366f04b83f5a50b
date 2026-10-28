@@ -1,0 +1,14 @@
+Casks/r/rowboat.rb
+  h_9df9c32c3f321d 19-20
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.6.16",
+  "base_commit_sha": "e75f549cbf7259d07dd7ca548366f04b83f5a50b",
+  "prompts": {},
+  "humans": {
+    "h_9df9c32c3f321d": {
+      "author": "Rui Chen <rui@chenrui.dev>"
+    }
+  }
+}

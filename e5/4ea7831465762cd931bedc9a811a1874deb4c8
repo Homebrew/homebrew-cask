@@ -1,0 +1,14 @@
+Casks/h/hamrs-pro.rb
+  h_9df9c32c3f321d 23-24
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.4",
+  "base_commit_sha": "e54ea7831465762cd931bedc9a811a1874deb4c8",
+  "prompts": {},
+  "humans": {
+    "h_9df9c32c3f321d": {
+      "author": "Rui Chen <rui@chenrui.dev>"
+    }
+  }
+}

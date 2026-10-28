@@ -1,0 +1,19 @@
+Casks/o/openhuman.rb
+  s_0586f4cc6abb98::t_c23a36937a0825 37-38
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.4",
+  "base_commit_sha": "a4fa54fb26d16a530ca2ed3f6ac3d1d77b244cd6",
+  "prompts": {},
+  "sessions": {
+    "s_0586f4cc6abb98": {
+      "agent_id": {
+        "tool": "codex",
+        "id": "01a0d8f7-6613-7050-bd12-093cc0249d96",
+        "model": "gpt-6-luna"
+      },
+      "human_author": "Rui Chen <rui@chenrui.dev>"
+    }
+  }
+}

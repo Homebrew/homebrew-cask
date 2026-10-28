@@ -1,0 +1,19 @@
+Casks/t/trader-workstation.rb
+  s_35d5cda18ab012::t_943af2e5f71364 29-32,37,44,49
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.6.16",
+  "base_commit_sha": "971b037ca877ae338108003f274b226e50cdd9bd",
+  "prompts": {},
+  "sessions": {
+    "s_35d5cda18ab012": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "eeacdf22-145d-4cda-bd45-7828d3f1dcc5",
+        "model": "claude-opus-4-8"
+      },
+      "human_author": "Rui Chen <rui@chenrui.dev>"
+    }
+  }
+}

@@ -1,0 +1,19 @@
+Casks/o/opera.rb
+  s_9586829ca27b65::t_ffdff97ee76805 20-21
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.6.22",
+  "base_commit_sha": "f7f382e3b52169307f5ab09daa2a411c5099f63c",
+  "prompts": {},
+  "sessions": {
+    "s_9586829ca27b65": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "a67c9ae7-1c53-422c-be52-7e6880648d3e",
+        "model": "unknown"
+      },
+      "human_author": "Rui Chen <rui@chenrui.dev>"
+    }
+  }
+}

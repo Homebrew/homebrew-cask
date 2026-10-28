@@ -1,0 +1,19 @@
+Casks/c/clash-verge-rev.rb
+  s_688448bcbd10b7::t_e0fa973f1fe289 4-6
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.4",
+  "base_commit_sha": "2e89af9821cd98fc672069410e098ae138aeb576",
+  "prompts": {},
+  "sessions": {
+    "s_688448bcbd10b7": {
+      "agent_id": {
+        "tool": "codex",
+        "id": "01a0c9a1-3d38-7bf2-93f8-ca944c7818f6",
+        "model": "gpt-5.6-luna"
+      },
+      "human_author": "Rui Chen <rui@chenrui.dev>"
+    }
+  }
+}

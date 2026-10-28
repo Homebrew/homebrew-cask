@@ -1,0 +1,19 @@
+Casks/l/longplay.rb
+  s_0586f4cc6abb98::t_bbe349b2aecace 26-27
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.4",
+  "base_commit_sha": "dc314ab40ed831e6acdd60b378ae009957c2faa2",
+  "prompts": {},
+  "sessions": {
+    "s_0586f4cc6abb98": {
+      "agent_id": {
+        "tool": "codex",
+        "id": "01a0d8f7-6613-7050-bd12-093cc0249d96",
+        "model": "gpt-6-luna"
+      },
+      "human_author": "Rui Chen <rui@chenrui.dev>"
+    }
+  }
+}

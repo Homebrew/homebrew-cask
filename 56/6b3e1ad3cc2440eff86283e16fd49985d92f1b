@@ -1,0 +1,14 @@
+Casks/x/xkey.rb
+  h_9df9c32c3f321d 20-21
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.6.22",
+  "base_commit_sha": "566b3e1ad3cc2440eff86283e16fd49985d92f1b",
+  "prompts": {},
+  "humans": {
+    "h_9df9c32c3f321d": {
+      "author": "Rui Chen <rui@chenrui.dev>"
+    }
+  }
+}

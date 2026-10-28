@@ -1,0 +1,14 @@
+Casks/l/longbridge-pro.rb
+  h_9df9c32c3f321d 23-24
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.6.22",
+  "base_commit_sha": "c4cb1a868aa5e5f9887372d7e0553c792ef7f269",
+  "prompts": {},
+  "humans": {
+    "h_9df9c32c3f321d": {
+      "author": "Rui Chen <rui@chenrui.dev>"
+    }
+  }
+}

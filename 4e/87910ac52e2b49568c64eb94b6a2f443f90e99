@@ -1,0 +1,19 @@
+Casks/p/paraview.rb
+  s_63ba588ae12245::t_526cc3b4d26f0f 31-32
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.6.16",
+  "base_commit_sha": "4e87910ac52e2b49568c64eb94b6a2f443f90e99",
+  "prompts": {},
+  "sessions": {
+    "s_63ba588ae12245": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "c2c077f5-a5c7-4bc7-9a6f-13cd10149ccc",
+        "model": "claude-opus-4-8"
+      },
+      "human_author": "Rui Chen <rui@chenrui.dev>"
+    }
+  }
+}

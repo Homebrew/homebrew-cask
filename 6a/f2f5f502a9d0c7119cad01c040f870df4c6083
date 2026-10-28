@@ -1,0 +1,14 @@
+Casks/m/microsoft-edge@canary.rb
+  h_9df9c32c3f321d 22
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.5.6",
+  "base_commit_sha": "6af2f5f502a9d0c7119cad01c040f870df4c6083",
+  "prompts": {},
+  "humans": {
+    "h_9df9c32c3f321d": {
+      "author": "Rui Chen <rui@chenrui.dev>"
+    }
+  }
+}

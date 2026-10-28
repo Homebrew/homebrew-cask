@@ -1,0 +1,19 @@
+Casks/g/granola.rb
+  s_9586829ca27b65::t_190a5b68744735 21-22
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.6.22",
+  "base_commit_sha": "1d78f877655308f7efc5c42a83a541c67cea0cf9",
+  "prompts": {},
+  "sessions": {
+    "s_9586829ca27b65": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "a67c9ae7-1c53-422c-be52-7e6880648d3e",
+        "model": "unknown"
+      },
+      "human_author": "Rui Chen <rui@chenrui.dev>"
+    }
+  }
+}

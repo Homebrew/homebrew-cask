@@ -1,0 +1,19 @@
+Casks/c/clockify.rb
+  s_87e9a83978736d::t_70d1e4b65a5608 12-14
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.5",
+  "base_commit_sha": "978884adc6a30369f91c2f4bf052222ef1c7c653",
+  "prompts": {},
+  "sessions": {
+    "s_87e9a83978736d": {
+      "agent_id": {
+        "tool": "codex",
+        "id": "01a10d3b-5cdd-76d0-b05d-4b2d5929cf4c",
+        "model": "gpt-6.1-sol"
+      },
+      "human_author": "Rui Chen <rui@chenrui.dev>"
+    }
+  }
+}

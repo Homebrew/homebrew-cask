@@ -1,0 +1,14 @@
+Casks/e/energiza.rb
+  h_9df9c32c3f321d 19-20
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.5",
+  "base_commit_sha": "61442bde2fbec7aec4884846086531b9ec96f775",
+  "prompts": {},
+  "humans": {
+    "h_9df9c32c3f321d": {
+      "author": "Rui Chen <rui@chenrui.dev>"
+    }
+  }
+}

@@ -1,0 +1,19 @@
+Casks/g/gearsystem.rb
+  s_f45f0ac9bfb5e1::t_43a73387117f35 18-19
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.6.16",
+  "base_commit_sha": "47d888a9f2eef6207add83d8b51713da948d266f",
+  "prompts": {},
+  "sessions": {
+    "s_f45f0ac9bfb5e1": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "a43edab1-7170-4dd5-ad80-7802d435d947",
+        "model": "claude-opus-4-6"
+      },
+      "human_author": "Rui Chen <rui@chenrui.dev>"
+    }
+  }
+}

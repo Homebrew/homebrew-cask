@@ -1,0 +1,14 @@
+Casks/s/shimo.rb
+  h_9df9c32c3f321d 2-3
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.4",
+  "base_commit_sha": "343bfe69e03858090568ecae77cf5e1900f069fb",
+  "prompts": {},
+  "humans": {
+    "h_9df9c32c3f321d": {
+      "author": "Rui Chen <rui@chenrui.dev>"
+    }
+  }
+}

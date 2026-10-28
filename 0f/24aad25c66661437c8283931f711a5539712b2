@@ -1,0 +1,19 @@
+Casks/m/microsoft-auto-update.rb
+  s_c7478b2c662445::t_f97a9b4710998f 38
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.4",
+  "base_commit_sha": "0f24aad25c66661437c8283931f711a5539712b2",
+  "prompts": {},
+  "sessions": {
+    "s_c7478b2c662445": {
+      "agent_id": {
+        "tool": "codex",
+        "id": "01a0b7e6-b18d-7563-9e19-b04dc35d3068",
+        "model": "gpt-6-astra"
+      },
+      "human_author": "Rui Chen <rui@chenrui.dev>"
+    }
+  }
+}
