@@ -29,7 +29,7 @@ cask "ideashell" do
     "~/Library/Caches/com.rrd.ideashell.global",
     "~/Library/Caches/com.rrd.ideashell.global.ShipIt",
     "~/Library/HTTPStorages/com.rrd.ideashell.global",
-    "~/Library/Logs/ideashell/com.rrd.ideashell.global*.log",
+    "~/Library/Logs/ideashell",
     "~/Library/Preferences/com.rrd.ideashell.global.plist",
   ]
 end
