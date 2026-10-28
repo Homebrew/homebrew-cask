@@ -7,7 +7,7 @@ cask "kensaku" do
   desc "Local file search that reads inside your files, including screenshots"
   homepage "https://github.com/yjid/kensaku"
 
-  app "Kensaku.app"
+  app "kensaku.app"
 
   zap trash: [
     "~/Library/Application Support/com.gochi.kensaku",
