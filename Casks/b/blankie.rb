@@ -14,9 +14,12 @@ cask "blankie" do
   app "Blankie.app"
 
   zap trash: [
+    "~/Library/Application Scripts/com.codybrom.blankie",
+    "~/Library/Application Scripts/group.com.codybrom.blankie",
     "~/Library/Application Support/Blankie",
     "~/Library/Caches/com.codybrom.blankie",
     "~/Library/Containers/com.codybrom.Blankie",
+    "~/Library/Group Containers/group.com.codybrom.blankie",
     "~/Library/Preferences/com.codybrom.blankie.plist",
     "~/Library/Saved Application State/com.codybrom.blankie.savedState",
   ]
