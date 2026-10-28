@@ -19,6 +19,8 @@ cask "pinwheel" do
 
   zap trash: [
     "~/Library/Application Scripts/com.bjango.pinwheel.PinwheelPreviewer",
+    "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.bjango.pinwheel.sfl*",
+    "~/Library/Caches/com.bjango.pinwheel",
     "~/Library/Caches/Pinwheel",
     "~/Library/Containers/com.bjango.pinwheel.PinwheelPreviewer",
     "~/Library/HTTPStorages/com.bjango.pinwheel",
