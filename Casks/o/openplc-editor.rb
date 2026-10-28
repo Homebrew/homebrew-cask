@@ -1,9 +1,9 @@
 cask "openplc-editor" do
   arch arm: "-ARM"
 
-  version "4.3.2"
-  sha256 arm:   "4cda4b98109a464c2a21ee86d707d7eec45ce38ab8d41b391243312f3a996e8e",
-         intel: "2c35aa520e3039f7435063234ffc53c7172e1308203e043b93a203bbc08aa42b"
+  version "4.3.3"
+  sha256 arm:   "289266e13215b9bed79500634caba68e132180ff13ad9a0ca4d08fa02ed440bf",
+         intel: "f0e04e0ff861b5baa938d043485ad6a45d526ed7673d3d9cb166ecadb1aa49c4"
 
   url "https://github.com/Autonomy-Logic/openplc-editor/releases/download/v#{version}/OpenPLC_Editor_#{version}#{arch}.dmg"
   name "OpenPLC Editor"
