@@ -1,9 +1,9 @@
 cask "thonny" do
   arch arm: "arm64", intel: "x64"
 
-  version "5.0.0"
-  sha256 arm:   "cdaaef53d59580139c8c811bc5a2a9f4246e0cb9d194bce0a89f621889b29e7e",
-         intel: "07a3b0f74f5159e0d3d5d78901fe726d408de38c8d7bddacca0f3c6aa6575997"
+  version "5.0.1"
+  sha256 arm:   "d82bcac04b9e010695fbc7a7d176188a5aa731bdcff163f4d3d7a32c6beefe50",
+         intel: "1bb31ae9fe48c712980e57b0353a051c6e2615ba2cebc164179db134588ac033"
 
   url "https://github.com/thonny/thonny/releases/download/v#{version}/thonny-#{version}-#{arch}.pkg"
   name "Thonny"
