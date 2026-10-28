@@ -1,6 +1,6 @@
 cask "betterzip" do
-  version "6.0.6"
-  sha256 "da670bf02cb98344cb58ce041a60344f84930eb24ac17744cbdd0429716e953e"
+  version "6.1"
+  sha256 "47d68429b73aa7188904cc7dc9efb21738bebb34d85b87a87a927b67dad56651"
 
   url "https://macitbetter.com/dl/BetterZip-#{version}.zip"
   name "BetterZip"
