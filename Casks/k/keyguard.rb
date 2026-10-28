@@ -25,6 +25,7 @@ cask "keyguard" do
       "~/.cache/keyguard",
       "~/.config/keyguard",
       "~/.local/share/keyguard",
+      "~/Library/Preferences/com.artemchep.keyguard.plist",
     ]
   end
 
