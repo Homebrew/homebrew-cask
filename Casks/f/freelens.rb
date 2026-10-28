@@ -3,14 +3,14 @@ cask "freelens" do
   os macos: "macos", linux: "linux"
   url_end = on_system_conditional macos: "dmg", linux: "AppImage"
 
-  version "1.10.3"
-  sha256 arm:          "ae33e11d5db858da1f64ae2c4f7ca3835786780bcb2af02e55fe756f08900419",
-         intel:        "d9b462114b9587ca8daaf1ce62529de7d3ec65e42f39628edfc10ecbd69c3175",
-         arm64_linux:  "d9a030f7461f4cf0e489e863d738aeac17882c4b843a66c979457677b05b9a8e",
-         x86_64_linux: "5be46890eb13e167559b862b9a6f246eeec0a72761c0b3e91a646329323581e9"
+  version "2.0.0"
+  sha256 arm:          "58412b6db367c4e7f081b1ee14b84cecf0d9ed00cb5853fe7abcf40ea06203b5",
+         intel:        "e3f5b6e5586d5645de153d5dbd62c477fd5269f28c44199120fbb4ee14f472dc",
+         arm64_linux:  "d49142c20ffe7b4d381ba7eb4d42e1f1a0ae615ce435720f41b4b8309c9ba2bc",
+         x86_64_linux: "372a019765170ad420b0224d653d488ebebc41faa972052fa3df1337c2cb11d1"
 
   on_macos do
-    depends_on macos: :monterey
+    depends_on macos: :ventura
 
     app "Freelens.app"
 
