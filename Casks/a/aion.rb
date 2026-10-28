@@ -17,8 +17,8 @@ cask "aion" do
 
   app "Aion.app"
 
-  uninstall quit:    "com.7fei.Aion",
-            launchctl: "com.7fei.Aion.helper.v2"
+  uninstall launchctl: "com.7fei.Aion.helper.v2",
+            quit:      "com.7fei.Aion"
 
   zap trash: [
     "~/Library/Application Scripts/group.com.7fei.Aion",
