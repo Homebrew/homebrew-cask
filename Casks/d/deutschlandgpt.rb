@@ -20,11 +20,11 @@ cask "deutschlandgpt" do
   app "DeutschlandGPT.app"
 
   zap trash: [
-    "~/.deutschlandgpt",
-    "~/Library/Application Support/de.deutschlandgpt.desktop",
-    "~/Library/Caches/de.deutschlandgpt.desktop",
-    "~/Library/Logs/de.deutschlandgpt.desktop",
-    "~/Library/Preferences/de.deutschlandgpt.desktop.plist",
-    "~/Library/WebKit/de.deutschlandgpt.desktop",
-  ]
+        "~/Library/Application Support/de.deutschlandgpt.desktop",
+        "~/Library/Caches/de.deutschlandgpt.desktop",
+        "~/Library/Logs/de.deutschlandgpt.desktop",
+        "~/Library/Preferences/de.deutschlandgpt.desktop.plist",
+        "~/Library/WebKit/de.deutschlandgpt.desktop",
+      ],
+      rmdir: "~/.deutschlandgpt"
 end
