@@ -15,14 +15,20 @@ cask "thinkrail" do
 
     app "ThinkRail.app"
 
-    zap trash: "~/Library/Application Support/ai.thinkrail.app/stable"
+    zap trash: [
+          "~/Library/Application Support/ai.thinkrail.app",
+          "~/Library/Preferences/ai.thinkrail.app.plist",
+          "~/Library/WebKit/ai.thinkrail.app",
+        ],
+        rmdir: "~/.thinkrail"
   end
   on_linux do
     url "https://github.com/JetBrains/thinkrail/releases/download/v#{version}/stable-linux-#{arch}-ThinkRail-#{version}.tar.zst"
 
     command_wrapper "thinkrail-desktop", executable: "#{staged_path}/ThinkRail/bin/launcher"
 
-    zap trash: "#{ENV.fetch("HOMEBREW_XDG_DATA_HOME", "~/.local/share")}/ai.thinkrail.app/stable"
+    zap trash: "#{ENV.fetch("HOMEBREW_XDG_DATA_HOME", "~/.local/share")}/ai.thinkrail.app/stable",
+        rmdir: "~/.thinkrail"
   end
 
   name "ThinkRail"
