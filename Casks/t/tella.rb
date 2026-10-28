@@ -21,7 +21,10 @@ cask "tella" do
 
   zap trash: [
     "~/Library/Application Scripts/tv.tella.Tella",
+    "~/Library/Application Support/tv.tella.Tella",
+    "~/Library/Caches/tv.tella.Tella",
     "~/Library/Containers/tv.tella.Tella",
+    "~/Library/HTTPStorages/tv.tella.Tella",
     "~/Library/Preferences/tv.tella.Tella.plist",
   ]
 end
