@@ -19,6 +19,7 @@ cask "ia-presenter" do
 
   zap trash: [
     "~/Library/Application Scripts/net.ia.presenter",
+    "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/net.ia.presenter.sfl*",
     "~/Library/Containers/net.ia.presenter",
   ]
 end
