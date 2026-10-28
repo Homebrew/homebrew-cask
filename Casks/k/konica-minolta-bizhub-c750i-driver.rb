@@ -29,7 +29,7 @@ cask "konica-minolta-bizhub-c750i-driver" do
 
   depends_on :macos
 
-  pkg "C751i_C308i_C4751i_C750i_C287i_C4050i_11.pkg"
+  pkg "C751i_C308i_C4751i_C750i_C287i_C4050i.pkg"
 
   uninstall_preflight_steps do
     set_ownership "/Library/Printers/KONICAMINOLTA/Preferences"
