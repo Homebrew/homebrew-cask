@@ -1,6 +1,6 @@
 cask "telegram@beta" do
-  version "13.1.0,283402"
-  sha256 "e9873da2e3d57b79948372e2931ae76c70d9c179ee9642dce2dba5daf5a31188"
+  version "13.1.0,283406"
+  sha256 "742b8331c16cccf3a7c973c564c372d037144c53fd8e847257eeb671a1056f50"
 
   url "https://mac-updates.telegram.org/beta/Telegram-#{version.csv.first}.#{version.csv.second}.app.zip"
   name "Telegram for macOS"
