@@ -26,10 +26,15 @@ cask "betterandbetter" do
 
   app "BetterAndBetter.app"
 
+  uninstall launchctl: "com.better365.BetterAndBetterHelper"
+
   zap trash: [
+    "~/Library/Application Scripts/4K6FWZU8C4.group.cn.better365.BetterAndBetter",
     "~/Library/Application Support/BetterAndBetter",
     "~/Library/Application Support/cn.better365.BetterAndBetter",
+    "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/cn.better365.betterandbetter.sfl*",
     "~/Library/Caches/cn.better365.BetterAndBetter",
+    "~/Library/Group Containers/4K6FWZU8C4.group.cn.better365.BetterAndBetter",
     "~/Library/HTTPStorages/cn.better365.BetterAndBetter",
     "~/Library/HTTPStorages/cn.better365.BetterAndBetter.binarycookies",
     "~/Library/Preferences/cn.better365.BetterAndBetter.plist",
