@@ -20,11 +20,13 @@ cask "beyond-compare" do
   binary "#{appdir}/Beyond Compare.app/Contents/MacOS/bcomp"
 
   zap trash: [
+    "~/Library/Application Scripts/com.ScooterSoftware.BeyondCompare.BCFinder",
     "~/Library/Application Support/Beyond Compare*",
     "~/Library/Caches/com.apple.helpd/Generated/Beyond Compare Help*",
     "~/Library/Caches/com.apple.helpd/Generated/com.ScooterSoftware.BeyondCompare.help*",
     "~/Library/Caches/com.ScooterSoftware.BeyondCompare",
     "~/Library/Containers/com.ScooterSoftware.BeyondCompare.BCFinder",
+    "~/Library/HTTPStorages/com.ScooterSoftware.BeyondCompare",
     "~/Library/Preferences/com.ScooterSoftware.BeyondCompare.plist",
     "~/Library/Saved Application State/com.ScooterSoftware.BeyondCompare.savedState",
   ]
