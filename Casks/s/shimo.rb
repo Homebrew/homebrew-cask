@@ -22,7 +22,9 @@ cask "shimo" do
   zap trash: [
     "~/Library/Application Support/Shimo",
     "~/Library/Caches/com.feingeist.Shimo",
+    "~/Library/HTTPStorages/com.feingeist.Shimo",
     "~/Library/HTTPStorages/com.feingeist.Shimo.binarycookies",
+    "~/Library/Logs/Shimo",
     "~/Library/Preferences/com.feingeist.Shimo.plist",
   ]
 end
