@@ -20,15 +20,16 @@ cask "factory" do
   app "Factory.app"
 
   zap trash: [
-    "~/Library/Application Support/ai.factory.desktop",
-    "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.electron.factory.sfl*",
-    "~/Library/Application Support/Factory",
-    "~/Library/Caches/ai.factory.desktop",
-    "~/Library/HTTPStorages/ai.factory.desktop",
-    "~/Library/Logs/Factory",
-    "~/Library/Preferences/ai.factory.desktop.plist",
-    "~/Library/Preferences/com.electron.factory.plist",
-    "~/Library/Saved Application State/ai.factory.desktop.savedState",
-    "~/Library/WebKit/ai.factory.desktop",
-  ]
+        "~/Library/Application Support/ai.factory.desktop",
+        "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.electron.factory.sfl*",
+        "~/Library/Application Support/Factory",
+        "~/Library/Caches/ai.factory.desktop",
+        "~/Library/HTTPStorages/ai.factory.desktop",
+        "~/Library/Logs/Factory",
+        "~/Library/Preferences/ai.factory.desktop.plist",
+        "~/Library/Preferences/com.electron.factory.plist",
+        "~/Library/Saved Application State/ai.factory.desktop.savedState",
+        "~/Library/WebKit/ai.factory.desktop",
+      ],
+      rmdir: "~/.factory"
 end
