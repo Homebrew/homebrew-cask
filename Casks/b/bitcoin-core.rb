@@ -28,6 +28,8 @@ cask "bitcoin-core" do
     set_permissions "Bitcoin-Qt.app", "0755"
   end
 
+  uninstall quit: "org.bitcoinfoundation.Bitcoin-Qt"
+
   # Don't trash directory "~/Library/Application Support/Bitcoin" because it can contain bitcoin wallets
   zap trash: [
     "~/Library/Application Support/Bitcoin/blocks",
