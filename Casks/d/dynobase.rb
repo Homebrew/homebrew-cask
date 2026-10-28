@@ -26,7 +26,11 @@ cask "dynobase" do
   app "Dynobase.app"
 
   zap trash: [
-    "~/Library/Application Support/dynobase",
-    "~/Library/Saved Application State/com.rwilinski.dynobase.savedState",
-  ]
+        "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.todesktop.220811zswf4aj4x.sfl*",
+        "~/Library/Application Support/dynobase",
+        "~/Library/Logs/Dynobase",
+        "~/Library/Preferences/com.todesktop.220811zswf4aj4x.plist",
+        "~/Library/Saved Application State/com.rwilinski.dynobase.savedState",
+      ],
+      rmdir: "~/.dynobase"
 end
