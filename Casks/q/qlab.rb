@@ -18,7 +18,9 @@ cask "qlab" do
   app "QLab.app"
 
   zap trash: [
+    "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.figure53.qlab.#{version.major}.sfl*",
     "~/Library/Application Support/QLab",
+    "~/Library/Caches/com.figure53.QLab.#{version.major}",
     "~/Library/HTTPStorages/com.figure53.QLab.#{version.major}",
     "~/Library/Preferences/com.figure53.QLab.#{version.major}.plist",
     "~/Library/Saved Application State/com.figure53.QLab.#{version.major}.savedState",
