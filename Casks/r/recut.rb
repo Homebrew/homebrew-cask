@@ -28,9 +28,14 @@ cask "recut" do
   app "Recut.app"
 
   zap trash: [
-    "~/Library/Application Support/Recut",
-    "~/Library/Caches/com.tinywins.recut",
-    "~/Library/Preferences/com.tinywins.recut.plist",
-    "~/Library/Saved Application State/com.tinywins.recut.savedState",
-  ]
+        "~/Library/Application Support/co.tinywins.recut",
+        "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/co.tinywins.recut.sfl*",
+        "~/Library/Application Support/Recut",
+        "~/Library/Caches/co.tinywins.recut",
+        "~/Library/Caches/com.tinywins.recut",
+        "~/Library/Logs/co.tinywins.recut",
+        "~/Library/Preferences/com.tinywins.recut.plist",
+        "~/Library/Saved Application State/com.tinywins.recut.savedState",
+      ],
+      rmdir: "~/Documents/Recut Projects"
 end
