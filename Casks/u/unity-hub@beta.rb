@@ -1,11 +1,11 @@
 cask "unity-hub@beta" do
   arch arm: "arm64", intel: on_system_conditional(macos: "x64", linux: "x86_64")
 
-  version "4.0.0-beta.3"
-  sha256 arm:          "fc5cbea1683c3021a507f49afa27cdd6ead3219368ef788c64ab43643af145e9",
-         intel:        "6c61cf7e73a276f7b6a89cda473aed6431b7ede491ef7a795694c842ead05614",
-         arm64_linux:  "93a9a416d28ba4e75582b4e81c8c28a0b1db8a61a94c08e050cd4b8f146fb313",
-         x86_64_linux: "b6277d3c6c4d9f62ff8986a8e34fe39411aff778dccc52aeaa616ed1b8067f9a"
+  version "4.0.0-beta.4"
+  sha256 arm:          "499f1f1ba2c4e89bdcafa268e1342c1772bb2965c33e601f9675ceec24345cfe",
+         intel:        "1a95f9f54c334af016c1c33fed9a70fd065174f33652efd929cc99b7c757fdac",
+         arm64_linux:  "984df5196d859cacc942aa5b2ac079ee9ddfaef4781c10fc36e171f3f56b396d",
+         x86_64_linux: "bdc15e2f296a0eed5b1d468ab1ccd8f26812fc4e40539564e7acabd80bc544bd"
 
   on_macos do
     url "https://public-cdn.cloud.unity3d.com/hub/prod/#{version}/UnityHubSetup-#{version}-#{arch}.dmg"
