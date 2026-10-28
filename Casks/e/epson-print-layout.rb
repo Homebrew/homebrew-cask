@@ -1,6 +1,6 @@
 cask "epson-print-layout" do
-  version "1.5.17"
-  sha256 "54e6977736130e6e6ff5b8e18297e8cdfd5d14a0061a230f08a4733c40ade820"
+  version "1.5.18"
+  sha256 "232cae997ac6b44c33a792b9154a4e7dd9250f780d6903a59fc2f660fd51d244"
 
   url "https://ftp.epson.com/drivers/EPL_#{version.no_dots}.dmg"
   name "Epson Print Layout"
