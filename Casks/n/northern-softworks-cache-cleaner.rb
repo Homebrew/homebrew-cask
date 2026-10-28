@@ -22,6 +22,7 @@ cask "northern-softworks-cache-cleaner" do
 
   zap trash: [
     "~/Library/Application Support/com.northernsw.nswCacheCleaner",
+    "~/Library/Preferences/Golden Gate Cache Cleaner Preferences",
     "~/Library/Preferences/Sonoma Cache Cleaner Preferences",
     "~/Library/Preferences/Tahoe Cache Cleaner Preferences",
     "~/Library/Preferences/Ventura Cache Cleaner Preferences",
