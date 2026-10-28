@@ -18,7 +18,9 @@ cask "presentify" do
   app "Presentify.app"
 
   zap trash: [
+    "~/Library/Application Scripts/com.rampatra.presentify",
     "~/Library/Caches/com.rampatra.presentify",
+    "~/Library/Containers/com.rampatra.presentify",
     "~/Library/HTTPStorages/com.rampatra.presentify",
     "~/Library/Preferences/com.rampatra.presentify.plist",
     "~/Library/Preferences/presentify-user-defaults-suite.plist",
