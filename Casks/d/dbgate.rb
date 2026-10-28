@@ -15,12 +15,14 @@ cask "dbgate" do
     app "DbGate.app"
 
     zap trash: [
-      "~/dbgate-data",
-      "~/Library/Application Support/dbgate",
-      "~/Library/Logs/dbgate",
-      "~/Library/Preferences/org.dbgate.plist",
-      "~/Library/Saved Application State/org.dbgate.savedState",
-    ]
+          "~/dbgate-data",
+          "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/org.dbgate.sfl*",
+          "~/Library/Application Support/dbgate",
+          "~/Library/Logs/dbgate",
+          "~/Library/Preferences/org.dbgate.plist",
+          "~/Library/Saved Application State/org.dbgate.savedState",
+        ],
+        rmdir: "~/.dbgate"
   end
   on_linux do
     app_image "dbgate-#{version}-linux_#{arch}.AppImage", target: "DbGate.AppImage"
