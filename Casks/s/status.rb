@@ -28,6 +28,7 @@ cask "status" do
   zap trash: [
     "~/Library/Application Support/Status",
     "~/Library/Caches/Status",
+    "~/Library/Preferences/com.status-app.Status Desktop.plist",
     "~/Library/Preferences/im.status.Status Desktop.plist",
   ]
 end
