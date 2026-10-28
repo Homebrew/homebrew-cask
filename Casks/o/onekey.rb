@@ -24,6 +24,7 @@ cask "onekey" do
 
   zap trash: [
     "~/Library/Application Support/@onekeyhq",
+    "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/so.onekey.wallet.desktop.sfl*",
     "~/Library/Logs/@onekeyhq",
     "~/Library/Preferences/so.onekey.wallet.desktop.plist",
     "~/Library/Saved Application State/so.onekey.wallet.desktop.savedState",
