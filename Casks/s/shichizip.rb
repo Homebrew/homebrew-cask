@@ -15,9 +15,16 @@ cask "shichizip" do
   app "ShichiZip.app"
 
   zap trash: [
+    "~/Library/Application Scripts/ee.dawn.ShichiZip.CompressAction",
     "~/Library/Application Scripts/ee.dawn.ShichiZip.OpenInShichiZipAction",
     "~/Library/Application Scripts/ee.dawn.ShichiZip.RevealInFileManagerAction",
     "~/Library/Application Scripts/ee.dawn.ShichiZip.SmartQuickExtractAction",
+    "~/Library/Application Scripts/VNM753Y3JX.ShichiZip",
+    "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/ee.dawn.shichizip.sfl*",
+    "~/Library/Containers/ee.dawn.ShichiZip.CompressAction",
+    "~/Library/Containers/ee.dawn.ShichiZip.OpenInShichiZipAction",
+    "~/Library/Containers/ee.dawn.ShichiZip.RevealInFileManagerAction",
+    "~/Library/Containers/ee.dawn.ShichiZip.SmartQuickExtractAction",
     "~/Library/Group Containers/VNM753Y3JX.ShichiZip",
     "~/Library/Preferences/ee.dawn.ShichiZip.plist",
   ]
