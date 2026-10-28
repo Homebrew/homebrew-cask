@@ -2,11 +2,11 @@ cask "terminal-browser" do
   arch arm: "arm64", intel: "x64"
   os macos: "darwin", linux: "linux"
 
-  version "0.15.0"
-  sha256 arm:          "68baffc7cc3b1a817d5744cb70655fbb3002ae0d985538f9dfaf0517788fa7a4",
-         intel:        "4309aa1479b6c472c8e554cf07be16c9e164cdfda2b443597236a26b3c2f1653",
-         arm64_linux:  "1474ff2c5654ef9a810b83edc514938163586f1e994333891fe109c81fa1e97f",
-         x86_64_linux: "856a5fbe1f0daf769c87fe54c16453c2a5b873a4d384a988dc8b0abce405ba02"
+  version "0.15.1"
+  sha256 arm:          "1d63db26249ce074301c1b5d308c57dd322c6c0758adb41d00c632496d818526",
+         intel:        "8c49a55e4cdb9b79d0ea68071c6119483194e3405fc68acd496079cd991c803f",
+         arm64_linux:  "6ed94377367ba0923db922bdbefffe919d002fa21841fbfbb1b1025febaf364e",
+         x86_64_linux: "138bf71c3d6f115025e8661b7ee2d036cf7c92ecb2f715e0b4c316539bcaa7eb"
 
   url "https://terminal-browser.sh/install/dl/stable/v#{version}/terminal-browser-#{os}-#{arch}.tar.gz"
   name "terminal-browser"
