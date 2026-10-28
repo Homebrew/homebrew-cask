@@ -16,6 +16,8 @@ cask "vocevista-video" do
 
   app "VoceVista Video.app"
 
+  uninstall quit: "com.sygyt.mac.VoceVistaVideo"
+
   zap trash: [
     "~/Library/Application Support/Sygyt Software/VoceVista Video",
     "~/Library/Caches/com.plausiblelabs.crashreporter.data/com.sygyt.mac.VoceVistaVideo",
