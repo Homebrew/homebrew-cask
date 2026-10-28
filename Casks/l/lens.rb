@@ -23,9 +23,12 @@ cask "lens" do
   app "Lens.app"
 
   zap trash: [
-    "~/Library/Application Support/Lens",
-    "~/Library/Caches/Lens",
-    "~/Library/Preferences/com.electron.kontena-lens.plist",
-    "~/Library/Saved Application State/com.electron.kontena-lens.savedState",
-  ]
+        "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.electron.kontena-lens.sfl*",
+        "~/Library/Application Support/Lens",
+        "~/Library/Caches/Lens",
+        "~/Library/Logs/Lens",
+        "~/Library/Preferences/com.electron.kontena-lens.plist",
+        "~/Library/Saved Application State/com.electron.kontena-lens.savedState",
+      ],
+      rmdir: "~/.k8slens"
 end
