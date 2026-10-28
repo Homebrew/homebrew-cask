@@ -62,6 +62,7 @@ cask "tencent-yingyongbao" do
             quit:      "com.tencent.yybmac.healthagent"
 
   zap trash: [
+    "~/Library/Application Scripts/com.tencent.yybmac.contextmenu.finder",
     "~/Library/Application Support/com.tencent.yybmac",
     "~/Library/Application Support/com.tencent.yybmac.engine",
     "~/Library/Application Support/com.tencent.yybmac.wine.engine",
