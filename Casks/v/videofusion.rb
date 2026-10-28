@@ -31,6 +31,10 @@ cask "videofusion" do
 
   zap trash: [
     "~/Library/Application Scripts/com.lemon.lvpro",
+    "~/Library/Caches/com.lemon.lvpro",
     "~/Library/Containers/com.lemon.lvpro",
+    "~/Library/HTTPStorages/com.lemon.lvpro",
+    "~/Library/Preferences/com.lemon.lvpro.helper.renderer.plist",
+    "~/Library/Preferences/com.lemon.lvpro.plist",
   ]
 end
