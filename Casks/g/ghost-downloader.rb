@@ -1,9 +1,9 @@
 cask "ghost-downloader" do
   arch arm: "arm64", intel: "x86_64"
 
-  version "4.4.5"
-  sha256 arm:   "e1850125ca304ea3508c62bfd2b0f35da2726f68a4c3c298c149fe72f745e55b",
-         intel: "0a7320734aba1321563229ebfe3874a7c83bd77dfa98b04649f4cb4e6cfa28c3"
+  version "4.4.6"
+  sha256 arm:   "13309754dcc6ac42165a406875607c5a5f1f8fcdc6570ceb062d48df7c234b24",
+         intel: "7be6ba0777daabd837eed81ad59e9d0fc8ae5cea1c117b1f1911b5a9f5799418"
 
   url "https://github.com/XiaoYouChR/Ghost-Downloader-3/releases/download/v#{version}/Ghost-Downloader-v#{version}-macOS-#{arch}.dmg"
   name "Ghost Downloader"
@@ -19,7 +19,10 @@ cask "ghost-downloader" do
 
   app "Ghost Downloader.app"
 
-  uninstall quit: "io.github.xiaoyouchr.GhostDownloader"
+  uninstall quit: [
+    "com.xychr.ghostdownloader",
+    "io.github.xiaoyouchr.GhostDownloader",
+  ]
 
   zap trash: [
     "~/Library/Application Support/GhostDownloader",
