@@ -22,6 +22,7 @@ cask "radial" do
   app "Radial.app"
 
   zap trash: [
+    "~/Library/Application Support/Radial",
     "~/Library/Caches/dk.FirstForm.Radial",
     "~/Library/HTTPStorages/dk.FirstForm.Radial",
     "~/Library/Preferences/dk.FirstForm.Radial.plist",
