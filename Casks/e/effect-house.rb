@@ -38,6 +38,7 @@ cask "effect-house" do
   zap trash: [
     "~/Library/Application Support/EffectHouse",
     "~/Library/HTTPStorages/com.ies.orion",
+    "~/Library/Logs/Effect House_debug.log",
     "~/Library/Saved Application State/com.ies.orion.savedState",
   ]
 end
