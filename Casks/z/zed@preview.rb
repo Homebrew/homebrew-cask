@@ -11,6 +11,8 @@ cask "zed@preview" do
          x86_64_linux: "cbd5dd86734b2accd14d12d8a8c4d2e94851c5dcf19c16fb27b14fcf3738bb63"
 
   on_macos do
+    depends_on macos: :monterey
+
     app "Zed Preview.app"
     binary "#{appdir}/Zed Preview.app/Contents/MacOS/cli", target: "zed-preview"
 
