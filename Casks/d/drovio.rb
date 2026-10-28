@@ -19,5 +19,6 @@ cask "drovio" do
 
   app "Drovio.app"
 
-  zap trash: "~/Library/Application Support/Drovio"
+  zap trash: "~/Library/Application Support/Drovio",
+      rmdir: "~/Documents/Drovio"
 end
