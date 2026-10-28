@@ -30,8 +30,10 @@ cask "bettercmdtab@beta" do
   app "BetterCmdTab.app"
 
   zap trash: [
+    "~/Library/Application Support/BetterCmdTab",
     "~/Library/Application Support/pro.bettercmdtab.BetterCmdTab",
     "~/Library/Caches/pro.bettercmdtab.BetterCmdTab",
+    "~/Library/HTTPStorages/pro.bettercmdtab.BetterCmdTab",
     "~/Library/Preferences/pro.bettercmdtab.BetterCmdTab.plist",
   ]
 end
