@@ -25,6 +25,7 @@ cask "zed-delta" do
   zap trash: [
     "~/.config/delta",
     "~/Library/Application Support/delta",
+    "~/Library/Caches/delta-ipc",
     "~/Library/Preferences/com.zed-industries.delta.plist",
   ]
 end
