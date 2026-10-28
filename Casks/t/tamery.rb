@@ -1,9 +1,9 @@
 cask "tamery" do
   arch arm: "arm64", intel: "x64"
 
-  version "0.99.2"
-  sha256 arm:   "f310735618786239d324b5596ba36441e8cc9cec56b42df5a0470fc6f0445d53",
-         intel: "db5322a2ebc212e54b6838a69a10138156ef2e0fa54cfe736e4c2a94a276a4f4"
+  version "0.99.3"
+  sha256 arm:   "7ebb745554f8fc569c12b1c42a73494d37a38ccefc2a7c38c16b080f30cf229e",
+         intel: "18f7f9905e8796ca816eefd9d9550e1356676383222a70b9feececefc59c3f78"
 
   url "https://download.tamery.app/versions/#{version}/mac/dmg/#{arch}"
   name "Tamery"
@@ -16,7 +16,7 @@ cask "tamery" do
   end
 
   auto_updates true
-  depends_on macos: :monterey
+  depends_on macos: :ventura
 
   app "Tamery.app"
 
