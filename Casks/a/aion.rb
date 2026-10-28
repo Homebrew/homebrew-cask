@@ -17,5 +17,19 @@ cask "aion" do
 
   app "Aion.app"
 
-  uninstall quit: "com.7fei.Aion"
+  uninstall quit:    "com.7fei.Aion",
+            launchctl: "com.7fei.Aion.helper.v2"
+
+  zap trash: [
+    "~/Library/Application Scripts/group.com.7fei.Aion",
+    "~/Library/Application Support/Aion",
+    "~/Library/Application Support/com.7fei.Aion",
+    "~/Library/Caches/AionNotificationIcons",
+    "~/Library/Caches/com.7fei.Aion",
+    "~/Library/Group Containers/group.com.7fei.Aion",
+    "~/Library/HTTPStorages/com.7fei.Aion",
+    "~/Library/Preferences/com.7fei.Aion.plist",
+    "~/Library/Preferences/group.com.7fei.Aion.plist",
+    "~/Library/WebKit/com.7fei.Aion",
+  ]
 end
