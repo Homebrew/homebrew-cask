@@ -2,11 +2,11 @@ cask "unity-hub" do
   arch arm: "arm64", intel: on_system_conditional(macos: "x64", linux: "x86_64")
   os macos: "mac", linux: "linux"
 
-  version "3.22.4"
-  sha256 arm:          "9a76c03b8a02e5c61be79b877972a73b093de4eb31b8eb511932744af6f0fc9b",
-         intel:        "4187aaf957e289c8c83466150e0452b3d6388e251b017a94c6876131256665b0",
-         arm64_linux:  "83abcb2965c54ce5b69dbd0d6062bcac7c62e6da94166abab86eb348a6433ecf",
-         x86_64_linux: "de94f91e213138c5594f55b3810bb9d1cdf2f038730ab67b461e54122bbe0bc0"
+  version "3.22.5"
+  sha256 arm:          "c767b8c3df4a9361d8a2aeb2cd7ef1730956bcb63a89c83140858be314c6dbf0",
+         intel:        "6cee2985388e83a89239115a5694e9683589d0ba456dc6a5f48be58124cd1dd8",
+         arm64_linux:  "63bc5cc504a47d973faa102b3808846bb5724b81102b010ba547ab5b700611db",
+         x86_64_linux: "81a0f0f56b2c25d4eb668da6e03f983b6f4d6950375172d5707f413a2e5ca94f"
 
   on_macos do
     url "https://public-cdn.cloud.unity3d.com/hub/prod/#{version}/UnityHubSetup-#{version}-#{arch}.dmg"
