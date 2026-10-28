@@ -30,10 +30,11 @@ cask "cline-app" do
   uninstall quit: "bot.cline.app"
 
   zap trash: [
-    "~/Library/Application Support/bot.cline.app",
-    "~/Library/Caches/bot.cline.app",
-    "~/Library/Preferences/bot.cline.app.plist",
-    "~/Library/Saved Application State/bot.cline.app.savedState",
-    "~/Library/WebKit/bot.cline.app",
-  ]
+        "~/Library/Application Support/bot.cline.app",
+        "~/Library/Caches/bot.cline.app",
+        "~/Library/Preferences/bot.cline.app.plist",
+        "~/Library/Saved Application State/bot.cline.app.savedState",
+        "~/Library/WebKit/bot.cline.app",
+      ],
+      rmdir: "~/.cline"
 end
