@@ -1,8 +1,8 @@
 cask "jan" do
-  version "0.8.7"
-  sha256 arm:          "0124e6048837d467955792155ff63c566260700a2da673a34e1af8185d781083",
-         intel:        "0124e6048837d467955792155ff63c566260700a2da673a34e1af8185d781083",
-         x86_64_linux: "4b37501a01cd9d2e4aeaac3bb96352f6f7df29aa5666acfc326e3bf33666f61a"
+  version "0.8.8"
+  sha256 arm:          "93c33b220907624346131a6d799faee8e6dfc2e042a996bcfaf82659c5bfc7fe",
+         intel:        "93c33b220907624346131a6d799faee8e6dfc2e042a996bcfaf82659c5bfc7fe",
+         x86_64_linux: "ef98314c0230e3066235fd195ff1ffdf652b85b264bbd9ddf337f99d077c9159"
 
   on_macos do
     url "https://github.com/janhq/jan/releases/download/v#{version}/jan-mac-universal-#{version}.zip"
