@@ -11,8 +11,6 @@ cask "zen" do
          x86_64_linux: "0acae554219848792e7f463af7b31aa118e40c44a1e33698b6119e71ba4fecb6"
 
   on_macos do
-    conflicts_with cask: "zen-privacy"
-
     app "Zen.app"
     command_wrapper "zen", executable: "#{appdir}/Zen.app/Contents/MacOS/zen"
 
