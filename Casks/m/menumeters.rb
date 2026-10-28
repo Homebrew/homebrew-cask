@@ -1,6 +1,6 @@
 cask "menumeters" do
-  version "2.1.6.1"
-  sha256 "6c8a1a62e5f84ca043898e2503f4750c8cd8447588c6fb52d3be9c505a5cdff8"
+  version "2.1.7"
+  sha256 "77aba126fbc1020c6c6e61ce7213ae823281ce927ac0140cf5ca91f819b85d06"
 
   url "https://github.com/yujitach/MenuMeters/releases/download/#{version}/MenuMeters_#{version}.zip"
   name "MenuMeters for El Capitan (and later)"
@@ -13,7 +13,7 @@ cask "menumeters" do
   end
 
   auto_updates true
-  depends_on :macos
+  depends_on macos: :monterey
 
   app "MenuMeters.app"
 
