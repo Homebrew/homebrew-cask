@@ -3,10 +3,10 @@ cask "losslesscut" do
   os macos: "mac", linux: "linux"
   url_end = on_system_conditional macos: "dmg", linux: "AppImage"
 
-  version "3.70.1"
-  sha256 arm:          "82964e13ca65beeee508fbdb27fe823121701748b8b4023800bdcf701183d2ea",
-         intel:        "1605f8e93e54d0359f154fe12b273b770e07e91da8c211097aa4cf7ae103f338",
-         x86_64_linux: "04c87c97ff3980b8ebb6a62f0394204232e73a7dff89ea86ef49be3c372b0842"
+  version "3.70.2"
+  sha256 arm:          "3c0e2b3ec25fec66cf0cef343450d9a333e4bba5d64456c34cd18e891a3f5947",
+         intel:        "5504f5b1ed485d694929f64db9c41516cfe866f5dc5f8bb2afaad7d9a99d975c",
+         x86_64_linux: "e9ea00c9cf6cdda10db9d9cd13fc9ca10d61cdc046a60f5ee340db6643164a4a"
 
   on_macos do
     depends_on macos: :monterey
