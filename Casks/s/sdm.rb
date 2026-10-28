@@ -25,6 +25,7 @@ cask "sdm" do
   zap trash: [
     "/usr/local/bin/sdm",
     "~/.sdm",
+    "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.electron.sdm.sfl*",
     "~/Library/Application Support/SDM",
     "~/Library/Caches/com.electron.sdm*",
     "~/Library/Preferences/com.electron.sdm.plist",
