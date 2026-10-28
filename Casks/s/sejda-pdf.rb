@@ -22,6 +22,7 @@ cask "sejda-pdf" do
   zap trash: [
     "~/.sejda",
     "~/.sejda-desktop",
+    "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.sejda.sejda-desktop.sfl*",
     "~/Library/Application Support/Sejda PDF Desktop",
     "~/Library/Preferences/com.sejda.sejda-desktop.plist",
     "~/Library/Saved Application State/com.sejda.sejda-desktop.savedState",
