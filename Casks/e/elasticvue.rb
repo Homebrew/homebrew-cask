@@ -3,10 +3,10 @@ cask "elasticvue" do
        intel: on_system_conditional(macos: "x64", linux: "amd64")
   os macos: "dmg", linux: "AppImage"
 
-  version "1.16.0"
-  sha256 arm:          "510e33d636256c44b083c324ba854222fe8c0b57dc45008b9ca5c7c9173890eb",
-         intel:        "a828a15d456d55ebe16c7dbcae611903073768547875b89d811ba2f6d6a91558",
-         x86_64_linux: "77bd4021cca2c2eef0141cd373534145148ed83a438da0ea7e39e7a314ec605b"
+  version "1.17.0"
+  sha256 arm:          "66a5be9464f737d5b916074f0a17604ceb628b891d7ac89c033803e3ca306cb0",
+         intel:        "1b6895dbe91ff340082816829585699b1dcff0f7dcaf108276d82b7cfc949110",
+         x86_64_linux: "38ea7839fea449338c93d148899880b78230a6c37406996137b3d6f97e82f6b8"
 
   on_macos do
     app "elasticvue.app"
