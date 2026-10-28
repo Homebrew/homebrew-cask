@@ -23,9 +23,11 @@ cask "cocoapacketanalyzer" do
 
   zap trash: [
     "~/Library/Application Scripts/com.tastycocoabytes.CocoaPacketAnalyzer.CPAQLExt",
+    "~/Library/Application Scripts/com.tastycocoabytes.CocoaPacketAnalyzer.CPAQLSpotlightImporter",
     "~/Library/Application Support/CocoaPacketAnalyzer",
     "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.tastycocoabytes.cocoapacketanalyzer.sfl*",
     "~/Library/Containers/com.tastycocoabytes.CocoaPacketAnalyzer.CPAQLExt",
+    "~/Library/Containers/com.tastycocoabytes.CocoaPacketAnalyzer.CPAQLSpotlightImporter",
     "~/Library/Preferences/com.tastycocoabytes.CocoaPacketAnalyzer.plist",
     "~/Library/Saved Application State/com.tastycocoabytes.CocoaPacketAnalyzer.savedState",
   ]
