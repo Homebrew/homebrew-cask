@@ -8,6 +8,8 @@ cask "astro-editor" do
          x86_64_linux: "df9484b384914ecee9c459161c57d544cd4b692ae74c7b84d51b0d7c72096322"
 
   on_macos do
+    depends_on macos: :monterey
+
     app "Astro Editor.app"
 
     zap trash: [
