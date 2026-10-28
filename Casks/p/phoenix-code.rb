@@ -25,6 +25,7 @@ cask "phoenix-code" do
   zap trash: [
         "~/Library/Application Support/io.phcode",
         "~/Library/Caches/io.phcode",
+        "~/Library/HTTPStorages/io.phcode.binarycookies",
         "~/Library/Saved Application State/io.phcode.savedState",
         "~/Library/WebKit/io.phcode",
       ],
