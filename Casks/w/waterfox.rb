@@ -25,6 +25,7 @@ cask "waterfox" do
     "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/org.mozilla.waterfox.sfl*",
     "~/Library/Application Support/Waterfox",
     "~/Library/Caches/Waterfox",
+    "~/Library/Preferences/net.waterfox.waterfox.plist",
     "~/Library/Preferences/org.waterfoxproject.waterfox.plist",
   ]
 end
