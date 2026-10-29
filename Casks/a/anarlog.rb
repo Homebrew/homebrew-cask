@@ -3,11 +3,11 @@ cask "anarlog" do
   os macos: "macos", linux: "linux"
   url_end = on_system_conditional macos: "dmg", linux: "AppImage"
 
-  version "1.4.33"
-  sha256 arm:          "78c8ab49de6108137dee862608c644f75237655370e166fdca61a497bc1dc4cd",
-         intel:        "cd1a2d3b8005729c05f5c9651f15dd17ebbcceb8144a90cd88d176057c41ab15",
-         arm64_linux:  "741a0f445cdcb68cc4d8ac64cd002f0b31b6e5e868990177cdf272d20b597c1d",
-         x86_64_linux: "98b597faab2ee7123c4ab02a6c2b97a4b91092fcc714e61155909682d6c6c171"
+  version "1.4.34"
+  sha256 arm:          "9ddfbdc9388d17239804f877f4deb86bd7f0fc93fba34baba02fdec716ce851c",
+         intel:        "fe63ea0848bf1172ea033c532b93e119b96d38d9549e34c7b152a7422f251fa5",
+         arm64_linux:  "a6037201cddfcd717ef865c943e16283998a1b3d9ae0923156fa087942ded3b6",
+         x86_64_linux: "d70cfd1bdd256b81d450e248e2ecc3d3a724740a187c11bcbd1d22a92d2a7fea"
 
   on_macos do
     auto_updates true
