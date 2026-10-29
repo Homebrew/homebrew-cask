@@ -8,7 +8,7 @@ cask "hapigo" do
   homepage "https://www.hapigo.com/"
 
   livecheck do
-    url "https://hapigo.com/update/cast.plist"
+    url "https://www.hapigo.com/update/cast.plist"
     strategy :xml do |xml|
       xml.get_elements("//key[text()='version']").map { |item| item.next_element&.text&.strip }
     end
