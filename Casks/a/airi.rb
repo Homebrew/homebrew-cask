@@ -1,9 +1,9 @@
 cask "airi" do
   arch arm: "arm64", intel: "x64"
 
-  version "0.13.0"
-  sha256 arm:   "4af0bde542c60951bb49607ad8889d7a046461ab597783dee9d7543d5beb2dc1",
-         intel: "7a3040d0b1faf588b187826e61e13ecadde3debba340354c80fc35339f99f9ed"
+  version "0.13.1"
+  sha256 arm:   "80cde8f967c2c58a0e293c5022de7bab97d95ecd8dd452fe99f4f2069b673546",
+         intel: "15beef0428daa01b94c6c3899f44b9ad8373fd26e69ecd541c0df00f429685d9"
 
   url "https://github.com/moeru-ai/airi/releases/download/v#{version}/AIRI-#{version}-darwin-#{arch}.dmg"
   name "AIRI"
