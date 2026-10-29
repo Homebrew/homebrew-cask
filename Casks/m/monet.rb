@@ -25,8 +25,12 @@ cask "monet" do
 
   zap trash: [
     "~/.monet",
+    "~/Library/Application Scripts/BKJ3T6HL57.io.github.zenolab124.monet",
+    "~/Library/Application Scripts/io.github.zenolab124.monet.widget",
     "~/Library/Application Support/io.github.zenolab124.monet",
     "~/Library/Caches/io.github.zenolab124.monet",
+    "~/Library/Containers/io.github.zenolab124.monet.widget",
+    "~/Library/Group Containers/BKJ3T6HL57.io.github.zenolab124.monet",
     "~/Library/HTTPStorages/io.github.zenolab124.monet",
     "~/Library/LaunchAgents/io.github.zenolab124.monet.tray.plist",
     "~/Library/LaunchAgents/io.github.zenolab124.monet.widget-updater.plist",
