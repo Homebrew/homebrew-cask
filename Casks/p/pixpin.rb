@@ -1,6 +1,6 @@
 cask "pixpin" do
-  version "3.5.5.1"
-  sha256 "efe097abe580b78139001f024b6fb18aa906e0d43fce192c98aa4e587e71e26e"
+  version "3.6.6.0"
+  sha256 "f0a9e6122daf2d30191d08730198cf5cc5abe5595d7cf85612ed7b3c19347873"
 
   url "https://down.pixpin.cn/PixPin_mac_#{version}_uni.dmg"
   name "PixPin"
