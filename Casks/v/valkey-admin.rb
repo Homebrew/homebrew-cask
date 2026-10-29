@@ -1,9 +1,9 @@
 cask "valkey-admin" do
   arch arm: "-arm64"
 
-  version "1.2.0"
-  sha256 arm:   "6da810891f589535b0e68dec2c605fb2cf7bc84447d9ad6d05199902d5d23396",
-         intel: "434f09d66f1a6370da2a7701e134f64fa05208c36b05b74431d9f6b5e372a02d"
+  version "1.3.0"
+  sha256 arm:   "773d111cf8925582fdcac7f8c99fe34f5978b7fb22b0b44b01af0e3cd6803489",
+         intel: "5dfac626d7022cb531b36d57b3b78e5f0bf44a0ab0a1944ed13e5f26bf99d3e8"
 
   url "https://github.com/valkey-io/valkey-admin/releases/download/v#{version}/Valkey.Admin-#{version}#{arch}.dmg"
   name "Valkey Admin"
