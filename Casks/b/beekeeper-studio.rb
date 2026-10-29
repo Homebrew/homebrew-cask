@@ -17,6 +17,7 @@ cask "beekeeper-studio" do
     zap trash: [
       "~/Library/Application Support/beekeeper-studio",
       "~/Library/Application Support/Caches/beekeeper-studio-updater",
+      "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/io.beekeeperstudio.desktop.sfl*",
       "~/Library/Caches/io.beekeeperstudio.desktop",
       "~/Library/Caches/io.beekeeperstudio.desktop.ShipIt",
       "~/Library/Preferences/ByHost/io.beekeeperstudio.desktop.ShipIt.*.plist",
