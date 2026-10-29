@@ -16,8 +16,8 @@ cask "adobe-connect" do
     end
   end
   on_intel do
-    version "2026.01.39,11"
-    sha256 "e1f1d1497b2bea65b77729771fc304e4792a9fa0db92e179e836039e02b35392"
+    version "2026.10.170,11"
+    sha256 "adca95c96f6e5b3f6ad00feb43e9d1b449ee29e7f91890dcfab18146508ce6c2"
 
     livecheck do
       url "https://www.adobe.com/go/ConnectMac11PlusIntel",
