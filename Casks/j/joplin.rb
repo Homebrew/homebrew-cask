@@ -14,6 +14,7 @@ cask "joplin" do
 
     zap trash: [
       "~/.config/joplin-desktop",
+      "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/net.cozic.joplin-desktop.sfl*",
       "~/Library/Application Support/Joplin",
       "~/Library/Preferences/net.cozic.joplin-desktop.helper.plist",
       "~/Library/Preferences/net.cozic.joplin-desktop.plist",
