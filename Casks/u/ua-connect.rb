@@ -34,6 +34,7 @@ cask "ua-connect" do
             ]
 
   zap trash: [
+    "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.uaudio.ua-connect.sfl*",
     "~/Library/Application Support/UA Connect",
     "~/Library/Application Support/Universal Audio/UA Connect",
     "~/Library/Logs/UA Connect",
