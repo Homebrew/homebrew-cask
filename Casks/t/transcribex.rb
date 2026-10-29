@@ -18,8 +18,9 @@ cask "transcribex" do
   app "TranscribeX.app"
 
   zap trash: [
-    "~/Library/Caches/com.wlly.janome.AudioTranscribe",
-    "~/Library/HTTPStorages/com.wlly.janome.AudioTranscribe",
-    "~/Library/Preferences/com.wlly.janome.AudioTranscribe.plist",
-  ]
+        "~/Library/Caches/com.wlly.janome.AudioTranscribe",
+        "~/Library/HTTPStorages/com.wlly.janome.AudioTranscribe",
+        "~/Library/Preferences/com.wlly.janome.AudioTranscribe.plist",
+      ],
+      rmdir: "~/Documents/transcribex"
 end

@@ -24,6 +24,7 @@ cask "diversion-app" do
   uninstall quit: "com.todesktop.240506tnendbebc"
 
   zap trash: [
+    "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.todesktop.240506tnendbebc.sfl*",
     "~/Library/Application Support/Diversion Desktop",
     "~/Library/Caches/com.todesktop.240506tnendbebc",
     "~/Library/Caches/com.todesktop.240506tnendbebc.ShipIt",

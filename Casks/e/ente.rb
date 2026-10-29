@@ -18,6 +18,7 @@ cask "ente" do
   app "ente.app"
 
   zap trash: [
+    "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/io.ente.bhari-frame.sfl*",
     "~/Library/Application Support/ente",
     "~/Library/Logs/ente",
     "~/Library/Preferences/io.ente.bhari-frame.helper.plist",

@@ -23,7 +23,13 @@ cask "tresorit" do
             login_item: "Tresorit"
 
   zap trash: [
+    "~/Library/Application Scripts/986R6FFN66.com.tresorit.mac",
+    "~/Library/Application Scripts/com.tresorit.mac.FileProvider",
+    "~/Library/Application Scripts/com.tresorit.mac.TresoritExtension*",
     "~/Library/Application Support/Tresorit",
+    "~/Library/Containers/com.tresorit.mac.FileProvider",
+    "~/Library/Containers/com.tresorit.mac.TresoritExtension*",
+    "~/Library/Group Containers/986R6FFN66.com.tresorit.mac",
     "~/Library/Preferences/com.tresorit.mac.plist",
   ]
 end

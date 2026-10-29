@@ -30,10 +30,13 @@ cask "tencent-lemon" do
             ]
 
   zap trash: [
+    "~/Library/Application Support/com.tencent.Lemon",
     "~/Library/Caches/com.tencent.Lemon",
     "~/Library/Caches/com.tencent.LemonMonitor",
+    "~/Library/HTTPStorages/com.tencent.Lemon*",
     "~/Library/Logs/LemonMonitor.log",
     "~/Library/Logs/Tencent Lemon.log",
+    "~/Library/Preferences/com.tencent.Lemon.plist",
     "~/Library/Preferences/com.tencent.LemonUpdate.plist",
     "~/Library/Preferences/LemonMonitor_packet.dat",
     "~/Library/Preferences/Tencent Lemon_packet.dat",

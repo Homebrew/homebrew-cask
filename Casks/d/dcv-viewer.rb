@@ -19,5 +19,9 @@ cask "dcv-viewer" do
 
   app "DCV Viewer.app"
 
-  zap trash: "~/Library/Preferences/com.nicesoftware.dcvviewer.plist"
+  zap trash: [
+    "~/Library/Application Support/com.nicesoftware.dcvviewer",
+    "~/Library/Logs/com.nicesoftware.dcvviewer",
+    "~/Library/Preferences/com.nicesoftware.dcvviewer.plist",
+  ]
 end

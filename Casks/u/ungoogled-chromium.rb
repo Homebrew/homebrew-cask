@@ -29,6 +29,7 @@ cask "ungoogled-chromium" do
   zap trash: [
     "~/Library/Application Support/Chromium",
     "~/Library/Caches/Chromium",
+    "~/Library/Preferences/io.ungoogled-software.ungoogled-chromium.plist",
     "~/Library/Preferences/org.chromium.Chromium.plist",
     "~/Library/Saved Application State/org.chromium.Chromium.savedState",
   ]

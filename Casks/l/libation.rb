@@ -16,7 +16,9 @@ cask "libation" do
   binary "#{appdir}/Libation.app/Contents/MacOS/LibationCli", target: "libationcli"
 
   zap trash: [
+    "~/Library/Application Support/CrashReporter/Libation_*.plist",
     "~/Library/Application Support/Libation",
+    "~/Library/Logs/DiagnosticReports/Libation-*.ips",
     "~/Library/Preferences/org.libation.macos.plist",
   ]
 end

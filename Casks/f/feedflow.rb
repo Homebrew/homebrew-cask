@@ -13,6 +13,7 @@ cask "feedflow" do
 
     zap trash: [
       "~/Library/Application Support/FeedFlow",
+      "~/Library/Preferences/com.prof18.feedflow.plist",
       "~/Library/Saved Application State/com.prof18.feedflow.savedState",
     ]
   end

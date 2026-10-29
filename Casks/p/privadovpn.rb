@@ -20,7 +20,15 @@ cask "privadovpn" do
 
   zap trash: [
     "~/Documents/PrivadoVPN",
+    "~/Library/Application Scripts/4D7YV49724.io.privado.main.tunnel",
+    "~/Library/Application Scripts/io.privado.main.widget",
     "~/Library/Application Support/PrivadoVPN",
+    "~/Library/Caches/io.privado.main",
     "~/Library/Caches/PrivadoVPN",
+    "~/Library/Containers/io.privado.main.widget",
+    "~/Library/Group Containers/4D7YV49724.io.privado.main.tunnel",
+    "~/Library/HTTPStorages/io.privado.main",
+    "~/Library/Logs/PrivadoVPN",
+    "~/Library/Preferences/io.privado.main.plist",
   ]
 end

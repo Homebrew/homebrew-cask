@@ -21,6 +21,8 @@ cask "copilot-money" do
   app "Copilot.app"
 
   zap trash: [
+    "~/Library/Application Scripts/com.copilot.production*",
+    "~/Library/Application Scripts/group.com.copilot.production",
     "~/Library/Containers/com.copilot.production",
     "~/Library/Group Containers/group.com.copilot.production",
   ]

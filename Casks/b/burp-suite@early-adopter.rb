@@ -35,5 +35,8 @@ cask "burp-suite@early-adopter" do
 
   uninstall quit: "com.install4j.6592-1155-2163-3973.70"
 
-  zap trash: "~/.BurpSuite"
+  zap trash: [
+    "~/.BurpSuite",
+    "~/Library/Preferences/com.install4j.6592-1155-2163-3973.70.plist",
+  ]
 end

@@ -21,6 +21,7 @@ cask "session" do
   app "Session.app"
 
   zap trash: [
+    "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.loki-project.messenger-desktop.sfl*",
     "~/Library/Application Support/Session",
     "~/Library/Caches/Session",
     "~/Library/Preferences/com.loki-project.messenger-desktop.plist",

@@ -26,6 +26,7 @@ cask "sequel-ace" do
   zap trash: [
     "~/Library/Application Scripts/com.sequel-ace.sequel-ace",
     "~/Library/Application Scripts/NKQ4HJ66PX.sequel-ace",
+    "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.sequel-ace.sequel-ace.sfl*",
     "~/Library/Containers/com.sequel-ace.sequel-ace",
     "~/Library/Group Containers/NKQ4HJ66PX.sequel-ace",
   ]

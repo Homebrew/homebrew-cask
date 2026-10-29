@@ -21,6 +21,8 @@ cask "mudlet" do
   app "mudlet.app"
 
   zap trash: [
+    "~/Library/Caches/mudlet",
+    "~/Library/HTTPStorages/org.mudlet.mudlet",
     "~/Library/Preferences/org.mudlet.mudlet.plist",
     "~/Library/Saved Application State/org.mudlet.mudlet.savedState",
     "~/mudlet-data",

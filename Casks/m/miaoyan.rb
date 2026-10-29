@@ -18,9 +18,11 @@ cask "miaoyan" do
   app "MiaoYan.app"
 
   zap trash: [
-    "~/Library/Application Support/com.tw93.MiaoYan",
-    "~/Library/Caches/com.tw93.MiaoYan",
-    "~/Library/HTTPStorages/com.tw93.MiaoYan",
-    "~/Library/Preferences/com.tw93.MiaoYan.plist",
-  ]
+        "~/Library/Application Support/com.tw93.MiaoYan",
+        "~/Library/Caches/com.tw93.MiaoYan",
+        "~/Library/HTTPStorages/com.tw93.MiaoYan",
+        "~/Library/Preferences/com.tw93.MiaoYan.plist",
+        "~/Library/WebKit/com.tw93.miaoyan",
+      ],
+      rmdir: "~/Documents/MiaoYan"
 end

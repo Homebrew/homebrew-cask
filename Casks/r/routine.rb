@@ -23,6 +23,7 @@ cask "routine" do
   app "Routine.app"
 
   zap trash: [
+    "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/co.routine.desktop.sfl*",
     "~/Library/Application Support/Routine",
     "~/Library/Caches/co.routine.desktop",
     "~/Library/Caches/co.routine.desktop.ShipIt",

@@ -17,6 +17,7 @@ cask "openplc-editor" do
   uninstall quit: "com.autonomylogic.openplceditor"
 
   zap trash: [
+    "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.autonomylogic.openplceditor.sfl*",
     "~/Library/Application Support/OpenPLC Editor",
     "~/Library/HTTPStorages/com.autonomylogic.openplceditor",
     "~/Library/Preferences/com.autonomylogic.openplceditor.plist",

@@ -20,8 +20,14 @@ cask "typewhisper" do
   app "TypeWhisper.app"
 
   zap trash: [
+    "~/Library/Application Scripts/2D8ALY3LCL.com.typewhisper.mac",
+    "~/Library/Application Scripts/com.typewhisper.mac.transcribe-action",
+    "~/Library/Application Scripts/com.typewhisper.mac.widgets",
     "~/Library/Application Support/TypeWhisper",
     "~/Library/Caches/com.typewhisper.mac",
+    "~/Library/Containers/com.typewhisper.mac.transcribe-action",
+    "~/Library/Containers/com.typewhisper.mac.widgets",
+    "~/Library/Group Containers/2D8ALY3LCL.com.typewhisper.mac",
     "~/Library/HTTPStorages/com.typewhisper.mac",
     "~/Library/Preferences/com.typewhisper.mac.plist",
   ]

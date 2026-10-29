@@ -25,7 +25,12 @@ cask "rstudio" do
 
   uninstall quit: "com.rstudio.desktop"
 
-  zap trash: "~/.rstudio-desktop"
+  zap trash: [
+        "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.rstudio.desktop.sfl*",
+        "~/Library/Application Support/RStudio",
+        "~/Library/Preferences/com.rstudio.desktop.plist",
+      ],
+      rmdir: "~/.rstudio-desktop"
 
   caveats <<~EOS
     #{token} depends on R. The R Project provides official binaries:

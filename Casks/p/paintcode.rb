@@ -20,7 +20,10 @@ cask "paintcode" do
   uninstall quit: "com.pixelcut.paintcode*"
 
   zap trash: [
+    "~/Library/Application Scripts/com.pixelcut.paintcode*",
+    "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.pixelcut.paintcode*.sfl*",
     "~/Library/Application Support/com.pixelcut.paintcode*",
+    "~/Library/Containers/com.pixelcut.paintcode*",
     "~/Library/HTTPStorages/com.pixelcut.paintcode*",
     "~/Library/Preferences/com.pixelcut.paintcode*.plist",
     "~/Library/Saved Application State/com.pixelcut.paintcode*.savedState",

@@ -18,13 +18,15 @@ cask "rocket-typist" do
   app "Rocket Typist.app"
 
   zap trash: [
+    "~/Library/Application Scripts/com.witt-software.Rocket-Typist-2.Share-Text-With-Rocket-Typist",
     "~/Library/Application Support/com.witt-software.rocket-typist",
-    "~/Library/Application Support/com.witt-software.Rocket-Typist-#{version.major}",
+    "~/Library/Application Support/com.witt-software.Rocket-Typist-2",
     "~/Library/Application Support/Rocket Typist",
     "~/Library/Caches/com.apple.helpd/Generated/com.witt-software.Rocket-Typist.help*",
-    "~/Library/Caches/com.plausiblelabs.crashreporter.data/com.witt-software.Rocket-Typist-#{version.major}",
-    "~/Library/Caches/com.witt-software.Rocket-Typist-#{version.major}",
-    "~/Library/HTTPStorages/com.witt-software.Rocket-Typist-#{version.major}",
-    "~/Library/Preferences/com.witt-software.Rocket-Typist-#{version.major}.plist",
+    "~/Library/Caches/com.plausiblelabs.crashreporter.data/com.witt-software.Rocket-Typist-2",
+    "~/Library/Caches/com.witt-software.Rocket-Typist-2",
+    "~/Library/Containers/com.witt-software.Rocket-Typist-2.Share-Text-With-Rocket-Typist",
+    "~/Library/HTTPStorages/com.witt-software.Rocket-Typist-2*",
+    "~/Library/Preferences/com.witt-software.Rocket-Typist-2.plist",
   ]
 end

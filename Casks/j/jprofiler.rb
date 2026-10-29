@@ -26,6 +26,7 @@ cask "jprofiler" do
 
   zap trash: [
     "~/.jprofiler*",
+    "~/Library/Preferences/com.install4j.8435-0008-8661-5857.2.plist",
     "~/Library/Preferences/com.jprofiler.history.plist",
     "~/Library/Preferences/com.jprofiler.v*.plist",
     "~/Library/Preferences/jprofiler.vmoptions",

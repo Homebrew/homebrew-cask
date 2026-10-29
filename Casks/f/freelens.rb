@@ -15,8 +15,10 @@ cask "freelens" do
     app "Freelens.app"
 
     zap trash: [
+      "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/app.freelens.freelens.sfl*",
       "~/Library/Application Support/Freelens",
       "~/Library/Logs/Freelens",
+      "~/Library/Preferences/app.freelens.Freelens.plist",
     ]
   end
   on_linux do
