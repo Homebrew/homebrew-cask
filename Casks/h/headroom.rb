@@ -1,9 +1,9 @@
 cask "headroom" do
   os macos: "mac.dmg", linux: "amd64.AppImage"
 
-  version "0.9.51"
-  sha256 arm:          "e339575d37e740f09934a43ec41fe3bf9fdd91dfba2a4f1c359890547aff5dc1",
-         x86_64_linux: "ae28655cc9ca4fb7021b8f0c9cccd8688ee54f76a3cf9975730e42ddb366f1d8"
+  version "0.9.52"
+  sha256 arm:          "e12033c507d31c2b82146d3db3bdbfe6fbedfb28235e0f085953bcda8ccecfef",
+         x86_64_linux: "a43ba937a4ba5de4308167220d8019930bd24fc39b59c236dc661c3848238bce"
 
   on_macos do
     depends_on arch: :arm64
