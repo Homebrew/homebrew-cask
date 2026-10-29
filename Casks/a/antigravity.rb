@@ -2,9 +2,9 @@ cask "antigravity" do
   arch arm: "arm", intel: "x64"
   livecheck_arch = on_arch_conditional arm: "arm64", intel: "x64"
 
-  version "2.28.1,6709500728705024"
-  sha256 arm:   "19d5103001d57438afdcc4285e2d9f624811ef8fcb1d05c7d2ac58d8bc3ab24c",
-         intel: "3dce9f895753f55f93e287608f1086f2cbac4a89ccf2e3c48f1e24e4e8c79684"
+  version "2.28.2,5937220255875072"
+  sha256 arm:   "9174721d9cd8528719c8fcb3ea79d438f75c283ee5921189aca7391571a8bf1f",
+         intel: "bde38268564f753db7f232c3d5fd0e7000f6b67b1b06bb6181a769a8e3ca2f37"
 
   url "https://storage.googleapis.com/antigravity-public/antigravity-hub/#{version.csv.first}-#{version.csv.second}/darwin-#{arch}/Antigravity.dmg"
   name "Google Antigravity"
