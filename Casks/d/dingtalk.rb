@@ -29,10 +29,14 @@ cask "dingtalk" do
             delete:  "/Applications/DingTalk.app"
 
   zap trash: [
+    "~/Library/Application Scripts/com.alibaba.DingTalkMac.DTFinderSyncExt",
+    "~/Library/Application Scripts/com.alibaba.DingTalkMac.DTShareExtension",
     "~/Library/Application Support/DingTalkMac",
     "~/Library/Caches/com.alibaba.DingTalkInstaller",
     "~/Library/Caches/com.alibaba.DingTalkMac",
     "~/Library/Caches/DingTalk",
+    "~/Library/Containers/com.alibaba.DingTalkMac.DTFinderSyncExt",
+    "~/Library/Containers/com.alibaba.DingTalkMac.DTShareExtension",
     "~/Library/Preferences/com.alibaba.DingTalk-Helper.plist",
     "~/Library/Preferences/com.alibaba.DingTalkInstaller.plist",
     "~/Library/Preferences/com.alibaba.DingTalkMac.plist",
