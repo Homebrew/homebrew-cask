@@ -1,6 +1,6 @@
 cask "trickster" do
-  version "4.0"
-  sha256 "847f26d19172c9c8550ab4624958f01b02bc7f6d8ae132b30fe66226ecee2a55"
+  version "4.0.1"
+  sha256 "a01095f3d8e0ae95c2604454beaedb63d06c9683ec8a2431dcc2a6b42456fc0d"
 
   url "https://dl.apparentsoft.com/TricksterUpdates/Trickster_#{version}.zip"
   name "Trickster"
