@@ -22,6 +22,7 @@ cask "launchhome" do
   zap trash: [
     "~/Library/Application Support/com.wlh.launchpad",
     "~/Library/Caches/com.wlh.launchpad",
+    "~/Library/HTTPStorages/com.wlh.launchpad",
     "~/Library/Preferences/com.wlh.launchpad.plist",
   ]
 end
