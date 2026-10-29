@@ -1,5 +1,5 @@
 cask "tabitha" do
-  version "0.12.0"
+  version "0.12.1"
   sha256 :no_check
 
   url "https://tabitha.fewersteps.app/download/Tabitha.dmg"
@@ -8,10 +8,9 @@ cask "tabitha" do
   homepage "https://tabitha.fewersteps.app/"
 
   livecheck do
-    url "https://tabitha.fewersteps.app/changelog/"
-    strategy :page_match do |page|
-      page.scan(/\#(\d+\.\d+\.\d+)/i)
-          .map { |match| match&.first }
+    url "https://updates.fewersteps.app/tabitha/appcast.xml"
+    strategy :sparkle do |item|
+      "#{item.short_version}#{item.url[%r{/(\d+)/[^/]+\.dmg}i, 1]}"
     end
   end
 
@@ -19,7 +18,10 @@ cask "tabitha" do
 
   app "Tabitha.app"
 
-  "~/Library/Caches/app.fewersteps.Tabitha",
-	"~/Library/HTTPStorages/app.fewersteps.Tabitha",
-	"~/Library/Preferences/app.fewersteps.Tabitha.plist",
+  zap launchctl: "application.app.fewersteps.Tabitha.5687652.5687658",
+      delete:    [
+        "~/Library/Caches/app.fewersteps.Tabitha",
+        "~/Library/HTTPStorages/app.fewersteps.Tabitha",
+        "~/Library/Preferences/app.fewersteps.Tabitha.plist",
+      ]
 end
