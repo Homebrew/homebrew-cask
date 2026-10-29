@@ -4,7 +4,7 @@ cask "saega" do
 
   url "https://storage.googleapis.com/saega-downloads/Saega-#{version}.dmg"
   name "Saega"
-  desc "Dictation app for Swedish and Norwegian"
+  desc "Dictation and meeting transcription for Swedish and Norwegian"
   homepage "https://saega.app/"
 
   livecheck do
