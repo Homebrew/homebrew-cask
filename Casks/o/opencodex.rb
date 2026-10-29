@@ -4,7 +4,7 @@ cask "opencodex" do
 
   url "https://github.com/lidge-jun/opencodex/releases/download/v#{version}/OpenCodex-#{version}-macos.dmg"
   name "OpenCodex"
-  desc "Universal provider proxy for OpenAI Codex and Claude Code"
+  desc "Proxy that connects AI coding agents to other LLM providers"
   homepage "https://opencodex.me/"
 
   livecheck do
