@@ -1,6 +1,6 @@
 cask "reolink" do
-  version "8.21.12,2026.07,230926448887f151e9d6d10f"
-  sha256 "a4b94c4fddcf4da25eee72bf421a1f790345c98b4675b1935ad1a37dab218103"
+  version "8.21.30,2026.10,2902441964ec604090ec479d"
+  sha256 "195fd5529e55a156bd7e0b7215615414d76a0dd82686fc201b3fbe764b6b9d68"
 
   url "https://home-cdn.reolink.us/wp-content/uploads/#{version.csv.second.major}/#{version.csv.second.minor}/#{version.csv.third}.dmg"
   name "Reolink Client"
