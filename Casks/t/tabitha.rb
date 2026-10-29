@@ -19,5 +19,7 @@ cask "tabitha" do
 
   app "Tabitha.app"
 
-  zap :not_required
+  "~/Library/Caches/app.fewersteps.Tabitha",
+	"~/Library/HTTPStorages/app.fewersteps.Tabitha",
+	"~/Library/Preferences/app.fewersteps.Tabitha.plist",
 end
