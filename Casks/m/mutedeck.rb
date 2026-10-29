@@ -26,7 +26,7 @@ cask "mutedeck" do
   depends_on :macos
 
   installer script: {
-    executable: "MuteDeck-#{version}-Installer.app/Contents/MacOS/MuteDeck-#{version}-Installer",
+    executable: "Install MuteDeck.app/Contents/MacOS/MuteDeck-#{version}-Installer",
     args:       [
       "--root", "/Applications/MuteDeck",
       "--accept-messages", "--accept-licenses", "--confirm-command",
