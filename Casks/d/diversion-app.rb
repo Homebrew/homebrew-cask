@@ -1,9 +1,9 @@
 cask "diversion-app" do
   arch arm: "arm64", intel: "x64"
 
-  version "0.9.0"
-  sha256 arm:   "1d1cb2e055d610e7dce5d99b07e01851177235b470f2819d8da4da45ce93692d",
-         intel: "16caedb4074317d8da220fa5b8c5f8ed76dc0d4adcb916f198905d8c8b739ccb"
+  version "0.10.0"
+  sha256 arm:   "29fc185b4bb39b27737d984d884ba5d1f36360c931c19a7fa8b6789eb79de812",
+         intel: "d56e7bfb0f3515d37fc9d8b8b75692a48fb29dc64d87eda2116d173d3e0e150d"
 
   url "https://download.todesktop.com/240506tnendbebc/Diversion%20Desktop%20#{version}-#{arch}.dmg"
   name "Diversion Desktop"
