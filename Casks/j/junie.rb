@@ -12,7 +12,7 @@ cask "junie" do
     binary "Applications/junie.app/Contents/MacOS/junie"
   end
   on_linux do
-    binary "junie/bin/junie"
+    binary "junie-app/bin/junie"
   end
 
   url "https://github.com/JetBrains/junie/releases/download/#{version}/junie-release-#{version}-#{os}-#{arch}.zip"
