@@ -2,7 +2,7 @@ cask "tabitha" do
   version "0.12.1"
   sha256 :no_check
 
-  url "https://tabitha.fewersteps.app/download/Tabitha.dmg"
+  url "https://updates.fewersteps.app/tabitha/Tabitha-0.12.1.dmg"
   name "Tabitha"
   desc "Switch windows, not apps"
   homepage "https://tabitha.fewersteps.app/"
