@@ -1,9 +1,9 @@
 cask "sparrow" do
   arch arm: "aarch64", intel: "x86_64"
 
-  version "2.5.5"
-  sha256 arm:   "02be94466d92bef4b81b6b9c3efaf6ef4910f713330065309750e92679f711cd",
-         intel: "8db7d49112f73be162e2a22dd1494c095b760fca22e50223405a425deb4e7dcf"
+  version "2.5.6"
+  sha256 arm:   "4211bf7a58f7cfb88b541e33220bed75b316d92adfeb18565e4bbc53e33759b9",
+         intel: "09e54e472db8bbf7b2c7078889468771d6f60a446af464e1a4ca05556fa90f39"
 
   url "https://github.com/sparrowwallet/sparrow/releases/download/#{version}/Sparrow-#{version}-#{arch}.dmg"
   name "Sparrow Bitcoin Wallet"
