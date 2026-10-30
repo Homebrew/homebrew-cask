@@ -19,6 +19,8 @@ cask "keeper-password-manager" do
   zap trash: [
     "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.keepersecurity.passwordmanager.sfl*",
     "~/Library/Application Support/Keeper Password Manager",
+    "~/Library/Caches/com.keepersecurity.passwordmanager*",
+    "~/Library/HTTPStorages/com.keepersecurity.passwordmanager",
     "~/Library/Preferences/com.keepersecurity.passwordmanager.plist",
     "~/Library/Saved Application State/com.keepersecurity.passwordmanager.savedState",
   ]
