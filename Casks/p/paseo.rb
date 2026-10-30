@@ -17,12 +17,12 @@ cask "paseo" do
     uninstall launchctl: "sh.paseo.desktop.ShipIt",
               quit:      "sh.paseo.desktop",
               script:    {
-                executable: "#{appdir}/Paseo.app/Contents/Resources/bin/paseo",
-                args:       ["daemon", "stop", "--force"],
+                executable:   "#{appdir}/Paseo.app/Contents/Resources/bin/paseo",
+                args:         ["daemon", "stop", "--force"],
+                must_succeed: false,
               }
 
     zap trash: [
-      "~/.paseo",
       "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/sh.paseo.desktop.sfl*",
       "~/Library/Application Support/Paseo",
       "~/Library/Caches/@getpaseodesktop-updater",
@@ -41,10 +41,7 @@ cask "paseo" do
 
     app_image "Paseo-x86_64.AppImage", target: "Paseo.AppImage"
 
-    zap trash: [
-      "~/.config/Paseo",
-      "~/.paseo",
-    ]
+    zap trash: "~/.config/Paseo"
   end
 
   name "Paseo"
@@ -55,4 +52,6 @@ cask "paseo" do
     url :url
     regex(/^v?(\d+(?:\.\d+)+)$/i)
   end
+
+  auto_updates true
 end
