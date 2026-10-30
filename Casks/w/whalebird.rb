@@ -17,6 +17,7 @@ cask "whalebird" do
   app "Whalebird.app"
 
   zap trash: [
+    "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/social.whalebird.app.sfl*",
     "~/Library/Application Support/Whalebird",
     "~/Library/Logs/Whalebird",
     "~/Library/Preferences/social.whalebird.app.plist",
