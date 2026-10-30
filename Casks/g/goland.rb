@@ -31,7 +31,8 @@ cask "goland" do
                   executable: "/usr/bin/open",
                   args:       ["-na", "GoLand.app", "--args"]
 
-  uninstall quit: "com.jetbrains.goland"
+  uninstall launchctl: "application.com.jetbrains.app.daemon.*",
+            quit:      "com.jetbrains.goland"
 
   zap trash: [
     "~/Library/Application Support/JetBrains/GoLand",
