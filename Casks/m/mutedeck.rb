@@ -43,5 +43,8 @@ cask "mutedeck" do
             },
             delete:    "/Applications/MuteDeck"
 
-  zap trash: "~/Library/Application Support/mutedeck"
+  zap trash: [
+    "~/Library/Application Support/mutedeck",
+    "~/Library/Preferences/com.mutedeck.MuteDeck.plist",
+  ]
 end
