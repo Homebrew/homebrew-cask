@@ -1,20 +1,22 @@
-cask "vocevista-video-pro" do
-  version "5.11.1.9379"
-  sha256 "fe2f00ba40362ee8c2e7b7929267c8eb91ce7d121a1e8262ea6287980f5037fb"
+cask "vocevista-pro" do
+  version "6.0.2.10487"
+  sha256 "597e5c2d009ef510b372b99457e1c243e8b250799afd8e85aeb52851d3d1b051"
 
-  url "https://download.sygyt.com/#{version.major_minor_patch}/VoceVistaVideoPro_macOS_#{version}.dmg"
-  name "VoceVista Video Pro"
+  url "https://download.sygyt.com/#{version.major_minor_patch}/VoceVistaPro_macOS_#{version}.dmg"
+  name "VoceVista Pro"
   desc "High-resolution voice spectrum and vibrato analyzer"
   homepage "https://www.sygyt.com/"
 
   livecheck do
-    url "https://www.sygyt.com/dwnld/518/"
+    url "https://www.vocevista.com/downloads/vocevista-pro-mac/"
     strategy :header_match
   end
 
   depends_on macos: :ventura
 
-  app "VoceVista Video Pro.app"
+  app "VoceVista Pro.app"
+
+  uninstall quit: "com.sygyt.mac.VoceVistaVideoPro"
 
   zap trash: [
     "~/Library/Application Support/Sygyt Software/VoceVista Video Pro",
