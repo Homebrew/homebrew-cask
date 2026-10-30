@@ -38,6 +38,7 @@ cask "wondershare-uniconverter" do
     "~/Library/Preferences/com.wondershare.helper_compact.plist",
     "~/Library/Preferences/com.Wondershare.UniConverter#{version.major}.plist",
     "~/Library/Saved Application State/com.Wondershare.UniConverter#{version.major}.savedState",
+    "~/Library/WebKit/com.Wondershare.UniConverter#{version.major}",
     "~/Movies/Wondershare UniConverter#{version.major}",
     "~/Pictures/Wondershare UniConverter#{version.major}",
   ]
