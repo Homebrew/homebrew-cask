@@ -19,6 +19,9 @@ cask "moonfin" do
   zap trash: [
         "/Library/Preferences/org.moonfin.app.plist",
         "~/Documents/Moonfin/DB/offline.db",
+        "~/Library/Application Support/org.moonfin.app",
+        "~/Library/Caches/org.moonfin.app",
+        "~/Library/Preferences/org.moonfin.app.plist",
       ],
 
       rmdir: "~/Documents/Moonfin"
