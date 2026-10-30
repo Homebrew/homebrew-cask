@@ -1,9 +1,9 @@
 cask "rider" do
   arch arm: "-aarch64"
 
-  version "2026.2.3.1,262.10968.170"
-  sha256 arm:   "39aa927f579b95b766947fb8ca8fa78d495f6a1d5942a94f4104e1b873c45209",
-         intel: "130bd590fb0708e551765cda08ae1743523e6fd13ce8a3bde5d4c6245852bec8"
+  version "2026.2.4,262.11879.110"
+  sha256 arm:   "4adfd542691dee694e82636a583dbf681627d582b8fc41ab9ecef88181b531ec",
+         intel: "70872752e2718e0b00ff2fd978f89cec44569fbcb45fe993baf42fdabda85800"
 
   url "https://download.jetbrains.com/rider/JetBrains.Rider-#{version.csv.first}#{arch}.dmg"
   name "JetBrains Rider"
