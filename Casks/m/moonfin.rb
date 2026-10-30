@@ -1,6 +1,6 @@
 cask "moonfin" do
-  version "2.7.0"
-  sha256 "519a3b3c615c949a963b3152347e5cdfe9fa6234dab07bab9c09063be4ec1cde"
+  version "2.8.0"
+  sha256 "e043cede1c64b0f7121b2a6400c8f6537ea4b26a5ff00f52feb8c910050e0018"
 
   url "https://github.com/Moonfin-Client/Moonfin-Core/releases/download/#{version}/Moonfin_macOS_v#{version}.dmg"
   name "Moonfin"
@@ -12,7 +12,7 @@ cask "moonfin" do
     strategy :github_latest
   end
 
-  depends_on macos: :sonoma
+  depends_on macos: :sequoia
 
   app "Moonfin.app"
 
