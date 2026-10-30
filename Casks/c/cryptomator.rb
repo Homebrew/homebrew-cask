@@ -5,11 +5,11 @@ cask "cryptomator" do
   name_prefix = on_system_conditional macos: "Cryptomator", linux: "cryptomator"
   url_end = on_system_conditional macos: "dmg", linux: "AppImage"
 
-  version "1.19.5"
-  sha256 arm:          "0df28420179f63a3a9b44c2212907c590b7cd92875970f54a16960db29de3beb",
-         intel:        "9db920e8476010e1f2ad3fc186a71f3ab163516ccaf1d494fa616e920cfc0682",
-         arm64_linux:  "760bd64d85e956f1c0a5528e8b3e179a178074807415d44206d9c9a01161b19d",
-         x86_64_linux: "a4e7b885bc3ee6c65e5e0b95d15088567ed97670ce19c517e20cb091ec2931a3"
+  version "1.19.6"
+  sha256 arm:          "fdfc8ef50b10baca1078b7a9edf404e330363c8a3a40fda29f86dd5d3a0a0b02",
+         intel:        "84eeab413f0b381ec5c7d5844b79ac8fc80abc0e5266a3a3cf3a5ce72e1cfa4a",
+         arm64_linux:  "2bc13b968b32c5d3ab5d45087abb9ab4ef01b5584560c17511c956c4c681f82e",
+         x86_64_linux: "a6167f6ab3c5f161b31726b94bcf0abcb7f78c857b16e485adeb8e5096b74acd"
 
   on_macos do
     app "Cryptomator.app"
