@@ -20,6 +20,7 @@ cask "home-assistant" do
   app "Home Assistant.app"
 
   zap trash: [
+    "~/Library/Application Scripts/group.io.robbie.homeassistant",
     "~/Library/Application Scripts/io.robbie.HomeAssistant",
     "~/Library/Containers/io.robbie.HomeAssistant",
     "~/Library/Group Containers/group.io.robbie.homeassistant",
