@@ -17,7 +17,8 @@ cask "rex-app" do
 
   app "Rex Beta.app"
 
-  uninstall quit: "com.superlogical.rex"
+  uninstall launchctl: "com.superlogical.rex.server.*",
+            quit:      "com.superlogical.rex"
 
   zap trash: [
     "~/Library/Application Support/com.superlogical.rex",
