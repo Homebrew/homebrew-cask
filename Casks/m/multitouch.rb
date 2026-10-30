@@ -1,6 +1,6 @@
 cask "multitouch" do
-  version "1.48"
-  sha256 "11c8ed3adaa03fcd7d7de67119e22749a88cb1bec1b607d63321b312e22a2b78"
+  version "2.0"
+  sha256 "b7978ba98e372967be19ce9c078eb8cb8f6fdf3b730d139f661a1f7a5d568367"
 
   url "https://multitouch.app/downloads/multitouch#{version}.dmg"
   name "Multitouch"
@@ -13,7 +13,7 @@ cask "multitouch" do
   end
 
   auto_updates true
-  depends_on :macos
+  depends_on macos: :sonoma
 
   app "Multitouch.app"
 
