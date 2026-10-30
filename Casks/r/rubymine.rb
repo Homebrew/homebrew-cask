@@ -31,7 +31,8 @@ cask "rubymine" do
                   executable: "/usr/bin/open",
                   args:       ["-na", "RubyMine.app", "--args"]
 
-  uninstall quit: "com.jetbrains.rubymine"
+  uninstall launchctl: "application.com.jetbrains.app.daemon.*",
+            quit:      "com.jetbrains.rubymine"
 
   zap trash: [
     "~/Library/Application Support/RubyMine#{version.major_minor}",
