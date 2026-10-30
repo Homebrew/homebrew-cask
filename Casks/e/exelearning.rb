@@ -12,6 +12,7 @@ cask "exelearning" do
   app "eXeLearning.app"
 
   zap trash: [
+    "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/es.intef.exelearning.sfl*",
     "~/Library/Application Support/exelearning",
     "~/Library/Caches/es.intef.exelearning",
     "~/Library/Caches/es.intef.exelearning.ShipIt",
