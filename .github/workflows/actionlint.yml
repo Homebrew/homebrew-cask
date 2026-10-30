@@ -57,7 +57,7 @@ jobs:
     steps:
       - name: Set up Homebrew
         id: setup-homebrew
-        uses: Homebrew/actions/setup-homebrew@4790763c0a3ba4036f72634dc079c4a7dfcd4878 # 2026.10.19.1
+        uses: Homebrew/actions/setup-homebrew@d482da0e602890d3160aade42e72c8556103bf04 # 2026.10.26.1
         with:
           core: false
           cask: false
@@ -115,7 +115,7 @@ jobs:
           path: results.sarif
 
       - name: Upload SARIF file
-        uses: github/codeql-action/upload-sarif@6f2ac81f5cd81fe351a197ba0b00d91d03cd2aee # v4.39.0
+        uses: github/codeql-action/upload-sarif@9b3254085494b55a0f7c4c2b3d2d52cc712ce370 # v4.39.1
         with:
           sarif_file: results.sarif
           category: zizmor
