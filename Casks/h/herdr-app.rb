@@ -21,5 +21,8 @@ cask "herdr-app" do
   app "Herdr.app"
   binary "#{appdir}/Herdr.app/Contents/MacOS/Herdr", target: "herdr-app"
 
-  zap trash: "~/.config/herdr-app"
+  zap trash: [
+    "~/.config/herdr-app",
+    "~/Library/Preferences/dev.herdr.app.plist",
+  ]
 end
