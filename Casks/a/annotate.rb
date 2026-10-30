@@ -12,5 +12,8 @@ cask "annotate" do
 
   app "Annotate.app"
 
-  zap trash: "~/Library/Containers/com.epilande.Annotate"
+  zap trash: [
+    "~/Library/Application Scripts/com.epilande.Annotate",
+    "~/Library/Containers/com.epilande.Annotate",
+  ]
 end

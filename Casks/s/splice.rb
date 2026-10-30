@@ -25,6 +25,7 @@ cask "splice" do
   zap trash: [
     "~/Library/Application Support/*Splice*",
     "~/Library/Caches/com.splice*",
+    "~/Library/HTTPStorages/com.splice.Splice",
     "~/Library/Preferences/com.splice*",
   ]
 end

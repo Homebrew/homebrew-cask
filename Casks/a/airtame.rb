@@ -19,6 +19,7 @@ cask "airtame" do
 
   zap trash: [
     "~/Library/Application Support/airtame-application",
+    "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.airtame.airtame-application.sfl*",
     "~/Library/Logs/Airtame",
     "~/Library/Preferences/com.airtame.airtame-application.plist",
     "~/Library/Saved Application State/com.airtame.airtame-application.savedState",

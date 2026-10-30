@@ -24,13 +24,21 @@ cask "pdfelement" do
   ]
 
   zap trash: [
+    "~/Library/Application Scripts/com.wondershare.PDFelement.PDFelementWidgets",
+    "~/Library/Application Scripts/com.wondershare.PDFelement.ShareExtension",
+    "~/Library/Application Scripts/YZC2T44ZDX.com.wondershare.PDFelement",
     "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.wondershare.pdfelement.sfl*",
     "~/Library/Application Support/com.wondershare.PDFelement",
     "~/Library/Caches/com.wondershare.PDFelement",
     "~/Library/Caches/PDFelement",
+    "~/Library/Containers/com.wondershare.PDFelement.PDFelementWidgets",
+    "~/Library/Containers/com.wondershare.PDFelement.ShareExtension",
+    "~/Library/Group Containers/YZC2T44ZDX.com.wondershare.PDFelement",
+    "~/Library/HTTPStorages/com.wondershare.PDFelement",
     "~/Library/Preferences/com.wondershare.PDFelement-custom.plist",
     "~/Library/Preferences/com.wondershare.PDFelement.plist",
     "~/Library/Saved Application State/com.wondershare.PDFelement.savedState",
+    "~/Library/sensorsanalytics-com.wondershare.PDFelement-*.plist",
     "~/Library/WebKit/com.wondershare.PDFelement",
   ]
 end

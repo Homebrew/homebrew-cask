@@ -17,10 +17,14 @@ cask "bitwarden" do
     ]
 
     zap trash: [
+      "~/Library/Application Scripts/com.bitwarden.desktop.autofill-extension",
+      "~/Library/Application Scripts/LTZ2PFU5D6.com.bitwarden.desktop",
       "~/Library/Application Support/Bitwarden",
       "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.bitwarden.desktop.sfl*",
       "~/Library/Caches/com.bitwarden.desktop",
       "~/Library/Caches/com.bitwarden.desktop.ShipIt",
+      "~/Library/Containers/com.bitwarden.desktop.autofill-extension",
+      "~/Library/Group Containers/LTZ2PFU5D6.com.bitwarden.desktop",
       "~/Library/Logs/Bitwarden",
       "~/Library/Preferences/ByHost/com.bitwarden.desktop.ShipIt.*.plist",
       "~/Library/Preferences/com.bitwarden.desktop.helper.plist",

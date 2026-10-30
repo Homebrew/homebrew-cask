@@ -29,6 +29,7 @@ cask "morgen" do
   app "Morgen.app"
 
   zap trash: [
+    "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.todesktop.210203cqcj00tw1.sfl*",
     "~/Library/Application Support/Morgen",
     "~/Library/Preferences/com.todesktop.210203cqcj00tw1.plist",
     "~/Library/Saved Application State/com.todesktop.210203cqcj00tw1.savedState",

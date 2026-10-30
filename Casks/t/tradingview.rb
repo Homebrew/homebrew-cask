@@ -20,6 +20,7 @@ cask "tradingview" do
   uninstall quit: "com.tradingview.tradingviewapp.desktop"
 
   zap trash: [
+    "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.tradingview.tradingviewapp.desktop.sfl*",
     "~/Library/Application Support/TradingView",
     "~/Library/Preferences/com.tradingview.tradingviewapp.desktop.plist",
     "~/Library/Saved Application State/com.tradingview.tradingviewapp.desktop.savedState",

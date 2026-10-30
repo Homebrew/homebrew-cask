@@ -21,9 +21,11 @@ cask "eve-online" do
 
   zap trash: [
     "~/Library/Application Support/CCP/EVE",
+    "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.ccpgames.eve-online-launcher.sfl*",
     "~/Library/Application Support/EVE Online",
     "~/Library/Caches/CCP/EVE",
     "~/Library/Logs/EVE Online",
+    "~/Library/Preferences/com.ccpgames.eve-online-launcher.plist",
     "~/Library/Preferences/com.ccpgames.EVE.plist",
   ]
 end

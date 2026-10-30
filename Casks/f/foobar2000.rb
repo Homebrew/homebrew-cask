@@ -19,6 +19,7 @@ cask "foobar2000" do
 
   zap trash: [
     "~/Library/foobar2000",
+    "~/Library/foobar2000-v2",
     "~/Library/Preferences/com.foobar2000.mac.plist",
   ]
 end

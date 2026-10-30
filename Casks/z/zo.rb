@@ -13,6 +13,7 @@ cask "zo" do
   app "Zo.app"
 
   zap trash: [
+    "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/computer.zo.desktop.sfl*",
     "~/Library/Application Support/Zo",
     "~/Library/Preferences/computer.zo.desktop.plist",
   ]

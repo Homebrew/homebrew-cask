@@ -21,6 +21,7 @@ cask "neohtop" do
   app "NeoHtop.app"
 
   zap trash: [
+    "~/Library/Application Support/com.neohtop.dev",
     "~/Library/Caches/com.neohtop.dev",
     "~/Library/WebKit/com.neohtop.dev",
   ]
