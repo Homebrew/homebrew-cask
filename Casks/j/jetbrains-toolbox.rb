@@ -2,18 +2,21 @@ cask "jetbrains-toolbox" do
   arch arm: "-arm64"
   os macos: "dmg", linux: "tar.gz"
 
-  version "3.9,3.9.0.88839"
-  sha256 arm:          "af1a2e14be46e1bbca0e310a865029b0694d44c062105b9b847d557f3aa66760",
-         intel:        "6824ea74093e5e0db208d3a510725ea520fe225470db53dd5300453820b22ad6",
-         arm64_linux:  "dee1bdb310a561d80a87bb52251843fb5f4d577ea8ae2144b817538af53b9690",
-         x86_64_linux: "e578d49627da13a6e196e234bfb6325db02a64a07fd22414909daae378ab4049"
+  version "3.9.1,3.9.1.89198"
+  sha256 arm:          "bd4ed78166bb9baab9d211b00a49fc865c187a7ef02b282007f04d889a63fa6d",
+         intel:        "ed6c542a6dde523f87884e1fdf336575133893b0cc22063ee90a1314aeca4720",
+         arm64_linux:  "090c11b7c44053bda95adbb4b9d4d09fde09fe91145ebca681290b2c156a9cab",
+         x86_64_linux: "43add3c33c9b86ee560adc8579261e8e26465a101b281720937c6d1d4967b3e4"
 
   on_macos do
     auto_updates true
 
     app "JetBrains Toolbox.app"
 
-    uninstall launchctl: "com.jetbrains.toolbox",
+    uninstall launchctl: [
+                "application.com.jetbrains.app.daemon.*",
+                "com.jetbrains.toolbox",
+              ],
               quit:      "com.jetbrains.toolbox",
               signal:    ["TERM", "com.jetbrains.toolbox"]
 
