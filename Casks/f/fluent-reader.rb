@@ -17,6 +17,7 @@ cask "fluent-reader" do
   app "Fluent Reader.app"
 
   zap trash: [
+    "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/me.hyliu.fluentreader.sfl*",
     "~/Library/Application Support/fluent-reader",
     "~/Library/Preferences/me.hyliu.fluentreader.plist",
     "~/Library/Saved Application State/me.hyliu.fluentreader.savedState",
