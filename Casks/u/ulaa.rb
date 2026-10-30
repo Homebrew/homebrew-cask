@@ -1,11 +1,11 @@
 cask "ulaa" do
   arch arm: "arm64", intel: "x64"
 
-  sha256 arm:   "56130746587bc2d281772887977835fd0368ec25c7b6b59b36665e3085b63360",
+  sha256 arm:   "d00e549b66b8cb9b00fe95456b2cbd3e0cece87763ca337c9814158ebd5da423",
          intel: "2684d9bc4ba445a475b0c9a96a4e92d5caed591485da29e6ab1b9815019820d1"
 
   on_arm do
-    version "2.51.1"
+    version "2.51.2"
   end
   on_intel do
     version "2.51.1"
