@@ -1,9 +1,9 @@
 cask "keet" do
   arch intel: "-Intel"
 
-  version "4.25.0"
-  sha256 arm:   "3aaacc2ec025d281e60c7c8a4dcd07ce940288165a3dd479d6df421cb40c787f",
-         intel: "f0cd4eaf7437a49528bed5db252deaa5d47919428c2610ec8ac73aef81f3356e"
+  version "4.25.1"
+  sha256 arm:   "fa2e51913aba34e0d62c5ea8fcc6b06f39f37767b0ffee8cc05d978016f7da23",
+         intel: "af633aca7112b8ce024d97616d8fc342b4238e5a0abbe2125e53dcb450b4e393"
 
   url "https://static.keet.io/downloads/#{version}/Keet#{arch}.dmg"
   name "keet"
