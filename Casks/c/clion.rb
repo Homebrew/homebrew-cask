@@ -30,7 +30,8 @@ cask "clion" do
   command_wrapper "clion",
                   executable: "#{appdir}/CLion.app/Contents/MacOS/clion"
 
-  uninstall quit: "com.jetbrains.CLion"
+  uninstall launchctl: "application.com.jetbrains.app.daemon.*",
+            quit:      "com.jetbrains.CLion"
 
   zap trash: [
     "~/Library/Application Support/JetBrains/CLion#{version.major_minor}",
