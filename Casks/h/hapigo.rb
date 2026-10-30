@@ -22,9 +22,13 @@ cask "hapigo" do
   uninstall quit: "com.xunyong.hapigo"
 
   zap trash: [
+    "~/Library/Application Scripts/com.xunyong.hapigo.FinderMenu",
+    "~/Library/Application Scripts/group.com.xunyong.hapigoSharing",
     "~/Library/Application Support/Hapigo",
     "~/Library/Caches/com.xunyong.hapigo",
     "~/Library/Caches/Hapigo",
+    "~/Library/Containers/com.xunyong.hapigo.FinderMenu",
+    "~/Library/Group Containers/group.com.xunyong.hapigoSharing",
     "~/Library/HTTPStorages/com.xunyong.hapigo",
     "~/Library/HTTPStorages/com.xunyong.hapigo.binarycookies",
     "~/Library/Preferences/com.xunyong.hapigo.plist",
