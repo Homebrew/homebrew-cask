@@ -3,11 +3,11 @@ cask "mockoon" do
   os macos: "dmg", linux: "AppImage"
   name_start = on_system_conditional macos: "mockoon.setup.", linux: "mockoon-"
 
-  version "9.9.0"
-  sha256 arm:          "d1bd3440620694fa2ac433a1c0723bbfc79b3ba5d8884de3a82eee419b54a826",
-         intel:        "cd0c048a932cd5f3f22ba914e52e7c87471f0fbb48c3e9f06cde8e7e616b53a2",
-         arm64_linux:  "2bee33c2ad34c3a80bb1d7789b3860cca004c504324b9b15095a59e4acc5bcd5",
-         x86_64_linux: "e2e7b7aadd5c30b0dafcbcc8011bd0efe19c51dd8a59d45a97e37ece8ecf8eb5"
+  version "9.10.0"
+  sha256 arm:          "66579745c6217c6cc1ec51142dd893ffd74263b0467ca222338deddb77bcf721",
+         intel:        "8187a29a7971ecf42e0bd08cfb84831db7de8df77bcddeb9ee14fd0b831215d3",
+         arm64_linux:  "8391800bfa145e69fcaad76f9ef19d26fa5be9ea94ffcc4e1a23a79aa1564c93",
+         x86_64_linux: "596c03a7c9aa8a4649d9aad7267cd566a4164f795863fb82024cc968520ea412"
 
   on_macos do
     depends_on macos: :ventura
