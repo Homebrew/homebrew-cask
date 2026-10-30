@@ -30,7 +30,8 @@ cask "rustrover" do
   command_wrapper "rustrover",
                   executable: "#{appdir}/RustRover.app/Contents/MacOS/rustrover"
 
-  uninstall quit: "com.jetbrains.rustrover"
+  uninstall launchctl: "application.com.jetbrains.app.daemon.*",
+            quit:      "com.jetbrains.rustrover"
 
   zap trash: [
     "~/Library/Application Support/JetBrains/RustRover#{version.major_minor}",
