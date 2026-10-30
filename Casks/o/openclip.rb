@@ -1,6 +1,6 @@
 cask "openclip" do
-  version "1.9.1"
-  sha256 "c92ee82459dec5f0e855fc309ed1f3a018c73bda28b258f90ace4fd8d6d24b68"
+  version "1.9.2"
+  sha256 "65bf7a6c39bf121a7c0af99110b22cc68fd847e0c97cc85e26414fbe1cf63e12"
 
   url "https://github.com/ganeshmshetty/openclip/releases/download/v#{version}/OpenClip-v#{version}.zip"
   name "OpenClip"
