@@ -17,6 +17,8 @@ cask "dropzone" do
 
   app "Dropzone #{version.major}.app"
 
+  uninstall launchctl: "com.aptonic.LaunchAtLogin"
+
   zap trash: [
     "~/Library/Application Scripts/com.aptonic.Dropzone#{version.major}",
     "~/Library/Application Scripts/com.aptonic.LaunchAtLogin",
