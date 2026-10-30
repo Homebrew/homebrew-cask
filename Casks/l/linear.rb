@@ -1,6 +1,6 @@
 cask "linear" do
-  version "1.32.7"
-  sha256 "99919aef3ea3c3f62e2900372ce4a2f63777095b835664ef6a78332e24ae5065"
+  version "1.32.8"
+  sha256 "08d42b917bc44068231d47a9e14ae9fdac2ca95fa6b451e810fcda0f756ed4a3"
 
   url "https://releases.linear.app/Linear-#{version}-universal.dmg"
   name "Linear"
