@@ -5,7 +5,7 @@ cask "vocevista-pro" do
   url "https://download.sygyt.com/#{version.major_minor_patch}/VoceVistaPro_macOS_#{version}.dmg"
   name "VoceVista Pro"
   desc "High-resolution voice spectrum and vibrato analyzer"
-  homepage "https://www.sygyt.com/"
+  homepage "https://www.vocevista.com/en/"
 
   livecheck do
     url "https://www.vocevista.com/downloads/vocevista-pro-mac/"
