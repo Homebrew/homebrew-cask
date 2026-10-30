@@ -25,11 +25,16 @@ cask "truhu" do
 
   app "TruHu Mac Desktop.app"
 
+  uninstall quit: "Seboya.TruHu.MacApp"
+
   zap trash: [
     "~/Library/Application Support/TruHuDesktop",
+    "~/Library/Caches/Seboya.TruHu.MacApp",
     "~/Library/Caches/Seboya.TruHuCalibrator.Mac",
     "~/Library/HTTPStorages/Seboya.TruHuCalibrator.Mac",
+    "~/Library/Preferences/Seboya.TruHu.MacApp.plist",
     "~/Library/Preferences/Seboya.TruHuCalibrator.Mac.plist",
+    "~/Library/WebKit/Seboya.TruHu.MacApp",
     "~/Library/WebKit/Seboya.TruHuCalibrator.Mac",
   ]
 end
