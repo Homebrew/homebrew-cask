@@ -9,7 +9,7 @@ cask "kirocrew" do
          x86_64_linux: "b871e43bab7295f8f56e0c85ff2bc6bdd4a4951f530745ca6536f8aac03eb7f3"
 
   on_macos do
-    depends_on macos: :monterey
+    depends_on macos: :ventura
 
     app "KiroCrew.app"
   end
