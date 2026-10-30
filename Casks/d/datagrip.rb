@@ -30,7 +30,8 @@ cask "datagrip" do
   command_wrapper "datagrip",
                   executable: "#{appdir}/DataGrip.app/Contents/MacOS/datagrip"
 
-  uninstall quit: "com.jetbrains.datagrip"
+  uninstall launchctl: "application.com.jetbrains.app.daemon.*",
+            quit:      "com.jetbrains.datagrip"
 
   zap trash: [
     "~/Library/Application Support/JetBrains/DataGrip*",
