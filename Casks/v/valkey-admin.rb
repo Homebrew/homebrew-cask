@@ -15,5 +15,9 @@ cask "valkey-admin" do
 
   app "Valkey Admin.app"
 
-  zap trash: "~/Library/Application Support/Valkey Admin"
+  zap trash: [
+    "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.valkey.admin.sfl*",
+    "~/Library/Application Support/Valkey Admin",
+    "~/Library/Preferences/com.valkey.admin.plist",
+  ]
 end
