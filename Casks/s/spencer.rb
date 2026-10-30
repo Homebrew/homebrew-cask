@@ -1,5 +1,5 @@
 cask "spencer" do
-  version "1.7.5"
+  version "1.7.6"
   sha256 :no_check
 
   url "https://get.macspencer.app/Spencer.dmg"
