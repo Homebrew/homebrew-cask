@@ -21,6 +21,7 @@ cask "lm-studio" do
     ]
 
     zap trash: [
+      "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/ai.elementlabs.lmstudio.sfl*",
       "~/Library/Application Support/LM Studio",
       "~/Library/Caches/ai.elementlabs.lmstudio",
       "~/Library/Caches/ai.elementlabs.lmstudio.ShipIt",
