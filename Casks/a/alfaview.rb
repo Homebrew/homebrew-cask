@@ -21,5 +21,8 @@ cask "alfaview" do
   uninstall quit:    "com.alfaview.desktop",
             pkgutil: "com.alfaview.desktop"
 
-  zap trash: "~/Library/Application Support/alfaview"
+  zap trash: [
+    "~/Library/Application Support/alfaview",
+    "~/Library/Caches/alfaview Video Conferencing Systems GmbH & Co. KG",
+  ]
 end
