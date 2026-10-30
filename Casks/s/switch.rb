@@ -16,6 +16,8 @@ cask "switch" do
 
   app "Switch.app"
 
+  uninstall quit: "com.nchsoftware.switch"
+
   zap trash: [
     "~/Library/Application Support/Switch",
     "~/Library/Application Support/SwitchSubStatAbort",
