@@ -1,9 +1,9 @@
 cask "todoist-app" do
   arch arm: "arm64", intel: "x64"
 
-  version "9.35.0"
-  sha256 arm:   "f78d41fb2ef6e736019ce4eaddb9f327d4cf68acbb9072e89f2e12b3ee3f86ee",
-         intel: "3aba372159f45809d48264227cccb504e39df0406f9b7abe21c0c609c08e2626"
+  version "9.36.1"
+  sha256 arm:   "35ef776c91597364367563b07b11f79cd8be47d50f3237581cf86eeccad64fab",
+         intel: "3af060728b6f775e056990bfbbaa17470c30a6925724d704853d9d53e5d14876"
 
   url "https://electron-dl.todoist.com/mac/Todoist-darwin-#{version}-#{arch}-latest.dmg"
   name "Todoist"
