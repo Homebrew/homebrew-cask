@@ -21,12 +21,18 @@ cask "dropzone" do
 
   zap trash: [
     "~/Library/Application Scripts/com.aptonic.Dropzone#{version.major}",
+    "~/Library/Application Scripts/com.aptonic.Dropzone#{version.major}.Dropzone-Share-Extension-Non-MAS",
     "~/Library/Application Scripts/com.aptonic.LaunchAtLogin",
+    "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.aptonic.dropzone#{version.major}.sfl*",
+    "~/Library/Application Support/com.aptonic.Dropzone#{version.major}",
     "~/Library/Application Support/Dropzone #{version.major}",
     "~/Library/Caches/com.aptonic.Dropzone#{version.major}",
     "~/Library/Containers/com.aptonic.Dropzone#{version.major}",
+    "~/Library/Containers/com.aptonic.Dropzone#{version.major}.Dropzone-Share-Extension-Non-MAS",
     "~/Library/Containers/com.aptonic.LaunchAtLogin",
+    "~/Library/HTTPStorages/com.aptonic.Dropzone#{version.major}*",
     "~/Library/Preferences/com.aptonic.Dropzone#{version.major}.plist",
     "~/Library/Saved Application State/com.aptonic.Dropzone#{version.major}.savedState",
+    "~/Library/WebKit/com.aptonic.Dropzone#{version.major}",
   ]
 end
