@@ -23,6 +23,8 @@ cask "dash-dash" do
     set_permissions "Dash-Qt.app", "0755"
   end
 
+  uninstall quit: "org.dash.Dash-Qt"
+
   zap trash: [
     "~/Library/Application Support/DashCore",
     "~/Library/Preferences/org.dash.Dash-Qt.plist",
