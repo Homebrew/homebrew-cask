@@ -5,11 +5,11 @@ cask "pulsar" do
   os macos: "Mac", linux: "Linux"
   file_ext = on_system_conditional macos: "dmg", linux: "AppImage"
 
-  version "1.132.1"
-  sha256 arm:          "a8e89b56872b40a1f23dadd547c13a74463b0271cf2ac9fb44306c4342756ce6",
-         intel:        "1aa1bb588baa44bcb3b5f11a2b3d910a59e6594ee3a7f087feb5042d133970b8",
-         arm64_linux:  "27a25a64c3ebf76590c3cecb4dcce91ac7586be0c66ff16c5026631e8aa8250c",
-         x86_64_linux: "4527276473c48d454e0899a0cdb6bf04f1d2bd8eb452d35aad048d00ef8a6537"
+  version "1.133.0"
+  sha256 arm:          "dcf41b070bff42677490ee74f97242110de23df3579f26ed7e71d5548700f627",
+         intel:        "c2cd3f5d93b622d94435b177ea386cebcfee9979cbc5dde577ae8896d81a95f6",
+         arm64_linux:  "96e84e2a62a94938dc411db2fe5b35dbeb143b9a84133c0b899f07f46d6e9d17",
+         x86_64_linux: "456c13ec0e36f0b92ffe016e584f4dc77be72ce12083b479a3af68e912655cf9"
 
   on_macos do
     app "Pulsar.app"
