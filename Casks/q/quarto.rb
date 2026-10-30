@@ -3,11 +3,11 @@ cask "quarto" do
   os macos: "macos", linux: "linux-#{arch}"
   url_end = on_system_conditional macos: "pkg", linux: "tar.gz"
 
-  version "1.10.19"
-  sha256 arm:          "472017edbbffa5dd4a8d21b66327bcb09b25a019c21b18f815d5b187db10e980",
-         intel:        "472017edbbffa5dd4a8d21b66327bcb09b25a019c21b18f815d5b187db10e980",
-         arm64_linux:  "bba2bb55add74c754c313905df42b0f45a8250aee2110a4fce7f83020bfe1b8f",
-         x86_64_linux: "8e38c2b2df6a6dbd369ea16e15acded6894545258d13a02f777f81ad18fd7973"
+  version "1.10.20"
+  sha256 arm:          "106868b01d1459f9e77246939b5fda7f183d6635d9af89ba4d1c8de6a0f2b7ad",
+         intel:        "106868b01d1459f9e77246939b5fda7f183d6635d9af89ba4d1c8de6a0f2b7ad",
+         arm64_linux:  "dbea6737797559c43ca7b595b220ed8fd5befead33004805f42306bcc17e8713",
+         x86_64_linux: "c43fc13454337b7ca73ee78371228e1554679053b856a4ff07f068f2c36a5202"
 
   on_macos do
     pkg "quarto-#{version}-macos.pkg"
