@@ -28,5 +28,6 @@ cask "duplicati" do
   zap trash: [
     "~/.config/Duplicati",
     "~/Library/Application Support/Duplicati",
+    "~/Library/Preferences/com.duplicati.app.plist",
   ]
 end
