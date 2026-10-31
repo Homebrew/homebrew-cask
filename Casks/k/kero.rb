@@ -1,9 +1,9 @@
 cask "kero" do
   arch arm: "arm64", intel: "amd64"
 
-  version "2.1.28"
-  sha256 arm:   "f93a5b821af9a41adadc3a891b5b04a42282c4484c80202be60ca4d538dfeb00",
-         intel: "2a222b158bbf72c054380875510bff10aa86d26e2ac708627e83d06cc631c4f4"
+  version "2.1.31"
+  sha256 arm:   "57b1979b6a239a77fa19143581611e0221eaf1f81b694b6d04803f6ea92b6e5e",
+         intel: "ce6bb35cdfca150db2edb14ce63c16108b27e1557b6650d75b784c617ecfbc8f"
 
   url "https://github.com/egoist/kero/releases/download/v#{version}/kero-#{version}-#{arch}.dmg"
   name "Kero"
