@@ -20,6 +20,7 @@ cask "mp3tag" do
 
   zap trash: [
     "~/Library/Application Scripts/app.mp3tag.Mp3tag",
+    "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/app.mp3tag.mp3tag.sfl*",
     "~/Library/Containers/app.mp3tag.Mp3tag",
   ]
 end
