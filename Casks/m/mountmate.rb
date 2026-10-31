@@ -17,5 +17,9 @@ cask "mountmate" do
 
   app "MountMate.app"
 
-  zap trash: "~/Library/Preferences/com.homielab.mountmate.plist"
+  zap trash: [
+    "~/Library/Caches/com.homielab.mountmate",
+    "~/Library/HTTPStorages/com.homielab.mountmate",
+    "~/Library/Preferences/com.homielab.mountmate.plist",
+  ]
 end
