@@ -21,7 +21,9 @@ cask "typeface" do
 
   zap trash: [
     "~/Library/Application Scripts/com.criminalbird.typeface.standalone",
+    "~/Library/Application Scripts/group.com.criminalbird.typeface",
     "~/Library/Containers/com.criminalbird.typeface.standalone",
+    "~/Library/Group Containers/group.com.criminalbird.typeface",
     "~/Library/Preferences/com.criminalbird.typeface.standalone.plist",
   ]
 end
