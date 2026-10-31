@@ -1,8 +1,9 @@
 cask "direqual" do
-  version "7.7.0.15"
+  version "7.7.2.12"
   sha256 :no_check
 
-  url "https://naarakstudio.com/download/DirEqual.dmg"
+  url "https://naarakstudio.com/download/DirEqual.dmg",
+      user_agent: :browser
   name "DirEqual"
   desc "Advanced directory compare utility"
   homepage "https://naarakstudio.com/direqual/"
