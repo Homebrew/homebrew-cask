@@ -1,5 +1,5 @@
 cask "yandextelemost" do
-  version "3.2.2,10363"
+  version "3.3.3,10428"
   sha256 :no_check
 
   url "https://telemost.yandex.com/download-desktop"
