@@ -2,10 +2,10 @@ cask "zulip" do
   arch arm: "arm64", intel: on_system_conditional(macos: "x64", linux: "x86_64")
   os macos: "dmg", linux: "AppImage"
 
-  version "5.13.2"
-  sha256 arm:          "1091a2a79be475177e3008e5089f0b546f8b51266e497c840fcb3e8488a5dba2",
-         intel:        "36ac2cea4cf18b5c13dfe1ec22157ef5cc39ef18e0431f20ebc1fcdcdf124a36",
-         x86_64_linux: "fb3fb3d21af46281179dc00ac5142d6f5a65d3a73d0af35855e16068d30d88a0"
+  version "5.14.2"
+  sha256 arm:          "e54a5e6bcd0150914cf2a2942ccf8ac8df58aa1102039dc66d47af79c6d28776",
+         intel:        "08bd851d7974f6c45965eed0204e16cf362d6ec5622bf96fd6fe1bcdf3e80884",
+         x86_64_linux: "7f954670236b55a48abb96b42a201df6a64d8bb2df38183c862d6c016d22473b"
 
   on_macos do
     depends_on macos: :ventura
