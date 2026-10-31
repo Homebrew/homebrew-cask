@@ -21,10 +21,10 @@ cask "openidea" do
   app "OpenIDEA.app"
 
   zap trash: [
-    "~/Library/Application Support/OpenIDEA",
+    "~/Library/Application Support/ai.l0ng.openidea",
     "~/Library/Caches/ai.l0ng.openidea",
     "~/Library/HTTPStorages/ai.l0ng.openidea",
-    "~/Library/Logs/OpenIDEA",
+    "~/Library/Logs/ai.l0ng.openidea",
     "~/Library/Preferences/ai.l0ng.openidea.plist",
     "~/Library/Saved Application State/ai.l0ng.openidea.savedState",
     "~/Library/WebKit/ai.l0ng.openidea",
