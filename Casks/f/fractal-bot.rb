@@ -1,8 +1,8 @@
 cask "fractal-bot" do
-  version "3.00.24"
-  sha256 "9776c928ad66a9ff3bd62b0556b466458e450def8f6982b3a53e7cecf45e16f6"
+  version "3.01.00"
+  sha256 "de9ec7a5dbf314310531bef7b7fd6d8b59b41cdcf33e7982054ae85ff664a099"
 
-  url "https://www.fractalaudio.com/downloads/fractal-bot/Fractal-Bot-OSX-v#{version.tr(".", "p")}.dmg"
+  url "https://www.fractalaudio.com/downloads/fractal-bot/Fractal-Bot-Mac-v#{version.tr(".", "p")}.dmg"
   name "Fractal Bot"
   desc "Send and receive data to and from your Fractal Audio Systems products"
   homepage "https://www.fractalaudio.com/fractal-bot/"
