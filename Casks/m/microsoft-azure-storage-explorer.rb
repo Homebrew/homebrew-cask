@@ -20,6 +20,7 @@ cask "microsoft-azure-storage-explorer" do
   app "Microsoft Azure Storage Explorer.app"
 
   zap trash: [
+    "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.microsoft.storageexplorer.sfl*",
     "~/Library/Application Support/StorageExplorer",
     "~/Library/Logs/StorageExplorer",
     "~/Library/Preferences/com.microsoft.StorageExplorer.plist",
