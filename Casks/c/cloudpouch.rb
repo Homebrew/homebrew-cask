@@ -14,7 +14,9 @@ cask "cloudpouch" do
     zap trash: [
       "~/.cloudpouch-aws-sso-client-credentials",
       "~/Library/Application Support/CloudPouch",
+      "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/dev.cloudpouch.cloudpouch.sfl*",
       "~/Library/Logs/CloudPouch",
+      "~/Library/Preferences/dev.cloudpouch.cloudpouch.plist",
     ]
   end
   on_linux do
