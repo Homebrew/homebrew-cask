@@ -4,11 +4,11 @@ cask "effectcraft" do
   os macos: "macos", linux: "linux"
   url_end = on_system_conditional macos: "dmg", linux: "AppImage"
 
-  version "0.18.0"
-  sha256 arm:          "79a0c24a644018eb39b722eddb5a15a34280c86856171f6a6415a3541b182004",
-         intel:        "79a0c24a644018eb39b722eddb5a15a34280c86856171f6a6415a3541b182004",
-         arm64_linux:  "bee3a7f8d720869df9f9276b3df2f8e7f54e8b9e961ab296665f24a7078b6d48",
-         x86_64_linux: "071f8eb42be63a7862117d399f96d7ed4cc5b90ac1d06b6bab99370d0cd4ada3"
+  version "0.19.0"
+  sha256 arm:          "2b75bca532a06f66b04150b835853f41028821d74b6bae357f2232535c0be450",
+         intel:        "2b75bca532a06f66b04150b835853f41028821d74b6bae357f2232535c0be450",
+         arm64_linux:  "45aca1be69c186447f53ab85a5d22507a36efee224edc944dd09f18056ee05eb",
+         x86_64_linux: "9c8b8c5b33f1f04240deaebc854cc53b997cda48cf29ecd7173b43c98049f0c1"
 
   on_macos do
     app "EffectCraft.app"
