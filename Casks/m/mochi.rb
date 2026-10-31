@@ -20,6 +20,7 @@ cask "mochi" do
   app "Mochi.app"
 
   zap trash: [
+    "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.msteedman.mochi.sfl*",
     "~/Library/Application Support/mochi",
     "~/Library/Logs/Mochi",
     "~/Library/Preferences/com.msteedman.mochi.plist",
