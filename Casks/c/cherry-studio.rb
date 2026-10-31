@@ -3,11 +3,11 @@ cask "cherry-studio" do
   os macos: "mac", linux: "linux"
   url_end = on_system_conditional macos: "dmg", linux: "AppImage"
 
-  version "2.1.9"
-  sha256 arm:          "c82a2474c5c1c0dc3a575a7efa5892b3a9fec04373fdf296fe86ac662311d427",
-         intel:        "593b8b734c936b5d757ac5d463bb0da22aa4de77854cfc80b7f90aae4094c330",
-         arm64_linux:  "3c135ebb425bab46cfb1da2c0c6f7bd145e6cafd9b8d1a7c8c8e03b22a6b4f36",
-         x86_64_linux: "16c4f69796d9c4c22ad9297ac4736e058feceea442b8b1ca156cd3465a0da85f"
+  version "2.1.10"
+  sha256 arm:          "9b2f17d6e2ded803304e7bb26ca7b05e2aeb50290053487a33f8d8195bfa6180",
+         intel:        "385c39ed6b569067f1a4b567b267f3a3d4eb10a3e5ec2415e25f37f3c6b00c48",
+         arm64_linux:  "44a2676712b3a8ca551724307319ba6d80b5107fc07271acf04ab75d28f9ae64",
+         x86_64_linux: "f2953191bad4e28704a6ac9c828104492f4d70045f7a3239842cff0a5d4cfbfc"
 
   on_macos do
     depends_on macos: :ventura
