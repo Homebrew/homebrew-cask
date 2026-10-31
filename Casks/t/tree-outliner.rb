@@ -2,8 +2,7 @@ cask "tree-outliner" do
   version "1.0.11"
   sha256 :no_check
 
-  url "https://macplus-software.com/downloads/Tree%20Outliner.zip",
-      verified: "macplus-software.com/downloads/"
+  url "https://macplus-software.com/downloads/Tree%20Outliner.zip"
   name "Tree Outliner"
   desc "Text outliner"
   homepage "https://noteifyapp.com/tree-outliner/"
