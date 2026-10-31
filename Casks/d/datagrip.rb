@@ -37,6 +37,7 @@ cask "datagrip" do
     "~/Library/Application Support/JetBrains/DataGrip*",
     "~/Library/Caches/JetBrains/DataGrip*",
     "~/Library/Logs/JetBrains/DataGrip*",
+    "~/Library/Preferences/com.jetbrains.datagrip.plist",
     "~/Library/Saved Application State/com.jetbrains.datagrip.savedState",
   ]
 end
