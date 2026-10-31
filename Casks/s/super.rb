@@ -2,11 +2,11 @@ cask "super" do
   arch arm: "arm64", intel: "amd64"
   os macos: "darwin", linux: "linux"
 
-  version "0.3.0"
-  sha256 arm:          "b5124ec88e1ba908909902f98c6ebc9754d034cecd0690f078a52f384dbf6eeb",
-         intel:        "2c7cf6c21c4c486541b3d34df614a07fc6cea9b45bb8b63f25e3df64136ae3a4",
-         arm64_linux:  "81384df59e7ca8d2a59855e03040c58a7402539b75dc55e78de46bf68cb49257",
-         x86_64_linux: "2bbc1fab55be4124a4ffa253eba806590b73509935ac8740599a47caf9d3185d"
+  version "0.4.0"
+  sha256 arm:          "29dc8942b1bb14a408c7cbdf02e11f913ff8c895af07b2eac7fd84825af287fa",
+         intel:        "1e930f1b0e46ce4aefb4eedd717eac75d29a566a30e2671848ec3a0455c38fa9",
+         arm64_linux:  "c775b96b1494e5decc935e517a3787d66e0b4458660a4537a0a6d09065aaefbb",
+         x86_64_linux: "41067ee343374c1b946500acdcb2e6e0f130cde7946d95bb38d73507957fce90"
 
   url "https://github.com/superdb/super/releases/download/v#{version}/super-v#{version}.#{os}-#{arch}.tar.gz"
   name "SuperDB"
