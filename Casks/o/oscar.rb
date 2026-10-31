@@ -1,12 +1,12 @@
 cask "oscar" do
   arch arm: "ARM", intel: "Intel"
-  url_start = on_arch_conditional arm: "OSCAR-", intel: "oscar20_"
+  version_prefix = on_arch_conditional intel: "20"
 
-  version "2.1.0"
-  sha256 arm:   "84abe85da8b75d2ea66840c3c8cbc43547f14420f062d79efa07e4e81fd8f296",
-         intel: "6201904ce62ed05e223c3bd205c7bd3c16806af2ed0acb852124a7c78830a5b6"
+  version "2.1.1"
+  sha256 arm:   "626dc6f0b1ac2b274f95e9c29fbc25280c5ac81e3584abec47cd70de6926a9a1",
+         intel: "79d608bf8d65a95616133ba1fdec8b15ab2d321c0b94a4ca03c30ce5dc62979b"
 
-  url "https://www.sleepfiles.com/OSCAR/#{version.major_minor}/#{url_start}#{version}-#{arch}.dmg"
+  url "https://www.sleepfiles.com/OSCAR/#{version}/OSCAR#{version_prefix}-#{version}-#{arch}.dmg"
   name "OSCAR"
   desc "CPAP Analysis Reporter"
   homepage "https://www.sleepfiles.com/OSCAR/"
@@ -16,7 +16,7 @@ cask "oscar" do
     regex(%r{href=.*?/OSCAR.*?v?(\d+(?:\.\d+)+)(?:[._-]#{arch})?\.dmg}i)
   end
 
-  depends_on macos: :sonoma
+  depends_on macos: :ventura
 
   app "OSCAR20.app"
 
