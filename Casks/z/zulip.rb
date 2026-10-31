@@ -13,6 +13,7 @@ cask "zulip" do
     app "Zulip.app"
 
     zap trash: [
+      "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/org.zulip.zulip-electron.sfl*",
       "~/Library/Application Support/Zulip",
       "~/Library/Caches/org.zulip.zulip-electron.helper",
       "~/Library/Logs/Zulip",
