@@ -16,5 +16,9 @@ cask "fractal-bot" do
 
   app "Fractal-Bot.app"
 
-  zap trash: "~/Library/Application Support/Fractal Audio/Fractal-Bot"
+  zap trash: [
+    "~/Library/Application Support/Fractal Audio/Fractal-Bot",
+    "~/Library/Caches/com.fractalaudio.fractalbot",
+    "~/Library/HTTPStorages/com.fractalaudio.fractalbot",
+  ]
 end
