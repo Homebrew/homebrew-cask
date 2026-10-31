@@ -23,6 +23,7 @@ cask "vocevista-pro" do
     "~/Library/Caches/com.plausiblelabs.crashreporter.data/com.sygyt.mac.VoceVistaVideoPro",
     "~/Library/Caches/Sygyt Software/VoceVista Video Pro",
     "~/Library/Preferences/com.sygyt.mac.VoceVistaVideoPro.plist",
+    "~/Library/Preferences/com.sygyt.VoceVista Pro.plist",
     "~/Library/Preferences/com.sygyt.VoceVista Video Pro.plist",
   ]
 end
