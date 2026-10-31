@@ -1,6 +1,6 @@
 cask "herdr-app" do
-  version "0.1.10"
-  sha256 "08be7b314e00dc3926df12616a1a0b4464771ff3bd0916c41a26d7d921ca3556"
+  version "0.1.11"
+  sha256 "e918204612d0ad0266f476acdcf7b217c34d0d7e1c8ace22a37b2df2bf20eafb"
 
   url "https://releases.herdr.dev/app/#{version}/Herdr.dmg"
   name "Herdr"
