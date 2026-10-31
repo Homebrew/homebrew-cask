@@ -2,12 +2,14 @@ cask "lunar-client" do
   arch arm: "arm64", intel: "x64"
 
   version "3.7.28"
+  sha256 arm:          "5da5fbbcf9a3cc51553e61c109a8d45252a08a55d846c6043db22f0114f357e0",
+         intel:        "9e9fcb321b7ac46d2600bcc545dc12d8887b917bc622891da5947ce71a0a402c",
+         x86_64_linux: "f79e41dc877fc3865463e3c5d507aab4ee2f572649ec28380cf02a657c53f968"
 
   on_macos do
-    sha256 arm:   "5da5fbbcf9a3cc51553e61c109a8d45252a08a55d846c6043db22f0114f357e0",
-           intel: "9e9fcb321b7ac46d2600bcc545dc12d8887b917bc622891da5947ce71a0a402c"
-
     url "https://launcher-releases.lunarclientprod.com/master/6e18b5a4f4ebbd4c7ecff572f1700cedce1f248bcb157adce5ec49be9e081a23/Lunar%20Client%20v#{version}-ow-#{arch}.dmg"
+
+    depends_on macos: :ventura
 
     app "Lunar Client.app"
 
@@ -21,8 +23,6 @@ cask "lunar-client" do
     ]
   end
   on_linux do
-    sha256 "f79e41dc877fc3865463e3c5d507aab4ee2f572649ec28380cf02a657c53f968"
-
     url "https://launcher-releases.lunarclientprod.com/master/6e18b5a4f4ebbd4c7ecff572f1700cedce1f248bcb157adce5ec49be9e081a23/Lunar%20Client-#{version}-ow.AppImage"
 
     depends_on arch: :x86_64
