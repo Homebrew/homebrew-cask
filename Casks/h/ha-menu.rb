@@ -7,6 +7,8 @@ cask "ha-menu" do
   desc "Menu Bar app to perform common Home Assistant functions"
   homepage "https://github.com/codechimp-org/ha-menu"
 
+  deprecate! date: "2026-10-31", because: :discontinued
+
   depends_on :macos
 
   app "HA Menu.app"
