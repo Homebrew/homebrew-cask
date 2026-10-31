@@ -21,6 +21,7 @@ cask "vivaldi@snapshot" do
 
   zap trash: [
     "/Library/Logs/DiagnosticReports/Vivaldi Helper (Renderer)_*.diag",
+    "/Library/Logs/DiagnosticReports/Vivaldi Helper_*.diag",
     "/Library/Logs/DiagnosticReports/Vivaldi Snapshot_*.diag",
     "~/Library/Application Support/CrashReporter/Vivaldi Snapshot_*.plist",
     "~/Library/Application Support/Vivaldi Snapshot",
