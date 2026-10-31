@@ -16,6 +16,7 @@ cask "hoppscotch-selfhost" do
     zap trash: [
       "~/Library/Application Support/io.hoppscotch.desktop",
       "~/Library/Caches/io.hoppscotch.desktop",
+      "~/Library/Logs/io.hoppscotch.desktop",
       "~/Library/Saved Application State/io.hoppscotch.desktop.savedState",
       "~/Library/WebKit/io.hoppscotch.desktop",
     ]
