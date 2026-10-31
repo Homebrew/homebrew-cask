@@ -32,10 +32,12 @@ cask "superset" do
     app_image "superset-#{version}-x86_64.AppImage", target: "Superset.AppImage"
   end
 
-  url "https://github.com/superset-sh/superset/releases/download/desktop-v#{version}/#{os}-#{version}#{arch}#{url_end}"
+  url "https://github.com/ParadevAI/Paradev/releases/download/desktop-v#{version}/#{os}-#{version}#{arch}#{url_end}",
+      verified: "github.com/ParadevAI/Paradev/"
+  name "Paradev"
   name "Superset"
-  desc "Terminal for orchestrating agents"
-  homepage "https://superset.sh/"
+  desc "Workspace for running coding agents in parallel"
+  homepage "https://paradev.com/"
 
   livecheck do
     url :url
