@@ -34,6 +34,7 @@ cask "mps" do
     "~/Library/Application Support/MPS#{version.csv.first.major_minor}",
     "~/Library/Caches/MPS#{version.csv.first.major_minor}",
     "~/Library/Logs/MPS#{version.csv.first.major_minor}",
+    "~/Library/Preferences/com.jetbrains.mps.plist",
     "~/Library/Preferences/MPS#{version.csv.first.major_minor}",
     "~/MPSSamples.#{version.csv.first.major_minor}",
   ]
