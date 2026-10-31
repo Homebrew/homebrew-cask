@@ -1,0 +1,14 @@
+Casks/font/font-u/font-urw-core35.rb
+  h_9df9c32c3f321d 2-3
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.5",
+  "base_commit_sha": "c5731be8390a1fceb95af2872c1f1a0a746b3845",
+  "prompts": {},
+  "humans": {
+    "h_9df9c32c3f321d": {
+      "author": "Rui Chen <rui@chenrui.dev>"
+    }
+  }
+}
