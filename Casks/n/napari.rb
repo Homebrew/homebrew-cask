@@ -1,9 +1,9 @@
 cask "napari" do
   arch arm: "arm64", intel: "x86_64"
 
-  version "0.9.2"
-  sha256 arm:   "cd303953bfa2c5ddc71a3d7985003c9f29a2700fb0afb176505f79d4d4c82649",
-         intel: "1bf3b1f43d7fbcc01bdbab634b4ba4f7c331384ff7723c80329f5f574bdb4712"
+  version "0.10.0"
+  sha256 arm:   "75bc9cb2988a55a66de681c8faeba3a0c1c41267c8ecd0cabe3ea36a8c9e8136",
+         intel: "ca48a715618f7696ccf5ee6d4bef0010f9a14544c6c121444cad5b1bf893165a"
 
   url "https://github.com/napari/napari/releases/download/v#{version}/napari-#{version}-macOS-#{arch}.pkg"
   name "napari"
