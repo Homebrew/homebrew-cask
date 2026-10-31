@@ -19,6 +19,9 @@ cask "cadran" do
 
   zap trash: [
     "~/Library/Application Support/Cadran",
+    "~/Library/Caches/com.cadran.wallpaper-contrast",
+    "~/Library/Caches/ilyomix.Cadran",
+    "~/Library/HTTPStorages/ilyomix.Cadran*",
     "~/Library/Preferences/ilyomix.Cadran.plist",
   ]
 end
