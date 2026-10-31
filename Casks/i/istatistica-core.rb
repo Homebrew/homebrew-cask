@@ -1,6 +1,6 @@
 cask "istatistica-core" do
-  version "1.0,202502191"
-  sha256 "4c69487609e62487bc64e6b21b16edf38b2bf6f9f284dc5faeae4921209776c7"
+  version "1.1,202610300"
+  sha256 "54fb1a08218c8a958b33e88100234fb25e89b089f3a25fe5210b53680fa5fdc0"
 
   url "https://www.imagetasks.com/updates/iStatisticaCore#{version.csv.second}.zip"
   name "iStatistica Core"
