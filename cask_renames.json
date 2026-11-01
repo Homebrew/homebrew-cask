@@ -110,6 +110,7 @@
   "jupyterlab": "jupyterlab-app",
   "katana": "katana-app",
   "kit": "script-kit",
+  "kitlangton-hex": "anomaly-hex",
   "knock": "knock-app",
   "llamabarn": "llama-app",
   "languagetool": "languagetool-desktop",
