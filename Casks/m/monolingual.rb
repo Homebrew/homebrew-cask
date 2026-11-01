@@ -1,7 +1,7 @@
 cask "monolingual" do
   on_arm do
-    version "2.0.2"
-    sha256 "8e649f7547a9afa6839ad30b5cc4a26c9c3233d2d79a866d82317fc34b1a772f"
+    version "2.0.3"
+    sha256 "39652bd791f1e1cdfcd7d2283c78e02f749037ff3587c0018a350822b65cebe9"
 
     depends_on macos: :golden_gate
   end
