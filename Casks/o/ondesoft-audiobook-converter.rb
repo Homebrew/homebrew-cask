@@ -16,6 +16,14 @@ cask "ondesoft-audiobook-converter" do
 
   app "Ondesoft AudioBook Converter.app"
 
+  zap trash: [
+    "~/Library/Application Support/Ondesoft AudioBook Converter",
+    "~/Library/Caches/com.ondesoft-audiobook-converter",
+    "~/Library/HTTPStorages/com.ondesoft-audiobook-converter",
+    "~/Library/Preferences/com.ondesoft-audiobook-converter.plist",
+    "~/Library/Saved Application State/com.ondesoft-audiobook-converter.savedState",
+  ]
+
   caveats do
     requires_rosetta
   end
