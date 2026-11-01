@@ -1,6 +1,6 @@
 cask "geotag" do
-  version "6.0.2"
-  sha256 "0ff88045309d29f5227f8a4f83a536056d042b6f0f4e92e0c65349885c42e8ba"
+  version "6.1"
+  sha256 "fe8a0d4bb3ee5e3dae87e6d3d7e7c990d15dec6d4ccd71c6ff74fbf6e905071a"
 
   url "https://www.snafu.org/GeoTag/GeoTag-#{version}.dmg"
   name "GeoTag"
@@ -16,6 +16,8 @@ cask "geotag" do
   depends_on macos: :tahoe
 
   app "GeoTag.app"
+
+  uninstall quit: "org.snafu.GeoTag"
 
   zap trash: [
     "~/Library/Caches/org.snafu.GeoTag",
