@@ -17,6 +17,7 @@ cask "vamiga" do
   app "vAmiga.app"
 
   zap trash: [
+    "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/dirkwhoffmann.vamiga.sfl*",
     "~/Library/Application Support/vAmiga",
     "~/Library/Preferences/dirkwhoffmann.vAmiga.plist",
   ]
