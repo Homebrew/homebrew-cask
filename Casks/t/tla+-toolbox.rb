@@ -30,6 +30,12 @@ cask "tla+-toolbox" do
 
   app "TLA+ Toolbox.app"
 
+  zap trash: [
+    "~/.tlaplus",
+    "~/Library/Preferences/org.lamport.tla.toolbox.product.product.plist",
+    "~/Library/Saved Application State/org.lamport.tla.toolbox.product.product.savedState",
+  ]
+
   caveats do
     requires_rosetta
   end
