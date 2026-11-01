@@ -1,9 +1,9 @@
 cask "panoply" do
   arch arm: "arm64-"
 
-  version "5.10.2"
-  sha256 arm:   "e06ca50f8bd9db5bcfb4867dd1a9b408ada4bd2828ff55aececfa2c87c7172e1",
-         intel: "500f1b99ce79e5ea795f7a54e5b131e02bfa0d54912659f97f4cbe531acaaa31"
+  version "5.10.3"
+  sha256 arm:   "45c4bdb4f93f7bdda0dc6f1d3157dc4a440be1db8c2ea92d53445c47072c3c12",
+         intel: "72c421cbf61b8c97bae5a09a69954f7da0cf1d30832f012d31a3cee047c7bef9"
 
   url "https://www.giss.nasa.gov/tools/panoply/download/PanoplyMacOS-#{arch}#{version}.dmg"
   name "Panoply netCDF, HDF and GRIB Data Viewer"
