@@ -18,6 +18,7 @@ cask "kiwix" do
 
   zap trash: [
     "~/Library/Application Scripts/Kiwix",
+    "~/Library/Application Scripts/self.Kiwix",
     "~/Library/Containers/self.kiwix",
   ]
 end
