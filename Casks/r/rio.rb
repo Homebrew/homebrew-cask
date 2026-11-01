@@ -22,6 +22,7 @@ cask "rio" do
   uninstall quit: "com.raphaelamorim.rio"
 
   zap trash: [
+    "~/Library/Caches/rio",
     "~/Library/Preferences/com.raphaelamorim.rio.plist",
     "~/Library/Saved Application State/com.raphaelamorim.rio.savedState",
   ]
