@@ -6,7 +6,7 @@ cask "font-redaction-70" do
       branch:    "main",
       only_path: "ofl/redaction70"
   name "Redaction 70"
-  homepage "https://github.com/jeremymickel/Redaction"
+  homepage "https://fonts.google.com/specimen/Redaction+70"
 
   font "Redaction70-Bold.ttf"
   font "Redaction70-Italic.ttf"
