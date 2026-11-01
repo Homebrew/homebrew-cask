@@ -20,7 +20,9 @@ cask "geotag" do
   uninstall quit: "org.snafu.GeoTag"
 
   zap trash: [
+    "~/Library/Application Scripts/org.snafu.GeoTag",
     "~/Library/Caches/org.snafu.GeoTag",
+    "~/Library/Containers/org.snafu.GeoTag",
     "~/Library/Preferences/org.snafu.GeoTag.plist",
     "~/Library/Saved Application State/org.snafu.GeoTag.savedState",
   ]
