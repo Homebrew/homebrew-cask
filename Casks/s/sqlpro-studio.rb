@@ -1,10 +1,6 @@
 cask "sqlpro-studio" do
-  version "2026.238"
-  sha256 "59f808e0ce1943d8720dea2aaa43d40b9a7989b910b984ce2b85dcc11337db27"
-
-  on_sequoia :or_older do
-    disable! date: "2026-09-01", because: :fails_gatekeeper_check
-  end
+  version "2026.301.3"
+  sha256 "3eb6a917eea339596fb76733400b4df8e6b220d1f8858bfd8868a4ac0fae059e"
 
   url "https://d3fwkemdw8spx3.cloudfront.net/studio/SQLProStudio.#{version}.app.zip"
   name "SQLPro Studio"
