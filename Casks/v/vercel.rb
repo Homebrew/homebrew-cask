@@ -2,11 +2,11 @@ cask "vercel" do
   arch arm: "arm64", intel: "x64"
   os macos: "darwin", linux: "linux"
 
-  version "65.8.0"
-  sha256 arm:          "2854ab6144f535d844c62079c77d4b045b579101e53cbb18f1da5442551e3943",
-         intel:        "defb891d189b52a5dca285edf0231cd1c212f7dd8d1691f53f62d1a34cb22f99",
-         arm64_linux:  "07664001854127b4685e4bda89d22ff08393ab9974b18c1b1ec8eab49ebb72e3",
-         x86_64_linux: "c4581b8f16e26f1f9e3162d0e9a06595e5baa3bc55dbc9d8a86455e55fba3bf3"
+  version "65.9.0"
+  sha256 arm:          "8ade01169a3d66746102428614ba59e4f0fa238f25c07b31887a3c3e45899cd8",
+         intel:        "7d742e569ffcdae5be08934682358ef5afe3d7112a2e46fc1a87b1f70fe43bef",
+         arm64_linux:  "68837fb3c27d596d644729e168ceb8be813d4f17c32d7312d8554fdd6650f57f",
+         x86_64_linux: "5a9c5741a70819639b92fcee4398915c3794b5b822559c32dcc9862b4ed611eb"
 
   on_macos do
     depends_on macos: :ventura
