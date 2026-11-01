@@ -1,6 +1,6 @@
 cask "macshot-offline" do
-  version "4.3.0"
-  sha256 "6b2e735d3812ac136c5c6a2f130550c29aed0e37179fadf8776ed4ae2fc7c890"
+  version "4.4.0"
+  sha256 "fd845b5e691c9094cf012d466bd4754350d6df6e0142098172c04c1ca5d951bc"
 
   url "https://github.com/sw33tLie/macshot/releases/download/v#{version}/MacShot-Offline.dmg"
   name "macshot Offline"
