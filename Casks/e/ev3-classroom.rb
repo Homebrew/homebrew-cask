@@ -17,6 +17,16 @@ cask "ev3-classroom" do
 
   app "EV3Classroom.app"
 
+  zap trash: [
+    "~/Documents/LEGO Education EV3 Content",
+    "~/Library/Application Support/MINDSTORMS_EDU",
+    "~/Library/Caches/com.lego.ev3.ShipIt",
+    "~/Library/Caches/mindstorms_edu-updater",
+    "~/Library/Logs/EV3 Classroom",
+    "~/Library/Preferences/com.lego.ev3.plist",
+    "~/Library/Saved Application State/com.lego.ev3.savedState",
+  ]
+
   caveats do
     requires_rosetta
   end
