@@ -23,6 +23,7 @@ cask "work-louder-input" do
   uninstall quit: "it.focusense.input-app"
 
   zap trash: [
+    "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/it.focusense.input-app.sfl*",
     "~/Library/Application Support/input",
     "~/Library/Caches/input-updater",
     "~/Library/Caches/it.focusense.input-app",

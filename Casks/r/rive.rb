@@ -19,7 +19,9 @@ cask "rive" do
 
   zap trash: [
     "~/Library/Application Scripts/app.rive.editor",
+    "~/Library/Application Scripts/NJ3JMFUNS9.app.rive.editor",
     "~/Library/Caches/app.rive.editor",
     "~/Library/Containers/app.rive.editor",
+    "~/Library/Group Containers/NJ3JMFUNS9.app.rive.editor",
   ]
 end

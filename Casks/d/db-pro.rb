@@ -17,6 +17,7 @@ cask "db-pro" do
     app "DB Pro.app"
 
     zap trash: [
+      "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.dbpro.app.sfl*",
       "~/Library/Application Support/DB Pro",
       "~/Library/Caches/@dbproelectron-updater",
       "~/Library/Caches/com.dbpro.app",

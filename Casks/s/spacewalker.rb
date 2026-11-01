@@ -20,6 +20,7 @@ cask "spacewalker" do
   app "SpaceWalker.app"
 
   zap trash: [
+    "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.viture.spacewalker.sfl*",
     "~/Library/Application Support/com.viture.spacewalker",
     "~/Library/Caches/com.viture.spacewalker",
     "~/Library/HTTPStorages/com.viture.spacewalker",

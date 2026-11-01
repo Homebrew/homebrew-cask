@@ -26,6 +26,7 @@ cask "clipy" do
     "~/Library/Caches/com.crashlytics.data/com.clipy-app.Clipy",
     "~/Library/Caches/io.fabric.sdk.mac.data/com.clipy-app.Clipy",
     "~/Library/Cookies/com.clipy-app.Clipy.binarycookies",
+    "~/Library/HTTPStorages/com.clipy-app.Clipy",
     "~/Library/Preferences/com.clipy-app.Clipy.plist",
   ]
 end

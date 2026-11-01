@@ -24,6 +24,8 @@ cask "opencodex" do
             quit:      "com.opencodex.desktop"
 
   zap trash: [
+    "~/.opencodex",
+    "~/.opencodex-desktop",
     "~/Library/Application Scripts/com.opencodex.desktop.widget",
     "~/Library/Application Support/com.opencodex.desktop",
     "~/Library/Caches/com.opencodex.desktop",

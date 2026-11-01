@@ -18,6 +18,7 @@ cask "cashnotify" do
   zap trash: [
     "~/Library/Application Support/Caches/cashnotify-updater",
     "~/Library/Application Support/CashNotify",
+    "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.baguetteengineering.cashnotify.sfl*",
     "~/Library/Caches/com.baguetteengineering.cashnotify",
     "~/Library/Caches/com.baguetteengineering.cashnotify.ShipIt",
     "~/Library/Logs/CashNotify",
