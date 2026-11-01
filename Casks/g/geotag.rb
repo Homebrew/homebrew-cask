@@ -17,6 +17,8 @@ cask "geotag" do
 
   app "GeoTag.app"
 
+  uninstall quit: "org.snafu.GeoTag"
+
   zap trash: [
     "~/Library/Caches/org.snafu.GeoTag",
     "~/Library/Preferences/org.snafu.GeoTag.plist",
