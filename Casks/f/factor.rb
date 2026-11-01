@@ -19,6 +19,12 @@ cask "factor" do
 
   suite "factor"
 
+  zap trash: [
+    "~/Library/Caches/org.factorcode.Factor",
+    "~/Library/Preferences/org.factorcode.Factor.plist",
+    "~/Library/Saved Application State/org.factorcode.Factor.savedState",
+  ]
+
   caveats do
     path_environment_variable "#{appdir}/factor"
   end
