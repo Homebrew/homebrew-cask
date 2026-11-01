@@ -20,6 +20,7 @@ cask "multitouch" do
   uninstall quit: "com.brassmonkery.Multitouch"
 
   zap trash: [
+    "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.brassmonkery.multitouch.sfl*",
     "~/Library/Application Support/Multitouch",
     "~/Library/Caches/com.brassmonkery.Multitouch",
     "~/Library/Cookies/com.brassmonkery.Multitouch.binarycookies",
