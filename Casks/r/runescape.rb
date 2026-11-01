@@ -16,6 +16,14 @@ cask "runescape" do
 
   app "RuneScape.app"
 
+  zap trash: [
+        "~/Jagex/launcher",
+        "~/Jagex/RuneScape",
+        "~/Library/Preferences/com.jagex.RuneScape.plist",
+        "~/Library/Preferences/RuneScape Preferences",
+      ],
+      rmdir: "~/Jagex"
+
   caveats do
     requires_rosetta
   end
