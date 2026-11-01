@@ -1,9 +1,9 @@
 cask "bluebubbles" do
   arch arm: "-arm64"
 
-  version "1.9.9"
-  sha256 arm:   "fafd650c883f52e7494a6625e45249f2144d197378a4d57143ccf6198bb2e862",
-         intel: "9681e65f60214a6a95f3bd12b57bd4cc8ad6d8f58cd9c1d8811b2a4606ad7c04"
+  version "1.9.12"
+  sha256 arm:   "923b562d2c945e7bb587576902f39af1456ec746b041090a397296e0786d5d43",
+         intel: "6858a914e3d2e7fd40b1ecf5d24ea4789ea0e33af6b3ad2bf1a940e090abff57"
 
   url "https://github.com/BlueBubblesApp/bluebubbles-server/releases/download/v#{version}/BlueBubbles-#{version}#{arch}.dmg"
   name "BlueBubbles"
