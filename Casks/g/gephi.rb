@@ -1,9 +1,9 @@
 cask "gephi" do
   arch arm: "aarch64", intel: "x64"
 
-  version "0.11.3"
-  sha256 arm:   "4210bef140f5c8d4d5e1c66d6f664ca23d563b9901f91a140374305db6e7e2b1",
-         intel: "b6d45ea7bf84f5256bc4ce3cbaf3fbfc0c4cfc93747a7074764e86af8ed53fdf"
+  version "0.11.4"
+  sha256 arm:   "77400998065042d3cd25c7d5be6a69bdf0ad6ac7b61216186d342f0ffdc9e598",
+         intel: "8c7aa77b9814350d32813d41f76a71e9c4c2e0591437d8cab2a2c9e17b674d72"
 
   url "https://github.com/gephi/gephi/releases/download/v#{version}/gephi-#{version}-macos-#{arch}.dmg"
   name "Gephi"
