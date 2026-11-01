@@ -36,6 +36,7 @@ cask "rider" do
     "~/Library/Application Support/Rider#{version.major_minor}",
     "~/Library/Caches/Rider#{version.major_minor}",
     "~/Library/Logs/Rider#{version.major_minor}",
+    "~/Library/Preferences/com.jetbrains.rider.plist",
     "~/Library/Preferences/jetbrains.rider.71e559ef.plist",
     "~/Library/Preferences/Rider#{version.major_minor}",
     "~/Library/Saved Application State/com.jetbrains.rider.savedState",
