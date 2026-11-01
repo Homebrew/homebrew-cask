@@ -22,4 +22,12 @@ cask "baiduinput" do
 
   uninstall pkgutil: "com.baidu.inputmethod.*",
             delete:  "/Library/Input Methods/BaiduIM.app"
+
+  zap trash: [
+    "~/Library/Application Support/BaiduInput",
+    "~/Library/Caches/com.baidu.inputmethod.BaiduIM",
+    "~/Library/HTTPStorages/com.baidu.inputmethod.BaiduIM",
+    "~/Library/Preferences/com.baidu.inputmethod.BaiduIM.plist",
+    "~/Library/Saved Application State/com.baidu.baiduiminstaller.savedState",
+  ]
 end
