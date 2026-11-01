@@ -1,9 +1,9 @@
 cask "textus" do
   arch arm: "aarch64", intel: "x64"
 
-  version "1.3.0"
-  sha256 arm:   "620ae22371d26984eeda8a588e43150a3ce220d02d75279d8f8e5a383a0e2f86",
-         intel: "1de209df78754c0968d44dfc32ede37f6d05d846528f319770efe3357b8e0277"
+  version "1.3.1"
+  sha256 arm:   "9cd259be84d641e72b8497872a620537146e55dd0aee9be564bb35583686e9cd",
+         intel: "7fff0361a2a2d837441a753fece9f2d82e7dd410caa68ba34bbb18399510a78c"
 
   url "https://github.com/CatVinci-Studio/Textus/releases/download/v#{version}/Textus_#{version}_#{arch}.dmg"
   name "Textus"
