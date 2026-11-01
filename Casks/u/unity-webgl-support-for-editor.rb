@@ -17,4 +17,6 @@ cask "unity-webgl-support-for-editor" do
   pkg "UnitySetup-WebGL-Support-for-Editor-#{version.csv.first}.pkg"
 
   uninstall pkgutil: "com.unity3d.WebGLSupport-#{version.csv.first}"
+
+  zap :not_required
 end
