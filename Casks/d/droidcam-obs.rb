@@ -7,10 +7,8 @@ cask "droidcam-obs" do
   desc "Use your phone as a camera directly in OBS Studio"
   homepage "https://www.dev47apps.com/obs/"
 
-  livecheck do
-    url :url
-    strategy :github_latest
-  end
+  # Reference: https://github.com/Homebrew/homebrew-cask/pull/235792
+  deprecate! date: "2026-11-01", because: "is not compatible with Homebrew's installation parameters"
 
   depends_on cask: "obs"
   depends_on :macos
