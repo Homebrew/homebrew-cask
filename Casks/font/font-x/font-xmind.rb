@@ -6,7 +6,7 @@ cask "font-xmind" do
       branch:    "main",
       only_path: "ofl/xmind"
   name "Xmind"
-  homepage "https://github.com/lamzhonghang/xmind"
+  homepage "https://fonts.google.com/specimen/Xmind"
 
   font "Xmind-Italic[wght].ttf"
   font "Xmind[wght].ttf"
