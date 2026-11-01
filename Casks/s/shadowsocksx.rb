@@ -15,6 +15,12 @@ cask "shadowsocksx" do
 
   app "ShadowsocksX.app"
 
+  zap trash: [
+    "/Library/Application Support/ShadowsocksX",
+    "~/.ShadowsocksX",
+    "~/Library/Preferences/clowwindy.ShadowsocksX.plist",
+  ]
+
   caveats do
     requires_rosetta
   end
