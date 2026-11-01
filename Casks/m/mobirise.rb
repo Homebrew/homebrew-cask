@@ -19,6 +19,7 @@ cask "mobirise" do
   app "Mobirise.app"
 
   zap trash: [
+    "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.mobirise.mobirise.sfl*",
     "~/Library/Application Support/Mobirise",
     "~/Library/Application Support/Mobirise.com",
     "~/Library/Preferences/com.mobirise.Mobirise.plist",
