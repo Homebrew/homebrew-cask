@@ -3,16 +3,16 @@ cask "yaak" do
   os macos: "Yaak", linux: "yaak"
   url_end = on_system_conditional macos: "dmg", linux: "AppImage"
 
-  sha256 arm:          "ded7f8bd79cfc6d557d04097f87030f49fb266d701b511cd66e03004cc7f9408",
-         intel:        "7ad2dbd820155867457f3dc05260138cbb6dacf17650425e9892e939b3914d40",
-         arm64_linux:  "cc55764631d2c4208e00269320d20e8345e22b19a69e04adb9fcd1f8230c8e9a",
-         x86_64_linux: "f5b1efd902748a2468e5220592520ae4b24e2c9abd106fee326bef5e849f02ab"
+  sha256 arm:          "9e33bd239292fca9645a4ee6c29ced1cd40ca7a741d9dbcc18a3b1e142594ee8",
+         intel:        "82793a5635db3f996a757b52f0f9c49461c6f45c9c36492c07c867ad09ed6ce7",
+         arm64_linux:  "4db473d1750163b0d7648c5698edd4b04deb43fc847a9e9b4112dc06880edb36",
+         x86_64_linux: "e9d0eb791a34c8d1278b359e732bbdc1626ff26a2c1766672b248f41f544d59b"
 
   on_arm do
-    version "2026.9.0"
+    version "2026.9.1"
   end
   on_intel do
-    version "2026.9.0"
+    version "2026.9.1"
   end
   on_macos do
     auto_updates true
