@@ -8,6 +8,7 @@ cask "affinity-photo" do
   homepage "https://affinity.serif.com/en-us/photo/"
 
   deprecate! date: "2025-10-30", because: :discontinued
+  disable! date: "2026-11-01", because: :discontinued, replacement_cask: "affinity"
 
   auto_updates true
   depends_on :macos
