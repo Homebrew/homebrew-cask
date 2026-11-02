@@ -26,6 +26,12 @@ cask "heroic" do
     depends_on arch: :x86_64
 
     app_image "Heroic-#{version}-linux-#{arch}.AppImage", target: "Heroic.AppImage"
+
+    zap trash: [
+      "~/.cache/heroic-updater",
+      "~/.config/heroic",
+      "~/.local/state/Heroic",
+    ]
   end
 
   url "https://github.com/Heroic-Games-Launcher/HeroicGamesLauncher/releases/download/v#{version}/Heroic-#{version}-#{os}-#{arch}.#{url_end}"

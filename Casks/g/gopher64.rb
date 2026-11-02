@@ -18,6 +18,12 @@ cask "gopher64" do
   end
   on_linux do
     binary "gopher64-linux-#{arch}", target: "gopher64"
+
+    zap trash: [
+      "~/.cache/gopher64",
+      "~/.config/gopher64",
+      "~/.local/share/gopher64",
+    ]
   end
 
   url "https://github.com/gopher64/gopher64/releases/download/v#{version}/gopher64-#{os}-#{arch}#{url_end}"

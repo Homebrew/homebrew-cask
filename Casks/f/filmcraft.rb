@@ -15,6 +15,8 @@ cask "filmcraft" do
   end
   on_linux do
     app_image "filmcraft-#{version}-linux-#{arch}.AppImage", target: "FilmCraft.AppImage"
+
+    zap trash: "~/.local/share/filmcraft"
   end
 
   url "https://github.com/storytold/filmcraft/releases/download/v#{version}/filmcraft-#{version}-#{url_end}"

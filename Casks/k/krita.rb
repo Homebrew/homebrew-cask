@@ -26,6 +26,15 @@ cask "krita" do
     depends_on arch: :x86_64
 
     app_image "krita-#{version}-#{arch}.AppImage", target: "Krita.AppImage"
+
+    zap trash: [
+      "~/.cache/krita",
+      "~/.config/kritadisplayrc",
+      "~/.config/kritarc",
+      "~/.local/share/krita",
+      "~/.local/share/krita-sysinfo.log",
+      "~/.local/share/krita.log",
+    ]
   end
 
   url "https://download.kde.org/stable/krita/#{version}/krita-#{version}-#{arch}#{os}.#{url_end}"

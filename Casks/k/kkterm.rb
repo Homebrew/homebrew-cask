@@ -21,6 +21,8 @@ cask "kkterm" do
     depends_on arch: :x86_64
 
     app_image "kkterm-#{version}-linux-x86_64.AppImage", target: "kkterm.AppImage"
+
+    zap trash: "~/.local/share/com.kkterm.app"
   end
 
   url "https://github.com/ryantsai/KKTerm/releases/download/v#{version}/kkterm-#{version}-#{os}"

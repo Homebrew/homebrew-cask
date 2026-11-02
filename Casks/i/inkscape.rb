@@ -25,6 +25,8 @@ cask "inkscape" do
     depends_on arch: :x86_64
 
     app_image "Inkscape-#{version.csv.first}.AppImage", target: "Inkscape.AppImage"
+
+    zap trash: "~/.config/inkscape"
   end
 
   url "https://media.inkscape.org/dl/resources/file/Inkscape-#{version.csv.second || version.csv.first}#{arch}.#{url_end}"

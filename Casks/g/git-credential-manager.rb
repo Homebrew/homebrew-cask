@@ -27,6 +27,8 @@ cask "git-credential-manager" do
     depends_on formula: "icu4c"
 
     binary "git-credential-manager"
+
+    zap trash: "~/.gcm"
   end
 
   url "https://github.com/git-ecosystem/git-credential-manager/releases/download/v#{version.major_minor_patch}/gcm-#{os}-#{arch}-#{version.major_minor_patch}.#{url_end}"

@@ -26,6 +26,12 @@ cask "gram" do
   end
   on_linux do
     binary "#{staged_path}/gram.app/bin/gram"
+
+    zap trash: [
+      "~/.cache/gram",
+      "~/.config/gram",
+      "~/.local/share/gram",
+    ]
   end
 
   url "https://codeberg.org/GramEditor/gram/releases/download/#{version}/#{os}-#{arch}-#{version}.#{url_end}"

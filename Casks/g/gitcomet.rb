@@ -26,6 +26,12 @@ cask "gitcomet" do
   end
   on_linux do
     app_image "gitcomet-v#{version}-linux-#{arch}.AppImage", target: "GitComet.AppImage"
+
+    zap trash: [
+      "~/.local/share/gitcomet",
+      "~/.local/share/icons/hicolor/*/apps/gitcomet.png",
+      "~/.local/state/gitcomet",
+    ]
   end
 
   url "https://github.com/Auto-Explore/GitComet/releases/download/v#{version}/gitcomet-v#{version}-#{os}-#{arch}.#{url_end}"

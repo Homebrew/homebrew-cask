@@ -30,6 +30,13 @@ cask "genoffice" do
     depends_on arch: :x86_64
 
     app_image "GenOffice-#{version}.AppImage", target: "GenOffice.AppImage"
+
+    zap trash: [
+          "~/.config/GenOffice",
+          "~/.genoffice",
+          "~/.local/bin/genoffice",
+        ],
+        rmdir: "~/Documents/GenOffice"
   end
 
   url "https://github.com/genspark-ai/genoffice/releases/download/v#{version}/GenOffice-#{version}#{arch}.#{url_end}"

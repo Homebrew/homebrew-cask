@@ -29,6 +29,12 @@ cask "librewolf" do
   on_linux do
     app_image "librewolf-#{version.tr(",", "-")}-linux-#{arch}-appimage.AppImage",
               target: "LibreWolf.AppImage"
+
+    zap trash: [
+      "~/.cache/librewolf",
+      "~/.config/librewolf",
+      "~/.librewolf",
+    ]
   end
 
   url "https://dl.librewolf.net/librewolf/#{version.tr(",", "-")}/librewolf-#{version.tr(",", "-")}-#{os}-#{arch}-#{url_end}"

@@ -24,6 +24,11 @@ cask "helium-browser" do
   end
   on_linux do
     app_image "helium-#{version}-#{arch}.AppImage", target: "Helium.AppImage"
+
+    zap trash: [
+      "~/.cache/net.imput.helium",
+      "~/.config/net.imput.helium",
+    ]
   end
 
   url "https://github.com/imputnet/helium-#{os}/releases/download/#{version}/helium#{file_sep}#{version}#{file_sep}#{arch}#{url_end}"

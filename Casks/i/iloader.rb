@@ -21,6 +21,8 @@ cask "iloader" do
   end
   on_linux do
     app_image "iloader-linux-#{arch}.AppImage", target: "iloader.AppImage"
+
+    zap trash: "~/.local/share/me.nabdev.iloader"
   end
 
   url "https://github.com/nab138/iloader/releases/download/v#{version}/#{os}"

@@ -25,6 +25,8 @@ cask "elasticvue" do
     depends_on arch: :x86_64
 
     app_image "elasticvue_#{version}_#{arch}.AppImage", target: "Elasticvue.AppImage"
+
+    zap trash: "~/.local/share/com.elasticvue.app"
   end
 
   url "https://github.com/cars10/elasticvue/releases/download/v#{version}/elasticvue_#{version}_#{arch}.#{os}"
