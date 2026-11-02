@@ -20,6 +20,7 @@ cask "doomsday-engine" do
   zap trash: [
     "~/Library/Application Support/Doomsday Engine",
     "~/Library/Caches/Deng Team",
+    "~/Library/Caches/Doomsday",
     "~/Library/Preferences/net.dengine.doomsday-shell-gui.plist",
     "~/Library/Preferences/net.dengine.doomsday.plist",
     "~/Library/Preferences/net.dengine.shell.plist",
