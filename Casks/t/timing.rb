@@ -27,12 +27,17 @@ cask "timing" do
   uninstall login_item: "TimingHelper"
 
   zap trash: [
+    "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/info.eurocomp.timing2.sfl*",
+    "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/info.eurocomp.timinghelper.sfl*",
     "~/Library/Application Support/info.eurocomp.Timing2",
     "~/Library/Application Support/info.eurocomp.TimingHelper",
     "~/Library/Application Support/info.eurocomp.TimingHelper.InfoExtractorService",
     "~/Library/Caches/info.eurocomp.Timing2",
     "~/Library/Caches/info.eurocomp.TimingHelper",
     "~/Library/Caches/info.eurocomp.TimingHelper.InfoExtractorService",
+    "~/Library/HTTPStorages/info.eurocomp.Timing2",
+    "~/Library/HTTPStorages/info.eurocomp.TimingHelper",
+    "~/Library/Preferences/info.eurocomp.Timing2.fallback.plist",
     "~/Library/Preferences/info.eurocomp.Timing2.plist",
     "~/Library/Preferences/info.eurocomp.TimingHelper.InfoExtractorService.plist",
     "~/Library/Preferences/info.eurocomp.TimingHelper.plist",
