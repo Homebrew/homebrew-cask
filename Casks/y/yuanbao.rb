@@ -1,6 +1,6 @@
 cask "yuanbao" do
-  version "2.90.0.607,22bd7b1ada98db21704983823bdf9abd"
-  sha256 "93dfeeae418e5b6faabfc9f34731b30605fbe14e592e4428061a58fb0a456659"
+  version "2.91.0.607,44c874864df6282aad55b0232b344705"
+  sha256 "d2e2a802b999decb02962744c810f84e7c93efec1c1cb5aa1e55e1860bef81de"
 
   url "https://cdn-hybrid-prod.hunyuan.tencent.com/Desktop/official/#{version.csv.second}/yuanbao_#{version.csv.first}_universal.dmg"
   name "Yuanbao"
