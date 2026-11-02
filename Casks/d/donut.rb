@@ -1,15 +1,15 @@
 cask "donut" do
   arch arm: "aarch64", intel: on_system_conditional(macos: "x64", linux: "amd64")
-  url_end = on_system_conditional macos: "dmg", linux: "AppImage"
+  os macos: "dmg", linux: "AppImage"
 
-  sha256 arm:          "19e78a64b7c6dc0a20c4c0c22ecc0f7b9e5eddeea00e7e59ef35a01a7438f983",
+  sha256 arm:          "47a717f079914cd1091d7ca00b2dab9120d9b97ba16aa3695180a78c087f209a",
          intel:        "082ee5c53582b54f6e8df010860b7444011351bcc21d604b459707779451fa1c",
-         arm64_linux:  "bf6657c1010cb05e6281ba1b1a879cb1d7ab44fb8bc36678cc75bb3470e0a4a7",
-         x86_64_linux: "f5bc8b5259ec9855c5ef825b051908b6aa282576c8f62e55c879b40d127e5806"
+         arm64_linux:  "f1c92d51072fd1033e2602c52d8d681b8869564044fd29aeee4fffc09060e80e",
+         x86_64_linux: "8468bcac6008af24c8a8ba63e907ee5b43504380fbd291d921c8949ad784a3a7"
 
   on_macos do
     on_arm do
-      version "0.35.5"
+      version "0.36.0"
 
       livecheck do
         url :url
@@ -42,7 +42,7 @@ cask "donut" do
     ]
   end
   on_linux do
-    version "0.35.5"
+    version "0.36.0"
 
     livecheck do
       url :url
@@ -58,7 +58,7 @@ cask "donut" do
     ]
   end
 
-  url "https://github.com/zhom/donutbrowser/releases/download/v#{version}/Donut_#{version}_#{arch}.#{url_end}"
+  url "https://github.com/zhom/donutbrowser/releases/download/v#{version}/Donut_#{version}_#{arch}.#{os}"
   name "Donut Browser"
   desc "Anti-detect web browser"
   homepage "https://donutbrowser.com/"
