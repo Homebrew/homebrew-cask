@@ -1,6 +1,6 @@
 cask "channel-works" do
-  version "12.2.0"
-  sha256 "a81e8fc113909c05db78027215eb44818fa7ee37202b1992f77e202c6696dd0d"
+  version "12.2.4"
+  sha256 "ec4ca50d2e2aba961895029c1e22757b0150173d2a015c49bfa9a6fd73b7a63a"
 
   url "https://github.com/channel-io/channel-works-macos/releases/download/v#{version}/Channel.Works-darwin-universal-#{version}.zip"
   name "Channel Works"
