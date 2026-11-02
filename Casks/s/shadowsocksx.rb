@@ -15,6 +15,8 @@ cask "shadowsocksx" do
 
   app "ShadowsocksX.app"
 
+  uninstall quit: "clowwindy.ShadowsocksX"
+
   zap trash: [
     "/Library/Application Support/ShadowsocksX",
     "~/.ShadowsocksX",
