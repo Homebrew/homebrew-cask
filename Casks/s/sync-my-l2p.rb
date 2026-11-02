@@ -11,6 +11,8 @@ cask "sync-my-l2p" do
 
   app "Sync-my-L2P.app"
 
+  uninstall quit: "de.rwth-aachen.Sync-my-L2P"
+
   zap trash: [
     "~/Library/Application Support/Sync-my-L2P",
     "~/Library/Preferences/de.rwth-aachen.Sync-my-L2P.plist",
