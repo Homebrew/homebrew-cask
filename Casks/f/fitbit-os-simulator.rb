@@ -16,6 +16,8 @@ cask "fitbit-os-simulator" do
 
   app "Fitbit OS Simulator.app"
 
+  uninstall quit: "com.fitbit.os.simulator"
+
   zap trash: [
     "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.fitbit.os.simulator.sfl*",
     "~/Library/Application Support/Fitbit OS Simulator",
