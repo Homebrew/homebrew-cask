@@ -17,6 +17,7 @@ cask "sqlpro-for-sqlite" do
   app "SQLPro for SQLite.app"
 
   zap trash: [
+    "~/Library/Application Scripts/com.hankinsoft.osx.sqliteprofessional",
     "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.hankinsoft.osx.sqliteprofessional.sfl*",
     "~/Library/Containers/com.hankinsoft.osx.sqliteprofessional",
   ]
