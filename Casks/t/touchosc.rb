@@ -19,8 +19,10 @@ cask "touchosc" do
 
   zap trash: [
     "~/Documents/TouchOSC",
+    "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/net.hexler.lex.sfl*",
     "~/Library/Application Support/net.hexler.lex",
     "~/Library/Caches/net.hexler.lex",
+    "~/Library/HTTPStorages/net.hexler.lex*",
     "~/Library/Logs/net.hexler.lex",
     "~/Library/Preferences/net.hexler.lex.plist",
     "~/Library/Saved Application State/net.hexler.lex.savedState",
