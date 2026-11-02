@@ -28,10 +28,7 @@ cask "chatall" do
   desc "Concurrently chat with ChatGPT, Bing Chat, Bard, Claude, ChatGLM and more"
   homepage "https://github.com/sunner/ChatALL"
 
-  livecheck do
-    url :url
-    strategy :github_latest
-  end
+  deprecate! date: "2026-11-02", because: :discontinued
 
   auto_updates true
 end
