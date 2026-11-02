@@ -17,6 +17,7 @@ cask "aimersoft-video-converter-ultimate" do
   app "Aimersoft Video Converter Ultimate.app"
 
   zap trash: [
+        "~/Library/Application Support/Aimersoft Video Converter Ultimate",
         "~/Library/Application Support/Aimersoft/Video Converter Ultimate",
         "~/Library/Application Support/Video Converter Ultimate",
         "~/Library/Caches/com.Aimersoft.Video-Converter-Ultimate",
