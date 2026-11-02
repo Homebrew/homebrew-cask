@@ -3,11 +3,11 @@ cask "audacity" do
   os macos: "macOS", linux: "linux"
   url_end = on_system_conditional macos: "dmg", linux: "AppImage"
 
-  version "4.0.1"
-  sha256 arm:          "278c8647b78c77af7f07dbd5e7d9bfc950bc14168047b65738716b61d12055ec",
-         intel:        "9794b0b3a3a795bdc097b411a5776ba59dc451cb1524f58c9714c30cca2564be",
-         arm64_linux:  "3abc517f26f00197eaac9c4e56b35dc53d8e933764b41077950e8526cd4aa075",
-         x86_64_linux: "ca2f04f172124d1f18ac608749854c5d31f04ab266a758c348190c05d9b2087c"
+  version "4.0.2"
+  sha256 arm:          "fd462da6204cbf9758b44c7ce1c29d5fe5cab4f31ba308d33c125f1b170401c3",
+         intel:        "4bf24e9f68e4af31dc47a6b1d02a44a74b537bdb88298d3bc14be55fb1fe6e58",
+         arm64_linux:  "88b1e16dd40a5b7d36bec5789b03f66bda34a7b964e19f338951bf6034d9db9c",
+         x86_64_linux: "a5f8787aa13cdb500a60fc013403b986776876b960cca962bc6e7fff066172f3"
 
   on_macos do
     app "Audacity #{version.major}.app"
