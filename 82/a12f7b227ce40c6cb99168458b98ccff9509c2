@@ -1,0 +1,14 @@
+Casks/o/open-webui.rb
+  h_9df9c32c3f321d 6-10,13
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.5",
+  "base_commit_sha": "82a12f7b227ce40c6cb99168458b98ccff9509c2",
+  "prompts": {},
+  "humans": {
+    "h_9df9c32c3f321d": {
+      "author": "Rui Chen <rui@chenrui.dev>"
+    }
+  }
+}
