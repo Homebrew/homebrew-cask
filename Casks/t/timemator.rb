@@ -20,11 +20,14 @@ cask "timemator" do
   zap trash: [
     "~/Library/Application Scripts/com.catforce.timemator.macos.TimematorWidgets",
     "~/Library/Application Scripts/group.catforce.timemator",
+    "~/Library/Application Scripts/UZ3GNZNN2A.com.catforce.timemator.group",
     "~/Library/Application Support/com.catforce.timemator.macos",
     "~/Library/Application Support/Timemator",
     "~/Library/Caches/com.catforce.timemator.macos",
     "~/Library/Containers/com.catforce.timemator.macos.TimematorWidgets",
     "~/Library/Group Containers/group.catforce.timemator",
+    "~/Library/Group Containers/UZ3GNZNN2A.com.catforce.timemator.group",
+    "~/Library/HTTPStorages/com.catforce.timemator.macos*",
     "~/Library/Preferences/com.catforce.timemator.macos.plist",
   ]
 end
