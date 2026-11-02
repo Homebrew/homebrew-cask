@@ -1,7 +1,7 @@
 cask "emailchemy" do
   arch arm: "-AppleSilicon"
 
-  version "15.0"
+  version "15.1"
   sha256 :no_check
 
   url "https://wksdownload.s3.amazonaws.com/emailchemy/Emailchemy-Mac#{arch}.dmg"
