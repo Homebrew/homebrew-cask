@@ -2,11 +2,11 @@ cask "codeql" do
   arch arm: on_system_conditional(macos: "64", linux: "-arm64"), intel: "64"
   os macos: "osx", linux: "linux"
 
-  version "2.27.3"
-  sha256 arm:          "67732b562bfda6ae2617cf143a496b0f72f4bed0532df966db933917a10b01e8",
-         intel:        "67732b562bfda6ae2617cf143a496b0f72f4bed0532df966db933917a10b01e8",
-         arm64_linux:  "4d9001f704f3e3e9145e2ac3db23bda323968f9f674cb1b507f195abddea0170",
-         x86_64_linux: "845075a2fa2fdf72629adc6cbde6264691b698d1f294bd27f10c6b579cd750a4"
+  version "2.27.4"
+  sha256 arm:          "7da72a7a758ef272985cce665ddb22bccc0b0a212f09f175d943eb5ff5fc57e4",
+         intel:        "7da72a7a758ef272985cce665ddb22bccc0b0a212f09f175d943eb5ff5fc57e4",
+         arm64_linux:  "168093d6650ca00e43c880885317e6c5745af7057da7ba7dc27d4a8f8e3e25af",
+         x86_64_linux: "393bf92b66596141ec93baf9b483f4a350f3749916c922fed0dd63c67706047d"
 
   url "https://github.com/github/codeql-cli-binaries/releases/download/v#{version}/codeql-#{os}#{arch}.zip"
   name "CodeQL"
