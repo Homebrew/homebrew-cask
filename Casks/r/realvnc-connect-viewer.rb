@@ -1,6 +1,6 @@
 cask "realvnc-connect-viewer" do
-  version "8.5.0"
-  sha256 "fbb9708f3193224031a7e0856f67219404384d3afa1013ea5b242c0b52525659"
+  version "8.5.3"
+  sha256 "6f70e9384472eb47e139c71f38ee8b3a0f9cbd82ba47e0723df8be2628b4e687"
 
   url "https://downloads.realvnc.com/download/file/realvnc-connect-viewer/RealVNC-Connect-Viewer-#{version}-MacOSX-universal.pkg"
   name "RealVNC Connect Viewer"
@@ -9,7 +9,7 @@ cask "realvnc-connect-viewer" do
 
   livecheck do
     url "https://help.realvnc.com/api/v2/help_center/en-us/sections/35761686621853/articles.json"
-    regex(/RealVNC\s+Connect\s+Viewer\s+v?(\d+(?:\.\d+)+)/i)
+    regex(/RealVNC\s+(?:Connect\s+)?Viewer\s+v?(\d+(?:\.\d+)+)/i)
     strategy :json do |json, regex|
       json["articles"]&.map do |article|
         match = article["title"]&.match(regex)
