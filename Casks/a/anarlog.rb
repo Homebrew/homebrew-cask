@@ -32,6 +32,16 @@ cask "anarlog" do
   end
   on_linux do
     app_image "anarlog-linux-#{arch}.AppImage", target: "Anarlog.AppImage"
+
+    zap trash: [
+      "~/.cache/char",
+      "~/.cache/com.hyprnote.stable",
+      "~/.local/bin/.anarlog-cli",
+      "~/.local/bin/anarlog",
+      "~/.local/share/anarlog",
+      "~/.local/share/applications/anarlog-handler.desktop",
+      "~/.local/share/com.hyprnote.stable",
+    ]
   end
 
   url "https://github.com/fastrepl/anarlog/releases/download/desktop_v#{version}/anarlog-#{os}-#{arch}.#{url_end}"

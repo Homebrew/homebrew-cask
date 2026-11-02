@@ -22,6 +22,9 @@ cask "bb" do
     depends_on arch: :x86_64
 
     app_image "bb-#{version}-x86_64.AppImage", target: "bb.AppImage"
+
+    zap trash: "~/.config/bb",
+        rmdir: "~/.bb"
   end
 
   url "https://github.com/get-bb/bb/releases/download/desktop-v#{version}/bb-#{version}-#{os}"

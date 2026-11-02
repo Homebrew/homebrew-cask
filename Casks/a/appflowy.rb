@@ -22,6 +22,8 @@ cask "appflowy" do
     depends_on arch: :x86_64
 
     app_image "AppFlowy-#{version}-linux-x86_64.AppImage", target: "AppFlowy.AppImage"
+
+    zap trash: "~/.local/share/AppFlowy"
   end
 
   url "https://github.com/AppFlowy-IO/AppFlowy/releases/download/#{version}/AppFlowy-#{version}-#{os}"

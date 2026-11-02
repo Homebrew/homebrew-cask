@@ -19,6 +19,8 @@ cask "bugdom2" do
   end
   on_linux do
     app_image "Bugdom2-#{version}-linux-#{arch}.AppImage", target: "Bugdom 2.AppImage"
+
+    zap trash: "~/.config/Bugdom2"
   end
 
   url "https://github.com/jorio/Bugdom2/releases/download/v#{version}/Bugdom2-#{version}-#{url_end}"

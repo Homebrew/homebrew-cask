@@ -23,6 +23,8 @@ cask "astro-editor" do
     depends_on arch: :x86_64
 
     app_image "Astro.Editor_#{version}_amd64.AppImage", target: "AstroEditor.AppImage"
+
+    zap trash: "~/.local/share/is.danny.astroeditor"
   end
 
   url "https://github.com/dannysmith/astro-editor/releases/download/v#{version}/Astro.Editor_#{version}_#{os}.#{url_end}"

@@ -23,6 +23,8 @@ cask "blink1control" do
 
     app_image "Blink1Control#{version.major}-#{version}-linux-x86_64.AppImage",
               target: "Blink1Control#{version.major}.AppImage"
+
+    zap trash: "~/.config/Blink1Control2"
   end
 
   url "https://github.com/todbot/Blink1Control2/releases/download/v#{version}/Blink1Control#{version.major}-#{version}-#{url_end}"

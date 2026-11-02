@@ -25,6 +25,9 @@ cask "actual" do
   end
   on_linux do
     app_image "Actual-linux-#{arch}.AppImage", target: "Actual.AppImage"
+
+    zap trash: "~/.config/Actual",
+        rmdir: "~/Documents/Actual"
   end
 
   url "https://github.com/actualbudget/actual/releases/download/v#{version}/Actual-#{os}-#{arch}.#{url_end}"

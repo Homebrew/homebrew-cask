@@ -28,6 +28,11 @@ cask "artisan" do
     depends_on arch: :x86_64
 
     app_image "artisan-linux-#{version}.AppImage", target: "Artisan.AppImage"
+
+    zap trash: [
+      "~/.config/artisan-scope",
+      "~/.local/share/artisan-scope",
+    ]
   end
 
   url "https://github.com/artisan-roaster-scope/artisan/releases/download/v#{version}/artisan-#{os_arch}-#{version}.#{url_end}"

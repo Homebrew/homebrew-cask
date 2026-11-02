@@ -22,6 +22,8 @@ cask "beaver-notes" do
   end
   on_linux do
     app_image "Beaver-Notes-#{version}#{arch}.AppImage", target: "Beaver Notes.AppImage"
+
+    zap trash: "~/.config/Beaver Notes"
   end
 
   url "https://github.com/Beaver-Notes/Beaver-Notes/releases/download/#{version}/#{name_start}-#{version}#{url_end}"

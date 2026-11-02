@@ -25,6 +25,13 @@ cask "arduino-ide" do
     depends_on arch: :x86_64
 
     app_image "arduino-ide_#{version}_Linux_#{arch}.AppImage", target: "ArduinoIDE.AppImage"
+
+    zap trash: [
+      "~/.arduino15",
+      "~/.arduinoIDE",
+      "~/.config/Arduino IDE",
+      "~/.config/arduino-ide",
+    ]
   end
 
   url "https://github.com/arduino/arduino-ide/releases/download/#{version}/arduino-ide_#{version}_#{os}_#{arch}.#{url_end}"

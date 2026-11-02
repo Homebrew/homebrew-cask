@@ -24,6 +24,8 @@ cask "aigcpanel" do
   on_linux do
     app_image "AigcPanel-#{version.csv.second || version.csv.first}-linux-#{arch}.AppImage",
               target: "AigcPanel.AppImage"
+
+    zap trash: "~/.config/aigcpanel"
   end
 
   url "https://github.com/modstart-lib/aigcpanel/releases/download/v#{version.csv.first}/AigcPanel-#{version.csv.second || version.csv.first}-#{os}-#{arch}.#{url_end}"

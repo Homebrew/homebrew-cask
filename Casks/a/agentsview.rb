@@ -22,6 +22,12 @@ cask "agentsview" do
   end
   on_linux do
     app_image "AgentsView_#{version}_#{arch}.AppImage", target: "AgentsView.AppImage"
+
+    zap trash: [
+      "~/.agentsview",
+      "~/.local/share/applications/agentsview-desktop-handler.desktop",
+      "~/.local/share/io.agentsview.desktop",
+    ]
   end
 
   url "https://github.com/kenn-io/agentsview/releases/download/v#{version}/AgentsView_#{version}_#{arch}.#{url_end}"

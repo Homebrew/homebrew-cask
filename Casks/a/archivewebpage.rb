@@ -26,6 +26,12 @@ cask "archivewebpage" do
     depends_on arch: :x86_64
 
     app_image "ArchiveWeb.page-#{version}.AppImage", target: "ArchiveWeb.page.AppImage"
+
+    zap trash: [
+      "~/.cache/@webrecorderarchivewebpage-updater",
+      "~/.config/ArchiveWeb.page",
+      "~/.config/archivewebpage",
+    ]
   end
 
   url "https://github.com/webrecorder/archiveweb.page/releases/download/v#{version}/ArchiveWeb.page-#{version}.#{url_end}"

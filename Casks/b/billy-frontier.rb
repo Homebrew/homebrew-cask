@@ -20,6 +20,8 @@ cask "billy-frontier" do
   end
   on_linux do
     app_image "BillyFrontier-#{version}-linux-#{arch}.AppImage", target: "Billy Frontier.AppImage"
+
+    zap trash: "~/.config/BillyFrontier"
   end
 
   url "https://github.com/jorio/BillyFrontier/releases/download/v#{version}/BillyFrontier-#{version}-#{url_end}"

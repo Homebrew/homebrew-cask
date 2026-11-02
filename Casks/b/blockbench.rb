@@ -24,6 +24,8 @@ cask "blockbench" do
     depends_on arch: :x86_64
 
     app_image "Blockbench_#{version}.AppImage", target: "Blockbench.AppImage"
+
+    zap trash: "~/.config/Blockbench"
   end
 
   url "https://github.com/JannisX11/blockbench/releases/download/v#{version}/Blockbench_#{url_arch}#{version}.#{url_end}"

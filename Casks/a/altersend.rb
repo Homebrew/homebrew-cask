@@ -27,6 +27,8 @@ cask "altersend" do
     url "https://github.com/denislupookov/altersend/releases/download/v#{version}/AlterSend-#{arch}.#{os}"
 
     app_image "AlterSend-#{arch}.AppImage", target: "AlterSend.AppImage"
+
+    zap trash: "~/.config/AlterSend"
   end
 
   name "AlterSend"
