@@ -17,8 +17,11 @@ cask "ev3-classroom" do
 
   app "EV3Classroom.app"
 
+  uninstall quit: "com.lego.ev3"
+
   zap trash: [
     "~/Documents/LEGO Education EV3 Content",
+    "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.lego.ev3.sfl*",
     "~/Library/Application Support/MINDSTORMS_EDU",
     "~/Library/Caches/com.lego.ev3.ShipIt",
     "~/Library/Caches/mindstorms_edu-updater",
