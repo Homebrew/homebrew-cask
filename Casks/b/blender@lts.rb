@@ -29,6 +29,7 @@ cask "blender@lts" do
 
   zap trash: [
     "~/Library/Application Support/Blender",
+    "~/Library/Caches/Blender",
     "~/Library/Saved Application State/org.blenderfoundation.blender.savedState",
   ]
 end
