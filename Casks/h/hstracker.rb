@@ -1,8 +1,8 @@
 cask "hstracker" do
-  version "3.7.1"
-  sha256 "b610dcba0968e1fb520a3ede7bceb6286561d75fffbce936efdb5848672bd36b"
+  version "3.7.2"
+  sha256 "3bc35d6d3003c84e95a12c403667e4d22851fef8ad7da582fd467b77a164fe68"
 
-  url "https://github.com/HearthSim/HSTracker/releases/download/#{version}/HSTracker.app.zip"
+  url "https://github.com/HearthSim/HSTracker-Releases/releases/download/#{version}/HSTracker.app.zip"
   name "Hearthstone Deck Tracker"
   desc "Deck tracker and deck manager for Hearthstone"
   homepage "https://hsdecktracker.net/"
@@ -15,7 +15,7 @@ cask "hstracker" do
   end
 
   auto_updates true
-  depends_on :macos
+  depends_on macos: :monterey
 
   app "HSTracker.app"
 
