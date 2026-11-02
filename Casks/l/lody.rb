@@ -26,6 +26,14 @@ cask "lody" do
     depends_on arch: :x86_64
 
     app_image "Lody-#{version}-#{arch}.AppImage", target: "Lody.AppImage"
+
+    zap trash: [
+      "~/.cache/@lodyelectron-updater",
+      "~/.config/Lody",
+      "~/.config/lody-desktop-nodejs",
+      "~/.local/share/icons/ai.lody.desktop.png",
+      "~/.lody",
+    ]
   end
 
   url "https://updates.lody.ai/production/Lody-#{version}-#{arch}.#{url_end}"

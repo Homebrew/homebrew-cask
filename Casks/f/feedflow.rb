@@ -21,6 +21,11 @@ cask "feedflow" do
     depends_on arch: :x86_64
 
     app_image "FeedFlow-#{version.csv.first}-x86_64.AppImage", target: "FeedFlow.AppImage"
+
+    zap trash: [
+      "~/.local/share/FeedFlow",
+      "~/.local/share/icons/hicolor/512x512/apps/com.prof18.feedflow.png",
+    ]
   end
 
   url "https://github.com/prof18/feed-flow/releases/download/#{version.csv.first}-#{version.csv.second}/FeedFlow-#{version.csv.first}#{url_end}"

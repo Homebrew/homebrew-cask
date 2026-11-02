@@ -33,6 +33,12 @@ cask "lm-studio" do
   end
   on_linux do
     app_image "LM-Studio-#{version.tr(",", "-")}-#{arch}.AppImage", target: "LM Studio.AppImage"
+
+    zap trash: [
+      "~/.cache/lm-studio-updater",
+      "~/.config/LM Studio",
+      "~/.config/LM-Studio",
+    ]
   end
 
   url "https://installers.lmstudio.ai/#{os}/#{arch}/#{version.tr(",", "-")}/LM-Studio-#{version.tr(",", "-")}-#{arch}.#{url_end}"

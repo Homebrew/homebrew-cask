@@ -22,6 +22,8 @@ cask "localsend" do
     depends_on arch: :x86_64
 
     app_image "LocalSend-#{version}-linux-x86-64.AppImage", target: "LocalSend.AppImage"
+
+    zap trash: "~/.local/share/org.localsend.localsend_app"
   end
 
   url "https://github.com/localsend/localsend/releases/download/v#{version}/LocalSend-#{version}#{os}"

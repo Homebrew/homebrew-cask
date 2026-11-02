@@ -18,6 +18,8 @@ cask "feather" do
   end
   on_linux do
     app_image "feather-#{version}#{linux_arch}.AppImage", target: "Feather.AppImage"
+
+    zap trash: "~/.config/feather"
   end
 
   url "https://github.com/feather-wallet/feather/releases/download/#{version}/feather-#{version}#{url_end}"

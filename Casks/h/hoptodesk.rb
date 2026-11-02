@@ -28,6 +28,12 @@ cask "hoptodesk" do
     depends_on arch: :x86_64
 
     app_image "hoptodesk.AppImage", target: "HopToDesk.AppImage"
+
+    zap trash: [
+          "~/.config/hoptodesk",
+          "~/.local/share/logs/HopToDesk",
+        ],
+        rmdir: "~/.local/share/logs"
   end
 
   url "https://dl.hoptodesk.com/releases/#{version}/#{os}.#{url_end}"

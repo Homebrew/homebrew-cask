@@ -22,6 +22,12 @@ cask "fedistar" do
     depends_on arch: :x86_64
 
     app_image "fedistar_#{version}_amd64.AppImage", target: "Fedistar.AppImage"
+
+    zap trash: [
+      "~/.cache/net.fedistar",
+      "~/.local/share/fedistar",
+      "~/.local/share/net.fedistar",
+    ]
   end
 
   url "https://github.com/h3poteto/fedistar/releases/download/v#{version}/fedistar_#{version}_#{url_end}"

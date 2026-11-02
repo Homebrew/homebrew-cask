@@ -36,6 +36,12 @@ cask "ferdium" do
     depends_on arch: :x86_64
 
     app_image "Ferdium-linux-Portable-#{version}-x86_64.AppImage", target: "Ferdium.AppImage"
+
+    zap trash: [
+      "~/.cache/ferdium-updater",
+      "~/.config/autostart/ferdium.desktop",
+      "~/.config/Ferdium",
+    ]
   end
 
   url "https://github.com/ferdium/ferdium-app/releases/download/v#{version}/Ferdium-#{os}-#{version}-#{url_end}"
