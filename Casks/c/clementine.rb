@@ -1,6 +1,6 @@
 cask "clementine" do
-  version "1.4.3"
-  sha256 "226a9a4e7ea27e96f89e384f52970e316364e256b05ead94c8ff7b8b5ad14c58"
+  version "1.4.4"
+  sha256 "fa10fcfc3744005e484f5ed89189f2f29ee8692c3694e5536b9211d4d776d988"
 
   url "https://github.com/clementine-player/Clementine/releases/download/#{version}/clementine-#{version}.dmg"
   name "Clementine"
