@@ -10,7 +10,7 @@ cask "feather" do
          x86_64_linux: "b6dfa6d3c3c545cc1bed9db621b1c04c2546bb610ee9b23c756938259c029eab"
 
   on_macos do
-    depends_on macos: :monterey
+    depends_on macos: :sonoma
 
     app "Feather.app"
 
