@@ -1,6 +1,6 @@
 cask "middle" do
-  version "1.14"
-  sha256 "28bf5dd6ec0eaabdcf4bee181dd880d077b2f9e312e652e662dbfa7122a59a83"
+  version "1.15"
+  sha256 "b9b924e909fa7ab953c71ba8e2fc197f958bdd23c445839539271348691436f0"
 
   url "https://middleclick.app/downloads/Middle#{version}.dmg"
   name "Middle"
@@ -13,7 +13,7 @@ cask "middle" do
   end
 
   auto_updates true
-  depends_on :macos
+  depends_on macos: :sonoma
 
   app "Middle.app"
 
