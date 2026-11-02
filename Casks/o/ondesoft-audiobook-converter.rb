@@ -16,6 +16,8 @@ cask "ondesoft-audiobook-converter" do
 
   app "Ondesoft AudioBook Converter.app"
 
+  uninstall quit: "com.ondesoft-audiobook-converter"
+
   zap trash: [
     "~/Library/Application Support/Ondesoft AudioBook Converter",
     "~/Library/Caches/com.ondesoft-audiobook-converter",
