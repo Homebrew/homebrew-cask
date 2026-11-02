@@ -18,5 +18,8 @@ cask "emailchemy" do
 
   app "Emailchemy.app"
 
-  zap trash: "~/Library/Preferences/com.weirdkid.es.plist"
+  zap trash: [
+    "~/Library/Preferences/com.install4j.6029-5726-8846-0121.357.plist",
+    "~/Library/Preferences/com.weirdkid.es.plist",
+  ]
 end
