@@ -30,6 +30,8 @@ cask "tla+-toolbox" do
 
   app "TLA+ Toolbox.app"
 
+  uninstall quit: "org.lamport.tla.toolbox.product.product"
+
   zap trash: [
     "~/.tlaplus",
     "~/Library/Preferences/org.lamport.tla.toolbox.product.product.plist",
