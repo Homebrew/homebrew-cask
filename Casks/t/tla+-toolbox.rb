@@ -30,6 +30,14 @@ cask "tla+-toolbox" do
 
   app "TLA+ Toolbox.app"
 
+  uninstall quit: "org.lamport.tla.toolbox.product.product"
+
+  zap trash: [
+    "~/.tlaplus",
+    "~/Library/Preferences/org.lamport.tla.toolbox.product.product.plist",
+    "~/Library/Saved Application State/org.lamport.tla.toolbox.product.product.savedState",
+  ]
+
   caveats do
     requires_rosetta
   end

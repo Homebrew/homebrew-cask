@@ -34,4 +34,6 @@ cask "epoccam" do
               "/Library/CoreMediaIO/Plug-Ins/DAL/EpocCamPlugin.plugin",
               "/Library/LaunchAgents/com.kinoni.epoccam.daemon.plist",
             ]
+
+  zap trash: "~/Library/Preferences/com.kinoni.epoccam.plist"
 end

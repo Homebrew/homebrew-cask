@@ -15,4 +15,6 @@ cask "pongsaver" do
   depends_on :macos
 
   screen_saver "PongSaver.saver"
+
+  zap trash: "~/Library/Containers/com.apple.ScreenSaver.Engine.legacyScreenSaver/Data/Library/Preferences/ByHost/com.enjoygineering.PongSaver.*.plist"
 end

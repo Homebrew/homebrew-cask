@@ -16,6 +16,16 @@ cask "stationtv-link" do
 
   app "StationTV Link.app"
 
+  uninstall quit: "jp.co.pixela.StationTV-Link"
+
+  zap trash: [
+    "~/Library/Caches/thumbnailBigCache.bin",
+    "~/Library/Caches/thumbnailSmallCache.bin",
+    "~/Library/Preferences/jp.co.pixela.StationTV-Link",
+    "~/Library/Preferences/jp.co.pixela.StationTV-Link.plist",
+    "~/Library/Saved Application State/jp.co.pixela.StationTV-Link.savedState",
+  ]
+
   caveats do
     requires_rosetta
   end

@@ -17,4 +17,6 @@ cask "unity-ios-support-for-editor" do
   pkg "UnitySetup-iOS-Support-for-Editor-#{version.csv.first}.pkg"
 
   uninstall pkgutil: "com.unity3d.iOSSupport-#{version.csv.first}"
+
+  zap :not_required
 end

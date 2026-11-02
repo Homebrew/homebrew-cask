@@ -24,6 +24,14 @@ cask "itunes-producer" do
 
   uninstall pkgutil: "com.apple.pkg.iTunesProducer"
 
+  zap trash: [
+    "~/Library/Caches/com.apple.iTunesProducer",
+    "~/Library/HTTPStorages/com.apple.iTunesProducer",
+    "~/Library/Preferences/com.apple.iTunes_Producer.plist",
+    "~/Library/Preferences/com.apple.iTunesProducer.plist",
+    "~/Library/Saved Application State/com.apple.iTunesProducer.savedState",
+  ]
+
   caveats do
     requires_rosetta
   end
