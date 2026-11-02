@@ -23,6 +23,8 @@ cask "obsidian" do
   end
   on_linux do
     app_image "Obsidian-#{version}#{arch}.AppImage", target: "Obsidian.AppImage"
+
+    zap trash: "~/.config/obsidian"
   end
 
   url "https://github.com/obsidianmd/obsidian-releases/releases/download/v#{version}/Obsidian-#{version}#{arch}.#{os}"

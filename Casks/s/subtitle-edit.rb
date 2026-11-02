@@ -22,6 +22,8 @@ cask "subtitle-edit" do
   end
   on_linux do
     binary "SubtitleEdit", target: "subtitleedit"
+
+    zap trash: "~/.config/Subtitle Edit"
   end
 
   url "https://github.com/SubtitleEdit/subtitleedit/releases/download/v#{version}/SubtitleEdit-#{os}-#{arch}.#{url_end}"

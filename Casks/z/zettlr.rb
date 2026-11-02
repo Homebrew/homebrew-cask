@@ -25,6 +25,8 @@ cask "zettlr" do
   end
   on_linux do
     app_image "Zettlr-#{version}-#{arch}.AppImage", target: "Zettlr.AppImage"
+
+    zap trash: "~/.config/Zettlr"
   end
 
   url "https://github.com/Zettlr/Zettlr/releases/download/v#{version}/Zettlr-#{version}-#{arch}.#{os}"

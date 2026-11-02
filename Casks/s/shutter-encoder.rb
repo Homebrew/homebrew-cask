@@ -20,6 +20,8 @@ cask "shutter-encoder" do
     depends_on arch: :x86_64
 
     app_image "Shutter Encoder #{version} #{arch}.AppImage", target: "Shutter Encoder.AppImage"
+
+    zap trash: "~/Shutter Encoder"
   end
 
   artifact = "Shutter Encoder #{version} #{arch}.#{os}"

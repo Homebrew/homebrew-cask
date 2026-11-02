@@ -26,6 +26,8 @@ cask "psysonic" do
     depends_on arch: :x86_64
 
     app_image "Psysonic_#{version}_#{arch}.AppImage", target: "Psysonic.AppImage"
+
+    zap trash: "~/.local/share/dev.psysonic.player"
   end
 
   url "https://github.com/Psysonic/psysonic/releases/download/app-v#{version}/Psysonic_#{version}_#{arch}.#{url_end}"

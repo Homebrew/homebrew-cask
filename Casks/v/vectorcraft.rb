@@ -20,6 +20,8 @@ cask "vectorcraft" do
   end
   on_linux do
     app_image "vectorcraft-#{version}-linux-#{arch}.AppImage", target: "VectorCraft.AppImage"
+
+    zap trash: "~/.config/vectorcraft"
   end
 
   url "https://github.com/storytold/vectorcraft/releases/download/v#{version}/vectorcraft-#{version}-#{os}-#{arch}.#{url_end}"

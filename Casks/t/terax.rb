@@ -25,6 +25,11 @@ cask "terax" do
     depends_on arch: :x86_64
 
     app_image "Terax_#{version}_#{arch}.AppImage", target: "Terax.AppImage"
+
+    zap trash: [
+      "~/.cache/terax",
+      "~/.local/share/app.crynta.terax",
+    ]
   end
 
   url "https://github.com/crynta/terax-ai/releases/download/v#{version}/Terax_#{version}_#{arch}.#{os}"

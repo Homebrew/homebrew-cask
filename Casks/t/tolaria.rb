@@ -26,6 +26,13 @@ cask "tolaria" do
     depends_on arch: :x86_64
 
     app_image "Tolaria_#{version.csv.second || version}_#{arch}.AppImage", target: "Tolaria.AppImage"
+
+    zap trash: [
+      "~/.config/com.tolaria.app",
+      "~/.local/share/applications/tolaria-handler.desktop",
+      "~/.local/share/club.refactoring.tolaria",
+      "~/.local/share/tolaria",
+    ]
   end
 
   url "https://github.com/refactoringhq/tolaria/releases/download/v#{version.csv.first.dots_to_hyphens}/Tolaria_#{version.csv.second || version}#{os}"

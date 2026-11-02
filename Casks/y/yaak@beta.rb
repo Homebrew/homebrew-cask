@@ -25,6 +25,11 @@ cask "yaak@beta" do
   end
   on_linux do
     app_image "yaak_#{version}_#{arch}.AppImage", target: "Yaak.AppImage"
+
+    zap trash: [
+      "~/.config/app.yaak.desktop",
+      "~/.local/share/app.yaak.desktop",
+    ]
   end
 
   url "https://github.com/mountain-loop/yaak/releases/download/v#{version}/#{os}_#{version}_#{arch}.#{url_end}"

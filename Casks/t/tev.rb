@@ -21,6 +21,8 @@ cask "tev" do
   end
   on_linux do
     app_image "tev#{arch}.appimage", target: "tev.AppImage"
+
+    zap :not_required
   end
 
   url "https://github.com/Tom94/tev/releases/download/v#{version}/tev#{arch}.#{os}"

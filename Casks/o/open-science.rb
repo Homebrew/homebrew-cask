@@ -30,6 +30,13 @@ cask "open-science" do
     depends_on arch: :x86_64
 
     app_image "aipoch-open-science-#{version}-linux-x86_64.AppImage", target: "Open-Science.AppImage"
+
+    zap trash: [
+          "~/.cache/open-science-updater",
+          "~/.config/Open Science",
+          "~/.config/Open-Science",
+        ],
+        rmdir: "~/.open-science*"
   end
 
   url "https://github.com/aipoch/open-science/releases/download/v#{version}/aipoch-open-science-#{version}-#{os}-#{arch}.#{url_end}"

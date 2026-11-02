@@ -25,6 +25,12 @@ cask "tabularis@nightly" do
     depends_on arch: :x86_64
 
     app_image "tabularis_#{version.csv.first}_#{arch}.AppImage", target: "tabularis.AppImage"
+
+    zap trash: [
+      "~/.config/tabularis",
+      "~/.local/share/applications/tabularis-handler.desktop",
+      "~/.local/share/tabularis",
+    ]
   end
 
   url "https://github.com/TabularisDB/tabularis/releases/download/nightly-#{version.csv.second}/tabularis_#{version.csv.first}_#{arch}.#{os}"

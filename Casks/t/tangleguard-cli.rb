@@ -11,6 +11,9 @@ cask "tangleguard-cli" do
   on_macos do
     zap trash: "~/Library/Application Support/CrashReporter/tangleguard*"
   end
+  on_linux do
+    zap :not_required
+  end
 
   url "https://tangleguard-cli-builds.s3.eu-central-1.amazonaws.com/v#{version}/tangleguard-cli_#{version}_#{arch}-#{os}.tar.gz"
   name "Tangleguard CLI"
