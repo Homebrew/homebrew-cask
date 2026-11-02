@@ -1,17 +1,15 @@
 cask "scribus" do
-  arch arm: "arm64", intel: on_system_conditional(linux: "x86_64")
-  os linux: "linux-"
+  arch arm: "-arm64", intel: on_system_conditional(linux: "-x86_64")
+  os linux: "-linux"
   url_end = on_system_conditional macos: "dmg", linux: "AppImage"
 
-  version "1.6.6"
-  sha256 arm:          "0666a15e843575dea51233f874f2a840c73dc1cc5cbdf676fcff2e8978a71815",
-         intel:        "69cc1b918747882395d984f0d0a3c06e965d06368299952e645b31925e284a99",
-         x86_64_linux: "3919deb7d93ea46377c041074ebe48cba15258ed0a4fe07dde8290b5efb4442e"
+  version "1.6.7"
+  sha256 arm:          "46729a3bdc0e432bd3cfbae508da401aeb9f7a0159a7a03f3fef1de631557ac6",
+         intel:        "b059b246abf27c7a6ca6c5c0ad16e7e2df5303a0c62447935f2f155bae73e150",
+         x86_64_linux: "aa2c175b7ff6676f5e94460635d16b233da11c11ec1a37648359808684df2fc2"
 
   on_macos do
-    on_intel do
-      depends_on macos: :monterey
-    end
+    depends_on macos: :ventura
 
     app "Scribus.app"
 
@@ -34,7 +32,7 @@ cask "scribus" do
     ]
   end
 
-  url "https://downloads.sourceforge.net/scribus/scribus/#{version.csv.first}/scribus-#{version.csv.second || version.csv.first}-#{os}#{arch}.#{url_end}"
+  url "https://downloads.sourceforge.net/scribus/scribus/#{version.csv.first}/scribus-#{version.csv.second || version.csv.first}#{os}#{arch}.#{url_end}"
   name "Scribus"
   desc "Free and open-source page layout program"
   homepage "https://www.scribus.net/"
