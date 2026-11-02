@@ -6,8 +6,8 @@ cask "cursor" do
   version "3.27.22,b1aa50cb6db84fd3e8c808259cb172ea73425c1f"
   sha256 arm:          "fed256d59c331944f75dedfbaffa43a7b50e9eda5f2c30156b6a8c2195dbb8c7",
          intel:        "80aae63467bef2e9de1b73d349215cd9cc0866290eb04ad3c2a7c9fc033b75af",
-         arm64_linux:  "d52ec03e7ec1aaeca4078c1110d21f5919ba11b8eb690e885947afed47251aa2",
-         x86_64_linux: "4fb0422d43e85592653f1becb1f718e6324a8082dd7e06b24f6f34ac71f98704"
+         arm64_linux:  "19551c1d3fc4c92beace296b415815ca787516d5b5a26ac408588aaeffe69914",
+         x86_64_linux: "4db2fe35ae192301dd5b342379d0a041abdbdd6d9029efe083008cfdaa02f80e"
 
   on_macos do
     url "https://downloads.cursor.com/production/#{version.csv.second}/#{os}/#{arch}/Cursor-darwin-#{arch}.#{url_end}"
