@@ -18,6 +18,8 @@ cask "ruswitcher" do
   app "RuSwitcher.app"
 
   zap trash: [
+    "~/Library/Caches/com.ruswitcher.app",
+    "~/Library/HTTPStorages/com.ruswitcher.app",
     "~/Library/Logs/RuSwitcher",
     "~/Library/Preferences/com.ruswitcher.app.plist",
   ]
