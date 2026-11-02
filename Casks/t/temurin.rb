@@ -1,7 +1,7 @@
 cask "temurin" do
   arch arm: "aarch64"
 
-  sha256 arm:   "1717037d6089aada9f8abb77d13435669f0a969df28eba99ee8ba205f357e5b1"
+  sha256 arm: "1717037d6089aada9f8abb77d13435669f0a969df28eba99ee8ba205f357e5b1"
 
   on_arm do
     version "27.0.1.0.2,1"
