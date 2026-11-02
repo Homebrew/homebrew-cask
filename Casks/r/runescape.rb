@@ -16,6 +16,8 @@ cask "runescape" do
 
   app "RuneScape.app"
 
+  uninstall quit: "com.jagex.RuneScape"
+
   zap trash: [
         "~/Jagex/launcher",
         "~/Jagex/RuneScape",
