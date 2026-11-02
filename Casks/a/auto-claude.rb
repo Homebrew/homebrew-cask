@@ -24,6 +24,8 @@ cask "auto-claude" do
     depends_on arch: :x86_64
 
     app_image "Auto-Claude-#{version}-linux-#{arch}.AppImage", target: "Auto-Claude.AppImage"
+
+    zap trash: "~/.config/auto-claude-ui"
   end
 
   url "https://github.com/AndyMik90/Aperant/releases/download/v#{version}/Auto-Claude-#{version}-#{os}-#{arch}.#{url_end}"

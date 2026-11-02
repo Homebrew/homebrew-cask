@@ -26,6 +26,15 @@ cask "audacity" do
   end
   on_linux do
     app_image "audacity-linux-#{version}-#{arch}.AppImage", target: "Audacity.AppImage"
+
+    zap trash: [
+          "~/.cache/Audacity",
+          "~/.config/Audacity",
+          "~/.config/audacity#{version.major}",
+          "~/.local/share/Audacity",
+          "~/.local/share/audacity#{version.major}",
+        ],
+        rmdir: "~/Documents/Audacity#{version.major}"
   end
 
   url "https://github.com/audacity/audacity/releases/download/Audacity-#{version}/audacity-#{os}-#{version}-#{arch}.#{url_end}"

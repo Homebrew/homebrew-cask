@@ -20,6 +20,8 @@ cask "aya" do
     depends_on arch: :x86_64
 
     app_image "AYA-#{version}-linux-#{arch}.AppImage", target: "AYA.AppImage"
+
+    zap trash: "~/.config/AYA"
   end
 
   url "https://github.com/liriliri/aya/releases/download/v#{version}/AYA-#{version}-#{os}-#{arch}.#{url_end}"

@@ -22,6 +22,8 @@ cask "browseros" do
     depends_on arch: :x86_64
 
     app_image "BrowserOS_v#{version.csv.first}_#{arch}.AppImage", target: "BrowserOS.AppImage"
+
+    zap trash: "~/.config/browser-os"
   end
 
   url "https://github.com/browseros-ai/BrowserOS/releases/download/v#{version.csv.second || version.csv.first}/BrowserOS_v#{version.csv.first}_#{arch}.#{url_end}"

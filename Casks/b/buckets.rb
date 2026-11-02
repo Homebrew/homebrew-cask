@@ -28,6 +28,11 @@ cask "buckets" do
   end
   on_linux do
     app_image "Buckets-linux-latest-#{arch}-#{version}.AppImage", target: "Buckets.AppImage"
+
+    zap trash: [
+      "~/.cache/buckets-updater",
+      "~/.config/Buckets",
+    ]
   end
 
   url "https://github.com/buckets/application/releases/download/v#{version}/Buckets-#{url_mid}#{arch}-#{version}.#{url_end}"

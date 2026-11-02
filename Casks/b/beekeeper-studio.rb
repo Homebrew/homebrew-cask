@@ -27,6 +27,11 @@ cask "beekeeper-studio" do
   end
   on_linux do
     app_image "Beekeeper-Studio-#{version}#{arch}.AppImage", target: "Beekeeper Studio.AppImage"
+
+    zap trash: [
+      "~/.cache/beekeeper-studio-updater",
+      "~/.config/beekeeper-studio",
+    ]
   end
 
   url "https://github.com/beekeeper-studio/beekeeper-studio/releases/download/v#{version}/Beekeeper-Studio-#{version}#{arch}.#{os}"

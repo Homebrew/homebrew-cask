@@ -24,6 +24,12 @@ cask "brickstore" do
     depends_on arch: :x86_64
 
     app_image "Linux-AppImage-BrickStore-#{version}-x86_64.AppImage", target: "BrickStore.AppImage"
+
+    zap trash: [
+      "~/.cache/BrickStore",
+      "~/.config/BrickStore",
+      "~/.local/share/BrickStore",
+    ]
   end
 
   url "https://github.com/rgriebl/brickstore/releases/download/v#{version}/#{os}-BrickStore-#{version}#{url_end}"

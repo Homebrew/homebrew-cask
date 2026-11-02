@@ -36,6 +36,13 @@ cask "bitwarden" do
     depends_on arch: :x86_64
 
     app_image "Bitwarden-#{version}-x86_64.AppImage", target: "Bitwarden.AppImage"
+
+    zap trash: [
+      "~/.cache/bitwarden-updater",
+      "~/.cache/com.bitwarden.desktop",
+      "~/.config/autostart/bitwarden.desktop",
+      "~/.config/Bitwarden",
+    ]
   end
 
   url "https://github.com/bitwarden/clients/releases/download/desktop-v#{version}/Bitwarden-#{version}-#{url_end}"

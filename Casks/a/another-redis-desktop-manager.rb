@@ -20,6 +20,8 @@ cask "another-redis-desktop-manager" do
   on_linux do
     app_image "Another-Redis-Desktop-Manager-linux-#{version}-#{arch}.AppImage",
               target: "AnotherRedisDesktopManager.AppImage"
+
+    zap trash: "~/.config/another-redis-desktop-manager"
   end
 
   url "https://github.com/qishibo/AnotherRedisDesktopManager/releases/download/v#{version}/Another-Redis-Desktop-Manager-#{os}-#{version}-#{arch}.#{url_end}"

@@ -21,6 +21,13 @@ cask "artcraft-launcher" do
   end
   on_linux do
     app_image "artcraft-launcher-#{version}-linux-#{arch}.AppImage", target: "artcraft-launcher.AppImage"
+
+    zap trash: [
+          "~/.cache/artcraft-launcher",
+          "~/.local/share/artcraft-launcher",
+          "~/.local/share/ArtCraft/versions",
+        ],
+        rmdir: "~/.local/share/ArtCraft"
   end
 
   url "https://github.com/storytold/craft-launcher/releases/download/v#{version}/artcraft-launcher-#{version}-#{platform_suffix}"

@@ -25,6 +25,11 @@ cask "biscuit" do
     depends_on arch: :x86_64
 
     app_image "Biscuit-#{version}.AppImage", target: "Biscuit.AppImage"
+
+    zap trash: [
+      "~/.cache/biscuit-updater",
+      "~/.config/biscuit",
+    ]
   end
 
   url "https://github.com/agata/dl.biscuit/releases/download/#{version}/Biscuit-#{version}#{url_end}"

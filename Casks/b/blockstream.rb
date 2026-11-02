@@ -21,6 +21,15 @@ cask "blockstream" do
     depends_on arch: :x86_64
 
     app_image "Blockstream-#{arch}.AppImage", target: "Blockstream.AppImage"
+
+    zap trash: [
+          "~/.cache/Blockstream/Blockstream",
+          "~/.local/share/Blockstream/Green",
+        ],
+        rmdir: [
+          "~/.cache/Blockstream",
+          "~/.local/share/Blockstream",
+        ]
   end
 
   url "https://github.com/Blockstream/green_qt/releases/download/release_#{version}/Blockstream-#{arch}.#{url_end}"

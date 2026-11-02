@@ -26,6 +26,12 @@ cask "block-buzz" do
     depends_on arch: :x86_64
 
     app_image "Buzz_#{version}_#{arch}.AppImage", target: "Buzz.AppImage"
+
+    zap trash: [
+          "~/.local/bin/buzz",
+          "~/.local/share/xyz.block.buzz.app",
+        ],
+        rmdir: "~/.buzz"
   end
 
   url "https://github.com/block/buzz/releases/download/desktop-v#{version}/Buzz_#{version}_#{arch}.#{os}"

@@ -14,6 +14,8 @@ cask "advantagescope" do
 
     app "AdvantageScope.app"
 
+    uninstall quit: "org.littletonrobotics.advantagescope"
+
     zap trash: [
       "~/Library/Application Support/AdvantageScope",
       "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/org.littletonrobotics.advantagescope.sfl*",
@@ -22,6 +24,8 @@ cask "advantagescope" do
   end
   on_linux do
     app_image "advantagescope-linux-#{arch}-v#{version}.AppImage", target: "AdvantageScope.AppImage"
+
+    zap trash: "~/.config/AdvantageScope"
   end
 
   url "https://github.com/Mechanical-Advantage/AdvantageScope/releases/download/v#{version}/advantagescope-#{os}-#{arch}-v#{version}.#{url_end}"

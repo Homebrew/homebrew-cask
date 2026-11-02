@@ -20,6 +20,16 @@ cask "bitbox" do
     depends_on arch: :x86_64
 
     app_image "BitBox-#{version}-x86_64.AppImage", target: "BitBox.AppImage"
+
+    zap trash: [
+          "~/.cache/Shift Crypto/BitBoxApp",
+          "~/.config/bitbox",
+          "~/.local/share/Shift Crypto/BitBoxApp",
+        ],
+        rmdir: [
+          "~/.cache/Shift Crypto",
+          "~/.local/share/Shift Crypto",
+        ]
   end
 
   url "https://github.com/BitBoxSwiss/bitbox-wallet-app/releases/download/v#{version}/BitBox-#{version}-#{url_end}"

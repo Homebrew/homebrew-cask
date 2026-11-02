@@ -24,6 +24,11 @@ cask "bdash" do
     depends_on arch: :x86_64
 
     app_image "Bdash-#{version}.AppImage", target: "Bdash.AppImage"
+
+    zap trash: [
+      "~/.bdash",
+      "~/.config/Bdash",
+    ]
   end
 
   url "https://github.com/bdash-app/bdash/releases/download/v#{version}/Bdash-#{version}#{os}"

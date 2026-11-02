@@ -27,6 +27,12 @@ cask "breaktimer" do
     depends_on arch: :x86_64
 
     app_image "BreakTimer.AppImage", target: "BreakTimer.AppImage"
+
+    zap trash: [
+      "~/.cache/breaktimer-updater",
+      "~/.config/autostart/BreakTimer.AppImage.desktop",
+      "~/.config/BreakTimer",
+    ]
   end
 
   url "https://github.com/tom-james-watson/breaktimer-app/releases/download/v#{version}/BreakTimer.#{url_end}"

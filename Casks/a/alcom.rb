@@ -23,6 +23,8 @@ cask "alcom" do
   end
   on_linux do
     app_image "alcom-#{version}-#{arch}.AppImage", target: "ALCOM.AppImage"
+
+    zap trash: "~/.local/share/com.anatawa12.vrc-get-gui"
   end
 
   url "https://github.com/vrc-get/vrc-get/releases/download/gui-v#{version}/#{os}-#{version}-#{arch_end}.#{url_end}"

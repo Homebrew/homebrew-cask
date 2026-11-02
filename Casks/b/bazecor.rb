@@ -24,6 +24,8 @@ cask "bazecor" do
     depends_on arch: :x86_64
 
     app_image "Bazecor-#{version}-#{arch}.AppImage", target: "Bazecor.AppImage"
+
+    zap trash: "~/.config/Bazecor"
   end
 
   url "https://github.com/Dygmalab/Bazecor/releases/download/v#{version}/Bazecor-#{version}-#{arch}.#{url_end}"
