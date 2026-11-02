@@ -1,10 +1,10 @@
 cask "thinkrail" do
   arch arm: "arm64", intel: "x64"
 
-  version "0.3.0"
-  sha256 arm:          "235dbae9504ee9ebd6188fbe1cda5bca8a76685b7280ee3243bbde868204b37d",
-         arm64_linux:  "fb2aaba1673290540d4d8520d15771cf35d1867b1af9f12cf1768b01963b0dc5",
-         x86_64_linux: "ad08a93adde49a0d2788ea21ea2687860d5713f5f8d8705b05ad6b79829e2aba"
+  version "0.3.1"
+  sha256 arm:          "dc23dad47bf3cf6b7ae73ffde5ee6af0d38f16a0c2810919c65f954c820f903d",
+         arm64_linux:  "0060f5edabad65ccecc0fb6fec1df011977ef04080786403636e34011aa35e41",
+         x86_64_linux: "8f8889e29e3cb0e8bb83a1fe8a42644d6f2b11f47e39109f238419851337b742"
 
   on_macos do
     url "https://github.com/JetBrains/thinkrail/releases/download/v#{version}/thinkrail-desktop-darwin-arm64.dmg"
