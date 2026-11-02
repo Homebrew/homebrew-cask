@@ -27,6 +27,13 @@ cask "cherry-studio" do
   end
   on_linux do
     app_image "Cherry-Studio-#{version}-linux-#{arch}.AppImage", target: "Cherry Studio.AppImage"
+
+    zap trash: [
+      "~/.cache/cherrystudio-updater",
+      "~/.cherrystudio",
+      "~/.config/CherryStudio",
+      "~/.local/share/applications/cherrystudio-url-handler.desktop",
+    ]
   end
 
   url "https://github.com/CherryHQ/cherry-studio/releases/download/v#{version}/Cherry-Studio-#{version}-#{os}-#{arch}.#{url_end}"

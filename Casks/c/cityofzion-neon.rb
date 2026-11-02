@@ -21,6 +21,8 @@ cask "cityofzion-neon" do
     depends_on arch: :x86_64
 
     app_image "Neon.#{version}.AppImage", target: "Neon.AppImage"
+
+    zap trash: "~/.config/Neon"
   end
 
   url "https://github.com/CityOfZion/neon-wallet/releases/download/v#{version}/Neon.#{version}#{url_end}"

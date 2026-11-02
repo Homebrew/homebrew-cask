@@ -19,6 +19,8 @@ cask "cro-mag-rally" do
   end
   on_linux do
     app_image "CroMagRally-#{version}-linux-#{arch}.AppImage", target: "Cro-Mag Rally.AppImage"
+
+    zap trash: "~/.config/CroMagRally"
   end
 
   url "https://github.com/jorio/CroMagRally/releases/download/#{version}/CroMagRally-#{version}-#{url_end}"

@@ -30,6 +30,12 @@ cask "cate" do
     depends_on arch: :x86_64
 
     app_image "Cate-#{version}.AppImage", target: "Cate.AppImage"
+
+    zap trash: [
+      "~/.cache/cate-updater",
+      "~/.cate",
+      "~/.config/Cate",
+    ]
   end
 
   url "https://github.com/0-AI-UG/cate/releases/download/v#{version}/Cate-#{version}#{url_end}"

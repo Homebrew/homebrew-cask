@@ -21,6 +21,8 @@ cask "db-browser-for-sqlcipher@nightly" do
   on_linux do
     app_image "DB.Browser.for.SQLCipher-#{version}-#{arch}.AppImage",
               target: "DBBrowserForSQLCipherNightly.AppImage"
+
+    zap trash: "~/.config/sqlitebrowser"
   end
 
   url "https://github.com/sqlitebrowser/sqlitebrowser/releases/download/nightly/DB.Browser.for.SQLCipher-#{os}#{version}#{url_end}"

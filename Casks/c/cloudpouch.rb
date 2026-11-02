@@ -23,6 +23,12 @@ cask "cloudpouch" do
     depends_on arch: :x86_64
 
     app_image "CloudPouch-#{version}.AppImage", target: "CloudPouch.AppImage"
+
+    zap trash: [
+      "~/.cache/cloudpouch-updater",
+      "~/.cloudpouch-aws-sso-client-credentials",
+      "~/.config/CloudPouch",
+    ]
   end
 
   url "https://github.com/CloudPouch/CloudPouch.dev/releases/download/v#{version}/CloudPouch-#{version}#{url_end}"

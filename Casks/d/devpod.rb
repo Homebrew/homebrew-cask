@@ -26,6 +26,14 @@ cask "devpod" do
     depends_on arch: :x86_64
 
     app_image "DevPod_linux_amd64.AppImage", target: "DevPod.AppImage"
+
+    zap trash: [
+      "~/.cache/dev-pod-desktop",
+      "~/.devpod",
+      "~/.local/share/applications/dev-pod-desktop-handler.desktop",
+      "~/.local/share/dev-pod-desktop",
+      "~/.local/share/sh.loft.devpod",
+    ]
   end
 
   url "https://github.com/loft-sh/devpod/releases/download/v#{version}/DevPod_#{os}_#{arch}.#{url_end}"

@@ -50,6 +50,12 @@ cask "donut" do
     end
 
     app_image "Donut_#{version}_#{arch}.AppImage", target: "Donut.AppImage"
+
+    zap trash: [
+      "~/.cache/DonutBrowser",
+      "~/.local/share/com.donutbrowser",
+      "~/.local/share/DonutBrowser",
+    ]
   end
 
   url "https://github.com/zhom/donutbrowser/releases/download/v#{version}/Donut_#{version}_#{arch}.#{url_end}"

@@ -40,6 +40,12 @@ cask "cursor" do
     url "https://downloads.cursor.com/production/#{version.csv.second}/#{os}/#{arch}/Cursor-#{version.csv.first}-#{artifact_arch}.#{url_end}"
 
     app_image "Cursor-#{version.csv.first}-#{artifact_arch}.AppImage", target: "Cursor.AppImage"
+
+    zap trash: [
+      "~/.config/Cursor",
+      "~/.cursor",
+      "~/.cursor-tutor",
+    ]
   end
 
   name "Cursor"

@@ -20,6 +20,8 @@ cask "db-browser-for-sqlite" do
 
     app_image "DB.Browser.for.SQLite-v#{version}-x86.64-v2.AppImage",
               target: "DBBrowserForSQLite.AppImage"
+
+    zap trash: "~/.config/sqlitebrowser"
   end
 
   url "https://github.com/sqlitebrowser/sqlitebrowser/releases/download/v#{version}/DB.Browser.for.SQLite-v#{version}#{url_end}"

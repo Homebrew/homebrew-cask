@@ -21,6 +21,8 @@ cask "deskreen" do
   end
   on_linux do
     app_image "deskreen-ce-#{version}-#{arch}.AppImage", target: "Deskreen.AppImage"
+
+    zap trash: "~/.config/deskreen-ce"
   end
 
   url "https://github.com/pavlobu/deskreen/releases/download/v#{version}/#{os}-ce-#{version}-#{arch}.#{url_end}"

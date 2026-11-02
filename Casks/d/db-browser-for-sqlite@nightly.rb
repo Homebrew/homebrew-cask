@@ -21,6 +21,8 @@ cask "db-browser-for-sqlite@nightly" do
   on_linux do
     app_image "DB.Browser.for.SQLite-#{version}-#{arch}.AppImage",
               target: "DBBrowserForSQLiteNightly.AppImage"
+
+    zap trash: "~/.config/sqlitebrowser"
   end
 
   url "https://github.com/sqlitebrowser/sqlitebrowser/releases/download/nightly/DB.Browser.for.SQLite-#{os}#{version}#{url_end}"

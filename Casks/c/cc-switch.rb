@@ -24,6 +24,13 @@ cask "cc-switch" do
   end
   on_linux do
     app_image "CC-Switch-v#{version}-Linux-#{arch}.AppImage", target: "CC Switch.AppImage"
+
+    zap trash: [
+      "~/.cache/com.ccswitch.desktop",
+      "~/.cc-switch",
+      "~/.local/share/applications/cc-switch-handler.desktop",
+      "~/.local/share/com.ccswitch.desktop",
+    ]
   end
 
   url "https://github.com/farion1231/cc-switch/releases/download/v#{version}/CC-Switch-v#{version}-#{url_end}"

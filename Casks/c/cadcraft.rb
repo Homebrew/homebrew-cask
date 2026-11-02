@@ -22,6 +22,11 @@ cask "cadcraft" do
   end
   on_linux do
     app_image "cadcraft-#{version}-linux-#{arch}.AppImage", target: "CADCraft.AppImage"
+
+    zap trash: [
+      "~/.config/cadcraft",
+      "~/.local/share/ai.storyteller.cadcraft",
+    ]
   end
 
   url "https://github.com/storytold/cadcraft/releases/download/v#{version}/cadcraft-#{version}-#{os}-#{arch}.#{url_end}"

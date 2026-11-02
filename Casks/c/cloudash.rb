@@ -21,6 +21,8 @@ cask "cloudash" do
     depends_on arch: :x86_64
 
     app_image "Cloudash-#{version}.AppImage", target: "Cloudash.AppImage"
+
+    zap trash: "~/.config/Cloudash"
   end
 
   url "https://github.com/cloudashdev/cloudash/releases/download/#{version}/Cloudash-#{version}#{url_end}"

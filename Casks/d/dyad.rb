@@ -27,6 +27,12 @@ cask "dyad" do
     depends_on arch: :x86_64
 
     app_image "dyad_#{version}_x86_64.AppImage", target: "Dyad.AppImage"
+
+    zap trash: [
+          "~/.config/dyad",
+          "~/.local/share/applications/dyad-url-handler.desktop",
+        ],
+        rmdir: "~/dyad-apps"
   end
 
   url "https://github.com/dyad-sh/dyad/releases/download/v#{version}/dyad#{os}#{version}#{url_end}"

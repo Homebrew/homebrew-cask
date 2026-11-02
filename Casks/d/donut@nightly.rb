@@ -23,6 +23,12 @@ cask "donut@nightly" do
   end
   on_linux do
     app_image "Donut_nightly_#{arch}.AppImage", target: "Donut.AppImage"
+
+    zap trash: [
+      "~/.cache/DonutBrowser",
+      "~/.local/share/com.donutbrowser",
+      "~/.local/share/DonutBrowser",
+    ]
   end
 
   url "https://github.com/zhom/donutbrowser/releases/download/nightly/Donut_nightly_#{arch}.#{url_end}"

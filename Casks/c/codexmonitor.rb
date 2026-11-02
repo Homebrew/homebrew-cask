@@ -23,6 +23,8 @@ cask "codexmonitor" do
     url "https://github.com/Dimillian/CodexMonitor/releases/download/v#{version}/Codex.Monitor_#{version}_#{arch}.AppImage"
 
     app_image "Codex.Monitor_#{version}_#{arch}.AppImage", target: "Codex Monitor.AppImage"
+
+    zap trash: "~/.local/share/com.dimillian.codexmonitor"
   end
 
   name "CodexMonitor"

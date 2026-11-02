@@ -26,6 +26,11 @@ cask "clawd-on-desk" do
     depends_on arch: :x86_64
 
     app_image "Clawd-on-Desk-#{version}-#{arch}.AppImage", target: "Clawd on Desk.AppImage"
+
+    zap trash: [
+      "~/.clawd",
+      "~/.config/clawd-on-desk",
+    ]
   end
 
   url "https://github.com/rullerzhou-afk/clawd-on-desk/releases/download/v#{version}/Clawd-on-Desk-#{version}-#{arch}.#{os}"

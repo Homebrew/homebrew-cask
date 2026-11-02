@@ -22,6 +22,8 @@ cask "deadbolt" do
     depends_on arch: :x86_64
 
     app_image "Deadbolt-#{version}.x86_64.AppImage", target: "Deadbolt.AppImage"
+
+    zap trash: "~/.config/deadbolt"
   end
 
   url "https://github.com/alichtman/deadbolt/releases/download/v#{version}/Deadbolt-#{version}#{arch}#{url_end}"

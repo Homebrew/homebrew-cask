@@ -19,6 +19,8 @@ cask "colour-contrast-analyser" do
     depends_on arch: :x86_64
 
     app_image "Colour-Contrast-Analyser-Setup-#{version}.AppImage", target: "Colour Contrast Analyser.AppImage"
+
+    zap trash: "~/.config/CCA"
   end
 
   url "https://github.com/ThePacielloGroup/CCAe/releases/download/v#{version}/#{os}-#{version}.#{url_end}"
