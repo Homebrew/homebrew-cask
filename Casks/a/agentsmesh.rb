@@ -10,10 +10,7 @@ cask "agentsmesh" do
   desc "AI agent workforce platform"
   homepage "https://agentsmesh.ai/"
 
-  livecheck do
-    url :url
-    strategy :github_latest
-  end
+  disable! date: "2026-11-02", because: :no_longer_available
 
   depends_on :macos
 
