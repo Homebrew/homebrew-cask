@@ -1,6 +1,6 @@
 cask "zeal" do
-  version "0.9.1"
-  sha256 "25de0c73f9e45b6a3b50406f80c1b6580fe7f941381ea75e6739a51636ecb746"
+  version "0.9.2"
+  sha256 "fd622cfc209b5bb9a6cd71892ad0ab129fd9889a3e90f539599a81e1e2afe452"
 
   url "https://github.com/zealdocs/zeal/releases/download/v#{version}/Zeal-#{version}-x86_64.AppImage"
   name "Zeal"
