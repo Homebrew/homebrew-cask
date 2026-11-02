@@ -20,6 +20,11 @@ cask "decrediton" do
     depends_on arch: :x86_64
 
     app_image "decrediton-linux-amd64-v#{version}.AppImage", target: "Decrediton.AppImage"
+
+    zap trash: [
+      "~/.config/Decrediton",
+      "~/.config/decrediton",
+    ]
   end
 
   url "https://github.com/decred/decred-binaries/releases/download/v#{version}/decrediton-#{os}-#{arch}-v#{version}.#{url_end}"

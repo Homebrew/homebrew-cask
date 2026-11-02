@@ -22,6 +22,11 @@ cask "claude-devtools" do
     depends_on arch: :x86_64
 
     app_image "claude-devtools-#{version}-x86_64.AppImage", target: "Claude DevTools.AppImage"
+
+    zap trash: [
+      "~/.cache/claude-devtools-updater",
+      "~/.config/claude-devtools",
+    ]
   end
 
   url "https://github.com/matt1398/claude-devtools/releases/download/v#{version}/claude-devtools-#{version}#{url_end}"

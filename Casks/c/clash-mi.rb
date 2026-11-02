@@ -23,6 +23,8 @@ cask "clash-mi" do
     depends_on arch: :x86_64
 
     app_image "clashmi_#{version}_linux_amd64.AppImage", target: "Clash Mi.AppImage"
+
+    zap trash: "~/.local/share/com.nebula.clashmi"
   end
 
   url "https://github.com/KaringX/clashmi/releases/download/v#{version}/clashmi_#{version}_#{url_end}"

@@ -26,6 +26,11 @@ cask "crosspaste" do
   on_linux do
     app_image "crosspaste-#{version.major_minor_patch}-#{version.split(".").last}-#{arch}.AppImage",
               target: "CrossPaste.AppImage"
+
+    zap trash: [
+      "~/.config/autostart/crosspaste.desktop",
+      "~/.local/share/.crosspaste",
+    ]
   end
 
   url "https://github.com/CrossPaste/crosspaste-desktop/releases/download/#{version}/crosspaste-#{version.major_minor_patch}-#{version.split(".").last}-#{url_end}"

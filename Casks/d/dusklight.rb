@@ -18,6 +18,8 @@ cask "dusklight" do
   end
   on_linux do
     app_image "Dusklight-v#{version}-linux-#{arch}.AppImage", target: "Dusklight.AppImage"
+
+    zap trash: "~/.local/share/TwilitRealm"
   end
 
   url "https://github.com/TwilitRealm/dusklight/releases/download/v#{version}/Dusklight-v#{version}-#{os}-#{arch}.#{url_end}"

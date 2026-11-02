@@ -35,6 +35,11 @@ cask "drawio" do
   end
   on_linux do
     app_image "drawio-#{arch}-#{version}.AppImage", target: "drawio.AppImage"
+
+    zap trash: [
+      "~/.cache/draw.io-updater",
+      "~/.config/draw.io",
+    ]
   end
 
   url "https://github.com/jgraph/drawio-desktop/releases/download/v#{version}/#{os}-#{arch}-#{version}.#{url_end}"

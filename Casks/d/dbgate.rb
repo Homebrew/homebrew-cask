@@ -26,6 +26,13 @@ cask "dbgate" do
   end
   on_linux do
     app_image "dbgate-#{version}-linux_#{arch}.AppImage", target: "DbGate.AppImage"
+
+    zap trash: [
+          "~/.config/DbGate",
+          "~/.config/dbgate",
+          "~/dbgate-data",
+        ],
+        rmdir: "~/.dbgate"
   end
 
   url "https://github.com/dbgate/dbgate/releases/download/v#{version}/dbgate-#{version}-#{os}.#{url_end}"

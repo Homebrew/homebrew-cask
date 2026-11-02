@@ -22,6 +22,8 @@ cask "cmtrace-open" do
     depends_on arch: :x86_64
 
     app_image "CMTrace.Open_#{version}_amd64.AppImage", target: "CMTrace Open.AppImage"
+
+    zap trash: "~/.local/share/com.cmtrace.open"
   end
 
   url "https://github.com/adamgell/cmtraceopen/releases/download/v#{version}/CMTrace.Open_#{version}_#{url_end}"

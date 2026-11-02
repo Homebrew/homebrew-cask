@@ -21,6 +21,11 @@ cask "chatall" do
   end
   on_linux do
     app_image "ChatALL-#{version}-linux-#{arch}.AppImage", target: "ChatALL.AppImage"
+
+    zap trash: [
+      "~/.cache/chatall-updater",
+      "~/.config/chatall",
+    ]
   end
 
   url "https://github.com/sunner/ChatALL/releases/download/v#{version}/ChatALL-#{version}-#{os}-#{arch}.#{url_end}"

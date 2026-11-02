@@ -19,6 +19,8 @@ cask "candy-crisis" do
   end
   on_linux do
     app_image "CandyCrisis-#{version}-linux-#{arch}.AppImage", target: "Candy Crisis.AppImage"
+
+    zap trash: "~/.local/share/CandyCrisis"
   end
 
   url "https://github.com/jorio/CandyCrisis/releases/download/v#{version}/CandyCrisis-#{version}-#{url_end}"

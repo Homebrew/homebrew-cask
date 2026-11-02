@@ -23,6 +23,12 @@ cask "dbx" do
   end
   on_linux do
     app_image "DBX_#{version}_#{arch}.AppImage", target: "DBX.AppImage"
+
+    zap trash: [
+      "~/.cache/com.dbx.app",
+      "~/.local/share/applications/dbx-handler.desktop",
+      "~/.local/share/com.dbx.app",
+    ]
   end
 
   url "https://github.com/t8y2/dbx/releases/download/v#{version}/DBX_#{version}_#{arch}.#{os}"

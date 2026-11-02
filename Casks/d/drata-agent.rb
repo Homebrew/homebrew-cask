@@ -22,6 +22,11 @@ cask "drata-agent" do
     depends_on arch: :x86_64
 
     app_image "Drata-Agent-linux.AppImage", target: "DrataAgent.AppImage"
+
+    zap trash: [
+      "~/.config/autostart/drata-agent.desktop",
+      "~/.config/drata-agent",
+    ]
   end
 
   url "https://github.com/drata/agent-releases/releases/download/#{version}/Drata-Agent-#{os}.#{url_end}"

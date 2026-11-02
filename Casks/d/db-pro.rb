@@ -28,6 +28,11 @@ cask "db-pro" do
   end
   on_linux do
     app_image "DB Pro-#{version}-#{file_arch}.AppImage", target: "DB Pro.AppImage"
+
+    zap trash: [
+      "~/.cache/@dbproelectron-updater",
+      "~/.config/DB Pro",
+    ]
   end
 
   url "https://releases.dbpro.app/#{os}-#{arch}/DB%20Pro-#{version}-#{file_arch}.#{url_end}"

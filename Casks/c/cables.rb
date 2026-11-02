@@ -26,6 +26,8 @@ cask "cables" do
     depends_on arch: :x86_64
 
     app_image "cables-#{version}-linux-x64.AppImage", target: "Cables.AppImage"
+
+    zap trash: "~/.config/cables_electron"
   end
 
   url "https://github.com/cables-gl/cables_electron/releases/download/v#{version}/cables-#{version}-#{url_end}"
