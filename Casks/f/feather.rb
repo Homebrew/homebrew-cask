@@ -3,14 +3,14 @@ cask "feather" do
   linux_arch = on_arch_conditional arm: "-arm64"
   url_end = on_system_conditional macos: "-#{arch}.zip", linux: "#{linux_arch}.AppImage"
 
-  version "2.8.1"
-  sha256 arm:          "a35f19be74ca59bad96f7331d3ca8e4f56ec47e82c193f5fc50ddbebce017233",
-         intel:        "a44238e9713261a513f5688030cb23bb077584b3682be29bc975d883e7aa31fa",
-         arm64_linux:  "ed6e8e885539ee2a76e49ef6cbbeda8586959ae5ad30432f102669a83081aecd",
-         x86_64_linux: "c5e95c68ea932067c269d9aa6073450326ec845efba2dfe1e71d8de3d89c15f4"
+  version "2.9.1"
+  sha256 arm:          "606c04f910c10dca41bbec735d395206202c068a8049470219250be641915305",
+         intel:        "9b9bd9f883383539a10b6cb428e7d84947ac66536491ac46a5070af44046af4e",
+         arm64_linux:  "d832c0d618d195e2f4b78c596ceb135c13582396b5a08e9998ef2b6e1638e2e6",
+         x86_64_linux: "b6dfa6d3c3c545cc1bed9db621b1c04c2546bb610ee9b23c756938259c029eab"
 
   on_macos do
-    depends_on macos: :monterey
+    depends_on macos: :sonoma
 
     app "Feather.app"
 
