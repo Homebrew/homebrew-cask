@@ -7,5 +7,13 @@ cask "moonglow" do
   desc "Display brightness and colour temperature control"
   homepage "https://github.com/prompt-smithy/moonglow"
 
+  depends_on macos: ">= :monterey"
+
   app "Moonglow.app"
+
+  zap trash: [
+    "~/Library/Application Support/Moonglow",
+    "~/Library/Logs/Moonglow",
+    "~/Library/Preferences/com.prompt-smithy.Moonglow.plist",
+  ]
 end
