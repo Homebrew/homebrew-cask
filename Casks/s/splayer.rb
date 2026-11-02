@@ -12,6 +12,7 @@ cask "splayer" do
   app "SPlayer.app"
 
   zap trash: [
+    "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/org.splayer.splayerx.sfl*",
     "~/Library/Application Support/splayer",
     "~/Library/Caches/org.splayer.splayerx",
     "~/Library/Caches/org.splayer.splayerx.ShipIt",
