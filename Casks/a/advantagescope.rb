@@ -14,6 +14,8 @@ cask "advantagescope" do
 
     app "AdvantageScope.app"
 
+    uninstall quit: "org.littletonrobotics.advantagescope"
+
     zap trash: [
       "~/Library/Application Support/AdvantageScope",
       "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/org.littletonrobotics.advantagescope.sfl*",
