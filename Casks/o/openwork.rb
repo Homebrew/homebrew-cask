@@ -29,6 +29,12 @@ cask "openwork" do
   end
   on_linux do
     app_image "openwork-linux-#{arch}-#{version}.AppImage", target: "OpenWork.AppImage"
+
+    zap trash: [
+      "~/.config/@openwork",
+      "~/.config/com.differentai.openwork",
+      "~/.config/openwork",
+    ]
   end
 
   url "https://github.com/different-ai/openwork/releases/download/v#{version}/openwork-#{os}-#{arch}-#{version}.#{url_end}"

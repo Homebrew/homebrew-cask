@@ -24,6 +24,11 @@ cask "motrix@beta" do
   end
   on_linux do
     app_image "Motrix-#{version}#{arch}.AppImage", target: "Motrix.AppImage"
+
+    zap trash: [
+      "~/.cache/motrix-turbo-updater",
+      "~/.config/Motrix",
+    ]
   end
 
   url "https://github.com/agalwood/Motrix/releases/download/v#{version}/Motrix-#{version}#{arch}.#{os}"

@@ -20,6 +20,8 @@ cask "neovide-app" do
     depends_on arch: :x86_64
 
     app_image "neovide.AppImage", target: "Neovide.AppImage"
+
+    zap trash: "~/.local/share/neovide"
   end
 
   url "https://github.com/neovide/neovide/releases/download/#{version}/#{os}"

@@ -26,6 +26,12 @@ cask "tabularis" do
     depends_on arch: :x86_64
 
     app_image "tabularis_#{version}_amd64.AppImage", target: "tabularis.AppImage"
+
+    zap trash: [
+      "~/.config/tabularis",
+      "~/.local/share/applications/tabularis-handler.desktop",
+      "~/.local/share/tabularis",
+    ]
   end
 
   url "https://github.com/TabularisDB/tabularis/releases/download/v#{version}/tabularis_#{version}_#{arch}.#{os}"

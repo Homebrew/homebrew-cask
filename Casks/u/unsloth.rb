@@ -23,6 +23,15 @@ cask "unsloth" do
     depends_on arch: :x86_64
 
     app_image "Unsloth-Desktop-Linux.AppImage", target: "Unsloth.AppImage"
+
+    zap trash: [
+          "~/.cache/unsloth-studio",
+          "~/.config/ai.unsloth.studio",
+          "~/.local/share/ai.unsloth.studio",
+          "~/.local/share/applications/unsloth-studio-handler.desktop",
+          "~/.unsloth/studio",
+        ],
+        rmdir: "~/.unsloth"
   end
 
   url "https://github.com/unslothai/unsloth/releases/download/v#{version}/Unsloth-Desktop-#{os}"

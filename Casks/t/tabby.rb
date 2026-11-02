@@ -30,6 +30,11 @@ cask "tabby" do
   end
   on_linux do
     app_image "tabby-#{version}-linux-#{arch}.AppImage", target: "Tabby.AppImage"
+
+    zap trash: [
+      "~/.cache/tabby-updater",
+      "~/.config/tabby",
+    ]
   end
 
   url "https://github.com/Eugeny/tabby/releases/download/v#{version}/tabby-#{version}-#{os}-#{arch}.#{url_end}"

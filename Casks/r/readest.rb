@@ -25,6 +25,12 @@ cask "readest" do
   end
   on_linux do
     app_image "Readest_#{version}_#{arch}.AppImage", target: "Readest.AppImage"
+
+    zap trash: [
+      "~/.cache/AppImage-Cache/com.bilingify.readest",
+      "~/.cache/com.bilingify.readest",
+      "~/.local/share/com.bilingify.readest",
+    ]
   end
 
   url "https://github.com/readest/readest/releases/download/v#{version}/Readest_#{version}_#{os}"

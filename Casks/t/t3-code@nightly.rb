@@ -28,6 +28,20 @@ cask "t3-code@nightly" do
     depends_on arch: :x86_64
 
     app_image "T3-Code-#{version}-#{arch}.AppImage", target: "T3 Code Nightly.AppImage"
+
+    zap trash: [
+      "~/.config/T3 Code (Alpha)",
+      "~/.config/t3code",
+      "~/.config/t3code-v2",
+      "~/.local/share/applications/com.t3tools.T3Code.desktop",
+      "~/.local/share/icons/com.t3tools.T3Code.desktop.png",
+      "~/.local/share/icons/hicolor/256x256/apps/com.t3tools.T3Code.png",
+      "~/.local/share/icons/hicolor/256x256/apps/com.t3tools.t3code.png",
+      "~/.t3/bin",
+      "~/.t3/caches",
+      "~/.t3/usage-host-id",
+      "~/.t3/userdata",
+    ]
   end
 
   url "https://github.com/pingdotgg/t3code/releases/download/v#{version}/T3-Code-#{version}-#{arch}.#{os}"

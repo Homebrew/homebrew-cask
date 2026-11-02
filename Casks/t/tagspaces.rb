@@ -22,6 +22,8 @@ cask "tagspaces" do
   end
   on_linux do
     app_image "tagspaces-linux-#{arch}-#{version}.AppImage", target: "TagSpaces.AppImage"
+
+    zap trash: "~/.config/TagSpaces"
   end
 
   url "https://github.com/tagspaces/tagspaces/releases/download/v#{version}/tagspaces-#{os}-#{arch}-#{version}.#{url_end}"

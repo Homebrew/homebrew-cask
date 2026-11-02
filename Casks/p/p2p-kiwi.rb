@@ -21,6 +21,8 @@ cask "p2p-kiwi" do
   end
   on_linux do
     app_image "p2p-kiwi_#{arch}.AppImage", target: "p2p.kiwi.AppImage"
+
+    zap trash: "~/.config/p2p.kiwi"
   end
 
   url "https://github.com/dont-be-evil-company/p2p.kiwi/releases/download/v#{version}/p2p-kiwi_#{url_end}"

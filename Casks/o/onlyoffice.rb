@@ -38,6 +38,11 @@ cask "onlyoffice" do
     end
 
     app_image "DesktopEditors-#{arch}.AppImage", target: "ONLYOFFICE.AppImage"
+
+    zap trash: [
+      "~/.config/onlyoffice",
+      "~/.local/share/onlyoffice",
+    ]
   end
 
   name "ONLYOFFICE"

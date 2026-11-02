@@ -30,6 +30,12 @@ cask "superset" do
     depends_on arch: :x86_64
 
     app_image "superset-#{version}-x86_64.AppImage", target: "Superset.AppImage"
+
+    zap trash: [
+          "~/.cache/@supersetdesktop-updater",
+          "~/.config/Superset",
+        ],
+        rmdir: "~/.superset"
   end
 
   url "https://github.com/ParadevAI/Paradev/releases/download/desktop-v#{version}/#{os}-#{version}#{arch}#{url_end}"

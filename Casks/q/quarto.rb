@@ -22,6 +22,11 @@ cask "quarto" do
   end
   on_linux do
     binary "quarto-#{version}/bin/quarto"
+
+    zap trash: [
+      "~/.cache/quarto",
+      "~/.local/share/quarto",
+    ]
   end
 
   url "https://github.com/quarto-dev/quarto-cli/releases/download/v#{version}/quarto-#{version}-#{os}.#{url_end}"

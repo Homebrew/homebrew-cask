@@ -27,6 +27,12 @@ cask "zen@twilight" do
   end
   on_linux do
     app_image "zen-#{arch}.AppImage", target: "Zen Twilight.AppImage"
+
+    zap trash: [
+      "~/.cache/zen",
+      "~/.config/zen",
+      "~/.zen",
+    ]
   end
 
   url "https://github.com/zen-browser/desktop/releases/download/twilight-1/zen#{os}.#{url_end}"

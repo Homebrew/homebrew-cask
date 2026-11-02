@@ -18,6 +18,11 @@ cask "photocraft" do
   end
   on_linux do
     app_image "photocraft-#{version}-linux-#{arch}.AppImage", target: "PhotoCraft.AppImage"
+
+    zap trash: [
+      "~/.config/photocraft",
+      "~/.local/share/icons/hicolor/*/apps/ai.storyteller.photocraft.*",
+    ]
   end
 
   url "https://github.com/storytold/photocraft/releases/download/v#{version}/photocraft-#{version}-#{url_end}"
