@@ -16,7 +16,7 @@ cask "nosql-workbench" do
   end
 
   auto_updates true
-  depends_on :macos
+  depends_on macos: :ventura
 
   app "NoSQL Workbench.app"
 
