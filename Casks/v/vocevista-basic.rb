@@ -1,9 +1,9 @@
-cask "overtone-analyzer" do
-  version "5.11.1.9379"
-  sha256 "e5d57ca258173391fc7efdc19328e9cb87a123c4ecd1215e539ae8133bbee410"
+cask "vocevista-basic" do
+  version "6.0.2.10487"
+  sha256 "b343d79b7f46f2b556017e5691e2681fe219d1bf6226adfc3d2f65c0952fc9bf"
 
-  url "https://download.sygyt.com/#{version.major_minor_patch}/OvertoneAnalyzer_macOS_#{version}.dmg"
-  name "Overtone Analyzer"
+  url "https://download.sygyt.com/#{version.major_minor_patch}/VoceVistaBasic_macOS_#{version}.dmg"
+  name "VoceVista Basic"
   desc "Real-time voice spectrum analyzer and audio editor"
   homepage "https://www.sygyt.com/"
 
@@ -14,7 +14,9 @@ cask "overtone-analyzer" do
 
   depends_on macos: :ventura
 
-  app "Overtone Analyzer.app"
+  app "VoceVista Basic.app"
+
+  uninstall quit: "com.sygyt.mac.OvertoneAnalyzer"
 
   zap trash: [
     "~/Library/Application Support/Sygyt Software/Overtone Analyzer",
@@ -22,5 +24,6 @@ cask "overtone-analyzer" do
     "~/Library/Caches/Sygyt Software/Overtone Analyzer",
     "~/Library/Preferences/com.sygyt.mac.OvertoneAnalyzer.plist",
     "~/Library/Preferences/com.sygyt.Overtone Analyzer.plist",
+    "~/Library/Preferences/com.sygyt.VoceVista Basic.plist",
   ]
 end
