@@ -2,15 +2,25 @@ cask "incy" do
   arch arm: "arm64", intel: "intel"
 
   version "3.9.0"
-  sha256 arm:   "ba7772c616d3886102e84642044015031f0e565a3815a37f18d356e396280b72",
-         intel: "9a4c1e07b5f74137fe4be91760732b8a030e8400829ef1f93de2a9c4187b4f66"
+  sha256 arm:   "7114e9dba560cc518220ca1eba5945b32f1334ba756745041d10a11ebd0049b5",
+         intel: "403fb5e9788c10eb6e7b0bc7914d3e5c65a3bf1df67f31a2fab380ff8939ab97"
 
   url "https://github.com/INCY-DEV/incy-platforms/releases/download/desktop-v#{version}/incy-macos-#{arch}.dmg"
   name "INCY"
   desc "Proxy client"
   homepage "https://incy.cc/"
 
-  depends_on macos: :monterey
+  livecheck do
+    url :url
+    regex(/Desktop\s+\*\*(\d+(:?\.\d+)+)\*\*/)
+    strategy :github_latest do |json, regex|
+      matches = json["body"].match(regex)
+
+      matches[1]
+    end
+  end
+
+  depends_on macos: :ventura
 
   app "incy.app"
 
