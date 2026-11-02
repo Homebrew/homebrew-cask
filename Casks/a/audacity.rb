@@ -10,6 +10,8 @@ cask "audacity" do
          x86_64_linux: "a5f8787aa13cdb500a60fc013403b986776876b960cca962bc6e7fff066172f3"
 
   on_macos do
+    depends_on macos: :ventura
+
     app "Audacity #{version.major}.app"
 
     uninstall quit: "org.audacityteam.audacity#{version.major}"
