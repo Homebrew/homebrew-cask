@@ -1,6 +1,6 @@
 cask "blender@lts" do
-  version "5.2.2"
-  sha256 "dc4125399b8bfefe283cc1624d6cfc7809d1cac20ace51072127eb371f31f210"
+  version "5.2.3"
+  sha256 "acc05374485a272342d4b323c15ac01953e7f697da2f1bad8af9c3bf087267a4"
 
   url "https://download.blender.org/release/Blender#{version.major_minor}/blender-#{version}-macos-arm64.dmg"
   name "Blender LTS"
