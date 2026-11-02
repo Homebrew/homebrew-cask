@@ -3,14 +3,14 @@ cask "open-webui" do
        intel: on_system_conditional(macos: "-x64", linux: "_x86_64")
   os macos: "dmg", linux: "AppImage"
 
-  version "0.0.20"
-  sha256 arm:          "454fee910c872168b75f98bf676af4d15b21dfcc6b43a26dfadc94bd9ef10b97",
-         intel:        "3d98d2d398f0f5388e1d85ffa487f2b5e9fc1540771aba02fa7bcabcbdf52e5b",
-         arm64_linux:  "b96c55276da3e1d4bd6569fc977c56af855cbfd205c452e988d0a6c0bfbbc4e4",
-         x86_64_linux: "2cd19ee9a7afc540d47131dfaef39dd55e75c64feebbf78810e0f22ab6f031e2"
+  version "0.1.4"
+  sha256 arm:          "91265013455cc699f94adc4d8f91167ca411a770ff88e1e0792c19b50c2b4af3",
+         intel:        "38837952d6cc5e28d6f262a51db5161a6f43b6b504cfadb3e9e5a96da5655fe8",
+         arm64_linux:  "b2162b13576bf4f227bc5f831172c92ae7968ac088d2aea8fae4b9177b3b6494",
+         x86_64_linux: "ae865e251579183b1bf6385a3a07855ed06d9a2445e58453788143da5d61f9a8"
 
   on_macos do
-    depends_on macos: :monterey
+    depends_on macos: :ventura
 
     app "Open WebUI.app"
 
