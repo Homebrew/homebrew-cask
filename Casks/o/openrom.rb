@@ -15,7 +15,7 @@ cask "openrom" do
     strategy :github_latest
   end
 
-  depends_on macos: :catalina
+  depends_on :macos
   container nested: "OpenROM-v#{version}_macOS_#{arch}.dmg"
 
   app "OpenROM.app"
