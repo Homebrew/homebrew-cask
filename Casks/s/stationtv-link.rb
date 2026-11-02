@@ -16,6 +16,8 @@ cask "stationtv-link" do
 
   app "StationTV Link.app"
 
+  uninstall quit: "jp.co.pixela.StationTV-Link"
+
   zap trash: [
     "~/Library/Caches/thumbnailBigCache.bin",
     "~/Library/Caches/thumbnailSmallCache.bin",
