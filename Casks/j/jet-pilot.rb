@@ -18,6 +18,14 @@ cask "jet-pilot" do
   end
   on_linux do
     app_image "JET.Pilot_#{version}_#{arch}.AppImage", target: "JET Pilot.AppImage"
+
+    zap trash: [
+      "~/.cache/com.unxsist.jetpilot",
+      "~/.config/com.unxsist.jetpilot",
+      "~/.kube/jet-pilot",
+      "~/.local/share/applications/jet-pilot-handler.desktop",
+      "~/.local/share/com.unxsist.jetpilot",
+    ]
   end
 
   url "https://github.com/unxsist/jet-pilot/releases/download/v#{version}/JET.Pilot_#{version}_#{arch}.#{os}"
