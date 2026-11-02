@@ -16,6 +16,8 @@ cask "renamer" do
 
   app "Renamer.app"
 
+  uninstall quit: "com.incrediblebee.Renamer"
+
   zap trash: [
     "~/Library/Application Support/Renamer",
     "~/Library/HTTPStorages/com.incrediblebee.Renamer",
