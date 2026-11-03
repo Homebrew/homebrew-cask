@@ -35,9 +35,11 @@ cask "codebuddy" do
     "~/Library/Application Support/CodeBuddy",
     "~/Library/Application Support/CodeBuddyExtension/Cache/CodeBuddyIDE/CodeBuddy",
     "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.tencent.codebuddy.sfl*",
+    "~/Library/Application Support/com.tencent.codebuddy*",
     "~/Library/Caches/com.tencent.codebuddy",
     "~/Library/Caches/com.tencent.codebuddy.ShipIt",
     "~/Library/HTTPStorages/com.tencent.codebuddy",
+    "~/Library/Preferences/com.tencent.codebuddy.helper.plist",
     "~/Library/Preferences/com.tencent.codebuddy.plist",
   ]
 end
