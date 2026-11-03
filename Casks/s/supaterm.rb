@@ -1,9 +1,9 @@
 cask "supaterm" do
   arch arm: "arm64", intel: "x64"
 
-  version "26.10.9"
-  sha256 arm:   "6469dab989c793393ae93ff0531c663896473236064ce64ecd7171f103662151",
-         intel: "e956e80cb7f82716ecebd3fcbd3df376983f344ff01d924a4c3fcb7182318a09"
+  version "26.10.10"
+  sha256 arm:   "acceca9b4460448989681991643f02cab5c75f254a1c97c9c3678f386ef07336",
+         intel: "e6fcb8cf11ca0e22827ebfe95e726bf9850c1a1c1bfd53ad7edeab4a57035ab8"
 
   url "https://github.com/supabitapp/supaterm/releases/download/v#{version}/supaterm-#{version}-#{arch}.dmg"
   name "Supaterm"
