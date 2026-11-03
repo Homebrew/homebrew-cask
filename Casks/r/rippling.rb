@@ -17,6 +17,7 @@ cask "rippling" do
   app "Rippling.app"
 
   zap trash: [
+    "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.rippling.client.sfl*",
     "~/Library/Application Support/Rippling",
     "~/Library/Preferences/com.rippling.client.plist",
     "~/Library/Saved Application State/com.rippling.client.savedState",
