@@ -18,6 +18,8 @@ cask "onecast" do
   app "OneCast.app"
 
   zap trash: [
+    "~/Library/Application Support/com.onecast.macos",
+    "~/Library/Application Support/OneCast",
     "~/Library/Caches/com.onecast.macos",
     "~/Library/HTTPStorages/com.onecast.macos",
     "~/Library/Preferences/com.onecast.macos.plist",
