@@ -21,5 +21,10 @@ cask "spline" do
 
   uninstall launchctl: "com.design.spline.ShipIt"
 
-  zap trash: "~/Library/Preferences/com.design.spline.plist"
+  zap trash: [
+    "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.design.spline.sfl*",
+    "~/Library/Application Support/Spline",
+    "~/Library/Logs/Spline",
+    "~/Library/Preferences/com.design.spline.plist",
+  ]
 end
