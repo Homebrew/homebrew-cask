@@ -14,6 +14,7 @@ cask "macdown-3000" do
   binary "#{appdir}/MacDown 3000.app/Contents/SharedSupport/bin/macdown"
 
   zap trash: [
+    "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/app.macdown.macdown3000.sfl*",
     "~/Library/Application Support/MacDown 3000",
     "~/Library/Caches/app.macdown.macdown3000",
     "~/Library/Preferences/app.macdown.macdown3000.plist",
