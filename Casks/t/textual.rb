@@ -8,8 +8,8 @@ cask "textual" do
     end
   end
   on_monterey :or_newer do
-    version "7.2.8"
-    sha256 "10098131330eafbf6b040139cb5ae2493b61a7dc5e91832fc716387d93126d99"
+    version "7.2.9"
+    sha256 "a9a116a54f524263d79f96c3d254d89cd747c1f9a499ee3c179484d04f873f34"
 
     livecheck do
       url "https://www.textualapp.com/docs/legacy/guides/direct-download-links"
