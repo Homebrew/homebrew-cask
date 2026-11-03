@@ -17,6 +17,7 @@ cask "handy" do
       "~/Library/Application Support/com.pais.handy",
       "~/Library/Caches/com.pais.handy",
       "~/Library/LaunchAgents/Handy.plist",
+      "~/Library/Logs/com.pais.handy",
       "~/Library/WebKit/com.pais.handy",
     ]
   end
