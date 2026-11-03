@@ -2,11 +2,11 @@ cask "junie" do
   arch arm: "aarch64", intel: "amd64"
   os macos: "macos", linux: "linux"
 
-  version "3893.6"
-  sha256 arm:          "917bd6a481f0e0c0dd18abfeb5a6da3e23d5c9c529beeddffbb61742a925ff49",
-         intel:        "5263a3102e8fc6d3bd248b49138006559705690b23e6d025816f0e6b015f76fb",
-         arm64_linux:  "95ecc3fc905e4a5ca33f98eda65fb9c3b84f1a10bea50959d3090af02ab894fe",
-         x86_64_linux: "dc88c2434c4d673d4df1fe579cfaaf34565b223c6a8702c6ee8e0494638f8635"
+  version "3959.5"
+  sha256 arm:          "99e40d2614b71fe0d9052cd0c3d069f045127fad2e4d552f0497352481c46931",
+         intel:        "a09a7a2222034be135bdfddcc913cb9c243d41e992fbbdf8eb4694f5d3836d89",
+         arm64_linux:  "0e320c65f6a4edae5afe2041db22a430e30edacac263f6fbd2a45bd37ad77f4b",
+         x86_64_linux: "7d69a09b8021d901ea94aabcd86718a654cae08c1df11dec5788cc9bc39915b4"
 
   on_macos do
     binary "Applications/junie.app/Contents/MacOS/junie"
