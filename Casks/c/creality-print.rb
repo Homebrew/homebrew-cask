@@ -35,7 +35,10 @@ cask "creality-print" do
 
   zap trash: [
     "~/Library/Application Support/Creality",
+    "~/Library/Caches/com.creality.crealityprint",
     "~/Library/Caches/Creality",
+    "~/Library/Preferences/com.creality.crealityprint.plist",
     "~/Library/Saved Application State/com.creality.crealityprint.savedState",
+    "~/Library/WebKit/com.creality.crealityprint",
   ]
 end
