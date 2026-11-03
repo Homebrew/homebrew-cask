@@ -19,6 +19,8 @@ cask "remanager" do
   zap trash: [
     "~/Library/Application Support/reManager",
     "~/Library/Caches/com.wails.reManager",
+    "~/Library/Caches/io.scottlabs.reManager",
     "~/Library/Preferences/com.wails.reManager.plist",
+    "~/Library/WebKit/io.scottlabs.reManager",
   ]
 end
