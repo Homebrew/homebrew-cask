@@ -7,12 +7,12 @@ cask "beat-link-trigger" do
 
   url "https://github.com/Deep-Symmetry/beat-link-trigger/releases/download/v#{version}/Beat-Link-Trigger-#{version}-MacOS#{arch}.dmg"
   name "Beat Link Trigger"
-  desc "Trigger events and automate shows in response to events on Pioneer CDJs"
+  desc "Event trigger and show automation tool for Pioneer CDJs"
   homepage "https://github.com/Deep-Symmetry/beat-link-trigger"
 
   livecheck do
     url :url
-    strategy :github_latest
+    regex(/^v?(\d+(?:\.\d+)+)$/i)
   end
 
   depends_on :macos
