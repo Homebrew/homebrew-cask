@@ -1,6 +1,6 @@
 cask "omniwm@canary" do
-  version "20261101-1233-41306790357-1"
-  sha256 "817ba3371a43b0a7f31177bb371d49bd973935ea6aa7810399a861b181f12917"
+  version "20261103-0414-41576561015-1"
+  sha256 "4052fc09ec4c90d3de5e4a592c8f6062b54184aed281f8d3706298c74ce6399d"
 
   url "https://github.com/OmniNull/OmniWM/releases/download/canary-#{version}/OmniWM-canary-canary-#{version}.zip"
   name "OmniWM Canary"
