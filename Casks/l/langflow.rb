@@ -35,10 +35,15 @@ cask "langflow" do
 
   zap trash: [
     "~/.langflow",
+    "~/Library/Application Support/com.LangflowDesktop",
     "~/Library/Caches/com.Langflow",
+    "~/Library/Caches/com.LangflowDesktop",
     "~/Library/Caches/langflow",
     "~/Library/Logs/com.Langflow",
+    "~/Library/Logs/com.LangflowDesktop",
     "~/Library/Preferences/com.Langflow.plist",
+    "~/Library/Preferences/com.LangflowDesktop.plist",
     "~/Library/WebKit/com.Langflow",
+    "~/Library/WebKit/com.LangflowDesktop",
   ]
 end
