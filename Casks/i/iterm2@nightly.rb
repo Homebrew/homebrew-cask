@@ -28,7 +28,10 @@ cask "iterm2@nightly" do
     "~/Library/Application Support/iTerm",
     "~/Library/Application Support/iTerm2",
     "~/Library/Caches/com.googlecode.iterm2",
+    "~/Library/HTTPStorages/com.googlecode.iterm2",
     "~/Library/Preferences/com.googlecode.iterm2.plist",
+    "~/Library/Preferences/com.googlecode.iterm2.private.plist",
     "~/Library/Saved Application State/com.googlecode.iterm2.savedState",
+    "~/Library/WebKit/com.googlecode.iterm2",
   ]
 end
