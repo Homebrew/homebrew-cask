@@ -19,5 +19,8 @@ cask "rouvy" do
 
   app "Rouvy.app"
 
-  zap trash: "~/Library/Application Support/eu.virtualtraining.rouvy.mac"
+  zap trash: [
+    "~/Library/Application Support/eu.virtualtraining.rouvy.mac",
+    "~/Library/Preferences/eu.virtualtraining.rouvy.mac.plist",
+  ]
 end
