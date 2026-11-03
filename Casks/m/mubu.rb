@@ -23,6 +23,7 @@ cask "mubu" do
   app "幕布.app"
 
   zap trash: [
+    "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.mubu.desktop.sfl*",
     "~/Library/Application Support/幕布",
     "~/Library/Preferences/com.mubu.desktop.plist",
     "~/Library/Saved Application State/com.mubu.desktop.savedState",
