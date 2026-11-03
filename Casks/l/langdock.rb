@@ -1,6 +1,6 @@
 cask "langdock" do
-  version "1.1.0"
-  sha256 "749af675dd86265de8dcbc0454acf66cd2eaa87acf32026144b6427d2ecfc294"
+  version "1.1.1"
+  sha256 "756afb1d55bf3578c11323e292b20350ba44d0e1b871ee05f09739337c132e8a"
 
   url "https://desktop.langdock.com/global/stable/Langdock-#{version}.dmg"
   name "Langdock"
