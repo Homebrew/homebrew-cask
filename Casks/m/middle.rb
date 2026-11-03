@@ -21,6 +21,7 @@ cask "middle" do
 
   zap trash: [
     "~/Library/Application Scripts/com.knollsoft.MiddleLauncher",
+    "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.knollsoft.middle.sfl*",
     "~/Library/Application Support/Middle",
     "~/Library/Caches/com.knollsoft.Middle",
     "~/Library/Containers/com.knollsoft.MiddleLauncher",
