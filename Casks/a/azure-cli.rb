@@ -22,8 +22,8 @@ cask "azure-cli" do
 
   binary "bin/az"
   bash_completion "completions/bash/az"
-  fish_completion "completions/fish/az.fish"
   zsh_completion "completions/zsh/_az"
+  fish_completion "completions/fish/az.fish"
 
   zap trash: "~/.azure"
 end
