@@ -1,12 +1,12 @@
 cask "bambu-studio" do
-  os macos: "mac", linux: "ubuntu24.04"
+  os macos: "mac", linux: "ubu24"
   name_start = on_system_conditional macos: "Bambu_Studio", linux: "BambuStudio"
   url_end = on_system_conditional macos: "dmg", linux: "AppImage"
 
-  version "02.08.02.61,20260820225108"
-  sha256 arm:          "cf648a95858fb630e1353c4987038df60d6caab693f18411fb95fb809f2d6926",
-         intel:        "cf648a95858fb630e1353c4987038df60d6caab693f18411fb95fb809f2d6926",
-         x86_64_linux: "d501b103fac5424513ec0e8d6bc145fb30719de2c7d94d7320d723740c81a7fd"
+  version "02.09.01.70,20261103183404"
+  sha256 arm:          "e4f42ac1542cb107cb21cbf98717de7b17e735bdb46fd2a18249e30929e3310d",
+         intel:        "e4f42ac1542cb107cb21cbf98717de7b17e735bdb46fd2a18249e30929e3310d",
+         x86_64_linux: "668dabb1be53c758189ed6bc89935285dea5e0af46216546b1bafd6882e9aff0"
 
   on_macos do
     app "BambuStudio.app"
@@ -24,7 +24,7 @@ cask "bambu-studio" do
   on_linux do
     depends_on arch: :x86_64
 
-    app_image "BambuStudio_ubuntu24.04-v#{version.csv.first}-#{version.csv.second}.AppImage",
+    app_image "#{name_start}_#{os}-v#{version.csv.first}-#{version.csv.second}.#{url_end}",
               target: "BambuStudio.AppImage"
 
     zap trash: "~/.config/BambuStudio"
