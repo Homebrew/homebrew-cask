@@ -1,0 +1,14 @@
+Casks/z/zcode.rb
+  h_9df9c32c3f321d 19
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.5",
+  "base_commit_sha": "6cfac3ca0d4a8e3565731ae3e79eb988c514fc98",
+  "prompts": {},
+  "humans": {
+    "h_9df9c32c3f321d": {
+      "author": "Rui Chen <rui@chenrui.dev>"
+    }
+  }
+}
