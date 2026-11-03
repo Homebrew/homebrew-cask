@@ -21,7 +21,11 @@ cask "front" do
   app "Front.app"
 
   zap trash: [
+    "~/Library/Application Scripts/com.frontapp.Front.ShareExtension",
+    "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.frontapp.front.sfl*",
     "~/Library/Application Support/Front",
+    "~/Library/Caches/Front",
+    "~/Library/Containers/com.frontapp.Front.ShareExtension",
     "~/Library/FrontBoard",
     "~/Library/Logs/Front",
     "~/Library/Preferences/com.frontapp.Front.plist",
