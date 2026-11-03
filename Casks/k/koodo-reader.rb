@@ -22,6 +22,8 @@ cask "koodo-reader" do
   end
   on_linux do
     app_image "Koodo-Reader-#{version}-#{arch}.AppImage", target: "Koodo Reader.AppImage"
+
+    zap trash: "~/.config/koodo-reader"
   end
 
   url "https://github.com/koodo-reader/koodo-reader/releases/download/v#{version}/Koodo-Reader-#{version}-#{arch}.#{os}"
