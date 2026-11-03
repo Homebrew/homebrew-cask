@@ -136,7 +136,7 @@ jobs:
       - name: Run brew fetch --cask ${{ matrix.cask.token }}
         id: fetch
         run: |
-          brew fetch --cask --retry --force ${{ join(matrix.fetch_args, ' ') }} '${{ matrix.cask.path }}'
+          brew fetch --cask --retry --force ${{ join(matrix.fetch_args, ' ') }} '${{ matrix.cask.token }}'
         timeout-minutes: 30
         if: >
           always() &&
@@ -170,7 +170,11 @@ jobs:
         id: info
         env:
           CASK_PATH: ${{ matrix.cask.path }}
-        run: brew cask-ci info "$CASK_PATH"
+          TAP: ${{ matrix.tap }}
+        run: |
+          tap_cask_path="$(brew --repository "$TAP")/${CASK_PATH#./}"
+          echo "TAP_CASK_PATH=$tap_cask_path" >> "$GITHUB_ENV"
+          brew cask-ci info "$tap_cask_path"
         if: always() && steps.fetch.outcome == 'success' && matrix.cask
 
       - name: Uninstall conflicting formulae
@@ -189,7 +193,7 @@ jobs:
 
       - name: Run brew uninstall --cask --force --zap ${{ matrix.cask.token }}
         run: |
-          brew uninstall --cask --force --zap '${{ matrix.cask.path }}'
+          brew uninstall --cask --force --zap '${{ matrix.cask.token }}'
         if: always() && steps.info.outcome == 'success'
         timeout-minutes: 30
 
@@ -200,7 +204,7 @@ jobs:
 
       - name: Run brew install --cask ${{ matrix.cask.token }}
         id: install
-        run: brew install --cask '${{ matrix.cask.path }}'
+        run: brew install --cask '${{ matrix.cask.token }}'
         if: >
           always() && steps.info.outcome == 'success' &&
           fromJSON(steps.info.outputs.macos_requirement_satisfied) &&
@@ -208,7 +212,7 @@ jobs:
         timeout-minutes: 30
 
       - name: Check for missing zap paths
-        run: brew cask-ci zap-check '${{ matrix.cask.path }}'
+        run: brew cask-ci zap-check "$TAP_CASK_PATH"
         if: >
           always() &&
           steps.install.outcome == 'success' &&
@@ -217,7 +221,7 @@ jobs:
         timeout-minutes: 10
 
       - name: Run brew uninstall --cask ${{ matrix.cask.token }}
-        run: brew uninstall --cask '${{ matrix.cask.path }}'
+        run: brew uninstall --cask '${{ matrix.cask.token }}'
         if: always() && steps.install.outcome == 'success' && !fromJSON(steps.info.outputs.manual_installer)
         timeout-minutes: 30
 
@@ -229,7 +233,7 @@ jobs:
         timeout-minutes: 30
 
       - name: Compare installed and running apps and services with snapshot (macOS only)
-        run: brew cask-ci check '${{ matrix.cask.path }}'
+        run: brew cask-ci check "$TAP_CASK_PATH"
         if: always() && steps.snapshot.outcome == 'success' && steps.install.outcome == 'success' && runner.os == 'macOS'
 
   conclusion:
