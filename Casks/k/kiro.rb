@@ -25,6 +25,8 @@ cask "kiro" do
   app "Kiro.app"
   binary "#{appdir}/Kiro.app/Contents/Resources/app/bin/code", target: "kiro"
 
+  uninstall quit: "dev.kiro.desktop"
+
   zap trash: [
         "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/dev.kiro.desktop.sfl*",
         "~/Library/Application Support/Kiro",
