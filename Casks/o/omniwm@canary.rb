@@ -26,8 +26,10 @@ cask "omniwm@canary" do
     "~/.config/omniwm",
     "~/.local/state/omniwm",
     "~/Library/Application Support/com.barut.OmniWM",
+    "~/Library/Application Support/CrashReporter/OmniWM_*.plist",
     "~/Library/Caches/com.barut.OmniWM",
     "~/Library/HTTPStorages/com.barut.OmniWM",
+    "~/Library/Logs/DiagnosticReports/OmniWM-*.ips",
     "~/Library/Preferences/com.barut.OmniWM.plist",
   ]
 end

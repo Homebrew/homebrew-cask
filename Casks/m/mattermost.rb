@@ -26,6 +26,7 @@ cask "mattermost" do
   uninstall quit: "Mattermost.Desktop"
 
   zap trash: [
+    "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/mattermost.desktop.sfl*",
     "~/Library/Application Support/Mattermost",
     "~/Library/Containers/Mattermost.Desktop",
     "~/Library/Logs/Mattermost",

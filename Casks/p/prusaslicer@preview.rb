@@ -17,5 +17,8 @@ cask "prusaslicer@preview" do
 
   app "PrusaSlicer-#{version}.app"
 
-  zap trash: "~/Library/Application Support/PrusaSlicer3-dev"
+  zap trash: [
+    "~/Library/Application Support/PrusaSlicer3-dev",
+    "~/Library/Preferences/com.prusa3d.slic3r.plist",
+  ]
 end

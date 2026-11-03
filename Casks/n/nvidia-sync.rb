@@ -19,6 +19,7 @@ cask "nvidia-sync" do
   app "NVIDIA Sync.app"
 
   zap trash: [
+    "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.nvidia.nvidia-sync.sfl*",
     "~/Library/Application Support/NVIDIA/Sync",
     "~/Library/Preferences/com.nvidia.nvidia-sync.plist",
   ]

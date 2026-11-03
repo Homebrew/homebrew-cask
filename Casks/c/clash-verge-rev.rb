@@ -23,8 +23,10 @@ cask "clash-verge-rev" do
   uninstall quit: "io.github.clash-verge-rev.clash-verge-rev"
 
   zap trash: [
+    "~/Library/Application Scripts/io.github.clash-verge-rev.clash-verge-rev",
     "~/Library/Application Support/io.github.clash-verge-rev.clash-verge-rev",
     "~/Library/Caches/io.github.clash-verge-rev.clash-verge-rev",
+    "~/Library/Group Containers/io.github.clash-verge-rev.clash-verge-rev",
     "~/Library/WebKit/io.github.clash-verge-rev.clash-verge-rev",
   ]
 end

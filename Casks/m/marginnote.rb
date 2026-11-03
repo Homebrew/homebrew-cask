@@ -18,7 +18,9 @@ cask "marginnote" do
   app "MarginNote #{version.major}.app"
 
   zap trash: [
+    "~/Library/Application Scripts/QReader.MarginStudy.easy",
     "~/Library/Application Support/QReader.MarginStudyMac",
+    "~/Library/Containers/QReader.MarginStudy.easy",
     "~/Library/Containers/QReader.MarginStudyMac",
   ]
 end

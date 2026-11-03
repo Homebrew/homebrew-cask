@@ -15,6 +15,7 @@ cask "mochi-diffusion" do
 
   zap trash: [
     "~/Library/Application Support/MochiDiffusion",
+    "~/Library/Caches/com.joshua-park.Mochi-Diffusion",
     "~/Library/HTTPStorages/com.joshua-park.Mochi-Diffusion",
     "~/Library/Preferences/com.joshua-park.Mochi-Diffusion.plist",
   ]

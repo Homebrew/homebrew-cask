@@ -17,6 +17,7 @@ cask "writemapper" do
   app "WriteMapper.app"
 
   zap trash: [
+    "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.gx.writemapper*.sfl*",
     "~/Library/Application Support/WriteMapper",
     "~/Library/Preferences/com.gx.writemapper*.plist",
     "~/Library/Saved Application State/com.gx.writemapper*.savedState",

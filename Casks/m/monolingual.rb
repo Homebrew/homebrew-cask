@@ -27,6 +27,9 @@ cask "monolingual" do
 
   zap trash: [
     "~/Library/Application Scripts/com.github.IngmarStein.Monolingual",
+    "~/Library/Caches/com.github.IngmarStein.Monolingual",
     "~/Library/Containers/com.github.IngmarStein.Monolingual",
+    "~/Library/HTTPStorages/com.github.IngmarStein.Monolingual",
+    "~/Library/Preferences/com.github.IngmarStein.Monolingual.plist",
   ]
 end

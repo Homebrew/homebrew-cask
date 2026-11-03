@@ -24,6 +24,7 @@ cask "nosql-workbench" do
 
   zap trash: [
     "~/Library/Application Support/Caches/nosql-workbench-updater",
+    "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.dynamodb.workbench.sfl*",
     "~/Library/Application Support/NoSQL Workbench",
     "~/Library/Caches/com.dynamodb.workbench",
     "~/Library/Caches/com.dynamodb.workbench.ShipIt",

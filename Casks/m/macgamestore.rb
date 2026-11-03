@@ -33,6 +33,9 @@ cask "macgamestore" do
 
   zap trash: [
     "/Applications/MacGameStore",
+    "~/Library/Application Support/.macgamestore",
     "~/Library/Application Support/MacGameStore.com",
+    "~/Library/Caches/com.macgamestore.Client2",
+    "~/Library/Preferences/com.macgamestore.Client2.plist",
   ]
 end
