@@ -38,6 +38,7 @@ cask "macvim-app" do
   ].each { |link_name| binary "#{appdir}/MacVim.app/Contents/bin/mvim", target: link_name }
 
   zap trash: [
+    "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/org.vim.macvim.sfl*",
     "~/Library/Caches/org.vim.MacVim",
     "~/Library/Preferences/org.vim.MacVim.LSSharedFileList.plist",
     "~/Library/Preferences/org.vim.MacVim.plist",
