@@ -2,11 +2,11 @@ cask "azure-cli" do
   arch arm: "arm64", intel: "x86_64"
   os macos: "macos", linux: "linux"
 
-  version "2.91.0"
-  sha256 arm:          "dc28a3eef40d0b20f266f1e76b7a91f7a8ecdeaa28d0c855459eaa74edacbae6",
-         intel:        "b8c51c518c526d9ee0fd47716236f91804b578f9d560a2d8f60266fac7b67d6f",
-         arm64_linux:  "1d0a008190aa39d26c6cb6a4ab818e7f7b0fd96258f96b49952d91411a64b01b",
-         x86_64_linux: "26bbdd9bf46cdbe03dcbdbbe37b2301608e29518ae32fbdfcf1eb143d41d9f38"
+  version "2.92.0"
+  sha256 arm:          "6fb7d8d6d3db65098e259d5d1d6364359b4b54b5aef4ea6b18bddddd9468407a",
+         intel:        "75030452016f1d72cdcd60f1ff71328eac153fe13b00563554ab2dbc0fbe23cb",
+         arm64_linux:  "ef78aad855168a61eb372c1624406b97a94f1b23935b9391d131565337acc703",
+         x86_64_linux: "b90a489e0447b83e9d265b6d14f8b9306cd96b830c7f93e60bbcdf18cd2532af"
 
   url "https://github.com/Azure/azure-cli/releases/download/azure-cli-#{version}/azure-cli-#{version}-#{os}-#{arch}.tar.gz"
   name "Azure CLI"
@@ -22,8 +22,8 @@ cask "azure-cli" do
 
   binary "bin/az"
   bash_completion "completions/bash/az"
-  zsh_completion "completions/zsh/_az"
   fish_completion "completions/fish/az.fish"
+  zsh_completion "completions/zsh/_az"
 
   zap trash: "~/.azure"
 end
