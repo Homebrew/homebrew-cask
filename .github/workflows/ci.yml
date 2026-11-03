@@ -93,6 +93,10 @@ jobs:
           cask: true
           stable: ${{ matrix.stable || false }}
 
+      # setup-homebrew blanks this via $GITHUB_ENV, which overrides workflow `env:`.
+      - name: Disable API installs
+        run: echo 'HOMEBREW_NO_INSTALL_FROM_API=1' >> "${GITHUB_ENV}"
+
       - name: Enable debug mode
         run: |
           echo 'HOMEBREW_DEBUG=1' >> "${GITHUB_ENV}"
