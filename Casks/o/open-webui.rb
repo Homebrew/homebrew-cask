@@ -14,7 +14,11 @@ cask "open-webui" do
 
     app "Open WebUI.app"
 
-    zap trash: "~/Library/Application Support/open-webui"
+    zap trash: [
+      "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.openwebui.desktop.sfl*",
+      "~/Library/Application Support/open-webui",
+      "~/Library/Preferences/com.openwebui.desktop.plist",
+    ]
   end
   on_linux do
     app_image "open-webui#{arch}.AppImage"
