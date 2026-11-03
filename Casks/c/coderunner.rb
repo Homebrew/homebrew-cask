@@ -20,6 +20,7 @@ cask "coderunner" do
   zap trash: [
     "~/Library/Application Scripts/com.krill.CodeRunner.CodeRunnerThumbs",
     "~/Library/Application Support/CodeRunner",
+    "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.krill.coderunner.sfl*",
     "~/Library/Autosave Information/com.krill.CodeRunner.plist",
     "~/Library/Caches/com.krill.CodeRunner",
     "~/Library/Containers/com.krill.CodeRunner.CodeRunnerThumbs",
