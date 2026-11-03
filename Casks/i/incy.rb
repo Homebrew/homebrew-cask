@@ -12,11 +12,9 @@ cask "incy" do
 
   livecheck do
     url :url
-    regex(/Desktop\s+\*\*(\d+(:?\.\d+)+)\*\*/)
+    regex(/Desktop\s+\**v?(\d+(:?\.\d+)+)\**/)
     strategy :github_latest do |json, regex|
-      matches = json["body"].match(regex)
-
-      matches[1]
+      json["body"]&.[](regex, 1)
     end
   end
 
