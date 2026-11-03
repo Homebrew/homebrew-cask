@@ -2,9 +2,9 @@ cask "typeless" do
   arch arm: "arm64", intel: "x64"
   livecheck_arch = on_arch_conditional arm: "arm64", intel: "latest"
 
-  version "2.9.0"
-  sha256 arm:   "42879868e8454a67838ef1691f9c36b1f32ab15fbf77d70aae1aab8707e05273",
-         intel: "e55af7c58a657e083c85e2dd23c4e3441facfb2fa87ad59b990f3d026c837845"
+  version "2.10.0"
+  sha256 arm:   "febc8c971e710d04cd0f1e7d5e25412d06fbf1693ab9ce1c565a22aa7fefe1c3",
+         intel: "cfbd6819d9b5e1c20abd175448e30bb0e4fe177bc1fec6d76af404bce6ccc326"
 
   url "https://typeless-static.com/desktop-release/Typeless-#{version}-#{arch}.dmg"
   name "Typeless"
@@ -17,7 +17,7 @@ cask "typeless" do
   end
 
   auto_updates true
-  depends_on :macos
+  depends_on macos: :monterey
 
   app "Typeless.app"
 
