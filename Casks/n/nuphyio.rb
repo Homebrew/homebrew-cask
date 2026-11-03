@@ -1,6 +1,6 @@
 cask "nuphyio" do
-  version "2.2.8,1791624931580"
-  sha256 "44319985975f68285a6a2c0625c508102fd701a97d8d2356f09220413223ca00"
+  version "2.2.9,1793684567946"
+  sha256 "b56195b883688657aa845e954a43381140d9780c7cad2a594e142310e33a5cef"
 
   url "https://cdn.nuphy.io/upgrade/mac/NuPhyIO-#{version.csv.first}-#{version.csv.second}.dmg"
   name "NuPhyIO"
