@@ -31,6 +31,7 @@ cask "bbedit" do
   zap trash: [
     "~/Library/Application Scripts/com.barebones.bbedit",
     "~/Library/Application Support/BBEdit",
+    "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.barebones.bbedit.sfl*",
     "~/Library/BBEdit",
     "~/Library/Caches/com.barebones.bbedit",
     "~/Library/Containers/com.barebones.bbedit",
