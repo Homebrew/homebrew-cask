@@ -17,6 +17,7 @@ cask "meru" do
   uninstall quit: "sh.zoid.meru"
 
   zap trash: [
+    "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/sh.zoid.meru.sfl*",
     "~/Library/Application Support/Meru",
     "~/Library/Caches/meru-updater",
     "~/Library/Caches/sh.zoid.meru",
