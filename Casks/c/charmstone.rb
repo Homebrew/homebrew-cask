@@ -21,6 +21,7 @@ cask "charmstone" do
 
   zap trash: [
     "~/Library/Application Support/Charmstone Pro",
+    "~/Library/Application Support/Charmstone",
     "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.knollsoft.charmstonepro.sfl*",
     "~/Library/Caches/com.knollsoft.CharmstonePro",
     "~/Library/HTTPStorages/com.knollsoft.CharmstonePro",
