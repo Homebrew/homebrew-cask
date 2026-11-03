@@ -18,8 +18,10 @@ cask "elgato-studio" do
   app "Elgato Studio.app"
 
   zap trash: [
+    "~/Library/Application Scripts/com.elgato.studio",
     "~/Library/Application Support/com.elgato.studio",
     "~/Library/Caches/com.elgato.studio",
+    "~/Library/Containers/com.elgato.studio",
     "~/Library/Preferences/com.elgato.studio.plist",
     "~/Library/Saved Application State/com.elgato.studio.savedState",
   ]
