@@ -1,11 +1,11 @@
 cask "kate" do
   arch arm: "arm64", intel: "x86_64"
 
-  sha256 arm:   "157c784cd14bfc29101573911b28c14535f23a784f41a8dcb7ffb3aee8923da0",
+  sha256 arm:   "3d428133610429a11b8a2c32c9cdc88431aec54c92cbe10490bb35a420ed8144",
          intel: "4f01ee96097530b062161ade082bdfbf887ae364d7bed8b5211f2c469de7aced"
 
   on_arm do
-    version "26.08,12761"
+    version "26.08,12840"
   end
   on_intel do
     version "26.08,12761"
