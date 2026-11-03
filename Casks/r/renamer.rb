@@ -19,9 +19,11 @@ cask "renamer" do
   uninstall quit: "com.incrediblebee.Renamer"
 
   zap trash: [
+    "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.incrediblebee.renamer.sfl*",
     "~/Library/Application Support/Renamer",
     "~/Library/HTTPStorages/com.incrediblebee.Renamer",
     "~/Library/Logs/Renamer.log",
     "~/Library/Preferences/com.incrediblebee.Renamer#{version.major}.plist",
+    "~/Library/Preferences/com.incrediblebee.Renamer.plist",
   ]
 end
