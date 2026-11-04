@@ -1,6 +1,6 @@
 cask "focused" do
-  version "3.6,1853"
-  sha256 "88000db9b6d1304c9968d08ad4bd3ccd6125e2ca53ed3b2a718782368d2fa688"
+  version "3.7.0,1875"
+  sha256 "161bf2e3558758975c9cb6256148fdb2e552453f9c377188e6703a4753cbfbe8"
 
   url "https://dl.devant.io/v1/ffbdbfd0-ecfc-11e9-9897-1b1ad6ec37c4/#{version.csv.second}/Focused.zip"
   name "Focused"
@@ -13,9 +13,11 @@ cask "focused" do
   end
 
   auto_updates true
-  depends_on :macos
+  depends_on macos: :sonoma
 
   app "Focused.app"
+
+  uninstall quit: "com.71squared.focused"
 
   zap trash: [
     "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.71squared.focused.sfl*",
