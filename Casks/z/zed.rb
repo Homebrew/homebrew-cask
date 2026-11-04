@@ -11,6 +11,8 @@ cask "zed" do
          x86_64_linux: "719f6bf649ea8d87961adbf728e178561bac3f598d72d7949558d1150cfc43dd"
 
   on_macos do
+    depends_on macos: :monterey
+
     app "Zed.app"
     binary "#{appdir}/Zed.app/Contents/MacOS/cli", target: "zed"
 
