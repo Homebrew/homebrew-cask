@@ -1,6 +1,6 @@
 cask "gloomberb" do
-  version "0.19.6"
-  sha256 "4c1a992b2c758ccf500dd99fd46e7e12348bc361c1ef7f1c8a4630b50b1c8510"
+  version "0.20.0"
+  sha256 "7cb9c648227b288bf1518ab1ecf9f4baad2130dbca741179b41f6b736f23637b"
 
   url "https://github.com/gloom-sh/gloomberb/releases/download/v#{version}/stable-macos-arm64-Gloomberb.app.zip"
   name "Gloomberb"
@@ -14,7 +14,7 @@ cask "gloomberb" do
 
   auto_updates true
   depends_on arch: :arm64
-  depends_on :macos
+  depends_on macos: :sonoma
 
   app "Gloomberb.app"
   binary "#{appdir}/Gloomberb.app/Contents/Resources/gloomberb"
