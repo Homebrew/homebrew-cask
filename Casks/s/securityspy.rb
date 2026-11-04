@@ -1,5 +1,5 @@
 cask "securityspy" do
-  version "6.21"
+  version "6.22"
   sha256 :no_check
 
   url "https://www.bensoftware.com/securityspy/releases/SecuritySpy.dmg"
@@ -16,8 +16,12 @@ cask "securityspy" do
 
   app "SecuritySpy.app"
 
+  uninstall quit: "com.bensoftware.SecuritySpy"
+
   zap trash: [
+    "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.bensoftware.securityspy.sfl*",
     "~/Library/Application Support/SecuritySpy",
+    "~/Library/Preferences/BSLRunningMarker-SecuritySpy",
     "~/Library/Preferences/SecuritySpy Preferences*",
     "~/Library/Saved Application State/com.bensoftware.SecuritySpy.savedState",
     "~/SecuritySpy",
