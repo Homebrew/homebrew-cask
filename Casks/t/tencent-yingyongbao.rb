@@ -74,6 +74,7 @@ cask "tencent-yingyongbao" do
     "~/Library/Logs/com.tencent.yybmac",
     "~/Library/Preferences/com.tencent.yybmac.healthagent.plist",
     "~/Library/Preferences/com.tencent.yybmac.plist",
+    "~/Library/Preferences/com.tencent.yybmac.screenshot.plist",
     "~/Library/WebKit/com.tencent.yybmac",
   ]
 end
