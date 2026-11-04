@@ -4,13 +4,15 @@ cask "zed" do
   filename_start = on_system_conditional macos: "Zed", linux: "zed-linux"
   filename_ext = on_system_conditional macos: "dmg", linux: "tar.gz"
 
-  version "1.26.2"
-  sha256 arm:          "4632b670da78371fef5a0e417918d7b42bfc333e291ae86ab6b758d635c6be81",
-         intel:        "3a34904105cae732a7fa9a1c708b7994ad09f11b679ce20c585eca4a61cd5f53",
-         arm64_linux:  "167c53a4b1ea13a788e6281269ccf0421b7fe77186267b4cd3d91e06a6fba928",
-         x86_64_linux: "4d7b972019f25bd0a8cc6f4c56c81ab7ad9205f3461d00ac79259b34a03856d2"
+  version "1.27.0"
+  sha256 arm:          "8dcfdfaa94917cece0ff52ab6e3f7117c6647b78f32d266684cf0c13462d76a8",
+         intel:        "7a89a9d40401004329ec40ef0f188ee5536e638906b1ff6e5bfc79eda7c995b3",
+         arm64_linux:  "9e4f8b182f41d4cd434cbbc6d1562329a33ef048d65a39bae0665465d0a638bb",
+         x86_64_linux: "719f6bf649ea8d87961adbf728e178561bac3f598d72d7949558d1150cfc43dd"
 
   on_macos do
+    depends_on macos: :monterey
+
     app "Zed.app"
     binary "#{appdir}/Zed.app/Contents/MacOS/cli", target: "zed"
 
