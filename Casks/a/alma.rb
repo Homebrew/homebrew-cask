@@ -12,6 +12,7 @@ cask "alma" do
 
   livecheck do
     url "https://github.com/yetone/alma-releases"
+    regex(/^v?(\d+(:?\.\d+)+)$/i)
     throttle days: 1
   end
 
