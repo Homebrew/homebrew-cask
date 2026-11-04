@@ -1,6 +1,6 @@
 cask "notchnook-pro" do
-  version "2.0.7,2073"
-  sha256 "c7c8cd4badc8a6daec2397a378045633bdf0062b04d0e2bbbac1fa1a4544dba9"
+  version "2.0.8,2074"
+  sha256 "ca68bb80b3d193f1f83ef02e1fd5ab2c9c088bc96b422941fdb6d7e95c0c5d44"
 
   url "https://getnotchnook.com/pro-updates/v2/NotchNook-Pro-build#{version.csv.second}.dmg"
   name "NotchNook Pro"
