@@ -1,9 +1,9 @@
 cask "voiden" do
   arch arm: "arm64", intel: "x64"
 
-  version "2.3.4"
-  sha256 arm:   "b37431a791f46a5033c254e629003aa200191330b50113f489f9e3a48d3e192a",
-         intel: "f69aa6e4996ce15a2f673861c730b7dcd7d87eae6aab81a02bdef7be9ecc9455"
+  version "2.4.0"
+  sha256 arm:   "fcf3379951fdfc0bf2813d164197676340e58df3807538fd7b4de9f25073e615",
+         intel: "34d803b1488443db00f54a27d7ea83ccbcfe47275bd5bc0179fc7f4f9620d706"
 
   url "https://voiden-releases.s3.eu-west-1.amazonaws.com/voiden/darwin/#{arch}/Voiden-darwin-#{arch}-#{version}.zip"
   name "Voiden"
@@ -18,7 +18,7 @@ cask "voiden" do
   end
 
   conflicts_with cask: "voiden@beta"
-  depends_on macos: :monterey
+  depends_on macos: :ventura
 
   app "Voiden.app"
 
