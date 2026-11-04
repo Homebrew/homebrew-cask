@@ -1,6 +1,6 @@
 cask "papercut-mobility-print-client" do
-  version "1.0.660"
-  sha256 "e7dd410dd6e9fc40253b325955587ae7c4a522e80aa1fa10a8129b651b27253e"
+  version "1.0.676"
+  sha256 "d6c4eb45d4be0fa4fae03b0e5029871d6d5ec32a51001682d3a03807abe75b03"
 
   url "https://cdn.papercut.com/web/products/mobility-print/installers/client/macos-cloud/mobility-print-client-installer-#{version}.dmg"
   name "PaperCut Mobility Print Client"
