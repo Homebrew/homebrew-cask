@@ -1,8 +1,11 @@
 cask "anchor-wallet" do
-  version "1.4.0"
-  sha256 "bec00cb5f9a58883b4eabf41d5e44c7baee74940b0cb57d282a472ec52c644bb"
+  arch arm: "arm64", intel: "x64"
 
-  url "https://github.com/greymass/anchor/releases/download/v#{version}/mac-anchor-wallet-#{version}-x64.dmg"
+  version "1.4.0"
+  sha256 arm:   "60b4947872e1b508f1e57e6aaaef5bf100b0da9b90e7ca1c0b68afc0e24c8adf",
+         intel: "bec00cb5f9a58883b4eabf41d5e44c7baee74940b0cb57d282a472ec52c644bb"
+
+  url "https://github.com/greymass/anchor/releases/download/v#{version}/mac-anchor-wallet-#{version}-#{arch}.dmg"
   name "Anchor Wallet"
   desc "EOSIO Desktop Wallet and Authenticator"
   homepage "https://www.greymass.com/anchor"
@@ -26,8 +29,4 @@ cask "anchor-wallet" do
     "~/Library/Preferences/com.greymass.anchordesktop.release.plist",
     "~/Library/Saved Application State/com.greymass.anchordesktop.release.savedState",
   ]
-
-  caveats do
-    requires_rosetta
-  end
 end
