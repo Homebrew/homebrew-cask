@@ -3,13 +3,13 @@ cask "companion" do
   livecheck_arch = on_arch_conditional arm: "arm", intel: "intel"
 
   sha256 arm:   "ff4793e7b144903bedf7296cfdfcc277b9bff5ff891317d7c7f08349fac29ffe",
-         intel: "bfd183de36c4559c84eb37c5815a88760e8a0346aca904cebe305bd47b44f055"
+         intel: "da93a0858f8da67c4f28e775541762c40bec9ec8794f38fe2048aaef238835ae"
 
   on_arm do
     version "5.1.2,10019,98d5d4e1a1"
   end
   on_intel do
-    version "5.1.1,10000,1e2454ae78"
+    version "5.1.2,10019,98d5d4e1a1"
   end
 
   url "https://cf-pub.bitfocus.io/companion/companion/companion-mac-#{arch}-#{version.csv.first}-#{version.csv.second}-stable-#{version.csv.third}.dmg"
