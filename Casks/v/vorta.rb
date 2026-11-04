@@ -20,7 +20,14 @@ cask "vorta" do
 
   app "Vorta.app"
 
-  zap trash: "~/Library/Application Support/Vorta"
+  zap trash: [
+    "~/Library/Application Support/Vorta",
+    "~/Library/Caches/com.borgbase.client.macos",
+    "~/Library/Caches/Vorta",
+    "~/Library/HTTPStorages/com.borgbase.client.macos",
+    "~/Library/Logs/Vorta",
+    "~/Library/Preferences/com.borgbase.client.macos.plist",
+  ]
 
   caveats <<~EOS
     #{token} requires BorgBackup to run. If you do not need mount support, use
