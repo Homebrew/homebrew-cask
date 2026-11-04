@@ -2,10 +2,10 @@ cask "genoffice" do
   arch arm: "-arm64"
   url_end = on_system_conditional macos: "dmg", linux: "AppImage"
 
-  version "0.12.600"
-  sha256 arm:          "a0f3e688112b72ddaea49fcceda725b54861342d82f8f5d628b949c90ab58baa",
-         intel:        "9ff61458c58fa0f98c239db5f3bc0022a50a10d9f62f213e4403d88f78582e07",
-         x86_64_linux: "b1923333a4a1ebddc70635dfff888d0600461b17a87071711b1ee757364e58c9"
+  version "0.12.852"
+  sha256 arm:          "7724ead484688d4bc061dbdfdf1326340b7fb8101c796d2760b2baf63721f52b",
+         intel:        "5b7404ac401e64592fb8d84cb54ec3282dcf0f61cd33b5d2855cebd2b9f32365",
+         x86_64_linux: "824e2d75f2eb5d1851dc502e9224c1d44b020dbcf626577473993b31d60c7fde"
 
   on_macos do
     auto_updates true
