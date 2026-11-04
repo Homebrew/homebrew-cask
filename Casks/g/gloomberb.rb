@@ -23,6 +23,7 @@ cask "gloomberb" do
 
   zap trash: [
     "~/.gloomberb",
+    "~/Library/Application Support/com.vincelwt.gloomberb",
     "~/Library/WebKit/com.vincelwt.gloomberb",
   ]
 end
