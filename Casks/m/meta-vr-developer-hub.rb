@@ -1,9 +1,10 @@
-cask "meta-quest-developer-hub" do
-  version "6.5.2,3b34b595843ba33f451ec0b39a802b01"
-  sha256 "4108c75a0d444622da70238b21e66094c4a19160c3738cd598b87dfd1615730c"
+cask "meta-vr-developer-hub" do
+  version "6.6.0,16711ddde7b0cf840af1e69ed05ebac5"
+  sha256 "c900979255d0ebc325190f690fe5feba254f82e6ae1586dd47cdeb644855deb0"
 
   url "https://www.oculus.com/x2asset/electron-apps/odh/#{version.csv.second}/Meta%20Quest%20Developer%20Hub-#{version.csv.first}.zip"
-  name "meta-quest-developer-hub"
+  name "Meta VR Developer Hub"
+  name "Meta Quest Developer Hub"
   desc "VR development tool"
   homepage "https://developer.oculus.com/meta-quest-developer-hub/"
 
@@ -18,13 +19,15 @@ cask "meta-quest-developer-hub" do
     end
   end
 
+  auto_updates true
   depends_on :macos
 
-  app "Meta Quest Developer Hub.app"
+  app "Meta VR Developer Hub.app"
 
   zap trash: [
     "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.oculus.odh.sfl*",
     "~/Library/Application Support/Meta Quest Developer Hub",
+    "~/Library/Application Support/Meta VR Developer Hub",
     "~/Library/Application Support/odh",
     "~/Library/Preferences/com.oculus.odh.plist",
     "~/Library/Saved Application State/com.oculus.odh.savedState",
