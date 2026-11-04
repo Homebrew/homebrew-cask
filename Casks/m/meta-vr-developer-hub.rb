@@ -1,10 +1,10 @@
-cask "meta-quest-developer-hub" do
+cask "meta-vr-developer-hub" do
   version "6.6.0,16711ddde7b0cf840af1e69ed05ebac5"
   sha256 "c900979255d0ebc325190f690fe5feba254f82e6ae1586dd47cdeb644855deb0"
 
   url "https://www.oculus.com/x2asset/electron-apps/odh/#{version.csv.second}/Meta%20Quest%20Developer%20Hub-#{version.csv.first}.zip"
-  name "Meta Quest Developer Hub"
   name "Meta VR Developer Hub"
+  name "Meta Quest Developer Hub"
   desc "VR development tool"
   homepage "https://developer.oculus.com/meta-quest-developer-hub/"
 
