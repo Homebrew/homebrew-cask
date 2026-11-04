@@ -1,9 +1,9 @@
 cask "fabric-app" do
   arch arm: "arm64", intel: "x64"
 
-  version "0.2.15"
-  sha256 arm:   "9f41afd6fbf895c08e450be4c6f5acb458c616b6c1d92a6dedd9a2c94a9f080f",
-         intel: "8c20b867718abfa39c2022612c107b4c3ac6935c878718c82b8b58bc0dc5d1b2"
+  version "0.2.16"
+  sha256 arm:   "3c3df850e030adc367e1d5b90c5f4aff320e36085f02e6acbac6471e3dc4facc",
+         intel: "cc5b2c60eb437b55a6f0235dcc4cdc9619b8d6f60e5a980aa12f17d4a594c246"
 
   url "https://download.todesktop.com/220930m1ahpjvoh/Fabric%20#{version}-#{arch}-mac.zip"
   name "Fabric"
