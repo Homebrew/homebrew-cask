@@ -2,10 +2,10 @@ cask "tabularis@nightly" do
   arch arm: "aarch64", intel: on_system_conditional(macos: "x64", linux: "amd64")
   os macos: "dmg", linux: "AppImage"
 
-  version "0.30.1-6,20261103-835b6ce"
-  sha256 arm:          "3c8392d992fbac6ca670ef3a4cf743d76039350158cb013c435bb627537d3934",
-         intel:        "bf8557fac2f17164917bebba5b140866ef36743a0b9ef3ce2231579aa9b87b93",
-         x86_64_linux: "6defb8820f9aff231380ab47edaa66d572b96103c521d0fbacc5341bfb943378"
+  version "0.31.1-1,20261104-1f65b0b"
+  sha256 arm:          "2d56368b24b3577c026bdb300d816a6ad8434ced38c8b36b336b95bc8d356ea1",
+         intel:        "2dc56da4a8cfc31d25a45b675125fe98002db99aca8e0c49965db55cf0a4210c",
+         x86_64_linux: "ba1bc9ed4c93ed49f4231b1ef5ed86e744dd76ee65cba7f4100b7efd76dfa089"
 
   on_macos do
     depends_on macos: :monterey
