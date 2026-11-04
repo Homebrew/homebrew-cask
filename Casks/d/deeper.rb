@@ -40,7 +40,7 @@ cask "deeper" do
     end
   end
   on_golden_gate :or_newer do
-    version "3.4.0"
+    version "3.4.1"
 
     url "https://www.titanium-software.fr/download/27/Deeper.dmg"
 
