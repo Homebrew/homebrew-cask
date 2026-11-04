@@ -17,6 +17,7 @@ cask "quo" do
   app "Quo.app"
 
   zap trash: [
+    "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/ca.illusive.openphone.sfl*",
     "~/Library/Application Support/OpenPhone",
     "~/Library/Preferences/ca.illusive.openphone.plist",
     "~/Library/Saved Application State/ca.illusive.openphone.savedState",
