@@ -20,17 +20,21 @@ cask "amneziavpn" do
               "AmneziaVPN",
               "AmneziaVPN-service",
             ],
-            quit:      "AmneziaVPN",
+            quit:      [
+              "AmneziaVPN",
+              "com.yourcompany.AmneziaVPN",
+            ],
             pkgutil:   [
               "org.amneziavpn.AmneziaVPN",
               "org.amneziavpn.package",
             ]
 
-  zap trash: [
-    "~/Library/Caches/AmneziaVPN.ORG",
-    "~/Library/Preferences/AmneziaVPN.plist",
-    "~/Library/Preferences/org.amneziavpn.AmneziaVPN.plist",
-  ]
+  zap delete: "/Library/LaunchDaemons/AmneziaVPN.plist",
+      trash:  [
+        "~/Library/Caches/AmneziaVPN.ORG",
+        "~/Library/Preferences/AmneziaVPN.plist",
+        "~/Library/Preferences/org.amneziavpn.AmneziaVPN.plist",
+      ]
 
   caveats do
     requires_rosetta
