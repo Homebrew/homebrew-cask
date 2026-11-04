@@ -3,10 +3,10 @@ cask "openscreen" do
   os macos: "Mac-#{arch}", linux: "Linux"
   url_end = on_system_conditional macos: "zip", linux: "AppImage"
 
-  version "2.1.2"
-  sha256 arm:          "431e90d87bbd64f13f68929a4d063274087a9b3554876af05ca0e3f94e70151b",
-         intel:        "7b55e8878cb359ac0f0f3cf44af171fc29e24cf2ac6e65d9c8a732367731b782",
-         x86_64_linux: "6e51a170990c56df63d213b01443b0b435674747353c6926a45c29a4ee0aa9d6"
+  version "2.2.1"
+  sha256 arm:          "3fc1e1f7fe96e594175fef2200afee848ead645a19aca6c45e28b92e9ac14d19",
+         intel:        "75c6a064b41314ba38ec62af2c06046c0ab961d6df0a350edbd809f53c5da85f",
+         x86_64_linux: "c77a358c9cb3fda8b134abc93dbe67b8e3a419cbc623198b4d3769c00eb8bfe7"
 
   on_macos do
     depends_on macos: :ventura
