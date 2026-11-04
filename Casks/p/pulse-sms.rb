@@ -1,15 +1,15 @@
 cask "pulse-sms" do
-  version "4.5.3"
-  sha256 "9e12b4a0b794ee4903ee59c57b10c5951a357f739c90bda387a81a55b9bdd73f"
+  version "4.5.4"
+  sha256 "9b7c15fb4df70f27e410bac32e66b94a1c931fb9f994021f7cfc45a898e75291"
 
-  url "https://github.com/maplemedia/pulse-sms-desktop/releases/download/v#{version}/pulse-sms-#{version}.dmg"
+  url "https://github.com/maplemedia/pulse-sms-desktop/releases/download/v#{version}/pulse-sms-#{version}-universal.dmg"
   name "Pulse SMS"
   desc "Desktop client for Pulse SMS"
   homepage "https://home.pulsesms.app/overview/"
 
   livecheck do
     url :url
-    regex(/^pulse[._-]sms[._-]v?(\d+(?:\.\d+)+)\.dmg$/i)
+    regex(/^pulse[._-]sms[._-]v?(\d+(?:\.\d+)+)[._-]universal\.dmg$/i)
     strategy :github_releases do |json, regex|
       json.map do |release|
         next if release["draft"] || release["prerelease"]
@@ -24,7 +24,7 @@ cask "pulse-sms" do
     end
   end
 
-  depends_on :macos
+  depends_on macos: :monterey
 
   app "Pulse SMS.app"
 
@@ -32,8 +32,4 @@ cask "pulse-sms" do
     "~/Library/Application Support/pulse-sms",
     "~/Library/Logs/pulse-sms",
   ]
-
-  caveats do
-    requires_rosetta
-  end
 end
