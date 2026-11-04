@@ -26,6 +26,8 @@ cask "ungoogled-chromium" do
 
   app "Chromium.app"
 
+  uninstall quit: "io.ungoogled-software.ungoogled-chromium"
+
   zap trash: [
     "~/Library/Application Support/Chromium",
     "~/Library/Caches/Chromium",
