@@ -1,5 +1,5 @@
 cask "hides" do
-  version "7.4"
+  version "7.4.1"
   sha256 :no_check
 
   url "https://sweetpproductions.com/products/hides/Hides.dmg"
@@ -13,7 +13,7 @@ cask "hides" do
   end
 
   auto_updates true
-  depends_on :macos
+  depends_on macos: :monterey
 
   app "Hides.app"
 
