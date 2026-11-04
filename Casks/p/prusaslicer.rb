@@ -16,6 +16,8 @@ cask "prusaslicer" do
 
   app "Original Prusa Drivers/PrusaSlicer.app"
 
+  uninstall quit: "com.prusa3d.slic3r/"
+
   zap trash: [
     "~/Library/Application Support/PrusaSlicer",
     "~/Library/Preferences/com.prusa3d.slic3r",
