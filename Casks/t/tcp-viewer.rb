@@ -27,8 +27,10 @@ cask "tcp-viewer" do
             ]
 
   zap trash: [
+    "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.proxyman.tcpviewer.sfl*",
     "~/Library/Application Support/TCPViewer",
     "~/Library/Caches/com.proxyman.tcpviewer",
+    "~/Library/HTTPStorages/com.proxyman.tcpviewer",
     "~/Library/Preferences/com.proxyman.tcpviewer.plist",
     "~/Library/Saved Application State/com.proxyman.tcpviewer.savedState",
   ]
