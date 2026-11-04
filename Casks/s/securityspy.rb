@@ -16,8 +16,12 @@ cask "securityspy" do
 
   app "SecuritySpy.app"
 
+  uninstall quit: "com.bensoftware.SecuritySpy"
+
   zap trash: [
+    "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.bensoftware.securityspy.sfl*",
     "~/Library/Application Support/SecuritySpy",
+    "~/Library/Preferences/BSLRunningMarker-SecuritySpy",
     "~/Library/Preferences/SecuritySpy Preferences*",
     "~/Library/Saved Application State/com.bensoftware.SecuritySpy.savedState",
     "~/SecuritySpy",
