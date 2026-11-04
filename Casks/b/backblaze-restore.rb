@@ -1,5 +1,5 @@
 cask "backblaze-restore" do
-  version "10.0.3.1076"
+  version "10.0.4.1082"
   sha256 :no_check
 
   url "https://f000.backblazeb2.com/file/b2-computer-backup-public/macos/standalone-restore/backblaze_restore.dmg"
