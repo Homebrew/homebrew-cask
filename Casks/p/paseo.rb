@@ -23,16 +23,17 @@ cask "paseo" do
               }
 
     zap trash: [
-      "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/sh.paseo.desktop.sfl*",
-      "~/Library/Application Support/Paseo",
-      "~/Library/Caches/@getpaseodesktop-updater",
-      "~/Library/Caches/sh.paseo.desktop",
-      "~/Library/Caches/sh.paseo.desktop.ShipIt",
-      "~/Library/HTTPStorages/sh.paseo.desktop",
-      "~/Library/Logs/Paseo",
-      "~/Library/Preferences/ByHost/sh.paseo.desktop.ShipIt.*.plist",
-      "~/Library/Preferences/sh.paseo.desktop.plist",
-    ]
+          "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/sh.paseo.desktop.sfl*",
+          "~/Library/Application Support/Paseo",
+          "~/Library/Caches/@getpaseodesktop-updater",
+          "~/Library/Caches/sh.paseo.desktop",
+          "~/Library/Caches/sh.paseo.desktop.ShipIt",
+          "~/Library/HTTPStorages/sh.paseo.desktop",
+          "~/Library/Logs/Paseo",
+          "~/Library/Preferences/ByHost/sh.paseo.desktop.ShipIt.*.plist",
+          "~/Library/Preferences/sh.paseo.desktop.plist",
+        ],
+        rmdir: "~/.paseo"
   end
   on_linux do
     url "https://github.com/getpaseo/paseo/releases/download/v#{version}/Paseo-x86_64.AppImage"

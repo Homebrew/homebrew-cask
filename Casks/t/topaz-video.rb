@@ -52,8 +52,10 @@ cask "topaz-video" do
             ]
 
   zap trash: [
+    "~/Library/Application Scripts/com.topazlabs.TopazVideoFCP.XPCService",
     "~/Library/Application Support/Topaz Labs LLC/Topaz Video",
     "~/Library/Caches/Topaz Labs LLC/Topaz Video",
+    "~/Library/Containers/com.topazlabs.TopazVideoFCP.XPCService",
     "~/Library/Preferences/com.topazlabs.Topaz Video.plist",
     "~/Library/Preferences/com.topazlabs.Topaz-Video.plist",
   ]

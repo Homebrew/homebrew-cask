@@ -28,7 +28,7 @@ cask "camtasia" do
 
   zap trash: [
     "/Users/Shared/TechSmith/Camtasia",
-    "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.techsmith.camtasia#{version.major}.sfl*",
+    "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.techsmith.camtasia*.sfl*",
     "~/Library/Application Support/TechSmith/Camtasia*",
     "~/Library/Caches/com.plausiblelabs.crashreporter.data/com.techsmith.camtasia*",
     "~/Library/Caches/com.techsmith.camtasia*",
