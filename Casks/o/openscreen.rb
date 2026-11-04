@@ -15,6 +15,7 @@ cask "openscreen" do
     binary "#{appdir}/Openscreen.app/Contents/MacOS/Openscreen", target: "openscreen"
 
     zap trash: [
+      "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.etiennelescot.openscreen.sfl*",
       "~/Library/Application Support/openscreen",
       "~/Library/Caches/com.etiennelescot.openscreen",
       "~/Library/Preferences/com.etiennelescot.openscreen.plist",
