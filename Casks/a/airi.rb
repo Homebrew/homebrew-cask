@@ -1,9 +1,8 @@
 cask "airi" do
   arch arm: "arm64", intel: "x64"
 
-  version "0.14.1"
-  sha256 arm:   "249d5e0ef836dd73ee78758dd837b87461e07fd44d1014d3bb482e091d78f4e1",
-         intel: "f0da5724867cf5d6b5077d482e66223db7dac5a77468f437a6d8f95c199eb4d7"
+  version "0.15.1"
+  sha256 "b275e7ec33dd1e0f33c2392d00bbb8c0ee047519aba7343ef9b1230fc3a23c2f"
 
   url "https://github.com/moeru-ai/airi/releases/download/v#{version}/AIRI-#{version}-darwin-#{arch}.dmg"
   name "AIRI"
@@ -18,6 +17,7 @@ cask "airi" do
     regex(%r{/releases/tag/v?(\d+(?:\.\d+)+)["' >]}i)
   end
 
+  depends_on arch: :arm64
   depends_on macos: :monterey
 
   app "airi.app"
