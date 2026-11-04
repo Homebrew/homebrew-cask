@@ -20,6 +20,7 @@ cask "focused" do
   uninstall quit: "com.71squared.focused"
 
   zap trash: [
+    "~/Library/Application Scripts/com.71squared.focused",
     "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.71squared.focused.sfl*",
     "~/Library/Containers/com.71squared.focused",
   ]
