@@ -1,6 +1,6 @@
 cask "recut" do
-  version "4.5.3,eyJfcmFpbHMiOnsiZGF0YSI6MjE1LCJwdXIiOiJibG9iX2lkIn19--97fc52138c2768f17d3d20c9815a2b15b505efb6"
-  sha256 "0c37f87fb6f0eb016824ac4fdfaafc0ebaef989e90e3404ba19f359aec435de0"
+  version "4.5.4,eyJfcmFpbHMiOnsiZGF0YSI6MjIzLCJwdXIiOiJibG9iX2lkIn19--7dc23c1958764c44e9d5fe1e414084d8cf85a8ee"
+  sha256 "3c2d5c5f98fc19eb4783e98b603bcd28db03d070c18e77c1d6585489200f25bb"
 
   url "https://updates.getrecut.com/rails/active_storage/blobs/redirect/#{version.csv.second}/Recut_#{version.csv.first}_universal.dmg"
   name "Recut"
