@@ -14,6 +14,7 @@ cask "mqttx" do
     app "MQTTX.app"
 
     zap trash: [
+      "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.electron.mqttx.sfl*",
       "~/Library/Application Support/MQTTX",
       "~/Library/Logs/MQTTX",
       "~/Library/Preferences/com.electron.mqttx.plist",
