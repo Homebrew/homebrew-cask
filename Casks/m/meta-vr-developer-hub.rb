@@ -19,6 +19,7 @@ cask "meta-vr-developer-hub" do
     end
   end
 
+  auto_updates true
   depends_on :macos
 
   app "Meta VR Developer Hub.app"
