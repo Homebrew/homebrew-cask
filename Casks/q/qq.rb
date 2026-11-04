@@ -1,21 +1,14 @@
 cask "qq" do
-  version "7.0.0_260812_01,9.9.33,126b7ce6"
-  sha256 "b195c26df362af58954c898ab1dd984784a2ba6f57a629e6fb9b3ecc3bf9e65c"
+  version "7.0.3.54395,9.9.37,a8ffd03b"
+  sha256 "2f1d9ae1d1f02bf7e1b0a62339817d4f016f4a59dc2bd3c0aa28a0cf4ca36bb1"
 
-  url "https://qqdl.gtimg.cn/qqfile/QQNT/#{version.csv.second}/release/#{version.csv.third}/QQ_#{version.csv.first}.dmg"
+  url "https://qqdl.gtimg.cn/qqfile/QQNT/#{version.csv.second}/beta/#{version.csv.third}/QQ_v#{version.csv.first}.dmg"
   name "QQ"
   desc "Instant messaging tool"
   homepage "https://im.qq.com/index/#/macos"
 
   livecheck do
-    url "https://im.qq.com/proxy/domain/cdn-go.cn/qq-web/im.qq.com_new/latest/rainbow/pcConfig.json"
-    regex(%r{/QQNT/(\d+(?:\.\d+)+)/release/(\h+)/QQ[._-]v?(\d+(?:[._]\d+)+)\.dmg}i)
-    strategy :json do |json, regex|
-      match = json.dig("macOS", "downloadUrl")&.match(regex)
-      next if match.blank?
-
-      "#{match[3]},#{match[1]},#{match[2]}"
-    end
+    skip "No reliable way to get version info"
   end
 
   auto_updates true
