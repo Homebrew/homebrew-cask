@@ -18,7 +18,7 @@ cask "voiden" do
   end
 
   conflicts_with cask: "voiden@beta"
-  depends_on macos: :monterey
+  depends_on macos: :ventura
 
   app "Voiden.app"
 
