@@ -3,10 +3,10 @@ cask "superset" do
   os macos: "Superset", linux: "superset"
   url_end = on_system_conditional macos: ".dmg", linux: "-x86_64.AppImage"
 
-  version "2.0.4"
-  sha256 arm:          "0a35fab6981de87568354bb813571c5c794a84d4c8aae0ae1ade814317133036",
-         intel:        "11d2ca1184a4aeeb7e5b91bb18cf2299e2a7dc6b5ac286d9880d288e5116c0e3",
-         x86_64_linux: "ee1332e91893daf306460b79df2128611b415326ef9e4f7466c82df9d4076549"
+  version "2.0.5"
+  sha256 arm:          "e67aa43be53a547a4331873c810f3adec9859e25afcc84d7fff9c6f3616d8ab0",
+         intel:        "97206be915995d063c72bbf54f2de9c56edade4b65cf0925dd1c5fac9782eca4",
+         x86_64_linux: "a7d40727a7fda81bf09245b2c3118618df35c912e402ba492033e4dce552dca5"
 
   on_macos do
     depends_on macos: :ventura
