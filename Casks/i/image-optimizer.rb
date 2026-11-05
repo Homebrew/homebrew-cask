@@ -14,6 +14,7 @@ cask "image-optimizer" do
   depends_on macos: :monterey
 
   app "Image Optimizer.app"
+  binary "#{appdir}/Image Optimizer.app/Contents/Resources/bin/imgopt"
 
   zap trash: [
     "~/Library/Application Support/image-optimizer",
