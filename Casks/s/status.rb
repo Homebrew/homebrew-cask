@@ -1,6 +1,6 @@
 cask "status" do
-  version "2.39.2,f2e1c6"
-  sha256 "0d124cfe2d8c12ee7a94877f0d2227a42be124105b42d2d49ce9be0414b58143"
+  version "2.39.3,211c45"
+  sha256 "94cd23d2b8e3a6dfd4f31a13f4e6561281a0eb3368c787b4ae4a30a5e847f6cb"
 
   url "https://github.com/status-im/status-desktop/releases/download/#{version.csv.first}/StatusIm-Desktop-#{version.csv.first}-#{version.csv.second}-aarch64.dmg"
   name "Status"
