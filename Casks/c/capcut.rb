@@ -1,8 +1,8 @@
 cask "capcut" do
-  version "9.5.0.4590"
-  sha256 "93306fb16c46298c2c89e34017b5e1b5b6f4b4e330d676f01737a4fe5927e71f"
+  version "9.7.0.4727"
+  sha256 "71851ea5761da4100782dde8dca1740dc17b42c610803d57cb8d440c791c7dfc"
 
-  url "https://sf16-web-tos-buz.capcutstatic.com/obj/capcut-web-buz-sg/packages/CapCut_#{version.dots_to_underscores}_capcutpc_0_creatortool.dmg"
+  url "https://sf16-web-tos-buz.capcutstatic.com/obj/capcut-web-buz-sg/packages/CapCut_#{version.dots_to_underscores}_capcutpc_0_creatortool_nosandbox.dmg"
   name "CapCut"
   desc "Video editing and image design platform"
   homepage "https://www.capcut.com/"
