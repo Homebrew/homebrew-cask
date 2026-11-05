@@ -1,7 +1,7 @@
 cask "herd" do
   on_arm do
-    version "2.0.3"
-    sha256 "0bd210571551eebcb081d9a9b29c94c680fd75b3125001c77077ce9449badd24"
+    version "2.1.0"
+    sha256 "bd25bc95fdc5a083a197354e88865d23bcda9ac8d9b19b26a3619b4dc1ca4705"
 
     # The appcast may exclude newer versions if a `build` parameter is omitted.
     livecheck do
