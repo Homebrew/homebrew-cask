@@ -24,6 +24,7 @@ cask "diri" do
   # shared with the legacy Dirijor.app, so it is left out entirely for now.
   zap trash: [
     "~/Library/Application Support/diri",
+    "~/Library/Application Support/Dirijor",
     "~/Library/Caches/com.dirijor.diri",
     "~/Library/Caches/diri",
     "~/Library/HTTPStorages/com.dirijor.diri",
