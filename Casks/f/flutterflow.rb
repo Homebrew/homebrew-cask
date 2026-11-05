@@ -1,6 +1,6 @@
 cask "flutterflow" do
-  version "7.2.26"
-  sha256 "59013213e9b43b353b60118408d61c03e1ea50bbd192a3a3ec4aaa1837be7f1f"
+  version "7.2.33"
+  sha256 "e0fd5acb693e8ee0206131176e5161bf3652f136093aeae3bd4d2bfd2e420d46"
 
   url "https://storage.googleapis.com/flutterflow-downloads/macos/flutterflow-#{version}-macos.zip"
   name "FlutterFlow"
@@ -14,7 +14,7 @@ cask "flutterflow" do
 
   depends_on macos: :monterey
 
-  app "FlutterFlow.app"
+  app "FlutterFlow Studio.app"
 
   zap trash: [
     "~/Library/Application Support/io.flutterflow.prod.mac",
