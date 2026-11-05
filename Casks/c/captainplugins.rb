@@ -9,7 +9,7 @@ cask "captainplugins" do
 
   livecheck do
     url :url
-    regex(/filename=.*?CaptainPlugins[+._-]v?(\d+(?:\.\d+)+)\.zip/i)
+    regex(/CaptainPlugins(?:%2B|[+._-])v?(\d+(?:\.\d+)+)\.zip/i)
     strategy :header_match
   end
 
