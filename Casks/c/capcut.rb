@@ -1,6 +1,6 @@
 cask "capcut" do
-  version "9.7.0.4727"
-  sha256 "71851ea5761da4100782dde8dca1740dc17b42c610803d57cb8d440c791c7dfc"
+  version "9.7.1.4778"
+  sha256 "ad939b4c113227808947757b3fcd1420636e7d411a0e9ff0ee34d330ff8a59c6"
 
   url "https://sf16-web-tos-buz.capcutstatic.com/obj/capcut-web-buz-sg/packages/CapCut_#{version.dots_to_underscores}_capcutpc_0_creatortool_nosandbox.dmg"
   name "CapCut"
