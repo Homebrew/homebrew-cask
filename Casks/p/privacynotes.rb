@@ -1,6 +1,6 @@
 cask "privacynotes" do
-  version "0.722.0"
-  sha256 "61a96c8927a251212d9cd4983fda1a73a9157cf1539b91dd3b31025be211c75a"
+  version "0.726.7"
+  sha256 "5a4c9386b64ee107f0f861c3303f967979b7fb1bc9edb018b2c1d09c0d4c8842"
 
   url "https://releases.privacynotes.app/#{version}/PrivacyNotes_#{version}_universal.dmg"
   name "PrivacyNotes"
