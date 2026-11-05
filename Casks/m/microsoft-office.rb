@@ -21,7 +21,6 @@ cask "microsoft-office" do
     microsoft-outlook
     microsoft-powerpoint
     microsoft-word
-    onedrive
   ]
   depends_on macos: :sonoma
 
@@ -32,20 +31,20 @@ cask "microsoft-office" do
           "choiceAttribute"  => "selected",
           "attributeSetting" => 0,
         },
+        {
+          "choiceIdentifier" => "com.microsoft.OneDrive", # OneDrive.pkg
+          "choiceAttribute"  => "selected",
+          "attributeSetting" => 0,
+        },
       ]
 
   uninstall launchctl: [
               "com.microsoft.office.licensing.helper",
               "com.microsoft.office.licensingV2.helper",
               "com.microsoft.office.licensingV3.helper",
-              "com.microsoft.OneDriveStandaloneUpdater",
-              "com.microsoft.OneDriveStandaloneUpdaterDaemon",
-              "com.microsoft.OneDriveUpdaterDaemon",
-              "com.microsoft.SyncReporter",
             ],
             quit:      "com.microsoft.autoupdate2",
             pkgutil:   [
-              "com.microsoft.OneDrive",
               "com.microsoft.package.DFonts",
               "com.microsoft.package.Frameworks",
               "com.microsoft.package.Microsoft_Excel.app",
@@ -67,16 +66,12 @@ cask "microsoft-office" do
               "/Applications/Microsoft Outlook.app",
               "/Applications/Microsoft PowerPoint.app",
               "/Applications/Microsoft Word.app",
-              "/Applications/OneDrive.app",
             ]
 
   zap trash: [
     "~/Library/Application Scripts/com.microsoft.errorreporting",
     "~/Library/Application Scripts/com.microsoft.Excel",
     "~/Library/Application Scripts/com.microsoft.Office365ServiceV2",
-    "~/Library/Application Scripts/com.microsoft.OneDrive.FileProvider",
-    "~/Library/Application Scripts/com.microsoft.OneDrive.FinderSync",
-    "~/Library/Application Scripts/com.microsoft.OneDriveLauncher",
     "~/Library/Application Scripts/com.microsoft.onenote.mac",
     "~/Library/Application Scripts/com.microsoft.onenote.mac.shareextension",
     "~/Library/Application Scripts/com.microsoft.openxml.excel.app",
@@ -84,21 +79,16 @@ cask "microsoft-office" do
     "~/Library/Application Scripts/com.microsoft.outlook.profilemanager",
     "~/Library/Application Scripts/com.microsoft.Powerpoint",
     "~/Library/Application Scripts/com.microsoft.Word",
-    "~/Library/Application Scripts/UBF8T346G9.OneDriveStandaloneSuite",
     "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.microsoft.excel.sfl*",
     "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.microsoft.powerpoint.sfl*",
     "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.microsoft.word.sfl*",
     "~/Library/Application Support/CrashReporter/Microsoft Error Reporting_*.plist",
     "~/Library/Application Support/Microsoft Update Assistant",
-    "~/Library/Caches/com.microsoft.OneDriveStandaloneUpdater",
-    "~/Library/Caches/com.plausiblelabs.crashreporter.data/com.microsoft.OneDriveStandaloneUpdater",
     "~/Library/Containers/com.microsoft.com.microsoft.RMS-XPCService",
     "~/Library/Containers/com.microsoft.errorreporting",
     "~/Library/Containers/com.microsoft.Excel",
     "~/Library/Containers/com.microsoft.netlib.shipassertprocess",
     "~/Library/Containers/com.microsoft.Office365ServiceV2",
-    "~/Library/Containers/com.microsoft.OneDrive.FileProvider",
-    "~/Library/Containers/com.microsoft.OneDrive.FinderSync",
     "~/Library/Containers/com.microsoft.onenote.mac",
     "~/Library/Containers/com.microsoft.onenote.mac.shareextension",
     "~/Library/Containers/com.microsoft.openxml.excel.app",
@@ -108,15 +98,8 @@ cask "microsoft-office" do
     "~/Library/Containers/com.microsoft.Word",
     "~/Library/Group Containers/UBF8T346G9.ms",
     "~/Library/Group Containers/UBF8T346G9.Office",
-    "~/Library/Group Containers/UBF8T346G9.OfficeOneDriveSyncIntegration",
     "~/Library/Group Containers/UBF8T346G9.OfficeOsfWebHost",
-    "~/Library/Group Containers/UBF8T346G9.OneDriveStandaloneSuite",
-    "~/Library/HTTPStorages/com.microsoft.OneDriveStandaloneUpdater",
-    "~/Library/HTTPStorages/com.microsoft.OneDriveStandaloneUpdater.binarycookies",
-    "~/Library/Logs/OneDrive",
     "~/Library/Preferences/com.microsoft.Excel.plist",
-    "~/Library/Preferences/com.microsoft.OneDriveStandaloneUpdater.plist",
-    "~/Library/Preferences/com.microsoft.OneDriveUpdater.plist",
     "~/Library/Preferences/com.microsoft.Outlook.plist",
     "~/Library/Preferences/com.microsoft.Powerpoint.plist",
     "~/Library/Preferences/com.microsoft.Word.plist",
