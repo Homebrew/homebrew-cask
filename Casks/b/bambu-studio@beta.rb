@@ -23,6 +23,7 @@ cask "bambu-studio@beta" do
 
     zap trash: [
       "/Library/Logs/DiagnosticsReports/BambuStudio*",
+      "~/Library/Application Support/BambuStudio",
       "~/Library/Application Support/BambuStudioBeta",
       "~/Library/Caches/com.bambulab.bambu-studio",
       "~/Library/HTTPStorages/com.bambulab.bambu-studio.binarycookies",
