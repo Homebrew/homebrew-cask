@@ -5,8 +5,7 @@ cask "rabbitgui" do
   sha256 arm:   "90f03ad424a8caa5d964bf26801c699570ed5a5e1664921c512c06cbf3746d64",
          intel: "268876aebfe20ccebcc9e517fdcc4cabd1df07e7db1019c2877a9fc6023f2e32"
 
-  url "https://rabbit-gui-releases.s3.eu-west-3.amazonaws.com/rabbit-gui-#{version}-#{arch}.dmg",
-      verified: "rabbit-gui-releases.s3.eu-west-3.amazonaws.com/"
+  url "https://rabbit-gui-releases.s3.eu-west-3.amazonaws.com/rabbit-gui-#{version}-#{arch}.dmg"
   name "RabbitGUI"
   desc "Desktop client for RabbitMQ"
   homepage "https://rabbitgui.com/"
