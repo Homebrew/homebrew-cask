@@ -1,9 +1,9 @@
 cask "sononym" do
   arch arm: "-arm64"
 
-  version "1.6.15"
-  sha256 arm:   "d84afbeee6e04d9820e927b3fb59568edaf4419158683402e80e725e064ebe82",
-         intel: "fad4a269bd54edfdb656d356c3fed689857dbda9ce75b4135cc3d456a8f7bf7c"
+  version "1.6.16"
+  sha256 arm:   "a39068c65daf80c4c647d2fda13015ea6538309ea5b279d032f9fd7c17ab6b36",
+         intel: "c93d86d214a71a9b0e2b4d8d0790f0869697f4cc1348e5573b83d9ebe39330e1"
 
   url "https://www.sononym.net/download/Sononym-#{version}#{arch}.dmg"
   name "Sononym"
