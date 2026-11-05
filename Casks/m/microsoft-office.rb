@@ -123,4 +123,12 @@ cask "microsoft-office" do
     "~/Library/Saved Application State/com.microsoft.office.setupassistant.savedState",
     "~/Library/Saved Application State/com.microsoft.Word.savedState",
   ]
+
+  caveats <<~EOS
+    The Microsoft Office installer includes OneDrive and may replace a newer OneDrive
+    installation with an older bundled version. If OneDrive reports that its files
+    were managed by a newer version, run its updater:
+
+    open '/Applications/OneDrive.app/Contents/OneDrive Updater.app'
+  EOS
 end
