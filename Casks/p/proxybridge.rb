@@ -1,6 +1,6 @@
 cask "proxybridge" do
-  version "4.1.1,4.1.1_MacOS"
-  sha256 "7ffebe7ada4226567dcd4f7c8e7009d2ad0ef2afa4bc7a8525e2a9ddc0dd8c68"
+  version "4.1.2,4.1.2_MacOS"
+  sha256 "485fc224e9a671bc997de5353e3e524c4d6c7f0454951a23fe99dbe35864bb1c"
 
   url "https://github.com/InterceptSuite/ProxyBridge/releases/download/v#{version.csv.second || version.csv.first}/ProxyBridge-v#{version.csv.first}-Universal-Installer.pkg"
   name "ProxyBridge"
