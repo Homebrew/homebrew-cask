@@ -4,7 +4,7 @@ cask "tinycast" do
 
   url "https://github.com/abue-ammar/tinycast/releases/download/v#{version}/Tinycast-#{version}.dmg"
   name "Tinycast"
-  desc "Application launcher for controlling everything from the keyboard"
+  desc "Application launcher and productivity tool"
   homepage "https://tinycast.dev/"
 
   livecheck do
