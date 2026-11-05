@@ -2,7 +2,6 @@ cask "bambu-studio@beta" do
   os macos: "mac", linux: "ubu24"
   name_start = on_system_conditional macos: "Bambu_Studio", linux: "BambuStudio"
   url_end = on_system_conditional macos: "dmg", linux: "AppImage"
-  version_separator = on_system_conditional macos: "_", linux: "-"
   livecheck_regex = on_system_conditional(
     macos: %r{
       /\D*(\d+(?:\.\d+)+[^/]*?)/
@@ -17,8 +16,8 @@ cask "bambu-studio@beta" do
   )
 
   on_macos do
-    version "02.08.04.61,20260929132640,02.08.04.57"
-    sha256 "06f86e1ce4fbcf7fcab177bca5b0f24d4fd100dc4f568bfbcacaf4aa81ff5a63"
+    version "02.09.01.70,20261103183404"
+    sha256 "e4f42ac1542cb107cb21cbf98717de7b17e735bdb46fd2a18249e30929e3310d"
 
     app "BambuStudio.app"
 
@@ -33,18 +32,18 @@ cask "bambu-studio@beta" do
     ]
   end
   on_linux do
-    version "02.08.04.57,20260922164607"
-    sha256 "4870e355fa5e98e3a47bcd196b7ae16c2e9c15896a81ceaabe09ddbefa80d2f0"
+    version "02.09.01.70,20261103183404"
+    sha256 "668dabb1be53c758189ed6bc89935285dea5e0af46216546b1bafd6882e9aff0"
 
     depends_on arch: :x86_64
 
-    app_image "#{name_start}_#{os}#{version_separator}v#{version.csv.first}-#{version.csv.second}.#{url_end}",
+    app_image "#{name_start}_#{os}-v#{version.csv.first}-#{version.csv.second}.#{url_end}",
               target: "BambuStudio.AppImage"
 
     zap trash: "~/.config/BambuStudio"
   end
 
-  url "https://github.com/bambulab/BambuStudio/releases/download/v#{version.csv.third || version.csv.first}/#{name_start}_#{os}#{version_separator}v#{version.csv.first}-#{version.csv.second}.#{url_end}"
+  url "https://github.com/bambulab/BambuStudio/releases/download/v#{version.csv.third || version.csv.first}/#{name_start}_#{os}-v#{version.csv.first}-#{version.csv.second}.#{url_end}"
   name "Bambu Studio Beta"
   desc "3D model slicing software for 3D printers, maintained by Bambu Lab"
   homepage "https://bambulab.com/en/download/studio"
