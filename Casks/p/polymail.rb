@@ -1,7 +1,7 @@
 cask "polymail" do
   arch arm: "arm", intel: "intel"
 
-  version "2.4.3006"
+  version "2.4.3007"
   sha256 :no_check
 
   url "https://builds.polymail.io/macos-#{arch}/current"
