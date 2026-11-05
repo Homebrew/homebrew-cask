@@ -1,6 +1,6 @@
 cask "nrfutil" do
-  version "1.4.1-f15ff58"
-  sha256 "866a0d9e6c8b7b3d46b219caa71e485b26bad3f53c9ba7c06d9665620f35b394"
+  version "1.4.2-8a9090a"
+  sha256 "1c65d4095ba28c1e1a65dbe85e79bf91c36efab8dc2b28c1d8005c98bb37242b"
 
   url "https://files.nordicsemi.com/artifactory/swtools/external/nrfutil/executables/universal-apple-darwin/nrfutil-universal-apple-darwin-#{version}"
   name "nrfutil"
