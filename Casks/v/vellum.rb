@@ -19,6 +19,11 @@ cask "vellum" do
 
   zap trash: [
     "~/Library/Application Scripts/co.180g.Vellum",
+    "~/Library/Application Support/co.180g.Vellum",
+    "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/co.180g.vellum.sfl*",
+    "~/Library/Caches/co.180g.Vellum",
     "~/Library/Containers/co.180g.Vellum",
+    "~/Library/HTTPStorages/co.180g.Vellum",
+    "~/Library/Preferences/co.180g.Vellum.plist",
   ]
 end
