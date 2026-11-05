@@ -1,6 +1,6 @@
 cask "veracrypt" do
-  version "1.26.30"
-  sha256 "4316eba9a933b2157781713c547a08ecaea02f3d484e302b28be575c4af84aea"
+  version "1.26.31"
+  sha256 "a596f2e5cd43fd8e1a343a1e85869b9d72c4244206b511724455d02297d12290"
 
   url "https://github.com/veracrypt/VeraCrypt/releases/download/VeraCrypt_#{version}/VeraCrypt_#{version}.dmg"
   name "VeraCrypt"
