@@ -31,5 +31,8 @@ cask "capcut" do
     "~/Library/Application Scripts/com.lemon.lvoverseas",
     "~/Library/Containers/com.lemon.lvoverseas",
     "~/Library/Group Containers/22MMUN2RN5.lv",
+    "~/Library/HTTPStorages/com.lemon.lvoverseas",
+    "~/Library/Preferences/com.capcut.CapCut.plist",
+    "~/Library/Preferences/com.lemon.lvoverseas.plist",
   ]
 end
