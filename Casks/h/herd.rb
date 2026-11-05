@@ -12,7 +12,8 @@ cask "herd" do
     depends_on macos: :sonoma
 
     uninstall launchctl: "de.beyondco.herd.helper",
-              quit:      "Herd.app"
+              quit:      "Herd.app",
+              delete:    "/Library/PrivilegedHelperTools/de.beyondco.herd.helper"
   end
   on_intel do
     version "1.30.2"
