@@ -27,6 +27,7 @@ cask "akiflow" do
 
   zap trash: [
     "~/Library/Application Support/Akiflow",
+    "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.akiflow.akiflow.sfl*",
     "~/Library/Preferences/Akiflow",
     "~/Library/Preferences/com.akiflow.akiflow.plist",
     "~/Library/Saved Application State/com.akiflow.akiflow.savedState",
