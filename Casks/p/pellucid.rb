@@ -2,8 +2,7 @@ cask "pellucid" do
   version "1.0.3"
   sha256 "b8d218926a448eaef5e245f5920c5249b58d59d3180916199e3a60c03686fb29"
 
-  url "https://downloads.pellucid-pdf.com/releases/#{version}/Pellucid-#{version}-osx-arm64.zip",
-      verified: "downloads.pellucid-pdf.com/releases/"
+  url "https://downloads.pellucid-pdf.com/releases/#{version}/Pellucid-#{version}-osx-arm64.zip"
   name "Pellucid"
   desc "Annotate, fill and organize PDFs in a native desktop workspace"
   homepage "https://pellucid-pdf.com/"
