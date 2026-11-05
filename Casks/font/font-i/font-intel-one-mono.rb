@@ -1,19 +1,19 @@
 cask "font-intel-one-mono" do
-  version "1.4.0"
-  sha256 "74ef8ee667403c760745bc12fc5e2cb1684544194fad3d5340919c173a8227fc"
+  version "1.5.0"
+  sha256 "6ec64d4fdbaef33f81fe270566368ff0c926bb021f72ac148f2cdec604bd1283"
 
-  url "https://github.com/intel/intel-one-mono/releases/download/V#{version}/otf.zip"
+  url "https://github.com/intel/intel-one-mono/releases/download/V#{version}/intel-one-mono-otf.zip"
   name "Intel One Mono"
   homepage "https://github.com/intel/intel-one-mono"
 
-  font "otf/IntelOneMono-Bold.otf"
-  font "otf/IntelOneMono-BoldItalic.otf"
-  font "otf/IntelOneMono-Italic.otf"
-  font "otf/IntelOneMono-Light.otf"
-  font "otf/IntelOneMono-LightItalic.otf"
-  font "otf/IntelOneMono-Medium.otf"
-  font "otf/IntelOneMono-MediumItalic.otf"
-  font "otf/IntelOneMono-Regular.otf"
+  font "intel-one-mono-otf/IntelOneMono-Bold.otf"
+  font "intel-one-mono-otf/IntelOneMono-BoldItalic.otf"
+  font "intel-one-mono-otf/IntelOneMono-Italic.otf"
+  font "intel-one-mono-otf/IntelOneMono-Light.otf"
+  font "intel-one-mono-otf/IntelOneMono-LightItalic.otf"
+  font "intel-one-mono-otf/IntelOneMono-Medium.otf"
+  font "intel-one-mono-otf/IntelOneMono-MediumItalic.otf"
+  font "intel-one-mono-otf/IntelOneMono-Regular.otf"
 
   zap :not_required
 end
