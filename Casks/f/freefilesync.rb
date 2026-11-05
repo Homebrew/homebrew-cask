@@ -1,6 +1,6 @@
 cask "freefilesync" do
   version "14.13"
-  sha256 "b77ac29c6dd7cfabcb06c9e0232407504401fce9ccd72c25a1883deda5f6a2ab"
+  sha256 "1b68234019cc502ef58cdabf07e72c32caec78384f0588a792198dcd9aa05225"
 
   url "https://freefilesync.org/download/FreeFileSync_#{version}_macOS.zip"
   name "FreeFileSync"
