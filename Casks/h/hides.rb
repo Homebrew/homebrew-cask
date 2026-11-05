@@ -18,6 +18,7 @@ cask "hides" do
   app "Hides.app"
 
   zap trash: [
+    "~/Library/Application Scripts/com.sweetpproductions.Hides",
     "~/Library/Containers/com.sweetpproductions.Hides",
     "~/Library/Group Containers/*.com.sweetpproductions.Hides",
   ]
