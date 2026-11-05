@@ -29,7 +29,9 @@ cask "pulse-sms" do
   app "Pulse SMS.app"
 
   zap trash: [
+    "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/xyz.klinker.messenger.sfl*",
     "~/Library/Application Support/pulse-sms",
     "~/Library/Logs/pulse-sms",
+    "~/Library/Preferences/xyz.klinker.messenger.plist",
   ]
 end
