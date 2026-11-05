@@ -1,6 +1,6 @@
 cask "volumehud" do
-  version "4.0.0"
-  sha256 "67697e68a22c39f47ff1345ec6d2d8cd4cf5c48c875925383872930d73cd6a9b"
+  version "4.0.1"
+  sha256 "3195e903aeecd1c1c32e8a61ac01ce819613cca854d2056dc14ede97a86cb038"
 
   url "https://github.com/dannystewart/volumeHUD/releases/download/v#{version}/volumeHUD-#{version}.dmg"
   name "volumeHUD"
