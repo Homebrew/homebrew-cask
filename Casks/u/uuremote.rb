@@ -14,6 +14,7 @@ cask "uuremote" do
     strategy :header_match
   end
 
+  auto_updates true
   depends_on :macos
 
   pkg "uuyc_#{version}_nochannel.pkg"
