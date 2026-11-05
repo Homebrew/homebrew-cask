@@ -3,10 +3,10 @@ cask "hoppscotch" do
   os macos: "mac", linux: "linux"
   url_end = on_system_conditional macos: "dmg", linux: "AppImage"
 
-  version "26.10.0-0"
-  sha256 arm:          "5c5180ef02365c7bcf22d5b5d6052dc9dd4369304bd7ac7a0d6175eec692c375",
-         intel:        "5ef61bb43a783e6a4e55090dc9184efe7e4ea576063696def6864b052f18373d",
-         x86_64_linux: "c2199fe6b05aacaf6cc008a8302c60a041645792aa3782dff1f977ccbfd1cd2d"
+  version "26.10.1-0"
+  sha256 arm:          "84af15d1d2f246b10ecedf712a61f514e648615039c88d75e1d4eb2babcc6c42",
+         intel:        "ace5dafb85ef26c22836f5ecd99de272252e4ab55242fbf68b982951cc8c8f2e",
+         x86_64_linux: "a97a9f6b4193323bc1c81cd7fbdecff2cd1d02a414fdb2b9a26648c556545fc8"
 
   on_macos do
     app "Hoppscotch.app"
