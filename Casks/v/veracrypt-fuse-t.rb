@@ -1,6 +1,6 @@
 cask "veracrypt-fuse-t" do
-  version "1.26.30"
-  sha256 "7d99a5bde0df74df357131d3eae50b89b4d943f13058044fc66269ef53c3a7ff"
+  version "1.26.31"
+  sha256 "eff8b6e7f3da3be2e75f5b0074dc7d1da8f503dff02e9b0698d5af647a1aaf87"
 
   url "https://github.com/veracrypt/VeraCrypt/releases/download/VeraCrypt_#{version}/VeraCrypt_FUSE-T_#{version}.dmg"
   name "VeraCrypt Fuse-T"
