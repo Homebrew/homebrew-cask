@@ -24,7 +24,7 @@ cask "bambu-studio" do
   on_linux do
     depends_on arch: :x86_64
 
-    app_image "BambuStudio_ubu24-v#{version.csv.first}-#{version.csv.second}.AppImage",
+    app_image "#{name_start}_#{os}-v#{version.csv.first}-#{version.csv.second}.#{url_end}",
               target: "BambuStudio.AppImage"
 
     zap trash: "~/.config/BambuStudio"
