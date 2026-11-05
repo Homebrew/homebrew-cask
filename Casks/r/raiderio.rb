@@ -17,7 +17,9 @@ cask "raiderio" do
   app "RaiderIO.app"
 
   zap trash: [
+    "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/io.raider.client.sfl*",
     "~/Library/Application Support/RaiderIO",
     "~/Library/Logs/RaiderIO",
+    "~/Library/Preferences/io.raider.client.plist",
   ]
 end
