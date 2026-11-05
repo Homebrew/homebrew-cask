@@ -18,8 +18,11 @@ cask "rescuetime" do
   app "RescueTime.app"
 
   zap trash: [
+    "~/Library/Application Scripts/com.rescuetime.RescueTime-Helper",
+    "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.rescuetime.rescuetime-helper.sfl*",
     "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.rescuetime.rescuetime.sfl*",
     "~/Library/Caches/com.rescuetime.RescueTime",
+    "~/Library/Containers/com.rescuetime.RescueTime-Helper",
     "~/Library/HTTPStorages/com.rescuetime.RescueTime*",
     "~/Library/Preferences/com.rescuetime.RescueTime.plist",
     "~/Library/RescueTime.com",
