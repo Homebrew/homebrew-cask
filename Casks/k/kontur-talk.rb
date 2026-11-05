@@ -19,6 +19,7 @@ cask "kontur-talk" do
   app "Толк.app"
 
   zap trash: [
+    "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/kontur.talk.sfl*",
     "~/Library/Application Support/ktalk",
     "~/Library/Logs/ktalk",
     "~/Library/Preferences/kontur.talk.plist",
