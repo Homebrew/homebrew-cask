@@ -38,7 +38,7 @@ cask "sf-symbols" do
     uninstall pkgutil: "com.apple.pkg.SFSymbols"
   end
   on_sequoia :or_newer do
-    version "27.0,140"
+    version "27.2,150"
     sha256 :no_check # required as upstream package is updated in-place
 
     livecheck do
@@ -58,7 +58,7 @@ cask "sf-symbols" do
     command_wrapper "sfsymbols",
                     executable: "#{appdir}/SF Symbols.app/Contents/Executables/sfsymbols"
 
-    uninstall pkgutil: "com.apple.pkg.SFSymbolsPackage"
+    uninstall pkgutil: "com.apple.pkg.SFSymbols"
   end
 
   url "https://devimages-cdn.apple.com/design/resources/download/SF-Symbols-#{version.major}.dmg"
