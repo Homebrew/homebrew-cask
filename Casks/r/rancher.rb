@@ -33,6 +33,7 @@ cask "rancher" do
     "~/.kuberlr",
     "~/.rd",
     "~/Library/Application Support/Caches/rancher-desktop-updater",
+    "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/io.rancherdesktop.app.sfl*",
     "~/Library/Application Support/Rancher Desktop",
     "~/Library/Application Support/rancher-desktop",
     "~/Library/Caches/io.rancherdesktop.app*",
