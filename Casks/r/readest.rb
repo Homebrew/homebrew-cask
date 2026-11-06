@@ -2,11 +2,11 @@ cask "readest" do
   arch arm: "aarch64", intel: "amd64"
   os macos: "universal.dmg", linux: "#{arch}.AppImage"
 
-  version "0.12.16"
-  sha256 arm:          "493f8393b5f1e7d1cd26525f0737b2658cafc7efb0657d9102834c6bdd194f0f",
-         intel:        "493f8393b5f1e7d1cd26525f0737b2658cafc7efb0657d9102834c6bdd194f0f",
-         arm64_linux:  "531e2e89be866a0c157ce079edfc71ad672da87a5c0608db1ea8dbaa1d3face6",
-         x86_64_linux: "83fbf17d29c443c777642482534a603bc338643731d926f7a30df19f5f02e584"
+  version "0.12.20"
+  sha256 arm:          "9c70e84c963a16d6c90f2d5298d3c85ad293aa419c362f524d258c6249a63bda",
+         intel:        "9c70e84c963a16d6c90f2d5298d3c85ad293aa419c362f524d258c6249a63bda",
+         arm64_linux:  "52092039b62ddf4e86c9b07f9bc52913784f286a4cbc0e28a79016c9cd4a21ec",
+         x86_64_linux: "6c0dc3af96f989006b10d9680cd1ee928b3ee577af6befdab4ae18cff083b262"
 
   on_macos do
     auto_updates true
