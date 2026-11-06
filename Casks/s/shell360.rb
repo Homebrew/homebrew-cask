@@ -22,6 +22,8 @@ cask "shell360" do
 
   zap trash: [
     "~/Library/Application Support/com.nashaofu.shell360",
+    "~/Library/Caches/com.nashaofu.shell360",
+    "~/Library/Logs/com.nashaofu.shell360",
     "~/Library/Webkit/com.nashaofu.shell360",
   ]
 end
