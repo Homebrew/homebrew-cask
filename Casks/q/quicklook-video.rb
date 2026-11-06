@@ -16,8 +16,8 @@ cask "quicklook-video" do
     end
   end
   on_sequoia :or_newer do
-    version "3.12"
-    sha256 "c367f73ee4a0253bb6282564b406954e1d7b854facf2ef73dd8a0ac02c1ba7e8"
+    version "3.13"
+    sha256 "23b6c3e094caad5c44a9fcb2f865074f6a1f0cdb33fb6f81edad978ecd1d6f61"
 
     # The version in the tag and asset file name doesn't include dots, so we match
     # the version from the release title (e.g. "Release 1.23").
