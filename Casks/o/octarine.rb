@@ -2,11 +2,11 @@ cask "octarine" do
   arch arm: "aarch64", intel: "x64"
   folder = on_arch_conditional arm: "arm", intel: "intel"
 
-  version "0.56.0"
-  sha256 arm:   "8e0427e2f491031787eb3b4d0fdd78e284abc99297ff263fe98c6b804d50638e",
-         intel: "92b012a295eca05e30b51236ca0fed415654ee37f5a4a6fc71722098509d1587"
+  version "0.56.1"
+  sha256 arm:   "5a012b0cb19ff5efbab00bdbd631d9f4636381dcd0dbe51f9b363a78ba525f32",
+         intel: "0b7796b704caeca37ce6f580aa97f975074d345adc0643656396a30c6a7c69cb"
 
-  url "https://pub-3d35bc018fc54f11bde129e3e73e8002.r2.dev/#{version}/#{folder}/octarine_#{version}_#{arch}.dmg"
+  url "https://downloads.octarine.app/#{version}/#{folder}/octarine_#{version}_#{arch}.dmg"
   name "Octarine"
   desc "Markdown-based note-taking app"
   homepage "https://octarine.app/"
