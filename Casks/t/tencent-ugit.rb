@@ -28,6 +28,7 @@ cask "tencent-ugit" do
     "~/Library/Caches/com.tencent.ugit",
     "~/Library/Caches/com.tencent.ugit.ShipIt",
     "~/Library/HTTPStorages/com.tencent.ugit",
+    "~/Library/Logs/UGit",
     "~/Library/Preferences/com.tencent.ugit.plist",
   ]
 end
