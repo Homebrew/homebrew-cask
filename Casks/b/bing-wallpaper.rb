@@ -41,8 +41,8 @@ cask "bing-wallpaper" do
     end
   end
   on_sonoma :or_newer do
-    version "2.0.18.370,731d78f2-f2a9-46d2-839a-17be870ad4b2"
-    sha256 "5c7c4131e57f00096f4583b4606ab762bf22ed6ee3fe4a26eb91c93d83261e3b"
+    version "2.0.26.0,7d83205d-0650-4f11-aa35-9b216123c5d9"
+    sha256 "189d833df6579a883b7e127aad8e5a88b5d3db101f9481928bee512f21dd8619"
 
     url "https://download.microsoft.com/download/#{version.csv.second}/MicrosoftBingWallpaper_#{version.csv.first}.pkg"
 
