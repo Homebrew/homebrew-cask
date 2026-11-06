@@ -38,6 +38,7 @@ cask "android-studio-preview@canary" do
         "~/Library/Logs/Google/AndroidStudioPreview#{version.major_minor}",
         "~/Library/Preferences/com.android.Emulator.plist",
         "~/Library/Preferences/com.google.android.studio-EAP.plist",
+        "~/Library/Preferences/com.google.android.studio.plist",
         "~/Library/Saved Application State/com.google.android.studio-EAP.savedState",
       ],
       rmdir: [
