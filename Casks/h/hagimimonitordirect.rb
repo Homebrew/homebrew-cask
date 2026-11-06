@@ -1,6 +1,6 @@
 cask "hagimimonitordirect" do
-  version "1.7.7"
-  sha256 "a66518bb5633d8eaf055a991b5e08ecb38f35a49dacc5166c484241042611a71"
+  version "1.7.8"
+  sha256 "4084912a11770eed742dc13dac149d642b3eceb3209d9130502fc6361df9e5f9"
 
   url "https://github.com/Acerola-1/hagimi-monitor/releases/download/v#{version}/HagimiMonitor.dmg"
   name "Hagimi Monitor"
