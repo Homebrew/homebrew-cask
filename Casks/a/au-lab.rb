@@ -1,5 +1,5 @@
 cask "au-lab" do
-  version "2.3"
+  version "2.5"
   sha256 :no_check
 
   url "https://www.apple.com/apple-music/apple-digital-masters/docs/au_lab.zip"
@@ -12,13 +12,9 @@ cask "au-lab" do
     strategy :extract_plist
   end
 
-  depends_on :macos
+  depends_on macos: :sonoma
 
   app "AU Lab.app"
 
   zap trash: "~/Library/Preferences/com.apple.aulab.plist"
-
-  caveats do
-    requires_rosetta
-  end
 end
