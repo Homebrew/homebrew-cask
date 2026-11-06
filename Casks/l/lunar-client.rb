@@ -17,6 +17,7 @@ cask "lunar-client" do
               quit:      "com.moonsworth.client"
 
     zap trash: [
+      "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.moonsworth.client.sfl*",
       "~/Library/Application Support/lunarclient",
       "~/Library/Caches/com.moonsworth.client",
       "~/Library/Caches/com.moonsworth.client.ShipIt",
