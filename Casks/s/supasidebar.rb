@@ -7,6 +7,11 @@ cask "supasidebar" do
   desc "Arc-like sidebar to save links, files and folders from any browser"
   homepage "https://supasidebar.com/"
 
+  livecheck do
+    url :url
+    strategy :github_latest
+  end
+
   auto_updates true
   depends_on macos: :sonoma
 
