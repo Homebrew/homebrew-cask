@@ -4,11 +4,11 @@ cask "figcraft" do
   os macos: "macos", linux: "linux"
   url_end = on_system_conditional macos: "dmg", linux: "AppImage"
 
-  version "0.15.1"
-  sha256 arm:          "03778bd82b3b1fdf59bc4301cd45e453e1355a7841dd155d47df1694a19a89e3",
-         intel:        "03778bd82b3b1fdf59bc4301cd45e453e1355a7841dd155d47df1694a19a89e3",
-         arm64_linux:  "4d06ad75bc18532ca2fd7173561ae31241384ddeaef117d2729b5374e0b8de0d",
-         x86_64_linux: "f70bc23eea74acda75902e15c6426a436d6644a08340e53d4b637874279f5b87"
+  version "0.16.0"
+  sha256 arm:          "8ab18e498d557962c154e97848b650270d3fbfbcd4d606ffc285f6ebd5a159b1",
+         intel:        "8ab18e498d557962c154e97848b650270d3fbfbcd4d606ffc285f6ebd5a159b1",
+         arm64_linux:  "2f8362617b149649667dcb4b9eb60379801e771f57de588f737241a8a673ffb4",
+         x86_64_linux: "c652030a574e730ff571ef795c305af26faa87475745f1a3e553ae6a39706675"
 
   on_macos do
     app "FigCraft.app"
