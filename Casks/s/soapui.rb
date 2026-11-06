@@ -43,6 +43,7 @@ cask "soapui" do
     "~/.soapuios",
     "~/default-soapui-workspace.xml",
     "~/Library/Application Support/SoapUI-*",
+    "~/Library/Preferences/com.install4j.5517-2803-0637-4585.7979.plist",
     "~/soapui-settings.xml",
   ]
 end
