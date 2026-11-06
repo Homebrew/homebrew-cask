@@ -15,8 +15,8 @@ cask "propresenter" do
     end
   end
   on_monterey do
-    version "19.0.1,318767361"
-    sha256 "a428409c5a59c0e1f0ced0d8788d521c75672fadd50ec15e20992a1fffbd4b9d"
+    version "18.4,302252046"
+    sha256 "fcfb4f9391002065a1f807a1476f51defbcc07b50720f27e0400fedb6952b697"
 
     livecheck do
       url "https://api.renewedvision.com/v1/pro/upgrade?platform=macos&osVersion=12.0&appVersion=0&buildNumber=0&includeNotes=0"
@@ -29,9 +29,24 @@ cask "propresenter" do
       end
     end
   end
-  on_ventura :or_newer do
+  on_ventura do
     version "21.4,352583705"
     sha256 "a428409c5a59c0e1f0ced0d8788d521c75672fadd50ec15e20992a1fffbd4b9d"
+
+    livecheck do
+      url "https://api.renewedvision.com/v1/pro/upgrade?platform=macos&osVersion=13.7&appVersion=0&buildNumber=0&includeNotes=0"
+      strategy :json do |json|
+        json["upgrades"]&.map do |item|
+          next if item["version"].blank? || item["buildNumber"].blank?
+
+          "#{item["version"]},#{item["buildNumber"]}"
+        end
+      end
+    end
+  end
+  on_sonoma :or_newer do
+    version "22,369098928"
+    sha256 "3dfc1594339a8af712b73e0ab24f0bf4972308c5de4403ec319332089745535b"
 
     livecheck do
       url "https://api.renewedvision.com/v1/pro/upgrade?platform=macos&osVersion=99&appVersion=0&buildNumber=0&includeNotes=0"
@@ -55,6 +70,8 @@ cask "propresenter" do
   depends_on :macos
 
   app "ProPresenter.app"
+
+  uninstall quit: "com.renewedvision.propresenter"
 
   zap trash: [
         "/Library/Application Support/RenewedVision",
