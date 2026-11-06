@@ -1,0 +1,118 @@
+name: Close unresponsive pull requests
+
+on:
+  schedule:
+    # Once every day at midnight UTC
+    - cron: "0 0 * * *"
+  workflow_dispatch:
+
+permissions: {}
+
+defaults:
+  run:
+    shell: bash -xeuo pipefail {0}
+
+concurrency:
+  group: close-unresponsive-prs
+  cancel-in-progress: false
+
+jobs:
+  close:
+    name: Close unresponsive pull requests
+    if: github.repository_owner == 'Homebrew'
+    runs-on: ubuntu-slim
+    permissions:
+      contents: read
+      pull-requests: write # for `gh pr close` and its comment
+    steps:
+      - name: Close pull requests awaiting an author response
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GH_REPO: ${{ github.repository }}
+          DAYS_BEFORE_CLOSE: 7
+          EXEMPT_LABEL: awaiting maintainer feedback
+          QUERY: |-
+            query($owner: String!, $repo: String!, $endCursor: String) {
+              repository(owner: $owner, name: $repo) {
+                pullRequests(states: OPEN, first: 50, after: $endCursor) {
+                  nodes {
+                    number
+                    authorAssociation
+                    author { __typename login }
+                    labels(first: 20) { nodes { name } }
+                    timelineItems(
+                      last: 100
+                      itemTypes: [
+                        ISSUE_COMMENT
+                        PULL_REQUEST_REVIEW
+                        PULL_REQUEST_COMMIT
+                        HEAD_REF_FORCE_PUSHED_EVENT
+                        REOPENED_EVENT
+                      ]
+                    ) {
+                      nodes {
+                        __typename
+                        ... on IssueComment { createdAt authorAssociation author { __typename login } }
+                        ... on PullRequestReview { submittedAt state authorAssociation author { __typename login } }
+                        ... on PullRequestCommit { commit { committedDate author { user { login } } } }
+                        ... on HeadRefForcePushedEvent { createdAt actor { __typename login } }
+                        ... on ReopenedEvent { createdAt actor { __typename login } }
+                      }
+                    }
+                  }
+                  pageInfo { hasNextPage endCursor }
+                }
+              }
+            }
+          # Select non-maintainer pull requests where the latest activity from the author or
+          # a maintainer is a maintainer comment or review (not an approval) past the limit.
+          FILTER: |-
+            def human: . != null and .__typename != "Bot" and .login != "BrewTestBot";
+            def maintainer: IN("MEMBER", "OWNER");
+
+            .data.repository.pullRequests.nodes[]
+            | select((.author | human) and (.authorAssociation | maintainer | not))
+            | select(any(.labels.nodes[]; .name == $exempt_label) | not)
+            | .number as $number
+            | .author.login as $author
+            | .timelineItems.nodes as $items
+            | [$items[] | select(.authorAssociation | maintainer) | .author.login] as $maintainers
+            | [
+                $items[]
+                | select(
+                    (.__typename | IN("IssueComment", "PullRequestReview") | not) or
+                    (.authorAssociation | maintainer) or
+                    .author.login == $author
+                  )
+                | if .__typename == "PullRequestCommit" then
+                    { actor: { login: .commit.author.user.login }, time: .commit.committedDate }
+                  elif .__typename == "PullRequestReview" then
+                    { actor: .author, time: .submittedAt, approved: (.state == "APPROVED") }
+                  elif .__typename == "IssueComment" then
+                    { actor: .author, time: .createdAt }
+                  else
+                    { actor: .actor, time: .createdAt }
+                  end
+                | select((.actor | human) and .time != null)
+                | .maintainer = (.actor.login | IN($maintainers[]))
+              ]
+            | max_by(.time)
+            | select(.maintainer and (.approved | not))
+            | select((.time | fromdateiso8601) < now - $days * 24 * 60 * 60)
+            | $number
+        run: |
+          pull_requests="$(
+            gh api graphql --paginate \
+              --raw-field owner="${GITHUB_REPOSITORY_OWNER}" \
+              --raw-field repo="${GITHUB_REPOSITORY#*/}" \
+              --raw-field query="${QUERY}" |
+              jq --raw-output \
+                --argjson days "${DAYS_BEFORE_CLOSE}" \
+                --arg exempt_label "${EXEMPT_LABEL}" \
+                "${FILTER}"
+          )"
+
+          for pull_request in ${pull_requests}
+          do
+            gh pr close "${pull_request}" --comment "This pull request has been automatically closed because it has not had a response to a maintainer's comment or review in ${DAYS_BEFORE_CLOSE} days. If you're still working on it, please comment here and a maintainer can reopen it."
+          done
