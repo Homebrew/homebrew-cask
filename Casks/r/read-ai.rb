@@ -4,7 +4,7 @@ cask "read-ai" do
 
   url "https://desktop.read.ai/installers/darwin/aarch64/#{version}/Read+AI_#{version}_aarch64.dmg"
   name "Read AI"
-  desc "Meeting recorder, transcriber and summarizer"
+  desc "Meeting recorder, transcriber and summariser"
   homepage "https://www.read.ai/desktop"
 
   livecheck do
