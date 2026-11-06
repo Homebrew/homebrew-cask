@@ -1,6 +1,6 @@
 cask "tiger-trade" do
-  version "9.26.2"
-  sha256 "ddf5578ba565b06404c4574c6a22181196d02e513e21b8a32d5aedeca0a6f6e0"
+  version "9.29.2"
+  sha256 "341133afbd5c77b547afc58f083b2f5f74af59c2a5acdc2dd23e8bd9f17d9694"
 
   url "https://download.tigerfintech.com/desktop/cdn/f/TigerTrade_#{version}.dmg"
   name "Tiger Trade"
@@ -9,10 +9,9 @@ cask "tiger-trade" do
   homepage "https://www.itiger.com/sg/download/"
 
   livecheck do
-    url "https://up.play-analytics.com/app/upgrade/latest?lang=zh_CN&platform=darwin&appVer=1"
-    regex(/TigerTrade[._-]v?(\d+(?:\.\d+)+)\.dmg/i)
-    strategy :json do |json, regex|
-      json["downloadUrl"]&.[](regex, 1)
+    url "https://download.tigerfintech.com/desktop/cdn/f/TigerTrade_latest.dmg"
+    strategy :extract_plist do |items|
+      items["com.itiger.TigerTrade-Mac"]&.short_version
     end
   end
 
