@@ -51,6 +51,8 @@ cask "motrix@beta" do
     end
   end
 
+  disable! date: "2026-10-23", because: :discontinued, replacement_cask: "motrix"
+
   auto_updates true
   conflicts_with cask: "motrix"
 end
