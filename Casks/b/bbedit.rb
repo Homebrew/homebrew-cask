@@ -28,6 +28,8 @@ cask "bbedit" do
   manpage "#{appdir}/BBEdit.app/Contents/Resources/bbfind.1"
   manpage "#{appdir}/BBEdit.app/Contents/Resources/bbresults.1"
 
+  uninstall quit: "com.barebones.bbedit"
+
   zap trash: [
     "~/Library/Application Scripts/com.barebones.bbedit",
     "~/Library/Application Support/BBEdit",
