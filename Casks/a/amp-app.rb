@@ -1,6 +1,6 @@
 cask "amp-app" do
-  version "1.0,1120"
-  sha256 "92a55766006817437d2dca36bddd2fa8bff77f780433c95f3a94a50b87fb174d"
+  version "1.0,1130"
+  sha256 "c3cc43ec4bcfbfdcdf2ec48ec7c8079daa61ccfd3c13b3eb482189d8da32c939"
 
   url "https://static.ampcode.com/mac/Amp-#{version.csv.first}-#{version.csv.second}.dmg"
   name "Amp"
