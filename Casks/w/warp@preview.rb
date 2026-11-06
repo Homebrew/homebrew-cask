@@ -1,6 +1,6 @@
 cask "warp@preview" do
-  version "0.2026.11.03.17.07.preview_00"
-  sha256 "8145ad17810b11d127e1cebb7d7063439e0191cb1f438af1245b7633f5da4604"
+  version "0.2026.11.04.08.17.preview_01"
+  sha256 "6507a097f461b5f0525ce6a65c31c2e599b5ff08a7db0d6ee0a9c9861428ff05"
 
   url "https://releases.warp.dev/preview/v#{version}/WarpPreview.dmg"
   name "Warp Preview"
