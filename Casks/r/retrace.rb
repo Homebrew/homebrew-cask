@@ -18,6 +18,9 @@ cask "retrace" do
 
   app "Retrace.app"
 
+  uninstall launchctl: "io.retrace.app.crash-recovery",
+            quit:      "io.retrace.app"
+
   zap trash: [
     "~/Library/Application Support/Retrace",
     "~/Library/Caches/io.retrace.app",
