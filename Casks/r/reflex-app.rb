@@ -16,5 +16,10 @@ cask "reflex-app" do
 
   app "Reflex.app"
 
-  zap trash: "~/Library/Preferences/com.stuntsoftware.Reflex.plist"
+  zap trash: [
+    "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.stuntsoftware.reflex.sfl*",
+    "~/Library/Caches/com.stuntsoftware.Reflex",
+    "~/Library/HTTPStorages/com.stuntsoftware.Reflex",
+    "~/Library/Preferences/com.stuntsoftware.Reflex.plist",
+  ]
 end
