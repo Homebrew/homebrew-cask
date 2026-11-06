@@ -18,6 +18,7 @@ cask "readest" do
       "~/Library/Application Support/com.bilingify.readest",
       "~/Library/Caches/com.bilingify.readest",
       "~/Library/Caches/readest",
+      "~/Library/Logs/com.bilingify.readest",
       "~/Library/Preferences/com.bilingify.readest.plist",
       "~/Library/WebKit/com.bilingify.readest",
       "~/Library/WebKit/readest",
