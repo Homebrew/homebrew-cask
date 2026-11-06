@@ -17,7 +17,7 @@ cask "rancher" do
 
   auto_updates true
   conflicts_with cask: "docker-desktop"
-  depends_on macos: :monterey
+  depends_on macos: :ventura
 
   app "Rancher Desktop.app"
 
