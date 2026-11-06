@@ -1,6 +1,7 @@
 cask "neovide-app" do
   arch arm: "aarch64", intel: "x86_64"
-  os macos: "Neovide-#{arch}-apple-darwin.dmg", linux: "neovide.AppImage"
+  filename = on_system_conditional macos: "Neovide-#{arch}-apple-darwin.dmg",
+                                   linux: "neovide.AppImage"
 
   version "0.17.2"
   sha256 arm:          "45f6bbec3f067ae595578127249714411dc2a8fb37a34f598eb8175ac767ea7b",
@@ -20,11 +21,12 @@ cask "neovide-app" do
     depends_on arch: :x86_64
 
     app_image "neovide.AppImage", target: "Neovide.AppImage"
+    binary "neovide.AppImage", target: "neovide"
 
     zap trash: "~/.local/share/neovide"
   end
 
-  url "https://github.com/neovide/neovide/releases/download/#{version}/#{os}"
+  url "https://github.com/neovide/neovide/releases/download/#{version}/#{filename}"
   name "Neovide"
   desc "Neovim Client"
   homepage "https://github.com/neovide/neovide"
