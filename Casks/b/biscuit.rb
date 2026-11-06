@@ -2,10 +2,10 @@ cask "biscuit" do
   arch arm: "-arm64"
   url_end = on_system_conditional macos: "#{arch}.dmg", linux: ".AppImage"
 
-  version "2.2.5"
-  sha256 arm:          "b118d8d6bc75c05fe1f860bb6682a3111e6117463c5558573563fa335394d97c",
-         intel:        "f9bef82b8bddb49873321bfea4da0a384309370430fa10d3a80f00fdd1c99b8e",
-         x86_64_linux: "0a593e9651d1598bb6ddf3823a9abf12e31ebeb0e53023b253022d0e9dd43b2c"
+  version "2.2.8"
+  sha256 arm:          "575745c572918027e3b683337579f179523b77e2d869a2ba2c48ac385222e596",
+         intel:        "2067cc4d216d9a79c84cd94727c2f50129166a72e5b6ec714a10f25602e8f197",
+         x86_64_linux: "1f9a943dda1d8e31c6ca8ddca5a3508e03e0fa740a31239d9451a423a25d1221"
 
   on_macos do
     depends_on macos: :monterey
