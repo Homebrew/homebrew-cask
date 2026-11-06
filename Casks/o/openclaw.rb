@@ -15,6 +15,7 @@ cask "openclaw" do
       "~/.openclaw",
       "~/Library/Application Support/OpenClaw",
       "~/Library/Caches/ai.openclaw.mac",
+      "~/Library/Caches/openclaw",
       "~/Library/HTTPStorages/ai.openclaw.mac",
       "~/Library/HTTPStorages/bot.molt.mac",
       "~/Library/Logs/DiagnosticReports/OpenClaw*",
