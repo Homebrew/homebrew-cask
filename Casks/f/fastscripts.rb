@@ -18,6 +18,8 @@ cask "fastscripts" do
   app "FastScripts.app"
 
   zap trash: [
+    "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.red-sweater.fastscripts#{version.major}.sfl*",
+    "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.red-sweater.fastscripts.rsscriptrunner.sfl*",
     "~/Library/Application Support/FastScripts Script Runner",
     "~/Library/Application Support/FastScripts",
     "~/Library/Caches/com.red-sweater.fastscripts#{version.major}",
