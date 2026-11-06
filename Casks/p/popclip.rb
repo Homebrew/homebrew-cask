@@ -23,8 +23,11 @@ cask "popclip" do
 
   zap trash: [
     "~/Library/Application Support/com.pilotmoon.popclip",
+    "~/Library/Application Support/CrashReporter/PopClip_*.plist",
     "~/Library/Application Support/PopClip",
+    "~/Library/Caches/CloudKit/com.pilotmoon.popclip",
     "~/Library/Caches/com.pilotmoon.popclip",
+    "~/Library/HTTPStorages/com.pilotmoon.popclip",
     "~/Library/Preferences/com.pilotmoon.popclip.plist",
     "~/Library/SyncedPreferences/com.apple.kvs/ChangeTokens/NoEncryption/PopClip",
   ]
