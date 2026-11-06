@@ -22,6 +22,7 @@ cask "nrf-connect" do
 
   zap trash: [
     "~/.nrfconnect-apps",
+    "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.nordicsemi.nrfconnect.sfl*",
     "~/Library/Application Support/nrfconnect",
     "~/Library/Preferences/com.nordicsemi.nrfconnect.plist",
     "~/Library/Saved Application State/com.nordicsemi.nrfconnect.savedState",
