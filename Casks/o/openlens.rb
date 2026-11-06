@@ -28,5 +28,7 @@ cask "openlens" do
   desc "Open source build of Lens Kubernetes IDE"
   homepage "https://github.com/MuhammedKalkan/OpenLens/"
 
+  deprecate! date: "2026-11-06", because: :discontinued
+
   auto_updates true
 end
