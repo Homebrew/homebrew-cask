@@ -13,8 +13,8 @@ cask "blockstream" do
     app "Blockstream.app"
 
     zap trash: [
-      "~/Library/Application Support/Blockstream/Green",
-      "~/Library/Caches/Blockstream/Green",
+      "~/Library/Application Support/Blockstream",
+      "~/Library/Caches/Blockstream",
     ]
   end
   on_linux do
