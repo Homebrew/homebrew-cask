@@ -24,5 +24,12 @@ cask "odrive" do
             ],
             pkgutil: "com.oxygen.odrive.*"
 
-  zap trash: "~/.odrive"
+  zap delete: [
+        "/Library/Logs/odrive-install.log",
+        "/Library/Logs/odrive-preinstall.log",
+      ],
+      trash:  [
+        "~/.odrive",
+        "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.oxygen.odriveapp.sfl*",
+      ]
 end

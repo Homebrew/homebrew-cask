@@ -73,7 +73,9 @@ cask "displaylink" do
   zap trash: [
     "~/Library/Application Scripts/73YQY62QM3.com.displaylink.DisplayLinkShared",
     "~/Library/Application Scripts/com.displaylink.DisplayLinkUserAgent",
+    "~/Library/Application Scripts/com.displaylink.DisplayLinkXpcService",
     "~/Library/Containers/com.displaylink.DisplayLinkUserAgent",
+    "~/Library/Containers/com.displaylink.DisplayLinkXpcService",
     "~/Library/Group Containers/73YQY62QM3.com.displaylink.DisplayLinkShared",
   ]
 

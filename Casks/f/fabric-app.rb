@@ -21,7 +21,9 @@ cask "fabric-app" do
   app "Fabric.app"
 
   zap trash: [
+    "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.todesktop.220930m1ahpjvoh.sfl*",
     "~/Library/Application Support/Fabric",
     "~/Library/Logs/Fabric",
+    "~/Library/Preferences/com.todesktop.220930m1ahpjvoh.plist",
   ]
 end

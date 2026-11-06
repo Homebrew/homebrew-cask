@@ -24,10 +24,13 @@ cask "amadeus-pro" do
   uninstall quit: "com.HairerSoft.AmadeusPro#{version.major}"
 
   zap trash: [
+    "~/Library/Application Scripts/FWDH9W45C2.com.HairerSoft.AmadeusPro*.shared",
     "~/Library/Application Support/Amadeus Pro",
-    "~/Library/Caches/com.HairerSoft.AmadeusPro",
-    "~/Library/HTTPStorages/com.HairerSoft.AmadeusPro",
-    "~/Library/Preferences/com.HairerSoft.AmadeusPro.plist",
-    "~/Library/Saved Application State/com.HairerSoft.AmadeusPro.savedState",
+    "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.hairersoft.amadeuspro*.sfl*",
+    "~/Library/Caches/com.HairerSoft.AmadeusPro*",
+    "~/Library/Group Containers/FWDH9W45C2.com.HairerSoft.AmadeusPro*.shared",
+    "~/Library/HTTPStorages/com.HairerSoft.AmadeusPro*",
+    "~/Library/Preferences/com.HairerSoft.AmadeusPro*.plist",
+    "~/Library/Saved Application State/com.HairerSoft.AmadeusPro*.savedState",
   ]
 end

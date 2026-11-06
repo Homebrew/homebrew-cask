@@ -20,7 +20,9 @@ cask "sononym" do
   app "Sononym.app"
 
   zap trash: [
+    "~/Library/Application Support/CrashReporter/Sononym_*.plist",
     "~/Library/Application Support/Sononym",
+    "~/Library/Logs/DiagnosticReports/Sononym-*.ips",
     "~/Library/Preferences/com.sononym.sononym.plist",
     "~/Library/Saved Application State/com.sononym.sononym.savedState",
   ]

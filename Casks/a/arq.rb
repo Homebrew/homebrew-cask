@@ -26,12 +26,16 @@ cask "arq" do
             pkgutil:   "com.haystacksoftware.Arq",
             delete:    "/Applications/Arq.app"
 
-  zap trash: [
-    "/Library/Application Support/ArqAgent",
-    "/Library/Application Support/ArqAgentAPFS",
-    "~/Library/Application Support/Arq *",
-    "~/Library/Arq *",
-    "~/Library/Preferences/com.haystacksoftware.Arq.plist",
-    "~/Library/Preferences/com.haystacksoftware.ArqMonitor.plist",
-  ]
+  zap delete: "/Library/Logs/ArqAgent",
+      trash:  [
+        "/Library/Application Support/ArqAgent",
+        "/Library/Application Support/ArqAgentAPFS",
+        "~/Library/Application Support/Arq *",
+        "~/Library/Arq *",
+        "~/Library/Arq",
+        "~/Library/HTTPStorages/com.haystacksoftware.Arq*",
+        "~/Library/Logs/Arq*",
+        "~/Library/Preferences/com.haystacksoftware.Arq.plist",
+        "~/Library/Preferences/com.haystacksoftware.ArqMonitor.plist",
+      ]
 end

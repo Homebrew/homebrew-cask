@@ -20,8 +20,14 @@ cask "taphouse" do
   uninstall quit: "com.multimodalsolutions.taphouse"
 
   zap trash: [
+    "~/Library/Application Scripts/com.multimodalsolutions.taphouse.widget",
+    "~/Library/Application Scripts/group.com.multimodalsolutions.taphouse",
     "~/Library/Application Support/Taphouse",
+    "~/Library/Caches/com.multimodalsolutions.taphouse",
     "~/Library/Caches/Taphouse",
+    "~/Library/Containers/com.multimodalsolutions.taphouse.widget",
+    "~/Library/Group Containers/group.com.multimodalsolutions.taphouse",
+    "~/Library/HTTPStorages/com.multimodalsolutions.taphouse",
     "~/Library/Preferences/com.multimodalsolutions.taphouse.plist",
   ]
 end

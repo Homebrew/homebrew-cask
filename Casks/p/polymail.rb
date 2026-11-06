@@ -20,6 +20,7 @@ cask "polymail" do
   app "Polymail.app"
 
   zap trash: [
+    "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/io.polymail.osx.sfl*",
     "~/Library/Application Support/Polymail",
     "~/Library/Caches/io.polymail.osx*",
     "~/Library/HTTPStorages/io.polymail.osx",

@@ -21,5 +21,6 @@ cask "nvidia-nsight-systems" do
 
   uninstall quit: "com.nvidia.devtools.QuadD"
 
-  zap trash: "~/Library/Saved Application State/com.nvidia.devtools.QuadD.savedState"
+  zap trash: "~/Library/Saved Application State/com.nvidia.devtools.QuadD.savedState",
+      rmdir: "~/Documents/NVIDIA Nsight Systems"
 end

@@ -22,9 +22,10 @@ cask "publii" do
   app "Publii.app"
 
   zap trash: [
-    "~/Documents/Publii",
-    "~/Library/Application Support/Publii",
-    "~/Library/Logs/Publii",
-    "~/Library/Preferences/com.tidycustoms.publii.plist",
-  ]
+        "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.tidycustoms.publii.sfl*",
+        "~/Library/Application Support/Publii",
+        "~/Library/Logs/Publii",
+        "~/Library/Preferences/com.tidycustoms.publii.plist",
+      ],
+      rmdir: "~/Documents/Publii"
 end
