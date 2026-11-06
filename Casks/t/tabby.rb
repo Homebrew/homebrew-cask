@@ -10,6 +10,7 @@ cask "tabby" do
          x86_64_linux: "79efb773fef45f97cd3be200a70cb9dc690fcef8d6faa2dbc29679aa8f687d85"
 
   on_macos do
+    auto_updates true
     depends_on macos: :monterey
 
     app "Tabby.app"
