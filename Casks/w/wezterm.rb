@@ -34,6 +34,7 @@ cask "wezterm" do
 
   zap trash: [
     "~/.local/share/wezterm",
+    "~/Library/Application Support/wezterm",
     "~/Library/Saved Application State/com.github.wez.wezterm.savedState",
   ]
 end
