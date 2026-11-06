@@ -2,10 +2,10 @@ cask "nodeterm" do
   arch arm: "-arm64"
   os macos: "dmg", linux: "AppImage"
 
-  version "0.5.0"
-  sha256 arm:          "0786f03c1260562a452a35de0f1868ba2e2a7198192e8959bd1050bff81a7913",
-         intel:        "fdd92beda5eefca119b21077d9cbf546fc1e3d70942e5575c4b3e63db47d82df",
-         x86_64_linux: "149e6f23b39625ab72a1b06445889fbdca0e34d8614ae7fa91092464fa5e2101"
+  version "0.5.1"
+  sha256 arm:          "16591257a13455a4f291a2d76e293366672fe33f253866edd9dbb699f25a67ce",
+         intel:        "d236c113a61a13dc036b58be04e0fb04657a155e276612663c65d4919d10be77",
+         x86_64_linux: "0da06fb61da22dda185d740f21b0208ff3a18c518219740b6c91aea11d67cc5c"
 
   on_macos do
     depends_on macos: :monterey
