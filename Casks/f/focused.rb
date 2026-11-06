@@ -1,6 +1,6 @@
 cask "focused" do
-  version "3.7.1,1876"
-  sha256 "2dd5e7bacfec693082962e304b9467308c50b5e454ee6471d06f02858565cf3c"
+  version "3.7.2,1880"
+  sha256 "8a78f2fd01ddf9fc17ae6ac42dcb6eb42a00945a9e96d31473d5c6e1d8a62c5f"
 
   url "https://dl.devant.io/v1/ffbdbfd0-ecfc-11e9-9897-1b1ad6ec37c4/#{version.csv.second}/Focused.zip"
   name "Focused"
