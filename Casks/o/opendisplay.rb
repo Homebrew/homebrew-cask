@@ -17,6 +17,7 @@ cask "opendisplay" do
   zap trash: [
     "~/Library/Caches/com.peetzweg.opensidecar.mac",
     "~/Library/HTTPStorages/com.peetzweg.opensidecar.mac",
+    "~/Library/Logs/OpenDisplay",
     "~/Library/Preferences/com.peetzweg.opensidecar.mac.plist",
   ]
 end
