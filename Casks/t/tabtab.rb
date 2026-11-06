@@ -19,6 +19,7 @@ cask "tabtab" do
   zap trash: [
     "~/Library/Caches/riccqi.TabTab",
     "~/Library/HTTPStorages/riccqi.TabTab",
+    "~/Library/Logs/TabTab",
     "~/Library/Preferences/riccqi.TabTab.plist",
   ]
 end
