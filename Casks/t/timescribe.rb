@@ -20,5 +20,9 @@ cask "timescribe" do
 
   app "TimeScribe.app"
 
-  zap trash: "~/Library/Application Support/timescribe"
+  zap trash: [
+    "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/de.amplussoftware.timescribe.sfl*",
+    "~/Library/Application Support/timescribe",
+    "~/Library/Preferences/de.amplussoftware.timescribe.plist",
+  ]
 end
