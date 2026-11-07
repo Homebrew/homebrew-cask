@@ -1,6 +1,6 @@
 cask "profind" do
-  version "1.42"
-  sha256 "f4a794aba4fc9d9027a32aec00e988690226b19d4881f0318be411a9a1cfdd4c"
+  version "1.43"
+  sha256 "5101a7d7019f7e5fc4711da3156ca35e2d05c55d7948687efef06a3e2c917a3e"
 
   url "https://www.zeroonetwenty.com/profind/downloads/ProFind#{version.major_minor.no_dots}.dmg"
   name "ProFind"
@@ -13,7 +13,7 @@ cask "profind" do
   end
 
   auto_updates true
-  depends_on :macos
+  depends_on macos: :monterey
 
   app "ProFind.app"
 
