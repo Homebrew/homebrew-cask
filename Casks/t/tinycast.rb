@@ -22,13 +22,14 @@ cask "tinycast" do
 
   zap trash: [
     "~/.config/tinycast",
-    "~/Library/Application Support/com.tinycast",
     "~/Library/Application Support/com.tinycast.app",
+    "~/Library/Application Support/CrashReporter/ClipboardTextHelper_*.plist",
+    "~/Library/Application Support/CrashReporter/FileIndexHelper_*.plist",
+    "~/Library/Application Support/CrashReporter/Tinycast Dictation_*.plist",
     "~/Library/Application Support/CrashReporter/Tinycast_*.plist",
+    "~/Library/Caches/ClipboardTextHelper",
     "~/Library/Caches/com.tinycast.app",
     "~/Library/Caches/com.tinycast.app.dictation",
-    "~/Library/HTTPStorages/com.tinycast.app",
-    "~/Library/HTTPStorages/com.tinycast.app.binarycookies",
     "~/Library/Preferences/com.tinycast.app.plist",
   ]
 end
