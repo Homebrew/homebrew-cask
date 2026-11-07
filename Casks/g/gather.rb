@@ -21,6 +21,7 @@ cask "gather" do
   app "Gather.app"
 
   zap trash: [
+    "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.gather.gather.sfl*",
     "~/Library/Application Support/Gather",
     "~/Library/Logs/Gather",
     "~/Library/Preferences/com.gather.Gather.plist",
