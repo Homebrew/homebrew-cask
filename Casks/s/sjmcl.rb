@@ -3,11 +3,11 @@ cask "sjmcl" do
   os macos: "macos", linux: "linux"
   url_end = on_system_conditional macos: ".dmg", linux: "_portable"
 
-  version "1.4.0"
-  sha256 arm:          "726a4ecbc94835d34b8a4d132a301296c0e87b7631f321fd40d3a158e25e9370",
-         intel:        "b6fdc6a77bbd3a043b5338117ee2a92a3302f49eaa51ccaf69d8eb21d6fac543",
-         arm64_linux:  "f2afc4b0d22e0ffba82cccfa1ea1be6efaaadbdb20e940204f5bb52c1e86b9b7",
-         x86_64_linux: "40ddae569e0e7ab56afe15c05e0441c12b6bafd61d96c28fb4c82c62df5562d4"
+  version "1.4.1"
+  sha256 arm:          "475ca26358be279d47738933859c59fb623c1fa6ff55366575c55c32f6c739ed",
+         intel:        "56b4a51ee2b1a5b4606f8465b27133cbd78d351d42de83f3e990b282d855aafe",
+         arm64_linux:  "9a75f91e3d8ebed08fd3a7d8ad64c0c06ebb3c9a98a31a6effc5fa02b4864118",
+         x86_64_linux: "b5b15d0d7a94dff77829777c9ce7fc18ebee5fc6685a4b98d75bcc114ea90c6d"
 
   on_macos do
     app "SJMCL.app"
