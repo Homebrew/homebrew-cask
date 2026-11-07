@@ -30,8 +30,6 @@ cask "tinycast" do
     "~/Library/Caches/ClipboardTextHelper",
     "~/Library/Caches/com.tinycast.app",
     "~/Library/Caches/com.tinycast.app.dictation",
-    "~/Library/HTTPStorages/com.tinycast.app",
-    "~/Library/HTTPStorages/com.tinycast.app.binarycookies",
     "~/Library/Preferences/com.tinycast.app.plist",
   ]
 end
