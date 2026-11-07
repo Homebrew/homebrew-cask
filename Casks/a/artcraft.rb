@@ -1,6 +1,6 @@
 cask "artcraft" do
-  version "0.41.0"
-  sha256 "3cf1df2e56345e603c5d0180e5b563dd5eca25d9e3c3959d9554012f510916c1"
+  version "0.41.1"
+  sha256 "89009b8983d88919481ac936e2ada0409dff0e0fc73f487cce3e7324699866a6"
 
   url "https://github.com/storytold/artcraft/releases/download/artcraft-v#{version}/ArtCraft_#{version}_universal.dmg"
   name "ArtCraft"
