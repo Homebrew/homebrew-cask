@@ -14,6 +14,7 @@ cask "mouseless@preview" do
     end
   end
 
+  auto_updates true
   conflicts_with cask: "mouseless"
   depends_on macos: :monterey
 
