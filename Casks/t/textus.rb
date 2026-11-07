@@ -8,7 +8,7 @@ cask "textus" do
   url "https://github.com/CatVinci-Studio/Textus/releases/download/v#{version}/Textus_#{version}_#{arch}.dmg"
   name "Textus"
   desc "WYSIWYG Markdown editor with built-in AI writing tools"
-  homepage "https://textus.catvinci.com/"
+  homepage "https://textus.md/"
 
   livecheck do
     url :url
