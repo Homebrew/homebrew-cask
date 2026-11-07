@@ -30,8 +30,6 @@ cask "tinycast@beta" do
     "~/Library/Caches/ClipboardTextHelper",
     "~/Library/Caches/com.tinycast.app.beta",
     "~/Library/Caches/com.tinycast.app.beta.dictation",
-    "~/Library/HTTPStorages/com.tinycast.app.beta",
-    "~/Library/HTTPStorages/com.tinycast.app.beta.binarycookies",
     "~/Library/Preferences/com.tinycast.app.beta.plist",
   ]
 end
