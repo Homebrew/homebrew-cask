@@ -21,7 +21,9 @@ cask "audius" do
   zap trash: [
     "~/Library/Application Support/Audius",
     "~/Library/Application Support/Caches/audius-client-updater",
+    "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/co.audius.app.sfl*",
     "~/Library/Logs/Audius",
+    "~/Library/Preferences/co.audius.app.plist",
     "~/Library/Saved Application State/co.audius.app.savedState",
   ]
 end
