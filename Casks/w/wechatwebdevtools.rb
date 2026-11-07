@@ -27,8 +27,10 @@ cask "wechatwebdevtools" do
   app "wechatwebdevtools.app"
 
   zap trash: [
+    "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.github.electron.sfl*",
     "~/Library/Application Support/微信开发者工具",
     "~/Library/Caches/微信开发者工具",
+    "~/Library/Preferences/com.github.Electron.plist",
     "~/Library/Preferences/com.tencent.webplusdevtools.plist",
     "~/Library/Preferences/com.tencent.wechat.devtools.plist",
     "~/Library/Saved Application State/com.tencent.wechat.devtools.savedState",
