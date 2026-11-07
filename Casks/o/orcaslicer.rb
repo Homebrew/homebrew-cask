@@ -16,6 +16,7 @@ cask "orcaslicer" do
     "~/Library/Application Support/OrcaSlicer",
     "~/Library/Caches/com.softfever3d.orca-slicer",
     "~/Library/HTTPStorages/com.softfever3d.orcaslicer.binarycookies",
+    "~/Library/Preferences/com.orcaslicer.OrcaSlicer.plist",
     "~/Library/Preferences/com.softfever3d.orca-slicer.plist",
     "~/Library/Saved Application State/com.softfever3d.orca-slicer.savedState",
     "~/Library/WebKit/com.softfever3d.orca-slicer",
