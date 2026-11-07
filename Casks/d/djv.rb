@@ -19,6 +19,7 @@ cask "djv" do
 
   zap trash: [
         "~/Documents/DJV/djv.log",
+        "~/Library/Application Support/DJV",
         "~/Library/Preferences/com.djv-sourceforge-net-*.plist",
       ],
       rmdir: "~/Documents/DJV"
