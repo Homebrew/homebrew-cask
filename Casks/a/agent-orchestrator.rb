@@ -21,6 +21,8 @@ cask "agent-orchestrator" do
 
   app "Agent Orchestrator.app"
 
+  uninstall quit: "dev.agent-orchestrator.desktop"
+
   zap trash: [
     "~/.ao",
     "~/Library/Caches/agent-orchestrator-updater",
