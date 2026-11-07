@@ -8,7 +8,7 @@ cask "agent-orchestrator" do
   url "https://github.com/OrchestratorInc/agent-orchestrator/releases/download/v#{version}/Agent.Orchestrator-darwin-#{arch}-#{version}.zip"
   name "Agent Orchestrator"
   name "Orchestrator"
-  desc "Run and supervise coding agents in parallel git worktrees"
+  desc "Supervisor for coding agents running in parallel Git worktrees"
   homepage "https://orchestrator.inc/"
 
   livecheck do
@@ -20,13 +20,14 @@ cask "agent-orchestrator" do
   depends_on macos: :ventura
 
   app "Agent Orchestrator.app"
+  binary "#{appdir}/Agent Orchestrator.app/Contents/Resources/daemon/ao"
 
   uninstall quit: "dev.agent-orchestrator.desktop"
 
   zap trash: [
-    "~/.ao",
-    "~/Library/Caches/agent-orchestrator-updater",
-    "~/Library/Preferences/dev.agent-orchestrator.desktop.plist",
-    "~/Library/Saved Application State/dev.agent-orchestrator.desktop.savedState",
-  ]
+        "~/Library/Caches/agent-orchestrator-updater",
+        "~/Library/Preferences/dev.agent-orchestrator.desktop.plist",
+        "~/Library/Saved Application State/dev.agent-orchestrator.desktop.savedState",
+      ],
+      rmdir: "~/.ao"
 end
