@@ -8,8 +8,8 @@ cask "itsycal" do
     end
   end
   on_golden_gate :or_newer do
-    version "0.27.3"
-    sha256 "4b13c059298c8c7744557eb8389a64b31be1fac6221b807574fb15c15d64f30b"
+    version "0.28.0"
+    sha256 "2ab68e0a20c541eab31fd89980bdabfef623b73b2bbbea5c862c73d78ee52fab"
 
     livecheck do
       url "https://itsycal.s3.amazonaws.com/itsycal.xml"
