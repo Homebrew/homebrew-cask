@@ -25,6 +25,7 @@ cask "retrace" do
     "~/Library/Application Support/Retrace",
     "~/Library/Caches/io.retrace.app",
     "~/Library/HTTPStorages/io.retrace.app",
+    "~/Library/Logs/Retrace",
     "~/Library/Preferences/io.retrace.app.plist",
     "~/Library/Saved Application State/io.retrace.app.savedState",
   ]
