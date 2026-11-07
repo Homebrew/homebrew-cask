@@ -25,6 +25,7 @@ cask "gloom" do
   zap trash: [
     "~/.gloomberb",
     "~/Library/Application Support/com.vincelwt.gloomberb",
+    "~/Library/Preferences/com.vincelwt.gloomberb.plist",
     "~/Library/WebKit/com.vincelwt.gloomberb",
   ]
 end
