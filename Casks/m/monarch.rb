@@ -2,8 +2,8 @@ cask "monarch" do
   arch arm: "aarch64", intel: "x64"
 
   on_arm do
-    version "0.9.53"
-    sha256 "5b610234be5525adcc591b07dd3e022876b113acf40ae8e77af710605090255c"
+    version "0.9.64"
+    sha256 "7aafcdf6077e57b8941607395cf922e113eba43c1a93f732dd03b63ee4063899"
 
     url "https://storage.googleapis.com/monarchlauncher/v08/#{arch}/monarch-#{version}.dmg"
 
@@ -13,6 +13,8 @@ cask "monarch" do
         json["version"]
       end
     end
+
+    depends_on macos: :sonoma
   end
   on_intel do
     version "0.7.14"
@@ -23,6 +25,8 @@ cask "monarch" do
     livecheck do
       skip "Legacy version"
     end
+
+    depends_on macos: :monterey
   end
 
   name "Monarch"
@@ -30,7 +34,6 @@ cask "monarch" do
   homepage "https://monarchlauncher.com/"
 
   auto_updates true
-  depends_on macos: :monterey
 
   app "Monarch.app"
 
