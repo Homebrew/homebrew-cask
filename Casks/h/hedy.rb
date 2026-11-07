@@ -7,8 +7,12 @@ cask "hedy" do
   desc "AI-powered meeting coach"
   homepage "https://hedy.ai/"
 
+  # The CDN caches each encoding separately and its gzip copy of the appcast
+  # isn't refreshed on release. macOS's curl only accepts gzip or deflate, so
+  # request the uncompressed copy instead.
   livecheck do
-    url "https://macos-update-xml.hedy.bot"
+    url "https://macos-update-xml.hedy.bot",
+        header: "Accept-Encoding: identity"
     strategy :sparkle
   end
 
