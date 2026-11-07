@@ -1,10 +1,10 @@
 cask "flameshot" do
   arch arm: "arm64", intel: "intel"
 
-  version "14.0.0,14.0,git0.da6121bd"
-  sha256 arm:          "bb0cccb2223ce0f4bfea00d90658e85fb5dc17aa7773bf2b22c70ffdb23d7221",
-         intel:        "871653260d9298db2e2a85e121c514f753dfdca94dccabbd74c142a2438f3d78",
-         x86_64_linux: "93ad1261ccae9387d35fd39a8b9428451163dfcba3f32658d80ec02ab0597789"
+  version "15.0.0,15.0.0,git0.f4f2e4e"
+  sha256 arm:          "ff2f63fb630992385a8738f45fb819051dd6a30ff87909a8e98bfbf21170df3d",
+         intel:        "bb3ba6c0f556c32051795d7007409e4d5ec2d810adb6c4e6e58498eeb1b51204",
+         x86_64_linux: "c5ac8a5749454fab318fe8d613098e0aafa74340bb72fff2dac240eaad3cf78e"
 
   on_macos do
     on_arm do
