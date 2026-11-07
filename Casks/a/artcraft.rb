@@ -24,5 +24,6 @@ cask "artcraft" do
     "~/Artcraft/temp",
     "~/Library/Caches/ai.artcraft.app",
     "~/Library/Logs/ai.artcraft.app",
+    "~/Library/WebKit/ai.artcraft.app",
   ]
 end
