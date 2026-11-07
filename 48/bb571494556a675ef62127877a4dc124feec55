@@ -1,0 +1,14 @@
+Casks/d/discord@canary.rb
+  h_9df9c32c3f321d 2-3,20-22
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.5",
+  "base_commit_sha": "48bb571494556a675ef62127877a4dc124feec55",
+  "prompts": {},
+  "humans": {
+    "h_9df9c32c3f321d": {
+      "author": "Rui Chen <rui@chenrui.dev>"
+    }
+  }
+}
