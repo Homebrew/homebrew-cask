@@ -1,8 +1,8 @@
 cask "earnapp" do
-  version "1.660.965"
-  sha256 "06b5f120fe1897857ab3f61a8e0f1b1ddcfa65643af5e4162027acfa197fae96"
+  version "1.760.676"
+  sha256 "caf8b66ce0397138d89e621e712f8f007f89434a4358996402e16b0452018777"
 
-  url "https://cdn.earnapp.com/static/earnapp-macos-#{version}.pkg"
+  url "https://cdn4.hola.org/static/earnapp-macos-#{version}.pkg"
   name "EarnApp"
   desc "Monetize unused internet bandwidth"
   homepage "https://earnapp.com/"
@@ -23,7 +23,10 @@ cask "earnapp" do
               "io.luminati.sdk.net-updater",
               "io.luminati.sdk.net-updater-launcher",
             ],
-            pkgutil: "com.pkg.(null)"
+            pkgutil: [
+              "com.earnapp.installer",
+              "com.pkg.(null)",
+            ]
 
   zap trash: [
     "~/Library/Caches/com.earnapp",
