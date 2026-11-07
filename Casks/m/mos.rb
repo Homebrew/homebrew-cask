@@ -14,6 +14,7 @@ cask "mos" do
     end
   end
 
+  auto_updates true
   conflicts_with cask: "mos@beta"
   depends_on :macos
 
