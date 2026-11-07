@@ -24,6 +24,7 @@ cask "distill-web-monitor" do
   app "Distill Web Monitor.app"
 
   zap trash: [
+    "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.electron.distill-web-monitor.sfl*",
     "~/Library/Application Support/Distill Web Monitor",
     "~/Library/Caches/com.electron.distill-web-monitor",
     "~/Library/Caches/com.electron.distill-web-monitor.ShipIt",
