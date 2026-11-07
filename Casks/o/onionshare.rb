@@ -18,6 +18,7 @@ cask "onionshare" do
 
   zap trash: [
     "~/Library/Application Support/OnionShare",
+    "~/Library/Preferences/OnionShare.plist",
     "~/Library/Preferences/org.onionshare.onionshare.plist",
     "~/Library/Saved Application State/org.onionshare.onionshare.savedState",
   ]
