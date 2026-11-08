@@ -7,11 +7,6 @@ cask "music-decoy" do
   desc "Music app blocker utility"
   homepage "https://lowtechguys.com/musicdecoy"
 
-  livecheck do
-    url :url
-    strategy :github_latest
-  end
-
   depends_on macos: :monterey
 
   app "Music Decoy.app"
