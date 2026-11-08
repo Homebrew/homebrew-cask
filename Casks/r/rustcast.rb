@@ -7,15 +7,12 @@ cask "rustcast" do
   desc "Application and utility launcher"
   homepage "https://rustcast.app/"
 
-  livecheck do
-    url :url
-    regex(/^v?(\d+(?:\.\d+)+)$/i)
-  end
+  deprecate! date: "2026-11-08", because: :discontinued
 
   auto_updates true
   depends_on macos: :ventura
 
-  app "target/release/macos/Rustcast.app"
+  app "target/release/macos/RustCast.app"
 
   zap trash: [
     "/tmp/rustcast.log",
