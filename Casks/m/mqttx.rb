@@ -31,9 +31,4 @@ cask "mqttx" do
   name "MQTTX"
   desc "Cross-platform MQTT 5.0 Desktop Client"
   homepage "https://mqttx.app/"
-
-  livecheck do
-    url :url
-    strategy :github_latest
-  end
 end
