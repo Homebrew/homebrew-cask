@@ -10,10 +10,7 @@ cask "pot" do
   desc "Software for text translation and recognition"
   homepage "https://pot-app.com/"
 
-  livecheck do
-    url :url
-    strategy :github_latest
-  end
+  deprecate! date: "2026-11-08", because: :discontinued
 
   depends_on :macos
 
