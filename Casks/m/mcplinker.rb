@@ -10,6 +10,8 @@ cask "mcplinker" do
   desc "Manage and sync MCP server configurations across AI clients"
   homepage "https://github.com/milisp/mcp-linker"
 
+  disable! date: "2026-11-08", because: :no_longer_available
+
   depends_on :macos
 
   app "MCPLinker.app"
