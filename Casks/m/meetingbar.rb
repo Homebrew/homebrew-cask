@@ -1,10 +1,10 @@
 cask "meetingbar" do
-  version "4.11.6"
-  sha256 "4f19af496d4ff44b9b0ee02be02bc76207f3e365a7f9e77c7219a08c607838d7"
+  version "5.0.0"
+  sha256 "26d4759f73f429c2aa93d225704bf85cdde8b1c035c12aadeb63d4dddbdae1e4"
 
   url "https://github.com/leits/MeetingBar/releases/download/v#{version}/MeetingBar.dmg"
   name "MeetingBar"
-  desc "Shows the next meeting in the menu bar"
+  desc "Meetings in your menu bar"
   homepage "https://github.com/leits/MeetingBar"
 
   livecheck do
@@ -14,7 +14,7 @@ cask "meetingbar" do
 
   no_autobump! because: :bumped_by_upstream
 
-  depends_on :macos
+  depends_on macos: :monterey
 
   app "MeetingBar.app"
 
