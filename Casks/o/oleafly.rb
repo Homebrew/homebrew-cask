@@ -2,11 +2,11 @@ cask "oleafly" do
   arch arm: "aarch64", intel: on_system_conditional(macos: "x64", linux: "amd64")
   url_end = on_system_conditional macos: "dmg", linux: "AppImage"
 
-  version "0.4.10"
-  sha256 arm:          "57271d33c8e51c7cc42d48de5f5d0c786423660c7dc63c0df0bfd381dd48a18a",
-         intel:        "ce4db1eb324793f8bda0e96fb3d9048f176f233ace1f29269b206ee4cd6534db",
-         arm64_linux:  "56b1e217045a1f425ffa2e7c28fd2c51a2fd199bcbe2928db2c30bdb6592512d",
-         x86_64_linux: "d01703ab0f951745b5144d50663e77d4941367449e9edc6fcc0b2fc07bb9eb07"
+  version "0.4.11"
+  sha256 arm:          "3f8111fb69f1f9dd31ef3cc8ec33df01f936afe18a5fa57508b42b07373e5c19",
+         intel:        "5ffa30a65be329651459334e85242cff8a429527899ed66bd6cbf3c12e619501",
+         arm64_linux:  "0c62d2d4dc27889a5244c3680d0f8c87f94e6ba5468efec731a14b3407535146",
+         x86_64_linux: "809e8e6fb462d8428de5bd94e71bfb662d0066a201179f5d4af2f8b92aaad390"
 
   on_macos do
     app "Oleafly.app"
