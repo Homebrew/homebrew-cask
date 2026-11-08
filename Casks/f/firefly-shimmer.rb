@@ -7,10 +7,7 @@ cask "firefly-shimmer" do
   desc "Official wallet for IOTA"
   homepage "https://firefly.iota.org/"
 
-  livecheck do
-    url "https://dl.firefly.iota.org/shimmer-mac.yml"
-    strategy :electron_builder
-  end
+  deprecate! date: "2026-11-08", because: :discontinued
 
   auto_updates true
   depends_on :macos
