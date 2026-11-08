@@ -10,14 +10,12 @@ cask "iconset" do
   desc "Organise icon sets and packs in one place"
   homepage "https://iconset.io/"
 
-  livecheck do
-    url :url
-    strategy :github_latest
-  end
-
   depends_on :macos
 
   app "Iconset.app"
+
+  uninstall launchctl: "io.iconset.app.ShipIt",
+            quit:      "io.iconset.app"
 
   zap trash: [
     "~/Library/Application Support/Iconset",

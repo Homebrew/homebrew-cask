@@ -29,9 +29,4 @@ cask "iloader" do
   name "iloader"
   desc "iOS Sideloading Companion"
   homepage "https://iloader.app/"
-
-  livecheck do
-    url :url
-    strategy :github_latest
-  end
 end

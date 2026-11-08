@@ -6,11 +6,6 @@ cask "font-bungee" do
   name "Bungee"
   homepage "https://djr.com/bungee/"
 
-  livecheck do
-    url :url
-    strategy :github_latest
-  end
-
   font "Bungee-fonts/Bungee_Basic/Bungee-Regular.ttf"
   font "Bungee-fonts/Bungee_Basic/BungeeHairline-Regular.ttf"
   font "Bungee-fonts/Bungee_Basic/BungeeInline-Regular.ttf"

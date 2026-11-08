@@ -7,11 +7,6 @@ cask "fuwari" do
   desc "Floating screenshot like a sticky"
   homepage "https://fuwari-app.com/"
 
-  livecheck do
-    url :url
-    strategy :github_latest
-  end
-
   depends_on :macos
 
   app "Fuwari v#{version}/Fuwari.app"

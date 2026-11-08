@@ -6,11 +6,6 @@ cask "font-junicode" do
   name "Junicode"
   homepage "https://github.com/psb1558/Junicode-font"
 
-  livecheck do
-    url :url
-    strategy :github_latest
-  end
-
   font "Junicode/OTF/Junicode-Bold.otf"
   font "Junicode/OTF/Junicode-BoldItalic.otf"
   font "Junicode/OTF/Junicode-Cond.otf"

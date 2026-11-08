@@ -7,11 +7,6 @@ cask "itsytv" do
   desc "Menu bar app for controlling your Apple TV"
   homepage "https://itsytv.app/"
 
-  livecheck do
-    url :url
-    strategy :github_latest
-  end
-
   depends_on macos: :sonoma
 
   app "Itsytv.app"

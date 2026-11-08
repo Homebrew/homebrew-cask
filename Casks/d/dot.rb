@@ -7,11 +7,6 @@ cask "dot" do
   desc "Menu bar calendar with meeting reminders"
   homepage "https://www.trydot.app/"
 
-  livecheck do
-    url :url
-    strategy :github_latest
-  end
-
   depends_on macos: :ventura
 
   app "Dot.app"
