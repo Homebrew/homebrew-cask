@@ -10,11 +10,6 @@ cask "spacedrive" do
   desc "Open source cross-platform file explorer"
   homepage "https://github.com/spacedriveapp/spacedrive"
 
-  livecheck do
-    url :url
-    strategy :github_latest
-  end
-
   auto_updates true
   depends_on :macos
 
