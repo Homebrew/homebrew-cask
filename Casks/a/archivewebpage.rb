@@ -38,9 +38,4 @@ cask "archivewebpage" do
   name "ArchiveWeb.page"
   desc "Archive webpages manually to WARC or WACZ files as you browse the web"
   homepage "https://archiveweb.page/"
-
-  livecheck do
-    url :url
-    strategy :github_latest
-  end
 end
