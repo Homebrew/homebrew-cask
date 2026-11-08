@@ -7,11 +7,6 @@ cask "moonfin" do
   desc "Media streaming client for Jellyfin and Emby"
   homepage "https://moonfin.io/"
 
-  livecheck do
-    url :url
-    strategy :github_latest
-  end
-
   depends_on macos: :sequoia
 
   app "Moonfin.app"
