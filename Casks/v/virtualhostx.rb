@@ -7,13 +7,7 @@ cask "virtualhostx" do
   desc "Local server environment"
   homepage "https://retina.studio/virtualhostx/"
 
-  # The homepage states that "as of November 24, 2021, ...VirtualHostX is sunset
-  # as an actively developed product". As of writing (2025-10-04), the Sparkle
-  # feed we were checking (https://shine.clickontyler.com/appcast.php?id=45) no
-  # longer works because the `shine` subdomain doesn't resolve.
-  livecheck do
-    skip "No longer developed or maintained"
-  end
+  disable! date: "2026-11-08", because: :discontinued
 
   depends_on :macos
 
