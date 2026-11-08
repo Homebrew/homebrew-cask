@@ -6,11 +6,6 @@ cask "font-sn-pro" do
   name "SN Pro Font Family"
   homepage "https://supernotes.app/open-source/sn-pro"
 
-  livecheck do
-    url :url
-    strategy :github_latest
-  end
-
   font "SNPro/SNPro-Black.otf"
   font "SNPro/SNPro-BlackItalic.otf"
   font "SNPro/SNPro-Bold.otf"
