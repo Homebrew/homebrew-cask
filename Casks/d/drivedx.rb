@@ -2,13 +2,15 @@ cask "drivedx" do
   version "1.12.1"
   sha256 "2011868774efd3a96405058985bb3fb8df2d6f06aead3f06d5dfde8fb80c745a"
 
-  url "https://binaryfruit.com/download/drivedx/mac/#{version.major}/bin/DriveDx.#{version}.zip"
+  url "https://binaryfruit.com/download/drivedx/mac/#{version.major}/bin/DriveDx.#{version}.zip",
+      user_agent: :browser
   name "DriveDX"
   desc "Drive health diagnostic & monitoring tool"
   homepage "https://binaryfruit.com/drivedx"
 
   livecheck do
-    url "https://binaryfruit.com/download/drivedx/mac/#{version.major}/updates/"
+    url "https://binaryfruit.com/download/drivedx/mac/#{version.major}/updates/",
+        user_agent: :browser
     strategy :sparkle, &:short_version
   end
 
