@@ -19,9 +19,18 @@ cask "nimbalyst" do
 
   app "Nimbalyst.app"
 
+  # Crystal was replaced by Nimbalyst, so its paths are kept for users migrated from `stravu-crystal`
   zap trash: [
     "~/Library/Application Support/@nimbalyst",
     "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.nimbalyst.electron.sfl*",
+    "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.stravu.crystal.sfl*",
+    "~/Library/Application Support/Crystal",
+    "~/Library/Caches/com.stravu.crystal",
+    "~/Library/Caches/com.stravu.crystal.ShipIt",
+    "~/Library/HTTPStorages/com.stravu.crystal",
+    "~/Library/Logs/Crystal",
     "~/Library/Preferences/com.nimbalyst.electron.plist",
+    "~/Library/Preferences/com.stravu.crystal.plist",
+    "~/Library/Saved Application State/com.stravu.crystal.savedState",
   ]
 end
