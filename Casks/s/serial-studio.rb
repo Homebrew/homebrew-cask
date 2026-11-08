@@ -7,11 +7,6 @@ cask "serial-studio" do
   desc "Data visualisation software for embedded devices and projects"
   homepage "https://serial-studio.github.io/"
 
-  livecheck do
-    url :url
-    strategy :github_latest
-  end
-
   depends_on macos: :sonoma
 
   app "Serial Studio Pro.app"

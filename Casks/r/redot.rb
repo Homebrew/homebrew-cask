@@ -10,7 +10,6 @@ cask "redot" do
   livecheck do
     url :url
     regex(/^redot-v?(\d+(?:\.\d+)+)[._-]stable$/i)
-    strategy :github_latest
   end
 
   depends_on :macos

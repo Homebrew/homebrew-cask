@@ -9,13 +9,15 @@ cask "smcfancontrol" do
 
   livecheck do
     url :url
-    strategy :github_latest
+    regex(/^v?(\d+(?:\.\d+)+)$/i)
   end
 
   conflicts_with cask: "smcfancontrol@beta"
   depends_on :macos
 
   app "smcFanControl.app"
+
+  uninstall quit: "com.eidac.smcFanControl2"
 
   zap trash: [
     "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.eidac.smcfancontrol#{version.major}.sfl*",

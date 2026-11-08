@@ -10,11 +10,6 @@ cask "work-louder-input" do
   desc "Keyboard configurator for Work Louder devices"
   homepage "https://worklouder.cc/input"
 
-  livecheck do
-    url :url
-    strategy :github_latest
-  end
-
   auto_updates true
   depends_on macos: :monterey
 

@@ -7,11 +7,6 @@ cask "voicenotes" do
   desc "AI-powered app for recording, transcribing and summarising voice notes"
   homepage "https://voicenotes.com/"
 
-  livecheck do
-    url :url
-    strategy :github_latest
-  end
-
   depends_on macos: :ventura
 
   app "Voicenotes.app"

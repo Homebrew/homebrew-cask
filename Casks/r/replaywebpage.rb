@@ -7,11 +7,6 @@ cask "replaywebpage" do
   desc "Web archive viewer for WARC and WACZ files"
   homepage "https://replayweb.page/"
 
-  livecheck do
-    url :url
-    strategy :github_latest
-  end
-
   depends_on macos: :monterey
 
   app "ReplayWeb.page.app"

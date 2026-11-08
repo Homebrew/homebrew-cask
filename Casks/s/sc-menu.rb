@@ -7,11 +7,6 @@ cask "sc-menu" do
   desc "Simple smartcard menu item"
   homepage "https://github.com/boberito/sc_menu"
 
-  livecheck do
-    url :url
-    strategy :github_latest
-  end
-
   depends_on macos: :ventura
 
   app "SC Menu.app"
