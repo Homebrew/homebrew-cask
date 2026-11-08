@@ -1,5 +1,5 @@
 cask "scrolla" do
-  version "35"
+  version "36"
   sha256 :no_check
 
   url "https://releases.scrolla.app/Scrolla.zip"
@@ -13,7 +13,7 @@ cask "scrolla" do
   end
 
   auto_updates true
-  depends_on macos: :sonoma
+  depends_on macos: :sequoia
 
   app "Scrolla.app"
 
