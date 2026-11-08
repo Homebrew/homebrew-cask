@@ -7,11 +7,6 @@ cask "betteraudio" do
   desc "Per-app volume, EQ and audio device control"
   homepage "https://betteraudio.pro/"
 
-  livecheck do
-    url :url
-    strategy :github_latest
-  end
-
   depends_on macos: :sonoma
 
   app "BetterAudio.app"

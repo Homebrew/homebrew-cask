@@ -7,11 +7,6 @@ cask "claude-status-bar" do
   desc "Menu bar status indicator for Claude Code"
   homepage "https://github.com/m1ckc3s/claude-status-bar"
 
-  livecheck do
-    url :url
-    strategy :github_latest
-  end
-
   depends_on macos: :monterey
 
   app "Claude Status Bar.app"

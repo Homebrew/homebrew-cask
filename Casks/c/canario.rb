@@ -7,11 +7,6 @@ cask "canario" do
   desc "Terminal emulator"
   homepage "https://rioterm.com/canario"
 
-  livecheck do
-    url :url
-    strategy :github_latest
-  end
-
   auto_updates true
   depends_on arch: :arm64
   depends_on macos: :sonoma

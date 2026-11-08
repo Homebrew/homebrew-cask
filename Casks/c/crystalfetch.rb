@@ -7,11 +7,6 @@ cask "crystalfetch" do
   desc "UI for creating Windows installer ISO from UUPDump"
   homepage "https://github.com/TuringSoftware/CrystalFetch"
 
-  livecheck do
-    url :url
-    strategy :github_latest
-  end
-
   depends_on macos: :monterey
 
   app "CrystalFetch.app"

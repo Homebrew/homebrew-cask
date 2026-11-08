@@ -36,10 +36,5 @@ cask "cloudpouch" do
   desc "AWS cloud FinOps tool"
   homepage "https://cloudpouch.dev/"
 
-  livecheck do
-    url :url
-    strategy :github_latest
-  end
-
   auto_updates true
 end

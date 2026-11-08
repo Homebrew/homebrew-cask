@@ -19,7 +19,7 @@ cask "copilot-cli" do
 
   livecheck do
     url :url
-    strategy :github_latest
+    regex(/^v?(\d+(?:\.\d+)+)$/i)
   end
 
   auto_updates true
