@@ -11,5 +11,8 @@ cask "gyroflow" do
 
   app "Gyroflow.app"
 
-  zap trash: "~/Library/Caches/Gyroflow"
+  zap trash: [
+    "~/Library/Application Support/Gyroflow",
+    "~/Library/Caches/Gyroflow",
+  ]
 end
