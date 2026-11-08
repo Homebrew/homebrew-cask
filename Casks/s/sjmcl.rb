@@ -33,9 +33,4 @@ cask "sjmcl" do
   name "SJMCL"
   desc "Minecraft launcher built with the community"
   homepage "https://mc.sjtu.cn/sjmcl/"
-
-  livecheck do
-    url :url
-    strategy :github_latest
-  end
 end
