@@ -29,9 +29,4 @@ cask "deskreen" do
   name "Deskreen"
   desc "Turns any device with a web browser into a secondary screen"
   homepage "https://deskreen.com/"
-
-  livecheck do
-    url :url
-    strategy :github_latest
-  end
 end
