@@ -34,9 +34,4 @@ cask "fedistar" do
   name "fedistar"
   desc "Multi-column Mastodon, Pleroma, and Friendica client for desktop"
   homepage "https://fedistar.net/"
-
-  livecheck do
-    url :url
-    strategy :github_latest
-  end
 end
