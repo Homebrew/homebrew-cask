@@ -8,7 +8,8 @@ cask "electrum-grs" do
   homepage "https://www.groestlcoin.org/groestlcoin-electrum-wallet/"
 
   livecheck do
-    url "https://groestlcoin.org/version"
+    url "https://groestlcoin.org/version",
+        user_agent: :browser
     strategy :json do |json|
       json["version"]
     end
