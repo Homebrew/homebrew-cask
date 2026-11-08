@@ -25,11 +25,13 @@ cask "amical" do
 
   zap trash: [
     "~/Library/Application Support/Amical",
+    "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/ai.amical.desktop.sfl*",
     "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.amical.desktop.sfl*",
     "~/Library/Caches/com.amical.desktop",
     "~/Library/Caches/com.amical.desktop.ShipIt",
     "~/Library/HTTPStorages/com.amical.desktop",
     "~/Library/Logs/Amical",
+    "~/Library/Preferences/ai.amical.desktop.plist",
     "~/Library/Preferences/com.amical.desktop.plist",
   ]
 end
