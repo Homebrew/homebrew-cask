@@ -55,7 +55,6 @@ cask "calibre" do
   binary "#{appdir}/calibre.app/Contents/MacOS/lrs2lrf"
   binary "#{appdir}/calibre.app/Contents/MacOS/markdown-calibre"
   binary "#{appdir}/calibre.app/Contents/MacOS/web2disk"
-
   # The GUI tools need to be run from their original paths, not a
   # symlink. Install wrapper scripts, instead. See #300885 for
   # details.
@@ -63,7 +62,6 @@ cask "calibre" do
   command_wrapper "ebook-edit", executable: "#{appdir}/calibre.app/Contents/MacOS/ebook-edit"
   command_wrapper "ebook-viewer", executable: "#{appdir}/calibre.app/Contents/MacOS/ebook-viewer"
   command_wrapper "lrfviewer", executable: "#{appdir}/calibre.app/Contents/MacOS/lrfviewer"
-
 
   uninstall quit: "net.kovidgoyal.calibre"
 
