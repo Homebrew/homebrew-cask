@@ -10,11 +10,6 @@ cask "hotovo-aider-desk" do
   desc "Desktop GUI for Aider AI pair programming"
   homepage "https://github.com/hotovo/aider-desk"
 
-  livecheck do
-    url :url
-    strategy :github_latest
-  end
-
   auto_updates true
   depends_on macos: :ventura
 
