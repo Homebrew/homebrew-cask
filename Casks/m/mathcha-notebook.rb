@@ -21,6 +21,7 @@ cask "mathcha-notebook" do
   app "Mathcha Notebook.app"
 
   zap trash: [
+    "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/mathcha.com.mathnotebook.sfl*",
     "~/Library/Application Support/Mathcha Notebook",
     "~/Library/Logs/Mathcha Notebook",
     "~/Library/Preferences/mathcha.com.mathnotebook.plist",
