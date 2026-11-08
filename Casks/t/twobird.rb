@@ -4,13 +4,15 @@ cask "twobird" do
   version "1.0.52"
   sha256 :no_check
 
-  url "https://www.twobird.com/download/mac-#{arch}"
+  url "https://www.twobird.com/download/mac-#{arch}",
+      user_agent: :browser
   name "Twobird"
   desc "Email client with collaborative notes"
   homepage "https://www.twobird.com/"
 
   livecheck do
-    url "https://dl.twobird.com/latest-mac.yml"
+    url "https://dl.twobird.com/latest-mac.yml",
+        user_agent: :browser
     strategy :electron_builder
   end
 
