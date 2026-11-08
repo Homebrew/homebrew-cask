@@ -30,9 +30,4 @@ cask "cursr" do
   name "Cursr"
   desc "Customise mouse movements between multiple displays"
   homepage "https://cursr.app/"
-
-  livecheck do
-    url :url
-    strategy :github_latest
-  end
 end
