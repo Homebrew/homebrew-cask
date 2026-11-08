@@ -33,9 +33,4 @@ cask "drata-agent" do
   name "Drata Agent"
   desc "Security audit software"
   homepage "https://drata.com/"
-
-  livecheck do
-    url :url
-    strategy :github_latest
-  end
 end
