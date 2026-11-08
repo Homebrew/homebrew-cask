@@ -16,6 +16,7 @@ cask "capsomnia" do
   uninstall launchctl: "com.github.fuji-mak.capsomnia",
             pkgutil:   "com.github.fuji-mak.capsomnia.pkg",
             delete:    [
+              "/Applications/Capsomnia.app",
               "/etc/sudoers.d/capsomnia",
               "/Library/PrivilegedHelperTools/capsomnia-pmset",
             ]
