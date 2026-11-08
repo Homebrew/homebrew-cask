@@ -4,11 +4,6 @@ cask "quba" do
     sha256 "3f0ab1ad76c6ca94e686b0eb5cf0f1f9888c4756e90bb3ec5cd2f46d294c6d7e"
 
     url "https://github.com/ZUGFeRD/quba-viewer/releases/download/#{version}/Quba-#{version}-macos-arm64.dmg"
-
-    livecheck do
-      url :url
-      strategy :github_latest
-    end
   end
   on_intel do
     version "1.5.1"
