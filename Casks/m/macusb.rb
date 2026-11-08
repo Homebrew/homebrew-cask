@@ -9,7 +9,8 @@ cask "macusb" do
 
   depends_on macos: :sonoma
 
-  app "macUSB.app"
+  # The privileged helper requires the app to be installed in /Applications.
+  app "macUSB.app", target: "/Applications/macUSB.app"
 
   uninstall quit: "com.kruszoneq.macUSB"
 
