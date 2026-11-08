@@ -10,6 +10,8 @@ cask "aws-vault-binary" do
   desc "Securely stores and accesses AWS credentials in a development environment"
   homepage "https://github.com/99designs/aws-vault"
 
+  deprecate! date: "2026-11-08", because: :discontinued, replacement_formula: "aws-vault"
+
   depends_on :macos
 
   binary "aws-vault"
