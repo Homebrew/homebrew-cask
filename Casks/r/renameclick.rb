@@ -10,11 +10,6 @@ cask "renameclick" do
   desc "Local-first AI app for file renaming and organisation"
   homepage "https://rename.click/"
 
-  livecheck do
-    url :url
-    strategy :github_latest
-  end
-
   auto_updates true
   depends_on macos: :ventura
 
