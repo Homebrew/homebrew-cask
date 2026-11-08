@@ -7,11 +7,6 @@ cask "greenery" do
   desc "Cryptocurrency bookkeeping and accounting wallet"
   homepage "https://www.greenery.finance/"
 
-  livecheck do
-    url :url
-    strategy :github_latest
-  end
-
   no_autobump! because: :bumped_by_upstream
 
   depends_on :macos
