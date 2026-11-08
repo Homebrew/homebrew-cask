@@ -4,11 +4,11 @@ cask "fluxer" do
   os macos: "darwin", linux: "linux"
   file_ext = on_system_conditional macos: "dmg", linux: "appimage"
 
-  version "2026.1107.235046"
-  sha256 arm:          "d00de6356b9de9a5ef7a96da5cfbda1ab431791a810629526b197f0b805695a1",
-         intel:        "d00de6356b9de9a5ef7a96da5cfbda1ab431791a810629526b197f0b805695a1",
-         arm64_linux:  "7ee8226601bcc9adee1cccb6e1ecaedfe7d486da16e94d0de17ca19d7da96c5e",
-         x86_64_linux: "4b32ce3ef1b1ed7dbd05903a19b64688c84627463b47258be6781a10eb0f9b3c"
+  version "2026.1108.50402"
+  sha256 arm:          "7d0dbe784e88a3e3abe7c79d410e02592482748e9d612fdbac65bc45e6252093",
+         intel:        "7d0dbe784e88a3e3abe7c79d410e02592482748e9d612fdbac65bc45e6252093",
+         arm64_linux:  "53d49e8c84bf25c736c902f018c6fa6048980936424f64d2ba15b296bebabe7f",
+         x86_64_linux: "d3567a556bc0d0839da6258e0e91d491c0d1ba848d29e93b87b796c838b62543"
 
   on_macos do
     auto_updates true
