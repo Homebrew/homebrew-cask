@@ -7,11 +7,6 @@ cask "claudebar" do
   desc "Menu bar app for monitoring AI coding assistant usage quotas"
   homepage "https://github.com/tddworks/ClaudeBar"
 
-  livecheck do
-    url :url
-    strategy :github_latest
-  end
-
   depends_on macos: :sequoia
 
   app "ClaudeBar.app"
