@@ -9,7 +9,8 @@ cask "ths" do
   homepage "https://download.10jqka.com.cn/free/mac"
 
   livecheck do
-    url "https://download.10jqka.com.cn/index/download/id/113/"
+    url "https://download.10jqka.com.cn/index/download/id/113/",
+        user_agent: :browser
     strategy :header_match
   end
 
