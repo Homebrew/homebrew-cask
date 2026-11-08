@@ -37,4 +37,6 @@ cask "legcord" do
       json["version"]
     end
   end
+
+  deprecate! date: "2026-11-08", because: :discontinued, replacement_cask: "discord"
 end
