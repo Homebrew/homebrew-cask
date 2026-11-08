@@ -3,11 +3,11 @@ cask "iptvnator" do
   os macos: "mac", linux: "linux"
   url_end = on_system_conditional macos: "dmg", linux: "AppImage"
 
-  version "0.24.0"
-  sha256 arm:          "29b9ff05e5f4eda4a1e44bb66dd0d46d9b8cc726310475c09c9334ba1451faf1",
-         intel:        "f1e0857f3d6b8c03b36a0ce6ccd0a4a138fb4d9eebdfcf6f2021debb325a9fb2",
-         arm64_linux:  "e1bd87aa9333f877b6591ec9417aedf978e5d5dba73e3e67d0613ecb0bf8e6c4",
-         x86_64_linux: "9478e316acf67004c0a41ab2afd90a95bb24e8270884a510817398136c94749e"
+  version "0.25.0"
+  sha256 arm:          "0afe23b22758b22db9f097932b4f3bc1c353dc6719bd5cb4a14cfface8602270",
+         intel:        "9b3a196b47932cc11f3f5b7f811c2e3ba185d71be36bc2555c0346ac3f18d6f0",
+         arm64_linux:  "39742faf735468ed6ab3af2c4f333a011ca3b4a3fcd375d4d1541c389da1bc60",
+         x86_64_linux: "3c13509484899412a2464c7c5cc099d27a797e0b1e9d4f20832be0c164d7c86c"
 
   on_macos do
     depends_on macos: :monterey
