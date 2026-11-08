@@ -1,6 +1,6 @@
 cask "fore-studio-vitals" do
-  version "1.10.2"
-  sha256 "4bdb9192a5c2f9aa71fb48587d7797687b61ebb41ef6b553175821a22600ae63"
+  version "1.10.3"
+  sha256 "347629c338b624d6926cf9b57f888fb1f838af05b9d20a1f382ebeeca4ff597e"
 
   url "https://statics.fore.studio/vitals/downloads/Vitals-#{version}.dmg"
   name "Vitals"
