@@ -1,6 +1,6 @@
 cask "gloom" do
-  version "0.20.5"
-  sha256 "bf0fae731220a2db06ebc465823f06a8cbb16dfaba4237a66054ef7fe3e68648"
+  version "0.20.6"
+  sha256 "8743a3956e0e70b969a0515196ae768040aad0fe02fc1e5f7af366f89c261b77"
 
   url "https://github.com/gloom-sh/gloomberb/releases/download/v#{version}/stable-macos-arm64-Gloom.app.zip"
   name "Gloom"
