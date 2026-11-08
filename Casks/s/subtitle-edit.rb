@@ -33,6 +33,6 @@ cask "subtitle-edit" do
 
   livecheck do
     url :url
-    strategy :github_latest
+    regex(/^v?(\d+(?:\.\d+)+)$/i)
   end
 end
