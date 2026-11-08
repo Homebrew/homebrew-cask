@@ -10,11 +10,6 @@ cask "neat" do
   desc "GitHub and Linear notifications on your desktop and menu bar"
   homepage "https://neat.run/"
 
-  livecheck do
-    url :url
-    strategy :github_latest
-  end
-
   depends_on macos: :ventura
 
   app "Neat.app"

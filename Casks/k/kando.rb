@@ -30,9 +30,4 @@ cask "kando" do
   name "Kando"
   desc "Pie menu"
   homepage "https://kando.menu/"
-
-  livecheck do
-    url :url
-    strategy :github_latest
-  end
 end

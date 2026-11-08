@@ -7,11 +7,6 @@ cask "meetingbar" do
   desc "Meetings in your menu bar"
   homepage "https://github.com/leits/MeetingBar"
 
-  livecheck do
-    url :url
-    strategy :github_latest
-  end
-
   no_autobump! because: :bumped_by_upstream
 
   depends_on macos: :monterey

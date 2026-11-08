@@ -7,11 +7,6 @@ cask "power-monitor" do
   desc "Reports power adapter and battery status"
   homepage "https://github.com/SAP/power-monitoring-tool-for-macos"
 
-  livecheck do
-    url :url
-    strategy :github_latest
-  end
-
   depends_on macos: :ventura
 
   pkg "PowerMonitor_#{version}.pkg"

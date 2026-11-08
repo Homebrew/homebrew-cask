@@ -28,10 +28,5 @@ cask "openshot-video-editor" do
   desc "Cross-platform video editor"
   homepage "https://openshot.org/"
 
-  livecheck do
-    url :url
-    strategy :github_latest
-  end
-
   conflicts_with cask: "openshot-video-editor@daily"
 end

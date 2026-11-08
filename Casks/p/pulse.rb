@@ -7,11 +7,6 @@ cask "pulse" do
   desc "System activity monitor for CPU, memory, GPU, disk and network"
   homepage "https://pulse.egoist.dev/"
 
-  livecheck do
-    url :url
-    strategy :github_latest
-  end
-
   auto_updates true
   depends_on arch: :arm64
   depends_on macos: :monterey

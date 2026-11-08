@@ -7,15 +7,11 @@ cask "orka-desktop" do
   desc "Run macOS virtual machines locally and build images for use with Orka"
   homepage "https://github.com/macstadium/orka-desktop"
 
-  livecheck do
-    url :url
-    regex(/v?(\d+(?:\.\d+)+(?:-beta\.\d+)?)/i)
-    strategy :github_latest
-  end
-
   depends_on macos: :ventura
 
   app "Orka Desktop.app"
+
+  uninstall quit: "com.macstadium.OrkaDesktop"
 
   zap trash: [
     "~/.local/state/orka",

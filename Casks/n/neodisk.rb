@@ -7,11 +7,6 @@ cask "neodisk" do
   desc "Read-only disk space visualiser"
   homepage "https://neodisk.app/"
 
-  livecheck do
-    url :url
-    strategy :github_latest
-  end
-
   auto_updates true
   depends_on macos: :sonoma
 
