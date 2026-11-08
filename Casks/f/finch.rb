@@ -10,11 +10,6 @@ cask "finch" do
   desc "Open source container development tool"
   homepage "https://github.com/runfinch/finch"
 
-  livecheck do
-    url :url
-    strategy :github_latest
-  end
-
   depends_on :macos
 
   pkg "Finch-v#{version}-#{arch}.pkg"
