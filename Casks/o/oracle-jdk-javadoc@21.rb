@@ -10,13 +10,9 @@ cask "oracle-jdk-javadoc@21" do
   desc "Documentation for the Oracle JDK"
   homepage "https://www.oracle.com/java/technologies/downloads/"
 
-  livecheck do
-    url "https://www.oracle.com/java/technologies/javase-jdk#{version.major}-doc-downloads.html"
-    regex(%r{/(\d+(?:\.\d+)*)(?:\+|%2B)(\d+(?:\.\d+)*)/(\h+)/jdk[._-]v?(\d+(?:\.\d+)*)_doc-all\.zip}i)
-    strategy :page_match do |page, regex|
-      page.scan(regex).map { |match| "#{match[0]},#{match[1]},#{match[2]}" }
-    end
-  end
+  # The 21.0.13 download has been removed and newer Oracle JDK 21 documentation
+  # is under the OTN licence and needs an Oracle account to download.
+  disable! date: "2026-11-08", because: :no_longer_meets_criteria
 
   depends_on :macos
 

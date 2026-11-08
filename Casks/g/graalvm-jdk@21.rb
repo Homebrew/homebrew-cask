@@ -4,31 +4,20 @@ cask "graalvm-jdk@21" do
   on_arm do
     version "21.0.12,7"
     sha256 "a98948c3a1ad037fe2dde5c80b06b214a5f80c120d8fc2453d155508cf677beb"
-
-    livecheck do
-      url "https://java.oraclecloud.com/currentJavaReleases/#{version.major}"
-      regex(/(?:jdk[._-])?(\d+(?:\.\d+)*)(?:-\d+)?\+(\d+)/i)
-      strategy :json do |json, regex|
-        match = json["releaseFullVersion"]&.match(regex)
-        next if match.blank?
-
-        "#{match[1]},#{match[2]}"
-      end
-    end
   end
   on_intel do
     version "21.0.9,7"
     sha256 "aaf06b193ea1a05662d4a5a05e899eb51f8881eee4319db044707e79dcabbb32"
-
-    livecheck do
-      skip "Legacy version"
-    end
   end
 
   url "https://download.oracle.com/graalvm/#{version.major}/archive/graalvm-jdk-#{version.csv.first}_macos-#{arch}_bin.tar.gz"
   name "GraalVM Java Development Kit"
   desc "GraalVM from Oracle"
   homepage "https://www.graalvm.org/"
+
+  # Newer Oracle GraalVM for JDK 21 releases are under the OTN licence and need
+  # an Oracle account to download.
+  deprecate! date: "2026-11-08", because: :no_longer_meets_criteria
 
   depends_on :macos
 
