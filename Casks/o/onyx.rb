@@ -40,7 +40,7 @@ cask "onyx" do
     end
   end
   on_golden_gate :or_newer do
-    version "5.1.1"
+    version "5.1.2"
 
     url "https://www.titanium-software.fr/download/27/OnyX.dmg"
 
