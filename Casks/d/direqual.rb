@@ -2,13 +2,15 @@ cask "direqual" do
   version "7.7.0.15"
   sha256 :no_check
 
-  url "https://naarakstudio.com/download/DirEqual.dmg"
+  url "https://naarakstudio.com/download/DirEqual.dmg",
+      user_agent: :browser
   name "DirEqual"
   desc "Advanced directory compare utility"
   homepage "https://naarakstudio.com/direqual/"
 
   livecheck do
-    url "https://naarakstudio.com/download/direqual/update.ver"
+    url "https://naarakstudio.com/download/direqual/update.ver",
+        user_agent: :browser
     regex(/v?(\d+(?:\.\d+)*):DirEqual\.dmg/i)
     strategy :page_match do |page, regex|
       page.scan(regex).map do |match|
