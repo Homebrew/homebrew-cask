@@ -7,11 +7,6 @@ cask "transmission" do
   desc "Open-source BitTorrent client"
   homepage "https://transmissionbt.com/"
 
-  livecheck do
-    url :url
-    strategy :github_latest
-  end
-
   auto_updates true
   conflicts_with cask: [
     "transmission@beta",
