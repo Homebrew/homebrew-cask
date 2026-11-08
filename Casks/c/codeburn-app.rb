@@ -2,10 +2,10 @@ cask "codeburn-app" do
   arch arm: "-arm64"
   os macos: "dmg", linux: "AppImage"
 
-  version "0.9.27"
-  sha256 arm:          "81f77bb6aa76bc618ff4a3f1798ce60b9b16f6d7b50629b6d1cab4d977cb17fb",
-         intel:        "260602b820b56f8cf7c3a9e6f18a9b29c63a70efaaa4b055a64e0835c63aa30d",
-         x86_64_linux: "8a843e32ebb6b09c1910d5a74da6a03aaa1e16a43fe13fadb461f245efee9192"
+  version "0.9.28"
+  sha256 arm:          "37ce4922d7d04531a486bc743307329c21325b2f573fea7caf20eabd072efc5a",
+         intel:        "c04cb1370c27cbe4df8dca9259c1ada6f32c5193f9f92a7683203f7444b78317",
+         x86_64_linux: "0d1e9fc8ab3ca4382e73d8ba21a477e8ac029f83f90a29037b3a3ffe1c7104fe"
 
   on_macos do
     depends_on macos: :monterey
