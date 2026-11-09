@@ -10,6 +10,7 @@ cask "tikz-editor" do
   desc "WYSIWYG editor for TikZ diagrams in LaTeX"
   homepage "https://tikz.dev/editor/"
 
+  auto_updates true
   depends_on :macos
 
   app "TikZ Editor.app"
@@ -17,6 +18,7 @@ cask "tikz-editor" do
   zap trash: [
     "~/Library/Application Support/com.tikz.editor",
     "~/Library/Caches/com.tikz.editor",
+    "~/Library/Preferences/com.tikz.editor.plist",
     "~/Library/WebKit/com.tikz.editor",
   ]
 end
