@@ -1,6 +1,6 @@
 cask "forel" do
-  version "1.1.1"
-  sha256 "d93cac43d25069da6ecb32ab971ef62c0a4e86fb0ba8baa8ef3f585caacd74d6"
+  version "1.2.0"
+  sha256 "9c16c98f766352d0da063a1228e7df154379ea3f8a892050347eafe1c36c6ddb"
 
   url "https://github.com/lab421/forel/releases/download/v#{version}/Forel-v#{version}.dmg"
   name "Forel"
