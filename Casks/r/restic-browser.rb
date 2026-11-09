@@ -1,3 +1,4 @@
+# CI test of Homebrew/actions setup-homebrew blobless tap clones. Do not merge.
 cask "restic-browser" do
   version "0.3.3"
   sha256 "d2e772dd19912f0eed3053ba654cdd14ca44ea5039164be548362a8b0ab57e18"
