@@ -22,10 +22,14 @@ cask "dropshare" do
   binary "#{appdir}/Dropshare #{version.major}.app/Contents/Resources/ds.sh", target: "ds"
 
   zap trash: [
-    "~/Library/Application Support/Dropshare #{version.major}",
-    "~/Library/Caches/net.mkswap.Dropshare#{version.major}",
-    "~/Library/Cookies/net.mkswap.Dropshare#{version.major}.binarycookies",
-    "~/Library/Logs/Dropshare #{version.major}",
-    "~/Library/Preferences/net.mkswap.Dropshare#{version.major}.plist",
+    "~/Library/Application Scripts/net.mkswap.Dropshare*.Upload-with-Dropshare",
+    "~/Library/Application Support/Dropshare*",
+    "~/Library/Application Support/net.mkswap.Dropshare*",
+    "~/Library/Caches/net.mkswap.Dropshare*",
+    "~/Library/Containers/net.mkswap.Dropshare*.Upload-with-Dropshare",
+    "~/Library/Cookies/net.mkswap.Dropshare*.binarycookies",
+    "~/Library/HTTPStorages/net.mkswap.Dropshare*",
+    "~/Library/Logs/Dropshare*",
+    "~/Library/Preferences/net.mkswap.Dropshare*.plist",
   ]
 end
