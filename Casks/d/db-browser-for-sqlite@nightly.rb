@@ -3,11 +3,11 @@ cask "db-browser-for-sqlite@nightly" do
   os macos: "universal_"
   url_end = on_system_conditional macos: ".dmg", linux: "-#{arch}.AppImage"
 
-  version "20261102"
-  sha256 arm:          "6c1639de55cc00ac62ae4a3b33131907e1001b6ea812197703b9ce8dbeabe7c7",
-         intel:        "6c1639de55cc00ac62ae4a3b33131907e1001b6ea812197703b9ce8dbeabe7c7",
-         arm64_linux:  "66ef7a9f25474cfa556d1fb8a428125c6d5ec3de2dca88d36f698dd5cd12d197",
-         x86_64_linux: "db3423184b76fa8a791bccc6b4da8304db879ceadfae8cdc1d72ff4a86c092e7"
+  version "20261109"
+  sha256 arm:          "02f77229a467711988fc12475cbad0f11f2475694e201d81c68085e28dde91d2",
+         intel:        "02f77229a467711988fc12475cbad0f11f2475694e201d81c68085e28dde91d2",
+         arm64_linux:  "a87c1761ace8310896f006ba0a517d635f0a8ad0e83829d5b2d5dc948e50e4e6",
+         x86_64_linux: "c96180fb721565c51d3506856d0bb9354544fff278e6c195efd35d46ae83021b"
 
   on_macos do
     app "DB Browser for SQLite Nightly.app"
