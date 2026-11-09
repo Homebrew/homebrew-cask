@@ -11,5 +11,10 @@ cask "simple-comic" do
 
   app "Simple Comic.app"
 
-  zap trash: "~/Library/Application Support/Simple Comic"
+  zap trash: [
+    "~/Library/Application Scripts/com.ToWatchList.SimpleComic",
+    "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.towatchlist.simplecomic.sfl*",
+    "~/Library/Application Support/Simple Comic",
+    "~/Library/Containers/com.ToWatchList.SimpleComic",
+  ]
 end
