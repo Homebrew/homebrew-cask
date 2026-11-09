@@ -8,7 +8,7 @@ cask "workspace-one-intelligent-hub" do
   homepage "https://www.getwsone.com/"
 
   livecheck do
-    url "https://docs-be.omnissa.com/api/bundle/workspace-one-intelligent-hub-for-macos-release-notesVSaaS/page/WorkspaceONEIntelligenHubmacOS-ReleaseNotes.html"
+    url "https://docs.omnissa.com/workspace-one-intelligent-hub-for-macos-release-notes-VSaaS/WorkspaceONEIntelligenHubmacOS-ReleaseNotes"
     regex(/Intelligent\s+Hub\s+v?(\d+(?:\.\d+)+)/i)
   end
 
