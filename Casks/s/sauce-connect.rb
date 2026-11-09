@@ -1,6 +1,6 @@
 cask "sauce-connect" do
-  version "5.5.4"
-  sha256 "e3c074096c7516e3736f1da799325d2be7018e79b2fee56942401b03f80a59e5"
+  version "5.5.5"
+  sha256 "69d8febc827d5278972a8644f91b96b6d681df611b289af97210bf756db28856"
 
   url "https://saucelabs.com/downloads/sauce-connect/#{version}/sauce-connect-#{version}_darwin.all.zip"
   name "Sauce Connect"
