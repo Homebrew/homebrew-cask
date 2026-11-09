@@ -1,9 +1,9 @@
 cask "freellmapi" do
   arch arm: "arm64", intel: "x64"
 
-  version "0.16.22"
-  sha256 arm:   "9a21b4d3bb0e1e6325a63db6d384fe2f9067a0f5f116be722831992dbdc92c6f",
-         intel: "4d6b6277e8aacaaafaae5a041d21f4740c17f4d8dbbd5953d80ebf9070b560e6"
+  version "0.16.23"
+  sha256 arm:   "a7a00740f5caa28e40e84df97ecc1d9598e8b08d75dc09bd8920dd2e246774ae",
+         intel: "b2037f267e2704a485931a4b81e46b2d7f2200a135911104cc84e1330f2026e6"
 
   url "https://github.com/tashfeenahmed/freellmapi/releases/download/v#{version}/FreeLLMAPI-#{version}-#{arch}.dmg"
   name "FreeLLMAPI"
