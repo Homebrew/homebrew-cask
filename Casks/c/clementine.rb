@@ -1,6 +1,6 @@
 cask "clementine" do
-  version "1.4.4"
-  sha256 "fa10fcfc3744005e484f5ed89189f2f29ee8692c3694e5536b9211d4d776d988"
+  version "1.4.5"
+  sha256 "fca031695f2c594178939823bf7934ca5995520db8bfe87eae4d2531132a7f59"
 
   url "https://github.com/clementine-player/Clementine/releases/download/#{version}/clementine-#{version}.dmg"
   name "Clementine"
@@ -14,7 +14,7 @@ cask "clementine" do
 
   auto_updates true
   depends_on arch: :arm64
-  depends_on macos: :tahoe
+  depends_on macos: :sequoia
 
   app "Clementine.app"
 
