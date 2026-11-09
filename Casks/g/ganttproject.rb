@@ -22,6 +22,7 @@ cask "ganttproject" do
   zap trash: [
     "~/.ganttproject",
     "~/.ganttproject.d",
+    "~/Library/Caches/GanttProject",
     "~/Library/Preferences/com.bardsoftware.ganttproject.plist",
   ]
 end
