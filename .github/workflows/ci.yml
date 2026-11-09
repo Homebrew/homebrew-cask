@@ -87,11 +87,20 @@ jobs:
     steps:
       - name: Set up Homebrew
         id: set-up-homebrew
-        uses: Homebrew/actions/setup-homebrew@c262868c096d909fc278daa87ed9772967331ea3 # 2026.11.02.1
+        uses: Homebrew/actions/setup-homebrew@0b000f2baf4eadb5730ec15c1cf2308a4554b32c # blobless tap clone test, do not merge
         with:
           core: true
           cask: true
           stable: ${{ matrix.stable || false }}
+
+      - name: Debug tap clone shape (do not merge)
+        run: |
+          for tap in homebrew/core homebrew/cask; do
+            repo="$(brew --repository "$tap")"
+            echo "${tap}: shallow=$(git -C "$repo" rev-parse --is-shallow-repository) filter=$(git -C "$repo" config remote.origin.partialclonefilter || echo none)"
+            git -C "$repo" count-objects -vH
+          done
+          find "$(brew --repository homebrew/core)/Formula" -name '*.rb' | wc -l
 
       # setup-homebrew blanks this via $GITHUB_ENV, which overrides workflow `env:`.
       - name: Disable API installs
