@@ -1,9 +1,9 @@
 cask "lunarbar" do
   arch arm: "-apple-silicon"
 
-  version "1.10.0"
-  sha256 arm:   "caff81f93f07446d87d4f7c33e7f393d5d43bf3be2a68e3349e5a3ba1d49db7d",
-         intel: "1e66325c3d0cd3dea40dfd52182923a6f5d78dab3bc557b6f5701e95f7bbad89"
+  version "1.10.1"
+  sha256 arm:   "20bbb944baaf68e32a77f87cbfca908cfb3a1459d5f1d9bad50566725c42e37b",
+         intel: "ffa5538fb5fd2eb669fad2570909751fcaeb8f717a45ec261ec06332ee4b35e3"
 
   url "https://github.com/LunarBar-app/LunarBar/releases/download/v#{version}/LunarBar-#{version}#{arch}.dmg"
   name "LunarBar"
