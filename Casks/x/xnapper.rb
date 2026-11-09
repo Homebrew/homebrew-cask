@@ -21,8 +21,10 @@ cask "xnapper" do
 
   zap trash: [
     "~/Library/Application Scripts/com.devuap.beautyshotapp.Xnapper-Mac-Share-Extension",
+    "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.devuap.beautyshotapp.sfl*",
     "~/Library/Application Support/Xnapper",
     "~/Library/Caches/Xnapper",
     "~/Library/Containers/com.devuap.beautyshotapp.Xnapper-Mac-Share-Extension",
+    "~/Library/Preferences/com.devuap.beautyshotapp.plist",
   ]
 end
