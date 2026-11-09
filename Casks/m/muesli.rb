@@ -17,6 +17,7 @@ cask "muesli" do
   depends_on macos: :sonoma
 
   app "Muesli.app"
+  binary "#{appdir}/Muesli.app/Contents/MacOS/muesli-cli"
 
   zap trash: [
     "~/.cache/muesli",
