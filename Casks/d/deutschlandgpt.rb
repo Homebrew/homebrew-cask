@@ -1,6 +1,6 @@
 cask "deutschlandgpt" do
-  version "0.16.5"
-  sha256 "52476d182683abbe9338294264209598456d620b12d3c62b773ddbe06af11505"
+  version "0.16.6"
+  sha256 "0bd45e04558ad318132eb338dbffbdfa71642800cfdb48ea87cc51ab4556b990"
 
   url "https://dgpt-assets-prod.nbg1.your-objectstorage.com/releases/desktop/macos/deutschlandgpt-desktop-macos-v#{version}.dmg"
   name "DeutschlandGPT"
