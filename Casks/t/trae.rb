@@ -12,8 +12,11 @@ cask "trae" do
 
   livecheck do
     url "https://api.trae.ai/icube/api/v1/native/version/trae/latest"
-    strategy :json do |json|
-      json.dig("data", "manifest", "darwin", "version")
+    regex(%r{/stable/v?(\d+(?:\.\d+)+)/darwin/}i)
+    strategy :json do |json, regex|
+      json.dig("data", "manifest", "darwin", "versions")&.map do |item|
+        item["url"]&.[](regex, 1)
+      end
     end
   end
 
