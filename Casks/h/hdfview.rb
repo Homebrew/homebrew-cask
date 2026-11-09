@@ -1,9 +1,9 @@
 cask "hdfview" do
   arch arm: "arm64", intel: "x86_64"
 
-  version "3.4.1"
-  sha256 arm:   "a1669bb6cbd32f65cfd3f0c1839a094cd29bcec1ad3697cfb95d704dfaefd603",
-         intel: "776a87f2f6106d8b10183c8976aec303da88518de0412fa0440d433d95596c03"
+  version "3.5.0"
+  sha256 arm:   "3bf23866c99e9baf85b32e31fd89386a593ee782a5e5a4170162d266f83a2c1b",
+         intel: "e5b02e5af56b8d641722acab4ae258020877774a1ad6f914cfa6f439bc831815"
 
   url "https://github.com/HDFGroup/hdfview/releases/download/v#{version}/HDFView-#{version}App-Darwin-#{arch}.tar.gz"
   name "HDFView"
