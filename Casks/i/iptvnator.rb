@@ -15,8 +15,11 @@ cask "iptvnator" do
     app "IPTVnator.app"
 
     zap trash: [
+      "~/.iptvnator",
+      "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.fourgray.iptvnator.sfl*",
       "~/Library/Application Support/iptvnator",
       "~/Library/Preferences/com.electron.iptvnator.plist",
+      "~/Library/Preferences/com.fourgray.iptvnator.plist",
       "~/Library/Saved Application State/com.electron.iptvnator.savedState",
     ]
   end

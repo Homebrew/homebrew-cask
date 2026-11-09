@@ -13,14 +13,15 @@ cask "oleafly" do
     binary "#{appdir}/Oleafly.app/Contents/MacOS/oleafly-cli", target: "oleafly"
 
     zap trash: [
-      "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.oleafly.app.sfl*",
-      "~/Library/Application Support/com.oleafly.app",
-      "~/Library/Caches/com.oleafly.app",
-      "~/Library/HTTPStorages/com.oleafly.app",
-      "~/Library/Preferences/com.oleafly.app.plist",
-      "~/Library/Saved Application State/com.oleafly.app.savedState",
-      "~/Library/WebKit/com.oleafly.app",
-    ]
+          "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.oleafly.app.sfl*",
+          "~/Library/Application Support/com.oleafly.app",
+          "~/Library/Caches/com.oleafly.app",
+          "~/Library/HTTPStorages/com.oleafly.app",
+          "~/Library/Preferences/com.oleafly.app.plist",
+          "~/Library/Saved Application State/com.oleafly.app.savedState",
+          "~/Library/WebKit/com.oleafly.app",
+        ],
+        rmdir: "~/.oleafly"
   end
   on_linux do
     app_image "Oleafly_#{version}_#{arch}.AppImage", target: "Oleafly.AppImage"
