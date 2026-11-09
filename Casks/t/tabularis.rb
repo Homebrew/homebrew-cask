@@ -2,10 +2,10 @@ cask "tabularis" do
   arch arm: "aarch64", intel: on_system_conditional(macos: "x64", linux: "amd64")
   os macos: "dmg", linux: "AppImage"
 
-  version "0.31.0"
-  sha256 arm:          "0daa88bd5db64bd18835aa1bb9ab461fc1bc7211733b89016190b176e086912c",
-         intel:        "49d8a7686aa07de7438f4167527f28dda4ec5ebc389d8ceb007bc5aacfd18280",
-         x86_64_linux: "09eb2192aae7afdf2179424599319eb33376c023bd6778c0db520dcc0a5d71bf"
+  version "0.32.0"
+  sha256 arm:          "769c84c8df58d3ce5069c37387b9aeb259ee33b817417e686ec636001953b0d5",
+         intel:        "9dbdf89c66d0a3b307b6febf1ac5dc93c35616d57f6c571b7479c5706880ea29",
+         x86_64_linux: "b83d424e778c4e4bade68c49e741d2d515dae5a9838931ccde4f4aa2d5b0a3d0"
 
   on_macos do
     auto_updates true
