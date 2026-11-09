@@ -1,9 +1,9 @@
 cask "pixcake" do
   arch arm: "_arm64"
 
-  version "10.1.0-308"
-  sha256 arm:   "195d67dc25d4ababa6c4e04cdacc565ea2337c1fc9c4b4525effa07e81a3a526",
-         intel: "208ad4b22d15692636e041ee3ed9ba89d661a2235643fc69a69f093b2c48af23"
+  version "10.1.0-331"
+  sha256 arm:   "e98cf1b1b9f1e4977be9b71cb03568a64c0b9299584c95ecd9bffb37e80220b7",
+         intel: "ce1ef3a36a6242532080f3c30a1fb854a4467d03a96002b1e84f1e142355733e"
 
   url "https://download.pixcakeai.com/package/#{version}/%E5%83%8F%E7%B4%A0%E8%9B%8B%E7%B3%95-#{version}#{arch}.dmg"
   name "像素蛋糕"
