@@ -21,6 +21,7 @@ cask "openvpn-connect" do
     end
   end
 
+  auto_updates true
   depends_on macos: :monterey
 
   pkg "OpenVPN_Connect_#{version.csv.first.dots_to_underscores}(#{version.csv.second})_#{arch}_Installer_signed.pkg"
