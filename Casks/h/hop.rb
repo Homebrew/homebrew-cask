@@ -3,10 +3,10 @@ cask "hop" do
   os macos: "macos", linux: "linux"
   url_end = on_system_conditional macos: "dmg", linux: "AppImage"
 
-  version "0.5.0"
-  sha256 arm:          "b7438f7ecc152de8bfb6145b170f86b5b18f5e3f221edb0082d1164de3a1cec3",
-         intel:        "c2666f35d9f50a8557a57ac7b528b25bd03cb0ca41ca813ce3b53e1635c4e1ab",
-         x86_64_linux: "14f65e74c88ae97ef414e86809b005ac89981f72863560bc4587cae1978a6450"
+  version "0.5.1"
+  sha256 arm:          "a8b3bdc84fb3faeff9621abda5cfee6d74fc3e432e01a67e80b66a33514a5f09",
+         intel:        "0fb842f3dff01643babddcbb9e4a0ef3b75484886dbb4a303e211aa982361730",
+         x86_64_linux: "d0a472f3fa3df34ef1d9e359fba544eb21ea95b56ca2453687162e97d9c7c24f"
 
   on_macos do
     depends_on macos: :monterey
