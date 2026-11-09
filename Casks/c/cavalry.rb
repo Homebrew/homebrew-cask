@@ -16,6 +16,8 @@ cask "cavalry" do
 
   app "Cavalry.app"
 
+  uninstall quit: "com.scenegroup.cavalry"
+
   zap trash: [
     "~/Library/Application Support/Cavalry",
     "~/Library/Preferences/Cavalry",
