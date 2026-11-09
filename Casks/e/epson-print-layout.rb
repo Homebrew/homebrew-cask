@@ -13,7 +13,8 @@ cask "epson-print-layout" do
   # up to date, otherwise it could end up persistently returning an older
   # version as newest.
   livecheck do
-    url "https://epson.com/c/Epson-Print-Layout/s/SPT_PRINTLAYOUT?review-filter=macOS+14.x+%28Sonoma%29"
+    url "https://epson.com/c/Epson-Print-Layout/s/SPT_PRINTLAYOUT?review-filter=macOS+14.x+%28Sonoma%29",
+        user_agent: :browser
     regex(/Epson(?:\s|&nbsp;)*Print(?:\s|&nbsp;)*Layout(?:\s|&nbsp;)*v?(\d+(?:\.\d+)+)/im)
   end
 
