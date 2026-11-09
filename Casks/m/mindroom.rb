@@ -1,6 +1,6 @@
 cask "mindroom" do
-  version "2026.11.230"
-  sha256 "a3d24b9dca26fe10de7d6dd8a91a73c9d509838cfedfd77bd7903b071c4d7238"
+  version "2026.11.240"
+  sha256 "1cb75d521037d70d0e29160dd64ff283a03e75500964125388432913b894ea70"
 
   url "https://github.com/mindroom-ai/mindroom/releases/download/v#{version}/MindRoom.dmg"
   name "MindRoom"
