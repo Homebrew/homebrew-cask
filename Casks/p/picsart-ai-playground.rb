@@ -1,6 +1,6 @@
 cask "picsart-ai-playground" do
-  version "2.74.0"
-  sha256 "50144dacb9a0d73abd4380f34ca475c17d8b3f39452c186cd08f4e0d4fcd6906"
+  version "2.75.0"
+  sha256 "9f61b90e353eeb7082772e7d6765ce8a81ad6f48925a5957b66f2d74bbc138b4"
 
   url "https://picsart.com/ai-playground/desktop/update/AI-Playground-#{version}.zip"
   name "Picsart AI Playground"
