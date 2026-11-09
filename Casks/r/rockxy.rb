@@ -23,6 +23,7 @@ cask "rockxy" do
   zap trash: [
     "~/Library/Application Support/com.amunx.rockxy",
     "~/Library/Application Support/com.amunx.rockxy.community",
+    "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.amunx.rockxy.community.sfl*",
     "~/Library/Caches/com.amunx.rockxy.community",
     "~/Library/HTTPStorages/com.amunx.rockxy.community",
     "~/Library/Preferences/com.amunx.rockxy.community.plist",
