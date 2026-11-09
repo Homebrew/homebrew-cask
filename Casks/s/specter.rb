@@ -15,7 +15,7 @@ cask "specter" do
     url "https://specter.solutions/downloads/"
     regex(/Specter[._-]v?(\d+(?:\.\d+)+)\.dmg/i)
     strategy :page_match do |page, regex|
-      js_file_name = page[%r{src=["']?/assets/(index[._-]\w+\.js)}i, 1]
+      js_file_name = page[%r{(?:href|src)=["']?/assets/(prerender[._-][\w-]+\.js)}i, 1]
       next unless js_file_name
 
       js_file = Homebrew::Livecheck::Strategy.page_content(
