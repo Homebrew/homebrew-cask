@@ -35,4 +35,9 @@ cask "hop" do
   name "HOP"
   desc "View and edit HWP documents"
   homepage "https://golbin.github.io/hop/"
+
+  livecheck do
+    url :url
+    strategy :github_latest
+  end
 end
