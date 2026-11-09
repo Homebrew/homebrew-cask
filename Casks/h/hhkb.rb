@@ -9,10 +9,7 @@ cask "hhkb" do
 
   livecheck do
     url "https://happyhackingkb.com/download/"
-    regex(%r{/mac/HHKBkeymapTool[._-]v?(\d)(\d)(\d+)ma\.dmg}i)
-    strategy :page_match do |page, regex|
-      page.scan(regex).map { |match| match.join(".") }
-    end
+    regex(%r{Version\s+v?(\d+(?:\.\d+)+)\s*<br[^>]*>\s*<a[^>]+?/mac/HHKBkeymapTool[._-]v?\d+ma\.dmg}i)
   end
 
   depends_on :macos
