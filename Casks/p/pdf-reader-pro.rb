@@ -20,10 +20,16 @@ cask "pdf-reader-pro" do
 
   app "PDF Reader Pro.app"
 
+  uninstall launchctl: "com.brother.pdfreaderprofree.mac.PDFReaderProDMGHelper"
+
   zap trash: [
+    "~/Library/Application Scripts/com.brother.pdfreaderprofree.mac.PDFReaderProDMGHelper",
+    "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.brother.pdfreaderprofree.mac.pdfreaderprodmghelper.sfl*",
     "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.brother.pdfreaderprofree.mac.sfl*",
     "~/Library/Application Support/com.brother.pdfreaderprofree.mac",
     "~/Library/Caches/com.brother.pdfreaderprofree.mac",
+    "~/Library/Containers/com.brother.pdfreaderprofree.mac.PDFReaderProDMGHelper",
+    "~/Library/HTTPStorages/com.brother.pdfreaderprofree.mac",
     "~/Library/Preferences/com.brother.pdfreaderprofree.mac.bookmarks.plist",
     "~/Library/Preferences/com.brother.pdfreaderprofree.mac.plist",
   ]
