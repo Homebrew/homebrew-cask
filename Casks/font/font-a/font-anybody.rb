@@ -11,5 +11,5 @@ cask "font-anybody" do
   font "Anybody-Italic[wdth,wght].ttf"
   font "Anybody[wdth,wght].ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

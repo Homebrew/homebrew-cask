@@ -1,6 +1,6 @@
 cask "forklift" do
-  version "4.7.5"
-  sha256 "5a53e4303ade6fadad894b2304023f268ba5474575f8b875619176aaf2826c14"
+  version "4.7.7"
+  sha256 "d2811c3a21d3e8597f5909e6d25ca8e1cefcc40aba7116f745a22adf7317583f"
 
   url "https://download.binarynights.com/ForkLift/ForkLift#{version}.zip"
   name "ForkLift"
@@ -28,13 +28,16 @@ cask "forklift" do
             delete:    "/Library/PrivilegedHelperTools/com.binarynights.ForkLiftHelper"
 
   zap trash: [
+    "~/Library/Application Scripts/J3CP9BBBN6.com.binarynights.ForkLift",
     "~/Library/Application Support/ForkLift",
     "~/Library/Caches/com.binarynights.ForkLift-#{version.major}",
     "~/Library/Cookies/com.binarynights.ForkLift-#{version.major}.binarycookies",
+    "~/Library/Group Containers/J3CP9BBBN6.com.binarynights.ForkLift",
     "~/Library/HTTPStorages/com.binarynights.ForkLift-#{version.major}",
     "~/Library/Logs/ForkLift",
     "~/Library/Logs/ForkLiftMini",
     "~/Library/Preferences/com.binarynights.ForkLift-#{version.major}.plist",
+    "~/Library/Preferences/com.binarynights.ForkLift.plist",
     "~/Library/Preferences/com.binarynights.ForkLiftMini.plist",
     "~/Library/Saved Application State/com.binarynights.ForkLift-#{version.major}.savedState",
   ]

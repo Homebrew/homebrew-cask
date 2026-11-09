@@ -1,6 +1,6 @@
 cask "tunnelblick" do
-  version "9.0.1,6491"
-  sha256 "73ca843b7720cd9261a7fd6cf53b0901a06f69c25824ef09430e4094f0688ad0"
+  version "10.0.3,6610"
+  sha256 "8bb0f38b44c69a6c0ab4a3959d6091e5d3682af4019e99c4b79233fdc4ea7cdc"
 
   url "https://tunnelblick.net/iprelease/Tunnelblick_#{version.csv.first}_build_#{version.csv.second}.dmg"
   name "Tunnelblick"
@@ -19,6 +19,7 @@ cask "tunnelblick" do
   end
 
   auto_updates true
+  conflicts_with cask: "tunnelblick@beta"
   depends_on macos: :ventura
 
   app "Tunnelblick.app"
@@ -36,6 +37,7 @@ cask "tunnelblick" do
 
   zap trash: [
     "~/Library/Application Support/Tunnelblick",
+    "~/Library/Caches/com.apple.helpd/Generated/Tunnelblick Help*",
     "~/Library/Caches/com.apple.helpd/SDMHelpData/Other/English/HelpSDMIndexFile/Tunnelblick*",
     "~/Library/Caches/net.tunnelblick.tunnelblick",
     "~/Library/Cookies/net.tunnelblick.tunnelblick.binarycookies",

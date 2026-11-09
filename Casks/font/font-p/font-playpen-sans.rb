@@ -8,5 +8,5 @@ cask "font-playpen-sans" do
 
   font "PlaypenSans[wght].ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

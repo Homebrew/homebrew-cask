@@ -13,5 +13,5 @@ cask "font-goorm-sans-code" do
 
   font "goorm sans code 2/Public/goorm_Sans_Code_400.ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

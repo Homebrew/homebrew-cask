@@ -8,5 +8,5 @@ cask "font-nabla" do
 
   font "Nabla[EDPT,EHLT].ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

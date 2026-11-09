@@ -9,8 +9,6 @@ cask "inkscape" do
          x86_64_linux: "d217fe05c92faaed5c3af46856b6299c98933dc722819cb5bc2ca052c5522166"
 
   on_macos do
-    depends_on macos: :big_sur
-
     app "Inkscape.app"
     command_wrapper "inkscape", executable: "#{appdir}/Inkscape.app/Contents/MacOS/inkscape"
 
@@ -27,6 +25,8 @@ cask "inkscape" do
     depends_on arch: :x86_64
 
     app_image "Inkscape-#{version.csv.first}.AppImage", target: "Inkscape.AppImage"
+
+    zap trash: "~/.config/inkscape"
   end
 
   url "https://media.inkscape.org/dl/resources/file/Inkscape-#{version.csv.second || version.csv.first}#{arch}.#{url_end}"

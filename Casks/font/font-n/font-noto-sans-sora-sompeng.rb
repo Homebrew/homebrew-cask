@@ -8,5 +8,5 @@ cask "font-noto-sans-sora-sompeng" do
 
   font "NotoSansSoraSompeng[wght].ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

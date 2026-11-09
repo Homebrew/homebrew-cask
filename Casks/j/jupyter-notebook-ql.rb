@@ -8,12 +8,13 @@ cask "jupyter-notebook-ql" do
   homepage "https://github.com/jendas1/jupyter-notebook-quick-look"
 
   deprecate! date: "2025-09-22", because: :no_longer_meets_criteria
+  disable! date: "2026-09-27", because: :no_longer_meets_criteria
 
   depends_on :macos
 
   qlplugin "jupyter-notebook-quick-look.qlgenerator"
 
-  # No zap stanza required
+  zap :not_required
 
   caveats <<~EOS
     You need python 3 and the nbconvert module to use this plugin.

@@ -8,5 +8,5 @@ cask "font-rozha-one" do
 
   font "RozhaOne-Regular.ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

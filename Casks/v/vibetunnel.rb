@@ -12,8 +12,8 @@ cask "vibetunnel" do
     regex(/^v?(\d+(?:\.\d+)*(?:-beta\.\d+)?)$/i)
   end
 
-  depends_on macos: :sonoma
   depends_on arch: :arm64
+  depends_on macos: :sonoma
 
   app "VibeTunnel.app"
   binary "#{appdir}/VibeTunnel.app/Contents/Resources/vt"

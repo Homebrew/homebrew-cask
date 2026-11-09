@@ -11,5 +11,5 @@ cask "font-ibarra-real-nova" do
   font "IbarraRealNova-Italic[wght].ttf"
   font "IbarraRealNova[wght].ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

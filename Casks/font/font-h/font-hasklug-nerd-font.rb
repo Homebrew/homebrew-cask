@@ -56,5 +56,5 @@ cask "font-hasklug-nerd-font" do
   font "HasklugNerdFontPropo-SemiBold.otf"
   font "HasklugNerdFontPropo-SemiBoldItalic.otf"
 
-  # No zap stanza required
+  zap :not_required
 end

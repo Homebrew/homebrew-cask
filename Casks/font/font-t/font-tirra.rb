@@ -15,5 +15,5 @@ cask "font-tirra" do
   font "Tirra-Regular.ttf"
   font "Tirra-SemiBold.ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

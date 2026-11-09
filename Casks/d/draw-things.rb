@@ -1,6 +1,6 @@
 cask "draw-things" do
-  version "1.20260716.0-4d534b3c"
-  sha256 "4d534b3c75b4d759d12c25458c545ed534160e1c922c726426399a6aea55aeae"
+  version "26.1020.0-a424ad4b"
+  sha256 "a424ad4b656aea3865480db35541b530f83fa76340f37e2a56b3df70466b369e"
 
   url "https://static.drawthings.ai/DrawThings-#{version}.zip"
   name "Draw Things"
@@ -15,6 +15,8 @@ cask "draw-things" do
   depends_on macos: :monterey
 
   app "Draw Things.app"
+
+  uninstall quit: "com.liuliu.draw-things"
 
   zap trash: [
     "~/Library/Application Scripts/com.liuliu.draw-things",

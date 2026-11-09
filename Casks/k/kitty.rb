@@ -2,11 +2,13 @@ cask "kitty" do
   arch arm: "arm64", intel: "x86_64"
   os macos: ".dmg", linux: "-#{arch}.txz"
 
-  version "0.48.2"
+  version "0.50.0"
+  sha256 arm:          "cc01acf6db19a1730ef60b3e7cf0f6300feb51199bf17e9cff7ee12d28d74e0c",
+         intel:        "cc01acf6db19a1730ef60b3e7cf0f6300feb51199bf17e9cff7ee12d28d74e0c",
+         arm64_linux:  "3eb3257081ece4650dd112b2cf1bdbc0d1952d1a3f3934f22949e666e18451ee",
+         x86_64_linux: "f04b11775574d6aabfb529b7e734cc0a7d7d12c7df9fb8ec1843e45420e514ee"
 
   on_macos do
-    sha256 "f804f58ee4b69c76f84eb3281e140748269a63f3f4a816015a8dec2a06d2b195"
-
     depends_on macos: :monterey
 
     app "kitty.app"
@@ -14,11 +16,15 @@ cask "kitty" do
                     executable: "#{appdir}/kitty.app/Contents/MacOS/kitty"
     command_wrapper "kitten",
                     executable: "#{appdir}/kitty.app/Contents/MacOS/kitten"
+
+    zap trash: [
+      "~/Library/Caches/kitty",
+      "~/Library/Preferences/kitty",
+      "~/Library/Preferences/net.kovidgoyal.kitty.plist",
+      "~/Library/Saved Application State/net.kovidgoyal.kitty.savedState",
+    ]
   end
   on_linux do
-    sha256 arm64_linux:  "534b214d407a05e4603da75ef02fffa592ec1bbec20a413c5e0cd3f853c928cb",
-           x86_64_linux: "967a1958e7fc67b495d279c0963bcd1a0482097151817ce6506fabc822689af7"
-
     binary "bin/kitty"
     binary "bin/kitten"
     manpage "share/man/man1/kitty.1"
@@ -90,6 +96,8 @@ cask "kitty" do
     manpage "share/man/man1/kitten-unicode-input.1"
     manpage "share/man/man1/kitten-update-self.1"
     manpage "share/man/man5/kitty.conf.5"
+
+    zap trash: "~/.cache/kitty"
   end
 
   url "https://github.com/kovidgoyal/kitty/releases/download/v#{version}/kitty-#{version}#{os}"
@@ -98,12 +106,4 @@ cask "kitty" do
   homepage "https://github.com/kovidgoyal/kitty"
 
   conflicts_with cask: "kitty@nightly"
-
-  zap trash: [
-    "~/.config/kitty",
-    "~/Library/Caches/kitty",
-    "~/Library/Preferences/kitty",
-    "~/Library/Preferences/net.kovidgoyal.kitty.plist",
-    "~/Library/Saved Application State/net.kovidgoyal.kitty.savedState",
-  ]
 end

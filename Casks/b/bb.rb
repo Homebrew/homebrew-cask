@@ -1,13 +1,13 @@
 cask "bb" do
   os macos: "arm64.dmg", linux: "x86_64.AppImage"
 
-  version "0.42.1"
+  version "0.49.0"
+  sha256 arm:          "5bebb0b635c1c8b14e549fe3799152d8a6375bb2e8259be328897e1906f63e17",
+         x86_64_linux: "8349ab773715624fec5082739c817d2a15809504699d34b47d3d9dfbe60fc770"
 
   on_macos do
-    sha256 "7a9fb692c402799e219493b3c17704577396d1100767d604580e6853fbcaf1e7"
-
     depends_on arch: :arm64
-    depends_on macos: :monterey
+    depends_on macos: :ventura
 
     app "bb.app"
 
@@ -19,11 +19,12 @@ cask "bb" do
         rmdir: "~/.bb"
   end
   on_linux do
-    sha256 "b29165f5cd2f06feeba51c36ca86b96006bfc6c48521903367c004ae63c86976"
-
     depends_on arch: :x86_64
 
     app_image "bb-#{version}-x86_64.AppImage", target: "bb.AppImage"
+
+    zap trash: "~/.config/bb",
+        rmdir: "~/.bb"
   end
 
   url "https://github.com/get-bb/bb/releases/download/desktop-v#{version}/bb-#{version}-#{os}"

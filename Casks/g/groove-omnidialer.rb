@@ -1,6 +1,6 @@
 cask "groove-omnidialer" do
-  version "26.813.1056"
-  sha256 "2c1ade537bb1090e27d3ee17c678fcffa78563742a87aa3b97a2c2c9ca66b213"
+  version "26.1105.1138"
+  sha256 "a4f0a92d1c20ad025be5b7c86df2e6e562e24a6bfbb623907ce4fb04fd08a953"
 
   url "https://groove-dialer.s3-us-west-2.amazonaws.com/electron/Groove%20OmniDialer-#{version}-universal.dmg"
   name "Groove OmniDialer"
@@ -20,6 +20,7 @@ cask "groove-omnidialer" do
   uninstall quit: "com.electron.dialer"
 
   zap trash: [
+    "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.electron.dialer.sfl*",
     "~/Library/Application Support/com.electron.dialer",
     "~/Library/Caches/com.electron.dialer",
     "~/Library/HTTPStorages/com.electron.dialer",

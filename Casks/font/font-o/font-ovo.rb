@@ -8,5 +8,5 @@ cask "font-ovo" do
 
   font "Ovo-Regular.ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

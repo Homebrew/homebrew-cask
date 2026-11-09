@@ -11,5 +11,5 @@ cask "font-rethink-sans" do
   font "RethinkSans-Italic[wght].ttf"
   font "RethinkSans[wght].ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

@@ -8,5 +8,5 @@ cask "font-belgrano" do
 
   font "Belgrano-Regular.ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

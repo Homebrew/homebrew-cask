@@ -9,5 +9,5 @@ cask "font-bizter" do
   font "BIZTER_v#{version}/BIZTER-Bold.ttf"
   font "BIZTER_v#{version}/BIZTER-Regular.ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

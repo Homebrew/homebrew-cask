@@ -2,12 +2,12 @@ cask "tencent-meeting" do
   arch arm: "arm64", intel: "x86_64"
 
   on_arm do
-    version "3.45.10.412,88ba033c8b9ccd1b728f9b292abb9088"
-    sha256 "39552078b8e4de9611a2e1a88855e92a143259bd32dfb9dbb88ecf427e9426fb"
+    version "3.47.2.407,8f792a0af699fd29e5a7f6b461a4c2ee"
+    sha256 "f8b6a2c5c1d86af42718517130600f56c3a22d61fcc48eda025058fc8a583835"
   end
   on_intel do
-    version "3.45.10.412,db230c1ca40f8715f0d473797baaf9b2"
-    sha256 "725942e02a50d0cb0176e22870f13585b9e7d1977e82991fd7fe1a7bcaea5848"
+    version "3.47.2.407,270f990dec24a6387576fcce1f8dd2cd"
+    sha256 "7a7b07f1dfde0e4fe428bc43f0f260156a77ca8dc81e525067bc7d770e13f386"
   end
 
   url "https://updatecdn.meeting.qq.com/cos/#{version.csv.second}/TencentMeeting_0300000000_#{version.csv.first}.publish.#{arch}.officialwebsite.dmg"
@@ -39,7 +39,10 @@ cask "tencent-meeting" do
   zap trash: [
     "~/Library/Application Scripts/com.tencent.meeting",
     "~/Library/Application Scripts/FN2V63AD2J.com.tencent.meeting",
+    "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.tencent.meeting.services.wmexternal.sfl*",
+    "~/Library/Application Support/com.tencent.meeting*",
     "~/Library/Caches/com.tencent.meeting*",
+    "~/Library/com.tencent.meeting",
     "~/Library/Containers/com.tencent.meeting*",
     "~/Library/Containers/com.tencent.wemeet.FileDelta",
     "~/Library/Group Containers/FN2V63AD2J.com.tencent.meeting",

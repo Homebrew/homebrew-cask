@@ -1,6 +1,6 @@
 cask "spacejump" do
-  version "2.1.2"
-  sha256 "edfb488dd3f0208f664a59c7ec9c57d520c3d1259f039816089580a5a1384aa4"
+  version "3.0.3"
+  sha256 "ca11880894357544c8edffb5b9a100e4896b2f88936892ba837c8413dc679c48"
 
   url "https://pub-2f1e73dd67bd462192b6592baa57a0ce.r2.dev/SpaceJump-v#{version}.dmg"
   name "SpaceJump"
@@ -19,6 +19,7 @@ cask "spacejump" do
 
   zap trash: [
     "~/Library/Application Support/com.ideabridge.spacejump",
+    "~/Library/Application Support/SpaceJump",
     "~/Library/Caches/com.ideabridge.spacejump",
     "~/Library/HTTPStorages/com.ideabridge.spacejump*",
     "~/Library/Logs/SpaceJump",

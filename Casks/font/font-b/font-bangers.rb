@@ -8,5 +8,5 @@ cask "font-bangers" do
 
   font "Bangers-Regular.ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

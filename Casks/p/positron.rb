@@ -1,9 +1,9 @@
 cask "positron" do
   arch arm: "arm64", intel: "x64"
 
-  version "2026.09.1-2"
-  sha256 arm:   "47856dd881bff89c1749c137bd05dc1838a749afcd9e06f946bce3dca4a257a6",
-         intel: "53580e5c6d7573306f04f4de16b146f80fadbacbabf0ef05c816f35b370625e9"
+  version "2026.11.0-308"
+  sha256 arm:   "94cac1bea2aa67bad066da5af9d73f44f372777209548eb91f396bfc50e26801",
+         intel: "008f4b8641583a2a18b4c59780910773f2bbfcd4568f256ddbef9baea0e0e46d"
 
   url "https://cdn.posit.co/positron/releases/mac/#{arch}/Positron-darwin-#{version}-#{arch}.zip"
   name "Positron"
@@ -23,7 +23,9 @@ cask "positron" do
 
   zap trash: [
     "~/.positron",
+    "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/co.posit.positron.sfl*",
     "~/Library/Application Support/Positron",
+    "~/Library/Preferences/co.posit.positron.plist",
     "~/Library/Preferences/com.rstudio.positron.plist",
     "~/Library/Saved Application State/com.rstudio.positron.savedState",
   ]

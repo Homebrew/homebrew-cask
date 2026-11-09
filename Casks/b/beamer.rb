@@ -1,6 +1,6 @@
 cask "beamer" do
-  version "4.2.0"
-  sha256 "6bd4a6c84e10ce35c5d641f921d875120a2acfb9e58300ee47d63bbdeb8f547a"
+  version "4.3.7"
+  sha256 "cf4e4eef197433f8a38ef241b2cb6a3d30294e3626a6334efd4230d9c14fddb6"
 
   url "https://ushining.softorino.com/shine_uploads/beamermac_#{version}.dmg"
   name "Beamer"
@@ -17,6 +17,8 @@ cask "beamer" do
 
   app "Beamer.app"
 
+  uninstall quit: "com.softorino.beamer"
+
   zap trash: [
         "~/Library/Application Support/Beamer",
         "~/Library/Caches/com.softorino.beamer",
@@ -26,8 +28,4 @@ cask "beamer" do
         "~/Library/Saved Application State/com.softorino.beamer.savedState",
       ],
       rmdir: "/Users/Shared/Beamer"
-
-  caveats do
-    requires_rosetta
-  end
 end

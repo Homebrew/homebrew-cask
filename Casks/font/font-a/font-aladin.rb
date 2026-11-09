@@ -8,5 +8,5 @@ cask "font-aladin" do
 
   font "Aladin-Regular.ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

@@ -8,5 +8,5 @@ cask "font-marmelad" do
 
   font "Marmelad-Regular.ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

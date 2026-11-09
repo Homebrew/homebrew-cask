@@ -1,6 +1,6 @@
 cask "pocket-casts" do
-  version "2.4.1"
-  sha256 "43c5065aeb3a7e26357afb707c409c7b1b664b5f161185658ebcf2737a5a2e53"
+  version "2.4.6"
+  sha256 "4e8290a96ab233c8dacde5807d6a792efa18fc2d58d4eae33e9b8dc2d8d98068"
 
   url "https://cdn.a8c-ci.services/pocket-casts-desktop/pocket-casts-desktop-darwin-universal-v#{version}.dmg"
   name "Pocket Casts"
@@ -14,7 +14,7 @@ cask "pocket-casts" do
   end
 
   auto_updates true
-  depends_on macos: :monterey
+  depends_on macos: :ventura
 
   app "Pocket Casts.app"
 
@@ -25,6 +25,7 @@ cask "pocket-casts" do
     "~/Library/Caches/au.com.shiftyjelly.PocketCasts",
     "~/Library/Caches/com.electron.pocket-casts*",
     "~/Library/HTTPStorages/com.electron.pocket-casts",
+    "~/Library/Logs/Pocket Casts",
     "~/Library/Preferences/au.com.shiftyjelly.PocketCasts.plist",
     "~/Library/Preferences/com.electron.pocket-casts.plist",
     "~/Library/Saved Application State/com.electron.pocket-casts.savedState",

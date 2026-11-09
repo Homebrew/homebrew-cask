@@ -9,12 +9,14 @@ cask "ivideonserver" do
 
   livecheck do
     url "https://www.ivideon.com/downloads/"
-    regex(/href=.*?IvideonServer[._-]v?(\d+(?:\.\d+)+)[._-]macosx[._-]x86[._-]64\.dmg/i)
+    regex(/IvideonServer[._-]v?(\d+(?:\.\d+)+)[._-]macosx[._-]x86[._-]64\.dmg/i)
   end
 
   depends_on :macos
 
   app "IvideonServer.app"
+
+  uninstall quit: "com.ivideon.IvideonServer"
 
   zap trash: "~/Library/Saved Application State/com.ivideon.IvideonServer.savedState"
 

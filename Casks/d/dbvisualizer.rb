@@ -1,9 +1,9 @@
 cask "dbvisualizer" do
   arch arm: "aarch64", intel: "x64"
 
-  version "26.2.2"
-  sha256 arm:   "1b4bf5481b80306645d81fa64b134fc6675be8447229d64c559653b12063f4c2",
-         intel: "a694a0831e9b6095e5df3e1381aa356d0ff1fc04ef155b6dcaa2bd21ae82717e"
+  version "26.2.5"
+  sha256 arm:   "0a516bd4603cd32f61c92a49d914e0fa69f7ac0807a99aab837dc2398918d76e",
+         intel: "881a5df8c6e21ea23c91d4ed76ef380428ca67e1e8120dd2f8e22c0ddd2907ac"
 
   url "https://www.dbvis.com/product_download/dbvis-#{version}/media/dbvis_macos-#{arch}_#{version.dots_to_underscores}.dmg"
   name "DbVisualizer"
@@ -18,6 +18,8 @@ cask "dbvisualizer" do
   depends_on :macos
 
   app "DbVisualizer.app"
+
+  uninstall quit: "com.dbvis.DbVisualizer"
 
   zap trash: [
     "~/.dbvis",

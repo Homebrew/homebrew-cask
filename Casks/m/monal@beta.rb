@@ -1,6 +1,6 @@
 cask "monal@beta" do
-  version "1093"
-  sha256 "bdb29bd3351a680649401e53c4dc424e92871d32ee9eb9699d435442b9e64694"
+  version "1100"
+  sha256 "f0956b00e4e0881c8e191c3d52ec674827199b7f0259e8dcfebd41947998aa74"
 
   url "https://downloads.monal-im.org/monal-im/beta/macOS/Monal-#{version}.zip"
   name "Monal"
@@ -13,7 +13,7 @@ cask "monal@beta" do
   end
 
   conflicts_with cask: "monal"
-  depends_on macos: :big_sur
+  depends_on :macos
 
   app "Monal.app"
 
@@ -22,6 +22,7 @@ cask "monal@beta" do
   zap trash: [
     "~/Library/Application Scripts/group.monal",
     "~/Library/Application Scripts/org.monal-im.prod.catalyst.monal",
+    "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/org.monal-im.prod.catalyst.monal.sfl*",
     "~/Library/Containers/org.monal-im.prod.catalyst.monal",
     "~/Library/Group Containers/group.monal",
   ]

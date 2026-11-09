@@ -8,5 +8,5 @@ cask "font-noto-sans-oriya" do
 
   font "NotoSansOriya[wdth,wght].ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

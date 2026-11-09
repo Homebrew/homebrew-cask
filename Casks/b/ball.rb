@@ -11,5 +11,5 @@ cask "ball" do
 
   app "Ball.app"
 
-  # No zap stanza required
+  zap :not_required
 end

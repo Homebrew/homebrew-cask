@@ -8,5 +8,5 @@ cask "font-noto-sans-old-permic" do
 
   font "NotoSansOldPermic-Regular.ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

@@ -26,5 +26,5 @@ cask "font-monoid-nerd-font" do
   font "MonoidNerdFontPropo-Regular.ttf"
   font "MonoidNerdFontPropo-Retina.ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

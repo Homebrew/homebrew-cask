@@ -12,5 +12,5 @@ cask "font-ebh" do
   font "EBH-v#{version}/EBH Initials.otf"
   font "EBH-v#{version}/EBH Runes.otf"
 
-  # No zap stanza required
+  zap :not_required
 end

@@ -14,5 +14,5 @@ cask "font-hind-mysuru" do
   font "HindMysuru-Regular.ttf"
   font "HindMysuru-SemiBold.ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

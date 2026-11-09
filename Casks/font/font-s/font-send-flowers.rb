@@ -8,5 +8,5 @@ cask "font-send-flowers" do
 
   font "SendFlowers-Regular.ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

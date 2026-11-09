@@ -8,5 +8,5 @@ cask "font-moirai-one" do
 
   font "MoiraiOne-Regular.ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

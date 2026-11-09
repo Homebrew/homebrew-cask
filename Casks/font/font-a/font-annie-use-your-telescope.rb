@@ -8,5 +8,5 @@ cask "font-annie-use-your-telescope" do
 
   font "AnnieUseYourTelescope-Regular.ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

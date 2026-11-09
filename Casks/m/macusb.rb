@@ -1,6 +1,6 @@
 cask "macusb" do
-  version "2.4"
-  sha256 "fe3f25cb03c0b6437a148977e36a6e00fbbfcb1d2c868a041812e2b769fde1ae"
+  version "2.6"
+  sha256 "2e48bc5d316d859aa74429f471501726e7dccb4ffcb4e3ab1e36d6fa7defe254"
 
   url "https://github.com/Kruszoneq/macUSB/releases/download/v#{version}/macUSB.#{version}.dmg"
   name "macUSB"
@@ -9,11 +9,13 @@ cask "macusb" do
 
   depends_on macos: :sonoma
 
-  app "macUSB.app"
+  # The privileged helper requires the app to be installed in /Applications.
+  app "macUSB.app", target: "/Applications/macUSB.app"
 
   uninstall quit: "com.kruszoneq.macUSB"
 
   zap trash: [
+    "~/Library/Application Support/com.kruszoneq.macUSB",
     "~/Library/Application Support/macUSB",
     "~/Library/Caches/com.kruszoneq.macUSB",
     "~/Library/HTTPStorages/com.kruszoneq.macUSB*",

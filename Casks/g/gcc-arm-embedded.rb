@@ -6,10 +6,10 @@ cask "gcc-arm-embedded" do
   pkg_version = nil
   gcc_version = nil
   on_arm do
-    version "15.3.rel1"
-    pkg_version = "15.3.rel1"
+    version "15.3.rel2"
+    pkg_version = "15.3.rel2"
     gcc_version = "15.3.1"
-    sha256 "5fb58dc3bd6684e70a02bd1c654a6b91f044cda241eb3ae663a7b9170491d7b2"
+    sha256 "779972fa545f738bfbba2ff0ae44d5ad7510b00cfb414702974844ba625412f3"
 
     livecheck do
       url "https://gitlab.arm.com/tooling/gnu-toolchains-for-arm/-/raw/main/README.md"
@@ -32,7 +32,7 @@ cask "gcc-arm-embedded" do
   url "https://gitlab.arm.com/api/v4/projects/tooling%2Fgnu-toolchains-for-arm/packages/generic/gnu-toolchain/#{version}/arm-gnu-toolchain-#{version}-darwin-#{arch}-arm-none-eabi.pkg"
   name "GCC ARM Embedded"
   desc "Pre-built GNU bare-metal toolchain for 32-bit Arm processors"
-  homepage "https://developer.arm.com/tools-and-software/gnu-toolchain"
+  homepage "https://developer.arm.com/tools-and-software/gnu-toolchain", browsed: "2026-10-15"
 
   depends_on :macos
 
@@ -76,5 +76,5 @@ cask "gcc-arm-embedded" do
               "/Applications/ArmGNUToolchain/#{pkg_version}",
             ]
 
-  # No zap stanza required
+  zap :not_required
 end

@@ -16,5 +16,5 @@ cask "font-inknut-antiqua" do
   font "InknutAntiqua-Regular.ttf"
   font "InknutAntiqua-SemiBold.ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

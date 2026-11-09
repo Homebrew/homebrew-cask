@@ -13,5 +13,5 @@ cask "font-vollkorn-sc" do
   font "VollkornSC-Regular.ttf"
   font "VollkornSC-SemiBold.ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

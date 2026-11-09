@@ -8,5 +8,5 @@ cask "font-swanky-and-moo-moo" do
 
   font "SwankyandMooMoo.ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

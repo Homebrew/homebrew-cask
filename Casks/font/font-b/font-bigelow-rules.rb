@@ -8,5 +8,5 @@ cask "font-bigelow-rules" do
 
   font "BigelowRules-Regular.ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

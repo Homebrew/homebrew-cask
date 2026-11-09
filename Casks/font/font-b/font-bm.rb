@@ -8,5 +8,5 @@ cask "font-bm" do
 
   font "BM-HANNA.ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

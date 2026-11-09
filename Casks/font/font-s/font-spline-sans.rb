@@ -8,5 +8,5 @@ cask "font-spline-sans" do
 
   font "SplineSans[wght].ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

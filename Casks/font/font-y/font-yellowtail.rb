@@ -8,5 +8,5 @@ cask "font-yellowtail" do
 
   font "Yellowtail-Regular.ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

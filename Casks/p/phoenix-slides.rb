@@ -7,7 +7,7 @@ cask "phoenix-slides" do
   desc "Full-screen slideshow program"
   homepage "https://blyt.net/phxslides/"
 
-  depends_on macos: :big_sur
+  depends_on :macos
 
   app "Phoenix Slides.app"
 

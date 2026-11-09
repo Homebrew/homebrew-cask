@@ -10,5 +10,5 @@ cask "font-pt-mono" do
   font "PT/PT/PT-Mono/pt-mono_bold.ttf"
   font "PT/PT/PT-Mono/pt-mono_regular.ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

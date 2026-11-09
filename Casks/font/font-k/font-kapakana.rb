@@ -8,5 +8,5 @@ cask "font-kapakana" do
 
   font "Kapakana[wght].ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

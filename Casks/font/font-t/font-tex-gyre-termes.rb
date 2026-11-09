@@ -22,5 +22,5 @@ cask "font-tex-gyre-termes" do
   font "texgyretermes-italic.otf"
   font "texgyretermes-regular.otf"
 
-  # No zap stanza required
+  zap :not_required
 end

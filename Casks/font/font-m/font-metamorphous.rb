@@ -8,5 +8,5 @@ cask "font-metamorphous" do
 
   font "Metamorphous-Regular.ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

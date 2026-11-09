@@ -26,5 +26,5 @@ cask "font-mononoki-nerd-font" do
   font "MononokiNerdFontPropo-Italic.ttf"
   font "MononokiNerdFontPropo-Regular.ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

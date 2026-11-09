@@ -1,6 +1,6 @@
 cask "rotato" do
-  version "154"
-  sha256 "f8a9b0c1cae6398b5b0973bcabe1ce8e840539b29df987adb92443c67662a3bc"
+  version "162"
+  sha256 "5d13c1853daf00d2e2e96ea98963670f9634df3083e18ef39989ef5375799519"
 
   url "https://download.rota.to/Rotato-#{version}.dmg"
   name "Rotato"
@@ -20,6 +20,7 @@ cask "rotato" do
   app "Rotato.app"
 
   zap trash: [
+    "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.mortenjust.rendermock.sfl*",
     "~/Library/Application Support/com.mortenjust.Rendermock",
     "~/Library/Application Support/Rotato",
     "~/Library/Caches/com.mortenjust.Rendermock",

@@ -1,6 +1,6 @@
 cask "scroll-reverser" do
-  version "1.9"
-  sha256 "0961dbb6f8ef4e5edd432bf0dd6e7cdd4219d8bac8b3baa3f576af9a42bbf585"
+  version "2.1.1"
+  sha256 "654a2bbb368f39cf7ca9adcb4d83c12c572f2c64886ef5012949afd81cf69691"
 
   url "https://pilotmoon.com/downloads/ScrollReverser-#{version}.zip"
   name "Scroll Reverser"
@@ -17,8 +17,11 @@ cask "scroll-reverser" do
 
   app "Scroll Reverser.app"
 
+  uninstall quit: "com.pilotmoon.scroll-reverser"
+
   zap trash: [
     "~/Library/Caches/com.pilotmoon.scroll-reverser",
+    "~/Library/HTTPStorages/com.pilotmoon.scroll-reverser",
     "~/Library/Preferences/com.pilotmoon.scroll-reverser.plist",
   ]
 end

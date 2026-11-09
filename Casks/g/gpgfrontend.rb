@@ -27,17 +27,17 @@ cask "gpgfrontend" do
       end
     end
     on_sequoia :or_newer do
-      version "2.2.2"
+      version "2.2.4"
 
       on_sequoia do
         macos_version = "15"
 
-        sha256 "1939548a9fa638c0393489bbb094c5d3e71aa1869e858bc926981c64e3220847"
+        sha256 "8a4b936143e566a90f5f58177436b1ff9de28854f341a3b3791ac3ac2c9a8155"
       end
       on_tahoe :or_newer do
         macos_version = "26"
 
-        sha256 "e2503c724975578eec19d25bd34dd94f3281bd3c70b80bb40550cacff41be917"
+        sha256 "adb87710c4aa110402905807f02d312e196bc288f9ff0928ea457b37882546f5"
       end
     end
   end
@@ -53,17 +53,17 @@ cask "gpgfrontend" do
       end
     end
     on_sequoia :or_newer do
-      version "2.2.2"
+      version "2.2.4"
 
       on_sequoia do
         macos_version = "15-intel"
 
-        sha256 "157ca3a73676c2aedeb3828d404a7baf633e1e8276e08d524ec3944de4ddfdcb"
+        sha256 "80fda74cb371e881c014b62384de7b4132bf6183db387adf5accf0090f62d152"
       end
       on_tahoe :or_newer do
         macos_version = "26-intel"
 
-        sha256 "5de9cd993b4a90e818e9c1c746fba3828840388d25392d729774c93c654679ea"
+        sha256 "c6561ea36f09ade34868f80820a885dd5827581ff49db033f7b51fd9ff4b0182"
       end
     end
   end
@@ -84,6 +84,8 @@ cask "gpgfrontend" do
     "~/Library/Application Scripts/pub.gpgfrontend.gpgfrontend",
     "~/Library/Application Support/GpgFrontend",
     "~/Library/Containers/pub.gpgfrontend.gpgfrontend",
+    "~/Library/Preferences/com.bktus.gpgfrontend.GpgFrontend.plist",
+    "~/Library/Preferences/com.bktus.GpgFrontend.plist",
     "~/Library/Preferences/GpgFrontend",
     "~/Library/Preferences/GpgFrontend.plist",
     "~/Library/Preferences/pub.gpgfrontend.gpgfrontend.plist",

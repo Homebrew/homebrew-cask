@@ -8,5 +8,5 @@ cask "font-palette-mosaic" do
 
   font "PaletteMosaic-Regular.ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

@@ -14,5 +14,5 @@ cask "font-fira-code" do
   font "ttf/FiraCode-SemiBold.ttf"
   font "variable_ttf/FiraCode-VF.ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

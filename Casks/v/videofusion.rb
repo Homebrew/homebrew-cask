@@ -1,8 +1,8 @@
 cask "videofusion" do
-  version "11.4.0.13103"
-  sha256 "7eb2e7ff16f2f3d4ffa73b10458dc23a1ea586070b893d68da119b989fda5d91"
+  version "11.7.0.13374"
+  sha256 "ffb7a839cc44dcb984ba0a58388d0432c7e880f4e0aaf10115e96d51c51de0a9"
 
-  url "https://lf3-package.vlabstatic.com/obj/faceu-packages/Jianying_#{version.dots_to_underscores}_jianyingpro_0_creatortool.dmg"
+  url "https://lf3-package.vlabstatic.com/obj/faceu-packages/Jianying_#{version.dots_to_underscores}_jianyingpro_0_creatortool_nosandbox.dmg"
   name "VideoFusion"
   name "剪映专业版"
   name "Jianying Pro"
@@ -31,6 +31,10 @@ cask "videofusion" do
 
   zap trash: [
     "~/Library/Application Scripts/com.lemon.lvpro",
+    "~/Library/Caches/com.lemon.lvpro",
     "~/Library/Containers/com.lemon.lvpro",
+    "~/Library/HTTPStorages/com.lemon.lvpro",
+    "~/Library/Preferences/com.lemon.lvpro.helper.renderer.plist",
+    "~/Library/Preferences/com.lemon.lvpro.plist",
   ]
 end

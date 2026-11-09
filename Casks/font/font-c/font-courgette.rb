@@ -8,5 +8,5 @@ cask "font-courgette" do
 
   font "Courgette-Regular.ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

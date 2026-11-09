@@ -16,5 +16,5 @@ cask "font-tajawal" do
   font "Tajawal-Medium.ttf"
   font "Tajawal-Regular.ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

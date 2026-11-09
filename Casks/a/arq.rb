@@ -1,6 +1,6 @@
 cask "arq" do
-  version "7.48"
-  sha256 "6aecf59ba6a2d7407fe8d293ac0fed1fafc7a827fdbbe683f24320077b19a2de"
+  version "7.51"
+  sha256 "dde8b24ecb95617effbb716f633305036850501cbb18bff0040b518fd7de0572"
 
   url "https://www.arqbackup.com/download/arqbackup/Arq#{version}.pkg"
   name "Arq"
@@ -26,12 +26,16 @@ cask "arq" do
             pkgutil:   "com.haystacksoftware.Arq",
             delete:    "/Applications/Arq.app"
 
-  zap trash: [
-    "/Library/Application Support/ArqAgent",
-    "/Library/Application Support/ArqAgentAPFS",
-    "~/Library/Application Support/Arq *",
-    "~/Library/Arq *",
-    "~/Library/Preferences/com.haystacksoftware.Arq.plist",
-    "~/Library/Preferences/com.haystacksoftware.ArqMonitor.plist",
-  ]
+  zap delete: "/Library/Logs/ArqAgent",
+      trash:  [
+        "/Library/Application Support/ArqAgent",
+        "/Library/Application Support/ArqAgentAPFS",
+        "~/Library/Application Support/Arq *",
+        "~/Library/Arq *",
+        "~/Library/Arq",
+        "~/Library/HTTPStorages/com.haystacksoftware.Arq*",
+        "~/Library/Logs/Arq*",
+        "~/Library/Preferences/com.haystacksoftware.Arq.plist",
+        "~/Library/Preferences/com.haystacksoftware.ArqMonitor.plist",
+      ]
 end

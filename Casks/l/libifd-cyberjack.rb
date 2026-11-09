@@ -25,7 +25,7 @@ cask "libifd-cyberjack" do
             ],
             delete:  "/usr/local/libexec/SmartCardServices/drivers/libifd-cyberjack.bundle"
 
-  # No zap stanza required
+  zap :not_required
 
   caveats do
     files_in_usr_local

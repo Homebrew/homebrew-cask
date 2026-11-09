@@ -14,11 +14,11 @@ cask "acronis-true-image-cleanup-tool" do
 
   disable! date: "2026-09-01", because: :fails_gatekeeper_check
 
-  depends_on macos: :big_sur
+  depends_on :macos
 
   lib_directory = "#{HOMEBREW_PREFIX}/lib/acronis-true-image"
 
   binary "#{staged_path}/cleanup_tool%20Mac", target: "#{lib_directory}/cleanup_tool"
 
-  # No zap stanza required
+  zap :not_required
 end

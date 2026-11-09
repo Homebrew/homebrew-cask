@@ -1,6 +1,6 @@
 cask "syncthing-app" do
-  version "2.1.2-1"
-  sha256 "be56fc9807bc5e37332237ba479b77bde852c5f0d861c950674255999bbba0f6"
+  version "2.1.6-1"
+  sha256 "f81d091bb19c42b3bb7a2fda9e80f1794cdb27fadb18b094b0c99b53ef571e2d"
 
   url "https://github.com/syncthing/syncthing-macos/releases/download/v#{version}/Syncthing-#{version}.dmg"
   name "Syncthing"
@@ -18,6 +18,8 @@ cask "syncthing-app" do
   depends_on macos: :monterey
 
   app "Syncthing.app"
+
+  uninstall quit: "com.github.xor-gate.syncthing-macosx"
 
   zap trash: [
     "~/Library/Application Support/Syncthing-macOS",

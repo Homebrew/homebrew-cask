@@ -11,5 +11,5 @@ cask "font-inclusive-sans" do
   font "InclusiveSans-Italic[wght].ttf"
   font "InclusiveSans[wght].ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

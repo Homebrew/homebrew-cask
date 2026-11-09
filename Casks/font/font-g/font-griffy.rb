@@ -8,5 +8,5 @@ cask "font-griffy" do
 
   font "Griffy-Regular.ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

@@ -11,5 +11,5 @@ cask "font-zilla-slab-highlight" do
   font "ZillaSlabHighlight-Bold.ttf"
   font "ZillaSlabHighlight-Regular.ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

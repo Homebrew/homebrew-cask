@@ -8,5 +8,5 @@ cask "font-julee" do
 
   font "Julee-Regular.ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

@@ -14,8 +14,8 @@ cask "meridiem" do
     end
   end
 
-  depends_on macos: :monterey
   depends_on arch: :arm64
+  depends_on macos: :monterey
 
   app "Meridiem.app"
 

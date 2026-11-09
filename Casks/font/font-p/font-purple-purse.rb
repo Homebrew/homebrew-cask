@@ -8,5 +8,5 @@ cask "font-purple-purse" do
 
   font "PurplePurse-Regular.ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

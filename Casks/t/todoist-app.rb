@@ -1,9 +1,9 @@
 cask "todoist-app" do
   arch arm: "arm64", intel: "x64"
 
-  version "9.30.0"
-  sha256 arm:   "3b0bdee906488c4f35588a2c9150df11f2c06fc5118e5661ee723d1f2eaad0c8",
-         intel: "ae37997e06d2becb4ed92a988b8061de5caadd3afcb4066e4b0c04aa5ecac469"
+  version "9.36.2"
+  sha256 arm:   "a07a1f2a2a5b676ce28660f07a2d48ba6a6e36d9a8c4cf25433affdb9650f448",
+         intel: "968e9c020cd80fb66667a56029cdbe1e7b927589e8ed1da3a6b3a5e36c9c5c31"
 
   url "https://electron-dl.todoist.com/mac/Todoist-darwin-#{version}-#{arch}-latest.dmg"
   name "Todoist"
@@ -22,6 +22,7 @@ cask "todoist-app" do
 
   zap trash: [
     "~/Library/Application Scripts/*com.todoist.mac*",
+    "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.todoist.mac.todoist.sfl*",
     "~/Library/Application Support/Todoist",
     "~/Library/Containers/com.todoist.mac.Todoist*",
     "~/Library/Group Containers/*com.todoist.mac*",

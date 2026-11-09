@@ -8,5 +8,5 @@ cask "font-averia-gruesa-libre" do
 
   font "AveriaGruesaLibre-Regular.ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

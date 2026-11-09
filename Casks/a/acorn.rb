@@ -1,6 +1,6 @@
 cask "acorn" do
-  version "8.6.2"
-  sha256 "ab1fe1d1c18b74a2686c44c366e13f6ae4450d20e227dbb56b04fbd1df5c83f8"
+  version "8.7.2"
+  sha256 "0731ac2b64209b157488347e4e93ac166952cbbcb74293744e97bd938978744a"
 
   url "https://flyingmeat.com/download/Acorn-#{version}.zip"
   name "Acorn"
@@ -18,8 +18,12 @@ cask "acorn" do
   app "Acorn.app"
 
   zap trash: [
+    "~/Library/Application Scripts/com.flyingmeat.Acorn#{version.major}.Acornappex",
     "~/Library/Application Support/Acorn",
+    "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.flyingmeat.acorn#{version.major}.sfl*",
     "~/Library/Caches/com.flyingmeat.Acorn#{version.major}",
+    "~/Library/Containers/com.flyingmeat.Acorn#{version.major}.Acornappex",
+    "~/Library/HTTPStorages/com.flyingmeat.Acorn#{version.major}",
     "~/Library/Preferences/com.flyingmeat.Acorn#{version.major}.plist",
     "~/Library/Saved Application State/com.flyingmeat.Acorn#{version.major}.savedState",
   ]

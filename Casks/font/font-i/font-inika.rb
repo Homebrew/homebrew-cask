@@ -11,5 +11,5 @@ cask "font-inika" do
   font "Inika-Bold.ttf"
   font "Inika-Regular.ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

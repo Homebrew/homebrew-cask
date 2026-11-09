@@ -8,5 +8,5 @@ cask "font-kaiso" do
 
   font "kaiso_next/Kaiso-Next-B.otf"
 
-  # No zap stanza required
+  zap :not_required
 end

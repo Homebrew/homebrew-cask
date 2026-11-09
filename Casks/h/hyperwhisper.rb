@@ -1,6 +1,6 @@
 cask "hyperwhisper" do
-  version "2.47.0"
-  sha256 "b7d1f6ed151b9b531a02bca9225153070fa0c98d05e70747e2876592cb1fe046"
+  version "2.51.0"
+  sha256 "a7071bb78f97a68dfd7f00273ca8fb61713f702d61281c3fa34e529950283cf3"
 
   url "https://builds.hyperwhisper.com/hyperwhisper-#{version}.dmg"
   name "HyperWhisper"
@@ -29,6 +29,7 @@ cask "hyperwhisper" do
     "~/Library/Application Support/HyperWhisper",
     "~/Library/Caches/com.hyperwhisper.hyperwhisper",
     "~/Library/HTTPStorages/com.hyperwhisper.hyperwhisper",
+    "~/Library/Logs/HyperWhisper",
     "~/Library/Preferences/com.hyperwhisper.hyperwhisper.plist",
     "~/Library/Saved Application State/com.hyperwhisper.hyperwhisper.savedState",
   ]

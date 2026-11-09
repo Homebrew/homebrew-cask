@@ -10,5 +10,5 @@ cask "font-material-design-icons-webfont" do
 
   font "materialdesignicons-webfont.ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

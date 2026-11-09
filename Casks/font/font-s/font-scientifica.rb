@@ -10,5 +10,5 @@ cask "font-scientifica" do
   font "scientifica/ttf/scientificaBold.ttf"
   font "scientifica/ttf/scientificaItalic.ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

@@ -8,5 +8,5 @@ cask "font-scope-one" do
 
   font "ScopeOne-Regular.ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

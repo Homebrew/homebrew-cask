@@ -26,5 +26,5 @@ cask "font-inconsolata-lgc-nerd-font" do
   font "InconsolataLGCNerdFontPropo-Italic.ttf"
   font "InconsolataLGCNerdFontPropo-Regular.ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

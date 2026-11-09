@@ -1,6 +1,6 @@
 cask "mp3tag" do
-  version "1.14.0"
-  sha256 "2996a0220f6faeb00c3e27517530cf63c598e95c2d0b9d9796cd17132f0b4eee"
+  version "1.15.0"
+  sha256 "28299a111664999fc07a52b8fa2d08c4766d78331afc54abbbab636d769ad5ab"
 
   url "https://updates.mp3tag.app/Mp3tag-#{version}.zip"
   name "Mp3tag"
@@ -20,6 +20,7 @@ cask "mp3tag" do
 
   zap trash: [
     "~/Library/Application Scripts/app.mp3tag.Mp3tag",
+    "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/app.mp3tag.mp3tag.sfl*",
     "~/Library/Containers/app.mp3tag.Mp3tag",
   ]
 end

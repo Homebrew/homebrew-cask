@@ -1,6 +1,6 @@
 cask "hopper-disassembler" do
-  version "6.5.0"
-  sha256 "4d1a55a98034d9440dd729f921d39b7a9943cb94021861463e79226bddddd1b6"
+  version "6.6.2"
+  sha256 "4a5b79f3de7f44cfd2e07bee45d7e8f3b8470b257590397b693b9acfdc6f9f08"
 
   url "https://www.hopperapp.com/downloader/public/Hopper-#{version}-demo.dmg",
       user_agent: :browser
@@ -19,7 +19,8 @@ cask "hopper-disassembler" do
 
   app "Hopper Disassembler.app"
 
-  uninstall launchctl: "com.cryptic-apps.ExternalAPI"
+  uninstall launchctl: "com.cryptic-apps.ExternalAPI",
+            quit:      "com.cryptic-apps.hopper-web-4"
 
   zap trash: [
     "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.cryptic-apps.hopper-web-4.sfl*",

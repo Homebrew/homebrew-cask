@@ -1,6 +1,6 @@
 cask "kaleidoscope" do
-  version "7.0.1,10509"
-  sha256 "56834d2ac91c14eaf5109e37f971a03903489674e26b2c7db9d2ea7cdc834e77"
+  version "7.0.2,11016"
+  sha256 "f2fc4286dcd30cec6ac1d0e3f6b7cbae64eaf246ff1cd4f73ce1ae8c41e37231"
 
   url "https://updates.kaleidoscope.app/v#{version.major}/prod/Kaleidoscope-#{version.csv.first}-#{version.csv.second}.app.zip"
   name "Kaleidoscope"
@@ -26,7 +26,7 @@ cask "kaleidoscope" do
         args: ["{{appdir}}/Kaleidoscope.app/Contents/MacOS", "{{HOMEBREW_PREFIX}}/bin"], base: :appdir
   end
 
-  uninstall quit:    "app.kaleidoscope.v#{version.major}",
+  uninstall quit:    "app.kaleidoscope.v*",
             pkgutil: "app.kaleidoscope.uninstall_ksdiff"
 
   zap trash: [

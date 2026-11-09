@@ -1,5 +1,5 @@
 cask "garmin-express" do
-  version "7.29.2"
+  version "7.29.3.0"
   sha256 :no_check
 
   url "https://download.garmin.com/omt/express/GarminExpress.dmg"
@@ -7,15 +7,16 @@ cask "garmin-express" do
   desc "Update maps and software, sync with Garmin Connect and register your device"
   homepage "https://www.garmin.com/en-US/software/express"
 
-  # From https://support.garmin.com/en-US/?productID=168768&tab=software
   livecheck do
-    url "https://support.garmin.com/capi/faq/details/?locale=en-US&faqId=9MuiEv9c2y2wgcXvzEVEe8"
-    regex(/for\s+Mac:?[\s\u00a0]*?v?(\d+(?:\.\d+)+)/i)
-    strategy :json do |json, regex|
-      match = json["content"]&.match(regex)
-      next if match.blank?
-
-      match[1]
+    url "https://omt.garmin.com/Rce/ProtobufApi/ApplicationService/GetApplicationUpdate",
+        header:    "Accept: application/json",
+        post_json: {
+          ApplicationName: "express-mac",
+          ClientInfo:      { OperatingSystemType: "mac" },
+          CurrentVersion:  version.major_minor_patch.to_s,
+        }
+    strategy :json do |json|
+      json["VersionNumber"]
     end
   end
 

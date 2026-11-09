@@ -2,12 +2,12 @@ cask "block-buzz" do
   arch arm: "aarch64", intel: on_system_conditional(macos: "x64", linux: "amd64")
   os macos: "dmg", linux: "AppImage"
 
-  version "0.5.23"
+  version "0.5.28"
+  sha256 arm:          "eaed9b1eb06bb90752277ce2f79a1fdac5192fd99c97bc49f03573e7e8135b25",
+         intel:        "5b1b1779a7345ac7916d47580630d92006f86dcdbbaadbee4e9726d6d9b68cd7",
+         x86_64_linux: "60223ac27d8742226a0b5e3db5e1f97441b267ff63abb905793b33fe6568874c"
 
   on_macos do
-    sha256 arm:   "9197dde29a09ade77f56677e07cb4d6a9d7d1a6a157d7212f0a050144059c5b2",
-           intel: "dd0abf673a68e1aad59999194208dd7c144f4718742a997cea7d9c27b7bd016c"
-
     conflicts_with cask: "buzz"
 
     app "Buzz.app"
@@ -23,11 +23,15 @@ cask "block-buzz" do
         rmdir: "~/.buzz"
   end
   on_linux do
-    sha256 "f5bad1edeba2d6343e4102e9ce2baed4cda4a6dfd16abaa33081bfadbc5f9d4e"
-
     depends_on arch: :x86_64
 
     app_image "Buzz_#{version}_#{arch}.AppImage", target: "Buzz.AppImage"
+
+    zap trash: [
+          "~/.local/bin/buzz",
+          "~/.local/share/xyz.block.buzz.app",
+        ],
+        rmdir: "~/.buzz"
   end
 
   url "https://github.com/block/buzz/releases/download/desktop-v#{version}/Buzz_#{version}_#{arch}.#{os}"

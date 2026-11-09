@@ -12,10 +12,7 @@ cask "sanctum" do
   desc "Run LLMs locally"
   homepage "https://sanctum.ai/"
 
-  livecheck do
-    url :homepage
-    regex(/href=.*?Sanctum[._-]v?(\d+(?:\.\d+)+)[._-]#{arch}\.dmg/i)
-  end
+  disable! date: "2026-09-16", because: :no_longer_available
 
   depends_on :macos
 

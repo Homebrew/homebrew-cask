@@ -8,5 +8,5 @@ cask "font-triodion" do
 
   font "Triodion-Regular.ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

@@ -8,5 +8,5 @@ cask "font-briem-hand" do
 
   font "BriemHand[wght].ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

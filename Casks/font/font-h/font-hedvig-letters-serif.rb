@@ -8,5 +8,5 @@ cask "font-hedvig-letters-serif" do
 
   font "HedvigLettersSerif[opsz].ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

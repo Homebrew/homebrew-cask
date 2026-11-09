@@ -8,5 +8,5 @@ cask "font-bilbo" do
 
   font "Bilbo-Regular.ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

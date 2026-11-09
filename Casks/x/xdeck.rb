@@ -1,6 +1,6 @@
 cask "xdeck" do
-  version "3.2"
-  sha256 "db8bd49328c72ef4e4cb91fa2b0f9c1c2660c572c89dfc23492f8601b2c16e52"
+  version "3.3"
+  sha256 "ced844a43e222fdf858e2130bd832c44c7b8b69a28ec652bc185c9d43936a3ad"
 
   url "https://github.com/morishin/XDeck/releases/download/#{version}/XDeck-#{version}.zip"
   name "XDeck"

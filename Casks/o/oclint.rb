@@ -39,5 +39,5 @@ cask "oclint" do
   binary "oclint-#{version}/lib/clang", target: "#{HOMEBREW_PREFIX}/lib/clang"
   binary "oclint-#{version}/lib/oclint", target: "#{HOMEBREW_PREFIX}/lib/oclint"
 
-  # No zap stanza required
+  zap :not_required
 end

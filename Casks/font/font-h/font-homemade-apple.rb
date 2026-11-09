@@ -8,5 +8,5 @@ cask "font-homemade-apple" do
 
   font "HomemadeApple-Regular.ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

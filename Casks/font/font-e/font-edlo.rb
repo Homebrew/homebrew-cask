@@ -9,5 +9,5 @@ cask "font-edlo" do
   font "Edlo-master/edlo-nerd-font.ttf"
   font "Edlo-master/edlo.ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

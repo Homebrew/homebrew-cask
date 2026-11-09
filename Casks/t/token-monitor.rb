@@ -1,9 +1,9 @@
 cask "token-monitor" do
   arch arm: "arm64", intel: "x64"
 
-  version "0.54.0"
-  sha256 arm:   "deaea5fe4695864d996c53addbd756d8d859b804410cbe33b1438b56c092b714",
-         intel: "583f4c7afd71214e3dcca7fb70e1626b77e26f043cecbb1b0105e81909ab0ead"
+  version "0.88.0"
+  sha256 arm:   "f4e92d0cae01e13b37b73e59350f33523e9746e5aa308573233289b3259df5da",
+         intel: "d11531f49cbb7491eb9a3acb95e3b2ee983fd436f38ebfee03ed2b463ef35024"
 
   url "https://github.com/Javis603/token-monitor/releases/download/v#{version}/Token-Monitor-#{version}-#{arch}.dmg"
   name "Token Monitor"
@@ -16,17 +16,21 @@ cask "token-monitor" do
   end
 
   auto_updates true
-  depends_on macos: :monterey
+  depends_on macos: :ventura
 
   app "Token Monitor.app"
 
   uninstall quit: "com.javis.tokenmonitor"
 
   zap trash: [
+    "~/Library/Application Scripts/com.javis.tokenmonitor.widget",
+    "~/Library/Application Scripts/group.com.javis.tokenmonitor.macos",
     "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.javis.tokenmonitor.sfl*",
     "~/Library/Application Support/Token Monitor",
     "~/Library/Caches/com.javis.tokenmonitor",
     "~/Library/Caches/com.javis.tokenmonitor.ShipIt",
+    "~/Library/Containers/com.javis.tokenmonitor.widget",
+    "~/Library/Group Containers/group.com.javis.tokenmonitor.macos",
     "~/Library/HTTPStorages/com.javis.tokenmonitor",
     "~/Library/Logs/Token Monitor",
     "~/Library/Preferences/com.javis.tokenmonitor.plist",

@@ -13,5 +13,5 @@ cask "font-amiri" do
   font "Amiri-#{version}/AmiriQuran.ttf"
   font "Amiri-#{version}/AmiriQuranColored.ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

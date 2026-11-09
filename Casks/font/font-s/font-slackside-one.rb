@@ -8,5 +8,5 @@ cask "font-slackside-one" do
 
   font "SlacksideOne-Regular.ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

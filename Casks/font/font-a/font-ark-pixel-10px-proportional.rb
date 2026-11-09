@@ -1,6 +1,6 @@
 cask "font-ark-pixel-10px-proportional" do
-  version "2026.09.01"
-  sha256 "3a7f8ac0202e0a679ce9ec6b92d4406af8a0181a2931fe57b009aa2f84ecb955"
+  version "2026.10.25"
+  sha256 "d252a3cc41d43bd8a341c7d3b629c51bceb456f33c2359fdfa3ac5b49cf61136"
 
   url "https://github.com/TakWolf/ark-pixel-font/releases/download/#{version}/ark-pixel-font-10px-proportional-otf-v#{version}.zip"
   name "Ark Pixel 10px Proportional"
@@ -9,10 +9,10 @@ cask "font-ark-pixel-10px-proportional" do
   font "ark-pixel-10px-proportional-ja.otf"
   font "ark-pixel-10px-proportional-ko.otf"
   font "ark-pixel-10px-proportional-latin.otf"
-  font "ark-pixel-10px-proportional-zh_cn.otf"
+  font "ark-pixel-10px-proportional-zh_hans.otf"
+  font "ark-pixel-10px-proportional-zh_hant.otf"
   font "ark-pixel-10px-proportional-zh_hk.otf"
-  font "ark-pixel-10px-proportional-zh_tr.otf"
   font "ark-pixel-10px-proportional-zh_tw.otf"
 
-  # No zap stanza required
+  zap :not_required
 end

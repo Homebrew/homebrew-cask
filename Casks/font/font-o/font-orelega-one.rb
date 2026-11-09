@@ -8,5 +8,5 @@ cask "font-orelega-one" do
 
   font "OrelegaOne-Regular.ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

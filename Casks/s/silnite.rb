@@ -15,11 +15,11 @@ cask "silnite" do
     end
   end
 
-  depends_on macos: :big_sur
+  depends_on :macos
 
   pkg "silnite#{version.csv.first}/silniteInstaller.pkg"
 
   uninstall pkgutil: "co.eclecticlight.pkg.silniteInstaller"
 
-  # No zap stanza required
+  zap :not_required
 end

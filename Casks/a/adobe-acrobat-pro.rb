@@ -1,5 +1,5 @@
 cask "adobe-acrobat-pro" do
-  version "26.002.21901"
+  version "26.003.22075"
   sha256 :no_check
 
   url "https://trials.adobe.com/AdobeProducts/APRO/Acrobat_HelpX/osx10/Acrobat_DC_Web_WWMUI.dmg",
@@ -35,7 +35,7 @@ cask "adobe-acrobat-pro" do
               "com.adobe.armdc.app.pkg",
               "com.adobe.PDApp.AdobeApplicationManager.installer.pkg",
             ],
-            delete:    "/Applications/Adobe Acrobat DC/"
+            delete:    "/Applications/Adobe Acrobat DC"
 
   zap trash: [
     "~/Library/Application Support/Adobe/Acrobat",

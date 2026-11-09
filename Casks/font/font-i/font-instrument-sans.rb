@@ -11,5 +11,5 @@ cask "font-instrument-sans" do
   font "InstrumentSans-Italic[wdth,wght].ttf"
   font "InstrumentSans[wdth,wght].ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

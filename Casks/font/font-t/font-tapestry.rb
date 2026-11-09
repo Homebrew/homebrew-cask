@@ -8,5 +8,5 @@ cask "font-tapestry" do
 
   font "Tapestry-Regular.ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

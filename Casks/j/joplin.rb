@@ -2,10 +2,10 @@ cask "joplin" do
   arch arm: "-arm64"
   url_end = on_system_conditional macos: "#{arch}.DMG", linux: ".AppImage"
 
-  version "3.7.16"
-  sha256 arm:          "6bd0ab0857f475baf44028fd5614e0dbe5e92a91963f8aa2316972db94271cd3",
-         intel:        "fe2c4f87a4a801db1f79c01e4e242708438088b22338068f5929bc76dda63672",
-         x86_64_linux: "0c187ce66c4cddd59960f4b1861c87973d598d697239073c042ba1e35f08b30b"
+  version "3.7.22"
+  sha256 arm:          "185395eba8d9dac2d8656884cbb0e5b96bcb40b41d80c67126ce5526cb5186c8",
+         intel:        "5718f0e30ca4bacebb5f03822f2963433d1120e3581258772f2d9eba1d53633f",
+         x86_64_linux: "2b0b1ee82999f00883d21d950c2fb5dff28ccc3d2f570248b3abd40e5100dfdc"
 
   on_macos do
     depends_on macos: :monterey
@@ -13,6 +13,8 @@ cask "joplin" do
     app "Joplin.app"
 
     zap trash: [
+      "~/.config/joplin-desktop",
+      "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/net.cozic.joplin-desktop.sfl*",
       "~/Library/Application Support/Joplin",
       "~/Library/Preferences/net.cozic.joplin-desktop.helper.plist",
       "~/Library/Preferences/net.cozic.joplin-desktop.plist",
@@ -39,6 +41,4 @@ cask "joplin" do
     url :url
     strategy :github_latest
   end
-
-  auto_updates true
 end

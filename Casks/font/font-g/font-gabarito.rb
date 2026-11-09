@@ -8,5 +8,5 @@ cask "font-gabarito" do
 
   font "Gabarito[wght].ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

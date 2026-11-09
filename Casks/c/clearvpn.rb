@@ -1,6 +1,6 @@
 cask "clearvpn" do
-  version "3.4.3,202607.01.1222,1782909151"
-  sha256 "945e83cb736f51a4c952a1da8d06e6ae7f6748a68c4a9f104b45db1396294294"
+  version "3.5.0,202610.30.1622,1793377924"
+  sha256 "fdb9a6e6d31e1dc580a357b0c410a7e49052a0c10de01672ede4f3ee9e083727"
 
   url "https://dl.devmate.com/com.macpaw.clearvpn.macos-site-ver/#{version.csv.second}/#{version.csv.third}/ClearVPN-#{version.csv.second}.zip"
   name "ClearVPN"
@@ -23,8 +23,13 @@ cask "clearvpn" do
 
   app "ClearVPN.app"
 
+  uninstall launchctl: "com.macpaw.clearvpn.macos-site-ver.security-monitor"
+
   zap trash: [
+    "~/Library/Application Scripts/com.macpaw.clearvpn.macos-site-ver.widget",
+    "~/Library/Application Scripts/S8EX82NJP6.com.macpaw.clearvpn.macos-site-ver",
     "~/Library/Caches/com.macpaw.clearvpn.macos-site-ver",
+    "~/Library/Containers/com.macpaw.clearvpn.macos-site-ver.widget",
     "~/Library/Group Containers/S8EX82NJP6.com.macpaw.clearvpn.macos-site-ver",
     "~/Library/HTTPStorages/com.macpaw.clearvpn.macos-site-ver*",
     "~/Library/Preferences/com.macpaw.clearvpn.macos-site-ver.plist",

@@ -1,6 +1,6 @@
 cask "querious" do
-  version "4.2.4"
-  sha256 "137d6a1856af015b15807837428a1e18b1f2c850b8ce852c9a13e3fdfd5b674b"
+  version "4.2.5"
+  sha256 "ef62714c089247a3caf1928bb187367fdbcd8bb5c405df92c8a2090be642c483"
 
   url "https://www.araelium.com/querious/downloads/versions/Querious#{version}.zip"
   name "Querious #{version.major}"
@@ -18,6 +18,8 @@ cask "querious" do
   depends_on macos: :monterey
 
   app "Querious.app"
+
+  uninstall quit: "com.araeliumgroup.querious"
 
   zap trash: [
     "~/Library/Application Support/Querious",

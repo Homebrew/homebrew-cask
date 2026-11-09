@@ -1,9 +1,9 @@
 cask "balenaetcher" do
   arch arm: "arm64", intel: "x64"
 
-  version "2.1.6"
-  sha256 arm:   "ecf71fb5e74803ea8d7d16c54378a6a8d964e9808594b867c088222a8cfe3d2b",
-         intel: "a09909789aee9d6a35863bcdec069103dd4883eb45b6e5e218e66abc043a9e05"
+  version "2.1.9"
+  sha256 arm:   "44baa43cc425e6e236a7e6fc405fe9562e4955ddedc6e6f27e22d6e5905759fe",
+         intel: "1e896b335987afda8a2b97d92a4113e18a3cf3f52a46b9ce86ec5f4d8aecc884"
 
   url "https://github.com/balena-io/etcher/releases/download/v#{version}/balenaEtcher-#{version}-#{arch}.dmg"
   name "Etcher"
@@ -15,7 +15,7 @@ cask "balenaetcher" do
     strategy :github_latest
   end
 
-  depends_on macos: :big_sur
+  depends_on macos: :ventura
 
   app "balenaEtcher.app"
 

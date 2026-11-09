@@ -11,5 +11,5 @@ cask "font-karla-tamil-inclined" do
   font "KarlaTamilInclined-Bold.ttf"
   font "KarlaTamilInclined-Regular.ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

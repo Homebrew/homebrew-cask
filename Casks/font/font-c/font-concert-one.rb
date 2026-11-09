@@ -8,5 +8,5 @@ cask "font-concert-one" do
 
   font "ConcertOne-Regular.ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

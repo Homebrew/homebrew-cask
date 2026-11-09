@@ -8,5 +8,5 @@ cask "font-condiment" do
 
   font "Condiment-Regular.ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

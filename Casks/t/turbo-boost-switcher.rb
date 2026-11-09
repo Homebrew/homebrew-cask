@@ -12,8 +12,8 @@ cask "turbo-boost-switcher" do
     regex(%r{href=.*?/Turbo[._-]Boost[._-]Switcher[._-]v?(\d+(?:\.\d+)+)\.dmg}i)
   end
 
-  depends_on :macos
   depends_on arch: :x86_64
+  depends_on :macos
 
   suite "tbswitcher_resources"
   app "Turbo Boost Switcher.app"

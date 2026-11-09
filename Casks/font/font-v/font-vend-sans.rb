@@ -11,5 +11,5 @@ cask "font-vend-sans" do
   font "VendSans-Italic[wght].ttf"
   font "VendSans[wght].ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

@@ -22,5 +22,5 @@ cask "font-paperlogy" do
   font "Paperlogy-8ExtraBold.ttf"
   font "Paperlogy-9Black.ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

@@ -25,5 +25,5 @@ cask "font-harmonyos-sans-naskh-arabic" do
   font "HarmonyOS Sans/HarmonyOS Naskh Arabic/HarmonyOS_Sans_Naskh_Arabic_Thin.ttf"
   font "HarmonyOS Sans/HarmonyOS Naskh Arabic/HarmonyOS_Sans_Naskh_Arabic_UltraLight.ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

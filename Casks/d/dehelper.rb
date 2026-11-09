@@ -9,7 +9,7 @@ cask "dehelper" do
   desc "Chinese-German dictionary"
   homepage "https://www.eudic.net/v4/de/app/dehelper"
 
-  depends_on macos: :big_sur
+  depends_on :macos
 
   app "Dehelper.app"
 

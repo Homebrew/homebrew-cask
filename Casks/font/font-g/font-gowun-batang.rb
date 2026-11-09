@@ -11,5 +11,5 @@ cask "font-gowun-batang" do
   font "GowunBatang-Bold.ttf"
   font "GowunBatang-Regular.ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

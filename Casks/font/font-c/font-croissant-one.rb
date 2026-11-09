@@ -8,5 +8,5 @@ cask "font-croissant-one" do
 
   font "CroissantOne-Regular.ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

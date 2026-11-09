@@ -4,6 +4,7 @@ cask "runescape" do
 
   url "https://content.runescape.com/downloads/osx/RuneScape.dmg"
   name "RuneScape"
+  desc "Massively multiplayer online fantasy role-playing game"
   homepage "https://www.runescape.com/"
 
   livecheck do
@@ -14,6 +15,16 @@ cask "runescape" do
   depends_on :macos
 
   app "RuneScape.app"
+
+  uninstall quit: "com.jagex.RuneScape"
+
+  zap trash: [
+        "~/Jagex/launcher",
+        "~/Jagex/RuneScape",
+        "~/Library/Preferences/com.jagex.RuneScape.plist",
+        "~/Library/Preferences/RuneScape Preferences",
+      ],
+      rmdir: "~/Jagex"
 
   caveats do
     requires_rosetta

@@ -8,5 +8,5 @@ cask "font-noto-sans-tamil-supplement" do
 
   font "NotoSansTamilSupplement-Regular.ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

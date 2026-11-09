@@ -15,5 +15,5 @@ cask "font-averia-sans-libre" do
   font "AveriaSansLibre-LightItalic.ttf"
   font "AveriaSansLibre-Regular.ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

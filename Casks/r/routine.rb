@@ -1,9 +1,9 @@
 cask "routine" do
   arch arm: "-arm64"
 
-  version "2.3.0"
-  sha256 arm:   "f7369f6ab2e7c671c548c71182e0eb6939473ab3444773bf32b05ed65bfbca01",
-         intel: "44f245d1e1594a479f25ac165e7515c1fcaf96c77cb83f2b75530fad70ec1719"
+  version "3.1.0"
+  sha256 arm:   "14a09bd32c396b9edd7594d55edd05b0233a31c63710149e7281abee29ef5787",
+         intel: "b2d6b0097505b95c71043a716fd8ce7fb56eafff18b59d2ac7d513ad2e9d5d09"
 
   url "https://releases.routine.co/routine/osx#{arch}/Routine-#{version}.zip"
   name "Routine"
@@ -18,11 +18,12 @@ cask "routine" do
   end
 
   auto_updates true
-  depends_on macos: :big_sur
+  depends_on :macos
 
   app "Routine.app"
 
   zap trash: [
+    "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/co.routine.desktop.sfl*",
     "~/Library/Application Support/Routine",
     "~/Library/Caches/co.routine.desktop",
     "~/Library/Caches/co.routine.desktop.ShipIt",

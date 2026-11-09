@@ -8,5 +8,5 @@ cask "font-noto-serif-old-uyghur" do
 
   font "NotoSerifOldUyghur-Regular.ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

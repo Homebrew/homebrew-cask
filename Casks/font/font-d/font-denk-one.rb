@@ -8,5 +8,5 @@ cask "font-denk-one" do
 
   font "DenkOne-Regular.ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

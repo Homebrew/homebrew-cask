@@ -11,5 +11,5 @@ cask "font-xiaolai-mono" do
 
   font "XiaolaiMono-Regular.ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

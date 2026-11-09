@@ -1,9 +1,9 @@
 cask "shell360" do
   arch arm: "aarch64", intel: "x64"
 
-  version "0.2.6"
-  sha256 arm:   "106e3d0646981b278d545010fc13bcaf04991331b442c81be7668e3bc8f13b7b",
-         intel: "16cf679a18bc135ba5f695ee0a3100c7ae867125e1d814e78f61e756940be2f6"
+  version "0.2.8"
+  sha256 arm:   "5bd7bdfc5a4dd7127de132033aed0923fa4a941c02fc2b57fa2fa52e47ebbb2e",
+         intel: "05419aaf7e49115f9f36c7614eb3f1d28190b69a7ae0694d36a03de6a2e2fee2"
 
   url "https://github.com/nashaofu/shell360/releases/download/v#{version}/Shell360_#{version}_#{arch}.dmg"
   name "Shell360"
@@ -22,6 +22,8 @@ cask "shell360" do
 
   zap trash: [
     "~/Library/Application Support/com.nashaofu.shell360",
+    "~/Library/Caches/com.nashaofu.shell360",
+    "~/Library/Logs/com.nashaofu.shell360",
     "~/Library/Webkit/com.nashaofu.shell360",
   ]
 end

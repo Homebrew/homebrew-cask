@@ -8,5 +8,5 @@ cask "font-marcellus" do
 
   font "Marcellus-Regular.ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

@@ -8,5 +8,5 @@ cask "font-yusei-magic" do
 
   font "YuseiMagic-Regular.ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

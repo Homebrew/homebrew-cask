@@ -8,5 +8,5 @@ cask "font-asset" do
 
   font "Asset-Regular.ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

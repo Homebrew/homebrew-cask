@@ -8,5 +8,5 @@ cask "font-trade-winds" do
 
   font "TradeWinds-Regular.ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

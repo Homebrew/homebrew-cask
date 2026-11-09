@@ -8,5 +8,5 @@ cask "font-train-one" do
 
   font "TrainOne-Regular.ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

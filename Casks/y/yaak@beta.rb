@@ -3,11 +3,11 @@ cask "yaak@beta" do
   os macos: "Yaak", linux: "yaak"
   url_end = on_system_conditional macos: "dmg", linux: "AppImage"
 
-  version "2026.8.0-beta.1"
-  sha256 arm:          "3e9fb855c2e40acab3ae4c00d37aa63872da1df1f847055dea0fea205ab5e512",
-         intel:        "6fc0c3604ac5597b9c97666011c42db8701145e0addad8506585980d58523d01",
-         arm64_linux:  "3b0e7f2180a8dd2a39799c0b70c42e04d6899cf3fbe6371d03624591d09cc58c",
-         x86_64_linux: "6bd37cd806acc91526fcf6b9d0fccc3e2336c609577ad55a014f2a7ed772961a"
+  version "2026.10.0-beta.2"
+  sha256 arm:          "ecc1d2c9a164a04b207db038857aed4488226995b6ab1f114fe2f261d69a759f",
+         intel:        "84a7dd34f61b74cc6ac1cbb718192ef1cbbc00b253b3a7886564b004c203d0b0",
+         arm64_linux:  "a31ae14ff763b94a927ba0fd38df8b6d81cd22b3ab5eaed621c579d3e2e20222",
+         x86_64_linux: "7aa1b84ab39b52b6aadc52dedb25ff3abbaa26b4c4eab40136ba57069e6e6f38"
 
   on_macos do
     auto_updates true
@@ -25,6 +25,11 @@ cask "yaak@beta" do
   end
   on_linux do
     app_image "yaak_#{version}_#{arch}.AppImage", target: "Yaak.AppImage"
+
+    zap trash: [
+      "~/.config/app.yaak.desktop",
+      "~/.local/share/app.yaak.desktop",
+    ]
   end
 
   url "https://github.com/mountain-loop/yaak/releases/download/v#{version}/#{os}_#{version}_#{arch}.#{url_end}"

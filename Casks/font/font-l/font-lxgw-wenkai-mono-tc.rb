@@ -12,5 +12,5 @@ cask "font-lxgw-wenkai-mono-tc" do
   font "LXGWWenKaiMonoTC-Light.ttf"
   font "LXGWWenKaiMonoTC-Regular.ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

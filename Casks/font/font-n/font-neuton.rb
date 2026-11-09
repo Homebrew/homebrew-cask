@@ -15,5 +15,5 @@ cask "font-neuton" do
   font "Neuton-Light.ttf"
   font "Neuton-Regular.ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

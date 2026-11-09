@@ -16,5 +16,5 @@ cask "font-everson-mono" do
   font "evermono-#{version}/Everson Mono Oblique.ttf"
   font "evermono-#{version}/Everson Mono.ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

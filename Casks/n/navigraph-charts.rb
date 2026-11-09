@@ -1,6 +1,6 @@
 cask "navigraph-charts" do
-  version "8.44.0"
-  sha256 "73fd847b745547b9e37762216e7fb3da5f6034ce5b78b5c2908288577862ce38"
+  version "8.45.0"
+  sha256 "039b4b9095827bac79af9d0ee8ecf1e7dbe22a2466c4237a5158ab34218f06ef"
 
   url "https://download.navigraph.com/software/charts/mac/Navigraph%20Charts%20#{version}.dmg"
   name "Navigraph Charts"
@@ -13,7 +13,7 @@ cask "navigraph-charts" do
   end
 
   auto_updates true
-  depends_on :macos
+  depends_on macos: :monterey
 
   app "Navigraph Charts.app"
 

@@ -19,5 +19,5 @@ cask "font-meslo-lg-dz" do
   font "Meslo LG DZ v#{version}/MesloLGSDZ-Italic.ttf"
   font "Meslo LG DZ v#{version}/MesloLGSDZ-Regular.ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

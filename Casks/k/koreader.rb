@@ -19,5 +19,5 @@ cask "koreader" do
 
   app_image "koreader-v#{version}-#{arch}.AppImage", target: "KOReader.AppImage"
 
-  # No zap stanza required
+  zap trash: "~/.config/koreader"
 end

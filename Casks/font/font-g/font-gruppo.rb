@@ -8,5 +8,5 @@ cask "font-gruppo" do
 
   font "Gruppo-Regular.ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

@@ -1,6 +1,6 @@
 cask "recut" do
-  version "4.4.8,eyJfcmFpbHMiOnsiZGF0YSI6MTI0LCJwdXIiOiJibG9iX2lkIn19--a60e46fe8adaf5abc2a811fd2b8dfab13e7c4289"
-  sha256 "a703bc2e0da1abb6fafba70a0d7d18b3d1aa6f64ecc83b35ae6c76d662f008e4"
+  version "4.5.7,eyJfcmFpbHMiOnsiZGF0YSI6MjQ3LCJwdXIiOiJibG9iX2lkIn19--0e34e367b7e81bacef5da885e1a5198c16171c7a"
+  sha256 "21f96a30ce7c3564ef97496bfe2e3446f1b1293801875dab337a0299952de79a"
 
   url "https://updates.getrecut.com/rails/active_storage/blobs/redirect/#{version.csv.second}/Recut_#{version.csv.first}_universal.dmg"
   name "Recut"
@@ -28,9 +28,14 @@ cask "recut" do
   app "Recut.app"
 
   zap trash: [
-    "~/Library/Application Support/Recut",
-    "~/Library/Caches/com.tinywins.recut",
-    "~/Library/Preferences/com.tinywins.recut.plist",
-    "~/Library/Saved Application State/com.tinywins.recut.savedState",
-  ]
+        "~/Library/Application Support/co.tinywins.recut",
+        "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/co.tinywins.recut.sfl*",
+        "~/Library/Application Support/Recut",
+        "~/Library/Caches/co.tinywins.recut",
+        "~/Library/Caches/com.tinywins.recut",
+        "~/Library/Logs/co.tinywins.recut",
+        "~/Library/Preferences/com.tinywins.recut.plist",
+        "~/Library/Saved Application State/com.tinywins.recut.savedState",
+      ],
+      rmdir: "~/Documents/Recut Projects"
 end

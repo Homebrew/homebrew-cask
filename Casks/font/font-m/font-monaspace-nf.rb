@@ -222,5 +222,5 @@ cask "font-monaspace-nf" do
   font "NerdFonts/Monaspace Xenon/MonaspaceXenonNF-WideSemiBold.otf"
   font "NerdFonts/Monaspace Xenon/MonaspaceXenonNF-WideSemiBoldItalic.otf"
 
-  # No zap stanza required
+  zap :not_required
 end

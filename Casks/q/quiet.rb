@@ -1,9 +1,9 @@
 cask "quiet" do
   arch arm: "arm64", intel: "x64"
 
-  version "8.0.0"
-  sha256 arm:   "e5b5b28db716daf2687bdb08c6c8338b01fcff8706d2e0432dd0d80e4b858201",
-         intel: "29000ddd33786a0b1007b9f6afe8d6e31b6fe1dabd78bd45afc04b4a5edfd4f5"
+  version "11.3.1"
+  sha256 arm:   "375816cc338df46aeb8c1a92c191726633fb1e3ea164b0bdde242f27c7704301",
+         intel: "6dac63716a2a3ea6e6d218213c4c3cf1266324ea5a3b532f4da6f8d64321a43a"
 
   url "https://github.com/TryQuiet/quiet/releases/download/@quiet/desktop@#{version}/Quiet-#{version}-#{arch}.dmg"
   name "Quiet"
@@ -15,9 +15,13 @@ cask "quiet" do
     regex(/href=.*?Quiet[._-]v?(\d+(?:\.\d+)+)[._-]#{arch}\.dmg/i)
   end
 
-  depends_on :macos
+  depends_on macos: :ventura
 
   app "Quiet.app"
 
-  zap trash: "~/Library/Application Support/Quiet*"
+  zap trash: [
+    "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/quiet.sfl*",
+    "~/Library/Application Support/Quiet*",
+    "~/Library/Preferences/Quiet.plist",
+  ]
 end

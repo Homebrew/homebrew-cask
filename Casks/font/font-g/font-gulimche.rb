@@ -8,5 +8,5 @@ cask "font-gulimche" do
 
   font "GulimChe-Regular.ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

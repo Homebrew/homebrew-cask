@@ -11,5 +11,5 @@ cask "font-grenze" do
   font "Grenze-Italic[wght].ttf"
   font "Grenze[wght].ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

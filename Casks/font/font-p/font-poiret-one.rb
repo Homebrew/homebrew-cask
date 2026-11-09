@@ -8,5 +8,5 @@ cask "font-poiret-one" do
 
   font "PoiretOne-Regular.ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

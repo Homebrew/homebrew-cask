@@ -1,6 +1,6 @@
 cask "raycast-glaze" do
-  version "0.14.2,3a82800216"
-  sha256 "0746524c98035f388120c7523d777040ee405a479380238be5404b8eb382d60c"
+  version "0.14.5,6d276814e7"
+  sha256 "14e836e3006f1300f536f0361754b63de12b9804d45a3bf11b7bbbb5a8ab6c14"
 
   url "https://glaze.raycast-releases.com/Glaze_#{version.csv.first}_CI_Production_#{version.csv.second}_arm64.dmg"
   name "Glaze"

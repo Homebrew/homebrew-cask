@@ -11,5 +11,5 @@ cask "font-libre-baskerville" do
   font "LibreBaskerville-Italic[wght].ttf"
   font "LibreBaskerville[wght].ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

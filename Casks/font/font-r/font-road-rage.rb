@@ -8,5 +8,5 @@ cask "font-road-rage" do
 
   font "RoadRage-Regular.ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

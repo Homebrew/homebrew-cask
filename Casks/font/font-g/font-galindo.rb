@@ -8,5 +8,5 @@ cask "font-galindo" do
 
   font "Galindo-Regular.ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

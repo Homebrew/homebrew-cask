@@ -7,10 +7,7 @@ cask "pdf-converter-master" do
   desc "Document converter"
   homepage "https://www.lightenpdf.com/pdf-converter-mac.html"
 
-  livecheck do
-    url "https://www.lightenpdf.com/xml/PDF-Converter-Mac.xml"
-    strategy :sparkle
-  end
+  disable! date: "2026-10-03", because: :no_longer_available
 
   depends_on :macos
 

@@ -8,5 +8,5 @@ cask "font-mate-sc" do
 
   font "MateSC-Regular.ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

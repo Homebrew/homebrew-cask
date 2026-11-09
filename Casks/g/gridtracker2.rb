@@ -1,6 +1,6 @@
 cask "gridtracker2" do
-  version "2.260808.2"
-  sha256 "8ad2b52295df7e21f6b5e6312751b48f9487a03c7fe9b1432919fceffb0cb844"
+  version "2.261019.5"
+  sha256 "13edfabebb36c72a5527be9a685604f45211de32cfdf41a443136825a7deda30"
 
   url "https://download2.gridtracker.org/GridTracker2-#{version}-universal-mac.zip"
   name "GridTracker2"
@@ -12,13 +12,15 @@ cask "gridtracker2" do
     strategy :electron_builder
   end
 
-  depends_on macos: :big_sur
+  depends_on :macos
 
   app "GridTracker2.app"
 
   zap trash: [
+    "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/org.gridtracker.gridtracker2.sfl*",
     "~/Library/Application Support/GridTracker*",
     "~/Library/Caches/GridTracker",
+    "~/Library/Logs/GridTracker2",
     "~/Library/Preferences/org.gridtracker.GridTracker*.plist",
     "~/Library/Saved Application State/org.gridtracker.GridTracker*.savedState",
   ]

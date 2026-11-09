@@ -10,5 +10,5 @@ cask "font-chenyuluoyan" do
   font "chenyuluoyan_thin-main/ChenYuluoyan-2.0-Thin.ttf"
   font "chenyuluoyan_thin-main/ChenYuluoyan-Thin-Monospaced.ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

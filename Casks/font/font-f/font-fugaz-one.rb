@@ -8,5 +8,5 @@ cask "font-fugaz-one" do
 
   font "FugazOne-Regular.ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

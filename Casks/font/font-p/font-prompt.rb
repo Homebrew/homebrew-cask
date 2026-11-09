@@ -27,5 +27,5 @@ cask "font-prompt" do
   font "Prompt-Thin.ttf"
   font "Prompt-ThinItalic.ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

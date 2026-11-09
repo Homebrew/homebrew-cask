@@ -1,17 +1,16 @@
 cask "polymail" do
-  arch arm: "-arm64"
+  arch arm: "arm", intel: "intel"
 
-  version "2.4.3005"
-  sha256 arm:   "3c3053489bbd64a76773b46783eb018bf43d75eace3cf1731b9eaaf462aeb643",
-         intel: "bb014953459ea27a15b0e6481d16313ca61d3427110e7e425a5c33a855772202"
+  version "2.4.3007"
+  sha256 :no_check
 
-  url "https://sparkle-updater.polymail.io/macos#{arch}/builds/Polymail-v#{version}.dmg"
+  url "https://builds.polymail.io/macos-#{arch}/current"
   name "Polymail"
   desc "Email productivity application"
   homepage "https://polymail.io/"
 
   livecheck do
-    url "https://sparkle-updater.polymail.io/macos#{arch}/Polymail-Latest.zip"
+    url "https://builds.polymail.io/macos-arm/current"
     strategy :header_match
   end
 
@@ -21,6 +20,7 @@ cask "polymail" do
   app "Polymail.app"
 
   zap trash: [
+    "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/io.polymail.osx.sfl*",
     "~/Library/Application Support/Polymail",
     "~/Library/Caches/io.polymail.osx*",
     "~/Library/HTTPStorages/io.polymail.osx",

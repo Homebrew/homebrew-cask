@@ -8,7 +8,7 @@ cask "caffeine" do
   homepage "https://intelliscapesolutions.com/apps/caffeine"
 
   conflicts_with cask: "domzilla-caffeine"
-  depends_on macos: :big_sur
+  depends_on :macos
 
   app "Caffeine.app"
 

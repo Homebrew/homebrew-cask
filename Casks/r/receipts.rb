@@ -8,9 +8,13 @@ cask "receipts" do
   homepage "https://receipts-app.com/"
 
   livecheck do
-    url "https://receipts-app.com/updater.php"
-    regex(/href=.*?Receipts[._-]v?(\d+(?:[.-]\d+)+)\.zip/i)
+    url "https://receipts-app.com/updater-macos"
+    strategy :sparkle do |item|
+      "#{item.short_version}-#{item.version}"
+    end
   end
+
+  deprecate! date: "2026-10-14", because: :discontinued, replacement_cask: "receipts-space"
 
   depends_on :macos
 

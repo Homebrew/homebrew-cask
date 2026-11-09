@@ -8,5 +8,5 @@ cask "font-danfo" do
 
   font "Danfo[ELSH].ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

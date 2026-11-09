@@ -1,7 +1,7 @@
 cask "anythingllm" do
   arch arm: "-Silicon"
 
-  version "1.16.1"
+  version "1.19.0"
   sha256 :no_check
 
   url "https://cdn.anythingllm.com/latest/AnythingLLMDesktop#{arch}.dmg",
@@ -19,5 +19,9 @@ cask "anythingllm" do
 
   app "AnythingLLM.app"
 
-  zap trash: "~/Library/Application Support/anythingllm-desktop"
+  zap trash: [
+    "~/Library/Application Support/anythingllm-desktop",
+    "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.anythingllm.sfl*",
+    "~/Library/Preferences/com.anythingllm.plist",
+  ]
 end

@@ -7,6 +7,8 @@ cask "font-urw-base35" do
   name "URW++ base 35"
   homepage "https://github.com/ArtifexSoftware/urw-base35-fonts"
 
+  conflicts_with cask: "font-urw-core35"
+
   font "urw-base35-fonts-#{version}/fonts/C059-BdIta.otf"
   font "urw-base35-fonts-#{version}/fonts/C059-Bold.otf"
   font "urw-base35-fonts-#{version}/fonts/C059-Italic.otf"
@@ -43,5 +45,5 @@ cask "font-urw-base35" do
   font "urw-base35-fonts-#{version}/fonts/URWGothic-DemiOblique.otf"
   font "urw-base35-fonts-#{version}/fonts/Z003-MediumItalic.otf"
 
-  # No zap stanza required
+  zap :not_required
 end

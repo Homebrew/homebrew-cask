@@ -11,5 +11,5 @@ cask "font-atkinson-hyperlegible-next" do
   font "AtkinsonHyperlegibleNext-Italic[wght].ttf"
   font "AtkinsonHyperlegibleNext[wght].ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

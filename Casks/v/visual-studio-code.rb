@@ -11,9 +11,9 @@ cask "visual-studio-code" do
     end
   end
   on_monterey :or_newer do
-    version "1.136.1"
-    sha256 arm:   "bd15a1b26cd10ba84900f7bd30f21d51eef268828e1e15a8ac1f97f99620bbe5",
-           intel: "27b8b857b932454b91ccabde9d09642b15ce2fefa9e5e3c2f75e530eceb3cb9c"
+    version "1.145.2"
+    sha256 arm:   "518387556ced4e3ad898d062fef295fb8a363b7e84d999aa74862eb8fe738a21",
+           intel: "b6c60d84a8ffb85c5bb4106d6ff74773fec07e6c1a4bb944f8af68e3bfe5abbe"
 
     livecheck do
       url "https://update.code.visualstudio.com/api/update/#{arch}/stable/latest"

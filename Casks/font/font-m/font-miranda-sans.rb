@@ -11,5 +11,5 @@ cask "font-miranda-sans" do
   font "MirandaSans-Italic[wght].ttf"
   font "MirandaSans[wght].ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

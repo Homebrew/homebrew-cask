@@ -1,6 +1,6 @@
 cask "coin-wallet" do
-  version "6.29.0"
-  sha256 "04afee2a05d0d3a4c295e850a5ad28aa2f11dc33d209b966b3c32dc2e1ee6a38"
+  version "6.32.0"
+  sha256 "8a6f0acbee4b580b316565632953d62fa25c8a2c75a0e472008ab5b14ff582dc"
 
   url "https://github.com/CoinSpace/CoinSpace/releases/download/v#{version}/Coin.Wallet.dmg"
   name "Coin Wallet"
@@ -15,13 +15,16 @@ cask "coin-wallet" do
   end
 
   auto_updates true
-  depends_on macos: :big_sur
+  depends_on :macos
 
   app "Coin Wallet.app"
 
   zap trash: [
     "~/Library/Application Support/Coin Wallet",
+    "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.coinspace.wallet.sfl*",
     "~/Library/Caches/com.coinspace.wallet*",
+    "~/Library/HTTPStorages/com.coinspace.wallet",
+    "~/Library/Logs/Coin Wallet",
     "~/Library/Preferences/ByHost/com.coinspace.wallet.*.plist",
     "~/Library/Preferences/com.coinspace.wallet*.plist",
     "~/Library/Saved Application State/com.coinspace.wallet.savedState",

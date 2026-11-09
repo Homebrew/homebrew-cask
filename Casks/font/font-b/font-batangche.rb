@@ -8,5 +8,5 @@ cask "font-batangche" do
 
   font "BatangChe-Regular.ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

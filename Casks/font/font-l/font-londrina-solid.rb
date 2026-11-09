@@ -13,5 +13,5 @@ cask "font-londrina-solid" do
   font "LondrinaSolid-Regular.ttf"
   font "LondrinaSolid-Thin.ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

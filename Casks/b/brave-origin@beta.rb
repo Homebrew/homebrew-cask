@@ -2,24 +2,24 @@ cask "brave-origin@beta" do
   arch arm: "arm64", intel: "x64"
   folder_arch = on_arch_conditional arm: "-arm64"
 
-  sha256 arm:   "f4128c78ef4f78b570b71a6b204419625b4f40f555c101f617a8acf3d1a16434",
-         intel: "d1441dec40068888b8ac34fa6bc3bc1faadc02a44bc1ece9e74fb5be613f9b1b"
+  sha256 arm:   "d197bac12d77170bad045dc8d96c08046c3731e8c78bf9a0151cbfdc21dc911c",
+         intel: "c1c42551869972f0678b25896d4becf0b6ef25cb523268ed718b92dc48ba8263"
 
   on_arm do
-    version "1.96.48.0"
+    version "1.100.49.0,200.49"
   end
   on_intel do
-    version "1.96.48.0"
+    version "1.100.49.0,200.49"
   end
 
-  url "https://updates-cdn.bravesoftware.com/sparkle/Brave-Origin/beta#{folder_arch}/#{version.major_minor_patch.sub(".", "")}/Brave-Origin-Beta-#{arch}.dmg"
+  url "https://updates-cdn.bravesoftware.com/sparkle/Brave-Origin/beta#{folder_arch}/#{version.csv.second}/Brave-Origin-Beta-#{arch}.dmg"
   name "Brave Origin Beta"
   desc "Privacy-focused web browser"
   homepage "https://brave.com/origin/#beta"
 
   livecheck do
     url "https://updates.bravesoftware.com/sparkle/Brave-Origin/beta#{folder_arch}/appcast.xml"
-    strategy :sparkle, &:short_version
+    strategy :sparkle
   end
 
   auto_updates true

@@ -29,5 +29,5 @@ cask "imaging-edge-webcam" do
   uninstall quit:    "com.sony.imagingedge.iew",
             pkgutil: "com.sony.Webcam"
 
-  # No zap stanza required
+  zap :not_required
 end

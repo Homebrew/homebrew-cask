@@ -16,5 +16,5 @@ cask "font-aboriginal-serif" do
   font "AboriginalSerifITALIC.ttf"
   font "AboriginalSerifREGULAR.ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

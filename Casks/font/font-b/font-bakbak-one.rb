@@ -8,5 +8,5 @@ cask "font-bakbak-one" do
 
   font "BakbakOne-Regular.ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

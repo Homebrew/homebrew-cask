@@ -8,5 +8,5 @@ cask "font-splash" do
 
   font "Splash-Regular.ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

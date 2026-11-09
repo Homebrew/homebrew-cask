@@ -1,7 +1,7 @@
 cask "carbide-create" do
   on_arm do
-    version "853"
-    sha256 "35a06405128209a149480a0f73a54e8adfd694c97b20b11c30f1b87c1066e80e"
+    version "876"
+    sha256 "d430027fe869d9c8d8ad0c788e68243a91301e12a7dfb2b8853c85be88897e35"
 
     livecheck do
       url "https://carbide-downloads.website-us-east-1.linodeobjects.com/builds.json"
@@ -10,7 +10,7 @@ cask "carbide-create" do
       end
     end
 
-    depends_on macos: :monterey
+    depends_on macos: :ventura
   end
   on_intel do
     version "842"
@@ -20,7 +20,7 @@ cask "carbide-create" do
       skip "Legacy version"
     end
 
-    depends_on macos: :big_sur
+    depends_on macos: :any
   end
 
   url "https://carbide-downloads.website-us-east-1.linodeobjects.com/cc/stable/#{version}/CarbideCreate-#{version}.dmg"

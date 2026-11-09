@@ -12,5 +12,5 @@ cask "font-ko-pub-batang" do
   font "KoPubBatang-Light.ttf"
   font "KoPubBatang-Regular.ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

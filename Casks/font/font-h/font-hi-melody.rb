@@ -8,5 +8,5 @@ cask "font-hi-melody" do
 
   font "HiMelody-Regular.ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

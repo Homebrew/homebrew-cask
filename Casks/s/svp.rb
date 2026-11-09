@@ -1,6 +1,6 @@
 cask "svp" do
-  version "4.7.321"
-  sha256 "1925a6bc3f913957fab9a0acd9a3336da2f791bba82c7eb2cd4366c41670b263"
+  version "4.7.325-1"
+  sha256 "3c5f12329f23672a0aac12fabf8be55d1001d9e34fc2f0ef63fa7f8da251e543"
 
   url "https://www.svp-team.com/files/svp#{version.major}-mac.#{version}.dmg"
   name "SVP #{version.major} Mac"
@@ -16,6 +16,8 @@ cask "svp" do
   depends_on :macos
 
   app "SVP #{version.major} Mac.app"
+
+  uninstall quit: "com.svp-team.svpmanager"
 
   zap trash: [
     "~/Library/Application Support/SVP#{version.major}",

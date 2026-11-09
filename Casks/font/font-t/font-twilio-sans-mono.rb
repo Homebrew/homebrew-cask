@@ -23,5 +23,5 @@ cask "font-twilio-sans-mono" do
   font "Twilio-Sans-Mono/OTF/TwilioSansMono-Semibold.otf"
   font "Twilio-Sans-Mono/OTF/TwilioSansMono-SemiboldItl.otf"
 
-  # No zap stanza required
+  zap :not_required
 end

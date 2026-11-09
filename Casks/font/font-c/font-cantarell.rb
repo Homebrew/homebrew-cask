@@ -13,5 +13,5 @@ cask "font-cantarell" do
 
   font "cantarell-fonts-#{version}/prebuilt/Cantarell-VF.otf"
 
-  # No zap stanza required
+  zap :not_required
 end

@@ -8,7 +8,7 @@ cask "font-andika" do
 
   livecheck do
     url "https://software.sil.org/andika/download/"
-    regex(/href=.*Andika[._-]v?(\d+(?:\.\d+)+)\.zip/i)
+    regex(/href=.*?Andika[._-]v?(\d+(?:\.\d+)+)\.zip/i)
   end
 
   font "Andika-#{version}/Andika-Bold.ttf"
@@ -20,5 +20,5 @@ cask "font-andika" do
   font "Andika-#{version}/Andika-SemiBold.ttf"
   font "Andika-#{version}/Andika-SemiBoldItalic.ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

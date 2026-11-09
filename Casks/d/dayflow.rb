@@ -1,6 +1,6 @@
 cask "dayflow" do
-  version "2.4.0"
-  sha256 "16183ec026b3f790a2b5d33d6b88ece27780c40acad9fc4fa6c0643751aaff60"
+  version "2.8.0"
+  sha256 "9a1587de6d8c04baa5b20410b6ccb654f09c417338487ea51f134c448b408606"
 
   url "https://github.com/JerryZLiu/Dayflow/releases/download/v#{version}/Dayflow.dmg"
   name "Dayflow"
@@ -23,6 +23,11 @@ cask "dayflow" do
   zap trash: [
     "~/Library/Application Scripts/teleportlabs.com.Dayflow",
     "~/Library/Application Support/Dayflow",
+    "~/Library/Application Support/teleportlabs.com.Dayflow",
+    "~/Library/Caches/teleportlabs.com.Dayflow",
     "~/Library/Containers/teleportlabs.com.Dayflow",
+    "~/Library/HTTPStorages/teleportlabs.com.Dayflow",
+    "~/Library/Preferences/teleportlabs.com.Dayflow.plist",
+    "~/Library/WebKit/teleportlabs.com.Dayflow",
   ]
 end

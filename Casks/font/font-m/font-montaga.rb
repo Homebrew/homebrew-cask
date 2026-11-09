@@ -8,5 +8,5 @@ cask "font-montaga" do
 
   font "Montaga-Regular.ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

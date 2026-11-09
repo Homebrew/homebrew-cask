@@ -12,5 +12,5 @@ cask "font-genwanmin" do
   font "GenWanMin#{version.major}-R.ttc"
   font "GenWanMin#{version.major}-SB.ttc"
 
-  # No zap stanza required
+  zap :not_required
 end

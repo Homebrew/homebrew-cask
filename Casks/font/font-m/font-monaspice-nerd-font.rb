@@ -164,5 +164,5 @@ cask "font-monaspice-nerd-font" do
   font "MonaspiceXeNerdFontPropo-MediumItalic.otf"
   font "MonaspiceXeNerdFontPropo-Regular.otf"
 
-  # No zap stanza required
+  zap :not_required
 end

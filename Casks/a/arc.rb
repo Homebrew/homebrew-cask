@@ -1,6 +1,6 @@
 cask "arc" do
-  version "1.163.1,86571"
-  sha256 "534e181718c20c287f9786ee6fabfab181c237a762c5af56009143da3037eb95"
+  version "1.172.1,90370"
+  sha256 "842aea310f2db2adf7c00399a905684177fe0f640109f993357acc4592dbd07e"
 
   url "https://releases.arc.net/release/Arc-#{version.csv.first}-#{version.csv.second}.zip"
   name "Arc"
@@ -11,6 +11,8 @@ cask "arc" do
     url "https://releases.arc.net/updates.xml"
     strategy :sparkle
   end
+
+  disable! date: "2026-12-22", because: :discontinued
 
   auto_updates true
   depends_on macos: :ventura

@@ -8,5 +8,5 @@ cask "font-bacasime-antique" do
 
   font "BacasimeAntique-Regular.ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

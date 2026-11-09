@@ -1,6 +1,6 @@
 cask "curseforge" do
-  version "1.320.0-39237"
-  sha256 "2403e90d865ceabbeec63b4ed64d3e7baea026cda7356ca9154674c70db3c8bf"
+  version "1.325.0-41594"
+  sha256 "196dc4bfe914ff43c2f4176580bc65c594734c147008ad52ff8627988140cc94"
 
   url "https://curseforge.overwolf.com/electron/mac/CurseForge-#{version}-universal-mac.zip"
   name "CurseForge"
@@ -22,6 +22,9 @@ cask "curseforge" do
 
   zap trash: [
     "~/Library/Application Support/Caches/curseforge-updater",
+    "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.overwolf.curseforge.sfl*",
     "~/Library/Application Support/CurseForge",
+    "~/Library/Logs/CurseForge",
+    "~/Library/Preferences/com.overwolf.curseforge.plist",
   ]
 end

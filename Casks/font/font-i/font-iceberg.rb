@@ -8,5 +8,5 @@ cask "font-iceberg" do
 
   font "Iceberg-Regular.ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

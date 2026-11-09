@@ -1,6 +1,6 @@
 cask "surfshark" do
-  version "4.29.0,4541"
-  sha256 "63c6286ece4c46a6700e130558e1f86e0a941ce95428d17004beef8381e39cba"
+  version "4.30.2,4650"
+  sha256 "fbdb8689b9e054b8d71983ba051af4f8c5dab08ad08212a7f27400731fa3476f"
 
   url "https://downloads.surfshark.com/macOS/stable/#{version.csv.first}/#{version.csv.second}/Surfshark.dmg"
   name "Surfshark"
@@ -21,9 +21,15 @@ cask "surfshark" do
 
   zap trash: [
     "~/Library/Application Scripts/com.surfshark.vpnclient.macos*",
+    "~/Library/Application Scripts/YHUG37CKN8.com.surfshark.vpn.direct",
+    "~/Library/Application Support/com.surfshark.vpnclient.macos.direct",
     "~/Library/Application Support/CrashReporter/Surfshark.OpenVPN_*.plist",
+    "~/Library/Caches/com.surfshark.vpnclient.macos.direct",
     "~/Library/Containers/com.surfshark.vpnclient.macos*",
     "~/Library/Group Containers/YHUG37CKN8.com.surfshark.vpn",
+    "~/Library/Group Containers/YHUG37CKN8.com.surfshark.vpn.direct",
+    "~/Library/HTTPStorages/com.surfshark.vpnclient.macos.direct*",
+    "~/Library/Preferences/com.surfshark.vpnclient.macos.direct.plist",
     "~/Library/Saved Application State/com.surfshark.vpnclient.macos.savedState",
   ]
 end

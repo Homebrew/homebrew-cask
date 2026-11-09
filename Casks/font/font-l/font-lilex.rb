@@ -11,13 +11,17 @@ cask "font-lilex" do
   font "ttf/Lilex-ExtraLight.ttf"
   font "ttf/Lilex-ExtraLightItalic.ttf"
   font "ttf/Lilex-Italic.ttf"
+  font "ttf/Lilex-Light.ttf"
+  font "ttf/Lilex-LightItalic.ttf"
   font "ttf/Lilex-Medium.ttf"
   font "ttf/Lilex-MediumItalic.ttf"
   font "ttf/Lilex-Regular.ttf"
+  font "ttf/Lilex-SemiBold.ttf"
+  font "ttf/Lilex-SemiBoldItalic.ttf"
   font "ttf/Lilex-Thin.ttf"
   font "ttf/Lilex-ThinItalic.ttf"
   font "variable/Lilex-Italic[wght].ttf"
   font "variable/Lilex[wght].ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

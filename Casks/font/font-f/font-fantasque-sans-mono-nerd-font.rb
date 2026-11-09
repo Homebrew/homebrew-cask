@@ -26,5 +26,5 @@ cask "font-fantasque-sans-mono-nerd-font" do
   font "FantasqueSansMNerdFontPropo-Italic.ttf"
   font "FantasqueSansMNerdFontPropo-Regular.ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

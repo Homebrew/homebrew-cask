@@ -8,5 +8,5 @@ cask "font-unlock" do
 
   font "Unlock-Regular.ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

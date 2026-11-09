@@ -13,5 +13,5 @@ cask "modmove" do
 
   app "ModMove.app"
 
-  # No zap stanza required
+  zap :not_required
 end

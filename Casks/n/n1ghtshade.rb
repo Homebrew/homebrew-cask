@@ -24,7 +24,7 @@ cask "n1ghtshade" do
     libzip
     openssl
   ]
-  depends_on macos: :big_sur
+  depends_on :macos
 
   app "n1ghtshade.app"
 

@@ -11,5 +11,5 @@ cask "font-fruktur" do
   font "Fruktur-Italic.ttf"
   font "Fruktur-Regular.ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

@@ -8,5 +8,5 @@ cask "font-poprumcute" do
 
   font "poprumcute/PopRumCute.otf"
 
-  # No zap stanza required
+  zap :not_required
 end

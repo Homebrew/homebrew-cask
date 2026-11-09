@@ -1,6 +1,6 @@
 cask "ipvanish-vpn" do
-  version "5.1.3,166526"
-  sha256 "fe25e7e8041868f069f197a34cfb9d7b722e56e2533e1dd1ca5ed68343e85689"
+  version "5.4.0,173395"
+  sha256 "dc60d270899ea11804f75f87876470374676ce4b97117a44b2e63af89da26bfc"
 
   url "https://www.ipvanish.com/software/osx/IPVanish_v#{version.csv.first}_#{version.csv.second}.zip"
   name "IPVanish"
@@ -28,8 +28,10 @@ cask "ipvanish-vpn" do
   app "IPVanish VPN.app"
 
   zap trash: [
+    "~/Library/Application Scripts/com.ipvanish.IPVanish.secure-browser.action-extension",
     "~/Library/Application Support/com.ipvanish.IPVanish",
     "~/Library/Caches/com.ipvanish.IPVanish",
+    "~/Library/Containers/com.ipvanish.IPVanish.secure-browser.action-extension",
     "~/Library/HTTPStorages/com.ipvanish.IPVanish",
     "~/Library/Logs/IPVanish VPN",
     "~/Library/Preferences/com.ipvanish.IPVanish.plist",

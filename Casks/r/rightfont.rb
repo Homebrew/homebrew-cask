@@ -1,5 +1,5 @@
 cask "rightfont" do
-  version "10.1.1"
+  version "10.2.1"
   sha256 :no_check
 
   url "https://rightfontapp.com/update/rightfont.zip"
@@ -13,7 +13,7 @@ cask "rightfont" do
   end
 
   auto_updates true
-  depends_on macos: :big_sur
+  depends_on :macos
 
   app "RightFont.app"
 

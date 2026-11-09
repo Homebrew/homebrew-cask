@@ -1,6 +1,6 @@
 cask "codekit" do
-  version "3.36,34921"
-  sha256 "c5e9a80ae3fc98884ea4a6a6ee49b97b30b35b132a43c7ab1aa31ac69a90bee7"
+  version "3.38,36870"
+  sha256 "793644f7aa2e5029727ea702e823fbef8b93fdf96e17885fce8de54350948ad5"
 
   url "https://codekitapp.com/binaries/codekit-#{version.csv.second}.zip"
   name "CodeKit"
@@ -21,7 +21,9 @@ cask "codekit" do
     "~/Library/Application Support/com.incident57.CodeKit#{version.major}",
     "~/Library/Caches/com.incident57.CodeKit#{version.major}",
     "~/Library/Cookies/com.incident57.CodeKit#{version.major}.binarycookies",
+    "~/Library/HTTPStorages/com.incident57.CodeKit#{version.major}",
     "~/Library/Preferences/com.incident57.CodeKit#{version.major}.plist",
     "~/Library/Saved Application State/com.incident57.CodeKit#{version.major}.savedState",
+    "~/Library/WebKit/com.incident57.CodeKit#{version.major}",
   ]
 end

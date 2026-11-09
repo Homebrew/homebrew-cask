@@ -11,5 +11,5 @@ cask "font-commit-mono" do
   font "CommitMono-#{version}/CommitMono-700-Italic.otf"
   font "CommitMono-#{version}/CommitMono-700-Regular.otf"
 
-  # No zap stanza required
+  zap :not_required
 end

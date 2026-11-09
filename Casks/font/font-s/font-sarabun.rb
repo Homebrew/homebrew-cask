@@ -25,5 +25,5 @@ cask "font-sarabun" do
   font "Sarabun-Thin.ttf"
   font "Sarabun-ThinItalic.ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

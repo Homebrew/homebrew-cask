@@ -11,5 +11,5 @@ cask "font-klee-one" do
   font "KleeOne-Regular.ttf"
   font "KleeOne-SemiBold.ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

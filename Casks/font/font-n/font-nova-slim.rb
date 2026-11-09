@@ -8,5 +8,5 @@ cask "font-nova-slim" do
 
   font "NovaSlim.ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

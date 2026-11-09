@@ -1,6 +1,6 @@
 cask "sdm" do
-  version "24.59.0,E5C2ACBF1160BF160A9279167AD3A50FE4EE321B"
-  sha256 "f2643912ca0fbb60c884676aea46715e979ab8b68caa626cc0b43027921a6ba3"
+  version "25.2.1,F90FCCB176FADCF3CAD73ED6CDB3B10853865538"
+  sha256 "297d916b1c0287220638e95cac0f4a729b32c078144852bca14f7b8cd027928d"
 
   url "https://downloads.strongdm.com/builds/desktop/#{version.csv.first}/darwin-universal/#{version.csv.second}/SDM-#{version.csv.first}.universal.zip"
   name "sdm"
@@ -25,6 +25,7 @@ cask "sdm" do
   zap trash: [
     "/usr/local/bin/sdm",
     "~/.sdm",
+    "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.electron.sdm.sfl*",
     "~/Library/Application Support/SDM",
     "~/Library/Caches/com.electron.sdm*",
     "~/Library/Preferences/com.electron.sdm.plist",

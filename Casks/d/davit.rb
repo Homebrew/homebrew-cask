@@ -1,6 +1,6 @@
 cask "davit" do
-  version "0.1.29"
-  sha256 "07baf0d5d1bedcea9092a98d91cc78b964230a44de79a9d9ba4dd12b3ce2d87f"
+  version "0.1.39"
+  sha256 "392b9d139d6072e03145b96fb0ade14b70874a3df90fe7e445b140d39ee8910c"
 
   url "https://github.com/wouterdebie/davit/releases/download/v#{version}/Davit-#{version}.zip"
   name "Davit"
@@ -8,8 +8,8 @@ cask "davit" do
   homepage "https://davit.app/"
 
   auto_updates true
-  depends_on macos: :sequoia
   depends_on arch: :arm64
+  depends_on macos: :sequoia
 
   app "Davit.app"
 

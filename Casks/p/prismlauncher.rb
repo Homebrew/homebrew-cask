@@ -10,8 +10,8 @@ cask "prismlauncher" do
     end
   end
   on_monterey :or_newer do
-    version "11.1.0"
-    sha256 "b6ae145a02dd9bbc7c44ce3fa42ec942daca8c829584e21c66290a8e6ca89af8"
+    version "11.1.1"
+    sha256 "15126a7df57acb4f37fe581dad68cb03c7bb60b70eb82345f8bb3246235600c6"
 
     url "https://github.com/PrismLauncher/PrismLauncher/releases/download/#{version}/PrismLauncher-macOS-#{version}.zip"
 
@@ -20,22 +20,45 @@ cask "prismlauncher" do
       strategy :sparkle
     end
   end
+  on_macos do
+    app "Prism Launcher.app"
+    binary "#{appdir}/Prism Launcher.app/Contents/MacOS/prismlauncher"
+
+    zap trash: [
+      "~/Library/Application Support/PrismLauncher/metacache",
+      "~/Library/Application Support/PrismLauncher/PrismLauncher-*.log",
+      "~/Library/Application Support/PrismLauncher/prismlauncher.cfg",
+      "~/Library/Preferences/org.prismlauncher.PrismLauncher.plist",
+      "~/Library/Saved Application State/org.prismlauncher.PrismLauncher.savedState",
+      "~/Library/WebKit/org.prismlauncher.PrismLauncher",
+    ]
+  end
+  on_linux do
+    arch arm: "aarch64", intel: "x86_64"
+
+    version "11.1.1"
+    sha256 arm64_linux:  "88fce57f75405092dac69e21968537083aa2881dbca0bfb3b0d85d9c05f8085b",
+           x86_64_linux: "bb81038c56a09e944659e4b808dbfbc52d52d5e3a3ffe32216689a3ca1508d3d"
+
+    url "https://github.com/PrismLauncher/PrismLauncher/releases/download/#{version}/PrismLauncher-Linux-#{arch}.AppImage"
+
+    livecheck do
+      url :url
+      strategy :github_latest
+    end
+
+    app_image "PrismLauncher-Linux-#{arch}.AppImage", target: "PrismLauncher.AppImage"
+
+    zap trash: [
+      "~/.local/share/PrismLauncher/metacache",
+      "~/.local/share/PrismLauncher/PrismLauncher-*.log",
+      "~/.local/share/PrismLauncher/prismlauncher.cfg",
+    ]
+  end
 
   name "Prism Launcher"
   desc "Minecraft launcher"
   homepage "https://prismlauncher.org/"
 
   auto_updates true
-  depends_on :macos
-
-  app "Prism Launcher.app"
-  binary "#{appdir}/Prism Launcher.app/Contents/MacOS/prismlauncher"
-
-  zap trash: [
-    "~/Library/Application Support/PrismLauncher/metacache",
-    "~/Library/Application Support/PrismLauncher/PrismLauncher-*.log",
-    "~/Library/Application Support/PrismLauncher/prismlauncher.cfg",
-    "~/Library/Preferences/org.prismlauncher.PrismLauncher.plist",
-    "~/Library/Saved Application State/org.prismlauncher.PrismLauncher.savedState",
-  ]
 end

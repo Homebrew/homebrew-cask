@@ -1,5 +1,5 @@
 cask "macloggerdx" do
-  version "6.62"
+  version "6.63"
   sha256 :no_check # required as upstream package is often updated in-place
 
   url "https://www.dogparksoftware.com/files/MacLoggerDX#{version.no_dots}.dmg"
@@ -13,7 +13,7 @@ cask "macloggerdx" do
   end
 
   conflicts_with cask: "macloggerdx@beta"
-  depends_on :macos
+  depends_on macos: :monterey
 
   app "MacLoggerDX.app"
 

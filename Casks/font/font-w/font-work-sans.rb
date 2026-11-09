@@ -11,5 +11,5 @@ cask "font-work-sans" do
   font "WorkSans-Italic[wght].ttf"
   font "WorkSans[wght].ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

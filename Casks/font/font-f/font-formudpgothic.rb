@@ -10,5 +10,5 @@ cask "font-formudpgothic" do
   font "FORMUDPGothic-Bold.ttf"
   font "FORMUDPGothic-Regular.ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

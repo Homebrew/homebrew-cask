@@ -7,9 +7,9 @@ cask "idevice-pair" do
   desc "Generate pair records for iOS devices"
   homepage "https://github.com/jkcoxson/idevice_pair"
 
-  depends_on macos: :big_sur
+  depends_on :macos
 
   app "idevice_pair.app"
 
-  # No zap stanza required
+  zap :not_required
 end

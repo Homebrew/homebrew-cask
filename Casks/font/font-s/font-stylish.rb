@@ -8,5 +8,5 @@ cask "font-stylish" do
 
   font "Stylish-Regular.ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

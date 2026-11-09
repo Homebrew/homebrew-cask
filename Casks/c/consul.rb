@@ -1,9 +1,9 @@
 cask "consul" do
   arch arm: "arm64", intel: "amd64"
 
-  version "2.0.3"
-  sha256 arm:   "fed05e8e2a296989c1a5c86e3b38d5f4dbdc7d83e0c0acf4c5fe7e302e8f4fde",
-         intel: "9a8ced39610be73c4b6c918e64c1589a3fe9747f3a2188b8da55d0a35ddca4e0"
+  version "2.1.0"
+  sha256 arm:   "236d6a579c5fcfb065f416bd3a296ad199a1116c2667481bffdfdc60a5e61468",
+         intel: "40e614b6bf47e85387c7a9f65b97e4f0a6f21057c4e50e1b05cbc4691b338d99"
 
   url "https://releases.hashicorp.com/consul/#{version}/consul_#{version}_darwin_#{arch}.zip"
   name "Consul"
@@ -19,5 +19,5 @@ cask "consul" do
 
   binary "consul"
 
-  # No zap stanza required
+  zap :not_required
 end

@@ -18,8 +18,8 @@ cask "mythic" do
     end
   end
 
-  depends_on macos: :sonoma
   depends_on arch: :arm64
+  depends_on macos: :sonoma
 
   app "Mythic.app"
 

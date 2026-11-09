@@ -1,6 +1,6 @@
 cask "tencent-lemon" do
-  version "5.3.6,EBE8EF4A8859CB996D58A364699DCA60"
-  sha256 "ce83b2923ea5d6c696b24b53945d5e1f04a4a428e414c1b9740429848baa187c"
+  version "5.3.8,6D1470FEA8573BFF3E422BDE1DEF14CD"
+  sha256 "a3268ee479ba0631e61524b577e6fae7ad63f9355eeec315b9ed1bcbf5eb3cfd"
 
   url "https://pm.myapp.com/invc/xfspeed/qqpcmgr/module_update/#{version.csv.second}/Lemon#{version.csv.first}.dmg"
   name "Tencent Lemon Cleaner"
@@ -30,10 +30,13 @@ cask "tencent-lemon" do
             ]
 
   zap trash: [
+    "~/Library/Application Support/com.tencent.Lemon",
     "~/Library/Caches/com.tencent.Lemon",
     "~/Library/Caches/com.tencent.LemonMonitor",
+    "~/Library/HTTPStorages/com.tencent.Lemon*",
     "~/Library/Logs/LemonMonitor.log",
     "~/Library/Logs/Tencent Lemon.log",
+    "~/Library/Preferences/com.tencent.Lemon.plist",
     "~/Library/Preferences/com.tencent.LemonUpdate.plist",
     "~/Library/Preferences/LemonMonitor_packet.dat",
     "~/Library/Preferences/Tencent Lemon_packet.dat",

@@ -1,11 +1,12 @@
 cask "bitbox" do
   url_end = on_system_conditional macos: "macOS.dmg", linux: "x86_64.AppImage"
 
-  version "4.51.4"
+  version "4.52.0"
+  sha256 arm:          "fc3e13bf8aedf2df375a4d63a8b8af38651b70835be691928e6b796156c4809d",
+         intel:        "fc3e13bf8aedf2df375a4d63a8b8af38651b70835be691928e6b796156c4809d",
+         x86_64_linux: "2f963f03c76a9757601a487bf36549468efe5d513c350362fb437dee61005990"
 
   on_macos do
-    sha256 "b0acaacc07e25f0e6da6290133572c45c67c2267203863ceb98bddf70eb5ac6c"
-
     depends_on macos: :monterey
 
     app "BitBox.app"
@@ -16,11 +17,19 @@ cask "bitbox" do
     ]
   end
   on_linux do
-    sha256 "4a71cfeec7a42e95907dd08faad1032d6996364a10d77c3c06c9a6df4ebd3ba7"
-
     depends_on arch: :x86_64
 
     app_image "BitBox-#{version}-x86_64.AppImage", target: "BitBox.AppImage"
+
+    zap trash: [
+          "~/.cache/Shift Crypto/BitBoxApp",
+          "~/.config/bitbox",
+          "~/.local/share/Shift Crypto/BitBoxApp",
+        ],
+        rmdir: [
+          "~/.cache/Shift Crypto",
+          "~/.local/share/Shift Crypto",
+        ]
   end
 
   url "https://github.com/BitBoxSwiss/bitbox-wallet-app/releases/download/v#{version}/BitBox-#{version}-#{url_end}"
@@ -29,7 +38,7 @@ cask "bitbox" do
   homepage "https://bitbox.swiss/"
 
   livecheck do
-    url "https://bitbox.swiss/download/"
-    regex(/href=.*?BitBox[._-]v?(\d+(?:\.\d+)+)(?:[._-]macOS)?\.dmg/i)
+    url :url
+    strategy :github_latest
   end
 end

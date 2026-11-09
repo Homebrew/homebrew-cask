@@ -8,5 +8,5 @@ cask "font-jersey-25" do
 
   font "Jersey25-Regular.ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

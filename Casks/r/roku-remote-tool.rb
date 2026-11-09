@@ -1,7 +1,7 @@
 cask "roku-remote-tool" do
   arch arm: "arm64", intel: "x64"
 
-  version "4.4.0"
+  version "5.1.0"
   sha256 :no_check
 
   url "https://devtools.web.roku.com/RokuRemote/app/mac/roku-remote-tool-mac-#{arch}.zip"
@@ -21,8 +21,10 @@ cask "roku-remote-tool" do
   app "roku_remote_tool.app"
 
   zap trash: [
+    "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.electron.rokuremotetool.sfl*",
     "~/Library/Application Support/roku_remote_tool",
     "~/Library/Logs/roku_remote_tool",
+    "~/Library/Preferences/com.electron.rokuremotetool.plist",
     "~/Library/Preferences/com.rokuremotetool.plist",
   ]
 end

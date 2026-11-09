@@ -2,9 +2,9 @@ cask "dotnet-sdk@9" do
   # Differs from the `dotnet` formula by including additional closed-source components
   arch arm: "arm64", intel: "x64"
 
-  version "9.0.317"
-  sha256 arm:   "62b62ede499c2703e075afad4570e4acd1506b6d8b0b927185485a7c7983973a",
-         intel: "5dddb66e4ff319e4f0492795bc8794c3b403902eb0edfad6333a2d91579ae307"
+  version "9.0.320"
+  sha256 arm:   "08e0a587b047572bcdb6d5014a9458bfcb3aeb8a85e0be23950463a60ef5561d",
+         intel: "6e9f8791a9b5798ae5214b869e336d4b32e654d0d941f620c27e302547fd9d58"
 
   url "https://builds.dotnet.microsoft.com/dotnet/Sdk/#{version}/dotnet-sdk-#{version}-osx-#{arch}.pkg"
   name ".NET SDK"
@@ -34,5 +34,5 @@ cask "dotnet-sdk@9" do
 
   uninstall pkgutil: "com.microsoft.dotnet.*#{version.major_minor}*#{arch}"
 
-  # No zap stanza required
+  zap :not_required
 end

@@ -8,5 +8,5 @@ cask "font-reggae-one" do
 
   font "ReggaeOne-Regular.ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

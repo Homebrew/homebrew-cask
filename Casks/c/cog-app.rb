@@ -1,6 +1,6 @@
 cask "cog-app" do
-  version "3633,80979a907"
-  sha256 "c2f02af8cee67bcda466f0e74919d10fe5ad39b1d81ab4b09ee5fe58c1943542"
+  version "3880,af67a918a"
+  sha256 "16145e9835f926ae787d727d2a759c27bac8d2c53de652fa3b242a365caba34e"
 
   url "https://cogcdn.cog.losno.co/Cog-#{version.csv.second}.zip"
   name "Cog"
@@ -19,16 +19,19 @@ cask "cog-app" do
   end
 
   auto_updates true
-  depends_on :macos
+  depends_on macos: :monterey
 
   app "Cog.app"
 
   uninstall quit: "org.cogx.cog"
 
   zap trash: [
+    "~/Library/Application Scripts/group.org.cogx.cog",
     "~/Library/Application Scripts/org.cogx.cog",
     "~/Library/Application Support/Cog",
     "~/Library/Caches/org.cogx.cog",
+    "~/Library/Containers/org.cogx.cog",
+    "~/Library/Group Containers/group.org.cogx.cog",
     "~/Library/Preferences/org.cogx.cog.plist",
   ]
 end

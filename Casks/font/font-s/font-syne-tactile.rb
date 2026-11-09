@@ -8,5 +8,5 @@ cask "font-syne-tactile" do
 
   font "SyneTactile-Regular.ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

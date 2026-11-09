@@ -1,8 +1,9 @@
 cask "youdaodict" do
-  version "11.3.16,1077"
+  version "11.3.24,1085"
   sha256 :no_check
 
-  url "https://codown.youdao.com/cidian/download/MacDict.dmg"
+  url "https://codown.youdao.com/cidian/download/MacDict.dmg",
+      referer: "https://fanyi.youdao.com/"
   name "YoudaoDict"
   name "网易有道词典"
   desc "Youdao Dictionary"
@@ -17,8 +18,11 @@ cask "youdaodict" do
 
   app "网易有道翻译.app"
 
+  uninstall quit: "com.youdao.YoudaoDict"
+
   zap trash: [
     "~/Library/Application Scripts/com.youdao.YoudaoDict",
+    "~/Library/Application Scripts/com.youdao.YoudaoDict.YoudaoFileExtension",
     "~/Library/Application Support/com.youdao.YoudaoDict",
     "~/Library/Caches/com.youdao.YoudaoDict",
     "~/Library/com.youdao.YoudaoDict",

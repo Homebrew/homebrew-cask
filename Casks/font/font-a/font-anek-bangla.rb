@@ -8,5 +8,5 @@ cask "font-anek-bangla" do
 
   font "AnekBangla[wdth,wght].ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

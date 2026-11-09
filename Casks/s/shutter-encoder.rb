@@ -3,12 +3,10 @@ cask "shutter-encoder" do
        intel: on_system_conditional(macos: "Mac 64bits", linux: "Linux 64bits")
   os macos: "pkg", linux: "AppImage"
 
-  version "20.3"
+  version "20.5"
   sha256 :no_check # required as upstream package is updated in-place
 
   on_macos do
-    depends_on macos: :big_sur
-
     pkg "Shutter Encoder #{version} #{arch}.pkg"
 
     uninstall launchctl: "application.com.paulpacifico.shutterencoder.*",
@@ -22,6 +20,8 @@ cask "shutter-encoder" do
     depends_on arch: :x86_64
 
     app_image "Shutter Encoder #{version} #{arch}.AppImage", target: "Shutter Encoder.AppImage"
+
+    zap trash: "~/Shutter Encoder"
   end
 
   artifact = "Shutter Encoder #{version} #{arch}.#{os}"

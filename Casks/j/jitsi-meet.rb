@@ -1,6 +1,6 @@
 cask "jitsi-meet" do
-  version "2026.8.0"
-  sha256 "9480833adebc35c0974e75bd2c45b07c154eca7816d83295403219f682bf3452"
+  version "2026.10.0"
+  sha256 "6e45229b85b82ec5461636f5720e1283bda094d1677cb5b753e1c024eba62d4f"
 
   url "https://github.com/jitsi/jitsi-meet-electron/releases/download/v#{version}/jitsi-meet.dmg"
   name "Jitsi Meet"
@@ -13,7 +13,9 @@ cask "jitsi-meet" do
   app "Jitsi Meet.app"
 
   zap trash: [
+    "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/org.jitsi.jitsi-meet.sfl*",
     "~/Library/Application Support/Jitsi Meet",
     "~/Library/Logs/Jitsi Meet",
+    "~/Library/Preferences/org.jitsi.jitsi-meet.plist",
   ]
 end

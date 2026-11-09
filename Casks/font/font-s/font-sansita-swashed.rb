@@ -8,5 +8,5 @@ cask "font-sansita-swashed" do
 
   font "SansitaSwashed[wght].ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

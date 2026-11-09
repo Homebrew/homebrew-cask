@@ -12,5 +12,5 @@ cask "font-amiko" do
   font "Amiko-Regular.ttf"
   font "Amiko-SemiBold.ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

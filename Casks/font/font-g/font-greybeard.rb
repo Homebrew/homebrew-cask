@@ -33,5 +33,5 @@ cask "font-greybeard" do
   font "Greybeard-22px-Bold.ttf"
   font "Greybeard-22px.ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

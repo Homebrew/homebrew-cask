@@ -1,6 +1,6 @@
 cask "minecraft-education" do
-  version "1.26.32.0"
-  sha256 "8aaada426842ebc054acb70ecd0a44fcb9abe02988e98d5488f17376380e2960"
+  version "1.26.33.0"
+  sha256 "80bb151b1db4e46edc503230bc8ece25210fff94b7d73d6774559a054398a91e"
 
   url "https://downloads.minecrafteduservices.com/retailbuilds/MacOS/Minecraft_Education_#{version}.dmg"
   name "Minecraft Education Edition"
@@ -21,9 +21,12 @@ cask "minecraft-education" do
   zap trash: [
     "~/Library/Application Support/com.microsoft.minecraftpe",
     "~/Library/Application Support/minecraftpe",
+    "~/Library/Caches/com.microsoft.minecraft-edu",
     "~/Library/Caches/com.microsoft.minecraftpe",
+    "~/Library/HTTPStorages/com.microsoft.minecraft-edu",
     "~/Library/HTTPStorages/com.microsoft.minecraftpe",
     "~/Library/HTTPStorages/com.microsoft.minecraftpe.binarycookies",
+    "~/Library/Preferences/com.microsoft.minecraft-edu.plist",
     "~/Library/Preferences/com.microsoft.minecraftpe.plist",
     "~/Library/Saved Application State/com.microsoft.minecraftpe.savedState",
     "~/Library/WebKit/com.microsoft.minecraftpe",

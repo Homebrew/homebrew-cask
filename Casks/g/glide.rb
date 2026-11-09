@@ -1,9 +1,9 @@
 cask "glide" do
   arch arm: "aarch64", intel: "x64"
 
-  version "0.2.15"
-  sha256 arm:   "9e76c3964eefab9eb2742d85ffdd2b89b3424f06d322c00ecf3258a4f3cc07e7",
-         intel: "1f6985485f472b966f31865acc8e521aaa8119cdd7934a89c4f8591d1bde25d9"
+  version "0.2.18"
+  sha256 arm:   "29bab59e387d15156b24f190b45410868477749c3b2e633ce30b691fd28fcec6",
+         intel: "c498f0b9ae40ea63fb1955342374de93ad884e94e53941064faba098aebc2981"
 
   url "https://github.com/glide-wm/glide/releases/download/v#{version}/Glide_#{version}_#{arch}.dmg"
   name "Glide"
@@ -15,12 +15,18 @@ cask "glide" do
     strategy :github_latest
   end
 
-  depends_on macos: :big_sur
+  conflicts_with cask: "glide-browser"
+  depends_on :macos
 
   app "Glide.app"
   binary "#{appdir}/Glide.app/Contents/MacOS/glide"
 
-  uninstall login_item: "Glide"
+  uninstall quit:       "org.glidewm.glide",
+            login_item: "Glide"
 
-  zap trash: "~/.glide/layout.ron", rmdir: "~/.glide"
+  zap trash: [
+        "~/.glide/layout.ron",
+        "~/Library/Saved Application State/org.glidewm.glide.savedState",
+      ],
+      rmdir: "~/.glide"
 end

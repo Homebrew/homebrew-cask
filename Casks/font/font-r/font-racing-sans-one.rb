@@ -8,5 +8,5 @@ cask "font-racing-sans-one" do
 
   font "RacingSansOne-Regular.ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

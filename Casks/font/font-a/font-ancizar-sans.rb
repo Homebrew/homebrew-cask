@@ -11,5 +11,5 @@ cask "font-ancizar-sans" do
   font "AncizarSans-Italic[wght].ttf"
   font "AncizarSans[wght].ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

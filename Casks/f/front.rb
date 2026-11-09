@@ -1,9 +1,9 @@
 cask "front" do
   arch arm: "arm64", intel: "x64"
 
-  version "3.77.0"
-  sha256 arm:   "e8fb367c9746626f08afe7a7d0f40fb458097d028281daa1b65d3ba29d2f6af8",
-         intel: "9d6592b7d337e3928a7a30f12f28c3f13e0cb4f9ee0e94f642d32b5bba373c45"
+  version "3.80.1"
+  sha256 arm:   "e4848412e260f36f46df91cf417f67265f79cc5f6204b880990d1ca268aa9597",
+         intel: "5257d9070369e67c5e187281a255023916bd3a7799148cb1d42c12770c732fc5"
 
   url "https://dl.frontapp.com/desktop/builds/#{version}/Front-#{version}-#{arch}.zip"
   name "Front"
@@ -21,7 +21,11 @@ cask "front" do
   app "Front.app"
 
   zap trash: [
+    "~/Library/Application Scripts/com.frontapp.Front.ShareExtension",
+    "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.frontapp.front.sfl*",
     "~/Library/Application Support/Front",
+    "~/Library/Caches/Front",
+    "~/Library/Containers/com.frontapp.Front.ShareExtension",
     "~/Library/FrontBoard",
     "~/Library/Logs/Front",
     "~/Library/Preferences/com.frontapp.Front.plist",

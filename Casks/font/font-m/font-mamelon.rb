@@ -11,5 +11,5 @@ cask "font-mamelon" do
   font "mamelon_hireg/Mamelon-4-Hi-Regular.otf"
   font "mamelon_hireg/Mamelon-5-Hi-Regular.otf"
 
-  # No zap stanza required
+  zap :not_required
 end

@@ -8,5 +8,5 @@ cask "font-diplomata-sc" do
 
   font "DiplomataSC-Regular.ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

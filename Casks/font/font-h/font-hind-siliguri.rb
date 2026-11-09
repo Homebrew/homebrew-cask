@@ -14,5 +14,5 @@ cask "font-hind-siliguri" do
   font "HindSiliguri-Regular.ttf"
   font "HindSiliguri-SemiBold.ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

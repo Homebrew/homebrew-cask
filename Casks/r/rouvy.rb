@@ -1,5 +1,5 @@
 cask "rouvy" do
-  version "4.7.2"
+  version "4.8.4"
   sha256 :no_check
 
   url "https://cdn.rouvy.com/update/Rouvy_Installer.dmg"
@@ -19,5 +19,8 @@ cask "rouvy" do
 
   app "Rouvy.app"
 
-  zap trash: "~/Library/Application Support/eu.virtualtraining.rouvy.mac"
+  zap trash: [
+    "~/Library/Application Support/eu.virtualtraining.rouvy.mac",
+    "~/Library/Preferences/eu.virtualtraining.rouvy.mac.plist",
+  ]
 end

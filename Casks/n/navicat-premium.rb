@@ -1,5 +1,5 @@
 cask "navicat-premium" do
-  version "17.3.12"
+  version "17.3.13"
   sha256 :no_check
 
   language "zh-CN" do
@@ -59,9 +59,15 @@ cask "navicat-premium" do
   end
 
   conflicts_with cask: "navicat-premium@15"
-  depends_on macos: :big_sur
+  depends_on :macos
 
   app "Navicat Premium.app"
+
+  uninstall quit:   "com.navicat.NavicatPremium",
+            signal: [
+              ["TERM", "com.navicat.NavicatPremium"],
+              ["KILL", "com.navicat.NavicatPremium"],
+            ]
 
   zap trash: [
     "~/Library/Application Support/PremiumSoft CyberTech/Navicat CC/Navicat Premium",

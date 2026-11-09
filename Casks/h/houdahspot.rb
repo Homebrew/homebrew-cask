@@ -1,6 +1,6 @@
 cask "houdahspot" do
-  version "6.8.4,a0b1d3c4-dff8-4f7d-b39e-4caed1924756"
-  sha256 "2dfda1d96451680781fa5dff8c8869efe0bab076f6b3c573404d0bca03dcb047"
+  version "6.8.5,afcbcf67-8e51-47a6-8b9d-a2cea4be06f6"
+  sha256 "2691bc43efe35346170ca0983efc2261ebb703ea3727357fdfc95ebe50983158"
 
   url "https://dl.houdah.com/houdahSpot/updates/cast_assets/#{version.csv.second}/HoudahSpot_#{version.csv.first}.dmg"
   name "HoudahSpot"
@@ -24,14 +24,15 @@ cask "houdahspot" do
   app "HoudahSpot.app"
 
   zap trash: [
-    "~/Library/Application Scripts/com.houdah.HoudahSpot#{version.major}.FinderExtension",
-    "~/Library/Application Scripts/com.houdah.HoudahSpot#{version.major}.HoudahSpotQuickAction",
-    "~/Library/Application Support/com.houdah.HoudahSpot#{version.major}",
-    "~/Library/Caches/com.houdah.HoudahSpot#{version.major}",
-    "~/Library/Containers/com.houdah.HoudahSpot#{version.major}.FinderExtension",
-    "~/Library/Containers/com.houdah.HoudahSpot#{version.major}.HoudahSpotQuickAction",
-    "~/Library/HTTPStorages/com.houdah.HoudahSpot#{version.major}",
+    "~/Library/Application Scripts/com.houdah.HoudahSpot4.FinderExtension",
+    "~/Library/Application Scripts/com.houdah.HoudahSpot4.HoudahSpotQuickAction",
+    "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.houdah.houdahspot4.sfl*",
+    "~/Library/Application Support/com.houdah.HoudahSpot4",
+    "~/Library/Caches/com.houdah.HoudahSpot4",
+    "~/Library/Containers/com.houdah.HoudahSpot4.FinderExtension",
+    "~/Library/Containers/com.houdah.HoudahSpot4.HoudahSpotQuickAction",
+    "~/Library/HTTPStorages/com.houdah.HoudahSpot4",
     "~/Library/Mail/Bundles/HoudahSpotMailPlugin.mailbundle",
-    "~/Library/Preferences/com.houdah.HoudahSpot#{version.major}.plist",
+    "~/Library/Preferences/com.houdah.HoudahSpot4.plist",
   ]
 end

@@ -1,9 +1,9 @@
 cask "pgadmin4" do
   arch arm: "arm64", intel: "x64"
 
-  version "9.17"
-  sha256 arm:   "c49fe899451596ffcf18dbf4c452c89bcec3082dbc31838d46b7dbda792d84df",
-         intel: "954f9c48d13f99d57995ad48c43df98b9453b45154ea937d0f653f4747a852fb"
+  version "9.19"
+  sha256 arm:   "8827d9444752497602f15cb01bd4014378510a2fdd118902686da3f36713b8ed",
+         intel: "a3ef8cce61a1d00a3de5ea00fa75507832ccfebbaa4f5f5685355de0347a51d8"
 
   url "https://ftp.postgresql.org/pub/pgadmin/pgadmin4/v#{version}/macos/pgadmin4-#{version}-#{arch}.dmg"
   name "pgAdmin4"
@@ -18,6 +18,8 @@ cask "pgadmin4" do
   depends_on :macos
 
   app "pgAdmin 4.app"
+
+  uninstall quit: "org.pgadmin.pgadmin4"
 
   zap trash: [
     "~/.pgadmin",

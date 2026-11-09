@@ -8,5 +8,5 @@ cask "font-bebas-neue" do
 
   font "BebasNeue-Regular.ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

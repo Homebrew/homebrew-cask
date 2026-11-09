@@ -1,5 +1,5 @@
 cask "command-tab-plus" do
-  version "2.9.11"
+  version "2.9.14"
   sha256 :no_check
 
   url "https://macplus-software.com/downloads/Command-Tab%20Plus%20#{version.major}.zip"
@@ -18,6 +18,7 @@ cask "command-tab-plus" do
   app "Command-Tab Plus #{version.major}.app"
 
   zap trash: [
+    "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.sergey-gerasimenko.command-tab-plus-#{version.major}.sfl*",
     "~/Library/Application Support/com.sergey-gerasimenko.Command-Tab-Plus-#{version.major}",
     "~/Library/Caches/com.sergey-gerasimenko.Command-Tab-Plus-#{version.major}",
     "~/Library/HTTPStorages/com.sergey-gerasimenko.Command-Tab-Plus-#{version.major}",

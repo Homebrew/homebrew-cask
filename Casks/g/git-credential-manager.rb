@@ -3,11 +3,11 @@ cask "git-credential-manager" do
   os macos: "osx", linux: "linux"
   url_end = on_system_conditional macos: "pkg", linux: "tar.gz"
 
-  version "2.9.1"
-  sha256 arm:          "3b499fb5d580359d30a21b0aacc9f3314ed4df29a747b52425f647c095e37828",
-         intel:        "2eaa8829d064b381023ebe4202a3ca3883ff2441e799c885dcd78318b6cdf183",
-         arm64_linux:  "cf3806b7528b5a5af16bd4bd0683202fc432d9008dd91d20c4c6744b24a033b5",
-         x86_64_linux: "31fc151c3b111ffe25616a4356bd9a50bdcdbd0922c5e11990fb220c6caf1ce1"
+  version "3.0.2"
+  sha256 arm:          "4391c392785e0087a5b120c23c4ffa1c4aa4aed1e15c6ded084db4e1f8baa398",
+         intel:        "e12385440bfd9a8fadc5b1f2174b3c21017923acc2e48a30b953ef023e1625e2",
+         arm64_linux:  "650360154f92bfdd4e836043453410385fb53c06630280aabcb8ece6143a1706",
+         x86_64_linux: "b8e59e22a830006ca4d93e34513effbb2d9fc0c45d9ccf40395eaab7c4c1b97e"
 
   on_macos do
     pkg "gcm-osx-#{arch}-#{version}.pkg"
@@ -16,7 +16,7 @@ cask "git-credential-manager" do
                 executable: "/usr/local/share/gcm-core/uninstall.sh",
                 sudo:       true,
               },
-              pkgutil: "com.microsoft.GitCredentialManager"
+              pkgutil: "com.microsoft.gitcredentialmanager"
 
     zap trash: [
       "~/Library/Preferences/git-credential-manager-ui.plist",
@@ -27,6 +27,8 @@ cask "git-credential-manager" do
     depends_on formula: "icu4c"
 
     binary "git-credential-manager"
+
+    zap trash: "~/.gcm"
   end
 
   url "https://github.com/git-ecosystem/git-credential-manager/releases/download/v#{version.major_minor_patch}/gcm-#{os}-#{arch}-#{version.major_minor_patch}.#{url_end}"

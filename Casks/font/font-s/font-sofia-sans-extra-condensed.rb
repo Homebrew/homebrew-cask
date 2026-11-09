@@ -11,5 +11,5 @@ cask "font-sofia-sans-extra-condensed" do
   font "SofiaSansExtraCondensed-Italic[wght].ttf"
   font "SofiaSansExtraCondensed[wght].ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

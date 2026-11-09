@@ -1,9 +1,9 @@
 cask "rotki" do
   arch arm: "arm64", intel: "x64"
 
-  version "1.44.0"
-  sha256 arm:   "253669c869c455bd1756d3a86a7a7716a737cb4adf4ad7e8dc5f5f05b00f8ef8",
-         intel: "9071aabd6ef7e334af850024f0811463acb9ce50deaf6c26c570c99e6979281e"
+  version "1.44.2"
+  sha256 arm:   "1390a35b50f2074d59a880630645e4150f9961bd76e946c9b7a6bfae1081dd4b",
+         intel: "5ee16b0c402b933f60cecced651539be1da154d584824b14f3dcc98de09c91b0"
 
   url "https://github.com/rotki/rotki/releases/download/v#{version}/rotki-darwin_#{arch}-v#{version}.dmg"
   name "Rotki"
@@ -20,6 +20,7 @@ cask "rotki" do
   app "rotki.app"
 
   zap trash: [
+    "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.rotki.app.sfl*",
     "~/Library/Application Support/rotki",
     "~/Library/Preferences/com.rotki.app.plist",
     "~/Library/Saved Application State/com.rotki.app.savedState",

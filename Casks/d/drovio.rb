@@ -1,6 +1,6 @@
 cask "drovio" do
-  version "3.6.1"
-  sha256 "542499cdaff0e24ad30451389336bbbbca50e40717921684b1bc5ce27fd41a3b"
+  version "3.7.0"
+  sha256 "a384fba726ba5c144f9ae64cef0bfff267d7e763693987fa57910cba28924fa4"
 
   url "https://repository.drovio.com/stable/drovio/macos_universal/#{version.major}.x/#{version}/drovio.dmg"
   name "Drovio"
@@ -19,5 +19,6 @@ cask "drovio" do
 
   app "Drovio.app"
 
-  zap trash: "~/Library/Application Support/Drovio"
+  zap trash: "~/Library/Application Support/Drovio",
+      rmdir: "~/Documents/Drovio"
 end

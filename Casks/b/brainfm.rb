@@ -1,9 +1,9 @@
 cask "brainfm" do
   arch arm: "arm64", intel: "x64"
 
-  version "0.0.309"
-  sha256 arm:   "c421818a5ce9629fbcb5b323ec2ca6b970cec0f28a0db7f5393086a855808b62",
-         intel: "1303dddd0229f52fbee75be58a9093539cf63677b4ed4d3895586839d9048df5"
+  version "0.0.334"
+  sha256 arm:   "3664032bf0923c38e5037664fe181e7fd1499a6dee0b587840bca7a0b6d2434f",
+         intel: "a9f63445106cec665fcabdc0f1058df1872bd6fdcacbec3c83bdd75e5e2b06cb"
 
   url "https://download.brain.fm/darwin/#{arch}/Brain.fm-#{version}-#{arch}.dmg"
   name "Brain.fm"
@@ -24,6 +24,7 @@ cask "brainfm" do
 
   zap trash: [
     "~/Library/Application Support/Brain.fm",
+    "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.electron.brain.fm.sfl*",
     "~/Library/Caches/com.electron.brain.fm",
     "~/Library/Caches/com.electron.brain.fm.ShipIt",
     "~/Library/HTTPStorages/com.electron.brain.fm",

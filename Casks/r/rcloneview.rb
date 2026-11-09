@@ -1,6 +1,6 @@
 cask "rcloneview" do
-  version "1.5.35"
-  sha256 "f0ee757ffb22132489a5c42e88287d77f9ab653201a47c9a902e8760667427a3"
+  version "1.6.8"
+  sha256 "c240ca29d4a173bd91d3af5571165af34e36c8623495f3d16e25a7fb2111bea8"
 
   url "https://downloads.bdrive.com/rclone_view/builds/RcloneView-#{version}.dmg"
   name "RcloneView"
@@ -11,7 +11,7 @@ cask "rcloneview" do
   # https://rcloneview.com/appcast/appcast-mac.xml
   livecheck do
     url "https://rcloneview.com/src/download"
-    regex(/href=.*RcloneView[._-]v?(\d+(?:\.\d+)+)\.dmg/i)
+    regex(/href=.*?RcloneView[._-]v?(\d+(?:\.\d+)+)\.dmg/i)
   end
 
   auto_updates true

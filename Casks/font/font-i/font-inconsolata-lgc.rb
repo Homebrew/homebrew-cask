@@ -1,6 +1,6 @@
 cask "font-inconsolata-lgc" do
-  version "3.300"
-  sha256 "7a8d9b5098cf3d322658b40f1f0e52a02d0227d599aa3ee051e790d918167051"
+  version "3.420"
+  sha256 "6332dd70a35c948d08ab9f89128542df11c962d17b4c0e6b961838218000b16f"
 
   url "https://github.com/MihailJP/Inconsolata-LGC/releases/download/v#{version}/InconsolataLGC-#{version}.tar.xz"
   name "Inconsolata LGC"
@@ -16,5 +16,5 @@ cask "font-inconsolata-lgc" do
   font "InconsolataLGC/Inconsolata-LGC-Italic.ttf"
   font "InconsolataLGC/Inconsolata-LGC.ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

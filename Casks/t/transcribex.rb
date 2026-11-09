@@ -1,5 +1,5 @@
 cask "transcribex" do
-  version "9.4"
+  version "10.6"
   sha256 :no_check
 
   url "https://www.transcribex.io/download/TranscribeX.dmg"
@@ -18,8 +18,9 @@ cask "transcribex" do
   app "TranscribeX.app"
 
   zap trash: [
-    "~/Library/Caches/com.wlly.janome.AudioTranscribe",
-    "~/Library/HTTPStorages/com.wlly.janome.AudioTranscribe",
-    "~/Library/Preferences/com.wlly.janome.AudioTranscribe.plist",
-  ]
+        "~/Library/Caches/com.wlly.janome.AudioTranscribe",
+        "~/Library/HTTPStorages/com.wlly.janome.AudioTranscribe",
+        "~/Library/Preferences/com.wlly.janome.AudioTranscribe.plist",
+      ],
+      rmdir: "~/Documents/transcribex"
 end

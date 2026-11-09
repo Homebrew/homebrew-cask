@@ -8,5 +8,5 @@ cask "font-neonderthaw" do
 
   font "Neonderthaw-Regular.ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

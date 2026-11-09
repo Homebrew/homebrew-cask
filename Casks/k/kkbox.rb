@@ -1,6 +1,6 @@
 cask "kkbox" do
-  version "26.9.1"
-  sha256 "d7ea67c2a20f8e75a356b0d160587bc71759af21b18b413c88d43fec0dfa75e1"
+  version "26.11.5"
+  sha256 "6ffd0aae5d47630b14bdf7ec89ec6564d6828dbdbe2850cda4d0e80bdc5b6fa3"
 
   url "https://dl-universal-v2.kfs.io/KKBOX-#{version}-universal.dmg"
   name "KKBOX"
@@ -12,7 +12,7 @@ cask "kkbox" do
     strategy :header_match
   end
 
-  depends_on macos: :monterey
+  depends_on macos: :ventura
 
   app "KKBOX.app"
 

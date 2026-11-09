@@ -3,21 +3,16 @@ cask "darktable" do
   os macos: "dmg", linux: "AppImage"
   url_name = on_system_conditional macos: "darktable", linux: "Darktable"
 
-  version "5.6.1"
-  sha256 arm:          "155c25a48e06023eeeda3640f6f4fc7848bc1ad8e7384ba1d7b63098986fbeda",
-         intel:        "ab09e11d548a7028f7bacc2bc4549a272c4e8d385be0e38ecc9e7943914abe61",
-         arm64_linux:  "87088ada0a614c2c61c6bc663249388fe9e1d4b57689de3a5fd98c7af348d75d",
-         x86_64_linux: "867ba61fca41d614e6650fd92d6e7968d8c56a1d1dd2bbc3aa06b52508694ed6"
+  version "5.6.2"
+  sha256 arm:          "6ff88e58a2a59cb07b0a1502fea7205e68cd783380a33a3ce7bda68ec29def0c",
+         arm64_linux:  "5b8015f8534453cb3bbd6e5a03e362cb7d9d9573f20d3928aadad354df18ad10",
+         x86_64_linux: "4b0d1c737a2a18c7d8afb81aa3daaf25930bbe541dda98e6354dabd5c2e4dc36"
 
   on_macos do
-    on_arm do
-      depends_on macos: :sonoma
-    end
-    on_intel do
-      depends_on macos: :sequoia
-    end
-
     disable! date: "2026-09-01", because: :fails_gatekeeper_check
+
+    depends_on arch: :arm64
+    depends_on macos: :sonoma
 
     app "darktable.app"
 

@@ -1,9 +1,9 @@
 cask "wondershare-uniconverter" do
   arch arm: "_arm"
 
-  version "17.6.0"
-  sha256 arm:   "d56bf9bcfae047ad91ff2dc8124ed74cd761a1d411e6f50bf6d4897b73304a56",
-         intel: "d5b83ff6a8fadfc9dbaaabcb391980e3c031ee4b4d6a6b11f82b0848388c7763"
+  version "18.0.1"
+  sha256 arm:   "4f0712291c0c98932514964f5bb80a79dc88e795399609931b0909eb20d1a9f4",
+         intel: "1b10bebf26df57db689599ed19a825216d38a3adfd7055971f80be2e46ed91b0"
 
   url "https://download.wondershare.com/cbs_down/uniconverter-mac#{arch}_#{version}_full14207.zip"
   name "UniConverter"
@@ -38,6 +38,7 @@ cask "wondershare-uniconverter" do
     "~/Library/Preferences/com.wondershare.helper_compact.plist",
     "~/Library/Preferences/com.Wondershare.UniConverter#{version.major}.plist",
     "~/Library/Saved Application State/com.Wondershare.UniConverter#{version.major}.savedState",
+    "~/Library/WebKit/com.Wondershare.UniConverter#{version.major}",
     "~/Movies/Wondershare UniConverter#{version.major}",
     "~/Pictures/Wondershare UniConverter#{version.major}",
   ]

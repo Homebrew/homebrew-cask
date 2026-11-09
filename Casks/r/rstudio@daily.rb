@@ -1,6 +1,6 @@
 cask "rstudio@daily" do
-  version "2026.09.0-174"
-  sha256 "a22e32640874996d2440491eeec276c03ac66c3e9d6b8fe0f7c4edf08516496f"
+  version "2026.11.0-203"
+  sha256 "8af768450f9f38586bf48958d348b41ffc4f3d42c9d225cb6d4f2b8e8b986135"
 
   url "https://rstudio-ide-build.s3.amazonaws.com/electron/macos/RStudio-#{version}.dmg"
   name "RStudio Daily"
@@ -16,7 +16,7 @@ cask "rstudio@daily" do
   end
 
   conflicts_with cask: "rstudio"
-  depends_on macos: :monterey
+  depends_on macos: :ventura
 
   app "RStudio.app"
 

@@ -1,6 +1,6 @@
 cask "flock-app" do
-  version "2.2.513"
-  sha256 "610d73f1792905a4dd6c0dbbd27dd83a40e3c7d482784a298d4623ada8621ff6"
+  version "2.2.527"
+  sha256 "a3dbc3bcffcd54d5c909a9048b9d0738523654e424d4c28b8378c2e46dea6786"
 
   url "https://updates.flock.co/fl_mac_electron/Flock-macOS-#{version}.dmg"
   name "Flock"
@@ -12,18 +12,15 @@ cask "flock-app" do
     strategy :header_match
   end
 
-  depends_on :macos
+  depends_on macos: :monterey
 
   app "Flock.app"
 
   zap trash: [
+    "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/to.go.osx.sfl*",
     "~/Library/Application Support/Flock",
     "~/Library/Logs/Flock",
     "~/Library/Preferences/to.go.osx.plist",
     "~/Library/Saved Application State/to.go.osx.savedState",
   ]
-
-  caveats do
-    requires_rosetta
-  end
 end

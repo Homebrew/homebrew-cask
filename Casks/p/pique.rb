@@ -1,6 +1,6 @@
 cask "pique" do
-  version "0.1.0b5"
-  sha256 "6f1cc2d58afb720f26da942a32efa8dad357c5d975683ece85ba26998aeab075"
+  version "1.0.0"
+  sha256 "69b38016220740cecdebb582ee513566803ea34048c840a1743d01396edbd0e6"
 
   url "https://github.com/macadmins/pique/releases/download/v#{version}/Pique-#{version}.pkg"
   name "Pique"

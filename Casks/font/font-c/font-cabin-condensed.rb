@@ -13,5 +13,5 @@ cask "font-cabin-condensed" do
   font "CabinCondensed-Regular.ttf"
   font "CabinCondensed-SemiBold.ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

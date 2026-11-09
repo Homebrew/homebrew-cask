@@ -8,5 +8,5 @@ cask "font-black-han-sans" do
 
   font "BlackHanSans-Regular.ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

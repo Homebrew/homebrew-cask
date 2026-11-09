@@ -22,5 +22,5 @@ cask "font-tinos-nerd-font" do
   font "TinosNerdFontPropo-Italic.ttf"
   font "TinosNerdFontPropo-Regular.ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

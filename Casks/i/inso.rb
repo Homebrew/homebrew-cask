@@ -1,6 +1,6 @@
 cask "inso" do
-  version "13.2.0"
-  sha256 "939f749ed909f28a54752b4c21bb66a0cda53354150bb1439036fe4a7d172fef"
+  version "13.4.0"
+  sha256 "d3aa043b7e2b4b2cab26e6c29a593b470433aeac9dda6dc01ac2188d5b947289"
 
   url "https://github.com/Kong/insomnia/releases/download/core%40#{version}/inso-macos-#{version}.zip"
   name "inso"
@@ -18,7 +18,7 @@ cask "inso" do
 
   binary "inso"
 
-  # No zap stanza required
+  zap :not_required
 
   caveats do
     requires_rosetta

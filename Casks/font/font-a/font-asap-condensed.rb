@@ -25,5 +25,5 @@ cask "font-asap-condensed" do
   font "AsapCondensed-SemiBold.ttf"
   font "AsapCondensed-SemiBoldItalic.ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

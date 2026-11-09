@@ -1,9 +1,9 @@
 cask "nimbalyst" do
   arch arm: "arm64", intel: "x64"
 
-  version "0.76.2"
-  sha256 arm:   "0e8a29595a25881a46aff110ae1d17afd9e718d641884a5ae3e763164b31bc13",
-         intel: "4af7436ef8ac34091a9f8f8539dbd99a2319f643f56a52ac581245fe822a2b7b"
+  version "0.81.7"
+  sha256 arm:   "8b0100c459215609200bc99e29d3c29aa8dcef4ebefd9f5fefa2edd01dbb6de1",
+         intel: "c94fe44c86a9aff772bdb4a2a92277a8dc3572b12e88c46888fa151c43c5781f"
 
   url "https://github.com/Nimbalyst/nimbalyst/releases/download/v#{version}/Nimbalyst-macOS-#{arch}.dmg"
   name "Nimbalyst"
@@ -19,9 +19,18 @@ cask "nimbalyst" do
 
   app "Nimbalyst.app"
 
+  # Crystal was replaced by Nimbalyst, so its paths are kept for users migrated from `stravu-crystal`
   zap trash: [
     "~/Library/Application Support/@nimbalyst",
     "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.nimbalyst.electron.sfl*",
+    "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.stravu.crystal.sfl*",
+    "~/Library/Application Support/Crystal",
+    "~/Library/Caches/com.stravu.crystal",
+    "~/Library/Caches/com.stravu.crystal.ShipIt",
+    "~/Library/HTTPStorages/com.stravu.crystal",
+    "~/Library/Logs/Crystal",
     "~/Library/Preferences/com.nimbalyst.electron.plist",
+    "~/Library/Preferences/com.stravu.crystal.plist",
+    "~/Library/Saved Application State/com.stravu.crystal.savedState",
   ]
 end

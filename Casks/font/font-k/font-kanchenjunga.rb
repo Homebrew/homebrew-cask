@@ -13,5 +13,5 @@ cask "font-kanchenjunga" do
   font "Kanchenjunga-Regular.ttf"
   font "Kanchenjunga-SemiBold.ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

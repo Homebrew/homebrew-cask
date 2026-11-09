@@ -21,4 +21,11 @@ cask "silicon-labs-vcp-driver" do
     executable: "uninstaller.sh",
     sudo:       true,
   }
+
+  zap trash: [
+        "~/Library/Application Scripts/com.silabs.cp210x",
+        "~/Library/Containers/com.silabs.cp210x",
+        "~/Library/Log/silabs_vcp_installer.log",
+      ],
+      rmdir: "~/Library/Log"
 end

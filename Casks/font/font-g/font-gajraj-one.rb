@@ -8,5 +8,5 @@ cask "font-gajraj-one" do
 
   font "GajrajOne-Regular.ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

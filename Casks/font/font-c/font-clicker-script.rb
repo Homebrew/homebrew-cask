@@ -8,5 +8,5 @@ cask "font-clicker-script" do
 
   font "ClickerScript-Regular.ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

@@ -8,7 +8,7 @@ cask "image2icon" do
   homepage "https://www.img2icnsapp.com/"
 
   livecheck do
-    url "http://apps.shinynode.com/apps/image2icon_appcast.xml"
+    url "https://sf-applications.s3.amazonaws.com/Image2Icon/image2icon_appcast.xml"
     strategy :sparkle, &:short_version
   end
 

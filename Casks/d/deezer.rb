@@ -1,6 +1,6 @@
 cask "deezer" do
-  version "7.1.330"
-  sha256 "40affae03cae8258e6a8581d5f4a761319dfc6b772a48026bfc6899f12575ca1"
+  version "8.0.10"
+  sha256 "ce9e1196eaa30d904ae71e327a3b107a5a222cf27d3728bdd994317e89d49fdf"
 
   url "https://www.deezer.com/desktop/download/artifact-darwin-x64-#{version}"
   name "Deezer"
@@ -19,6 +19,7 @@ cask "deezer" do
 
   zap trash: [
     "~/Library/Application Support/Caches/deezer-desktop-updater",
+    "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.deezer.deezer-desktop.sfl*",
     "~/Library/Application Support/Deezer",
     "~/Library/Application Support/deezer-desktop",
     "~/Library/Caches/com.deezer.deezer*",

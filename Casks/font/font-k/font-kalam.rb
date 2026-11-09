@@ -10,5 +10,5 @@ cask "font-kalam" do
   font "Kalam-Light.otf"
   font "Kalam-Regular.otf"
 
-  # No zap stanza required
+  zap :not_required
 end

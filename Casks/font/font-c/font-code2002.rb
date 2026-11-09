@@ -8,5 +8,5 @@ cask "font-code2002" do
 
   font "CODE2002.TTF"
 
-  # No zap stanza required
+  zap :not_required
 end

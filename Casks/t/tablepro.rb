@@ -1,26 +1,28 @@
 cask "tablepro" do
-  arch arm: "arm64", intel: "x86_64"
+  version "0.85.0"
+  sha256 "babca71f8021aae90f136b1fda3197d809788c75119ad99c9aeb725ae14ccda1"
 
-  version "0.72.0"
-  sha256 arm:   "529d55ed0da0c0615e0e89e0bc2e2eb8081a2e0a19bac7b66d09f01fac757d5b",
-         intel: "2620863cb9cfcb91337d4555a3013e1f4051558cf64376fc4da62ac76a7efb33"
-
-  url "https://github.com/TableProApp/TablePro/releases/download/v#{version}/TablePro-#{version}-#{arch}.dmg"
+  url "https://github.com/TableProApp/TablePro/releases/download/v#{version}/TablePro-#{version}.dmg"
   name "TablePro"
   desc "Native database client for many database types"
   homepage "https://tablepro.app/"
 
   livecheck do
-    url "https://raw.githubusercontent.com/TableProApp/TablePro/main/appcast.xml"
-    strategy :sparkle, &:short_version
+    url "https://updates.tablepro.app/appcast.xml"
+    strategy :sparkle do |items|
+      items.find { |item| item.channel.nil? }&.short_version
+    end
   end
 
   auto_updates true
-  depends_on macos: :sonoma
+  depends_on macos: :ventura
 
   app "TablePro.app"
 
+  uninstall quit: "com.TablePro"
+
   zap trash: [
+    "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.tablepro.sfl*",
     "~/Library/Application Support/TablePro",
     "~/Library/Caches/com.TablePro",
     "~/Library/HTTPStorages/com.TablePro",

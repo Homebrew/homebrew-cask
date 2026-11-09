@@ -1,6 +1,6 @@
 cask "yandex-music" do
-  version "5.118.1"
-  sha256 "f29865136036cdc0f17ee8a06a1abf598f19207b36df8d98d560e045934d31b0"
+  version "5.126.1"
+  sha256 "2bd582ea6fae35753851082b2bd8aaef2dc1c0a3e74a2dc13d613115e604d436"
 
   url "https://desktop.app.music.yandex.net/stable/Yandex_Music_universal_#{version}.dmg"
   name "Yandex Music"
@@ -15,11 +15,14 @@ cask "yandex-music" do
   auto_updates true
   depends_on macos: :monterey
 
-  app "Яндекс Музыка.app"
+  # Renamed for consistency: app name is different in the Finder and in a shell.
+  app "Яндекс Музыка.app", target: "Yandex Music.app"
 
   zap trash: [
+    "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/ru.yandex.desktop.music.sfl*",
     "~/Library/Application Support/YandexMusic",
     "~/Library/Logs/YandexMusic",
+    "~/Library/Preferences/ru.yandex.desktop.music.plist",
     "~/Library/Saved Application State/ru.yandex.desktop.music.savedState",
   ]
 end

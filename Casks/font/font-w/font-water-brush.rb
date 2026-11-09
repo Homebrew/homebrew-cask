@@ -8,5 +8,5 @@ cask "font-water-brush" do
 
   font "WaterBrush-Regular.ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

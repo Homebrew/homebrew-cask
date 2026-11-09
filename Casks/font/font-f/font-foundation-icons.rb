@@ -8,5 +8,5 @@ cask "font-foundation-icons" do
 
   font "foundation-icons/foundation-icons.ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

@@ -18,5 +18,5 @@ cask "fabfilter-pro-q" do
 
   uninstall pkgutil: "com.fabfilter.Pro-Q.*"
 
-  # No zap stanza required
+  zap :not_required
 end

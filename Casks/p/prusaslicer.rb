@@ -1,6 +1,6 @@
 cask "prusaslicer" do
-  version "2.9.6"
-  sha256 "94fd7b8a9f87c9631e1c71739b15b184fc5f4c0ceabd69072f1c78f229a4fe40"
+  version "2.9.7"
+  sha256 "f735f9d527823d159d9ac1e8f84ce1b74ea571e705e70e723bee546d070db60b"
 
   url "https://github.com/prusa3d/PrusaSlicer/releases/download/version_#{version}/PrusaSlicer-#{version}.dmg"
   name "PrusaSlicer"
@@ -15,6 +15,8 @@ cask "prusaslicer" do
   depends_on :macos
 
   app "Original Prusa Drivers/PrusaSlicer.app"
+
+  uninstall quit: "com.prusa3d.slic3r/"
 
   zap trash: [
     "~/Library/Application Support/PrusaSlicer",

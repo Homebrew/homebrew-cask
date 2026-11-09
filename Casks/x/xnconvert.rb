@@ -1,6 +1,6 @@
 cask "xnconvert" do
-  version "1.116.0"
-  sha256 "4d3d4ef552155a5bf85cdfea363f88af0dbb23b697ce1ed720e0705d70a96b2d"
+  version "1.118.0"
+  sha256 "2d1e64bcb12e9d84788cca5ca9eb97bda2d7f07eaff7ff2f0b24aafbebeae597"
 
   url "https://download.xnview.com/old_versions/XnConvert/XnConvert-#{version}-mac.dmg"
   name "XnSoft XnConvert"
@@ -9,10 +9,10 @@ cask "xnconvert" do
 
   livecheck do
     url "https://download.xnview.com/old_versions/XnConvert/"
-    regex(/href=.*XnConvert[._-]v?(\d+(?:\.\d+)+)[._-]mac\.dmg/i)
+    regex(/href=.*?XnConvert[._-]v?(\d+(?:\.\d+)+)[._-]mac\.dmg/i)
   end
 
-  depends_on :macos
+  depends_on macos: :monterey
 
   app "XnConvert.app"
 

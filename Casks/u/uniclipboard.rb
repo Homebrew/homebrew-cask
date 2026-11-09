@@ -1,9 +1,9 @@
 cask "uniclipboard" do
   arch arm: "aarch64", intel: "x64"
 
-  version "0.19.3"
-  sha256 arm:   "f633f6b9a999babb8ef76e9ea453b2556568a7e1eb26db630f479bb1e3a85152",
-         intel: "aee45d012d0d890b4af55f3236639448bbb3ac09d44722cc1d381c24461163b8"
+  version "1.6.1"
+  sha256 arm:   "8c8f9843f0a9da10dc03b8cf7066bc9256c244abf151f5493096193f3586d5e8",
+         intel: "43eef976a2df6c03af7d29710590fb46289580ac3e4b8162b922900b207b1c3f"
 
   url "https://github.com/UniClipboard/UniClipboard/releases/download/v#{version}/UniClipboard_#{version}_#{arch}.dmg"
   name "UniClipboard"
@@ -21,8 +21,11 @@ cask "uniclipboard" do
 
   zap trash: [
     "~/Library/Application Support/app.uniclipboard.desktop",
+    "~/Library/Application Support/app.uniclipboard.desktop-upgrade-backups",
     "~/Library/Caches/app.uniclipboard.desktop",
     "~/Library/Logs/app.uniclipboard.desktop",
+    "~/Library/Preferences/app.uniclipboard.desktop.plist",
     "~/Library/WebKit/app.uniclipboard.desktop",
+    "~/Library/WebKit/app.uniclipboard.desktop.ui",
   ]
 end

@@ -8,5 +8,5 @@ cask "font-licorice" do
 
   font "Licorice-Regular.ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

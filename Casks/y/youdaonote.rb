@@ -1,9 +1,9 @@
 cask "youdaonote" do
   arch arm: "-arm64"
 
-  version "8.2.81"
-  sha256 arm:   "8fd7681156693e19eff489b2ef65fabe48a19839e04f3d8d8a972e437a6659c7",
-         intel: "c5d8b8aca8dd9619d079651a1cc9156611daaec572e843a10a66a3026480edc4"
+  version "8.2.100"
+  sha256 arm:   "3d961410ec816147a0846347390e92c8195153a12a029fae613e418029e56893",
+         intel: "967255a39f4cd0f53b01538be1a092032b7364fd5200cc304157ce14d1a45cd4"
 
   url "https://artifact.lx.netease.com/download/ynote-electron/%E6%9C%89%E9%81%93%E4%BA%91%E7%AC%94%E8%AE%B0-#{version}#{arch}.dmg",
       user_agent: :fake
@@ -22,7 +22,11 @@ cask "youdaonote" do
   app "有道云笔记.app"
 
   zap trash: [
+    "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/ynote-desktop.sfl*",
+    "~/Library/Application Support/ynote-desktop",
     "~/Library/Containers/com.youdao.note.YoudaoNoteMac",
+    "~/Library/Logs/ynote-desktop",
+    "~/Library/Preferences/ynote-desktop.plist",
     "~/Library/Saved Application State/com.youdao.YoudaoDict.savedState",
   ]
 end

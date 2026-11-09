@@ -1,6 +1,6 @@
 cask "pgen" do
-  version "1.19.0"
-  sha256 "aec4233a016b46bcfbb55f2e6c8e4cee436254143dcaae85bf3fd7bfee67514a"
+  version "1.21.0"
+  sha256 "55ec6df1bd635ae50811b2c41a0b3edee8dfa5ba745f9d079de0b11fc6423b45"
 
   url "https://pgendb.com/download/v#{version}/pgen.dmg"
   name "pgen"
@@ -13,7 +13,7 @@ cask "pgen" do
   end
 
   auto_updates true
-  depends_on macos: :big_sur
+  depends_on macos: :monterey
 
   app "pgen.app"
 

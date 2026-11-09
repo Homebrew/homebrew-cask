@@ -20,15 +20,17 @@ jobs:
     strategy:
       matrix:
         runner:
-          - macos-14
           - macos-15
           - macos-26
+          - xcode-27
           - ubuntu-latest
     runs-on: ${{ matrix.runner }}
+    env:
+      HOMEBREW_DEVELOPER: 1
     steps:
       - name: Set up Homebrew
         id: set-up-homebrew
-        uses: Homebrew/actions/setup-homebrew@3cdb78d0f62ad29dd32de765782654f4eedea607 # 2026.08.31.1
+        uses: Homebrew/actions/setup-homebrew@c262868c096d909fc278daa87ed9772967331ea3 # 2026.11.02.1
         with:
           core: false
           cask: false

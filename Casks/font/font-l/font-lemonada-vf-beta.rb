@@ -8,5 +8,5 @@ cask "font-lemonada-vf-beta" do
 
   font "LemonadaVFBeta.ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

@@ -26,5 +26,5 @@ cask "font-gohufont-nerd-font" do
   font "GohuFontuni14NerdFontMono-Regular.ttf"
   font "GohuFontuni14NerdFontPropo-Regular.ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

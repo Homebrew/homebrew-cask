@@ -23,5 +23,5 @@ cask "font-alegreya-sans-sc" do
   font "AlegreyaSansSC-Thin.ttf"
   font "AlegreyaSansSC-ThinItalic.ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

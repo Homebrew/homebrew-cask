@@ -1,6 +1,6 @@
 cask "accordance" do
-  version "14.1.2"
-  sha256 "0ea778147a93b1e4fb20d8fe272859bb27bb624c12bdc99a44c1de2908d93aea"
+  version "14.2.0"
+  sha256 "3324ab4f7d690c7f1ec993f3ad179329f18105c9dd09c0f4cdf08dab65890d5d"
 
   url "https://d366ra67x2bs56.cloudfront.net/mac/Acc_#{version}.zip"
   name "Accordance Bible Software"
@@ -13,6 +13,7 @@ cask "accordance" do
   end
 
   auto_updates true
+  conflicts_with cask: "accordance@13"
   depends_on :macos
 
   app "Accordance.app"

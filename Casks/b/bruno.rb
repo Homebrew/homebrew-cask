@@ -3,26 +3,31 @@ cask "bruno" do
   os macos: "mac", linux: "linux"
   url_end = on_system_conditional macos: "dmg", linux: "AppImage"
 
-  version "4.1.0"
-  sha256 arm:          "31af43035099556492ce2196a87e88234caafdc897ccc2c9bfa62a321fc5df8e",
-         intel:        "f936a42ca8177386c1b392111a2bf374876c35a09e3089691f4f1a79eabf4b6e",
-         arm64_linux:  "7f08392501125d33800fa2b7762465234dce35933d38787da562b65c37197406",
-         x86_64_linux: "50deeed474542745b69ddb5bde3667dead0c93ff0d76e0d39526ae36cd234c92"
+  version "4.3.0"
+  sha256 arm:          "bb4c4d8de817a6f529880627606137fd16346ddece547c6a0862e84bd1cc69bf",
+         intel:        "d17034ae3f444215419d64dee5d5fbd28a728b54181bef4a70692cee259b722a",
+         arm64_linux:  "6048c3aeb76607c71df7558deea83cfef9d33cf24a63da9e7c5268ab19d13469",
+         x86_64_linux: "3c386b1007f66d875c34a2a502063fbad65c66e37409a316ebe518788b1e80bb"
 
   on_macos do
     auto_updates true
-    depends_on macos: :big_sur
 
     app "Bruno.app"
 
     zap trash: [
-      "~/Library/Application Support/bruno",
-      "~/Library/Preferences/com.usebruno.app.plist",
-      "~/Library/Saved Application State/com.usebruno.app.savedState",
-    ]
+          "~/Library/Application Support/bruno",
+          "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.usebruno.app.sfl*",
+          "~/Library/Logs/bruno",
+          "~/Library/Preferences/com.usebruno.app.plist",
+          "~/Library/Saved Application State/com.usebruno.app.savedState",
+        ],
+        rmdir: "~/Documents/bruno"
   end
   on_linux do
     app_image "bruno_#{version}_#{arch}_linux.AppImage", target: "Bruno.AppImage"
+
+    zap trash: "~/.config/bruno",
+        rmdir: "~/Documents/bruno"
   end
 
   url "https://github.com/usebruno/bruno/releases/download/v#{version}/bruno_#{version}_#{arch}_#{os}.#{url_end}"

@@ -32,5 +32,5 @@ cask "font-foundry-sterling" do
   font "FoundrySterlingOT3-Medium.otf"
   font "zFoundrySterling-Bold.otf"
 
-  # No zap stanza required
+  zap :not_required
 end

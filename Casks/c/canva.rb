@@ -1,6 +1,6 @@
 cask "canva" do
-  version "1.124.1"
-  sha256 "d5772b5bed2da9dadabd256beb92ecd70617013a1fbf2844fc2ff78cdbea3266"
+  version "1.126.2"
+  sha256 "54097964544ace50e7e83260da85ab45feebd61a311ed51c4ee9f068ab7f3658"
 
   url "https://desktop-release.canva.com/Canva-#{version}-universal.dmg"
   name "Canva"
@@ -19,8 +19,10 @@ cask "canva" do
 
   zap trash: [
     "~/Library/Application Support/Canva",
+    "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.canva.canvadesktop.sfl*",
     "~/Library/Caches/com.canva.CanvaDesktop",
     "~/Library/Caches/com.canva.CanvaDesktop.ShipIt",
+    "~/Library/HTTPStorages/com.canva.CanvaDesktop",
     "~/Library/LaunchAgents/com.canva.availability-check-agent.plist",
     "~/Library/Logs/Canva",
     "~/Library/Preferences/com.canva.CanvaDesktop.plist",

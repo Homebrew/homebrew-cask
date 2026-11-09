@@ -8,5 +8,5 @@ cask "font-noto-sans-imperial-aramaic" do
 
   font "NotoSansImperialAramaic-Regular.ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

@@ -12,5 +12,5 @@ cask "font-kaisei-harunoumi" do
   font "KaiseiHarunoUmi-Medium.ttf"
   font "KaiseiHarunoUmi-Regular.ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

@@ -1,6 +1,6 @@
 cask "pritunl" do
-  version "1.4.4744.47"
-  sha256 "de71c6fa41fe00e50eeac0e57fe1fdb3b9409b68afcfcb77f722b7b6c3b80d01"
+  version "1.4.4791.77"
+  sha256 "ef6c4f6564d45cf0dfa89aed95db9926328372e0dac2d6608876072dc9b846ab"
 
   url "https://github.com/pritunl/pritunl-client-electron/releases/download/#{version}/Pritunl.pkg.zip"
   name "Pritunl"

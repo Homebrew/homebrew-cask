@@ -8,5 +8,5 @@ cask "font-akt" do
 
   font "Akt[wght].ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

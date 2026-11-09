@@ -8,5 +8,5 @@ cask "font-noto-sans-cypriot" do
 
   font "NotoSansCypriot-Regular.ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

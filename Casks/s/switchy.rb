@@ -1,6 +1,6 @@
 cask "switchy" do
-  version "1.1.6,82"
-  sha256 "0732cbe26c7caf19facc163e342d8c61fee7e30cfd222bd9197ace6dfab6b2a0"
+  version "2.0,93"
+  sha256 "22021d1e75b5ebeaa09c8f0083dd3f6c2865d5c72aff3b4e0c2b6df8bd28cc98"
 
   url "https://github.com/benhursenabathi/mangobuns/releases/download/switchy-v#{version.csv.first}-build#{version.csv.second}/Switchy-#{version.csv.first}.dmg"
   name "Switchy"
@@ -9,7 +9,9 @@ cask "switchy" do
 
   livecheck do
     url "https://mangobuns.com/switchy/appcast.xml"
-    strategy :sparkle
+    strategy :sparkle do |items|
+      items.find { |item| item.channel.nil? }&.nice_version
+    end
   end
 
   auto_updates true

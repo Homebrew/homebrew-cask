@@ -20,7 +20,7 @@ cask "sqlworkbenchj" do
 
   app "SQLWorkbenchJ.app"
 
-  # No zap stanza required
+  zap :not_required
 
   caveats do
     depends_on_java "11+"

@@ -1,6 +1,6 @@
 cask "hookmark" do
-  version "7.2.2"
-  sha256 "e125f86b36b4fc8384991e932ad8fc51b67e0af90259b7d10863d4775378fbe7"
+  version "7.3.1"
+  sha256 "e73f2f93cc441f9f62160a08c925cb89577e4b64ac83392d9942309224010227"
 
   url "https://updates.hookproductivity.com/downloads/Hookmark-app-#{version}.dmg",
       user_agent: :browser

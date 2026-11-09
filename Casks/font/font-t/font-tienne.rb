@@ -12,5 +12,5 @@ cask "font-tienne" do
   font "Tienne-Bold.ttf"
   font "Tienne-Regular.ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

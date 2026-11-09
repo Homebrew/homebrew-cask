@@ -1,9 +1,9 @@
 cask "signal@beta" do
   arch arm: "arm64", intel: "x64"
 
-  version "8.27.0-beta.3"
-  sha256 arm:   "4e3f7bf257d975f4223a184fcd91be01bc9a371dec558a15ddcb11c1a2d617c4",
-         intel: "22f2440f503f388f738f1697f2500b3c96e1fae84ea40f2f62c2cd2b23218104"
+  version "8.35.0-beta.1"
+  sha256 arm:   "cfc5aae6c638d355b8aedf31ebe56c16ae67da2cd5f2677a69cd680055d3b13b",
+         intel: "68854cee85f0363843551a84f929e5a34f6eddbfada6389f05a839bb6797057e"
 
   url "https://updates.signal.org/desktop/signal-desktop-beta-mac-#{arch}-#{version}.zip"
   name "Signal Beta"
@@ -16,12 +16,15 @@ cask "signal@beta" do
   end
 
   auto_updates true
-  depends_on macos: :monterey
+  depends_on macos: :ventura
 
   app "Signal Beta.app"
 
   zap trash: [
+    "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/org.whispersystems.signal-desktop-beta.sfl*",
+    "~/Library/Application Support/Signal Beta",
     "~/Library/Application Support/Signal",
+    "~/Library/Preferences/org.whispersystems.signal-desktop-beta.plist",
     "~/Library/Preferences/org.whispersystems.signal-desktop.helper.plist",
     "~/Library/Preferences/org.whispersystems.signal-desktop.plist",
     "~/Library/Saved Application State/org.whispersystems.signal-desktop.savedState",

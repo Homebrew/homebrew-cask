@@ -8,5 +8,5 @@ cask "font-mervale-script" do
 
   font "MervaleScript-Regular.ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

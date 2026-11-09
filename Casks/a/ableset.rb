@@ -1,9 +1,9 @@
 cask "ableset" do
   arch arm: "-arm64"
 
-  version "3.1.5"
-  sha256 arm:   "da0f4ef3317cd88f4089bcdd411220ed63fac97da9bb6fb934f5a88b0116419c",
-         intel: "4a7855068be4ebfa48dbf7ee2d7135706ebce60d453a75742b017a34aaa70e29"
+  version "3.1.9"
+  sha256 arm:   "477f6879638947b65894aef5a615dc2342cb20c085be467ff4202b1a43ff2c82",
+         intel: "27a0cc8d003f8a77dbaa21c2d510b348f2fc7197aa8235239442f049373398eb"
 
   url "https://s3.amazonaws.com/download.ableset.app/mac#{arch}/AbleSet-#{version}#{arch}.dmg"
   name "AbleSet"
@@ -19,6 +19,8 @@ cask "ableset" do
   depends_on macos: :monterey
 
   app "AbleSet.app"
+
+  uninstall quit: "org.leolabs.ableset"
 
   zap trash: [
     "~/Library/Application Support/ableset",

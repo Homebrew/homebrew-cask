@@ -8,5 +8,5 @@ cask "font-black-and-white-picture" do
 
   font "BlackAndWhitePicture-Regular.ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

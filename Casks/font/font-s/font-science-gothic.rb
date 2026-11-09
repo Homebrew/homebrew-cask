@@ -8,5 +8,5 @@ cask "font-science-gothic" do
 
   font "ScienceGothic[CTRS,slnt,wdth,wght].ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

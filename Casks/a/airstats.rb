@@ -1,6 +1,6 @@
 cask "airstats" do
-  version "1.4"
-  sha256 "5888362bbca31914c9ec2c80541e9717e59e0eaf56ef0e846d28619015fe49c7"
+  version "1.6"
+  sha256 "63189e9f262b9dab708fff0af39b14bd4faa80baa6bdc6e0dc409f2426c82418"
 
   url "https://github.com/byrencheema/airstats/releases/download/v#{version}/AirStats.dmg"
   name "AirStats"
@@ -8,8 +8,8 @@ cask "airstats" do
   homepage "https://airstats.app/"
 
   auto_updates true
-  depends_on macos: :sonoma
   depends_on arch: :arm64
+  depends_on macos: :sonoma
 
   app "AirStats.app"
 

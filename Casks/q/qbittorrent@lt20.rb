@@ -47,6 +47,12 @@ cask "qbittorrent@lt20" do
     depends_on arch: :x86_64
 
     app_image "qbittorrent-#{version}_lt20_#{arch}.AppImage", target: "qBittorrent.AppImage"
+
+    zap trash: [
+      "~/.cache/qBittorrent",
+      "~/.config/qBittorrent",
+      "~/.local/share/qBittorrent",
+    ]
   end
 
   url "https://downloads.sourceforge.net/qbittorrent/qbittorrent-#{os}/qbittorrent-#{version}/qbittorrent-#{version}_lt20#{url_end}"

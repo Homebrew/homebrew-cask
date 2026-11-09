@@ -8,5 +8,5 @@ cask "font-chicle" do
 
   font "Chicle-Regular.ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

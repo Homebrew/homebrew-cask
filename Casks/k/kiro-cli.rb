@@ -1,8 +1,8 @@
 cask "kiro-cli" do
-  version "2.21.1"
-  sha256 "3de3591ba23d44d16d49e8f372c4436c9c18ea446982c900a869193cfa21f85c"
+  version "3.1.0"
+  sha256 "81559df6deffaad19581f9f1014b608709c49659f10f1b0c348cbafc2c8930d7"
 
-  url "https://desktop-release.q.us-east-1.amazonaws.com/#{version}/Kiro%20CLI.dmg"
+  url "https://desktop-release.q.us-east-1.amazonaws.com/#{version}/kirocli-universal-darwin.zip"
   name "Kiro CLI"
   desc "AI-powered productivity tool for the command-line"
   homepage "https://kiro.dev/docs/cli/"
@@ -14,13 +14,9 @@ cask "kiro-cli" do
     end
   end
 
-  auto_updates true
-  depends_on macos: :big_sur
+  depends_on :macos
 
-  app "Kiro CLI.app"
-  binary "#{appdir}/Kiro CLI.app/Contents/MacOS/kiro-cli"
-
-  uninstall launchctl: "com.amazon.codewhisperer.launcher"
+  binary "kirocli/bin/kiro-cli"
 
   zap trash: [
     "~/.kiro",

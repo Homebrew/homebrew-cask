@@ -8,8 +8,8 @@ cask "discord" do
     end
   end
   on_monterey :or_newer do
-    version "0.0.410"
-    sha256 "893ec758b3ae3fdc6f8c9bb197603d41042bff317aaa7d616f8ea64350d93b19"
+    version "0.0.421"
+    sha256 "5862c7663124e27284ef513eddf039ee8ae8b6cb6df222afb2779e633f5b5c6a"
 
     livecheck do
       url "https://updates.discord.com/distributions/app/manifests/latest?channel=stable&platform=osx&arch=x64"
@@ -25,7 +25,7 @@ cask "discord" do
   homepage "https://discord.com/"
 
   auto_updates true
-  depends_on :macos
+  depends_on macos: :ventura
 
   app "Discord.app"
 

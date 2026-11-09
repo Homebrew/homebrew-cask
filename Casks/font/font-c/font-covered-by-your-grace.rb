@@ -8,5 +8,5 @@ cask "font-covered-by-your-grace" do
 
   font "CoveredByYourGrace.ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

@@ -7,11 +7,6 @@ cask "ransomwhere" do
   desc "Protect your personal files"
   homepage "https://objective-see.org/products/ransomwhere.html"
 
-  livecheck do
-    url :url
-    strategy :github_latest
-  end
-
   depends_on :macos
 
   installer script: {
@@ -31,7 +26,7 @@ cask "ransomwhere" do
     sudo:       true,
   }
 
-  # No zap stanza required
+  zap :not_required
 
   caveats do
     requires_rosetta

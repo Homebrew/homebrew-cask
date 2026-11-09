@@ -13,5 +13,5 @@ cask "font-palemonasmufi-bolditalic" do
 
   font "PalemMUFI-bi.ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

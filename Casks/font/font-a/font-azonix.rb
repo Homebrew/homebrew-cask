@@ -8,5 +8,5 @@ cask "font-azonix" do
 
   font "Azonix.otf"
 
-  # No zap stanza required
+  zap :not_required
 end

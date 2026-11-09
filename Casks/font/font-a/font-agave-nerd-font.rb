@@ -20,5 +20,5 @@ cask "font-agave-nerd-font" do
   font "AgaveNerdFontPropo-Bold.ttf"
   font "AgaveNerdFontPropo-Regular.ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

@@ -29,6 +29,11 @@ cask "filen" do
   end
   on_linux do
     app_image "Filen_linux_#{arch}.AppImage", target: "Filen.AppImage"
+
+    zap trash: [
+      "~/.cache/@filendesktop-updater",
+      "~/.config/@filen",
+    ]
   end
 
   url "https://cdn.filen.io/@filen/desktop/release/v#{version}/Filen_#{os}_#{arch}.#{url_end}"

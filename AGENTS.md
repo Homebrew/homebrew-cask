@@ -79,8 +79,10 @@ Commit message: `<cask> <version> (new cask)` (e.g., `myapp 1.0.0 (new cask)`)
 
 - **Token**: Follow the [token reference](https://docs.brew.sh/Cask-Cookbook#token-reference)—lowercase, hyphens, no version numbers
 - **Required stanzas**: `version`, `sha256`, `url`, `name`, `desc`, `homepage`, and at least one artifact (`app`, `pkg`, etc.)
+- **`desc` stanza**: Follow the [Description Guidelines](https://docs.brew.sh/Description-Guidelines)—say what the software is in plain, neutral words, without marketing adjectives, feature lists or comparisons with other projects ("alternative to", "replacement for", "like X but faster"). Naming another project is fine when the relationship is a fact, e.g. "Slack client". Use British English spelling (e.g. "colour", "visualiser")
 - **`uninstall` stanza**: Required for `pkg` and `installer` artifacts
 - **`zap` stanza**: Recommended for thorough cleanup (preference files, caches in `~/Library`)
+- **`livecheck` stanza**: Don't add `strategy :github_latest` by default. GitHub release asset URLs use the `Git` strategy by default, so first check `brew livecheck --debug --cask <cask>` without a `livecheck` block, adding only `url :url` and a `regex` if tags need filtering. GitHub rate-limits API requests, so only use `strategy :github_latest` when `Git` can't adequately identify the latest version (e.g. tags using a stable version format are marked as pre-release or not all tags receive a release) or there's a notable time gap between a tag and release. The "latest" release must also reliably be the correct latest version. See [`livecheck` guidelines](https://docs.brew.sh/Brew-Livecheck#general-guidelines)
 
 ## Required Validation
 
@@ -181,7 +183,7 @@ If AI assisted with the PR, check the AI checkbox in the PR template. Briefly de
 - How AI was used
 - What manual verification was performed (especially `zap` paths)
 
-Do not identify an AI tool as an author, co-author, committer or signatory of a commit, including through an `Assisted-by`, `Co-developed-by` or similar commit trailer.
+Every commit must have a human author or `Co-authored-by` co-author: commits attributed only to AI tools are rejected.
 Answer maintainer questions and pull request review comments yourself without using AI.
 AI assistants must not draft or post these responses; the human contributor must answer them directly.
 

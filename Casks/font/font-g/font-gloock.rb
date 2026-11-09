@@ -8,5 +8,5 @@ cask "font-gloock" do
 
   font "Gloock-Regular.ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

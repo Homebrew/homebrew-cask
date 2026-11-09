@@ -15,5 +15,5 @@ cask "font-pridi" do
   font "Pridi-Regular.ttf"
   font "Pridi-SemiBold.ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

@@ -16,5 +16,5 @@ cask "font-symbols-only-nerd-font" do
   font "SymbolsNerdFont-Regular.ttf"
   font "SymbolsNerdFontMono-Regular.ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

@@ -3,11 +3,13 @@ cask "db-browser-for-sqlite@nightly" do
   os macos: "universal_"
   url_end = on_system_conditional macos: ".dmg", linux: "-#{arch}.AppImage"
 
-  version "20260908"
+  version "20261109"
+  sha256 arm:          "02f77229a467711988fc12475cbad0f11f2475694e201d81c68085e28dde91d2",
+         intel:        "02f77229a467711988fc12475cbad0f11f2475694e201d81c68085e28dde91d2",
+         arm64_linux:  "a87c1761ace8310896f006ba0a517d635f0a8ad0e83829d5b2d5dc948e50e4e6",
+         x86_64_linux: "c96180fb721565c51d3506856d0bb9354544fff278e6c195efd35d46ae83021b"
 
   on_macos do
-    sha256 "d120b2b69280ac66e825a7964212424d830a5fa15d0a1deb449ba5809cbf6c7d"
-
     app "DB Browser for SQLite Nightly.app"
 
     zap trash: [
@@ -17,11 +19,10 @@ cask "db-browser-for-sqlite@nightly" do
     ]
   end
   on_linux do
-    sha256 arm64_linux:  "4c55f65ae87d01789cd178919937f27c7911cfef6e477901be71e2ab2729df41",
-           x86_64_linux: "b32431b8c58fd8e88f2d4d5f6520f550f48dac6e883c9836332cfad91dcbbef2"
-
     app_image "DB.Browser.for.SQLite-#{version}-#{arch}.AppImage",
               target: "DBBrowserForSQLiteNightly.AppImage"
+
+    zap trash: "~/.config/sqlitebrowser"
   end
 
   url "https://github.com/sqlitebrowser/sqlitebrowser/releases/download/nightly/DB.Browser.for.SQLite-#{os}#{version}#{url_end}"

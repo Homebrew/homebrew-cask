@@ -15,5 +15,5 @@ cask "ia-markdown-dictionary" do
 
   dictionary "iA Markdown.dictionary"
 
-  # No zap stanza required
+  zap :not_required
 end

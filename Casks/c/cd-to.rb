@@ -10,11 +10,6 @@ cask "cd-to" do
   on_monterey :or_newer do
     version "3.1.3"
     sha256 "821cf3b1f4a0af0d89e71317a5a3271b89e569adf84c9b609d6f159d643c568b"
-
-    livecheck do
-      url :url
-      strategy :github_latest
-    end
   end
 
   url "https://github.com/jbtule/cdto/releases/download/v#{version}/cdto_#{version.dots_to_underscores}.zip"
@@ -26,6 +21,10 @@ cask "cd-to" do
 
   app "cd to.app"
 
+  uninstall quit: "name.tuley.jay.cd-to"
+
+  zap :not_required
+
   caveats <<~EOS
     To complete installation:
     1. Open the Applications folder in finder.
@@ -35,6 +34,4 @@ cask "cd-to" do
     To use, just click on the new button and instantly opens a new Terminal.app
     window.
   EOS
-
-  # No zap stanza required
 end

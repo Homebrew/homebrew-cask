@@ -8,5 +8,5 @@ cask "font-reddit-mono" do
 
   font "RedditMono[wght].ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

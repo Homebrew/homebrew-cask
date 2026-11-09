@@ -11,5 +11,5 @@ cask "font-charm" do
   font "Charm-Bold.ttf"
   font "Charm-Regular.ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

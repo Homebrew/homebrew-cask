@@ -8,5 +8,5 @@ cask "font-grandiflora-one" do
 
   font "GrandifloraOne-Regular.ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

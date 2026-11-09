@@ -14,5 +14,5 @@ cask "scriptql" do
 
   qlplugin "ScriptQL.qlgenerator"
 
-  # No zap stanza required
+  zap :not_required
 end

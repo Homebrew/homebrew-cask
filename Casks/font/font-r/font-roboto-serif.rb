@@ -11,5 +11,5 @@ cask "font-roboto-serif" do
   font "RobotoSerif-Italic[GRAD,opsz,wdth,wght].ttf"
   font "RobotoSerif[GRAD,opsz,wdth,wght].ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

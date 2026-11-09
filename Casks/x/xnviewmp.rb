@@ -1,6 +1,6 @@
 cask "xnviewmp" do
-  version "1.11.6"
-  sha256 "1da40a995db18edf5e0a9904ffb1e0e29306f8ad6bce36853f1830f5ef084b04"
+  version "1.12.2"
+  sha256 "c0d5626d5f3edf63c9b42e9e0f852d248960314c52d580ff4644dbe8c5ae0fa1"
 
   url "https://download.xnview.com/old_versions/XnView_MP/XnView_MP-#{version}-mac.dmg"
   name "XnViewMP"
@@ -12,7 +12,7 @@ cask "xnviewmp" do
     regex(/\[XnViewMP\].*?v?(\d+(?:\.\d+)+)/im)
   end
 
-  depends_on :macos
+  depends_on macos: :monterey
 
   app "XnViewMP.app"
 

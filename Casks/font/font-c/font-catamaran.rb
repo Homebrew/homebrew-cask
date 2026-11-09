@@ -8,5 +8,5 @@ cask "font-catamaran" do
 
   font "Catamaran[wght].ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

@@ -1,6 +1,6 @@
 cask "keyty" do
-  version "1.6.0"
-  sha256 "a8c65272cccc731f9799c4fa5b9f8dd078dde56fcfe48888d59de30394720d1b"
+  version "1.8.0"
+  sha256 "f80665a951ddb545dba229705aedd56720d49a4c047cf49ee1296644330fc127"
 
   url "https://github.com/keytyapp/Keyty/releases/download/v#{version}/Keyty.dmg"
   name "Keyty"
@@ -13,7 +13,7 @@ cask "keyty" do
   end
 
   auto_updates true
-  depends_on macos: :big_sur
+  depends_on :macos
 
   app "Keyty.app"
 

@@ -8,5 +8,5 @@ cask "font-myrica" do
 
   font "Myrica-#{version}/Myrica.TTC"
 
-  # No zap stanza required
+  zap :not_required
 end

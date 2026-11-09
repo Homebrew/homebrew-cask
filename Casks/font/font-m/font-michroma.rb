@@ -8,5 +8,5 @@ cask "font-michroma" do
 
   font "Michroma-Regular.ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

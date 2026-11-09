@@ -11,5 +11,5 @@ cask "font-pliant" do
   font "Pliant-Italic[wdth,wght].ttf"
   font "Pliant[wdth,wght].ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

@@ -14,7 +14,7 @@ cask "ijhttp" do
 
   binary "ijhttp/ijhttp"
 
-  # No zap stanza required
+  zap :not_required
 
   caveats do
     depends_on_java "17+"

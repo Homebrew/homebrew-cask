@@ -8,5 +8,5 @@ cask "font-twitter-color-emoji" do
 
   font "TwitterColorEmoji-SVGinOT-#{version}/TwitterColorEmoji-SVGinOT.ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

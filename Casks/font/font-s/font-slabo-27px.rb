@@ -8,5 +8,5 @@ cask "font-slabo-27px" do
 
   font "Slabo27px-Regular.ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

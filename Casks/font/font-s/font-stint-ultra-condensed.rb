@@ -8,5 +8,5 @@ cask "font-stint-ultra-condensed" do
 
   font "StintUltraCondensed-Regular.ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

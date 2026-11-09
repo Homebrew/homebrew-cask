@@ -5,7 +5,7 @@ cask "applite" do
   url "https://github.com/milanvarady/Applite/releases/download/v#{version}/Applite.dmg"
   name "Applite"
   desc "User-friendly GUI app for Homebrew"
-  homepage "https://aerolite.dev/applite"
+  homepage "https://applite.app/"
 
   livecheck do
     url "https://milanvarady.github.io/Applite/appcast.xml"

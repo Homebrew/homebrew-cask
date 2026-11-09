@@ -8,5 +8,5 @@ cask "font-kirang-haerang" do
 
   font "KirangHaerang-Regular.ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

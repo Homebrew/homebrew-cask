@@ -1,6 +1,6 @@
 cask "macgamestore" do
-  version "5.7.13,7046"
-  sha256 "4eb28e9b27ccc80fd652958d7a3812fd48cc643052f7b26b15409e34f6862a5f"
+  version "5.8.2,7054"
+  sha256 "7fa0700466f62bc11a4d15c33495065757e140e9e93e773795c231391d09b4ac"
 
   url "https://www.macgamestore.com/api_clientapp/clientupdates/public/core#{version.csv.second[0]}/MacGameStore_#{version.csv.first}_#{version.csv.second}.zip"
   name "MacGameStore"
@@ -33,6 +33,9 @@ cask "macgamestore" do
 
   zap trash: [
     "/Applications/MacGameStore",
+    "~/Library/Application Support/.macgamestore",
     "~/Library/Application Support/MacGameStore.com",
+    "~/Library/Caches/com.macgamestore.Client2",
+    "~/Library/Preferences/com.macgamestore.Client2.plist",
   ]
 end

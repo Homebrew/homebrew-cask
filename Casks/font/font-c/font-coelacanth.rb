@@ -92,5 +92,5 @@ cask "font-coelacanth" do
   font "CoelacanthSubhd-SemibdIt.otf"
   font "CoelacanthSubhd.otf"
 
-  # No zap stanza required
+  zap :not_required
 end

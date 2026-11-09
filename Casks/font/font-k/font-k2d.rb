@@ -25,5 +25,5 @@ cask "font-k2d" do
   font "K2D-Thin.ttf"
   font "K2D-ThinItalic.ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

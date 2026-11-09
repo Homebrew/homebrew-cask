@@ -1,5 +1,5 @@
 cask "free42-decimal" do
-  version "3.3.12"
+  version "3.5.2"
   sha256 :no_check
 
   url "https://thomasokken.com/free42/download/Free42Mac.zip"
@@ -23,5 +23,6 @@ cask "free42-decimal" do
     "~/Library/HTTPStorages/com.thomasokken.Free42.binarycookies",
     "~/Library/Preferences/com.thomasokken.Free42.plist",
     "~/Library/Saved Application State/com.thomasokken.Free42",
+    "~/Library/WebKit/com.thomasokken.Free42",
   ]
 end

@@ -13,5 +13,5 @@ cask "font-noto-sans-oriya-ui" do
   font "NotoSansOriyaUI-Regular.ttf"
   font "NotoSansOriyaUI-Thin.ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

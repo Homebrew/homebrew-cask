@@ -1,6 +1,6 @@
 cask "surge" do
-  version "6.9.0,12250,2e39a9dd675107098a3c4e779953f46a"
-  sha256 "d6a0e7fba9f84294e61176d8ca3962a51182d92603ba4bba25890e1ca3d5a53d"
+  version "6.10.0,12500,79b87792e2bd345e064c2d473790b404"
+  sha256 "a53ba83fa7c35229145fc064f324defedc6ae161cd1173d57e634523a4104890"
 
   url "https://dl.nssurge.com/mac/v#{version.major}/Surge-#{version.tr(",", "-")}.zip"
   name "Surge"
@@ -31,7 +31,7 @@ cask "surge" do
   uninstall launchctl: "com.nssurge.surge-mac.helper",
             delete:    "/Library/PrivilegedHelperTools/com.nssurge.surge-mac.helper"
 
-  zap delete: [
+  zap trash: [
     "~/Library/Application Support/bugsnag-shared-com.nssurge.surge-mac",
     "~/Library/Application Support/com.bugsnag.Bugsnag/com.nssurge.surge-mac",
     "~/Library/Application Support/com.nssurge.surge-mac",

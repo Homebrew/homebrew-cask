@@ -8,5 +8,5 @@ cask "font-suranna" do
 
   font "Suranna-Regular.ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

@@ -7,10 +7,7 @@ cask "jetbrains-space" do
   desc "Team communication and collaboration software"
   homepage "https://www.jetbrains.com/space/"
 
-  livecheck do
-    url "https://download-cdn.jetbrains.com/space/latest-mac.yml"
-    strategy :electron_builder
-  end
+  disable! date: "2026-10-06", because: :no_longer_available
 
   auto_updates true
   depends_on :macos

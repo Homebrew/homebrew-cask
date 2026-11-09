@@ -1,6 +1,6 @@
 cask "font-devicons" do
-  version "2.0.1"
-  sha256 "0b68b1350516e2222827b74d826a635c9e6cb288d3baec12d11f85af3a5fb906"
+  version "2.4.0"
+  sha256 "35ac50ba9a7e5b2e08556c47eb6355da3f1c83598cd2f8f9b79cc5ca81a4a3dc"
 
   url "https://registry.npmjs.org/devicons/-/devicons-#{version}.tgz"
   name "Devicons"
@@ -8,5 +8,5 @@ cask "font-devicons" do
 
   font "package/dist/devicons.ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

@@ -13,5 +13,5 @@ cask "font-istok-web" do
   font "IstokWeb-Italic.ttf"
   font "IstokWeb-Regular.ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

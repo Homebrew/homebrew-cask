@@ -18,6 +18,8 @@ cask "blu-ray-player" do
     end
   end
 
+  disable! date: "2026-11-02", because: :no_longer_available
+
   auto_updates true
   depends_on :macos
 

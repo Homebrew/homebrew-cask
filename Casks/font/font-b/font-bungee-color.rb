@@ -8,5 +8,5 @@ cask "font-bungee-color" do
 
   font "BungeeColor-Regular.ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

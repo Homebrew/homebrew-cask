@@ -1,8 +1,8 @@
 cask "nativ" do
-  version "0.3.7"
-  sha256 "1e980559df3f2f4c765d4d8a156dd867d1eb1e41d258e3334e261bb6b7886050"
+  version "0.4.5"
+  sha256 "723d933fce59cad9a45a207f59deb5277fdd0aaffc4a607029bdf4d1479815ab"
 
-  url "https://github.com/Blaizzy/nativ/releases/download/v#{version}/Nativ-#{version}.dmg"
+  url "https://github.com/Neywa-Labs/nativ/releases/download/v#{version}/Nativ-#{version}.dmg"
   name "Nativ"
   desc "Run AI models locally"
   homepage "https://blaizzy.github.io/nativ/"

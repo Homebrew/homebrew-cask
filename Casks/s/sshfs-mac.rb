@@ -26,12 +26,12 @@ cask "sshfs-mac" do
     end
   end
 
-  depends_on :macos
   depends_on cask: "macfuse"
+  depends_on :macos
 
   pkg "sshfs-#{version}.pkg"
 
   uninstall pkgutil: "io.macfuse.installer.components.sshfs"
 
-  # No zap stanza required
+  zap :not_required
 end

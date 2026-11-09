@@ -15,6 +15,13 @@ cask "google-analytics-opt-out" do
 
   app "Google Analytics Opt Out.app"
 
+  zap trash: [
+    "~/Library/Application Scripts/com.google.AnalyticsOptOutSafari.Extension",
+    "~/Library/Containers/com.google.AnalyticsOptOutSafari.Extension",
+    "~/Library/Preferences/com.google.AnalyticsOptOutSafari.plist",
+    "~/Library/Saved Application State/com.google.AnalyticsOptOutSafari.savedState",
+  ]
+
   caveats do
     requires_rosetta
   end

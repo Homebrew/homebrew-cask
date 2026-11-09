@@ -8,5 +8,5 @@ cask "font-ballet" do
 
   font "Ballet[opsz].ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

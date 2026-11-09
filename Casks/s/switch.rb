@@ -1,5 +1,5 @@
 cask "switch" do
-  version "14.08"
+  version "14.11"
   sha256 :no_check
 
   url "https://www.nch.com.au/components/switchmaci.zip"
@@ -16,10 +16,11 @@ cask "switch" do
 
   app "Switch.app"
 
+  uninstall quit: "com.nchsoftware.switch"
+
   zap trash: [
     "~/Library/Application Support/Switch",
     "~/Library/Application Support/SwitchSubStatAbort",
-    "~/Library/Caches/com.apple.tiswitcher.cache",
     "~/Library/Caches/SwitchCounts.txt",
     "~/Library/Preferences/ByHost/com.nchsoftware.switch.*.plist",
     "~/Library/Preferences/com.nchsoftware.switch.plist",

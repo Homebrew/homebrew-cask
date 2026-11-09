@@ -1,6 +1,6 @@
 cask "microsoft-office-businesspro" do
-  version "16.112.26083020"
-  sha256 "71b79d8841fed6893b37edb3edc6dc0b36f8d22bf73ad3a0709c360076f22ea1"
+  version "16.114.26110224"
+  sha256 "12b47dafe8206427b7cbe2a50c6ade9cee421a0bd2e1af54f4b6308480d8eb4c"
 
   url "https://res.public.onecdn.static.microsoft/mro1cdnstorage/C1297A47-86C4-4C1F-97FA-950631F94777/MacAutoupdate/Microsoft_365_and_Office_#{version}_BusinessPro_Installer.pkg"
   name "Microsoft Office BusinessPro"
@@ -38,6 +38,7 @@ cask "microsoft-office-businesspro" do
   uninstall launchctl: [
               "com.microsoft.office.licensing.helper",
               "com.microsoft.office.licensingV2.helper",
+              "com.microsoft.office.licensingV3.helper",
               "com.microsoft.OneDriveStandaloneUpdater",
               "com.microsoft.OneDriveStandaloneUpdaterDaemon",
               "com.microsoft.OneDriveUpdaterDaemon",
@@ -58,6 +59,7 @@ cask "microsoft-office-businesspro" do
               "com.microsoft.package.Microsoft_Word.app",
               "com.microsoft.package.Proofing_Tools",
               "com.microsoft.pkg.licensing",
+              "com.microsoft.pkg.licensing.v3",
               "com.microsoft.teams",
               "com.microsoft.teams2",
               "com.microsoft.wdav",
@@ -89,7 +91,9 @@ cask "microsoft-office-businesspro" do
     "~/Library/Application Scripts/com.microsoft.Outlook",
     "~/Library/Application Scripts/com.microsoft.outlook.profilemanager",
     "~/Library/Application Scripts/com.microsoft.Powerpoint",
+    "~/Library/Application Scripts/com.microsoft.teams2*",
     "~/Library/Application Scripts/com.microsoft.Word",
+    "~/Library/Application Scripts/UBF8T346G9.OneDriveStandaloneSuite",
     "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.microsoft.excel.sfl*",
     "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.microsoft.powerpoint.sfl*",
     "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.microsoft.word.sfl*",
@@ -106,22 +110,29 @@ cask "microsoft-office-businesspro" do
     "~/Library/Containers/com.microsoft.Excel",
     "~/Library/Containers/com.microsoft.netlib.shipassertprocess",
     "~/Library/Containers/com.microsoft.Office365ServiceV2",
+    "~/Library/Containers/com.microsoft.OneDrive.FileProvider",
+    "~/Library/Containers/com.microsoft.OneDrive.FinderSync",
     "~/Library/Containers/com.microsoft.onenote.mac",
     "~/Library/Containers/com.microsoft.onenote.mac.shareextension",
     "~/Library/Containers/com.microsoft.openxml.excel.app",
     "~/Library/Containers/com.microsoft.Outlook",
     "~/Library/Containers/com.microsoft.outlook.profilemanager",
     "~/Library/Containers/com.microsoft.Powerpoint",
+    "~/Library/Containers/com.microsoft.teams2*",
     "~/Library/Containers/com.microsoft.Word",
     "~/Library/Cookies/com.microsoft.teams.binarycookies",
     "~/Library/Group Containers/UBF8T346G9.ms",
     "~/Library/Group Containers/UBF8T346G9.Office",
     "~/Library/Group Containers/UBF8T346G9.OfficeOneDriveSyncIntegration",
     "~/Library/Group Containers/UBF8T346G9.OfficeOsfWebHost",
+    "~/Library/Group Containers/UBF8T346G9.OneDriveStandaloneSuite",
     "~/Library/HTTPStorages/com.microsoft.OneDriveStandaloneUpdater",
     "~/Library/HTTPStorages/com.microsoft.OneDriveStandaloneUpdater.binarycookies",
     "~/Library/Logs/Microsoft Teams",
+    "~/Library/Logs/OneDrive",
     "~/Library/Preferences/com.microsoft.Excel.plist",
+    "~/Library/Preferences/com.microsoft.OneDriveStandaloneUpdater.plist",
+    "~/Library/Preferences/com.microsoft.OneDriveUpdater.plist",
     "~/Library/Preferences/com.microsoft.Outlook.plist",
     "~/Library/Preferences/com.microsoft.Powerpoint.plist",
     "~/Library/Preferences/com.microsoft.teams.plist",

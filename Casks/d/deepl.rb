@@ -1,5 +1,5 @@
 cask "deepl" do
-  on_ventura :or_older do
+  on_sonoma :or_older do
     on_big_sur :or_older do
       version "24.2.1798840"
       sha256 "dacbf3dbd42eab3b1d3c4b48e0f0672146d07d94627b7ad073985fe41e9e9217"
@@ -18,13 +18,19 @@ cask "deepl" do
 
       url "https://www.deepl.com/macos/download/#{version.major_minor}/#{version.patch}/DeepL.dmg"
     end
+    on_sonoma do
+      version "26.6.14916780"
+      sha256 "e5507b544654795fc06d6a73090b3c15421913f6acba0bcbf81f6066bb50917c"
+
+      url "https://www.deepl.com/macos/download/#{version.major_minor}/#{version.patch}/DeepL.dmg"
+    end
     livecheck do
       skip "Legacy version"
     end
   end
-  on_sonoma :or_newer do
-    version "26.6.14916780"
-    sha256 "e5507b544654795fc06d6a73090b3c15421913f6acba0bcbf81f6066bb50917c"
+  on_sequoia :or_newer do
+    version "26.11.13023090762"
+    sha256 "85aacdd551fc4d876536f29322c1787c6089fec2bd132666bc3b76d5d043a88f"
 
     url "https://www.deepl.com/macos/download/#{version.major_minor}/#{version.patch}/DeepL.dmg"
     livecheck do
@@ -42,15 +48,28 @@ cask "deepl" do
 
   app "DeepL.app"
 
-  uninstall quit: [
-    "com.linguee.DeepLCopyTranslator",
-    "com.linguee.DeepLLauncher",
-    "com.linguee.DeepLStatusBar",
-  ]
+  uninstall launchctl: [
+              "com.linguee.DeepLLauncher",
+              "com.linguee.DeepLUninstall",
+            ],
+            quit:      [
+              "com.linguee.DeepLCopyTranslator",
+              "com.linguee.DeepLLauncher",
+              "com.linguee.DeepLStatusBar",
+            ]
 
   zap trash: [
+    "~/Library/Application Scripts/com.linguee.DeepLCopyTranslator.DeepLTranslatorFinderExt",
+    "~/Library/Application Scripts/group.com.linguee.DeepL",
+    "~/Library/Application Support/DeepL",
     "~/Library/Caches/com.linguee.DeepLCopyTranslator*",
+    "~/Library/Caches/com.linguee.DeepLUninstall",
+    "~/Library/Containers/com.linguee.DeepLCopyTranslator.DeepLTranslatorFinderExt",
     "~/Library/Group Containers/*.com.linguee.DeepL",
+    "~/Library/HTTPStorages/com.linguee.DeepLCopyTranslator*",
+    "~/Library/HTTPStorages/com.linguee.DeepLUninstall*",
     "~/Library/Preferences/com.linguee.DeepLCopyTranslator.plist",
+    "~/Library/Preferences/com.linguee.DeepLUninstall.plist",
+    "~/Library/WebKit/com.linguee.DeepLCopyTranslator",
   ]
 end

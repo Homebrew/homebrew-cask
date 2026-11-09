@@ -1,9 +1,9 @@
 cask "trezor-suite" do
   arch arm: "arm64", intel: "x64"
 
-  version "26.8.2"
-  sha256 arm:   "99f511e73f6f10ec97b824e64c5906435b3abe20d092c0ac95362c195f352fc1",
-         intel: "783ca7d43e082a2b05eef33ddbb23b4d8020602edfd7d53760a3448849287d6c"
+  version "26.10.3"
+  sha256 arm:   "d1e1bc3b597a800d4395ac152ee5445a8eadcb4c318e831a3227bbd49694d9a3",
+         intel: "72f19886a13075b59b634b133eac8f308749a407b1b16197d70fe96364412842"
 
   url "https://data.trezor.io/suite/releases/desktop/latest/Trezor-Suite-#{version}-mac-#{arch}.dmg"
   name "TREZOR Suite"
@@ -22,6 +22,7 @@ cask "trezor-suite" do
 
   zap trash: [
     "~/Library/Application Support/@trezor/suite-desktop",
+    "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/io.trezor.trezorsuite.sfl*",
     "~/Library/Preferences/io.trezor.TrezorSuite.plist",
   ]
 end

@@ -1,5 +1,5 @@
 cask "keeper-password-manager" do
-  version "18.6.0"
+  version "18.7.0"
   sha256 :no_check
 
   url "https://keepersecurity.com/desktop_electron/Darwin/KeeperSetup.dmg"
@@ -19,6 +19,8 @@ cask "keeper-password-manager" do
   zap trash: [
     "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.keepersecurity.passwordmanager.sfl*",
     "~/Library/Application Support/Keeper Password Manager",
+    "~/Library/Caches/com.keepersecurity.passwordmanager*",
+    "~/Library/HTTPStorages/com.keepersecurity.passwordmanager",
     "~/Library/Preferences/com.keepersecurity.passwordmanager.plist",
     "~/Library/Saved Application State/com.keepersecurity.passwordmanager.savedState",
   ]

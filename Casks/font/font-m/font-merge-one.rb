@@ -8,5 +8,5 @@ cask "font-merge-one" do
 
   font "MergeOne-Regular.ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

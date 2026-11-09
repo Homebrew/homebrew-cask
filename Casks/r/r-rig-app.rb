@@ -1,9 +1,9 @@
 cask "r-rig-app" do
   arch arm: "arm64", intel: "x86_64"
 
-  version "0.8.1"
-  sha256 arm:   "65a6cd859b22e8a0bd2a1e99ed8a7cab73460c1ef8b7ac27e4697961dcc1de74",
-         intel: "fada7177d6c5aeb66353ade8cdb59f2905cfb982b8de9cdc2179f8220e010e25"
+  version "0.11.1"
+  sha256 arm:   "cbb7adb7fa26075c60937129d97230bf3d5d120e1aab2879462c3413a61b3d25",
+         intel: "969e7872dfb4af5494f988966aafe17d28cb182da1be41ab7b0826300f6c3ebe"
 
   url "https://github.com/r-lib/rig/releases/download/v#{version}/rig-#{version}-macOS-#{arch}.pkg"
   name "r-rig-app"
@@ -21,5 +21,5 @@ cask "r-rig-app" do
 
   uninstall pkgutil: "com.gaborcsardi.rig"
 
-  # No zap stanza required
+  zap :not_required
 end

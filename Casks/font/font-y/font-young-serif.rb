@@ -8,5 +8,5 @@ cask "font-young-serif" do
 
   font "YoungSerif-Regular.ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

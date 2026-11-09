@@ -8,5 +8,5 @@ cask "font-dynalight" do
 
   font "Dynalight-Regular.ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

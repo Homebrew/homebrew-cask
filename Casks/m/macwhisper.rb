@@ -1,6 +1,6 @@
 cask "macwhisper" do
-  version "14.8.1,1481"
-  sha256 "b0d6525d5f65b311991b0e60a9d37f38f9086941b47c867faee2800c95c5eb28"
+  version "15.10,1591"
+  sha256 "e1d1f633eca0aa4e831617b4049c2e6475f8600cd676487415fe0cbffa50628d"
 
   url "https://cdn.macwhisper.com/macwhisper/MacWhisper-#{version.csv.second}#{"_#{version.csv.third}" if version.csv.third}.zip"
   name "MacWhisper"
@@ -23,17 +23,22 @@ cask "macwhisper" do
   end
 
   auto_updates true
-  depends_on macos: :sonoma
+  depends_on macos: :sequoia
 
   app "MacWhisper.app"
 
   uninstall quit: "com.goodsnooze.MacWhisper"
 
   zap trash: [
+    "~/Library/Application Scripts/8Q7TMPA46J.group.com.goodsnooze.macwhisper.share",
     "~/Library/Application Scripts/com.goodsnooze.MacWhisper",
+    "~/Library/Application Scripts/com.goodsnooze.MacWhisper.ShareExtension",
+    "~/Library/Application Support/com.goodsnooze.MacWhisper",
     "~/Library/Application Support/MacWhisper",
     "~/Library/Caches/com.goodsnooze.MacWhisper",
     "~/Library/Containers/com.goodsnooze.MacWhisper",
+    "~/Library/Containers/com.goodsnooze.MacWhisper.ShareExtension",
+    "~/Library/Group Containers/8Q7TMPA46J.group.com.goodsnooze.macwhisper.share",
     "~/Library/HTTPStorages/com.goodsnooze.MacWhisper",
     "~/Library/HTTPStorages/com.goodsnooze.MacWhisper.binarycookies",
     "~/Library/Preferences/com.goodsnooze.MacWhisper.plist",

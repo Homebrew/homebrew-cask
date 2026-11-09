@@ -10,5 +10,5 @@ cask "font-blackout" do
   font "blackout-master/Blackout Midnight.ttf"
   font "blackout-master/Blackout Sunrise.ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

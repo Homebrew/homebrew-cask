@@ -1,14 +1,16 @@
 cask "stockbit" do
-  version "2.2.0"
-  sha256 "026dc5b525f4a30d90888d4cd584948e15f3c947eaf48ec49110864bb9be1b6d"
+  version "2.8.1"
+  sha256 "b28479c2df8ec28203d4348b7f2a3f29a545ce5c88dd6b3bcc8df10010bcc4db"
 
-  url "https://sda-release-v2.stockbit.com/release/#{version}/macos/Stockbit.dmg"
+  url "https://sda-release-v2.stockbit.com/release/#{version}/macos/Stockbit.dmg",
+      user_agent: :browser
   name "Stockbit"
   desc "Indonesian stock trading and analysis platform"
   homepage "https://stockbit.com/desktop"
 
   livecheck do
-    url "https://sda-updater.stockbit.com/macos?format=bundle"
+    url "https://sda-updater.stockbit.com/macos?format=bundle",
+        user_agent: :browser
     regex(%r{/release/(\d+(?:\.\d+)+)/macos/Stockbit\.dmg}i)
     strategy :header_match
   end

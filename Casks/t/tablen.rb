@@ -7,10 +7,7 @@ cask "tablen" do
   desc "Native SQL client"
   homepage "https://tablen.app/"
 
-  livecheck do
-    url "https://tablen.app/api/appcast.xml"
-    strategy :sparkle, &:short_version
-  end
+  disable! date: "2026-10-05", because: :no_longer_available
 
   auto_updates true
   depends_on macos: :sequoia

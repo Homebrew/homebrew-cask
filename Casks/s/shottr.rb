@@ -1,6 +1,6 @@
 cask "shottr" do
-  version "1.9.1"
-  sha256 "0bfd797dbcfec52a5e122b50062ad6b954847fe3b53d676c05ac4361f50ce5b3"
+  version "1.10.0"
+  sha256 "0d9830bbc31921c5cebd615b8e0bfb02fdd3b461c9896cda8a004087285d2df0"
 
   url "https://shottr.cc/dl/Shottr-#{version}.dmg"
   name "Shottr"
@@ -9,13 +9,15 @@ cask "shottr" do
 
   livecheck do
     url "https://shottr.cc/newversion.html"
-    regex(/href=.*?Shottr[._-]v?(\d+(?:\.\d+)+)\.dmg/i)
+    regex(/href=.*?Shottr[._-]v?(\d+(?:\.\d+)+[a-z]?)\.dmg/i)
   end
 
   auto_updates true
-  depends_on :macos
+  depends_on macos: :monterey
 
   app "Shottr.app"
+
+  uninstall quit: "cc.ffitch.shottr"
 
   zap trash: [
     "~/Library/Application Scripts/cc.ffitch.shottr",

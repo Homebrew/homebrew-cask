@@ -3,14 +3,14 @@ cask "tagspaces" do
   os macos: "mac", linux: "linux"
   url_end = on_system_conditional macos: "dmg", linux: "AppImage"
 
-  version "6.13.12"
-  sha256 arm:          "7e092dd98027c637afbabf0ef709d1e130e401c5b848072e210322688fb0d73e",
-         intel:        "9eebf40eda3fc2e8d042d7a12c09820639ac980587a222738c24bff289b46996",
-         arm64_linux:  "13d163fac83f391280f0970a8e28c2a095dbc7ef70b5aba7f8d6095ac64844aa",
-         x86_64_linux: "f956564c9f5c341321e95d7aa75dd880bbe4d262b3a87e146fcf5869511b8c81"
+  version "6.14.3"
+  sha256 arm:          "d963f018f305b83562d8bb8a94f18f84f419909b5109072d9d81c44a15437a5e",
+         intel:        "ccdf3a210c1c8890319f8a744038037c3adc154fd0f63db1fc18c74e2741f3ee",
+         arm64_linux:  "f18162f21ace9832e9356e6575ef9e2909d530b43b3671a0e404472d7cfc8200",
+         x86_64_linux: "194fa91b1b0d5fee47c1882c6cb57d28847e68c38365411de7f36faf6b175339"
 
   on_macos do
-    depends_on macos: :monterey
+    depends_on macos: :ventura
 
     app "TagSpaces.app"
 
@@ -22,6 +22,8 @@ cask "tagspaces" do
   end
   on_linux do
     app_image "tagspaces-linux-#{arch}-#{version}.AppImage", target: "TagSpaces.AppImage"
+
+    zap trash: "~/.config/TagSpaces"
   end
 
   url "https://github.com/tagspaces/tagspaces/releases/download/v#{version}/tagspaces-#{os}-#{arch}-#{version}.#{url_end}"

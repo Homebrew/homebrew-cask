@@ -8,5 +8,5 @@ cask "font-offside" do
 
   font "Offside-Regular.ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

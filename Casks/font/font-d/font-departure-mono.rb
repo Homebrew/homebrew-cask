@@ -8,5 +8,5 @@ cask "font-departure-mono" do
 
   font "DepartureMono-#{version}/DepartureMono-Regular.otf"
 
-  # No zap stanza required
+  zap :not_required
 end

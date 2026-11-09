@@ -1,9 +1,9 @@
 cask "itch" do
   arch arm: "arm64", intel: "amd64"
 
-  version "26.20.0"
-  sha256 arm:   "2510857d6854fa538157b001fc6d577cf42addc2f2974abc81c91cb1eae47f80",
-         intel: "5dbaf5a5f6b8f2f5d1b8992dbd662fcb771fb4cc27ffdf66419f356cf91ca541"
+  version "26.22.0"
+  sha256 arm:   "fd31ff479b6e085a5599bd4c2599005d4505e50f13ba87fa7357ffedb2c07e19",
+         intel: "3a13b128b57a5b52e406b7b1ccf4439703d63b9326fe54bbaf5e60a2ab738c68"
 
   url "https://github.com/itchio/itch/releases/download/v#{version}/itch-v#{version}-darwin-#{arch}.tar.gz"
   name "itch"

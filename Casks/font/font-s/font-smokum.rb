@@ -8,5 +8,5 @@ cask "font-smokum" do
 
   font "Smokum-Regular.ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

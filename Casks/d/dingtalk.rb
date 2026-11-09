@@ -1,6 +1,6 @@
 cask "dingtalk" do
-  version "8.5.5,58003328"
-  sha256 "709fc0772baf279f19866fdf980c9f3da47ab7e0a063eb7d6ef9971c641ddcab"
+  version "9.0.5,59563623"
+  sha256 "8fc21f498c56952bd2fe6d035cfc97aa47c75de8ad020449b85f2fd97dafe22a"
 
   url "https://dtapp-pub.dingtalk.com/dingtalk-desktop/mac_dmg/Release/DingTalk_v#{version.csv.first}-Installer_#{version.csv.second}_universal.dmg"
   name "DingTalk"
@@ -29,10 +29,14 @@ cask "dingtalk" do
             delete:  "/Applications/DingTalk.app"
 
   zap trash: [
+    "~/Library/Application Scripts/com.alibaba.DingTalkMac.DTFinderSyncExt",
+    "~/Library/Application Scripts/com.alibaba.DingTalkMac.DTShareExtension",
     "~/Library/Application Support/DingTalkMac",
     "~/Library/Caches/com.alibaba.DingTalkInstaller",
     "~/Library/Caches/com.alibaba.DingTalkMac",
     "~/Library/Caches/DingTalk",
+    "~/Library/Containers/com.alibaba.DingTalkMac.DTFinderSyncExt",
+    "~/Library/Containers/com.alibaba.DingTalkMac.DTShareExtension",
     "~/Library/Preferences/com.alibaba.DingTalk-Helper.plist",
     "~/Library/Preferences/com.alibaba.DingTalkInstaller.plist",
     "~/Library/Preferences/com.alibaba.DingTalkMac.plist",

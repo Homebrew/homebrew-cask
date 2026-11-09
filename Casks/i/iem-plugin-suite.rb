@@ -1,6 +1,6 @@
 cask "iem-plugin-suite" do
-  version "1.15.0"
-  sha256 "eec673eedb219e4733b2c888beec4df50343aacf6b2305c5f430e0cb02e90088"
+  version "1.16.0"
+  sha256 "8bec940b407254e6794849b96aa9ce97ca4d085d5545a690eae7d0e4d95d31f2"
 
   url "https://users.iem.at/holzmueller/IEM-Audioplugins/IEMPluginSuite/v#{version}/IEMPluginSuite_v#{version}.pkg"
   name "IEM Plug-in Suite"

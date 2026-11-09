@@ -1,6 +1,6 @@
 cask "font-iosevka-curly" do
-  version "34.8.1"
-  sha256 "df20ce326b36185c583bc35768de8a9d6f992966a2cd737b239561cd0cb320b1"
+  version "34.9.1"
+  sha256 "5a6e34f49bcbf201093d336ddad50ffb253ab9eb4db33df704b25bb240ef99c1"
 
   url "https://github.com/be5invis/Iosevka/releases/download/v#{version}/SuperTTC-IosevkaCurly-#{version}.zip"
   name "Iosevka Curly"
@@ -13,5 +13,5 @@ cask "font-iosevka-curly" do
 
   font "IosevkaCurly.ttc"
 
-  # No zap stanza required
+  zap :not_required
 end

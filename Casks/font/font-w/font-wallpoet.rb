@@ -8,5 +8,5 @@ cask "font-wallpoet" do
 
   font "Wallpoet-Regular.ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

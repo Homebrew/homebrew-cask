@@ -1,9 +1,9 @@
 cask "perforce" do
   arch arm: "12arm64", intel: "1015x86_64"
 
-  version "2026.1,2972966"
-  sha256 arm:   "173be6c67c605add6e5d6e4228e4ab3e33b249a6bd35306054439c8f0926bd54",
-         intel: "12a81063ebf3ce37b36388bd116a7f5a12bce4c984b0977380d59127b8a06ab1"
+  version "2026.1,3089746"
+  sha256 arm:   "2ca3169a31c37bcf33ff6b90564ecb493bb1ea0c2cc77c5257b63f6d7862903e",
+         intel: "eeb013b01de0c81023c29d068861511d81eff2d3f5c1e3072f3f933cb0d6c761"
 
   url "https://filehost.perforce.com/perforce/r#{version.major[-2..]}.#{version.minor}/bin.macosx#{arch}/helix-core-server.tgz"
   name "Perforce Helix Core Server"
@@ -30,7 +30,7 @@ cask "perforce" do
   binary "p4d"
   binary "p4p"
 
-  # No zap stanza required
+  zap :not_required
 
   caveats <<~EOS
     Instructions on using the Helix Versioning Engine are available in

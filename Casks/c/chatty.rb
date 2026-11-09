@@ -9,7 +9,7 @@ cask "chatty" do
 
   livecheck do
     url :url
-    strategy :github_latest
+    regex(/^v?(\d+(?:\.\d+)+)$/i)
   end
 
   depends_on :macos

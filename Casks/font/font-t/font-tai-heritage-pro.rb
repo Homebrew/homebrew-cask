@@ -11,5 +11,5 @@ cask "font-tai-heritage-pro" do
   font "TaiHeritagePro-Bold.ttf"
   font "TaiHeritagePro-Regular.ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

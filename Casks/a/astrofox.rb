@@ -24,6 +24,11 @@ cask "astrofox" do
     depends_on arch: :x86_64
 
     app_image "Astrofox-linux-x86_64.AppImage", target: "Astrofox.AppImage"
+
+    zap trash: [
+      "~/.cache/astrofox-updater",
+      "~/.config/Astrofox",
+    ]
   end
 
   url "https://github.com/astrofox-io/astrofox/releases/download/v#{version}/Astrofox-#{os}-#{arch}.#{url_end}"

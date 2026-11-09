@@ -11,5 +11,5 @@ cask "font-source-serif-4" do
   font "SourceSerif4-Italic[opsz,wght].ttf"
   font "SourceSerif4[opsz,wght].ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

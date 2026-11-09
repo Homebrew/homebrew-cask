@@ -1,6 +1,6 @@
 cask "badgeify" do
-  version "1.14.5"
-  sha256 "2f5bba9da48c106153aef493a9b22e950fec6dd252ea1ef5dd5272621ffa6d10"
+  version "1.15.0"
+  sha256 "06ddd3b03a31cad33a0f11fcea3aec9dd3c0c8abce51d64fa67ae6069edf99ad"
 
   url "https://api.badgeify.app/release/download/darwin/universal/#{version}"
   name "Badgeify"
@@ -13,7 +13,7 @@ cask "badgeify" do
   end
 
   auto_updates true
-  depends_on macos: :big_sur
+  depends_on :macos
 
   app "Badgeify.app"
 

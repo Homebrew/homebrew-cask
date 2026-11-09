@@ -6,11 +6,6 @@ cask "font-junicode" do
   name "Junicode"
   homepage "https://github.com/psb1558/Junicode-font"
 
-  livecheck do
-    url :url
-    strategy :github_latest
-  end
-
   font "Junicode/OTF/Junicode-Bold.otf"
   font "Junicode/OTF/Junicode-BoldItalic.otf"
   font "Junicode/OTF/Junicode-Cond.otf"
@@ -19,6 +14,8 @@ cask "font-junicode" do
   font "Junicode/OTF/Junicode-CondLightItalic.otf"
   font "Junicode/OTF/Junicode-CondMedium.otf"
   font "Junicode/OTF/Junicode-CondMediumItalic.otf"
+  font "Junicode/OTF/Junicode-CondSemiBold.otf"
+  font "Junicode/OTF/Junicode-CondSemiBoldItalic.otf"
   font "Junicode/OTF/Junicode-Exp.otf"
   font "Junicode/OTF/Junicode-ExpBold.otf"
   font "Junicode/OTF/Junicode-ExpBoldItalic.otf"
@@ -41,6 +38,8 @@ cask "font-junicode" do
   font "Junicode/OTF/Junicode-SemiCondLightItalic.otf"
   font "Junicode/OTF/Junicode-SemiCondMedium.otf"
   font "Junicode/OTF/Junicode-SemiCondMediumItalic.otf"
+  font "Junicode/OTF/Junicode-SemiCondSemiBold.otf"
+  font "Junicode/OTF/Junicode-SemiCondSemiBoldItalic.otf"
   font "Junicode/OTF/Junicode-SemiExp.otf"
   font "Junicode/OTF/Junicode-SemiExpBold.otf"
   font "Junicode/OTF/Junicode-SemiExpBoldItalic.otf"
@@ -52,5 +51,5 @@ cask "font-junicode" do
   font "Junicode/VAR/JunicodeVF-Italic.ttf"
   font "Junicode/VAR/JunicodeVF-Roman.ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

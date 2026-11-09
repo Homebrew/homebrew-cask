@@ -1,14 +1,14 @@
 cask "r-app" do
   arch arm: "arm64", intel: "x86_64"
 
-  sha256 arm:   "67f6eea4ced4ce48f0a0d4fa3a1cac43d1859a05a88993ee3dff7c52e7edbc4b",
-         intel: "612bb00cb4c627721d6d80b0f5224227c0fcdefb4a5b6c917511480361c16571"
+  sha256 arm:   "a678b4db1fcd71b1b1cc58edcfa4a8d36ee012a02659dde9eab9366e93571157",
+         intel: "aa9b1dba09cc69710571ad93efba26a9bcb5a0098543dadc4bb8e419a423195e"
 
   on_arm do
-    version "4.6.1,sonoma"
+    version "4.6.2,sonoma"
   end
   on_intel do
-    version "4.6.1,big-sur"
+    version "4.6.2,big-sur"
   end
 
   url "https://cloud.r-project.org/bin/macosx/#{version.csv.second}-#{arch}/base/R-#{version.csv.first}-#{arch}.pkg"

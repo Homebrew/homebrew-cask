@@ -8,5 +8,5 @@ cask "font-nikukyu" do
 
   font "Nikukyu-Regular.ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

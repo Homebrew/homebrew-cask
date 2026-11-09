@@ -8,5 +8,5 @@ cask "font-russo-one" do
 
   font "RussoOne-Regular.ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

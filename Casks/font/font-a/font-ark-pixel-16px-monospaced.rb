@@ -6,6 +6,8 @@ cask "font-ark-pixel-16px-monospaced" do
   name "Ark Pixel 16px Monospaced"
   homepage "https://github.com/TakWolf/ark-pixel-font"
 
+  deprecate! date: "2026-09-26", because: :discontinued
+
   font "ark-pixel-16px-monospaced-ja.otf"
   font "ark-pixel-16px-monospaced-ko.otf"
   font "ark-pixel-16px-monospaced-latin.otf"
@@ -14,5 +16,5 @@ cask "font-ark-pixel-16px-monospaced" do
   font "ark-pixel-16px-monospaced-zh_tr.otf"
   font "ark-pixel-16px-monospaced-zh_tw.otf"
 
-  # No zap stanza required
+  zap :not_required
 end

@@ -8,5 +8,5 @@ cask "font-alien-block" do
 
   font "AlienBlock-Regular.ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

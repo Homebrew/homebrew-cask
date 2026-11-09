@@ -1,9 +1,9 @@
 cask "onekey" do
   arch arm: "arm64", intel: "x64"
 
-  version "6.5.2"
-  sha256 arm:   "d4c02f3d26137285fc86545062f837532167998417b1d1de8a0ca034d598147c",
-         intel: "8a0abf85f7bf87ea9b66f41dd9b46b344a2f80b0c04210f5d944d3ed665b52bc"
+  version "6.6.3"
+  sha256 arm:   "c8894de630c724506165940e48affc8670dd2b078c4babdf6a98ba85094f7f86",
+         intel: "7421ac745fb4bc6dd46307ae7276527e60cc67691ffb774f2a65d5ba6a6f4327"
 
   url "https://github.com/OneKeyHQ/app-monorepo/releases/download/v#{version}/OneKey-Wallet-#{version}-mac-#{arch}.dmg"
   name "OneKey"
@@ -18,12 +18,13 @@ cask "onekey" do
   end
 
   auto_updates true
-  depends_on macos: :monterey
+  depends_on macos: :ventura
 
   app "OneKey.app"
 
   zap trash: [
     "~/Library/Application Support/@onekeyhq",
+    "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/so.onekey.wallet.desktop.sfl*",
     "~/Library/Logs/@onekeyhq",
     "~/Library/Preferences/so.onekey.wallet.desktop.plist",
     "~/Library/Saved Application State/so.onekey.wallet.desktop.savedState",

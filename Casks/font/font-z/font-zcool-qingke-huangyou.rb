@@ -8,5 +8,5 @@ cask "font-zcool-qingke-huangyou" do
 
   font "ZCOOLQingKeHuangYou-Regular.ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

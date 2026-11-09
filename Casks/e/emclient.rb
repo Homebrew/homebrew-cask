@@ -1,6 +1,6 @@
 cask "emclient" do
-  version "10.4.5674"
-  sha256 "cfccfcae88e623e97894df5d5868e1bb2d62cf76ac81d9a576f8c05b94b84dde"
+  version "11.0.1577"
+  sha256 "bb8fd986e8cb05d64765296f720b010f17fdced7d20e6b5a654c958456a3b480"
 
   url "https://cdn-dist.emclient.com/dist/v#{version}_Mac/setup.pkg"
   name "eM Client"
@@ -15,7 +15,7 @@ cask "emclient" do
 
   auto_updates true
   conflicts_with cask: "emclient@beta"
-  depends_on macos: :big_sur
+  depends_on macos: :sonoma
 
   pkg "setup.pkg"
 
@@ -23,7 +23,9 @@ cask "emclient" do
             delete:  "/Applications/eM Client.app"
 
   zap trash: [
+    "~/Library/Application Scripts/com.emclient.mail.client.share",
     "~/Library/Caches/com.emclient.mail.client",
+    "~/Library/Containers/com.emclient.mail.client.share",
     "~/Library/Preferences/com.emclient.mail.*.plist",
     "~/Library/Saved Application State/com.emclient.mail.client.savedState",
   ]

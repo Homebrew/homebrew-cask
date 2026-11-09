@@ -8,5 +8,5 @@ cask "font-kokoro" do
 
   font "Kokoro-Regular.ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

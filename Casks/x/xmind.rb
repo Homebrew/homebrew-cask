@@ -1,6 +1,6 @@
 cask "xmind" do
-  version "26.05.01106-202608091830"
-  sha256 "14fb11ca7836a935211e6e95f00c494fe611833b8df8c65e91d018bc2166e6d3"
+  version "27.01.05087-202611032216"
+  sha256 "3f2ed64e2bfa7a494a9e3f651157fc160297663bd73d48c16a9d0ca03e83fe7c"
 
   url "https://dl3.xmind.net/Xmind-for-macOS-#{version}.dmg"
   name "XMind"
@@ -14,11 +14,14 @@ cask "xmind" do
   end
 
   conflicts_with cask: "xmind@beta"
-  depends_on macos: :big_sur
+  depends_on macos: :monterey
 
   app "Xmind.app"
 
   zap trash: [
+    "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/net.xmind.vana.app.sfl*",
+    "~/Library/Application Support/Xmind",
+    "~/Library/Preferences/net.xmind.vana.app.plist",
     "~/Library/Saved Application State/org.xmind.cathy.application.savedState",
     "~/Library/XMind",
   ]

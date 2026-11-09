@@ -1,6 +1,6 @@
 cask "holavpn" do
-  version "4.0,1.257.548"
-  sha256 "2f6c28366e98c2e23209e298360f6fad5a4e7777785b39d0bde28bd3f2949860"
+  version "4.3,1.262.103"
+  sha256 "2f0ca5a0093e2ca301493353c3efb57f4e175a272790f9fa586baa9c27402816"
 
   url "https://cdn4.hola.org/static/HolaVPN2E-#{version.csv.first}-#{version.csv.second}.dmg"
   name "Hola VPN"
@@ -22,6 +22,7 @@ cask "holavpn" do
   zap trash: [
     "~/Documents/holavpn2e.db*",
     "~/Library/Application Support/Hola2E",
+    "~/Library/Application Support/org.hola.hola2e",
     "~/Library/Caches/org.hola.hola2e*",
     "~/Library/HTTPStorages/org.hola.hola2e*",
     "~/Library/LaunchAgents/org.hola.svc.plist",

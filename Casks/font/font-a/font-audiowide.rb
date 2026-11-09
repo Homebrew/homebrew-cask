@@ -8,5 +8,5 @@ cask "font-audiowide" do
 
   font "Audiowide-Regular.ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

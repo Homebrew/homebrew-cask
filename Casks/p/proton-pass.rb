@@ -1,6 +1,6 @@
 cask "proton-pass" do
-  version "1.40.0"
-  sha256 "7b2b457761e03eb892039304cc71d31eb229f154e3c08a88c7792504a81acdbf"
+  version "1.43.0"
+  sha256 "f9db644a12c481e1b7fe235ffb1140e4b4ca36e54a502fe57192dc03d0ee9727"
 
   url "https://proton.me/download/pass/macos/ProtonPass_#{version}.dmg"
   name "Proton Pass"
@@ -19,12 +19,12 @@ cask "proton-pass" do
   end
 
   auto_updates true
-  depends_on macos: :monterey
+  depends_on macos: :ventura
 
   app "Proton Pass.app"
 
   zap trash: [
-    "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/me.proton.pass.electron..sfl*",
+    "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/me.proton.pass.electron.sfl*",
     "~/Library/Application Support/Proton Pass",
     "~/Library/Caches/me.proton.pass.electron",
     "~/Library/Caches/me.proton.pass.electron.ShipIt",

@@ -3,11 +3,11 @@ cask "dusklight" do
   os macos: "macos", linux: "linux"
   url_end = on_system_conditional macos: "zip", linux: "AppImage"
 
-  version "1.4.1"
-  sha256 arm:          "fc6086b6d4713aff24360727510dd5997f8daeae7be7da6f5c6b7ff008cdb910",
-         intel:        "76807140252bd72640c54fe063a92f58428ad567fd224600f6966f4358d73018",
-         arm64_linux:  "5d9214716ae5808b2ce40104f742534e685a4d3cf83fdd3b608c02870e68c363",
-         x86_64_linux: "f5dd1308c131430945cc12cdd44f22d31e3dd6ec5458498491924a5e9fa92d40"
+  version "2.0.3"
+  sha256 arm:          "b3e6aae6c7fc6a4f863b45b64e3bdcf12e5d88213f82bc5a08e215c39e4682f2",
+         intel:        "ab54f38637e3a0a4b50192b5ba26d9052a66426e38ebaaf583d3eff4ac12aa01",
+         arm64_linux:  "7f7d72054847277afccdddb93f7cca4e3b730768da64e30a4cdd6774c23bdbf9",
+         x86_64_linux: "87ec251963c984ad2b3ac075281431d2221db2297dc19f2ab5daad92e969fc06"
 
   on_macos do
     depends_on macos: :monterey
@@ -18,6 +18,8 @@ cask "dusklight" do
   end
   on_linux do
     app_image "Dusklight-v#{version}-linux-#{arch}.AppImage", target: "Dusklight.AppImage"
+
+    zap trash: "~/.local/share/TwilitRealm"
   end
 
   url "https://github.com/TwilitRealm/dusklight/releases/download/v#{version}/Dusklight-v#{version}-#{os}-#{arch}.#{url_end}"

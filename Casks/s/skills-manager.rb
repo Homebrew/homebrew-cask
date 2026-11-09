@@ -1,9 +1,9 @@
 cask "skills-manager" do
   arch arm: "aarch64", intel: "x64"
 
-  version "1.38.0"
-  sha256 arm:   "2b1aadc8427ba86af494533621a6ed107275c3b1891bc83ce2e6a5ab6ccec71a",
-         intel: "fd697f4d3934fc3989957d5ee3e1f58ae7f11749b8b0a88569275591ac5dcad0"
+  version "1.43.3"
+  sha256 arm:   "fb49fd15194a8292fc51adc60ee7cd716c92815f1de00ec6235e95bba01f74ae",
+         intel: "a5af4946947a85101ba211606bf111fe13f6f993f6ad1da6c20a29b2ed2e546d"
 
   url "https://github.com/xingkongliang/skills-manager/releases/download/v#{version}/skills-manager_#{version}_#{arch}.dmg"
   name "Skills Manager"
@@ -17,6 +17,8 @@ cask "skills-manager" do
 
   zap trash: [
     "~/.skills-manager",
+    "~/Library/Application Support/com.agentskills.desktop",
+    "~/Library/Application Support/skills-manager",
     "~/Library/Caches/com.agentskills.desktop",
     "~/Library/Logs/com.agentskills.desktop",
     "~/Library/Preferences/com.agentskills.desktop.plist",

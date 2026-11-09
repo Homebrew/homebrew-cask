@@ -8,5 +8,5 @@ cask "font-gveret-levin" do
 
   font "GveretLevin-Regular.ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

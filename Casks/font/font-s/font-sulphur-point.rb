@@ -12,5 +12,5 @@ cask "font-sulphur-point" do
   font "SulphurPoint-Light.ttf"
   font "SulphurPoint-Regular.ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

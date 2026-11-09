@@ -19,7 +19,7 @@ cask "grads" do
   binary "grads-#{version}/bin/gribscan"
   binary "grads-#{version}/bin/stnmap"
 
-  # No zap stanza required
+  zap :not_required
 
   caveats do
     requires_rosetta

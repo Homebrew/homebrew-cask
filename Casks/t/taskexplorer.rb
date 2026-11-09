@@ -1,13 +1,13 @@
 cask "taskexplorer" do
-  version "2.1.0"
-  sha256 "bf509f14cabdadaa81bc3509d195b8646ee203ceba15aba26d26c6b882422ccd"
+  version "3.1.0"
+  sha256 "536bda55f06e45bd7edc6cbed29aeb230db0f003675388a78f45d714a9ca8705"
 
   url "https://github.com/objective-see/TaskExplorer/releases/download/v#{version}/TaskExplorer_#{version}.zip"
   name "TaskExplorer"
   desc "Tool to explore all the running tasks (processes)"
   homepage "https://objective-see.org/products/taskexplorer.html"
 
-  depends_on macos: :big_sur
+  depends_on macos: :sonoma
 
   app "TaskExplorer.app"
 

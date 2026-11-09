@@ -8,5 +8,5 @@ cask "font-ramsina" do
 
   font "Ramsina-Regular.ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

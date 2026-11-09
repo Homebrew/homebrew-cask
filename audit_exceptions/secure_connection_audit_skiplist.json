@@ -12,7 +12,6 @@
     "https://helpx.adobe.com/camera-raw/using/adobe-dng-converter.html",
     "https://helpx.adobe.com/photoshop/kb/uptodate.html"
   ],
-  "blood-on-the-clocktower-online": "https://bloodontheclocktower.com/",
   "canon-ufrii-driver": "https://www.usa.canon.com/bin/canon/support/getsoftwarediver.ds.MACOS_14.39319.All.English.json",
   "cisco-jabber": "https://www.webex.com/downloads/jabber.html",
   "elecom-mouse-util": "https://www.elecom.co.jp/global/download-list/utility/mouse_assistant/mac/",
@@ -35,7 +34,6 @@
     "https://dev.mysql.com/downloads/workbench/",
     "https://www.mysql.com/products/workbench/"
   ],
-  "native-access": "https://www.native-instruments.com/en/specials/native-access-2/",
   "quickbooks": "https://quickbooks.intuit.com/desktop/",
   "tableau": [
     "https://www.tableau.com/products/desktop",
@@ -53,9 +51,6 @@
   "tableau-reader": [
     "https://www.tableau.com/products/reader",
     "https://downloads.tableau.com/TableauAutoUpdate.xml"
-  ],
-  "tal-drum": [
-    "https://tal-software.com/products/tal-drum"
   ],
   "vuze": "https://www.vuze.com/",
   "xcodepilot": "https://xcodepilot.thriller.fun/docs/"

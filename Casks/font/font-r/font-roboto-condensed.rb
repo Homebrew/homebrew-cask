@@ -11,5 +11,5 @@ cask "font-roboto-condensed" do
   font "RobotoCondensed-Italic[wght].ttf"
   font "RobotoCondensed[wght].ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

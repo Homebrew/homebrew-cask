@@ -11,5 +11,5 @@ cask "font-platypi" do
   font "Platypi-Italic[wght].ttf"
   font "Platypi[wght].ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

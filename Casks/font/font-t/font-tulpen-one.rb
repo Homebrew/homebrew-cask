@@ -8,5 +8,5 @@ cask "font-tulpen-one" do
 
   font "TulpenOne-Regular.ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

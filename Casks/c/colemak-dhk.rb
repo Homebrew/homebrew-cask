@@ -21,7 +21,7 @@ cask "colemak-dhk" do
 
   keyboard_layout "mod-dh-master/macOS/Colemak DHk.bundle"
 
-  # No zap stanza required
+  zap :not_required
 
   caveats do
     logout

@@ -2,11 +2,11 @@ cask "tidelift" do
   arch arm: "_arm"
   os macos: "darwin", linux: "linux"
 
-  version "1.16.74"
-  sha256 arm:          "c4d3e341ac2ea8b66cc624978bb511899bed7c2bdf50a822a550bde56c7e63ec",
-         intel:        "43e9de7e6d01520f5d7b0f5f3dcb557a0190a8b00f8f961e8c0c0a01ff87f106",
-         arm64_linux:  "f83dc155d09ad98d4bc0e68e2eb5ff7447438f4b861e5a438de4acfd9bc0dbe4",
-         x86_64_linux: "2d731623238ee5073885d570e766517d8677acb76067a1a1563bb106f5fd2859"
+  version "1.16.80"
+  sha256 arm:          "543d76284a9753398a1e11ad57de4eab9757a5a0543e35cc228c15610c50ea72",
+         intel:        "4711f7717d2be946800dc6477421ea7d7e3654fecbdb3484b5325cef244eb437",
+         arm64_linux:  "cb6f4b21a6b458844e378a940580c0d8411f1a9bb1c5f37f7da03630b3aed9ad",
+         x86_64_linux: "d645489744811bba1f9519d671a6713a350e58487c411bd111eaf11f48db0cfc"
 
   on_macos do
     disable! date: "2026-09-01", because: :fails_gatekeeper_check
@@ -28,5 +28,5 @@ cask "tidelift" do
     set_permissions "tidelift", "+x"
   end
 
-  # No zap stanza required
+  zap :not_required
 end

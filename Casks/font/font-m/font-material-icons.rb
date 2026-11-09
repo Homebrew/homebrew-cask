@@ -13,5 +13,5 @@ cask "font-material-icons" do
   font "MaterialIconsSharp-Regular.otf"
   font "MaterialIconsTwoTone-Regular.otf"
 
-  # No zap stanza required
+  zap :not_required
 end

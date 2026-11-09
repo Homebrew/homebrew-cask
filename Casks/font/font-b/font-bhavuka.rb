@@ -8,5 +8,5 @@ cask "font-bhavuka" do
 
   font "Bhavuka-Regular.ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

@@ -8,5 +8,5 @@ cask "font-adamina" do
 
   font "Adamina-Regular.ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

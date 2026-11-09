@@ -8,5 +8,5 @@ cask "font-noto-serif-telugu" do
 
   font "NotoSerifTelugu[wght].ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

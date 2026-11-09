@@ -11,6 +11,8 @@ cask "quakespasm" do
     url "https://sourceforge.net/projects/quakespasm/rss?path=/Mac"
   end
 
+  disable! date: "2026-10-12", because: :fails_gatekeeper_check
+
   depends_on :macos
 
   suite "QuakeSpasm"

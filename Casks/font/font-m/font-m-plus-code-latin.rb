@@ -8,5 +8,5 @@ cask "font-m-plus-code-latin" do
 
   font "MPLUSCodeLatin[wdth,wght].ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

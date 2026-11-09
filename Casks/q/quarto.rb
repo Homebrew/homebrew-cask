@@ -3,11 +3,13 @@ cask "quarto" do
   os macos: "macos", linux: "linux-#{arch}"
   url_end = on_system_conditional macos: "pkg", linux: "tar.gz"
 
-  version "1.10.18"
+  version "1.11.9"
+  sha256 arm:          "35ad09e472235dc91638339d19891088531f9e2e77549dda2f7c210610e1b4d2",
+         intel:        "35ad09e472235dc91638339d19891088531f9e2e77549dda2f7c210610e1b4d2",
+         arm64_linux:  "8a96da89026c8cba0fc2607f62d99836eae8c5b65465b5d476af16f54c10d191",
+         x86_64_linux: "9d037baa3b38ffac7217edca1d2e53760b0fab4d5749220740a32056e03a1530"
 
   on_macos do
-    sha256 "c57119e22012a4de14de0addf6da51db455082fcc2524a6dcba9696e7577cf4d"
-
     pkg "quarto-#{version}-macos.pkg"
 
     uninstall pkgutil: "org.rstudio.quarto"
@@ -19,10 +21,12 @@ cask "quarto" do
     ]
   end
   on_linux do
-    sha256 arm64_linux:  "f6a07df68e25330b5df34f65d3df66bca605acce3b830c593a58e91884d4cf6c",
-           x86_64_linux: "afad071b5bd22c02f2d300695743189d3650e0537a53073e654b630cff2b0c73"
-
     binary "quarto-#{version}/bin/quarto"
+
+    zap trash: [
+      "~/.cache/quarto",
+      "~/.local/share/quarto",
+    ]
   end
 
   url "https://github.com/quarto-dev/quarto-cli/releases/download/v#{version}/quarto-#{version}-#{os}.#{url_end}"

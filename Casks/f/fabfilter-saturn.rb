@@ -18,5 +18,5 @@ cask "fabfilter-saturn" do
 
   uninstall pkgutil: "com.fabfilter.Saturn.*"
 
-  # No zap stanza required
+  zap :not_required
 end

@@ -1,6 +1,6 @@
 cask "status" do
-  version "2.38.2,3ef171"
-  sha256 "af412ec0060a6075b485359f9299a72001a55c17dbd5da80e4bfdb60eaa3e64b"
+  version "2.39.3,211c45"
+  sha256 "94cd23d2b8e3a6dfd4f31a13f4e6561281a0eb3368c787b4ae4a30a5e847f6cb"
 
   url "https://github.com/status-im/status-desktop/releases/download/#{version.csv.first}/StatusIm-Desktop-#{version.csv.first}-#{version.csv.second}-aarch64.dmg"
   name "Status"
@@ -28,6 +28,7 @@ cask "status" do
   zap trash: [
     "~/Library/Application Support/Status",
     "~/Library/Caches/Status",
+    "~/Library/Preferences/com.status-app.Status Desktop.plist",
     "~/Library/Preferences/im.status.Status Desktop.plist",
   ]
 end

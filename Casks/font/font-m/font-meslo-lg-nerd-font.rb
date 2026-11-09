@@ -86,5 +86,5 @@ cask "font-meslo-lg-nerd-font" do
   font "MesloLGSNerdFontPropo-Italic.ttf"
   font "MesloLGSNerdFontPropo-Regular.ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

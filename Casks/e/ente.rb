@@ -1,6 +1,6 @@
 cask "ente" do
-  version "1.7.28"
-  sha256 "effae9a4c991c7651318cd1daf4046f3d66171890b6164177313cd1a4735f459"
+  version "1.7.31"
+  sha256 "4313f315ebd324c8522d9485c180074b6cff2efbfafcf2eccea746ee36b8d351"
 
   url "https://github.com/ente-io/photos-desktop/releases/download/v#{version}/ente-#{version}-universal.dmg"
   name "Ente"
@@ -18,6 +18,7 @@ cask "ente" do
   app "ente.app"
 
   zap trash: [
+    "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/io.ente.bhari-frame.sfl*",
     "~/Library/Application Support/ente",
     "~/Library/Logs/ente",
     "~/Library/Preferences/io.ente.bhari-frame.helper.plist",

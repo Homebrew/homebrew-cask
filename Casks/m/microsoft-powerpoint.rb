@@ -18,8 +18,8 @@ cask "microsoft-powerpoint" do
     end
   end
   on_sonoma :or_newer do
-    version "16.112.26083020"
-    sha256 "77aaa12e2769a2c31d41718d51672d1e6ec88de9bd2490dd11cef04289d5cd1e"
+    version "16.114.26110224"
+    sha256 "04e749464f5be0601b9ded49d77b6476e2c0279f1f92d2ea100d6cd75c60ead1"
 
     livecheck do
       url "https://go.microsoft.com/fwlink/p/?linkid=525136"
@@ -48,11 +48,15 @@ cask "microsoft-powerpoint" do
         },
       ]
 
-  uninstall launchctl: "com.microsoft.office.licensingV2.helper",
+  uninstall launchctl: [
+              "com.microsoft.office.licensingV2.helper",
+              "com.microsoft.office.licensingV3.helper",
+            ],
             quit:      "com.microsoft.autoupdate2",
             pkgutil:   [
               "com.microsoft.package.Microsoft_PowerPoint.app",
               "com.microsoft.pkg.licensing",
+              "com.microsoft.pkg.licensing.v3",
             ],
             delete:    "/Applications/Microsoft PowerPoint.app"
 

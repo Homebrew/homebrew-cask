@@ -8,5 +8,5 @@ cask "font-powerline-symbols" do
 
   font "PowerlineSymbols.otf"
 
-  # No zap stanza required
+  zap :not_required
 end

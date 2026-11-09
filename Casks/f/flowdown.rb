@@ -1,6 +1,6 @@
 cask "flowdown" do
-  version "5.1.5"
-  sha256 "b614c9ce8286bca8a7ea9243aafca93442b09720330a4b48993d19f97a0de0b1"
+  version "5.2.4"
+  sha256 "c1f1873d21239afa504ba8396075dbc3e34c1ffa89e1c6677ebb0232a9df3500"
 
   url "https://github.com/Lakr233/FlowDown/releases/download/#{version}/FlowDown-#{version}.zip"
   name "FlowDown"
@@ -20,6 +20,9 @@ cask "flowdown" do
   uninstall quit: "wiki.qaq.flow"
 
   zap trash: [
+    "~/Library/Application Scripts/wiki.qaq.flow",
+    "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/wiki.qaq.flow.sfl*",
+    "~/Library/Containers/wiki.qaq.flow",
     "~/Library/Containers/wiki.qaq.flow.FlowDownWidget",
     "~/Library/Containers/wiki.qaq.FlowDown.Community",
   ]

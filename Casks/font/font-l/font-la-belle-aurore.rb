@@ -8,5 +8,5 @@ cask "font-la-belle-aurore" do
 
   font "LaBelleAurore.ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

@@ -8,5 +8,5 @@ cask "font-rubik-marker-hatch" do
 
   font "RubikMarkerHatch-Regular.ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

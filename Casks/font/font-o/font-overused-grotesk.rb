@@ -24,5 +24,5 @@ cask "font-overused-grotesk" do
   font "otf/OverusedGrotesk-SemiBoldItalic.otf"
   font "variable/OverusedGrotesk-VF.ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

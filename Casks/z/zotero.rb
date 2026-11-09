@@ -1,6 +1,6 @@
 cask "zotero" do
-  version "10.0.1"
-  sha256 "1b6e57cedb2dbcbe3f31c06069734d2201559da99a34c7f84167b6b4c7ee5aa8"
+  version "10.0.8"
+  sha256 "bf6192a0745ae67efbb7ff4e7f1953d8b78f5eed7083f4eefa12b762ecddcabe"
 
   url "https://download.zotero.org/client/release/#{version}/Zotero-#{version}.dmg"
   name "Zotero"
@@ -22,9 +22,13 @@ cask "zotero" do
 
   zap trash: [
         "~/Library/Application Scripts/org.zotero.SafariExtensionApp.SafariExtension",
+        "~/Library/Application Scripts/org.zotero.zotero.SafariExtension",
+        "~/Library/Application Scripts/org.zotero.zotero.SafariWebExtension",
         "~/Library/Application Support/Zotero",
         "~/Library/Caches/Zotero",
         "~/Library/Containers/org.zotero.SafariExtensionApp.SafariExtension",
+        "~/Library/Containers/org.zotero.zotero.SafariExtension",
+        "~/Library/Containers/org.zotero.zotero.SafariWebExtension",
         "~/Library/Preferences/org.zotero.zotero.plist",
         "~/Library/Saved Application State/org.zotero.zotero.savedState",
       ],

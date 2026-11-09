@@ -8,5 +8,5 @@ cask "font-aksara-bali-galang" do
 
   font "AksaraBaliGalang-Regular.ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

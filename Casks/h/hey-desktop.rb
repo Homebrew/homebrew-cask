@@ -1,9 +1,9 @@
 cask "hey-desktop" do
   arch arm: "-arm64"
 
-  version "1.3.7"
-  sha256 arm:   "39e1342c4f6aee1b4bb5202ffe723828e15a36f77869f89d9a05633c7b90780f",
-         intel: "6093f7917db92702eacc7753e160f220724a9c4115013301a510c4734db61a2e"
+  version "1.3.9"
+  sha256 arm:   "62e5b1990adb002ff33075e968f7459067893bbb8abcf7d71993d9a3ed538fe3",
+         intel: "a4a1ca01a50ed10352a3801c784a9b54e04732f92209a810b88a27ffdaaa9224"
 
   url "https://hey.com/desktop/HEY-#{version}#{arch}-mac.zip"
   name "HEY"
@@ -25,7 +25,9 @@ cask "hey-desktop" do
   app "HEY.app"
 
   zap trash: [
+    "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.hey.app.desktop.sfl*",
     "~/Library/Application Support/HEY",
+    "~/Library/Logs/HEY",
     "~/Library/Preferences/com.hey.app.desktop.plist",
   ]
 end

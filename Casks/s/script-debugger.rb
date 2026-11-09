@@ -1,6 +1,6 @@
 cask "script-debugger" do
-  version "8.0.10-8A88"
-  sha256 "4146e6ef549f3af64c50055f911fc0b3a0ab9dc9f12d181d4cf553b1243c4b53"
+  version "8.0.11-8A90"
+  sha256 "660840337546fb65701ebc3a1650ac9e56c8dd55aeb66192c2af5c76e4af4996"
 
   url "https://s3.amazonaws.com/latenightsw.com/ScriptDebugger#{version}.dmg"
   name "Script Debugger"
@@ -15,6 +15,8 @@ cask "script-debugger" do
   depends_on :macos
 
   app "Script Debugger.app"
+
+  uninstall quit: "com.latenightsw.ScriptDebugger8"
 
   zap trash: [
     "~/Library/Application Support/Script Debugger #{version.major}",

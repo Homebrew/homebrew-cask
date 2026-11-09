@@ -71,5 +71,5 @@ cask "font-plemol-jp-hs" do
   font "PlemolJP_HS_v#{version}/PlemolJP_HS/PlemolJPHS-Thin.ttf"
   font "PlemolJP_HS_v#{version}/PlemolJP_HS/PlemolJPHS-ThinItalic.ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

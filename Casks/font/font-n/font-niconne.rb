@@ -8,5 +8,5 @@ cask "font-niconne" do
 
   font "Niconne-Regular.ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

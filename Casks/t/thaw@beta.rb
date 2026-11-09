@@ -1,6 +1,6 @@
 cask "thaw@beta" do
-  version "2.1.0-beta.2"
-  sha256 "82d51f2e3304a1657bd34b620e7e76452e73867f974dcba375c53a9909917d9c"
+  version "3.0.0-beta.6"
+  sha256 "d7d05ee3aa6fdf18836f1e8c27af73868b61f288e743a29b8bf80b073c4cfc2b"
 
   url "https://github.com/thaw-app/Thaw/releases/download/#{version}/Thaw_#{version}.zip"
   name "Thaw"
@@ -13,14 +13,19 @@ cask "thaw@beta" do
   end
 
   auto_updates true
-  depends_on macos: :tahoe
+  conflicts_with cask: "thaw"
+  depends_on macos: :golden_gate
 
   app "Thaw.app"
 
   uninstall quit: ["com.stonerl.Thaw", "com.stonerl.Thaw.MenuBarItemService"]
 
   zap trash: [
+    "~/Library/Application Scripts/com.stonerl.Thaw.ThawControls",
+    "~/Library/Application Support/com.stonerl.Thaw",
+    "~/Library/Application Support/Thaw",
     "~/Library/Caches/com.stonerl.Thaw",
+    "~/Library/Containers/com.stonerl.Thaw.ThawControls",
     "~/Library/HTTPStorages/com.stonerl.Thaw",
     "~/Library/Preferences/com.stonerl.Thaw.plist",
     "~/Library/WebKit/com.stonerl.Thaw",

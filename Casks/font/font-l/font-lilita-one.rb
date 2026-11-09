@@ -8,5 +8,5 @@ cask "font-lilita-one" do
 
   font "LilitaOne-Regular.ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

@@ -23,5 +23,5 @@ cask "hummingbird" do
     set_ownership "hummingbird-macos-*-#{version}/hummingbird", user: "root"
   end
 
-  # No zap stanza required
+  zap :not_required
 end

@@ -13,5 +13,5 @@ cask "diskspace" do
 
   uninstall pkgutil: "com.scriptingosx.diskspace"
 
-  # No zap stanza required
+  zap :not_required
 end

@@ -7,7 +7,10 @@ cask "font-lxgw-simzhisong" do
   name "新致宋体"
   homepage "https://github.com/lxgw/SimXiZhi"
 
+  # The upstream repository was archived on 2026-08-21 and is no longer maintained.
+  deprecate! date: "2026-09-12", because: :discontinued
+
   font "SimZhiSong.ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

@@ -8,6 +8,7 @@ cask "skyfonts" do
   homepage "https://skyfonts.com/"
 
   deprecate! date: "2025-11-02", because: :discontinued
+  disable! date: "2026-11-02", because: :discontinued
 
   depends_on :macos
 

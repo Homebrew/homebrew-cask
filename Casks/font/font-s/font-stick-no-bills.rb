@@ -8,5 +8,5 @@ cask "font-stick-no-bills" do
 
   font "StickNoBills[wght].ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

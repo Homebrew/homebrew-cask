@@ -1,9 +1,9 @@
 cask "langflow" do
   arch arm: "aarch64", intel: "universal"
 
-  version "1.11.0,v1.11.0"
-  sha256 arm:   "a93ded4ffcc45af9b472efc01a2f863547fb25c802a50e1824248f5fdb3f8897",
-         intel: "c8b812b7071cbd100f920bcca6f68b7709c18902d2ecbffd023f9cc51381cb4e"
+  version "1.13.0,v1.13.0"
+  sha256 arm:   "309412db77f2c3ae0bd06a0427f2c0ff4f46bab7d6b1c903dff5018542d72fc7",
+         intel: "2e25659faff31e0922366609b689fa1fa40a58535eeee3e12370bddb2ef8d92a"
 
   url "https://github.com/langflow-ai/langflow/releases/download/#{version.csv.second || version}/Langflow_#{version.csv.first}_#{arch}.dmg"
   name "Langflow Desktop"
@@ -35,10 +35,15 @@ cask "langflow" do
 
   zap trash: [
     "~/.langflow",
+    "~/Library/Application Support/com.LangflowDesktop",
     "~/Library/Caches/com.Langflow",
+    "~/Library/Caches/com.LangflowDesktop",
     "~/Library/Caches/langflow",
     "~/Library/Logs/com.Langflow",
+    "~/Library/Logs/com.LangflowDesktop",
     "~/Library/Preferences/com.Langflow.plist",
+    "~/Library/Preferences/com.LangflowDesktop.plist",
     "~/Library/WebKit/com.Langflow",
+    "~/Library/WebKit/com.LangflowDesktop",
   ]
 end

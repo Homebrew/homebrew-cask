@@ -8,5 +8,5 @@ cask "font-fleur-de-leah" do
 
   font "FleurDeLeah-Regular.ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

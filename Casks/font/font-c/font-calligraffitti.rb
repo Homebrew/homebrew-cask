@@ -8,5 +8,5 @@ cask "font-calligraffitti" do
 
   font "Calligraffitti-Regular.ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

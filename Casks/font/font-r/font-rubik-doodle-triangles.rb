@@ -8,5 +8,5 @@ cask "font-rubik-doodle-triangles" do
 
   font "RubikDoodleTriangles-Regular.ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

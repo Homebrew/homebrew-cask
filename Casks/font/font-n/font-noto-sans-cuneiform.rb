@@ -8,5 +8,5 @@ cask "font-noto-sans-cuneiform" do
 
   font "NotoSansCuneiform-Regular.ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

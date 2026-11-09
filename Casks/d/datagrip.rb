@@ -1,9 +1,9 @@
 cask "datagrip" do
   arch arm: "-aarch64"
 
-  version "2026.2.5,262.10315.132"
-  sha256 arm:   "f4c85cb1a1973764f84184c5fb8e4b86c7fac9aae2731e503f6f331b1217ddc8",
-         intel: "76200b342b9484afee1be33ac3b15dc78d7f5b240531953904851ae2bda3bca0"
+  version "2026.3,263.7307.216"
+  sha256 arm:   "17201e7bf85313612ba5e7644f8b2293c0fc95137e2e442879f94899df8ec735",
+         intel: "24df7d8f6b35406dd2576c2e5874bf4e125da9787e2e33d2acae488eb31f2f54"
 
   url "https://download.jetbrains.com/datagrip/datagrip-#{version.csv.first}#{arch}.dmg"
   name "DataGrip"
@@ -30,12 +30,14 @@ cask "datagrip" do
   command_wrapper "datagrip",
                   executable: "#{appdir}/DataGrip.app/Contents/MacOS/datagrip"
 
-  uninstall quit: "com.jetbrains.datagrip"
+  uninstall launchctl: "application.com.jetbrains.app.daemon.*",
+            quit:      "com.jetbrains.datagrip"
 
   zap trash: [
     "~/Library/Application Support/JetBrains/DataGrip*",
     "~/Library/Caches/JetBrains/DataGrip*",
     "~/Library/Logs/JetBrains/DataGrip*",
+    "~/Library/Preferences/com.jetbrains.datagrip.plist",
     "~/Library/Saved Application State/com.jetbrains.datagrip.savedState",
   ]
 end

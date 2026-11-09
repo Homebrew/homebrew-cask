@@ -14,5 +14,5 @@ cask "font-noto-serif-cjk" do
 
   font "NotoSerifCJK.ttc"
 
-  # No zap stanza required
+  zap :not_required
 end

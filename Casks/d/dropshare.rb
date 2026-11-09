@@ -1,6 +1,6 @@
 cask "dropshare" do
-  version "6.14,6257"
-  sha256 "629302d962e890fdd32887dbf7915e734d6d6703774ad60423d93030935ee66f"
+  version "6.16,6286"
+  sha256 "d408c5ddc1015355725121fdaf4e9e0368188ec2eaccb1329cd568c453a689bd"
 
   url "https://d2wvuuix8c9e48.cloudfront.net/Dropshare#{version.major}-#{version.csv.second}.app.zip"
   name "Dropshare"
@@ -22,10 +22,14 @@ cask "dropshare" do
   binary "#{appdir}/Dropshare #{version.major}.app/Contents/Resources/ds.sh", target: "ds"
 
   zap trash: [
-    "~/Library/Application Support/Dropshare #{version.major}",
-    "~/Library/Caches/net.mkswap.Dropshare#{version.major}",
-    "~/Library/Cookies/net.mkswap.Dropshare#{version.major}.binarycookies",
-    "~/Library/Logs/Dropshare #{version.major}",
-    "~/Library/Preferences/net.mkswap.Dropshare#{version.major}.plist",
+    "~/Library/Application Scripts/net.mkswap.Dropshare*.Upload-with-Dropshare",
+    "~/Library/Application Support/Dropshare*",
+    "~/Library/Application Support/net.mkswap.Dropshare*",
+    "~/Library/Caches/net.mkswap.Dropshare*",
+    "~/Library/Containers/net.mkswap.Dropshare*.Upload-with-Dropshare",
+    "~/Library/Cookies/net.mkswap.Dropshare*.binarycookies",
+    "~/Library/HTTPStorages/net.mkswap.Dropshare*",
+    "~/Library/Logs/Dropshare*",
+    "~/Library/Preferences/net.mkswap.Dropshare*.plist",
   ]
 end

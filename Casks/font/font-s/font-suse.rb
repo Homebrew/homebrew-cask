@@ -11,5 +11,5 @@ cask "font-suse" do
   font "SUSE-Italic[wght].ttf"
   font "SUSE[wght].ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

@@ -1,6 +1,6 @@
 cask "orcaslicer" do
-  version "2.4.2"
-  sha256 "e15e7bb1b66214ec6e96b169b388004179c4f5f705effcdaf8c80d4992ee0366"
+  version "2.5.0"
+  sha256 "061e0c6ff104c37655c83190725ac2420960f23c39b56aae9b546e6c542995d5"
 
   url "https://github.com/OrcaSlicer/OrcaSlicer/releases/download/v#{version}/OrcaSlicer_Mac_universal_V#{version}.dmg"
   name "Orca Slicer"
@@ -8,7 +8,7 @@ cask "orcaslicer" do
   homepage "https://github.com/OrcaSlicer/OrcaSlicer"
 
   conflicts_with cask: "orcaslicer@nightly"
-  depends_on macos: :big_sur
+  depends_on :macos
 
   app "OrcaSlicer.app"
 
@@ -16,6 +16,7 @@ cask "orcaslicer" do
     "~/Library/Application Support/OrcaSlicer",
     "~/Library/Caches/com.softfever3d.orca-slicer",
     "~/Library/HTTPStorages/com.softfever3d.orcaslicer.binarycookies",
+    "~/Library/Preferences/com.orcaslicer.OrcaSlicer.plist",
     "~/Library/Preferences/com.softfever3d.orca-slicer.plist",
     "~/Library/Saved Application State/com.softfever3d.orca-slicer.savedState",
     "~/Library/WebKit/com.softfever3d.orca-slicer",

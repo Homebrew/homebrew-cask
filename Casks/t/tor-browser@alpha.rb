@@ -1,6 +1,6 @@
 cask "tor-browser@alpha" do
-  version "16.0a11"
-  sha256 "667ac3ffde2b5d09e2518ed06dc7ab122103e9e55d28208f1bf90ad6d50cbb97"
+  version "16.0a14"
+  sha256 "237c56cc974756f0e2430bfaf2eb002ad2782fb33739008e87a8f75c8a7f93c7"
 
   url "https://dist.torproject.org/torbrowser/#{version}/tor-browser-macos-#{version}.dmg"
   name "Tor Browser"
@@ -25,6 +25,7 @@ cask "tor-browser@alpha" do
     "~/Library/Application Support/TorBrowser-Data",
     "~/Library/Preferences/org.mozilla.tor browser.plist",
     "~/Library/Preferences/org.torproject.torbrowser.plist",
+    "~/Library/Preferences/org.torproject.torbrowseralpha.plist",
     "~/Library/SavedApplicationState/org.torproject.torbrowser.savedState",
   ]
 end

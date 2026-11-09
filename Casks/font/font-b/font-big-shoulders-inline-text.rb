@@ -8,5 +8,5 @@ cask "font-big-shoulders-inline-text" do
 
   font "BigShouldersInlineText[wght].ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

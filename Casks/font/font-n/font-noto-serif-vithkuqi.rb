@@ -8,5 +8,5 @@ cask "font-noto-serif-vithkuqi" do
 
   font "NotoSerifVithkuqi[wght].ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

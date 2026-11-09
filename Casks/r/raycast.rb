@@ -25,9 +25,9 @@ cask "raycast" do
   end
   on_ventura :or_newer do
     on_sequoia :or_older do
-      version "1.104.28"
-      sha256 arm:   "faeb92e04880ddb04d24a9fb94d29e675075524da2f4a3162e3800a90bb2dce3",
-             intel: "30b04561e0b4c146e8b0615dd6984662fc0f5e6737bbe5d460fe43d993140f2b"
+      version "1.104.33"
+      sha256 arm:   "f74c894a54353385f3395419e7ea50f4c42b38ea7faccf9b28fdd888618bf1e0",
+             intel: "c88f7e6b5bf60e8b1b082234f14658cbc6d7df21d82099ed2e8e089e4e60e33c"
 
       url "https://releases.raycast.com/releases/#{version}/download?build=#{arch}"
 
@@ -39,8 +39,8 @@ cask "raycast" do
       end
     end
     on_tahoe :or_newer do
-      version "2.2.1.0"
-      sha256 "a5fc1693a43a3415ad61c3d6161b20d2cfc19169c06df819a63cb73c5000ce15"
+      version "2.11.1.0"
+      sha256 "777e3fbe08dee41d88639ccb49c70893c61f85f92db6ddc9ae869a8fa653575a"
 
       url "https://x.raycast-releases.com/download?platform=macos&architecture=arm64&version=#{version}"
 
@@ -60,7 +60,7 @@ cask "raycast" do
   homepage "https://raycast.com/"
 
   auto_updates true
-  depends_on macos: :big_sur
+  depends_on :macos
 
   app "Raycast.app"
 
@@ -70,12 +70,17 @@ cask "raycast" do
   zap trash: [
     "~/.config/raycast",
     "~/Library/Application Scripts/com.raycast.macos.BrowserExtension",
+    "~/Library/Application Scripts/SY64MV22J9.com.raycast.macos.shared",
+    "~/Library/Application Support/.com.raycast.macos.backups",
     "~/Library/Application Support/com.raycast.macos",
+    "~/Library/Application Support/com.raycast.shared",
     "~/Library/Caches/com.raycast.macos",
     "~/Library/Caches/SentryCrash/Raycast",
     "~/Library/Containers/com.raycast.macos.BrowserExtension",
     "~/Library/Cookies/com.raycast.macos.binarycookies",
+    "~/Library/Group Containers/SY64MV22J9.com.raycast.macos.shared",
     "~/Library/HTTPStorages/com.raycast.macos",
+    "~/Library/Logs/com.raycast.macos",
     "~/Library/Preferences/com.raycast.macos.plist",
     "~/Library/WebKit/com.raycast.macos",
   ]

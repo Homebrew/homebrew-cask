@@ -11,5 +11,5 @@ cask "font-fantasque-sans-mono-noloopk" do
   font "OTF/FantasqueSansMono-Italic.otf"
   font "OTF/FantasqueSansMono-Regular.otf"
 
-  # No zap stanza required
+  zap :not_required
 end

@@ -1,6 +1,6 @@
 cask "lm-studio-bionic" do
-  version "1.1.1,5"
-  sha256 "7ce37ac3cd361e53da6888b75c1a869d7f68500928f8c725402e92e6e25aa011"
+  version "1.2.0,2"
+  sha256 "6bccde077cb6eefc55e9afed7a749d6c4b45cdd08b78b8240d0f0df521648dd2"
 
   url "https://bionic-installers.lmstudio.ai/darwin/arm64/#{version.tr(",", "-")}/Bionic-#{version.tr(",", "-")}-arm64.dmg"
   name "LM Studio Bionic"
@@ -30,10 +30,12 @@ cask "lm-studio-bionic" do
   ]
 
   zap trash: [
+    "~/Library/Application Scripts/D65G88RHWN.ai.elementlabs.bionic.office-document-preview",
     "~/Library/Application Support/Bionic",
     "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/ai.elementlabs.bionic.sfl*",
     "~/Library/Caches/ai.elementlabs.bionic",
     "~/Library/Caches/ai.elementlabs.bionic.ShipIt",
+    "~/Library/Group Containers/D65G88RHWN.ai.elementlabs.bionic.office-document-preview",
     "~/Library/HTTPStorages/ai.elementlabs.bionic",
     "~/Library/Logs/Bionic",
     "~/Library/Preferences/ai.elementlabs.bionic.plist",

@@ -1,13 +1,10 @@
 cask "iina" do
-  version "1.4.4"
-  sha256 "dd0fc0bd4b37fb57a1c8d30d6e3201b3a64bafd29959fe56953964613237beb1"
+  version "1.5.1"
+  sha256 "f414507ec60bcfeda3a9f539f74470253e31b619d031e7a9e9a71519da1598cd"
 
   on_macos do
     on_arm do
       depends_on macos: :monterey
-    end
-    on_intel do
-      depends_on macos: :big_sur
     end
   end
 

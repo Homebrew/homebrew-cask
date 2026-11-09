@@ -21,5 +21,5 @@ cask "font-mali" do
   font "Mali-SemiBold.ttf"
   font "Mali-SemiBoldItalic.ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

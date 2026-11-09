@@ -15,5 +15,5 @@ cask "font-suite" do
   font "SUITE-Regular.otf"
   font "SUITE-SemiBold.otf"
 
-  # No zap stanza required
+  zap :not_required
 end

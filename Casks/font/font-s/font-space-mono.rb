@@ -13,5 +13,5 @@ cask "font-space-mono" do
   font "SpaceMono-Italic.ttf"
   font "SpaceMono-Regular.ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

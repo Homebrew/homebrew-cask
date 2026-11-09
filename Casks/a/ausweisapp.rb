@@ -1,6 +1,6 @@
 cask "ausweisapp" do
-  version "2.5.5"
-  sha256 "907d059ab4fed21986ca9960d6dbc0b816746b617d4a0fa1efc220ec69d7559f"
+  version "2.6.2"
+  sha256 "b3aeb8ba128710003b512b11774abf36d9c01129370158fa62baa9dc5d530815"
 
   url "https://github.com/Governikus/AusweisApp/releases/download/#{version}/AusweisApp-#{version}.dmg"
   name "AusweisApp"
@@ -17,9 +17,8 @@ cask "ausweisapp" do
 
   app "AusweisApp.app"
 
-  zap trash: "~/Library/Application Scripts/com.governikus.ausweisapp2"
-
-  caveats do
-    requires_rosetta
-  end
+  zap trash: [
+    "~/Library/Application Scripts/com.governikus.ausweisapp2",
+    "~/Library/Containers/com.governikus.ausweisapp2",
+  ]
 end

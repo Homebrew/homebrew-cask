@@ -8,5 +8,5 @@ cask "font-playwrite-it-moderna" do
 
   font "PlaywriteITModerna[wght].ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

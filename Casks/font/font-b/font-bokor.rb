@@ -8,5 +8,5 @@ cask "font-bokor" do
 
   font "Bokor-Regular.ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

@@ -22,5 +22,5 @@ cask "cardinal" do
     "studio.kx.distrho.plugins.cardinal.vst3bundles",
   ]
 
-  # No zap stanza required
+  zap :not_required
 end

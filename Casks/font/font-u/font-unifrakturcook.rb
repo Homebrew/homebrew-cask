@@ -8,5 +8,5 @@ cask "font-unifrakturcook" do
 
   font "UnifrakturCook-Bold.ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

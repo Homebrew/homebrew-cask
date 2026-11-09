@@ -1,6 +1,6 @@
 cask "swiftformat-for-xcode" do
-  version "0.63.0"
-  sha256 "2d55032a00604883db7d0850a483656256c179b8a326cdcb08ceaa393005c37c"
+  version "0.64.6"
+  sha256 "86e19529eec4ed26e8eb46893a71006f99a464cbd6774d1fce46389eb6c1c7ff"
 
   url "https://github.com/nicklockwood/SwiftFormat/releases/download/#{version}/SwiftFormat.for.Xcode.app.zip"
   name "SwiftFormat for Xcode"
@@ -33,6 +33,7 @@ cask "swiftformat-for-xcode" do
   zap trash: [
     "~/Library/Application Scripts/com.charcoaldesign.SwiftFormat-for-Xcode",
     "~/Library/Application Scripts/com.charcoaldesign.SwiftFormat-for-Xcode.SourceEditorExtension",
+    "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.charcoaldesign.swiftformat-for-xcode.sfl*",
     "~/Library/Containers/com.charcoaldesign.SwiftFormat-for-Xcode",
     "~/Library/Group Containers/com.charcoaldesign.SwiftFormat",
   ]

@@ -22,9 +22,9 @@ cask "slack" do
     end
   end
   on_ventura :or_newer do
-    version "4.52.155"
-    sha256 arm:   "28f3d5dcdfcb267c10a863417bcdfe6d1a6f73b214965b19f72c825fd4b7b60e",
-           intel: "21669dad8412cbe75af0e0ea694fe3fb0b49e36e2600c5d0f39676a17fcd4201"
+    version "4.53.280"
+    sha256 arm:   "c8a329a74536383fb804655740ef7179652e87449de258f1a8ca5dff5d66dbf4",
+           intel: "7097ac977cead6414bafe68434909d4dbd8909992ff39c9a7d9ef2d634bcde40"
 
     url "https://downloads.slack-edge.com/desktop-releases/mac/#{arch}/#{version}/Slack-#{version}-macOS.dmg"
 
@@ -40,7 +40,7 @@ cask "slack" do
 
   auto_updates true
   conflicts_with cask: "slack@beta"
-  depends_on macos: :big_sur
+  depends_on :macos
 
   app "Slack.app"
 

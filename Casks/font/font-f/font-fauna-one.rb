@@ -8,5 +8,5 @@ cask "font-fauna-one" do
 
   font "FaunaOne-Regular.ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

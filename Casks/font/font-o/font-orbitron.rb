@@ -8,5 +8,5 @@ cask "font-orbitron" do
 
   font "Orbitron[wght].ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

@@ -9,5 +9,5 @@ cask "font-elice-digital-baeum" do
   font "EliceDigitalBaeumOTF_Bold.otf"
   font "EliceDigitalBaeumOTF_Regular.otf"
 
-  # No zap stanza required
+  zap :not_required
 end

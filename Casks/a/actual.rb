@@ -3,11 +3,11 @@ cask "actual" do
   os macos: "mac", linux: "linux"
   url_end = on_system_conditional macos: "dmg", linux: "AppImage"
 
-  version "26.9.0"
-  sha256 arm:          "d6c01a7fc830d28ef6e476073a1574ae356222cc524c9097e74387017212247b",
-         intel:        "73f3b239f1a937c7c5f8ca03504800115a92175796cbe71b043c4358593ed176",
-         arm64_linux:  "5375f889ec614665f54a029fa8c7537e511d90a67398fb6e0c3ec8b0b66c86d3",
-         x86_64_linux: "fb3e5dbe756bfa614be3d0714c182ac9af977d77749d105535f7068aeeb38171"
+  version "26.11.0"
+  sha256 arm:          "734a96923e461f5c2741c1a531b353ca249bb2f2ef9f7cb6e9d2b23ddeaf3ba8",
+         intel:        "65650b88041f56e9f08e1ce53af4ed60b3da4d7d2f7a12ddd970b8dcb2a01631",
+         arm64_linux:  "c250c72c2d74754122fef09a4b4f503c07a872a800e00dcee0ee298a03264df6",
+         x86_64_linux: "cc4d555a8bde6f74a3dd0eb4c0dda9c13d44d69806874861d595b51e1e4b2080"
 
   on_macos do
     depends_on macos: :monterey
@@ -25,6 +25,9 @@ cask "actual" do
   end
   on_linux do
     app_image "Actual-linux-#{arch}.AppImage", target: "Actual.AppImage"
+
+    zap trash: "~/.config/Actual",
+        rmdir: "~/Documents/Actual"
   end
 
   url "https://github.com/actualbudget/actual/releases/download/v#{version}/Actual-#{os}-#{arch}.#{url_end}"

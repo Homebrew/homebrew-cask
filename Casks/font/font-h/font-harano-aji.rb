@@ -22,5 +22,5 @@ cask "font-harano-aji" do
   font "HaranoAjiFonts-#{version}/HaranoAjiMincho-Regular.otf"
   font "HaranoAjiFonts-#{version}/HaranoAjiMincho-SemiBold.otf"
 
-  # No zap stanza required
+  zap :not_required
 end

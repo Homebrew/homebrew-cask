@@ -8,5 +8,5 @@ cask "font-oxygen-mono" do
 
   font "OxygenMono-Regular.ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

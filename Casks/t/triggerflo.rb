@@ -1,6 +1,6 @@
 cask "triggerflo" do
-  version "2.1.0"
-  sha256 "eebaa625666da57ff720d5934cdbfd8411fc43f0767619723da07dc5c22c15c0"
+  version "2.8.0"
+  sha256 "c6e43198dff2dc247f2af17975769c8b8bb0016a16598459db57be139a6b04b3"
 
   url "https://triggerflo.app/downloads/TriggerFlo-#{version}.dmg"
   name "TriggerFlo"
@@ -13,16 +13,18 @@ cask "triggerflo" do
   end
 
   auto_updates true
-  depends_on :macos
+  depends_on macos: :monterey
 
   app "TriggerFlo.app"
 
   zap trash: [
     "~/Library/Application Scripts/app.triggerflo",
+    "~/Library/Application Scripts/app.triggerflo.TriggerFloTimerWidget",
     "~/Library/Application Scripts/group.app.triggerflo",
     "~/Library/Application Support/app.triggerflo",
     "~/Library/Caches/app.triggerflo",
     "~/Library/Containers/app.triggerflo",
+    "~/Library/Containers/app.triggerflo.TriggerFloTimerWidget",
     "~/Library/Group Containers/group.app.triggerflo",
     "~/Library/HTTPStorages/app.triggerflo",
     "~/Library/Preferences/app.triggerflo.plist",

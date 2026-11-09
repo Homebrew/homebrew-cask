@@ -11,5 +11,5 @@ cask "font-reddit-sans" do
   font "RedditSans-Italic[wght].ttf"
   font "RedditSans[wght].ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

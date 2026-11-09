@@ -8,5 +8,5 @@ cask "font-finger-paint" do
 
   font "FingerPaint-Regular.ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

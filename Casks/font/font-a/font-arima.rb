@@ -8,5 +8,5 @@ cask "font-arima" do
 
   font "Arima[wght].ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

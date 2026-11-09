@@ -1,5 +1,5 @@
 cask "yandextelemost" do
-  version "2.39.5,9385"
+  version "3.3.3,10428"
   sha256 :no_check
 
   url "https://telemost.yandex.com/download-desktop"
@@ -14,7 +14,8 @@ cask "yandextelemost" do
 
   depends_on macos: :monterey
 
-  app "Yandex.Telemost.app"
+  # Renamed for consistency: app name is different in the Finder and in a shell.
+  app "Yandex.Telemost.app", target: "Yandex Telemost.app"
 
   uninstall quit: "ru.yandex.desktop.telemost"
 

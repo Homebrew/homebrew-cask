@@ -1,6 +1,6 @@
 cask "unraid-usb-creator" do
-  version "2.0.11,1"
-  sha256 "ba85bee1b9e39bf09f829d3a87ceb76b7b4fb49cc7f72a3dce596431113f66aa"
+  version "2.0.11.1,1"
+  sha256 "bcb7efa32925d465159f2ae90091a5d5c67be255f8e33f0bafd2fac372e6e02a"
 
   url "https://github.com/unraid/usb-creator-next/releases/download/v#{version.csv.first}-unraid.#{version.csv.second}/Unraid.USB.Creator-v#{version.csv.first}-unraid.#{version.csv.second}.dmg"
   name "Unraid USB Creator"

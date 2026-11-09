@@ -8,5 +8,5 @@ cask "font-mrs-saint-delafield" do
 
   font "MrsSaintDelafield-Regular.ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

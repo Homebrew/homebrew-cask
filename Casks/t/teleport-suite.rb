@@ -1,6 +1,6 @@
 cask "teleport-suite" do
-  version "18.11.0"
-  sha256 "2034eef9147b1b25c7555db5eb8ce261a816302f9ca23b0a2bd14c0245b2908f"
+  version "18.11.9"
+  sha256 "a5f9a8e5cb878f5e447124639d4c18795d443a3a4f552e5dadeecc6a729f0a0a"
 
   url "https://cdn.teleport.dev/teleport-#{version}.pkg"
   name "Teleport"
@@ -14,7 +14,6 @@ cask "teleport-suite" do
   end
 
   conflicts_with cask: [
-    "teleport-suite@16",
     "teleport-suite@17",
     "tsh",
   ]

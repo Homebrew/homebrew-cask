@@ -62,5 +62,5 @@ cask "font-blex-mono-nerd-font" do
   font "BlexMonoNerdFontPropo-Thin.ttf"
   font "BlexMonoNerdFontPropo-ThinItalic.ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

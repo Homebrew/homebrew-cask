@@ -6,6 +6,8 @@ cask "font-ark-pixel-16px-proportional" do
   name "Ark Pixel 16px Proportional"
   homepage "https://github.com/TakWolf/ark-pixel-font"
 
+  deprecate! date: "2026-09-26", because: :discontinued
+
   font "ark-pixel-16px-proportional-ja.otf"
   font "ark-pixel-16px-proportional-ko.otf"
   font "ark-pixel-16px-proportional-latin.otf"
@@ -14,5 +16,5 @@ cask "font-ark-pixel-16px-proportional" do
   font "ark-pixel-16px-proportional-zh_tr.otf"
   font "ark-pixel-16px-proportional-zh_tw.otf"
 
-  # No zap stanza required
+  zap :not_required
 end

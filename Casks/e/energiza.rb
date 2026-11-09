@@ -1,5 +1,5 @@
 cask "energiza" do
-  version "1.3.5"
+  version "1.3.7"
   sha256 :no_check
 
   url "https://appgineers.de/energiza/files/Energiza.zip"
@@ -12,9 +12,12 @@ cask "energiza" do
     strategy :sparkle, &:short_version
   end
 
-  depends_on :macos
+  auto_updates true
+  depends_on macos: :monterey
 
   app "Energiza.app"
+
+  uninstall quit: "de.appgineers.energiza"
 
   zap trash: [
     "~/Library/Application Support/Energiza",

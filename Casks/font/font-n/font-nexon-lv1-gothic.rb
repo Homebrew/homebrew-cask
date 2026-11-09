@@ -11,5 +11,5 @@ cask "font-nexon-lv1-gothic" do
   font "NEXON Lv1 Gothic_OTF_TTF/OTF/NEXON Lv1 Gothic OTF Light.otf"
   font "NEXON Lv1 Gothic_OTF_TTF/OTF/NEXON Lv1 Gothic OTF.otf"
 
-  # No zap stanza required
+  zap :not_required
 end

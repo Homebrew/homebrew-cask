@@ -13,5 +13,5 @@ cask "font-ibm-plex-math" do
 
   font "ibm-plex-math/fonts/complete/otf/IBMPlexMath-Regular.otf"
 
-  # No zap stanza required
+  zap :not_required
 end

@@ -8,5 +8,5 @@ cask "font-cantora-one" do
 
   font "CantoraOne-Regular.ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

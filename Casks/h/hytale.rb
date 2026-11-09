@@ -1,6 +1,6 @@
 cask "hytale" do
-  version "2026.08.28-3d62362"
-  sha256 "a47d7a861d568c0f11a7397d372890e46a143c72f92aaa911c203f45a5548703"
+  version "2026.10.26-7b63bde"
+  sha256 "1a278bc154123bb90cee8ccf14f3c063096e12a6e2c84cb64f0fb201d7d51d32"
 
   url "https://launcher.hytale.com/builds/release/darwin/arm64/hytale-launcher-#{version}.dmg"
   name "Hytale"
@@ -15,8 +15,8 @@ cask "hytale" do
   end
 
   auto_updates true
-  depends_on :macos
   depends_on arch: :arm64
+  depends_on :macos
 
   app "Hytale Launcher.app"
 

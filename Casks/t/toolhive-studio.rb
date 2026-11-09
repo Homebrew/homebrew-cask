@@ -1,9 +1,9 @@
 cask "toolhive-studio" do
   arch arm: "arm64", intel: "x64"
 
-  version "0.40.0"
-  sha256 arm:   "bb91250bce9f94dc48fed6cf32c96646ae5fc4e1078d5ec8b657fd36d7eef387",
-         intel: "c501c239fd4e6a31e04c9d17fb86b130c24747a0bd129dac751609bf46d929e6"
+  version "0.40.2"
+  sha256 arm:   "46a4e966788cbd37c99b23200cc4c74d13149be23029ab44ace10218c24414a7",
+         intel: "2c2f5216a20d2a6521a1a7f016ae808c1fa0ac2268be5b0d71e95888e4e0f1a2"
 
   url "https://github.com/stacklok/toolhive-studio/releases/download/v#{version}/ToolHive-#{arch}.dmg"
   name "ToolHive"
@@ -15,7 +15,7 @@ cask "toolhive-studio" do
     regex(/^v?(\d+(?:\.\d+)+)$/i)
   end
 
-  depends_on macos: :monterey
+  depends_on macos: :ventura
 
   app "ToolHive.app"
 

@@ -1,6 +1,6 @@
 cask "mailmaster" do
-  version "5.7.2.1516"
-  sha256 "2f9ea2fda42b6e4337b2c6deb70eb3df70f2983e8642417b1991c9bb0da1f0dc"
+  version "5.7.4.1543"
+  sha256 "b9befaa59ccf94963910a238235a9669c7e4e6660e88a6546dbdce284872bf27"
 
   url "https://res.126.net/dl/client/macmail/dashi/mail#{version.major}.dmg",
       user_agent: :fake
@@ -42,9 +42,11 @@ cask "mailmaster" do
   zap trash: [
     "~/Library/Application Scripts/com.netease.macmail",
     "~/Library/Application Scripts/com.netease.macmail-launcher",
+    "~/Library/Application Scripts/group.com.netease.macmail",
     "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.netease.macmail-launcher.sfl*",
     "~/Library/Containers/com.netease.macmail",
     "~/Library/Containers/com.netease.macmail-launcher",
+    "~/Library/Group Containers/group.com.netease.macmail",
     "~/Library/Preferences/com.netease.macmail.plist",
     "~/Library/Saved Application State/com.netease.macmail.savedState",
   ]

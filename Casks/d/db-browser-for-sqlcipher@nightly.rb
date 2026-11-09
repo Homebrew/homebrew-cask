@@ -3,11 +3,13 @@ cask "db-browser-for-sqlcipher@nightly" do
   os macos: "universal_"
   url_end = on_system_conditional macos: ".dmg", linux: "-#{arch}.AppImage"
 
-  version "20260908"
+  version "20261109"
+  sha256 arm:          "62e3243a62aec5ffcc68767f9af6c7187dfc68fc62f177a724e8cd89b3a4f8ca",
+         intel:        "62e3243a62aec5ffcc68767f9af6c7187dfc68fc62f177a724e8cd89b3a4f8ca",
+         arm64_linux:  "969564f4a6692f431136e64be9978408013afba22a70c24e8991bc1454efd607",
+         x86_64_linux: "913b6bd0a845d4be94169ff202b2dec073b6c95ba37b5eb0648a36da2e04478d"
 
   on_macos do
-    sha256 "62db640763a3e4f137902cf152de9fc6aa8920079df084fd2ddb04b292fdb60a"
-
     app "DB Browser for SQLCipher Nightly.app"
 
     zap trash: [
@@ -17,11 +19,10 @@ cask "db-browser-for-sqlcipher@nightly" do
     ]
   end
   on_linux do
-    sha256 arm64_linux:  "b08c5643c1d07c8038b2f40eccb3e1d18ec40190ebd69d780da76c37116017a4",
-           x86_64_linux: "6e6b19d1cfc12f5f74009aace6e5bbcffccba2dad47ee158a505583b4dbe34ca"
-
     app_image "DB.Browser.for.SQLCipher-#{version}-#{arch}.AppImage",
               target: "DBBrowserForSQLCipherNightly.AppImage"
+
+    zap trash: "~/.config/sqlitebrowser"
   end
 
   url "https://github.com/sqlitebrowser/sqlitebrowser/releases/download/nightly/DB.Browser.for.SQLCipher-#{os}#{version}#{url_end}"

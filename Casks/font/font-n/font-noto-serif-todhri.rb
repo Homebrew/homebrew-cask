@@ -8,5 +8,5 @@ cask "font-noto-serif-todhri" do
 
   font "NotoSerifTodhri-Regular.ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

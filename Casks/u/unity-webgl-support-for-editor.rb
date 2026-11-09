@@ -1,6 +1,6 @@
 cask "unity-webgl-support-for-editor" do
-  version "6000.5.10f1,3bd4f66ad299"
-  sha256 "a5c9ded3e1ed82a3d34a62543035b3fb0b7ee17b40a38cbece03a115daf317f3"
+  version "6000.6.8f1,237b6593792b"
+  sha256 "46e07a390e27e55b479efb436d9ed036d3cb688b583767331ebe648aad500891"
 
   url "https://download.unity3d.com/download_unity/#{version.csv.second}/MacEditorTargetInstaller/UnitySetup-WebGL-Support-for-Editor-#{version.csv.first}.pkg"
   name "Unity WebGL Build Support"
@@ -11,10 +11,12 @@ cask "unity-webgl-support-for-editor" do
     cask "unity"
   end
 
-  depends_on :macos
   depends_on cask: "unity"
+  depends_on :macos
 
   pkg "UnitySetup-WebGL-Support-for-Editor-#{version.csv.first}.pkg"
 
   uninstall pkgutil: "com.unity3d.WebGLSupport-#{version.csv.first}"
+
+  zap :not_required
 end

@@ -11,5 +11,5 @@ cask "font-playwrite-at-guides" do
   font "PlaywriteATGuides-Italic.ttf"
   font "PlaywriteATGuides-Regular.ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

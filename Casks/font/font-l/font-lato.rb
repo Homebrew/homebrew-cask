@@ -25,5 +25,5 @@ cask "font-lato" do
   font "Lato2OFL/Lato-Thin.ttf"
   font "Lato2OFL/Lato-ThinItalic.ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

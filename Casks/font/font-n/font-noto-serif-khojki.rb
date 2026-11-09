@@ -8,5 +8,5 @@ cask "font-noto-serif-khojki" do
 
   font "NotoSerifKhojki[wght].ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

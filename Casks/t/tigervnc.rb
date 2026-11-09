@@ -12,7 +12,7 @@ cask "tigervnc" do
     regex(%r{url=.*?/TigerVNC[._-]v?(\d+(?:\.\d+)+)\.dmg}i)
   end
 
-  depends_on macos: :big_sur
+  depends_on :macos
 
   app "TigerVNC.app"
 

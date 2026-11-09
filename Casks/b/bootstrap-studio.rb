@@ -1,9 +1,9 @@
 cask "bootstrap-studio" do
   arch arm: "arm64", intel: "x64"
 
-  version "8.0.1"
-  sha256 arm:   "7a8fe9122381fb2dbc137dc0d8d34a318645a2e11fb710c3625642911cc5d544",
-         intel: "ff99e38acf63fc002a56ee0340118d0b42ef19bc632b9bca8eb064a0d7c56994"
+  version "9.0.1"
+  sha256 arm:   "0c6c505449ea25653e5de51f288594d3273d5b0a558fb04168340ef265629114",
+         intel: "03b8d9afd98db731df10a1d7efaf136196677cd73cd50466b816da45ee019ffd"
 
   url "https://releases.bootstrapstudio.io/#{version}/Bootstrap%20Studio%20(#{arch}).dmg"
   name "Bootstrap Studio"
@@ -21,6 +21,7 @@ cask "bootstrap-studio" do
   app "Bootstrap Studio.app"
 
   zap trash: [
+    "~/Library/Application Support/Bootstrap Studio",
     "~/Library/Application Support/bstudio",
     "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/bg.zine.bootstrapstudio.sfl*",
     "~/Library/Application Support/CrashReporter/Bootstrap Studio*",

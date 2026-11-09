@@ -8,5 +8,5 @@ cask "font-rocknroll-one" do
 
   font "RocknRollOne-Regular.ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

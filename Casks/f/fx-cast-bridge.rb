@@ -31,5 +31,5 @@ cask "fx-cast-bridge" do
 
   uninstall pkgutil: "tf.matt.fx_cast_bridge"
 
-  # No zap stanza required
+  zap :not_required
 end

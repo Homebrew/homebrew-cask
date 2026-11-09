@@ -8,5 +8,5 @@ cask "font-kumbh-sans" do
 
   font "KumbhSans[YOPQ,wght].ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

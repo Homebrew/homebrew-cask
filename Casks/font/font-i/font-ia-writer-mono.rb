@@ -13,5 +13,5 @@ cask "font-ia-writer-mono" do
   font "iA-Fonts-master/iA Writer Mono/Variable/iAWriterMonoV-Italic.ttf"
   font "iA-Fonts-master/iA Writer Mono/Variable/iAWriterMonoV.ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

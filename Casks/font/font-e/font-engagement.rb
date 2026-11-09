@@ -8,5 +8,5 @@ cask "font-engagement" do
 
   font "Engagement-Regular.ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

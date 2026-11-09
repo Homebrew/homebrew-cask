@@ -1,6 +1,6 @@
 cask "amiberry" do
-  version "8.3.0"
-  sha256 "dd797299f70cec573a09b3f5d1bfbaba8f3b4a5421a776d2555e3b8ef897d718"
+  version "8.5.0"
+  sha256 "002bb71af68a86a23c2779258248af71683c6a56caf74cf716e40081b5df9e7a"
 
   url "https://github.com/BlitterStudio/amiberry/releases/download/v#{version}/Amiberry-#{version}-macOS-universal.dmg"
   name "Amiberry"
@@ -16,5 +16,6 @@ cask "amiberry" do
 
   app "Amiberry.app"
 
-  zap trash: "~/Library/Application Support/Amiberry"
+  zap trash: "~/Library/Application Support/Amiberry",
+      rmdir: "~/Documents/Amiberry"
 end

@@ -1,9 +1,9 @@
 cask "corretto@8" do
   arch arm: "aarch64", intel: "x64"
 
-  version "8.504.01.1"
-  sha256 arm:   "995b606c7b1771810dc6e57a2db99dee925f56dbc8194a35682697ad67ac5894",
-         intel: "1c1023d871f7d46219ad516cba505ad1bba2456dd311344a881439fe85cafd60"
+  version "8.512.09.1"
+  sha256 arm:   "3f0c750068ff1c27e76663376b9c86ac7c7fb0d3e01d1526f1f64fe785739f4b",
+         intel: "f89ec3936990c68fc3a3a2e9e3c599623c4490bc17f1043caba2943252e196a7"
 
   url "https://corretto.aws/downloads/resources/#{version}/amazon-corretto-#{version}-macosx-#{arch}.pkg"
   name "Amazon Corretto JDK"
@@ -21,5 +21,6 @@ cask "corretto@8" do
   pkg "amazon-corretto-#{version}-macosx-#{arch}.pkg"
 
   uninstall pkgutil: "com.amazon.corretto.#{version.major}"
-  # No zap stanza required
+
+  zap :not_required
 end

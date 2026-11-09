@@ -14,5 +14,5 @@ cask "font-free-mono-tengwar" do
   font "FreeMonoTengwar.#{version}/FreeMonoTengwar-embedding.ttf"
   font "FreeMonoTengwar.#{version}/FreeMonoTengwar.ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

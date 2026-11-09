@@ -11,6 +11,18 @@ cask "splayer" do
 
   app "SPlayer.app"
 
+  zap trash: [
+    "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/org.splayer.splayerx.sfl*",
+    "~/Library/Application Support/splayer",
+    "~/Library/Caches/org.splayer.splayerx",
+    "~/Library/Caches/org.splayer.splayerx.ShipIt",
+    "~/Library/Caches/splayer-updater",
+    "~/Library/HTTPStorages/org.splayer.splayerx",
+    "~/Library/Logs/splayer",
+    "~/Library/Preferences/org.splayer.splayerx.plist",
+    "~/Library/Saved Application State/org.splayer.splayerx.savedState",
+  ]
+
   caveats do
     requires_rosetta
   end

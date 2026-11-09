@@ -30,5 +30,5 @@ cask "go-agent" do
 
   binary "go-agent-#{version.csv.first}/bin/go-agent"
 
-  # No zap stanza required
+  zap :not_required
 end

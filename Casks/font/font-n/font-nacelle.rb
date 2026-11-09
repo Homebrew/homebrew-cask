@@ -28,5 +28,5 @@ cask "font-nacelle" do
   font "Nacelle-UltraLight.otf"
   font "Nacelle-UltraLightItalic.otf"
 
-  # No zap stanza required
+  zap :not_required
 end

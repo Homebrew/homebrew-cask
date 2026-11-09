@@ -1,6 +1,6 @@
 cask "microsoft-office" do
-  version "16.112.26083020"
-  sha256 "46c0df926b79c87a9a754aad1d571156ebc0c5875a63ae3ef802d83314ee9c45"
+  version "16.114.26110224"
+  sha256 "7441883af5b06154317b026e1159dce83b6cbef6c39f737230abfec1867002f0"
 
   url "https://res.public.onecdn.static.microsoft/mro1cdnstorage/C1297A47-86C4-4C1F-97FA-950631F94777/MacAutoupdate/Microsoft_365_and_Office_#{version}_Installer.pkg"
   name "Microsoft Office"
@@ -37,6 +37,7 @@ cask "microsoft-office" do
   uninstall launchctl: [
               "com.microsoft.office.licensing.helper",
               "com.microsoft.office.licensingV2.helper",
+              "com.microsoft.office.licensingV3.helper",
               "com.microsoft.OneDriveStandaloneUpdater",
               "com.microsoft.OneDriveStandaloneUpdaterDaemon",
               "com.microsoft.OneDriveUpdaterDaemon",
@@ -54,6 +55,7 @@ cask "microsoft-office" do
               "com.microsoft.package.Microsoft_Word.app",
               "com.microsoft.package.Proofing_Tools",
               "com.microsoft.pkg.licensing",
+              "com.microsoft.pkg.licensing.v3",
               "com.microsoft.wdav",
               "com.microsoft.wdav.shim",
             ],
@@ -82,6 +84,7 @@ cask "microsoft-office" do
     "~/Library/Application Scripts/com.microsoft.outlook.profilemanager",
     "~/Library/Application Scripts/com.microsoft.Powerpoint",
     "~/Library/Application Scripts/com.microsoft.Word",
+    "~/Library/Application Scripts/UBF8T346G9.OneDriveStandaloneSuite",
     "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.microsoft.excel.sfl*",
     "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.microsoft.powerpoint.sfl*",
     "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.microsoft.word.sfl*",
@@ -94,6 +97,8 @@ cask "microsoft-office" do
     "~/Library/Containers/com.microsoft.Excel",
     "~/Library/Containers/com.microsoft.netlib.shipassertprocess",
     "~/Library/Containers/com.microsoft.Office365ServiceV2",
+    "~/Library/Containers/com.microsoft.OneDrive.FileProvider",
+    "~/Library/Containers/com.microsoft.OneDrive.FinderSync",
     "~/Library/Containers/com.microsoft.onenote.mac",
     "~/Library/Containers/com.microsoft.onenote.mac.shareextension",
     "~/Library/Containers/com.microsoft.openxml.excel.app",
@@ -105,9 +110,13 @@ cask "microsoft-office" do
     "~/Library/Group Containers/UBF8T346G9.Office",
     "~/Library/Group Containers/UBF8T346G9.OfficeOneDriveSyncIntegration",
     "~/Library/Group Containers/UBF8T346G9.OfficeOsfWebHost",
+    "~/Library/Group Containers/UBF8T346G9.OneDriveStandaloneSuite",
     "~/Library/HTTPStorages/com.microsoft.OneDriveStandaloneUpdater",
     "~/Library/HTTPStorages/com.microsoft.OneDriveStandaloneUpdater.binarycookies",
+    "~/Library/Logs/OneDrive",
     "~/Library/Preferences/com.microsoft.Excel.plist",
+    "~/Library/Preferences/com.microsoft.OneDriveStandaloneUpdater.plist",
+    "~/Library/Preferences/com.microsoft.OneDriveUpdater.plist",
     "~/Library/Preferences/com.microsoft.Outlook.plist",
     "~/Library/Preferences/com.microsoft.Powerpoint.plist",
     "~/Library/Preferences/com.microsoft.Word.plist",

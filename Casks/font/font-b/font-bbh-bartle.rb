@@ -8,5 +8,5 @@ cask "font-bbh-bartle" do
 
   font "BBHBartle-Regular.ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

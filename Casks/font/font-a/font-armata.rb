@@ -8,5 +8,5 @@ cask "font-armata" do
 
   font "Armata-Regular.ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

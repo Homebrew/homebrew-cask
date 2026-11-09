@@ -15,6 +15,8 @@ cask "sauerbraten" do
     end
   end
 
+  disable! date: "2026-11-02", because: :fails_gatekeeper_check
+
   depends_on :macos
 
   app "Sauerbraten.app"

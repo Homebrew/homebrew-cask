@@ -8,5 +8,5 @@ cask "font-noto-sans-indic-siyaq-numbers" do
 
   font "NotoSansIndicSiyaqNumbers-Regular.ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

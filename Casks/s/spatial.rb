@@ -17,5 +17,5 @@ cask "spatial" do
 
   binary "spatial_#{version}/spatial"
 
-  # No zap stanza required
+  zap :not_required
 end

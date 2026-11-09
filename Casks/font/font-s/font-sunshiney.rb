@@ -8,5 +8,5 @@ cask "font-sunshiney" do
 
   font "Sunshiney-Regular.ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

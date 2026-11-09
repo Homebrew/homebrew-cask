@@ -11,5 +11,5 @@ cask "font-b612" do
   font "b612-#{version}/fonts/ttf/B612-Italic.ttf"
   font "b612-#{version}/fonts/ttf/B612-Regular.ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

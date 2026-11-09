@@ -8,5 +8,5 @@ cask "font-indie-flower" do
 
   font "IndieFlower-Regular.ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

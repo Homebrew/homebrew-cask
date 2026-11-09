@@ -1,6 +1,6 @@
 cask "rio" do
-  version "0.5.27"
-  sha256 "1e59d7d642abd5dc3c622ff8418d593acbd0710925367f6b031681d422343e92"
+  version "0.5.29"
+  sha256 "8e7872f3d79496cb7be08bc1ff0fd84ae3bae51aec1ba3a116bc02e502f61592"
 
   url "https://github.com/raphamorim/rio/releases/download/v#{version}/rio.dmg"
   name "Rio"
@@ -22,6 +22,7 @@ cask "rio" do
   uninstall quit: "com.raphaelamorim.rio"
 
   zap trash: [
+    "~/Library/Caches/rio",
     "~/Library/Preferences/com.raphaelamorim.rio.plist",
     "~/Library/Saved Application State/com.raphaelamorim.rio.savedState",
   ]

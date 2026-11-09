@@ -1,6 +1,6 @@
 cask "sxitch" do
-  version "1.4.2"
-  sha256 "5312d4fcf68d31d6868e5c5e8d61268d0fa9c39c7452df110ce692efdb57e6c7"
+  version "1.6.1"
+  sha256 "9941e046634f4ac86a98afd24592da1e1264e6cfebdac1f717a7d2da346b085b"
 
   url "https://pub-de38f9dc4d154d119d16caaa9a29824b.r2.dev/v#{version}/Sxitch.app.zip"
   name "Sxitch"
@@ -8,7 +8,7 @@ cask "sxitch" do
   homepage "https://sxitch.app/"
 
   livecheck do
-    url "https://pub-de38f9dc4d154d119d16caaa9a29824b.r2.dev/v#{version}/version.txt"
+    url "https://pub-de38f9dc4d154d119d16caaa9a29824b.r2.dev/version.txt"
     regex(/^(\d+(?:\.\d+)+)$/i)
   end
 

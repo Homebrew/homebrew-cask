@@ -1,6 +1,6 @@
 cask "rewritebar" do
-  version "2.33.0"
-  sha256 "cf7c46b632e49c3e2aa391ef379bd27db375a46f636372c8d488ad9fdfaf1da1"
+  version "2.38.2"
+  sha256 "7a311a7690d74b43e383cdec9ade0765f40c16d0708b9c2d5f2976e313629c51"
 
   url "https://rewritebar.com/download/v#{version}.zip"
   name "RewriteBar"
@@ -22,7 +22,9 @@ cask "rewritebar" do
   zap trash: [
     "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.m91michel.rewritebar.*",
     "~/Library/Application Support/RewriteBar",
+    "~/Library/Caches/com.m91michel.rewritebar",
     "~/Library/Caches/RewriteBar",
+    "~/Library/HTTPStorages/com.m91michel.rewritebar",
     "~/Library/HTTPStorages/RewriteBar",
     "~/Library/Preferences/com.m91michel.rewritebar.plist",
     "~/Library/Saved Application State/com.m91michel.rewritebar.savedState",

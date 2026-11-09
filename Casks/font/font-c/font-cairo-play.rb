@@ -8,5 +8,5 @@ cask "font-cairo-play" do
 
   font "CairoPlay[slnt,wght].ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

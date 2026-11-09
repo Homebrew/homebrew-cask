@@ -8,7 +8,7 @@ cask "font-genshingothic" do
 
   livecheck do
     url :homepage
-    regex(/href=.*genshingothic[._-]v?(\d+(?:\.\d+)*)\.zip"/i)
+    regex(/href=.*?genshingothic[._-]v?(\d+(?:\.\d+)*)\.zip"/i)
   end
 
   font "GenShinGothic-Bold.ttf"
@@ -33,5 +33,5 @@ cask "font-genshingothic" do
   font "GenShinGothic-P-Regular.ttf"
   font "GenShinGothic-Regular.ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

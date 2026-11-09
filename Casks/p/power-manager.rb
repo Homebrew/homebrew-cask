@@ -1,6 +1,6 @@
 cask "power-manager" do
-  version "5.13.1"
-  sha256 "dd41b83ced319d9856e3f5d516b8d0d2406ff123a5ec5ddcb489b11a23e2aa99"
+  version "5.16.2"
+  sha256 "5eafc9d0733da2140555a8310e0896342e6fde70cc73507ae28737b42d0b4fec"
 
   url "https://www.dssw.co.uk/powermanager/dsswpowermanager-#{version.no_dots}.dmg"
   name "Power Manager"
@@ -20,6 +20,7 @@ cask "power-manager" do
   zap trash: [
     "~/Library/Application Scripts/uk.co.dssw.powermanager.standard",
     "~/Library/Application Scripts/uk.co.dssw.powermanager.update.download",
+    "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/uk.co.dssw.powermanager.standard.sfl*",
     "~/Library/Containers/uk.co.dssw.powermanager.standard",
     "~/Library/Containers/uk.co.dssw.powermanager.update.download",
   ]

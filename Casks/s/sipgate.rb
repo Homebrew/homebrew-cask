@@ -1,6 +1,6 @@
 cask "sipgate" do
-  version "2.44.3"
-  sha256 "da4558577e9270185ef66fcfea3b02bb3a0a965e188d8ccb209e8880f83d1020"
+  version "2.46.2"
+  sha256 "252f5447260f08d14a17f14e4e8e468d33bc515086fa8b5d828f930f2b03ed99"
 
   url "https://s3-eu-central-1.amazonaws.com/desktop.download.sipgate.com/sipgate-#{version}.zip"
   name "sipgate"
@@ -13,11 +13,12 @@ cask "sipgate" do
   end
 
   auto_updates true
-  depends_on macos: :monterey
+  depends_on macos: :ventura
 
   app "sipgate.app"
 
   zap trash: [
+    "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.sipgate.desktop.sfl*",
     "~/Library/Application Support/sipgate-desktop",
     "~/Library/Caches/com.sipgate.desktop",
     "~/Library/Caches/com.sipgate.desktop.ShipIt",

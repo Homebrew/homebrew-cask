@@ -11,5 +11,5 @@ cask "font-grandstander" do
   font "Grandstander-Italic[wght].ttf"
   font "Grandstander[wght].ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

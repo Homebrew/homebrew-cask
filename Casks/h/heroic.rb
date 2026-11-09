@@ -3,10 +3,10 @@ cask "heroic" do
   os macos: "macOS", linux: "linux"
   url_end = on_system_conditional macos: "dmg", linux: "AppImage"
 
-  version "2.22.1"
-  sha256 arm:          "4f803330ae6f0c084876589cef335ce98812b6a1598df2f170451fbf0ecb9007",
-         intel:        "fbf1bf989f5f7206d3508a53779eaca28af7e51542ac761dc1b2bc13421dc310",
-         x86_64_linux: "e91e3171c8cb8a57acfcfc7f665e8c74c5a80cf088d5ea61a2af5e6bcc537762"
+  version "2.22.4"
+  sha256 arm:          "29d5476a4bf1aea4dd3c907253a49ba3272223b420c5bac8c72995b36b57cd89",
+         intel:        "20f99a94ae49068c9a79f3f2ee79932fcf1d0bdc903e19e9a5a09d1683733c08",
+         x86_64_linux: "1664fc3c8e746325f049273272a0eae5a7f653bd3eb4534c2e2a26ef90086e99"
 
   on_macos do
     depends_on macos: :monterey
@@ -26,6 +26,12 @@ cask "heroic" do
     depends_on arch: :x86_64
 
     app_image "Heroic-#{version}-linux-#{arch}.AppImage", target: "Heroic.AppImage"
+
+    zap trash: [
+      "~/.cache/heroic-updater",
+      "~/.config/heroic",
+      "~/.local/state/Heroic",
+    ]
   end
 
   url "https://github.com/Heroic-Games-Launcher/HeroicGamesLauncher/releases/download/v#{version}/Heroic-#{version}-#{os}-#{arch}.#{url_end}"

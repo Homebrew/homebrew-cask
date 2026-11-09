@@ -1,6 +1,6 @@
 cask "meta" do
-  version "2.5.5"
-  sha256 "9c88193cfc9cf9858f10635c8836e9a535c0cc52454082ca97a1213f57ed6080"
+  version "2.6.3"
+  sha256 "4f4e5690dc4168fafeb32a8d102674c4fbe1a2bf056391a54c47bf87df05b642"
 
   url "https://www.nightbirdsevolve.com/meta/updates/bin/Meta%20#{version}.zip"
   name "Meta"
@@ -13,7 +13,7 @@ cask "meta" do
   end
 
   auto_updates true
-  depends_on :macos
+  depends_on macos: :monterey
 
   app "Meta.app"
 

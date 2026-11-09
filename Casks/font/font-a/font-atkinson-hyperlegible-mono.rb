@@ -11,5 +11,5 @@ cask "font-atkinson-hyperlegible-mono" do
   font "AtkinsonHyperlegibleMono-Italic[wght].ttf"
   font "AtkinsonHyperlegibleMono[wght].ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

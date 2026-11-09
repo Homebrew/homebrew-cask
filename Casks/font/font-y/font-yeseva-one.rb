@@ -8,5 +8,5 @@ cask "font-yeseva-one" do
 
   font "YesevaOne-Regular.ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

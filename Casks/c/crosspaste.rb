@@ -2,12 +2,13 @@ cask "crosspaste" do
   arch arm: "aarch64", intel: "amd64"
   url_end = on_system_conditional macos: "mac-#{arch}.zip", linux: "#{arch}.AppImage"
 
-  version "2.2.0.2544"
+  version "2.3.1.2781"
+  sha256 arm:          "dcbc94f97aab359e6aa2fc4d40d3b08c6d83973b85fa08e761b6c99dd4280842",
+         intel:        "aa3c2d7e94220c412947afeab9fdc5fd7c95885b408d8beded831467d0978f01",
+         arm64_linux:  "826e15a1307806919771de317eb1962173a37528e8fe0d26aa3e30268e9f0eb4",
+         x86_64_linux: "75870dd1d827bf2612f6a9b20a56083ede9ce6b65d4af411e288bad95156e233"
 
   on_macos do
-    sha256 arm:   "c4a6e3b4fae2b91ffa06e9d1f8b113e5240fe1b8b2e1f2e1a545e1c2155526a5",
-           intel: "e873143494b6f1796f8953c82491fad8cd132eca4e934b5f82a80cdf2865004f"
-
     depends_on macos: :sonoma
 
     app "CrossPaste.app"
@@ -23,11 +24,13 @@ cask "crosspaste" do
     ]
   end
   on_linux do
-    sha256 arm64_linux:  "66c8317432a3bf1ccc444d915ca2cee9eba7bcc6f83fd70fb2c136423aa81a35",
-           x86_64_linux: "2adb16b74dacffc8aa84d74f2d2d8ba35720f884463f1bcaf094104f16402b24"
-
     app_image "crosspaste-#{version.major_minor_patch}-#{version.split(".").last}-#{arch}.AppImage",
               target: "CrossPaste.AppImage"
+
+    zap trash: [
+      "~/.config/autostart/crosspaste.desktop",
+      "~/.local/share/.crosspaste",
+    ]
   end
 
   url "https://github.com/CrossPaste/crosspaste-desktop/releases/download/#{version}/crosspaste-#{version.major_minor_patch}-#{version.split(".").last}-#{url_end}"

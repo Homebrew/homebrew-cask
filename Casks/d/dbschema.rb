@@ -1,5 +1,5 @@
 cask "dbschema" do
-  version "10.5.2"
+  version "10.6.0"
   sha256 :no_check # required as upstream package is updated in-place
 
   url "https://dbschema.com/download/dbschema_macos_#{version.dots_to_underscores}.dmg"
@@ -27,5 +27,6 @@ cask "dbschema" do
     args:       ["-q"],
   }
 
-  zap trash: "~/Library/Preferences/com.dbschema.dbschema.plist"
+  zap trash: "~/Library/Preferences/com.dbschema.dbschema.plist",
+      rmdir: "~/Desktop/DbSchema*"
 end

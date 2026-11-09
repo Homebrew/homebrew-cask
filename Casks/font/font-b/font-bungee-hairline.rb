@@ -8,5 +8,5 @@ cask "font-bungee-hairline" do
 
   font "BungeeHairline-Regular.ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

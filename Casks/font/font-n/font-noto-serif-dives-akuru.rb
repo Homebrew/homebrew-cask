@@ -8,5 +8,5 @@ cask "font-noto-serif-dives-akuru" do
 
   font "NotoSerifDivesAkuru-Regular.ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

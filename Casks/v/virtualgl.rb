@@ -17,5 +17,5 @@ cask "virtualgl" do
             },
             pkgutil: "com.virtualgl.vglclient"
 
-  # No zap stanza required
+  zap :not_required
 end

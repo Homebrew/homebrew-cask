@@ -1,8 +1,11 @@
 cask "aside" do
-  version "1.0.825.1"
-  sha256 "91d3e6c0fc2256338a1c2f85ae0481b2ceb4a21c0f17105d4cdf29bbd535ba9b"
+  arch arm: "arm64", intel: "x64"
 
-  url "https://releases.aside.com/dev-updater/Aside-#{version}.dmg"
+  version "1.0.1022.1"
+  sha256 arm:   "0ecd3f192482dcf76c72b7488d01fc33dd989fc766e86e0c832b9742bbbc650e",
+         intel: "fd9bbe633da1898e360f261a815cb70148be8da40166843cfc658830b0b83fa5"
+
+  url "https://releases.aside.com/dev-updater/Aside-#{version}-#{arch}.dmg"
   name "Aside"
   desc "Web browser with built-in AI assistant"
   homepage "https://aside.com/"
@@ -10,7 +13,7 @@ cask "aside" do
   livecheck do
     url "https://ptqgesmtzwdmeiknncqc.supabase.co/functions/v1/omaha/version_info.json"
     strategy :json do |json|
-      json.dig("platforms", "mac", "version")
+      json.dig("platforms", "mac", "architectures", arch, "version")
     end
   end
 
@@ -22,13 +25,22 @@ cask "aside" do
   uninstall launchctl: [
               "at.studio.AsideBrowser.UpdaterPrivilegedHelper",
               "at.studio.AsideKeystone.agent",
+              "at.studio.asidekeystone.agent",
               "at.studio.AsideKeystone.xpcservice",
+              "at.studio.asidekeystone.xpcservice",
               "at.studio.AsideUpdater.wake",
             ],
             quit:      "at.studio.AsideBrowser",
+            signal:    [
+              ["TERM", "at.studio.AsideBrowser"],
+              ["TERM", "at.studio.AsideUpdater"],
+            ],
             delete:    [
               "/Library/LaunchDaemons/at.studio.AsideBrowser.UpdaterPrivilegedHelper.plist",
               "/Library/PrivilegedHelperTools/at.studio.AsideBrowser.UpdaterPrivilegedHelper",
+              "~/Library/LaunchAgents/at.studio.asidekeystone.agent.plist",
+              "~/Library/LaunchAgents/at.studio.asidekeystone.xpcservice.plist",
+              "~/Library/LaunchAgents/at.studio.AsideUpdater.wake.plist",
             ]
 
   zap launchctl: [
@@ -43,6 +55,7 @@ cask "aside" do
         "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/at.studio.AsideBrowser.sfl*",
         "~/Library/Aside",
         "~/Library/Caches/Aside",
+        "~/Library/Caches/aside-memory",
         "~/Library/Caches/at.studio.AsideBrowser",
         "~/Library/Caches/at.studio.AsideKeystone",
         "~/Library/Caches/at.studio.AsideKeystone.Agent",

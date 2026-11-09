@@ -8,5 +8,5 @@ cask "font-tilt-warp" do
 
   font "TiltWarp[XROT,YROT].ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

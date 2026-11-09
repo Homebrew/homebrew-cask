@@ -8,5 +8,5 @@ cask "font-raleway-dots" do
 
   font "RalewayDots-Regular.ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

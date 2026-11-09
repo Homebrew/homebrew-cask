@@ -15,5 +15,5 @@ cask "font-gentium-book" do
   font "GentiumBook-#{version}/GentiumBook-SemiBold.ttf"
   font "GentiumBook-#{version}/GentiumBook-SemiBoldItalic.ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

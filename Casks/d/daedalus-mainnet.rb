@@ -1,9 +1,9 @@
 cask "daedalus-mainnet" do
   arch arm: "aarch64", intel: "x86_64"
 
-  version "11.3.0,86724,adf90b52e"
-  sha256 arm:   "4754a30b2a0e9926db61ded865f72ac52f76d0ce49845e080de19d9358396882",
-         intel: "0f3d81f72912c3b22a72fcb0930eaab0ab8a1aa586ba85a279d8378289ce37b8"
+  version "11.6.1,88397,d8ee6df04"
+  sha256 arm:   "74895b201fca45157ae8d0128350ea72400574705b516c5aea6c070307c2e882",
+         intel: "1eeb3ba290c456408e64a6e29436b2d1337a434dd354875ab36a749454be3d38"
 
   url "https://update-cardano-mainnet.iohk.io/daedalus-#{version.csv.first}-#{version.csv.second}-mainnet-#{version.csv.third}-#{arch}-darwin.pkg"
   name "Daedalus Mainnet"
@@ -14,7 +14,7 @@ cask "daedalus-mainnet" do
     url "https://update-cardano-mainnet.iohk.io/daedalus-latest-version.json"
     regex(/daedalus[._-]v?(\d+(?:\.\d+)+)[._-](\d+)(?:[._-]mainnet)?[._-](\h+)/i)
     strategy :json do |json, regex|
-      match = json.dig("platforms", "darwin", "URL")&.match(regex)
+      match = json.dig("platforms", "macos", arch, "URL")&.match(regex)
       next if match.blank?
 
       "#{match[1]},#{match[2]},#{match[3]}"

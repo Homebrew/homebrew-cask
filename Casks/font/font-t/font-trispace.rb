@@ -8,5 +8,5 @@ cask "font-trispace" do
 
   font "Trispace[wdth,wght].ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

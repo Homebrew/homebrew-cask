@@ -1,9 +1,9 @@
 cask "semeru-jdk-open@25" do
   arch arm: "aarch64", intel: "x64"
 
-  version "25.0.4.10"
-  sha256 arm:   "c6da9ef30b526ad3ebfa82fe7a0e7489f4081a8fec7dac3351ee5bbf48e24dcb",
-         intel: "d71d3e4334a6f70ba43f2f981ccf28040b5a335e41f1c516d0abb750d09ffd10"
+  version "25.0.5.0"
+  sha256 arm:   "523f85b78b49f5f0d50b09a73ef813d5268771d01f6e3cf22235ee431598c7b7",
+         intel: "ceb2f10b9dbc496e1e4fd0210376101c4c34da78d3d6e68e3961bc77bd223216"
 
   url "https://github.com/ibmruntimes/semeru#{version.major}-binaries/releases/download/jdk-#{version}/ibm-semeru-open-jdk_#{arch}_mac_#{version}.pkg"
   name "IBM Semeru Runtime (JDK 25) Open Edition"
@@ -21,5 +21,5 @@ cask "semeru-jdk-open@25" do
 
   uninstall pkgutil: "net.ibm-semeru-open.#{version.major}.jdk"
 
-  # No zap stanza required
+  zap :not_required
 end

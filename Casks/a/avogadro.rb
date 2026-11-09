@@ -1,9 +1,9 @@
 cask "avogadro" do
   arch arm: "-arm64"
 
-  version "2.0.0"
-  sha256 arm:   "6605ec8934ff3206b60bde53f9a3624faf1bda73aa140ba6fbaa0593378b3a42",
-         intel: "68730783f6d141faaa23bb9972e87fd83d35f6a0173ea7295d675c54a0e5d160"
+  version "2.1.0"
+  sha256 arm:   "d6bdc4348ccf53c01e14259bdaedb489c8584da356d78abe4f421099ea95229c",
+         intel: "991a30a87c8305e20cb85afbd04638dfe8854f6cce6848f0caf029bf81e1abe3"
 
   url "https://github.com/OpenChemistry/avogadrolibs/releases/download/#{version}/Avogadro2-#{version}-Darwin#{arch}.dmg"
   name "Avogadro"
@@ -13,6 +13,8 @@ cask "avogadro" do
   depends_on :macos
 
   app "Avogadro2.app"
+
+  uninstall quit: "cc.avogadro"
 
   zap trash: [
     "~/Library/Application Support/OpenChemistry/Avogadro",

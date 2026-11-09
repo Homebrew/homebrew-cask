@@ -33,5 +33,5 @@ cask "font-opendyslexic-nerd-font" do
   font "OpenDyslexicNerdFontPropo-Italic.otf"
   font "OpenDyslexicNerdFontPropo-Regular.otf"
 
-  # No zap stanza required
+  zap :not_required
 end

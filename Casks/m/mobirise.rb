@@ -1,7 +1,7 @@
 cask "mobirise" do
   arch arm: "-m"
 
-  version "6.1.12"
+  version "6.2.0"
   sha256 :no_check
 
   url "https://download.mobirise.com/MobiriseSetup#{arch}.dmg"
@@ -19,6 +19,7 @@ cask "mobirise" do
   app "Mobirise.app"
 
   zap trash: [
+    "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.mobirise.mobirise.sfl*",
     "~/Library/Application Support/Mobirise",
     "~/Library/Application Support/Mobirise.com",
     "~/Library/Preferences/com.mobirise.Mobirise.plist",

@@ -2,9 +2,9 @@ cask "github@beta" do
   arch arm: "arm64", intel: "x64"
   platform = on_arch_conditional arm: "darwin-arm64", intel: "darwin"
 
-  version "3.6.5-beta2-8838faae"
-  sha256 arm:   "70bf267b9683c2657cdd9e061476f5f44ff2260024397db8e5fa06bb27a135af",
-         intel: "7b13283420b41e126807f3c27727d11261f827968d79273a02b29a083b7d685a"
+  version "3.6.11-beta1-c9cf6648"
+  sha256 arm:   "af49b2cada963c6cfb8365aea3d5f655a2b810bc7b82e57ebba8e3f75592dfbc",
+         intel: "d9e6b6c09fad0779481f050cf5654d5ad2122fd3997a628044e2fef80d9c224a"
 
   url "https://desktop.githubusercontent.com/releases/#{version}/GitHubDesktop-#{arch}.zip"
   name "GitHub Desktop"
@@ -19,7 +19,7 @@ cask "github@beta" do
 
   auto_updates true
   conflicts_with cask: "github"
-  depends_on macos: :monterey
+  depends_on macos: :ventura
 
   app "GitHub Desktop.app"
   binary "#{appdir}/GitHub Desktop.app/Contents/Resources/app/static/github.sh", target: "github"
@@ -33,6 +33,7 @@ cask "github@beta" do
         "~/Library/Application Support/ShipIt_stdout.log",
         "~/Library/Caches/com.github.GitHubClient",
         "~/Library/Caches/com.github.GitHubClient.ShipIt",
+        "~/Library/HTTPStorages/com.github.GitHubClient",
         "~/Library/Logs/GitHub Desktop",
         "~/Library/Preferences/ByHost/com.github.GitHubClient.ShipIt.*.plist",
         "~/Library/Preferences/com.github.GitHubClient.helper.plist",

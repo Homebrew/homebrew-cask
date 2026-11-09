@@ -1,11 +1,11 @@
 cask "advanced-renamer" do
   arch arm: "arm", intel: "intel"
 
-  version "4.25"
-  sha256 arm:   "f9a5b139c8294cbd8b58bd8b5755526d676f32444ea383e7835c89edc8deecc1",
-         intel: "d99b8f82ca162a16c8d3f9fb48c9f0f9495660be3d2ebcef7cf7aea0f40b683e"
+  version "4.28"
+  sha256 arm:   "3d255e02e1afc47d2688b79dabf2b72228147d70d544cddf0e3fa5ea043dc1f4",
+         intel: "9d10f28ef70f85e7c792ef07d0caa8b30bd02e28cc0fc8a2e38d33430a667466"
 
-  url "https://www.advancedrenamer.com/down/macos/#{arch}/AdvancedRenamer_#{version.tr(".", "_")}.dmg"
+  url "https://www.advancedrenamer.com/down/macos/#{arch}/AdvancedRenamer_#{version.dots_to_underscores}.dmg"
   name "Advanced Renamer"
   desc "Batch file renaming utility"
   homepage "https://www.advancedrenamer.com/"
@@ -21,7 +21,7 @@ cask "advanced-renamer" do
     end
   end
 
-  depends_on macos: :big_sur
+  depends_on :macos
 
   app "Advanced Renamer.app"
 

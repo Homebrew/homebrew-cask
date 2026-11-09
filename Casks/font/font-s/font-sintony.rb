@@ -11,5 +11,5 @@ cask "font-sintony" do
   font "Sintony-Bold.ttf"
   font "Sintony-Regular.ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

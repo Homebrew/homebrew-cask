@@ -8,5 +8,5 @@ cask "font-lohit-tamil" do
 
   font "Lohit-Tamil.ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

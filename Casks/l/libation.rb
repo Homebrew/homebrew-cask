@@ -1,9 +1,9 @@
 cask "libation" do
   arch arm: "arm64", intel: "x64"
 
-  version "14.2.0"
-  sha256 arm:   "2f76e85ca7a2b238905c0ab8e7253057758edb3aeb21365778766fa36189cc6e",
-         intel: "6e9d7dcc3eb8e0a736f5097cc3f691c14289f6a69fe9d2f34d9d47ad41807996"
+  version "14.2.5"
+  sha256 arm:   "2f412f1116f933c589e4495500873287320d31fce5ffd885a2b4aa64717f2a9d",
+         intel: "c2c0431c89d9ced2bf3b70df9ad83aa61b76ceae42e93cf052535b969bc16e86"
 
   url "https://github.com/rmcrackan/Libation/releases/download/v#{version}/Libation.#{version}-macOS-chardonnay-#{arch}.dmg"
   name "Libation"
@@ -16,7 +16,9 @@ cask "libation" do
   binary "#{appdir}/Libation.app/Contents/MacOS/LibationCli", target: "libationcli"
 
   zap trash: [
+    "~/Library/Application Support/CrashReporter/Libation_*.plist",
     "~/Library/Application Support/Libation",
+    "~/Library/Logs/DiagnosticReports/Libation-*.ips",
     "~/Library/Preferences/org.libation.macos.plist",
   ]
 end

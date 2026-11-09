@@ -8,5 +8,5 @@ cask "font-hermeneus-one" do
 
   font "HermeneusOne-Regular.ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

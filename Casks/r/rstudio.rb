@@ -1,6 +1,6 @@
 cask "rstudio" do
-  version "2026.08.2,200"
-  sha256 "4e7147d90bf5702b8b8d8dac5c3666b943f89a3997b787a5d7c3b8f5bb07b5d0"
+  version "2026.10.1,239"
+  sha256 "20c3b5978e93004e10807a273ed2e98daff2c44710d43c44e70d17761147f75d"
 
   url "https://download1.rstudio.org/electron/macos/RStudio-#{version.csv.first}-#{version.csv.second}.dmg"
   name "RStudio"
@@ -25,7 +25,12 @@ cask "rstudio" do
 
   uninstall quit: "com.rstudio.desktop"
 
-  zap trash: "~/.rstudio-desktop"
+  zap trash: [
+        "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.rstudio.desktop.sfl*",
+        "~/Library/Application Support/RStudio",
+        "~/Library/Preferences/com.rstudio.desktop.plist",
+      ],
+      rmdir: "~/.rstudio-desktop"
 
   caveats <<~EOS
     #{token} depends on R. The R Project provides official binaries:

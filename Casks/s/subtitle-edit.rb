@@ -3,11 +3,11 @@ cask "subtitle-edit" do
   os macos: "macOS", linux: "Linux"
   url_end = on_system_conditional macos: "dmg", linux: "tar.gz"
 
-  version "5.1.0"
-  sha256 arm:          "c1b7b9472bc015784e346c210effd6bca2c1fd187110ec928b1e344bccbb155e",
-         intel:        "182d8c80276e5ca7a2937cd5e34aa25a987c3a7faf9f714b0a01eab7e947905e",
-         arm64_linux:  "6655968696782c5bea9b841185e3f85785e1f028c280a73ba0c865c21afe7b4d",
-         x86_64_linux: "455938238969d3aa0a2a500ac061b66161bed1602a96846e01c883322cd5255f"
+  version "5.4.0"
+  sha256 arm:          "23ff6eb5afd79c4448cced84979b3c428bbab6f2de0de9c01a5f3370f91042e6",
+         intel:        "881503bd1ae93ed04fee3fb93439a200373f4463a17c02b1de4f2c224610a56e",
+         arm64_linux:  "ae5ee9f68a0b897f7e5debbd602af1e0be6582e1e59b284177a8b23585c909b0",
+         x86_64_linux: "e41ed6cc8b3d8b2ca69fdc6d573320900f0555a1ea5d2767d6ecc47353967548"
 
   on_macos do
     depends_on macos: :monterey
@@ -22,6 +22,8 @@ cask "subtitle-edit" do
   end
   on_linux do
     binary "SubtitleEdit", target: "subtitleedit"
+
+    zap trash: "~/.config/Subtitle Edit"
   end
 
   url "https://github.com/SubtitleEdit/subtitleedit/releases/download/v#{version}/SubtitleEdit-#{os}-#{arch}.#{url_end}"
@@ -31,6 +33,6 @@ cask "subtitle-edit" do
 
   livecheck do
     url :url
-    strategy :github_latest
+    regex(/^v?(\d+(?:\.\d+)+)$/i)
   end
 end

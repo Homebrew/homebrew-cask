@@ -8,5 +8,5 @@ cask "font-braah-one" do
 
   font "BraahOne-Regular.ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

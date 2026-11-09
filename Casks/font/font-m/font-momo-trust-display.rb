@@ -8,5 +8,5 @@ cask "font-momo-trust-display" do
 
   font "MomoTrustDisplay-Regular.ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

@@ -3,17 +3,20 @@ cask "aigcpanel" do
   os macos: "mac", linux: "linux"
   url_end = on_system_conditional macos: "dmg", linux: "AppImage"
 
-  version "2.0.0"
-  sha256 arm:          "5ed88f3ab6ab9fbff56a4967d2d4bc74daff91c867bd4c32c05784d921d73a4a",
-         intel:        "d25346bea12380e583e03e4ccb7b94ae7c1aed222fd13f910b23c18db419b7a1",
-         arm64_linux:  "b7d4f7ba2b4ac17b0b6dab1a3a41a60b8b9622505e9f01ca58e8f6dc09b8d17c",
-         x86_64_linux: "2afea5d4f14ec2343ceddcfe1b19a95dc1d8be3775c33585f36f64d6d2261819"
+  version "2.6.0"
+  sha256 arm:          "09e47cf83352063567bd0d05f3edcbff861d54713c8359c3c3eecd207db95c86",
+         intel:        "8c99ca3d4ed59a8d7d2f2fefb826731c7ca94976c34fbe27ea25d5f0ca6f6ec5",
+         arm64_linux:  "78a6ff101e60e2a57fa8bb673d89bbf4539b91b18da77a3583f810999b0a6c56",
+         x86_64_linux: "8a7964ad1d3bbf64eb61cac569f73a69c41a077169771c039dca83c8dd5786fa"
 
   on_macos do
     app "AigcPanel.app"
 
+    uninstall quit: "AigcPanel"
+
     zap trash: [
       "~/Library/Application Support/aigcpanel",
+      "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/aigcpanel.sfl*",
       "~/Library/Preferences/AigcPanel.plist",
       "~/Library/Saved Application State/AigcPanel.savedState",
     ]
@@ -21,6 +24,8 @@ cask "aigcpanel" do
   on_linux do
     app_image "AigcPanel-#{version.csv.second || version.csv.first}-linux-#{arch}.AppImage",
               target: "AigcPanel.AppImage"
+
+    zap trash: "~/.config/aigcpanel"
   end
 
   url "https://github.com/modstart-lib/aigcpanel/releases/download/v#{version.csv.first}/AigcPanel-#{version.csv.second || version.csv.first}-#{os}-#{arch}.#{url_end}"
@@ -31,13 +36,17 @@ cask "aigcpanel" do
   livecheck do
     url :url
     regex(%r{/v?(\d+(?:\.\d+)+)/AigcPanel[._-]v?(\d+(?:\.\d+)+)[._-]#{os}[._-]#{arch}\.#{url_end}}i)
-    strategy :github_latest do |json, regex|
-      json["assets"]&.map do |asset|
-        match = asset["browser_download_url"]&.match(regex)
-        next if match.blank?
+    strategy :github_releases do |json, regex|
+      json.map do |release|
+        next if release["draft"] || release["prerelease"]
 
-        (match[2] == match[1]) ? match[1] : "#{match[1]},#{match[2]}"
-      end
+        release["assets"]&.map do |asset|
+          match = asset["browser_download_url"]&.match(regex)
+          next if match.blank?
+
+          (match[2] == match[1]) ? match[1] : "#{match[1]},#{match[2]}"
+        end
+      end.flatten
     end
   end
 end

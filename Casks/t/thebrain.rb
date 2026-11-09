@@ -1,9 +1,9 @@
 cask "thebrain" do
   arch arm: "arm64", intel: "x64"
 
-  version "15.0.612"
-  sha256 arm:   "9672b36ded3147504b333dc63ad1feb780d88f1980828bdf2e1530d6a11f4a70",
-         intel: "23c39119725a8beb35001b86338dec29f242d226fa1f9f5b68e094d7ff73205e"
+  version "15.0.647"
+  sha256 arm:   "464673bf77cc7825bba822741108d849f4468f4da7f7cea349ed047df3000f4b",
+         intel: "f2d824fcb319527d80ef73e4f5861350697ed1b3d7c8c7fee5046b9fb6da8bd6"
 
   url "https://updater.thebrain.com/files/TheBrain-#{version}-#{arch}.dmg"
   name "TheBrain"
@@ -20,9 +20,15 @@ cask "thebrain" do
 
   app "TheBrain #{version.major}.app"
 
+  uninstall quit: "com.thebrain.dekutron"
+
   zap trash: [
+    "~/Library/Application Scripts/com.thebrain.dekutron.QuickThoughtShare",
+    "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.thebrain.dekutron.sfl*",
     "~/Library/Caches/com.thebrain.TheBrain",
+    "~/Library/Containers/com.thebrain.dekutron.QuickThoughtShare",
     "~/Library/HTTPStorages/com.thebrain.TheBrain",
+    "~/Library/Preferences/com.thebrain.dekutron.plist",
     "~/Library/Preferences/com.thebrain.TheBrain.plist",
   ]
 end

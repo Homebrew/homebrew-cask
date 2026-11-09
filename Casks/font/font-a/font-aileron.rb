@@ -28,5 +28,5 @@ cask "font-aileron" do
   font "Aileron-UltraLight.otf"
   font "Aileron-UltraLightItalic.otf"
 
-  # No zap stanza required
+  zap :not_required
 end

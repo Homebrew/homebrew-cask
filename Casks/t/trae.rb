@@ -1,19 +1,22 @@
 cask "trae" do
   arch arm: "arm64", intel: "x64"
 
-  version "2.3.61406"
-  sha256 arm:   "b8064ce3461dd899dbfa6e3b46ebdaf5ae045c1eaad580eff3513947dbc336f8",
-         intel: "b7167e5d9d17693042adf4896eeb36fa50881be4402c22aae39af95916691752"
+  version "2.3.99397"
+  sha256 arm:   "2644135f0e783c6a2f5860b8e8fdae9c0a72cbb1fe935d1e4bf022812ca04452",
+         intel: "2d8066c64456c93822de64c30371ad031ba1c44e97c2450a17f0a5d41c4957ff"
 
-  url "https://lf-cdn.trae.ai/obj/trae-ai-us/pkg/app/releases/stable/#{version}/darwin/Trae-darwin-#{arch}.dmg"
+  url "https://lf-cdn.trae.ai/obj/trae-ai-us/pkg/app/releases/stable/#{version}/darwin/TRAE-darwin-#{arch}.dmg"
   name "Trae"
   desc "Adaptive AI IDE"
   homepage "https://www.trae.ai/"
 
   livecheck do
     url "https://api.trae.ai/icube/api/v1/native/version/trae/latest"
-    strategy :json do |json|
-      json.dig("data", "manifest", "darwin", "version")
+    regex(%r{/stable/v?(\d+(?:\.\d+)+)/darwin/}i)
+    strategy :json do |json, regex|
+      json.dig("data", "manifest", "darwin", "versions")&.map do |item|
+        item["url"]&.[](regex, 1)
+      end
     end
   end
 

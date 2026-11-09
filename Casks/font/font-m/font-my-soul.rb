@@ -8,5 +8,5 @@ cask "font-my-soul" do
 
   font "MySoul-Regular.ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

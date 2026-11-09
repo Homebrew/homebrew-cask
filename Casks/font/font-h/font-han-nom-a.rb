@@ -14,5 +14,5 @@ cask "font-han-nom-a" do
   font "HAN NOM A.ttf"
   font "HAN NOM B.ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

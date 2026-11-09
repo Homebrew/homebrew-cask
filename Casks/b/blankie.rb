@@ -1,6 +1,6 @@
 cask "blankie" do
-  version "2.0.2"
-  sha256 "0a964ed8f8bd45c73c2a559097ec8f8401c3f8e4251a0e80af28b539d1588f79"
+  version "2.1.0"
+  sha256 "6b7747e01531196dc229c91508e5eaf60a6babf4178cd91f996ee5a3273b2b49"
 
   url "https://github.com/codybrom/blankie/releases/download/v#{version}/Blankie.zip"
   name "Blankie"
@@ -14,9 +14,12 @@ cask "blankie" do
   app "Blankie.app"
 
   zap trash: [
+    "~/Library/Application Scripts/com.codybrom.blankie",
+    "~/Library/Application Scripts/group.com.codybrom.blankie",
     "~/Library/Application Support/Blankie",
     "~/Library/Caches/com.codybrom.blankie",
     "~/Library/Containers/com.codybrom.Blankie",
+    "~/Library/Group Containers/group.com.codybrom.blankie",
     "~/Library/Preferences/com.codybrom.blankie.plist",
     "~/Library/Saved Application State/com.codybrom.blankie.savedState",
   ]

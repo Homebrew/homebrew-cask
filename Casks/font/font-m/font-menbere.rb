@@ -8,5 +8,5 @@ cask "font-menbere" do
 
   font "Menbere[wght].ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

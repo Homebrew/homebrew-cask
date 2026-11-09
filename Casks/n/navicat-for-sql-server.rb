@@ -1,5 +1,5 @@
 cask "navicat-for-sql-server" do
-  version "17.3.12"
+  version "17.3.13"
   sha256 :no_check
 
   language "zh-CN" do
@@ -57,9 +57,11 @@ cask "navicat-for-sql-server" do
     cask "navicat-premium"
   end
 
-  depends_on macos: :big_sur
+  depends_on :macos
 
-  app "Navicat For SQL Server.app"
+  app "Navicat for SQL Server.app"
+
+  uninstall quit: "com.navicat.NavicatForSQLServer"
 
   zap trash: [
     "~/Library/Application Support/PremiumSoft CyberTech/Navicat CC/Navicat for SQL Server",

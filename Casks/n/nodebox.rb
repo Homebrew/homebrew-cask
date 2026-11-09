@@ -1,6 +1,6 @@
 cask "nodebox" do
-  version "3.1.0"
-  sha256 "b46328edcd6fdf2f3f6dcbb87995d53b2eb4efeb6afaa36fff55943bd3873b4e"
+  version "3.2.0"
+  sha256 "28f6e6b0e8c37e0f49227de5efb45262678e5cbd9512f28efc7d1528773a4710"
 
   url "https://github.com/nodebox/nodebox/releases/download/v#{version}/NodeBox-#{version}.dmg"
   name "NodeBox"
@@ -12,7 +12,7 @@ cask "nodebox" do
     regex(/href=.*?NodeBox[._-]v?(\d+(?:\.\d+)+)\.dmg/i)
   end
 
-  depends_on :macos
+  depends_on macos: :monterey
 
   app "NodeBox.app"
 

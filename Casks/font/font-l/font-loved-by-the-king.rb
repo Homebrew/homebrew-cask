@@ -8,5 +8,5 @@ cask "font-loved-by-the-king" do
 
   font "LovedbytheKing.ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

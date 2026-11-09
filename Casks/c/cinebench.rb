@@ -10,10 +10,10 @@ cask "cinebench" do
 
   livecheck do
     url "https://www.maxon.net/en/downloads/cinebench-downloads"
-    regex(/href=.*Cinebench[._-]?v?(\d+(?:\.\d+)*)[._-]macOS\.dmg/i)
+    regex(/href=.*?Cinebench[._-]?v?(\d+(?:\.\d+)*)[._-]macOS\.dmg/i)
   end
 
-  depends_on macos: :big_sur
+  depends_on :macos
 
   app "Cinebench.app"
 

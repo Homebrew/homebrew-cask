@@ -8,5 +8,5 @@ cask "font-fustat" do
 
   font "Fustat[wght].ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

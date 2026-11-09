@@ -8,5 +8,5 @@ cask "font-noto-serif-thai" do
 
   font "NotoSerifThai[wdth,wght].ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

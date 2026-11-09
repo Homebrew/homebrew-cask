@@ -1,6 +1,5 @@
 cask "hyper" do
   arch arm: "arm64", intel: "x64"
-  livecheck_arch = on_arch_conditional arm: "_arm64"
 
   version "3.4.1"
   sha256 arm:   "7d2440fdd93fde4101e603fe2de46732b54292a868ad17dbcb55288e6f8430a8",
@@ -11,12 +10,7 @@ cask "hyper" do
   desc "Terminal built on web technologies"
   homepage "https://hyper.is/"
 
-  livecheck do
-    url "https://releases.hyper.is/update/mac#{livecheck_arch}/0.0.0"
-    strategy :json do |json|
-      json["name"]&.delete_prefix("v")
-    end
-  end
+  deprecate! date: "2026-11-08", because: :discontinued
 
   auto_updates true
   conflicts_with cask: "hyper@canary"

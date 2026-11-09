@@ -23,5 +23,5 @@ cask "font-spectral-sc" do
   font "SpectralSC-SemiBold.ttf"
   font "SpectralSC-SemiBoldItalic.ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

@@ -8,5 +8,5 @@ cask "font-spirax" do
 
   font "Spirax-Regular.ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

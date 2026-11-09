@@ -11,8 +11,9 @@ cask "codux" do
   homepage "https://www.codux.com/"
 
   deprecate! date: "2025-10-25", because: :unmaintained
+  disable! date: "2026-11-01", because: :unmaintained
 
-  depends_on macos: :big_sur
+  depends_on :macos
 
   app "Codux.app"
 

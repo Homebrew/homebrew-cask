@@ -8,5 +8,5 @@ cask "font-khyay" do
 
   font "Khyay-Regular.ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

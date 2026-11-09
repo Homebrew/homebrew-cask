@@ -15,5 +15,5 @@ cask "font-crimson-text" do
   font "CrimsonText-SemiBold.ttf"
   font "CrimsonText-SemiBoldItalic.ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

@@ -8,5 +8,5 @@ cask "font-happy-monkey" do
 
   font "HappyMonkey-Regular.ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

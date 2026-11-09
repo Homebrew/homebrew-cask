@@ -1,9 +1,9 @@
 cask "fabric-app" do
   arch arm: "arm64", intel: "x64"
 
-  version "0.2.10"
-  sha256 arm:   "863c2b494ad2ea6d7cf370f2e6cc2d6c8e27b7865f6a3a89093c6de9a5e2ef76",
-         intel: "d71cb53fb07cdcf2c9cb1ee8788de2e90d2088eda438bcde0e606cb526ec15e9"
+  version "0.2.16"
+  sha256 arm:   "3c3df850e030adc367e1d5b90c5f4aff320e36085f02e6acbac6471e3dc4facc",
+         intel: "cc5b2c60eb437b55a6f0235dcc4cdc9619b8d6f60e5a980aa12f17d4a594c246"
 
   url "https://download.todesktop.com/220930m1ahpjvoh/Fabric%20#{version}-#{arch}-mac.zip"
   name "Fabric"
@@ -21,7 +21,9 @@ cask "fabric-app" do
   app "Fabric.app"
 
   zap trash: [
+    "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.todesktop.220930m1ahpjvoh.sfl*",
     "~/Library/Application Support/Fabric",
     "~/Library/Logs/Fabric",
+    "~/Library/Preferences/com.todesktop.220930m1ahpjvoh.plist",
   ]
 end

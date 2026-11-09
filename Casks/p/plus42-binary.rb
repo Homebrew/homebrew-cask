@@ -1,5 +1,5 @@
 cask "plus42-binary" do
-  version "1.3.15"
+  version "1.5.2"
   sha256 :no_check
 
   url "https://thomasokken.com/plus42/download/Plus42Mac.zip"
@@ -23,5 +23,6 @@ cask "plus42-binary" do
     "~/Library/HTTPStorages/com.thomasokken.Plus42b.binarycookies",
     "~/Library/Preferences/com.thomasokken.Plus42b.plist",
     "~/Library/Saved Application State/com.thomasokken.Plus42b",
+    "~/Library/WebKit/com.thomasokken.Plus42b",
   ]
 end

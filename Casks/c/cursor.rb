@@ -3,11 +3,11 @@ cask "cursor" do
   os macos: "darwin", linux: "linux"
   url_end = on_system_conditional macos: "zip", linux: "AppImage"
 
-  version "3.19.13,dd066f332fcea7382764400fde902f61920648d5"
-  sha256 arm:          "e870dfefc6feb19f283e69cdcf2af17fcb542afdcb9968bc9a1a7a1beeaf9e11",
-         intel:        "9f02758c8fb0c1d73d23fbcce304c634c3b6815a09da90234711006162960b1a",
-         arm64_linux:  "0126d8c0110bf6103a76082accf7627fcaa5697f6ac563ccfe185f2d5c14b69e",
-         x86_64_linux: "07d9033ff4ecbc4d8e9a1604abbed9ca242db61a371509516b8531d510e9b508"
+  version "3.29.15,86776fcb52ca505783155631089b65d646f9b03f"
+  sha256 arm:          "8fa25e50a63b04e8d8a8645834e7471d0d102b229b8c16bf9e06dd623e694986",
+         intel:        "7d40217c72ae20a49006ded37d1dd03fcac3a42932e84785a44fbeeb33a3cf11",
+         arm64_linux:  "e037445d1f155ca54490a20e0a2638774cde7b9393b6d910b62359dc0890c455",
+         x86_64_linux: "aef16ecf27dbea88625d06d4f945c6d1152c489f2fedd5032c978d696f9417d1"
 
   on_macos do
     url "https://downloads.cursor.com/production/#{version.csv.second}/#{os}/#{arch}/Cursor-darwin-#{arch}.#{url_end}"
@@ -24,13 +24,13 @@ cask "cursor" do
       "~/Library/Application Support/Caches/cursor-updater",
       "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.todesktop.230313mzl4w4u92.sfl*",
       "~/Library/Application Support/Cursor",
-      "~/Library/Caches/com.todesktop.*",
-      "~/Library/Caches/com.todesktop.*.ShipIt",
-      "~/Library/HTTPStorages/com.todesktop.*",
+      "~/Library/Caches/com.todesktop.230313mzl4w4u92",
+      "~/Library/Caches/com.todesktop.230313mzl4w4u92.ShipIt",
+      "~/Library/HTTPStorages/com.todesktop.230313mzl4w4u92",
       "~/Library/Logs/Cursor",
-      "~/Library/Preferences/ByHost/com.todesktop.*.ShipIt.*.plist",
-      "~/Library/Preferences/com.todesktop.*.plist",
-      "~/Library/Saved Application State/com.todesktop.*.savedState",
+      "~/Library/Preferences/ByHost/com.todesktop.230313mzl4w4u92.ShipIt.*.plist",
+      "~/Library/Preferences/com.todesktop.230313mzl4w4u92.plist",
+      "~/Library/Saved Application State/com.todesktop.230313mzl4w4u92.savedState",
       "~/Library/Saved Application State/todesktop.com.ToDesktop-Installer.savedState",
     ]
   end
@@ -40,6 +40,12 @@ cask "cursor" do
     url "https://downloads.cursor.com/production/#{version.csv.second}/#{os}/#{arch}/Cursor-#{version.csv.first}-#{artifact_arch}.#{url_end}"
 
     app_image "Cursor-#{version.csv.first}-#{artifact_arch}.AppImage", target: "Cursor.AppImage"
+
+    zap trash: [
+      "~/.config/Cursor",
+      "~/.cursor",
+      "~/.cursor-tutor",
+    ]
   end
 
   name "Cursor"

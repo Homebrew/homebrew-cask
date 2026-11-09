@@ -15,11 +15,11 @@ cask "alisma" do
     end
   end
 
-  depends_on macos: :big_sur
+  depends_on :macos
 
   pkg "alisma#{version.major}/alismaInstaller.pkg"
 
   uninstall pkgutil: "co.eclecticlight.pkg.alismaInstaller"
 
-  # No zap stanza required
+  zap :not_required
 end

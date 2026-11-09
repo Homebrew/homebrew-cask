@@ -8,5 +8,5 @@ cask "font-new-tegomin" do
 
   font "NewTegomin-Regular.ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

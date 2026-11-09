@@ -1,6 +1,6 @@
 cask "bezel" do
-  version "4.7.1"
-  sha256 "a4c63645eddc34d1cefd8a949aaf9565b2f8ad5c72a84ac5e5420e9616fea00a"
+  version "5.4.1"
+  sha256 "e7a4d29c6dd8144d0a066180efc1e602b90e43b09f5bf8eaad19cf226c011594"
 
   url "https://download.nonstrict.eu/bezel/Bezel-#{version}.zip"
   name "Bezel"
@@ -20,7 +20,13 @@ cask "bezel" do
   app "Bezel.app"
 
   zap trash: [
+    "~/Library/Application Scripts/com.nonstrict.BezelAppleTVHelper",
+    "~/Library/Application Scripts/com.nonstrict.BezelDALService",
+    "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.nonstrict.bezel-direct.sfl*",
+    "~/Library/Application Support/com.nonstrict.Bezel-direct",
     "~/Library/Caches/com.nonstrict.Bezel-direct",
+    "~/Library/Containers/com.nonstrict.BezelAppleTVHelper",
+    "~/Library/Containers/com.nonstrict.BezelDALService",
     "~/Library/HTTPStorages/com.nonstrict.Bezel-direct",
     "~/Library/Preferences/com.nonstrict.Bezel-direct.plist",
   ]

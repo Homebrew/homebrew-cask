@@ -4,13 +4,14 @@ cask "lm-studio" do
   os macos: "darwin", linux: "linux"
   url_end = on_system_conditional macos: "dmg", linux: "AppImage"
 
-  version "0.4.23,1"
+  version "0.4.28,2"
+  sha256 arm:          "f8be634f1eeabaa19d9004d6de8b8bf8cd805a22e34b1f9538d4d702cf884775",
+         arm64_linux:  "8a99806356e167844c929dae30d49f8be8c48a0aaf6895d17e85163c6635bcd3",
+         x86_64_linux: "a3e6cf8233697be0a8ad6871197b424242af3c5a346671aeed59959ed7eebf11"
 
   on_macos do
-    sha256 "f450f510d975608a45fbf54cd892915c285066cc07cbf3441d7ddb0ba3329f0e"
-
-    depends_on macos: :monterey
     depends_on arch: :arm64
+    depends_on macos: :monterey
 
     app "LM Studio.app"
 
@@ -20,6 +21,7 @@ cask "lm-studio" do
     ]
 
     zap trash: [
+      "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/ai.elementlabs.lmstudio.sfl*",
       "~/Library/Application Support/LM Studio",
       "~/Library/Caches/ai.elementlabs.lmstudio",
       "~/Library/Caches/ai.elementlabs.lmstudio.ShipIt",
@@ -30,10 +32,13 @@ cask "lm-studio" do
     ]
   end
   on_linux do
-    sha256 arm64_linux:  "3333f28050744ad4bc293b995aad0047e66d890209df9dd01e582975d39ad7d6",
-           x86_64_linux: "c1bdf195281e25dc921af5c91eb2502035240dce1217140c43036d6cf3038fd8"
-
     app_image "LM-Studio-#{version.tr(",", "-")}-#{arch}.AppImage", target: "LM Studio.AppImage"
+
+    zap trash: [
+      "~/.cache/lm-studio-updater",
+      "~/.config/LM Studio",
+      "~/.config/LM-Studio",
+    ]
   end
 
   url "https://installers.lmstudio.ai/#{os}/#{arch}/#{version.tr(",", "-")}/LM-Studio-#{version.tr(",", "-")}-#{arch}.#{url_end}"

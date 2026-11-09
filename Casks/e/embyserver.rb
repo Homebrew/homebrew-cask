@@ -1,9 +1,9 @@
 cask "embyserver" do
   arch arm: "arm64", intel: "x64"
 
-  version "4.9.5.0"
-  sha256 arm:   "65ba970a0037edeefbbba957c65a0acabdb129e543589beb85408b98c03573aa",
-         intel: "a7b4c010dbcb573fe27338399f637386a7423c751c0f96103f81497920380a11"
+  version "4.10.2.0"
+  sha256 arm:   "6f4afc702d4f62b5879b543151dd327e41ec994c4b23038b42b583b13ff155c1",
+         intel: "5d825a353b65ed662206b620c5f2267a7a10043b91a6f8da47dd49375ee25a82"
 
   url "https://github.com/MediaBrowser/Emby.Releases/releases/download/#{version}/embyserver-osx-#{arch}-#{version}.zip"
   name "Emby Server"
@@ -18,6 +18,8 @@ cask "embyserver" do
   depends_on :macos
 
   app "osx-#{arch}/EmbyServer.app"
+
+  uninstall quit: "com.embyapp.embymediaserver"
 
   zap trash: "~/.config/emby-server"
 end

@@ -1,5 +1,5 @@
 cask "cavalry" do
-  version "2.7.2"
+  version "2.8.1"
   sha256 :no_check
 
   url "https://cavalry.studio/downloads/latest/Cavalry.dmg"
@@ -15,6 +15,8 @@ cask "cavalry" do
   depends_on macos: :monterey
 
   app "Cavalry.app"
+
+  uninstall quit: "com.scenegroup.cavalry"
 
   zap trash: [
     "~/Library/Application Support/Cavalry",

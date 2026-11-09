@@ -53,5 +53,5 @@ cask "font-new-computer-modern" do
   font "newcm-#{version}/otf/NewCMUncial10-Book.otf"
   font "newcm-#{version}/otf/NewCMUncial10-Regular.otf"
 
-  # No zap stanza required
+  zap :not_required
 end

@@ -1,6 +1,6 @@
 cask "nani" do
-  version "1.1.8"
-  sha256 "c157543a17eb8278bd855c0c795615886c93b840a154a0cc51f29f4c5562d4f5"
+  version "1.1.15"
+  sha256 "b3cf3501b5ba2509c5f89c9ce93aaf891f7a2524267f49664cdc71ebd02d4502"
 
   url "https://nani-desktop.kiok.jp/artifacts/nani-#{version}.dmg"
   name "Nani Translate"
@@ -17,5 +17,9 @@ cask "nani" do
 
   app "Nani.app"
 
-  zap trash: "~/Library/Application Support/Nani"
+  zap trash: [
+    "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/jp.kiok.nani.sfl*",
+    "~/Library/Application Support/Nani",
+    "~/Library/Preferences/jp.kiok.nani.plist",
+  ]
 end

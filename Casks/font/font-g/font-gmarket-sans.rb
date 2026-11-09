@@ -10,5 +10,5 @@ cask "font-gmarket-sans" do
   font "GmarketSansOTF/GmarketSansLight.otf"
   font "GmarketSansOTF/GmarketSansMedium.otf"
 
-  # No zap stanza required
+  zap :not_required
 end

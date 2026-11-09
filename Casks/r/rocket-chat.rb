@@ -1,6 +1,6 @@
 cask "rocket-chat" do
-  version "4.17.0"
-  sha256 "8856fc17dc5eff1f5912b3931295087b204ed09c8b019a51f9ae96b56e18a528"
+  version "4.19.1"
+  sha256 "7cd5f8236d54b0b0f82eecab6d9e6ddf567e61c41e0b2ff7aa5a6a4aac89eee1"
 
   url "https://github.com/RocketChat/Rocket.Chat.Electron/releases/download/#{version.csv.first}/rocketchat-#{version.csv.second || version.csv.first}-mac.dmg"
   name "Rocket.Chat"
@@ -30,10 +30,12 @@ cask "rocket-chat" do
   app "Rocket.Chat.app"
 
   zap trash: [
+    "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/chat.rocket.sfl*",
     "~/Library/Application Support/Rocket.Chat",
     "~/Library/Caches/chat.rocket",
     "~/Library/Caches/chat.rocket.electron.helper",
     "~/Library/Caches/chat.rocket.ShipIt",
+    "~/Library/Logs/Rocket.Chat",
     "~/Library/Preferences/chat.rocket.electron.helper.plist",
     "~/Library/Preferences/chat.rocket.plist",
     "~/Library/Saved Application State/chat.rocket.savedState",

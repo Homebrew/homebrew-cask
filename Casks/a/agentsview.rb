@@ -3,15 +3,13 @@ cask "agentsview" do
   os macos: "darwin", linux: "linux"
   url_end = on_system_conditional macos: "dmg", linux: "AppImage"
 
-  version "0.42.0"
-  sha256 arm:          "836ba9b6993d617d420f6683f738d5b58daf282fa6eb7634db79328e8b6afc65",
-         intel:        "6c7257eb2bf142f7666619d8b8f3d4f89b40a6e2b2cda721317f5d405d4a7b31",
-         arm64_linux:  "e7c873a6f4d9285adb615ea06c4e0ae51f9dc9bcd525e074337f69519fe71e9f",
-         x86_64_linux: "73f374d2b9982ce4b2211d920e4d7f4da9aa56e561428f404db0d85ed82c654b"
+  version "0.46.1"
+  sha256 arm:          "bb127ecad6849332f6f4c6a5925bcd26a439257f648a608a36eb510c1843a85c",
+         intel:        "a32de4b538321e7e6a5d7990928de01476040bef8f6ad5e3ffc30581fb51dd1f",
+         arm64_linux:  "692d5ee506d6fe496fc9007d33c45e769b53235a7d2820902d3f12c2612b67d6",
+         x86_64_linux: "ccc4a316e341dbd1f4107fd44dcaea0e4e36e871186a3d9a3630b93892ac3128"
 
   on_macos do
-    depends_on macos: :big_sur
-
     app "AgentsView.app"
     binary "#{appdir}/AgentsView.app/Contents/MacOS/agentsview"
 
@@ -24,6 +22,12 @@ cask "agentsview" do
   end
   on_linux do
     app_image "AgentsView_#{version}_#{arch}.AppImage", target: "AgentsView.AppImage"
+
+    zap trash: [
+      "~/.agentsview",
+      "~/.local/share/applications/agentsview-desktop-handler.desktop",
+      "~/.local/share/io.agentsview.desktop",
+    ]
   end
 
   url "https://github.com/kenn-io/agentsview/releases/download/v#{version}/AgentsView_#{version}_#{arch}.#{url_end}"

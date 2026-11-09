@@ -26,5 +26,5 @@ cask "desktoppr" do
 
   uninstall pkgutil: "com.scriptingosx.desktoppr"
 
-  # No zap stanza required
+  zap :not_required
 end

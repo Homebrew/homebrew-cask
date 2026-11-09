@@ -11,5 +11,5 @@ cask "font-piazzolla" do
   font "Piazzolla-Italic[opsz,wght].ttf"
   font "Piazzolla[opsz,wght].ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

@@ -13,7 +13,7 @@ cask "isimulator" do
 
   app "iSimulator.app"
 
-  zap delete: [
+  zap trash: [
     "~/Library/Application Support/niels.jin.iSimulator",
     "~/Library/Caches/niels.jin.iSimulator",
     "~/Library/Preferences/niels.jin.iSimulator.plist",

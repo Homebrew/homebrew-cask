@@ -8,5 +8,5 @@ cask "font-bitcount-grid-double" do
 
   font "BitcountGridDouble[CRSV,ELSH,ELXP,slnt,wght].ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

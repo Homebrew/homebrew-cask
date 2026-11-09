@@ -10,8 +10,6 @@ cask "deskreen" do
          x86_64_linux: "25c54a448344587257ce977288c4b3c7e729fc1cc7061ad7471622cd09a47ab2"
 
   on_macos do
-    depends_on macos: :big_sur
-
     app "Deskreen CE.app"
 
     zap trash: [
@@ -23,15 +21,12 @@ cask "deskreen" do
   end
   on_linux do
     app_image "deskreen-ce-#{version}-#{arch}.AppImage", target: "Deskreen.AppImage"
+
+    zap trash: "~/.config/deskreen-ce"
   end
 
   url "https://github.com/pavlobu/deskreen/releases/download/v#{version}/#{os}-ce-#{version}-#{arch}.#{url_end}"
   name "Deskreen"
   desc "Turns any device with a web browser into a secondary screen"
   homepage "https://deskreen.com/"
-
-  livecheck do
-    url :url
-    strategy :github_latest
-  end
 end

@@ -13,5 +13,5 @@ cask "font-liberation-mono-for-powerline" do
   font "Literation Mono Powerline Italic.ttf"
   font "Literation Mono Powerline.ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

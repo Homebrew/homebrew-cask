@@ -20,6 +20,7 @@ cask "bettercmdtab" do
     end
   end
 
+  conflicts_with cask: "bettercmdtab@beta"
   depends_on macos: :ventura
 
   app "BetterCmdTab.app"

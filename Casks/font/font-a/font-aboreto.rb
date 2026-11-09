@@ -8,5 +8,5 @@ cask "font-aboreto" do
 
   font "Aboreto-Regular.ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

@@ -12,5 +12,5 @@ cask "font-karantina" do
   font "Karantina-Light.ttf"
   font "Karantina-Regular.ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

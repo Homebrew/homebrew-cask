@@ -8,5 +8,5 @@ cask "font-zcool-xiaowei" do
 
   font "ZCOOLXiaoWei-Regular.ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

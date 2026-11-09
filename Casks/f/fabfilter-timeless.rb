@@ -18,5 +18,5 @@ cask "fabfilter-timeless" do
 
   uninstall pkgutil: "com.fabfilter.Timeless.*"
 
-  # No zap stanza required
+  zap :not_required
 end

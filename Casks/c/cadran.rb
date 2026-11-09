@@ -1,6 +1,6 @@
 cask "cadran" do
-  version "1.3.12"
-  sha256 "e994edaed3113413e4aeffd3d769bdd3329f18e0582986050bcbda5533245ac6"
+  version "2.0.3"
+  sha256 "0ad635f195c0cbefd277bb66472a83591b4e80f5000cf3386291faa9d1295257"
 
   url "https://github.com/Ilyomix/Cadran-releases/releases/download/v#{version}/Cadran-#{version}.dmg"
   name "Cadran"
@@ -19,6 +19,9 @@ cask "cadran" do
 
   zap trash: [
     "~/Library/Application Support/Cadran",
+    "~/Library/Caches/com.cadran.wallpaper-contrast",
+    "~/Library/Caches/ilyomix.Cadran",
+    "~/Library/HTTPStorages/ilyomix.Cadran*",
     "~/Library/Preferences/ilyomix.Cadran.plist",
   ]
 end

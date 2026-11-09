@@ -15,5 +15,5 @@ cask "font-sarpanch" do
   font "Sarpanch-Regular.ttf"
   font "Sarpanch-SemiBold.ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

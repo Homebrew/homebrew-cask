@@ -1,9 +1,9 @@
 cask "yakit" do
   arch arm: "arm64", intel: "x64"
 
-  version "1.4.8-0905"
-  sha256 arm:   "e4ee46ba0bed1275186d6f250c4b97aafc110da7054c0def58ff12c6b1938412",
-         intel: "a8408550c18f300f66aa5f18b16bde8ce8c18ec2610c350907b03e6c71f5bab7"
+  version "1.4.9-1109"
+  sha256 arm:   "b4693a8dae4acc67f31b5a2fb1ade1a15757bc31e2d4b3d80ac8b9f76d89be49",
+         intel: "c92bc065ed8ac2728402864e9c93fd35b0362d33150dcac3ffdbab67da66f122"
 
   url "https://github.com/yaklang/yakit/releases/download/v#{version}/Yakit-#{version}-darwin-#{arch}.dmg"
   name "Yakit"
@@ -12,7 +12,7 @@ cask "yakit" do
 
   livecheck do
     url :url
-    regex(/^v?(\d+(?:[.-]\d+)+)$/)
+    regex(/^v?(\d+(?:[.-]\d+)+)$/i)
   end
 
   depends_on :macos

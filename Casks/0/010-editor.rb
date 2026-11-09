@@ -1,9 +1,9 @@
 cask "010-editor" do
   arch arm: "ARM64", intel: "64"
 
-  version "16.0.4"
-  sha256 arm:   "fb253925d3cd4b605f8992ec04bcb20be89e54da9b2166daded7819532035ad9",
-         intel: "bec2345607091a57894d0e42d496a20a410b7d67f08058720b1fba8f99a57489"
+  version "17.0.1"
+  sha256 arm:   "6144cac83a6f4c5ab81a9391f2074804e472098a686925de7ad2085bf47a7c8a",
+         intel: "b3ec752155d6390306bfe86de34e2661adde9f89bbd2937a16509c3aa8e94db2"
 
   url "https://download.sweetscape.com/010EditorMac#{arch}Installer#{version}.dmg"
   name "010 Editor"
@@ -15,9 +15,11 @@ cask "010-editor" do
     regex(/Version:?\s*(\d+(?:\.\d+)+),\s*macOS/i)
   end
 
-  depends_on macos: :big_sur
+  depends_on :macos
 
   app "010 Editor.app"
+
+  uninstall quit: "com.SweetScape.010Editor"
 
   zap trash: [
         "~/.config/SweetScape",

@@ -8,5 +8,5 @@ cask "font-graduate" do
 
   font "Graduate-Regular.ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

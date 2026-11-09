@@ -8,5 +8,5 @@ cask "font-hanuman" do
 
   font "Hanuman[wght].ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

@@ -14,5 +14,5 @@ cask "font-battambang" do
   font "Battambang-Regular.ttf"
   font "Battambang-Thin.ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

@@ -1,6 +1,6 @@
 cask "incident-io" do
-  version "1.4.2"
-  sha256 "839e30a68ea8d37249ca67bdd51355f449a6f650d1ffef66f6d6b80502542172"
+  version "1.4.16"
+  sha256 "c8ba5ba7744227dffc660e314329a7dfd48118a86875b0dfd56452944fd7856c"
 
   url "https://storage.googleapis.com/incident-io-production-downloads/incident.io-#{version}.zip"
   name "incident.io"
@@ -17,5 +17,9 @@ cask "incident-io" do
 
   app "incident.io.app"
 
-  zap trash: "~/Library/Application Support/incident.io"
+  zap trash: [
+    "~/Library/Application Support/incident.io",
+    "~/Library/Caches/com.incidentio.desktop",
+    "~/Library/Preferences/com.incidentio.desktop.plist",
+  ]
 end

@@ -1,6 +1,6 @@
 cask "cloudflare-warp@beta" do
-  version "2026.7.1210.1"
-  sha256 "44e16d2848bee801f759a915623b0b819a48aba834c1fe35be8724bacf13bda9"
+  version "2026.9.1555.1"
+  sha256 "e96af4d074a7cadaf1429a054333259dba8739c401675102f4e3a8e8a47bc57e"
 
   url "https://downloads.cloudflareclient.com/v1/download/macos/version/#{version}"
   name "Cloudflare WARP"
@@ -14,19 +14,16 @@ cask "cloudflare-warp@beta" do
 
   auto_updates true
   conflicts_with cask: "cloudflare-warp"
-  depends_on macos: :sonoma
+  depends_on macos: :sequoia
 
   pkg "Cloudflare_WARP_#{version}.pkg"
 
   uninstall launchctl: [
               "com.cloudflare.1dot1dot1dot1.macos.loginlauncherapp",
               "com.cloudflare.1dot1dot1dot1.macos.warp.daemon",
+              "com.cloudflare.warp.updater",
             ],
             quit:      "com.cloudflare.1dot1dot1dot1.macos",
-            script:    {
-              executable: "/Applications/Cloudflare WARP.app/Contents/Resources/uninstall.sh",
-              sudo:       true,
-            },
             pkgutil:   "com.cloudflare.1dot1dot1dot1.macos",
             delete:    [
               "/usr/local/bin/warp-cli",
@@ -34,16 +31,20 @@ cask "cloudflare-warp@beta" do
               "/usr/local/bin/warp-diag",
             ]
 
-  zap trash: [
-    "/Library/LaunchDaemons/com.cloudflare.1dot1dot1dot1.macos.warp.daemon.plist",
-    "~/Library/Application Scripts/com.cloudflare.1dot1dot1dot1.macos.loginlauncherapp",
-    "~/Library/Application Support/com.cloudflare.1dot1dot1dot1.macos",
-    "~/Library/Caches/com.cloudflare.1dot1dot1dot1.macos",
-    "~/Library/Caches/com.plausiblelabs.crashreporter.data/com.cloudflare.1dot1dot1dot1.macos",
-    "~/Library/Containers/com.cloudflare.1dot1dot1dot1.macos.loginlauncherapp",
-    "~/Library/HTTPStorages/com.cloudflare.1dot1dot1dot1.macos",
-    "~/Library/HTTPStorages/com.cloudflare.1dot1dot1dot1.macos.binarycookies",
-    "~/Library/Preferences/com.cloudflare.1dot1dot1dot1.macos.plist",
-    "~/Library/WebKit/com.cloudflare.1dot1dot1dot1.macos",
-  ]
+  zap script: {
+        executable: "/Applications/Cloudflare WARP.app/Contents/Resources/uninstall.sh",
+        sudo:       true,
+      },
+      trash:  [
+        "/Library/LaunchDaemons/com.cloudflare.1dot1dot1dot1.macos.warp.daemon.plist",
+        "~/Library/Application Scripts/com.cloudflare.1dot1dot1dot1.macos.loginlauncherapp",
+        "~/Library/Application Support/com.cloudflare.1dot1dot1dot1.macos",
+        "~/Library/Caches/com.cloudflare.1dot1dot1dot1.macos",
+        "~/Library/Caches/com.plausiblelabs.crashreporter.data/com.cloudflare.1dot1dot1dot1.macos",
+        "~/Library/Containers/com.cloudflare.1dot1dot1dot1.macos.loginlauncherapp",
+        "~/Library/HTTPStorages/com.cloudflare.1dot1dot1dot1.macos",
+        "~/Library/HTTPStorages/com.cloudflare.1dot1dot1dot1.macos.binarycookies",
+        "~/Library/Preferences/com.cloudflare.1dot1dot1dot1.macos.plist",
+        "~/Library/WebKit/com.cloudflare.1dot1dot1dot1.macos",
+      ]
 end

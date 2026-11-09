@@ -23,11 +23,21 @@ cask "omnifocus" do
       skip "Legacy version"
     end
   end
-  on_sonoma :or_newer do
+  on_sonoma do
     version "4.8.13"
     sha256 "bc547b38e18d34409603666dc467ef3b83de615f728b53554003ac7d88c44ea7"
 
     url "https://downloads.omnigroup.com/software/macOS/14/OmniFocus-#{version}.dmg"
+
+    livecheck do
+      skip "Legacy version"
+    end
+  end
+  on_sequoia :or_newer do
+    version "4.9.3"
+    sha256 "4c0f7f1783c5f30be99b0c48c8a57df70e58652878edbf801a968640fb7cec3f"
+
+    url "https://downloads.omnigroup.com/software/macOS/15/OmniFocus-#{version}.dmg"
 
     livecheck do
       url "https://www.omnigroup.com/download/latest/omnifocus/"

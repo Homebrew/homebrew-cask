@@ -32,6 +32,5 @@ cask "mds" do
     "~/Library/Application Support/com.twocanoes.mds.sync",
     "~/Library/Application Support/MDS",
     "~/Library/Logs/com.twocanoes.mds.log",
-    "~/Library/Preferences/com.apple.imdsmsrecordstore.plist",
   ]
 end

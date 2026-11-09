@@ -9,10 +9,10 @@ cask "asset-catalog-tinkerer" do
 
   livecheck do
     url :url
-    strategy :github_latest
+    regex(/^v?(\d+(?:\.\d+)+)$/i)
   end
 
-  depends_on macos: :big_sur
+  depends_on :macos
 
   app "Asset Catalog Tinkerer.app"
 

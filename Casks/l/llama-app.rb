@@ -1,6 +1,6 @@
 cask "llama-app" do
-  version "0.42.0"
-  sha256 "26babd81703cd35ca1c6dd90df15c0fd56e1a053a34710c4d143ea8235b453c4"
+  version "0.47.0"
+  sha256 "7fa356591ab1f37639cfa1f5e50b2eba52940f578965c1427b2d4eaa1571350b"
 
   url "https://github.com/ggml-org/Llama-macOS/releases/download/#{version}/Llama.dmg"
   name "Llama"
@@ -26,6 +26,7 @@ cask "llama-app" do
     "~/Library/HTTPStorages/app.llama.Llama",
     "~/Library/HTTPStorages/app.llamabarn.LlamaBarn",
     "~/Library/HTTPStorages/app.llamabarn.LlamaBarn.binarycookies",
+    "~/Library/Logs/Llama",
     "~/Library/Preferences/app.llama.Llama.plist",
     "~/Library/Preferences/app.llamabarn.LlamaBarn.plist",
     "~/Library/WebKit/app.llamabarn.LlamaBarn",

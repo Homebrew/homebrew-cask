@@ -12,5 +12,5 @@ cask "font-belanosima" do
   font "Belanosima-Regular.ttf"
   font "Belanosima-SemiBold.ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

@@ -9,7 +9,7 @@ cask "timemachineeditor" do
 
   livecheck do
     url :homepage
-    regex(/href=.*TimeMachineEditor\s*v?(\d+(?:\.\d+)+)/i)
+    regex(/href=.*?TimeMachineEditor\s*v?(\d+(?:\.\d+)+)/i)
   end
 
   auto_updates true

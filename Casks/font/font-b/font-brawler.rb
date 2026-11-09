@@ -11,5 +11,5 @@ cask "font-brawler" do
   font "Brawler-Bold.ttf"
   font "Brawler-Regular.ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

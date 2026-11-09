@@ -13,5 +13,5 @@ cask "font-delugia-book" do
   font "delugia-book/DelugiaBookLight-Italic.ttf"
   font "delugia-book/DelugiaBookLight.ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

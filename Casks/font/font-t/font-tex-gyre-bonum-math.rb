@@ -13,5 +13,5 @@ cask "font-tex-gyre-bonum-math" do
 
   font "texgyrebonum-math-#{version.no_dots}/opentype/texgyrebonum-math.otf"
 
-  # No zap stanza required
+  zap :not_required
 end

@@ -8,5 +8,5 @@ cask "font-marhey" do
 
   font "Marhey[wght].ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

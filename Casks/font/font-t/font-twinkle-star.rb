@@ -8,5 +8,5 @@ cask "font-twinkle-star" do
 
   font "TwinkleStar-Regular.ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

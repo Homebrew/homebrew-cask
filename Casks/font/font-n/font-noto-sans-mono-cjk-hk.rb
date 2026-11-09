@@ -13,5 +13,5 @@ cask "font-noto-sans-mono-cjk-hk" do
   font "NotoSansMonoCJKhk-Bold.otf"
   font "NotoSansMonoCJKhk-Regular.otf"
 
-  # No zap stanza required
+  zap :not_required
 end

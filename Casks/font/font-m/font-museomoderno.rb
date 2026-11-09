@@ -11,5 +11,5 @@ cask "font-museomoderno" do
   font "MuseoModerno-Italic[wght].ttf"
   font "MuseoModerno[wght].ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

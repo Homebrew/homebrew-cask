@@ -2,12 +2,12 @@ cask "ngrok" do
   arch arm: "arm64", intel: "amd64"
 
   on_arm do
-    version "3.39.11,dy27whJwwmb,a"
-    sha256 "9324a6552d74e25d5bdfdbedc4b32422c96f044fda37877498ad8ef10bddf7f7"
+    version "3.39.13,msmi2kd3cjc,a"
+    sha256 "514967480546b968e87e9ec47efd513ce5012e11000957f9696a05c73b05b908"
   end
   on_intel do
-    version "3.39.11,8QQF2ciKqxM,a"
-    sha256 "c6b9b3d9184fc08c33fb8b181d9f241d8f5d61162a0be0521b6dfc1f11813a96"
+    version "3.39.13,9bmfVHa69NJ,a"
+    sha256 "b0ec8786315fd41e4da490aa88cf7868f554ef7ea2873b435ce971d02961c1a9"
   end
 
   url "https://bin.ngrok.com/#{version.csv.third}/#{version.csv.second}/ngrok-v#{version.major}-#{version.csv.first}-darwin-#{arch}.zip"
@@ -26,6 +26,15 @@ cask "ngrok" do
   depends_on :macos
 
   binary "ngrok"
+  generate_completions_from_executable "/usr/bin/env", "SHELL=/bin/bash",
+                                       "#{staged_path}/ngrok", "completion",
+                                       base_name: "ngrok", shells: [:bash], shell_parameter_format: :none
+  generate_completions_from_executable "/usr/bin/env", "SHELL=/bin/zsh",
+                                       "#{staged_path}/ngrok", "completion",
+                                       base_name: "ngrok", shells: [:zsh], shell_parameter_format: :none
+  generate_completions_from_executable "/usr/bin/env", "SHELL=/bin/fish",
+                                       "#{staged_path}/ngrok", "completion",
+                                       base_name: "ngrok", shells: [:fish], shell_parameter_format: :none
 
   postflight_steps do
     set_permissions "ngrok", "0755"
@@ -35,11 +44,4 @@ cask "ngrok" do
     "~/.ngrok#{version.major}",
     "~/Library/Application Support/ngrok",
   ]
-
-  caveats <<~EOS
-    To install shell completions, add this to your profile:
-      if command -v ngrok &>/dev/null; then
-        eval "$(ngrok completion)"
-      fi
-  EOS
 end

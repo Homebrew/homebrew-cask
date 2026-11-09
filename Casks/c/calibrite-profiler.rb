@@ -1,6 +1,6 @@
 cask "calibrite-profiler" do
-  version "3.1.2"
-  sha256 "b976a74bbe10aca00794aac225f3f7ca594e039ee82960793da526c3d097a52e"
+  version "3.1.3"
+  sha256 "dce19872ab6e441aa87544fe184110f60a01a2f653edacc423d24e4707278098"
 
   url "https://github.com/LUMESCA/calibrite-profiler-releases/releases/download/v#{version}/calibrite-PROFILER-#{version}.dmg"
   name "calibrite PROFILER"

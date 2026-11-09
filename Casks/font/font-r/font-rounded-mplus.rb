@@ -55,5 +55,5 @@ cask "font-rounded-mplus" do
   font "rounded-mplus-2p-regular.ttf"
   font "rounded-mplus-2p-thin.ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

@@ -8,5 +8,5 @@ cask "font-noto-sans-malayalam" do
 
   font "NotoSansMalayalam[wdth,wght].ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

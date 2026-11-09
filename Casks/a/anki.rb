@@ -24,9 +24,9 @@ cask "anki" do
     end
   end
   on_ventura :or_newer do
-    version "26.08.1"
-    sha256 arm:   "fa9ddd3c005a2246a349d6b571f925fed4a4624a7d2151ccd87ef3eaf46b9993",
-           intel: "180c9ded2f7d3661699de151d9fcfa1128132cefca620ae66977dc404d782d56"
+    version "26.09.4"
+    sha256 arm:   "527b968b88d54cb0308d1de7a1ee193109863546e1cb62dcd016bd93bd816684",
+           intel: "a31d673c39851f0f6eb3fa53f2570cd06182b402d414e0d5716fab8b96296159"
 
     url "https://github.com/ankitects/anki/releases/download/#{version}/anki-#{version}-mac-#{arch}.dmg"
 
@@ -43,6 +43,8 @@ cask "anki" do
   depends_on :macos
 
   app "Anki.app"
+
+  uninstall quit: "net.ankiweb.anki"
 
   zap trash: [
     "~/Library/Application Support/Anki*",

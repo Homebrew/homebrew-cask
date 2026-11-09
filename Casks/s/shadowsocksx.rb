@@ -7,10 +7,21 @@ cask "shadowsocksx" do
   desc "Removed according to regulations"
   homepage "https://github.com/shadowsocks/shadowsocks-iOS/wiki/Shadowsocks-for-OSX-Help"
 
-  conflicts_with cask: "shadowsocksx-ng-r"
+  conflicts_with cask: [
+    "shadowsocksx-ng",
+    "shadowsocksx-ng-r",
+  ]
   depends_on :macos
 
   app "ShadowsocksX.app"
+
+  uninstall quit: "clowwindy.ShadowsocksX"
+
+  zap trash: [
+    "/Library/Application Support/ShadowsocksX",
+    "~/.ShadowsocksX",
+    "~/Library/Preferences/clowwindy.ShadowsocksX.plist",
+  ]
 
   caveats do
     requires_rosetta

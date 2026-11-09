@@ -8,5 +8,5 @@ cask "font-profontx" do
 
   font "ProFontX/ProFontX"
 
-  # No zap stanza required
+  zap :not_required
 end

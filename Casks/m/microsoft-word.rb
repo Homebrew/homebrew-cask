@@ -18,8 +18,8 @@ cask "microsoft-word" do
     end
   end
   on_sonoma :or_newer do
-    version "16.112.26083020"
-    sha256 "9156b92606948613d5fae45f87369fe378f8834ed6416c18b6c67fcca25460cd"
+    version "16.114.26110224"
+    sha256 "56cf89c9694a25ee2ea1deaf29b1317f15b800647a2d3619219b91f2e7b9cc38"
 
     livecheck do
       url "https://go.microsoft.com/fwlink/p/?linkid=525134"
@@ -48,11 +48,15 @@ cask "microsoft-word" do
         },
       ]
 
-  uninstall launchctl: "com.microsoft.office.licensingV2.helper",
+  uninstall launchctl: [
+              "com.microsoft.office.licensingV2.helper",
+              "com.microsoft.office.licensingV3.helper",
+            ],
             quit:      "com.microsoft.autoupdate2",
             pkgutil:   [
               "com.microsoft.package.Microsoft_Word.app",
               "com.microsoft.pkg.licensing",
+              "com.microsoft.pkg.licensing.v3",
             ]
 
   zap trash: [

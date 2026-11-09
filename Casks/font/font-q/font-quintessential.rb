@@ -8,5 +8,5 @@ cask "font-quintessential" do
 
   font "Quintessential-Regular.ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

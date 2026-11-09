@@ -1,6 +1,6 @@
 cask "bettermouse" do
-  version "1.6,8985"
-  sha256 "cf9c288e9ecbfb2956848965e76b84dfe706ce2eebc3a6a9a3163859b60e1507"
+  version "1.7,9092"
+  sha256 "3fdad25aa5f68c091f33d708158f468a4f93dc24020ad586ddc6741a43efddce"
 
   url "https://better-mouse.com/wp-content/uploads/BetterMouse.#{version.csv.first}.#{version.csv.second}.zip"
   name "BetterMouse"
@@ -13,7 +13,7 @@ cask "bettermouse" do
   end
 
   auto_updates true
-  depends_on macos: :big_sur
+  depends_on macos: :monterey
 
   app "BetterMouse.app"
 

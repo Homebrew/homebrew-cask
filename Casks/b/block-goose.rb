@@ -1,9 +1,9 @@
 cask "block-goose" do
   arch intel: "_intel_mac"
 
-  version "1.49.0"
-  sha256 arm:   "b26c3e0bdb4d32f2d9da1eaa5e3566d5637e5b15cd2fb78348b67e2b434e6510",
-         intel: "23cad5bd9c84da7bd068ac6aa4271d78f09c325ceac5795770a652f6bf3ebc3d"
+  version "1.57.0"
+  sha256 arm:   "8c7e0446fcac698841be1274da3cdf57ae09ac6712175b1715c3b4fa39516d3f",
+         intel: "5811118d129f3e5fd25f96fb67cf41d6e0bdcfd5ffeff9a1aeb1dff2daacdb0d"
 
   url "https://github.com/block/goose/releases/download/v#{version}/Goose#{arch}.zip"
   name "Goose"
@@ -33,5 +33,9 @@ cask "block-goose" do
 
   app "Goose.app"
 
-  zap trash: "~/Library/Application Support/Goose"
+  zap trash: [
+    "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.electron.goose.sfl*",
+    "~/Library/Application Support/Goose",
+    "~/Library/Preferences/com.electron.goose.plist",
+  ]
 end

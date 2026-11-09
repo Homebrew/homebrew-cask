@@ -8,5 +8,5 @@ cask "font-linefont" do
 
   font "Linefont[wdth,wght].ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

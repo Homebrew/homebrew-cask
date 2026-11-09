@@ -8,5 +8,5 @@ cask "font-combo" do
 
   font "Combo-Regular.ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

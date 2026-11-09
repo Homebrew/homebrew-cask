@@ -11,5 +11,5 @@ cask "font-sour-gummy" do
   font "SourGummy-Italic[wdth,wght].ttf"
   font "SourGummy[wdth,wght].ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

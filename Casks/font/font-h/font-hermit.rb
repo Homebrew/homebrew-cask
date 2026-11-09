@@ -18,5 +18,5 @@ cask "font-hermit" do
   font "Hermit-Regular.otf"
   font "Hermit-RegularItalic.otf"
 
-  # No zap stanza required
+  zap :not_required
 end

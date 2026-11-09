@@ -1,6 +1,6 @@
 cask "reverso" do
-  version "2.16.1,669"
-  sha256 "4412378fe20249463ee855fdbc3f86ec3cf3dd0f3c182dcd623f317395d9bdee"
+  version "2.17.2,710"
+  sha256 "3aa90dadd43faa993a64a230449fc1d6aa6cfecc0551b822842ce043c7db77b6"
 
   url "https://cdn.reverso.net/download/reverso/desktop/macos/distrib/Reverso_#{version.csv.first}.#{version.csv.second}.zip"
   name "Reverso"
@@ -13,11 +13,16 @@ cask "reverso" do
   end
 
   auto_updates true
-  depends_on :macos
+  depends_on macos: :monterey
 
   app "Reverso.app"
 
-  uninstall quit: "com.softissimo.ReversoContext.macosapp"
+  uninstall launchctl: "com.softissimo.ReversoContext.Auto-Launcher-Reverso",
+            quit:      [
+              "com.softissimo.ReversoContext.macosapp",
+              "com.softissimo.ReversoContext.macosapp.helper",
+              "com.softissimo.ReversoContext.Reverso-Quick-Search",
+            ]
 
   zap trash: [
     "~/Library/Application Scripts/com.softissimo.ReversoContext.*",

@@ -21,5 +21,5 @@ cask "font-kodchasan" do
   font "Kodchasan-SemiBold.ttf"
   font "Kodchasan-SemiBoldItalic.ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

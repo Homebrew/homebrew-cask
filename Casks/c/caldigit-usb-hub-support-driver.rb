@@ -20,7 +20,7 @@ cask "caldigit-usb-hub-support-driver" do
             pkgutil: "com.CalDigit.USBHubSupport.pkg",
             delete:  "/Library/Extensions/CalDigitUSBHubSupport.kext"
 
-  # No zap stanza required
+  zap :not_required
 
   caveats do
     reboot

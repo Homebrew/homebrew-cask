@@ -8,5 +8,5 @@ cask "font-recursive" do
 
   font "Recursive[CASL,CRSV,MONO,slnt,wght].ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

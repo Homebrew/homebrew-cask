@@ -11,5 +11,5 @@ cask "font-david-clm" do
   font "DavidCLM-Medium.otf"
   font "DavidCLM-MediumItalic.otf"
 
-  # No zap stanza required
+  zap :not_required
 end

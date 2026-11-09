@@ -35,5 +35,5 @@ cask "font-tamzen" do
   font "tamzen-font-Tamzen-#{version}/ttf/TamzenForPowerline8x16b.ttf"
   font "tamzen-font-Tamzen-#{version}/ttf/TamzenForPowerline8x16r.ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

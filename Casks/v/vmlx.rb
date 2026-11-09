@@ -1,6 +1,6 @@
 cask "vmlx" do
-  version "1.6.55"
-  sha256 "f092526715880aef4a1a640d79bce96cdd30f7409c3207b7c473761f0e44059b"
+  version "1.6.84"
+  sha256 "ae21c5c65661daf7c70fe331dd64f7f61d8c0bf10a5694a665f008a080df996f"
 
   url "https://github.com/jjang-ai/mlxstudio/releases/download/v#{version}/vMLX-#{version}-sequoia-arm64.dmg"
   name "vMLX"
@@ -13,8 +13,8 @@ cask "vmlx" do
   end
 
   auto_updates true
-  depends_on macos: :sonoma
   depends_on arch: :arm64
+  depends_on macos: :sonoma
 
   app "vMLX.app"
 

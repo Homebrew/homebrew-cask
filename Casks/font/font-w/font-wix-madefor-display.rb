@@ -8,5 +8,5 @@ cask "font-wix-madefor-display" do
 
   font "WixMadeforDisplay[wght].ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

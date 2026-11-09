@@ -8,5 +8,5 @@ cask "font-yuyu" do
 
   font "Yuyu-Regular.ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

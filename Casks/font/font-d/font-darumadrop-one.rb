@@ -8,5 +8,5 @@ cask "font-darumadrop-one" do
 
   font "DarumadropOne-Regular.ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

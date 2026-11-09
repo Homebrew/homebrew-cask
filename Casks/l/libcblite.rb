@@ -28,5 +28,5 @@ cask "libcblite" do
             source_base: :relative, remove_on_uninstall: true
   end
 
-  # No zap stanza required
+  zap :not_required
 end

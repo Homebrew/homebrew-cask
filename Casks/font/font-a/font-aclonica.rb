@@ -8,5 +8,5 @@ cask "font-aclonica" do
 
   font "Aclonica-Regular.ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

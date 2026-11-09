@@ -1,9 +1,9 @@
 cask "gams" do
   arch arm: "_arm64"
 
-  version "54.3.1"
-  sha256 arm:   "765f027e63bfb3bdc0bc396fd33c98ef66a3317be33de33247f8a9643e54ea2d",
-         intel: "e98db406b8cd13b7187aef98f6ae254899b0311a5ae7fd8f5c114174d3e24863"
+  version "54.6.1"
+  sha256 arm:   "0cb71b9682952afac7a203bdad310c1090765435f4d92960ae680c029ed1223b",
+         intel: "f02a339236ad969abe6e161eda0ee39422360d33249ab9d15fa667ce191e8276"
 
   url "https://d37drm4t2jghv5.cloudfront.net/distributions/#{version}/macosx#{arch}/GAMS#{version}.pkg"
   name "GAMS"
@@ -42,7 +42,7 @@ cask "gams" do
     sudo:       true,
   }
 
-  # No zap stanza required
+  zap :not_required
 
   caveats do
     license "https://gams.com/GAMS_EULA.pdf"

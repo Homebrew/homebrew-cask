@@ -1,6 +1,6 @@
 cask "flow5" do
-  version "7.57"
-  sha256 "f39b23e9fca651c3200f8a8d75eaffbf37d7727c9124a992e261cd660178d548"
+  version "7.58"
+  sha256 "a248d8840c4c87780a256144907504082559b33c65869cf99b5c2e8db52e0667"
 
   url "https://github.com/techwinder/flow5/releases/download/v#{version}/flow5_v#{version}.dmg"
   name "flow5"

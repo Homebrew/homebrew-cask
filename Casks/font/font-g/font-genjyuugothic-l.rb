@@ -8,7 +8,7 @@ cask "font-genjyuugothic-l" do
 
   livecheck do
     url :homepage
-    regex(/href=.*genjyuugothic-l[._-]v?(\d+(?:\.\d+)*)\.zip"/i)
+    regex(/href=.*?genjyuugothic-l[._-]v?(\d+(?:\.\d+)*)\.zip"/i)
   end
 
   font "GenJyuuGothicL-Bold.ttf"
@@ -33,5 +33,5 @@ cask "font-genjyuugothic-l" do
   font "GenJyuuGothicL-P-Regular.ttf"
   font "GenJyuuGothicL-Regular.ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

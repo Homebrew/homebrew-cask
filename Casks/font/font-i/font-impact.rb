@@ -8,5 +8,5 @@ cask "font-impact" do
 
   font "Impact.TTF"
 
-  # No zap stanza required
+  zap :not_required
 end

@@ -19,5 +19,5 @@ cask "font-go" do
   font "Go-Smallcaps-Italic.ttf"
   font "Go-Smallcaps.ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

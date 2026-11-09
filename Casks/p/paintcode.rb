@@ -1,6 +1,6 @@
 cask "paintcode" do
-  version "3.6.2"
-  sha256 "d420950ad28675040f23cfb5110784f9669d40d335aef2c816ea50ed9dc1c8a0"
+  version "3.6.3"
+  sha256 "ae402878abb9f42f12906d18a87ae826cf1eda59067eed902c2cce6f3851d6b3"
 
   url "https://www.pixelcut.com/paintcode#{version.major}/paintcode_#{version}.zip"
   name "PaintCode"
@@ -12,12 +12,18 @@ cask "paintcode" do
     strategy :sparkle, &:short_version
   end
 
+  auto_updates true
   depends_on macos: :monterey
 
   app "PaintCode.app"
 
+  uninstall quit: "com.pixelcut.paintcode*"
+
   zap trash: [
+    "~/Library/Application Scripts/com.pixelcut.paintcode*",
+    "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.pixelcut.paintcode*.sfl*",
     "~/Library/Application Support/com.pixelcut.paintcode*",
+    "~/Library/Containers/com.pixelcut.paintcode*",
     "~/Library/HTTPStorages/com.pixelcut.paintcode*",
     "~/Library/Preferences/com.pixelcut.paintcode*.plist",
     "~/Library/Saved Application State/com.pixelcut.paintcode*.savedState",

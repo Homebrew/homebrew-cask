@@ -3,11 +3,12 @@ cask "krita" do
   os macos: "signed"
   url_end = on_system_conditional macos: "dmg", linux: "AppImage"
 
-  version "5.3.3"
+  version "5.3.4.1"
+  sha256 arm:          "531e261da1fd8d5c468cfcd4eebd16e9edf6ab320e89406d2875f2e43c1148de",
+         intel:        "531e261da1fd8d5c468cfcd4eebd16e9edf6ab320e89406d2875f2e43c1148de",
+         x86_64_linux: "e315dfb3da81cdb8bddc4bb3fcd4d9bacd0630fc7065d8ed07de758b267573f0"
 
   on_macos do
-    sha256 "625e37c01cfb74094ae58353dd9d343cd389a00c33cb65d6ddf1f2f1e2bc3a19"
-
     # Renamed for consistency: app name is different in the Finder and in a shell.
     app "krita.app", target: "Krita.app"
 
@@ -22,11 +23,18 @@ cask "krita" do
     ]
   end
   on_linux do
-    sha256 "1e3fff5da006c0d2600f98a41aa2c9a7dfa49bd931f3640616f30d762db4f743"
-
     depends_on arch: :x86_64
 
     app_image "krita-#{version}-#{arch}.AppImage", target: "Krita.AppImage"
+
+    zap trash: [
+      "~/.cache/krita",
+      "~/.config/kritadisplayrc",
+      "~/.config/kritarc",
+      "~/.local/share/krita",
+      "~/.local/share/krita-sysinfo.log",
+      "~/.local/share/krita.log",
+    ]
   end
 
   url "https://download.kde.org/stable/krita/#{version}/krita-#{version}-#{arch}#{os}.#{url_end}"

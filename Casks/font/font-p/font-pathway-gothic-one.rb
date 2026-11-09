@@ -8,5 +8,5 @@ cask "font-pathway-gothic-one" do
 
   font "PathwayGothicOne-Regular.ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

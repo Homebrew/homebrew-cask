@@ -1,6 +1,6 @@
 cask "marsedit" do
-  version "5.4.5"
-  sha256 "fab98bd0b517e915cbcf3deb72017d4408ecc2e73814c41f3cec1906012fcb94"
+  version "5.4.7"
+  sha256 "8e193431d05cb0486d91adbcacc2ecec27f5fc07573bbe1039ffb4dede941450"
 
   url "https://redsweater.com/marsedit/MarsEdit#{version}.zip"
   name "MarsEdit"
@@ -16,6 +16,8 @@ cask "marsedit" do
   depends_on :macos
 
   app "MarsEdit.app"
+
+  uninstall quit: "com.red-sweater.marsedit5"
 
   zap trash: [
     "~/Library/Application Scripts/com.red-sweater.*",

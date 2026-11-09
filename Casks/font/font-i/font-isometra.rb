@@ -4,9 +4,9 @@ cask "font-isometra" do
 
   url "https://github.com/google/fonts/raw/main/ofl/isometra/Isometra-Regular.ttf"
   name "Isometra"
-  homepage "https://github.com/field2/isometra"
+  homepage "https://fonts.google.com/specimen/Isometra"
 
   font "Isometra-Regular.ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

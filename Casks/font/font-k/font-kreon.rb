@@ -8,5 +8,5 @@ cask "font-kreon" do
 
   font "Kreon[wght].ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

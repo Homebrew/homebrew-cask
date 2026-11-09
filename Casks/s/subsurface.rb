@@ -1,8 +1,11 @@
 cask "subsurface" do
-  version "6.0.5576"
-  sha256 "e8ba59cdfe0a02b4eeab1d9588ae0fadb5639590b3595a458c794d3fe97a8d14"
+  arch arm: "arm", intel: "intel"
 
-  url "https://subsurface-divelog.org/downloads/Subsurface-#{version}-CICD-release.dmg",
+  version "6.0.5738"
+  sha256 arm:   "5c786a6253887e900e1c7d070d9e014f94e1843df1ffc6e267d09acd4f7a19c3",
+         intel: "120a4e890d6cfb9e4fc80039c13b936767c776cc7b8e83988b7a8efac8033f15"
+
+  url "https://subsurface-divelog.org/downloads/Subsurface-#{version}-#{arch}-CICD-release.dmg",
       user_agent: :fake
   name "Subsurface"
   desc "Open source divelog program"
@@ -10,20 +13,18 @@ cask "subsurface" do
 
   livecheck do
     url "https://subsurface-divelog.org/current-release/"
-    regex(/href=.*?Subsurface[._-]v?(\d+(?:\.\d+)+)[._-]CICD[._-]release\.dmg/i)
+    regex(/href=.*?Subsurface[._-]v?(\d+(?:\.\d+)+)[._-]#{arch}[._-]CICD[._-]release\.dmg/i)
   end
 
   depends_on macos: :monterey
 
   app "Subsurface.app"
 
+  uninstall quit: "org.subsurface-divelog"
+
   zap trash: [
     "~/Library/Application Support/Subsurface",
     "~/Library/Caches/Subsurface",
     "~/Library/Preferences/org.hohndel.subsurface.Subsurface.plist",
   ]
-
-  caveats do
-    requires_rosetta
-  end
 end

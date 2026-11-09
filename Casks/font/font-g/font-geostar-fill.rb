@@ -8,5 +8,5 @@ cask "font-geostar-fill" do
 
   font "GeostarFill-Regular.ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

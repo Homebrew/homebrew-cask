@@ -1,6 +1,6 @@
 cask "amethyst-nostr" do
-  version "1.14.0"
-  sha256 "84a1bdaf3577ed7375ab65c48358efd3c609fa47b504de61f4e8fc436f6b3436"
+  version "1.21.0"
+  sha256 "4c58f200807d4589b203447e65aec8ba8d44cc68452c4e82a338157feb557965"
 
   url "https://github.com/vitorpamplona/amethyst/releases/download/v#{version}/amethyst-desktop-#{version}-macos-arm64.dmg"
   name "Amethyst"
@@ -17,5 +17,6 @@ cask "amethyst-nostr" do
     "~/.amethyst",
     "~/Library/Application Support/Amethyst",
     "~/Library/Caches/AmethystDesktop",
+    "~/Library/Preferences/com.vitorpamplona.amethyst.plist",
   ]
 end

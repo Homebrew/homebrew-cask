@@ -1,9 +1,9 @@
 cask "dcv-viewer" do
   arch arm: "arm64", intel: "x86_64"
 
-  version "2025.0.8846"
-  sha256 arm:   "0f7e0d840b87f2f465e57923906c7926fdcd427b557ffb113670cefbb924bf81",
-         intel: "22a715f3641873e7f6eb036d582d8c7425fd676d2aef815ccac60ddf9de682b6"
+  version "2026.0.14555"
+  sha256 arm:   "c52414b13832d8c7583440e499864a59163165545e897044f4b48090859fca05",
+         intel: "6ac566bac142047212e026097a3e52aa8146e9544b3cdc244a555c6fbbdb66a6"
 
   url "https://d1uj6qtbmh3dt5.cloudfront.net/#{version.major_minor}/Clients/nice-dcv-viewer-#{version}.#{arch}.dmg"
   name "NICE DCV Viewer"
@@ -15,9 +15,13 @@ cask "dcv-viewer" do
     regex(%r{href=.*?/nice-dcv-viewer[._-]v?(\d+(?:\.\d+)+)[._-]#{arch}\.dmg}i)
   end
 
-  depends_on :macos
+  depends_on macos: :sonoma
 
   app "DCV Viewer.app"
 
-  zap trash: "~/Library/Preferences/com.nicesoftware.dcvviewer.plist"
+  zap trash: [
+    "~/Library/Application Support/com.nicesoftware.dcvviewer",
+    "~/Library/Logs/com.nicesoftware.dcvviewer",
+    "~/Library/Preferences/com.nicesoftware.dcvviewer.plist",
+  ]
 end

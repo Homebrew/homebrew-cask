@@ -13,5 +13,5 @@ cask "font-ubuntu-mono-derivative-powerline" do
   font "Ubuntu Mono derivative Powerline Italic.ttf"
   font "Ubuntu Mono derivative Powerline.ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

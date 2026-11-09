@@ -1,9 +1,9 @@
 cask "mochi" do
   arch arm: "-arm64"
 
-  version "26.8.2"
-  sha256 arm:   "c6640d334ba4d054189c9f9a7f1b03e86a11e87eed7c4f6d064d86b763b41c67",
-         intel: "f1411e555ed1ab9cc0a99f3ce8c8460a07ebce868dcb9aade87c8dadb4752d99"
+  version "26.10.1"
+  sha256 arm:   "94848605cd7fc54dcd6cf7c45f798ed732df2d34e14fba3376c7bad606ea286d",
+         intel: "82dd74b9aec541993208fc168a6bfe91686f8f090c72eaebb51523bf8a0d58a2"
 
   url "https://download.mochi.cards/releases/Mochi-#{version}#{arch}.dmg"
   name "Mochi"
@@ -15,11 +15,12 @@ cask "mochi" do
     strategy :electron_builder
   end
 
-  depends_on macos: :big_sur
+  depends_on :macos
 
   app "Mochi.app"
 
   zap trash: [
+    "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.msteedman.mochi.sfl*",
     "~/Library/Application Support/mochi",
     "~/Library/Logs/Mochi",
     "~/Library/Preferences/com.msteedman.mochi.plist",

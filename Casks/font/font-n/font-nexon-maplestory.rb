@@ -10,5 +10,5 @@ cask "font-nexon-maplestory" do
   font "OTF/Maplestory OTF Bold.otf"
   font "OTF/Maplestory OTF Light.otf"
 
-  # No zap stanza required
+  zap :not_required
 end

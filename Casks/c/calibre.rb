@@ -18,8 +18,8 @@ cask "calibre" do
     end
   end
   on_sonoma :or_newer do
-    version "9.14.0"
-    sha256 "a2f825138645ea29d9f77a78c177216c0db855fa0c7b993a16ace230c04fe3d4"
+    version "9.18.0"
+    sha256 "b4b8000433b6e4d0fdfb3bd0283cd76b7525c65daf5af027ec4dc1e629ef3d0c"
 
     livecheck do
       url "https://calibre-ebook.com/dist/osx"
@@ -62,13 +62,14 @@ cask "calibre" do
 
   uninstall quit: "net.kovidgoyal.calibre"
 
-  zap trash: [
-    "~/Library/Application Support/calibre-ebook.com",
-    "~/Library/Caches/calibre",
-    "~/Library/Preferences/calibre",
-    "~/Library/Preferences/com.calibre-ebook.ebook-viewer.plist",
-    "~/Library/Preferences/net.kovidgoyal.calibre.plist",
-    "~/Library/Saved Application State/com.calibre-ebook.ebook-viewer.savedState",
-    "~/Library/Saved Application State/net.kovidgoyal.calibre.savedState",
-  ]
+  zap delete: "/Library/Caches/calibre-singleinstance-*.lock",
+      trash:  [
+        "~/Library/Application Support/calibre-ebook.com",
+        "~/Library/Caches/calibre",
+        "~/Library/Preferences/calibre",
+        "~/Library/Preferences/com.calibre-ebook.ebook-viewer.plist",
+        "~/Library/Preferences/net.kovidgoyal.calibre.plist",
+        "~/Library/Saved Application State/com.calibre-ebook.ebook-viewer.savedState",
+        "~/Library/Saved Application State/net.kovidgoyal.calibre.savedState",
+      ]
 end

@@ -8,5 +8,5 @@ cask "font-noto-serif-ethiopic" do
 
   font "NotoSerifEthiopic[wdth,wght].ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

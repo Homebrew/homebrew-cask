@@ -8,5 +8,5 @@ cask "font-prosto-one" do
 
   font "ProstoOne-Regular.ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

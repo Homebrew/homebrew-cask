@@ -1,9 +1,9 @@
 cask "lexicon-dj" do
   arch arm: "aarch64", intel: "amd64"
 
-  version "1.11.14"
-  sha256 arm:   "24aa8c81d5371e86c14ce5a70aaefc8a89c6690fbaee79ab0abbf79d14db1f66",
-         intel: "9edf9a386ce394ccf97d0e3805b7ee6fa885c24d21a48e8c823e1cd1c992f1e7"
+  version "1.11.15"
+  sha256 arm:   "941cac80ce7618306f5c2a0b14383215b30e16db1cf0d5d4d35a2c130dd62245",
+         intel: "e3905063bb6d7d4f8e408de614526753d086e745f40a8dac9e4cf80ad145c4b8"
 
   url "https://update.rekord.cloud/releases/lexicon/latest/lexicon-#{version}-mac-#{arch}.zip"
   name "Lexicon"

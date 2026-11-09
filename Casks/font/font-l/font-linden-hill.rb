@@ -11,5 +11,5 @@ cask "font-linden-hill" do
   font "LindenHill-Italic.ttf"
   font "LindenHill-Regular.ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

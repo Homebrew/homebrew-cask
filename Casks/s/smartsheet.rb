@@ -12,8 +12,10 @@ cask "smartsheet" do
     strategy :electron_builder
   end
 
+  disable! date: "2027-01-06", because: :discontinued
+
   auto_updates true
-  depends_on macos: :big_sur
+  depends_on :macos
 
   app "Smartsheet.app"
 

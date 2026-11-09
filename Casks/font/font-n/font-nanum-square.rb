@@ -15,5 +15,5 @@ cask "font-nanum-square" do
   font "NaverNanumSquare/NanumFontSetup_TTF_SQUARE/NanumSquare_acL.ttf"
   font "NaverNanumSquare/NanumFontSetup_TTF_SQUARE/NanumSquare_acR.ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

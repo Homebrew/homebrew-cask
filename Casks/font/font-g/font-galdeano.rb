@@ -8,5 +8,5 @@ cask "font-galdeano" do
 
   font "Galdeano-Regular.ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

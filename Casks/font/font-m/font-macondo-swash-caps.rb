@@ -8,5 +8,5 @@ cask "font-macondo-swash-caps" do
 
   font "MacondoSwashCaps-Regular.ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

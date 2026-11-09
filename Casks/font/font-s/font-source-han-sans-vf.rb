@@ -8,5 +8,5 @@ cask "font-source-han-sans-vf" do
 
   font "SourceHanSans-VF.otf.ttc"
 
-  # No zap stanza required
+  zap :not_required
 end

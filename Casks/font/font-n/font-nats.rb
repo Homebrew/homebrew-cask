@@ -8,5 +8,5 @@ cask "font-nats" do
 
   font "NATS-Regular.ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

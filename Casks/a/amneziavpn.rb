@@ -1,6 +1,6 @@
 cask "amneziavpn" do
-  version "5.0.1.5"
-  sha256 "8e88c02605375400a7972ee5205cc6bcd223e555757522fbc97fe3c9a4946084"
+  version "5.1.0.6"
+  sha256 "4d61f8a0c872f5776b49f52d5fbabdc74bd99bc135269d02f3ede937e5b84b67"
 
   url "https://github.com/amnezia-vpn/amnezia-client/releases/download/#{version}/AmneziaVPN_#{version}_macos_x64.pkg"
   name "Amnezia VPN"
@@ -20,17 +20,21 @@ cask "amneziavpn" do
               "AmneziaVPN",
               "AmneziaVPN-service",
             ],
-            quit:      "AmneziaVPN",
+            quit:      [
+              "AmneziaVPN",
+              "com.yourcompany.AmneziaVPN",
+            ],
             pkgutil:   [
               "org.amneziavpn.AmneziaVPN",
               "org.amneziavpn.package",
             ]
 
-  zap trash: [
-    "~/Library/Caches/AmneziaVPN.ORG",
-    "~/Library/Preferences/AmneziaVPN.plist",
-    "~/Library/Preferences/org.amneziavpn.AmneziaVPN.plist",
-  ]
+  zap delete: "/Library/LaunchDaemons/AmneziaVPN.plist",
+      trash:  [
+        "~/Library/Caches/AmneziaVPN.ORG",
+        "~/Library/Preferences/AmneziaVPN.plist",
+        "~/Library/Preferences/org.amneziavpn.AmneziaVPN.plist",
+      ]
 
   caveats do
     requires_rosetta

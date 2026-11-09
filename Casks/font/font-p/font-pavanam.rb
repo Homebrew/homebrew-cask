@@ -8,5 +8,5 @@ cask "font-pavanam" do
 
   font "Pavanam-Regular.ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

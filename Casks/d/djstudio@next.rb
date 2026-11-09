@@ -2,9 +2,9 @@ cask "djstudio@next" do
   arch arm: "-arm64"
   livecheck_arch = on_arch_conditional arm: "-apple"
 
-  version "4.2.12-beta.2"
-  sha256 arm:   "5dd9037a69085cbaff44208f15684d7aae3510c2043c88ec87bd591230405bcb",
-         intel: "b329d0a0b0cc908fe9c6eb5fa89f6df8d58d58438ed320ff88e1acdcc1ba71ef"
+  version "5.0.10-beta.2"
+  sha256 arm:   "e9e81a641995f5997d5b4f050bcd32b60a3ef8b42dfe683e7de283b8a8403174",
+         intel: "8a3cde4081b9ea5f5e680cdf4cef144d8463be728537c4b1edf0961a47ecce03"
 
   url "https://download.next.dj.studio/DJ.Studio%20Next-#{version}#{arch}.dmg"
   name "DJ.Studio Next"
@@ -20,6 +20,8 @@ cask "djstudio@next" do
   depends_on macos: :monterey
 
   app "DJ.Studio Next.app"
+
+  uninstall quit: "dj.studio.next.app"
 
   zap trash: [
     "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/dj.studio.app.sfl*",

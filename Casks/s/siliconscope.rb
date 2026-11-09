@@ -1,6 +1,6 @@
 cask "siliconscope" do
-  version "4.2.0"
-  sha256 "e2ccaae543bee32064dc3f3a3b7b954898269a6314dfbe2a3205eb398b222373"
+  version "4.8.1"
+  sha256 "c0df708742b64e29f728340afd79743b172d048a815a9e17664abbea2c433b64"
 
   url "https://github.com/kennss/SiliconScope/releases/download/v#{version}/SiliconScope-#{version}.dmg"
   name "SiliconScope"
@@ -8,8 +8,8 @@ cask "siliconscope" do
   homepage "https://siliconscope.calidalab.ai/"
 
   auto_updates true
-  depends_on macos: :sonoma
   depends_on arch: :arm64
+  depends_on macos: :sonoma
 
   app "SiliconScope.app"
 

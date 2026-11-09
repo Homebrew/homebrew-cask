@@ -24,6 +24,17 @@ cask "colorchecker-camera-calibration" do
     ],
     delete:  "/System/Applications/ColorChecker Camera Calibration.app"
 
+  zap trash: [
+        "~/Library/Application Support/X-Rite/ColorCheckerCameraCalibration",
+        "~/Library/Caches/com.xrite.cameracalibration",
+        "~/Library/HTTPStorages/com.xrite.cameracalibration",
+        "~/Library/Logs/CameraCalibrationLogger.txt",
+        "~/Library/Logs/CameraCalibrationPluginLogger.txt",
+        "~/Library/Preferences/com.xrite.cameracalibration.plist",
+        "~/Library/Saved Application State/com.xrite.cameracalibration.savedState",
+      ],
+      rmdir: "~/Library/Application Support/X-Rite"
+
   caveats do
     requires_rosetta
   end

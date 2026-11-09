@@ -1,6 +1,6 @@
 cask "ds4-control" do
-  version "1.7.0"
-  sha256 "f1840fe0b0c99bd238d85ba8ac019aec32d317374a7b19bbc0dc4cb10f317c21"
+  version "1.9.0"
+  sha256 "b3802349b92fcec86728f31b32d1c827330a23b26000b2dc0084ce55c6829661"
 
   url "https://github.com/notatestuser/ds4-control/releases/download/v#{version}/DS4-Control-v#{version}.dmg"
   name "DS4 Control"

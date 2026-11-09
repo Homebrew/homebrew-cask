@@ -8,5 +8,5 @@ cask "font-whisper" do
 
   font "Whisper-Regular.ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

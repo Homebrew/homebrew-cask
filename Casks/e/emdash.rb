@@ -1,9 +1,9 @@
 cask "emdash" do
   arch arm: "arm64", intel: "x64"
 
-  version "1.2.4"
-  sha256 arm:   "b894e82e94ee98b3ab39ff4a5c3185eaf86692c41f962557e22f0e3ddf0fe0ef",
-         intel: "9dd6a02eb7c8f786e17caddc04031d894c2bfd7050e91e3a93521720918b632e"
+  version "1.2.11"
+  sha256 arm:   "6f36052874fef79a34c802b9c0f34a3fe7f379747f5c89093d6f7b1cd1916b25",
+         intel: "a9b8685d885df0bb49b6298917a7572fc4f9080f7eaa7ec563fa56671017c44d"
 
   url "https://github.com/generalaction/emdash/releases/download/v#{version}/emdash-#{arch}.dmg"
   name "Emdash"
@@ -23,6 +23,7 @@ cask "emdash" do
 
   zap trash: [
     "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.emdash.sfl*",
+    "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.emdash.stable.sfl*",
     "~/Library/Application Support/Emdash",
     "~/Library/Logs/emdash",
     "~/Library/Preferences/com.emdash.plist",

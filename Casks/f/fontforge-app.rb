@@ -2,10 +2,11 @@ cask "fontforge-app" do
   os macos: "MacOS.app.dmg", linux: "Linux-x86_64.AppImage"
 
   version "2025-10-09"
+  sha256 arm:          "ba9f883389188d822a36cd447e9a9940a2bf4c4254f49f9fa3aa622a69b73110",
+         intel:        "ba9f883389188d822a36cd447e9a9940a2bf4c4254f49f9fa3aa622a69b73110",
+         x86_64_linux: "bf72ec45305c663da7d2288822b7d2cfc37846716322bdca4075273c0cef8294"
 
   on_macos do
-    sha256 "ba9f883389188d822a36cd447e9a9940a2bf4c4254f49f9fa3aa622a69b73110"
-
     disable! date: "2026-09-01", because: :fails_gatekeeper_check
 
     depends_on macos: :ventura
@@ -17,8 +18,6 @@ cask "fontforge-app" do
     end
   end
   on_linux do
-    sha256 "bf72ec45305c663da7d2288822b7d2cfc37846716322bdca4075273c0cef8294"
-
     depends_on arch: :x86_64
 
     app_image "FontForge-#{version.csv.first}-Linux-x86_64.AppImage", target: "FontForge.AppImage"
