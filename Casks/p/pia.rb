@@ -1,6 +1,6 @@
 cask "pia" do
-  version "4.1.0"
-  sha256 "eb8a25db8c2ad67fbaad39100e48102f18a436cb6a99bc0db9829a95e8e6e283"
+  version "4.1.1"
+  sha256 "85c1954d24aa98b1ac544396c1750cc578dc19b1099a965f5da66937cafd1622"
 
   url "https://github.com/LINCnil/pia/releases/download/v#{version}/pia-#{version}-universal.dmg"
   name "Pia"
@@ -26,7 +26,7 @@ cask "pia" do
     end
   end
 
-  depends_on :macos
+  depends_on macos: :monterey
 
   app "pia.app"
 
