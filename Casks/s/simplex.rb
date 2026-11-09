@@ -19,5 +19,8 @@ cask "simplex" do
 
   app "SimpleX.app"
 
-  zap trash: "~/Library/Saved Application State/chat.simplex.app.savedState"
+  zap trash: [
+    "~/Library/Preferences/chat.simplex.app.plist",
+    "~/Library/Saved Application State/chat.simplex.app.savedState",
+  ]
 end
