@@ -1,6 +1,6 @@
 cask "tcp-viewer" do
-  version "1.23.0,123"
-  sha256 "c4b39e727ab54e3919a2ac9da04607cb6e38061c2546f3cf744fed1b79f72c6f"
+  version "1.24.0,124"
+  sha256 "817ded3030c8dd769e8b7bbdb541aba6ac34f270cd22154eb105d0f06543b42e"
 
   url "https://assets-tcpviewer.proxyman.com/release/production/#{version.csv.first}/#{version.csv.second}/tcpviewer_#{version.csv.first}_#{version.csv.second}.dmg"
   name "TCP Viewer"
