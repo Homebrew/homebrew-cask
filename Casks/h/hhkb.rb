@@ -9,7 +9,7 @@ cask "hhkb" do
 
   livecheck do
     url "https://happyhackingkb.com/download/"
-    regex(%r{macOS\s*</td>.*?HHKBkeymapTool[._-]v?\d+(?:\.\d+)*[^.]*?\.dmg.*?>\s*v?(\d+(?:\.\d+)+)\s*<}im)
+    regex(%r{Version\s+v?(\d+(?:\.\d+)+)\s*<br[^>]*>\s*<a[^>]+?/mac/HHKBkeymapTool[._-]v?\d+ma\.dmg}i)
   end
 
   depends_on :macos
