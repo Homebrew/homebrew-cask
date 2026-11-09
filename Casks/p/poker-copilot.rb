@@ -8,10 +8,13 @@ cask "poker-copilot" do
   homepage "https://pokercopilot.com/"
 
   livecheck do
-    url :homepage
-    regex(/href=.*?pokercopilot_macos_universal[._-]v?(\d+(?:[._]\d+)+)[._-]build[._-](\d+)\.dmg/i)
-    strategy :page_match do |page, regex|
-      page.scan(regex).map { |match| "#{match[0].tr("_", ".")},#{match[1]}" }
+    url "https://pokercopilot.com/download?installer=osx-universal"
+    regex(/pokercopilot_macos_universal[._-]v?(\d+(?:[._]\d+)+)[._-]build[._-](\d+)\.dmg/i)
+    strategy :header_match do |headers, regex|
+      match = headers["location"]&.match(regex)
+      next if match.blank?
+
+      "#{match[1].tr("_", ".")},#{match[2]}"
     end
   end
 
