@@ -1,15 +1,15 @@
 cask "kugelblitz" do
-  version "1.0.2"
-  sha256 "9441df5f609af3dc0220bc538dd54db4e361acc2ddc759e4b05326abb8e85c63"
+  version "1.1"
+  sha256 "a245c0e85829efb6f45d2405a01589ce9154cfc5fc9cd1818c79a4ab86c4d67e"
 
   url "https://apps.metaebene.me/dl/kugelblitz/#{version}/Kugelblitz-#{version}.dmg"
   name "Kugelblitz"
   desc "3D globe and atlas for exploring geodata"
-  homepage "https://apps.metaebene.me/de/kugelblitz"
+  homepage "https://apps.metaebene.me/en/kugelblitz"
 
   livecheck do
-    url "https://apps.metaebene.me/kugelblitz/releases.atom"
-    regex(%r{<title>Kugelblitz\s+v?(\d+(?:\.\d+)+)</title>}i)
+    url "https://apps.metaebene.me/kugelblitz/appcast.xml"
+    strategy :sparkle, &:short_version
   end
 
   auto_updates true
