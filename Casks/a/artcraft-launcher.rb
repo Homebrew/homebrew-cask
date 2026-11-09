@@ -2,11 +2,11 @@ cask "artcraft-launcher" do
   arch arm: "aarch64", intel: "x86_64"
   platform_suffix = on_system_conditional macos: "macos-universal.dmg", linux: "linux-#{arch}.AppImage"
 
-  version "0.16.1"
-  sha256 arm:          "c092ab7586b34b7861b3e47728d689986575f83428f72222e5fe9090c97f6a66",
-         intel:        "c092ab7586b34b7861b3e47728d689986575f83428f72222e5fe9090c97f6a66",
-         arm64_linux:  "530343f1ab3e478bf69f9246ce5558e76a3abb5ca1c8806f8b188d385035d67e",
-         x86_64_linux: "ee87ee039f89bda45a960ef92af46acb43077de981cd593f3041af9f07bf8c4b"
+  version "0.17.0"
+  sha256 arm:          "3a5bc2804fb5c256f409c089a58c6cab48a03f1a7ea8f036491fc0501c2a8331",
+         intel:        "3a5bc2804fb5c256f409c089a58c6cab48a03f1a7ea8f036491fc0501c2a8331",
+         arm64_linux:  "e497e42f8ee8d5baea2c871cb9fbce1278df806ef09a854a3a1045ec8421f2a9",
+         x86_64_linux: "1dd467ef0946b152a05e5a6f17e41d191ff00ab61f8fcfc6e160e764da12f07c"
 
   on_macos do
     app "ArtCraft Launcher.app"
