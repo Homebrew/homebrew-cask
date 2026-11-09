@@ -8,5 +8,5 @@ cask "font-petit-formal-script" do
 
   font "PetitFormalScript-Regular.ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

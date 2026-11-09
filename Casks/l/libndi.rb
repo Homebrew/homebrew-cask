@@ -13,5 +13,5 @@ cask "libndi" do
 
   uninstall pkgutil: "com.newtek.libndi"
 
-  # No zap stanza required
+  zap :not_required
 end

@@ -8,5 +8,5 @@ cask "font-leckerli-one" do
 
   font "LeckerliOne-Regular.ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

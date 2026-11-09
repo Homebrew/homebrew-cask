@@ -3,14 +3,14 @@ cask "cherry-studio" do
   os macos: "mac", linux: "linux"
   url_end = on_system_conditional macos: "dmg", linux: "AppImage"
 
-  version "2.0.13"
-  sha256 arm:          "a9d1486875ddb188524e51915f5f1f7e30a5a9915000580b88aca529f2d8f09b",
-         intel:        "4b16bc394cc6cebb94a7a2a7d4e85c071808d261f0e46fe07ad71b03b758f716",
-         arm64_linux:  "4d64b193b13338ff09f0a802cf4ddec53e2e015c69a17e738cae32055a173821",
-         x86_64_linux: "64159c25e7a095b46ded6a3e1613d96c52daa14e83ab37a9950ea1aa62fd40a6"
+  version "2.1.10"
+  sha256 arm:          "9b2f17d6e2ded803304e7bb26ca7b05e2aeb50290053487a33f8d8195bfa6180",
+         intel:        "385c39ed6b569067f1a4b567b267f3a3d4eb10a3e5ec2415e25f37f3c6b00c48",
+         arm64_linux:  "44a2676712b3a8ca551724307319ba6d80b5107fc07271acf04ab75d28f9ae64",
+         x86_64_linux: "f2953191bad4e28704a6ac9c828104492f4d70045f7a3239842cff0a5d4cfbfc"
 
   on_macos do
-    depends_on macos: :monterey
+    depends_on macos: :ventura
 
     app "Cherry Studio.app"
     binary "#{appdir}/Cherry Studio.app/Contents/MacOS/Cherry Studio", target: "cherry-studio"
@@ -27,6 +27,13 @@ cask "cherry-studio" do
   end
   on_linux do
     app_image "Cherry-Studio-#{version}-linux-#{arch}.AppImage", target: "Cherry Studio.AppImage"
+
+    zap trash: [
+      "~/.cache/cherrystudio-updater",
+      "~/.cherrystudio",
+      "~/.config/CherryStudio",
+      "~/.local/share/applications/cherrystudio-url-handler.desktop",
+    ]
   end
 
   url "https://github.com/CherryHQ/cherry-studio/releases/download/v#{version}/Cherry-Studio-#{version}-#{os}-#{arch}.#{url_end}"

@@ -8,5 +8,5 @@ cask "font-special-elite" do
 
   font "SpecialElite-Regular.ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

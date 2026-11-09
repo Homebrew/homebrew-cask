@@ -14,5 +14,5 @@ cask "font-migu-1p" do
   font "migu-1p-#{version.no_dots}/migu-1p-bold.ttf"
   font "migu-1p-#{version.no_dots}/migu-1p-regular.ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

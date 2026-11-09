@@ -8,5 +8,5 @@ cask "font-cedarville-cursive" do
 
   font "Cedarville-Cursive.ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

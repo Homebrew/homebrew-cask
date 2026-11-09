@@ -8,5 +8,5 @@ cask "font-alata" do
 
   font "Alata-Regular.ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

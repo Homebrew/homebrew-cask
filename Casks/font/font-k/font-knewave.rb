@@ -8,5 +8,5 @@ cask "font-knewave" do
 
   font "Knewave-Regular.ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

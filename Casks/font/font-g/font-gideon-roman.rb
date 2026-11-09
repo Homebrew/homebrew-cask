@@ -8,5 +8,5 @@ cask "font-gideon-roman" do
 
   font "GideonRoman-Regular.ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

@@ -1,6 +1,6 @@
 cask "koharu" do
-  version "0.81.8"
-  sha256 "3d5a86505d2d0569e6e75e5ff73c31d4d186b58bcb463a0215ce9a299e34213d"
+  version "0.83.5"
+  sha256 "78b1dcd0f353a8bc3b63115744b55e4fd73e93eb1a1a349473c92b7988247f0f"
 
   url "https://github.com/mayocream/koharu/releases/download/#{version}/koharu_#{version}_aarch64.dmg"
   name "Koharu"
@@ -12,8 +12,8 @@ cask "koharu" do
     regex(/^v?(\d+(?:\.\d+)+)$/i)
   end
 
-  depends_on macos: :big_sur
   depends_on arch: :arm64
+  depends_on :macos
 
   app "koharu.app"
 

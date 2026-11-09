@@ -1,6 +1,6 @@
 cask "gitfox" do
-  version "4.10.0,12203"
-  sha256 "4f0876a27addca8b645498a2dcc00e007f33c2e7595eccbb6b01dffa7ec458fc"
+  version "5.4.2,12615"
+  sha256 "eb489890d214f6a719eeb814823b6b364306dd15e1c384c10ad45b0aa957a0a4"
 
   url "https://update.gitfox.app/builds/retail/#{version.csv.second}/Gitfox.#{version.csv.second}.zip"
   name "Gitfox"
@@ -19,7 +19,7 @@ cask "gitfox" do
   end
 
   auto_updates true
-  depends_on macos: :tahoe
+  depends_on macos: :sequoia
 
   app "Gitfox.app"
   binary "#{appdir}/Gitfox.app/Contents/SharedSupport/bin/gitfox-cli", target: "gitfox"

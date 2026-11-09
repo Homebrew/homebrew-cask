@@ -11,5 +11,5 @@ cask "font-biz-udmincho" do
   font "BIZUDMincho-Bold.ttf"
   font "BIZUDMincho-Regular.ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

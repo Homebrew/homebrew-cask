@@ -1,9 +1,9 @@
 cask "android-studio-preview@canary" do
   arch arm: "mac_arm", intel: "mac"
 
-  version "2026.2.1.4,rabbit1-canary4"
-  sha256 arm:   "726abf1f61cda86424365ab87a004fd1916ff2470952a420f4134b3f055f33f2",
-         intel: "ffe1579b5dc6128f0467c9a1889529e7ae6c95d352d4d8fca89ef70e2b2a81a5"
+  version "2026.2.3.3,rabbit3-canary3"
+  sha256 arm:   "6cf7cf1324367a4b35b1c21f1e13b97801c9b78775bea45877a510a352bd5b52",
+         intel: "97f3ab51b21072636846cca88110c4ad690a2530d1441957c400b3d6375fc6f8"
 
   url "https://edgedl.me.gvt1.com/android/studio/install/#{version.csv.first}/android-studio#{"-#{version.csv.second}" if version.csv.second}-#{arch}.dmg"
   name "Android Studio Preview (Canary)"
@@ -38,6 +38,7 @@ cask "android-studio-preview@canary" do
         "~/Library/Logs/Google/AndroidStudioPreview#{version.major_minor}",
         "~/Library/Preferences/com.android.Emulator.plist",
         "~/Library/Preferences/com.google.android.studio-EAP.plist",
+        "~/Library/Preferences/com.google.android.studio.plist",
         "~/Library/Saved Application State/com.google.android.studio-EAP.savedState",
       ],
       rmdir: [

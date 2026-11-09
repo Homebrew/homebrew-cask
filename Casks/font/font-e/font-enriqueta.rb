@@ -13,5 +13,5 @@ cask "font-enriqueta" do
   font "Enriqueta-Regular.ttf"
   font "Enriqueta-SemiBold.ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

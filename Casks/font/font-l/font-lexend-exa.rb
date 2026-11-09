@@ -8,5 +8,5 @@ cask "font-lexend-exa" do
 
   font "LexendExa[wght].ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

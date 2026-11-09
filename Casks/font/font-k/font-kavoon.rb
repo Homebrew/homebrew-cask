@@ -8,5 +8,5 @@ cask "font-kavoon" do
 
   font "Kavoon-Regular.ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

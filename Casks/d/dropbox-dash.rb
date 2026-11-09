@@ -1,6 +1,6 @@
 cask "dropbox-dash" do
-  version "3.174.23"
-  sha256 "732483eca97edd66fdb4ef15a2a39ddd7fad6927d903d07cbf83154898a0f740"
+  version "3.185.1"
+  sha256 "6498daf717288c3d29da4a42937f9b9f5dea660a04685cde5e8296cbbd726ee4"
 
   url "https://edge.dropboxstatic.com/dbx-releng/products/dash-tesla/#{version}/mac.x86_64/Dropbox%20Dash-#{version}.dmg"
   name "Dropbox Dash"
@@ -13,7 +13,7 @@ cask "dropbox-dash" do
   end
 
   auto_updates true
-  depends_on macos: :big_sur
+  depends_on :macos
 
   app "Dropbox Dash.app"
 
@@ -25,6 +25,7 @@ cask "dropbox-dash" do
             quit:      "io.hypertools.Dropbox-Dash"
 
   zap trash: [
+    "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/io.hypertools.dropbox-dash.sfl*",
     "~/Library/Application Support/Dropbox Dash",
     "~/Library/Group Containers/com.dash",
     "~/Library/Preferences/io.hypertools.Dropbox-Dash.plist",

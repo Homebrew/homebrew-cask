@@ -69,5 +69,5 @@ cask "ghdl" do
   binary "#{directory}/include/ghdl", target: "#{HOMEBREW_PREFIX}/include/ghdl"
   binary "#{directory}/lib/ghdl", target: "#{HOMEBREW_PREFIX}/lib/ghdl"
 
-  # No zap stanza required
+  zap :not_required
 end

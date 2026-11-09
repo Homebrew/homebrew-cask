@@ -8,5 +8,5 @@ cask "font-bpmf-iansui" do
 
   font "BpmfIansui-Regular.ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

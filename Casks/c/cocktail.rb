@@ -51,7 +51,7 @@ cask "cocktail" do
     uninstall quit: "com.maintain.cocktail.sequoia"
   end
   on_tahoe do
-    version "19.10"
+    version "19.10.1"
     sha256 :no_check
 
     url "https://www.maintain.se/downloads/Cocktail#{version.major}TE.dmg"
@@ -64,7 +64,7 @@ cask "cocktail" do
     uninstall quit: "com.maintain.cocktail.tahoe"
   end
   on_golden_gate :or_newer do
-    version "20.0.2"
+    version "20.2.3"
     sha256 :no_check
 
     url "https://www.maintain.se/downloads/Cocktail#{version.major}GG.dmg"

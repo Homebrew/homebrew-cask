@@ -13,5 +13,5 @@ cask "font-philosopher" do
   font "Philosopher-Italic.ttf"
   font "Philosopher-Regular.ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

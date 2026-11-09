@@ -14,7 +14,7 @@ cask "cleanmymac-cli" do
     end
   end
 
-  depends_on macos: :big_sur
+  depends_on :macos
 
   app "CleanMyMac_5_CLI.app"
   binary "CleanMyMac_5_CLI.app/Contents/MacOS/CleanMyMac_5_CLI", target: "cleanmymac"

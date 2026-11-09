@@ -39,7 +39,7 @@ Some style guidelines:
 * Use string manipulations to improve the maintainability of your cask (see [`version` methods](https://docs.brew.sh/Cask-Cookbook#version-methods)).
 * Test your cask using `brew audit` and `brew style` (see the documentation on [testing and auditing](https://docs.brew.sh/Adding-Software-to-Homebrew#testing-and-auditing-the-cask)).
 * Make one pull request per cask change.
-* Do not squash commits after updating a pull request.
+* Squash commits after updating a pull request so that each cask has one commit.
 * Use descriptive commit messages - mention cask name and version/change (ie. `transmission 2.82`, `google-chrome: update zap`).
 
 ## AI/LLM usage
@@ -48,7 +48,7 @@ We allow you to create issues and pull requests with AI/LLM with the following r
 
 * You must disclose in the initial issue or pull request that you used AI/LLM and what tool/model/etc. you used.
 * You must review all AI/LLM generated code, prose, etc. content before you ask anyone in Homebrew to review it for you.
-* You must not attribute a commit to AI/LLM as an author, co-author, committer or signatory, including through an `Assisted-by`, `Co-developed-by` or similar commit trailer.
+* You must attribute every commit to at least one human author or `Co-authored-by` co-author; attribution to AI/LLM is only allowed alongside them.
 * You must answer all maintainer questions and pull request review comments yourself, without using AI/LLM.
 * Unless you are a maintainer, you may only have one AI-assisted/generated pull request open at a time.
 * If you reach the point where you feel unwilling or unable to do the above, please close your issue or pull request.

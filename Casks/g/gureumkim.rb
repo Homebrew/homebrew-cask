@@ -18,5 +18,5 @@ cask "gureumkim" do
 
   uninstall pkgutil: "org.youknowone.inputmethod.Gureum"
 
-  # No zap stanza required
+  zap :not_required
 end

@@ -8,5 +8,5 @@ cask "font-freehand" do
 
   font "Freehand-Regular.ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

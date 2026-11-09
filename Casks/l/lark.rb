@@ -3,12 +3,12 @@ cask "lark" do
   livecheck_arch = on_arch_conditional arm: "_m1"
 
   on_arm do
-    version "7.75.20,c22d69d1"
-    sha256 "dfd5c9fafd8cefe0147d1b0a8b8186ccef20d6b0ad227ca5c05bca7867d3e70d"
+    version "8.4.19,363d4914"
+    sha256 "d7427a424425ef1e8518cb39af60846d9667fdd718364c13307d9867fa96bc46"
   end
   on_intel do
-    version "7.75.20,07add062"
-    sha256 "d081f05c6b97b11e38a2aa044bae6a9c82e0e90578f86d1ae429013eedf904a4"
+    version "8.4.19,37e2fd2a"
+    sha256 "2fc82e23dc281fc6f7457933c0b0c46035eac6682707b98b9bdc139c5cb5200a"
   end
 
   url "https://sf16-sg.larksuitecdn.com/obj/lark-version-sg/#{version.csv.second}/Lark-darwin_#{arch}-#{version.csv.first}-signed.dmg"
@@ -28,14 +28,17 @@ cask "lark" do
   end
 
   auto_updates true
-  depends_on macos: :big_sur
+  depends_on :macos
 
   app "LarkSuite.app"
 
   zap trash: [
     "~/Library/Caches/com.electron.lark",
     "~/Library/Caches/com.electron.lark.helper",
+    "~/Library/Caches/com.larksuite.larkApp.helper",
+    "~/Library/HTTPStorages/com.larksuite.larkApp.helper",
     "~/Library/Preferences/com.electron.lark.helper.plist",
+    "~/Library/Preferences/com.larksuite.larkApp.plist",
     "~/Library/Saved Application State/com.electron.lark.savedState",
   ]
 end

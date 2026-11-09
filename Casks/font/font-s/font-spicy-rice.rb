@@ -8,5 +8,5 @@ cask "font-spicy-rice" do
 
   font "SpicyRice-Regular.ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

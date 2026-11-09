@@ -23,6 +23,13 @@ cask "chiri" do
   end
   on_linux do
     app_image "Chiri_#{version}_#{arch}.AppImage", target: "Chiri.AppImage"
+
+    zap trash: [
+      "~/.cache/AppImage-Cache/garden.chiri.Chiri",
+      "~/.config/garden.chiri.Chiri",
+      "~/.local/share/applications/garden.chiri.Chiri-handler.desktop",
+      "~/.local/share/garden.chiri.Chiri",
+    ]
   end
 
   url "https://github.com/chiriapp/chiri/releases/download/app-v#{version}/Chiri_#{version}_#{arch}.#{url_end}"

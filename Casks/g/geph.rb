@@ -1,6 +1,6 @@
 cask "geph" do
-  version "5.8.3"
-  sha256 "d2ad08a476a617e6988cd21f84d9f7e1b6c56eaa84f8cc1b182894822de43acd"
+  version "5.9.1"
+  sha256 "ca13af9ce315fc25848e7be402c84cf0375a888d2a2e7639fba07315dfa6101b"
 
   url "https://dl.geph.io/geph-releases/macos-stable/#{version}/geph-macos.pkg"
   name "Geph"

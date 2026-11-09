@@ -8,5 +8,5 @@ cask "font-quando" do
 
   font "Quando-Regular.ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

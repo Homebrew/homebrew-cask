@@ -1,7 +1,7 @@
 cask "iterm2@nightly" do
   # NOTE: "2" is not a version number, but an intrinsic part of the product name
-  version "3_7_20260908"
-  sha256 "0e674776f84ba485235a9420cc90dbb86b647a184d44fdabfd8e2f8ec9e15e65"
+  version "3_7_20261109"
+  sha256 "6756965fd7282da1edc2d130ac534acc59c8af4dacb44c626b114435a1ec4968"
 
   url "https://iterm2.com/downloads/nightly/iTerm2-#{version}-nightly.zip"
   name "iTerm2"
@@ -28,7 +28,10 @@ cask "iterm2@nightly" do
     "~/Library/Application Support/iTerm",
     "~/Library/Application Support/iTerm2",
     "~/Library/Caches/com.googlecode.iterm2",
+    "~/Library/HTTPStorages/com.googlecode.iterm2",
     "~/Library/Preferences/com.googlecode.iterm2.plist",
+    "~/Library/Preferences/com.googlecode.iterm2.private.plist",
     "~/Library/Saved Application State/com.googlecode.iterm2.savedState",
+    "~/Library/WebKit/com.googlecode.iterm2",
   ]
 end

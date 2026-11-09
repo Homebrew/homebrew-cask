@@ -8,7 +8,8 @@ cask "beyond-compare@4" do
   homepage "https://www.scootersoftware.com/"
 
   livecheck do
-    url "https://www.scootersoftware.com/download/v4"
+    url "https://www.scootersoftware.com/download/v4",
+        user_agent: :browser
     regex(/BCompareOSX[._-]v?(\d+(?:\.\d+)+)\.zip/i)
   end
 

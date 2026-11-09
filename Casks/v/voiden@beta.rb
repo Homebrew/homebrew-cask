@@ -1,9 +1,9 @@
 cask "voiden@beta" do
   arch arm: "arm64", intel: "x64"
 
-  version "2.3.0-beta.2"
-  sha256 arm:   "441d08fa041b26087299ed0f276a044797552730c3cb79fed1bc546265e981a1",
-         intel: "8ccfa1a8e4cc28011a634f3d02a17150383a1840186e4eb1a428906076900424"
+  version "2.4.0-beta.2"
+  sha256 arm:   "2d0029b1b3a0d743985c12441e69c5e232c445a11c5c3077db83480f79580916",
+         intel: "822c21b9aa7390550a1cd927ad37e698b1c14a689539d86f0340ccc41180c50b"
 
   url "https://voiden-beta-releases.s3.eu-west-1.amazonaws.com/voiden/darwin/#{arch}/Voiden-darwin-#{arch}-#{version}.zip"
   name "Voiden Beta"
@@ -18,7 +18,7 @@ cask "voiden@beta" do
   end
 
   conflicts_with cask: "voiden"
-  depends_on macos: :monterey
+  depends_on macos: :ventura
 
   app "Voiden.app"
 
@@ -28,6 +28,7 @@ cask "voiden@beta" do
     "~/Library/Caches/com.electron.voiden",
     "~/Library/Caches/com.electron.voiden.ShipIt",
     "~/Library/HTTPStorages/com.electron.voiden",
+    "~/Library/Logs/Voiden",
     "~/Library/Preferences/com.electron.voiden.plist",
   ]
 end

@@ -8,5 +8,5 @@ cask "font-montagu-slab" do
 
   font "MontaguSlab[opsz,wght].ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

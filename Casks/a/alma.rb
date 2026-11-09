@@ -1,9 +1,9 @@
 cask "alma" do
   arch arm: "arm64", intel: "x64"
 
-  version "0.4.15"
-  sha256 arm:   "9c53d232697747a3bdc221140c63c3a0f8eae18ae3cdd8eb91f79fa3a23523fc",
-         intel: "122151b0aade943588e2b7f87fb74849bdc22cce7025fe48582c73df26613eda"
+  version "0.4.534"
+  sha256 arm:   "5d2a4b778cd115524ea026a8e8f8dc4ffddc0aa8d3c615bbcd1317af4d4e1223",
+         intel: "9a1e1de6910417edbe1d1708cf0e3f4f35fed6234f86c36138f69b24bd355f8c"
 
   url "https://updates.alma.now/alma-#{version}-mac-#{arch}.dmg"
   name "Alma"
@@ -12,8 +12,8 @@ cask "alma" do
 
   livecheck do
     url "https://github.com/yetone/alma-releases"
-    strategy :github_releases
-    throttle 15
+    regex(/^v?(\d+(?:\.\d+)+)$/i)
+    throttle days: 1
   end
 
   auto_updates true

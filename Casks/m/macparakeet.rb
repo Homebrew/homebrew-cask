@@ -1,6 +1,6 @@
 cask "macparakeet" do
-  version "0.7.3"
-  sha256 "0c4ccb1b6f0cedae0f7994afce393094596aacdd8548af374ae18ae500ecdd8a"
+  version "0.8.10"
+  sha256 "a80a4d401ad538dc37c4b2c826b47077064b7f085f3f24cbda481d8219634090"
 
   url "https://github.com/moona3k/macparakeet/releases/download/v#{version}/MacParakeet.dmg"
   name "MacParakeet"
@@ -17,6 +17,8 @@ cask "macparakeet" do
   depends_on macos: :sonoma
 
   app "MacParakeet.app"
+
+  uninstall quit: "com.macparakeet.MacParakeet"
 
   zap trash: [
     "~/Library/Application Support/MacParakeet",

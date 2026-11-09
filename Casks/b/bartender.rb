@@ -1,14 +1,14 @@
 cask "bartender" do
-  version "6.6.2"
-  sha256 "e178616bc09956e39f0ab0ff9112b8fe89f744b406f8e417fb7b2aaf3524e064"
+  version "7.1.0"
+  sha256 "22ed651f6d57bbe34fc19a76f46856775759aeda361301828c64e9cb7218aa69"
 
-  url "https://downloads.macbartender.com/B2/updates/#{version.dots_to_hyphens}/Bartender%20#{version.major}.zip"
+  url "https://downloads.macbartender.com/Bartender#{version.major}/updates/#{version.dots_to_hyphens}/Bartender%20#{version.major}.zip"
   name "Bartender"
   desc "Menu bar icon organiser"
   homepage "https://www.macbartender.com/"
 
   livecheck do
-    url "https://www.macbartender.com/B2/updates/AppcastB#{version.major}.xml"
+    url "https://downloads.macbartender.com/Bartender#{version.major}/updates/AppcastB#{version.major}.xml"
     regex(%r{/v?(\d+(?:[.-]\d+)+)/Bartender%20#{version.major}\.zip}i)
     strategy :sparkle do |item, regex|
       item.url.scan(regex)&.map { |match| match[0].tr("-", ".") }

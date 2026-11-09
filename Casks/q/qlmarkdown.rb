@@ -1,6 +1,6 @@
 cask "qlmarkdown" do
-  version "1.5.2"
-  sha256 "b111681c95355d931e72f4f8dff63565e329e8b4d5bcd95f127c4cba2b9e3ea0"
+  version "1.5.7"
+  sha256 "96cc95553ee63557f7ec58f41a568ff1fe5bca95b6bcd3883709fa8337c685d4"
 
   url "https://github.com/sbarex/QLMarkdown/releases/download/#{version}/QLMarkdown.zip"
   name "sbarex QLMarkdown"
@@ -19,10 +19,12 @@ cask "qlmarkdown" do
   end
 
   auto_updates true
-  depends_on macos: :big_sur
+  depends_on macos: :monterey
 
   app "QLMarkdown.app"
   binary "#{appdir}/QLMarkdown.app/Contents/Resources/qlmarkdown_cli"
+
+  uninstall quit: "org.sbarex.QLMarkdown"
 
   zap trash: [
     "~/Library/Application Scripts/group.org.sbarex.qlmarkdown",

@@ -8,5 +8,5 @@ cask "font-roboto-slab" do
 
   font "RobotoSlab[wght].ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

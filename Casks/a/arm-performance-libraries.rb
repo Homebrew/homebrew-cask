@@ -15,8 +15,8 @@ cask "arm-performance-libraries" do
     regex(/Version[._-]v?(\d+(?:\.\d+)+)/i)
   end
 
-  depends_on :macos
   depends_on arch: :arm64
+  depends_on :macos
 
   installer script: {
     executable: "armpl_#{install_suffix}_install.sh",
@@ -30,7 +30,7 @@ cask "arm-performance-libraries" do
             ],
             rmdir:  "/opt/arm"
 
-  # No zap stanza required
+  zap :not_required
 
   caveats do
     license "https://developer.arm.com/documentation/109686/latest"

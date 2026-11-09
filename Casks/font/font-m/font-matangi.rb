@@ -8,5 +8,5 @@ cask "font-matangi" do
 
   font "Matangi[wght].ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

@@ -59,5 +59,5 @@ cask "font-iosevka-term-slab-nerd-font" do
   font "IosevkaTermSlabNerdFontPropo-Oblique.ttf"
   font "IosevkaTermSlabNerdFontPropo-Regular.ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

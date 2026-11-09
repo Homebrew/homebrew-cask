@@ -47,5 +47,5 @@ cask "font-redhat" do
   font "RedHatFont-#{version}/fonts/Proportional/RedHatText/variable/RedHatText-Italic-VF.ttf"
   font "RedHatFont-#{version}/fonts/Proportional/RedHatText/variable/RedHatText-VF.ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

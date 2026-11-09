@@ -1,11 +1,45 @@
 cask "open-science" do
-  arch arm: "arm64", intel: "x64"
+  arch arm: "arm64", intel: on_system_conditional(macos: "x64", linux: "x86_64")
+  os macos: "mac", linux: "linux"
+  url_end = on_system_conditional macos: "dmg", linux: "AppImage"
 
-  version "0.26.0"
-  sha256 arm:   "d6d38790a5a0e94b1406914cea2546775d1ebfde42042fd0cff5f699955af8d8",
-         intel: "e8cd62b5b58cfc2a98aa1cd94bc5f4b064bfd1e15a5f4864ceb0acd283b16c27"
+  version "1.2.0"
+  sha256 arm:          "c47f9b87b2504b16afe3ceeff6a1d755f0e88586c12658c0a4c87e2a01cf8140",
+         intel:        "a8e69f640a356944fa23299835ff237b396b1eaddcc485f79472bd4c1835557f",
+         x86_64_linux: "1bdb000a141665743308e962d4909ffe68bd3ddc8adf4e7d5646375b0152062b"
 
-  url "https://github.com/aipoch/open-science/releases/download/v#{version}/aipoch-open-science-#{version}-mac-#{arch}.dmg"
+  on_macos do
+    depends_on macos: :monterey
+
+    app "Open-Science.app"
+
+    uninstall quit: "com.aipoch.open-science"
+
+    zap trash: [
+          "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.aipoch.open-science.sfl*",
+          "~/Library/Application Support/Open Science",
+          "~/Library/Application Support/Open-Science",
+          "~/Library/Caches/com.aipoch.open-science",
+          "~/Library/Logs/Open Science",
+          "~/Library/Preferences/com.aipoch.open-science.plist",
+          "~/Library/Saved Application State/com.aipoch.open-science.savedState",
+        ],
+        rmdir: "~/.open-science*"
+  end
+  on_linux do
+    depends_on arch: :x86_64
+
+    app_image "aipoch-open-science-#{version}-linux-x86_64.AppImage", target: "Open-Science.AppImage"
+
+    zap trash: [
+          "~/.cache/open-science-updater",
+          "~/.config/Open Science",
+          "~/.config/Open-Science",
+        ],
+        rmdir: "~/.open-science*"
+  end
+
+  url "https://github.com/aipoch/open-science/releases/download/v#{version}/aipoch-open-science-#{version}-#{os}-#{arch}.#{url_end}"
   name "Open Science"
   desc "AI research workbench with scientific agents and notebooks"
   homepage "https://aipoch.com/open-science"
@@ -16,18 +50,4 @@ cask "open-science" do
   end
 
   auto_updates true
-  depends_on macos: :monterey
-
-  app "Open Science.app"
-
-  uninstall quit: "com.aipoch.open-science"
-
-  zap trash: [
-    "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.aipoch.open-science.sfl*",
-    "~/Library/Application Support/Open Science",
-    "~/Library/Caches/com.aipoch.open-science",
-    "~/Library/Logs/Open Science",
-    "~/Library/Preferences/com.aipoch.open-science.plist",
-    "~/Library/Saved Application State/com.aipoch.open-science.savedState",
-  ]
 end

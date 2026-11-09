@@ -8,5 +8,5 @@ cask "font-rubik-scribble" do
 
   font "RubikScribble-Regular.ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

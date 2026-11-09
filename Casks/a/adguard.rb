@@ -1,6 +1,6 @@
 cask "adguard" do
-  version "2.19.0.2258"
-  sha256 "149344c273968ab48ceac5de6025fb5219480899fb3520c101e1ce86e83d3804"
+  version "2.20.3.2633"
+  sha256 "8a9126a4fa60e2344dd8a7d9859ecea2e97a6131a7effcf799900a6c9b6a9a9d"
 
   url "https://static.adguard.com/mac/release/AdGuard-#{version}.dmg"
   name "AdGuard"
@@ -9,8 +9,12 @@ cask "adguard" do
 
   livecheck do
     url "https://static.adguard.com/mac/adguard-release-appcast.xml"
-    strategy :sparkle do |item|
-      item.short_version.delete_suffix(" release")
+    regex(/AdGuard[._-]v?(\d+(?:\.\d+)+)\.dmg/i)
+    strategy :sparkle do |item, regex|
+      match = item.url&.match(regex)
+      next if match.blank?
+
+      match[1]
     end
   end
 
@@ -35,7 +39,10 @@ cask "adguard" do
             ],
             rmdir:     "/Library/Application Support/AdGuard Software"
 
-  zap delete: "/Library/Logs/com.adguard.mac.adguard",
+  zap delete: [
+        "/Library/Logs/com.adguard.mac.adguard",
+        "/Library/Preferences/com.adguard.mac.adguard.helper.plist",
+      ],
       trash:  [
         "~/Library/Application Scripts/*com.adguard.mac*",
         "~/Library/Application Support/Adguard",

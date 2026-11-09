@@ -1,30 +1,28 @@
 cask "hotovo-aider-desk" do
   arch arm: "arm64", intel: "x64"
 
-  version "0.82.0"
-  sha256 arm:   "e270d76ec90710febb886a515bfa20c0d2aff1d2eee061a69bf5ff4b149fb39b",
-         intel: "98311b8efa72a5db95806c9189be4ab039ae82950931df9bd7b228a8ae3632c9"
+  version "0.91.0"
+  sha256 arm:   "94161942bef28d897fb73cc3f5f4832f1002e3e55f3ce976dc1e8f703464c9a0",
+         intel: "f232aa1dbf8ec401c84caf821b0c58ac14a67a0a1a5a21baf6d4818c91922134"
 
   url "https://github.com/hotovo/aider-desk/releases/download/v#{version}/aider-desk-#{version}-macos-#{arch}.dmg"
   name "AiderDesk"
   desc "Desktop GUI for Aider AI pair programming"
   homepage "https://github.com/hotovo/aider-desk"
 
-  livecheck do
-    url :url
-    strategy :github_latest
-  end
-
   auto_updates true
-  depends_on macos: :monterey
+  depends_on macos: :ventura
 
   app "aider-desk.app"
 
   zap trash: [
+    "~/.aider-desk",
     "~/Library/Application Support/aider-desk",
     "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.hotovo.aider-desk.sfl*",
+    "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/eu.magiksoft.aiderdesk.sfl*",
     "~/Library/Logs/aider-desk",
     "~/Library/Preferences/com.hotovo.aider-desk.plist",
+    "~/Library/Preferences/eu.magiksoft.aiderdesk.plist",
     "~/Library/Saved Application State/com.hotovo.aider-desk.savedState",
   ]
 end

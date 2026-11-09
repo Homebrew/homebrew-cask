@@ -8,5 +8,5 @@ cask "font-edu-vic-wa-nt-beginner" do
 
   font "EduVICWANTBeginner[wght].ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

@@ -10,12 +10,9 @@ cask "oracle-jdk@21" do
   desc "JDK from Oracle"
   homepage "https://www.oracle.com/java/technologies/downloads/"
 
-  livecheck do
-    url "https://java.oraclecloud.com/currentJavaReleases/#{version.major}"
-    strategy :json do |json|
-      json["releaseVersion"]
-    end
-  end
+  # Newer Oracle JDK 21 releases are under the OTN licence and need an Oracle
+  # account to download.
+  deprecate! date: "2026-11-08", because: :no_longer_meets_criteria
 
   depends_on :macos
 
@@ -23,7 +20,7 @@ cask "oracle-jdk@21" do
 
   uninstall pkgutil: "com.oracle.jdk-#{version}"
 
-  # No zap stanza required
+  zap :not_required
 
   caveats do
     license "https://www.oracle.com/downloads/licenses/no-fee-license.html"

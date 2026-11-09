@@ -8,5 +8,5 @@ cask "font-esteban" do
 
   font "Esteban-Regular.ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

@@ -8,5 +8,5 @@ cask "font-bree-serif" do
 
   font "BreeSerif-Regular.ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

@@ -1,6 +1,6 @@
 cask "kde-connect" do
-  version "26.04.2"
-  sha256 "e2be426417eb55ff9a4bcdf959d05c74751a2b83240a2368b5645aef4252d718"
+  version "26.08.2"
+  sha256 "1c6328fca363af229b48b238717ab176747b06b57714e2bb968a041c38ced153"
 
   url "https://download.kde.org/stable/release-service/#{version}/macos/kdeconnect-kde-macos-clang-arm64.dmg"
   name "KDE Connect"
@@ -9,7 +9,7 @@ cask "kde-connect" do
 
   livecheck do
     url "https://kdeconnect.kde.org/download.html"
-    regex(%r{href=.*?release-service/(\d+(?:\.\d+)+)(?:/macos/kdeconnect-kde-macos-clang-arm64.dmg)}i)
+    regex(%r{href=.*?release-service/(\d+(?:\.\d+)+)(?:/macos/kdeconnect-kde-macos-clang-arm64\.dmg)}i)
   end
 
   depends_on macos: :ventura, arch: :arm64

@@ -2,12 +2,12 @@ cask "cate" do
   arch arm: "-arm64"
   url_end = on_system_conditional macos: "#{arch}.dmg", linux: ".AppImage"
 
-  version "1.7.0"
+  version "2.0.5"
+  sha256 arm:          "a624da0fb2739a12386038d3f19fd563d461d4fad9e9e2239e97e63976144740",
+         intel:        "277ed4e69af5050c6e13c8db642b429aafc5bc85ca8984c3f75ed25794f8e43e",
+         x86_64_linux: "831cb742ebfa03224fc80081698d7a15fb1321cadef6d106ea1adf9a52756b9e"
 
   on_macos do
-    sha256 arm:   "4deba2757d813a13e784b0d71e6e7fb22f418d7c06e0bec7b87f47eab7aa43ec",
-           intel: "d682affb59dd7cf5ab855cdff58b2e65ef38a2fe4fa8fae5216dec1d9d1d80d3"
-
     depends_on macos: :monterey
 
     app "Cate.app"
@@ -27,11 +27,15 @@ cask "cate" do
     ]
   end
   on_linux do
-    sha256 "3fda53f5de14ab9a19d17bad6715b6158cb6f0b63ffde9378f4c1cf742da28aa"
-
     depends_on arch: :x86_64
 
     app_image "Cate-#{version}.AppImage", target: "Cate.AppImage"
+
+    zap trash: [
+      "~/.cache/cate-updater",
+      "~/.cate",
+      "~/.config/Cate",
+    ]
   end
 
   url "https://github.com/0-AI-UG/cate/releases/download/v#{version}/Cate-#{version}#{url_end}"

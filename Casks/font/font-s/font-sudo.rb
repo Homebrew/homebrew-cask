@@ -9,5 +9,5 @@ cask "font-sudo" do
   font "sudo/SudoUIVariable.ttf"
   font "sudo/SudoVariable.ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

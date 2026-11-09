@@ -5,17 +5,19 @@ cask "db-pro" do
   livecheck_file = on_system_conditional macos: "latest-mac.yml", linux: "latest-linux.yml"
   url_end = on_system_conditional macos: "dmg", linux: "AppImage"
 
-  version "2.8.1"
+  version "2.10.2"
+  sha256 arm:          "1b69b018faedde04fe1c7216029f40510c3e7d8d6136605332bf4f354dd7231e",
+         intel:        "5c5c4b5be08c2c5fe5e2a390bfa3dd5acb4cddcbcd3c59d98baab9a6b54355c2",
+         arm64_linux:  "3bea20fa1ec2a17dcbab846b6cde8f9c11e748be0dd978aef59cfbde0c76e9b4",
+         x86_64_linux: "758ab4b78387fe640411e22fe73cb84da53bbdb653718903580d5886b90ce31c"
 
   on_macos do
-    sha256 arm:   "5c8583e3da6c6cf98ac35dd47c03880275df9bfe558fb9791563241450bfea27",
-           intel: "55da2a7c655334b154bd676ecc42a93113fef57da5411e4ae4e14542725e3b17"
-
     depends_on macos: :monterey
 
     app "DB Pro.app"
 
     zap trash: [
+      "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.dbpro.app.sfl*",
       "~/Library/Application Support/DB Pro",
       "~/Library/Caches/@dbproelectron-updater",
       "~/Library/Caches/com.dbpro.app",
@@ -25,10 +27,12 @@ cask "db-pro" do
     ]
   end
   on_linux do
-    sha256 arm64_linux:  "cbefbfa43623547fd0ce2afbc0582233abdc9a7507b29307546463b828c465cd",
-           x86_64_linux: "e70a958b1a18ffb7f66789618f0550e7e3039041f2b45e980016b9b572f0ed73"
-
     app_image "DB Pro-#{version}-#{file_arch}.AppImage", target: "DB Pro.AppImage"
+
+    zap trash: [
+      "~/.cache/@dbproelectron-updater",
+      "~/.config/DB Pro",
+    ]
   end
 
   url "https://releases.dbpro.app/#{os}-#{arch}/DB%20Pro-#{version}-#{file_arch}.#{url_end}"

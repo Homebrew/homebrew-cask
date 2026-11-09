@@ -11,5 +11,5 @@ cask "font-verdana" do
   font "Verdanai.TTF"
   font "Verdanaz.TTF"
 
-  # No zap stanza required
+  zap :not_required
 end

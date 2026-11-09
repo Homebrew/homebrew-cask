@@ -1,6 +1,6 @@
 cask "mountmate" do
-  version "5.19"
-  sha256 "e8b835600522be82f5c19e86458e4fb399e25eade548922baa1acaa7eda6d28b"
+  version "6.5"
+  sha256 "df780c285523466ba1d58c3e3e4b7d19fc59017f2a0e8d4354bb833eb5a13bb7"
 
   url "https://github.com/homielab/mountmate/releases/download/v#{version}/MountMate_#{version}.dmg"
   name "MountMate"
@@ -17,5 +17,9 @@ cask "mountmate" do
 
   app "MountMate.app"
 
-  zap trash: "~/Library/Preferences/com.homielab.mountmate.plist"
+  zap trash: [
+    "~/Library/Caches/com.homielab.mountmate",
+    "~/Library/HTTPStorages/com.homielab.mountmate",
+    "~/Library/Preferences/com.homielab.mountmate.plist",
+  ]
 end

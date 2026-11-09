@@ -4,6 +4,7 @@ cask "color-oracle" do
 
   url "https://colororacle.org/ColorOracleMac.zip"
   name "Color Oracle"
+  desc "Color blindness simulator"
   homepage "https://colororacle.org/"
 
   livecheck do

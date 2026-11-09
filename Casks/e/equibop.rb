@@ -1,6 +1,6 @@
 cask "equibop" do
-  version "3.3.0"
-  sha256 "b8fcc0917290c4c50199b57d6fb46653a54670b3ba47025a52a2e21014579cc6"
+  version "3.3.2"
+  sha256 "c8b886b9a28e1842627ece313cebe33d04be8d3cd7fadf6daf46b30e305ec24c"
 
   url "https://github.com/Equicord/Equibop/releases/download/v#{version}/Equibop-#{version}-universal.dmg"
   name "Equibop"
@@ -13,11 +13,12 @@ cask "equibop" do
   end
 
   auto_updates true
-  depends_on macos: :monterey
+  depends_on macos: :ventura
 
   app "equibop.app"
 
   zap trash: [
+    "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/org.equicord.equibop.sfl*",
     "~/Library/Application Support/equibop",
     "~/Library/Caches/org.equicord.equibop",
     "~/Library/Caches/org.equicord.equibop.ShipIt",

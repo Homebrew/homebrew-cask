@@ -12,6 +12,8 @@ cask "xampp@7" do
     regex(/xampp[._-]osx[._-]v?(7(?:\.\d+)*-\d+)[._-]installer\.dmg/i)
   end
 
+  disable! date: "2026-10-12", because: :fails_gatekeeper_check
+
   conflicts_with cask: "xampp"
   depends_on :macos
 
@@ -27,7 +29,7 @@ cask "xampp@7" do
               args:       ["--mode", "unattended"],
               sudo:       true,
             },
-            delete: "/Applications/XAMPP/"
+            delete: "/Applications/XAMPP"
 
   zap trash: "~/Library/Saved Application State/com.bitnami.manager.savedState"
 end

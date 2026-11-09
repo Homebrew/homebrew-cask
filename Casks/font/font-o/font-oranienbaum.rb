@@ -8,5 +8,5 @@ cask "font-oranienbaum" do
 
   font "Oranienbaum-Regular.ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

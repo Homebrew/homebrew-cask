@@ -11,5 +11,5 @@ cask "font-georgia" do
   font "Georgiai.TTF"
   font "Georgiaz.TTF"
 
-  # No zap stanza required
+  zap :not_required
 end

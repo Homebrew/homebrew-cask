@@ -1,8 +1,8 @@
 cask "plover" do
-  version "5.4.1"
-  sha256 "22a4fc885f947cb1b5954bd5e32b51c55c57b7eb9cb909f18ec7807f2ffa948c"
+  version "5.4.2"
+  sha256 "541e161657808dd9d0290fea3088404a6c39f5450502e1c1ee326102dd171d68"
 
-  url "https://github.com/openstenoproject/plover/releases/download/v#{version}/plover-#{version}-macosx_12_0_universal2.dmg"
+  url "https://github.com/openstenoproject/plover/releases/download/v#{version}/plover-#{version}-macosx_26_0_universal2.dmg"
   name "Plover"
   desc "Stenotype engine"
   homepage "https://opensteno.org/plover/"

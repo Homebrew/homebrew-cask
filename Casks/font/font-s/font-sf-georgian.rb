@@ -13,5 +13,5 @@ cask "font-sf-georgian" do
 
   uninstall pkgutil: "com.apple.pkg.SFGeorgianFonts"
 
-  # No zap stanza required
+  zap :not_required
 end

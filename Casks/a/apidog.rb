@@ -2,9 +2,9 @@ cask "apidog" do
   arch arm: "-macOS-arm64"
   livecheck_folder = on_arch_conditional arm: "-arm64"
 
-  version "2.8.46"
-  sha256 arm:   "5b9045b496f13a1c6411af388ada5bdbb31c06438504d1700fd4ede5d6588a0b",
-         intel: "5cfdcb7d0e6703ece5fb952415862b820ce534f4b1e2376f8e80692ac8d8ae75"
+  version "2.8.52"
+  sha256 arm:   "4d3cdc87d6a256def95566592b30d8dddec2300f22776943a474ef204dd2332d",
+         intel: "c19054f3026a1f81419751b82f6cf41d142f363969f3a5f78f757a739b9ec5a4"
 
   url "https://file-assets.apidog.com/download/#{version}/legacy-Apidog#{arch}-#{version}.dmg"
   name "Apidog"
@@ -23,6 +23,7 @@ cask "apidog" do
 
   zap trash: [
     "~/Library/Application Support/apidog",
+    "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.apidog.app.sfl*",
     "~/Library/Preferences/com.apidog.app.plist",
     "~/Library/Saved Application State/com.apidog.app.savedState",
   ]

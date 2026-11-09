@@ -15,5 +15,5 @@ cask "font-inria-sans" do
   font "InriaSans-LightItalic.ttf"
   font "InriaSans-Regular.ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

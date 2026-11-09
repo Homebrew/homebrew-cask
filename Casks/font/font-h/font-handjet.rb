@@ -8,5 +8,5 @@ cask "font-handjet" do
 
   font "Handjet[ELGR,ELSH,wght].ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

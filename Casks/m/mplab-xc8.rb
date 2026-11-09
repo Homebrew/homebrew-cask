@@ -40,5 +40,5 @@ cask "mplab-xc8" do
     sudo:       true,
   }
 
-  # No zap stanza required
+  zap :not_required
 end

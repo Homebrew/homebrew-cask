@@ -1,14 +1,14 @@
 cask "kate" do
   arch arm: "arm64", intel: "x86_64"
 
-  sha256 arm:   "f781c5bad5bafbf5adcb0b4004bc9f68d9e3f47c35097ea296db234edb645eeb",
-         intel: "35c0092f794a43cbacad9815b4615aa06174c358a3ff893aec2374fe53e72fee"
+  sha256 arm:   "3d428133610429a11b8a2c32c9cdc88431aec54c92cbe10490bb35a420ed8144",
+         intel: "4f01ee96097530b062161ade082bdfbf887ae364d7bed8b5211f2c469de7aced"
 
   on_arm do
-    version "26.08,12352"
+    version "26.08,12840"
   end
   on_intel do
-    version "26.08,12352"
+    version "26.08,12761"
   end
 
   url "https://cdn.kde.org/ci-builds/utilities/kate/release-#{version.csv.first}/macos-#{arch}/kate-release_#{version.csv.first}-#{version.csv.second}-macos-clang-#{arch}.dmg"
@@ -45,7 +45,10 @@ cask "kate" do
   zap trash: [
     "~/Library/Application Support/kate",
     "~/Library/Caches/kate",
+    "~/Library/Preferences/kate*",
     "~/Library/Preferences/org.kde.kate.plist",
+    "~/Library/Preferences/State/katestaterc",
+    "~/Library/Preferences/State/UserFeedback.org.kde.kate",
     "~/Library/Saved Application State/org.kde.kate.savedState",
   ]
 end

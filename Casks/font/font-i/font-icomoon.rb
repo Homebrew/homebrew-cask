@@ -8,5 +8,5 @@ cask "font-icomoon" do
 
   font "IcoMoon-Free-master/Font/IcoMoon-Free.ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

@@ -1,6 +1,6 @@
 cask "reflex-app" do
-  version "2.0"
-  sha256 "d827cd32cf730c5c8582b200ba1dfb6c1df03e30c3ac6b32c8563ae67d02b489"
+  version "2.1"
+  sha256 "c331644578c57e39a2b8244c00b4fda22586e8d65641342a6c56593b70288bfc"
 
   url "https://stuntsoftware.com/download/reflex_#{version}.zip"
   name "Reflex"
@@ -16,5 +16,10 @@ cask "reflex-app" do
 
   app "Reflex.app"
 
-  zap trash: "~/Library/Preferences/com.stuntsoftware.Reflex.plist"
+  zap trash: [
+    "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.stuntsoftware.reflex.sfl*",
+    "~/Library/Caches/com.stuntsoftware.Reflex",
+    "~/Library/HTTPStorages/com.stuntsoftware.Reflex",
+    "~/Library/Preferences/com.stuntsoftware.Reflex.plist",
+  ]
 end

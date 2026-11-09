@@ -8,5 +8,5 @@ cask "font-noto-sans-bamum" do
 
   font "NotoSansBamum[wght].ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

@@ -6,15 +6,12 @@ cask "font-sn-pro" do
   name "SN Pro Font Family"
   homepage "https://supernotes.app/open-source/sn-pro"
 
-  livecheck do
-    url :url
-    strategy :github_latest
-  end
-
   font "SNPro/SNPro-Black.otf"
   font "SNPro/SNPro-BlackItalic.otf"
   font "SNPro/SNPro-Bold.otf"
   font "SNPro/SNPro-BoldItalic.otf"
+  font "SNPro/SNPro-Book.otf"
+  font "SNPro/SNPro-BookItalic.otf"
   font "SNPro/SNPro-Heavy.otf"
   font "SNPro/SNPro-HeavyItalic.otf"
   font "SNPro/SNPro-Light.otf"
@@ -28,5 +25,5 @@ cask "font-sn-pro" do
   font "SNPro/SNPro-Thin.otf"
   font "SNPro/SNPro-ThinItalic.otf"
 
-  # No zap stanza required
+  zap :not_required
 end

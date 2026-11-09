@@ -11,7 +11,7 @@ cask "ukrainian-unicode-layout" do
 
   keyboard_layout "macOS-Ukrainian-Unicode-Layout-#{version}"
 
-  # No zap stanza required
+  zap :not_required
 
   caveats do
     reboot

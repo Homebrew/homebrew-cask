@@ -8,5 +8,5 @@ cask "font-geologica" do
 
   font "Geologica[CRSV,SHRP,slnt,wght].ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

@@ -16,5 +16,5 @@ cask "font-bravura" do
   font "bravura-bravura-#{version}/redist/otf/Bravura.otf"
   font "bravura-bravura-#{version}/redist/otf/BravuraText.otf"
 
-  # No zap stanza required
+  zap :not_required
 end

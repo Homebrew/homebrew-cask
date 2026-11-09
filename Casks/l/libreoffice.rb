@@ -2,9 +2,9 @@ cask "libreoffice" do
   arch arm: "aarch64", intel: "x86-64"
   folder = on_arch_conditional arm: "aarch64", intel: "x86_64"
 
-  version "26.8.0"
-  sha256 arm:   "8858d8058da4f862f47559486814e65efc27294da67c5e4bb56b006b1ee59f89",
-         intel: "2dcbce4894e01bc1ecd594658e2cbda70ff7bfcd0b310f35d38887797172d09e"
+  version "26.8.2"
+  sha256 arm:   "9f24fe83ab1ed5c95eb3df580119f32932f713e577feeac02bf619fb00749b55",
+         intel: "0af062779cc17f6f852918b2424c745f7dd2d20d51d7fb8a0925eb92ec0417a7"
 
   url "https://download.documentfoundation.org/libreoffice/stable/#{version}/mac/#{folder}/LibreOffice_#{version}_MacOS_#{arch}.dmg"
   name "LibreOffice"
@@ -29,7 +29,7 @@ cask "libreoffice" do
   end
 
   conflicts_with cask: "libreoffice-still"
-  depends_on macos: :big_sur
+  depends_on :macos
 
   app "LibreOffice.app"
   binary "#{appdir}/LibreOffice.app/Contents/MacOS/gengal"

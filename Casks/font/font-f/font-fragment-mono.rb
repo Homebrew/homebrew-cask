@@ -11,5 +11,5 @@ cask "font-fragment-mono" do
   font "FragmentMono-Italic.ttf"
   font "FragmentMono-Regular.ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

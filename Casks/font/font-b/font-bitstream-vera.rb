@@ -17,5 +17,5 @@ cask "font-bitstream-vera" do
   font "ttf-bitstream-vera-#{version}/VeraSe.ttf"
   font "ttf-bitstream-vera-#{version}/VeraSeBd.ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

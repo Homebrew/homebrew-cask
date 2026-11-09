@@ -11,5 +11,5 @@ cask "font-alef" do
   font "Alef-Bold.ttf"
   font "Alef-Regular.ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

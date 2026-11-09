@@ -2,11 +2,11 @@ cask "1password-cli@beta" do
   arch arm: "arm64", intel: "amd64"
   os macos: "darwin", linux: "linux"
 
-  version "2.39.1-beta.01"
-  sha256 arm:          "5a10849ea208649f1c98913d13fa13c6ca9981f21dae3b8daee874701f15d8ff",
-         intel:        "f450729141cb49477bc168fa98c68db96e8eabed8cea865d8b79d615a007ec72",
-         arm64_linux:  "e4cc960792a98dec659d87d571c6c1e82d6f2e4b872686409c9dd31e2ea095bd",
-         x86_64_linux: "57a5d7637e1f508194b48732136de57e53efcc447877a5dbcaed7801abeb7f49"
+  version "2.44.0-beta.01"
+  sha256 arm:          "e18dfe67ad539cc6f4be8ca98000251831fbd9c721d59f4e0eea8550827c7c6e",
+         intel:        "0f34ae754eff3e148f3365504ba04b40097940d308c76004585fb4f0d1625a71",
+         arm64_linux:  "392ee92bc9e373090db4cee6c1230b6e916e732fd6e7a07a2aba580727a8b5d2",
+         x86_64_linux: "04149edc674f4fd5741a57e0044fbcb1abe90877da105a7ea534fc0af2dd2da4"
 
   url "https://cache.agilebits.com/dist/1P/op2/pkg/v#{version}/op_#{os}_#{arch}_v#{version}.zip"
   name "1Password CLI"

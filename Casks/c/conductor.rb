@@ -2,12 +2,12 @@ cask "conductor" do
   arch arm: "aarch64", intel: "x86_64"
 
   on_arm do
-    version "0.84.2,01M1Q0E22GXE2PKE93VP2386RV"
-    sha256 "724e706fb32b47419b16bb4cabaee5cbc08d5f63c4565c36fe86bd34aef12749"
+    version "0.93.0,01M6KR44F2MT1786PCBKYWBN4Y"
+    sha256 "b7326fd61a78d638a1ce1106fea70a86e851b84b4218b8605ad4bd2ffcbb4671"
   end
   on_intel do
-    version "0.84.2,01M1Q0E623WBGZK80RB6MSBGAD"
-    sha256 "7e7cb03dd7a1b80a13a68de7db095441a1f343e477075f526123c0dd3c2a8c28"
+    version "0.93.0,01M6KR4QRGMEZ6K3K6CXFHFZHE"
+    sha256 "a3a5ae93da94c3c366da9c0e920cfa4b1fff61e1aa34a29a36c5a3e5bf9e66fc"
   end
 
   url "https://cdn.crabnebula.app/asset/#{version.csv.second}"
@@ -33,8 +33,9 @@ cask "conductor" do
   app "Conductor.app"
 
   zap trash: [
-    "~/Library/Application Support/com.conductor.app",
-    "~/Library/Caches/com.conductor.app",
-    "~/Library/WebKit/com.conductor.app",
-  ]
+        "~/Library/Application Support/com.conductor.app",
+        "~/Library/Caches/com.conductor.app",
+        "~/Library/WebKit/com.conductor.app",
+      ],
+      rmdir: "~/.conductor"
 end

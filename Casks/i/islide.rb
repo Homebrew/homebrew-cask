@@ -17,6 +17,17 @@ cask "islide" do
 
   app "iSlide.app"
 
+  zap trash: [
+    "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.islide.islidetools.sfl*",
+    "~/Library/Application Support/iSlide Tools",
+    "~/Library/Caches/com.islide.islidetools.ShipIt",
+    "~/Library/Caches/islidetools-updater",
+    "~/Library/Logs/iSlide Tools",
+    "~/Library/Logs/iSlide",
+    "~/Library/Preferences/com.islide.islidetools.plist",
+    "~/Library/Saved Application State/com.islide.islidetools.savedState",
+  ]
+
   caveats do
     requires_rosetta
   end

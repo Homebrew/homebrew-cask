@@ -1,6 +1,6 @@
 cask "macmediakeyforwarder" do
-  version "4.1.0"
-  sha256 "f20960b926188cc579e986932f931150fc828e49dfdb9411cb4a5b352e2bdf0a"
+  version "4.5.1"
+  sha256 "352a690dcc654ca1b892afab403ec148747d8712f1ec3379efceda4664af70cd"
 
   url "https://github.com/quentinlesceller/macmediakeyforwarder/releases/download/v#{version}/MacMediaKeyForwarder.dmg"
   name "Mac Media Key Forwarder"

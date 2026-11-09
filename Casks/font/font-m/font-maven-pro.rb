@@ -8,5 +8,5 @@ cask "font-maven-pro" do
 
   font "MavenPro[wght].ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

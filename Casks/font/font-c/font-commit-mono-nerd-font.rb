@@ -26,5 +26,5 @@ cask "font-commit-mono-nerd-font" do
   font "CommitMonoNerdFontPropo-Italic.otf"
   font "CommitMonoNerdFontPropo-Regular.otf"
 
-  # No zap stanza required
+  zap :not_required
 end

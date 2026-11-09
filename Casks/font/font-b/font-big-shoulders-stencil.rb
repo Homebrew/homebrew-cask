@@ -8,5 +8,5 @@ cask "font-big-shoulders-stencil" do
 
   font "BigShouldersStencil[opsz,wght].ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

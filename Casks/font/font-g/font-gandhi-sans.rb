@@ -11,5 +11,5 @@ cask "font-gandhi-sans" do
   font "GandhiSans-Italic.otf"
   font "GandhiSans-Regular.otf"
 
-  # No zap stanza required
+  zap :not_required
 end

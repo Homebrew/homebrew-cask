@@ -8,5 +8,5 @@ cask "font-anaheim" do
 
   font "Anaheim[wght].ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

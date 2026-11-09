@@ -13,5 +13,5 @@ cask "font-tex-gyre-schola-math" do
 
   font "texgyreschola-math-#{version.no_dots}/opentype/texgyreschola-math.otf"
 
-  # No zap stanza required
+  zap :not_required
 end

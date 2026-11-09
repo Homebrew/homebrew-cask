@@ -15,5 +15,5 @@ cask "font-times-newer-roman" do
   font "TimesNewerRoman-Italic.otf"
   font "TimesNewerRoman-Regular.otf"
 
-  # No zap stanza required
+  zap :not_required
 end

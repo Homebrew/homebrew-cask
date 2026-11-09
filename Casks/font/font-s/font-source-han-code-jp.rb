@@ -21,5 +21,5 @@ cask "font-source-han-code-jp" do
   font "source-han-code-jp-#{version}/OTF/SourceHanCodeJP-Regular.otf"
   font "source-han-code-jp-#{version}/OTF/SourceHanCodeJP-RegularIt.otf"
 
-  # No zap stanza required
+  zap :not_required
 end

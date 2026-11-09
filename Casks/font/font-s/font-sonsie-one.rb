@@ -8,5 +8,5 @@ cask "font-sonsie-one" do
 
   font "SonsieOne-Regular.ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

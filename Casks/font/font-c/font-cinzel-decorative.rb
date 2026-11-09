@@ -12,5 +12,5 @@ cask "font-cinzel-decorative" do
   font "CinzelDecorative-Bold.ttf"
   font "CinzelDecorative-Regular.ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

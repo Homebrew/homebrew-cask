@@ -1,9 +1,9 @@
 cask "docker-desktop" do
   arch arm: "arm64", intel: "amd64"
 
-  version "4.90.0,238679"
-  sha256 arm:   "c131ee28ef56248d4abee2268c05235b19216b015ddf632727cef1b95a6f995c",
-         intel: "d5c1143655cd2a4cbd674e5a1337762fa34699d541e93c53bde034048f1c74c8"
+  version "4.99.0,245822"
+  sha256 arm:   "0ede7f9917b55c396a17b03c069cadf457a7d21904bc264c6d398fe132da7fb9",
+         intel: "0584a21e7503a4e12e25c7c829ef9439ceca6f453842e47ade9d1961c2fbd2af"
 
   on_intel do
     binary "#{appdir}/Docker.app/Contents/Resources/bin/com.docker.hyperkit",
@@ -31,8 +31,6 @@ cask "docker-desktop" do
          target: "/usr/local/bin/docker"
   binary "#{appdir}/Docker.app/Contents/Resources/bin/docker-credential-desktop",
          target: "/usr/local/bin/docker-credential-desktop"
-  binary "#{appdir}/Docker.app/Contents/Resources/bin/docker-credential-ecr-login",
-         target: "/usr/local/bin/docker-credential-ecr-login"
   binary "#{appdir}/Docker.app/Contents/Resources/bin/docker-credential-osxkeychain",
          target: "/usr/local/bin/docker-credential-osxkeychain"
   binary "#{appdir}/Docker.app/Contents/Resources/bin/kubectl",
@@ -41,10 +39,10 @@ cask "docker-desktop" do
          target: "/usr/local/cli-plugins/docker-compose"
   bash_completion "#{appdir}/Docker.app/Contents/Resources/etc/docker-compose.bash-completion"
   bash_completion "#{appdir}/Docker.app/Contents/Resources/etc/docker.bash-completion"
-  fish_completion "#{appdir}/Docker.app/Contents/Resources/etc/docker-compose.fish-completion"
-  fish_completion "#{appdir}/Docker.app/Contents/Resources/etc/docker.fish-completion"
   zsh_completion "#{appdir}/Docker.app/Contents/Resources/etc/docker-compose.zsh-completion"
   zsh_completion "#{appdir}/Docker.app/Contents/Resources/etc/docker.zsh-completion"
+  fish_completion "#{appdir}/Docker.app/Contents/Resources/etc/docker-compose.fish-completion"
+  fish_completion "#{appdir}/Docker.app/Contents/Resources/etc/docker.fish-completion"
 
   postflight_steps do
     # Only link if `kubernetes-cli` is not installed.

@@ -1,6 +1,6 @@
 cask "qqlive" do
-  version "2.183.0.55849"
-  sha256 "6b228e78a3cc86e7568eeb21c9e8880161a64ebcda3d0ca9e7a18757642fc15e"
+  version "2.190.0.55922"
+  sha256 "4b358a29ce815630b885402ff2feab7b5df4bc8e63b5c5de5f99dbea99c7c414"
 
   url "https://dldir1.qq.com/qqtv/mac/TencentVideo#{version}.dmg"
   name "QQLive"
@@ -27,9 +27,13 @@ cask "qqlive" do
   uninstall quit: "com.tencent.tenvideo"
 
   zap trash: [
+    "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.tencent.tenvideo.sfl*",
+    "~/Library/Application Support/com.tencent.tenvideo",
     "~/Library/Caches/com.tencent.tenvideo",
+    "~/Library/com.tencent.tenvideo",
     "~/Library/Containers/com.tencent.tenvideo",
     "~/Library/Cookies/com.tencent.tenvideo.binarycookies",
+    "~/Library/HTTPStorages/com.tencent.tenvideo",
     "~/Library/Logs/QQLive",
     "~/Library/Preferences/com.tencent.tenvideo.plist",
     "~/Library/Saved Application State/com.tencent.tenvideo.savedState",

@@ -12,7 +12,7 @@ cask "diskboard" do
     regex(%r{downloads/v?(\d+(?:\.\d+)+)/DiskBoard\.app\.zip}i)
   end
 
-  depends_on macos: :big_sur
+  depends_on :macos
 
   app "DiskBoard.app"
 

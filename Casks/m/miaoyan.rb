@@ -1,6 +1,6 @@
 cask "miaoyan" do
-  version "4.2.0"
-  sha256 "d47cd9117800b50a427963fc396478d7ad70eb2c8d7633088f2f4d9e2bcb39a8"
+  version "4.8.0"
+  sha256 "bba67c3acacfe75e50aa480180573b43660c191b8b8447ab13cc0271842e8249"
 
   url "https://github.com/tw93/MiaoYan/releases/download/V#{version}/MiaoYan_V#{version}.zip"
   name "MiaoYan"
@@ -13,14 +13,16 @@ cask "miaoyan" do
   end
 
   auto_updates true
-  depends_on macos: :big_sur
+  depends_on macos: :monterey
 
   app "MiaoYan.app"
 
   zap trash: [
-    "~/Library/Application Support/com.tw93.MiaoYan",
-    "~/Library/Caches/com.tw93.MiaoYan",
-    "~/Library/HTTPStorages/com.tw93.MiaoYan",
-    "~/Library/Preferences/com.tw93.MiaoYan.plist",
-  ]
+        "~/Library/Application Support/com.tw93.MiaoYan",
+        "~/Library/Caches/com.tw93.MiaoYan",
+        "~/Library/HTTPStorages/com.tw93.MiaoYan",
+        "~/Library/Preferences/com.tw93.MiaoYan.plist",
+        "~/Library/WebKit/com.tw93.miaoyan",
+      ],
+      rmdir: "~/Documents/MiaoYan"
 end

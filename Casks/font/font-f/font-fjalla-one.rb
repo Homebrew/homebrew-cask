@@ -8,5 +8,5 @@ cask "font-fjalla-one" do
 
   font "FjallaOne-Regular.ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

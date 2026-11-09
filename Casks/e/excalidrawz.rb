@@ -1,6 +1,6 @@
 cask "excalidrawz" do
-  version "2.4.3"
-  sha256 "7cb3a00f390a10bf0793877f0c85bcfa5c9ba6951631aecae69ec36542fa012c"
+  version "2.5.1"
+  sha256 "290cbaf9226c94728a6e2d71d201c0e9b0be48d06186dce2c744220aebabeb63"
 
   url "https://github.com/chocoford/ExcalidrawZ/releases/download/v#{version.csv.first}/ExcalidrawZ.#{version}.dmg"
   name "ExcalidrawZ"
@@ -13,7 +13,7 @@ cask "excalidrawz" do
   end
 
   auto_updates true
-  depends_on macos: :ventura
+  depends_on macos: :sonoma
 
   app "ExcalidrawZ.app"
 
@@ -21,6 +21,8 @@ cask "excalidrawz" do
 
   zap trash: [
     "~/Library/Application Scripts/com.chocoford.excalidraw",
+    "~/Library/Application Scripts/group.com.chocoford.excalidraw",
     "~/Library/Containers/com.chocoford.excalidraw",
+    "~/Library/Group Containers/group.com.chocoford.excalidraw",
   ]
 end

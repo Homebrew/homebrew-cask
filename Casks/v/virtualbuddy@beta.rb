@@ -1,6 +1,6 @@
 cask "virtualbuddy@beta" do
-  version "2.2,408"
-  sha256 "18abf51522408a8bae4ea8b8b9242945a0ed34fd14127bf60066e765e3e2381f"
+  version "2.2.1,431"
+  sha256 "1895f81726b346018be96e5b38549a1336adfd7691007cd2860002c5057c9e9f"
 
   url "https://su.virtualbuddy.app/beta/VirtualBuddy_v#{version.csv.first}-#{version.csv.second}.dmg"
   name "VirtualBuddy"
@@ -21,6 +21,7 @@ cask "virtualbuddy@beta" do
 
   zap trash: [
     "~/Library/Application Support/VirtualBuddy",
+    "~/Library/Caches/codes.rambo.VirtualBuddy",
     "~/Library/HTTPStorages/codes.rambo.VirtualBuddy",
     "~/Library/Preferences/codes.rambo.VirtualBuddy.plist",
   ]

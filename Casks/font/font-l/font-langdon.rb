@@ -8,5 +8,5 @@ cask "font-langdon" do
 
   font "Langdon.otf"
 
-  # No zap stanza required
+  zap :not_required
 end

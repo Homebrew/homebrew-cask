@@ -3,10 +3,10 @@ cask "waku" do
   url_end = on_system_conditional macos: ".dmg", linux: "-unknown-linux-gnu.tar.gz"
   file_prefix = on_system_conditional macos: "Waku", linux: "waku"
 
-  version "0.1.18"
-  sha256 arm:          "a2a6a98d0c782f336caf4a110753fc25d4492e2eb8d0cf42c30734ca3aa8d89a",
-         arm64_linux:  "64f2c876a748b27664c27b6afd0dbee2c57c51811987a99eeed707e915c35830",
-         x86_64_linux: "10a1db976113844a140537b85afebd0e0d043f40472954ef8563c599f23a0093"
+  version "0.1.20"
+  sha256 arm:          "b01d0cbc3cc6f4e4717d4be56e2f58b46114ad2f9439cf28a228e4a7585e53ce",
+         arm64_linux:  "b075e3fb8ca85e1ba8df7f72aa47447a4fbd1b99b985aacad9eb5046ae6b1bb9",
+         x86_64_linux: "8bad569f3a3794aedae4f79ffaf711fe9b8ef3173e605c009ce07a71a7aea415"
 
   on_macos do
     auto_updates true

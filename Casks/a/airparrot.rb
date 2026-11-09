@@ -1,6 +1,6 @@
 cask "airparrot" do
-  version "3.1.7"
-  sha256 "acb42bb53c1dfde1fec6835fd8fd89a278b215a97f1e08545e45780cebb19409"
+  version "3.1.10"
+  sha256 "0422517b786f7666f145762fa2cb16a51f104594eb4b2fae13578b265cde5523"
 
   url "https://download.airsquirrels.com/AirParrot#{version.major}/Mac/AirParrot-#{version}.dmg"
   name "AirParrot"
@@ -13,7 +13,7 @@ cask "airparrot" do
   end
 
   auto_updates true
-  depends_on :macos
+  depends_on macos: :monterey
 
   app "AirParrot #{version.major}.app"
 
@@ -26,5 +26,11 @@ cask "airparrot" do
               "com.squirrels.driver.AirParrotSpeakers",
             ]
 
-  zap trash: "~/Library/Preferences/com.squirrels.AirParrot-*.plist"
+  zap trash: [
+    "~/Library/Application Support/AirParrot #{version.major}",
+    "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.squirrels.airparrot-#{version.major}.sfl*",
+    "~/Library/Caches/com.squirrels.AirParrot-#{version.major}",
+    "~/Library/HTTPStorages/com.squirrels.AirParrot-#{version.major}*",
+    "~/Library/Preferences/com.squirrels.AirParrot-*.plist",
+  ]
 end

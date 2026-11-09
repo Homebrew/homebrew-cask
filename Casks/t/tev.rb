@@ -15,14 +15,14 @@ cask "tev" do
     uninstall quit: "org.tom94.tev"
 
     zap trash: [
-      "~/Library/Application Scripts/com.apple.CalendarUI.SpotlightEventPreview",
-      "~/Library/Containers/com.apple.CalendarUI.SpotlightEventPreview",
       "~/Library/Preferences/org.tom94.tev.plist",
       "~/Library/Saved Application State/org.tom94.tev.savedState",
     ]
   end
   on_linux do
     app_image "tev#{arch}.appimage", target: "tev.AppImage"
+
+    zap :not_required
   end
 
   url "https://github.com/Tom94/tev/releases/download/v#{version}/tev#{arch}.#{os}"

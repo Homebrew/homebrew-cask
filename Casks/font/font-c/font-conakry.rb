@@ -8,5 +8,5 @@ cask "font-conakry" do
 
   font "ConakryFont/Conakry.ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

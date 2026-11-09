@@ -2,19 +2,22 @@ cask "tangleguard-cli" do
   arch arm: "aarch64", intel: "x86_64"
   os macos: "apple-darwin", linux: "unknown-linux-gnu"
 
-  version "0.15.0"
-  sha256 arm:          "aaf892452cb20bba2a788fcd5eebfd33b5c2e6408dfc14badec26c3dc1c7dc7b",
-         intel:        "04f99dc28efa643147bde828383ebf43bd3c23c35d0c271c768b23498ce10aec",
-         arm64_linux:  "7c0d928a865738c0f04312fef93cc0282dadcb083f8cc10f73225acf7060cce9",
-         x86_64_linux: "1434f3f1ac4dafc190107eaa72ad9ced49cc9e4a57170f6b3e3ff49b76db8508"
+  version "0.27.0"
+  sha256 arm:          "f8f494d0e64e9c5f1396fca0c30ebb8c14d7860ad1ec3053f6ff937cc2319b3d",
+         intel:        "5f6fe32f9dfcffccd07cad1bdc8f9d125a4266c3e5943758dd6cc060c3725dfd",
+         arm64_linux:  "a86862d870352da958650a9f109751c099bb4d65cb0d0b3b60cf16bcd84c98ff",
+         x86_64_linux: "25795071235af2bb84df7b0ab96f620e41e19553a89ce1f828475562f7df3b28"
 
   on_macos do
-    zap trash: "~/Library/Application Support/CrashReporter/tangleguard-cli*"
+    zap trash: "~/Library/Application Support/CrashReporter/tangleguard*"
+  end
+  on_linux do
+    zap :not_required
   end
 
   url "https://tangleguard-cli-builds.s3.eu-central-1.amazonaws.com/v#{version}/tangleguard-cli_#{version}_#{arch}-#{os}.tar.gz"
   name "Tangleguard CLI"
-  desc "Codebase Architecture Context via the CLI for LLMs and Humans"
+  desc "Code architecture context for LLMs and humans"
   homepage "https://tangleguard.com/"
 
   livecheck do
@@ -22,5 +25,5 @@ cask "tangleguard-cli" do
     regex(/v?(\d+(?:\.\d+)+)/i)
   end
 
-  binary "tangleguard-cli"
+  binary "tangleguard"
 end

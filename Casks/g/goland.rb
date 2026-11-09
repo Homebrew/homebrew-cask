@@ -1,9 +1,9 @@
 cask "goland" do
   arch arm: "-aarch64"
 
-  version "2026.2.2.1,262.10315.160"
-  sha256 arm:   "c534cd0b8275ad11ed47ec19919b03417d71f817586e11dbe9e84e87f4e808c6",
-         intel: "04b846336f530ecf071af9980abf1532a310066d3d4a07007dd684d982461137"
+  version "2026.3,263.7307.211"
+  sha256 arm:   "8f83727c7dd0cbdd50bfa0e43cc81e44fe0d4de1e76f634b19a365cc7c867827",
+         intel: "f812c7521e77c3d53f35e8aa151834c84142df02700d76256f3ba30f4288f0b9"
 
   url "https://download.jetbrains.com/go/goland-#{version.csv.first}#{arch}.dmg"
   name "Goland"
@@ -31,7 +31,8 @@ cask "goland" do
                   executable: "/usr/bin/open",
                   args:       ["-na", "GoLand.app", "--args"]
 
-  uninstall quit: "com.jetbrains.goland"
+  uninstall launchctl: "application.com.jetbrains.app.daemon.*",
+            quit:      "com.jetbrains.goland"
 
   zap trash: [
     "~/Library/Application Support/JetBrains/GoLand",

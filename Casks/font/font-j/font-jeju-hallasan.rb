@@ -8,5 +8,5 @@ cask "font-jeju-hallasan" do
 
   font "JejuHallasan-Regular.ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

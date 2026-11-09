@@ -8,5 +8,5 @@ cask "font-commissioner" do
 
   font "Commissioner[FLAR,VOLM,slnt,wght].ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

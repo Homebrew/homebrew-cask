@@ -8,5 +8,5 @@ cask "font-actor" do
 
   font "Actor-Regular.ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

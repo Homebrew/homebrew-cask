@@ -2,11 +2,13 @@ cask "obsidian" do
   arch arm: on_system_conditional(linux: "-arm64")
   os macos: "dmg", linux: "AppImage"
 
-  version "1.13.7"
+  version "1.15.0"
+  sha256 arm:          "d3f837e6fd3efaf65fa0bec987b18296982995d4ddae3171a7f7f67e0e2b7aa8",
+         intel:        "d3f837e6fd3efaf65fa0bec987b18296982995d4ddae3171a7f7f67e0e2b7aa8",
+         arm64_linux:  "fb350986a6083f1a26330c297ba2bef8191d60f00f982d4b420c821aceaf04f5",
+         x86_64_linux: "1dd8cfb593deaa644101bdb4df65b159ed7985993b6572dd25fd1363459e91cc"
 
   on_macos do
-    sha256 "05daa54f5e1a4458f75da29f8faaa17e8e37ae16998432537f674c626db99bce"
-
     depends_on macos: :monterey
 
     app "Obsidian.app"
@@ -20,10 +22,9 @@ cask "obsidian" do
     ]
   end
   on_linux do
-    sha256 arm64_linux:  "e286fd2bb2a5d346a35a577bd764c73fd5537dddec2b99a1a3e5e35974085203",
-           x86_64_linux: "e0d8e0a611624de8c9c7dcd8a9e648279fb0a0d552faa1312b7e4f3a5fa72663"
-
     app_image "Obsidian-#{version}#{arch}.AppImage", target: "Obsidian.AppImage"
+
+    zap trash: "~/.config/obsidian"
   end
 
   url "https://github.com/obsidianmd/obsidian-releases/releases/download/v#{version}/Obsidian-#{version}#{arch}.#{os}"

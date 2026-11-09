@@ -8,5 +8,5 @@ cask "font-carattere" do
 
   font "Carattere-Regular.ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

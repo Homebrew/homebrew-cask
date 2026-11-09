@@ -1,6 +1,6 @@
 cask "sqlpro-for-postgres" do
-  version "2026.238"
-  sha256 "e5be77915d27dee0d6ac7d5fcc33f9143daf1a06d6cf8656ffe5b3e722dcc053"
+  version "2026.301"
+  sha256 "151bbd90fc9c2d3a2ce95cf0716d85ef564fd27061dc61473a805ea83ce93f41"
 
   url "https://d3fwkemdw8spx3.cloudfront.net/postgres/SQLProPostgres.#{version}.app.zip"
   name "SQLPro for Postgres"
@@ -17,6 +17,7 @@ cask "sqlpro-for-postgres" do
   app "SQLPro for Postgres.app"
 
   zap trash: [
+    "~/Library/Application Scripts/com.hankinsoft.osx.SQLProPostgres",
     "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.hankinsoft.osx.sqlpropostgres.sfl*",
     "~/Library/Containers/com.hankinsoft.osx.sqlpropostgres",
   ]

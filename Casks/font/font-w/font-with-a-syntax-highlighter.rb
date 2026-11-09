@@ -33,5 +33,5 @@ cask "font-with-a-syntax-highlighter" do
   font "FontWithASyntaxHighlighter-main/FontWithASyntaxHighlighterNightOwl-LightWideItalic.otf"
   font "FontWithASyntaxHighlighter-main/FontWithASyntaxHighlighterNightOwl-Regular.otf"
 
-  # No zap stanza required
+  zap :not_required
 end

@@ -8,5 +8,5 @@ cask "font-nova-round" do
 
   font "NovaRound.ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

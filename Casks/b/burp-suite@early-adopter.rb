@@ -1,9 +1,9 @@
 cask "burp-suite@early-adopter" do
   arch arm: "MacOsArm64", intel: "MacOsx"
 
-  version "2026.8"
-  sha256 arm:   "638ff9d9c3026838798f5659904e3e9cba00ee0b26f3d616f93b1967f275d2ce",
-         intel: "6c6f0f8450179d1c3e99538fcdad7d1d764a5d7e290c8c48b9070018e08c9411"
+  version "2026.10.1"
+  sha256 arm:   "77a343a0e8ac80784382f33c54ce8c0516618ad7d92a97eb6e014b57d8f2f07d",
+         intel: "28dcf9d4a929b510ae65c6cf17387b0de8149f2d01ff36b8dcc0759ca305a7d3"
 
   url "https://portswigger-cdn.net/burp/releases/download?product=desktop&version=#{version}&type=#{arch}"
   name "Burp Suite Community Edition"
@@ -35,5 +35,8 @@ cask "burp-suite@early-adopter" do
 
   uninstall quit: "com.install4j.6592-1155-2163-3973.70"
 
-  zap trash: "~/.BurpSuite"
+  zap trash: [
+    "~/.BurpSuite",
+    "~/Library/Preferences/com.install4j.6592-1155-2163-3973.70.plist",
+  ]
 end

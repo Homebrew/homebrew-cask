@@ -3,11 +3,11 @@ cask "drawio" do
   os macos: "draw.io", linux: "drawio"
   url_end = on_system_conditional macos: "dmg", linux: "AppImage"
 
-  version "31.4.4"
-  sha256 arm:          "46d8f352d51ec8a036e4ad2a166e4b00eb9a6d2aec758619cddaa1fae16b7929",
-         intel:        "b3cf4a3aabe260ac14bb9c029fdbc692b19ebaabe8940a94fda8ae1784d0891d",
-         arm64_linux:  "967124600aa51f537e403eb63c405b680f39a019d2bd5dd1367fc8c9798aef1e",
-         x86_64_linux: "c444663e11cf4cbbabf0324e07c68e3003c5d773d65d53d319d47e95f568b93a"
+  version "32.6.10"
+  sha256 arm:          "83e4027837f89bfba9dafbcc5c0e4befa76e2ac7f4e37f7a7b40c817141a6727",
+         intel:        "b2e6be1e323177d40cc2bac4e0d2fcf436ece1f4dc6fe648d164679d4ac9c84b",
+         arm64_linux:  "2b3a66339d56a87a346df52b65fc39a342da1b12b5eed80a633c3bb6c031700e",
+         x86_64_linux: "94158126a43016b4e6f24bbc2c840ab8b5a51c6bf2796e1b3dadc64390b2d256"
 
   on_macos do
     depends_on macos: :ventura
@@ -35,6 +35,11 @@ cask "drawio" do
   end
   on_linux do
     app_image "drawio-#{arch}-#{version}.AppImage", target: "drawio.AppImage"
+
+    zap trash: [
+      "~/.cache/draw.io-updater",
+      "~/.config/draw.io",
+    ]
   end
 
   url "https://github.com/jgraph/drawio-desktop/releases/download/v#{version}/#{os}-#{arch}-#{version}.#{url_end}"

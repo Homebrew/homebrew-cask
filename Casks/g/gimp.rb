@@ -5,21 +5,21 @@ cask "gimp" do
   name_start = on_system_conditional macos: "gimp", linux: "GIMP"
   url_end = on_system_conditional macos: "dmg", linux: "AppImage"
 
-  version "3.2.4"
-  sha256 arm:          "294c016dca7795999129a38b462f80fac3c13cb963e6de9d04eeb5d6e519392b",
-         intel:        "85214a388687718d30169d88b22794d6b0a89849bcc7aa456f4afb83c1326be8",
-         arm64_linux:  "7cb6f5c2b5a693302beb3e41c987c47562ff146eed4125b19ecf414ba6dca0ab",
-         x86_64_linux: "f1ce6dc671ef1c4aad87a0db9d7462e8ca9c0b5f899456337803c6ba32d0babe"
+  version "3.2.8"
+  sha256 arm:          "06404a375106b7613ba3a14c7d8d9a7cbe18b9b9e2b2050bb72f3162cbcfc395",
+         intel:        "7746487985d7143b190692500b58d5317b6ce916a60f8139a76df5eea1e920db",
+         arm64_linux:  "3fd61dbc40b760f7806ffc04c29dc0d93021b799b9d0e6977571c4425d0323b0",
+         x86_64_linux: "8b43dc23e58a1b66ace9dd6d4d5f7e8532f3398e6109f95a1ec0b6ad036aa250"
 
   on_macos do
-    depends_on macos: :big_sur
-
     app "GIMP.app"
     command_wrapper "gimp", executable: "#{appdir}/GIMP.app/Contents/MacOS/gimp"
 
     zap trash: [
       "~/Library/Application Support/Gimp",
+      "~/Library/Caches/GIMP",
       "~/Library/Preferences/org.gimp.gimp-#{version.major_minor}.plist",
+      "~/Library/Preferences/org.gimp.gimp.plist",
       "~/Library/Saved Application State/org.gimp.gimp-#{version.major_minor}.savedState",
     ]
   end

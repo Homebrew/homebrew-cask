@@ -1,6 +1,6 @@
 cask "osquery" do
-  version "5.23.1"
-  sha256 "9f40cea0358759ab2ee871c577055657e3cc2c7cbe5c1247f764245941178aa6"
+  version "5.24.1"
+  sha256 "950cc119f68c4d292f3e9407171205633e7174e13fc14ab593f48c75d907bd4f"
 
   url "https://github.com/osquery/osquery/releases/download/#{version}/osquery-#{version}.pkg"
   name "osquery"
@@ -22,5 +22,5 @@ cask "osquery" do
               "io.osquery.agent",
             ]
 
-  # No zap stanza required
+  zap :not_required
 end

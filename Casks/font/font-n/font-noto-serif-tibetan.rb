@@ -8,5 +8,5 @@ cask "font-noto-serif-tibetan" do
 
   font "NotoSerifTibetan[wght].ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

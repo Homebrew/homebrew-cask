@@ -32,5 +32,5 @@ cask "font-victor-mono" do
   font "OTF/VictorMono-ThinItalic.otf"
   font "OTF/VictorMono-ThinOblique.otf"
 
-  # No zap stanza required
+  zap :not_required
 end

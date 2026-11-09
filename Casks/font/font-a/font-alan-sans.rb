@@ -8,5 +8,5 @@ cask "font-alan-sans" do
 
   font "AlanSans[wght].ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

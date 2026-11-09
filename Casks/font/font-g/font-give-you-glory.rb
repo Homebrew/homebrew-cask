@@ -8,5 +8,5 @@ cask "font-give-you-glory" do
 
   font "GiveYouGlory.ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

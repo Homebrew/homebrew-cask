@@ -1,6 +1,6 @@
 cask "appbox" do
-  version "4.0.0"
-  sha256 "30f346b0dc685b3ad8ce870213974618f0997d5d18081ca41f03bef0b8789aad"
+  version "4.1.0"
+  sha256 "eac5efb75115cb9340b1cbe9933519a0a4e69565f2f72df39f9b98caaa4e8cec"
 
   url "https://github.com/getappbox/AppBox-iOSAppsWirelessInstallation/releases/download/#{version}/AppBox.app.zip"
   name "AppBox"

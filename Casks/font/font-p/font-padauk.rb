@@ -11,5 +11,5 @@ cask "font-padauk" do
   font "Padauk-Bold.ttf"
   font "Padauk-Regular.ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

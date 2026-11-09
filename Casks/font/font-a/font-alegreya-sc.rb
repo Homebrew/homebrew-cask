@@ -19,5 +19,5 @@ cask "font-alegreya-sc" do
   font "AlegreyaSC-MediumItalic.ttf"
   font "AlegreyaSC-Regular.ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

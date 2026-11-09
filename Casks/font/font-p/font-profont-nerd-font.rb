@@ -20,5 +20,5 @@ cask "font-profont-nerd-font" do
   font "ProFontWindowsNerdFontMono-Regular.ttf"
   font "ProFontWindowsNerdFontPropo-Regular.ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

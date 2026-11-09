@@ -7,11 +7,6 @@ cask "biglybt" do
   desc "Bittorrent client based on the Azureus open source project"
   homepage "https://www.biglybt.com/"
 
-  livecheck do
-    url :url
-    strategy :github_latest
-  end
-
   auto_updates true
   depends_on :macos
 

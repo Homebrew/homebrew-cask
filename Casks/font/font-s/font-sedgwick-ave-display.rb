@@ -8,5 +8,5 @@ cask "font-sedgwick-ave-display" do
 
   font "SedgwickAveDisplay-Regular.ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

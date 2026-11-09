@@ -27,5 +27,5 @@ cask "font-raleway" do
   font "Raleway-#{version}/variable/TTF/Raleway-Italic-VF.ttf"
   font "Raleway-#{version}/variable/TTF/Raleway-VF.ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

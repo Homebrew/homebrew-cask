@@ -1,6 +1,6 @@
 cask "hapigo" do
-  version "2.22.1"
-  sha256 "3dea65cabd50e104a229aa6e70b9ec6ed9670a6dc37f4bf2e4e5e20659111352"
+  version "2.23.1"
+  sha256 "f351c119bc0c503f8632bfc60a6df409bf4871e1dfccf04d110949585de67ac3"
 
   url "https://dl.hapigo.com/HapiGo_#{version}.dmg"
   name "HapiGo"
@@ -8,23 +8,27 @@ cask "hapigo" do
   homepage "https://www.hapigo.com/"
 
   livecheck do
-    url "https://hapigo.com/update/cast.plist"
+    url "https://www.hapigo.com/update/cast.plist"
     strategy :xml do |xml|
       xml.get_elements("//key[text()='version']").map { |item| item.next_element&.text&.strip }
     end
   end
 
   auto_updates true
-  depends_on macos: :monterey
+  depends_on macos: :ventura
 
   app "HapiGo.app"
 
   uninstall quit: "com.xunyong.hapigo"
 
   zap trash: [
+    "~/Library/Application Scripts/com.xunyong.hapigo.FinderMenu",
+    "~/Library/Application Scripts/group.com.xunyong.hapigoSharing",
     "~/Library/Application Support/Hapigo",
     "~/Library/Caches/com.xunyong.hapigo",
     "~/Library/Caches/Hapigo",
+    "~/Library/Containers/com.xunyong.hapigo.FinderMenu",
+    "~/Library/Group Containers/group.com.xunyong.hapigoSharing",
     "~/Library/HTTPStorages/com.xunyong.hapigo",
     "~/Library/HTTPStorages/com.xunyong.hapigo.binarycookies",
     "~/Library/Preferences/com.xunyong.hapigo.plist",

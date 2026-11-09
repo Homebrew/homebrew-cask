@@ -3,11 +3,11 @@ cask "gitcomet" do
   os macos: "macos", linux: "linux"
   url_end = on_system_conditional macos: "dmg", linux: "AppImage"
 
-  version "0.2.3"
-  sha256 arm:          "03c09bdafb3708c089fc7090d90dd6ca2fbdec0ab3fd9138aaebe44a5fb9d4b1",
-         intel:        "68e07e85678a686c0928d1b9abbc09f743dbb8860501ac6786faf7394c3a72e0",
-         arm64_linux:  "8bede3c1a1f4ecedb4f2537504cd188362dba168bca3d06a3e49affa65d9f97d",
-         x86_64_linux: "6502994a00e0a44c2a35ffaa69f10ad821d2c87c2cc147d3ad90f8fec70740e4"
+  version "0.3.3"
+  sha256 arm:          "ffde019181122d599ff84cc4cd51f24d066e3123ccc3386ae2dcd4f8e259e5ba",
+         intel:        "ef2f0affd87de80ad2348bb442d5066a857e19edaf0126471e6c81f60c5a0701",
+         arm64_linux:  "a735af6409729e339c3c7b76b69c8ce6d84aa15c7fc1d1b847ab5601fd4cd8aa",
+         x86_64_linux: "b3a4203b0947ff73214773035271006bb3b4f62788cb1a0e3ca7a72560bab692"
 
   on_macos do
     depends_on macos: :ventura
@@ -26,6 +26,12 @@ cask "gitcomet" do
   end
   on_linux do
     app_image "gitcomet-v#{version}-linux-#{arch}.AppImage", target: "GitComet.AppImage"
+
+    zap trash: [
+      "~/.local/share/gitcomet",
+      "~/.local/share/icons/hicolor/*/apps/gitcomet.png",
+      "~/.local/state/gitcomet",
+    ]
   end
 
   url "https://github.com/Auto-Explore/GitComet/releases/download/v#{version}/gitcomet-v#{version}-#{os}-#{arch}.#{url_end}"

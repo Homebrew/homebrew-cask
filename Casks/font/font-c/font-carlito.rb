@@ -13,5 +13,5 @@ cask "font-carlito" do
   font "Carlito-Italic.ttf"
   font "Carlito-Regular.ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

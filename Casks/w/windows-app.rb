@@ -1,6 +1,6 @@
 cask "windows-app" do
-  version "11.4.0"
-  sha256 "bdc7ccf2914960074d8eaeaa0b3661127bb3a29291f6832ab7dfdadf70c4171a"
+  version "11.4.4"
+  sha256 "70041210ec1c40cbcc1913010fb9a7de7e2b0c8d9f336777775789ae65bc9cab"
 
   url "https://res.public.onecdn.static.microsoft/mro1cdnstorage/C1297A47-86C4-4C1F-97FA-950631F94777/MacAutoupdate/Windows_App_#{version}_installer.pkg"
   name "Windows App"
@@ -12,7 +12,6 @@ cask "windows-app" do
     strategy :header_match
   end
 
-  conflicts_with cask: "microsoft-remote-desktop"
   depends_on macos: :sonoma
 
   pkg "Windows_App_#{version}_installer.pkg",

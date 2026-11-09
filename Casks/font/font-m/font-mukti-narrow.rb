@@ -8,5 +8,5 @@ cask "font-mukti-narrow" do
 
   font "muktinarrow.ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

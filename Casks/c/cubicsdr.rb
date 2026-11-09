@@ -30,6 +30,12 @@ cask "cubicsdr" do
 
   app "CubicSDR.app"
 
+  zap trash: [
+    "~/Library/Application Support/CubicSDR",
+    "~/Library/Preferences/com.cubicproductions.cubicsdr.plist",
+    "~/Library/Saved Application State/com.cubicproductions.cubicsdr.savedState",
+  ]
+
   caveats do
     requires_rosetta
   end

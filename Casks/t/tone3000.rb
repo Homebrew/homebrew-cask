@@ -1,13 +1,13 @@
 cask "tone3000" do
-  version "0.0.5"
-  sha256 "31f33dd5e26f568ee1781026e94ae35d93fbb823ec6980d340e082f4da70e9dd"
+  version "0.0.12"
+  sha256 "c1f09461522076385e4060caa9bf583afb6a6ca96155acb5b52728d8a2266fa7"
 
   url "https://github.com/tone-3000/tone3000-plugin/releases/download/v#{version}/TONE3000-v#{version}-macos-universal.pkg"
   name "TONE3000"
   desc "Amp modeling plug-in for Neural Amp Modeler captures and impulse responses"
   homepage "https://www.tone3000.com/"
 
-  depends_on macos: :big_sur
+  depends_on :macos
 
   pkg "TONE3000-v#{version}-macos-universal.pkg"
 

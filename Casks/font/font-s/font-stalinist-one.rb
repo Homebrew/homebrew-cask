@@ -8,5 +8,5 @@ cask "font-stalinist-one" do
 
   font "StalinistOne-Regular.ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

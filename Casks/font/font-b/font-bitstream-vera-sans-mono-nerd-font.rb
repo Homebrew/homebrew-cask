@@ -26,5 +26,5 @@ cask "font-bitstream-vera-sans-mono-nerd-font" do
   font "BitstromWeraNerdFontPropo-Oblique.ttf"
   font "BitstromWeraNerdFontPropo-Regular.ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

@@ -1,6 +1,6 @@
 cask "topaz-video" do
-  version "1.7.0"
-  sha256 "7a854d549b1cf2ffe9f8dfb208f954a94e0fa770ded8fb481fdd140b16a6079a"
+  version "1.7.2"
+  sha256 "65336a4bc15825e34aede45854083425cd8aad7b1fb36cabc8f39369c0a82f74"
 
   url "https://downloads.topazlabs.com/deploy/TopazVideoStudio/#{version}/TopazVideo-#{version}.pkg"
   name "Topaz Video"
@@ -14,7 +14,7 @@ cask "topaz-video" do
 
   auto_updates true
   depends_on arch: :arm64
-  depends_on macos: :big_sur
+  depends_on :macos
 
   pkg "TopazVideo-#{version}.pkg"
 
@@ -52,8 +52,10 @@ cask "topaz-video" do
             ]
 
   zap trash: [
+    "~/Library/Application Scripts/com.topazlabs.TopazVideoFCP.XPCService",
     "~/Library/Application Support/Topaz Labs LLC/Topaz Video",
     "~/Library/Caches/Topaz Labs LLC/Topaz Video",
+    "~/Library/Containers/com.topazlabs.TopazVideoFCP.XPCService",
     "~/Library/Preferences/com.topazlabs.Topaz Video.plist",
     "~/Library/Preferences/com.topazlabs.Topaz-Video.plist",
   ]

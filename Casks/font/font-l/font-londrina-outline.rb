@@ -8,5 +8,5 @@ cask "font-londrina-outline" do
 
   font "LondrinaOutline-Regular.ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

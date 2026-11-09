@@ -1,9 +1,9 @@
 cask "microsoft-azure-storage-explorer" do
   arch arm: "arm64", intel: "x64"
 
-  version "1.46.0"
-  sha256 arm:   "d96f537addf70319d65a7e510242bfcde8b92117ab3a4adf04eda80453939d1d",
-         intel: "b5838336619959398268b7e8cd9ce7528b81773c0028b21f47be26d3323c1d39"
+  version "1.47.1"
+  sha256 arm:   "bee06b5d49a281b7ddc11846925cdc1849358752732ee17af7806d02b6125f87",
+         intel: "f50db6b43f4644e189b5b3ae1f13f28b0cf1d5cc07cdbfe1f63e644da88d4b5c"
 
   url "https://github.com/microsoft/AzureStorageExplorer/releases/download/v#{version}/StorageExplorer-darwin-#{arch}.zip"
   name "Microsoft Azure Storage Explorer"
@@ -20,6 +20,7 @@ cask "microsoft-azure-storage-explorer" do
   app "Microsoft Azure Storage Explorer.app"
 
   zap trash: [
+    "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.microsoft.storageexplorer.sfl*",
     "~/Library/Application Support/StorageExplorer",
     "~/Library/Logs/StorageExplorer",
     "~/Library/Preferences/com.microsoft.StorageExplorer.plist",

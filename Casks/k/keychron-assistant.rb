@@ -1,6 +1,6 @@
 cask "keychron-assistant" do
   version "1.1.6"
-  sha256 "22c1a611a81f8b0b0c7cc3b318a95b912f22de76dead86d7854b72d84a95b7bc"
+  sha256 "19ff27030e2ab17810179931c9d848e039d066b629243b253d8f5ebf9d07040d"
 
   url "https://launcher.keychron.com/static/assist/KeychronAssist-#{version}.dmg"
   name "Keychron Assistant"

@@ -1,6 +1,6 @@
 cask "antinote" do
-  version "2.1.0"
-  sha256 "106bcf712a5890f3d5eeafe15013ef679fe5b8e438ee2f8db514eb7b46542681"
+  version "2.1.3"
+  sha256 "c81e53c397f7ce3ce03a0059140df59899d4401c0afcac593de7be713e01af50"
 
   url "https://antinote.io/updates/Antinote_#{version}.dmg"
   name "Antinote"
@@ -20,5 +20,6 @@ cask "antinote" do
   zap trash: [
     "~/Library/Application Scripts/com.chabomakers.Antinote",
     "~/Library/Containers/com.chabomakers.Antinote",
+    "~/Library/Preferences/com.chabomakers.Antinote.plist",
   ]
 end

@@ -1,6 +1,6 @@
 cask "duplicate-file-finder" do
-  version "9.2.2,1042"
-  sha256 "186587b7b4806544e6fbffe13f2b371a1ba9b4a176c7a19b3c13090603e8a94c"
+  version "9.2.4,1099"
+  sha256 "68e6f509205f2ee6b42868d32d8ee4093f1be66f866e9297bd2e1d0b8d66470b"
 
   url "https://download.nektony.com/download/duplicate-file-finder/duplicate-file-finder.dmg?build=#{version.csv.second}"
   name "Duplicate File Finder"
@@ -13,12 +13,13 @@ cask "duplicate-file-finder" do
   end
 
   auto_updates true
-  depends_on macos: :big_sur
+  depends_on :macos
 
   app "Duplicate File Finder #{version.major}.app"
 
   zap trash: [
     "~/Library/Application Scripts/com.nektony.Duplicate-File-Finder-SII*",
+    "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.nektony.duplicate-file-finder-siii.sfl*",
     "~/Library/Application Support/com.nektony.Duplicate-File-Finder-SII*",
     "~/Library/Caches/com.nektony.Duplicate-File-Finder-SII*",
     "~/Library/Cookies/com.nektony.Duplicate-File-Finder-SII.binarycookies",

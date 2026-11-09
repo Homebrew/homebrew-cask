@@ -1,6 +1,6 @@
 cask "dorso" do
-  version "1.15.1"
-  sha256 "1daabab81b3b0233a5664ec1133f5d0c6706699f66e9dc6a9547d0575c849d6a"
+  version "1.17.0"
+  sha256 "7463f92ea0413c4e87111ceda7584308eede6716aace987782a392d577f0a5a4"
 
   url "https://github.com/tldev/dorso/releases/download/v#{version}/Dorso-v#{version}.dmg"
   name "Dorso"
@@ -12,5 +12,8 @@ cask "dorso" do
 
   app "Dorso.app"
 
-  zap trash: "~/Library/Preferences/com.thelazydeveloper.posturr.plist"
+  zap trash: [
+    "~/Library/Application Support/Dorso",
+    "~/Library/Preferences/com.thelazydeveloper.posturr.plist",
+  ]
 end

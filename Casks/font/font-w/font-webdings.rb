@@ -8,5 +8,5 @@ cask "font-webdings" do
 
   font "Webdings.TTF"
 
-  # No zap stanza required
+  zap :not_required
 end

@@ -23,7 +23,7 @@ cask "programmer-dvorak" do
 
   keyboard_layout "Library/Keyboard Layouts/Programmer Dvorak.bundle"
 
-  # No zap stanza required
+  zap :not_required
 
   caveats do
     reboot

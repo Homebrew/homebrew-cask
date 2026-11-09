@@ -1,8 +1,8 @@
 cask "zipic" do
-  version "1.10.0"
-  sha256 "7a9e1c3a7fcc693e85b7a0f4ac184e829f8138d711fc99dde0857c74784bc1ed"
+  version "1.10.8"
+  sha256 "7030638f1e0ef151513b6fcc634956496f01ac183183927d9542dc5305b3322c"
 
-  url "https://releases.5km.tech/zipic/Zipic%20#{version}.dmg"
+  url "https://releases.5km.tech/zipic/Zipic%20#{version}.dmg?r=2"
   name "Zipic"
   desc "Image compression tool"
   homepage "https://zipic.app/"
@@ -18,7 +18,10 @@ cask "zipic" do
   app "Zipic.app"
 
   zap trash: [
+    "~/Library/Application Support/studio.5km.zipic",
     "~/Library/Application Support/zipic",
+    "~/Library/Caches/studio.5km.zipic",
+    "~/Library/HTTPStorages/studio.5km.zipic",
     "~/Library/Preferences/studio.5km.zipic.plist",
     "~/Library/Saved Application State/studio.5km.zipic.savedState",
     "~/Library/zipic",

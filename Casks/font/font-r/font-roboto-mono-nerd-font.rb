@@ -50,5 +50,5 @@ cask "font-roboto-mono-nerd-font" do
   font "RobotoMonoNerdFontPropo-Thin.ttf"
   font "RobotoMonoNerdFontPropo-ThinItalic.ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

@@ -8,5 +8,5 @@ cask "font-miss-fajardose" do
 
   font "MissFajardose-Regular.ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

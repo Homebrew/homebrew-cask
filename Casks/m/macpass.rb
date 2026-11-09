@@ -14,7 +14,7 @@ cask "macpass" do
 
   uninstall quit: "com.hicknhacksoftware.MacPass"
 
-  zap delete: [
+  zap trash: [
     "~/Library/Application Support/MacPass",
     "~/Library/Caches/com.hicknhacksoftware.MacPass",
     "~/Library/Cookies/com.hicknhacksoftware.MacPass.binarycookies",

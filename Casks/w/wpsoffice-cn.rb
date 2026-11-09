@@ -1,9 +1,9 @@
 cask "wpsoffice-cn" do
   arch arm: "arm64", intel: "x64"
 
-  version "12.1.28492"
-  sha256 arm:   "324aa5dc8da0a1a16004750765b9f396882821c030bce881b12c60eaeb818eaa",
-         intel: "9c5777f567a474a579eeafdd7af059c68f1b17f77c19b018301ccce3bc5bd657"
+  version "12.1.29182"
+  sha256 arm:   "688f2d3eab07857fedeac75d991a39228bd45f5299cc05d922aec45742f8e4d7",
+         intel: "9a16c7bbfd7172f4a20e7f7f351bd7348b145678838c11a875964e144b5412b0"
 
   url "https://package.mac.wpscdn.cn/mac_wps_pkg/#{version}/WPS_Office_#{version}(#{version.patch})_#{arch}.dmg"
   name "WPS Office"
@@ -31,5 +31,6 @@ cask "wpsoffice-cn" do
     "~/Library/Containers/com.kingsoft.wpsoffice.mac.recentfiles",
     "~/Library/Containers/com.kingsoft.wpsoffice.mac.WPSFinderMenu",
     "~/Library/Containers/YK4WKE5WAM.wpsoffice",
+    "~/Library/Group Containers/YK4WKE5WAM.wpsoffice",
   ]
 end

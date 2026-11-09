@@ -13,7 +13,7 @@ cask "sublercli" do
 
   binary "SublerCLI"
 
-  # No zap stanza required
+  zap :not_required
 
   caveats do
     requires_rosetta

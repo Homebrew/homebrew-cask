@@ -1,5 +1,5 @@
 cask "google-chrome@dev" do
-  version "155.0.8040.2"
+  version "159.0.8144.0"
   sha256 :no_check
 
   url "https://dl.google.com/chrome/mac/universal/dev/googlechromedev.dmg"
@@ -43,6 +43,7 @@ cask "google-chrome@dev" do
         "~/Library/LaunchAgents/com.google.keystone.agent.plist",
         "~/Library/LaunchAgents/com.google.keystone.xpcservice.plist",
         "~/Library/Logs/GoogleSoftwareUpdateAgent.log",
+        "~/Library/Preferences/com.google.Chrome.dev.plist",
         "~/Library/Preferences/com.google.Chrome.plist",
         "~/Library/Preferences/com.google.Keystone.Agent.plist",
         "~/Library/Saved Application State/com.google.Chrome.app.*.savedState",

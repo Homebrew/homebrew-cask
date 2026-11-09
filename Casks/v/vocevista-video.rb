@@ -1,6 +1,6 @@
 cask "vocevista-video" do
-  version "5.11.1.9379"
-  sha256 "dac305877c9aa77d4923f9fab683ce119d06fe21c26b22bec4c4f61074155f0a"
+  version "6.0.2.10487"
+  sha256 "b154469fd4ec17129b126ac32e911743df432840c4069d5a753517789951dfa9"
 
   url "https://download.sygyt.com/#{version.major_minor_patch}/VoceVistaVideo_macOS_#{version}.dmg"
   name "VoceVista Video"
@@ -15,6 +15,8 @@ cask "vocevista-video" do
   depends_on macos: :ventura
 
   app "VoceVista Video.app"
+
+  uninstall quit: "com.sygyt.mac.VoceVistaVideo"
 
   zap trash: [
     "~/Library/Application Support/Sygyt Software/VoceVista Video",

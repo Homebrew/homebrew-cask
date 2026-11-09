@@ -8,5 +8,5 @@ cask "font-ruslan-display" do
 
   font "RuslanDisplay-Regular.ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

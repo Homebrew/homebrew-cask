@@ -11,5 +11,5 @@ cask "font-kadwa" do
   font "Kadwa-Bold.ttf"
   font "Kadwa-Regular.ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

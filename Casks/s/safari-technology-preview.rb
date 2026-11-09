@@ -1,7 +1,9 @@
 cask "safari-technology-preview" do
   on_tahoe :or_older do
-    version "251,140-94790-20260826-3c91860d-070e-431a-8a0d-0927cf32dc6c"
-    sha256 "1dec128ebadb74a87913b5e4878ca2fe38425da4ac66b5a53d23f88575ed2e0c"
+    version "256,142-53570-20261104-0a424b2d-98ac-491c-9215-ddf803ed6253"
+    sha256 "db9d2e5f01eda23d02f483110dce5eb328d53da42a94fe57f0bd3f4cc59a6a43"
+
+    url "https://secure-appldnld.apple.com/STP/#{version.csv.second}/SafariTechnologyPreview.dmg"
 
     livecheck do
       url :homepage
@@ -15,16 +17,20 @@ cask "safari-technology-preview" do
         "#{release},#{id}"
       end
     end
+
+    pkg "Safari Technology Preview.pkg"
   end
   # when adjusting the on_{os} scoping, also update the livecheck regex
   on_golden_gate :or_newer do
-    version "247,140-34366-20260630-87ebbe6a-e3ef-4af1-9d0e-848f2ab2ec7a"
-    sha256 "65b28478653fd40a51c6488814793e785e07cc7632d7ddc337e6d1a1f4ec9e2b"
+    version "256,142-53583-20261104-3efa3282-5778-498f-bf15-a17269776fe0"
+    sha256 "f754df7a314c36664ff9cfa6547023733e4e0ef88eaeae072f348ec2fd1dbe51"
+
+    url "https://secure-appldnld.apple.com/STP/#{version.csv.second}/SafariTechPreview#{version.csv.first}.dmg"
 
     livecheck do
       url :homepage
       regex(%r{
-        href=.*?/([^/]+)/Safari(?:%20|\+)?Technology(?:%20|\+)?Preview\.dmg
+        href=.*?/([^/]+)/Safari(?:%20|\+)?Tech(?:nology)?(?:%20|\+)?Preview\d*\.dmg
         .*?macOS(?:\s|&nbsp;)*27[\s.<]
       }ix)
       strategy :page_match do |page, regex|
@@ -33,9 +39,10 @@ cask "safari-technology-preview" do
         "#{release},#{id}"
       end
     end
+
+    pkg "SafariTechPreview#{version.csv.first}.pkg"
   end
 
-  url "https://secure-appldnld.apple.com/STP/#{version.csv.second}/SafariTechnologyPreview.dmg"
   name "Safari Technology Preview"
   desc "Web browser"
   homepage "https://developer.apple.com/safari/resources/"
@@ -43,16 +50,17 @@ cask "safari-technology-preview" do
   auto_updates true
   depends_on macos: :tahoe
 
-  pkg "Safari Technology Preview.pkg"
-
   uninstall launchctl: [
+              "com.apple.AuthenticationServicesCore.AuthenticationServicesAgent",
               "com.apple.AuthenticationServicesCore.AuthenticationServicesAgent-STP",
+              "com.apple.SafariSyncService",
               "com.apple.SafariTechnologyPreview.History",
               "com.apple.SafariTechnologyPreview.SyncService",
+              "com.apple.webkit.webpushd",
               "com.apple.webkit.webpushd.relocatable",
             ],
             quit:      "com.apple.SafariTechnologyPreview",
-            pkgutil:   "com.apple.pkg.SafariTechPreviewPackage",
+            pkgutil:   "com.apple.pkg.SafariTechPreview*",
             delete:    "/Applications/Safari Technology Preview.app"
 
   zap trash: [

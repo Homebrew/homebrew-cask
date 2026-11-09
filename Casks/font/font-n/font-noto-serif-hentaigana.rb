@@ -8,5 +8,5 @@ cask "font-noto-serif-hentaigana" do
 
   font "NotoSerifHentaigana[wght].ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

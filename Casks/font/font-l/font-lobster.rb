@@ -8,5 +8,5 @@ cask "font-lobster" do
 
   font "Lobster-Regular.ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

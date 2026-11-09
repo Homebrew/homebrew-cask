@@ -14,5 +14,5 @@ cask "font-pt-serif" do
   font "PT/PT/PT-Serif/pt-serif_italic.ttf"
   font "PT/PT/PT-Serif/pt-serif_regular.ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

@@ -12,5 +12,5 @@ cask "font-lxgw-fasmartgothic" do
 
   font "LXGWFasmartGothic.ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

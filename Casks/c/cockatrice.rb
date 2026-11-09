@@ -16,7 +16,7 @@ cask "cockatrice" do
     end
   end
   on_ventura :or_newer do
-    version "3.0.2,2026-06-26,Graduation-Day,3.0.2"
+    version "3.1.2,2026-10-25,Reality-Check,3.1.2"
 
     on_ventura do
       sha256 "4137a2021c97ef47f514b44898bc3897c1448698962dcad1f4d8482632e57bb8"
@@ -33,7 +33,7 @@ cask "cockatrice" do
       url "https://github.com/Cockatrice/Cockatrice/releases/download/#{version.csv.second}-Release-#{version.csv.first}/Cockatrice-#{version.csv.third}-#{version.csv.fourth}-macOS14.dmg"
     end
     on_sequoia :or_newer do
-      sha256 "51705bcd11211ab1beb19ebb41931e64c16c1f2ec8d530473de57fdc0a9b764b"
+      sha256 "4b23a124f900cf9772ce342095cb8b5538ada1343d59a56dc262b6ff543b51b9"
 
       url "https://github.com/Cockatrice/Cockatrice/releases/download/#{version.csv.second}-Release-#{version.csv.first}/Cockatrice-#{version.csv.third}-#{version.csv.fourth}-macOS15.dmg"
     end
@@ -56,9 +56,9 @@ cask "cockatrice" do
   desc "Virtual tabletop for multiplayer card games"
   homepage "https://cockatrice.github.io/"
 
-  depends_on macos: :big_sur
+  depends_on :macos
 
-  app "cockatrice.app"
+  app "Cockatrice.app"
   app "oracle.app"
   app "servatrice.app"
 
@@ -70,6 +70,7 @@ cask "cockatrice" do
 
   zap trash: [
     "~/Library/Application Support/Cockatrice",
+    "~/Library/Caches/Cockatrice",
     "~/Library/Preferences/com.cockatrice.Cockatrice.plist",
     "~/Library/Preferences/com.cockatrice.oracle.plist",
     "~/Library/Preferences/de.cockatrice.Cockatrice.plist",

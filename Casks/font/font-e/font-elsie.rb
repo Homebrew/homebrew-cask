@@ -11,5 +11,5 @@ cask "font-elsie" do
   font "Elsie-Black.ttf"
   font "Elsie-Regular.ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

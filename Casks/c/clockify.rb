@@ -1,5 +1,5 @@
 cask "clockify" do
-  version "2.12.6"
+  version "2.12.10"
   sha256 :no_check
 
   url "https://clockify.me/downloads/ClockifyDesktop.zip"
@@ -9,7 +9,9 @@ cask "clockify" do
 
   livecheck do
     url "https://clockify.me/downloads/appcast.xml"
-    strategy :sparkle, &:short_version
+    strategy :sparkle do |items|
+      items.map(&:short_version)
+    end
   end
 
   auto_updates true

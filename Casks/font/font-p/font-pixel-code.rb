@@ -27,5 +27,5 @@ cask "font-pixel-code" do
   font "otf/PixelCode-Thin.otf"
   font "otf/PixelCode.otf"
 
-  # No zap stanza required
+  zap :not_required
 end

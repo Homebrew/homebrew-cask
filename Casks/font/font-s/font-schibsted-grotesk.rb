@@ -11,5 +11,5 @@ cask "font-schibsted-grotesk" do
   font "SchibstedGrotesk-Italic[wght].ttf"
   font "SchibstedGrotesk[wght].ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

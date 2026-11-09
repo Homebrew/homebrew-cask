@@ -1,6 +1,6 @@
 cask "vitamin-r" do
-  version "4.26"
-  sha256 "7c95f12a62b61c62947ab21c0cfa87027d0807c7d5f16290708495f57a66fd7c"
+  version "4.29"
+  sha256 "9fcc648770db917fac326afecea5fb9a2960da7e742dba8f1207f9a4a3a175b5"
 
   url "https://www.publicspace.net/download/signedVitamin#{version.major}.zip"
   name "Vitamin-R"
@@ -13,11 +13,12 @@ cask "vitamin-r" do
   end
 
   auto_updates true
-  depends_on macos: :ventura
+  depends_on macos: :sequoia
 
   app "Vitamin-R #{version.major}.app"
 
-  uninstall login_item: "Vitamin-R #{version.major}"
+  uninstall quit:       "net.publicspace.dist.vitaminr#{version.major}",
+            login_item: "Vitamin-R #{version.major}"
 
   zap trash: [
     "~/Library/Application Support/Vitamin-R",

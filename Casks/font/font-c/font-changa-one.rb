@@ -11,5 +11,5 @@ cask "font-changa-one" do
   font "ChangaOne-Italic.ttf"
   font "ChangaOne-Regular.ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

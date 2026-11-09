@@ -32,5 +32,5 @@ cask "toshiba-color-mfp" do
               "/Library/Printers/toshiba",
             ]
 
-  # No zap stanza required
+  zap :not_required
 end

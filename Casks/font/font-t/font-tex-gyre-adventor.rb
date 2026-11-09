@@ -22,5 +22,5 @@ cask "font-tex-gyre-adventor" do
   font "texgyreadventor-italic.otf"
   font "texgyreadventor-regular.otf"
 
-  # No zap stanza required
+  zap :not_required
 end

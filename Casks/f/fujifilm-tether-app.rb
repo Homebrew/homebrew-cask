@@ -5,7 +5,7 @@ cask "fujifilm-tether-app" do
   url "https://dl.fujifilm-x.com/support/software/tether-app-mac#{version.csv.first.no_dots}-#{version.csv.second}/FUJIFILM_TetherApp_Mac#{version.csv.first.no_dots}.pkg"
   name "FUJIFILM TETHER APP"
   desc "For Fujifilm GFX/X series camera tether shooting"
-  homepage "https://fujifilm-x.com/en-us/support/download/software/tether-app/"
+  homepage "https://www.fujifilm-x.com/en-us/support/download/software/tether-app/"
 
   livecheck do
     url :homepage

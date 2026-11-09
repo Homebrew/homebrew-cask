@@ -1,9 +1,9 @@
 cask "zoho-cliq" do
   arch arm: "arm64", intel: "x64"
 
-  version "1.8.4"
-  sha256 arm:   "243242cdb5d5884b66855b0645720f5043c628bee6807a385eb6954050176f44",
-         intel: "4196a3c497ecda1fffcd3330e03205dccfae3f7a4026e06374154d8a22172019"
+  version "1.8.6"
+  sha256 arm:   "8161ca4792a57923fc57c125a441bcfb3ba133e50163dead3fc89d6044199d6a",
+         intel: "f0e48504c295b96b43b97aca02888f04e54419d4a17cebfcfe796b3437551081"
 
   url "https://downloads.zohocdn.com/chat-desktop/mac/Cliq-#{arch}-#{version}.pkg"
   name "Zoho Cliq"

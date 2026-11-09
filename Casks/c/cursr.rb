@@ -2,12 +2,12 @@ cask "cursr" do
   arch arm: "arm64", intel: "x64"
   url_end = on_system_conditional macos: "-mac-#{arch}.dmg", linux: ".AppImage"
 
-  version "1.7.3"
+  version "1.7.4"
+  sha256 arm:          "1403a29035fb386480231844e71476eefbd1aff874dfcb22afebd101a8587194",
+         intel:        "ca7f6f2b5f52796085b0d6764e82e3c73458ac39d20387592691cdfab865dc23",
+         x86_64_linux: "32d6ab61131723bfc11a211664fb66dacf5345951032b9f4fadfd23aa6885ede"
 
   on_macos do
-    sha256 arm:   "e60db5a98cadbbdd4d5e1d44c9d335028f9e013f00c473544e04b1153f43f823",
-           intel: "828c06f4acc31b72651f25623c92c9130a3ea9c02a5b80531c39e099bb721abb"
-
     app "Cursr.app"
 
     zap trash: [
@@ -16,20 +16,18 @@ cask "cursr" do
     ]
   end
   on_linux do
-    sha256 "0828ef809901204729c23b332ef104bfc0b13d6a920ea9a7f81841cf11f7e09f"
-
     depends_on arch: :x86_64
 
     app_image "Cursr.AppImage"
+
+    zap trash: [
+      "~/.config/autostart/cursr-autostart.desktop",
+      "~/.config/cursr",
+    ]
   end
 
   url "https://github.com/bitgapp/Cursr/releases/download/v#{version}/Cursr#{url_end}"
   name "Cursr"
   desc "Customise mouse movements between multiple displays"
   homepage "https://cursr.app/"
-
-  livecheck do
-    url :url
-    strategy :github_latest
-  end
 end

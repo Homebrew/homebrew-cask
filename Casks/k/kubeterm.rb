@@ -1,6 +1,6 @@
 cask "kubeterm" do
-  version "2.7.0"
-  sha256 "f88a50280146ebd301ec6e8ce97a21ff807e9fb73d5bb05ebc979e26cb8f4be7"
+  version "2.8.3"
+  sha256 "1514a51243ef3721f754c9d182d6bd4462bd55a0ab8504ddb6d5b1c0b8b3b25f"
 
   url "https://github.com/kbterm/kubeterm/releases/download/v#{version}/Kubeterm-v#{version}-universal.dmg"
   name "Kubeterm"
@@ -12,7 +12,7 @@ cask "kubeterm" do
     strategy :github_latest
   end
 
-  depends_on macos: :big_sur
+  depends_on macos: :monterey
 
   app "kubeterm.app"
 

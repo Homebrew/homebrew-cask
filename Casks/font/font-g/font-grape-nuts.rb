@@ -8,5 +8,5 @@ cask "font-grape-nuts" do
 
   font "GrapeNuts-Regular.ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

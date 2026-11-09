@@ -1,6 +1,6 @@
 cask "snapmaker-orca" do
-  version "2.3.5"
-  sha256 "2fb75ef060556ed6a67863202e767842a4f778138f9ac2b464331ae0a424a663"
+  version "2.4.1"
+  sha256 "7a590830a39835d103cd00f06f558eb0332fb4feda761e9397724c554720815f"
 
   url "https://github.com/snapmaker/orcaslicer/releases/download/v#{version}/Snapmaker_Orca_Mac_universal_V#{version}.dmg"
   name "Snapmaker Orca"
@@ -13,9 +13,11 @@ cask "snapmaker-orca" do
   end
 
   auto_updates true
-  depends_on macos: :big_sur
+  depends_on :macos
 
   app "Snapmaker Orca.app"
+
+  uninstall quit: "com.snapmaker.snapmaker-orca"
 
   zap trash: [
     "~/Library/Application Support/Snapmaker_Orca",

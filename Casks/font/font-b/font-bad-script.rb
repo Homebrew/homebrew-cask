@@ -8,5 +8,5 @@ cask "font-bad-script" do
 
   font "BadScript-Regular.ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

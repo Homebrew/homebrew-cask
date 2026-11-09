@@ -11,5 +11,5 @@ cask "font-cormorant-garamond" do
   font "CormorantGaramond-Italic[wght].ttf"
   font "CormorantGaramond[wght].ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

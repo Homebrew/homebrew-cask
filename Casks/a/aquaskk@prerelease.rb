@@ -1,6 +1,6 @@
 cask "aquaskk@prerelease" do
-  version "4.7.8"
-  sha256 "e0c28724ff6eb5a01f95585a25d25a08c4296a657ca3590ee14cfd97318df95e"
+  version "4.7.9"
+  sha256 "cd0da8ec67c1bfc7f96e519ff1e4413cd4e85f6022a2f86e0e1984902c1e4b78"
 
   url "https://github.com/codefirst/aquaskk/releases/download/#{version}/AquaSKK-#{version}.pkg"
   name "AquaSKK"

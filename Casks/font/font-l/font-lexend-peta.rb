@@ -8,5 +8,5 @@ cask "font-lexend-peta" do
 
   font "LexendPeta[wght].ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

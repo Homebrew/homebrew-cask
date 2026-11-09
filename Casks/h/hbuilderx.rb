@@ -1,9 +1,9 @@
 cask "hbuilderx" do
   arch arm: ".arm64"
 
-  version "5.24.2026081301"
-  sha256 arm:   "3a1e0041551b25ddedcf00301ae0b00009167821749f953f917636b5f54e877b",
-         intel: "1539b4aaeffe1cbddcfc827e7f4928bd65755a35df1bce540fc350e75f868eae"
+  version "5.34.2026102909"
+  sha256 arm:   "305fd3d92461a9391a0f4168a8e79a4866f33e7a02b18135babfe19ab2f4075f",
+         intel: "145ab91ea09dd3e13dfd5ea53c74994a73f2e847b094580e68a7743f622c0005"
 
   url "https://download1.dcloud.net.cn/download/HBuilderX.#{version}#{arch}.dmg"
   name "HBuilderX"
@@ -17,9 +17,14 @@ cask "hbuilderx" do
     end
   end
 
-  depends_on macos: :big_sur
+  depends_on :macos
 
   app "HBuilderX.app"
 
-  zap trash: "~/Library/Application Support/HBuilder X"
+  uninstall quit: "io.dcloud.HBuilderX"
+
+  zap trash: [
+    "~/Library/Application Support/HBuilder X",
+    "~/Library/Preferences/io.dcloud.HBuilderX.plist",
+  ]
 end

@@ -13,5 +13,5 @@ cask "font-almarai" do
   font "Almarai-Light.ttf"
   font "Almarai-Regular.ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

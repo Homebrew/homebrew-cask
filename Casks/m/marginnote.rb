@@ -1,6 +1,6 @@
 cask "marginnote" do
-  version "4.4.6"
-  sha256 "2e6f0f4cace14aa7033592febefc65bde042c4fa5033978a82b9581399dd1c20"
+  version "5.0.1"
+  sha256 "e5dd3f321523edacb8ffac13d50175f902656876bcdaa44f21aabd55de924210"
 
   url "https://dist.marginnote.cn/MarginNote#{version}.dmg"
   name "MarginNote"
@@ -8,7 +8,7 @@ cask "marginnote" do
   homepage "https://www.marginnote.com/"
 
   livecheck do
-    url "https://dist.marginnote.cn/marginnote#{version.major}.xml"
+    url "https://dist.marginnote.cn/marginnote4.xml"
     strategy :sparkle, &:short_version
   end
 
@@ -18,7 +18,9 @@ cask "marginnote" do
   app "MarginNote #{version.major}.app"
 
   zap trash: [
+    "~/Library/Application Scripts/QReader.MarginStudy.easy",
     "~/Library/Application Support/QReader.MarginStudyMac",
+    "~/Library/Containers/QReader.MarginStudy.easy",
     "~/Library/Containers/QReader.MarginStudyMac",
   ]
 end

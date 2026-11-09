@@ -1,9 +1,9 @@
 cask "duplicati" do
   arch arm: "arm64", intel: "x64"
 
-  version "2.4.0.0,2026-09-03"
-  sha256 arm:   "dc8c8539741159551069f17150265d47367982fbb2e51bce9e39f6320e83bf2f",
-         intel: "b8cfccfb97294eac1e0fef854915c176cdafb3a00dcd20f6c0267bea4e6d254a"
+  version "2.4.1.0,2026-10-29"
+  sha256 arm:   "5eff07e08bec56173cdfe129cdff5cd0eb7faad3b67d718c0b481d2a0143da2a",
+         intel: "2f87b8eeca3dce87badc85deccf516fd15be2bc072a6bd0526f47b390ad6d757"
 
   url "https://updates.duplicati.com/stable/duplicati-#{version.csv.first}_stable_#{version.csv.second}-osx-#{arch}-gui.dmg"
   name "Duplicati"
@@ -28,5 +28,6 @@ cask "duplicati" do
   zap trash: [
     "~/.config/Duplicati",
     "~/Library/Application Support/Duplicati",
+    "~/Library/Preferences/com.duplicati.app.plist",
   ]
 end

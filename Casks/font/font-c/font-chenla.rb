@@ -8,5 +8,5 @@ cask "font-chenla" do
 
   font "Chenla.ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

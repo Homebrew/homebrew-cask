@@ -2,11 +2,11 @@ cask "copilot-cli" do
   arch arm: "arm64", intel: "x64"
   os macos: "darwin", linux: "linux"
 
-  version "1.0.83"
-  sha256 arm:          "80a5ded6f1db484b4661af676ea914605ecfbcaf49f6b4bed81e6df16cbd56bd",
-         intel:        "7e4f7236b0cd5ee474e6ab6d35ea67b8c33d5ec6483498e0fdd0218f458b2d53",
-         arm64_linux:  "213b3a267042dbac3cd8ae22c82f5ea04ff3cabc008108c0f895055d46be4473",
-         x86_64_linux: "ffbe1c429664b8a05efed67ecdb467123e40fcaa3c6c14ef9a98ba74da4687b7"
+  version "1.0.107"
+  sha256 arm:          "85c58e1ba11a5869c9f5f59017571674ef6199e474c118caad3cb23ebe99448a",
+         intel:        "f9106a04e0134d2593fa664bb3bcaa282e308cc740c79182f6c3ae53fffe4caf",
+         arm64_linux:  "28c9c911af64521821ba908dc1866bf4bfd1705cd9b3320abc2353704de952a0",
+         x86_64_linux: "aff04181566f637010a88e68ea145ac1515ec596fae3890d06d81bb8c4be0c4e"
 
   on_macos do
     depends_on macos: :ventura
@@ -19,7 +19,7 @@ cask "copilot-cli" do
 
   livecheck do
     url :url
-    strategy :github_latest
+    regex(/^v?(\d+(?:\.\d+)+)$/i)
   end
 
   auto_updates true
@@ -28,5 +28,8 @@ cask "copilot-cli" do
   binary "copilot"
   generate_completions_from_executable "copilot", "completion"
 
-  zap trash: "~/.copilot"
+  zap trash: [
+    "~/.copilot",
+    "~/Library/Caches/copilot",
+  ]
 end

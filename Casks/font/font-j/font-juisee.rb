@@ -15,5 +15,5 @@ cask "font-juisee" do
   font "Juisee_v#{version}/JuiseeHW-Regular.ttf"
   font "Juisee_v#{version}/JuiseeHW-RegularItalic.ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

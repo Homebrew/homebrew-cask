@@ -8,5 +8,5 @@ cask "font-mingzat" do
 
   font "Mingzat-Regular.ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

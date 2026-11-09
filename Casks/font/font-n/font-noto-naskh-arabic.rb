@@ -8,5 +8,5 @@ cask "font-noto-naskh-arabic" do
 
   font "NotoNaskhArabic[wght].ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

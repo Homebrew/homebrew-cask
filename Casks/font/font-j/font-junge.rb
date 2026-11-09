@@ -8,5 +8,5 @@ cask "font-junge" do
 
   font "Junge-Regular.ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

@@ -1,6 +1,6 @@
 cask "afterglow" do
-  version "1.0.1"
-  sha256 "f0b8a55af180bbcf1a6a08838129859ea831b9e9a582e0ad657fe7ee9951ddfd"
+  version "1.1"
+  sha256 "4a2aa46aac35c2bf1c951e55ea700f2e5dd91f98cd764cdafa9a246e3b382771"
 
   url "https://morphing.cloud/afterglow/Afterglow-v#{version}.dmg"
   name "Afterglow"

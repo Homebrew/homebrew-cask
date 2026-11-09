@@ -1,7 +1,7 @@
 cask "emailchemy" do
   arch arm: "-AppleSilicon"
 
-  version "15.0"
+  version "15.1"
   sha256 :no_check
 
   url "https://wksdownload.s3.amazonaws.com/emailchemy/Emailchemy-Mac#{arch}.dmg"
@@ -18,5 +18,8 @@ cask "emailchemy" do
 
   app "Emailchemy.app"
 
-  zap trash: "~/Library/Preferences/com.weirdkid.es.plist"
+  zap trash: [
+    "~/Library/Preferences/com.install4j.6029-5726-8846-0121.357.plist",
+    "~/Library/Preferences/com.weirdkid.es.plist",
+  ]
 end

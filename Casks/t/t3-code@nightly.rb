@@ -2,10 +2,10 @@ cask "t3-code@nightly" do
   arch arm: "arm64", intel: on_system_conditional(macos: "x64", linux: "x86_64")
   os macos: "dmg", linux: "AppImage"
 
-  version "0.0.41-nightly.20260908.1400"
-  sha256 arm:          "0ed8dbfd3f6126d407fc06222229d83ca4b90753c9fd523db92e65eb9056e32e",
-         intel:        "97b73bba1195ead965828acdb309a813463043e3d076a737f97555a8e9b10b6c",
-         x86_64_linux: "0207daa68fca073478bae8dbdfb66b9dddaf4bc09972b765b13c002d6375d888"
+  version "0.1.8-nightly.20261109.4399"
+  sha256 arm:          "86a84dcf71d87b502030de290d6c4ac0cfc9e53c9113ac005c55e0fff1b41afd",
+         intel:        "2668a3f09d7a9adbb780c96591bf8a632e4c571c5b51dbd7f8e78343e2805356",
+         x86_64_linux: "2e5eda868d4ee2b81af6d0b301c517080db03d12a6c5ff910aeecb5ca06b0e77"
 
   on_macos do
     auto_updates true
@@ -28,6 +28,20 @@ cask "t3-code@nightly" do
     depends_on arch: :x86_64
 
     app_image "T3-Code-#{version}-#{arch}.AppImage", target: "T3 Code Nightly.AppImage"
+
+    zap trash: [
+      "~/.config/T3 Code (Alpha)",
+      "~/.config/t3code",
+      "~/.config/t3code-v2",
+      "~/.local/share/applications/com.t3tools.T3Code.desktop",
+      "~/.local/share/icons/com.t3tools.T3Code.desktop.png",
+      "~/.local/share/icons/hicolor/256x256/apps/com.t3tools.T3Code.png",
+      "~/.local/share/icons/hicolor/256x256/apps/com.t3tools.t3code.png",
+      "~/.t3/bin",
+      "~/.t3/caches",
+      "~/.t3/usage-host-id",
+      "~/.t3/userdata",
+    ]
   end
 
   url "https://github.com/pingdotgg/t3code/releases/download/v#{version}/T3-Code-#{version}-#{arch}.#{os}"

@@ -8,5 +8,5 @@ cask "font-gravitas-one" do
 
   font "GravitasOne.ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

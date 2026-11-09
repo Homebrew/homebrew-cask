@@ -8,5 +8,5 @@ cask "font-playwrite-ng-modern" do
 
   font "PlaywriteNGModern[wght].ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

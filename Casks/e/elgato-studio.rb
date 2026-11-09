@@ -1,6 +1,6 @@
 cask "elgato-studio" do
-  version "1.1.0.1170"
-  sha256 "90eb81b1b06b166f69e309e0861f176e99159555aaccd86993f79f1563e54795"
+  version "2.0.0.2230"
+  sha256 "7a9735e3a48ec181c704c5e8a1b163272dfd284b6e2c2ca5cbf5739874fb0095"
 
   url "https://edge.elgato.com/egc/macos/estm/release/ElgatoStudio-#{version}.dmg"
   name "Elgato Studio"
@@ -13,13 +13,15 @@ cask "elgato-studio" do
   end
 
   auto_updates true
-  depends_on macos: :sonoma
+  depends_on macos: :sequoia
 
   app "Elgato Studio.app"
 
   zap trash: [
+    "~/Library/Application Scripts/com.elgato.studio",
     "~/Library/Application Support/com.elgato.studio",
     "~/Library/Caches/com.elgato.studio",
+    "~/Library/Containers/com.elgato.studio",
     "~/Library/Preferences/com.elgato.studio.plist",
     "~/Library/Saved Application State/com.elgato.studio.savedState",
   ]

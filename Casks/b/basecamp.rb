@@ -1,6 +1,6 @@
 cask "basecamp" do
-  version "5.1.5"
-  sha256 "aa319d36950f5470fda77d62b5b6e91f61faf34ce41c5707e31b2a51a0ae08b7"
+  version "5.2.3"
+  sha256 "078ec2367758cafa3b031c73d3033389dfd02fff805a418f654a7b7e66a53dde"
 
   url "https://basecamp.com/desktop/Basecamp-#{version}-mac.zip"
   name "Basecamp"

@@ -1,5 +1,5 @@
 cask "backblaze-restore" do
-  version "10.0.2.1048"
+  version "10.0.4.1082"
   sha256 :no_check
 
   url "https://f000.backblazeb2.com/file/b2-computer-backup-public/macos/standalone-restore/backblaze_restore.dmg"
@@ -12,10 +12,12 @@ cask "backblaze-restore" do
     regex(/Version\s+v?(\d+(?:\.\d+)+)/i)
   end
 
-  depends_on macos: :big_sur
+  depends_on :macos
 
   # Renamed for consistency: app name is different in the Finder and in a shell.
   app "BackblazeRestore.app", target: "Backblaze Restore.app"
+
+  uninstall quit: "com.backblaze.BackblazeRestore"
 
   zap trash: [
     "~/Library/Application Support/BackblazeRestore",

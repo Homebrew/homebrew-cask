@@ -18,7 +18,7 @@ cask "pivy-app" do
             quit:      "net.cooperi.pivy-agent",
             pkgutil:   "net.cooperi.pivy"
 
-  # No zap stanza required
+  zap :not_required
 
   caveats "The installer will prompt you to insert a YubiKey or other PIV token via a dialog box."
 end

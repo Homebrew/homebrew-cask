@@ -1,9 +1,9 @@
 cask "eclipse-ide" do
   arch arm: "aarch64", intel: "x86_64"
 
-  version "4.40,2026-06"
-  sha256 arm:   "069e2418aa5faffd443516b0c147ad9f6453d6b4fc70e5209bd01b3673e48b53",
-         intel: "fa57f507844b7be46d1c1775f150c4edd77850d5e34f6eddbd104d36acec785e"
+  version "4.41,2026-09"
+  sha256 arm:   "940fa9fe7feee5d3cbb3aff3904944d81a5fadbefc48d069881f7e5073e5ebd1",
+         intel: "f23deb3cf27c1d636c2fc656c7addc4458c695be7d0dea5ab0c9c08369457f06"
 
   url "https://www.eclipse.org/downloads/download.php?file=/technology/epp/downloads/release/#{version.csv.second}/R/eclipse-committers-#{version.csv.second}-R-macosx-cocoa-#{arch}.dmg&r=1"
   name "Eclipse IDE for Eclipse Committers"
@@ -30,7 +30,7 @@ cask "eclipse-ide" do
     end
   end
 
-  depends_on macos: :big_sur
+  depends_on :macos
 
   app "Eclipse.app"
 

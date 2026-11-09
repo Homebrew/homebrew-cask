@@ -1,11 +1,12 @@
 cask "oscar" do
   arch arm: "ARM", intel: "Intel"
+  version_prefix = on_arch_conditional intel: "20"
 
-  version "2.0.1"
-  sha256 arm:   "78cd674ba7755ddcf505dd870c6e1d366c6e658a57482d91593eb191e611c769",
-         intel: "b44aedb2855583457985fd9fc4467983254a24ce51bfb43134e72be64e12194e"
+  version "2.1.1"
+  sha256 arm:   "626dc6f0b1ac2b274f95e9c29fbc25280c5ac81e3584abec47cd70de6926a9a1",
+         intel: "79d608bf8d65a95616133ba1fdec8b15ab2d321c0b94a4ca03c30ce5dc62979b"
 
-  url "https://www.sleepfiles.com/OSCAR/#{version}/OSCAR#{version.major_minor.no_dots}-#{version}-#{arch}.dmg"
+  url "https://www.sleepfiles.com/OSCAR/#{version}/OSCAR#{version_prefix}-#{version}-#{arch}.dmg"
   name "OSCAR"
   desc "CPAP Analysis Reporter"
   homepage "https://www.sleepfiles.com/OSCAR/"
@@ -17,7 +18,9 @@ cask "oscar" do
 
   depends_on macos: :ventura
 
-  app "OSCAR#{version.major_minor.no_dots}.app"
+  app "OSCAR20.app"
+
+  uninstall quit: "org.oscar-team.OSCAR20"
 
   zap trash: [
     "~/Library/Preferences/org.oscar-team.OSCAR*.plist",

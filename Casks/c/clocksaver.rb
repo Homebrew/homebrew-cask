@@ -11,5 +11,5 @@ cask "clocksaver" do
 
   screen_saver "Clock.saver"
 
-  # No zap stanza required
+  zap :not_required
 end

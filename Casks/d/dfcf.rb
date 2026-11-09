@@ -14,9 +14,9 @@ cask "dfcf" do
 
   app "东方财富.app"
 
+  zap :not_required
+
   caveats do
     requires_rosetta
   end
-
-  # No zap stanza required
 end

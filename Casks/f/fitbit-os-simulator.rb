@@ -16,6 +16,18 @@ cask "fitbit-os-simulator" do
 
   app "Fitbit OS Simulator.app"
 
+  uninstall quit: "com.fitbit.os.simulator"
+
+  zap trash: [
+    "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.fitbit.os.simulator.sfl*",
+    "~/Library/Application Support/Fitbit OS Simulator",
+    "~/Library/Caches/@fitbitsimulator-updater",
+    "~/Library/Caches/com.fitbit.os.simulator.ShipIt",
+    "~/Library/Logs/Fitbit OS Simulator",
+    "~/Library/Preferences/com.fitbit.os.simulator.plist",
+    "~/Library/Saved Application State/com.fitbit.os.simulator.savedState",
+  ]
+
   caveats do
     requires_rosetta
   end

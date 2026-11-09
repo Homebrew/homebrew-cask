@@ -1,6 +1,6 @@
 cask "akiflow" do
-  version "2.80.3,d68751d9"
-  sha256 "17564e664216c05dbee118b9581ec25a0c07d2d3769224ce87a81b6509dfa73f"
+  version "2.85.5,833b3cae"
+  sha256 "d702ffa7978d496407955c7690a815b6ade355241eaae4935b7d57911277a824"
 
   url "https://download.akiflow.com/builds/Akiflow-#{version.csv.first}-#{version.csv.second}-universal.dmg"
   name "Akiflow"
@@ -21,12 +21,13 @@ cask "akiflow" do
   end
 
   auto_updates true
-  depends_on macos: :monterey
+  depends_on macos: :ventura
 
   app "Akiflow.app"
 
   zap trash: [
     "~/Library/Application Support/Akiflow",
+    "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.akiflow.akiflow.sfl*",
     "~/Library/Preferences/Akiflow",
     "~/Library/Preferences/com.akiflow.akiflow.plist",
     "~/Library/Saved Application State/com.akiflow.akiflow.savedState",

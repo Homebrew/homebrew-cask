@@ -1,6 +1,6 @@
 cask "linear" do
-  version "1.32.4"
-  sha256 "bae1078fabf5b72d884c3bbba4235117e92070adcba407cdc30afb3933f14d31"
+  version "1.32.8"
+  sha256 "08d42b917bc44068231d47a9e14ae9fdac2ca95fa6b451e810fcda0f756ed4a3"
 
   url "https://releases.linear.app/Linear-#{version}-universal.dmg"
   name "Linear"
@@ -13,11 +13,12 @@ cask "linear" do
   end
 
   auto_updates true
-  depends_on macos: :monterey
+  depends_on macos: :ventura
 
   app "Linear.app"
 
   zap trash: [
+    "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.linear.sfl*",
     "~/Library/Application Support/Linear",
     "~/Library/Caches/com.linear",
     "~/Library/Caches/com.linear.ShipIt",

@@ -16,5 +16,5 @@ cask "font-league-spartan" do
   font "LeagueSpartan-#{version}/static/OTF/LeagueSpartan-SemiBold.otf"
   font "LeagueSpartan-#{version}/variable/TTF/LeagueSpartan-VF.ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

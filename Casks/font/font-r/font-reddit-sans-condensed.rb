@@ -8,5 +8,5 @@ cask "font-reddit-sans-condensed" do
 
   font "RedditSansCondensed[wght].ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

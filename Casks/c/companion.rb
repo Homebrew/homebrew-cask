@@ -2,9 +2,15 @@ cask "companion" do
   arch arm: "arm64", intel: "x64"
   livecheck_arch = on_arch_conditional arm: "arm", intel: "intel"
 
-  version "5.0.5,9736,0293f0d1ee"
-  sha256 arm:   "29be1d68b04e2ac6742727f8bd83cf03ed8f7a347325115d9e18a55806d41338",
-         intel: "1be5a87019971b8788b9d05365e60beeef856f7c8b567e1e13af31f74c01a1ea"
+  sha256 arm:   "ff4793e7b144903bedf7296cfdfcc277b9bff5ff891317d7c7f08349fac29ffe",
+         intel: "da93a0858f8da67c4f28e775541762c40bec9ec8794f38fe2048aaef238835ae"
+
+  on_arm do
+    version "5.1.2,10019,98d5d4e1a1"
+  end
+  on_intel do
+    version "5.1.2,10019,98d5d4e1a1"
+  end
 
   url "https://cf-pub.bitfocus.io/companion/companion/companion-mac-#{arch}-#{version.csv.first}-#{version.csv.second}-stable-#{version.csv.third}.dmg"
   name "Bitfocus Companion"
@@ -26,7 +32,7 @@ cask "companion" do
     end
   end
 
-  depends_on macos: :monterey
+  depends_on macos: :ventura
 
   app "Companion.app"
 
@@ -37,5 +43,6 @@ cask "companion" do
     "~/Library/Application Support/companion-launcher",
     "~/Library/Preferences/companion-nodejs",
     "~/Library/Preferences/companion.bitfocus.no.plist",
+    "~/Library/Preferences/test-companion.bitfocus.no.plist",
   ]
 end

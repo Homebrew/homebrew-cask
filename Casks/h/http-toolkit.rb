@@ -2,11 +2,11 @@ cask "http-toolkit" do
   arch arm: "arm64", intel: "x64"
   os macos: "dmg", linux: "AppImage"
 
-  version "1.27.1"
-  sha256 arm:          "9fb15e0de154cb88debbc298bdc96e7c20d657c4eb138555b6c0603e1dcb07ec",
-         intel:        "9f670af93770bd85d7507e67d2ec38c85820ecd0a433a8998a090d09fcf65f8e",
-         arm64_linux:  "2a99611f77f5e8faf4b27be6fe709b6775964fed36c003dfb5c521a7f51a6a08",
-         x86_64_linux: "c901cc8ebd51689f5faec76e46e31f3f011aba1eab486d335fa782d279a203fb"
+  version "1.27.4"
+  sha256 arm:          "06397ca729d7c77fbb43fc27029301b782f5fed4917b7b9f3c2394a56c3808be",
+         intel:        "1a71439ff7dcf4374f5de1fcc251bb553c8546327e4c465dc760a8a62a9b04f9",
+         arm64_linux:  "e1ab69e80dedc429f002b8ba795969c4aa8ace5b4151fa963e70baf86f08d7f8",
+         x86_64_linux: "f3cccb975ca617341d50c2988fcedfa2522d009792376ca9e71d22727d852dc8"
 
   on_macos do
     depends_on macos: :monterey
@@ -14,6 +14,7 @@ cask "http-toolkit" do
     app "HTTP Toolkit.app"
 
     zap trash: [
+      "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/tech.httptoolkit.desktop.sfl*",
       "~/Library/Application Support/HTTP Toolkit",
       "~/Library/Caches/httptoolkit-server",
       "~/Library/Logs/HTTP Toolkit",

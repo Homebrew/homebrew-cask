@@ -12,5 +12,5 @@ cask "font-ahuramzda" do
 
   font "Ahuramazda-Avestan-Font-#{version}/ahuramazda.ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

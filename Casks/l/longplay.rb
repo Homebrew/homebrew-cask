@@ -1,6 +1,6 @@
 cask "longplay" do
-  version "1.1.9"
-  sha256 "c50f4bff671c0822956bb4f9645cb8d915915d253e3aedce648cc40c9c0623eb"
+  version "1.1.11"
+  sha256 "08568a9a26443389e7cab63918ae488135f2f010bf73adc49d7f8449d2f003d9"
 
   url "https://download.longplay.app/mac/Longplay-#{version.csv.first}#{"-#{version.csv.second}" if version.csv.second}.dmg"
   name "Longplay"
@@ -23,10 +23,15 @@ cask "longplay" do
 
   app "Longplay.app"
 
+  uninstall quit: "app.longplay.Longplay-Mac"
+
   zap trash: [
+    "~/Library/Application Scripts/7N3B54ALZK.app.longplay.Longplay",
     "~/Library/Application Scripts/app.longplay.Longplay-Mac",
     "~/Library/Application Scripts/group.app.longplay.Longplay",
+    "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/app.longplay.longplay-mac.sfl*",
     "~/Library/Containers/app.longplay.Longplay-Mac",
+    "~/Library/Group Containers/7N3B54ALZK.app.longplay.Longplay",
     "~/Library/Group Containers/group.app.longplay.Longplay",
   ]
 end

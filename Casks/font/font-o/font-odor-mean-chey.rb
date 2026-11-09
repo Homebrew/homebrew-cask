@@ -8,5 +8,5 @@ cask "font-odor-mean-chey" do
 
   font "OdorMeanChey-Regular.ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

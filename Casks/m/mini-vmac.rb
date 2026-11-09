@@ -16,6 +16,11 @@ cask "mini-vmac" do
 
   app "Mini vMac.app"
 
+  zap trash: [
+    "~/Library/Preferences/com.gryphel.minivmac.plist",
+    "~/Library/Saved Application State/com.gryphel.minivmac.savedState",
+  ]
+
   caveats do
     requires_rosetta
   end

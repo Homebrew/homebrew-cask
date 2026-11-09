@@ -1,6 +1,6 @@
 cask "webull" do
-  version "9.15.1,9000300101"
-  sha256 "f630ddc1132830957814c236c0247baddd0a07a4c5ce2dc5a6ad63c7de1b44dc"
+  version "9.18.0,9000300124"
+  sha256 "1c169433eda32a6b6033089fa67b7ce29a8ab5a08d4c873590a9a602759bde85"
 
   url "https://u1sweb.webullfintech.com/us/Webull%20Desktop_#{version.csv.first}_#{version.csv.second}_global_universalsigned.dmg"
   name "Webull"
@@ -24,6 +24,7 @@ cask "webull" do
   zap trash: [
     "~/.config/Webull Desktop",
     "~/Library/Application Support/Webull Desktop",
+    "~/Library/Preferences/com.webull.desktop.v1.plist",
     "~/Library/Preferences/com.webulldesktop.*",
     "~/Library/Saved Application State/com.webull.desktop.v1.savedState",
   ]

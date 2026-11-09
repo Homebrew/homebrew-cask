@@ -16,5 +16,5 @@ cask "font-zxgamut" do
   font "static/ZxGamut-SemiBold.otf"
   font "static/ZxGamut-Thin.otf"
 
-  # No zap stanza required
+  zap :not_required
 end

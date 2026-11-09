@@ -1,6 +1,6 @@
 cask "vivaldi" do
-  version "8.2.4133.47"
-  sha256 "1edd44db4ebe86c3188dcf708dd58d9765ca7abe59476b08b15a1f9ef8e910e2"
+  version "8.3.4191.30"
+  sha256 "424bbeda3c663c5cf219020a9318d31270872627e81dbba416605831c59fd05b"
 
   url "https://downloads.vivaldi.com/stable-auto/Vivaldi.#{version}.universal.tar.xz"
   name "Vivaldi"
@@ -21,6 +21,7 @@ cask "vivaldi" do
 
   zap trash: [
     "/Library/Logs/DiagnosticReports/Vivaldi Helper (Renderer)_*.diag",
+    "/Library/Logs/DiagnosticReports/Vivaldi Helper_*.diag",
     "/Library/Logs/DiagnosticReports/Vivaldi_*.diag",
     "~/Library/Application Support/CrashReporter/Vivaldi_*.plist",
     "~/Library/Application Support/Vivaldi",

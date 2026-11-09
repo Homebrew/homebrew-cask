@@ -1,6 +1,6 @@
 cask "paper-design" do
-  version "0.5.7,260904829lm19ta"
-  sha256 "b9f8e6c3b3d8a73a1578157bb4416f3b78be46123047ccd62716a8ea1cfa7cab"
+  version "0.5.18,261031pthw9s82w"
+  sha256 "b28995f16649d4abe424d3a80ab3d1d5e727127bad3d44b538bb7310127958ac"
 
   url "https://download.todesktop.com/2601167vjw8xe/Paper%20#{version.csv.first}%20-%20Build%20#{version.csv.second}-arm64.dmg"
   name "Paper"
@@ -22,7 +22,7 @@ cask "paper-design" do
 
   auto_updates true
   depends_on arch: :arm64
-  depends_on macos: :monterey
+  depends_on macos: :ventura
 
   app "Paper.app"
 

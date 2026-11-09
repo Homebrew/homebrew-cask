@@ -1,6 +1,6 @@
 cask "kdrive" do
-  version "3.8.7.1"
-  sha256 "e0b6c4076e6a87aa514e56a1af429e7a2dd76070d7f6b725d1a5407703672532"
+  version "4.0.3.1"
+  sha256 "a95360e52d4c9ee2e650fd723707a6ea88c54be8ee57e116b0df258c8d308ac6"
 
   url "https://download.storage.infomaniak.com/drive/desktopclient/kDrive-#{version}.pkg"
   name "kDrive"
@@ -36,11 +36,15 @@ cask "kdrive" do
   zap trash: [
     "~/Library/Application Scripts/864VDCS2QY.com.infomaniak.drive.desktopclient.LoginItemAgent",
     "~/Library/Application Scripts/com.infomaniak.drive.desktopclient.Extension",
+    "~/Library/Application Support/kDrive",
     "~/Library/Caches/com.infomaniak.drive.desktopclient",
+    "~/Library/Caches/com.infomaniak.drive.desktopclient.gui",
     "~/Library/Containers/864VDCS2QY.com.infomaniak.drive.desktopclient.LoginItemAgent",
     "~/Library/Containers/com.infomaniak.drive.desktopclient.Extension",
     "~/Library/Cookies/com.infomaniak.drive.desktopclient.binarycookies",
     "~/Library/Group Containers/864VDCS2QY.com.infomaniak.drive.desktopclient",
+    "~/Library/Logs/kDrive",
+    "~/Library/Preferences/com.infomaniak.drive.desktopclient.gui.plist",
     "~/Library/Preferences/com.infomaniak.drive.desktopclient.plist",
     "~/Library/Preferences/kDrive",
   ]

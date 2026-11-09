@@ -1,6 +1,6 @@
 cask "rambox" do
-  version "2.7.1"
-  sha256 "4d4339b562447ee4e95b11273a5952dcf773bea6d2e3ea31007f0935c338a156"
+  version "3.1.2"
+  sha256 "771e21a9ffb6af99b33dd1d5baea4c7bc80d6b92e99afe60bec0a35716b2e491"
 
   url "https://github.com/ramboxapp/download/releases/download/v#{version}/Rambox-#{version}-mac.zip"
   name "Rambox"
@@ -13,6 +13,7 @@ cask "rambox" do
   app "Rambox.app"
 
   zap trash: [
+    "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.rambox.sfl*",
     "~/Library/Application Support/CrashReporter/Rambox Helper_*.plist",
     "~/Library/Application Support/CrashReporter/Rambox_*.plist",
     "~/Library/Application Support/Rambox",
@@ -23,6 +24,7 @@ cask "rambox" do
     "~/Library/Preferences/ByHost/com.grupovrs.ramboxce.ShipIt.*.plist",
     "~/Library/Preferences/com.grupovrs.ramboxce.helper.plist",
     "~/Library/Preferences/com.grupovrs.ramboxce.plist",
+    "~/Library/Preferences/com.rambox.plist",
     "~/Library/Preferences/com.saenzramiro.rambox.helper.plist",
     "~/Library/Preferences/com.saenzramiro.rambox.plist",
     "~/Library/Saved Application State/com.grupovrs.ramboxce.savedState",

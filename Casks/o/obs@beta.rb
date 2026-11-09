@@ -2,9 +2,9 @@ cask "obs@beta" do
   arch arm: "apple", intel: "intel"
   livecheck_folder = on_arch_conditional arm: "arm64", intel: "x86_64"
 
-  version "32.2.0-rc2"
-  sha256 arm:   "19dcdd8fe01d916f63617db4e4d62501e4881f6a737359e3462101fe76d8d3df",
-         intel: "dfe081310f8444fd38912763dee1b8db5c1164a17da6a78d2cff272638e22681"
+  version "33.0.0-rc3"
+  sha256 arm:   "ead594ec544503aeb42df5033266c3a9d3de5bd07335449dd751a6681b4571e6",
+         intel: "a4b38098ae9c370d4536a9d4dc5ed459ac9b9cf55cf1865951ae3d9e977c9f12"
 
   url "https://cdn-fastly.obsproject.com/downloads/obs-studio-#{version}-macos-#{arch}.dmg"
   name "OBS"
@@ -25,13 +25,14 @@ cask "obs@beta" do
 
   auto_updates true
   conflicts_with cask: "obs"
-  depends_on macos: :monterey
+  depends_on macos: :ventura
 
   app "OBS.app"
   command_wrapper "obs",
                   executable: "#{appdir}/OBS.app/Contents/MacOS/OBS"
 
-  uninstall delete: "/Library/CoreMediaIO/Plug-Ins/DAL/obs-mac-virtualcam.plugin"
+  uninstall quit:   "com.obsproject.obs-studio",
+            delete: "/Library/CoreMediaIO/Plug-Ins/DAL/obs-mac-virtualcam.plugin"
 
   zap trash: [
     "~/Library/Application Support/obs-studio",

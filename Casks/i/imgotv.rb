@@ -1,6 +1,6 @@
 cask "imgotv" do
-  version "6.5.9"
-  sha256 "d2c486468eea3304c83f1e56c14d7aae6395c555220667c2cbbc53bcd658b83c"
+  version "6.6.0"
+  sha256 "0f549b51ab66b7ab53986dc62d5811c55618f239806a96a8791967d9276dd885"
 
   url "https://download.imgo.tv/app/mac/#{version}/mgtv-mango-#{version}.dmg"
   name "芒果TV"

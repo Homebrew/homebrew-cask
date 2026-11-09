@@ -8,5 +8,5 @@ cask "font-montenegrin-gothic-one" do
 
   font "MontenegrinGothicOne-Regular.ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

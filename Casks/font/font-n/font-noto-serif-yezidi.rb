@@ -8,5 +8,5 @@ cask "font-noto-serif-yezidi" do
 
   font "NotoSerifYezidi[wght].ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

@@ -16,5 +16,5 @@ cask "font-terminus" do
   font "terminus-ttf-#{version}/TerminusTTF-Bold-Italic-#{version}.ttf"
   font "terminus-ttf-#{version}/TerminusTTF-Italic-#{version}.ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

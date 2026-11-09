@@ -1,6 +1,6 @@
 cask "praat" do
-  version "7.0.02,7002"
-  sha256 "9e4d1d220cff32ccfa4521114d23c11ebbfd792db61884f6019a44bd4aba19d4"
+  version "7.0.03,7003"
+  sha256 "5a8eda57682cd16ec38ebd0461bb5e699b30ba2e25fe135ba3847961d8e4fdbb"
 
   url "https://github.com/praat/praat.github.io/releases/download/v#{version.csv.first}/praat#{version.csv.second}_mac.dmg"
   name "Praat"
@@ -26,6 +26,7 @@ cask "praat" do
   binary "#{appdir}/Praat.app/Contents/MacOS/Praat", target: "praat"
 
   zap trash: [
+    "~/Library/Application Support/Praat",
     "~/Library/Preferences/Praat Prefs",
     "~/Library/Saved Application State/org.praat.Praat.savedState",
   ]

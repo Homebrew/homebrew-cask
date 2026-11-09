@@ -1,9 +1,9 @@
 cask "eigent" do
   arch arm: "-arm64"
 
-  version "1.0.4"
-  sha256 arm:   "2f05a18ea7f5d7c1d62add5ce7aacf1c0330af7d7bc07e98902c3860a44480dd",
-         intel: "45d23b31a5b4d44aa822915455a3bf97ab68c5a69e00789ec64276204213cdc4"
+  version "1.0.7"
+  sha256 arm:   "0791c0539bec38b75765717e1babf3d041b1b9ef89aa352d7085c9bd4d5a43b6",
+         intel: "a986038887b39934850a9e255f93a24fe39f526eae8b395dbf21731f81d2643f"
 
   url "https://github.com/eigent-ai/eigent/releases/download/v#{version}/Eigent-#{version}#{arch}.dmg"
   name "Eigent"
@@ -29,7 +29,7 @@ cask "eigent" do
     end
   end
 
-  depends_on macos: :big_sur
+  depends_on :macos
 
   app "Eigent.app"
 

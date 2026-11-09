@@ -10,14 +10,9 @@ cask "opencomic" do
   desc "Comic and Manga reader"
   homepage "https://opencomic.app/"
 
-  livecheck do
-    url :url
-    strategy :github_latest
-  end
+  depends_on :macos
 
-  depends_on macos: :big_sur
-
-  app "OpenComic.app"
+  app "opencomic.app"
 
   zap trash: [
     "~/Library/Application Support/OpenComic",

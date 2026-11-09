@@ -1,6 +1,6 @@
 cask "font-lxgw-neoxihei" do
-  version "1.305"
-  sha256 "893cfbec604768f03785ab4f369508de68c274273359a5cadee17e2852975d5c"
+  version "1.308"
+  sha256 "80415d3666d9f51cf42ecf82c5350488e6b3f282ab46a3b90dcaa5e212564ecc"
 
   url "https://github.com/lxgw/LxgwNeoXiHei/releases/download/v#{version}/LXGWNeoXiHei.ttf"
   name "LXGW NeoXiHei"
@@ -14,5 +14,5 @@ cask "font-lxgw-neoxihei" do
 
   font "LXGWNeoXiHei.ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

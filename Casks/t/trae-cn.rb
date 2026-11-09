@@ -3,11 +3,11 @@ cask "trae-cn" do
   os macos: "darwin", linux: "linux"
   url_end = on_system_conditional macos: "dmg", linux: "tar.gz"
 
-  version "2.3.62837"
-  sha256 arm:          "b8a033c4a4ebbd4802a14d517f802e12c506504edfe2fe957ecde700ae615b64",
-         intel:        "1b805bf6f3e1fc1ffac7807e3c6ea51d9c2bed8927a96829f7d23ea163117d54",
-         arm64_linux:  "aab2675b754aea1f921bf5b0a7f19188a25aae80e4e46b0870a8069b8946ad4f",
-         x86_64_linux: "b84c558c5328e241ca35c53748bf56b098662a49989ec73c13f0f8abdd13589b"
+  version "2.3.101515"
+  sha256 arm:          "6c041c21c92da32d6c863ab0054eaeb632e19be9895868b23070521ea44b9314",
+         intel:        "18764b77e597b22bc3eccc105d3fed687be49d20870d635175b4db18fe006761",
+         arm64_linux:  "69396c9838d15da3106b852a25f864b7ffbf94c4e53bf8cef7f34c3a49499fa9",
+         x86_64_linux: "82ccad2ccf4037d92d616b9ea52c5757df2a43b3fc91178f66a303ab00712620"
 
   on_macos do
     depends_on macos: :monterey
@@ -42,15 +42,18 @@ cask "trae-cn" do
     ]
   end
 
-  url "https://lf-cdn.trae.com.cn/obj/trae-com-cn/pkg/app/releases/stable/#{version}/#{os}/Trae_CN-#{os}-#{arch}.#{url_end}"
+  url "https://lf-cdn.trae.com.cn/obj/trae-com-cn/pkg/app/releases/stable/#{version}/#{os}/TRAE_CN-#{os}-#{arch}.#{url_end}"
   name "Trae CN"
   desc "Adaptive AI IDE"
   homepage "https://www.trae.com.cn/"
 
   livecheck do
     url "https://api.trae.ai/icube/api/v1/native/version/trae/cn/latest"
-    strategy :json do |json|
-      json.dig("data", "manifest", os, "version")
+    regex(%r{/stable/v?(\d+(?:\.\d+)+)/#{os}/}i)
+    strategy :json do |json, regex|
+      json.dig("data", "manifest", os, "versions")&.map do |item|
+        item["url"]&.[](regex, 1)
+      end
     end
   end
 

@@ -8,5 +8,5 @@ cask "font-overpass-mono" do
 
   font "OverpassMono[wght].ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

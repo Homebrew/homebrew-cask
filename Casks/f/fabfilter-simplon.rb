@@ -18,5 +18,5 @@ cask "fabfilter-simplon" do
 
   uninstall pkgutil: "com.fabfilter.Simplon.*"
 
-  # No zap stanza required
+  zap :not_required
 end

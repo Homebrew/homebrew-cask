@@ -2,11 +2,11 @@ cask "dda" do
   arch arm: "aarch64", intel: "x86_64"
   os macos: "apple-darwin", linux: "unknown-linux-gnu"
 
-  version "0.38.0"
-  sha256 arm:          "242d5af17dd2bc5142127fd7c54ca9f45035f0b6817cb1bfd3279077838427d1",
-         intel:        "8aa664344845081c818ea840e00a574795031a8295b654782960d83f16ffabe6",
-         arm64_linux:  "16de2b851744b29dfc2d8290642fec54d75df9e2d6dd5266f79b9e1baa841023",
-         x86_64_linux: "092d691b08321ff1dee1c465234ee8aa1675654cbf2cc926fe603f047b02cf06"
+  version "0.40.1"
+  sha256 arm:          "7591d3c674ad854120a5c0c4a1163ed7d2dad9179c09610625d96248345cbc58",
+         intel:        "f3e79b406dcef36be9441f5e88749093f2c68b91af2d37aaf5f0b47b430c651b",
+         arm64_linux:  "3e90097365cb8ce6290e2c90dbfe3ee45875a3818508004cd4c6ce2a10100835",
+         x86_64_linux: "7cc98cfcf88cc915cf154dcb96bd02c2f191a06b51f3793629eedfb738b7784b"
 
   url "https://github.com/DataDog/datadog-agent-dev/releases/download/v#{version}/dda-#{arch}-#{os}.tar.gz"
   name "dda"
@@ -27,5 +27,5 @@ cask "dda" do
     args:       ["self", "remove"],
   }
 
-  # No zap stanza required
+  zap :not_required
 end

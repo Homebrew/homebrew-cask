@@ -8,7 +8,7 @@ cask "font-ocr" do
 
   livecheck do
     url :homepage
-    regex(/href=.*ocr[._-]v?(\d+(?:\.\d+)*)\.zip/i)
+    regex(/href=.*?ocr[._-]v?(\d+(?:\.\d+)*)\.zip/i)
   end
 
   font "ocr-#{version}/OCRA.otf"
@@ -19,5 +19,5 @@ cask "font-ocr" do
   font "ocr-#{version}/OCRBS.otf"
   font "ocr-#{version}/OCRBX.otf"
 
-  # No zap stanza required
+  zap :not_required
 end

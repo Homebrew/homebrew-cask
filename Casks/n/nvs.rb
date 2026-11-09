@@ -14,7 +14,7 @@ cask "nvs" do
 
   uninstall trash: "~/.nvs"
 
-  # No zap stanza required
+  zap :not_required
 
   caveats <<~EOS
     NVS installs all Node.js versions to ~/.nvs by default.

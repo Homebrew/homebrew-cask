@@ -18,8 +18,8 @@ cask "microsoft-excel" do
     end
   end
   on_sonoma :or_newer do
-    version "16.112.26083020"
-    sha256 "8d7e51e42886c9ae7a0c7981aa6df64c8ce56eb08948afee270c26bf3c1a9eee"
+    version "16.114.26110224"
+    sha256 "ba9fbc27f3c33fcc4732bd9ce3538613fbe6c4faaf269a681e064d9d39dd257c"
 
     livecheck do
       url "https://go.microsoft.com/fwlink/p/?linkid=525135"
@@ -48,11 +48,15 @@ cask "microsoft-excel" do
         },
       ]
 
-  uninstall launchctl: "com.microsoft.office.licensingV2.helper",
+  uninstall launchctl: [
+              "com.microsoft.office.licensingV2.helper",
+              "com.microsoft.office.licensingV3.helper",
+            ],
             quit:      "com.microsoft.autoupdate2",
             pkgutil:   [
               "com.microsoft.package.Microsoft_Excel.app",
               "com.microsoft.pkg.licensing",
+              "com.microsoft.pkg.licensing.v3",
             ]
 
   zap trash: [

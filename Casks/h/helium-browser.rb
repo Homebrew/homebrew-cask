@@ -4,11 +4,11 @@ cask "helium-browser" do
   file_sep = on_system_conditional macos: "_", linux: "-"
   url_end = on_system_conditional macos: "-macos.dmg", linux: ".AppImage"
 
-  version "0.16.5.1"
-  sha256 arm:          "8bed392e9fd676467cd48d68c6bfaebc56918c61a015e3d91e55411750954d9b",
-         intel:        "dad9b62c7d7f208f1b42f32bdcb70d0a7e4fb99922095f44486968a03d823202",
-         arm64_linux:  "cc264504b6c6ff7a5d781c7aa81ad55b2e1d78d36d6eee042bd4532fdc204d04",
-         x86_64_linux: "37afb0c20e3ab9fb1b0aa109bff5a94d60c29c8ded9c5b79f1c1ba4ec1b15dec"
+  version "0.21.1.1"
+  sha256 arm:          "e0be38d4b39b8ce120b7c7eeda128ecfba0e6611d5d23f2fbab2e3510c276331",
+         intel:        "5ea75758df4bf2ea7faedc1de39bc006e7e2a0e3c9258904310f83e3010f01b0",
+         arm64_linux:  "aa0057946abcc66745267a73c7e08d8812a522d7874a42da025f3a0a11fb9c36",
+         x86_64_linux: "a62bc4081b99709b3117165cf7abe7111d3b544671ab17232f429b9b0544b3fa"
 
   on_macos do
     depends_on macos: :ventura
@@ -24,6 +24,11 @@ cask "helium-browser" do
   end
   on_linux do
     app_image "helium-#{version}-#{arch}.AppImage", target: "Helium.AppImage"
+
+    zap trash: [
+      "~/.cache/net.imput.helium",
+      "~/.config/net.imput.helium",
+    ]
   end
 
   url "https://github.com/imputnet/helium-#{os}/releases/download/#{version}/helium#{file_sep}#{version}#{file_sep}#{arch}#{url_end}"

@@ -1,9 +1,9 @@
 cask "snowflake-snowsql" do
   arch arm: "arm64", intel: "x86_64"
 
-  version "1.5.1"
-  sha256 arm:   "521e87e1b43284720dbab70357fbba32bf32b9a3709516be8dd650980d9fd4bf",
-         intel: "c9761bb580b00e6b0c6bc6b0c6004907846488f9ad9c62a7bb9de534728e6f12"
+  version "1.5.4"
+  sha256 arm:   "8e8e061cd29cdf97f5c4411da48d1aabcbd4a4ac7ad87ada3ce8e6e446df2a06",
+         intel: "0dc9e4025f1eadd5ac9bce35a1990db2c28ca59416c6376b982638e4cb652ce6"
 
   url "https://sfc-repo.snowflakecomputing.com/snowsql/bootstrap/#{version.csv.second || version.csv.first.major_minor}/darwin_#{arch}/snowsql-#{version.csv.first}-darwin_#{arch}.pkg"
   name "SnowSQL"

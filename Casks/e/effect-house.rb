@@ -3,12 +3,12 @@ cask "effect-house" do
   livecheck_arch = on_arch_conditional arm: "arm64", intel: "x86_64"
 
   on_arm do
-    version "5.14.0,7219,08192026,104"
-    sha256 "186817e3eae8f4a2cf27d9fb7733dc62e4096ba08299f9e9d8157a05b3c2ecd2"
+    version "5.16.0,1671,10202026,104"
+    sha256 "429b138e22657535345d03a485dac8ca72b9a481578aad4f8e53ec5ada662edb"
   end
   on_intel do
-    version "5.14.0,1689,08192026,104"
-    sha256 "6fce980ea7af54c495ddfc399fc4d4571f132bb6a0b864d8748f92e8a8add42e"
+    version "5.16.0,4070,10202026,104"
+    sha256 "d4051994be8a2ac7d8aef2e11e8fbec543f9766429c9c56bbf609fac9a776e43"
   end
 
   url "https://sf16-va.tiktokcdn.com/obj/eden-va2/olaa_ajlmml_zlp/ljhwZthlaukjlkulzlp/V#{version.csv.first.no_dots}External_Release_Builds_#{version.csv.third}/Effect_House_v#{version.csv.first}.#{version.csv.second}_#{arch}_#{version.csv.fourth}.dmg"
@@ -38,6 +38,7 @@ cask "effect-house" do
   zap trash: [
     "~/Library/Application Support/EffectHouse",
     "~/Library/HTTPStorages/com.ies.orion",
+    "~/Library/Logs/Effect House_debug.log",
     "~/Library/Saved Application State/com.ies.orion.savedState",
   ]
 end

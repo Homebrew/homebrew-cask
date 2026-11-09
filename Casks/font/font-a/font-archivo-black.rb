@@ -8,5 +8,5 @@ cask "font-archivo-black" do
 
   font "ArchivoBlack-Regular.ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

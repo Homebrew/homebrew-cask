@@ -8,5 +8,5 @@ cask "font-arizonia" do
 
   font "Arizonia-Regular.ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

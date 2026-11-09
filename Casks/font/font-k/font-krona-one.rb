@@ -8,5 +8,5 @@ cask "font-krona-one" do
 
   font "KronaOne-Regular.ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

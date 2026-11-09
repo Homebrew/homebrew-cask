@@ -8,5 +8,5 @@ cask "font-escumasia" do
 
   font "escumasia/Escumasia-Regular.otf"
 
-  # No zap stanza required
+  zap :not_required
 end

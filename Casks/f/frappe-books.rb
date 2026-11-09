@@ -10,10 +10,7 @@ cask "frappe-books" do
   desc "Book-keeping software for small businesses and freelancers"
   homepage "https://frappe.io/books/"
 
-  livecheck do
-    url :url
-    strategy :github_latest
-  end
+  deprecate! date: "2026-11-08", because: :discontinued
 
   depends_on :macos
 

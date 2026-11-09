@@ -11,5 +11,5 @@ cask "font-rosario" do
   font "Rosario-Italic[wght].ttf"
   font "Rosario[wght].ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

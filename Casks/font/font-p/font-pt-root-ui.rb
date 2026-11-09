@@ -9,5 +9,5 @@ cask "font-pt-root-ui" do
 
   font "PT/PT/PT-Root-UI/pt-root-ui_vf.ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

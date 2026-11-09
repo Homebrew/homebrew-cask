@@ -8,5 +8,5 @@ cask "font-tektur" do
 
   font "Tektur[wdth,wght].ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

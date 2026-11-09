@@ -1,9 +1,9 @@
 cask "tauritavern" do
   arch arm: "arm64", intel: "x64"
 
-  version "2.2.0"
-  sha256 arm:   "913756a0de19bb315d85204e026697aaff078d06d6f82d7ca5cff7bd70d0c6d2",
-         intel: "fbf3d80e4921f7abfbb3d56797db8645c14236e8338c96cec66997e5c1d81811"
+  version "2.4.0"
+  sha256 arm:   "5fb376a6f47415e96216e898c750be631542c3db799e374e75aa1109428edcd1",
+         intel: "ac6d590d24527e9a6e6ca49c8b9cbf4ff01297cad1da14aad05abf535cf633d9"
 
   url "https://github.com/Darkatse/TauriTavern/releases/download/v#{version}/TauriTavern-#{version}-macos-#{arch}.dmg"
   name "TauriTavern"

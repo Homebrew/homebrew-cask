@@ -14,5 +14,5 @@ cask "save-hollywood" do
 
   screen_saver "SaveHollywood.saver"
 
-  # No zap stanza required
+  zap :not_required
 end

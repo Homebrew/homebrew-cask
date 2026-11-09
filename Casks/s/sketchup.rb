@@ -1,6 +1,6 @@
 cask "sketchup" do
-  version "2026.2.242.76"
-  sha256 "3a89d6ea7a5eddbd97521bde884f528f2dd6348b6408b74651551fb89d27c344"
+  version "2027.0.277.186"
+  sha256 "83164a6acfdece31a4e881c1c62959618c54bc9f05793017a719fc80762bceb7"
 
   url "https://download.sketchup.com/SketchUp-#{version.dots_to_hyphens}.dmg"
   name "SketchUp"

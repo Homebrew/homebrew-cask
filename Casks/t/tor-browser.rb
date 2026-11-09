@@ -1,6 +1,6 @@
 cask "tor-browser" do
-  version "15.0.21"
-  sha256 "2adc3e7392c371475d4e857c8c1a7411d477eeab459d886195afea98c3a4572d"
+  version "16.0"
+  sha256 "b482caf66f2e2435b27c1714820991c3f5588653a5ca17f500c9cef99a7ba799"
 
   url "https://www.torproject.org/dist/torbrowser/#{version}/tor-browser-macos-#{version}.dmg"
   name "Tor Browser"
@@ -12,7 +12,7 @@ cask "tor-browser" do
   # which is a problem if the newest version for macOS is lower. This checks
   # the download page instead, which links to the newest file for macOS.
   livecheck do
-    url "https://www.torproject.org/download/"
+    url "https://download.torproject.org/tor-browser-for-desktop/"
     regex(/href=.*?tor-browser(?:-macos)?[._-]v?(\d+(?:\.\d+)+)\.dmg/i)
   end
 

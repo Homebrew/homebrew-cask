@@ -1,8 +1,8 @@
 cask "mirai" do
-  version "0.4.8"
-  sha256 "da4a5cd57d95dd486e901baa77e5b06b7cc819b8d6d2c6dbaf1e5e7be9534205"
+  version "0.6.17"
+  sha256 "c9be6ecadc1c5a12556b4fac2b90bfcbdcc0e0f8cc3a7f62029b48990ddee56f"
 
-  url "https://assets.trymirai.com/app/mirai-#{version}-aarch64-apple-darwin.dmg"
+  url "https://github.com/trymirai/uzu/releases/download/#{version}/mirai-#{version}-aarch64-apple-darwin.dmg"
   name "Mirai"
   desc "Inference engine for AI models"
   homepage "https://trymirai.com/"
@@ -24,6 +24,8 @@ cask "mirai" do
   zap trash: [
     "~/.config/com.trymirai.cli",
     "~/Library/Application Support/mirai",
+    "~/Library/Caches/com.mirai.tech.chat",
     "~/Library/Caches/com.mirai.tech.chat.ShipIt",
+    "~/Library/WebKit/com.mirai.tech.chat",
   ]
 end

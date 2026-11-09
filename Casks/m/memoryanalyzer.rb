@@ -15,7 +15,7 @@ cask "memoryanalyzer" do
     regex(/href=.*?MemoryAnalyzer-(\d+(?:\.\d+)*).*?\.dmg/i)
   end
 
-  depends_on macos: :big_sur
+  depends_on :macos
 
   app "MemoryAnalyzer.app"
 

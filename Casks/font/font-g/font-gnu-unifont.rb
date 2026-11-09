@@ -1,6 +1,6 @@
 cask "font-gnu-unifont" do
-  version "17.0.05"
-  sha256 "f287cffb26e22723aa36e6684869b0f3ff3bfb822c4b01008bd847911ec1b631"
+  version "18.0.01"
+  sha256 "eab60847aac34c8768765cecc7821faf50de2636187b452b9b5fa50a12b00bc3"
 
   url "https://ftpmirror.gnu.org/gnu/unifont/unifont-#{version}/unifont-#{version}.tar.gz"
   name "GNU Unifont"
@@ -9,8 +9,12 @@ cask "font-gnu-unifont" do
   font "unifont-#{version}/font/precompiled/unifont-#{version}.otf"
   font "unifont-#{version}/font/precompiled/unifont_csur-#{version}.otf"
   font "unifont-#{version}/font/precompiled/unifont_jp-#{version}.otf"
+  font "unifont-#{version}/font/precompiled/unifont_jp_sample-#{version}.otf"
   font "unifont-#{version}/font/precompiled/unifont_sample-#{version}.otf"
+  font "unifont-#{version}/font/precompiled/unifont_t-#{version}.otf"
+  font "unifont-#{version}/font/precompiled/unifont_t_sample-#{version}.otf"
   font "unifont-#{version}/font/precompiled/unifont_upper-#{version}.otf"
+  font "unifont-#{version}/font/precompiled/unifont_upper_sample-#{version}.otf"
 
-  # No zap stanza required
+  zap :not_required
 end

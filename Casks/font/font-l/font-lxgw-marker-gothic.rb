@@ -8,5 +8,5 @@ cask "font-lxgw-marker-gothic" do
 
   font "LXGWMarkerGothic-Regular.ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

@@ -8,5 +8,5 @@ cask "font-rammetto-one" do
 
   font "RammettoOne-Regular.ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

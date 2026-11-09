@@ -3,13 +3,15 @@ cask "audacity" do
   os macos: "macOS", linux: "linux"
   url_end = on_system_conditional macos: "dmg", linux: "AppImage"
 
-  version "4.0.0"
-  sha256 arm:          "266201f3151b09e46a5ab8e0ce1a16cefdd53a66fc7c979e943b2c88d6500c51",
-         intel:        "4a5edd087bd5078aa2cd4e93c085a1172c9d791533c96b416a36bd82838a868b",
-         arm64_linux:  "e5def4e76febc4ab2dea7525a43aa62ddfa092434d164c1ea039687889a6104d",
-         x86_64_linux: "772663b0b407be44232193b8402cde4da4665c7f6e81edb5b70e3b14e8b9b5b4"
+  version "4.0.2"
+  sha256 arm:          "fd462da6204cbf9758b44c7ce1c29d5fe5cab4f31ba308d33c125f1b170401c3",
+         intel:        "4bf24e9f68e4af31dc47a6b1d02a44a74b537bdb88298d3bc14be55fb1fe6e58",
+         arm64_linux:  "88b1e16dd40a5b7d36bec5789b03f66bda34a7b964e19f338951bf6034d9db9c",
+         x86_64_linux: "a5f8787aa13cdb500a60fc013403b986776876b960cca962bc6e7fff066172f3"
 
   on_macos do
+    depends_on macos: :ventura
+
     app "Audacity #{version.major}.app"
 
     uninstall quit: "org.audacityteam.audacity#{version.major}"
@@ -26,6 +28,15 @@ cask "audacity" do
   end
   on_linux do
     app_image "audacity-linux-#{version}-#{arch}.AppImage", target: "Audacity.AppImage"
+
+    zap trash: [
+          "~/.cache/Audacity",
+          "~/.config/Audacity",
+          "~/.config/audacity#{version.major}",
+          "~/.local/share/Audacity",
+          "~/.local/share/audacity#{version.major}",
+        ],
+        rmdir: "~/Documents/Audacity#{version.major}"
   end
 
   url "https://github.com/audacity/audacity/releases/download/Audacity-#{version}/audacity-#{os}-#{version}-#{arch}.#{url_end}"

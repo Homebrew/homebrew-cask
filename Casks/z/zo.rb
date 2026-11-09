@@ -1,6 +1,6 @@
 cask "zo" do
-  version "1.5.13"
-  sha256 "880711377370a3d55a1631a70c74bedc3257733172bb3f115862a78694801221"
+  version "1.5.15"
+  sha256 "4207047142928f55893cad47e9c07a7f5b500e4a9b61b12639ec7d2ca453580b"
 
   url "https://github.com/zocomputer/Zo/releases/download/v#{version}/Zo-#{version}-universal-mac.zip"
   name "Zo"
@@ -13,6 +13,7 @@ cask "zo" do
   app "Zo.app"
 
   zap trash: [
+    "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/computer.zo.desktop.sfl*",
     "~/Library/Application Support/Zo",
     "~/Library/Preferences/computer.zo.desktop.plist",
   ]

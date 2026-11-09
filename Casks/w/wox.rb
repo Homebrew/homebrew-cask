@@ -1,9 +1,9 @@
 cask "wox" do
   arch arm: "arm64", intel: "amd64"
 
-  version "2.4.2"
-  sha256 arm:   "824a8ee5c85b6e2a8da74c9bdd0d20ffc47c117eabd1ffec6cbfa2aca1d04db0",
-         intel: "5ade637be42a13106fcbe3601d497219a3ccb5e795648566781ae753111f79be"
+  version "2.5.0"
+  sha256 arm:   "414f940b389a390391a0309dea6033f313842adc1f2c2c153303c3fcf7a62486",
+         intel: "9782775263dd9dc1456cc5227e021c00ed9234875d4fbcb7027c0bb007d412a6"
 
   url "https://github.com/Wox-launcher/Wox/releases/download/v#{version}/wox-mac-#{arch}.dmg"
   name "Wox"
@@ -19,5 +19,8 @@ cask "wox" do
 
   app "Wox.app"
 
-  zap trash: "~/.wox"
+  zap trash: [
+    "~/.wox",
+    "~/Library/Preferences/com.github.wox.plist",
+  ]
 end

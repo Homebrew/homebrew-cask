@@ -12,7 +12,7 @@ cask "vimcal" do
     version "1.0.47"
     sha256 "00596285cbe1f34aa171a02f6cb9ce043e501ea83e8783dd54e1864b0f6de897"
 
-    depends_on macos: :big_sur
+    depends_on macos: :any
   end
 
   url "https://vimcal-#{host_suffix}.s3.amazonaws.com/Vimcal-#{version}#{arch}.dmg"

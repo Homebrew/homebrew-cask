@@ -11,5 +11,5 @@ cask "font-petrona" do
   font "Petrona-Italic[wght].ttf"
   font "Petrona[wght].ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

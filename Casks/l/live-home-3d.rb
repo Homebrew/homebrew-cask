@@ -1,5 +1,5 @@
 cask "live-home-3d" do
-  version "4.12.1"
+  version "5.1.1"
   sha256 :no_check
 
   url "https://belightsoft.s3.amazonaws.com/updates/LiveHome3D.zip"
@@ -12,16 +12,19 @@ cask "live-home-3d" do
     strategy :sparkle, &:short_version
   end
 
-  depends_on macos: :big_sur
+  depends_on macos: :monterey
 
   app "Live Home 3D.app"
 
   zap trash: [
     "~/Library/Application Scripts/com.belightsoft.LiveHome3D.ThumbnailProvider",
+    "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.belightsoft.livehome3d.sfl*",
     "~/Library/Application Support/Live Home 3D",
     "~/Library/Caches/com.belightsoft.LiveHome3D",
     "~/Library/Containers/com.belightsoft.LiveHome3D.ThumbnailProvider",
+    "~/Library/HTTPStorages/com.belightsoft.LiveHome3D",
     "~/Library/Preferences/com.belightsoft.LiveHome3D.plist",
     "~/Library/Saved Application State/com.belightsoft.LiveHome3D.savedState",
+    "~/Library/WebKit/com.belightsoft.LiveHome3D",
   ]
 end

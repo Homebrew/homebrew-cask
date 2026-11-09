@@ -1,6 +1,6 @@
 cask "spokenly" do
-  version "2.29.1"
-  sha256 "d960d726a73a07c82431e4fd5109198109a85048203baa00f459c3deb64abf9e"
+  version "2.35.6"
+  sha256 "d3f59582118b25920312fe118efd6afa9ec52675ee0e0a7ff0639ba27866d42f"
 
   url "https://cdn.spokenly.app/releases/macos/Spokenly-#{version}.dmg"
   name "Spokenly"
@@ -16,6 +16,8 @@ cask "spokenly" do
   depends_on macos: :ventura
 
   app "Spokenly.app"
+
+  uninstall quit: "app.spokenly"
 
   zap trash: [
     "~/Library/Application Support/app.spokenly.revenuecat",

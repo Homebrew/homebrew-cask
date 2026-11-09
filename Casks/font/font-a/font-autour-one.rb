@@ -8,5 +8,5 @@ cask "font-autour-one" do
 
   font "AutourOne-Regular.ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

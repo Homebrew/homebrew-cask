@@ -7,9 +7,11 @@ cask "simpleclock" do
   desc "Simple analogue clock screensaver written entirely in Swift"
   homepage "https://github.com/Wandmalfarbe/Simple-Clock-Screensaver"
 
+  disable! date: "2026-10-12", because: :fails_gatekeeper_check
+
   depends_on :macos
 
   screen_saver "SimpleClock.saver"
 
-  # No zap stanza required
+  zap :not_required
 end

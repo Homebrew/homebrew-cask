@@ -8,5 +8,5 @@ cask "font-voces" do
 
   font "Voces-Regular.ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

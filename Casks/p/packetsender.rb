@@ -1,6 +1,6 @@
 cask "packetsender" do
-  version "8.11.1"
-  sha256 "f573d24fa1245e5572bc578d4fa9b1865dccd802e8fe333b7dc0512eb5bb5a30"
+  version "8.11.3"
+  sha256 "38380df6905d452927010b968d0ba859b343c29fa621fe85041ed3a8388098db"
 
   url "https://github.com/dannagle/PacketSender/releases/download/v#{version}/PacketSender_v#{version}.dmg"
   name "Packet Sender"

@@ -8,5 +8,5 @@ cask "font-biorhyme" do
 
   font "BioRhyme[wdth,wght].ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

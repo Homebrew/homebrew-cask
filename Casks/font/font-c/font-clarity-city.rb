@@ -6,10 +6,10 @@ cask "font-clarity-city" do
       branch:    "main",
       only_path: "ofl/claritycity"
   name "Clarity City"
-  homepage "https://github.com/googlefonts/clarity-city"
+  homepage "https://fonts.google.com/specimen/Clarity+City"
 
   font "ClarityCity-Italic[wght].ttf"
   font "ClarityCity[wght].ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

@@ -8,5 +8,5 @@ cask "font-hundar" do
 
   font "Hundar.otf"
 
-  # No zap stanza required
+  zap :not_required
 end

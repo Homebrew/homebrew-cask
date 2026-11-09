@@ -8,5 +8,5 @@ cask "font-chocolate-classical-sans" do
 
   font "ChocolateClassicalSans-Regular.ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

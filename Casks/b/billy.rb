@@ -1,6 +1,6 @@
 cask "billy" do
-  version "1.1.2,42"
-  sha256 "6b48451d0f5e3fd70c842600f9db68de362eef38387aab7fa3a0f5dadf9f7be2"
+  version "1.2.1,44"
+  sha256 "c785c8d9d3863b5969334940470523daebde37d3004584abfd64fbb22586a862"
 
   url "https://cdn.amore.computer/releases/com.simonlou.Billy/#{version.csv.first}-#{version.csv.second}/Billy.dmg"
   name "Billy"
@@ -18,6 +18,8 @@ cask "billy" do
   depends_on macos: :sonoma
 
   app "Billy.app"
+
+  uninstall quit: "com.simonlou.Billy"
 
   zap trash: [
     "~/Library/Application Scripts/com.simonlou.Billy",

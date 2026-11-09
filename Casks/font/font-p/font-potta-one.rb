@@ -8,5 +8,5 @@ cask "font-potta-one" do
 
   font "PottaOne-Regular.ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

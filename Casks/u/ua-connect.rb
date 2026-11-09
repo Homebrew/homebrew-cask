@@ -1,6 +1,6 @@
 cask "ua-connect" do
-  version "1.9.6,3797"
-  sha256 "f0e901d41994ffea7bbeaac1bf7a933f84e6bede68734c385e437167a392ecda"
+  version "1.11.1,3915"
+  sha256 "184f88fd744822f3c78f3528ae81158a5bf46a08c01b93d1c90dfefeae6023a2"
 
   url "https://builds.uaudio.com/apps/UA_Connect/UA_Connect_#{version.csv.first.dots_to_underscores}_#{version.csv.second}_Mac.dmg"
   name "UA Connect"
@@ -19,7 +19,7 @@ cask "ua-connect" do
   end
 
   auto_updates true
-  depends_on macos: :big_sur
+  depends_on :macos
 
   app "UA Connect.app"
 
@@ -34,6 +34,7 @@ cask "ua-connect" do
             ]
 
   zap trash: [
+    "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.uaudio.ua-connect.sfl*",
     "~/Library/Application Support/UA Connect",
     "~/Library/Application Support/Universal Audio/UA Connect",
     "~/Library/Logs/UA Connect",

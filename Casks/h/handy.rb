@@ -2,11 +2,11 @@ cask "handy" do
   arch arm: "aarch64", intel: on_system_conditional(macos: "x64", linux: "amd64")
   os macos: "dmg", linux: "AppImage"
 
-  version "0.9.6"
-  sha256 arm:          "a961b35724f6c860bcdcece1f1d77c21343ad2156525f8800ca968a1aad4d854",
-         intel:        "f47b184b3052fa6a994e6cae1619b6340cea0e8742e616042444908649659d08",
-         arm64_linux:  "d0f2b7df715148625efb5b030a1855b272165634a0bdb1835593dcdbf2def67a",
-         x86_64_linux: "c652f69572cc846302d76076198a07b4d62b5f7b548285933527584a3c62f4fd"
+  version "0.10.0"
+  sha256 arm:          "bdc41359af0b8b3014f14c44ea3fe85b1e45387bdad261bd4a2cfc92f7f35496",
+         intel:        "210cc45fa66c899dcb8848df807779c7a808fe8e6dd863b9d5ed448a8acd7d3a",
+         arm64_linux:  "e76ee45a404009319046878e314e94a7f431b3808179b3b05a410477154d8aa6",
+         x86_64_linux: "20661c16b0b9e1b7dc5020be463f2b17f654bfeaf0ba1d7032bc4b77b268ec6c"
 
   on_macos do
     depends_on macos: :ventura
@@ -17,6 +17,7 @@ cask "handy" do
       "~/Library/Application Support/com.pais.handy",
       "~/Library/Caches/com.pais.handy",
       "~/Library/LaunchAgents/Handy.plist",
+      "~/Library/Logs/com.pais.handy",
       "~/Library/WebKit/com.pais.handy",
     ]
   end

@@ -1,9 +1,9 @@
 cask "splice" do
   arch arm: "aarch64", intel: "amd64"
 
-  version "5.4.12"
-  sha256 arm:   "913e4f4b7d65bb3ee1393d9751b1f339750ca575e6c368b170a959902ceace86",
-         intel: "8d31d76880d1c8771b7e0ce0d53d862331e08366619806ef28239d4da5278cad"
+  version "5.4.14"
+  sha256 arm:   "3e6986f0d6b55a7e07763ee15efcd50adab22261199efb50aefbc811b15c4970",
+         intel: "0f50a02c400523393d0a410c3f0f8f9b24116b8827fba79e77ddbf87ef5df2df"
 
   url "https://desktop.splice.com/conveyor/stable/splice-#{version}-mac-#{arch}.zip"
   name "Splice"
@@ -25,6 +25,7 @@ cask "splice" do
   zap trash: [
     "~/Library/Application Support/*Splice*",
     "~/Library/Caches/com.splice*",
+    "~/Library/HTTPStorages/com.splice.Splice",
     "~/Library/Preferences/com.splice*",
   ]
 end

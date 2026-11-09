@@ -1,9 +1,9 @@
 cask "inkdrop" do
   arch arm: "arm64", intel: "x64"
 
-  version "6.1.4"
-  sha256 arm:   "b8d0d93991baf817689239aa2566504578a68b21b063a2f561e2ea061fc77c0c",
-         intel: "84b8a4597be453c2cdecc833af1ab45658da86bad73343a7fefcb18ef2d5f887"
+  version "6.3.1"
+  sha256 arm:   "4ebf4dcf264b8626e09ecc074d90bf6775a88e34e51f92d9fa3e66c8ecde3d48",
+         intel: "e2b46daf548298be716ac4cd951edcbde5ffd556f3cbedc03f01079f1a340042"
 
   url "https://dist.inkdrop.app/releases/inkdrop-#{version}-#{arch}-mac.zip"
   name "Inkdrop"
@@ -15,11 +15,12 @@ cask "inkdrop" do
     strategy :electron_builder
   end
 
-  depends_on macos: :monterey
+  depends_on macos: :ventura
 
   app "Inkdrop.app"
 
   zap trash: [
+    "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/info.pkpk.inkdrop.sfl*",
     "~/Library/Application Support/inkdrop",
     "~/Library/Caches/info.pkpk.inkdrop",
     "~/Library/Preferences/info.pkpk.inkdrop.helper.plist",

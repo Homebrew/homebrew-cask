@@ -24,6 +24,12 @@ cask "audacity@3" do
     depends_on arch: :x86_64
 
     app_image "audacity-linux-#{version}-#{arch}#{ubuntu_version}.AppImage", target: "Audacity.AppImage"
+
+    zap trash: [
+      "~/.config/audacity",
+      "~/.local/share/audacity",
+      "~/.local/state/audacity",
+    ]
   end
 
   url "https://github.com/audacity/audacity/releases/download/Audacity-#{version}/audacity-#{os}-#{version}-#{arch}#{ubuntu_version}.#{url_end}"

@@ -8,5 +8,5 @@ cask "font-manrope" do
 
   font "Manrope[wght].ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

@@ -1,9 +1,9 @@
 cask "phpstorm" do
   arch arm: "-aarch64"
 
-  version "2026.2.2,262.10315.130"
-  sha256 arm:   "e331f5ea210db713d44b906306b32bf839d88d084fc47bceceb60a9dae3c4671",
-         intel: "898ef2b56e3b70f29d89b0c760820c11cd0089581291d004d0ff3ea7c23eeaa8"
+  version "2026.3,263.7307.215"
+  sha256 arm:   "596814016d9f79a5fec096dcd863d699f134adba165340040505c835f8c7fed2",
+         intel: "4a716c086281572be52d546501cdab7c2bab6102cda30f6568d5b9c57522614e"
 
   url "https://download.jetbrains.com/webide/PhpStorm-#{version.csv.first}#{arch}.dmg"
   name "JetBrains PhpStorm"
@@ -30,7 +30,8 @@ cask "phpstorm" do
   command_wrapper "phpstorm",
                   executable: "#{appdir}/PhpStorm.app/Contents/MacOS/phpstorm"
 
-  uninstall quit: "com.jetbrains.PhpStorm"
+  uninstall launchctl: "application.com.jetbrains.app.daemon.*",
+            quit:      "com.jetbrains.PhpStorm"
 
   zap trash: [
     "~/Library/Application Support/JetBrains/consentOptions",

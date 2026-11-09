@@ -1,6 +1,6 @@
 cask "clickshare" do
-  version "4.51.0,7"
-  sha256 "aa52fe1338b821a8fc56432c8a8d599d3264f1b715734908e33a3fa5290892bf"
+  version "4.52.0,11"
+  sha256 "be0db58f1f4ae2b0d982690aaffe40bf20447404fcd54d072f68e67f9df965d3"
 
   url "https://assets.cloud.barco.com/clickshare/release/ClickShare-#{version.csv.first}-b#{version.csv.second}_mac.zip"
   name "ClickShare"

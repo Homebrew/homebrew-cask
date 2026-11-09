@@ -1,9 +1,9 @@
 cask "zulu" do
   arch arm: "aarch64", intel: "x64"
 
-  version "26.0.2.1,26.32.203"
-  sha256 arm:   "d510118457c62dc50601e4bcf6e9f55cd0a2605cab593e4203d5161daa3b8719",
-         intel: "8012d1b7467cfcba67b4ec06ec280f3c842a0894dceccc45b4b20d8965b525c6"
+  version "27.0.1.0.3,27.30.109"
+  sha256 arm:   "31748960ed7a483ebd5aa10c53e0aa5716b57824b5960f33e06108fec5d62d4d",
+         intel: "e637a76765469e4c9aef986c7130a82a4cdcfdd27b0a07a6afe0f2ca7bb96c22"
 
   url "https://cdn.azul.com/zulu/bin/zulu#{version.csv.second}-ca-jdk#{version.csv.first}-macosx_#{arch}.dmg",
       referer: "https://www.azul.com/downloads/"
@@ -24,11 +24,11 @@ cask "zulu" do
     end
   end
 
-  depends_on macos: :big_sur
+  depends_on :macos
 
   pkg "Double-Click to Install Azul Zulu JDK #{version.major}.pkg"
 
   uninstall pkgutil: "com.azulsystems.zulu.#{version.major}"
 
-  # No zap stanza required
+  zap :not_required
 end

@@ -16,6 +16,18 @@ cask "aimersoft-video-converter-ultimate" do
 
   app "Aimersoft Video Converter Ultimate.app"
 
+  zap trash: [
+        "~/Library/Application Support/Aimersoft Video Converter Ultimate",
+        "~/Library/Application Support/Aimersoft/Video Converter Ultimate",
+        "~/Library/Application Support/Video Converter Ultimate",
+        "~/Library/Caches/com.Aimersoft.Video-Converter-Ultimate",
+        "~/Library/HTTPStorages/com.Aimersoft.Video-Converter-Ultimate",
+        "~/Library/Logs/VideoConvertForMac.log",
+        "~/Library/Preferences/com.Aimersoft.Video-Converter-Ultimate.plist",
+        "~/Library/Saved Application State/com.Aimersoft.Video-Converter-Ultimate.savedState",
+      ],
+      rmdir: "~/Library/Application Support/Aimersoft"
+
   caveats do
     requires_rosetta
   end

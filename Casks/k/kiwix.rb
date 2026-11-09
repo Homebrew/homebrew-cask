@@ -1,6 +1,6 @@
 cask "kiwix" do
-  version "3.16.1"
-  sha256 "67582b16c2660ad4d364ff30863008483f18270ad4d3289e679c9cc43cdc8861"
+  version "3.18.0"
+  sha256 "58744c6301d7ad6cb24c288e04d46c32fa0f032ba66deed1d75f7d2279f946bd"
 
   url "https://download.kiwix.org/release/kiwix-macos/kiwix-macos_#{version}.dmg"
   name "Kiwix"
@@ -18,6 +18,7 @@ cask "kiwix" do
 
   zap trash: [
     "~/Library/Application Scripts/Kiwix",
+    "~/Library/Application Scripts/self.Kiwix",
     "~/Library/Containers/self.kiwix",
   ]
 end

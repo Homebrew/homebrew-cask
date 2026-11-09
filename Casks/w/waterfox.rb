@@ -1,6 +1,6 @@
 cask "waterfox" do
-  version "6.7.1.1"
-  sha256 "31584057a1d2a555ccd76303576389df2e33184f82c59265ae50a516a7ea95bc"
+  version "6.7.8"
+  sha256 "c0310a0614832808f7919832cdc86f17d646878cf570c5deac007545db0b3089"
 
   url "https://cdn1.waterfox.net/waterfox/releases/#{version}/Darwin_x86_64-aarch64/Waterfox%20#{version}.dmg"
   name "Waterfox"
@@ -25,6 +25,7 @@ cask "waterfox" do
     "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/org.mozilla.waterfox.sfl*",
     "~/Library/Application Support/Waterfox",
     "~/Library/Caches/Waterfox",
+    "~/Library/Preferences/net.waterfox.waterfox.plist",
     "~/Library/Preferences/org.waterfoxproject.waterfox.plist",
   ]
 end

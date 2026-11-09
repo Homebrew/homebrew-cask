@@ -11,5 +11,5 @@ cask "font-jaldi" do
   font "Jaldi-Bold.ttf"
   font "Jaldi-Regular.ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

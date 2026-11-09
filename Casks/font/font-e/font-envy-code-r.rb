@@ -15,5 +15,5 @@ cask "font-envy-code-r" do
   font "Envy Code R #{version}/Envy Code R Italic.ttf"
   font "Envy Code R #{version}/Envy Code R.ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

@@ -12,5 +12,5 @@ cask "font-material-symbols" do
   font "MaterialSymbolsRounded[FILL,GRAD,opsz,wght].ttf"
   font "MaterialSymbolsSharp[FILL,GRAD,opsz,wght].ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

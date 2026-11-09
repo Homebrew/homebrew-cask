@@ -1,22 +1,17 @@
 cask "mbed-studio" do
   version "1.5.0"
-  sha256 :no_check
+  sha256 "ffb62e8f641f35ca9935e34e81d2657d467e3c989f8441c99635fa5bc7798eac"
 
-  url "https://studio.mbed.com/installers/latest/mac/MbedStudio.pkg"
+  url "https://github.com/ARMmbed/mbed-studio/releases/download/v#{version}/MbedStudio-#{version}.pkg"
   name "Mbed Studio"
   desc "IDE for Mbed OS application and library development"
-  homepage "https://os.mbed.com/studio/"
+  homepage "https://armmbed.github.io/mbed-studio/"
 
-  livecheck do
-    url :url
-    strategy :header_match
-  end
+  deprecate! date: "2026-11-09", because: :discontinued
 
   depends_on :macos
 
-  rename "MbedStudio-*.pkg", "MbedStudio.pkg"
-
-  pkg "MbedStudio.pkg"
+  pkg "MbedStudio-#{version}.pkg"
 
   uninstall pkgutil: "com.arm.mbed.studio"
 

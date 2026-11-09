@@ -1,6 +1,6 @@
 cask "grammarly-desktop" do
-  version "1.190.0.0"
-  sha256 "586a57a6deac4cc0dfa3d9639780ff1cc640824ac3a69bddd6a5c4e9feaa960e"
+  version "1.207.0.0"
+  sha256 "7d2226921730115e877092b661f8fc2c2474742cbdbb390ff733db881f821f23"
 
   url "https://download-mac.grammarly.com/versions/#{version}/Grammarly.dmg"
   name "Grammarly Desktop"
@@ -13,7 +13,7 @@ cask "grammarly-desktop" do
   end
 
   auto_updates true
-  depends_on macos: :big_sur
+  depends_on :macos
 
   app "Grammarly Installer.app", target: "Grammarly Desktop.app"
 

@@ -8,5 +8,5 @@ cask "font-special-gothic" do
 
   font "SpecialGothic[wdth,wght].ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

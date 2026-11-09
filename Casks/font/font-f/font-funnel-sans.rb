@@ -11,5 +11,5 @@ cask "font-funnel-sans" do
   font "FunnelSans-Italic[wght].ttf"
   font "FunnelSans[wght].ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

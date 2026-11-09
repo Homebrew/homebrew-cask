@@ -25,6 +25,16 @@ cask "qt3dstudio" do
 
   uninstall delete: "~/Applications/qt3dstudio-#{version}"
 
+  zap trash: [
+        "~/Library/Application Support/The Qt Company/Qt 3D Studio",
+        "~/Library/Preferences/com.the-qt-company.Qt 3D Studio.plist",
+        "~/Library/Preferences/io.qt.Qt 3D Viewer.plist",
+        "~/Library/Preferences/org.qt-project.qt3dstudio.plist",
+        "~/Library/Saved Application State/com.yourcompany.Qt3DViewer.savedState",
+        "~/Library/Saved Application State/org.qt-project.qt3dstudio.savedState",
+      ],
+      rmdir: "~/Library/Application Support/The Qt Company"
+
   caveats do
     requires_rosetta
   end

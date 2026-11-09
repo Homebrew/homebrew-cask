@@ -72,5 +72,5 @@ cask "font-recursive-desktop" do
   font "ArrowType-Recursive-#{version}/Recursive_Desktop/separate_statics/OTF/RecursiveSansLnrSt-XBlk.otf"
   font "ArrowType-Recursive-#{version}/Recursive_Desktop/separate_statics/OTF/RecursiveSansLnrSt-XBlkItalic.otf"
 
-  # No zap stanza required
+  zap :not_required
 end

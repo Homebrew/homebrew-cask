@@ -1,9 +1,9 @@
 cask "utools" do
   arch arm: "-arm64"
 
-  version "7.8.0"
-  sha256 arm:   "95adb70a33782936d87acd03f92dc616ce0fb71e40636203371336f3ea9c6ca0",
-         intel: "b2b22065730d30fc7772952d6ebb409b72b3428c82f981b8af7b54a287fd9a22"
+  version "8.0.2"
+  sha256 arm:   "812b48d68e60d49aa6a433426ead2ff3434124e79b703355d9378d7d4df34190",
+         intel: "44d2b9201d3766774b64d77ddfd4ff40f1b76a359c2f2ef979063f77afd0fa77"
 
   url "https://open.u-tools.cn/download/uTools-#{version}#{arch}.dmg"
   name "uTools"
@@ -19,7 +19,10 @@ cask "utools" do
 
   app "uTools.app"
 
+  uninstall quit: "org.yuanli.utools"
+
   zap trash: [
+    "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/org.yuanli.utools.sfl*",
     "~/Library/Application Support/uTools",
     "~/Library/Logs/uTools",
     "~/Library/Preferences/org.yuanli.utools.plist",

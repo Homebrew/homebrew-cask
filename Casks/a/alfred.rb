@@ -1,6 +1,6 @@
 cask "alfred" do
-  version "5.7.3,2320"
-  sha256 "34060c6390175f36a53270d17d6be290d06c9079bd5251240ea72753bd9498cd"
+  version "5.8.1,2349"
+  sha256 "67a9233c711d9285775c7a8ef0ee9ea551f937f439b1f7b4e4c0996fd2d06426"
 
   url "https://cachefly.alfredapp.com/Alfred_#{version.csv.first}_#{version.csv.second}.tar.gz"
   name "Alfred"
@@ -19,6 +19,7 @@ cask "alfred" do
   end
 
   auto_updates true
+  conflicts_with cask: "alfred@prerelease"
   depends_on :macos
 
   app "Alfred #{version.major}.app"

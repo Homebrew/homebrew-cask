@@ -8,5 +8,5 @@ cask "font-romanesco" do
 
   font "Romanesco-Regular.ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

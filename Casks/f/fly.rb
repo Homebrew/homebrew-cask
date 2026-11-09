@@ -16,5 +16,5 @@ cask "fly" do
 
   binary "fly"
 
-  # No zap stanza required
+  zap :not_required
 end

@@ -11,5 +11,5 @@ cask "font-plus-jakarta-sans" do
   font "PlusJakartaSans-Italic[wght].ttf"
   font "PlusJakartaSans[wght].ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

@@ -15,5 +15,5 @@ cask "jlutil" do
 
   binary "jlutil.universal", target: "jlutil"
 
-  # No zap stanza required
+  zap :not_required
 end

@@ -11,5 +11,5 @@ cask "font-cabin" do
   font "Cabin-Italic[wdth,wght].ttf"
   font "Cabin[wdth,wght].ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

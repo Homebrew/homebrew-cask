@@ -18,5 +18,5 @@ cask "dockey" do
 
   uninstall quit: "com.igorstumberger.dockey"
 
-  # No zap stanza required
+  zap :not_required
 end

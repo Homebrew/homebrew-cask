@@ -7,13 +7,10 @@ cask "maestral" do
   desc "Open-source Dropbox client"
   homepage "https://maestral.app/"
 
-  livecheck do
-    url "https://maestral.app/appcast.xml"
-    strategy :sparkle, &:short_version
-  end
+  deprecate! date: "2026-11-08", because: :discontinued
 
   auto_updates true
-  depends_on macos: :big_sur
+  depends_on :macos
 
   app "Maestral.app"
   binary "#{appdir}/Maestral.app/Contents/MacOS/maestral-cli", target: "maestral"

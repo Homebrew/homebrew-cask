@@ -86,5 +86,5 @@ cask "font-noto-sans" do
   font "NotoSans/unhinted/variable-ttf/NotoSans-Italic[wdth,wght].ttf"
   font "NotoSans/unhinted/variable-ttf/NotoSans[wdth,wght].ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

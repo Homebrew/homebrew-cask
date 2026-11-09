@@ -34,5 +34,5 @@ cask "font-ibm-plex-mono" do
   font "ibm-plex-mono/fonts/complete/otf/IBMPlexMono-Thin.otf"
   font "ibm-plex-mono/fonts/complete/otf/IBMPlexMono-ThinItalic.otf"
 
-  # No zap stanza required
+  zap :not_required
 end

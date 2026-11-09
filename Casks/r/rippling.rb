@@ -1,6 +1,6 @@
 cask "rippling" do
-  version "3.6.53"
-  sha256 "c0ab5768116e9020a8bc4668b32247b892f39be6e6397e81d383053992707716"
+  version "3.6.62"
+  sha256 "35b6e81dc4696ff4a26c873c78c387b8bfe25f240c94bd3787060c976e03d04c"
 
   url "https://public-assets.ripplingcdn.com/global/hardware-public/device_release/electron-installer/#{version}/macos/Rippling.dmg"
   name "Rippling"
@@ -17,6 +17,7 @@ cask "rippling" do
   app "Rippling.app"
 
   zap trash: [
+    "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.rippling.client.sfl*",
     "~/Library/Application Support/Rippling",
     "~/Library/Preferences/com.rippling.client.plist",
     "~/Library/Saved Application State/com.rippling.client.savedState",

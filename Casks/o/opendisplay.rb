@@ -1,6 +1,6 @@
 cask "opendisplay" do
-  version "1.19.0"
-  sha256 "963749ac6a759686f78e5c42cfad689dc5f9cecbed16be305a132ce8f71dcb85"
+  version "1.30.2"
+  sha256 "8f48236e7a3e403e528afe3f03a2877806d754665976a65b92118db81c53d4fe"
 
   url "https://github.com/peetzweg/opendisplay/releases/download/v#{version}/OpenDisplay.dmg"
   name "OpenDisplay"
@@ -17,6 +17,7 @@ cask "opendisplay" do
   zap trash: [
     "~/Library/Caches/com.peetzweg.opensidecar.mac",
     "~/Library/HTTPStorages/com.peetzweg.opensidecar.mac",
+    "~/Library/Logs/OpenDisplay",
     "~/Library/Preferences/com.peetzweg.opensidecar.mac.plist",
   ]
 end

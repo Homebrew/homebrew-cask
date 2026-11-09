@@ -1,6 +1,6 @@
 cask "wacom-tablet" do
-  version "6.4.14-1"
-  sha256 "446c6889ad5602827fe1a6f597067428ffdbdd9b4e0cb00930385d99b876fb06"
+  version "6.4.15-1"
+  sha256 "1eb81473e03345f6cd06c55aa05ba40a5bbe602b3a4dabc83fe6bc9b8395cbc5"
 
   url "https://cdn.wacom.com/u/productsupport/drivers/mac/professional/WacomTablet_#{version}.dmg"
   name "Wacom Tablet"
@@ -8,7 +8,7 @@ cask "wacom-tablet" do
   homepage "https://www.wacom.com/en-us/support/product-support/drivers"
 
   livecheck do
-    url :homepage
+    url :homepage, user_agent: :browser
     regex(%r{/WacomTablet[._-]?v?(\d+(?:\.\d+)+(?:[_-]\d+[a-z]?)?)\.dmg}i)
   end
 

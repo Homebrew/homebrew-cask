@@ -8,5 +8,5 @@ cask "font-libre-caslon-display" do
 
   font "Libre-Caslon-Display-master/fonts/OTF/LibreCaslonDisplay-Regular.otf"
 
-  # No zap stanza required
+  zap :not_required
 end

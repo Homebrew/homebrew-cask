@@ -12,9 +12,12 @@ cask "unicodechecker" do
     strategy :sparkle
   end
 
+  auto_updates true
   depends_on :macos
 
   app "UnicodeChecker.app"
+
+  uninstall quit: "net.earthlingsoft.UnicodeChecker"
 
   zap trash: [
     "~/Library/Application Support/UnicodeChecker",

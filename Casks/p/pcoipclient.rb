@@ -1,15 +1,17 @@
 cask "pcoipclient" do
-  version "26.01.2"
-  sha256 "5a2adec5fa5664ac1142855b080c0dc53c5de0ddbce76c74ab64f8b895b726d5"
+  version "26.05.6"
+  sha256 "d72125ccf16b170248b190cad6e31ce09ac49db841780cd066d9fe80e0859f04"
 
-  url "https://dl.anyware.hp.com/DeAdBCiUYInHcSTy/pcoip-client/raw/names/pcoip-client-dmg/versions/#{version}/pcoip-client_#{version}.dmg"
+  url "https://dl.anyware.hp.com/pcoip-client/raw/names/pcoip-client-dmg/versions/#{version}/pcoip-client_#{version}.dmg"
   name "Teradici PCoIP Software Client for macOS"
   desc "Client for VM agents and remote workstation cards"
   homepage "https://anyware.hp.com/find/product/hp-anyware"
 
   livecheck do
-    url "https://dl.anyware.hp.com/DeAdBCiUYInHcSTy/pcoip-client/raw/names/pcoip-client-dmg/versions/latest/pcoip-client_latest.dmg"
-    strategy :header_match
+    url "https://dl.anyware.hp.com/ztqM7i47Dt06ETYM/pcoip-client/raw/names/pcoip-client-info/versions/dmg/pcoip-client-dmg-info.json"
+    strategy :json do |json|
+      json.first&.dig("currentVersion")
+    end
   end
 
   depends_on macos: :sonoma
@@ -23,6 +25,7 @@ cask "pcoipclient" do
 
   zap trash: [
     "~/Library/Preferences/com.teradici.PCoIP Client Connection Info.plist",
+    "~/Library/Preferences/com.teradici.pcoipclient.plist",
     "~/Library/Preferences/com.teradici.swiftclient.plist",
     "~/Library/Preferences/com.teradici.Teradici PCoIP Client.plist",
   ]

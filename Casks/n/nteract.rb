@@ -1,6 +1,6 @@
 cask "nteract" do
-  version "2.7.6,202608280705"
-  sha256 "355d19221eb5de3e66b2cd872d4ea06836d8bff4058ad49d7f780ab1e2fe29dc"
+  version "2.9.0,202610230557"
+  sha256 "49267a545234d4aac1dca05cae4a9d2fae41e1f69b94ce6399bc55ac8184517b"
 
   url "https://github.com/nteract/desktop/releases/download/v#{version.csv.first}-stable.#{version.csv.second}/nteract-stable-darwin-arm64.dmg"
   name "nteract"
@@ -18,8 +18,8 @@ cask "nteract" do
     end
   end
 
-  depends_on macos: :big_sur
   depends_on arch: :arm64
+  depends_on :macos
 
   app "nteract.app"
 
@@ -32,6 +32,7 @@ cask "nteract" do
   zap trash: [
     "~/Library/Application Support/nteract",
     "~/Library/Application Support/org.nteract.desktop",
+    "~/Library/Caches/nteract",
     "~/Library/Caches/org.nteract.desktop",
     "~/Library/WebKit/org.nteract.desktop",
   ]

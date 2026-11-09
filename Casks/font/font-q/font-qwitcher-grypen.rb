@@ -11,5 +11,5 @@ cask "font-qwitcher-grypen" do
   font "QwitcherGrypen-Bold.ttf"
   font "QwitcherGrypen-Regular.ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

@@ -1,9 +1,9 @@
 cask "session" do
   arch arm: "arm64", intel: "x64"
 
-  version "1.18.1"
-  sha256 arm:   "c07fd0d944de540f5e6a408cea351b82579edde28dd49ffa79ceabd82c134080",
-         intel: "3c625f505411296ef728c6fe0f494e6643cff4e8267d942bc7bf3f133935edf4"
+  version "1.18.3"
+  sha256 arm:   "bc3f81ce0062a0577bc9b59ed3fb47262a801e6ff455c73b5f5d8582d56cb5dc",
+         intel: "ebd08b724254de42f8f4d2090b87dfe691db402aa234ba0bffe2898995483cb2"
 
   url "https://github.com/session-foundation/session-desktop/releases/download/v#{version}/session-desktop-mac-#{arch}-#{version}.dmg"
   name "Session"
@@ -21,6 +21,7 @@ cask "session" do
   app "Session.app"
 
   zap trash: [
+    "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.loki-project.messenger-desktop.sfl*",
     "~/Library/Application Support/Session",
     "~/Library/Caches/Session",
     "~/Library/Preferences/com.loki-project.messenger-desktop.plist",

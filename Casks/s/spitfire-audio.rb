@@ -19,7 +19,7 @@ cask "spitfire-audio" do
   end
 
   auto_updates true
-  depends_on macos: :big_sur
+  depends_on :macos
 
   app "Spitfire Audio.app"
 
@@ -29,7 +29,7 @@ cask "spitfire-audio" do
     "/Library/PrivilegedHelperTools/com.spitfireaudio.LibraryManagerHelper",
   ]
 
-  zap delete: [
+  zap trash: [
     "~/Library/Caches/com.spitfireaudio.spitfireaudio",
     "~/Library/Preferences/com.spitfireaudio.spitfireaudio.plist",
   ]

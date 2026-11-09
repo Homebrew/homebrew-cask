@@ -8,5 +8,5 @@ cask "font-short-stack" do
 
   font "ShortStack-Regular.ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

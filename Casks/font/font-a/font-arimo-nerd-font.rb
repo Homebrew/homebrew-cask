@@ -22,5 +22,5 @@ cask "font-arimo-nerd-font" do
   font "ArimoNerdFontPropo-Italic.ttf"
   font "ArimoNerdFontPropo-Regular.ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

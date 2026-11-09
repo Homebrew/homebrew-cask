@@ -1,9 +1,9 @@
 cask "asana" do
   arch arm: "arm64", intel: "x64"
 
-  version "2.8.1"
-  sha256 arm:   "ada5626bcf7e657da850a19f9c07bd616f1c51d464d4bf0e6eaa7886aa1c4afb",
-         intel: "8b17b75b4ddeaebc6e6ac9558a6a157c9a9a20d033bfa0017da769cad8a26d36"
+  version "2.10.6"
+  sha256 arm:   "bd1580f8096a609aef62a5c0c7f65aeca892b92c5d8296337121d8dfc2ae211f",
+         intel: "cc057911a1e84658d620ab8e3598570a3a089118a795e8482b097f5b083d1ef4"
 
   url "https://desktop-downloads.asana.com/darwin_#{arch}/prod/v#{version}/Asana-darwin-#{arch}-#{version}.zip"
   name "Asana"
@@ -24,8 +24,11 @@ cask "asana" do
 
   zap trash: [
     "~/Library/Application Support/Asana",
+    "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.electron.asana.sfl*",
     "~/Library/Caches/com.electron.asana",
     "~/Library/Caches/com.electron.asana.ShipIt",
+    "~/Library/HTTPStorages/com.electron.asana",
+    "~/Library/Logs/Asana",
     "~/Library/Preferences/com.electron.asana.plist",
     "~/Library/Saved Application State/com.electron.asana.savedState",
   ]

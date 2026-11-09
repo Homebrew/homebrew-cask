@@ -15,5 +15,5 @@ cask "font-yaldevi-colombo" do
   font "YaldeviColombo-Regular.ttf"
   font "YaldeviColombo-SemiBold.ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

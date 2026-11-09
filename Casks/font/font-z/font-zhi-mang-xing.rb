@@ -8,5 +8,5 @@ cask "font-zhi-mang-xing" do
 
   font "ZhiMangXing-Regular.ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

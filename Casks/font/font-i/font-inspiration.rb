@@ -8,5 +8,5 @@ cask "font-inspiration" do
 
   font "Inspiration-Regular.ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

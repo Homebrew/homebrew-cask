@@ -1,9 +1,9 @@
 cask "webstorm" do
   arch arm: "-aarch64"
 
-  version "2026.2.2,262.10315.144"
-  sha256 arm:   "11d752433cc51270bdd0d2ea257c4a3bb264228477afdf1f64fce07ec2ef700b",
-         intel: "3f573135c6a0ac25ee4881318e3a6b0ae1cad9a82dac0403beb10b9eab5a0117"
+  version "2026.3,263.7307.202"
+  sha256 arm:   "d333faf67126b1c178e58f1b428931d4b400bff6fd6f254251f00e5442a09477",
+         intel: "9c9034708549712f91e20780ee6e7bf5ebb56c28143220950e6eed225f1f9daf"
 
   url "https://download.jetbrains.com/webstorm/WebStorm-#{version.csv.first}#{arch}.dmg"
   name "WebStorm"
@@ -30,7 +30,8 @@ cask "webstorm" do
   command_wrapper "webstorm",
                   executable: "#{appdir}/WebStorm.app/Contents/MacOS/webstorm"
 
-  uninstall quit: "com.jetbrains.WebStorm"
+  uninstall launchctl: "application.com.jetbrains.app.daemon.*",
+            quit:      "com.jetbrains.WebStorm"
 
   zap trash: [
     "~/Library/Application Support/JetBrains/WebStorm#{version.major_minor}",

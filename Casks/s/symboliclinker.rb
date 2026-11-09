@@ -11,5 +11,5 @@ cask "symboliclinker" do
 
   service "SymbolicLinker.service"
 
-  # No zap stanza required
+  zap :not_required
 end

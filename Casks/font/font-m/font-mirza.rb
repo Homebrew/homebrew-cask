@@ -13,5 +13,5 @@ cask "font-mirza" do
   font "Mirza-Regular.ttf"
   font "Mirza-SemiBold.ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

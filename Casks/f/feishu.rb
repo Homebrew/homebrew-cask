@@ -3,12 +3,12 @@ cask "feishu" do
   livecheck_arch = on_arch_conditional arm: "_m1"
 
   on_arm do
-    version "7.75.18,37e3e3a1"
-    sha256 "91f751e5e07aa9e7164377aaa092edc98b71cbfd6b618d27e6819d14d1e402ab"
+    version "8.5.6,5aa9e28b"
+    sha256 "48a2c1084a4974d82f94d67dd6c6f501d3b40f599cccaf5b801a211d188ca44e"
   end
   on_intel do
-    version "7.75.18,d7b09c05"
-    sha256 "2a2f449b9b8665c25147638e10a825c6472241b691780142a5781a7dd1369d53"
+    version "8.5.6,a21975d9"
+    sha256 "e9ab881c59084b39733d82fca3a09035d6cc527a3e0442f4ca75fffb54e30c3a"
   end
 
   url "https://sf3-cn.feishucdn.com/obj/ee-appcenter/#{version.csv.second}/Feishu-darwin_#{arch}-#{version.csv.first}-signed.dmg"
@@ -28,15 +28,19 @@ cask "feishu" do
   end
 
   auto_updates true
-  depends_on macos: :big_sur
+  depends_on :macos
 
   # Renamed for consistency: app name is different in the Finder and in a shell.
   app "Lark.app", target: "Feishu.app"
 
   zap trash: [
+    "~/Library/Application Support/com.electron.lark.font_workaround",
     "~/Library/Caches/com.bytedance.lark.helper",
     "~/Library/Caches/com.electron.lark",
+    "~/Library/Caches/com.electron.lark.helper",
+    "~/Library/HTTPStorages/com.electron.lark.helper",
     "~/Library/Preferences/com.bytedance.lark.helper.plist",
+    "~/Library/Preferences/com.electron.lark.plist",
     "~/Library/Saved Application State/com.electron.lark.savedState",
   ]
 end

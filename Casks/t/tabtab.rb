@@ -1,5 +1,5 @@
 cask "tabtab" do
-  version "2.1.3"
+  version "2.2.5"
   sha256 :no_check
 
   url "https://github.com/riccqi/TabTabApp/releases/download/prod/tabtab.dmg"
@@ -19,6 +19,7 @@ cask "tabtab" do
   zap trash: [
     "~/Library/Caches/riccqi.TabTab",
     "~/Library/HTTPStorages/riccqi.TabTab",
+    "~/Library/Logs/TabTab",
     "~/Library/Preferences/riccqi.TabTab.plist",
   ]
 end

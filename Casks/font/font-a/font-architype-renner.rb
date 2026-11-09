@@ -15,5 +15,5 @@ cask "font-architype-renner" do
   font "ArchitypeRenner-Medium.otf"
   font "ArchitypeRenner-Regular.otf"
 
-  # No zap stanza required
+  zap :not_required
 end

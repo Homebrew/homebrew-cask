@@ -8,5 +8,5 @@ cask "font-quicksand" do
 
   font "Quicksand[wght].ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

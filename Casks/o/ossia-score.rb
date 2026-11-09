@@ -1,9 +1,15 @@
 cask "ossia-score" do
   arch arm: "AppleSilicon", intel: "Intel"
 
-  version "3.8.2"
-  sha256 arm:   "48a2e953bb175f0524f4466572c3a27beb88180dc19c44d16bf3ea8913976e95",
+  sha256 arm:   "382e1e6ac976215ddaf8d60d5ae978f87e9ab8b2f99ce3dfd1370488286088ba",
          intel: "87d02b89412a1d74059aaba546978f7f4d85d57e06844cdcb89b7b1c02ef7ef4"
+
+  on_arm do
+    version "3.9.0"
+  end
+  on_intel do
+    version "3.8.2"
+  end
 
   url "https://github.com/ossia/score/releases/download/v#{version}/ossia.score-#{version}-macOS-#{arch}.dmg"
   name "ossia score"
@@ -30,6 +36,8 @@ cask "ossia-score" do
   depends_on macos: :monterey
 
   app "ossia score.app"
+
+  uninstall quit: "io.ossia.score"
 
   zap trash: [
     "~/Library/Preferences/io.ossia.score.plist",

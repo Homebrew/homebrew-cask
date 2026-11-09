@@ -1,15 +1,30 @@
 cask "donut" do
   arch arm: "aarch64", intel: on_system_conditional(macos: "x64", linux: "amd64")
-  url_end = on_system_conditional macos: "dmg", linux: "AppImage"
+  os macos: "dmg", linux: "AppImage"
 
-  version "0.30.0"
-  sha256 arm:          "76190a9133190925fb7c40440bbdf64b6901d00af17b1054636d35dc8d3cbebc",
-         intel:        "a4a1898831fa1c41c94d6e3500f4df48f3dc59b92d19ae305898b0bf9895d97b",
-         arm64_linux:  "28b65ef9581c7bd282cda7151129c2925783eb1ef265b5a87dd302ac78e52631",
-         x86_64_linux: "55cb3b67259439c9f2f998e8c683f953a95a3935dba8c14076bf836400547893"
+  sha256 arm:          "47a717f079914cd1091d7ca00b2dab9120d9b97ba16aa3695180a78c087f209a",
+         intel:        "082ee5c53582b54f6e8df010860b7444011351bcc21d604b459707779451fa1c",
+         arm64_linux:  "f1c92d51072fd1033e2602c52d8d681b8869564044fd29aeee4fffc09060e80e",
+         x86_64_linux: "8468bcac6008af24c8a8ba63e907ee5b43504380fbd291d921c8949ad784a3a7"
 
   on_macos do
-    depends_on macos: :big_sur
+    on_arm do
+      version "0.36.0"
+
+      livecheck do
+        url :url
+        strategy :github_latest
+      end
+    end
+    on_intel do
+      version "0.33.0"
+
+      livecheck do
+        skip "Legacy version"
+      end
+
+      deprecate! date: "2026-10-15", because: :discontinued
+    end
 
     app "Donut.app"
 
@@ -27,18 +42,26 @@ cask "donut" do
     ]
   end
   on_linux do
+    version "0.36.0"
+
+    livecheck do
+      url :url
+      strategy :github_latest
+    end
+
     app_image "Donut_#{version}_#{arch}.AppImage", target: "Donut.AppImage"
+
+    zap trash: [
+      "~/.cache/DonutBrowser",
+      "~/.local/share/com.donutbrowser",
+      "~/.local/share/DonutBrowser",
+    ]
   end
 
-  url "https://github.com/zhom/donutbrowser/releases/download/v#{version}/Donut_#{version}_#{arch}.#{url_end}"
+  url "https://github.com/zhom/donutbrowser/releases/download/v#{version}/Donut_#{version}_#{arch}.#{os}"
   name "Donut Browser"
   desc "Anti-detect web browser"
   homepage "https://donutbrowser.com/"
-
-  livecheck do
-    url :url
-    strategy :github_latest
-  end
 
   auto_updates true
   conflicts_with cask: "donut@nightly"

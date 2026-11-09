@@ -11,5 +11,5 @@ cask "font-baskervville" do
   font "Baskervville-Italic[wght].ttf"
   font "Baskervville[wght].ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

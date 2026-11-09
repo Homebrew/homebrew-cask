@@ -8,5 +8,5 @@ cask "font-m-plus-u" do
 
   font "MPLUSU[wght].ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

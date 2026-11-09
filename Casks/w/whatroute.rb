@@ -1,6 +1,6 @@
 cask "whatroute" do
-  version "2.8.1"
-  sha256 "6c5840b7e0a28c3ffa7454954f6d87d0676bcb3c00036254007e09142f49f3ae"
+  version "2.8.2"
+  sha256 "89c8b5941e8491717e91b2e5199648100f421341d2ddf434562551fb1cf7c56c"
 
   url "https://www.whatroute.net/software/whatroute-#{version}.zip"
   name "WhatRoute"
@@ -12,6 +12,7 @@ cask "whatroute" do
     strategy :sparkle, &:short_version
   end
 
+  auto_updates true
   depends_on macos: :sonoma
 
   app "WhatRoute.app"
@@ -24,6 +25,7 @@ cask "whatroute" do
             delete:    "/Library/PrivilegedHelperTools/net.whatroute.whatroute#{version.major}helper"
 
   zap trash: [
+    "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/net.whatroute.whatroute#{version.major}.sfl*",
     "~/Library/Caches/net.whatroute.whatroute#{version.major}",
     "~/Library/Logs/net.whatroute.whatroute#{version.major}",
     "~/Library/Preferences/net.whatroute.whatroute#{version.major}.plist",

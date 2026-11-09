@@ -1,7 +1,7 @@
 cask "virtualc64" do
   # NOTE: "64" is not a version number, but an intrinsic part of the product name
-  version "6.1"
-  sha256 "860a29ba0fc4d371679add11d50b95c6a3246b1e96d0a5aa2ebeb4eac8200b9b"
+  version "6.2"
+  sha256 "b6f28691f43d0393a23de4b8104e6b95f15dfe911a800adc4e85b99b4ff11266"
 
   url "https://github.com/dirkwhoffmann/virtualc64/releases/download/v#{version}/VirtualC64.app.zip"
   name "VirtualC64"
@@ -18,8 +18,10 @@ cask "virtualc64" do
   app "VirtualC64.app"
 
   zap trash: [
+    "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/de.dirkwhoffmann.vc64.sfl*",
     "~/Library/Application Support/VirtualC64",
     "~/Library/Caches/de.dirkwhoffmann.VirtualC64",
+    "~/Library/Preferences/de.dirkwhoffmann.VC64.plist",
     "~/Library/Preferences/de.dirkwhoffmann.VirtualC64.plist",
   ]
 end

@@ -23,5 +23,5 @@ cask "font-envy-code-r-nerd-font" do
   font "EnvyCodeRNerdFontPropo-Italic.ttf"
   font "EnvyCodeRNerdFontPropo-Regular.ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

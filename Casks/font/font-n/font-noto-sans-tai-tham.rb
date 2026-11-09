@@ -8,5 +8,5 @@ cask "font-noto-sans-tai-tham" do
 
   font "NotoSansTaiTham[wght].ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

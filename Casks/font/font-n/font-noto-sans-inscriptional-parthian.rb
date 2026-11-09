@@ -8,5 +8,5 @@ cask "font-noto-sans-inscriptional-parthian" do
 
   font "NotoSansInscriptionalParthian-Regular.ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

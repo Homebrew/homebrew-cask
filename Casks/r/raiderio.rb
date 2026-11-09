@@ -1,6 +1,6 @@
 cask "raiderio" do
-  version "5.0.5"
-  sha256 "3d22ce06ec69884ab367c8e11e8540708708b3de276e65092dfc0e6d06e1f60d"
+  version "6.0.1"
+  sha256 "8d9da4a9a746bcc9205b7154dbe6c2c979bab81b82e86e5736eb07b46699b3e7"
 
   url "https://github.com/RaiderIO/raiderio-client-builds/releases/download/v#{version}/RaiderIO_Client.dmg"
   name "Raider.io Client"
@@ -17,7 +17,9 @@ cask "raiderio" do
   app "RaiderIO.app"
 
   zap trash: [
+    "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/io.raider.client.sfl*",
     "~/Library/Application Support/RaiderIO",
     "~/Library/Logs/RaiderIO",
+    "~/Library/Preferences/io.raider.client.plist",
   ]
 end

@@ -8,5 +8,5 @@ cask "font-felipa" do
 
   font "Felipa-Regular.ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

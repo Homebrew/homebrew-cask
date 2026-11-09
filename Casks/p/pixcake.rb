@@ -1,9 +1,9 @@
 cask "pixcake" do
   arch arm: "_arm64"
 
-  version "9.9.5-38"
-  sha256 arm:   "59c6324d695fdcb6ee50b32ac52b4b4c16547b91484e0b5c14dcbb3973d57e27",
-         intel: "bf69bbf903ca52d66c4a87a7779fa06b072d5bc807c47aed2d07b1e75292be25"
+  version "10.1.0-308"
+  sha256 arm:   "195d67dc25d4ababa6c4e04cdacc565ea2337c1fc9c4b4525effa07e81a3a526",
+         intel: "208ad4b22d15692636e041ee3ed9ba89d661a2235643fc69a69f093b2c48af23"
 
   url "https://download.pixcakeai.com/package/#{version}/%E5%83%8F%E7%B4%A0%E8%9B%8B%E7%B3%95-#{version}#{arch}.dmg"
   name "像素蛋糕"
@@ -24,13 +24,15 @@ cask "pixcake" do
 
   depends_on :macos
 
-  app "pixcake.app", target: "像素蛋糕.app"
+  app "pixcake.app"
 
   uninstall quit: "com.xiangtian.pixcakepc"
 
   zap trash: [
     "~/Library/Application Support/com.xiangtian.pixcakepc",
+    "~/Library/Application Support/PixCake-qt_pro",
     "~/Library/Caches/com.xiangtian.pixcakepc",
+    "~/Library/Logs/DiagnosticReports/pixcake",
     "~/Library/Preferences/com.xiangtian.pixcakepc.plist",
     "~/Library/Saved Application State/com.xiangtian.pixcakepc.savedState",
   ]

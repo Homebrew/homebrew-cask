@@ -1,35 +1,44 @@
 cask "creality-print" do
   arch arm: "arm64", intel: "x86_64"
 
-  version "7.2.1.5476"
-  sha256 arm:   "6fe5eb238a2d73e9bcb524d77d6fb84e32da4c5c957a150b97ffae614c2b0713",
-         intel: "5b89736e41bf1917708a4bb6ba7a62a6f3b3c77dc6f076f9e36386cbd85173ba"
+  version "7.3.1.6378"
+  sha256 arm:   "747c226e996d22850f587f181a46b7d4e3fe8ce8d7e03ce23c959ef771a30021",
+         intel: "a842f88ef8fe14690d2563285a65bf612ff4e18c3977c6fcc402cf048abc2552"
 
-  url "https://github.com/CrealityOfficial/CrealityPrint/releases/download/v#{version.major_minor_patch}/CrealityPrint-#{version}-macx-#{arch}-Release.dmg"
+  url "https://github.com/CrealityOfficial/CrealityPrint/releases/download/v#{version.csv.second || version.major_minor_patch}/CrealityPrint-#{version.csv.first}-macx-#{arch}-Release.dmg"
   name "Creality Print"
   desc "Slicer and cloud services for some Creality FDM 3D printers"
   homepage "https://www.creality.com/pages/download-software"
 
   livecheck do
     url :url
-    regex(/^Creality[._-]?Print[._-]v?(\d+(?:\.\d+)+)[._-]macx[._-]#{arch}[._-]Release\.dmg$/i)
+    regex(%r{/v?(\d+(?:\.\d+)+)/Creality[._-]?Print[._-]v?(\d+(?:\.\d+)+)[._-]macx[._-]#{arch}[._-]Release\.dmg}i)
     strategy :github_latest do |json, regex|
       json["assets"]&.map do |asset|
-        match = asset["name"]&.match(regex)
-        next if match.blank?
+        match = asset["browser_download_url"]&.match(regex)
+        next unless match
 
-        match[1]
+        if Version.new(match[2]).major_minor_patch.to_s == match[1]
+          match[2]
+        else
+          "#{match[2]},#{match[1]}"
+        end
       end
     end
   end
 
-  depends_on macos: :big_sur
+  depends_on :macos
 
   app "Creality Print.app"
 
+  uninstall launchctl: "application.com.creality.crealityprint.*"
+
   zap trash: [
     "~/Library/Application Support/Creality",
+    "~/Library/Caches/com.creality.crealityprint",
     "~/Library/Caches/Creality",
+    "~/Library/Preferences/com.creality.crealityprint.plist",
     "~/Library/Saved Application State/com.creality.crealityprint.savedState",
+    "~/Library/WebKit/com.creality.crealityprint",
   ]
 end

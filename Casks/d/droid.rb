@@ -1,9 +1,9 @@
 cask "droid" do
   arch arm: "arm64", intel: "x64"
 
-  version "0.213.0"
-  sha256 arm:   "c7e3282165c2acb8180471ecae2b24ba1fe2592a6d54b291450ef217f65c6e7c",
-         intel: "d2194875678ad09096696af6c170be564b92883b171efe3c081169fddee01720"
+  version "1.6.0"
+  sha256 arm:   "b93842902913591726f4e668e332bc5ae2bdc8e0d3f9a0b3da4c37f19bba0db9",
+         intel: "42ce935ed28c627149cdaa1536178851c73674d39329a1a506f44af4a05b011b"
 
   url "https://downloads.factory.ai/factory-cli/releases/#{version}/darwin/#{arch}/droid"
   name "Droid"
@@ -16,8 +16,8 @@ cask "droid" do
   end
 
   auto_updates true
-  depends_on :macos
   depends_on formula: "ripgrep"
+  depends_on :macos
 
   binary "droid"
 

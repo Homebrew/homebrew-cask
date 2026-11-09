@@ -10,5 +10,5 @@ cask "font-andron-scriptor-web" do
 
   font "AND_SCR_WEB_#{version}/Andron Scriptor Web.ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

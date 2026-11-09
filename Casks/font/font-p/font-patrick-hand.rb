@@ -8,5 +8,5 @@ cask "font-patrick-hand" do
 
   font "PatrickHand-Regular.ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

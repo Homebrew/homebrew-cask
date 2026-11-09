@@ -16,5 +16,5 @@ cask "colorpicker-propicker" do
 
   colorpicker "ProPicker.colorPicker"
 
-  # No zap stanza required
+  zap :not_required
 end

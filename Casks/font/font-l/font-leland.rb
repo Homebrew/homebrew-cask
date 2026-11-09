@@ -10,5 +10,5 @@ cask "font-leland" do
   font "Leland-#{version}/LelandText.otf"
   artifact "Leland-#{version}/leland_metadata.json", target: "/Library/Application Support/SMuFL/Fonts/Leland/Leland.json"
 
-  # No zap stanza required
+  zap :not_required
 end

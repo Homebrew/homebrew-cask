@@ -8,5 +8,5 @@ cask "font-borel" do
 
   font "Borel-Regular.ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

@@ -8,5 +8,5 @@ cask "font-macondo" do
 
   font "Macondo-Regular.ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

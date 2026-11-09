@@ -1,6 +1,6 @@
 cask "font-iosevka-ss02" do
-  version "34.8.1"
-  sha256 "efb26f4b080ba52bb3136b2c396f6a938c126bcaab74e675cedfb1ef14d38060"
+  version "34.9.1"
+  sha256 "17949ad1944bc591e23477d725e67914cb279a58716250914fb2edb3e7699993"
 
   url "https://github.com/be5invis/Iosevka/releases/download/v#{version}/SuperTTC-IosevkaSS02-#{version}.zip"
   name "Iosevka SS02"
@@ -13,5 +13,5 @@ cask "font-iosevka-ss02" do
 
   font "IosevkaSS02.ttc"
 
-  # No zap stanza required
+  zap :not_required
 end

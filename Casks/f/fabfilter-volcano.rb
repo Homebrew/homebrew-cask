@@ -18,5 +18,5 @@ cask "fabfilter-volcano" do
 
   uninstall pkgutil: "com.fabfilter.Volcano.*"
 
-  # No zap stanza required
+  zap :not_required
 end

@@ -8,5 +8,5 @@ cask "font-molle" do
 
   font "Molle-Regular.ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

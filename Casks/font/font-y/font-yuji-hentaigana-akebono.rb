@@ -8,5 +8,5 @@ cask "font-yuji-hentaigana-akebono" do
 
   font "YujiHentaiganaAkebono-Regular.ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

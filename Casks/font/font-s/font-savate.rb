@@ -11,5 +11,5 @@ cask "font-savate" do
   font "Savate-Italic[wght].ttf"
   font "Savate[wght].ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

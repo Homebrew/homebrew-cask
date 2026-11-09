@@ -1,9 +1,9 @@
 cask "picview" do
   arch arm: "arm64", intel: "x64"
 
-  version "5.0.6"
-  sha256 arm:   "1adac9ee3d19b02b56c9ce3e47322dba4ea735df08633033a6190aee24e49402",
-         intel: "3a699a1df05ceaa9bbfc02ff25933a4999724c9ad9e251383de1222b30a9b5f3"
+  version "5.2.0.1"
+  sha256 arm:   "1cf7b147ccd6f795f986b98c97bf6920b455ff5a75fec457c993b7e7c61ab55c",
+         intel: "bee21ddac11fc1fe51ac4d0c3df22af7b7cd8578bced11f5a64651404af22bbd"
 
   url "https://github.com/Ruben2776/PicView/releases/download/#{version}/PicView-#{version}-macOS-#{arch}.dmg"
   name "PicView"

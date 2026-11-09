@@ -8,5 +8,5 @@ cask "font-strong" do
 
   font "Strong-Regular.ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

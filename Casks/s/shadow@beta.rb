@@ -1,9 +1,9 @@
 cask "shadow@beta" do
   arch arm: "arm64", intel: "x64"
 
-  version "9.9.10455"
-  sha256 arm:   "5e1078f516015d7c580f760a6923a49e1b39550685b73a5340ff5a653b57134d",
-         intel: "e2c54fb3457cc5d19074a7cc1b6a73f5517fee3e0672acd32cf389571ac1e036"
+  version "9.9.10488"
+  sha256 arm:   "10153be5f2d1717c3c7866f983f98111a5853a961b883835cff6d359ed12bc58",
+         intel: "e2ff91105bb6447cd261a0e911ce6621eeaa0aecb01a5993ff9ab4f3a436b1a7"
 
   url "https://update.shadow.tech/launcher/preprod/mac/#{arch}/ShadowPCBeta-#{version}.dmg"
   name "Shadow PC Beta"
@@ -20,6 +20,7 @@ cask "shadow@beta" do
   app "Shadow PC Beta.app"
 
   zap trash: [
+    "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.electron.shadow-beta.sfl*",
     "~/Library/Application Support/shadow-preprod",
     "~/Library/Preferences/com.electron.shadow-beta.plist",
   ]

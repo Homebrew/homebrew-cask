@@ -8,5 +8,5 @@ cask "font-baloo-bhai-2" do
 
   font "BalooBhai2[wght].ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

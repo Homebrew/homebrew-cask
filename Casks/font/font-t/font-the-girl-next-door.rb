@@ -8,5 +8,5 @@ cask "font-the-girl-next-door" do
 
   font "TheGirlNextDoor.ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

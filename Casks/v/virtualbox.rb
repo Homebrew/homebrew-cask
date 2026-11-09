@@ -1,9 +1,9 @@
 cask "virtualbox" do
   arch arm: "macOSArm64", intel: "OSX"
 
-  version "7.2.16,174877"
-  sha256 arm:   "43984f01e4dedd82a22d3c38d432a22f6df9bc2f5e5333a722b734c5bf8b6636",
-         intel: "8237c1c8ef0c837c47394b82959d7ea42626ad3140e452f4f59561021b428eed"
+  version "7.2.22,175245"
+  sha256 arm:   "8a5b76de792340071dd7660d3bdec9d71e2d259a843d286c98b4763469513a2d",
+         intel: "8ef68977c21eb94d82f0d05306d79dc2141ac2b94dcb050594fa1bc518d56a8c"
 
   on_arm do
     desc "Virtualiser for arm64 hardware"
@@ -65,6 +65,7 @@ cask "virtualbox" do
   zap trash: [
         "/Library/Application Support/VirtualBox",
         "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/org.virtualbox.app.virtualbox*",
+        "~/Library/LaunchAgents/org.virtualbox.vboxwebsrv.plist",
         "~/Library/Preferences/org.virtualbox.app.VirtualBox*",
         "~/Library/Saved Application State/org.virtualbox.app.VirtualBox*",
         "~/Library/VirtualBox",

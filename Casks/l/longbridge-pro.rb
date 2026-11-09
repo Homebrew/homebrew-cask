@@ -1,9 +1,9 @@
 cask "longbridge-pro" do
   arch arm: "arm64", intel: "x64"
 
-  version "2.38.16"
-  sha256 arm:   "e6f7b6d293e9c91430a2a200e0e2d75c7e7131d0a5fbccdca4d7376b9f830e8a",
-         intel: "527cc8d2183ddbfa99307e1b0a36513820ec7c993c94ba6677d862adf3609e37"
+  version "2.41.0"
+  sha256 arm:   "7f77a98890df555d9937049509d836fce752319da219eefdc70351814cc2c1db",
+         intel: "24e4044c081a6262cc09f826d5116c14b41407e070e8c5279e9150a9fac5ee34"
 
   url "https://download.lbkrs.com/longbridge-desktop/prod/longbridge-pro-#{version}-mac-#{arch}.dmg"
   name "Longbridge Pro"
@@ -15,13 +15,14 @@ cask "longbridge-pro" do
     strategy :electron_builder
   end
 
-  depends_on macos: :big_sur
+  depends_on :macos
 
   app "Longbridge Pro.app"
 
   uninstall quit: "global.longbridge.app.desktop"
 
   zap trash: [
+    "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/global.longbridge.app.desktop.sfl*",
     "~/Library/Application Support/Longbridge Pro",
     "~/Library/Caches/global.longbridge.app.desktop",
     "~/Library/Caches/global.longbridge.app.desktop.ShipIt",

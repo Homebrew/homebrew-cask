@@ -8,5 +8,5 @@ cask "font-kosugi-maru" do
 
   font "KosugiMaru-Regular.ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

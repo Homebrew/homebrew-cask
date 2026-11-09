@@ -9,5 +9,5 @@ cask "font-cubic-11" do
 
   font "Cubic-11-#{version}/fonts/ttf/Cubic_11.ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

@@ -1,6 +1,6 @@
 cask "trickster" do
-  version "3.9.11"
-  sha256 "3d0026adac43bf8d40584ee6150cbe327b46c609508f07f2ecc2a19692495232"
+  version "4.0.1"
+  sha256 "a01095f3d8e0ae95c2604454beaedb63d06c9683ec8a2431dcc2a6b42456fc0d"
 
   url "https://dl.apparentsoft.com/TricksterUpdates/Trickster_#{version}.zip"
   name "Trickster"
@@ -13,9 +13,11 @@ cask "trickster" do
   end
 
   auto_updates true
-  depends_on macos: :monterey
+  depends_on macos: :tahoe
 
   app "Trickster.app"
+
+  uninstall quit: "com.apparentsoft.trickster"
 
   zap trash: [
     "~/Library/Application Scripts/com.apparentsoft.trickster",

@@ -13,5 +13,5 @@ cask "font-arvo" do
   font "Arvo-Italic.ttf"
   font "Arvo-Regular.ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

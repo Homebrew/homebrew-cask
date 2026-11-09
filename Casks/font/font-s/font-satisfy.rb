@@ -8,5 +8,5 @@ cask "font-satisfy" do
 
   font "Satisfy-Regular.ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

@@ -8,5 +8,5 @@ cask "font-antonio" do
 
   font "Antonio[wght].ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

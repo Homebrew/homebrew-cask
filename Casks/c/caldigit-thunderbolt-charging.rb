@@ -23,6 +23,8 @@ cask "caldigit-thunderbolt-charging" do
             ],
             delete:  "/Library/Extensions/CalDigitThunderboltStationChargingSupport.kext"
 
+  zap :not_required
+
   caveats do
     requires_rosetta
     reboot

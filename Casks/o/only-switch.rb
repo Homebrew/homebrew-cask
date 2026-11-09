@@ -1,6 +1,6 @@
 cask "only-switch" do
-  version "2.7.2"
-  sha256 "6ec78cdf0deb14a5bec7569a8795db87f2cae828c4edd750e01e4cdf75323508"
+  version "3.5.0"
+  sha256 "b0784d695d48a6d5540eb12df1de21cbee8c482d4e136bbb42521a79a781ce6c"
 
   url "https://github.com/jacklandrin/OnlySwitch/releases/download/release_#{version}/OnlySwitch.dmg"
   name "OnlySwitch"
@@ -16,6 +16,8 @@ cask "only-switch" do
   depends_on macos: :sonoma
 
   app "Only Switch.app"
+
+  uninstall quit: "jacklandrin.OnlySwitch"
 
   zap trash: [
     "~/Library/Application Scripts/*.OnlySwitch.shared",

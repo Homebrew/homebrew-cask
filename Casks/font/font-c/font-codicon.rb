@@ -8,5 +8,5 @@ cask "font-codicon" do
 
   font "package/dist/codicon.ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

@@ -1,6 +1,6 @@
 cask "skim" do
-  version "1.7.15"
-  sha256 "804b2785f7c22e79d75fe9bbd0b2b2663ec1d765eb103fb0cb75fc3864dbeb73"
+  version "1.7.19"
+  sha256 "559aadf86a60661517ed523289f0f81cb4e859ccdbb54191cc64d4be3d7781dc"
 
   url "https://downloads.sourceforge.net/skim-app/Skim/Skim-#{version}/Skim-#{version}.dmg"
   name "Skim"
@@ -21,9 +21,13 @@ cask "skim" do
   binary "#{appdir}/Skim.app/Contents/SharedSupport/skimpdf"
 
   zap trash: [
+    "~/Library/Application Scripts/net.sourceforge.skim-app.skim.quicklook-preview",
+    "~/Library/Application Scripts/net.sourceforge.skim-app.skim.quicklook-thumbnails",
     "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/net.sourceforge.skim-app.skim.sfl*",
     "~/Library/Caches/com.apple.helpd/Generated/net.sourceforge.skim-app.skim.help*",
     "~/Library/Caches/net.sourceforge.skim-app.skim",
+    "~/Library/Containers/net.sourceforge.skim-app.skim.quicklook-preview",
+    "~/Library/Containers/net.sourceforge.skim-app.skim.quicklook-thumbnails",
     "~/Library/Cookies/net.sourceforge.skim-app.skim.binarycookies",
     "~/Library/HTTPStorages/net.sourceforge.skim-app.skim",
     "~/Library/Preferences/net.sourceforge.skim-app.skim.bookmarks.plist",

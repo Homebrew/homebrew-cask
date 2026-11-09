@@ -8,5 +8,5 @@ cask "font-honk" do
 
   font "Honk[MORF,SHLN].ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

@@ -1,6 +1,6 @@
 cask "insomnia@alpha" do
-  version "13.2.0"
-  sha256 "f0b4535e55af44c212b6e601ae5919d0fa8cdbd82c3b52c10e85a29f4f621806"
+  version "13.4.0"
+  sha256 "d07738de010d5d3aa4a850f3dd788ae403ec38b7f6676862d2b9c687893c99c1"
 
   url "https://github.com/Kong/insomnia/releases/download/core%40#{version}/Insomnia.Core-#{version}.dmg"
   name "Insomnia"
@@ -26,10 +26,13 @@ cask "insomnia@alpha" do
   app "Insomnia.app"
 
   zap trash: [
+    "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.insomnia.app.sfl*",
     "~/Library/Application Support/Insomnia",
     "~/Library/Caches/com.insomnia.app",
     "~/Library/Caches/com.insomnia.app.ShipIt",
     "~/Library/Cookies/com.insomnia.app.binarycookies",
+    "~/Library/HTTPStorages/com.insomnia.app",
+    "~/Library/Logs/Insomnia",
     "~/Library/Preferences/ByHost/com.insomnia.app.ShipIt.*.plist",
     "~/Library/Preferences/com.insomnia.app.helper.plist",
     "~/Library/Preferences/com.insomnia.app.plist",

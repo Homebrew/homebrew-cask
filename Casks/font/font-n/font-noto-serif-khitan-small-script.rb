@@ -8,5 +8,5 @@ cask "font-noto-serif-khitan-small-script" do
 
   font "NotoSerifKhitanSmallScript-Regular.ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

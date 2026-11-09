@@ -8,5 +8,5 @@ cask "font-revalia" do
 
   font "Revalia-Regular.ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

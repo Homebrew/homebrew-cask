@@ -11,5 +11,5 @@ cask "font-mate" do
   font "Mate-Italic.ttf"
   font "Mate-Regular.ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

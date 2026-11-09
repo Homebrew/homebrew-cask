@@ -8,5 +8,5 @@ cask "font-noto-sans-khojki" do
 
   font "NotoSansKhojki-Regular.ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

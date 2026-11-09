@@ -8,7 +8,7 @@ cask "font-charis" do
 
   livecheck do
     url "https://software.sil.org/charis/download/"
-    regex(/href=.*Charis[._-]v?(\d+(?:\.\d+)+)\.zip/i)
+    regex(/href=.*?Charis[._-]v?(\d+(?:\.\d+)+)\.zip/i)
   end
 
   font "Charis-#{version}/Charis-Bold.ttf"
@@ -20,5 +20,5 @@ cask "font-charis" do
   font "Charis-#{version}/Charis-SemiBold.ttf"
   font "Charis-#{version}/Charis-SemiBoldItalic.ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

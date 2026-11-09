@@ -1,6 +1,6 @@
 cask "outline" do
-  version "6.2609.0"
-  sha256 "82a535f7de97cc64b22efcb02a25bcb145ea0ee1753463ef1aac1126e5c7caff"
+  version "6.2609.3"
+  sha256 "fe08a0653caaa55ff0b79a3361a1eb3c64ebc87810f71ffac75bb33dbe20afd6"
 
   url "https://static.outline.app/direct/main/Outline_#{version}.zip"
   name "Outline"
@@ -13,7 +13,8 @@ cask "outline" do
   end
 
   auto_updates true
-  depends_on macos: :sequoia
+  conflicts_with cask: "getoutline"
+  depends_on macos: :tahoe
 
   app "Outline.app"
 
@@ -23,6 +24,7 @@ cask "outline" do
     "~/Library/Application Scripts/6WN928JT76.com.gorillized",
     "~/Library/Application Scripts/com.gorillized.outlinemac.standalone.extension",
     "~/Library/Application Scripts/com.gorillized.outlinemac.standalone.widget",
+    "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.gorillized.outlinemac.standalone.sfl*",
     "~/Library/Application Support/com.gorillized.outlinemac.standalone",
     "~/Library/Application Support/Outline",
     "~/Library/Caches/com.gorillized.outlinemac.standalone",

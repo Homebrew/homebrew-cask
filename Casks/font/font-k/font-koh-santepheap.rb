@@ -14,5 +14,5 @@ cask "font-koh-santepheap" do
   font "KohSantepheap-Regular.ttf"
   font "KohSantepheap-Thin.ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

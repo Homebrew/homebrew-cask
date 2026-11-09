@@ -8,5 +8,5 @@ cask "font-fredericka-the-great" do
 
   font "FrederickatheGreat-Regular.ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

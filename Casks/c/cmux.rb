@@ -1,6 +1,6 @@
 cask "cmux" do
-  version "0.64.22"
-  sha256 "fd148dba3519fe7d308844089ce4d062b17739ba645623f058f67a64798cea25"
+  version "0.65.2.2"
+  sha256 "18e8848e19d4e08ff0aefb30f180fdb3eafb3f32f0b361394351a58e505d397f"
 
   url "https://github.com/manaflow-ai/cmux/releases/download/v#{version}/cmux-macos.dmg"
   name "cmux"
@@ -18,7 +18,11 @@ cask "cmux" do
   app "cmux.app"
   binary "#{appdir}/cmux.app/Contents/Resources/bin/cmux"
 
+  uninstall launchctl: "application.com.cmuxterm.cua.*",
+            quit:      "com.cmuxterm.app"
+
   zap trash: [
+    "~/.cmuxterm",
     "~/.config/cmux",
     "~/Library/Application Support/cmux",
     "~/Library/Application Support/com.cmuxterm.app",
@@ -27,6 +31,7 @@ cask "cmux" do
     "~/Library/Caches/SentryCrash/cmux",
     "~/Library/HTTPStorages/com.cmuxterm.app",
     "~/Library/HTTPStorages/com.cmuxterm.app.binarycookies",
+    "~/Library/Logs/cmux-focus.log",
     "~/Library/Logs/cmux-update.log",
     "~/Library/Preferences/com.cmuxterm.app.plist",
     "~/Library/WebKit/com.cmuxterm.app",

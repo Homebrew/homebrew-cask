@@ -8,5 +8,5 @@ cask "font-gotu" do
 
   font "Gotu-Regular.ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

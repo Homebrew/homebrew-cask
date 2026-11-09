@@ -12,6 +12,8 @@ cask "xampp" do
     regex(%r{href=.*?/xampp[._-]osx[._-]v?(\d+(?:\.\d+)+-\d+)[._-]installer\.dmg}i)
   end
 
+  disable! date: "2026-10-12", because: :fails_gatekeeper_check
+
   conflicts_with cask: "xampp@7"
   depends_on :macos
 
@@ -27,7 +29,7 @@ cask "xampp" do
               args:       ["--mode", "unattended"],
               sudo:       true,
             },
-            delete: "/Applications/XAMPP/"
+            delete: "/Applications/XAMPP"
 
-  # No zap stanza required
+  zap :not_required
 end

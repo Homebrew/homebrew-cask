@@ -8,5 +8,5 @@ cask "font-flow-circular" do
 
   font "FlowCircular-Regular.ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

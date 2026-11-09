@@ -8,5 +8,5 @@ cask "font-walter-turncoat" do
 
   font "WalterTurncoat-Regular.ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

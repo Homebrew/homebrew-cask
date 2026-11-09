@@ -19,5 +19,5 @@ cask "font-kulim-park" do
   font "KulimPark-SemiBold.ttf"
   font "KulimPark-SemiBoldItalic.ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

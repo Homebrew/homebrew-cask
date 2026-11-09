@@ -17,5 +17,5 @@ cask "font-departure-mono-nerd-font" do
   font "DepartureMonoNerdFontMono-Regular.otf"
   font "DepartureMonoNerdFontPropo-Regular.otf"
 
-  # No zap stanza required
+  zap :not_required
 end

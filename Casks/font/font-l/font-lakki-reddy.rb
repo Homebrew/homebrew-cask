@@ -8,5 +8,5 @@ cask "font-lakki-reddy" do
 
   font "LakkiReddy-Regular.ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

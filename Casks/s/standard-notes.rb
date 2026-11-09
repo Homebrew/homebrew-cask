@@ -3,21 +3,21 @@ cask "standard-notes" do
   os macos: "mac", linux: "linux"
   url_end = on_system_conditional macos: "zip", linux: "AppImage"
 
-  version "3.202.0"
-  sha256 arm:          "13c6e69c20954dfde5b7063b824dee4cb6eaf521450378f3e615405e284a26b7",
-         intel:        "fc63ce7776137e057c6b421f46e6d48255a4f7ff8314d0d91d00dc2dcfdd9afb",
-         arm64_linux:  "2a8a5be561ce2f0dbbfe9b5d616e8ee9c062749f227304ff677ce6b3e9ef6525",
-         x86_64_linux: "207e671836cbd7c6b43b6fc753748605e492aeeffafc637dc70a4435535cd265"
+  version "3.202.11"
+  sha256 arm:          "8a8d85860487ddf9a9f89b6e06bf00e36d96dbe4ab99d0c41f52f7ff4d47bcaa",
+         intel:        "6eadbf68056ceed370ddac11c68a6ef18ca46721f02813a36209c1292d9958bd",
+         arm64_linux:  "355772d2356f475e730ec38109bef4bd1fc53c9b62a5c3b64e9cb344ba63f9a8",
+         x86_64_linux: "9f58e1edaa32c612d4cc4c93ad42c6435a03e2ac7c762abb5441f70aca5b25b1"
 
   on_macos do
-    depends_on macos: :big_sur
-
     app "Standard Notes.app"
 
     zap trash: [
+      "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/org.standardnotes.standardnotes.sfl*",
       "~/Library/Application Support/Standard Notes",
       "~/Library/Caches/org.standardnotes.standardnotes",
       "~/Library/Caches/org.standardnotes.standardnotes.ShipIt",
+      "~/Library/Logs/Standard Notes",
       "~/Library/Preferences/org.standardnotes.standardnotes.helper.plist",
       "~/Library/Preferences/org.standardnotes.standardnotes.plist",
       "~/Library/Saved Application State/org.standardnotes.standardnotes.savedState",

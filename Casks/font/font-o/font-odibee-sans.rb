@@ -8,5 +8,5 @@ cask "font-odibee-sans" do
 
   font "OdibeeSans-Regular.ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

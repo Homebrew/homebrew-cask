@@ -8,5 +8,5 @@ cask "font-podkova" do
 
   font "Podkova[wght].ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

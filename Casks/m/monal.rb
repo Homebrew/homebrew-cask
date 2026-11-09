@@ -1,6 +1,6 @@
 cask "monal" do
-  version "1092"
-  sha256 "559da3f9bba9a6c50d3a39ff0c38b01bf86a8e7da0e11eee323cc0e835aa0764"
+  version "1102"
+  sha256 "22dbea89fbec3b8456f0bdb41b559dc78fbc6d29131998497c6e7cc83b7754ff"
 
   url "https://downloads.monal-im.org/monal-im/stable/macOS/Monal-#{version}.zip"
   name "Monal"
@@ -13,9 +13,17 @@ cask "monal" do
   end
 
   conflicts_with cask: "monal@beta"
-  depends_on macos: :big_sur
+  depends_on :macos
 
   app "Monal.app"
 
-  zap trash: "~/Library/Group Containers/group.monal"
+  uninstall quit: "org.monal-im.prod.catalyst.monal"
+
+  zap trash: [
+    "~/Library/Application Scripts/group.monal",
+    "~/Library/Application Scripts/org.monal-im.prod.catalyst.monal",
+    "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/org.monal-im.prod.catalyst.monal.sfl*",
+    "~/Library/Containers/org.monal-im.prod.catalyst.monal",
+    "~/Library/Group Containers/group.monal",
+  ]
 end

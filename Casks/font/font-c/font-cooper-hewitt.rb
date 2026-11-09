@@ -21,5 +21,5 @@ cask "font-cooper-hewitt" do
   font "CooperHewitt-OTF-public/CooperHewitt-Thin.otf"
   font "CooperHewitt-OTF-public/CooperHewitt-ThinItalic.otf"
 
-  # No zap stanza required
+  zap :not_required
 end

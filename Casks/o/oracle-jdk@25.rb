@@ -1,9 +1,9 @@
 cask "oracle-jdk@25" do
   arch arm: "aarch64", intel: "x64"
 
-  version "25.0.4.1"
-  sha256 arm:   "f124cbe3a63cedc3ac228a513249bee2c6070d8c57bc2092645342405de0a904",
-         intel: "62eee8f5bbd8c9e121b992057a8b9a0925f2f1e22d965b6698e922e1766b6e46"
+  version "25.0.5.0.3"
+  sha256 arm:   "fb532ae527548d462dc4942eca1289aa8668fb08c9e6a5ce59eb3223a13ddbf6",
+         intel: "f85d4f0a4821749c411bcd9e14a2fa7a70b361eeb952ff370e5d07efd745b77f"
 
   url "https://download.oracle.com/java/#{version.major}/archive/jdk-#{version}_macos-#{arch}_bin.dmg"
   name "Oracle Java Standard Edition Development Kit"
@@ -23,7 +23,7 @@ cask "oracle-jdk@25" do
 
   uninstall pkgutil: "com.oracle.jdk-#{version}"
 
-  # No zap stanza required
+  zap :not_required
 
   caveats do
     license "https://www.oracle.com/downloads/licenses/no-fee-license.html"

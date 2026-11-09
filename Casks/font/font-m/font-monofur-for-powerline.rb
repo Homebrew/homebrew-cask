@@ -12,5 +12,5 @@ cask "font-monofur-for-powerline" do
   font "Monofur Italic for Powerline.ttf"
   font "Monofur for Powerline.ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

@@ -8,5 +8,5 @@ cask "font-titan-one" do
 
   font "TitanOne-Regular.ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

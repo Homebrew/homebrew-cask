@@ -11,5 +11,5 @@ cask "font-poltawski-nowy" do
   font "PoltawskiNowy-Italic[wght].ttf"
   font "PoltawskiNowy[wght].ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

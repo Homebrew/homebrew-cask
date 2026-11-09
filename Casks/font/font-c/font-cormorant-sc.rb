@@ -14,5 +14,5 @@ cask "font-cormorant-sc" do
   font "CormorantSC-Regular.ttf"
   font "CormorantSC-SemiBold.ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

@@ -8,5 +8,5 @@ cask "font-amstelvar-alpha" do
 
   font "AmstelvarAlpha-VF.ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

@@ -8,5 +8,5 @@ cask "font-sora" do
 
   font "Sora[wght].ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

@@ -8,5 +8,5 @@ cask "font-noto-serif-devanagari" do
 
   font "NotoSerifDevanagari[wdth,wght].ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

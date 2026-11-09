@@ -1,6 +1,4 @@
 cask "orcaslicer@nightly" do
-  arch arm: "arm64", intel: "x86_64"
-
   version :latest
   sha256 :no_check
 
@@ -10,7 +8,7 @@ cask "orcaslicer@nightly" do
   homepage "https://github.com/OrcaSlicer/OrcaSlicer"
 
   conflicts_with cask: "orcaslicer"
-  depends_on macos: :big_sur
+  depends_on :macos
 
   app "OrcaSlicer.app"
 

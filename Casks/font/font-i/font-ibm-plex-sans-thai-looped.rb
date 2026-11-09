@@ -20,5 +20,5 @@ cask "font-ibm-plex-sans-thai-looped" do
   font "ibm-plex-sans-thai-looped/fonts/complete/otf/IBMPlexSansThaiLooped-Text.otf"
   font "ibm-plex-sans-thai-looped/fonts/complete/otf/IBMPlexSansThaiLooped-Thin.otf"
 
-  # No zap stanza required
+  zap :not_required
 end

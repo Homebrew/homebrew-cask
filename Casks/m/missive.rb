@@ -1,6 +1,6 @@
 cask "missive" do
-  version "11.33.0"
-  sha256 "73ec79f03940c6e1c50568e9eb30fba993dba60202cc22d27117f1d6db3bc57d"
+  version "11.37.1"
+  sha256 "de74f51cb9afe85a259b573246aaa124a9218de1d84ac87106ece9e509f719aa"
 
   url "https://downloads.missiveapp.com/#{version}/Missive-#{version}.dmg"
   name "Missive"
@@ -13,11 +13,12 @@ cask "missive" do
   end
 
   auto_updates true
-  depends_on macos: :monterey
+  depends_on macos: :ventura
 
   app "Missive.app"
 
   zap trash: [
+    "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.missiveapp.osx.sfl*",
     "~/Library/Application Support/Missive",
     "~/Library/Logs/Missive",
     "~/Library/Preferences/com.missiveapp.osx.plist",

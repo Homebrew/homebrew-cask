@@ -13,5 +13,5 @@ cask "font-sitara" do
   font "Sitara-Italic.ttf"
   font "Sitara-Regular.ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

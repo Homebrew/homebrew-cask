@@ -32,8 +32,8 @@ cask "displaylink" do
     end
   end
   on_sonoma :or_newer do
-    version "16.2,2026-07"
-    sha256 "fd9eafab9542e592baa39984ed4e87e64e89f3de6b9a4429ab13a2334a7538e6"
+    version "17.1,2026-11"
+    sha256 "6c69153701443053ecb45c672bdc40f9761e59e8cad4532f6ca7010c2841a399"
 
     url "https://www.synaptics.com/sites/default/files/exe_files/#{version.csv.second}/DisplayLink%20Manager%20Graphics%20Connectivity#{version.csv.first}-EXE.pkg"
 
@@ -73,7 +73,9 @@ cask "displaylink" do
   zap trash: [
     "~/Library/Application Scripts/73YQY62QM3.com.displaylink.DisplayLinkShared",
     "~/Library/Application Scripts/com.displaylink.DisplayLinkUserAgent",
+    "~/Library/Application Scripts/com.displaylink.DisplayLinkXpcService",
     "~/Library/Containers/com.displaylink.DisplayLinkUserAgent",
+    "~/Library/Containers/com.displaylink.DisplayLinkXpcService",
     "~/Library/Group Containers/73YQY62QM3.com.displaylink.DisplayLinkShared",
   ]
 

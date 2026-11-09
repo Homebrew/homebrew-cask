@@ -68,5 +68,5 @@ cask "font-geist-mono-nerd-font" do
   font "GeistMonoNerdFontPropo-Thin.otf"
   font "GeistMonoNerdFontPropo-ThinItalic.otf"
 
-  # No zap stanza required
+  zap :not_required
 end

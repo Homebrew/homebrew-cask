@@ -8,5 +8,5 @@ cask "font-exile" do
 
   font "Exile-Regular.ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

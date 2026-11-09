@@ -1,6 +1,6 @@
 cask "meetingrecorder" do
-  version "1.6.3"
-  sha256 "4b0dc1f472866dea0362bdda7583bb5f68964140fa36fe170cc8118b552a3f26"
+  version "1.6.11"
+  sha256 "ca23fd33975b28e1384de06467d5a0b3150b47ef5d9d6b87948f9de853ef1b88"
 
   url "https://meetingsrecorder.com/downloads/MeetingRecorder-#{version}.dmg"
   name "MeetingRecorder"
@@ -13,8 +13,8 @@ cask "meetingrecorder" do
   end
 
   auto_updates true
-  depends_on macos: :sequoia
   depends_on arch: :arm64
+  depends_on macos: :sequoia
 
   app "MeetingRecorder.app"
 

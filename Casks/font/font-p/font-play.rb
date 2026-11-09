@@ -11,5 +11,5 @@ cask "font-play" do
   font "Play-Bold.ttf"
   font "Play-Regular.ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

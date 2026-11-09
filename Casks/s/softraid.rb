@@ -1,6 +1,6 @@
 cask "softraid" do
-  version "8.6.1"
-  sha256 "08db9e02751d787f99e52b36364612b47b5504e232d0d16ab58b26539b21cb0c"
+  version "9.0.3"
+  sha256 "d371b6b26a90de68e43d128e92c869c25433ad193c5f99cca8377a464c300c16"
 
   url "https://downloads.owc.com/softraid/mac/#{version.major}/softraid-#{version}.dmg"
   name "SoftRAID"
@@ -15,6 +15,8 @@ cask "softraid" do
   depends_on :macos
 
   app "SoftRAID.app"
+
+  uninstall quit: "com.softraid.SoftRAID"
 
   zap trash: [
     "~/Library/Caches/com.apple.helpd/Generated/com.softraid.SoftRAID.help*#{version}",

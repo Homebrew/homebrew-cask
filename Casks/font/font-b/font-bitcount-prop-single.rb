@@ -8,5 +8,5 @@ cask "font-bitcount-prop-single" do
 
   font "BitcountPropSingle[CRSV,ELSH,ELXP,slnt,wght].ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

@@ -23,5 +23,5 @@ cask "font-0xproto-nerd-font" do
   font "0xProtoNerdFontPropo-Italic.ttf"
   font "0xProtoNerdFontPropo-Regular.ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

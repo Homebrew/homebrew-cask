@@ -1,9 +1,9 @@
 cask "sleek-app" do
   arch arm: "arm64", intel: "x64"
 
-  version "2.0.27"
-  sha256 arm:   "0c6ec1f6b99e2d45098061f0fa3cf78c517c906b169fb49d4dc238df8137c7bc",
-         intel: "b77e03a37d9cce321d4ec588ae3a758eae43142f86d724b3c3977b1542eb4be3"
+  version "2.1.1"
+  sha256 arm:   "0a4d1553465f86bc4f6d95a1df9cdff944f246559c3f0fb08a3ffc1f54d6f7fc",
+         intel: "3959911a7e2d3ad62ed2a82a86aeaa14a9231864f6ecb30ac18103668905cc06"
 
   url "https://github.com/ransome1/sleek/releases/download/v#{version}/sleek-#{version}-mac-#{arch}.dmg"
   name "sleek"
@@ -15,11 +15,12 @@ cask "sleek-app" do
     strategy :github_latest
   end
 
-  depends_on macos: :monterey
+  depends_on macos: :ventura
 
   app "sleek.app"
 
   zap trash: [
+    "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.todotxt.sleek.sfl*",
     "~/Library/Application Support/sleek",
     "~/Library/Preferences/com.todotxt.sleek.plist",
     "~/Library/Saved Application State/com.todotxt.sleek.savedState",

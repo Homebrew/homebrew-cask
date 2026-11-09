@@ -8,5 +8,5 @@ cask "font-monda" do
 
   font "Monda[wght].ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

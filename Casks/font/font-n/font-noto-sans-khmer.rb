@@ -8,5 +8,5 @@ cask "font-noto-sans-khmer" do
 
   font "NotoSansKhmer[wdth,wght].ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

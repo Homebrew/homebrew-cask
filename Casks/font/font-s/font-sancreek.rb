@@ -8,5 +8,5 @@ cask "font-sancreek" do
 
   font "Sancreek-Regular.ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

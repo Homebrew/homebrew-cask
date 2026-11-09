@@ -1,6 +1,6 @@
 cask "ente-auth" do
-  version "4.4.25"
-  sha256 "a1a2f979feb28d4b1cf210190ed0e2efe22cbbb42edc2c22545fd244567049c0"
+  version "4.4.26"
+  sha256 "f063d87dc247feed7dba0ecdae208ffc22f9b5b2de0c58506394a2cae0610ada"
 
   url "https://github.com/ente-io/ente/releases/download/auth-v#{version}/ente-auth-v#{version}.dmg"
   name "Ente Auth"
@@ -13,7 +13,7 @@ cask "ente-auth" do
     strategy :github_releases
   end
 
-  depends_on :macos
+  depends_on macos: :monterey
 
   app "Ente Auth.app"
 

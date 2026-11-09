@@ -53,7 +53,7 @@ class FontCask:
   font "{{file}}"
 {% endfor %}
 
-  # No zap stanza required
+  zap :not_required
 end
 """
     )

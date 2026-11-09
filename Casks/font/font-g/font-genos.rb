@@ -11,5 +11,5 @@ cask "font-genos" do
   font "Genos-Italic[wght].ttf"
   font "Genos[wght].ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

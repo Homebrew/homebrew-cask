@@ -8,5 +8,5 @@ cask "font-oldenburg" do
 
   font "Oldenburg-Regular.ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

@@ -16,6 +16,12 @@ cask "ibored" do
 
   app "iBored.app"
 
+  zap trash: [
+    "~/Library/Application Support/iBored",
+    "~/Library/Preferences/org.tempel.ibored.plist",
+    "~/Library/Saved Application State/org.tempel.ibored.savedState",
+  ]
+
   caveats do
     requires_rosetta
   end

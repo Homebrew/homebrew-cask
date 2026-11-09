@@ -1,9 +1,9 @@
 cask "vorta" do
   arch arm: "arm", intel: "intel"
 
-  version "0.11.6"
-  sha256 arm:   "5e8c736b8f4a96ffd870a8f81bfbda2f68568beaf63c932ff33b9f91f2e84c08",
-         intel: "9fa72a71d8cb4b6802cf4e53ecb672738524d1b3eb28c97ed6875839460d27b7"
+  version "0.12.0"
+  sha256 arm:   "88b742c7b43d88700218e2ea98af0582b38a086095403827bc693842e4658daf",
+         intel: "47bc7191c5f32b50f4b6752c011790efef417bc3e2931bf59dad173d256cf21a"
 
   url "https://github.com/borgbase/vorta/releases/download/v#{version}/Vorta-v#{version}-#{arch}.dmg"
   name "Vorta"
@@ -16,11 +16,18 @@ cask "vorta" do
   end
 
   auto_updates true
-  depends_on :macos
+  depends_on macos: :sonoma
 
   app "Vorta.app"
 
-  zap trash: "~/Library/Application Support/Vorta"
+  zap trash: [
+    "~/Library/Application Support/Vorta",
+    "~/Library/Caches/com.borgbase.client.macos",
+    "~/Library/Caches/Vorta",
+    "~/Library/HTTPStorages/com.borgbase.client.macos",
+    "~/Library/Logs/Vorta",
+    "~/Library/Preferences/com.borgbase.client.macos.plist",
+  ]
 
   caveats <<~EOS
     #{token} requires BorgBackup to run. If you do not need mount support, use

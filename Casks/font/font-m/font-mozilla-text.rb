@@ -8,5 +8,5 @@ cask "font-mozilla-text" do
 
   font "MozillaText[wght].ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

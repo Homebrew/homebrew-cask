@@ -1,6 +1,6 @@
 cask "okta-verify" do
-  version "9.69.0,6459-c4b02d9"
-  sha256 "55e401165e9e2cb09596a83bac73e6df5c9451bc1bc7d34e60a66d0a24bca674"
+  version "9.73.0,6632-54ce62d"
+  sha256 "8991fe62f361e3bf6beb7fc87a8d339a06291715124c5ce51586089623986d35"
 
   url "https://okta.okta.com/artifacts/OKTA_VERIFY_MACOS/#{version.csv.first}/OktaVerify-#{version.csv.first}-#{version.csv.second}.pkg"
   name "Okta Verify"
@@ -42,7 +42,9 @@ cask "okta-verify" do
             ]
 
   zap trash: [
+    "~/Library/Application Scripts/com.okta.mobile.auth-service-extension",
     "~/Library/Containers/com.okta.mobile",
+    "~/Library/Containers/com.okta.mobile.auth-service-extension",
     "~/Library/Preferences/B7F62B65BN.group.okta.verify.shared.plist",
     "~/Library/Preferences/com.okta.mobile.plist",
     "~/Library/Preferences/group.com.okta.mobile.firebase.plist",

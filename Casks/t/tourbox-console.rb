@@ -1,6 +1,6 @@
 cask "tourbox-console" do
-  version "5.11.2,260402120540"
-  sha256 "5c908696af3c44d88ffa7e654608a1a65f2d268c1fcd2d7a5a8b4c27df53b931"
+  version "5.11.3,260612142948"
+  sha256 "59ba5f51b7022253b7912b5b1b1e284947bad4dfd71cecaef732b53175f27abd"
 
   url "https://cdn.tourboxtech.com/prod/console/TourBoxInstall#{version.csv.join("_")}.zip"
   name "TourBox Console"
@@ -8,13 +8,10 @@ cask "tourbox-console" do
   homepage "https://www.tourboxtech.com/"
 
   livecheck do
-    url "https://www.tourboxtech.com/tbmall/download/newest?local=US",
-        post_json: {
-          softName: "TourBox Console",
-        }
-    regex(/TourBoxInstall[._-]?v?(\d+(?:[._]\d+)+)/i)
-    strategy :json do |json, regex|
-      json.dig("result", "normalSoft", "macPath")&.[](regex, 1)&.tr("_", ",")
+    url "https://www.tourboxtech.com/en/downloads/macos/"
+    regex(/TourBoxInstall(\d+(?:\.\d+)+)_(\d+)\.zip/i)
+    strategy :page_match do |page, regex|
+      page.scan(regex).map { |match| "#{match[0]},#{match[1]}" }
     end
   end
 

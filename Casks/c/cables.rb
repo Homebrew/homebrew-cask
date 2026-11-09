@@ -2,12 +2,12 @@ cask "cables" do
   arch arm: "-arm64", intel: "-x64"
   url_end = on_system_conditional macos: "mac#{arch}.dmg", linux: "linux-x64.AppImage"
 
-  version "0.11.1"
+  version "0.12.1"
+  sha256 arm:          "38c0baebc7b783ced56252d64dd56f5a545fbe1694d370bc7a5afa32a96ec2ac",
+         intel:        "3a84192cd3f9ec07bec075e4fc72288e7467fabae9a309bdc8ee0cb6096f1ee6",
+         x86_64_linux: "8a41c21c08e17fd39b06b781f6cebbd783c6c6af4ca0b2ea7aef716956a7c4d8"
 
   on_macos do
-    sha256 arm:   "a03b1051f00061a991fcc11b3771fd09eb890f5febd313b912000ead380f3e01",
-           intel: "2b207148c5297275d4657d1e9cd25bca75860eba9f130af9b93b553774ce57e6"
-
     depends_on macos: :monterey
 
     app "cables.app"
@@ -23,11 +23,11 @@ cask "cables" do
     ]
   end
   on_linux do
-    sha256 "e42bb406228b0d34e14acc45b739e8c1169528e9bf469273473924018aa60acb"
-
     depends_on arch: :x86_64
 
     app_image "cables-#{version}-linux-x64.AppImage", target: "Cables.AppImage"
+
+    zap trash: "~/.config/cables_electron"
   end
 
   url "https://github.com/cables-gl/cables_electron/releases/download/v#{version}/cables-#{version}-#{url_end}"

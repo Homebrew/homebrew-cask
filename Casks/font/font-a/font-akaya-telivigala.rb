@@ -8,5 +8,5 @@ cask "font-akaya-telivigala" do
 
   font "AkayaTelivigala-Regular.ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

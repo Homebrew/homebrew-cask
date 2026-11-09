@@ -8,5 +8,5 @@ cask "font-stalemate" do
 
   font "Stalemate-Regular.ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

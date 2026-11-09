@@ -6,9 +6,11 @@ cask "grid-clock" do
   name "Grid Clock Screensaver"
   homepage "https://github.com/chrstphrknwtn/grid-clock-screensaver"
 
+  disable! date: "2026-10-12", because: :fails_gatekeeper_check
+
   depends_on :macos
 
   screen_saver "Grid Clock.saver"
 
-  # No zap stanza required
+  zap :not_required
 end

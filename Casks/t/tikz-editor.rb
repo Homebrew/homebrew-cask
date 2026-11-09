@@ -1,15 +1,16 @@
 cask "tikz-editor" do
   arch arm: "aarch64", intel: "x64"
 
-  version "0.5.2"
-  sha256 arm:   "fea06282c1e7a32910e07733e9a518eb3e1b623dcda1b7d9ddee6fc259b717f3",
-         intel: "7a62528010ed03c886926de2f56a5d95772bea0b170068e7238aed71463aba08"
+  version "1.1.0"
+  sha256 arm:   "b2a9f759bd1b84d9d0f75d660d6cec3bbdd02d49605e32143b997fa13df70553",
+         intel: "60f006a859ad98aab48ff1c3efa7efbe220135f7c8aaf108db383481a6fcfdf3"
 
   url "https://github.com/DominikPeters/tikz-editor/releases/download/app-v#{version}/TikZ.Editor_#{version}_#{arch}.dmg"
   name "TikZ Editor"
   desc "WYSIWYG editor for TikZ diagrams in LaTeX"
   homepage "https://tikz.dev/editor/"
 
+  auto_updates true
   depends_on :macos
 
   app "TikZ Editor.app"
@@ -17,6 +18,7 @@ cask "tikz-editor" do
   zap trash: [
     "~/Library/Application Support/com.tikz.editor",
     "~/Library/Caches/com.tikz.editor",
+    "~/Library/Preferences/com.tikz.editor.plist",
     "~/Library/WebKit/com.tikz.editor",
   ]
 end

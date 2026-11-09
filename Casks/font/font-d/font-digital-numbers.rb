@@ -8,5 +8,5 @@ cask "font-digital-numbers" do
 
   font "DigitalNumbers-Regular.ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

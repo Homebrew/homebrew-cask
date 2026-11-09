@@ -1,9 +1,9 @@
 cask "screaming-frog-seo-spider" do
   arch arm: "aarch64", intel: "x86_64"
 
-  version "24.3"
-  sha256 arm:   "6487d07b0f16782a85f8080cfbef56a59df8dec9372940f2504b0d95df32fc7b",
-         intel: "0f70c9fccb92edfc4378e66f90dad3078c177ebe239cf7564dab57553a3f2fad"
+  version "25.1"
+  sha256 arm:   "ae5610f9f2fe121417cf54f20b81fbcf0f67516b384676224325d4cddaf35c68",
+         intel: "adc8fc739b320a7014c8ce6f6321462d042b13e1569991e5ec4325b122dc96e4"
 
   url "https://download.screamingfrog.co.uk/products/seo-spider/ScreamingFrogSEOSpider-#{version}-#{arch}.dmg"
   name "Screaming Frog SEO Spider"
@@ -15,9 +15,11 @@ cask "screaming-frog-seo-spider" do
     regex(/(\d+(?:\.\d+)+)/i)
   end
 
-  depends_on macos: :big_sur
+  depends_on :macos
 
   app "Screaming Frog SEO Spider.app"
+
+  uninstall quit: "uk.co.screamingfrog.seo.spider"
 
   zap trash: [
     "~/.ScreamingFrogSEOSpider",

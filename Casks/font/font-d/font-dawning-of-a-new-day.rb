@@ -8,5 +8,5 @@ cask "font-dawning-of-a-new-day" do
 
   font "DawningofaNewDay.ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

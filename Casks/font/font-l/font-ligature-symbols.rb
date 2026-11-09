@@ -13,5 +13,5 @@ cask "font-ligature-symbols" do
 
   font "LigatureSymbols/LigatureSymbols-#{version}.otf"
 
-  # No zap stanza required
+  zap :not_required
 end

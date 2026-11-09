@@ -22,5 +22,5 @@ cask "irpf2024" do
 
   uninstall delete: "/Applications/IRPF2024"
 
-  # No zap stanza required
+  zap :not_required
 end

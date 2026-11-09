@@ -8,5 +8,5 @@ cask "font-vidaloka" do
 
   font "Vidaloka-Regular.ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

@@ -8,5 +8,5 @@ cask "font-medula-one" do
 
   font "MedulaOne-Regular.ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

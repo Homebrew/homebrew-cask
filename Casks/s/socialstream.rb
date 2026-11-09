@@ -1,9 +1,9 @@
 cask "socialstream" do
   arch arm: "arm64", intel: "x64"
 
-  version "0.4.18"
-  sha256 arm:   "6f45d36dff6ae4ace9e2b3b51ba326d17a4c32f2cc502bf1e4938b5e31629395",
-         intel: "d978fdb1475dfef0a73434d43880c1548e6f7715248c89efc9271722b10db83a"
+  version "0.4.40"
+  sha256 arm:   "0f4e9817552218fe08e33ade8bd6561804ee73c568340e5dd939ed8eb2b245a9",
+         intel: "446b95fa6de9eb9c4a81c167478990dfc94a9148d2eb7c3f7adfb44494f93153"
 
   url "https://github.com/steveseguin/social_stream/releases/download/v#{version}/socialstreamninja_mac_v#{version}_#{arch}.dmg"
   name "Social Stream"
@@ -16,11 +16,12 @@ cask "socialstream" do
     strategy :github_latest
   end
 
-  depends_on macos: :monterey
+  depends_on macos: :ventura
 
   app "socialstream.app"
 
   zap trash: [
+    "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/socialstream.electron.sfl*",
     "~/Library/Application Support/socialstream",
     "~/Library/Preferences/socialstream.electron.plist",
     "~/Library/Saved Application State/socialstream.electron.savedState",

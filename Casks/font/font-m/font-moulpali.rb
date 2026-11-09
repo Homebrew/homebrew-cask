@@ -8,5 +8,5 @@ cask "font-moulpali" do
 
   font "Moulpali-Regular.ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

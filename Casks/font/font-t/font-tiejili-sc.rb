@@ -9,5 +9,5 @@ cask "font-tiejili-sc" do
 
   font "TiejiliSC-Regular.otf"
 
-  # No zap stanza required
+  zap :not_required
 end

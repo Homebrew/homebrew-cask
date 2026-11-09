@@ -14,5 +14,5 @@ cask "font-scheherazade" do
   font "Scheherazade-#{version}/Scheherazade-Bold.ttf"
   font "Scheherazade-#{version}/Scheherazade-Regular.ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

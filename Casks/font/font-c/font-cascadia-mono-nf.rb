@@ -14,5 +14,5 @@ cask "font-cascadia-mono-nf" do
   font "ttf/CascadiaMonoNF.ttf"
   font "ttf/CascadiaMonoNFItalic.ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

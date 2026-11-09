@@ -23,5 +23,5 @@ cask "font-3270-nerd-font" do
   font "3270NerdFontPropo-Regular.ttf"
   font "3270NerdFontPropo-SemiCondensed.ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

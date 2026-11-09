@@ -10,8 +10,6 @@ cask "chatall" do
          x86_64_linux: "aec84550ec808b8e2902ddd4d74d99df1ecf51bf13d25372806167594b643c4d"
 
   on_macos do
-    depends_on macos: :big_sur
-
     app "ChatALL.app"
 
     zap trash: [
@@ -23,6 +21,11 @@ cask "chatall" do
   end
   on_linux do
     app_image "ChatALL-#{version}-linux-#{arch}.AppImage", target: "ChatALL.AppImage"
+
+    zap trash: [
+      "~/.cache/chatall-updater",
+      "~/.config/chatall",
+    ]
   end
 
   url "https://github.com/sunner/ChatALL/releases/download/v#{version}/ChatALL-#{version}-#{os}-#{arch}.#{url_end}"
@@ -30,10 +33,7 @@ cask "chatall" do
   desc "Concurrently chat with ChatGPT, Bing Chat, Bard, Claude, ChatGLM and more"
   homepage "https://github.com/sunner/ChatALL"
 
-  livecheck do
-    url :url
-    strategy :github_latest
-  end
+  deprecate! date: "2026-11-02", because: :discontinued
 
   auto_updates true
 end

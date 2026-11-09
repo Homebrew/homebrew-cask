@@ -13,7 +13,7 @@ cask "retroactive" do
 
   app "Retroactive #{version}/Retroactive.app"
 
-  zap delete: "~/Library/Caches/com.retroactive.Retroactive"
+  zap trash: "~/Library/Caches/com.retroactive.Retroactive"
 
   caveats do
     requires_rosetta

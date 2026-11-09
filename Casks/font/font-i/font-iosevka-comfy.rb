@@ -136,5 +136,5 @@ cask "font-iosevka-comfy" do
   font "iosevka-comfy-#{version}/iosevka-comfy/TTF/iosevka-comfy-normalsemilightitalic.ttf"
   font "iosevka-comfy-#{version}/iosevka-comfy/TTF/iosevka-comfy-normalsemilightupright.ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

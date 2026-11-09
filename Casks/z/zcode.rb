@@ -1,9 +1,9 @@
 cask "zcode" do
   arch arm: "arm64", intel: "x64"
 
-  version "3.11.2"
-  sha256 arm:   "cfa43b90ec74732ee3ee1262803d775658a3c954cc4cc0a9a1bec0f9c6dcbf98",
-         intel: "12cf306271a6bfb5f4100b9c735e07a22912051d27af845f98064495e41fd736"
+  version "3.17.2"
+  sha256 arm:   "53fdd9151a31df347ab7af598948c2b1d353039fcc2a77e272414da2373df391",
+         intel: "ebfe13719a357e47b45d74f87816dbf67bfa5798bd28f98b452a39a0762325ec"
 
   url "https://cdn-zcode.z.ai/zcode/electron/releases/#{version}/macos-#{arch}/ZCode-#{version}-mac-#{arch}.dmg"
   name "ZCode"
@@ -16,7 +16,7 @@ cask "zcode" do
   end
 
   auto_updates true
-  depends_on macos: :monterey
+  depends_on macos: :ventura
 
   app "ZCode.app"
 

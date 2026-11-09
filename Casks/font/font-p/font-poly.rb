@@ -11,5 +11,5 @@ cask "font-poly" do
   font "Poly-Italic.ttf"
   font "Poly-Regular.ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

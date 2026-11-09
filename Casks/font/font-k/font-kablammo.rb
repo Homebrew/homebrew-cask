@@ -8,5 +8,5 @@ cask "font-kablammo" do
 
   font "Kablammo[MORF].ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

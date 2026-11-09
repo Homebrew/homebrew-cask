@@ -11,5 +11,5 @@ cask "font-rufina" do
   font "Rufina-Bold.ttf"
   font "Rufina-Regular.ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

@@ -1,7 +1,7 @@
 cask "termius" do
   arch arm: "-arm64"
 
-  version "9.43.1"
+  version "10.4.1"
   sha256 :no_check
 
   url "https://autoupdate.termius.com/mac#{arch}/Termius.dmg"
@@ -15,7 +15,7 @@ cask "termius" do
   end
 
   auto_updates true
-  depends_on :macos
+  depends_on macos: :monterey
 
   app "Termius.app"
 
@@ -23,8 +23,10 @@ cask "termius" do
 
   zap trash: [
     "~/.termius",
+    "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.termius-dmg.mac.sfl*",
     "~/Library/Application Support/Termius",
     "~/Library/Logs/Termius",
+    "~/Library/Preferences/com.termius-dmg.mac.plist",
     "~/Library/Saved Application State/com.termius-dmg.mac.savedState",
   ]
 end

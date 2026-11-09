@@ -17,5 +17,5 @@ cask "font-baloo" do
   font "Fonts/BalooTammudu-Regular.ttf"
   font "Fonts/BalooThambi-Regular.ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

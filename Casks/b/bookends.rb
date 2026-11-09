@@ -1,5 +1,5 @@
 cask "bookends" do
-  version "15.4.4"
+  version "16.0.2"
   sha256 :no_check
 
   url "https://www.sonnysoftware.com/bookends-for-mac/downloads/Bookends.dmg"
@@ -14,17 +14,18 @@ cask "bookends" do
     end
   end
 
-  depends_on macos: :big_sur
+  depends_on :macos
 
   app "Bookends.app"
 
   zap trash: [
-    "~/Library/Application Scripts/com.microsoft.Word/Bookends.scpt",
-    "~/Library/Application Support/Bookends",
-    "~/Library/Caches/com.sonnysoftware.bookends2",
-    "~/Library/Group Containers/UBF8T346G9.Office/User Content.localized/Startup.localized/Word/Bookends.dotm",
-    "~/Library/HTTPStorages/com.sonnysoftware.bookends2",
-    "~/Library/PDF Services/Save PDF to Bookends",
-    "~/Library/Saved Application State/com.sonnysoftware.bookends2.savedState",
-  ]
+        "~/Library/Application Scripts/com.microsoft.Word/Bookends.scpt",
+        "~/Library/Application Support/Bookends",
+        "~/Library/Caches/com.sonnysoftware.bookends2",
+        "~/Library/Group Containers/UBF8T346G9.Office/User Content.localized/Startup.localized/Word/Bookends.dotm",
+        "~/Library/HTTPStorages/com.sonnysoftware.bookends2",
+        "~/Library/PDF Services/Save PDF to Bookends",
+        "~/Library/Saved Application State/com.sonnysoftware.bookends2.savedState",
+      ],
+      rmdir: "~/Documents/Bookends"
 end

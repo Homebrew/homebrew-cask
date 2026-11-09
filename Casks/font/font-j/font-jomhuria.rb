@@ -8,5 +8,5 @@ cask "font-jomhuria" do
 
   font "Jomhuria-Regular.ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

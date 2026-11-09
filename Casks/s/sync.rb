@@ -1,6 +1,6 @@
 cask "sync" do
-  version "2.2.62"
-  sha256 "458960bfed82fe409aae2727b4e122caa92388745c9deb74266066f25408a3cd"
+  version "2.2.65"
+  sha256 "a6b40a453eb3417b9d362a6c705900933b9ef849e6c3ba50ccf83a9ad67ebad7"
 
   url "https://www10.sync.com/download/apple/Sync-#{version}.dmg"
   name "Sync"
@@ -22,6 +22,7 @@ cask "sync" do
   zap trash: [
         "~/Library/Application Scripts/com.sync.desktop",
         "~/Library/Application Scripts/com.sync.desktop.findersync",
+        "~/Library/Containers/com.sync.desktop.findersync",
         "~/Library/Group Containers/com.sync.desktop",
         "~/Library/Preferences/com.sync.desktop.plist",
       ],

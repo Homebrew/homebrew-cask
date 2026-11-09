@@ -1,9 +1,9 @@
 cask "rider" do
   arch arm: "-aarch64"
 
-  version "2026.2.1,262.9437.287"
-  sha256 arm:   "5b565eea336499813e594a537ccf50d3f2639c00c3caa3fa9fc3686cdf22ada4",
-         intel: "3172cecfefa55581909da9d3acee8485b0f5442f4494cffe1d2c2e8e85a079d2"
+  version "2026.2.4.1,262.11879.119"
+  sha256 arm:   "12677cf3c5b7265ff26be9e1edc973deb2628e04793e5759b8c9ea55de8020e2",
+         intel: "6674cd5ef3684ee6d29f43314b7d37f03c9e10b3829334fe785a54b9e2026085"
 
   url "https://download.jetbrains.com/rider/JetBrains.Rider-#{version.csv.first}#{arch}.dmg"
   name "JetBrains Rider"
@@ -30,10 +30,13 @@ cask "rider" do
   command_wrapper "rider",
                   executable: "#{appdir}/Rider.app/Contents/MacOS/rider"
 
+  uninstall quit: "com.jetbrains.rider"
+
   zap trash: [
     "~/Library/Application Support/Rider#{version.major_minor}",
     "~/Library/Caches/Rider#{version.major_minor}",
     "~/Library/Logs/Rider#{version.major_minor}",
+    "~/Library/Preferences/com.jetbrains.rider.plist",
     "~/Library/Preferences/jetbrains.rider.71e559ef.plist",
     "~/Library/Preferences/Rider#{version.major_minor}",
     "~/Library/Saved Application State/com.jetbrains.rider.savedState",

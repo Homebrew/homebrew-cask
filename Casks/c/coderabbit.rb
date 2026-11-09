@@ -2,11 +2,11 @@ cask "coderabbit" do
   arch arm: "arm64", intel: "x64"
   os macos: "darwin", linux: "linux"
 
-  version "0.7.6"
-  sha256 arm:          "f970e608e383114e1edf214eea71a99d6604ea1dd09c01e754ee6b8d4b852cb1",
-         intel:        "1c6242dec8a0983ff70842bc1d0e8c888d1a92b1ad80afb969c00c94c482a704",
-         arm64_linux:  "2270641a6314bef0da32e5903ddc6de6265354962f7cf651fc581a4a91f22447",
-         x86_64_linux: "853a1727609ab0ff1f56863fa6de7acf3de593a6dc1bd7f91a32f11c5724ffc9"
+  version "0.9.3"
+  sha256 arm:          "9836ce4b03eafcd072e94ee53d08fc3b6c0719cdeade545718424d62be20c158",
+         intel:        "8c9ea5c30e0f8dcfe405ed550f1e6f2970f95e6e1a1374ad093d01792f71090f",
+         arm64_linux:  "4313b39253efc3b5bd0728192d80c815251f9e6f9f157bcb6bf701cf25d2e8ab",
+         x86_64_linux: "d886901a5bffd9d7359bcd10e92e27fa1e55e8a7f8da2b1dfcd425a7f89edc4b"
 
   url "https://cli.coderabbit.ai/releases/#{version}/coderabbit-#{os}-#{arch}.zip"
   name "CodeRabbit"

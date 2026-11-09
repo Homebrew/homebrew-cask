@@ -1,6 +1,6 @@
 cask "vivaldi@snapshot" do
-  version "8.2.4133.43"
-  sha256 "bcd0512cecaea373df9aa393cee046a7ae7d5aa710856c7ceae67ed198ada5e0"
+  version "8.3.4191.23"
+  sha256 "87cc6fc2c495f5648f7c0bf2c1bbcf8bfc2f12b668fbb3f0127f345aad6f79dd"
 
   url "https://downloads.vivaldi.com/snapshot-auto/Vivaldi.#{version}.universal.tar.xz"
   name "Vivaldi Snapshot"
@@ -21,6 +21,7 @@ cask "vivaldi@snapshot" do
 
   zap trash: [
     "/Library/Logs/DiagnosticReports/Vivaldi Helper (Renderer)_*.diag",
+    "/Library/Logs/DiagnosticReports/Vivaldi Helper_*.diag",
     "/Library/Logs/DiagnosticReports/Vivaldi Snapshot_*.diag",
     "~/Library/Application Support/CrashReporter/Vivaldi Snapshot_*.plist",
     "~/Library/Application Support/Vivaldi Snapshot",

@@ -20,5 +20,5 @@ cask "font-brass-mono" do
   font "BrassMonoCode-Italic.ttf"
   font "BrassMonoCode-Regular.ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

@@ -8,5 +8,5 @@ cask "font-doto" do
 
   font "Doto[ROND,wght].ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

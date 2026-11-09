@@ -13,5 +13,5 @@ cask "font-cousine" do
   font "Cousine-Italic.ttf"
   font "Cousine-Regular.ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

@@ -1,6 +1,6 @@
 cask "element" do
-  version "1.12.27"
-  sha256 "a9a577bcfbc2a2307525579fb9ca722ed70e9fd7d45e843dc9a297bba2bc1570"
+  version "1.12.33"
+  sha256 "6085bda81dd5aaa8c7aec4093d387f28395c48d0651ac4283ca1e06361d69923"
 
   url "https://packages.element.io/desktop/update/macos/Element-#{version}-universal-mac.zip"
   name "Element"
@@ -15,11 +15,12 @@ cask "element" do
   end
 
   auto_updates true
-  depends_on macos: :monterey
+  depends_on macos: :ventura
 
   app "Element.app"
 
   zap trash: [
+    "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/im.riot.app.sfl*",
     "~/Library/Application Support/Element",
     "~/Library/Application Support/Riot",
     "~/Library/Caches/im.riot.app",

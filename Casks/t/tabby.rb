@@ -3,13 +3,14 @@ cask "tabby" do
   os macos: "macos", linux: "linux"
   url_end = on_system_conditional macos: "zip", linux: "AppImage"
 
-  version "1.0.235"
-  sha256 arm:          "1080a05d44c8acfe9301ec56c5ffa3ab0e472086d1ace8fe8a5e2cbf9f71c7d5",
-         intel:        "09878c64b4c213c653310ba81655b91dc0f8063e1dd64dc57c3844a0bb58456d",
-         arm64_linux:  "746c9e301eea78af152f26c6df1d29b3eea55b30ef29ffd9fa86bcf2bd8d03be",
-         x86_64_linux: "0ca5dc015fe5ee7840f2b206864cc37c52f7c36b7a734e8653a39ae8a576dcef"
+  version "1.0.238"
+  sha256 arm:          "c877d8962f63a67baf40f3400b2d57a195f97d7b3547d7e804adae0e7df6754c",
+         intel:        "93935cc99fed5ff76a4cceaef15fdd15802aa7f49e9227f9c883df6eeebee9b4",
+         arm64_linux:  "3d8ead2292efef68514432493817f11be0aa1efeb68d81134ba6d2e7e4bc80ef",
+         x86_64_linux: "79efb773fef45f97cd3be200a70cb9dc690fcef8d6faa2dbc29679aa8f687d85"
 
   on_macos do
+    auto_updates true
     depends_on macos: :monterey
 
     app "Tabby.app"
@@ -30,6 +31,11 @@ cask "tabby" do
   end
   on_linux do
     app_image "tabby-#{version}-linux-#{arch}.AppImage", target: "Tabby.AppImage"
+
+    zap trash: [
+      "~/.cache/tabby-updater",
+      "~/.config/tabby",
+    ]
   end
 
   url "https://github.com/Eugeny/tabby/releases/download/v#{version}/tabby-#{version}-#{os}-#{arch}.#{url_end}"

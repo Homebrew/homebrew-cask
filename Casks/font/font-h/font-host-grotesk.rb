@@ -11,5 +11,5 @@ cask "font-host-grotesk" do
   font "HostGrotesk-Italic[wght].ttf"
   font "HostGrotesk[wght].ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

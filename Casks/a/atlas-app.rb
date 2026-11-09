@@ -1,9 +1,9 @@
 cask "atlas-app" do
   arch arm: "aarch64", intel: "x86_64"
 
-  version "0.3.1"
-  sha256 arm:   "84247f492310c5977dacdb198edaf55f402229d274d2c896c44fbad11d7f176e",
-         intel: "77cb2fb8bf21884c254082cba4ea72742494081a1552b4ca4384274daf596a27"
+  version "0.3.4"
+  sha256 arm:   "8d19c35f414e5f29a707efefcb602dd8b0258c653a09b2bff4c2e2d79f347bd6",
+         intel: "896a2896a629611cae5502bc5db6017726545cf428fec6063b2f5549bdf95139"
 
   url "https://github.com/pacifio/atlas/releases/download/alpha-#{version}/Atlas_#{version}_#{arch}.dmg"
   name "Atlas"
@@ -17,7 +17,7 @@ cask "atlas-app" do
   end
 
   auto_updates true
-  depends_on macos: :big_sur
+  depends_on :macos
 
   app "Atlas.app"
 

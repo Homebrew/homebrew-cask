@@ -1,9 +1,9 @@
 cask "roam-research" do
   arch arm: "-arm64"
 
-  version "0.0.38"
-  sha256 arm:   "32b84c73888498760a7bb4504e141ac25e6d7f26d954d62e468642335cde7bf9",
-         intel: "36472d666e9ffb6b3e1210eec2dbac4b960ab7650a268e096de77c964107e55d"
+  version "0.0.42"
+  sha256 arm:   "67c7bf1129fdc4e2a63509ac3a8dd77111d430041dd203681f578e75a6cf1096",
+         intel: "be33868bcd6dc5408ee2f666e91fb15972ee11378ecc3ff294136af5841ef658"
 
   url "https://roam-electron-deploy.s3.amazonaws.com/Roam+Research-#{version}#{arch}.dmg"
   name "Roam Research"
@@ -20,6 +20,8 @@ cask "roam-research" do
   app "Roam Research.app"
 
   zap trash: [
+    "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.roam-research.desktop-app.sfl*",
+    "~/Library/Application Support/Roam Research",
     "~/Library/Preferences/com.roam-research.desktop-app.plist",
     "~/Library/Saved Application State/com.roam-research.desktop-app.savedState",
   ]

@@ -8,5 +8,5 @@ cask "font-kenia" do
 
   font "Kenia-Regular.ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

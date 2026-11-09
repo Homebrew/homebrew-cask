@@ -31,5 +31,5 @@ cask "geoda" do
 
   app "GeoDa.app"
 
-  # No zap stanza required
+  zap :not_required
 end

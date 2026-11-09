@@ -8,5 +8,5 @@ cask "font-noto-sans-gujarati" do
 
   font "NotoSansGujarati[wdth,wght].ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

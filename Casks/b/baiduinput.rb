@@ -5,6 +5,7 @@ cask "baiduinput" do
   url "https://imeres.baidu.com/mac/baiduinput_mac_v#{version.csv.first}_#{version.csv.second}.dmg"
   name "Baidu Input"
   name "安装百度输入法"
+  desc "Chinese input method"
   homepage "https://srf.baidu.com/input/mac.html"
 
   livecheck do
@@ -21,4 +22,12 @@ cask "baiduinput" do
 
   uninstall pkgutil: "com.baidu.inputmethod.*",
             delete:  "/Library/Input Methods/BaiduIM.app"
+
+  zap trash: [
+    "~/Library/Application Support/BaiduInput",
+    "~/Library/Caches/com.baidu.inputmethod.BaiduIM",
+    "~/Library/HTTPStorages/com.baidu.inputmethod.BaiduIM",
+    "~/Library/Preferences/com.baidu.inputmethod.BaiduIM.plist",
+    "~/Library/Saved Application State/com.baidu.baiduiminstaller.savedState",
+  ]
 end

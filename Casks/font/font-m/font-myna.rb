@@ -8,5 +8,5 @@ cask "font-myna" do
 
   font "Myna.otf"
 
-  # No zap stanza required
+  zap :not_required
 end

@@ -1,6 +1,6 @@
 cask "bettercmdtab@beta" do
-  version "26.7,20260813144806"
-  sha256 "d72cdffb691b8e2fbb892afaf4d016ceb9bbf4ee99d8b2272a952db9278be67b"
+  version "26.8-beta.10,20261102111014"
+  sha256 "8b1e9ecdc7f815c4460c74bca0e80d2103a1ed3cfbeef3a214b0de6b072a0aea"
 
   url "https://github.com/rokartur/BetterCmdTab/releases/download/#{version.csv.first}/BetterCmdTab-#{version.csv.first}-#{version.csv.second}.dmg"
   name "BetterCmdTab"
@@ -30,8 +30,10 @@ cask "bettercmdtab@beta" do
   app "BetterCmdTab.app"
 
   zap trash: [
+    "~/Library/Application Support/BetterCmdTab",
     "~/Library/Application Support/pro.bettercmdtab.BetterCmdTab",
     "~/Library/Caches/pro.bettercmdtab.BetterCmdTab",
+    "~/Library/HTTPStorages/pro.bettercmdtab.BetterCmdTab",
     "~/Library/Preferences/pro.bettercmdtab.BetterCmdTab.plist",
   ]
 end

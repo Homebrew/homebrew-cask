@@ -10,7 +10,7 @@ cask "pyzo" do
   desc "Python IDE focused on interactivity and introspection"
   homepage "https://pyzo.org/"
 
-  depends_on macos: :big_sur
+  depends_on :macos
 
   app "pyzo.app"
 

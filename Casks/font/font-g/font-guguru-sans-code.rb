@@ -23,5 +23,5 @@ cask "font-guguru-sans-code" do
   font "GuguruSansCode_v#{version}/GuguruSansCodeConsole35/GuguruSansCodeConsole35-Italic.ttf"
   font "GuguruSansCode_v#{version}/GuguruSansCodeConsole35/GuguruSansCodeConsole35-Regular.ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

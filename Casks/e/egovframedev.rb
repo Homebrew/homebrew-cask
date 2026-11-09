@@ -17,7 +17,7 @@ cask "egovframedev" do
     regex(/개발자용\s+개발환경\s+v?(\d+(?:\.\d+)+)\s+(?!Beta)/i)
   end
 
-  depends_on macos: :big_sur
+  depends_on :macos
 
   app "eGovFrameDev-#{version}-macOS-#{arch}.app"
 

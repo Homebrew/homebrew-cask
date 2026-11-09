@@ -8,5 +8,5 @@ cask "font-unica-one" do
 
   font "UnicaOne-Regular.ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

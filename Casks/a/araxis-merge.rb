@@ -1,6 +1,6 @@
 cask "araxis-merge" do
-  version "2026.0"
-  sha256 "f76e3759b0e5bdd01aa6f67f16f27975b332f147dd84f8583dedc621a8cae124"
+  version "2026.1"
+  sha256 "62797d56c6d78a3c41dd0f0f9e4de530f33f94504bc7f558b721d1ac862991b8"
 
   url "https://www.araxis.com/download/Merge#{version}-macOS.dmg"
   name "Araxis Merge"
@@ -12,7 +12,7 @@ cask "araxis-merge" do
     regex(/href=.*?Merge[._-]?v?(\d+(?:\.\d+)+)-macOS\.dmg/i)
   end
 
-  depends_on macos: :sonoma
+  depends_on macos: :sequoia
 
   app "Araxis Merge.app"
   binary "#{appdir}/Araxis Merge.app/Contents/Utilities/araxishgmerge"

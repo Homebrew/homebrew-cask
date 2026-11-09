@@ -16,5 +16,5 @@ cask "font-lateef" do
   font "Lateef-Regular.ttf"
   font "Lateef-SemiBold.ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

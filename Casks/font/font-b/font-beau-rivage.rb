@@ -8,5 +8,5 @@ cask "font-beau-rivage" do
 
   font "BeauRivage-Regular.ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

@@ -7,7 +7,7 @@ cask "input0" do
   desc "Voice input tool with AI transcription"
   homepage "https://input0.com/"
 
-  depends_on macos: :big_sur
+  depends_on :macos
 
   app "Input0.app"
 

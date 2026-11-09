@@ -8,5 +8,5 @@ cask "font-over-the-rainbow" do
 
   font "OvertheRainbow.ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

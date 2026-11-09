@@ -1,11 +1,16 @@
 cask "supasidebar" do
-  version "1.0.1"
-  sha256 "0b332f5530fc1ef05a040d05e8f2e5ac902be53fa027690a86fd82ce57ea3714"
+  version "1.7.0"
+  sha256 "239f321a93cd04e2c898a78caa2ff06cc1a9891665e843ece1c0136f6111ce2b"
 
   url "https://github.com/auspy/supasidebar-updates/releases/download/v#{version}/supasidebar_v#{version}.dmg"
   name "SupaSidebar"
   desc "Arc-like sidebar to save links, files and folders from any browser"
   homepage "https://supasidebar.com/"
+
+  livecheck do
+    url :url
+    strategy :github_latest
+  end
 
   auto_updates true
   depends_on macos: :sonoma

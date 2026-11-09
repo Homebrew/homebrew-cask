@@ -1,6 +1,6 @@
 cask "tailscale-app" do
-  version "1.102.3"
-  sha256 "a1161b5146d65ec945199f6bb741c86b7057c4f1aeae41e10d7c08208064b64b"
+  version "1.104.5"
+  sha256 "f1a2afb589dc16487cff9f23c59d0021a1a4dcf8476d2637ab493c628422b810"
 
   url "https://pkgs.tailscale.com/stable/Tailscale-#{version}-macos.pkg"
   name "Tailscale"
@@ -13,7 +13,7 @@ cask "tailscale-app" do
   end
 
   auto_updates true
-  depends_on macos: :monterey
+  depends_on macos: :ventura
 
   pkg "Tailscale-#{version}-macos.pkg"
 
@@ -28,16 +28,20 @@ cask "tailscale-app" do
   zap trash: [
     "/Library/Tailscale",
     "~/Library/Application Scripts/*.io.tailscale.ipn.macsys",
+    "~/Library/Application Scripts/group.W5364U7YZB.io.tailscale.shared",
     "~/Library/Application Scripts/io.tailscale.ipn.macsys",
     "~/Library/Application Scripts/io.tailscale.ipn.macsys.login-item-helper",
     "~/Library/Application Scripts/io.tailscale.ipn.macsys.share-extension",
+    "~/Library/Application Scripts/io.tailscale.ipn.macsys.widgets",
     "~/Library/Caches/io.tailscale.ipn.macsys",
     "~/Library/Containers/io.tailscale.ipn.macos.network-extension",
     "~/Library/Containers/io.tailscale.ipn.macsys",
     "~/Library/Containers/io.tailscale.ipn.macsys.login-item-helper",
     "~/Library/Containers/io.tailscale.ipn.macsys.share-extension",
+    "~/Library/Containers/io.tailscale.ipn.macsys.widgets",
     "~/Library/Containers/Tailscale",
     "~/Library/Group Containers/*.io.tailscale.ipn.macsys",
+    "~/Library/Group Containers/group.W5364U7YZB.io.tailscale.shared",
     "~/Library/HTTPStorages/io.tailscale.ipn.macsys",
     "~/Library/HTTPStorages/io.tailscale.ipn.macsys.binarycookies",
     "~/Library/Preferences/io.tailscale.ipn.macsys.plist",

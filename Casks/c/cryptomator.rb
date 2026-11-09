@@ -5,15 +5,13 @@ cask "cryptomator" do
   name_prefix = on_system_conditional macos: "Cryptomator", linux: "cryptomator"
   url_end = on_system_conditional macos: "dmg", linux: "AppImage"
 
-  version "1.19.3"
-  sha256 arm:          "0bfe8c6aeb97acf638810e3e576016db510bc7bf71366dc00f3c7eea9a314f23",
-         intel:        "371dc9c75ded3d74440b6d597360bff20553f3c01c2c3d9aaf3fc97b46037938",
-         arm64_linux:  "dc118d40748d97a0bf62efe44fcbca6c4c6c711e9c97bb9f4f84eb1f06993e29",
-         x86_64_linux: "895d09255b5f5fe39029dba337ab0950f8609b3b7919313eeeb18d221e7e25ab"
+  version "1.19.6"
+  sha256 arm:          "fdfc8ef50b10baca1078b7a9edf404e330363c8a3a40fda29f86dd5d3a0a0b02",
+         intel:        "84eeab413f0b381ec5c7d5844b79ac8fc80abc0e5266a3a3cf3a5ce72e1cfa4a",
+         arm64_linux:  "2bc13b968b32c5d3ab5d45087abb9ab4ef01b5584560c17511c956c4c681f82e",
+         x86_64_linux: "a6167f6ab3c5f161b31726b94bcf0abcb7f78c857b16e485adeb8e5096b74acd"
 
   on_macos do
-    depends_on macos: :big_sur
-
     app "Cryptomator.app"
 
     zap trash: [

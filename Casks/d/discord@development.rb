@@ -1,8 +1,8 @@
 cask "discord@development" do
-  version "1.0.1021"
-  sha256 "91b387c2e20013f3358f1cf192c94be6d9445f70cba36b82ab66a9cf2be7d718"
+  version "1.0.1035"
+  sha256 "eb4f71554c2c12c3ab72b4b80e4e5f3c3a5bddb88e3f35b6e90487cf08022ecc"
 
-  url "https://dl-development.discordapp.net/apps/osx/#{version}/DiscordDevelopment.dmg"
+  url "https://development.dl2.discordapp.net/distro/app/development/osx/universal/#{version}/DiscordDevelopment.dmg"
   name "Discord Development"
   desc "Voice and text chat software"
   homepage "https://discord.com/"
@@ -13,7 +13,7 @@ cask "discord@development" do
   end
 
   auto_updates true
-  depends_on macos: :monterey
+  depends_on macos: :ventura
 
   app "Discord Development.app"
 

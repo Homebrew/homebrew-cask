@@ -11,5 +11,5 @@ cask "font-asap" do
   font "Asap-Italic[wdth,wght].ttf"
   font "Asap[wdth,wght].ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

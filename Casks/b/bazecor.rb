@@ -2,15 +2,15 @@ cask "bazecor" do
   arch arm: "arm64", intel: "x64"
   url_end = on_system_conditional macos: "dmg", linux: "AppImage"
 
-  version "1.10.0"
+  version "1.11.0"
+  sha256 arm:          "af6fafd879284242f38c588a0e2eef7579fb142aef1465fcddaa76db1b4e7683",
+         intel:        "24cd83d9d6cf1aba8f3ef5455c4a26589d3c50060031bd9b14166254b63482da",
+         x86_64_linux: "f264d31222a105dab20cc2899f6e5733a43421311aebf3f67e616f9762f6b1c3"
 
   on_macos do
-    sha256 arm:   "021ec9e364d63c4fb3d900f123c4b552cd20b356d8471a56897d5c808e15aa48",
-           intel: "0830aa2b37abf8fb33669eaa26dac5f12d3ad8fc3a82e733252de9ca34801687"
-
-    depends_on macos: :big_sur
-
     app "Bazecor.app"
+
+    uninstall quit: "com.dygmalab.bazecor"
 
     zap trash: [
       "~/Library/Application Support/BAZECOR",
@@ -21,11 +21,11 @@ cask "bazecor" do
     ]
   end
   on_linux do
-    sha256 "b5d92e67b6087477ad74b8b911493d1ccbd6d265b43aab1bdbcc6c7a2b1eb364"
-
     depends_on arch: :x86_64
 
     app_image "Bazecor-#{version}-#{arch}.AppImage", target: "Bazecor.AppImage"
+
+    zap trash: "~/.config/Bazecor"
   end
 
   url "https://github.com/Dygmalab/Bazecor/releases/download/v#{version}/Bazecor-#{version}-#{arch}.#{url_end}"

@@ -8,5 +8,5 @@ cask "font-acme" do
 
   font "Acme-Regular.ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

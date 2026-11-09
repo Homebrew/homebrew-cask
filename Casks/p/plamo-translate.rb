@@ -1,6 +1,6 @@
 cask "plamo-translate" do
-  version "0.6.11"
-  sha256 "c09aac65d519c477244bf8d0fa979e95af736c14813ba2ac1441fe3c76a5947d"
+  version "0.8.6"
+  sha256 "ec5c37b4d1a8c41bc284825a136fadacc6cd16a837d3e0025284714f12ed2f55"
 
   url "https://storage.googleapis.com/plamo-translate-web-downloads-prd/desktop/plamo-translate-desktop-#{version}.dmg"
   name "PLaMo Translate"
@@ -13,8 +13,8 @@ cask "plamo-translate" do
     strategy :electron_builder
   end
 
-  depends_on macos: :monterey
   depends_on arch: :arm64
+  depends_on macos: :ventura
 
   app "PLaMo翻訳.app"
 

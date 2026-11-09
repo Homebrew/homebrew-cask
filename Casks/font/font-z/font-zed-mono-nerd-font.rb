@@ -104,5 +104,5 @@ cask "font-zed-mono-nerd-font" do
   font "ZedMonoNerdFontPropo-Oblique.ttf"
   font "ZedMonoNerdFontPropo-Regular.ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

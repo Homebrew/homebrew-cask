@@ -8,5 +8,5 @@ cask "font-ultra" do
 
   font "Ultra-Regular.ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

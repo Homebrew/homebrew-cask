@@ -1,6 +1,6 @@
 cask "slicer" do
-  version "5.12.3,6a61a0b02eb3d967f032af6c"
-  sha256 "7904d7aa6aadc5ee5ea855ec7d28b33c24444daddd98684a8673a14f4c37d794"
+  version "5.12.4,6aa2063bce9de556d30132d8"
+  sha256 "a15ea10dc67db53c477fc7cb80b2c64a2cfb2516a9a67056a6432c5272c223e4"
 
   url "https://slicer-packages.kitware.com/api/v1/item/#{version.csv.second}/download"
   name "3D Slicer"

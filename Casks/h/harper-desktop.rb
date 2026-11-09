@@ -1,6 +1,6 @@
 cask "harper-desktop" do
-  version "2.9.1"
-  sha256 "e00e501ae0840bba015bd4e491ba8a2a843c3236eb94558508dc67d68d8a143b"
+  version "3.1.0"
+  sha256 "9c1bbbcd71ee943dc3cde5454098e788f097967426ff75e858081ee21c99b8f2"
 
   url "https://github.com/Automattic/harper/releases/download/v#{version}/Harper_#{version}_universal.dmg"
   name "Harper Desktop"

@@ -14,5 +14,5 @@ cask "font-elstobd" do
   font "Elstob_font/variable/Elstob-Italic.ttf"
   font "Elstob_font/variable/Elstob.ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

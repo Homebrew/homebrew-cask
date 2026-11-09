@@ -8,5 +8,5 @@ cask "font-sekuya" do
 
   font "Sekuya-Regular.ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

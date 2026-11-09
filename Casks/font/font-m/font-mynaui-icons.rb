@@ -14,5 +14,5 @@ cask "font-mynaui-icons" do
   font "mynaui-icons-#{version}/packages/icons/mynaui-solid.ttf"
   font "mynaui-icons-#{version}/packages/icons/mynaui.ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

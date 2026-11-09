@@ -1,6 +1,6 @@
 cask "lightburn" do
-  version "2.1.04"
-  sha256 "d888bced55faa15dadd687e15c8d1a51168ba8011ef21ac84b0172ea05e12c3a"
+  version "2.2.01"
+  sha256 "62cea610010c0bc34b7a78269f3da7aacdd3c214da7f46b3ad0c94fb58436412"
 
   url "https://release.lightburnsoftware.com/LightBurn/Release/LightBurn-v#{version}/LightBurn.V#{version}.dmg"
   name "LightBurn"
@@ -12,17 +12,16 @@ cask "lightburn" do
     regex(/href=.*?LightBurn[._-]V?(\d+(?:\.\d+)+)\.dmg/i)
   end
 
-  depends_on macos: :big_sur
+  depends_on macos: :ventura
 
   app "LightBurn.app"
 
-  zap trash: [
-    "~/Library/Preferences/com.LightBurnSoftware.LightBurn.plist",
-    "~/Library/Preferences/LightBurn",
-    "~/Library/Saved Application State/com.LightBurnSoftware.LightBurn.savedState",
-  ]
+  uninstall quit: "com.LightBurnSoftware.LightBurn"
 
-  caveats do
-    requires_rosetta
-  end
+  zap trash: [
+        "~/Library/Preferences/com.LightBurnSoftware.LightBurn.plist",
+        "~/Library/Preferences/LightBurn",
+        "~/Library/Saved Application State/com.LightBurnSoftware.LightBurn.savedState",
+      ],
+      rmdir: "~/.LightBurn"
 end

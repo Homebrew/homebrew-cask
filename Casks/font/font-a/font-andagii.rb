@@ -12,5 +12,5 @@ cask "font-andagii" do
 
   font "ANDAGII_.TTF"
 
-  # No zap stanza required
+  zap :not_required
 end

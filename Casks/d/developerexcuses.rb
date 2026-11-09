@@ -7,9 +7,11 @@ cask "developerexcuses" do
   desc "Screensaver showing quotes from developerexcuses.com"
   homepage "https://github.com/kimar/DeveloperExcuses"
 
+  disable! date: "2026-10-12", because: :fails_gatekeeper_check
+
   depends_on :macos
 
   screen_saver "DeveloperExcuses.saver"
 
-  # No zap stanza required
+  zap :not_required
 end

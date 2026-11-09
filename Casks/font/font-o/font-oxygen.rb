@@ -12,5 +12,5 @@ cask "font-oxygen" do
   font "Oxygen-Light.ttf"
   font "Oxygen-Regular.ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

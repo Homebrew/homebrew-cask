@@ -11,5 +11,5 @@ cask "font-annapurna-sil" do
   font "AnnapurnaSIL-Bold.ttf"
   font "AnnapurnaSIL-Regular.ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

@@ -1,6 +1,6 @@
 cask "slashy" do
-  version "1.3.57"
-  sha256 "048c9fd34f772a9f4f17922bf7a0ff6ed3fcfd1d4556c5cf2e237191db8501db"
+  version "1.3.67"
+  sha256 "41b53025322634aa61fc4dbec9fa5cb34b2df0628dfe050b5c809f134b041691"
 
   url "https://dl.slashy.com/Slashy-#{version}-universal.dmg"
   name "Slashy"
@@ -18,7 +18,12 @@ cask "slashy" do
   app "Slashy.app"
 
   zap trash: [
+    "~/Library/Application Scripts/com.slashy.email.calendar-widget",
+    "~/Library/Application Scripts/HQ26LAYG9H.com.slashy.email.calendar-widget",
+    "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.slashy.email.sfl*",
     "~/Library/Application Support/slashyemail",
+    "~/Library/Containers/com.slashy.email.calendar-widget",
+    "~/Library/Group Containers/HQ26LAYG9H.com.slashy.email.calendar-widget",
     "~/Library/Preferences/com.slashy.email.plist",
   ]
 end

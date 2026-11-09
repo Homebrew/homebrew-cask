@@ -13,5 +13,5 @@ cask "font-share" do
   font "Share-Italic.ttf"
   font "Share-Regular.ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

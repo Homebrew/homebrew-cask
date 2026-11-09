@@ -8,5 +8,5 @@ cask "font-square-peg" do
 
   font "SquarePeg-Regular.ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

@@ -1,9 +1,9 @@
 cask "session-manager-plugin" do
   arch arm: "_arm64"
 
-  version "1.2.835.0"
-  sha256 arm:   "1392dde1e7c91c4e66996e8a8374c9be2a1907847cf96259311cf9c53fdff900",
-         intel: "2e437c5a9ca54a600e11c1c8994d7e7a776ee16ea7c0bb26d0923882aceda4c4"
+  version "1.2.896.0"
+  sha256 arm:   "b95139a76cb473654d92185c200ac65205244b20f96aeb240b53837ba4973084",
+         intel: "d9d960f04acb5ba419e0a12f769f9af4f3263e098b9b63e2de659189c138341a"
 
   url "https://session-manager-downloads.s3.amazonaws.com/plugin/#{version}/mac#{arch}/session-manager-plugin.pkg"
   name "Session Manager Plugin for the AWS CLI"

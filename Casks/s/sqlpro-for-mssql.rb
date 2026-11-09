@@ -1,6 +1,6 @@
 cask "sqlpro-for-mssql" do
-  version "2026.238"
-  sha256 "01bc90bab8b63e0205d42edc610a7a88396052eb8d940e0ec9bda9bdd4c03ad4"
+  version "2026.301"
+  sha256 "74a8c36db83faf67c804e108cad86d630d0cc4b1519f6115745c7c672a219bba"
 
   url "https://d3fwkemdw8spx3.cloudfront.net/mssql/SQLProMSSQL.#{version}.app.zip"
   name "SQLPro for MSSQL"
@@ -17,6 +17,7 @@ cask "sqlpro-for-mssql" do
   app "SQLPro for MSSQL.app"
 
   zap trash: [
+    "~/Library/Application Scripts/com.hankinsoft.osx.tinysqlstudio",
     "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.hankinsoft.osx.tinysqlstudio.sfl*",
     "~/Library/Containers/com.hankinsoft.osx.tinysqlstudio",
   ]

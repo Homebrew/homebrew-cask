@@ -8,5 +8,5 @@ cask "font-fasthand" do
 
   font "Fasthand-Regular.ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

@@ -18,7 +18,9 @@ cask "monocle-app" do
   app "Monocle.app"
 
   zap trash: [
+    "~/Library/Application Scripts/dk.heyiam.monocle",
     "~/Library/Application Support/dk.heyiam.monocle",
+    "~/Library/Containers/dk.heyiam.monocle",
     "~/Library/Group Containers/com.monocle.settings",
     "~/Library/Preferences/dk.heyiam.monocle.plist",
   ]

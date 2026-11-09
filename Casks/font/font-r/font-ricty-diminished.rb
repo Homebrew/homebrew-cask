@@ -20,5 +20,5 @@ cask "font-ricty-diminished" do
   font "RictyDiminishedDiscord-Oblique.ttf"
   font "RictyDiminishedDiscord-Regular.ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

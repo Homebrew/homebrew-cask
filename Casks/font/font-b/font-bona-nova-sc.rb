@@ -12,5 +12,5 @@ cask "font-bona-nova-sc" do
   font "BonaNovaSC-Italic.ttf"
   font "BonaNovaSC-Regular.ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

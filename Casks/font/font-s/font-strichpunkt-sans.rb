@@ -8,5 +8,5 @@ cask "font-strichpunkt-sans" do
 
   font "StrichpunktSans[wdth,wght].ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

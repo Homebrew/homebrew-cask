@@ -10,5 +10,5 @@ cask "font-droid-sans-mono-for-powerline" do
 
   font "Droid Sans Mono for Powerline.otf"
 
-  # No zap stanza required
+  zap :not_required
 end

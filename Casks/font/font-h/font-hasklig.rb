@@ -26,5 +26,5 @@ cask "font-hasklig" do
   font "OTF/Hasklig-Semibold.otf"
   font "OTF/Hasklig-SemiboldIt.otf"
 
-  # No zap stanza required
+  zap :not_required
 end

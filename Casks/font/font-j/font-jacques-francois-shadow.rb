@@ -8,5 +8,5 @@ cask "font-jacques-francois-shadow" do
 
   font "JacquesFrancoisShadow-Regular.ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

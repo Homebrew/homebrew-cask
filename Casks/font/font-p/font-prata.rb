@@ -8,5 +8,5 @@ cask "font-prata" do
 
   font "Prata-Regular.ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

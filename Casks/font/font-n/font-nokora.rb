@@ -8,5 +8,5 @@ cask "font-nokora" do
 
   font "Nokora[wght].ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

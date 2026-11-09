@@ -7,12 +7,7 @@ cask "dhs" do
   desc "Scans for dylib hijacking"
   homepage "https://objective-see.org/products/dhs.html"
 
-  livecheck do
-    url :url
-    strategy :github_latest
-  end
-
-  depends_on macos: :big_sur
+  depends_on :macos
 
   app "DHS.app"
 

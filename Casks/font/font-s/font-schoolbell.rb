@@ -8,5 +8,5 @@ cask "font-schoolbell" do
 
   font "Schoolbell-Regular.ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

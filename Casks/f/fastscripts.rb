@@ -1,6 +1,6 @@
 cask "fastscripts" do
-  version "3.3.8"
-  sha256 "9c83004c7c44314238991074e8c842ef296eeb5de3435015eaa34c4995e35b0d"
+  version "3.3.9"
+  sha256 "9f92dbe3d899982a2a34f155ed2ecd94de1b0803a8057c6503600427996a5534"
 
   url "https://redsweater.com/fastscripts/FastScripts#{version}.zip"
   name "FastScripts"
@@ -18,6 +18,8 @@ cask "fastscripts" do
   app "FastScripts.app"
 
   zap trash: [
+    "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.red-sweater.fastscripts#{version.major}.sfl*",
+    "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.red-sweater.fastscripts.rsscriptrunner.sfl*",
     "~/Library/Application Support/FastScripts Script Runner",
     "~/Library/Application Support/FastScripts",
     "~/Library/Caches/com.red-sweater.fastscripts#{version.major}",

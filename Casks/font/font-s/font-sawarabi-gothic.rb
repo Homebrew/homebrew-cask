@@ -8,5 +8,5 @@ cask "font-sawarabi-gothic" do
 
   font "SawarabiGothic-Regular.ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

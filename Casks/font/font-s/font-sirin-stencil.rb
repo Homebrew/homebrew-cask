@@ -8,5 +8,5 @@ cask "font-sirin-stencil" do
 
   font "SirinStencil-Regular.ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

@@ -8,5 +8,5 @@ cask "font-maname" do
 
   font "Maname-Regular.ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

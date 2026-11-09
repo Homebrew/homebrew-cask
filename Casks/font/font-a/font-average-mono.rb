@@ -11,5 +11,5 @@ cask "font-average-mono" do
   font "AverageMono/AverageMonoBoldItalic.otf"
   font "AverageMono/AverageMonoItalic.otf"
 
-  # No zap stanza required
+  zap :not_required
 end

@@ -2,11 +2,11 @@ cask "copilot-cli@prerelease" do
   arch arm: "arm64", intel: "x64"
   os macos: "darwin", linux: "linux"
 
-  version "1.0.84-2"
-  sha256 arm:          "649c5e3fd731d249b3b6b3ac1522035c25f3733dfa29b11ad3a3f8ece684ddbb",
-         intel:        "d094ed8d0e3f5f2741921f01c4f12d8180da8cce79fd72361450fd7e51ca66b2",
-         arm64_linux:  "226dec2e74c18a8f0f27ada4b3f61e4005a944d93b5e5ad6ded571476603e9e5",
-         x86_64_linux: "81e2fc2848da6207fd0874a2072ccd0b9a179c9f0d939952b0cff504d96ff514"
+  version "1.0.108-1"
+  sha256 arm:          "577cb041ff6fa6291784b45e10f6cf3d18713c9e5fc11fa9fae2c1913c129fd3",
+         intel:        "19fc2bd12ede3af32136ca37a5daaa724def935eb0324d9914c519b5e68295d1",
+         arm64_linux:  "9405781848660f7712ac33f5fabda934b55d3698f3e87ce3b92f35567d9d252f",
+         x86_64_linux: "61b9bfa69433477e81b74b45c4b225fc2b8f4fa78e9a3edf54e564c0dbdcd2e0"
 
   on_macos do
     depends_on macos: :ventura
@@ -38,5 +38,8 @@ cask "copilot-cli@prerelease" do
   binary "copilot"
   generate_completions_from_executable "copilot", "completion"
 
-  zap trash: "~/.copilot"
+  zap trash: [
+    "~/.copilot",
+    "~/Library/Caches/copilot",
+  ]
 end

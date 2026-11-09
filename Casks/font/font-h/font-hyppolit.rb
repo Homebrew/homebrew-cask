@@ -8,5 +8,5 @@ cask "font-hyppolit" do
 
   font "Hyppolit.ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

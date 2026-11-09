@@ -8,5 +8,5 @@ cask "font-flavors" do
 
   font "Flavors-Regular.ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

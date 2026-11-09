@@ -11,5 +11,5 @@ cask "font-courier-new" do
   font "courbi.ttf"
   font "couri.ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

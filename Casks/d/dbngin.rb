@@ -1,6 +1,6 @@
 cask "dbngin" do
-  version "26.1.0,92"
-  sha256 "272cfcf9228e59ea2eac0f5b9b5f2556475a1c01c5d7b9fa248a8e383f2a5f1e"
+  version "27.0.2,102"
+  sha256 "58665a50da1ae6d8c3ac0286e1280ce3cc02ab448e49af9b88a4b9ccb282c969"
 
   url "https://files.dbngin.com/macos/#{version.csv.second}/DBngin.dmg"
   name "DBngin"
@@ -13,7 +13,7 @@ cask "dbngin" do
   end
 
   auto_updates true
-  depends_on :macos
+  depends_on macos: :monterey
 
   app "DBngin.app"
 

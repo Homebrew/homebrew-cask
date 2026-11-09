@@ -38,5 +38,5 @@ cask "font-intone-mono-nerd-font" do
   font "IntoneMonoNerdFontPropo-MediumItalic.ttf"
   font "IntoneMonoNerdFontPropo-Regular.ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

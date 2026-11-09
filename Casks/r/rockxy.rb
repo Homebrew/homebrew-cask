@@ -1,6 +1,6 @@
 cask "rockxy" do
-  version "0.38.2,57"
-  sha256 "95c38a821d161a6f747970ea0f16d645757b3c48428a8872920c8655f18818b9"
+  version "0.42.0,63"
+  sha256 "63bb22fb1edd60da47d9c23ba7593f8d2654d49932dc1e6869680cd04903b3d2"
 
   url "https://github.com/RockxyApp/Rockxy/releases/download/v#{version.csv.first}/Rockxy-#{version.tr(",", "-")}.dmg"
   name "Rockxy"
@@ -23,6 +23,7 @@ cask "rockxy" do
   zap trash: [
     "~/Library/Application Support/com.amunx.rockxy",
     "~/Library/Application Support/com.amunx.rockxy.community",
+    "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.amunx.rockxy.community.sfl*",
     "~/Library/Caches/com.amunx.rockxy.community",
     "~/Library/HTTPStorages/com.amunx.rockxy.community",
     "~/Library/Preferences/com.amunx.rockxy.community.plist",

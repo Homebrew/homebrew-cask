@@ -8,5 +8,5 @@ cask "font-protest-revolution" do
 
   font "ProtestRevolution-Regular.ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

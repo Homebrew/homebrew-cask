@@ -34,5 +34,5 @@ cask "surge-xt" do
               "/Applications/Surge XT.app",
             ]
 
-  # No zap stanza required
+  zap :not_required
 end

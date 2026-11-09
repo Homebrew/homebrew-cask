@@ -2,9 +2,9 @@ cask "jasp" do
   arch arm: "arm64", intel: "x86_64"
   livecheck_folder = on_arch_conditional arm: "-apple-silicon"
 
-  version "0.98.1.0"
-  sha256 arm:   "e980236d1ec6d58571b1f120d48f6c4c8ffc71bc893250a4988e96637220f257",
-         intel: "d39665e1c1478ae04c1b1c5c92754806b0824f31dcb65d4c5f7497b9e1f2fb07"
+  version "0.99.0.0"
+  sha256 arm:   "f67c1279c40440ee94860382866fc5681756d08c3338d95f52d87faff3a0afec",
+         intel: "b78dc537bfcc26d068efe0f25a1737429208bb28f6a3c568aacc8d13878866d2"
 
   on_intel do
     disable! date: "2026-09-01", because: :fails_gatekeeper_check
@@ -29,11 +29,14 @@ cask "jasp" do
 
   app "JASP.app"
 
+  uninstall quit: "org.jaspstats.jasp"
+
   zap trash: [
-    "~/.JASP",
-    "~/Library/Application Support/JASP",
-    "~/Library/Caches/JASP",
-    "~/Library/Preferences/org.jasp-stats.JASP.plist",
-    "~/Library/Saved Application State/org.jasp-stats.jasp.savedState",
-  ]
+        "~/.JASP",
+        "~/Library/Application Support/JASP",
+        "~/Library/Caches/JASP",
+        "~/Library/Preferences/org.jasp-stats.JASP.plist",
+        "~/Library/Saved Application State/org.jasp-stats.jasp.savedState",
+      ],
+      rmdir: "~/Documents/JASP_Sandbox"
 end

@@ -1,6 +1,6 @@
 cask "dockflow" do
-  version "1.81"
-  sha256 "d4c68721adfa6e07292c46ae6d72d92149839bababcb5ef2d42b0ac522ba46e9"
+  version "1.94"
+  sha256 "b05ff4f08549eacb1dd84cfb4ecf27b0bbd60129a048eb53f8fa9006f71c6b5d"
 
   url "https://github.com/AppitStudio/dock-flow-updates/releases/download/v#{version}/DockFlow.dmg"
   name "DockFlow"
@@ -23,6 +23,8 @@ cask "dockflow" do
     "~/Library/Application Support/DockFlow",
     "~/Library/Caches/com.appit.DockFlow",
     "~/Library/Group Containers/com.appit.DockFlowGroup",
+    "~/Library/Preferences/com.appit.DockFlow.licensing-admission.plist",
+    "~/Library/Preferences/com.appit.DockFlow.lifecycle.plist",
     "~/Library/Preferences/com.appit.DockFlow.plist",
     "~/Library/Preferences/com.appit.DockFlowHelper.plist",
     "~/Library/Saved Application State/com.appit.DockFlow.savedState",

@@ -1,10 +1,10 @@
 cask "codexbar" do
-  version "0.57.0"
-  sha256 "7bd3093cd18fef4943393f0b754870628fb77f08a129d60c3c42b647c5dbaf7c"
+  version "0.84.0"
+  sha256 "c1da2faaa9608f8798306c300804d3720782656f955d736d18bcac476b77ed2c"
 
   url "https://github.com/steipete/CodexBar/releases/download/v#{version}/CodexBar-macos-universal-#{version}.zip"
   name "CodexBar"
-  desc "Menu bar usage monitor for Codex and Claude"
+  desc "Menu bar app for tracking agentic coding limits and usage"
   homepage "https://codexbar.app/"
 
   depends_on macos: :sonoma

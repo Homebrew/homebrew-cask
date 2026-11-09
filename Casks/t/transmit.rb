@@ -1,6 +1,6 @@
 cask "transmit" do
-  version "5.11.6"
-  sha256 "6761097e3ec7141058f0fa67815ff2244e2ca68f9fcdce06edeaf04279a10208"
+  version "5.11.7"
+  sha256 "af7b01ff0346e428426fbd91ea6c3830c4e10243258e39e9fe52fd8eeb5d9dda"
 
   url "https://download-cdn.panic.com/transmit/Transmit%20#{version}.zip",
       user_agent: :browser

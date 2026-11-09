@@ -8,5 +8,5 @@ cask "font-taprom" do
 
   font "Taprom-Regular.ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

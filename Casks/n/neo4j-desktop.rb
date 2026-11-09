@@ -1,7 +1,7 @@
 cask "neo4j-desktop" do
   # NOTE: "4" is not a version number, but an intrinsic part of the product name
-  version "2.2.1"
-  sha256 "f4d2b1324af3aeaf008de29e0ed1aff13ebd23c4850ef5ff154ff2992128711a"
+  version "2.3.1"
+  sha256 "045005b2c6d651ecfae6deabfffb807873933a9b484c8c478ae9f7c95c1214f0"
 
   url "https://dist.neo4j.org/neo4j-desktop-#{version.major}/mac/neo4j-desktop-#{version}-universal.dmg"
   name "Neo4j Desktop"
@@ -13,15 +13,17 @@ cask "neo4j-desktop" do
     regex(%r{href=.*?/neo4j-desktop/.*?flavour=osx.*?release=(\d+(?:\.\d+)+)}i)
   end
 
-  depends_on macos: :monterey
+  depends_on macos: :ventura
 
   app "Neo4j Desktop #{version.major}.app"
 
   zap trash: [
+    "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.neo4j.neo4j-desktop-2.sfl*",
     "~/Library/Application Support/com.Neo4j.Relate",
     "~/Library/Application Support/Neo4j Desktop",
     "~/Library/Caches/com.Neo4j.Relate",
     "~/Library/Logs/Neo4j Desktop",
+    "~/Library/Preferences/com.neo4j.neo4j-desktop-2.plist",
     "~/Library/Preferences/com.neo4j.neo4j-desktop.plist",
     "~/Library/Saved Application State/com.neo4j.neo4j-desktop.savedState",
   ]

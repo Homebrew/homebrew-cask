@@ -8,5 +8,5 @@ cask "font-murecho" do
 
   font "Murecho[wght].ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

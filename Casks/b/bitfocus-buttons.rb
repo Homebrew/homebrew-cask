@@ -2,18 +2,23 @@ cask "bitfocus-buttons" do
   arch arm: "arm", intel: "x64"
   livecheck_arch = on_arch_conditional arm: "arm", intel: "intel"
 
-  version "1.6.9,5647,8ab35c7c"
-  sha256 arm:   "c2ab3d1e012e0d8e071c34ff0a6061fb9fd2068c12970b4baf25cbb22ef47e78",
-         intel: "835c1f7d3222093fa4fe56e41e976a12cc60c04a8c4970713431763827a5b6b9"
+  on_arm do
+    version "1.8.10,7301,16376c94"
+    sha256 "b4e9242318fe3f36e50e4fd0f3021e381a6243b015848d5446c3199d6f2f2902"
+  end
+  on_intel do
+    version "1.6.11,5658,cea7b6bf"
+    sha256 "896be2bae110109c5b22b4136c01b3be38f95d47f466c7b4e6040b0a17af5342"
+  end
 
-  url "https://s4.bitfocus.io/builds/buttons/bitfocus-buttons-mac-#{arch}-#{version.csv.second}-#{version.csv.third}.pkg"
+  url "https://cf-pub.bitfocus.io/buttons/buttons/bitfocus-buttons-mac-#{arch}-#{version.csv.first}-#{version.csv.second}-stable-#{version.csv.third}.pkg"
   name "Bitfocus Buttons"
   desc "Unified control and monitoring software"
   homepage "https://bitfocus.io/buttons"
 
   livecheck do
     url "https://api.bitfocus.io/v1/product/buttons/packages?branch=stable&limit=150"
-    regex(/buttons[._-]mac[._-]#{arch}[._-]v?(\d+(?:\.\d+)*)[._-](\h+)\.pkg/i)
+    regex(/buttons[._-]mac[._-]#{arch}[._-]v?(\d+(?:\.\d+)+)[._-](\d+)[._-]stable[._-](\h+)\.pkg/i)
     strategy :json do |json, regex|
       json["packages"]&.map do |package|
         next if package["target"] != "mac-#{livecheck_arch}"
@@ -21,14 +26,14 @@ cask "bitfocus-buttons" do
         match = package["uri"]&.match(regex)
         next if match.blank?
 
-        "#{package["version"]&.tr("v", "")},#{match[1]},#{match[2]}"
+        "#{match[1]},#{match[2]},#{match[3]}"
       end
     end
   end
 
   depends_on :macos
 
-  pkg "bitfocus-buttons-mac-#{arch}-#{version.csv.second}-#{version.csv.third}.pkg"
+  pkg "bitfocus-buttons-mac-#{arch}-#{version.csv.first}-#{version.csv.second}-stable-#{version.csv.third}.pkg"
 
   uninstall pkgutil: "io.bitfocus.buttons.pkg"
 

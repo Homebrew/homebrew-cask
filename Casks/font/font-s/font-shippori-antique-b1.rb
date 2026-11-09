@@ -8,5 +8,5 @@ cask "font-shippori-antique-b1" do
 
   font "ShipporiAntiqueB1-Regular.ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

@@ -11,5 +11,5 @@ cask "font-geom" do
   font "Geom-Italic[wght].ttf"
   font "Geom[wght].ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

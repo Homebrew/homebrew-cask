@@ -8,5 +8,5 @@ cask "font-emilys-candy" do
 
   font "EmilysCandy-Regular.ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

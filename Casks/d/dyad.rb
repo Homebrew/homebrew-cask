@@ -3,12 +3,12 @@ cask "dyad" do
   os macos: "-darwin-#{arch}-", linux: "_"
   url_end = on_system_conditional macos: ".zip", linux: "_x86_64.AppImage"
 
-  version "1.13.0"
+  version "1.22.0"
+  sha256 arm:          "5307d4949407bbc81693d152e3c5795edea1409dc1daf202f02a20779b8b24d6",
+         intel:        "0f931e0053b717cc3660b15afa3a973a4f31e7f474a94f45c9feae760034d2bc",
+         x86_64_linux: "ac0a8f895515ce350b69f7469566dffd38d43c26595cabe0912788b78e1e67b5"
 
   on_macos do
-    sha256 arm:   "0a51cd7dd8cf62fbc5d6502c62bd52b389a671f7088d5fc0075ee28efbe6c239",
-           intel: "ac1b4e9108b51e2f76647829e5b55cd90909796c4f97f05eae9192d3026d29e6"
-
     depends_on macos: :monterey
 
     app "dyad.app"
@@ -24,11 +24,15 @@ cask "dyad" do
     ], rmdir: "~/dyad-apps"
   end
   on_linux do
-    sha256 "40baf5b10e1cc49059f3d4b6ce23399f67c7815cc1df8ebea4c0a57ac30a63c8"
-
     depends_on arch: :x86_64
 
     app_image "dyad_#{version}_x86_64.AppImage", target: "Dyad.AppImage"
+
+    zap trash: [
+          "~/.config/dyad",
+          "~/.local/share/applications/dyad-url-handler.desktop",
+        ],
+        rmdir: "~/dyad-apps"
   end
 
   url "https://github.com/dyad-sh/dyad/releases/download/v#{version}/dyad#{os}#{version}#{url_end}"

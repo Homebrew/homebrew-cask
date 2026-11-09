@@ -8,5 +8,5 @@ cask "font-permanent-marker" do
 
   font "PermanentMarker-Regular.ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

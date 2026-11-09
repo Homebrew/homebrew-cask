@@ -8,5 +8,5 @@ cask "font-noto-serif-nyiakeng-puachue-hmong" do
 
   font "NotoSerifNyiakengPuachueHmong[wght].ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

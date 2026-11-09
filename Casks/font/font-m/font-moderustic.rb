@@ -8,5 +8,5 @@ cask "font-moderustic" do
 
   font "Moderustic[wght].ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

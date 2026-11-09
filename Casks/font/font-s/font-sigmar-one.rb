@@ -8,5 +8,5 @@ cask "font-sigmar-one" do
 
   font "SigmarOne-Regular.ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

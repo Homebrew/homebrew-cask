@@ -1,9 +1,9 @@
 cask "gitbutler" do
   arch arm: "aarch64", intel: "x86_64"
 
-  version "0.22.3,3234"
-  sha256 arm:   "edf0f680c102ff86faee1d919ea2a6166fcbe6e3a98986706c91a38eed662f74",
-         intel: "9b22060fb0dd11a4d9e41ee3d93c67b0c24986b824055fb9107368075c5c4b37"
+  version "0.23.2,3329"
+  sha256 arm:   "f85983085d9a259b0f945356cd7520e60e57b008526498c0cb83f39b3ad82f90",
+         intel: "57bc00bd42fe9c491ff34797cde82e96a39ad9d3bee38ae10bc42cac39868731"
 
   url "https://releases.gitbutler.com/releases/release/#{version.csv.first}-#{version.csv.second}/macos/#{arch}/GitButler.app.tar.gz"
   name "GitButler"
@@ -29,6 +29,7 @@ cask "gitbutler" do
 
   zap trash: [
     "~/Library/Application Support/com.gitbutler.app",
+    "~/Library/Application Support/gitbutler",
     "~/Library/Caches/com.gitbutler.app",
     "~/Library/Logs/com.gitbutler.app",
     "~/Library/Preferences/com.gitbutler.app.plist",

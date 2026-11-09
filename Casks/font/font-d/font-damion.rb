@@ -8,5 +8,5 @@ cask "font-damion" do
 
   font "Damion-Regular.ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

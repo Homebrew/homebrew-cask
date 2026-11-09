@@ -1,6 +1,6 @@
 cask "little-snitch@nightly" do
-  version "6.5,7301"
-  sha256 "259fc5a4b41f00f1d080547be3608c5ec2d1cdb40427007c129b592668ef8d27"
+  version "6.5.1,7309"
+  sha256 "a385f8dc44f09252e647b2ffdb142e6004ef2b2e9f6164dce496427ac8b12df6"
 
   url "https://www.obdev.at/downloads/littlesnitch/nightly/LittleSnitch-#{version.csv.first}-nightly-(#{version.csv.second}).dmg"
   name "Little Snitch"

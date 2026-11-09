@@ -8,5 +8,5 @@ cask "font-anek-kannada" do
 
   font "AnekKannada[wdth,wght].ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

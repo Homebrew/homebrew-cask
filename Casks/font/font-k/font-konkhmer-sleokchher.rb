@@ -8,5 +8,5 @@ cask "font-konkhmer-sleokchher" do
 
   font "KonkhmerSleokchher-Regular.ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

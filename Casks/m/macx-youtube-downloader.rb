@@ -1,5 +1,5 @@
 cask "macx-youtube-downloader" do
-  version "5.5.0"
+  version "5.5.2"
   sha256 :no_check
 
   url "https://www.macxdvd.com/download/macx-youtube-downloader-free.dmg"
@@ -23,8 +23,10 @@ cask "macx-youtube-downloader" do
   app "MacX YouTube Downloader.app"
 
   zap trash: [
+    "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.digiarty.youtubedownloader#{version.major}.sfl*",
     "~/Library/Application Support/Digiarty",
     "~/Library/Caches/com.digiarty.youtubedownloader#{version.major}",
+    "~/Library/HTTPStorages/com.digiarty.youtubedownloader#{version.major}",
     "~/Library/Preferences/com.digiarty.youtubedownloader#{version.major}.plist",
   ]
 end

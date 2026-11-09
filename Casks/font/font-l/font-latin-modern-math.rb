@@ -13,5 +13,5 @@ cask "font-latin-modern-math" do
 
   font "latinmodern-math-#{version.no_dots}/otf/latinmodern-math.otf"
 
-  # No zap stanza required
+  zap :not_required
 end

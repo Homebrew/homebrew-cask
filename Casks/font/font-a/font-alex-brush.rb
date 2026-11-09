@@ -8,5 +8,5 @@ cask "font-alex-brush" do
 
   font "AlexBrush-Regular.ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

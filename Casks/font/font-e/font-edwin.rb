@@ -11,5 +11,5 @@ cask "font-edwin" do
   font "Edwin-#{version}/Edwin-Italic.otf"
   font "Edwin-#{version}/Edwin-Roman.otf"
 
-  # No zap stanza required
+  zap :not_required
 end

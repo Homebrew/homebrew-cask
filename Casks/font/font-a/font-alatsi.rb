@@ -8,5 +8,5 @@ cask "font-alatsi" do
 
   font "Alatsi-Regular.ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

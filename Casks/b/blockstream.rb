@@ -2,27 +2,34 @@ cask "blockstream" do
   arch arm: "arm64", intel: "x86_64"
   url_end = on_system_conditional macos: "dmg", linux: "AppImage"
 
-  version "3.5.3"
+  version "3.6.1"
+  sha256 arm:          "41dd9a5ac365ddde2a950256f4bce9cac31d5f660f3a2b3793af5d753426cb47",
+         intel:        "3597c67979543b4bbaf72f97d0a948ce79da223314802f0ceb947c8dd2aad8b1",
+         x86_64_linux: "7dbb4cf8104b0e9fbffc0ab38e21bdccebe7332b45c0bd73c0c9eef72b73471c"
 
   on_macos do
-    sha256 arm:   "38d50624aa55ef6e8c08362711af99781643135b87b0479b0c5808711a8fa0d9",
-           intel: "258904592f787d48e71bb2829695b8079d2f0af46ebd1e9fde74e4b8805ad70c"
-
     depends_on macos: :ventura
 
     app "Blockstream.app"
 
     zap trash: [
-      "~/Library/Application Support/Blockstream/Green",
-      "~/Library/Caches/Blockstream/Green",
+      "~/Library/Application Support/Blockstream",
+      "~/Library/Caches/Blockstream",
     ]
   end
   on_linux do
-    sha256 "9e7091654abb460cd8a9fd3fa72324ab5e3422a91f483d89425d9e42325ee7ac"
-
     depends_on arch: :x86_64
 
     app_image "Blockstream-#{arch}.AppImage", target: "Blockstream.AppImage"
+
+    zap trash: [
+          "~/.cache/Blockstream/Blockstream",
+          "~/.local/share/Blockstream/Green",
+        ],
+        rmdir: [
+          "~/.cache/Blockstream",
+          "~/.local/share/Blockstream",
+        ]
   end
 
   url "https://github.com/Blockstream/green_qt/releases/download/release_#{version}/Blockstream-#{arch}.#{url_end}"

@@ -1,14 +1,14 @@
 cask "adobe-air" do
-  version "51.3.3.1"
-  sha256 "e766a4030ace3a4d154f80de5d39d3d2a518732ce27fd781ac0ba738a63d0f1e"
+  version "51.4.1.2"
+  sha256 "e8051b9051724406a1627de8593b16a135aa411413745aee6bd23379c88de261"
 
-  url "https://airsdk.harman.com/assets/downloads/#{version}/AdobeAIR.dmg"
+  url "https://airsdk.wxlift.com/assets/downloads/#{version}/AdobeAIR.dmg"
   name "Adobe AIR"
   desc "Framework used in the development of applications and games"
-  homepage "https://airsdk.harman.com/"
+  homepage "https://airsdk.wxlift.com/"
 
   # The download page is rendered using JavaScript with the download links
-  # obtained from https://airsdk.harman.com/main.<number>.js
+  # obtained from https://airsdk.wxlift.com/main.<number>.js
   # Since the <number> is not fixed in the filename, the current JavaScript
   # file needs to be extracted from the download page.
   livecheck do
@@ -18,7 +18,7 @@ cask "adobe-air" do
       js_file = page[/src=["']?(main.+\.js)\??["' >]/i, 1]
       next if js_file.blank?
 
-      version_page = Homebrew::Livecheck::Strategy.page_content("https://airsdk.harman.com/#{js_file}")
+      version_page = Homebrew::Livecheck::Strategy.page_content("https://airsdk.wxlift.com/#{js_file}")
       version_page[:content]&.scan(regex)&.map { |match| match[0] }
     end
   end

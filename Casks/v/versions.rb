@@ -1,6 +1,6 @@
 cask "versions" do
-  version "2.4.5,2042"
-  sha256 "38cd533eff8669046f9d4a886c5ebabfdb93e8c51f9bb94e43fa5f3d31af9ae4"
+  version "3.0.3,3007"
+  sha256 "e59e500cf82b63276ed7e72ed4a55ff0afd26cfd5cfbd30af787a3b23314f8c0"
 
   url "https://updates.versionsapp.com/v#{version.major}/prod/Versions-#{version.csv.first}-#{version.csv.second}.zip"
   name "Versions"
@@ -12,14 +12,18 @@ cask "versions" do
     strategy :sparkle
   end
 
-  depends_on :macos
+  depends_on macos: :sonoma
 
   app "Versions.app"
 
   zap trash: [
+    "~/Library/Application Scripts/4G35KLFD64.com.versionsapp.shared",
+    "~/Library/Application Scripts/com.versionsapp.v#{version.major}.finder",
     "~/Library/Application Support/com.versionsapp.v#{version.major}",
     "~/Library/Application Support/Versions",
     "~/Library/Caches/com.versionsapp.v#{version.major}",
+    "~/Library/Containers/com.versionsapp.v#{version.major}.finder",
+    "~/Library/Group Containers/4G35KLFD64.com.versionsapp.shared",
     "~/Library/HTTPStorages/com.versionsapp.v#{version.major}",
     "~/Library/Preferences/com.versionsapp.v#{version.major}.plist",
     "~/Library/WebKit/com.versionsapp.v#{version.major}",

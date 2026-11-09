@@ -8,5 +8,5 @@ cask "font-benne" do
 
   font "Benne-Regular.ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

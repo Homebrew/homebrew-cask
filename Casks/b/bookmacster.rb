@@ -1,6 +1,6 @@
 cask "bookmacster" do
-  version "3.3.9"
-  sha256 "beb0811eadbbc2efeef1e7a1fe157b691996faaef073561d65fdcb680cdc16cd"
+  version "3.3.12"
+  sha256 "d34bd68b1bdab849821d48afe50d3a3d4ad2f63c1c3f539aa8c10285b32902e9"
 
   url "https://sheepsystems.com/bookmacster/BookMacster_#{version}.zip"
   name "BookMacster"
@@ -24,6 +24,7 @@ cask "bookmacster" do
 
   zap trash: [
     "~/Library/Application Support/BookMacster",
+    "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.sheepsystems.bookmacster.sfl*",
     "~/Library/Caches/com.sheepsystems.BookMacster",
     "~/Library/Preferences/com.sheepsystems.BookMacster.plist",
     "~/Library/Saved Application State/com.sheepsystems.BookMacster.savedState",

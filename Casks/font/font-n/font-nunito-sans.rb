@@ -11,5 +11,5 @@ cask "font-nunito-sans" do
   font "NunitoSans-Italic[YTLC,opsz,wdth,wght].ttf"
   font "NunitoSans[YTLC,opsz,wdth,wght].ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

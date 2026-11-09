@@ -1,5 +1,5 @@
 cask "proxygen-app" do
-  version "6.3.1"
+  version "6.5"
   sha256 :no_check
 
   url "https://download.proxygen.app/Proxygen.dmg"
@@ -21,7 +21,9 @@ cask "proxygen-app" do
 
   zap trash: [
     "~/Library/Application Scripts/freshbits.Proxygen",
+    "~/Library/Application Scripts/group.freshbits.Proxygen",
     "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/freshbits.proxygen.sfl*",
     "~/Library/Containers/freshbits.Proxygen",
+    "~/Library/Group Containers/group.freshbits.Proxygen",
   ]
 end

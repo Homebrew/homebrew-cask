@@ -1,6 +1,6 @@
 cask "alt-tab" do
-  version "11.6.0"
-  sha256 "8050acf3f01802cc826baf23c17c5bd4ae21651a45fa6000c6db5a9cab59b890"
+  version "11.10.1"
+  sha256 "aa353197537ccfd378dd4a7ff43030561ce7c62267dd0b31b385691b0e7f594c"
 
   url "https://github.com/lwouis/alt-tab-macos/releases/download/v#{version}/AltTab-#{version}.zip"
   name "AltTab"
@@ -13,7 +13,7 @@ cask "alt-tab" do
   end
 
   auto_updates true
-  depends_on :macos
+  depends_on macos: :monterey
 
   app "AltTab.app"
 

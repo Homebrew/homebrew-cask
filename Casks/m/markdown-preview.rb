@@ -1,6 +1,6 @@
 cask "markdown-preview" do
-  version "0.0.55"
-  sha256 "0f1c287ac70763f784657ce819db741e1270cce56ce98fcb7e69540c837bed39"
+  version "0.0.71"
+  sha256 "ae01923580df4ac684891de69f47bc218aecf48223da1766f1a83edbf9a2afb3"
 
   url "https://github.com/pluk-inc/markdown-preview/releases/download/v#{version}/Markdown-Preview.dmg"
   name "Markdown Preview"
@@ -18,13 +18,17 @@ cask "markdown-preview" do
   app "Markdown Preview.app"
   binary "#{appdir}/Markdown Preview.app/Contents/Resources/bin/markdown-preview", target: "mdp"
 
+  uninstall quit: "doc.md-preview"
+
   zap trash: [
+    "~/Library/Application Scripts/5P3TSMNV42.doc.md-preview",
     "~/Library/Application Scripts/doc.md-preview",
     "~/Library/Application Scripts/doc.md-preview.quick-look",
     "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/doc.md-preview.sfl*",
     "~/Library/Caches/doc.md-preview",
     "~/Library/Containers/doc.md-preview",
     "~/Library/Containers/doc.md-preview.quick-look",
+    "~/Library/Group Containers/5P3TSMNV42.doc.md-preview",
     "~/Library/HTTPStorages/doc.md-preview",
     "~/Library/Preferences/doc.md-preview.plist",
   ]

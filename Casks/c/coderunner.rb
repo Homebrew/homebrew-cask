@@ -1,6 +1,6 @@
 cask "coderunner" do
-  version "4.5"
-  sha256 "d41c09e7d11226c0e0709ad55c04d4500adce9345568f4ef3da6c8e8190e4651"
+  version "4.6"
+  sha256 "2a4ff87a8811dc6d67979495d1d2a7380a5f7cd477ce2856ad594629e2ae5be4"
 
   url "https://coderunnerapp.com/download/update/CodeRunner-#{version}.zip"
   name "CodeRunner"
@@ -13,13 +13,14 @@ cask "coderunner" do
   end
 
   auto_updates true
-  depends_on :macos
+  depends_on macos: :monterey
 
   app "CodeRunner.app"
 
   zap trash: [
     "~/Library/Application Scripts/com.krill.CodeRunner.CodeRunnerThumbs",
     "~/Library/Application Support/CodeRunner",
+    "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.krill.coderunner.sfl*",
     "~/Library/Autosave Information/com.krill.CodeRunner.plist",
     "~/Library/Caches/com.krill.CodeRunner",
     "~/Library/Containers/com.krill.CodeRunner.CodeRunnerThumbs",

@@ -1,6 +1,6 @@
 cask "annotate" do
-  version "1.5.0"
-  sha256 "8bf766de1f76647e8b43ec9444d00d5baadd8f666a969c37ce3317298464cdbe"
+  version "1.8.0"
+  sha256 "0c04c0f66a3c03cdff386ebc19f8c1009836352cc2ffab9e06b7b93965b054b3"
 
   url "https://github.com/epilande/Annotate/releases/download/v#{version}/Annotate-#{version}.dmg"
   name "Annotate"
@@ -12,5 +12,8 @@ cask "annotate" do
 
   app "Annotate.app"
 
-  zap trash: "~/Library/Containers/com.epilande.Annotate"
+  zap trash: [
+    "~/Library/Application Scripts/com.epilande.Annotate",
+    "~/Library/Containers/com.epilande.Annotate",
+  ]
 end

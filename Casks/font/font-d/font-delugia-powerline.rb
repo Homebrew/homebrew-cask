@@ -13,5 +13,5 @@ cask "font-delugia-powerline" do
   font "delugia-powerline/DelugiaPLLight-Italic.ttf"
   font "delugia-powerline/DelugiaPLLight.ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

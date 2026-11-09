@@ -11,5 +11,5 @@ cask "font-coustard" do
   font "Coustard-Black.ttf"
   font "Coustard-Regular.ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

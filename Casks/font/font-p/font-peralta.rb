@@ -8,5 +8,5 @@ cask "font-peralta" do
 
   font "Peralta-Regular.ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

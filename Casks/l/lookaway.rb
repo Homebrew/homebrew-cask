@@ -1,6 +1,6 @@
 cask "lookaway" do
-  version "2.4.5"
-  sha256 "ce0f31434ac88a8374af82c2ec91d1f49d46293bbe69bdecb064075f5f9d3229"
+  version "2.4.11"
+  sha256 "2a654fa6d52b90be5d49244f3b7ccba59f02a5954f35d2aa9703a09bfaa41367"
 
   url "https://github.com/mysticalbits/lookaway-releases/releases/download/#{version}/LookAway.dmg"
   name "LookAway"
@@ -15,9 +15,13 @@ cask "lookaway" do
   uninstall quit: "com.mysticalbits.lookaway"
 
   zap trash: [
+    "~/Library/Application Scripts/D35B5Y6JX8.com.mysticalbits.lookaway.shared",
     "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.mysticalbits.lookaway.sfl*",
     "~/Library/Application Support/LookAway",
+    "~/Library/Caches/com.mysticalbits.lookaway",
     "~/Library/Caches/SentryCrash/LookAway",
+    "~/Library/Group Containers/D35B5Y6JX8.com.mysticalbits.lookaway.shared",
+    "~/Library/HTTPStorages/com.mysticalbits.lookaway*",
     "~/Library/Preferences/com.mysticalbits.lookaway.plist",
   ]
 end

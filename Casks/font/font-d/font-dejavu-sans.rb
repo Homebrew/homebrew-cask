@@ -18,5 +18,5 @@ cask "font-dejavu-sans" do
 
   font "dejavu-sans-ttf-#{version}/ttf/DejaVuSans.ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

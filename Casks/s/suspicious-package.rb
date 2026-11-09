@@ -14,8 +14,8 @@ cask "suspicious-package" do
     end
   end
   on_sonoma :or_newer do
-    version "4.7"
-    sha256 "5b8215b7a6536d1d41f1a3485e3428b39f8d3d0f2471ab1a0c69bedb22df4e5b"
+    version "4.8"
+    sha256 "cbe17b1a1c1d6137e8f36443622863773709d415c0aeec68e41b29ce3fad297f"
 
     livecheck do
       url "https://www.mothersruin.com/software/SuspiciousPackage/data/SuspiciousPackageVersionInfo.plist"

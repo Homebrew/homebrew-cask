@@ -8,5 +8,5 @@ cask "font-julius-sans-one" do
 
   font "JuliusSansOne-Regular.ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

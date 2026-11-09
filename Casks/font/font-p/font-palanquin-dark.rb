@@ -13,5 +13,5 @@ cask "font-palanquin-dark" do
   font "PalanquinDark-Regular.ttf"
   font "PalanquinDark-SemiBold.ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

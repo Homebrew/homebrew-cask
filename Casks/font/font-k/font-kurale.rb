@@ -8,5 +8,5 @@ cask "font-kurale" do
 
   font "Kurale-Regular.ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

@@ -13,14 +13,11 @@ cask "toolreleases" do
   end
 
   auto_updates true
-  depends_on macos: :big_sur
+  depends_on :macos
 
   app "ToolReleases.app"
 
-  uninstall quit:       [
-              "com.apple.systemevents",
-              "com.developermaris.ToolReleases",
-            ],
+  uninstall quit:       "com.developermaris.ToolReleases",
             login_item: "ToolReleases"
 
   zap trash: [

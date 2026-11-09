@@ -1,6 +1,6 @@
 cask "sublime-merge@dev" do
-  version "2126"
-  sha256 "98f71893c4fd385b255096b5e2b2b999131d91b02e2eb00ee7bb31b5c1fdf8ff"
+  version "2135"
+  sha256 "ee96cdd37af7873800d22c3d1addd23ac83a6ca4ba33ced956a72f5d649b72e5"
 
   url "https://download.sublimetext.com/sublime_merge_build_#{version}_mac.zip"
   name "Sublime Merge"
@@ -27,6 +27,8 @@ cask "sublime-merge@dev" do
     "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.sublimemerge.sfl*",
     "~/Library/Application Support/Sublime Merge",
     "~/Library/Caches/com.sublimemerge",
+    "~/Library/Caches/Sublime Merge",
+    "~/Library/HTTPStorages/com.sublimemerge",
     "~/Library/Preferences/com.sublimemerge.plist",
     "~/Library/Saved Application State/com.sublimemerge.savedState",
   ]

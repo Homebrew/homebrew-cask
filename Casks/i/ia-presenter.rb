@@ -1,6 +1,6 @@
 cask "ia-presenter" do
-  version "2.0.2,20026"
-  sha256 "1e324b88018df8faee28bf2463d98b8cc0ec9136233a915e12c92f9fcbf545a9"
+  version "2.1.3,21026"
+  sha256 "22e5beb2734034a954bcb3eda6a6af2e93eb1f1b09843ec3ff65ef3f0f23ca9e"
 
   url "https://files.ia.net/presenter/release/iA-Presenter-#{version.csv.first}-#{version.csv.second}.zip"
   name "iA Presenter"
@@ -19,6 +19,7 @@ cask "ia-presenter" do
 
   zap trash: [
     "~/Library/Application Scripts/net.ia.presenter",
+    "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/net.ia.presenter.sfl*",
     "~/Library/Containers/net.ia.presenter",
   ]
 end

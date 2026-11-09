@@ -12,5 +12,5 @@ cask "font-trochut" do
   font "Trochut-Italic.ttf"
   font "Trochut-Regular.ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

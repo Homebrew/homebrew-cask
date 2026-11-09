@@ -8,5 +8,5 @@ cask "font-truculenta" do
 
   font "Truculenta[opsz,wdth,wght].ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

@@ -1,6 +1,6 @@
 cask "microblog" do
-  version "4.0.8"
-  sha256 "8094f904e37444efd61fb109d1dd41f48819d556c12b48a38a0748b80f1ba6e2"
+  version "4.3.2"
+  sha256 "71ba4992c141f6fd1574e2c014ef5aef85c4494c0ede4291ef1076eac6295542"
 
   url "https://s3.amazonaws.com/micro.blog/mac/Micro.blog_#{version}.zip"
   name "Micro.blog"
@@ -19,6 +19,7 @@ cask "microblog" do
 
   zap trash: [
     "~/Library/Application Support/blog.micro.mac",
+    "~/Library/Application Support/Micro.blog",
     "~/Library/Caches/blog.micro.mac",
     "~/Library/Caches/com.crashlytics.data/blog.micro.mac",
     "~/Library/Caches/io.fabric.sdk.mac.data/blog.micro.mac",

@@ -9,5 +9,5 @@ cask "font-zhuque-fangsong" do
 
   font "ZhuqueFangsong-Regular.ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

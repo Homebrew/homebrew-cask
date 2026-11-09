@@ -23,5 +23,5 @@ cask "font-melete" do
   font "Melete-Regular.otf"
   font "Melete-UltraLight.otf"
 
-  # No zap stanza required
+  zap :not_required
 end

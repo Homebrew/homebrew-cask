@@ -8,5 +8,5 @@ cask "font-funnel-display" do
 
   font "FunnelDisplay[wght].ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

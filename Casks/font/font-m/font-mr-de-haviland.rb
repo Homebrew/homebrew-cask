@@ -8,5 +8,5 @@ cask "font-mr-de-haviland" do
 
   font "MrDeHaviland-Regular.ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

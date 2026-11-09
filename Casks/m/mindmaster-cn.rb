@@ -23,9 +23,9 @@ cask "mindmaster-cn" do
 
   app "亿图脑图MindMaster.app"
 
+  zap :not_required
+
   caveats do
     requires_rosetta
   end
-
-  # No zap stanza required
 end

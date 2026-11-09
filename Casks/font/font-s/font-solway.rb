@@ -14,5 +14,5 @@ cask "font-solway" do
   font "Solway-Medium.ttf"
   font "Solway-Regular.ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

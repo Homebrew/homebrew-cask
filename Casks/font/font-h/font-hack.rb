@@ -11,5 +11,5 @@ cask "font-hack" do
   font "ttf/Hack-Italic.ttf"
   font "ttf/Hack-Regular.ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

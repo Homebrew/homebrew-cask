@@ -8,5 +8,5 @@ cask "font-sixtyfour-convergence" do
 
   font "SixtyfourConvergence[BLED,SCAN,XELA,YELA].ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

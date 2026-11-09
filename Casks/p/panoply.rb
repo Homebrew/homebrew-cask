@@ -1,9 +1,9 @@
 cask "panoply" do
   arch arm: "arm64-"
 
-  version "5.10.1"
-  sha256 arm:   "286aeed3bdf797f0c49da92493c48cf65d19929993d61962435d23fe204b048e",
-         intel: "56b898304a0c772aed9c302b4c9f45f639bfbc68f3f261f5fc7ddfb9767bc51e"
+  version "5.10.3"
+  sha256 arm:   "45c4bdb4f93f7bdda0dc6f1d3157dc4a440be1db8c2ea92d53445c47072c3c12",
+         intel: "72c421cbf61b8c97bae5a09a69954f7da0cf1d30832f012d31a3cee047c7bef9"
 
   url "https://www.giss.nasa.gov/tools/panoply/download/PanoplyMacOS-#{arch}#{version}.dmg"
   name "Panoply netCDF, HDF and GRIB Data Viewer"
@@ -18,6 +18,8 @@ cask "panoply" do
   depends_on :macos
 
   app "Panoply.app"
+
+  uninstall quit: "gov.nasa.giss.panoply"
 
   zap trash: [
     "~/Library/Caches/gov.nasa.giss.panoply",

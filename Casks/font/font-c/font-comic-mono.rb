@@ -9,5 +9,5 @@ cask "font-comic-mono" do
   font "comic-mono-font-master/ComicMono-Bold.ttf"
   font "comic-mono-font-master/ComicMono.ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

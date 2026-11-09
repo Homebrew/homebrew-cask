@@ -15,7 +15,7 @@ cask "obs-advanced-scene-switcher" do
   disable! date: "2026-09-01", because: :fails_gatekeeper_check
 
   depends_on cask: "obs"
-  depends_on macos: :big_sur
+  depends_on :macos
 
   pkg "advanced-scene-switcher-#{version}-macos-universal.pkg"
 
@@ -26,5 +26,5 @@ cask "obs-advanced-scene-switcher" do
             delete:  "/Library/Application Support/obs-studio/plugins/advanced-scene-switcher.plugin",
             rmdir:   "/Library/Application Support/obs-studio/plugins"
 
-  # No zap stanza required
+  zap :not_required
 end

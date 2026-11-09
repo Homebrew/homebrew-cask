@@ -8,5 +8,5 @@ cask "font-red-rose" do
 
   font "RedRose[wght].ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

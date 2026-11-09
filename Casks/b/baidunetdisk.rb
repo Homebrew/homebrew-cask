@@ -1,9 +1,9 @@
 cask "baidunetdisk" do
   arch arm: "_arm64", intel: "_x64"
 
-  version "8.7.9"
-  sha256 arm:   "588381d189f68caf645a3e033e0e8a3b873dc998f6250707877db415bc762432",
-         intel: "0a2fd714ee093b8adc326576f4663d5cd075c711598c286db1c28fd8f987eefc"
+  version "8.9.7"
+  sha256 arm:   "594b7040c41eeb2b3d621340e220202455de5d828eeb703eb17291be6322958f",
+         intel: "36a0ce6a30ff4a571d303d0bf336a57fbea3b0e7a8dcaf7f30bbe13832d0a984"
 
   url "https://pkg-ant.baidu.com/issue/netdisk/MACguanjia/#{version}/BaiduNetdisk_mac_#{version}#{arch}.dmg"
   name "Baidu NetDisk"
@@ -25,12 +25,15 @@ cask "baidunetdisk" do
 
   zap trash: [
         "~/Library/Application Scripts/com.baidu.BaiduNetdisk-mac.FinderSync",
+        "~/Library/Application Scripts/group.com.baidu.BaiduNetdisk-Mac",
         "~/Library/Application Support/baidunetdisk",
+        "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.baidu.baidunetdisk-mac.sfl*",
         "~/Library/Application Support/com.baidu.BaiduNetdisk-mac",
         "~/Library/Caches/com.baidu.BaiduNetdisk-mac",
         "~/Library/Caches/com.plausiblelabs.crashreporter.data/com.baidu.BaiduNetdisk-mac",
         "~/Library/Containers/com.baidu.BaiduNetdisk-mac.FinderSync",
         "~/Library/Cookies/com.baidu.BaiduNetdisk-mac.binarycookies",
+        "~/Library/Group Containers/group.com.baidu.BaiduNetdisk-Mac",
         "~/Library/HTTPStorages/com.baidu.BaiduNetdisk-mac",
         "~/Library/Preferences/com.baidu.BaiduNetdisk-mac.plist",
         "~/Library/sapi/wappass.baidu.com",

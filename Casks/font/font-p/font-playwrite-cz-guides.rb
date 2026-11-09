@@ -8,5 +8,5 @@ cask "font-playwrite-cz-guides" do
 
   font "PlaywriteCZGuides-Regular.ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

@@ -8,5 +8,5 @@ cask "font-comme" do
 
   font "Comme[wght].ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

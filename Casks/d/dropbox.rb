@@ -2,9 +2,9 @@ cask "dropbox" do
   arch arm: ".arm64"
   livecheck_query = on_arch_conditional arm: "&arch=arm64"
 
-  version "268.4.4124"
-  sha256 arm:   "c07371457ba5c23a72b9a6bf101286886ef7db876d34c81daedc5be8688eafaa",
-         intel: "6ae7f7efce0b1d163ab73f93739c4ff878ae04ba7387189e94ace9235d238851"
+  version "276.4.5325"
+  sha256 arm:   "8f85b633f43dbd6d9b4a0d98d7183f0094ac2491225863f272edd7419368264d",
+         intel: "a2699624d7cd38e3257f49023618f9d88996a05e48bb315b50efbb6035c94b9f"
 
   url "https://edge.dropboxstatic.com/dbx-releng/client/Dropbox%20#{version}#{arch}.dmg"
   name "Dropbox"
@@ -44,6 +44,7 @@ cask "dropbox" do
     "~/Library/Application Scripts/com.getdropbox.dropbox.fileprovider",
     "~/Library/Application Scripts/com.getdropbox.dropbox.garcon",
     "~/Library/Application Scripts/com.getdropbox.dropbox.TransferExtension",
+    "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.getdropbox.dropbox.sfl*",
     "~/Library/Application Support/Dropbox",
     "~/Library/Application Support/DropboxElectron",
     "~/Library/Application Support/FileProvider/com.getdropbox.dropbox.fileprovider",

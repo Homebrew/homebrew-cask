@@ -8,5 +8,5 @@ cask "font-libre-barcode-39-extended" do
 
   font "LibreBarcode39Extended-Regular.ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

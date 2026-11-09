@@ -50,5 +50,5 @@ cask "font-googlesanscode-nerd-font" do
   font "GoogleSansCodeNerdFontPropo-SemiBold.ttf"
   font "GoogleSansCodeNerdFontPropo-SemiBoldItalic.ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

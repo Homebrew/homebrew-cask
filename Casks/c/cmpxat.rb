@@ -15,11 +15,11 @@ cask "cmpxat" do
     end
   end
 
-  depends_on macos: :big_sur
+  depends_on :macos
 
   pkg "cmpxat#{version.major}/cmpxatInstaller.pkg"
 
   uninstall pkgutil: "co.eclecticlight.pkg.cmpxatInstaller"
 
-  # No zap stanza required
+  zap :not_required
 end

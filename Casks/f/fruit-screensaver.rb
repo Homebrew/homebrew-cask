@@ -11,5 +11,5 @@ cask "fruit-screensaver" do
 
   screen_saver "Fruit.saver"
 
-  # No zap stanza required
+  zap :not_required
 end

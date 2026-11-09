@@ -8,5 +8,5 @@ cask "font-encode-sans-sc" do
 
   font "EncodeSansSC[wdth,wght].ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

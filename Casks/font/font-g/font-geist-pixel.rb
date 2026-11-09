@@ -1,6 +1,6 @@
 cask "font-geist-pixel" do
-  version "1.7.2"
-  sha256 "7fc800d2ac6b92844895196e5041aca55d814c15db70c44f79b3b83ab82b04e2"
+  version "1.9.2"
+  sha256 "15f066d58dcb99fb10014a49913009fdaf41e464cfb8851a44b44e593c95d3d8"
 
   url "https://github.com/vercel/geist-font/releases/download/v#{version}/geist-font-v#{version}.zip"
   name "Geist Pixel"
@@ -18,5 +18,5 @@ cask "font-geist-pixel" do
   font "geist-font/GeistPixel/otf/GeistPixel-Triangle.otf"
   font "geist-font/GeistPixel/variable/GeistPixel[ELSH].ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

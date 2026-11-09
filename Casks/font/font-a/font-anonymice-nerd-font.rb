@@ -26,5 +26,5 @@ cask "font-anonymice-nerd-font" do
   font "AnonymiceProNerdFontPropo-Italic.ttf"
   font "AnonymiceProNerdFontPropo-Regular.ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

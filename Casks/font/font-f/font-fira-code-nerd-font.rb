@@ -32,5 +32,5 @@ cask "font-fira-code-nerd-font" do
   font "FiraCodeNerdFontPropo-Retina.ttf"
   font "FiraCodeNerdFontPropo-SemiBold.ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

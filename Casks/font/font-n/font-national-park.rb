@@ -19,5 +19,5 @@ cask "font-national-park" do
   font "NationalPark-All-Fonts/otf/NationalPark-Regular.otf"
   font "NationalPark-All-Fonts/otf/NationalPark-SemiBold.otf"
 
-  # No zap stanza required
+  zap :not_required
 end

@@ -11,5 +11,5 @@ cask "font-spline-sans-mono" do
   font "SplineSansMono-Italic[wght].ttf"
   font "SplineSansMono[wght].ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

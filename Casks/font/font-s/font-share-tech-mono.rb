@@ -8,5 +8,5 @@ cask "font-share-tech-mono" do
 
   font "ShareTechMono-Regular.ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

@@ -1,6 +1,6 @@
 cask "nostalgiapp" do
-  version "1.2.0.12,179"
-  sha256 "26770103d190ab8e89690d68154bfdb433a4fb07ba4e7d437088c5f308bed61d"
+  version "1.2.6,214"
+  sha256 "8ae315432f9629fcdf05c761dafedad8f75c342f9958d182f1cb4caa6792d010"
 
   url "https://www.nostalgi.app/downloads/NostalgiApp-#{version.csv.first}#{"-b#{version.csv.second}" if version.csv.second}.dmg"
   name "NostalgiApp"
@@ -32,7 +32,11 @@ cask "nostalgiapp" do
   zap trash: [
     "~/Library/Application Support/NostalgiApp",
     "~/Library/Caches/com.nostalgi.app",
+    "~/Library/Caches/com.nostalgi.app.*.json",
+    "~/Library/Caches/NostalgiApp",
+    "~/Library/HTTPStorages/com.nostalgi.app",
     "~/Library/Logs/NostalgiApp",
     "~/Library/Preferences/com.nostalgi.app.plist",
+    "~/Library/WebKit/com.nostalgi.app",
   ]
 end

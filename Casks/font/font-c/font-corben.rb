@@ -11,5 +11,5 @@ cask "font-corben" do
   font "Corben-Bold.ttf"
   font "Corben-Regular.ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

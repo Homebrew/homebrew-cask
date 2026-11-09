@@ -16,5 +16,5 @@ cask "font-cochineal" do
   font "cochineal/opentype/Cochineal-Italic.otf"
   font "cochineal/opentype/Cochineal-Roman.otf"
 
-  # No zap stanza required
+  zap :not_required
 end

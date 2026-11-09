@@ -8,5 +8,5 @@ cask "font-bigshot-one" do
 
   font "BigshotOne-Regular.ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

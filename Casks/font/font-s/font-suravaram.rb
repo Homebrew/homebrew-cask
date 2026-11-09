@@ -8,5 +8,5 @@ cask "font-suravaram" do
 
   font "Suravaram-Regular.ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

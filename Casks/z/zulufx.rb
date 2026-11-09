@@ -1,9 +1,9 @@
 cask "zulufx" do
   arch arm: "aarch64", intel: "x64"
 
-  version "26.0.2.1,26.32.203"
-  sha256 arm:   "0de38519a7d51f90ba012663c30cc65e1f91ec8380cd7823c3f75b67f967c927",
-         intel: "06555f7f35f67e3440a534307b7f8f4fe938f1e259e472e72c9e79b91fe6244f"
+  version "27.0.1.0.3,27.30.109"
+  sha256 arm:   "6a181889ed3ad81e669664c55717ddcdbdb3591957ad7cc312871ff0e4b8bacf",
+         intel: "88750e816f9236442ca41f6e0fbae9802755a285071958455f4855d916710ca5"
 
   url "https://cdn.azul.com/zulu/bin/zulu#{version.csv.second}-ca-fx-jdk#{version.csv.first}-macosx_#{arch}.dmg",
       referer: "https://www.azul.com/downloads/"
@@ -30,5 +30,5 @@ cask "zulufx" do
 
   uninstall pkgutil: "com.azulsystems.zulu.#{version.major}"
 
-  # No zap stanza required
+  zap :not_required
 end

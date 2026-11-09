@@ -16,7 +16,7 @@ cask "ilya-birman-typography-layout" do
 
   keyboard_layout "Ilya Birman Typography Layout.bundle"
 
-  # No zap stanza required
+  zap :not_required
 
   caveats do
     reboot

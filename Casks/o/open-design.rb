@@ -1,9 +1,9 @@
 cask "open-design" do
   arch arm: "arm64", intel: "x64"
 
-  version "0.22.0"
-  sha256 arm:   "a3b585762f67680089adea5942be44e35338cc37c87d1c21e82285e718882479",
-         intel: "83d00486178a24a674b23ccc63909a5954390a50b77730e774b5822504a49994"
+  version "0.27.0"
+  sha256 arm:   "1226fa9ada937dc585a54c8d1e96adf4b8a92d39e3f998101923a09de0b038eb",
+         intel: "c7cdcb273a789c69c0022bb79b25dec773fa4c80f44793e2411c7d3e49f9056f"
 
   url "https://github.com/nexu-io/open-design/releases/download/open-design-v#{version}/open-design-#{version}-mac-#{arch}.dmg"
   name "Open Design"
@@ -21,6 +21,7 @@ cask "open-design" do
   app "Open Design.app"
 
   zap trash: [
+    "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/io.open-design.desktop.sfl*",
     "~/Library/Application Support/Open Design",
     "~/Library/Preferences/io.open-design.desktop.plist",
   ]

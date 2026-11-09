@@ -8,5 +8,5 @@ cask "font-margarine" do
 
   font "Margarine-Regular.ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

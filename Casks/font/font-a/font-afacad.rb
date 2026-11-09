@@ -11,5 +11,5 @@ cask "font-afacad" do
   font "Afacad-Italic[wght].ttf"
   font "Afacad[wght].ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

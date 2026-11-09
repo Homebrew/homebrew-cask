@@ -8,5 +8,5 @@ cask "font-new-rocker" do
 
   font "NewRocker-Regular.ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

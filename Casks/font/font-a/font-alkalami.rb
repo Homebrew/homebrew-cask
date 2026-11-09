@@ -8,5 +8,5 @@ cask "font-alkalami" do
 
   font "Alkalami-Regular.ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

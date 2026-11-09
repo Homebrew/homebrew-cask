@@ -8,5 +8,5 @@ cask "font-monocraft" do
 
   font "Monocraft.ttc"
 
-  # No zap stanza required
+  zap :not_required
 end

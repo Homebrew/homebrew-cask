@@ -8,5 +8,5 @@ cask "font-snowburst-one" do
 
   font "SnowburstOne-Regular.ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

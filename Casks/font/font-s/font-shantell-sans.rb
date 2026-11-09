@@ -11,5 +11,5 @@ cask "font-shantell-sans" do
   font "ShantellSans-Italic[BNCE,INFM,SPAC,wght].ttf"
   font "ShantellSans[BNCE,INFM,SPAC,wght].ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

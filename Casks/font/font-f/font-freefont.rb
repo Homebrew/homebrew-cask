@@ -24,5 +24,5 @@ cask "font-freefont" do
   font "freefont-#{version}/FreeSerifBoldItalic.otf"
   font "freefont-#{version}/FreeSerifItalic.otf"
 
-  # No zap stanza required
+  zap :not_required
 end

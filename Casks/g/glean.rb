@@ -1,6 +1,6 @@
 cask "glean" do
-  version "1.2026.21114"
-  sha256 "e61523c51e9186664508c40c4197faf0f099086f79b2d4a1de3735c478780f77"
+  version "1.2026.29912"
+  sha256 "4245ebfb7f82b34d496a696b737ac2f5abefa491606c364125cf7cf61856fa21"
 
   url "https://storage.googleapis.com/glean-downloads/glean-desktop-app/Glean-darwin-universal-#{version}.zip"
   name "Glean Desktop"
@@ -21,6 +21,7 @@ cask "glean" do
   zap trash: [
     "~/Library/Application Scripts/877XN49FUQ.com.glean.desktop",
     "~/Library/Application Scripts/com.glean.desktop",
+    "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.glean.desktop.sfl*",
     "~/Library/Application Support/CrashReporter/Glean_*.plist",
     "~/Library/Application Support/Glean",
     "~/Library/Containers/com.glean.desktop",

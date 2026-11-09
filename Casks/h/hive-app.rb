@@ -1,14 +1,19 @@
 cask "hive-app" do
   arch arm: "-arm64"
 
-  version "1.2.43"
-  sha256 arm:   "a73609a03807251f8c838bcf83ad8084830e685fef434285f62e69df342dca53",
-         intel: "0fcd5188b1e37039c1f93fd4ddca36a78831b38c971028f036d91108a13cc6e6"
+  version "1.2.50"
+  sha256 arm:   "add2463c5dc8fc0171d453f608926b13d9879d1fa719067459ba280d315cdee7",
+         intel: "00a034520c979f1e99dc03cc90f9cdfd68d72f9db6834e06dfb46430f3bf100d"
 
   url "https://github.com/morapelker/hive/releases/download/v#{version}/Hive-#{version}#{arch}.dmg"
   name "Hive"
   desc "AI agent orchestrator for parallel coding across projects"
   homepage "https://github.com/morapelker/hive"
+
+  livecheck do
+    url :url
+    strategy :github_latest
+  end
 
   auto_updates true
   depends_on macos: :monterey

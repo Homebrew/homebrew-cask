@@ -1,8 +1,8 @@
 cask "discord@canary" do
-  version "0.0.1311"
-  sha256 "7e30d680e59d9cd123b1270f492013d0f0814e21eea8c9faa7e4c64350d2ab01"
+  version "0.0.1529"
+  sha256 "eb3f6eff62f60b001686f1b1a38581b2c58845c4da24abae1b161a2936c1f9c0"
 
-  url "https://dl-canary.discordapp.net/apps/osx/#{version}/DiscordCanary.dmg"
+  url "https://canary.dl2.discordapp.net/distro/app/canary/osx/universal/#{version}/DiscordCanary.dmg"
   name "Discord Canary"
   desc "Voice and text chat software"
   homepage "https://canary.discord.com/"
@@ -13,9 +13,12 @@ cask "discord@canary" do
   end
 
   auto_updates true
-  depends_on macos: :monterey
+  depends_on macos: :ventura
 
   app "Discord Canary.app"
+
+  uninstall launchctl: "com.discord.discord.ShipIt",
+            quit:      "com.hnc.DiscordCanary"
 
   zap trash: [
     "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.hnc.discordcanary.sfl*",

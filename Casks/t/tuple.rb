@@ -1,6 +1,6 @@
 cask "tuple" do
-  version "3.2.0,2026-08-12,9d2e82a561"
-  sha256 "4167e08cae307e360d158dc1d2589535e762da84b2892762bfcadc0e8d99791d"
+  version "3.3.21,2026-11-05,2bdd4a7abc"
+  sha256 "e52c91045a4f8c0fe8858ba16623b25b758f1bcdb6d7579bc6db008e4f288050"
 
   url "https://d32ifkf9k9ezcg.cloudfront.net/production/sparkle/tuple-#{version.tr(",", "-")}.zip"
   name "Tuple"
@@ -19,7 +19,7 @@ cask "tuple" do
   end
 
   auto_updates true
-  depends_on macos: :sonoma
+  depends_on macos: :sequoia
 
   app "Tuple.app"
 
@@ -28,12 +28,21 @@ cask "tuple" do
 
   zap trash: [
     "~/Library/Application Scripts/app.tuple.app-LaunchAtLoginHelper",
+    "~/Library/Application Scripts/app.tuple.log",
+    "~/Library/Application Scripts/app.tuple.webcam-capturer",
+    "~/Library/Application Scripts/DQYU7DR9Q7.app.tuple.app",
     "~/Library/Application Support/app.tuple.app",
+    "~/Library/Application Support/Tuple",
     "~/Library/Caches/app.tuple.app",
     "~/Library/Caches/com.crashlytics.data/app.tuple.app",
     "~/Library/Caches/io.fabric.sdk.mac.data/app.tuple.app",
     "~/Library/Containers/app.tuple.app-LaunchAtLoginHelper",
+    "~/Library/Containers/app.tuple.log",
+    "~/Library/Containers/app.tuple.webcam-capturer",
+    "~/Library/Group Containers/DQYU7DR9Q7.app.tuple.app",
+    "~/Library/HTTPStorages/app.tuple.app",
     "~/Library/Preferences/app.tuple.app.plist",
+    "~/Library/Preferences/app.tuple.app.web.plist",
     "~/Library/WebKit/app.tuple.app",
   ]
 end

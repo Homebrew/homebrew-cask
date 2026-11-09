@@ -8,5 +8,5 @@ cask "font-spinnaker" do
 
   font "Spinnaker-Regular.ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

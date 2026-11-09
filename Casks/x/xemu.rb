@@ -1,6 +1,6 @@
 cask "xemu" do
-  version "0.8.136"
-  sha256 "9b5f52240b12ff0d6ab3852b38a820dc92b99124db8a981ccf2ed2cb893f446e"
+  version "0.8.139"
+  sha256 "9817aaa5e187a698416271a6ddc083a40d7ff5e09c3231cff32a692638c7427d"
 
   url "https://github.com/xemu-project/xemu/releases/download/v#{version}/xemu-#{version}-macos-universal.zip"
   name "Xemu"
@@ -14,7 +14,7 @@ cask "xemu" do
 
   depends_on :macos
 
-  app "Xemu.app"
+  app "xemu.app"
 
   zap trash: [
     "~/Library/Application Support/xemu",

@@ -1,6 +1,6 @@
 cask "microsoft-edge" do
-  version "152.0.4191.66,f3ce034a-259c-4a0e-8187-7c6cfa8f88c9"
-  sha256 "a943085facd5a36b0337dd09a9d808ee57630c6a861a45d13fa05862a22d7d35"
+  version "157.0.4341.42,bf6070c2-e62a-4839-a868-9f4a5e29b4c8"
+  sha256 "045d56a56c4ea29f31a60ad4afdcbd0c961b15da834c6b32b880ac11b682b516"
 
   url "https://msedge.sf.dl.delivery.mp.microsoft.com/filestreamingservice/files/#{version.csv.second}/MicrosoftEdge-#{version.csv.first}.dmg"
   name "Microsoft Edge"
@@ -28,12 +28,14 @@ cask "microsoft-edge" do
 
   zap trash: [
         "~/Library/Application Scripts/com.microsoft.edgemac.wdgExtension",
+        "~/Library/Application Scripts/UBF8T346G9.com.microsoft.edgemac.widgets",
         "~/Library/Application Support/Microsoft Edge",
         "~/Library/Application Support/Microsoft/EdgeUpdater",
         "~/Library/Caches/com.microsoft.edgemac",
         "~/Library/Caches/com.microsoft.EdgeUpdater",
         "~/Library/Caches/Microsoft Edge",
         "~/Library/Containers/com.microsoft.edgemac.wdgExtension",
+        "~/Library/Group Containers/UBF8T346G9.com.microsoft.edgemac.widgets",
         "~/Library/HTTPStorages/com.microsoft.edgemac",
         "~/Library/HTTPStorages/com.microsoft.EdgeUpdater",
         "~/Library/LaunchAgents/com.microsoft.EdgeUpdater.*.plist",

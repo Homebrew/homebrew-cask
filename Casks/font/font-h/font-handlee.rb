@@ -8,5 +8,5 @@ cask "font-handlee" do
 
   font "Handlee-Regular.ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

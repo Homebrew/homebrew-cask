@@ -8,5 +8,5 @@ cask "font-medievalsharp" do
 
   font "MedievalSharp.ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

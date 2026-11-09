@@ -1,6 +1,6 @@
 cask "alfaview" do
-  version "9.29.0"
-  sha256 "f0cc5c7ba94e87d6b89b614687f1cb4c828815b195bbda78f2ada1b8a7e5ed2c"
+  version "9.30.5"
+  sha256 "f7d0487fe7242e103ee0773da559a4c44cc37384baeb2bcde21eeb2e0c8a5627"
 
   url "https://assets.alfaview.com/stable/mac/alfaview-mac-production-#{version}.pkg"
   name "Alfaview"
@@ -21,5 +21,8 @@ cask "alfaview" do
   uninstall quit:    "com.alfaview.desktop",
             pkgutil: "com.alfaview.desktop"
 
-  zap trash: "~/Library/Application Support/alfaview"
+  zap trash: [
+    "~/Library/Application Support/alfaview",
+    "~/Library/Caches/alfaview Video Conferencing Systems GmbH & Co. KG",
+  ]
 end

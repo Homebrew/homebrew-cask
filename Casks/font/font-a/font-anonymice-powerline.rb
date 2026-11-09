@@ -13,5 +13,5 @@ cask "font-anonymice-powerline" do
   font "Anonymice Powerline Italic.ttf"
   font "Anonymice Powerline.ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

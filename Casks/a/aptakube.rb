@@ -1,6 +1,6 @@
 cask "aptakube" do
-  version "1.19.7"
-  sha256 "0a99ba88757ebcad00b0f651d76376722f51e6348279dfbcbae116d8db7d86e2"
+  version "1.22.3"
+  sha256 "82a8c1f87e1e1629db43393c781b08e8c910cf7adf6266d04670b1bf363bd740"
 
   url "https://releases.aptakube.com/Aptakube_#{version}_universal.dmg"
   name "Aptakube"
@@ -15,7 +15,7 @@ cask "aptakube" do
   end
 
   auto_updates true
-  depends_on macos: :big_sur
+  depends_on :macos
 
   app "Aptakube.app"
 

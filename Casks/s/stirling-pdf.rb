@@ -1,13 +1,15 @@
 cask "stirling-pdf" do
-  arch intel: "x86_64"
-  os macos: "macos-universal.dmg", linux: "linux-#{arch}.AppImage"
+  os macos: "macos-universal.dmg", linux: "linux-x86_64.AppImage"
 
-  version "2.14.3"
+  version "3.3.0"
+  sha256 arm:          "8d0c89b59ccc54765f0b6b8a2ae288f8d56abc5ee6ca0ae8a0cf3e02578bd90a",
+         intel:        "8d0c89b59ccc54765f0b6b8a2ae288f8d56abc5ee6ca0ae8a0cf3e02578bd90a",
+         x86_64_linux: "67e071fbe713e9bc2028bcf9ff8e0ac2b6e841d7223fec7b7013f689bd44331e"
 
   on_macos do
-    sha256 "25073f75260c75854af3c81b457958471142b204f3f37c1142b41c75c5704a55"
-
     app "Stirling PDF.app"
+
+    uninstall quit: "stirling.pdf.dev"
 
     zap trash: [
       "~/Library/Application Support/Stirling-PDF",
@@ -19,15 +21,23 @@ cask "stirling-pdf" do
     ]
   end
   on_linux do
-    sha256 "9beca308e9c507a7eec804b672e3bf220728caf49a58e2cd896154a69ac82d07"
-
     depends_on arch: :x86_64
 
-    app_image "Stirling-PDF-linux-#{arch}.AppImage", target: "Stirling-PDF.AppImage"
+    app_image "Stirling-PDF-linux-x86_64.AppImage", target: "Stirling PDF.AppImage"
+
+    zap trash: [
+      "~/.cache/stirling.pdf.dev",
+      "~/.config/Stirling-PDF",
+      "~/.config/stirling.pdf.dev",
+      "~/.local/share/applications/Stirling-PDF-handler.desktop",
+      "~/.local/share/stirling.pdf.dev",
+    ]
   end
 
   url "https://github.com/Stirling-Tools/Stirling-PDF/releases/download/v#{version}/Stirling-PDF-#{os}"
-  name "Stirling-PDF"
+  name "Stirling PDF"
   desc "PDF utility"
   homepage "https://stirling.com/"
+
+  auto_updates true
 end

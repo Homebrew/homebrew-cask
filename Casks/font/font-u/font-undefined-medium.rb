@@ -8,5 +8,5 @@ cask "font-undefined-medium" do
 
   font "undefined-medium-#{version}/fonts/otf/undefined-medium.otf"
 
-  # No zap stanza required
+  zap :not_required
 end

@@ -8,5 +8,5 @@ cask "font-sen" do
 
   font "Sen[wght].ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

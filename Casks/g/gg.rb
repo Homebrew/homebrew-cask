@@ -1,6 +1,6 @@
 cask "gg" do
-  version "0.41.0"
-  sha256 "84af4648a231b2cd883f950f1694ecd121e56cf82ab0e3d45aeec95f42ff2e33"
+  version "0.46.0"
+  sha256 "3b1c360bf8e95f8ff16b78c86471982553416dc46efaae289fd831b262cf01f8"
 
   url "https://github.com/gulbanana/gg/releases/download/v#{version}/gg_#{version}_universal.dmg"
   name "GG"
@@ -9,7 +9,7 @@ cask "gg" do
 
   livecheck do
     url :url
-    strategy :github_latest
+    regex(/^v?(\d+(?:\.\d+)+)$/i)
   end
 
   depends_on :macos

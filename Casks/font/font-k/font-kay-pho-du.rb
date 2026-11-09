@@ -13,5 +13,5 @@ cask "font-kay-pho-du" do
   font "KayPhoDu-Regular.ttf"
   font "KayPhoDu-SemiBold.ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

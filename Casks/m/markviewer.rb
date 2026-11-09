@@ -1,6 +1,6 @@
 cask "markviewer" do
-  version "1.8.7"
-  sha256 "01142ca50556f95d79275633b81be422c724a2d9b72edc38875564b4b99d8368"
+  version "1.8.18"
+  sha256 "cd48586ce35535ca0f3657c2218897736244c44b8545998a90028935194f8108"
 
   url "https://github.com/SeungbinBaik/markviewer-releases/releases/download/v#{version}/MarkViewer.dmg"
   name "MarkViewer"
@@ -13,7 +13,7 @@ cask "markviewer" do
   end
 
   auto_updates true
-  depends_on macos: :big_sur
+  depends_on :macos
 
   app "MarkViewer.app"
 

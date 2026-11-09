@@ -26,5 +26,5 @@ cask "font-terminess-ttf-nerd-font" do
   font "TerminessNerdFontPropo-Italic.ttf"
   font "TerminessNerdFontPropo-Regular.ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

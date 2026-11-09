@@ -1,6 +1,6 @@
 cask "openaudible" do
-  version "4.8.8"
-  sha256 "a9197f15293e9fac29a4ace0412423d24ff63ad411a54ef7da3d901f83990acc"
+  version "5.2"
+  sha256 "56b8323b60a8f1c3a665a3a2be87dabf91dcfda66d42de1229d58a07e2ad25de"
 
   url "https://github.com/openaudible/openaudible/releases/download/v#{version}/OpenAudible_#{version}.dmg"
   name "OpenAudible"
@@ -16,5 +16,6 @@ cask "openaudible" do
 
   app "OpenAudible.app"
 
-  zap trash: "/Library/OpenAudible"
+  zap trash: "~/Library/Preferences/org.openaudible.openaudible.plist",
+      rmdir: "~/Library/OpenAudible"
 end

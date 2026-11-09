@@ -11,5 +11,5 @@ cask "font-geo" do
   font "Geo-Oblique.ttf"
   font "Geo-Regular.ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

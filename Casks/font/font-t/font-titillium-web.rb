@@ -20,5 +20,5 @@ cask "font-titillium-web" do
   font "TitilliumWeb-SemiBold.ttf"
   font "TitilliumWeb-SemiBoldItalic.ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

@@ -1,9 +1,9 @@
 cask "clion@eap" do
   arch arm: "-aarch64"
 
-  version "2026.3,263.3889.68"
-  sha256 arm:   "2bd011727a06355bb5ecfef89996d4b2951b3ee0380506b47e953497e70511f8",
-         intel: "bfd7bef70eac93dc9329f4f63812b72eaa17d2dcab8acfb103a4414f3f8a15e6"
+  version "2026.3,263.7307.35"
+  sha256 arm:   "82a6d3a80b0575889b540535c61261be6edb23021c816bb8021b85c0109025ac",
+         intel: "a41b6950896f9a1a60c47ce88ff96bf665d75969f0b8501ec8643ffd6bbfc954"
 
   url "https://download.jetbrains.com/cpp/CLion-#{version.csv.second}#{arch}.dmg"
   name "CLion EAP"
@@ -29,7 +29,8 @@ cask "clion@eap" do
   app "CLion #{version.csv.first} EAP.app"
   binary "#{appdir}/CLion #{version.csv.first} EAP.app/Contents/MacOS/clion", target: "clion-eap"
 
-  uninstall quit: "com.jetbrains.CLion-EAP"
+  uninstall launchctl: "application.com.jetbrains.app.daemon.*",
+            quit:      "com.jetbrains.CLion-EAP"
 
   zap trash: [
     "~/Library/Application Support/JetBrains/CLion#{version.major_minor}",

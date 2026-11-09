@@ -13,5 +13,5 @@ cask "font-gfs-neohellenic" do
   font "GFSNeohellenicBoldItalic.ttf"
   font "GFSNeohellenicItalic.ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

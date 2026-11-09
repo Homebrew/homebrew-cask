@@ -1,13 +1,13 @@
 cask "mission-control-plus" do
-  version "1.27"
-  sha256 "b52994e33ebbb05cddb6eea55b54fee377eed8a9e96a59d409ab11599de859d1"
+  version "1.31"
+  sha256 "6e15acec3cab3cf808c7ea7466d1962326420c7117725defdac2e00b21bccb92"
 
   url "https://github.com/ronyfadel/MissionControlPlusReleases/releases/download/v#{version}/Mission.Control.Plus.tgz"
   name "Mission Control Plus"
   desc "Manage your windows in Mission Control"
   homepage "https://fadel.io/MissionControlPlus"
 
-  depends_on :macos
+  depends_on macos: :monterey
 
   app "Mission Control Plus.app"
 

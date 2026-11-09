@@ -1,9 +1,9 @@
 cask "openpencil" do
   arch arm: "aarch64", intel: "x64"
 
-  version "0.14.0"
-  sha256 arm:   "49f368ecc7c2d3203c56a48635ff8a301142f61f4abab0dbfe8d25b6b9b3d847",
-         intel: "deb65826c980dc79d29e9cb1c73cfe3f6a84bba776909755605680639bd02cc5"
+  version "0.16.0"
+  sha256 arm:   "31d3fc5bdde7acffa506e063263d2a1bcb913f405ddef47d405742514ee65527",
+         intel: "39ae0083ed6840e80533d4b08187d06fc40e474a2ded35a901d7548c4b5cf6ed"
 
   url "https://github.com/open-pencil/open-pencil/releases/download/v#{version}/OpenPencil_#{arch}.app.tar.gz"
   name "OpenPencil"
@@ -16,7 +16,7 @@ cask "openpencil" do
   end
 
   auto_updates true
-  depends_on :macos
+  depends_on macos: :ventura
 
   app "OpenPencil.app"
 

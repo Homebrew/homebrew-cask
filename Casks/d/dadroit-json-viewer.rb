@@ -7,13 +7,9 @@ cask "dadroit-json-viewer" do
   desc "JSON Viewer"
   homepage "https://dadroit.com/"
 
-  livecheck do
-    url "https://dadroit.com/download/"
-    regex(/ver.*?(\d+(?:\.\d+)+)\s*?\((\d+)\)/i)
-    strategy :page_match do |page, regex|
-      page.scan(regex).map { |match| "#{match[0]},#{match[1]}" }
-    end
-  end
+  # The upstream website uses Cloudflare protections and the zip file is
+  # inaccessible outside of a browser, so this cask is effectively unusable.
+  disable! date: "2026-09-27", because: :unreachable
 
   depends_on :macos
 

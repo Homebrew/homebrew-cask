@@ -19,5 +19,5 @@ cask "font-dai-banna-sil" do
   font "DaiBannaSIL-SemiBold.ttf"
   font "DaiBannaSIL-SemiBoldItalic.ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

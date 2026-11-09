@@ -8,5 +8,5 @@ cask "font-imbue" do
 
   font "Imbue[opsz,wght].ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

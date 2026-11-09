@@ -1,9 +1,9 @@
 cask "jellyfin" do
   arch arm: "arm64", intel: "amd64"
 
-  version "12.0"
-  sha256 arm:   "5c6611e8b20c5a0ff9738c8ac18e7d0f02e77f02092a0e715e634ad8b2be4010",
-         intel: "c4a00804d7df5b79eca9a4e911204257071be9d8b506e8d383f4a38ee3dfd34b"
+  version "12.4"
+  sha256 arm:   "504c0e201e4d9374403300622317b9a6b8b86f860a2a52eea5734f9abf70769d",
+         intel: "333d73eb745b5545168e05d8c79141b53c0693fd5df33add1d1afaf0d8c2a8b8"
 
   url "https://repo.jellyfin.org/files/server/macos/stable/v#{version}/#{arch}/jellyfin_#{version}-#{arch}.dmg"
   name "Jellyfin"
@@ -24,6 +24,7 @@ cask "jellyfin" do
     "~/.cache/jellyfin",
     "~/.config/jellyfin",
     "~/.local/share/jellyfin",
+    "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/jellyfin.server.sfl*",
     "~/Library/Application Support/jellyfin",
     "~/Library/Preferences/Jellyfin.Server.plist",
   ]

@@ -2,11 +2,11 @@ cask "motrix@beta" do
   arch arm: "-arm64", intel: on_system_conditional(macos: "-x64", linux: "-x86_64")
   os macos: "dmg", linux: "AppImage"
 
-  version "2.0.0-beta.34"
-  sha256 arm:          "5b5faf511927cb2954d007d61e033dea0bf942e6d8684506822ce00784de7852",
-         intel:        "fd2a17db2fcaec9f22fcb40ba6dfcb5a65769a5f7230235726d0f8673ffce140",
-         arm64_linux:  "f49dc26aeb797a1d69b231ecd1ed2440ec27a046faccde3fb4011c34fc3fac29",
-         x86_64_linux: "1e5852abbe793ba653061798d399dff0bfa5ec68271ee65de76543727cc4853f"
+  version "2.0.0-beta.52"
+  sha256 arm:          "210baa2418f1018cef2a157975ee031eaad3a62ae1e86f0a9e8a3f181a6c821e",
+         intel:        "8065ae3d90ff39f3a893c30c237017ce885c87ad6322e6697b446be15b354051",
+         arm64_linux:  "252eb0830943c308e3a66d043944721985d2cf1d0fb27ee83386a2f6d8df440c",
+         x86_64_linux: "b5c4ffde5367bc6d63e22da2b6696c4366f3fd37848b30f1b7b91751962be54b"
 
   on_macos do
     depends_on macos: :ventura
@@ -14,6 +14,7 @@ cask "motrix@beta" do
     app "Motrix.app"
 
     zap trash: [
+      "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/app.motrix.native.sfl*",
       "~/Library/Application Support/Motrix",
       "~/Library/Caches/app.motrix.native",
       "~/Library/Logs/Motrix",
@@ -23,6 +24,11 @@ cask "motrix@beta" do
   end
   on_linux do
     app_image "Motrix-#{version}#{arch}.AppImage", target: "Motrix.AppImage"
+
+    zap trash: [
+      "~/.cache/motrix-turbo-updater",
+      "~/.config/Motrix",
+    ]
   end
 
   url "https://github.com/agalwood/Motrix/releases/download/v#{version}/Motrix-#{version}#{arch}.#{os}"
@@ -44,6 +50,8 @@ cask "motrix@beta" do
       end
     end
   end
+
+  disable! date: "2026-10-23", because: :discontinued, replacement_cask: "motrix"
 
   auto_updates true
   conflicts_with cask: "motrix"

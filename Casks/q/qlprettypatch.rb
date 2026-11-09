@@ -8,10 +8,11 @@ cask "qlprettypatch" do
   homepage "https://github.com/atnan/QLPrettyPatch"
 
   deprecate! date: "2025-09-22", because: :no_longer_meets_criteria
+  disable! date: "2026-09-27", because: :no_longer_meets_criteria
 
   depends_on :macos
 
   qlplugin "QLPrettyPatch.qlgenerator"
 
-  # No zap stanza required
+  zap :not_required
 end

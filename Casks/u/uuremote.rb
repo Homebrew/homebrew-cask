@@ -1,8 +1,8 @@
 cask "uuremote" do
-  version "4.39.1"
-  sha256 "bf0ceac038bf4c9e750bc4831be2c61818bb55a5af93517d79094405127a68e2"
+  version "4.46.0"
+  sha256 "e347e1dfd57566934ae881f58f09fdd6ab1afae7f521cbfff3aa27a46a6c9560"
 
-  url "https://a56.gdl.netease.com/uuyc_#{version}.pkg"
+  url "https://a56.gdl.netease.com/uuyc_#{version}_nochannel.pkg"
   name "UU Remote"
   name "网易UU远程"
   desc "NetEase UU remote desktop access and control tool"
@@ -14,9 +14,10 @@ cask "uuremote" do
     strategy :header_match
   end
 
+  auto_updates true
   depends_on :macos
 
-  pkg "uuyc_#{version}.pkg"
+  pkg "uuyc_#{version}_nochannel.pkg"
 
   postflight_steps do
     # The postinstall script automatically opens the app. Therefore, we must
@@ -50,12 +51,15 @@ cask "uuremote" do
   zap trash: [
     "/Users/Shared/UURemote",
     "~/Library/Application Support/com.netease.uuremote",
+    "~/Library/Application Support/UURemote",
     "~/Library/Caches/com.netease.uuremote",
     "~/Library/Caches/com.netease.uuremote.server",
     "~/Library/HTTPStorages/com.netease.uuremote",
     "~/Library/HTTPStorages/com.netease.uuremote.server",
     "~/Library/Preferences/com.netease.uuremote.plist",
     "~/Library/Preferences/com.netease.uuremote.server.plist",
+    "~/Library/sensorsanalytics-com.netease.uuremote.server-distinct_id.plist",
+    "~/Library/sensorsanalytics-com.netease.uuremote.server-first_day.plist",
     "~/Library/WebKit/com.netease.uuremote",
   ]
 end

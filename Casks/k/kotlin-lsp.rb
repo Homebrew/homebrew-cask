@@ -2,13 +2,13 @@ cask "kotlin-lsp" do
   arch arm: "-aarch64"
   os macos: "sit", linux: "tar.gz"
 
-  version "262.9593.0"
-  sha256 arm:          "6ba6021a706b21e64cef33f7e2b79f187c0910320722bb2d3ed05ad1115ec43f",
-         intel:        "17369fda97c85418ac24ab38a9df56b21522a3468dfe193832fe455c13920745",
-         arm64_linux:  "2317831c6e5607d05b7ebc1da655330125ce0e3d66fbf24517dfce442debc14e",
-         x86_64_linux: "2d99d8e198fbe4aa8f4481e37799724ce94803b4ea12a60b416040e3fcd7cc5e"
+  version "263.7084.0"
+  sha256 arm:          "b403bf8a54bd458e3ba6731cf8abb3340be08b439c03576dfc02b13faf3694b8",
+         intel:        "b29c393a5e541153d03d626e7946268437e358a667a5f914a126dbb4007664b1",
+         arm64_linux:  "450ab7c1d80e48106aa429b48cb4226d82ca12a8a2400447ae02386794780cac",
+         x86_64_linux: "ae0c4b01e17ab73a4a5227a78ea99e6dcbe3e499600315b22759a4e4cddd11df"
 
-  url "https://download-cdn.jetbrains.com/language-server/kotlin-server/#{version}/kotlin-server-#{version}#{arch}.#{os}"
+  url "https://download.jetbrains.com/language-server/kotlin-server/#{version}/kotlin-server-#{version}#{arch}.#{os}"
   name "Kotlin LSP"
   desc "Official Kotlin Language Server"
   homepage "https://github.com/Kotlin/kotlin-lsp"
@@ -20,5 +20,5 @@ cask "kotlin-lsp" do
 
   binary "kotlin-server-#{version}/kotlin-lsp.sh", target: "kotlin-lsp"
 
-  # No zap stanza required
+  zap :not_required
 end

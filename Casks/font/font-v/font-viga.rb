@@ -8,5 +8,5 @@ cask "font-viga" do
 
   font "Viga-Regular.ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

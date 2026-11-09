@@ -1,6 +1,6 @@
 cask "kicad" do
-  version "10.0.6"
-  sha256 "ef4dcd4278c46d3efcd28c8db273d5957d68efda028f6bf79b4811fc5302dc68"
+  version "10.0.8"
+  sha256 "501d3e2933a385f1833497469f55326662df7e5d40401239826c40d6fa583f16"
 
   url "https://github.com/KiCad/kicad-source-mirror/releases/download/#{version}/kicad-unified-universal-#{version}.dmg"
   name "KiCad"
@@ -12,7 +12,7 @@ cask "kicad" do
     strategy :github_latest
   end
 
-  depends_on macos: :big_sur
+  depends_on :macos
 
   suite "KiCad"
   binary "#{appdir}/KiCad/KiCad.app/Contents/MacOS/dxf2idf"
@@ -25,8 +25,11 @@ cask "kicad" do
   zap delete: "/Library/Application Support/kicad",
       trash:  [
         "~/Library/Application Support/kicad",
+        "~/Library/Caches/KiCad",
         "~/Library/Preferences/kicad",
         "~/Library/Preferences/org.kicad-pcb.*",
+        "~/Library/Preferences/org.kicad.*",
         "~/Library/Saved Application State/org.kicad-pcb.*",
+        "~/Library/Saved Application State/org.kicad.*",
       ]
 end

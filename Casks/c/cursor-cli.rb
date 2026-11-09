@@ -1,11 +1,14 @@
 cask "cursor-cli" do
   arch arm: "arm64", intel: "x64"
+  os macos: "darwin", linux: "linux"
 
-  version "2026.09.02-c22c1a3"
-  sha256 arm:   "3d814861be3225fc8c38be320fb22e344d8f711a24279f1f9119e7b313ea51e7",
-         intel: "59e8afd9b4f5eba44682018b9428c4a94e230d090871eae19e703540aad6ef6a"
+  version "2026.11.05-86047df"
+  sha256 arm:          "67847e47e3ebd32b64c3fb4e6f36d475f1971b76e033b0ed6c9e01a3c1b440d7",
+         intel:        "75f345ce7638ff136e5cd09c45c3b2de4e73e5f590b50655e01e826c02bd7cfa",
+         arm64_linux:  "131554bfdbf683d8ebfef83a2bb46ac4e5d060f198711040b07ed063c2471871",
+         x86_64_linux: "170b77786cbf4c93064d64fff12b71a178b968730561c64afc2e8e752535442e"
 
-  url "https://downloads.cursor.com/lab/#{version}/darwin/#{arch}/agent-cli-package.tar.gz"
+  url "https://downloads.cursor.com/lab/#{version}/#{os}/#{arch}/agent-cli-package.tar.gz"
   name "Cursor CLI"
   desc "Command-line agent for Cursor"
   homepage "https://cursor.com/"
@@ -14,8 +17,6 @@ cask "cursor-cli" do
     url "https://cursor.com/install"
     regex(%r{downloads\.cursor\.com/lab/v?(\d+(?:[.-]\d+)+(?:[._-]\h+)?)/}i)
   end
-
-  depends_on :macos
 
   binary "#{staged_path}/dist-package/cursor-agent", target: "cursor-agent"
 

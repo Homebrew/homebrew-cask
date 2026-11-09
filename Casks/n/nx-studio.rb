@@ -1,6 +1,6 @@
 cask "nx-studio" do
-  version "1.10.1,vEVLA004QVnN07XfC2A52WMWwz22,8"
-  sha256 "93aa5f0261e88a03900dfc42c3d7e782b149b67081210036a326944d91971656"
+  version "1.11.0,apyHf00Vevg307PGU4m68PYjKb11,8"
+  sha256 "9adbf4e83d6dc78a026567cb6ca4f5a04c92083319ad37e03680d3098d04ba3a"
 
   url "https://download.nikonimglib.com/archive#{version.csv.third}/#{version.csv.second}/S-NXSTDO-#{version.csv.first.split(".").map { |n| n.rjust(2, "0") }.join}MF-ALLIN-ALL___.dmg"
   name "NX Studio"

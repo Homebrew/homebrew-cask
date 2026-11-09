@@ -1,6 +1,6 @@
 cask "clipy" do
-  version "1.3.0"
-  sha256 "80e67266f220d4e63cccfc185a5f3f800eadafa123e25e5f9791351ad13cb593"
+  version "1.4.1"
+  sha256 "14c067482ab1eb4f207e5b22ca276ce3fb19968e02142238e4d8e197c594bce3"
 
   url "https://github.com/Clipy/Clipy/releases/download/#{version}/Clipy_#{version}.dmg"
   name "Clipy"
@@ -26,6 +26,7 @@ cask "clipy" do
     "~/Library/Caches/com.crashlytics.data/com.clipy-app.Clipy",
     "~/Library/Caches/io.fabric.sdk.mac.data/com.clipy-app.Clipy",
     "~/Library/Cookies/com.clipy-app.Clipy.binarycookies",
+    "~/Library/HTTPStorages/com.clipy-app.Clipy",
     "~/Library/Preferences/com.clipy-app.Clipy.plist",
   ]
 end

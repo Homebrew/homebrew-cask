@@ -1,13 +1,13 @@
 cask "wailbrew" do
-  version "0.12.1"
-  sha256 "bcc9cb228c176cfadf020073b0c96f79ed69e8069f0767a1e61ceb5cb790e69c"
+  version "0.14.2"
+  sha256 "961703924639700cade59fde9017bcc9aaf1a3c0ab2b600b090314a684c5473b"
 
   url "https://github.com/wickenico/WailBrew/releases/download/v#{version}/wailbrew-v#{version}.zip"
   name "WailBrew"
   desc "Manage Homebrew packages with a UI"
   homepage "https://github.com/wickenico/WailBrew"
 
-  depends_on macos: :big_sur
+  depends_on :macos
 
   app "WailBrew.app"
 

@@ -8,5 +8,5 @@ cask "font-albertella" do
 
   font "albertella/Albertella-Light.otf"
 
-  # No zap stanza required
+  zap :not_required
 end

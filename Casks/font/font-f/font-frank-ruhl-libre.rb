@@ -8,5 +8,5 @@ cask "font-frank-ruhl-libre" do
 
   font "FrankRuhlLibre[wght].ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

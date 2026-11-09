@@ -25,6 +25,17 @@ cask "airmedia" do
               "com.crestron.CrestronAudioPlugin",
             ]
 
+  zap trash: [
+        "/Library/Application Support/Crestron/AirMedia",
+        "~/Library/Application Scripts/com.crestron.AirMedia2",
+        "~/Library/Application Support/Crestron/AirMedia",
+        "~/Library/Containers/com.crestron.AirMedia2",
+      ],
+      rmdir: [
+        "/Library/Application Support/Crestron",
+        "~/Library/Application Support/Crestron",
+      ]
+
   caveats do
     requires_rosetta
   end

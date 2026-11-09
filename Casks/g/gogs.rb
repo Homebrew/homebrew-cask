@@ -19,5 +19,5 @@ cask "gogs" do
                     cd '#{staged_path}/gogs' && ./gogs "$@"
                   EOS
 
-  # No zap stanza required
+  zap :not_required
 end

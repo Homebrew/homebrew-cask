@@ -1,9 +1,9 @@
 cask "plasticity" do
   arch arm: "arm64", intel: "x64"
 
-  version "26.1.4"
-  sha256 arm:   "4f61f0d3199bc2aaee6ec468e5e72f20f4781fd240db94b22282c0fa9659f70a",
-         intel: "191209da4e02ab65e35cba4fcdb4a1924fb73e31630a933c6a57e0c31803e512"
+  version "26.2.5"
+  sha256 arm:   "26e8e5b9f8803d2cde146310ea4e6ddea5c3fd6a1df5f1f6f06136c87145cca9",
+         intel: "a330727b8388a072f92d28ecbfb2da0b9c148e48eb66164aa8b6880cbed4d44f"
 
   url "https://github.com/nkallen/plasticity/releases/download/v#{version}/Plasticity-darwin-#{arch}-#{version}.zip"
   name "Plasticity"
@@ -20,7 +20,10 @@ cask "plasticity" do
   app "Plasticity.app"
 
   zap trash: [
-    "~/Library/Application Support/Plasticity",
-    "~/Library/Preferences/com.electron.plasticity.plist",
-  ]
+        "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.electron.plasticity.sfl*",
+        "~/Library/Application Support/Plasticity",
+        "~/Library/Logs/Plasticity",
+        "~/Library/Preferences/com.electron.plasticity.plist",
+      ],
+      rmdir: "~/.plasticity"
 end

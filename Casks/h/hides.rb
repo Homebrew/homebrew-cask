@@ -1,5 +1,5 @@
 cask "hides" do
-  version "7.4"
+  version "7.4.1"
   sha256 :no_check
 
   url "https://sweetpproductions.com/products/hides/Hides.dmg"
@@ -13,11 +13,12 @@ cask "hides" do
   end
 
   auto_updates true
-  depends_on macos: :big_sur
+  depends_on macos: :monterey
 
   app "Hides.app"
 
   zap trash: [
+    "~/Library/Application Scripts/com.sweetpproductions.Hides",
     "~/Library/Containers/com.sweetpproductions.Hides",
     "~/Library/Group Containers/*.com.sweetpproductions.Hides",
   ]

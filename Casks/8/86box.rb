@@ -20,7 +20,7 @@ cask "86box" do
     end
   end
 
-  depends_on macos: :big_sur
+  depends_on :macos
 
   app "86Box.app"
 

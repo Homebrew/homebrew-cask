@@ -7,6 +7,8 @@ cask "musaicfm" do
   desc "Screensaver displaying artwork based on Spotify or Last.fm profile data"
   homepage "https://github.com/docterd/MusaicFM"
 
+  deprecate! date: "2026-11-08", because: :discontinued
+
   depends_on :macos
 
   screen_saver "MusaicFM.saver"

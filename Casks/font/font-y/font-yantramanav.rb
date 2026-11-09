@@ -15,5 +15,5 @@ cask "font-yantramanav" do
   font "Yantramanav-Regular.ttf"
   font "Yantramanav-Thin.ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

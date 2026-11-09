@@ -12,9 +12,9 @@ cask "pimosa" do
     strategy :sparkle, &:short_version
   end
 
-  depends_on macos: :monterey
   # Binary is universal but only functional on Apple Silicon
   depends_on arch: :arm64
+  depends_on macos: :monterey
 
   app "Pimosa.app"
 

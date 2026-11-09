@@ -8,5 +8,5 @@ cask "font-kdam-thmor-pro" do
 
   font "KdamThmorPro-Regular.ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

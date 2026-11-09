@@ -8,5 +8,5 @@ cask "font-anek-odia" do
 
   font "AnekOdia[wdth,wght].ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

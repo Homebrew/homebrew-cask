@@ -11,5 +11,5 @@ cask "font-mina" do
   font "Mina-Bold.ttf"
   font "Mina-Regular.ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

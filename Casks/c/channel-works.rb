@@ -1,6 +1,6 @@
 cask "channel-works" do
-  version "12.0.7"
-  sha256 "15f6b8a09240aa91214e7ec9301a87bf4703b7574ad6c830de79922537ffdf43"
+  version "12.2.4"
+  sha256 "ec4ca50d2e2aba961895029c1e22757b0150173d2a015c49bfa9a6fd73b7a63a"
 
   url "https://github.com/channel-io/channel-works-macos/releases/download/v#{version}/Channel.Works-darwin-universal-#{version}.zip"
   name "Channel Works"
@@ -15,12 +15,13 @@ cask "channel-works" do
   end
 
   auto_updates true
-  depends_on macos: :big_sur
+  depends_on macos: :monterey
 
   app "Channel Works.app"
 
   zap trash: [
     "~/Library/Application Support/Channel Works",
+    "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.zoyi.channel.desk.osx.sfl*",
     "~/Library/Containers/com.zoyi.channel.desk.osx",
     "~/Library/Group Containers/8278Q64QFC.com.zoyi.channel.desk.osx",
     "~/Library/Logs/Channel Works",

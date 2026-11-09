@@ -1,6 +1,6 @@
 cask "inmusic-software-center" do
-  version "1.39.1"
-  sha256 "96c4106e44e4964925402fc22f453c4793161883fd04d6a5a808bf50020650ce"
+  version "1.40.1"
+  sha256 "a6167f115b053baec860f38cced2c077dbfdf41a5adec015197c25f6ab63a1cf"
 
   url "https://cdn.inmusicbrands.com/SI04/#{version.no_dots}/inMusic%20Software%20Center-darwin-universal-#{version}.zip"
   name "inMusic Software Center"
@@ -18,6 +18,7 @@ cask "inmusic-software-center" do
   app "inMusic Software Center.app"
 
   zap trash: [
+    "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.electron.inmusic-software-center.sfl*",
     "~/Library/Application Support/com.inmusicbrands.softwareunlock",
     "~/Library/Application Support/inMusic Software Center",
     "~/Library/Caches/com.electron.inmusic-software-center",

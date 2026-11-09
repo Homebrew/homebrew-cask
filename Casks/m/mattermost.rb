@@ -1,9 +1,9 @@
 cask "mattermost" do
   arch arm: "arm64", intel: "x64"
 
-  version "6.3.0"
-  sha256 arm:   "b6d22403e8a96cf54ba3a9ecf7267a5c7bb7ce225249ce12d53a60c8b4db5bfd",
-         intel: "9d7d9bed269c079a6bbe9e35b8275b03caeb85843b2d1aab3612e1063f9e4c0d"
+  version "6.3.2"
+  sha256 arm:   "7adb624266d125f9ac7d293cc742da52221f0e60991c0728de208c980da3ef33",
+         intel: "c256f69c8d57c1e527bee27205015f0fcc22da2590d11e55afd8d73bce55c5e6"
 
   url "https://releases.mattermost.com/desktop/#{version}/mattermost-desktop-#{version}-mac-#{arch}.zip"
   name "Mattermost"
@@ -26,6 +26,7 @@ cask "mattermost" do
   uninstall quit: "Mattermost.Desktop"
 
   zap trash: [
+    "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/mattermost.desktop.sfl*",
     "~/Library/Application Support/Mattermost",
     "~/Library/Containers/Mattermost.Desktop",
     "~/Library/Logs/Mattermost",

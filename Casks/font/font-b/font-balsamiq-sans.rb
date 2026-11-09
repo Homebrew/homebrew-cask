@@ -13,5 +13,5 @@ cask "font-balsamiq-sans" do
   font "BalsamiqSans-Italic.ttf"
   font "BalsamiqSans-Regular.ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

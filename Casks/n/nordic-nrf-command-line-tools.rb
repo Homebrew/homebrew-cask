@@ -14,12 +14,12 @@ cask "nordic-nrf-command-line-tools" do
     skip "Cannot be fetched due to Cloudflare protections"
   end
 
-  depends_on :macos
   depends_on cask: "segger-jlink"
+  depends_on :macos
 
   pkg ".nRF-Command-Line-Tools-#{version}-Darwin.pkg"
 
   uninstall pkgutil: "com.Nordic Semiconductor.nRF-Command-Line-Tools.*"
 
-  # No zap stanza required
+  zap :not_required
 end

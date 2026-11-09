@@ -12,5 +12,5 @@ cask "font-lekton" do
   font "Lekton-Italic.ttf"
   font "Lekton-Regular.ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

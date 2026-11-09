@@ -13,5 +13,5 @@ cask "font-scada" do
   font "Scada-Italic.ttf"
   font "Scada-Regular.ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

@@ -8,5 +8,5 @@ cask "font-copse" do
 
   font "Copse-Regular.ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

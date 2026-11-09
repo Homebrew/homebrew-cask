@@ -8,5 +8,5 @@ cask "font-viaoda-libre" do
 
   font "ViaodaLibre-Regular.ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

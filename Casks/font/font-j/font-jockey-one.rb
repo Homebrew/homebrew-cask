@@ -8,5 +8,5 @@ cask "font-jockey-one" do
 
   font "JockeyOne-Regular.ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

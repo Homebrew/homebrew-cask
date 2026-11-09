@@ -9,9 +9,9 @@ cask "font-sf-pro" do
 
   depends_on :macos
 
-  pkg "SF Pro Fonts.pkg"
+  pkg "SFProFonts.pkg"
 
   uninstall pkgutil: "com.apple.pkg.SFProFonts"
 
-  # No zap stanza required
+  zap :not_required
 end

@@ -24,6 +24,8 @@ cask "esphome-device-builder" do
     arch arm: "aarch64", intel: "amd64"
 
     app_image "ESPHome.Device.Builder_#{version}_#{arch}.AppImage", target: "ESPHome Device Builder.AppImage"
+
+    zap trash: "~/.local/share/io.esphome.builder"
   end
 
   url "https://github.com/esphome/esphome-desktop/releases/download/v#{version}/ESPHome.Device.Builder_#{version}_#{arch}.#{os}"

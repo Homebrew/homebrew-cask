@@ -14,5 +14,5 @@ cask "font-antinoou" do
   font "AntinoouFont-#{version}/Antinoou.ttf"
   font "AntinoouFont-#{version}/AntinoouItalic.ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

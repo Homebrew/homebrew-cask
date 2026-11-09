@@ -17,5 +17,5 @@ cask "font-ubuntu" do
   font "Ubuntu-MediumItalic.ttf"
   font "Ubuntu-Regular.ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

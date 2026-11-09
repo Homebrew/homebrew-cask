@@ -8,5 +8,5 @@ cask "font-meera-inimai" do
 
   font "MeeraInimai-Regular.ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

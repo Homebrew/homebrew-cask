@@ -13,5 +13,5 @@ cask "font-amaranth" do
   font "Amaranth-Italic.ttf"
   font "Amaranth-Regular.ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

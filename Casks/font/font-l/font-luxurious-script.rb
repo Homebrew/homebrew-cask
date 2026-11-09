@@ -8,5 +8,5 @@ cask "font-luxurious-script" do
 
   font "LuxuriousScript-Regular.ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

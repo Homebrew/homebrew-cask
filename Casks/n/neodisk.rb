@@ -1,20 +1,14 @@
 cask "neodisk" do
-  version "2.71.0"
-  sha256 "627d7a7fbe51298f5751e730b27dba62c149b2b555dba2a486e606640fa1a5ff"
+  version "2.83.2"
+  sha256 "9d66e314368b77e954c3368344f889210d3be8d0c3157a58511aeff59730082b"
 
   url "https://github.com/tkslucas/Neodisk/releases/download/v#{version}/Neodisk-#{version}.dmg"
   name "Neodisk"
   desc "Read-only disk space visualiser"
   homepage "https://neodisk.app/"
 
-  livecheck do
-    url :url
-    strategy :github_latest
-  end
-
   auto_updates true
   depends_on macos: :sonoma
-  depends_on arch: :arm64
 
   app "Neodisk.app"
 

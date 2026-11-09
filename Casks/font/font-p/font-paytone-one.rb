@@ -8,5 +8,5 @@ cask "font-paytone-one" do
 
   font "PaytoneOne-Regular.ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

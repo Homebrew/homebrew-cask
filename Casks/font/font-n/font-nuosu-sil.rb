@@ -8,5 +8,5 @@ cask "font-nuosu-sil" do
 
   font "NuosuSIL-Regular.ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

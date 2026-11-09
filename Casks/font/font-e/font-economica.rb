@@ -13,5 +13,5 @@ cask "font-economica" do
   font "Economica-Italic.ttf"
   font "Economica-Regular.ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

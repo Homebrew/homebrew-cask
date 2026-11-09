@@ -5,19 +5,20 @@ cask "beeper" do
                                    linux: on_arch_conditional(arm: "-arm64", intel: "-x86_64")
   url_end = on_system_conditional macos: "-mac.zip", linux: ".AppImage"
 
-  version "4.3.89"
-  sha256 arm:          "f6968462decc167e62c9469cbca84ec1ead7b57cedc1c766b7fbc7febd692c4e",
-         intel:        "594105719832f87cafde65ad982acb2710e3c071be422375682678af79687663",
-         arm64_linux:  "a0bc4d5a2746289f05d75771a6623a973be1be003e75c3c5173e2d7a737f60a3",
-         x86_64_linux: "a7de605ae802ec14037a88a26c0c5e9bb270dc60aebfdd4d6227fb9fe41f5c59"
+  version "4.3.284"
+  sha256 arm:          "979f8ebab5d16f1ef061197a5c97e5c2827385cc225a781757d0b3ca03d6e9ba",
+         intel:        "6206e06fe3768209a1d45e70af40d629ee5017e0468680c8a22bd2a586299858",
+         arm64_linux:  "195feb3e89720ba9b1c6b4be02fc1830e47d40b26546714860c034028917c3b2",
+         x86_64_linux: "25d8a73d1ef17aeb65b793ff9f6ade8222a372400e3f7ccf5e3bbdf0e9ca8c4a"
 
   on_macos do
-    depends_on macos: :monterey
+    depends_on macos: :ventura
 
     app "Beeper Desktop.app"
 
     zap trash: [
       "~/Library/Application Support/BeeperTexts",
+      "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.automattic.beeper.desktop.sfl*",
       "~/Library/Caches/com.automattic.beeper.desktop",
       "~/Library/Caches/com.automattic.beeper.desktop.ShipIt",
       "~/Library/Preferences/com.automattic.beeper.desktop.plist",

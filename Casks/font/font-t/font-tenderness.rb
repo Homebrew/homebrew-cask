@@ -19,5 +19,5 @@ cask "font-tenderness" do
 
   font "Tenderness-Regular.otf"
 
-  # No zap stanza required
+  zap :not_required
 end

@@ -8,5 +8,5 @@ cask "font-hammersmith-one" do
 
   font "HammersmithOne-Regular.ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

@@ -16,5 +16,5 @@ cask "font-m-plus-rounded-1c" do
   font "MPLUSRounded1c-Regular.ttf"
   font "MPLUSRounded1c-Thin.ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

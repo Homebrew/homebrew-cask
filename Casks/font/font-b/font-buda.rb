@@ -8,5 +8,5 @@ cask "font-buda" do
 
   font "Buda-Light.ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

@@ -1,6 +1,6 @@
 cask "cleanmymac" do
-  version "5.6.1,50601.0.2609011534"
-  sha256 "cecafce7591a8b78307bbbd9566760136ad19988074e5bf3540fc0bfe6f4964a"
+  version "5.7.4,50704.0.2611060828"
+  sha256 "c7375145a3849260b9b0f2ffae829ae784892db623b8419253cd8e5c82d30a47"
 
   url "https://updates.cleanmymac.com/com.macpaw.cleanmymac#{version.major}/releases/CleanMyMac#{version.major}_#{version.csv.second}.zip"
   name "CleanMyMac"
@@ -9,7 +9,6 @@ cask "cleanmymac" do
 
   livecheck do
     url "https://updates.cleanmymac.com/com.macpaw.cleanmymac#{version.major}/updates.xml"
-    regex(%r{/([^/]+)/CleanMyMac#{version.major}[._-]v?(?:\d+(?:\.\d+)+)\.zip}i)
     strategy :sparkle do |item|
       "#{item.short_version},#{item.version}"
     end
@@ -17,7 +16,7 @@ cask "cleanmymac" do
 
   auto_updates true
   conflicts_with cask: "cleanmymac-zh"
-  depends_on macos: :big_sur
+  depends_on :macos
 
   # Renamed for consistency: app name is different in the Finder and in a shell.
   app "CleanMyMac_#{version.major}.app", target: "CleanMyMac.app"
@@ -38,10 +37,14 @@ cask "cleanmymac" do
     "/Library/LaunchDaemons/com.macpaw.CleanMyMac#{version.major}.Agent.plist",
     "/Library/PrivilegedHelperTools/com.macpaw.CleanMyMac#{version.major}.Agent",
     "/Users/Shared/CleanMyMac_#{version.major}",
+    "~/Library/Application Scripts/com.macpaw.CleanMyMac#{version.major}.FinderSyncExtension",
     "~/Library/Application Scripts/S8EX82NJP6.com.macpaw.CleanMyMac#{version.major}",
+    "~/Library/Application Scripts/S8EX82NJP6.com.macpaw.CleanMyMac4",
     "~/Library/Application Support/CleanMyMac_#{version.major}",
     "~/Library/Caches/com.macpaw.CleanMyMac#{version.major}",
+    "~/Library/Containers/com.macpaw.CleanMyMac#{version.major}.FinderSyncExtension",
     "~/Library/Group Containers/S8EX82NJP6.com.macpaw.CleanMyMac#{version.major}",
+    "~/Library/Group Containers/S8EX82NJP6.com.macpaw.CleanMyMac4",
     "~/Library/HTTPStorages/com.macpaw.CleanMyMac#{version.major}",
     "~/Library/HTTPStorages/com.macpaw.CleanMyMac#{version.major}.binarycookies",
     "~/Library/LaunchAgents/com.macpaw.CleanMyMac#{version.major}.Updater.plist",

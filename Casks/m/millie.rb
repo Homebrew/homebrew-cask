@@ -1,6 +1,6 @@
 cask "millie" do
-  version "2.16.0"
-  sha256 "47446711439c7f783e64ea6261b4179d30398fb71d2e54a948792b53159894f3"
+  version "2.18.1"
+  sha256 "dec1a41dc9c09d4f57b1ff08a41173c35dc7455f971375ad56d6972aaa3b30e0"
 
   url "https://install.millie.co.kr/flutter/#{version}/millie.dmg"
   name "Millie"
@@ -14,7 +14,7 @@ cask "millie" do
     end
   end
 
-  depends_on macos: :big_sur
+  depends_on :macos
 
   app "밀리의서재.app"
 
@@ -22,6 +22,7 @@ cask "millie" do
     "~/Library/Application Support/kr.co.millie.MillieShelf",
     "~/Library/Caches/kr.co.millie.MillieShelf",
     "~/Library/HTTPStorages/kr.co.millie.MillieShelf.binarycookies",
+    "~/Library/Preferences/kr.co.millie.MillieShelf.plist",
     "~/Library/Saved Application State/kr.co.millie.MillieShelf.savedState",
     "~/Library/WebKit/kr.co.millie.MillieShelf",
   ]

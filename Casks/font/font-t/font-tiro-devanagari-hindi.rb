@@ -11,5 +11,5 @@ cask "font-tiro-devanagari-hindi" do
   font "TiroDevanagariHindi-Italic.ttf"
   font "TiroDevanagariHindi-Regular.ttf"
 
-  # No zap stanza required
+  zap :not_required
 end

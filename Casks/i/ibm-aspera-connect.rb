@@ -10,8 +10,8 @@ cask "ibm-aspera-connect" do
     url "https://delivery04-mul.dhe.ibm.com/sar/CMA/OSA/#{folder}/0/ibm-aspera-connect_#{version}_macOS_#{arch}.pkg"
   end
   on_intel do
-    version "4.2.19.956-HEAD"
-    sha256 "5f6b88d3b5fdf3d1e1dbeb4c49e366be12942100712622aa582571e4d7d3feef"
+    version "4.2.20.976"
+    sha256 "e3a90460bd967a749ff90377554954c7a1dce880fd943383a9126f6c444e327d"
 
     url "https://d3gcli72yxqn2z.cloudfront.net/downloads/connect/latest/bin/ibm-aspera-connect_#{version}_macOS_#{arch}.pkg"
   end

@@ -8,5 +8,5 @@ cask "font-noto-sans-mende-kikakui" do
 
   font "NotoSansMendeKikakui-Regular.ttf"
 
-  # No zap stanza required
+  zap :not_required
 end
