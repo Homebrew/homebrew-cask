@@ -10,16 +10,19 @@ cask "hdfview" do
   desc "Tool for browsing and editing HDF files"
   homepage "https://www.hdfgroup.org/download-hdfview/"
 
-  # The "latest" release on GitHub is set to the `snapshot` release instead of
-  # the latest stable version. This checks the version from the filename text
-  # on the homepage, so we don't have to use the `GithubReleases` strategy. If
-  # we used `GithubReleases`, we would have to create a somewhat involved
-  # `strategy` block to avoid releases where part of the version is 99, as
-  # upstream doesn't always reliably mark those versions as "pre-release" (e.g.
-  # `HDFView-3.3.99` isn't marked as pre-release).
+  # Upstream uses tags where a version part is 99 (e.g. `v99.99.99`) for
+  # snapshot builds, so we omit them.
   livecheck do
-    url :homepage
-    regex(/HDFView[._-]v?(\d+(?:\.\d+)+)[._-]?App[._-]Darwin[._-]#{arch}\.t/i)
+    url :url
+    regex(/^v?(\d+(?:\.\d+)+)$/i)
+    strategy :git do |tags, regex|
+      tags.filter_map do |tag|
+        match = tag.match(regex)
+        next if match.blank? || match[1].split(".").include?("99")
+
+        match[1]
+      end
+    end
   end
 
   depends_on :macos
