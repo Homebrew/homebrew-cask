@@ -1,10 +1,10 @@
 cask "clash-mi" do
   url_end = on_system_conditional macos: "macos_universal.dmg", linux: "linux_amd64.AppImage"
 
-  version "1.0.31.1703"
-  sha256 arm:          "4b36d2e002540a2ac9d4cc7b35e0e384e27a7fa40f5f9122ac5e90cf594c6d6b",
-         intel:        "4b36d2e002540a2ac9d4cc7b35e0e384e27a7fa40f5f9122ac5e90cf594c6d6b",
-         x86_64_linux: "b5e2ee38fe8d48e13d4cff1df88449aed704083a5fbb92cc0e53b0fa5664bdcd"
+  version "1.0.32.1803"
+  sha256 arm:          "fd0382f8d996f97ed65eadf634967e9c1eed4909ec181cd2a53d81b6280e5c17",
+         intel:        "fd0382f8d996f97ed65eadf634967e9c1eed4909ec181cd2a53d81b6280e5c17",
+         x86_64_linux: "8d1aee3cea3ea3a2863a145565a8af748ba56cc995236fec3ad34695196f612e"
 
   on_macos do
     depends_on macos: :monterey
