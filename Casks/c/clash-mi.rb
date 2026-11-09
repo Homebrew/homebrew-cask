@@ -12,8 +12,12 @@ cask "clash-mi" do
     app "Clash Mi.app"
 
     zap trash: [
+      "~/Library/Application Scripts/com.nebula.clashmi",
+      "~/Library/Application Scripts/group.com.nebula.clashmi",
       "~/Library/Application Support/clashmi",
       "~/Library/Caches/com.nebula.clashmi",
+      "~/Library/Containers/com.nebula.clashmi",
+      "~/Library/Group Containers/group.com.nebula.clashmi",
       "~/Library/Preferences/com.nebula.clashmi.plist",
       "~/Library/Saved Application State/com.nebula.clashmi.savedState",
       "~/Library/WebKit/com.nebula.clashmi",
