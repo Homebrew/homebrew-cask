@@ -10,9 +10,23 @@ cask "chipmunk" do
   desc "Log analysis tool"
   homepage "https://github.com/esrlabs/chipmunk/"
 
+  # Upstream sometimes publishes releases without macOS assets, so we check
+  # releases for a matching portable archive.
   livecheck do
     url :url
-    strategy :github_latest
+    regex(/^chipmunk@v?(\d+(?:\.\d+)+)[._-]darwin#{arch}[._-]portable\.t/i)
+    strategy :github_releases do |json, regex|
+      json.map do |release|
+        next if release["draft"] || release["prerelease"]
+
+        release["assets"]&.map do |asset|
+          match = asset["name"]&.match(regex)
+          next if match.blank?
+
+          match[1]
+        end
+      end.flatten
+    end
   end
 
   auto_updates true
