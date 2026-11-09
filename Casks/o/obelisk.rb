@@ -1,6 +1,6 @@
 cask "obelisk" do
-  version "0.6.1"
-  sha256 "bd315ce0d6e28e827f2ca2eeaf9319beb1b991bf5f1223d208c47b429f285092"
+  version "0.6.2"
+  sha256 "02c36d9fe2273852abde439f5bbbc3620964717406287190a2bf1edb574cc7bf"
 
   url "https://github.com/Zagrios/Obelisk/releases/download/v#{version}/Obelisk-#{version}-arm64.dmg"
   name "Obelisk"
