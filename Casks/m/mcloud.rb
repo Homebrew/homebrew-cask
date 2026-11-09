@@ -32,6 +32,7 @@ cask "mcloud" do
   app "中国移动云盘.app"
 
   zap trash: [
+    "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.cmic.mcloudformacosv2.sfl*",
     "~/Library/Application Support/mCloud",
     "~/Library/Preferences/com.cmic.mcloudForMacOSV2.plist",
   ]
