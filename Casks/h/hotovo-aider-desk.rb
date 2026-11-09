@@ -19,8 +19,10 @@ cask "hotovo-aider-desk" do
     "~/.aider-desk",
     "~/Library/Application Support/aider-desk",
     "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.hotovo.aider-desk.sfl*",
+    "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/eu.magiksoft.aiderdesk.sfl*",
     "~/Library/Logs/aider-desk",
     "~/Library/Preferences/com.hotovo.aider-desk.plist",
+    "~/Library/Preferences/eu.magiksoft.aiderdesk.plist",
     "~/Library/Saved Application State/com.hotovo.aider-desk.savedState",
   ]
 end
