@@ -14,7 +14,7 @@ cask "mixed-in-key" do
   # major version, so we have to fetch multiple pages to identify the current
   # URL for the latest file.
   livecheck do
-    url "https://shop.mixedinkey.com"
+    url "https://mixedinkey.com/"
     regex(/Mixed(?:%2B|[+._-])In(?:%2B|[+._-])Key[._-]v?(\d+(?:\.\d+)+)/i)
     strategy :page_match do |page, regex|
       # Find the current major version
