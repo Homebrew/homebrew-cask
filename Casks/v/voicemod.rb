@@ -1,9 +1,9 @@
 cask "voicemod" do
   arch arm: "AppleSilicon", intel: "Intel"
 
-  version "3.17.43"
-  sha256 arm:   "0330454cb4caa55cfbe1edb8426d6d76ce92b60b43517aff6fd6c07b338b332e",
-         intel: "550b4afa501201a29270ab651faa076c8a0c9bdbfbafa59016267b6e18ebe2f7"
+  version "3.17.49"
+  sha256 arm:   "1082b91958027bd3d92beac04fda1d4d6ef1faab8775721514e497f581e60ed4",
+         intel: "b86dcd91d320a6d7056c7f2c604605683adbbaa505b20b7da474d3ec122643bd"
 
   url "https://flagship-versions.voicemod.net/#{version}/Voicemod_#{version}-#{arch}.pkg"
   name "Voicemod"
