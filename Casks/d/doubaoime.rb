@@ -1,8 +1,8 @@
 cask "doubaoime" do
-  version "1.0.3,1000302,2"
-  sha256 "45c19afc498e3257c9828c4434181cb389b8df4510ea8c063ca02a4ab4a86e31"
+  version "1.1.0,1010005"
+  sha256 "53e51b8e266abcd65e3182e6827cb1694ba0418ddd393e052e18b7bcae63f535"
 
-  url "https://lf-wave.doubaocdn.com/obj/doubao-ime/app/macos/DoubaoImeInstaller_v#{version.csv.second}_#{version.csv.third}_release.zip"
+  url "https://lf-wave.doubaocdn.com/obj/doubao-ime/app/macos/DoubaoImeInstaller_v#{version.csv.second}_release.zip"
   name "Doubao Input Method"
   name "豆包输入法"
   desc "Chinese input method with voice input and intelligent suggestions"
@@ -10,13 +10,13 @@ cask "doubaoime" do
 
   livecheck do
     url "https://shurufa.doubao.com/api/v1/app/download_url?platform=macos"
-    regex(/DoubaoImeInstaller[._-]v?(\d+)[._-](\d+(?:_\d+)*)[._-]release\.zip/i)
+    regex(/DoubaoImeInstaller[._-]v?(\d+)[._-]release\.zip/i)
     strategy :json do |json, regex|
       short_version = json.dig("data", "version_name")&.sub(/\Av/i, "")
       match = json.dig("data", "url")&.match(regex)
       next if short_version.blank? || match.blank?
 
-      "#{short_version},#{match[1]},#{match[2]}"
+      "#{short_version},#{match[1]}"
     end
   end
 
