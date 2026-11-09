@@ -22,7 +22,11 @@ cask "youdaonote" do
   app "有道云笔记.app"
 
   zap trash: [
+    "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/ynote-desktop.sfl*",
+    "~/Library/Application Support/ynote-desktop",
     "~/Library/Containers/com.youdao.note.YoudaoNoteMac",
+    "~/Library/Logs/ynote-desktop",
+    "~/Library/Preferences/ynote-desktop.plist",
     "~/Library/Saved Application State/com.youdao.YoudaoDict.savedState",
   ]
 end
