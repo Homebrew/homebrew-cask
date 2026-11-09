@@ -1,16 +1,11 @@
 cask "es-de" do
-  arch arm: "macOSApple", intel: "macOSIntel"
+  arch arm: "arm64", intel: "x64"
 
-  on_arm do
-    version "3.5.0,357717468"
-    sha256 "060bd289fa17f8f07bac2eb688698047f7be79b80495983f08580b5f1a046e1e"
-  end
-  on_intel do
-    version "3.5.0,357717755"
-    sha256 "36418337e9f499506ee4fed6f8c880665abfb24eda1fde0b23f224f0ca69cd39"
-  end
+  version "3.5.0"
+  sha256 arm:   "060bd289fa17f8f07bac2eb688698047f7be79b80495983f08580b5f1a046e1e",
+         intel: "36418337e9f499506ee4fed6f8c880665abfb24eda1fde0b23f224f0ca69cd39"
 
-  url "https://gitlab.com/es-de/emulationstation-de/-/package_files/#{version.csv.second}/download"
+  url "https://packages.es-de.org/release/#{version}/ES-DE_#{version}-#{arch}.dmg"
   name "ES-DE"
   name "EmulationStation Desktop Edition"
   desc "Frontend for browsing and launching games from your multi-platform collection"
@@ -18,20 +13,8 @@ cask "es-de" do
 
   livecheck do
     url "https://gitlab.com/api/v4/projects/18817634/repository/files/latest_release.json/raw?ref=master"
-    regex(%r{/package_files/(\d+)/download}i)
-    strategy :json do |json, regex|
-      version = json.dig("stable", "version")
-      next if version.blank?
-
-      download_url = json.dig("stable", "packages")
-                         &.find { |pkg| pkg["name"] == arch }
-                         &.dig("url")
-      next if download_url.blank?
-
-      download_id = download_url[regex, 1]
-      next if download_id.blank?
-
-      "#{version},#{download_id}"
+    strategy :json do |json|
+      json.dig("stable", "version")
     end
   end
 
