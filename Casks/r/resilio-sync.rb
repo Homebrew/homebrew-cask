@@ -24,10 +24,13 @@ cask "resilio-sync" do
 
   zap trash: [
     "~/Library/Application Scripts/com.resilio.Sync.FinderExtension",
+    "~/Library/Application Scripts/group.com.resilio.Sync",
     "~/Library/Application Support/Resilio Sync",
     "~/Library/Caches/com.resilio.Sync",
     "~/Library/Containers/com.resilio.Sync.FinderExtension",
     "~/Library/Group Containers/group.com.resilio.Sync",
+    "~/Library/HTTPStorages/com.resilio.Sync",
     "~/Library/Preferences/com.resilio.Sync.plist",
+    "~/Library/WebKit/com.resilio.Sync",
   ]
 end
