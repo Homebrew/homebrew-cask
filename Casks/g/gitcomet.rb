@@ -3,14 +3,14 @@ cask "gitcomet" do
   os macos: "macos", linux: "linux"
   url_end = on_system_conditional macos: "dmg", linux: "AppImage"
 
-  version "0.3.3"
-  sha256 arm:          "ffde019181122d599ff84cc4cd51f24d066e3123ccc3386ae2dcd4f8e259e5ba",
-         intel:        "ef2f0affd87de80ad2348bb442d5066a857e19edaf0126471e6c81f60c5a0701",
-         arm64_linux:  "a735af6409729e339c3c7b76b69c8ce6d84aa15c7fc1d1b847ab5601fd4cd8aa",
-         x86_64_linux: "b3a4203b0947ff73214773035271006bb3b4f62788cb1a0e3ca7a72560bab692"
+  version "0.3.4"
+  sha256 arm:          "02d70829152703df4fb696418e2e31b1b7f62d064762e232e0f05db3e7c9334a",
+         intel:        "fce37391a931804f9384cd25e88f2147c2984535bf354c77062d90fe4e6954df",
+         arm64_linux:  "b65e2763f735e5a1cad3681b839542bf0b8e2d3363f20641b7c4137f9c6fe0c2",
+         x86_64_linux: "305f4738867cc264fd3c36edbf904940210facd93aa8ad3407db07134dbb7fd2"
 
   on_macos do
-    depends_on macos: :ventura
+    depends_on macos: :sequoia
 
     app "GitComet.app"
     binary "#{appdir}/GitComet.app/Contents/MacOS/gitcomet", target: "gitcomet"
