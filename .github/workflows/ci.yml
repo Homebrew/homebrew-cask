@@ -89,11 +89,13 @@ jobs:
         id: set-up-homebrew
         uses: Homebrew/actions/setup-homebrew@c262868c096d909fc278daa87ed9772967331ea3 # 2026.11.02.1
         with:
-          core: true
+          core: false
           cask: true
           stable: ${{ matrix.stable || false }}
 
       # setup-homebrew blanks this via $GITHUB_ENV, which overrides workflow `env:`.
+      # `test-bot` and `audit` blank it again in their step `env:`: they load casks
+      # from the tap regardless, and formulae from the API instead of homebrew/core.
       - name: Disable API installs
         run: echo 'HOMEBREW_NO_INSTALL_FROM_API=1' >> "${GITHUB_ENV}"
 
@@ -134,6 +136,8 @@ jobs:
 
       - name: Run brew test-bot --only-tap-syntax
         id: tap-syntax
+        env:
+          HOMEBREW_NO_INSTALL_FROM_API: ""
         run: brew test-bot --tap '${{ matrix.tap }}' --only-tap-syntax ${{ matrix.stable && '--stable' || '' }}
         if: always() && !matrix.cask
 
@@ -161,6 +165,8 @@ jobs:
 
       - name: Run brew audit --cask${{ (matrix.cask && ' ') || ' --tap ' }}${{ matrix.cask.token || matrix.tap }}
         id: audit
+        env:
+          HOMEBREW_NO_INSTALL_FROM_API: ""
         run: |
           brew audit --cask ${{ join(matrix.audit_args, ' ') }}${{ (matrix.cask && ' ') || ' --tap ' }}'${{ matrix.cask.token || matrix.tap }}'
         timeout-minutes: 30
