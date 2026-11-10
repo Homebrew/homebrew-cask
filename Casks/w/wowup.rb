@@ -18,6 +18,7 @@ cask "wowup" do
   uninstall quit: "io.wowup.jliddev"
 
   zap trash: [
+    "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/io.wowup.jliddev.sfl*",
     "~/Library/Application Support/WowUp",
     "~/Library/Logs/WowUp",
     "~/Library/Preferences/io.wowup.jliddev.plist",
