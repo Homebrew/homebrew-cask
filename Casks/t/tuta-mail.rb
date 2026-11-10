@@ -1,5 +1,5 @@
 cask "tuta-mail" do
-  version "366.261105.0"
+  version "368.261109.0"
   sha256 :no_check
 
   url "https://app.tuta.com/desktop/tutanota-desktop-mac.dmg"
