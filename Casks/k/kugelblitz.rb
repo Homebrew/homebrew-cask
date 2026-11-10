@@ -1,6 +1,6 @@
 cask "kugelblitz" do
-  version "1.1"
-  sha256 "a245c0e85829efb6f45d2405a01589ce9154cfc5fc9cd1818c79a4ab86c4d67e"
+  version "1.2"
+  sha256 "48ef4be2635885a2266eca3d7a4792ed322299ed1b2a1f3b22c9ea0845535289"
 
   url "https://apps.metaebene.me/dl/kugelblitz/#{version}/Kugelblitz-#{version}.dmg"
   name "Kugelblitz"
