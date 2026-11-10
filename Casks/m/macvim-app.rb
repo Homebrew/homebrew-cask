@@ -9,8 +9,10 @@ cask "macvim-app" do
 
   livecheck do
     url "https://macvim.org/appcast/latest.xml"
-    strategy :sparkle do |items|
-      item = items.find { |item| item.channel.nil? }
+    regex(%r{/MacVim\.dmg$}i)
+    strategy :sparkle do |items, regex|
+      item = items.find { |item| item.channel.nil? && item.url&.match(regex) }
+      next if item&.version.nil? || item.short_version.nil?
 
       "#{item.version},#{item.short_version}"
     end
@@ -40,7 +42,9 @@ cask "macvim-app" do
   zap trash: [
     "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/org.vim.macvim.sfl*",
     "~/Library/Caches/org.vim.MacVim",
+    "~/Library/HTTPStorages/org.vim.MacVim",
     "~/Library/Preferences/org.vim.MacVim.LSSharedFileList.plist",
     "~/Library/Preferences/org.vim.MacVim.plist",
+    "~/Library/WebKit/org.vim.MacVim",
   ]
 end
