@@ -15,6 +15,8 @@ cask "portx" do
     strategy :extract_plist
   end
 
+  deprecate! date: "2026-11-10", because: :discontinued, replacement_cask: "xcasca"
+
   depends_on :macos
 
   app "PortX.app"
