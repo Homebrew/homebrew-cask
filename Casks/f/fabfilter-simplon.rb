@@ -16,7 +16,7 @@ cask "fabfilter-simplon" do
 
   pkg "FabFilter Simplon #{version} Installer.pkg"
 
-  uninstall pkgutil: "com.fabfilter.Simplon.*"
+  uninstall pkgutil: "com.fabfilter.Simplon.*.#{version.major}"
 
   zap :not_required
 end
