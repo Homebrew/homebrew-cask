@@ -94,8 +94,8 @@ jobs:
           stable: ${{ matrix.stable || false }}
 
       # setup-homebrew blanks this via $GITHUB_ENV, which overrides workflow `env:`.
-      # `test-bot` and `audit` blank it again in their step `env:`: they load casks
-      # from the tap regardless, and formulae from the API instead of homebrew/core.
+      # Steps that never load casks from the API blank it again in their `env:` so
+      # formulae come from the API instead of homebrew/core.
       - name: Disable API installs
         run: echo 'HOMEBREW_NO_INSTALL_FROM_API=1' >> "${GITHUB_ENV}"
 
@@ -113,6 +113,8 @@ jobs:
 
       - name: Clean up CI machine
         if: runner.os == 'macOS' && !matrix.stable
+        env:
+          HOMEBREW_NO_INSTALL_FROM_API: ""
         run: brew test-bot --cleanup --only-cleanup-before
 
       - name: Cache Homebrew Gems
