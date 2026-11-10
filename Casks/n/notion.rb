@@ -2,14 +2,14 @@ cask "notion" do
   arch arm: "-arm64"
   livecheck_folder = on_arch_conditional arm: "arm64", intel: "latest"
 
-  sha256 arm:   "47708496978b16cbf5fb9da7dab1b4496f3e7fddecc15adf785223399373d3a3",
-         intel: "f41674e8f5b43fdb82a8b34853fd0afbd7f0a4fdad759c48ceab122abc8c4bd3"
+  sha256 arm:   "e627f85d879367b2cf634efcda9f14a6e142ec24dc1ec4ec80f8a2eb53f94886",
+         intel: "86651bcc1b70d1c18c5c64531bcaefa309eb8e7a23b63744bc560e162c61961b"
 
   on_arm do
-    version "7.42.3"
+    version "7.43.0"
   end
   on_intel do
-    version "7.42.3"
+    version "7.43.0"
   end
 
   url "https://desktop-release.notion-static.com/Notion-#{version}#{arch}.dmg"
