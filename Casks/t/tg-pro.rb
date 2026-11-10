@@ -25,6 +25,7 @@ cask "tg-pro" do
     "~/Library/Application Support/TG Pro",
     "~/Library/Caches/com.tunabellysoftware.tgpro",
     "~/Library/Cookies/com.tunabellysoftware.tgpro.binarycookies",
+    "~/Library/HTTPStorages/com.tunabellysoftware.tgpro",
     "~/Library/Preferences/com.tunabellysoftware.tgpro.plist",
   ]
 end

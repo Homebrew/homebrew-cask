@@ -20,6 +20,8 @@ cask "cavalry" do
 
   zap trash: [
     "~/Library/Application Support/Cavalry",
+    "~/Library/Caches/com.scenegroup.cavalry",
+    "~/Library/HTTPStorages/com.scenegroup.cavalry*",
     "~/Library/Preferences/Cavalry",
   ]
 end

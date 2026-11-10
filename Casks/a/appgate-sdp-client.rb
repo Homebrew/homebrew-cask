@@ -34,8 +34,12 @@ cask "appgate-sdp-client" do
             pkgutil:   "com.appgate.pkg.appgatetun.component"
 
   zap trash: [
+    "~/Library/Application Support/Appgate SDP",
     "~/Library/Application Support/appgate-ui",
+    "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.appgate.sdp.sfl*",
     "~/Library/Caches/com.cyxtera.appgate.sdp.uninstall",
+    "~/Library/Preferences/com.appgate.sdp.plist",
+    "~/Library/Preferences/com.appgate.sdp.service.plist",
     "~/Library/Preferences/com.cyxtera.appgate.sdp*",
     "~/Library/Saved Application State/com.cyxtera.appgate.sdp.savedState",
   ]

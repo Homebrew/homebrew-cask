@@ -13,5 +13,9 @@ cask "kameleo" do
 
   app "Kameleo.app"
 
-  zap trash: "~/Library/Application Support/Kameleo"
+  zap trash: [
+    "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/io.kameleo.client.sfl*",
+    "~/Library/Application Support/Kameleo",
+    "~/Library/Preferences/io.kameleo.client.plist",
+  ]
 end

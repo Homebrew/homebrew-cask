@@ -21,6 +21,7 @@ cask "camunda-modeler" do
 
   zap trash: [
     "~/Library/Application Support/camunda-modeler",
+    "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.camunda.camundamodeler.sfl*",
     "~/Library/Logs/Camunda Modeler",
     "~/Library/Preferences/com.camunda.CamundaModeler.plist",
     "~/Library/Saved Application State/com.camunda.CamundaModeler.savedState",

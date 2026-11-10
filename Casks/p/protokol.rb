@@ -18,6 +18,7 @@ cask "protokol" do
   app "Protokol.app"
 
   zap trash: [
+        "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/net.hexler.protokol.sfl*",
         "~/Library/Application Support/net.hexler.Protokol",
         "~/Library/Caches/net.hexler.Protokol",
         "~/Library/HTTPStorages/net.hexler.Protokol",

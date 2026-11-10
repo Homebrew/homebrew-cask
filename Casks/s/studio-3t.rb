@@ -26,9 +26,12 @@ cask "studio-3t" do
 
   zap trash: [
     "~/.3T/studio-3t",
+    "~/Library/Caches/com.install4j.0526-4458-1435-8154.837",
+    "~/Library/HTTPStorages/com.install4j.0526-4458-1435-8154.837",
     "~/Library/Preferences/3t.enterprise.mongochef.plist",
     "~/Library/Preferences/3t.mongochef.core.plist",
     "~/Library/Preferences/3t.mongochef.enterprise.plist",
     "~/Library/Preferences/3t.mongochef.pro.plist",
+    "~/Library/Preferences/com.install4j.0526-4458-1435-8154.837.plist",
   ]
 end

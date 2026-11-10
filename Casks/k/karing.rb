@@ -21,6 +21,7 @@ cask "karing" do
   zap trash: [
     "~/Library/Application Scripts/com.nebula.karing",
     "~/Library/Application Scripts/group.com.nebula.karing",
+    "~/Library/Containers/com.nebula.karing",
     "~/Library/Containers/Karing",
     "~/Library/Group Containers/group.com.nebula.karing",
   ]
