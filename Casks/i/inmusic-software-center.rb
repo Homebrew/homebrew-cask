@@ -1,15 +1,21 @@
 cask "inmusic-software-center" do
-  version "1.40.1"
-  sha256 "a6167f115b053baec860f38cced2c077dbfdf41a5adec015197c25f6ab63a1cf"
+  version "1.40.2,1042"
+  sha256 "1426f591b868be08e0f63d4e069cf48d66e1ea41cf08e24cccccf12773cbf370"
 
-  url "https://cdn.inmusicbrands.com/SI04/#{version.no_dots}/inMusic%20Software%20Center-darwin-universal-#{version}.zip"
+  url "https://cdn.inmusicbrands.com/SI04/#{version.csv.second || version.no_dots}/inMusic%20Software%20Center-darwin-universal-#{version.csv.first}.zip"
   name "inMusic Software Center"
   desc "Administration tool for inMusic brand creative software"
   homepage "https://www.airmusictech.com/downloads/"
 
   livecheck do
     url "https://inmusic.to/ISCMAC"
-    strategy :header_match
+    regex(%r{/(\d+)/inMusic%20Software%20Center-darwin-universal[._-]v?(\d+(:?\.\d+)+)\.zip}i)
+    strategy :header_match do |headers, regex|
+      match = headers["location"]&.match(regex)
+      next if match.blank?
+
+      (match[1] == match[2].tr(".", "")) ? match[2] : "#{match[2]},#{match[1]}"
+    end
   end
 
   auto_updates true
