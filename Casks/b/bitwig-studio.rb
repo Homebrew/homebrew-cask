@@ -20,5 +20,6 @@ cask "bitwig-studio" do
     "~/Library/Application Support/Bitwig",
     "~/Library/Caches/Bitwig",
     "~/Library/Logs/Bitwig",
+    "~/Library/Preferences/com.bitwig.studio.plist",
   ]
 end
