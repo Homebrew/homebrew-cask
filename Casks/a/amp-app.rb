@@ -24,9 +24,11 @@ cask "amp-app" do
 
   zap trash: [
     "~/Library/Application Scripts/com.ampcode.amp.macos.share",
+    "~/Library/Application Scripts/com.ampcode.amp.macos.widgets",
     "~/Library/Application Scripts/group.com.ampcode.amp.macos",
     "~/Library/Caches/com.ampcode.amp.macos",
     "~/Library/Containers/com.ampcode.amp.macos.share",
+    "~/Library/Containers/com.ampcode.amp.macos.widgets",
     "~/Library/Group Containers/group.com.ampcode.amp.macos",
     "~/Library/HTTPStorages/com.ampcode.amp.macos",
     "~/Library/HTTPStorages/com.ampcode.amp.macos.binarycookies",
