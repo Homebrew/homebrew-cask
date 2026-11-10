@@ -1,6 +1,6 @@
 cask "font-nordwand-mono" do
-  version "1.5.2"
-  sha256 "733880c59cf8227cdba6ef284ca58fd524a839b2c51a8c5abeaecb078e3a84fb"
+  version "1.5.3"
+  sha256 "f4cdc825b44d8fc8b25fbbddd67dbd95bad285d8a32dfbe43943b400718eee8e"
 
   url "https://github.com/tywr/Nordwand-Mono/releases/download/#{version}/NordwandMono-TTF.zip"
   name "Nordwand Mono"
