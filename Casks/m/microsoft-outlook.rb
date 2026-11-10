@@ -1,5 +1,5 @@
 cask "microsoft-outlook" do
-  on_ventura :or_older do
+  on_sonoma :or_older do
     on_big_sur :or_older do
       version "16.77.23091703"
       sha256 "becfe797d1c799a4366385f449e42f7377bd3d6de5d4db20e37bd36ba2f24ef5"
@@ -12,14 +12,18 @@ cask "microsoft-outlook" do
       version "16.101.25100321"
       sha256 "db4ce5854bbcb60284041f7a04e2f37e317cff578857486af78069b3935c5e86"
     end
+    on_sonoma do
+      version "16.114.26102720"
+      sha256 "f91c8e06a4fb9fcd0a7d3b4f0a189f73ab361306f01125f54b60a81d9e7ca766"
+    end
 
     livecheck do
       skip "Legacy version"
     end
   end
-  on_sonoma :or_newer do
-    version "16.114.26102720"
-    sha256 "f91c8e06a4fb9fcd0a7d3b4f0a189f73ab361306f01125f54b60a81d9e7ca766"
+  on_sequoia :or_newer do
+    version "16.115.26110837"
+    sha256 "89a5f392de320615c0940716d19778d8c1ef3a012130147aef87d000a0c25675"
 
     livecheck do
       url "https://go.microsoft.com/fwlink/p/?linkid=525137"
@@ -48,11 +52,15 @@ cask "microsoft-outlook" do
         },
       ]
 
-  uninstall launchctl: "com.microsoft.office.licensingV2.helper",
+  uninstall launchctl: [
+              "com.microsoft.office.licensingV2.helper",
+              "com.microsoft.office.licensingV3.helper",
+            ],
             quit:      "com.microsoft.autoupdate2",
             pkgutil:   [
               "com.microsoft.package.Microsoft_Outlook.app",
               "com.microsoft.pkg.licensing",
+              "com.microsoft.pkg.licensing.v3",
             ]
 
   zap trash: [
