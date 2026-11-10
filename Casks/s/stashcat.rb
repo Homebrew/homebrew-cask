@@ -1,6 +1,6 @@
 cask "stashcat" do
-  version "6.55.0"
-  sha256 "4fe1269fca1708ae08210edb83978ca88e56dcea971ef8d7f6312e16309db173"
+  version "6.58.0"
+  sha256 "1540d40aa44f58c9dc8da5bfe8ab054a001ed0bc452f79b97a96e793b78dc1e2"
 
   url "https://stashcat.s3-de-central.profitbricks.com/releases/darwin/stashcat-#{version}-darwin.zip"
   name "Stashcat"
