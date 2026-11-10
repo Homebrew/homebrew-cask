@@ -1,9 +1,8 @@
 cask "popchar" do
-  version "10.5"
-  sha256 "c9c5fbc5cca8250445232d6118b79ae64d188b30a2f7bcf13f765f13f1825a92"
+  version "11.0"
+  sha256 "ef47095bd1f8aac4419f10d23ed071b9b8475bb13322cc9c1ca91f54461002b7"
 
-  url "https://www.ergonis.com/downloads/products/popcharx/PopCharX#{version.no_dots}-Install.dmg",
-      user_agent: :fake
+  url "https://storage.ergonis.com/apps/production/popchar/archive/PopChar_#{version.no_dots}.zip"
   name "PopChar X"
   desc "Utility to display all characters of a font"
   homepage "https://www.ergonis.com/products/popcharx/"
@@ -15,9 +14,11 @@ cask "popchar" do
     end
   end
 
-  depends_on macos: :monterey
+  depends_on macos: :ventura
 
   app "PopChar.app"
+
+  uninstall quit: "com.macility.popchar3"
 
   zap trash: [
     "~/Library/Application Support/PopChar",
