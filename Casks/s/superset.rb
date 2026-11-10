@@ -1,12 +1,11 @@
 cask "superset" do
-  arch arm: "-arm64"
-  os macos: "Superset", linux: "superset"
-  url_end = on_system_conditional macos: ".dmg", linux: "-x86_64.AppImage"
+  arch arm: "arm64", intel: on_system_conditional(macos: "x64", linux: "x86_64")
+  os macos: "dmg", linux: "AppImage"
 
-  version "2.0.6"
-  sha256 arm:          "b21ccea780004fb904ecfa7b2071c0ee3ec95c1a8728fc3270bcca8754ac5db7",
-         intel:        "ba92dd9c9d6f4548eb610b61f89b1aec3233e326ca675c805c56a2b909b79617",
-         x86_64_linux: "9796fd0900e4944786a237c2aec8c0b080afeb4d9731ca7f7763279aa2b3895e"
+  version "2.0.8"
+  sha256 arm:          "b4c2c436433ed375bc832d4a45ecbbf5ded4960c364962e07f55d093afb338fc",
+         intel:        "5560caea017032fda57b80867c8217e13978e6ccac0a0deaf99037fb54ce5d13",
+         x86_64_linux: "ad4641f9eeab84534855a64f6c1935496337f1cb1295681e33caaf8681cc33ee"
 
   on_macos do
     depends_on macos: :ventura
@@ -29,7 +28,7 @@ cask "superset" do
   on_linux do
     depends_on arch: :x86_64
 
-    app_image "superset-#{version}-x86_64.AppImage", target: "Superset.AppImage"
+    app_image "Superset-x86_64.AppImage", target: "Superset.AppImage"
 
     zap trash: [
           "~/.cache/@supersetdesktop-updater",
@@ -38,7 +37,7 @@ cask "superset" do
         rmdir: "~/.superset"
   end
 
-  url "https://github.com/ParadevAI/Paradev/releases/download/desktop-v#{version}/#{os}-#{version}#{arch}#{url_end}"
+  url "https://github.com/ParadevAI/Paradev/releases/download/desktop-v#{version}/Superset-#{arch}.#{os}"
   name "Paradev"
   name "Superset"
   desc "Workspace for running coding agents in parallel"
