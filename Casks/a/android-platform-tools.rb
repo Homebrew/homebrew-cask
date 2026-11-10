@@ -1,10 +1,10 @@
 cask "android-platform-tools" do
   os macos: "darwin", linux: "linux"
 
-  version "37.0.3"
-  sha256 arm:          "f89baeb829903ceaf3ac92a78a2d25152728049d6316ebeaaca06d716e64842d",
-         intel:        "f89baeb829903ceaf3ac92a78a2d25152728049d6316ebeaaca06d716e64842d",
-         x86_64_linux: "214548146cadb2ca3508143d8a1d4be4c59de5bb837253e3ede89ed74cf450d1"
+  version "37.0.1"
+  sha256 arm:          "ee39ad5967e95c2a07f04dbcbde96b1a0c916ba376096db5d2f498b7727a5d1d",
+         intel:        "ee39ad5967e95c2a07f04dbcbde96b1a0c916ba376096db5d2f498b7727a5d1d",
+         x86_64_linux: "d230f13842f60f782a8645f9c813f8f845bf36089ea7289f28c48f17979313f1"
 
   on_linux do
     depends_on arch: :x86_64
@@ -15,9 +15,23 @@ cask "android-platform-tools" do
   desc "Android SDK component"
   homepage "https://developer.android.com/tools/releases/platform-tools"
 
+  # This `livecheck` block naively splits the HTML text on headings as a way of
+  # trying to identify which releases are Canary. This relies on the existing
+  # HTML structure, where the canary text (e.g. "Canary: November 2026",
+  # "Never released past Canary due to issue #123") appears after the version
+  # heading and before any other heading (e.g. another version or a subheading
+  # for a specific tool). This is fragile and may break in the future if the
+  # release note text format doesn't remain consistent.
   livecheck do
     url :homepage
     regex(/data-text=["']?[^"' >]*?v?(\d+(?:\.\d+)+)["'> (]/i)
+    strategy :page_match do |page, regex|
+      page.split(/<h\d+/i).filter_map do |section|
+        next if section.match?(/Canary/i)
+
+        section[regex, 1]
+      end
+    end
   end
 
   binary "#{staged_path}/platform-tools/adb"
