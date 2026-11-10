@@ -21,6 +21,8 @@ cask "portx" do
 
   app "PortX.app"
 
+  uninstall quit: "com.netsarang.portx"
+
   zap trash: [
     "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.netsarang.portx.sfl*",
     "~/Library/Application Support/PortX",
