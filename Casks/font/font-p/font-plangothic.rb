@@ -1,3 +1,4 @@
+# CI test of Homebrew/homebrew-cask#301478 without homebrew/core. Do not merge.
 cask "font-plangothic" do
   version "2.9.5795"
   sha256 "5a6c8a957ca03487ab86157dc5880af9a4e9f1fa1b74b3693486408d975ff1f9"

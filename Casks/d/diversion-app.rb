@@ -1,3 +1,4 @@
+# CI test of Homebrew/homebrew-cask#301478 without homebrew/core. Do not merge.
 cask "diversion-app" do
   arch arm: "arm64", intel: "x64"
 

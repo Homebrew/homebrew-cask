@@ -1,3 +1,4 @@
+# CI test of Homebrew/homebrew-cask#301478 without homebrew/core. Do not merge.
 cask "readest" do
   arch arm: "aarch64", intel: "amd64"
   os macos: "universal.dmg", linux: "#{arch}.AppImage"
