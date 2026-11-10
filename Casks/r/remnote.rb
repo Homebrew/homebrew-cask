@@ -22,6 +22,8 @@ cask "remnote" do
 
   app "RemNote.app"
 
+  uninstall quit: "io.remnote"
+
   zap trash: [
     "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/io.remnote.sfl*",
     "~/Library/Application Support/RemNote",
