@@ -1,6 +1,6 @@
 cask "curseforge" do
-  version "1.325.0-41594"
-  sha256 "196dc4bfe914ff43c2f4176580bc65c594734c147008ad52ff8627988140cc94"
+  version "1.326.0-42377"
+  sha256 "ba7b84232c889825dd98997de89fe49f7ec6762af4ca5a5ba60ad35556610d29"
 
   url "https://curseforge.overwolf.com/electron/mac/CurseForge-#{version}-universal-mac.zip"
   name "CurseForge"
@@ -13,7 +13,7 @@ cask "curseforge" do
   end
 
   auto_updates true
-  depends_on macos: :monterey
+  depends_on macos: :ventura
 
   app "CurseForge.app"
 
