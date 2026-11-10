@@ -5,8 +5,8 @@ cask "blender" do
   # https://www.blender.org/download/lts/ when updating this cask, as we cannot
   # identify LTS versions using livecheck.
   on_arm do
-    version "5.2.3"
-    sha256 "acc05374485a272342d4b323c15ac01953e7f697da2f1bad8af9c3bf087267a4"
+    version "5.3.0"
+    sha256 "2d802b54766741e612cead50b03ebbc8eb64dadc71eda932573d256b8a784720"
 
     # The upstream download page (https://www.blender.org/download/) cannot be
     # fetched due to Cloudflare protections, so we have to naively assume a
@@ -34,8 +34,8 @@ cask "blender" do
     end
   end
   on_intel do
-    version "4.5.15"
-    sha256 "3801a97619292a012ede0e855ee705ae872a680474845297b777254f7f21ed78"
+    version "4.5.16"
+    sha256 "009e437b33e5e131340b8d91eb9005d69ef6f1c67eff1402953a7d40cf94638f"
 
     # Intel support is limited to version 4.5.x series.
     livecheck do
@@ -52,7 +52,7 @@ cask "blender" do
   homepage "https://www.blender.org/"
 
   conflicts_with cask: "blender@lts"
-  depends_on :macos
+  depends_on macos: :ventura
 
   app "Blender.app"
   command_wrapper "blender",
