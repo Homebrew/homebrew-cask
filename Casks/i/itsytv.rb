@@ -1,6 +1,6 @@
 cask "itsytv" do
-  version "1.6.2"
-  sha256 "6ad433fdb4f5c4c1da993d69e14e169b9a4820bbddf7356ee2cfd49f45be50ae"
+  version "1.7.0"
+  sha256 "4beb94bd3ab9434e3c6e68dfdc82e96a484ff06ade959cc83db48491768feb9f"
 
   url "https://github.com/nickustinov/itsytv-macos/releases/download/v#{version}/Itsytv-#{version}.dmg"
   name "Itsytv"
