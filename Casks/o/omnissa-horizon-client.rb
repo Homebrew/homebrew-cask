@@ -1,6 +1,6 @@
 cask "omnissa-horizon-client" do
-  version "2606-8.19.0-32216012208,CART27FQ2_MAC_2606"
-  sha256 "decc052f456ba0909724c5e33c78f6fb9cc7d25adfd188af95c2993d46226c3f"
+  version "2609-8.20.0-42259346108,CART27FQ3_MAC_2609"
+  sha256 "056a6deca882aee8665269da75aa300a6d04c5373ee8a1c14c359ea536dd00fd"
 
   url "https://download3.omnissa.com/software/#{version.csv.second}/Omnissa-Horizon-Client-#{version.csv.first}.dmg"
   name "Omnissa Horizon Client"
@@ -42,6 +42,7 @@ cask "omnissa-horizon-client" do
               "com.omnissa.horizon.CDSHelper",
               "com.ws1.deem.MacUIEvents",
               "com.ws1.deemd",
+              "com.ws1.deemdCompat",
               "com.ws1.ws1etlm",
               "com.ws1.ws1etlmu",
             ],
@@ -55,19 +56,23 @@ cask "omnissa-horizon-client" do
             ],
             trash:     "/Applications/Omnissa Horizon Client.app"
 
-  zap trash: [
-    "/Library/Application Support/Omnissa",
-    "/Library/LaunchDaemons/com.omnissa.horizon.CDSHelper.plist",
-    "/Library/Preferences/com.omnissa.horizon.client.mac.plist",
-    "/Library/PrivilegedHelperTools/com.omnissa.horizon.CDSHelper",
-    "~/.omnissa",
-    "~/Library/Application Support/Omnissa Horizon Client",
-    "~/Library/Caches/com.omnissa.horizon.client.mac",
-    "~/Library/Logs/Omnissa Horizon Client",
-    "~/Library/Logs/Omnissa",
-    "~/Library/Preferences/com.omnissa.horizon.client.mac.plist",
-    "~/Library/Preferences/com.omnissa.horizon.keyboard.plist",
-    "~/Library/Saved Application State/com.omnissa.horizon.client.mac.savedState",
-    "~/Library/WebKit/com.omnissa.horizon.client.mac",
-  ]
+  zap delete: [
+        "/Library/Application Support/Omnissa",
+        "/Library/LaunchAgents/com.ws1.deem.MacUIEvents.plist",
+        "/Library/LaunchDaemons/com.omnissa.horizon.CDSHelper.plist",
+        "/Library/Logs/Omnissa Horizon Client",
+        "/Library/Preferences/com.omnissa.horizon.client.mac.plist",
+        "/Library/PrivilegedHelperTools/com.omnissa.horizon.CDSHelper",
+      ],
+      trash:  [
+        "~/.omnissa",
+        "~/Library/Application Support/Omnissa Horizon Client",
+        "~/Library/Caches/com.omnissa.horizon.client.mac",
+        "~/Library/Logs/Omnissa Horizon Client",
+        "~/Library/Logs/Omnissa",
+        "~/Library/Preferences/com.omnissa.horizon.client.mac.plist",
+        "~/Library/Preferences/com.omnissa.horizon.keyboard.plist",
+        "~/Library/Saved Application State/com.omnissa.horizon.client.mac.savedState",
+        "~/Library/WebKit/com.omnissa.horizon.client.mac",
+      ]
 end
