@@ -94,8 +94,8 @@ jobs:
           stable: ${{ matrix.stable || false }}
 
       # setup-homebrew blanks this via $GITHUB_ENV, which overrides workflow `env:`.
-      # Steps that never load casks from the API blank it again in their `env:` so
-      # formulae come from the API instead of homebrew/core.
+      # Only steps that need it to load the pull request's cask by name keep it.
+      # The rest blank it again in their `env:` so formulae come from the API.
       - name: Disable API installs
         run: echo 'HOMEBREW_NO_INSTALL_FROM_API=1' >> "${GITHUB_ENV}"
 
@@ -182,6 +182,7 @@ jobs:
         id: info
         env:
           CASK_PATH: ${{ matrix.cask.path }}
+          HOMEBREW_NO_INSTALL_FROM_API: ""
           TAP: ${{ matrix.tap }}
         run: |
           tap_cask_path="$(brew --repository "$TAP")/${CASK_PATH#./}"
@@ -214,9 +215,11 @@ jobs:
         run: brew cask-ci snapshot
         if: always() && steps.info.outcome == 'success' && runner.os == 'macOS'
 
-      - name: Run brew install --cask ${{ matrix.cask.token }}
+      - name: Run brew cask-ci install ${{ matrix.cask.token }}
         id: install
-        run: brew install --cask '${{ matrix.cask.token }}'
+        env:
+          HOMEBREW_NO_INSTALL_FROM_API: ""
+        run: brew cask-ci install "$TAP_CASK_PATH"
         if: >
           always() && steps.info.outcome == 'success' &&
           fromJSON(steps.info.outputs.macos_requirement_satisfied) &&
@@ -233,11 +236,15 @@ jobs:
         timeout-minutes: 10
 
       - name: Run brew uninstall --cask ${{ matrix.cask.token }}
+        env:
+          HOMEBREW_NO_INSTALL_FROM_API: ""
         run: brew uninstall --cask '${{ matrix.cask.token }}'
         if: always() && steps.install.outcome == 'success' && !fromJSON(steps.info.outputs.manual_installer)
         timeout-minutes: 30
 
       - name: Uninstall cask dependencies
+        env:
+          HOMEBREW_NO_INSTALL_FROM_API: ""
         run: |
           read -r -a cask_dependencies_array <<< "$CASK_DEPENDENCIES"
           brew uninstall --cask "${cask_dependencies_array[@]}"
@@ -245,6 +252,8 @@ jobs:
         timeout-minutes: 30
 
       - name: Compare installed and running apps and services with snapshot (macOS only)
+        env:
+          HOMEBREW_NO_INSTALL_FROM_API: ""
         run: brew cask-ci check "$TAP_CASK_PATH"
         if: always() && steps.snapshot.outcome == 'success' && steps.install.outcome == 'success' && runner.os == 'macOS'
 
