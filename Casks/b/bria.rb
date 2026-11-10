@@ -1,6 +1,6 @@
 cask "bria" do
-  version "6.8.8,131080"
-  sha256 "bce3749db091916ffc4441ee3e854684b7ff7c01aa7818f443d476bc16572986"
+  version "6.8.8.2,131593"
+  sha256 "03451c771c81efda2d9926e9bdfdf11b74a5d6b4c78734156b22229924bd2734"
 
   url "https://counterpath.s3.amazonaws.com/downloads/Bria_#{version.csv.first}_#{version.csv.second}.dmg"
   name "Bria"
