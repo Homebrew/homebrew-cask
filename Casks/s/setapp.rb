@@ -1,6 +1,6 @@
 cask "setapp" do
-  version "3.59.0,164,1793877812"
-  sha256 "b09de5fb8cacffeb096bed69890dc1495e0ff71570d936f0dabcb5428d957196"
+  version "4.0.0,165,1794245125"
+  sha256 "a124004ba0c6555e8bb05904a65e78b7d32a8eaa069b304f8e9a78e4e859735a"
 
   url "https://dl.devmate.com/com.setapp.DesktopClient/#{version.csv.second}/#{version.csv.third}/Setapp-#{version.csv.second}.zip"
   name "Setapp"
@@ -19,7 +19,7 @@ cask "setapp" do
   end
 
   auto_updates true
-  depends_on :macos
+  depends_on macos: :ventura
 
   app "Setapp.app"
 
