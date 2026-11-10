@@ -19,6 +19,7 @@ cask "altar-ai" do
 
   zap trash: [
     "~/Library/Application Support/altar-app",
+    "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.electron.altar-app.sfl*",
     "~/Library/Caches/com.electron.altar-app",
     "~/Library/Preferences/com.electron.altar-app.plist",
     "~/Library/Saved Application State/com.electron.altar-app.savedState",
