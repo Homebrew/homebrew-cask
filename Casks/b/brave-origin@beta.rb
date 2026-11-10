@@ -3,13 +3,13 @@ cask "brave-origin@beta" do
   folder_arch = on_arch_conditional arm: "-arm64"
 
   sha256 arm:   "e5d1744dd31c6066c43dd9d16adf80a6e732288af606b1c7a9c3904b8ea54a80",
-         intel: "c1c42551869972f0678b25896d4becf0b6ef25cb523268ed718b92dc48ba8263"
+         intel: "40858c8653ca057f4e953673ba7f9a15549df249903417d465ca82ea6aca2e08"
 
   on_arm do
     version "1.100.52.0,200.52"
   end
   on_intel do
-    version "1.100.49.0,200.49"
+    version "1.100.52.0,200.52"
   end
 
   url "https://updates-cdn.bravesoftware.com/sparkle/Brave-Origin/beta#{folder_arch}/#{version.csv.second}/Brave-Origin-Beta-#{arch}.dmg"
