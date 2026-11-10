@@ -10,7 +10,7 @@ cask "gitcomet" do
          x86_64_linux: "305f4738867cc264fd3c36edbf904940210facd93aa8ad3407db07134dbb7fd2"
 
   on_macos do
-    depends_on macos: :ventura
+    depends_on macos: :sequoia
 
     app "GitComet.app"
     binary "#{appdir}/GitComet.app/Contents/MacOS/gitcomet", target: "gitcomet"
