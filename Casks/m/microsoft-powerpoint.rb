@@ -1,5 +1,5 @@
 cask "microsoft-powerpoint" do
-  on_ventura :or_older do
+  on_sonoma :or_older do
     on_big_sur :or_older do
       version "16.77.23091703"
       sha256 "9ece350fa314584aafacfcdf559bb67b8707bc2c2e7a961f7881d1ea280aac4d"
@@ -12,14 +12,18 @@ cask "microsoft-powerpoint" do
       version "16.101.25100321"
       sha256 "6256fbb45f2922fa60c9a0101da3b27f933fcf0ada6f530ef1aca235803a7782"
     end
+    on_sonoma do
+      version "16.114.26110224"
+      sha256 "04e749464f5be0601b9ded49d77b6476e2c0279f1f92d2ea100d6cd75c60ead1"
+    end
 
     livecheck do
       skip "Legacy version"
     end
   end
-  on_sonoma :or_newer do
-    version "16.114.26110224"
-    sha256 "04e749464f5be0601b9ded49d77b6476e2c0279f1f92d2ea100d6cd75c60ead1"
+  on_sequoia :or_newer do
+    version "16.115.26110837"
+    sha256 "3178997f7a53596d2902833d6878dd5b594d3345025c64b83159dfcc93962334"
 
     livecheck do
       url "https://go.microsoft.com/fwlink/p/?linkid=525136"
