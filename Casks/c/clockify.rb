@@ -22,6 +22,7 @@ cask "clockify" do
   zap trash: [
     "~/Library/Application Support/coing.ClockifyDesktop",
     "~/Library/Caches/coing.ClockifyDesktop",
+    "~/Library/HTTPStorages/coing.ClockifyDesktop",
     "~/Library/Preferences/coing.ClockifyDesktop.plist",
     "~/Library/Saved Application State/coing.ClockifyDesktop.savedState",
   ]
