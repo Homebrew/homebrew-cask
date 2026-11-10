@@ -2,9 +2,9 @@ cask "dotnet-sdk@8" do
   # Differs from the `dotnet` formula by including additional closed-source components
   arch arm: "arm64", intel: "x64"
 
-  version "8.0.427"
-  sha256 arm:   "d50d86c13eb9c775164f6d77577106af1c6dd9216e9ad4f4a26edb2566f4fcb5",
-         intel: "c831dffce690059c3d8a774912042293a1368bc3e7ec24bd73ffff438b124004"
+  version "8.0.428"
+  sha256 arm:   "a6a302b95ef39c6ea753df6514195b604d7d8ecd5b99f955295dd8a35f05dbbd",
+         intel: "21fee50f4cac4f5ec08fcdded3289d814790c143214e92fca3659da093d7b80a"
 
   url "https://builds.dotnet.microsoft.com/dotnet/Sdk/#{version}/dotnet-sdk-#{version}-osx-#{arch}.pkg"
   name ".NET SDK"
