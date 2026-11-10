@@ -2,10 +2,10 @@ cask "tolaria" do
   arch arm: "Silicon", intel: on_system_conditional(macos: "Intel", linux: "amd64")
   os macos: "_macOS_#{arch}.dmg", linux: "_#{arch}.AppImage"
 
-  version "2026.11.06,2026.11.6"
-  sha256 arm:          "fcd8b487455b0f5f49839b4c35713364eb85d5debae4909d4f54aa2e670a3d8d",
-         intel:        "ff225583f2d88f4da08f62435d3141608813a37c40781c0e2ad3d4a27c4ad137",
-         x86_64_linux: "58207e63ba0e35dd9bcb00a61616d70e0c855ca411897623c6b342e3da1b27a3"
+  version "2026.11.10"
+  sha256 arm:          "c0a625424a5ac69c917705bf57bd36d6e49378bd16ebb70ec8a060595c64803b",
+         intel:        "be216fde132b9a9973859698935b216d89f9d74741073b465e71964d9f90b5da",
+         x86_64_linux: "2aaf67ad58693dd38eca7d2eff7179e7cd9e25b446caaae81a0ec3252f229084"
 
   on_macos do
     auto_updates true
