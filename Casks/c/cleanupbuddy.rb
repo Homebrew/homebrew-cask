@@ -1,6 +1,6 @@
 cask "cleanupbuddy" do
-  version "1.3.1,15"
-  sha256 "d64b1a2567612da30c8e6a902ae4ae215da7cfb4261f187f46957409429535ba"
+  version "2.0,26"
+  sha256 "cf9bbae06386bfa2f67ad42e03a2546e43c89a37adebf2599b2efa9566a6c3ef"
 
   url "https://sparkle.cleanupbuddy.app/CleanupBuddy_v#{version.csv.first}-#{version.csv.second}.dmg"
   name "CleanupBuddy"
@@ -13,7 +13,7 @@ cask "cleanupbuddy" do
   end
 
   auto_updates true
-  depends_on macos: :ventura
+  depends_on macos: :sonoma
 
   app "CleanupBuddy.app"
 
