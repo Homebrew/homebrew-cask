@@ -1,6 +1,6 @@
 cask "opencodex" do
-  version "2.100.0"
-  sha256 "ac25af19e50a106759dbfb8f44973070e17690135301cb30704e7c16eb4e70f3"
+  version "2.100.1"
+  sha256 "e68aa736ba3be5a27a484bccfe3f7df9587708540053616040b33ca68e75373e"
 
   url "https://github.com/lidge-jun/opencodex/releases/download/v#{version}/OpenCodex-#{version}-macos.dmg"
   name "OpenCodex"
