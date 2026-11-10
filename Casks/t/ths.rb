@@ -1,6 +1,6 @@
 cask "ths" do
-  version "5.3.5"
-  sha256 "14d228c77743771cb43d9f9796b666c6e36c9e43dc8d2ff61f97cd7aefa53dbc"
+  version "5.4.0"
+  sha256 "1d01a5bba64a2e2be66c55b1395dae030645b96d0cda8fdbd3038de3b1e18253"
 
   url "https://sp.thsi.cn/staticS3/mobileweb-upload-static-server.file/app_6/downloadcenter/ThsMac#{version}.dmg"
   name "Straight Flush"
