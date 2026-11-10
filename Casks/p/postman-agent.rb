@@ -21,6 +21,7 @@ cask "postman-agent" do
   app "Postman Agent.app"
 
   zap trash: [
+    "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.postmanlabs.agent.mac.sfl*",
     "~/Library/Application Support/PostmanAgent",
     "~/Library/Preferences/com.postmanlabs.agent.mac.plist",
   ]
