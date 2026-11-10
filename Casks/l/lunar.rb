@@ -1,6 +1,6 @@
 cask "lunar" do
-  version "6.11.3"
-  sha256 "2fd0961e4d58ad95ee5529f2c6e05d6999cd3fb2d511b77d3cbcbfbdbb74d686"
+  version "7.0.0b21"
+  sha256 "c3aacb9298f4e2a4ec97a4165646333c9290d1cd0a7fca9d938269004257850f"
 
   url "https://files.lunar.fyi/releases/Lunar-#{version}.dmg"
   name "Lunar"
@@ -15,7 +15,7 @@ cask "lunar" do
   end
 
   auto_updates true
-  depends_on macos: :monterey
+  depends_on macos: :sonoma
 
   app "Lunar.app"
 
