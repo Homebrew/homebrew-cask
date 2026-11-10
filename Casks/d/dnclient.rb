@@ -1,6 +1,6 @@
 cask "dnclient" do
-  version "0.9.10,cc4e1ce7"
-  sha256 "4aad33bcfc48c73cf236e8a9eae93700d46d193d6f69b58c576152e0f77d7247"
+  version "1.0.0,837870e1"
+  sha256 "ce1242b9ac167bca4c0e6dc76c8c008d0e10d389fbaec7ae444a558aacc9d370"
 
   url "https://dl.defined.net/#{version.csv.second}/v#{version.csv.first}/macos/DNClient-Desktop.dmg"
   name "DNClient"
