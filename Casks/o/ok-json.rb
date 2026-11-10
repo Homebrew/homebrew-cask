@@ -18,6 +18,8 @@ cask "ok-json" do
   app "OK JSON.app"
 
   zap trash: [
+    "~/Library/Application Scripts/net.shinystone.OKJSON",
+    "~/Library/Application Scripts/S8MRM84X6F.group.net.shinystone.OKJSON",
     "~/Library/Containers/net.shinystone.OKJSON",
     "~/Library/Group Containers/group.net.shinystone.OKJSON",
     "~/Library/Group Containers/S8MRM84X6F.group.net.shinystone.OKJSON",
