@@ -1,11 +1,8 @@
 cask "mps" do
-  arch arm: "macos-aarch64", intel: "macos"
+  version "2026.2,262.11879.701"
+  sha256 "3bd01adf7cf04c51e6b3478a7f1370af7df511012ed7b87902755ad0e2806cc5"
 
-  version "2026.1.2,261.27258.1085"
-  sha256 arm:   "d3097f8397da7e6409e01eaa5760d4f800440aaf90ac591fddf5d8ab0dcb79a7",
-         intel: "5eaecbe04607409a2a467346c5c18b814119c6bb28236d6ebdcef5d3cc283dcd"
-
-  url "https://download.jetbrains.com/mps/#{version.major_minor}/MPS-#{version.csv.first}-#{arch}.dmg"
+  url "https://download.jetbrains.com/mps/#{version.major_minor}/MPS-#{version.csv.first}-macos-aarch64.dmg"
   name "JetBrains MPS"
   desc "Create your own domain-specific language"
   homepage "https://www.jetbrains.com/mps/"
@@ -24,6 +21,7 @@ cask "mps" do
   end
 
   auto_updates true
+  depends_on arch: :arm64
   depends_on :macos
 
   app "MPS.app"
