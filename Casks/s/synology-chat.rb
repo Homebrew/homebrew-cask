@@ -18,5 +18,10 @@ cask "synology-chat" do
 
   app "Synology Chat.app"
 
-  zap trash: "~/Library/Application Support/Synology Chat"
+  zap trash: [
+    "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/synochat.sfl*",
+    "~/Library/Application Support/synochat-client",
+    "~/Library/Application Support/Synology Chat",
+    "~/Library/Preferences/synochat.plist",
+  ]
 end
