@@ -18,6 +18,7 @@ cask "wowup-cf" do
   uninstall quit: "io.wowupcf.jliddev"
 
   zap trash: [
+    "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/io.wowupcf.jliddev.sfl*",
     "~/Library/Application Support/WowUp-CF",
     "~/Library/Logs/WowUp-CF",
     "~/Library/Preferences/io.wowupcf.jliddev.plist",
