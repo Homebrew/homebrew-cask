@@ -11,6 +11,8 @@ cask "activitywatch" do
 
     app "ActivityWatch.app"
 
+    uninstall quit: "net.activitywatch.ActivityWatch"
+
     zap trash: [
       "~/Library/Application Support/activitywatch",
       "~/Library/Caches/activitywatch",
