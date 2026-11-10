@@ -21,6 +21,7 @@ cask "stashcat" do
   app "Stashcat.app"
 
   zap trash: [
+    "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/de.heinekingmedia.stashcatdesktopmessenger.sfl*",
     "~/Library/Application Support/Stashcat",
     "~/Library/Caches/de.heinekingmedia.stashcatdesktopmessenger",
     "~/Library/Caches/de.heinekingmedia.stashcatdesktopmessenger.ShipIt",
