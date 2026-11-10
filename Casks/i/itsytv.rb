@@ -12,7 +12,7 @@ cask "itsytv" do
   app "Itsytv.app"
 
   zap trash: [
-    "~/Library/Preferences/app.itsytv.plist",
-    "~/Library/Saved Application State/app.itsytv.savedState",
+    "~/Library/Application Scripts/com.itsytv.app",
+    "~/Library/Containers/com.itsytv.app",
   ]
 end
