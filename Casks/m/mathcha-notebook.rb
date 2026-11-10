@@ -1,9 +1,9 @@
 cask "mathcha-notebook" do
   arch arm: "-arm64"
 
-  version "1.0.464"
-  sha256 arm:   "8fb755f1f63074d1c89d849d1a9857eb588127a49052bbb70d42bc57c36e3653",
-         intel: "2172f94fc20f3a4acaab2756bc340bdcb5c85b6ea6ec60635a9cd9208bbb7527"
+  version "1.0.465"
+  sha256 arm:   "411f874f18fe627ac84b335593e1c2a317875e602556e7e708404e3b7bbc042f",
+         intel: "ac5b218d584d5817c23fee6b63ab141dda24d7eedbf2965fe547449db28f19d0"
 
   url "https://notebook-downloads.mathcha.io/public/Mathcha%20Notebook-#{version}#{arch}-mac.zip"
   name "Mathcha Notebook"
