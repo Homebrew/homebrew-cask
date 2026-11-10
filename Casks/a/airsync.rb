@@ -19,8 +19,10 @@ cask "airsync" do
   uninstall quit: "sameerasw.airsync-mac"
 
   zap trash: [
+    "~/Library/Application Scripts/sameerasw.airsync-mac.share",
     "~/Library/Application Support/airsync-mac",
     "~/Library/Caches/sameerasw.airsync-mac",
+    "~/Library/Containers/sameerasw.airsync-mac.share",
     "~/Library/Preferences/sameerasw.airsync-mac.plist",
     "~/Library/Saved Application State/sameerasw.airsync-mac.savedState",
   ]
