@@ -257,6 +257,21 @@ jobs:
         run: brew cask-ci check "$TAP_CASK_PATH"
         if: always() && steps.snapshot.outcome == 'success' && steps.install.outcome == 'success' && runner.os == 'macOS'
 
+      - name: Check homebrew/core was not tapped (do not merge)
+        if: always()
+        run: |
+          core_repository="$(brew --repository homebrew/core)"
+          if [[ ! -d "${core_repository}" ]]
+          then
+            echo "homebrew/core is not tapped."
+          elif [[ "$(uname -s)" == "Linux" ]]
+          then
+            echo "homebrew/core came with the container image: $(git -C "${core_repository}" log -1 --format='%h %cd')"
+          else
+            echo "::error::homebrew/core was tapped during this job."
+            exit 1
+          fi
+
   conclusion:
     name: conclusion
     needs: test
