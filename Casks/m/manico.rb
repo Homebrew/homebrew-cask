@@ -20,10 +20,14 @@ cask "manico" do
   uninstall login_item: "Manico"
 
   zap trash: [
+    "~/Library/Application Scripts/KAQ3M6FSM7.im.manico.Manico",
+    "~/Library/Application Support/bugsnag-shared-im.manico.Manico",
     "~/Library/Application Support/im.manico.Manico",
     "~/Library/Application Support/Manico",
+    "~/Library/Caches/bugsnag-shared-im.manico.Manico",
     "~/Library/Caches/im.manico.Manico",
     "~/Library/Containers/im.manico.Manico",
+    "~/Library/Group Containers/KAQ3M6FSM7.im.manico.Manico",
     "~/Library/HTTPStorages/im.manico.Manico",
     "~/Library/Preferences/im.manico.Manico.plist",
     "~/Library/WebKit/im.manico.Manico",
