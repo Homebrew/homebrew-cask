@@ -16,7 +16,7 @@ cask "fabfilter-timeless" do
 
   pkg "FabFilter Timeless #{version} Installer.pkg"
 
-  uninstall pkgutil: "com.fabfilter.Timeless.*"
+  uninstall pkgutil: "com.fabfilter.Timeless.*.#{version.major}"
 
   zap :not_required
 end

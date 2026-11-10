@@ -16,7 +16,7 @@ cask "fabfilter-micro" do
 
   pkg "FabFilter Micro #{version} Installer.pkg"
 
-  uninstall pkgutil: "com.fabfilter.Micro.*"
+  uninstall pkgutil: "com.fabfilter.Micro.*.#{version.major}"
 
   zap :not_required
 end

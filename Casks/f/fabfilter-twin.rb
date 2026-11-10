@@ -16,7 +16,7 @@ cask "fabfilter-twin" do
 
   pkg "FabFilter Twin #{version} Installer.pkg"
 
-  uninstall pkgutil: "com.fabfilter.Twin.*"
+  uninstall pkgutil: "com.fabfilter.Twin.*.#{version.major}"
 
   zap :not_required
 end
