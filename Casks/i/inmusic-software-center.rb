@@ -9,7 +9,7 @@ cask "inmusic-software-center" do
 
   livecheck do
     url "https://inmusic.to/ISCMAC"
-    regex(%r{SI04/(\d+)/inMusic%20Software%20Center-darwin-universal-(\d+(:?\.\d+)+)\.z}i)
+    regex(%r{/(\d+)/inMusic%20Software%20Center-darwin-universal[._-]v?(\d+(:?\.\d+)+)\.zip}i)
     strategy :header_match do |headers, regex|
       match = headers["location"]&.match(regex)
       next if match.blank?
