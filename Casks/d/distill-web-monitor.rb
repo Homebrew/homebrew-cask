@@ -1,9 +1,9 @@
 cask "distill-web-monitor" do
   arch arm: "arm64", intel: "x64"
 
-  version "4.3.1-beta"
-  sha256 arm:   "976d20c66311e8adbba6998306a5b5404d0b326b4c8189288df6f82aaa3fe26e",
-         intel: "adbc09704a0182d58851757474c9bef8c41dc1a42d00e93773452c052f81751f"
+  version "4.3.2-beta"
+  sha256 arm:   "9eeb4bce7d4c89e11319d65ad4f1af30cec612f60d701f59989bd18b28df7743",
+         intel: "0e29880ba53fad2d38d4dd78c52f9902d9518e78967cfb77e55c978a10270104"
 
   url "https://dev-distill-releases.s3.us-east-2.amazonaws.com/web-monitor/beta/#{version.sub("-beta", "")}/Distill%20Web%20Monitor-darwin-#{arch}-#{version}.zip"
   name "Distill Web Monitor"
