@@ -19,6 +19,7 @@ cask "nozbe" do
   app "Nozbe.app"
 
   zap trash: [
+    "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.nozbe4mac.sfl*",
     "~/Library/Application Support/Nozbe4",
     "~/Library/Caches/com.nozbe4mac",
     "~/Library/Caches/com.nozbe4mac.ShipIt",

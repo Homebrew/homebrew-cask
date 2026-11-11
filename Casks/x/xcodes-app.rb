@@ -23,5 +23,8 @@ cask "xcodes-app" do
   zap trash: [
     "/Library/PrivilegedHelperTools/com.robotsandpencils.XcodesApp.Helper",
     "~/Library/Application Support/com.robotsandpencils.XcodesApp",
+    "~/Library/Caches/com.xcodesorg.xcodesapp",
+    "~/Library/HTTPStorages/com.xcodesorg.xcodesapp",
+    "~/Library/Preferences/com.xcodesorg.xcodesapp.plist",
   ]
 end

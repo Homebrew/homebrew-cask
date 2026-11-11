@@ -18,6 +18,7 @@ cask "cleanupbuddy" do
   app "CleanupBuddy.app"
 
   zap trash: [
+    "~/Library/Application Support/CleanupBuddy",
     "~/Library/HTTPStorages/codes.rambo.CleanupBuddy",
     "~/Library/Preferences/codes.rambo.CleanupBuddy.plist",
     "~/Library/Saved Application State/codes.rambo.CleanupBuddy.savedState",
