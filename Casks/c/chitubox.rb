@@ -1,6 +1,6 @@
 cask "chitubox" do
   version "1.4.1"
-  sha256 "90d75ca716716b2ae6242c80bf444474b0c47ca6dfbe581cf4557f9f7f82083c"
+  sha256 "ccf795670b24a4350ab45433f61a8ffb9cec73d51a7cd580b4f552d0be0ba296"
 
   url "https://sac.chitubox.com/software/download.do?installerUrl=https%3A%2F%2Fdownload.chitubox.com%2F17952%2Fv#{version}%2FCHITUBOX_Mac_Installer_v#{version}.dmg&softwareId=17952&softwareVersionId=v#{version}"
   name "CHITUBOX"
