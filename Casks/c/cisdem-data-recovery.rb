@@ -21,6 +21,7 @@ cask "cisdem-data-recovery" do
 
   zap trash: [
     "~/Library/Application Support/Cisdem",
+    "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.easeus.datarecoveryloaderapp.sfl*",
     "~/Library/Application Support/com.easeus.datarecoverywizard",
     "~/Library/Preferences/com.easeus.datarecoverywizard",
     "~/Movies/CisdemRepair",
