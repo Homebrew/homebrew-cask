@@ -1,5 +1,5 @@
 cask "cisdem-data-recovery" do
-  version "20.6.0"
+  version "20.9.0"
   sha256 :no_check
 
   url "https://download.cisdem.com/cisdem-datarecovery.dmg",
@@ -17,8 +17,11 @@ cask "cisdem-data-recovery" do
 
   app "Cisdem Data Recovery.app"
 
+  uninstall quit: "com.easeus.datarecoveryloaderapp"
+
   zap trash: [
     "~/Library/Application Support/Cisdem",
+    "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.easeus.datarecoveryloaderapp.sfl*",
     "~/Library/Application Support/com.easeus.datarecoverywizard",
     "~/Library/Preferences/com.easeus.datarecoverywizard",
     "~/Movies/CisdemRepair",
