@@ -7,9 +7,9 @@ cask "wordpresscom-studio" do
          intel: "d59e055349bfe6963d3eeb85fe4d69acb986ecd70d5f8f26aca608ea6e9959f0"
 
   url "https://appscdn.wordpress.com/downloads/wordpress-com-studio/mac-#{folder_arch}/v#{version.csv.first}/#{version.csv.second}/update/studio-#{arch}-v#{version.csv.first}.zip"
-  name "Wordpress Studio"
+  name "WordPress Studio"
   desc "WordPress local development environment"
-  homepage "https://developer.wordpress.com/studio/"
+  homepage "https://wordpress.studio/"
 
   livecheck do
     url "https://public-api.wordpress.com/wpcom/v2/studio-app/updates?platform=darwin&arch=#{arch}&version=0.0.0"
