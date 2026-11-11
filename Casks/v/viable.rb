@@ -1,6 +1,6 @@
 cask "viable" do
-  version "1b12,2023.11"
-  sha256 "6613cf7f0ae9a6737eeec8a15f3110e53cb6986b51f3a236913046e8d3769d00"
+  version "11a,2026.11"
+  sha256 "aed6d82320da4bef1bc84f012f703965b21a2fde445f44f0146b6cb874f72e49"
 
   url "https://eclecticlight.co/wp-content/uploads/#{version.csv.second.major}/#{version.csv.second.minor}/viable#{version.csv.first}.zip"
   name "Viable"
@@ -19,7 +19,7 @@ cask "viable" do
 
   conflicts_with cask: "viables"
   depends_on arch: :arm64
-  depends_on macos: :monterey
+  depends_on macos: :sonoma
 
   app "viable#{version.csv.first}/Viable.app"
 
