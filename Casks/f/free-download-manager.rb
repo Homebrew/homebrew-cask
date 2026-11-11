@@ -1,7 +1,7 @@
 cask "free-download-manager" do
   arch intel: "_x86_64"
 
-  version "6.35.2"
+  version "6.36.0"
   sha256 :no_check # required as upstream package is updated in-place
 
   url "https://files2.freedownloadmanager.org/#{version.major}/latest/fdm#{arch}.dmg"
