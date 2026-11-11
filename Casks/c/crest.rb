@@ -1,6 +1,6 @@
 cask "crest" do
-  version "6.7.0"
-  sha256 "597f81f14280052036fdb8ef1d5cb4050d564f52c71b8dfe9602da9f84119a19"
+  version "6.8.0"
+  sha256 "39f00a293480511029adb8f017e4096fc6233be091c2eeedcbd03be7e0dc900c"
 
   url "https://crestnotch.app/downloads/Crest-#{version}.dmg"
   name "Crest"
