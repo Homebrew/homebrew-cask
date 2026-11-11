@@ -18,6 +18,8 @@ cask "apple-hewlett-packard-printer-drivers" do
     end
   end
 
+  disable! date: "2026-11-11", because: :unmaintained
+
   depends_on maximum_macos: :sonoma
 
   pkg "HewlettPackardPrinterDrivers.pkg"
