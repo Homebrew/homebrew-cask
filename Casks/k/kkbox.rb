@@ -1,6 +1,6 @@
 cask "kkbox" do
-  version "26.11.5"
-  sha256 "6ffd0aae5d47630b14bdf7ec89ec6564d6828dbdbe2850cda4d0e80bdc5b6fa3"
+  version "26.11.9"
+  sha256 "10733791b77dbfd2e266de1780299103ce4b7f3a06eca57b34ec554d873b1159"
 
   url "https://dl-universal-v2.kfs.io/KKBOX-#{version}-universal.dmg"
   name "KKBOX"
