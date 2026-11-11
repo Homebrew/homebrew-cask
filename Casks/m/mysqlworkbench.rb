@@ -39,16 +39,14 @@ cask "mysqlworkbench" do
       on_monterey do
         version "8.0.34"
         sha256 "9fba65a06db4c67e353014b49c41d7cd0e915dd6584df43d6cb099f38cf841e2"
-
-        url "https://downloads.mysql.com/archives/get/p/#{version.major}/file/mysql-workbench-community-#{version}-macos-#{arch}.dmg",
-            user_agent: :curl
       end
       on_ventura :or_newer do
         version "8.0.47"
         sha256 "9fb82446b8c89a5326f9c4b2ab59ab6ac76b389713f1f13553743f34952639a8"
-
-        url "https://cdn.mysql.com/Downloads/MySQLGUITools/mysql-workbench-community-#{version}-macos-#{arch}.dmg"
       end
+
+      url "https://downloads.mysql.com/archives/get/p/#{version.major}/file/mysql-workbench-community-#{version}-macos-#{arch}.dmg",
+          user_agent: :curl
 
       livecheck do
         skip "Legacy version"
