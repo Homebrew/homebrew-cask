@@ -1,9 +1,9 @@
 cask "look" do
   arch intel: "-x86_64"
 
-  version "0.7.4"
-  sha256 arm:   "dfa451f39df55c8344f9cdb67d6ba8209bbb7a658bb09ac9ae2c3b3832e9b725",
-         intel: "31091834af9cdaee24c1372e41857a1220e0df3e82583146694c1007a144237a"
+  version "0.7.5"
+  sha256 arm:   "21038f118540682bd4a1db4a4a15b40b2b5e453457331737b4407b61cbac003d",
+         intel: "b9c2247a8370373f784b7e0ce3d451725f450e570a5ebfc80ddee961b5555836"
 
   url "https://github.com/kunkka19xx/look/releases/download/v#{version}/Look-#{version}-macOS#{arch}.zip"
   name "Look"
