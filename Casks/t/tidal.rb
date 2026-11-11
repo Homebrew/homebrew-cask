@@ -1,9 +1,9 @@
 cask "tidal" do
   arch arm: "arm64", intel: "x64"
 
-  version "2.47.0"
-  sha256 arm:   "27017de61dce1703748f377224892fcbd10c66c57f3d0b9cf179c1183ea65ce3",
-         intel: "87787b48d2b118ede8d4313f21a182ca596f5756027c35273a68cecc5b2b35a9"
+  version "2.48.0"
+  sha256 arm:   "771fdb0f007d11685228212f04afe9ac03ce6a1bbc02df41cf00864191354103",
+         intel: "552d1d2d2884bc88642570b30ed2034f384f6479d5e3472a2a5f52f687c135df"
 
   url "https://download.tidal.com/desktop/mac/TIDAL.#{arch}.#{version}.zip"
   name "TIDAL"
