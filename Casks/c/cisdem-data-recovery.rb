@@ -17,6 +17,8 @@ cask "cisdem-data-recovery" do
 
   app "Cisdem Data Recovery.app"
 
+  uninstall quit: "com.easeus.datarecoveryloaderapp"
+
   zap trash: [
     "~/Library/Application Support/Cisdem",
     "~/Library/Application Support/com.easeus.datarecoverywizard",
