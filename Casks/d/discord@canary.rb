@@ -1,6 +1,6 @@
 cask "discord@canary" do
-  version "0.0.1545"
-  sha256 "595e1d7883eb4aec56124180385f775f8bdf6ca0f200d9568b6ad52f111166ee"
+  version "0.0.1546"
+  sha256 "4955e3b605e1155dc8f4aafa4a305c6f8163b8bbc010e3ac145868d7e500fcc8"
 
   url "https://canary.dl2.discordapp.net/distro/app/canary/osx/universal/#{version}/DiscordCanary.dmg"
   name "Discord Canary"
