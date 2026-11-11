@@ -1,9 +1,9 @@
 cask "autogram" do
   arch intel: "-intel"
 
-  version "2.8.3"
-  sha256 arm:   "3b640dcf1c71ea8cd3ce54efb9b172842c437cade576b499594b3a4f5561b346",
-         intel: "98888118491d5014055ebdef3e370cd2bc11ef4d795867ac117097861541a650"
+  version "2.9.0"
+  sha256 arm:   "2a98b6c160cd19dfb29fd023d527ab5ea63cbc841ceb09854586ba0e32293005",
+         intel: "008d1c76b70d345766647cc7e0572c483cf4ded6d67220bff39c6175f4a2af07"
 
   url "https://github.com/slovensko-digital/autogram/releases/download/v#{version}/autogram-#{version}-macos#{arch}.pkg"
   name "autogram"
