@@ -1,13 +1,13 @@
 cask "sc-menu" do
-  version "2.1.1"
-  sha256 "e8ce8777d1b3d157f60b48dc5e6022e719e067e68e9a4d7d852792f7166f5cab"
+  version "2.2"
+  sha256 "482341d649c72d13c8ee266456325e74e498bc848c7f6af03609549d022aaff3"
 
   url "https://github.com/boberito/sc_menu/releases/download/#{version}/SC_Menu.dmg"
   name "SC Menu"
   desc "Simple smartcard menu item"
   homepage "https://github.com/boberito/sc_menu"
 
-  depends_on macos: :ventura
+  depends_on macos: :sonoma
 
   app "SC Menu.app"
 
