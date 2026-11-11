@@ -11,14 +11,21 @@ cask "teamwork-graph-cli" do
   url "https://teamwork-graph.atlassian.com/cli/twg-#{os}-#{arch}-v#{version}"
   name "Teamwork Graph CLI"
   desc "Command-line interface for Atlassian Teamwork Graph"
-  homepage "https://teamwork-graph.atlassian.com/cli"
+  homepage "https://developer.atlassian.com/cloud/twg-cli"
 
   livecheck do
-    url "https://teamwork-graph.atlassian.com/cli/install"
-    regex(/DEFAULT_VERSION=["']?v?(\d+(?:\.\d+)+)/i)
+    url "https://teamwork-graph.atlassian.com/cli/manifest.json"
+    strategy :json do |json|
+      json["version"]
+    end
+  end
+
+  on_macos do
+    depends_on macos: :ventura
   end
 
   binary "twg-#{os}-#{arch}-v#{version}", target: "twg"
+  generate_completions_from_executable "twg-#{os}-#{arch}-v#{version}", "completion", "script", base_name: "twg"
 
   uninstall launchctl: "com.atlassian.twg.upkeep"
 
