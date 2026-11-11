@@ -1,6 +1,6 @@
 cask "mac-monitor" do
-  version "3.0.0"
-  sha256 "4d2fc17bff2652696d230606ea98716f9203aecc35affb7759cc58e71bdac8b2"
+  version "3.1.0"
+  sha256 "0ae29b2b8de8abc36798a7b7d8a9ad9fac820d9232c52c994e2d42f6e113278a"
 
   url "https://github.com/Brandon7CC/mac-monitor/releases/download/v#{version}/Mac-Monitor.pkg"
   name "Mac Monitor"
