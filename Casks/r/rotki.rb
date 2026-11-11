@@ -1,9 +1,9 @@
 cask "rotki" do
   arch arm: "arm64", intel: "x64"
 
-  version "1.44.2"
-  sha256 arm:   "1390a35b50f2074d59a880630645e4150f9961bd76e946c9b7a6bfae1081dd4b",
-         intel: "5ee16b0c402b933f60cecced651539be1da154d584824b14f3dcc98de09c91b0"
+  version "1.44.3"
+  sha256 arm:   "44b26ebfa37a6d29a41c4e2d140db7c2003f5e191675ee0b79847c4940b86db3",
+         intel: "cabadbdbda9c97d4a8552a2b84b33cfb0247d4a8dd95a85e61238194c9b81ddf"
 
   url "https://github.com/rotki/rotki/releases/download/v#{version}/rotki-darwin_#{arch}-v#{version}.dmg"
   name "Rotki"
