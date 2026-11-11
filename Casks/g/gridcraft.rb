@@ -2,11 +2,11 @@ cask "gridcraft" do
   arch arm: "aarch64", intel: "x86_64"
   url_end = on_system_conditional macos: "macos-universal.dmg", linux: "linux-#{arch}.AppImage"
 
-  version "0.18.0"
-  sha256 arm:          "35d96ba6fa8bbf90962fbce976b9206887d67a93827e16bbf438f8a915140dd3",
-         intel:        "35d96ba6fa8bbf90962fbce976b9206887d67a93827e16bbf438f8a915140dd3",
-         arm64_linux:  "fe77dc9383b275a9b04be2e0a818099efecea0458f372cd571533d6ce88d7d55",
-         x86_64_linux: "fde2f9982ac769026521cb6f710ec96b4d919b1634ad68b15b2b9bf62467020c"
+  version "0.19.0"
+  sha256 arm:          "ae2660fbb228cb9a19a3fe5f710d36ba8216159177b0d259eeaa0859dabe1462",
+         intel:        "ae2660fbb228cb9a19a3fe5f710d36ba8216159177b0d259eeaa0859dabe1462",
+         arm64_linux:  "5bb4039b484abaaac8888737282203c3dcaafa914704378ff82422532aec8259",
+         x86_64_linux: "ad2f7ec7df71eebbf5c6845d823891842586e60f2456e0f581433b1203c7d1e0"
 
   on_macos do
     app "GridCraft.app"
