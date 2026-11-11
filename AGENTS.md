@@ -173,7 +173,7 @@ Do NOT include:
 1. Reproduce failures locally with the same commands
 2. Read error messages in "Files changed" tab annotations
 3. Fix only the failing issue
-4. Push incremental commits (do not squash after opening PR)
+4. Squash commits so that each cask has one commit (`git commit --amend` keeps a single-cask PR squashed as you go), then `git push --force`
 5. If stuck, comment describing what you've tried
 
 ## AI Disclosure
