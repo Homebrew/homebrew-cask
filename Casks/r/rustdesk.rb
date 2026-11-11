@@ -2,11 +2,11 @@ cask "rustdesk" do
   arch arm: "aarch64", intel: "x86_64"
   os macos: "dmg", linux: "AppImage"
 
-  version "1.5.1"
-  sha256 arm:          "1b94182cba2375ea29a196f2c8183f7feaa00588474ecd76c92c2303ffd70d7b",
-         intel:        "457e45a26d3f0919221e6db3dfb8c6a12ca65190307b53a907c3c51b762eb008",
-         arm64_linux:  "47c1be6f26ee261101ed155bcd1923ab682ebfc5bc546e5b4399cb1a5b4097ed",
-         x86_64_linux: "bb8b7ccb3f50a201dccdc89b46385cff90f33e60b4730faeda9fa5504ac4dce6"
+  version "1.5.3"
+  sha256 arm:          "e6d30fa1633d772c48935907c208ca4e555a856fb2038af3aaa87a327c29360b",
+         intel:        "74d06e6b2e273a128e8d36313e30d47db2063f453a4235ed4d9e5cdfdf9be538",
+         arm64_linux:  "924c8dee36cbd7873ba222979ea1e3274c5537c382321504edf1be824e7cde37",
+         x86_64_linux: "ff7fff208fed218fc9f895457a36cc2dd31fefbfae0461a27b54f3d391204506"
 
   on_macos do
     depends_on macos: :monterey
