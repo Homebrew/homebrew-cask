@@ -9,6 +9,8 @@ cask "mailtrackerblocker" do
 
   no_autobump! because: :bumped_by_upstream
 
+  disable! date: "2026-11-11", because: "does not support macOS Sonoma or newer"
+
   auto_updates true
   depends_on maximum_macos: :ventura
 
