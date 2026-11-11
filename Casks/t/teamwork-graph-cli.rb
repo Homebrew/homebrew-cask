@@ -8,6 +8,10 @@ cask "teamwork-graph-cli" do
          arm64_linux:  "4dab6d4fbc94e450fc79e661ac48616ba1099b40077dedc550d4d105e1cb83cc",
          x86_64_linux: "36a93b0ad0011d80909cc00508091c34df03dd0bf1644fded67bf94f2c9ffc07"
 
+  on_macos do
+    depends_on macos: :ventura
+  end
+
   url "https://teamwork-graph.atlassian.com/cli/twg-#{os}-#{arch}-v#{version}"
   name "Teamwork Graph CLI"
   desc "Command-line interface for Atlassian Teamwork Graph"
@@ -18,10 +22,6 @@ cask "teamwork-graph-cli" do
     strategy :json do |json|
       json["version"]
     end
-  end
-
-  on_macos do
-    depends_on macos: :ventura
   end
 
   binary "twg-#{os}-#{arch}-v#{version}", target: "twg"
