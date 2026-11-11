@@ -32,6 +32,8 @@ cask "mysqlworkbench" do
       end
 
       app "MySQL Workbench.app"
+
+      uninstall quit: "com.oracle.mysqlworkbench"
     end
     on_intel do
       on_monterey do
@@ -63,6 +65,7 @@ cask "mysqlworkbench" do
   depends_on :macos
 
   zap trash: [
+    "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.oracle.mysqlworkbench.sfl*",
     "~/Library/Application Support/MySQL Workbench",
     "~/Library/Application Support/MySQL/Workbench",
     "~/Library/Caches/com.oracle.workbench.MySQLWorkbench",
