@@ -41,19 +41,40 @@ jobs:
     outputs:
       matrix: ${{ steps.generate-matrix.outputs.matrix }}
     runs-on: macos-latest
+    env:
+      HOMEBREW_NO_INSTALL_FROM_API: ""
     steps:
-      - name: Set up Homebrew
-        id: set-up-homebrew
-        uses: Homebrew/actions/setup-homebrew@c262868c096d909fc278daa87ed9772967331ea3 # 2026.11.02.1
-        with:
-          core: false
-          cask: true
+      # Not `setup-homebrew`: it fetches this tap's full history, but the matrix only needs the pull request's diff.
+      - name: Update Homebrew
+        run: |
+          repository="$(brew --repository)"
+          git -C "${repository}" config remote.origin.fetch "+refs/heads/*:refs/remotes/origin/*"
+          git -C "${repository}" fetch --force --tags origin
+          git -C "${repository}" remote set-head origin --auto
+          git -C "${repository}" checkout --force -B main origin/HEAD
 
       - name: Check out Pull Request
         uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
         with:
-          fetch-depth: 0
+          fetch-depth: 2
           persist-credentials: false
+
+      - name: Tap the checkout
+        run: |
+          tap="$(brew --repository)/Library/Taps/homebrew/homebrew-cask"
+          mkdir -p "$(dirname "${tap}")"
+          rm -rf "${tap}"
+          ln -s "${GITHUB_WORKSPACE}" "${tap}"
+
+          # `brew generate-cask-ci-matrix` diffs `origin...HEAD`.
+          # A pull request's merge commit has the base branch as its first parent.
+          base="HEAD"
+          if [[ "${GITHUB_EVENT_NAME}" == "pull_request" ]]
+          then
+            base="HEAD^1"
+          fi
+          git update-ref refs/remotes/origin/main "$(git rev-parse "${base}")"
+          git symbolic-ref refs/remotes/origin/HEAD refs/remotes/origin/main
 
       - name: Run brew config
         run: brew config
