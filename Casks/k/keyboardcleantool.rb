@@ -1,8 +1,8 @@
 cask "keyboardcleantool" do
-  version "8.3"
-  sha256 "13e2a061220626392b253ab41500871ac9bda1b92598d7a3077b483960256c93"
+  version "9.0"
+  sha256 "c56cd9fb628f115c810bd8ce96e3917f660fd86587305a91728b1344817546cc"
 
-  url "https://folivora.ai/releases/KeyboardCleanTool-#{version}.zip"
+  url "https://folivora.ai/releases/KeyboardCleanTool#{version.major}.zip"
   name "KeyboardCleanTool"
   desc "Blocks all Keyboard and TouchBar input"
   homepage "https://folivora.ai/keyboardcleantool"
