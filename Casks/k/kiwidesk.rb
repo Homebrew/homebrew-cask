@@ -4,7 +4,7 @@ cask "kiwidesk" do
 
   url "https://github.com/KiwiCanopy/KiwiDesk/releases/download/v#{version}/KiwiDesk-#{version}.zip"
   name "KiwiDesk"
-  desc "Tiling window manager with layouts, profiles, and Lua"
+  desc "Tiling window manager"
   homepage "https://kiwidesk.kiwicanopy.com/"
 
   livecheck do
