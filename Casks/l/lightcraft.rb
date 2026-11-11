@@ -4,11 +4,11 @@ cask "lightcraft" do
   os macos: "macos", linux: "linux"
   url_end = on_system_conditional macos: "dmg", linux: "AppImage"
 
-  version "0.20.0"
-  sha256 arm:          "ddb34c8c87bb05ad2c295052e3026363686d7995b08bcfe50e6cd98a6b67a697",
-         intel:        "ddb34c8c87bb05ad2c295052e3026363686d7995b08bcfe50e6cd98a6b67a697",
-         arm64_linux:  "810e99565a6fd0bd4414cd478fee4b69da5de2f764bc4fac90f4daeeff081f9b",
-         x86_64_linux: "66be1e9185d56f60086e9a7c019064dd238d95531c13c0e1c83a527fceb73e10"
+  version "0.21.0"
+  sha256 arm:          "dd3cd5b54df0d7d7a457e00f3fad7e550813d4df8a8cdaa1a6bdcf7021fb2b3d",
+         intel:        "dd3cd5b54df0d7d7a457e00f3fad7e550813d4df8a8cdaa1a6bdcf7021fb2b3d",
+         arm64_linux:  "026842f690848af3588d2879f4bc8e626bd965462f2fd924e64db9d179e57ab8",
+         x86_64_linux: "c3dea6f5c75b55d8023937c0965b5b7612533131da7d56e550a4ef0688faf1d6"
 
   on_macos do
     app "LightCraft.app"
