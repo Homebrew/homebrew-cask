@@ -21,10 +21,14 @@ cask "thunder" do
   uninstall quit: "com.xunlei.Thunder"
 
   zap trash: [
+    "~/Library/Application Scripts/com.xunlei.Thunder.Thunder-Extension",
+    "~/Library/Application Support/com.xunlei.Thunder",
     "~/Library/Application Support/Thunder",
     "~/Library/Caches/com.xunlei.Thunder",
     "~/Library/Caches/com.xunlei.XLPlayer",
+    "~/Library/Containers/com.xunlei.Thunder.Thunder-Extension",
     "~/Library/Cookies/com.xunlei.Thunder.binarycookies",
+    "~/Library/HTTPStorages/com.xunlei.Thunder",
     "~/Library/Preferences/com.xunlei.Thunder.loginSDK.plist",
     "~/Library/Preferences/com.xunlei.Thunder.plist",
     "~/Library/Preferences/com.xunlei.XLPlayer.plist",
