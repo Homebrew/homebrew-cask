@@ -3,10 +3,10 @@ cask "arduino-ide" do
   os macos: "macOS", linux: "Linux"
   url_end = on_system_conditional macos: "dmg", linux: "AppImage"
 
-  version "2.3.10"
-  sha256 arm:          "8811860dc8782b6cd6bb0076e9215255849f404b1b9e6f38069fdc4f5c43648e",
-         intel:        "d64093a38dc0c9059bd70375ebb93461cd4583019cdbb157dd6dced32efc35b7",
-         x86_64_linux: "79c8590a1744c220d72cbed0ea91c6e2a7f4594292699b2fb3364ebd713cd566"
+  version "2.3.11"
+  sha256 arm:          "bd70d36e125943855c27308c97702d69a7017041741a6f123734300424390bf7",
+         intel:        "30bfa077dd94cbcb6a87acd8064458530acb3fec70cbc53448645539e638c0b5",
+         x86_64_linux: "f243f8f894ebec50cbdf0e4decc4f31dd16f22254250de6243eab80ed83d3a90"
 
   on_macos do
     app "Arduino IDE.app"
