@@ -4,7 +4,7 @@ cask "plezy" do
 
   url "https://github.com/edde746/plezy/releases/download/#{version}/plezy-macos.dmg"
   name "Plezy"
-  desc "Modern cross-platform media server client built with Flutter"
+  desc "Client for Plex, Jellyfin and Emby media servers"
   homepage "https://plezy.app/"
 
   livecheck do
@@ -18,11 +18,9 @@ cask "plezy" do
   app "Plezy.app"
 
   zap trash: [
-    "~/Library/Application Scripts/com.edde746.plezy",
     "~/Library/Application Support/com.edde746.plezy",
     "~/Library/Caches/com.edde746.plezy",
     "~/Library/Caches/SentryCrash/Plezy",
-    "~/Library/Containers/com.edde746.plezy",
     "~/Library/HTTPStorages/com.edde746.plezy",
     "~/Library/Preferences/com.edde746.plezy.plist",
   ]
