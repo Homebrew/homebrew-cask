@@ -20,7 +20,9 @@ cask "xkey" do
   uninstall quit: "com.codetay.XKey"
 
   zap trash: [
+    "~/Library/Application Scripts/7E6Z9B4F2H.com.codetay.inputmethod.XKey",
     "~/Library/Application Support/XKey",
+    "~/Library/Group Containers/7E6Z9B4F2H.com.codetay.inputmethod.XKey",
     "~/Library/Preferences/com.codetay.XKey.plist",
   ]
 end
