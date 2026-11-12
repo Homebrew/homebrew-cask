@@ -1,9 +1,9 @@
 cask "fiji" do
   arch arm: "-arm64", intel: "64"
 
-  version "20261030-1817"
-  sha256 arm:   "f79823d589b131eaa5ec0f4a2faea67179b4673e0e12c653d614a53d996415cb",
-         intel: "f352161fca43dd8247fd2a238f6b1055b4fb80e9d633619ce5fdae10ee1eeba4"
+  version "20261112-1517"
+  sha256 arm:   "c1bbb7016f246d66acbdce79f9a3a2bf17790c27d2bd9ef104a5b5333590bc08",
+         intel: "13b84f3066ef74f70989dfbda5a07d11c4de441fb0538c36e6a7a7a62479f57d"
 
   url "https://downloads.imagej.net/fiji/archive/latest/#{version}/fiji-latest-macos#{arch}-jdk.zip"
   name "Fiji"
