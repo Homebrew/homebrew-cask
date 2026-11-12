@@ -25,9 +25,9 @@ cask "raycast" do
   end
   on_ventura :or_newer do
     on_sequoia :or_older do
-      version "1.104.33"
-      sha256 arm:   "f74c894a54353385f3395419e7ea50f4c42b38ea7faccf9b28fdd888618bf1e0",
-             intel: "c88f7e6b5bf60e8b1b082234f14658cbc6d7df21d82099ed2e8e089e4e60e33c"
+      version "1.104.36"
+      sha256 arm:   "a4e55a0798d2e063565abb2e57c7b50aa9c6b201ed7aa9fb2df755e9ef80617d",
+             intel: "31fdcb8e187751628ede4a50572f6f7895f0c66593041e7f88890e2a18c28a60"
 
       url "https://releases.raycast.com/releases/#{version}/download?build=#{arch}"
 
@@ -39,8 +39,8 @@ cask "raycast" do
       end
     end
     on_tahoe :or_newer do
-      version "2.11.1.0"
-      sha256 "777e3fbe08dee41d88639ccb49c70893c61f85f92db6ddc9ae869a8fa653575a"
+      version "2.12.0.0"
+      sha256 "439e4b1b4c4373788894e08d573bf1197f3ce5f14b3a74a7da4cde748c277bab"
 
       url "https://x.raycast-releases.com/download?platform=macos&architecture=arm64&version=#{version}"
 
