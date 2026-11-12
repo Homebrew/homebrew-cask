@@ -9,17 +9,10 @@ cask "oversight" do
 
   depends_on macos: :monterey
 
-  installer script: {
-    executable: "#{staged_path}/OverSight Installer.app/Contents/MacOS/OverSight Installer",
-    args:       ["-install"],
-    sudo:       true,
-  }
+  app "OverSight Installer.app/Contents/Resources/OverSight.app"
 
-  uninstall script: {
-    executable: "#{staged_path}/OverSight Installer.app/Contents/MacOS/OverSight Installer",
-    args:       ["-uninstall"],
-    sudo:       true,
-  }
+  uninstall quit:       "com.objective-see.oversight",
+            login_item: "OverSight"
 
   zap trash: [
     "~/Library/Caches/com.objective-see.oversight",
