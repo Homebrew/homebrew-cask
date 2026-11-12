@@ -1,6 +1,6 @@
 cask "bytemail" do
-  version "1.9.33"
-  sha256 "c1a2730e0e382508f14c664ccc342d112502f21b845a599d680bfe5b0b018f54"
+  version "1.9.35"
+  sha256 "d5a74b426e9a37c35c94bad09d55ea8b3ab995f463c5f30632f9e6800fe4592e"
 
   url "https://bytemailapp.com/downloads/ByteMail-#{version}.dmg"
   name "ByteMail"
