@@ -39,6 +39,7 @@ cask "adlock" do
 
   zap delete: "/Library/Logs/DiagnosticReports/com.hankuper.adlock.desktop*.ips",
       trash:  [
+        "/Library/Application Support/com.hankuper.adlock.desktop",
         "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.hankuper.adlock.desktop.launcher.sfl*",
         "~/Library/Caches/com.hankuper.adlock.desktop",
         "~/Library/HTTPStorages/com.hankuper.adlock.desktop",
