@@ -24,6 +24,8 @@ cask "second-life-viewer" do
 
   zap trash: [
     "~/Library/Application Support/SecondLife",
+    "~/Library/Caches/com.secondlife.indra.viewer",
     "~/Library/Caches/SecondLife",
+    "~/Library/Preferences/com.secondlife.indra.viewer.plist",
   ]
 end
