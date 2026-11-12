@@ -19,6 +19,8 @@ cask "parallels@19" do
     end
   end
 
+  deprecate! date: "2026-11-12", because: :unmaintained
+
   auto_updates true
   conflicts_with cask: [
     "parallels",
