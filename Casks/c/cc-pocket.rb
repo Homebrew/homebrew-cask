@@ -1,6 +1,6 @@
 cask "cc-pocket" do
-  version "1.163.0,306"
-  sha256 "c66c1ad5210da132f92f417fe6b511378a4284c41b302440bbdc91b54a2ced4b"
+  version "1.163.1,307"
+  sha256 "748c4a5c61bff4c2ab394abc018893ba9c465689867223aa2649a00e0b9cf1b1"
 
   url "https://github.com/K9i-0/ccpocket/releases/download/macos/v#{version.csv.first}%2B#{version.csv.second}/CC-Pocket-macos-v#{version.csv.first}.dmg"
   name "CC Pocket"
