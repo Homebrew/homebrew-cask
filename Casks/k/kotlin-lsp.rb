@@ -2,11 +2,11 @@ cask "kotlin-lsp" do
   arch arm: "-aarch64"
   os macos: "sit", linux: "tar.gz"
 
-  version "263.7084.0"
-  sha256 arm:          "b403bf8a54bd458e3ba6731cf8abb3340be08b439c03576dfc02b13faf3694b8",
-         intel:        "b29c393a5e541153d03d626e7946268437e358a667a5f914a126dbb4007664b1",
-         arm64_linux:  "450ab7c1d80e48106aa429b48cb4226d82ca12a8a2400447ae02386794780cac",
-         x86_64_linux: "ae0c4b01e17ab73a4a5227a78ea99e6dcbe3e499600315b22759a4e4cddd11df"
+  version "271.2085.0"
+  sha256 arm:          "2d22388f58be6f4dfa7a8f18c1e231871164dcacc16e407559029d7232816b4a",
+         intel:        "68457ab1825331e3eac85191b7c32737cbd8993867f5a9c50dfe012c5509e8f7",
+         arm64_linux:  "877aee612a17dab48144466282a6414ec58ab428a10b97c7e13edd9b6b3dc96e",
+         x86_64_linux: "e398e799027f41749ea33faa57470307d13d40f910961858c7e30adbd778ae08"
 
   url "https://download.jetbrains.com/language-server/kotlin-server/#{version}/kotlin-server-#{version}#{arch}.#{os}"
   name "Kotlin LSP"
