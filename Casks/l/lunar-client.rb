@@ -1,10 +1,10 @@
 cask "lunar-client" do
   arch arm: "arm64", intel: "x64"
 
-  version "3.7.35"
-  sha256 arm:          "564ccde83b953ca1d7e307151e86ed6098adb760c065df412c655b7ca9a310aa",
-         intel:        "bcf1e07d17fec612466bd25ea6f4229ba0f41cc78abc8c46e1856d67e68de74f",
-         x86_64_linux: "8512346344a7f2f2cef05f11e2e783ddba2bcd40294984e734dab8105d54f032"
+  version "3.7.36"
+  sha256 arm:          "eccaba45e8970fad0a5e92349a5e40bc4eed27842ce0abb536664c8b10a7a152",
+         intel:        "c059ab7975a685d295b95df55fe18133a8d1b096b885e9b0d241b4a366336613",
+         x86_64_linux: "cc190995a67db7f27eb438af62d0fb67288dee6b5c66a7b2bf9d4fd9888777e2"
 
   on_macos do
     url "https://launcher-releases.lunarclientprod.com/master/6e18b5a4f4ebbd4c7ecff572f1700cedce1f248bcb157adce5ec49be9e081a23/Lunar%20Client%20v#{version}-ow-#{arch}.dmg"
