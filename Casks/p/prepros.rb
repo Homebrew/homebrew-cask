@@ -22,6 +22,7 @@ cask "prepros" do
   app "Prepros.app"
 
   zap trash: [
+    "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/io.prepros.prepros.sfl*",
     "~/Library/Application Support/Prepros",
     "~/Library/Application Support/Prepros-#{version.major}",
     "~/Library/Preferences/io.prepros.prepros.plist",
