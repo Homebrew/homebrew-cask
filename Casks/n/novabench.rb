@@ -17,6 +17,7 @@ cask "novabench" do
   app "Novabench.app"
 
   zap trash: [
+    "~/Library/Application Support/com.novabench.client",
     "~/Library/Application Support/Novabench",
     "~/Library/Caches/com.novabench.client",
     "~/Library/Saved Application State/com.novabench.client.savedState",
