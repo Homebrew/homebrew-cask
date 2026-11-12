@@ -1,6 +1,6 @@
 cask "pastenow" do
-  version "2.37,768"
-  sha256 "c6610d92cdc2dfab4832e842c13abf95c892e2f892a553126c36a9653fffff51"
+  version "2.38,770"
+  sha256 "38e589739bd078fecb2940aeb5efefc41c6828d04f6ead1ddc440257f79e4585"
 
   url "https://pastenow.app/api/release_manager/downloads/app.pastenow.PasteNow/#{version.csv.second}.zip"
   name "PasteNow"
