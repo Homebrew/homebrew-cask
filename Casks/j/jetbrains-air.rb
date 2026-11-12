@@ -23,6 +23,8 @@ cask "jetbrains-air" do
 
   app "Air.app"
 
+  uninstall launchctl: "application.com.jetbrains.app.daemon.*"
+
   zap trash: [
     "~/Library/Application Support/JetBrains/Air",
     "~/Library/Caches/JetBrains/Air",
