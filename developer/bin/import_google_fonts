@@ -198,6 +198,13 @@ def find_google_casks():
       if not re.search(r"(github\.com\/google\/fonts|fonts\.google\.com|google\.com/fonts)", contents):
         continue
 
+      family_dir = re.search(
+        r"""(?:github\.com/google/fonts/raw/[^/]+/|only_path:\s*["'])"""
+        r"""(?:apache|ofl|ufl)/([^/"'\s]+)""",
+        contents,
+      )
+      family = family_dir[1] if family_dir else token.removeprefix("font-").replace("-", "")
+
       homepage = re.search(r"homepage\s+([\"'])(.*)(\1)\s*", contents)
       if homepage:
         homepage = homepage[2]
@@ -212,6 +219,7 @@ def find_google_casks():
       'path': cask_path,
       'description': description,
       'homepage': homepage,
+      'family': family,
     }
 
   return casks
@@ -285,6 +293,7 @@ Download the or clone the repository from https://github.com/google/fonts, then 
     existing_casks = find_google_casks()
     added_casks = {}
     updated_casks = {}
+    unparsed_families = set()
 
     for family_folder in family_folders:
         meta_file = os.path.join(family_folder, "METADATA.pb")
@@ -293,7 +302,10 @@ Download the or clone the repository from https://github.com/google/fonts, then 
         if os.path.exists(meta_file):
           try:
             cask = metadata_to_cask(meta_file, repo_dir)
-          except text_format.ParseError:
+          except text_format.ParseError as e:
+            print(f"Unable to parse {meta_file}: {e}", file=sys.stderr)
+            # The directory still identifies a family that is present upstream.
+            unparsed_families.add(os.path.basename(family_folder))
             continue
         else:
           cask = derive_cask(family_folder, repo_dir)
@@ -357,6 +369,7 @@ Download the or clone the repository from https://github.com/google/fonts, then 
     if not mode or mode == 'delete':
       # Delete casks which don't exist anymore.
       for deleted_cask in existing_casks.values():
-        os.remove(deleted_cask["path"])
+        if deleted_cask['family'] not in unparsed_families:
+          os.remove(deleted_cask["path"])
 
 run()
