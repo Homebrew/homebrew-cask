@@ -23,6 +23,8 @@ jobs:
   remove-disabled-packages:
     if: github.repository_owner == 'Homebrew'
     runs-on: macos-latest
+    outputs:
+      partially-disabled-packages: ${{ steps.remove_disabled.outputs.partially-disabled-packages }}
     env:
       REMOVAL_BRANCH: remove-disabled-packages
     permissions:
@@ -52,7 +54,7 @@ jobs:
 
       - name: Remove disabled packages
         id: remove_disabled
-        uses: Homebrew/actions/remove-disabled-packages@63a2d4d8d4193eab3e62b1b782ff3ab8408f5b29 # 2026.11.09.1
+        uses: Homebrew/actions/remove-disabled-packages@ceec4e8419bb3c97ce96e9dda7738499ed5f869d # 2026.11.14.1
         env:
           HOMEBREW_NO_INSTALL_FROM_API: 1
 
@@ -82,3 +84,26 @@ jobs:
             --body "$PR_BODY" \
             --head "$REMOVAL_BRANCH" \
             --title 'Remove disabled packages'
+
+  partially-disabled-issue:
+    needs: remove-disabled-packages
+    runs-on: ubuntu-slim
+    permissions:
+      issues: write # for Homebrew/actions/create-or-update-issue
+    steps:
+      - name: Report partially disabled casks
+        uses: Homebrew/actions/create-or-update-issue@ceec4e8419bb3c97ce96e9dda7738499ed5f869d # 2026.11.14.1
+        with:
+          # Keep the default `GITHUB_TOKEN`: issues it opens don't trigger `check-issues.yml`,
+          # which would otherwise close this one for not following an issue template.
+          title: Partially disabled casks ready for cleanup
+          body: |
+            These casks have been disabled for more than a year on some platforms but not others, so the [`remove-disabled-packages`](https://github.com/Homebrew/homebrew-cask/blob/HEAD/.github/workflows/remove-disabled-packages.yml) workflow can't remove them. Remove the disabled platforms (e.g. an `on_intel` or `on_macos` block) by hand.
+
+            ${{ needs.remove-disabled-packages.outputs.partially-disabled-packages }}
+          labels: help wanted
+          update-existing: ${{ needs.remove-disabled-packages.outputs.partially-disabled-packages != '' }}
+          skip-if-unchanged: true
+          close-existing: ${{ needs.remove-disabled-packages.outputs.partially-disabled-packages == '' }}
+          close-from-author: github-actions[bot]
+          close-comment: No partially disabled casks are left, closing issue.
