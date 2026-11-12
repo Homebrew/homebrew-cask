@@ -2,9 +2,9 @@ cask "antigravity-ide" do
   arch arm: "arm", intel: "x64"
   livecheck_arch = on_arch_conditional arm: "-arm64"
 
-  version "2.6.0,5526304964083712"
-  sha256 arm:   "7971e71ffaec88f9d9480ea2bcc80aebaee59c0ac06df6f0141ef59046b49c9c",
-         intel: "4e13a2073e666ac66b7e25e5a8943938f4bc0a17aea19ac1061dadfa80690e3b"
+  version "2.7.0,4507555968450560"
+  sha256 arm:   "4cf0776f9667f0afc3e823f80f04f7d978385ae4feda2d327ef6fce977032c64",
+         intel: "fb3678d41bff9dc4af9f8c58074b1a9c2e770807cec8c7237c4f0d10f03bbe56"
 
   url "https://edgedl.me.gvt1.com/edgedl/release2/j0qc3/antigravity/stable/#{version.csv.first}-#{version.csv.second}/darwin-#{arch}/Antigravity%20IDE.dmg"
   name "Google Antigravity IDE"
