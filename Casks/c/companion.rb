@@ -2,11 +2,11 @@ cask "companion" do
   arch arm: "arm64", intel: "x64"
   livecheck_arch = on_arch_conditional arm: "arm", intel: "intel"
 
-  sha256 arm:   "ff4793e7b144903bedf7296cfdfcc277b9bff5ff891317d7c7f08349fac29ffe",
+  sha256 arm:   "f4f9594aa1290a23fc0a30d79c614326d1ba37947ba4b4910fe8b9baff1234b9",
          intel: "da93a0858f8da67c4f28e775541762c40bec9ec8794f38fe2048aaef238835ae"
 
   on_arm do
-    version "5.1.2,10019,98d5d4e1a1"
+    version "5.1.3,10036,93ea3fa61c"
   end
   on_intel do
     version "5.1.2,10019,98d5d4e1a1"
