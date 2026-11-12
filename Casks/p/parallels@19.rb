@@ -24,6 +24,7 @@ cask "parallels@19" do
     "parallels",
     "parallels@18",
     "parallels@20",
+    "parallels@26",
   ]
   depends_on macos: :monterey
 
