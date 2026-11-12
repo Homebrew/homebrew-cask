@@ -21,7 +21,10 @@ cask "wolai" do
   app "wolai.app"
 
   zap trash: [
+    "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.wolai.app.sfl*",
     "~/Library/Application Support/wolai",
+    "~/Library/Logs/wolai",
+    "~/Library/Preferences/com.wolai.app.plist",
     "~/Library/Saved Application State/com.wolai.app.savedState",
   ]
 end
