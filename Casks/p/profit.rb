@@ -26,6 +26,7 @@ cask "profit" do
     "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.nelogica.profit.sfl*",
     "~/Library/Application Support/Profit",
     "~/Library/Caches/com.nelogica.profit",
+    "~/Library/Logs/Profit",
     "~/Library/Logs/ProfitMac",
     "~/Library/Preferences/com.nelogica.profit.plist",
     "~/Library/Saved Application State/com.nelogica.profit.savedState",
