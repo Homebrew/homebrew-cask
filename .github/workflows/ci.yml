@@ -46,18 +46,42 @@ jobs:
       actions: read # to check which run saved the Git cache
       contents: read
     steps:
-      - name: Set up Homebrew
-        id: set-up-homebrew
-        uses: Homebrew/actions/setup-homebrew@63a2d4d8d4193eab3e62b1b782ff3ab8408f5b29 # 2026.11.09.1
-        with:
-          core: false
-          cask: true
+      # Not `setup-homebrew`: it fetches this tap's full history, but the matrix only needs the pull request's diff.
+      - name: Update Homebrew
+        run: |
+          repository="$(brew --repository)"
+          git -C "${repository}" config remote.origin.fetch "+refs/heads/*:refs/remotes/origin/*"
+          git -C "${repository}" fetch --force --tags origin
+          git -C "${repository}" remote set-head origin --auto
+          git -C "${repository}" checkout --force -B main origin/HEAD
 
       - name: Check out Pull Request
         uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
         with:
-          fetch-depth: 0
+          # A pull request based on another branch needs full history to be diffed against the default branch.
+          fetch-depth: ${{ case(github.event_name != 'pull_request' || github.base_ref == github.event.repository.default_branch, 2, 0) }}
           persist-credentials: false
+
+      - name: Tap the checkout
+        run: |
+          tap="$(brew --repository)/Library/Taps/homebrew/homebrew-cask"
+          mkdir -p "$(dirname "${tap}")"
+          rm -rf "${tap}"
+          ln -s "${GITHUB_WORKSPACE}" "${tap}"
+
+          # `brew generate-cask-ci-matrix` diffs `origin...HEAD`.
+          # A pull request's merge commit has the base branch as its first parent.
+          # A full clone already has the real `origin/main`.
+          if [[ "$(git rev-parse --is-shallow-repository)" == "true" ]]
+          then
+            base="HEAD"
+            if [[ "${GITHUB_EVENT_NAME}" == "pull_request" ]]
+            then
+              base="HEAD^1"
+            fi
+            git update-ref refs/remotes/origin/main "$(git rev-parse "${base}")"
+          fi
+          git symbolic-ref refs/remotes/origin/HEAD refs/remotes/origin/main
 
       - name: Run brew config
         run: brew config
