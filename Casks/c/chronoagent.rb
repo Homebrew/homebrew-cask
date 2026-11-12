@@ -1,5 +1,5 @@
 cask "chronoagent" do
-  version "12.0.4"
+  version "12.0.3"
   sha256 :no_check
 
   url "https://downloads.econtechnologies.com/CA_Mac_Download.dmg"
@@ -8,8 +8,8 @@ cask "chronoagent" do
   homepage "https://www.econtechnologies.com/"
 
   livecheck do
-    url "https://www.econtechnologies.com/downloads/downloads.html"
-    regex(/>\s*ChronoAgent.*?Version\s+(\d+(?:\.\d+)+)[\s<]+/i)
+    url "https://www.econtechnologies.com/UC/updatecheck.php?prod=ChronoAgent&vers=0&lang=en&plat=mac&os=99&hw=arm64&req=1"
+    regex(/VERSION=(\d+(?:\.\d+)+)/i)
   end
 
   depends_on :macos
