@@ -7,15 +7,11 @@ cask "devtools" do
 
   url "https://github.com/me-shaon/devtools/releases/download/v#{version}/DevToolsApp-macos-#{arch}.dmg"
   name "DevTools"
-  desc "Offline-first developer utilities"
+  desc "Collection of developer utilities"
   homepage "https://github.com/me-shaon/devtools"
 
-  livecheck do
-    url :url
-    strategy :github_latest
-  end
-
-  depends_on macos: ">= :catalina"
+  auto_updates true
+  depends_on :macos
 
   app "DevToolsApp.app"
 
