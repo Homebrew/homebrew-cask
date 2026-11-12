@@ -15,7 +15,7 @@ cask "switchresx" do
   auto_updates true
   depends_on :macos
 
-  prefpane "SwitchResX.app/Contents/OptionalInstall/SwitchResX.prefPane"
+  app "SwitchResX.app"
 
   uninstall launchctl: "fr.madrau.switchresx.helper",
             quit:      [
