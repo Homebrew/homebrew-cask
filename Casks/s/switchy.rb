@@ -20,6 +20,7 @@ cask "switchy" do
   app "Switchy.app"
 
   zap trash: [
+    "~/Library/Application Support/Switchy",
     "~/Library/HTTPStorages/com.mangobuns.Switchy",
     "~/Library/Preferences/com.mangobuns.Switchy.plist",
   ]
