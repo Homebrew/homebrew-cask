@@ -12,5 +12,10 @@ cask "mtmr" do
 
   app "MTMR.app"
 
-  zap trash: "~/Library/Application Support/MTMR"
+  zap trash: [
+    "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/toxblh.mtmr.sfl*",
+    "~/Library/Application Support/MTMR",
+    "~/Library/HTTPStorages/Toxblh.MTMR",
+    "~/Library/Preferences/Toxblh.MTMR.plist",
+  ]
 end
