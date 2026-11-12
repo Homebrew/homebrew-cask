@@ -1,6 +1,6 @@
 cask "temurin@8" do
-  version "8,504,01"
-  sha256 "899960835a50e67670c8326df4e6160fbe7194201f48871e1a90fd1ca7aad58f"
+  version "8,512,09"
+  sha256 "522bfd6d5b339f9d049d0bb747c819365e1746b9245aff0fb37b272558893650"
 
   url "https://github.com/adoptium/temurin8-binaries/releases/download/jdk#{version.csv.first}u#{version.csv.second}-b#{version.csv.third}/OpenJDK#{version.csv.first}U-jdk_x64_mac_hotspot_#{version.csv.first}u#{version.csv.second}b#{version.csv.third.split(".").first}.pkg"
   name "Eclipse Temurin 8"
