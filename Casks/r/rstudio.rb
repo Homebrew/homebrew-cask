@@ -1,6 +1,6 @@
 cask "rstudio" do
-  version "2026.10.1,239"
-  sha256 "20c3b5978e93004e10807a273ed2e98daff2c44710d43c44e70d17761147f75d"
+  version "2026.11.0,203"
+  sha256 "8af768450f9f38586bf48958d348b41ffc4f3d42c9d225cb6d4f2b8e8b986135"
 
   url "https://download1.rstudio.org/electron/macos/RStudio-#{version.csv.first}-#{version.csv.second}.dmg"
   name "RStudio"
@@ -19,7 +19,7 @@ cask "rstudio" do
   end
 
   conflicts_with cask: "rstudio@daily"
-  depends_on macos: :monterey
+  depends_on macos: :ventura
 
   app "RStudio.app"
 
