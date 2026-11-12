@@ -20,6 +20,7 @@ cask "k8studio" do
   app "K8Studio.app"
 
   zap trash: [
+    "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/ide.k8studio.io.sfl*",
     "~/Library/Application Support/K8Studio",
     "~/Library/Caches/ide.k8studio.io",
     "~/Library/Caches/ide.k8studio.io.ShipIt",
