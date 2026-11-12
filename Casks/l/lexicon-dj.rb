@@ -20,5 +20,12 @@ cask "lexicon-dj" do
 
   app "Lexicon.app"
 
-  zap trash: "~/Library/Application Support/Lexicon"
+  zap trash: [
+    "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.rekord.cloud.lexicon.sfl*",
+    "~/Library/Application Support/Lexicon",
+    "~/Library/Caches/com.rekord.cloud.lexicon",
+    "~/Library/HTTPStorages/com.rekord.cloud.lexicon",
+    "~/Library/Logs/lexicon",
+    "~/Library/Preferences/com.rekord.cloud.lexicon.plist",
+  ]
 end
