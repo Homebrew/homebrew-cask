@@ -1,9 +1,9 @@
 cask "segger-embedded-studio" do
   arch arm: "arm64", intel: "x86_64"
 
-  version "8.30b"
-  sha256 arm:   "4c88289cd1c3937751a5237cabea6fe26b00ce8b723d158bd8416816e419908e",
-         intel: "ebf7852af6660a10585968354e129161d89c4ef218fd00ccf7a5c111c1ef1906"
+  version "8.30c"
+  sha256 arm:   "875e933ab85738faef126bfc89190913e4548de9d504c6f975dcc7a896ea4e71",
+         intel: "54166fca52fe5344cb1c089861251bdea34066a12db17ec080b1aa53ce35ab18"
 
   url "https://www.segger.com/fd/embedded-studio/Setup_EmbeddedStudio_v#{version.no_dots}_macOS_#{arch}.dmg"
   name "SEGGER Embedded Studio for Arm and RISC-V"
