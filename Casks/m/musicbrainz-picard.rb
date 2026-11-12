@@ -1,9 +1,9 @@
 cask "musicbrainz-picard" do
   arch arm: "arm64", intel: "x86_64"
 
-  version "3.0.4,13.0"
-  sha256 arm:   "dc4bd3ab3da5df45baa7e82e0a6b49930f6f8dd72e76b74fde0d533f41850310",
-         intel: "3ead7559abaf78b4a3f10205de0f1b0f497d307ccb99cc32b6e136016ebfa809"
+  version "3.0.5,13.0"
+  sha256 arm:   "53b1f8c3a971c538421ddc89a14a7322bd5bc90521ade1f5aded51d10a64ddfe",
+         intel: "b8c62aed466039cdb97ab1e9267df5fc55d37a493df146c0f85708f1e0a68499"
 
   url "https://data.musicbrainz.org/pub/musicbrainz/picard/MusicBrainz-Picard-#{version.csv.first}-macOS-#{version.csv.second}-#{arch}.dmg"
   name "MusicBrainz Picard"
