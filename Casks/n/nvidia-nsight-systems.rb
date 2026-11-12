@@ -1,9 +1,9 @@
 cask "nvidia-nsight-systems" do
   arch arm: "-arm64"
 
-  version "2026.6.1.218-39266636"
-  sha256 arm:   "867e9c9ba651d744f037554d621411c8abddb91ed4c86252c621ea01186750cb",
-         intel: "bdb5d4fc35bd037b25b91e4926c42a340a3a19a211da59e97316b07218b20597"
+  version "2026.6.1.251-39333969"
+  sha256 arm:   "73c992559f07d0146a3807711b1b03041d0f046301b26688ba8923cf5215fc0b",
+         intel: "370040436828278501415b7735134bd336c43627677654e4861a0d6cbe5dd093"
 
   url "https://developer.nvidia.com/downloads/assets/tools/secure/nsight-systems/#{version.major_minor.dots_to_underscores}/NsightSystems-macos#{arch}-public-#{version}.dmg"
   name "NVIDIA Nsight Systems"
