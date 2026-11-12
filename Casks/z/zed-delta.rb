@@ -1,6 +1,6 @@
 cask "zed-delta" do
-  version "0.25.0"
-  sha256 "8d616838f6233344bf66fc7d2deae8f53ee6c11db37f33764cff062bd8fe3631"
+  version "0.26.0"
+  sha256 "e49924a1b97c8e303949084e9a659e0e210d4be3834de544e15062e0e9efffbb"
 
   url "https://releases.delta.dev/releases/stable/#{version}/macos/aarch64/Delta.app.zip"
   name "Delta"
