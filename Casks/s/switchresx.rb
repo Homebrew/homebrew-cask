@@ -36,6 +36,7 @@ cask "switchresx" do
     "~/Library/Caches/fr.madrau.switchresx.daemon",
     "~/Library/Cookies/fr.madrau.switchresx.app.binarycookies",
     "~/Library/Cookies/fr.madrau.switchresx.daemon.binarycookies",
+    "~/Library/HTTPStorages/fr.madrau.switchresx.app",
     "~/Library/Preferences/fr.madrau.switchres.desktop-layout.plist",
     "~/Library/Preferences/fr.madrau.switchresx.app.plist",
     "~/Library/Preferences/fr.madrau.switchresx.daemon.plist",
