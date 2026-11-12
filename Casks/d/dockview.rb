@@ -1,25 +1,32 @@
 cask "dockview" do
-  version "1.7.5"
+  version "2.6.1"
   sha256 :no_check
 
-  url "https://macplus-software.com/downloads/DockViewStandard.zip"
+  url "https://macplus-software.com/downloads/DockView%202.zip"
   name "DockView"
+  name "DockView 2"
   desc "Utility to preview application windows in the dock"
   homepage "https://noteifyapp.com/dockview/"
 
   livecheck do
-    url "https://macplus-software.com/downloads/DockViewStandard.xml"
+    url "https://macplus-software.com/downloads/DockView%202.xml"
     strategy :sparkle, &:short_version
   end
 
   auto_updates true
-  depends_on :macos
+  depends_on macos: :sonoma
 
-  app "DockView.app"
+  app "DockView 2.app"
 
   zap trash: [
-    "~/Library/Application Support/com.sergey-gerasimenko.DockView",
-    "~/Library/Caches/com.sergey-gerasimenko.DockView",
-    "~/Library/Preferences/com.sergey-gerasimenko.DockView.plist",
+    "~/Library/Application Scripts/com.macplus-software.com.DockView-2",
+    "~/Library/Application Support/com.macplus-software.com.DockView-2",
+    "~/Library/Application Support/DockView 2",
+    "~/Library/Caches/com.macplus-software.com.DockView-2",
+    "~/Library/HTTPStorages/com.macplus-software.com.DockView-2",
+    "~/Library/HTTPStorages/com.macplus-software.com.DockView-2.binarycookies",
+    "~/Library/Preferences/com.macplus-software.com.DockView-2.plist",
+    "~/Library/Saved Application State/com.macplus-software.com.DockView-2.savedState",
+    "~/Library/WebKit/com.macplus-software.com.DockView-2",
   ]
 end
