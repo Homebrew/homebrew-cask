@@ -21,6 +21,7 @@ cask "naver-whale" do
 
   zap trash: [
     "~/Library/Caches/com.naver.Whale",
+    "~/Library/HTTPStorages/com.naver.Whale",
     "~/Library/Preferences/com.naver.Whale.plist",
     "~/Library/Saved Application State/com.naver.Whale.savedState",
   ]
