@@ -1,6 +1,6 @@
 cask "adrafinil" do
-  version "1.14.1"
-  sha256 "820c67ca2313e27f51a596ad3d244bcb5636bf24f8a8ed86bb49505faac19af2"
+  version "1.14.2"
+  sha256 "99d6776a86ffd4ad313a3e8493e6f6369ca434007b380286f4e5fdbdb1bf72ad"
 
   url "https://github.com/kageroumado/adrafinil/releases/download/v#{version}/Adrafinil-#{version}.dmg"
   name "Adrafinil"
