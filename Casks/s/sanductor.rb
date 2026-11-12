@@ -1,6 +1,6 @@
 cask "sanductor" do
-  version "1.0.1"
-  sha256 "2c88bb355e3ea1cc613ee119a3e0e08160018689507a43f68a191c603535a707"
+  version "1.0.2"
+  sha256 "3247c416983c42a3dcb15903f5368e08ef2ef27063fb6d88363d2c1b99b640ec"
 
   url "https://github.com/MikeMcQuaid/Sanductor/releases/download/#{version}/Sanductor-#{version}.zip"
   name "Sanductor"
