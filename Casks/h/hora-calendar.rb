@@ -4,7 +4,7 @@ cask "hora-calendar" do
 
   url "https://downloads.horacal.app/direct/stable/releases/#{version.csv.first}/#{version.csv.second}/hora-calendar-#{version.csv.first}-#{version.csv.second}.zip"
   name "hora Calendar"
-  desc "Google Calendar client with tasks and focus planning"
+  desc "Google Calendar client"
   homepage "https://horacal.app/"
 
   livecheck do
