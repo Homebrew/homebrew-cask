@@ -21,6 +21,7 @@ cask "bambu-connect" do
 
   zap trash: [
     "~/Library/Application Support/Bambu Connect",
+    "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.bambulab.bambu-connect.sfl*",
     "~/Library/Preferences/com.bambulab.bambu-connect.plist",
     "~/Library/Saved Application State/com.bambulab.bambu-connect.savedState",
   ]
