@@ -45,8 +45,8 @@ cask "propresenter" do
     end
   end
   on_sonoma :or_newer do
-    version "22,369098928"
-    sha256 "3dfc1594339a8af712b73e0ab24f0bf4972308c5de4403ec319332089745535b"
+    version "22.0.1,369099010"
+    sha256 "ea8001afa448d5fab4f567151d9906a528a4a0b5612457147050393e3da825ea"
 
     livecheck do
       url "https://api.renewedvision.com/v1/pro/upgrade?platform=macos&osVersion=99&appVersion=0&buildNumber=0&includeNotes=0"
