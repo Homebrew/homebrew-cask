@@ -1,9 +1,9 @@
 cask "hive-app" do
   arch arm: "-arm64"
 
-  version "1.2.50"
-  sha256 arm:   "add2463c5dc8fc0171d453f608926b13d9879d1fa719067459ba280d315cdee7",
-         intel: "00a034520c979f1e99dc03cc90f9cdfd68d72f9db6834e06dfb46430f3bf100d"
+  version "1.3.0"
+  sha256 arm:   "70e72d706a1a2ee09eb83a763bb810f8024e3c0cdc19b8eb60557dc4d8c20a85",
+         intel: "254f75718dcfaff187684b9a51581ca2c760e4a2949540babaac5b444c435a58"
 
   url "https://github.com/morapelker/hive/releases/download/v#{version}/Hive-#{version}#{arch}.dmg"
   name "Hive"
