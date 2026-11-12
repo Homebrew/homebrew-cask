@@ -17,5 +17,9 @@ cask "keyboardcleantool" do
 
   app "KeyboardCleanTool.app"
 
-  zap :not_required
+  zap trash: [
+    "~/Library/Caches/com.hegenberg.KeyboardCleanTool",
+    "~/Library/HTTPStorages/com.hegenberg.KeyboardCleanTool",
+    "~/Library/Preferences/com.hegenberg.KeyboardCleanTool.plist",
+  ]
 end
