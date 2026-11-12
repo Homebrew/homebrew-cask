@@ -4,11 +4,11 @@ cask "designcraft" do
   os macos: "macos", linux: "linux"
   url_end = on_system_conditional macos: "dmg", linux: "AppImage"
 
-  version "0.20.0"
-  sha256 arm:          "afaf516fd738128d8e5570664acfb02f2606ff49ba0203b59dfdeabd1b1c0d43",
-         intel:        "afaf516fd738128d8e5570664acfb02f2606ff49ba0203b59dfdeabd1b1c0d43",
-         arm64_linux:  "639c59db0079621b02b80a6d60962c291b1f4910b5ea27c56dc2eade013d214c",
-         x86_64_linux: "55ca6e4d9a21a77d3c2446bd0f56cb525356741a8d4260bcbfedbbb0c748f925"
+  version "0.20.1"
+  sha256 arm:          "f45b2bf5543c1d8c37d09a971e99420d6ef3d97b6ebe33e31b36d2a3c39eb0c2",
+         intel:        "f45b2bf5543c1d8c37d09a971e99420d6ef3d97b6ebe33e31b36d2a3c39eb0c2",
+         arm64_linux:  "14e6412cc8b15633571c0b09869b89f23ea2ac61b3e6819b3b26284e92b68693",
+         x86_64_linux: "f9d6fd6bb1a421850243c0d4be44235713a9ec5b26f8bf1d5ba87afcf8f91534"
 
   on_macos do
     app "DesignCraft.app"
