@@ -29,10 +29,16 @@ cask "elgato-wave-link" do
 
   zap trash: [
     "~/Library/Application Scripts/com.elgato.WaveLink*",
+    "~/Library/Application Scripts/group.com.elgato.WaveLink#{version.major}",
+    "~/Library/Application Support/com.elgato.WaveLink#{version.major}*",
+    "~/Library/Caches/com.elgato.WaveLink#{version.major}*",
     "~/Library/Containers/com.elgato.WaveLink*",
+    "~/Library/Group Containers/group.com.elgato.WaveLink#{version.major}",
     "~/Library/Group Containers/Y93VXCB8Q5.group.com.corsair.elgato",
+    "~/Library/HTTPStorages/com.elgato.WaveLink#{version.major}*",
     "~/Library/Logs/ElgatoWaveLink",
     "~/Library/Logs/WaveLink",
+    "~/Library/Preferences/com.elgato.WaveLink#{version.major}.plist",
     "~/Library/Preferences/com.elgato.WaveLink.plist",
   ]
 end
