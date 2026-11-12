@@ -8,10 +8,8 @@ cask "sable" do
   homepage "https://sable.moe/"
 
   livecheck do
-    url "https://git.sable.moe/api/v1/repos/SableClient/sable-next/releases/latest"
-    strategy :json do |json|
-      json["tag_name"]&.sub(/^v/, "")
-    end
+    url "https://git.sable.moe/SableClient/sable-next/releases/download/latest/latest-mac.yml"
+    strategy :electron_builder
   end
 
   auto_updates true
