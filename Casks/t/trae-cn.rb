@@ -3,11 +3,11 @@ cask "trae-cn" do
   os macos: "darwin", linux: "linux"
   url_end = on_system_conditional macos: "dmg", linux: "tar.gz"
 
-  version "2.3.102035"
-  sha256 arm:          "6b7e80dfc3ae0b9dd8504dae6922dda19bf8ed2eebdb783db791fcf6005232df",
-         intel:        "5d771229277c75e3453e6a547874ff8aad27d08c7c93f68ae819376e4edb172b",
-         arm64_linux:  "b71876507982f9a4db0b15de5ad28976160b1040fb857062bc8c0a9a4b2e0005",
-         x86_64_linux: "37096be310a67ac4991d8aa751184e12ebfc561567a3795929fdb0f914e6024a"
+  version "2.3.102387"
+  sha256 arm:          "fd27a3bcbf5f3d1e498fbc09e6ef85b2b742742de7b4104b7ff8aa2e1db6592f",
+         intel:        "2b7e4d4c76c39c35a7576b0a8ac1a08cf9c664c8b9441926488b8a798fcd3688",
+         arm64_linux:  "c9d259c7e215ef570b98671dc5bc821bc6bd46c52f06a1b9afa9c5d2733d662d",
+         x86_64_linux: "400cf82a46d17589f40fef21ee370064b793126c1d4ea6fc8c066772614896e3"
 
   on_macos do
     depends_on macos: :monterey
