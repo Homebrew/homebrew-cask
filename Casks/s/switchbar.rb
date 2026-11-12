@@ -18,6 +18,7 @@ cask "switchbar" do
   app "Switchbar.app"
 
   zap trash: [
+    "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.webcatalog.switchbar.sfl*",
     "~/Library/Application Support/Switchbar",
     "~/Library/Preferences/com.webcatalog.switchbar.plist",
   ]
