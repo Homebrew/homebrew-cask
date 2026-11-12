@@ -24,6 +24,7 @@ cask "parallels" do
     "parallels@18",
     "parallels@19",
     "parallels@20",
+    "parallels@26",
   ]
   depends_on arch: :arm64
   depends_on macos: :sonoma

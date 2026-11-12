@@ -24,6 +24,7 @@ cask "parallels@18" do
     "parallels",
     "parallels@19",
     "parallels@20",
+    "parallels@26",
   ]
   depends_on :macos
 
