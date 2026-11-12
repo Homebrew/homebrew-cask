@@ -3,11 +3,11 @@ cask "dbgate" do
   os macos: "mac_universal", linux: "linux_#{arch}"
   url_end = on_system_conditional macos: "dmg", linux: "AppImage"
 
-  version "7.3.4"
-  sha256 arm:          "11a765c242a1b8c7786f9952924b7ef3c8f002093c84f8a9a951073f43de3d82",
-         intel:        "11a765c242a1b8c7786f9952924b7ef3c8f002093c84f8a9a951073f43de3d82",
-         arm64_linux:  "b40a442910ada59663c6fcbb8bd6cdb5a7b6ff5ce267351111619df64f646202",
-         x86_64_linux: "40448f5c81d2ee86c1429f7ac78dbd5f2874b3c5078178e8d4644b4123acd4c0"
+  version "7.3.6"
+  sha256 arm:          "dc5d8aff44ff0218d73878d567b4bbec884e6a48d1698a5075d49c21358bc527",
+         intel:        "dc5d8aff44ff0218d73878d567b4bbec884e6a48d1698a5075d49c21358bc527",
+         arm64_linux:  "9373537051712d3b0b7ceaf18569b90be1262cd77774c1d1340ed3840fa0e225",
+         x86_64_linux: "cad074eb0c91d62c99a86b1ef799548844ceb62d2715d7a01a4d202cbaa640cb"
 
   on_macos do
     depends_on macos: :ventura
