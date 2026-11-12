@@ -9,12 +9,12 @@ cask "remotecrab" do
 
   livecheck do
     url "https://vgoapp.com/downloads/appcast.xml"
-    strategy :sparkle
+    strategy :sparkle, &:short_version
   end
 
   auto_updates true
-  depends_on macos: ">= :tahoe"
   depends_on arch: :arm64
+  depends_on macos: :tahoe
 
   app "RemoteCrab.app"
 
