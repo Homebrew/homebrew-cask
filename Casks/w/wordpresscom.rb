@@ -1,9 +1,9 @@
 cask "wordpresscom" do
   arch arm: "arm64", intel: "x64"
 
-  version "8.2.4"
-  sha256 arm:   "c18e0237290df62830c792ab95516effe5f54f7a0a774d8426de6a533f4c2e64",
-         intel: "41667a891f1fc8822bb8fc3326f1f165685b13cb83949f24eac3195baa334bf5"
+  version "8.2.5"
+  sha256 arm:   "1a7643bb426ab7ba425ee7c17168eb0b3be25f7a6d3fff1715d3e19260396cab",
+         intel: "c9d7f8bbaf4112727d50fb4f7567443eb17e3720ac85a2685290ae4ef785ea12"
 
   url "https://github.com/Automattic/wp-desktop/releases/download/v#{version}/wordpress.com-macOS-dmg-#{version}-#{arch}.dmg"
   name "WordPress.com"
