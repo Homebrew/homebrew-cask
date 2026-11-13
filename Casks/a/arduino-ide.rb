@@ -17,6 +17,7 @@ cask "arduino-ide" do
       "~/Library/Application Support/arduino-ide",
       "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/cc.arduino.ide*.sfl*",
       "~/Library/Arduino15",
+      "~/Library/Logs/Arduino IDE",
       "~/Library/Preferences/cc.arduino.IDE*.plist",
       "~/Library/Saved Application State/cc.arduino.IDE#{version.major}.savedState",
     ]
