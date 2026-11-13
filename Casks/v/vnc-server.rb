@@ -7,23 +7,25 @@ cask "vnc-server" do
   desc "Remote desktop server application"
   homepage "https://www.realvnc.com/"
 
-  # The upstream download page links to the latest pkg file but Cloudflare
-  # protections prevent us from fetching it, so it must be checked manually:
-  # https://www.realvnc.com/en/connect/download/vnc/macos/
   livecheck do
-    skip "Cannot be fetched due to Cloudflare protections"
+    url "https://help.realvnc.com/api/v2/help_center/en-us/sections/26441349091101/articles.json"
+    regex(/RealVNC\s+Server\s+v?(\d+(?:\.\d+)+)/i)
+    strategy :json do |json, regex|
+      json["articles"]&.map do |article|
+        # Some releases are Windows/Linux only (e.g. 7.14.0)
+        next if article["body"]&.match?(/release\s+is\s+for\s+(?:(?!mac)[^.<])+\s+only/i)
+
+        match = article["title"]&.match(regex)
+        next if match.blank?
+
+        match[1]
+      end
+    end
   end
 
   depends_on :macos
 
   pkg "VNC-Server-#{version}-MacOSX-universal.pkg"
-
-  uninstall_preflight_steps do
-    if_path_exists "/Applications/RealVNC/Uninstall VNC Server.app/Contents/Resources/uninstaller.sh" do
-      run "/Applications/RealVNC/Uninstall VNC Server.app/Contents/Resources/uninstaller.sh",
-          print_stderr: false, sudo: true
-    end
-  end
 
   uninstall launchctl: [
               "com.realvnc.vncagent.peruser",
