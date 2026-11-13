@@ -17,7 +17,13 @@ cask "mailplane" do
 
   app "Mailplane.app"
 
-  zap trash: "~/Library/Preferences/com.mailplaneapp.Mailplane.plist"
+  zap trash: [
+    "~/Library/Application Scripts/com.mailplaneapp.Mailplane*.Send",
+    "~/Library/Application Support/com.mailplaneapp.Mailplane*",
+    "~/Library/Containers/com.mailplaneapp.Mailplane*.Send",
+    "~/Library/Logs/Mailplane",
+    "~/Library/Preferences/com.mailplaneapp.Mailplane*.plist",
+  ]
 
   caveats do
     requires_rosetta
