@@ -39,9 +39,13 @@ cask "popo" do
   uninstall quit: "com.netease.game.popo"
 
   zap trash: [
+    "~/Library/Application Support/com.netease.game.popo",
     "~/Library/Application Support/Netease/Popo",
     "~/Library/Caches/com.netease.game.popo",
+    "~/Library/Containers/com.netease.game.popo",
+    "~/Library/HTTPStorages/com.netease.game.popo",
     "~/Library/Preferences/com.netease.game.popo.plist",
     "~/Library/Saved Application State/com.netease.game.popo.savedState",
+    "~/Library/WebKit/com.netease.game.popo",
   ]
 end
