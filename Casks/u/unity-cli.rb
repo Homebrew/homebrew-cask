@@ -2,11 +2,11 @@ cask "unity-cli" do
   arch arm: "arm64", intel: "x64"
   os macos: "darwin", linux: "linux"
 
-  version "1.0.0-beta.17"
-  sha256 arm:          "b14ce51e2f872f30ae1e89ed9ef0ffd07aa06160f918aadec09471b2f82846eb",
-         intel:        "5f2240f7682871448706e112f7ede236f7ab02ece2679b1cb8a7a148c729a60f",
-         arm64_linux:  "4fd880a0e7406de986747e5f484731a9838e097a9e0e70f4f6c4daa9463e2fc1",
-         x86_64_linux: "2f5246ee5bea5032da2917f5f0125d3cfe803c85dc34f78bd75a427db13a0b3c"
+  version "1.0.0"
+  sha256 arm:          "de6cb46c1ac1871d524965ed2ed5f14e1eb13b4fc25210a209a55c0b1154014f",
+         intel:        "2ce9f3cbdc537e4468f178382749508eca7c611cf4b304cc23395c63321a7d96",
+         arm64_linux:  "9534d3a98c92178f4abfc8e7d50a62df91da190db838bc6576e8982552269a37",
+         x86_64_linux: "bd680055cb4a8d9d244c70d79eefa5828f6668075097559547e1ca4aece07b2b"
 
   on_macos do
     zap trash: "~/Library/Application Support/UnityHub"
@@ -24,12 +24,11 @@ cask "unity-cli" do
   homepage "https://docs.unity.com/en-us/unity-cli"
 
   livecheck do
-    url "https://public-cdn.cloud.unity3d.com/hub/prod/cli/latest-beta.json"
+    url "https://public-cdn.cloud.unity3d.com/hub/prod/cli/latest.json"
     strategy :json do |json|
       json["version"]
     end
   end
 
-  # The extension-less download is staged under the version directory's name
-  binary version.to_s, target: "unity"
+  binary "unity-#{os}-#{arch}", target: "unity"
 end
