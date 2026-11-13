@@ -1,9 +1,9 @@
 cask "picgo" do
   arch arm: "arm64", intel: "x64"
 
-  version "3.0.3"
-  sha256 arm:   "8eaed1a22a01eb3cd2f41e4d3ac5d672b51ac5c56e1b4d7add4688acb9ad2c5b",
-         intel: "770a7783918c784add19d2e5537c1fd47440e4371d0701cb040bed85ae972c8e"
+  version "3.0.4"
+  sha256 arm:   "11c06eb99255279238f794a89c63ef9d57f7051c1ffdb31f2b7e6b903902da74",
+         intel: "30893c9a1d76de348baf149ca2fe15136e33f18a4d304e6129218c3ac4206f46"
 
   url "https://github.com/Molunerfinn/PicGo/releases/download/v#{version}/PicGo-#{version}-#{arch}.dmg"
   name "PicGo"
