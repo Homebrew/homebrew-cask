@@ -1,6 +1,6 @@
 cask "emeetlink" do
-  version "5.3.8,2026.0814.1137"
-  sha256 "3e194ab30fd5209f75e53581ae8f927d0d4fcffa026b47872b0cebd435793aec"
+  version "5.4.6,2026.1111.1335"
+  sha256 "fbd50455a7c2ec5af020b4704c88f126699a7643038df53f8f1c4062d667b93e"
 
   url "https://emeetapp.s3.us-west-2.amazonaws.com/emeet_link/EMEETLINK_macOS_V#{version.csv.first}_#{version.csv.second}.dmg"
   name "EMEETLINK"
