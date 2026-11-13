@@ -1,28 +1,24 @@
 cask "postman" do
   arch arm: "osx_arm64", intel: "osx64"
 
-  version "12.34.0"
-  sha256 arm:   "bff311c819c450eea1f70314d68601450f4fcb6abd4cfd935f1c6641440b2f70",
-         intel: "1fce3db9c4a60dff546658f8b9a51aa8b9731a3292f974a9fae7069dd46863ab"
+  version "12.36.3"
+  sha256 arm:   "5310dd2e7c1092fd209c17a22e511d6062bf6daa44920d37ce3607156c029eba",
+         intel: "0f1e199706598ab9beae8725d7197a95d83c2b9a1ca37fd14f60ea92720d670c"
 
   url "https://dl.pstmn.io/download/version/#{version}/#{arch}"
   name "Postman"
   desc "Collaboration platform for API development"
   homepage "https://www.postman.com/"
 
-  # This is a workaround to a slow-to-update livecheck. It uses the in-app
-  # update check link and queries the available versions for a generic major
-  # version. We cannot use #{version} as the URL does not exist if #{version}
-  # is the latest version available.
   livecheck do
-    url "https://dl.pstmn.io/update/status?currentVersion=#{version.major}.0.0&platform=#{arch}"
+    url "https://dl.pstmn.io/api/version/latest?platform=#{arch}&channel=stable"
     strategy :json do |json|
       json["version"]
     end
   end
 
   auto_updates true
-  depends_on :macos
+  depends_on macos: :monterey
 
   app "Postman.app"
 
