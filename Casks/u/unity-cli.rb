@@ -24,12 +24,11 @@ cask "unity-cli" do
   homepage "https://docs.unity.com/en-us/unity-cli"
 
   livecheck do
-    url "https://public-cdn.cloud.unity3d.com/hub/prod/cli/latest-beta.json"
+    url "https://public-cdn.cloud.unity3d.com/hub/prod/cli/latest.json"
     strategy :json do |json|
       json["version"]
     end
   end
 
-  # The extension-less download is staged under the version directory's name
-  binary version.to_s, target: "unity"
+  binary "unity-#{os}-#{arch}", target: "unity"
 end
