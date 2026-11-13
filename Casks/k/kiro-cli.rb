@@ -1,6 +1,6 @@
 cask "kiro-cli" do
-  version "3.2.1"
-  sha256 "bfda7f0b1c3d37e53143054a730df94dde52149ac7aea5699b6d36dabec87f06"
+  version "3.3.0"
+  sha256 "97906d8a4b6c1e77435c1f50048d2da2fbde7755f72cefdb59cc15b1f85575b8"
 
   url "https://desktop-release.q.us-east-1.amazonaws.com/#{version}/kirocli-universal-darwin.zip"
   name "Kiro CLI"
