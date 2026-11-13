@@ -37,7 +37,12 @@ cask "resolume-arena" do
             delete:    "/Applications/Resolume Arena #{version.major}"
 
   zap pkgutil: [
-    "com.resolume.pkg.ResolumeDXV",
-    "com.resolume.pkg.ResolumeQuickLook",
-  ]
+        "com.resolume.pkg.ResolumeDXV",
+        "com.resolume.pkg.ResolumeQuickLook",
+      ],
+      trash:   [
+        "~/Library/Caches/com.resolume.arena",
+        "~/Library/Logs/Resolume Arena",
+        "~/Library/Preferences/com.resolume.arena.plist",
+      ]
 end
