@@ -24,9 +24,11 @@ cask "kiwidesk" do
 
   zap trash: [
     "~/.config/KiwiDesk",
+    "~/Library/Application Support/CrashReporter/KiwiDesk_*.plist",
     "~/Library/Application Support/KiwiDesk",
     "~/Library/Caches/com.kiwicanopy.kiwidesk",
     "~/Library/HTTPStorages/com.kiwicanopy.kiwidesk",
     "~/Library/Preferences/com.kiwicanopy.kiwidesk.plist",
+    "~/Library/WebKit/com.kiwicanopy.kiwidesk",
   ]
 end
