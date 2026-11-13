@@ -31,9 +31,14 @@ cask "antigravity-cli" do
     end
   end
 
-  auto_updates true
-
-  binary "antigravity", target: "agy"
+  command_wrapper "agy",
+                  executable: "#{staged_path}/antigravity",
+                  env:        { "AGY_CLI_DISABLE_AUTO_UPDATE" => "true" }
 
   zap trash: "~/.gemini/antigravity-cli"
+
+  caveats <<~EOS
+    `agy`'s automatic updates are disabled so that Homebrew manages them.
+    Use `brew upgrade --cask #{token}` instead of `agy update`.
+  EOS
 end
