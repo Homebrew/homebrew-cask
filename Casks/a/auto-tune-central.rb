@@ -26,6 +26,7 @@ cask "auto-tune-central" do
 
   zap trash: [
     "~/Library/Application Support/Auto-Tune Central",
+    "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.antares.autotunecentral.sfl*",
     "~/Library/Application Support/CrashReporter/Auto-Tune Central_*.plist",
     "~/Library/Caches/com.Antares.AutoTuneCentral*",
     "~/Library/HTTPStorages/com.Antares.AutoTuneCentral",
