@@ -16,6 +16,8 @@ cask "m3unify" do
 
   app "M3Unify.app"
 
+  uninstall quit: "com.dougscripts.M3Unify"
+
   zap trash: [
     "~/Library/Caches/com.dougscripts.M3Unify",
     "~/Library/HTTPStorages/com.dougscripts.M3Unify",
