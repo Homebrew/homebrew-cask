@@ -1,6 +1,6 @@
 cask "nextpad++" do
-  version "1.1.2"
-  sha256 "03e321f496a38a940d68c09403c9d13f1e866d73d00d5c4dd4894ec3bc1a8739"
+  version "1.1.3"
+  sha256 "b291b289f1dc8f625c449151332bd0d088f6f966fbe5144904b14dd8c056e701"
 
   url "https://github.com/nextpad-plus-plus/nextpad-plus-plus-macos/releases/download/v#{version}/Nextpad++v#{version}.dmg"
   name "Nextpad++"
@@ -12,7 +12,7 @@ cask "nextpad++" do
     strategy :github_latest
   end
 
-  depends_on macos: :monterey
+  depends_on :macos
 
   app "Nextpad++.app"
 
