@@ -1,6 +1,6 @@
 cask "clone-hero" do
-  version "1.1.0.6142,-final"
-  sha256 "1b880f98a164d97a84bf09ee1b9636b8a67fe3ccfa0ec04ebfc0bb31561a2f39"
+  version "1.1.0.6161,-final"
+  sha256 "ef151ddea58465457ce1910690773dd947e53f0336f44c0e6111e8e402a51663"
 
   url "https://github.com/clonehero-game/releases/releases/download/v#{version.csv.first}#{version.csv.second if version.csv.second}/CloneHero.v#{version.csv.first}#{version.csv.second if version.csv.second}.dmg"
   name "Clone Hero"
@@ -18,7 +18,7 @@ cask "clone-hero" do
     end
   end
 
-  depends_on :macos
+  depends_on macos: :monterey
 
   app "Clone Hero.app"
 
