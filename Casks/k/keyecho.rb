@@ -1,9 +1,9 @@
 cask "keyecho" do
   arch arm: "aarch64", intel: "x64"
 
-  version "1.1.1"
-  sha256 arm:   "b182ec028e2d8bcdf8f7c30def2c3aaa02bd893a654a994c2ac39d1f11b0542e",
-         intel: "8f92e053311d08fce694fdeb32c741435fd87f80fa5f2d04ab683c3802c56ef4"
+  version "1.2.0"
+  sha256 arm:   "72b1590a5478d45e00689ecb61459edff40160c1849249ee5cf97e1523099e7e",
+         intel: "7a3169508c5fefef76c38fd9b3b1d927e628f8e56484089d63f7ae7add71bba4"
 
   url "https://github.com/ZacharyL2/KeyEcho/releases/download/v#{version}/KeyEcho_#{version}_#{arch}.dmg"
   name "KeyEcho"
