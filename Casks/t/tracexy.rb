@@ -1,6 +1,6 @@
 cask "tracexy" do
-  version "0.9.2,17"
-  sha256 "674fc314a2e85f04fcce2061722f207423656abb8ef3b4d75372c290e4400626"
+  version "0.10.0,18"
+  sha256 "e94cfdb194c2143cc6dba410614af13c094b5556b790dbc4566179792e2c9696"
 
   url "https://github.com/RockxyApp/Tracexy/releases/download/v#{version.csv.first}/Tracexy-#{version.tr(",", "-")}.dmg"
   name "Tracexy"
