@@ -20,10 +20,7 @@ cask "yandex-document" do
 
   pkg "yandex-document.pkg"
 
-  uninstall launchctl: [
-              "com.yandex.docs.document.updater.helper",
-              "com.yandex.docs.document.updater.helper.v2",
-            ],
+  uninstall launchctl: "com.yandex.docs.document.updater.helper.v2",
             quit:      "com.yandex.docs.document",
             pkgutil:   "com.yandex.docs.document"
 
