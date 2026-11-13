@@ -26,6 +26,7 @@ cask "lunar" do
     "~/Library/Application Support/Lunar",
     "~/Library/Caches/fyi.lunar.Lunar",
     "~/Library/Caches/Lunar",
+    "~/Library/Caches/LunarProductIcon.png",
     "~/Library/HTTPStorages/fyi.lunar.Lunar*",
     "~/Library/Preferences/fyi.lunar.Lunar.plist",
   ]
