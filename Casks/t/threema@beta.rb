@@ -22,6 +22,7 @@ cask "threema@beta" do
   app "Threema Beta.app"
 
   zap trash: [
+    "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/ch.threema.threema-desktop.sfl*",
     "~/Library/Application Support/ThreemaDesktop",
     "~/Library/Preferences/ch.threema.threema-desktop.plist",
     "~/Library/Saved Application State/ch.threema.threema-desktop.savedState",
