@@ -30,19 +30,16 @@ cask "box-tools" do
         target: "~/Library/Application Support/Box/Box Edit/Box #{a}.app"
   end
 
-  uninstall quit: [
-    "com.Box.Box-Edit",
-    "com.box.Box-Local-Com-Server",
-  ]
+  uninstall launchctl: [
+              "com.box.Box-Device-Trust.launch",
+              "com.Box.Box-Edit.launch",
+              "com.box.Box-Local-Com-Server.launch",
+            ],
+            quit:      [
+              "com.Box.Box-Edit",
+              "com.box.Box-Local-Com-Server",
+            ]
 
   zap trash: "~/Library/Application Support/Box/Box Edit",
       rmdir: "~/Library/Application Support/Box"
-
-  caveats do
-    requires_rosetta
-    <<~EOS
-      Box Edit currently only works with Safari and Firefox.
-      Restart your browser to load the plugin.
-    EOS
-  end
 end
