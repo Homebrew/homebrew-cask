@@ -24,7 +24,9 @@ cask "aks-desktop" do
 
   zap trash: [
     "~/Library/Application Support/AKS desktop",
+    "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.microsoft.aksdesktop.sfl*",
     "~/Library/Logs/AKS desktop",
     "~/Library/Preferences/com.microsoft.aks-desktop.plist",
+    "~/Library/Preferences/com.microsoft.aksdesktop.plist",
   ]
 end
