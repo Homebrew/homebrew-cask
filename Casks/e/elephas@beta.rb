@@ -18,6 +18,8 @@ cask "elephas@beta" do
   app "Elephas.app"
 
   zap trash: [
+    "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.kamban.elephas.sfl*",
+    "~/Library/Application Support/com.kamban.elephas",
     "~/Library/Application Support/Elephas",
     "~/Library/Caches/com.kamban.elephas",
     "~/Library/HTTPStorages/com.kamban.elephas",
