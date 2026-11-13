@@ -14,7 +14,10 @@ cask "gopher64" do
 
     app "Gopher64.app"
 
-    zap trash: "~/Library/Containers/io.github.gopher64.gopher64"
+    zap trash: [
+      "~/Library/Application Scripts/io.github.gopher64.gopher64",
+      "~/Library/Containers/io.github.gopher64.gopher64",
+    ]
   end
   on_linux do
     binary "gopher64-linux-#{arch}", target: "gopher64"
