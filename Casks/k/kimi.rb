@@ -8,7 +8,8 @@ cask "kimi" do
   homepage "https://www.moonshot.ai/"
 
   livecheck do
-    url "https://appsupport.moonshot.cn/api/app/pkg/latest/macos/download"
+    url "https://appsupport.moonshot.cn/api/app/pkg/latest/macos/download",
+        user_agent: :browser
     strategy :header_match
   end
 
