@@ -18,6 +18,7 @@ cask "texpile" do
   app "Texpile.app"
 
   zap trash: [
+    "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.texpile.desktop.sfl*",
     "~/Library/Application Support/texpile-desktop",
     "~/Library/Preferences/com.texpile.desktop.plist",
   ]
