@@ -10,8 +10,8 @@ cask "meetmic" do
   livecheck do
     url "https://f002.backblazeb2.com/file/meetmicapp/appcast.xml"
     regex(/MeetMic[._-]v?(\d+(?:\.\d+)+)\.zip/i)
-    strategy :sparkle do |item, regex|
-      item.url[regex, 1]
+    strategy :sparkle do |items, regex|
+      items.find { |item| item.channel.nil? }&.url&.[](regex, 1)
     end
   end
 
