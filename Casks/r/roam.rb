@@ -26,7 +26,8 @@ cask "roam" do
 
   app "Roam.app"
 
-  uninstall quit: "inc.wonder.roam"
+  uninstall launchctl: "inc.wonder.roam.ShipIt",
+            quit:      "inc.wonder.roam"
 
   zap trash: [
     "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/inc.wonder.roam.sfl*",
