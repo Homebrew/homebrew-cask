@@ -2,9 +2,9 @@ cask "jetbrains-air" do
   arch arm: "-aarch64"
   folder = on_arch_conditional arm: "aarch64", intel: "x64"
 
-  version "262.834.70"
-  sha256 arm:   "0e491ba2c147f3ff77566cb2a85e63774dbea6591da60f4177d02432e2eb65ec",
-         intel: "a88b66bc83651afd75079c6d6ce27538be369edc21fa4d7e6a1523ba06bd3c3d"
+  version "262.1102.13"
+  sha256 arm:   "ac9e4a3d56dd1f6d58aaa7aa4348dad265e926549967e4dd48ed1eed54cc108f",
+         intel: "a85fd48e5c5bd01678e94d94ff7aab5b5bfc0051ff525414b430c91a9893311e"
 
   url "https://download.jetbrains.com/air/installers/macos_#{folder}/Air-#{version}#{arch}.dmg"
   name "JetBrains Air"
@@ -22,6 +22,8 @@ cask "jetbrains-air" do
   depends_on :macos
 
   app "Air.app"
+
+  uninstall launchctl: "application.com.jetbrains.app.daemon.*"
 
   zap trash: [
     "~/Library/Application Support/JetBrains/Air",
