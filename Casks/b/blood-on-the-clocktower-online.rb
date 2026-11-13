@@ -20,6 +20,7 @@ cask "blood-on-the-clocktower-online" do
     "~/Library/Application Support/com.thepandemoniuminstitute.botc.app",
     "~/Library/Caches/com.thepandemoniuminstitute.botc-app",
     "~/Library/Caches/com.thepandemoniuminstitute.botc.app",
+    "~/Library/HTTPStorages/com.thepandemoniuminstitute.botc-app.binarycookies",
     "~/Library/Saved Application State/com.thepandemoniuminstitute.botc.app.savedState",
     "~/Library/WebKit/com.thepandemoniuminstitute.botc-app",
     "~/Library/WebKit/com.thepandemoniuminstitute.botc.app",

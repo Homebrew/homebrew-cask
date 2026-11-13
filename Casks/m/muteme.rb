@@ -22,6 +22,7 @@ cask "muteme" do
   app "MuteMe-Client.app"
 
   zap trash: [
+    "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.electron.muteme-client.sfl*",
     "~/Library/Application Support/MuteMe-Client",
     "~/Library/Caches/com.electron.muteme-client",
     "~/Library/Caches/com.electron.muteme-client.ShipIt",

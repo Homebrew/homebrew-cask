@@ -22,6 +22,7 @@ cask "deepchat" do
   binary "#{appdir}/DeepChat.app/Contents/MacOS/DeepChat", target: "deepchat"
 
   zap trash: [
+    "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.wefonk.deepchat.sfl*",
     "~/Library/Application Support/DeepChat",
     "~/Library/Logs/DeepChat",
     "~/Library/Preferences/com.wefonk.deepchat.plist",

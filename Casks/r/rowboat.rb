@@ -21,6 +21,10 @@ cask "rowboat" do
 
   zap trash: [
     "~/.rowboat",
+    "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.rowboat.app.sfl*",
     "~/Library/Application Support/Rowboat",
+    "~/Library/Caches/com.rowboat.app*",
+    "~/Library/HTTPStorages/com.rowboat.app",
+    "~/Library/Preferences/com.rowboat.app.plist",
   ]
 end

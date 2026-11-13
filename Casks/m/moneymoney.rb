@@ -20,6 +20,7 @@ cask "moneymoney" do
   zap trash: [
     "~/Library/Application Scripts/com.moneymoney-app.retail",
     "~/Library/Caches/com.moneymoney-app.retail",
+    "~/Library/Containers/com.moneymoney-app.retail",
     "~/Library/Containers/MoneyMoney",
     "~/Library/Saved Application State/com.moneymoney-app.retail.savedState",
   ]

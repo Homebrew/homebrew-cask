@@ -18,5 +18,9 @@ cask "jami" do
 
   app "Jami.app"
 
-  zap trash: "~/Library/Application Support/jami"
+  zap trash: [
+    "~/Library/Application Scripts/cx.ring",
+    "~/Library/Application Support/jami",
+    "~/Library/Containers/cx.ring",
+  ]
 end
