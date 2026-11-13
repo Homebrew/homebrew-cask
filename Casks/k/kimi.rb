@@ -1,6 +1,6 @@
 cask "kimi" do
-  version "3.2.25"
-  sha256 "3dcc3b0a9f1da6131a04544fbf515b675366a9424bffd0c63c7b6027e03c197d"
+  version "3.2.27"
+  sha256 "f1ce405a1cd1f6bdc3560b70b65efcad45872ddb4616b64ff361575783527ee7"
 
   url "https://kimi-img.moonshot.cn/app/download/mac/kimi_#{version}.dmg"
   name "kimi"
@@ -8,7 +8,8 @@ cask "kimi" do
   homepage "https://www.moonshot.ai/"
 
   livecheck do
-    url "https://appsupport.moonshot.cn/api/app/pkg/latest/macos/download"
+    url "https://appsupport.moonshot.cn/api/app/pkg/latest/macos/download",
+        user_agent: :browser
     strategy :header_match
   end
 
