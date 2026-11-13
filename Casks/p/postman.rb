@@ -10,12 +10,8 @@ cask "postman" do
   desc "Collaboration platform for API development"
   homepage "https://www.postman.com/"
 
-  # This is a workaround to a slow-to-update livecheck. It uses the in-app
-  # update check link and queries the available versions for a generic major
-  # version. We cannot use #{version} as the URL does not exist if #{version}
-  # is the latest version available.
   livecheck do
-    url "https://dl.pstmn.io/update/status?currentVersion=#{version.major}.0.0&platform=#{arch}"
+    url "https://dl.pstmn.io/api/version/latest?platform=#{arch}&channel=stable"
     strategy :json do |json|
       json["version"]
     end
