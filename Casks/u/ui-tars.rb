@@ -10,22 +10,7 @@ cask "ui-tars" do
   desc "GUI Agent for computer control using UI-TARS vision-language model"
   homepage "https://github.com/bytedance/UI-TARS-desktop"
 
-  livecheck do
-    url :url
-    regex(/^UI[._-]TARS[._-]v?(\d+(?:\.\d+)+)[._-]#{arch}\.dmg$/i)
-    strategy :github_releases do |json, regex|
-      json.map do |release|
-        next if release["draft"] || release["prerelease"]
-
-        release["assets"]&.map do |asset|
-          match = asset["name"]&.match(regex)
-          next if match.blank?
-
-          match[1]
-        end
-      end.flatten
-    end
-  end
+  deprecate! date: "2026-11-14", because: :discontinued
 
   auto_updates true
   depends_on :macos
