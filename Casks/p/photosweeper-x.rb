@@ -16,5 +16,9 @@ cask "photosweeper-x" do
 
   app "PhotoSweeper X.app"
 
-  zap trash: "~/Library/Preferences/com.overmacs.photosweeperpaddle.plist"
+  zap trash: [
+    "~/Library/Application Scripts/com.overmacs.photosweeperpaddle",
+    "~/Library/Containers/com.overmacs.photosweeperpaddle",
+    "~/Library/Preferences/com.overmacs.photosweeperpaddle.plist",
+  ]
 end
