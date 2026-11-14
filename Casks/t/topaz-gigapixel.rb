@@ -36,7 +36,7 @@ cask "topaz-gigapixel" do
 
   zap trash: [
     "~/Library/Application Support/Topaz Labs LLC/Topaz Gigapixel",
-    "~/Library/Cache/Topaz Labs LLC/Topaz Gigapixel",
+    "~/Library/Caches/Topaz Labs LLC/Topaz Gigapixel",
     "~/Library/Preferences/com.topazlabs.Topaz Gigapixel.plist",
     "~/Library/Preferences/com.topazlabs.TopazGigapixel.plist",
   ]
