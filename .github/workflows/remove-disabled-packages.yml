@@ -98,7 +98,7 @@ jobs:
           # which would otherwise close this one for not following an issue template.
           title: Partially disabled casks ready for cleanup
           body: |
-            These casks have been disabled for more than a year on some platforms but not others, so the [`remove-disabled-packages`](https://github.com/Homebrew/homebrew-cask/blob/HEAD/.github/workflows/remove-disabled-packages.yml) workflow can't remove them. Remove the disabled platforms (e.g. an `on_intel` or `on_macos` block) by hand.
+            These casks have been disabled for more than a year on some platforms but not others, so the [`remove-disabled-packages`](https://github.com/Homebrew/homebrew-cask/blob/HEAD/.github/workflows/remove-disabled-packages.yml) workflow can't remove them. Drop the disabled platforms by hand, since deleting the `disable!` alone would re-enable them: remove the URLs, checksums and artifacts only those platforms use, and restrict the cask to the platforms it still supports (e.g. `depends_on arch: :arm64`, `depends_on :linux` or a higher `depends_on macos:`).
 
             ${{ needs.remove-disabled-packages.outputs.partially-disabled-packages }}
           labels: help wanted
