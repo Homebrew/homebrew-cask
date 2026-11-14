@@ -30,5 +30,6 @@ cask "mdrp" do
     "~/Library/Cookies/com.mdrp.MDRP.binarycookies",
     "~/Library/HTTPStorages/com.mdrp.MDRP.binarycookies",
     "~/Library/Preferences/com.mdrp.MDRP.plist",
+    "~/Library/WebKit/com.mdrp.MDRP",
   ]
 end
