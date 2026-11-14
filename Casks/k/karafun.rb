@@ -20,6 +20,7 @@ cask "karafun" do
   uninstall quit: "com.recisio.kfiphone"
 
   zap trash: [
+    "~/Library/Application Scripts/com.recisio.kfiphone",
     "~/Library/Application Support/com.recisio.kfiphone",
     "~/Library/Containers/com.recisio.kfiphone",
   ]
