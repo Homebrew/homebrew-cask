@@ -16,6 +16,8 @@ cask "remote-buddy" do
 
   app "Remote Buddy.app"
 
+  uninstall quit: "com.iospirit.RemoteBuddy"
+
   zap trash: [
     "~/Library/Application Support/Remote Buddy",
     "~/Library/Caches/com.apple.helpd/Generated/com.iospirit.RemoteBuddy.help*",
