@@ -22,7 +22,7 @@ cask "free42-decimal" do
     "~/Library/HTTPStorages/com.thomasokken.Free42",
     "~/Library/HTTPStorages/com.thomasokken.Free42.binarycookies",
     "~/Library/Preferences/com.thomasokken.Free42.plist",
-    "~/Library/Saved Application State/com.thomasokken.Free42",
+    "~/Library/Saved Application State/com.thomasokken.Free42.savedState",
     "~/Library/WebKit/com.thomasokken.Free42",
   ]
 end
