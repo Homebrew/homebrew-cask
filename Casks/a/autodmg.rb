@@ -7,10 +7,7 @@ cask "autodmg" do
   desc "App for creating deployable system images from a system installer"
   homepage "https://github.com/MagerValp/AutoDMG"
 
-  livecheck do
-    url :url
-    strategy :github_latest
-  end
+  deprecate! date: "2026-11-14", because: :discontinued
 
   depends_on :macos
 
