@@ -1,9 +1,9 @@
 cask "opencomic" do
   arch arm: "-arm64"
 
-  version "1.6.5"
-  sha256 arm:   "7c324fecbf12a2ad9180e603a36de405fe1753ac5cfb8efb01ea950e1c82e346",
-         intel: "ad139381c0045845aed374507e63433465531743c8c94247899c4173ef640c5b"
+  version "2.0.0"
+  sha256 arm:   "be0f4a04f075d206e37a071a6695aeec9552f29c04a3c8da2c632d77b9457e83",
+         intel: "d50773af401a335637064edc0cac8a634174393b764a561aa83b8fdab837c7a8"
 
   url "https://github.com/ollm/OpenComic/releases/download/v#{version}/OpenComic-#{version}#{arch}.dmg"
   name "OpenComic"
@@ -13,6 +13,8 @@ cask "opencomic" do
   depends_on :macos
 
   app "opencomic.app"
+
+  uninstall quit: "org.opencomic.app"
 
   zap trash: [
     "~/Library/Application Support/OpenComic",
