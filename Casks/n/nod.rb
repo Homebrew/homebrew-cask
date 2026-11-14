@@ -24,6 +24,7 @@ cask "nod" do
 
   zap trash: [
     "~/.nod-desktop",
+    "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/dev.nod.desktop.sfl*",
     "~/Library/Application Support/nod",
     "~/Library/Caches/dev.nod.desktop",
     "~/Library/Caches/dev.nod.desktop.ShipIt",
