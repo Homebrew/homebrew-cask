@@ -2,7 +2,7 @@ cask "postbox" do
   version "7.0.65"
   sha256 "baa32f662fe1d3663f1bec4e3afb4120a31809bd6478d13f1b94d72a0363559c"
 
-  url "https://d3nx85trn0lqsg.cloudfront.net/mac/postbox-#{version}-mac64.dmg"
+  url "https://dist.postbox-inc.com/#{version}/mac/postbox-#{version}-mac64.dmg"
   name "Postbox"
   desc "Email client focusing on privacy protection"
   homepage "https://www.postbox-inc.com/"
@@ -12,10 +12,14 @@ cask "postbox" do
     regex(%r{href=.*?/postbox[._-]v?(\d+(?:\.\d+)+)[._-]mac64\.dmg}i)
   end
 
+  deprecate! date: "2026-11-14", because: :discontinued, replacement_cask: "emclient"
+
   auto_updates true
   depends_on :macos
 
   app "Postbox.app"
+
+  uninstall quit: "com.postbox-inc.postbox"
 
   zap trash: [
     "~/Library/Application Support/Postbox",
