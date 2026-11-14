@@ -2,8 +2,7 @@ cask "incy" do
   arch arm: "arm64", intel: "intel"
 
   version "3.9.1"
-  sha256 arm:   "117566145f6d4d085c543f3ab46113dab0ea3342b3f9b0ad2e75f22a551bfda9",
-         intel: "7d3291bf609ef04261d3f0fe06daae4b4d7ccd8409f021936675c8492e0423dd"
+  sha256 :no_check # required as upstream package is updated in-place
 
   url "https://github.com/INCY-DEV/incy-platforms/releases/download/desktop-v#{version}/incy-macos-#{arch}.dmg"
   name "INCY"
