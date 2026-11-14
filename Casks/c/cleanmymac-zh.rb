@@ -39,6 +39,7 @@ cask "cleanmymac-zh" do
   zap trash: [
     "/Users/Shared/CleanMyMac-X Menu",
     "/Users/Shared/CleanMyMac-X",
+    "~/Library/Application Scripts/*.com.macpaw.zh.CleanMyMac#{version.major}",
     "~/Library/Application Scripts/com.macpaw.zh.CleanMyMac#{version.major}.CleanMyMacWidget",
     "~/Library/Application Support/CleanMyMac-X*",
     "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.macpaw.zh.CleanMyMac#{version.major}.scheduler.sfl*",
@@ -53,6 +54,7 @@ cask "cleanmymac-zh" do
     "~/Library/Logs/CleanMyMac X Menu",
     "~/Library/Logs/com.macpaw.zh.CleanMyMac#{version.major}",
     "~/Library/Preferences/*.com.macpaw.zh.CleanMyMac#{version.major}*.plist",
+    "~/Library/Preferences/com.macpaw.zh.CleanMyMac#{version.major}.plist",
     "~/Library/Saved Application State/com.macpaw.zh.CleanMyMac#{version.major}.savedState",
     "~/Library/WebKit/com.macpaw.zh.CleanMyMac#{version.major}",
     "~/Pictures/Photos Library.photoslibrary/private/com.macpaw.zh.CleanMyMac#{version.major}",
