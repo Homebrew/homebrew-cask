@@ -25,6 +25,7 @@ cask "agent-orchestrator" do
   uninstall quit: "dev.agent-orchestrator.desktop"
 
   zap trash: [
+        "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/dev.agent-orchestrator.desktop.sfl*",
         "~/Library/Caches/agent-orchestrator-updater",
         "~/Library/Preferences/dev.agent-orchestrator.desktop.plist",
         "~/Library/Saved Application State/dev.agent-orchestrator.desktop.savedState",
