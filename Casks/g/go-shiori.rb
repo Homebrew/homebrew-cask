@@ -16,7 +16,7 @@ cask "go-shiori" do
 
   binary "shiori"
 
-  zap trash: "~/Library/ApplicationSupport/shiori"
+  zap trash: "~/Library/Application Support/shiori"
 
   caveats do
     <<~EOS
