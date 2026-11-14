@@ -14,6 +14,8 @@ cask "opencomic" do
 
   app "opencomic.app"
 
+  uninstall quit: "org.opencomic.app"
+
   zap trash: [
     "~/Library/Application Support/OpenComic",
     "~/Library/Caches/opencomic",
