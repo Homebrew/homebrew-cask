@@ -33,7 +33,7 @@ cask "displaylink" do
   end
   on_sonoma :or_newer do
     version "17.1,2026-11"
-    sha256 "6c69153701443053ecb45c672bdc40f9761e59e8cad4532f6ca7010c2841a399"
+    sha256 "e6e8c86f722d05fc4b5bca22d9627df00dfd11dadffb472278b075fb5b66067e"
 
     url "https://www.synaptics.com/sites/default/files/exe_files/#{version.csv.second}/DisplayLink%20Manager%20Graphics%20Connectivity#{version.csv.first}-EXE.pkg"
 
