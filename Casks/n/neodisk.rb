@@ -16,6 +16,7 @@ cask "neodisk" do
     "~/Library/Application Support/Neodisk",
     "~/Library/Caches/com.lucastakayasu.Neodisk",
     "~/Library/HTTPStorages/com.lucastakayasu.Neodisk",
+    "~/Library/Logs/Neodisk",
     "~/Library/Preferences/com.lucastakayasu.Neodisk.plist",
     "~/Library/Saved Application State/com.lucastakayasu.Neodisk.savedState",
   ]
