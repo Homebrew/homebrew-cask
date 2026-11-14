@@ -17,6 +17,7 @@ cask "opencomic" do
   uninstall quit: "org.opencomic.app"
 
   zap trash: [
+    "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/org.opencomic.app.sfl*",
     "~/Library/Application Support/OpenComic",
     "~/Library/Caches/opencomic",
     "~/Library/Preferences/org.opencomic.app.plist",
