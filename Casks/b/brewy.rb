@@ -1,6 +1,6 @@
 cask "brewy" do
-  version "0.26.5"
-  sha256 "671bb0751f14f2f02fae61f87bb820aa4c8ae5150243d38b9e26f73695d370ac"
+  version "0.26.6"
+  sha256 "9edb7caabd57dfc801f1b183eed8d870daf691c7c641f183eb764079b2afae82"
 
   url "https://github.com/starhaven-io/Brewy/releases/download/#{version}/Brewy-#{version}.zip"
   name "Brewy"
