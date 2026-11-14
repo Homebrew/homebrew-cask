@@ -1,4 +1,4 @@
-cask "dotnet-sdk" do
+cask "dotnet-sdk@11" do
   # Differs from the `dotnet` formula by including additional closed-source components
   arch arm: "arm64", intel: "x64"
 

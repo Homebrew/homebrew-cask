@@ -45,6 +45,7 @@
   "dosbox-staging": "dosbox-staging-app",
   "dosbox-x": "dosbox-x-app",
   "dotnet": "dotnet-runtime",
+  "dotnet-sdk": "dotnet-sdk@11",
   "dotnet@preview": "dotnet-runtime@preview",
   "doxygen": "doxygen-app",
   "dymo-label": "dymo-connect",
