@@ -1,6 +1,6 @@
 cask "m3unify" do
-  version "3.0.0"
-  sha256 "093714e18978c2fb8c5a2704ba66932d99dbc8137bed2802cdb677842e1f9c0b"
+  version "3.0.1"
+  sha256 "e18f39924d50c1369858d78ddc6a11d6d375b32062b3328fe30c1d9eb9ec16e1"
 
   url "https://dougscripts.com/itunes/scrx/M3Unify_#{version}.dmg"
   name "M3Unify"
@@ -15,6 +15,8 @@ cask "m3unify" do
   depends_on macos: :monterey
 
   app "M3Unify.app"
+
+  uninstall quit: "com.dougscripts.M3Unify"
 
   zap trash: [
     "~/Library/Caches/com.dougscripts.M3Unify",
