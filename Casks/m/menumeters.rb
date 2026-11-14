@@ -23,8 +23,8 @@ cask "menumeters" do
     "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.yujitach.menumeters.sfl*",
     "~/Library/Caches/com.yujitach.MenuMeters",
     "~/Library/HTTPStorages/com.yujitach.MenuMeters",
+    "~/Library/PreferencePanes/MenuMeters.prefPane",
     "~/Library/Preferences/com.ragingmenace.MenuMeters.plist",
     "~/Library/Preferences/com.yujitach.MenuMeters.plist",
-    "~/Library/PreferencesPanes/MenuMeters.prefPane",
   ]
 end
