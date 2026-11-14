@@ -1,7 +1,7 @@
 cask "roam" do
   arch arm: "arm64", intel: "x64"
 
-  version "239.0.0-beta001"
+  version "239.1.0-beta001"
   sha256 :no_check
 
   url "https://download.ro.am/Roam/8a86d88cfc9da3551063102e9a4e2a83/latest/darwin/#{arch}/Roam.dmg"
@@ -26,7 +26,8 @@ cask "roam" do
 
   app "Roam.app"
 
-  uninstall quit: "inc.wonder.roam"
+  uninstall launchctl: "inc.wonder.roam.ShipIt",
+            quit:      "inc.wonder.roam"
 
   zap trash: [
     "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/inc.wonder.roam.sfl*",

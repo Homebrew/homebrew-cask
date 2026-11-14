@@ -40,20 +40,48 @@ jobs:
   generate-matrix:
     outputs:
       matrix: ${{ steps.generate-matrix.outputs.matrix }}
+      git-cache-key: ${{ steps.git-cache.outputs.key }}
     runs-on: macos-latest
+    permissions:
+      actions: read # to check which run saved the Git cache
+      contents: read
     steps:
-      - name: Set up Homebrew
-        id: set-up-homebrew
-        uses: Homebrew/actions/setup-homebrew@63a2d4d8d4193eab3e62b1b782ff3ab8408f5b29 # 2026.11.09.1
-        with:
-          core: false
-          cask: true
+      # Not `setup-homebrew`: it fetches this tap's full history, but the matrix only needs the pull request's diff.
+      - name: Update Homebrew
+        run: |
+          repository="$(brew --repository)"
+          git -C "${repository}" config remote.origin.fetch "+refs/heads/*:refs/remotes/origin/*"
+          git -C "${repository}" fetch --force --tags origin
+          git -C "${repository}" remote set-head origin --auto
+          git -C "${repository}" checkout --force -B main origin/HEAD
 
       - name: Check out Pull Request
         uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
         with:
-          fetch-depth: 0
+          # A pull request based on another branch needs full history to be diffed against the default branch.
+          fetch-depth: ${{ case(github.event_name != 'pull_request' || github.base_ref == github.event.repository.default_branch, 2, 0) }}
           persist-credentials: false
+
+      - name: Tap the checkout
+        run: |
+          tap="$(brew --repository)/Library/Taps/homebrew/homebrew-cask"
+          mkdir -p "$(dirname "${tap}")"
+          rm -rf "${tap}"
+          ln -s "${GITHUB_WORKSPACE}" "${tap}"
+
+          # `brew generate-cask-ci-matrix` diffs `origin...HEAD`.
+          # A pull request's merge commit has the base branch as its first parent.
+          # A full clone already has the real `origin/main`.
+          if [[ "$(git rev-parse --is-shallow-repository)" == "true" ]]
+          then
+            base="HEAD"
+            if [[ "${GITHUB_EVENT_NAME}" == "pull_request" ]]
+            then
+              base="HEAD^1"
+            fi
+            git update-ref refs/remotes/origin/main "$(git rev-parse "${base}")"
+          fi
+          git symbolic-ref refs/remotes/origin/HEAD refs/remotes/origin/main
 
       - name: Run brew config
         run: brew config
@@ -75,6 +103,54 @@ jobs:
             brew generate-cask-ci-matrix --url "$PULL_REQUEST_URL"
           fi
 
+      # Any job on the default branch can save a cache under any key, and restoring one runs whatever it holds.
+      # So `test` only gets a key if the newest scheduled `git-cache.yml` run has exactly one cache, saved while it ran.
+      # Otherwise `test` restores nothing and `setup-homebrew` clones the tap in full.
+      - name: Find Git cache
+        id: git-cache
+        env:
+          GH_TOKEN: ${{ github.token }}
+          DEFAULT_BRANCH: ${{ github.event.repository.default_branch }}
+        run: |
+          run="$(
+            gh api --method GET "repos/${GITHUB_REPOSITORY}/actions/workflows/git-cache.yml/runs" \
+              --raw-field branch="${DEFAULT_BRANCH}" --raw-field event=schedule --raw-field status=success \
+              --raw-field per_page=1 \
+              --jq '.workflow_runs[0] // empty | "\(.id) \(.run_started_at) \(.updated_at)"'
+          )" || run=""
+          read -r run_id started finished <<<"${run}" || true
+          if [[ -z "${run_id}" ]]
+          then
+            echo "No successful scheduled Git cache run found."
+            exit 0
+          fi
+
+          prefix="git-snapshot-${run_id}-"
+          caches="$(
+            gh api --method GET "repos/${GITHUB_REPOSITORY}/actions/caches" \
+              --raw-field key="${prefix}" --raw-field ref="refs/heads/${DEFAULT_BRANCH}" --raw-field per_page=100
+          )" || caches="{}"
+          key="$(
+            jq --raw-output --arg prefix "${prefix}" --arg started "${started}" --arg finished "${finished}" '
+              def seconds: sub("\\.[0-9]+Z$"; "Z") | fromdate;
+              [.actions_caches[]? | select(.key | startswith($prefix))] as $caches |
+              [
+                $caches[] | (.created_at | seconds) as $created |
+                  select($created >= ($started | seconds) and $created <= ($finished | seconds))
+              ] as $saved |
+              select(
+                .total_count == (.actions_caches | length) and ($saved | length) == 1 and
+                  ([$caches[] | select(.key == $saved[0].key)] | length) == 1
+              ) | $saved[0].key
+            ' <<<"${caches}"
+          )" || key=""
+          if [[ "${key}" =~ ^git-snapshot-[0-9]+-[0-9a-f]{32}$ ]]
+          then
+            echo "key=${key}" >>"${GITHUB_OUTPUT}"
+          else
+            echo "::warning::Run ${run_id} does not have exactly one Git cache saved while it ran, so not restoring one."
+          fi
+
   test:
     name: ${{ matrix.name }}
     needs: generate-matrix
@@ -85,6 +161,27 @@ jobs:
       matrix:
         include: ${{ fromJson(needs.generate-matrix.outputs.matrix) }}
     steps:
+      # A full clone saved daily by `git-cache.yml`. `setup-homebrew` keeps an existing tap and only fetches newer commits.
+      # No `restore-keys`: only the exact key that `generate-matrix` checked may be restored.
+      - name: Restore Git cache
+        id: git-cache
+        if: ${{ !matrix.container && needs.generate-matrix.outputs.git-cache-key }}
+        uses: actions/cache/restore@55cc8345863c7cc4c66a329aec7e433d2d1c52a9 # v6.1.0
+        with:
+          path: .git
+          key: ${{ needs.generate-matrix.outputs.git-cache-key }}
+
+      - name: Seed tap from Git cache
+        if: steps.git-cache.outputs.cache-matched-key
+        run: |
+          tap="$(brew --repository "${GITHUB_REPOSITORY}")"
+          mkdir -p "${tap}"
+          mv .git "${tap}/.git"
+          # The snapshot's remote branches are up to a day old. Unpruned, a branch since replaced by
+          # `<branch>/<name>` (or the reverse) makes `setup-homebrew`'s fetch fail.
+          git -C "${tap}" config fetch.prune true
+          git -C "${tap}" checkout --force --quiet
+
       - name: Set up Homebrew
         id: set-up-homebrew
         uses: Homebrew/actions/setup-homebrew@63a2d4d8d4193eab3e62b1b782ff3ab8408f5b29 # 2026.11.09.1

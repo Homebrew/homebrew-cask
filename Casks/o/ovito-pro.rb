@@ -3,7 +3,7 @@ cask "ovito-pro" do
 
   on_arm do
     version "3.17.2"
-    sha256 "8b6c1090efd58ae06d7873a8710455d9f74f6ecdeaac8837f8fad54267012ab4"
+    sha256 "434241a8141cbd9c1f23bbdefa961f82f464e0032570dd66464e6e9d51920692"
   end
   on_intel do
     version "3.12.0"

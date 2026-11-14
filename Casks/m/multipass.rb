@@ -1,6 +1,6 @@
 cask "multipass" do
-  version "1.16.4"
-  sha256 "e481704f65bc1650ae8aa5c873eb9137e8b9b403eac60aa603b68d8b4d2c281c"
+  version "1.17.1"
+  sha256 "d6a175c499fddf5ee787be4dc4e599b06e769a39e2c56527d56440733a1083eb"
 
   on_arm do
     postflight_steps do
@@ -19,7 +19,7 @@ cask "multipass" do
     strategy :github_latest
   end
 
-  depends_on macos: :ventura
+  depends_on macos: :sonoma
 
   pkg "multipass-#{version}+mac-Darwin.pkg"
 

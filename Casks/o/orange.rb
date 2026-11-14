@@ -1,9 +1,9 @@
 cask "orange" do
   arch arm: "arm64", intel: "x86_64"
 
-  version "3.40.0"
-  sha256 arm:   "ff226be4cabf87442cc83168cad2341b673d2ee42e68536769c862c37a149ce3",
-         intel: "6ac6715e128f335046ea26b5d71f50e7c9812a06111caa3488df0726adf518df"
+  version "3.41.0"
+  sha256 arm:   "5aaed153d297369748ad12acfcab892809bc611003e8a5fde6662b9bb5c30df9",
+         intel: "1594b4c043c7af0e25a3e13b9e5ac61fe1db48192f5e2e8552b602a2cbc9e5bf"
 
   on_arm do
     app "Orange.app"
@@ -12,7 +12,7 @@ cask "orange" do
     app "Orange#{version.major}.app"
   end
 
-  url "https://download.biolab.si/download/files/Orange#{version.major}-#{version}-Python3.12.10-#{arch}.dmg"
+  url "https://download.biolab.si/download/files/Orange#{version.major}-#{version}-Python3.13.17-#{arch}.dmg"
   name "Orange"
   desc "Component-based data mining software"
   homepage "https://orangedatamining.com/"
@@ -23,6 +23,8 @@ cask "orange" do
   end
 
   depends_on :macos
+
+  uninstall quit: "si.biolab.orange"
 
   zap trash: [
     "~/Library/Application Support/Orange",

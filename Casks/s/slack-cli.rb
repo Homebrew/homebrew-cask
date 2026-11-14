@@ -2,10 +2,10 @@ cask "slack-cli" do
   arch arm: "arm64", intel: on_system_conditional(macos: "amd64", linux: "64-bit")
   os macos: "macOS", linux: "linux"
 
-  version "4.13.0"
-  sha256 arm:          "ff9c8f85396c0bb0caf0928fddb6636cdd79dbdaf1a8b51ab729d67de3d151c3",
-         intel:        "4bd41eec101e320bd400e506bb50d1b02476af624aa06aad9d97c1bfdcdf1023",
-         x86_64_linux: "2a1cb67b49649f85ec0da6fc4cb1d74a702dfb9e12088c8301776a69b0a8f072"
+  version "4.14.0"
+  sha256 arm:          "b93806166c66cefa8cb3c8142cf1fa97888f47fce439f83676a8a8091bd4fedc",
+         intel:        "21e69beee1b452d6897c14d906257ddc85a49f560cd1b4ec19582067fb380375",
+         x86_64_linux: "180a564df41ba1de5c98f62b5470ea101e83ba6eae46dfdbf231b10ff42e66d4"
 
   on_linux do
     depends_on arch: :x86_64
