@@ -24,6 +24,8 @@ cask "apidog" do
   zap trash: [
     "~/Library/Application Support/apidog",
     "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.apidog.app.sfl*",
+    "~/Library/Application Support/CrashReporter/Apidog Helper_*.plist",
+    "~/Library/Logs/DiagnosticReports/Apidog Helper-*.ips",
     "~/Library/Preferences/com.apidog.app.plist",
     "~/Library/Saved Application State/com.apidog.app.savedState",
   ]
