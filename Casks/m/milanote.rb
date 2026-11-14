@@ -22,7 +22,6 @@ cask "milanote" do
     "~/Library/Application Support/Milanote",
     "~/Library/Caches/com.milanote.app",
     "~/Library/Caches/com.milanote.app.ShipIt",
-    "~/Library/Library/Logs/Milanote",
     "~/Library/Logs/Milanote",
     "~/Library/Preferences/com.milanote.*.plist",
   ]

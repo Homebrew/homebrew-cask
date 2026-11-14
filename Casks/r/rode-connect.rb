@@ -24,7 +24,7 @@ cask "rode-connect" do
   uninstall pkgutil: "com.rodeconnect.installer"
 
   zap trash: [
-    "~/Library/Cache/com.rode.rodeconnect",
+    "~/Library/Caches/com.rode.rodeconnect",
     "~/Library/HTTPStorages/com.rode.rodeconnect",
     "~/Library/Preferences/com.rode.rodeconnect.plist",
   ]

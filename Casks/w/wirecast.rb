@@ -20,7 +20,7 @@ cask "wirecast" do
             delete: [
               "/Library/LaunchDaemons/net.telestream.LicensingHelper.plist",
               "/Library/Preferences/net.telestream.wirecast.plist",
-              "/Library/PriviledgedHelperTools/net.telestream.LicensingHelper",
+              "/Library/PrivilegedHelperTools/net.telestream.LicensingHelper",
             ]
 
   zap trash: [
@@ -29,6 +29,6 @@ cask "wirecast" do
     "~/Library/Logs/Wirecast",
     "~/Library/Preferences/net.telestream.wirecast.plist",
     "~/Library/Preferences/Wirecast",
-    "~/Library/Saved Applicate State/net.telestream.wirecast.savedState",
+    "~/Library/Saved Application State/net.telestream.wirecast.savedState",
   ]
 end

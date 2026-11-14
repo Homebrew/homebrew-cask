@@ -23,7 +23,7 @@ cask "buckets" do
       "~/Library/Logs/DiagnosticReports/Buckets-*.ips",
       "~/Library/Preferences/ByHost/com.github.buckets.application.ShipIt.*.plist",
       "~/Library/Preferences/com.github.buckets.application.plist",
-      "~/Library/Saved Application State/com.github.buckets.application.savedState,",
+      "~/Library/Saved Application State/com.github.buckets.application.savedState",
     ]
   end
   on_linux do

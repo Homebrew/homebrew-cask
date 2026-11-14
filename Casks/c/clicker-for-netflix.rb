@@ -19,8 +19,8 @@ cask "clicker-for-netflix" do
 
   zap trash: [
     "~/Library/Caches/com.dbklabs.clicker-for-netflix",
-    "~/Library/HTTPStorage/com.dbklabs.clicker-for-netflix.binarycookies",
     "~/Library/HTTPStorages/com.dbklabs.clicker-for-netflix",
+    "~/Library/HTTPStorages/com.dbklabs.clicker-for-netflix.binarycookies",
     "~/Library/Preferences/com.dbklabs.clicker-for-netflix.plist",
     "~/Library/Saved Application State/com.dbklabs.clicker-for-netflix.savedState",
     "~/Library/WebKit/com.dbklabs.clicker-for-netflix",

@@ -26,6 +26,6 @@ cask "tor-browser@alpha" do
     "~/Library/Preferences/org.mozilla.tor browser.plist",
     "~/Library/Preferences/org.torproject.torbrowser.plist",
     "~/Library/Preferences/org.torproject.torbrowseralpha.plist",
-    "~/Library/SavedApplicationState/org.torproject.torbrowser.savedState",
+    "~/Library/Saved Application State/org.torproject.torbrowseralpha.savedState",
   ]
 end

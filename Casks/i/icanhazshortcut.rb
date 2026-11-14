@@ -13,5 +13,9 @@ cask "icanhazshortcut" do
 
   uninstall quit: "info.deseven.icanhazshortcut"
 
-  zap trash: "~/Library/Preference/info.deseven.icanhazshortcut"
+  zap trash: [
+    "~/.config/iCanHazShortcut",
+    "~/Library/Application Support/iCanHazShortcut",
+    "~/Library/Preferences/info.deseven.icanhazshortcut.plist",
+  ]
 end

@@ -14,6 +14,6 @@ cask "jclasslib-bytecode-viewer" do
 
   zap trash: [
     "~/Library/Preferences/org.jclasslib.browser.plist",
-    "~/Library/Saved Application State/com.install4j.8931-3388-4457-4383",
+    "~/Library/Saved Application State/org.jclasslib.browser.savedState",
   ]
 end

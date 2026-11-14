@@ -22,7 +22,7 @@ cask "plus42-decimal" do
     "~/Library/HTTPStorages/com.thomasokken.Plus42",
     "~/Library/HTTPStorages/com.thomasokken.Plus42.binarycookies",
     "~/Library/Preferences/com.thomasokken.Plus42.plist",
-    "~/Library/Saved Application State/com.thomasokken.Plus42",
+    "~/Library/Saved Application State/com.thomasokken.Plus42.savedState",
     "~/Library/WebKit/com.thomasokken.Plus42",
   ]
 end
