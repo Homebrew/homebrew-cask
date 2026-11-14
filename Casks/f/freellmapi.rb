@@ -25,8 +25,10 @@ cask "freellmapi" do
 
     app_image "FreeLLMAPI-#{version}.AppImage", target: "FreeLLMAPI.AppImage"
 
-    # TODO: update `zap` stanza
-    zap :not_required
+    zap trash: [
+      "~/.cache/freellmapi-desktop-updater",
+      "~/.config/FreeLLMAPI",
+    ]
   end
 
   url "https://github.com/tashfeenahmed/freellmapi/releases/download/v#{version}/FreeLLMAPI-#{version}#{os}#{arch}.#{url_end}"
