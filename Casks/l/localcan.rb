@@ -20,6 +20,7 @@ cask "localcan" do
   app "LocalCan.app"
 
   zap trash: [
+    "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.electron.localcan.sfl*",
     "~/Library/Application Support/LocalCan",
     "~/Library/Caches/com.electron.localcan*",
     "~/Library/Logs/LocalCan",

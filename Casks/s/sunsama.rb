@@ -29,6 +29,7 @@ cask "sunsama" do
   app "Sunsama.app"
 
   zap trash: [
+    "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.sunsama.native-app.sfl*",
     "~/Library/Application Support/Sunsama",
     "~/Library/Logs/Sunsama",
     "~/Library/Preferences/com.sunsama.native-app.plist",

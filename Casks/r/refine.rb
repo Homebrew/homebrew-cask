@@ -18,10 +18,12 @@ cask "refine" do
   app "Refine.app"
 
   zap trash: [
+    "~/Library/Application Scripts/468WY4C4MA.com.runjuu.refine",
     "~/Library/Application Support/com.runjuu.refine",
     "~/Library/Application Support/Refine",
     "~/Library/Caches/CloudKit/com.runjuu.refine",
     "~/Library/Caches/com.runjuu.refine",
+    "~/Library/Group Containers/468WY4C4MA.com.runjuu.refine",
     "~/Library/HTTPStorages/com.runjuu.refine",
     "~/Library/Preferences/com.runjuu.refine.plist",
     "~/Library/WebKit/com.runjuu.refine",

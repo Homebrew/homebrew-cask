@@ -13,6 +13,7 @@ cask "mangodisk" do
   app "MangoDisk.app"
 
   zap trash: [
+    "~/Library/Application Support/.app.mangodisk.desktop.installation.lock",
     "~/Library/Application Support/app.mangodisk.desktop",
     "~/Library/Caches/app.mangodisk.desktop",
     "~/Library/HTTPStorages/app.mangodisk.desktop",

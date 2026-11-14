@@ -18,18 +18,22 @@ cask "tinycast@beta" do
 
   app "Tinycast Beta.app"
 
-  uninstall quit: "com.tinycast.app.beta"
+  uninstall quit: "com.abueammar.tinycast.beta"
 
   zap trash: [
     "~/.config/tinycast-beta",
+    "~/Library/Application Support/com.abueammar.tinycast.beta",
     "~/Library/Application Support/com.tinycast.app.beta",
     "~/Library/Application Support/CrashReporter/ClipboardTextHelper_*.plist",
     "~/Library/Application Support/CrashReporter/FileIndexHelper_*.plist",
     "~/Library/Application Support/CrashReporter/Tinycast Beta_*.plist",
     "~/Library/Application Support/CrashReporter/Tinycast Dictation_*.plist",
     "~/Library/Caches/ClipboardTextHelper",
+    "~/Library/Caches/com.abueammar.tinycast.beta",
+    "~/Library/Caches/com.abueammar.tinycast.beta.dictation",
     "~/Library/Caches/com.tinycast.app.beta",
     "~/Library/Caches/com.tinycast.app.beta.dictation",
+    "~/Library/Preferences/com.abueammar.tinycast.beta.plist",
     "~/Library/Preferences/com.tinycast.app.beta.plist",
   ]
 end

@@ -21,6 +21,7 @@ cask "sable" do
   uninstall quit: "moe.sable.client"
 
   zap trash: [
+    "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/moe.sable.client.sfl*",
     "~/Library/Application Support/moe.sable.client*",
     "~/Library/Caches/moe.sable.client",
     "~/Library/HTTPStorages/moe.sable.client",

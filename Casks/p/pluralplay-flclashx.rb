@@ -20,8 +20,9 @@ cask "pluralplay-flclashx" do
   app "FlClashX.app"
 
   zap trash: [
+    "~/Library/Application Support/com.follow.clashx",
     "~/Library/Application Support/FlClashX",
-    "~/Library/Caches/com.pluralplay.FlClashX",
-    "~/Library/Preferences/com.pluralplay.FlClashX.plist",
+    "~/Library/Caches/com.follow.clashx",
+    "~/Library/Preferences/com.follow.clashx.plist",
   ]
 end

@@ -24,6 +24,7 @@ cask "wordpresscom" do
 
   zap trash: [
     "~/Library/Application Support/Caches/wordpressdesktop-updater",
+    "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.automattic.wordpress.sfl*",
     "~/Library/Application Support/Wordpress.com",
     "~/Library/Caches/com.automattic.wordpress",
     "~/Library/Caches/com.automattic.wordpress.ShipIt",

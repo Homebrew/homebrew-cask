@@ -13,9 +13,12 @@ cask "meetily" do
   app "meetily.app"
 
   zap trash: [
+    "~/Library/Application Support/com.meetily.ai",
     "~/Library/Application Support/meetily",
+    "~/Library/Caches/com.meetily.ai",
     "~/Library/Logs/meetily",
     "~/Library/Preferences/com.meetily.ai.plist",
     "~/Library/Saved Application State/com.meetily.ai.savedState",
+    "~/Library/WebKit/com.meetily.ai",
   ]
 end
