@@ -14,9 +14,14 @@ cask "atomcode" do
   homepage "https://atomgit.com/atomgit_atomcode/atomcode"
 
   livecheck do
-    url "https://atomgit.com/atomgit_atomcode/atomcode.git"
+    url "https://api.atomgit.com/api/v5/repos/atomgit_atomcode/atomcode/releases/latest"
     regex(/^v?(\d+(?:\.\d+)+)$/i)
-    strategy :git
+    strategy :json do |json, regex|
+      match = json["tag_name"]&.match(regex)
+      next if match.blank?
+
+      match[1]
+    end
   end
 
   binary "atomcode"
