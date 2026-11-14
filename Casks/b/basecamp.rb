@@ -23,6 +23,8 @@ cask "basecamp" do
 
   zap trash: [
     "~/Library/Application Support/Basecamp*",
+    "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.basecamp.basecamp*.sfl*",
+    "~/Library/Logs/Basecamp",
     "~/Library/Preferences/com.basecamp.basecamp*.plist",
     "~/Library/Saved Application State/com.basecamp.basecamp*.savedState",
   ]
