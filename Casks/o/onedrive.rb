@@ -13,10 +13,7 @@ cask "onedrive" do
   end
 
   auto_updates true
-  conflicts_with cask: [
-    "microsoft-office",
-    "microsoft-office-businesspro",
-  ]
+  conflicts_with cask: "microsoft-office-businesspro"
   depends_on macos: :sonoma
 
   pkg "OneDrive.pkg"
@@ -57,6 +54,7 @@ cask "onedrive" do
     "~/Library/Caches/com.microsoft.OneDriveStandaloneUpdater",
     "~/Library/Caches/com.microsoft.OneDriveUpdater",
     "~/Library/Caches/com.plausiblelabs.crashreporter.data/com.microsoft.OneDrive",
+    "~/Library/Caches/com.plausiblelabs.crashreporter.data/com.microsoft.OneDriveStandaloneUpdater",
     "~/Library/Caches/com.plausiblelabs.crashreporter.data/com.microsoft.OneDriveUpdater",
     "~/Library/Caches/OneDrive",
     "~/Library/Containers/com.microsoft.OneDrive.FileProvider",
