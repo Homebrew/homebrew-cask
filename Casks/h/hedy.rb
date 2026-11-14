@@ -1,6 +1,6 @@
 cask "hedy" do
-  version "3.15.1,437"
-  sha256 "f9cbc13f80d45732681ed6388d19002e439f21770aab49ab7b04299aebd8c7a3"
+  version "3.16.0,439"
+  sha256 "4a025dfaa608eefa46d1a94c18d4a5208bb1e875bb1e4f965fe96f43b19c3632"
 
   url "https://dl.hedy.ai/Hedy-MacOS-#{version.csv.first}-#{version.csv.second}.dmg"
   name "Hedy AI"
