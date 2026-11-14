@@ -1,9 +1,9 @@
 cask "lattice" do
   arch arm: "aarch64", intel: "x64"
 
-  version "0.16.16"
-  sha256 arm:   "e2557205f2a24113e0d4963f0e8c44fcb7ef34316415f4bd33f32866baf683c8",
-         intel: "eea0b4a67561755ca610cdb08a67f91a34ab225b11c1283cce92348af19e58c4"
+  version "0.16.17"
+  sha256 arm:   "77338e91a71b3f253447934128dcc20bb937b4fae6b2aaa356f043627347810e",
+         intel: "7be5151fdcc3b55f8b5b8610c01f0d367a6cfa280cbe5c66c8c17b971ee88286"
 
   url "https://github.com/leo1oel/lattice/releases/download/v#{version}/Lattice_#{version}_#{arch}.dmg"
   name "Lattice"
