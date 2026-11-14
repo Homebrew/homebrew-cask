@@ -1,5 +1,5 @@
 cask "remote-buddy" do
-  version "2.7.3"
+  version "2.8"
   sha256 :no_check
 
   url "https://www.iospirit.com/products/remotebuddy/download/RemoteBuddy.zip"
@@ -15,6 +15,8 @@ cask "remote-buddy" do
   depends_on :macos
 
   app "Remote Buddy.app"
+
+  uninstall quit: "com.iospirit.RemoteBuddy"
 
   zap trash: [
     "~/Library/Application Support/Remote Buddy",
