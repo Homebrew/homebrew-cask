@@ -1,9 +1,9 @@
 cask "incy" do
   arch arm: "arm64", intel: "intel"
 
-  version "3.9.0"
-  sha256 arm:   "3c6ee88fac520fe06c81a7e856be130a6dfe738bc343ceffc08da12a9ed03aab",
-         intel: "5f60957766bb63ac359b7569f1b6a58089f8d790331e65c5cff1cc71ae7d77a4"
+  version "3.9.1"
+  sha256 arm:   "117566145f6d4d085c543f3ab46113dab0ea3342b3f9b0ad2e75f22a551bfda9",
+         intel: "7d3291bf609ef04261d3f0fe06daae4b4d7ccd8409f021936675c8492e0423dd"
 
   url "https://github.com/INCY-DEV/incy-platforms/releases/download/desktop-v#{version}/incy-macos-#{arch}.dmg"
   name "INCY"
