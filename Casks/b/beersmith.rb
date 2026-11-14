@@ -23,6 +23,6 @@ cask "beersmith" do
     "~/Library/Application Support/BeerSmith.*",
     "~/Library/Caches/BeerSmith-LLC.BeerSmith.*",
     "~/Library/Preferences/BeerSmith-LLC.BeerSmith.*.plist",
-    "~/Library/Saved Application State/BeerSmith-LLC.BeerSmith.*.savedStat",
+    "~/Library/Saved Application State/BeerSmith-LLC.BeerSmith.*.savedState",
   ]
 end
