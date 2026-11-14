@@ -6,6 +6,8 @@ cask "fliqlo" do
     livecheck do
       skip "Legacy version"
     end
+
+    screen_saver "Fliqlo.saver"
   end
   on_sonoma :or_newer do
     version "2.0"
@@ -15,6 +17,8 @@ cask "fliqlo" do
       url :homepage
       regex(/href=.*?Fliqlo%20v?(\d+(?:\.\d+)+)\.dmg/i)
     end
+
+    app "Fliqlo.app"
   end
 
   url "https://fliqlo.com/download/Fliqlo%20#{version}.dmg",
@@ -25,7 +29,9 @@ cask "fliqlo" do
 
   depends_on :macos
 
-  screen_saver "Fliqlo.saver"
-
-  zap trash: "/Library/Screen Savers/Fliqlo.saver"
+  zap trash: [
+    "/Library/Screen Savers/Fliqlo.saver",
+    "~/Library/Application Scripts/com.9031.fliqloMA",
+    "~/Library/Containers/com.9031.fliqloMA",
+  ]
 end
