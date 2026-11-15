@@ -4,7 +4,7 @@ cask "flic" do
 
   url "https://misc-scl-cdn.s3.amazonaws.com/Flic.#{version}.zip"
   name "Flic"
-  desc "Driver for the Flic bluetooth button"
+  desc "Driver for the Flic Bluetooth button"
   homepage "https://flic.io/applications/mac-app"
 
   livecheck do
