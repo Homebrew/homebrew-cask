@@ -1,6 +1,6 @@
 cask "texpile" do
-  version "2.0.0"
-  sha256 "5bbb83ab7d5ef3ea3fc9d822c75487a1bae68d048816ff7b07b51ae9e6c8f884"
+  version "2.0.1"
+  sha256 "7f32a98a1b7a11b614cbb3b6cac67d37842c8c43d42b0399dfac5083ecb44c94"
 
   url "https://dl.texpile.com/v#{version}/Texpile-#{version}.dmg"
   name "Texpile"
