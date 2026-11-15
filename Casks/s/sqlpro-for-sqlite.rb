@@ -4,7 +4,7 @@ cask "sqlpro-for-sqlite" do
 
   url "https://d3fwkemdw8spx3.cloudfront.net/sqlite/SQLProSQLite.#{version}.app.zip"
   name "SQLPro for SQLite"
-  desc "Advanced sqlite editor"
+  desc "SQLite editor"
   homepage "https://www.sqlitepro.com/"
 
   livecheck do
