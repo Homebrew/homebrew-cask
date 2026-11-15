@@ -1,21 +1,23 @@
 cask "fresh" do
-  version "4.0.7"
+  version "5.0.2"
   sha256 :no_check
 
-  url "https://ironicsoftware.com/downloads/Fresh.zip"
+  url "https://static.ironicsoftware.com/downloads/Fresh.zip"
   name "Fresh"
   desc "Keep your recently modified files at hand and up-to-date"
   homepage "https://ironicsoftware.com/fresh/"
 
   livecheck do
-    url "https://ironicsoftware.com/downloads/fresh#{version.major}.xml"
+    url "https://static.ironicsoftware.com/downloads/fresh#{version.major}.xml"
     strategy :sparkle, &:short_version
   end
 
   conflicts_with cask: "general-software-fresh"
-  depends_on :macos
+  depends_on macos: :sonoma
 
   app "Fresh.app"
+
+  uninstall quit: "com.ironic.fresh#{version.major}"
 
   zap trash: [
     "~/Library/Application Scripts/com.ironic.fresh#{version.major}",
