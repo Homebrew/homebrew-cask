@@ -1,9 +1,9 @@
 cask "dbeaver-community" do
   arch arm: "aarch64", intel: "x86_64"
 
-  version "26.2.4"
-  sha256 arm:   "a1a10b2655d149f42a96874c7e769cec170fc92632d04dc793baa39825c0e8d3",
-         intel: "f2480563fee951e57c492067f13ce674aa4ca246b0ceb07087836b545825eb6b"
+  version "26.2.5"
+  sha256 arm:   "2d739a95bbc3bb2f9fada4863a9f11904b94ebb34673999915809f788e849d73",
+         intel: "760cbc064685536e0249fb18bb7568be624b6a2737d394c2b3b8a6aacfd9464c"
 
   url "https://dbeaver.io/files/#{version}/dbeaver-ce-#{version}-macos-#{arch}.dmg"
   name "DBeaver Community Edition"
