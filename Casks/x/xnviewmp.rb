@@ -4,7 +4,7 @@ cask "xnviewmp" do
 
   url "https://download.xnview.com/old_versions/XnView_MP/XnView_MP-#{version}-mac.dmg"
   name "XnViewMP"
-  desc "Photo viewer, image manager, image resiser and more"
+  desc "Photo viewer and image manager"
   homepage "https://www.xnview.com/en/xnviewmp/"
 
   livecheck do
