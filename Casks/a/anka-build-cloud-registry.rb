@@ -6,7 +6,7 @@ cask "anka-build-cloud-registry" do
          intel: "5a3c06f5e7d924cbbb53a5ec73770438635c0594aecfecda55e49ba3635840dc"
 
   url "https://downloads.veertu.com/anka/anka-registry-#{arch}-#{version}.pkg"
-  name "Anka Build Cloud Controller"
+  name "Anka Build Cloud Registry"
   desc "Anka virtual machine registry & API"
   homepage "https://veertu.com/"
 

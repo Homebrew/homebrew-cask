@@ -4,7 +4,7 @@ cask "font-gensenrounded" do
 
   url "https://github.com/ButTaiwan/gensen-font/releases/download/v#{version}/GenSenRounded#{version.major}-ttc.zip"
   name "GenSenRounded"
-  name "GenSenRounded"
+  name "源泉圓體"
   homepage "https://github.com/ButTaiwan/gensen-font"
 
   font "GenSenRounded#{version.major}-B.ttc"
