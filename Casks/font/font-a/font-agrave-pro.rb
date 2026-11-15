@@ -4,7 +4,7 @@ cask "font-agrave-pro" do
 
   url "https://github.com/google/fonts/raw/main/ofl/agravepro/AgravePro%5Bwght%5D.ttf"
   name "Agrave Pro"
-  homepage "https://github.com/daanjobsis/agrave-pro"
+  homepage "https://fonts.google.com/specimen/Agrave+Pro"
 
   font "AgravePro[wght].ttf"
 
