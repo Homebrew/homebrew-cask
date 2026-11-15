@@ -2,10 +2,10 @@ cask "superset" do
   arch arm: "arm64", intel: on_system_conditional(macos: "x64", linux: "x86_64")
   os macos: "dmg", linux: "AppImage"
 
-  version "2.0.8"
-  sha256 arm:          "b4c2c436433ed375bc832d4a45ecbbf5ded4960c364962e07f55d093afb338fc",
-         intel:        "5560caea017032fda57b80867c8217e13978e6ccac0a0deaf99037fb54ce5d13",
-         x86_64_linux: "ad4641f9eeab84534855a64f6c1935496337f1cb1295681e33caaf8681cc33ee"
+  version "2.0.9"
+  sha256 arm:          "dccc149198633bc9ed099ef6cd53da46336868885dbef0b574190c6de0842399",
+         intel:        "76a10ff7b4778c4afb8cfa93bd53fd1145d64cb989af898a3e17b9e5ba38dcd0",
+         x86_64_linux: "4f1ffd6ac01b0fa47e4d38e270d78535a60539d2e72f2544d342aa498e0e589d"
 
   on_macos do
     depends_on macos: :ventura
