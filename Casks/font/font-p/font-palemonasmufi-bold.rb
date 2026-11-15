@@ -3,7 +3,7 @@ cask "font-palemonasmufi-bold" do
   sha256 :no_check
 
   url "https://mufi.info/q.php?o=mufifontfiledownload&name=PalemMUFI-bd.ttf"
-  name "PalemonasMUFI Italic"
+  name "PalemonasMUFI Bold"
   homepage "https://mufi.info/q.php?p=mufi/fonts/fontfamily/6"
 
   livecheck do
