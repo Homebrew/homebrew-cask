@@ -4,7 +4,7 @@ cask "presentation" do
 
   url "https://iihm.imag.fr/blanch/software/osx-presentation/releases/osx-presentation-#{version}.pkg"
   name "Présentation"
-  desc "Tool for pdf slides"
+  desc "PDF slide presenter"
   homepage "https://iihm.imag.fr/blanch/software/osx-presentation/"
 
   livecheck do
