@@ -1,6 +1,6 @@
 cask "golly" do
-  version "5.0"
-  sha256 "cf03c5b7941566f6222a519b984b6a6cd6e6e2107f61a31995be79a8b50c304e"
+  version "5.1"
+  sha256 "7bbf70d3bfbd7fee3f4fb304bd3dafe3b5f70cfa787da47dfaa840504cc364d7"
 
   url "https://downloads.sourceforge.net/golly/golly/golly-#{version.major_minor}/golly-#{version}-mac.dmg"
   name "Golly"
