@@ -51,4 +51,5 @@ cask "zen" do
   end
 
   auto_updates true
+  conflicts_with cask: "irbis-zen"
 end
