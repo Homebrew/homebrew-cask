@@ -4,7 +4,7 @@ cask "thinlinc-client" do
 
   url "https://www.cendio.com/downloads/clients/tl-#{version}-client-macos.dmg"
   name "ThinLinc"
-  desc "Linux remote desktop server"
+  desc "Remote desktop client for ThinLinc servers"
   homepage "https://www.cendio.com/thinlinc/what-is-thinlinc/"
 
   livecheck do
