@@ -1,10 +1,10 @@
 cask "appflowy" do
   os macos: "macos-universal.zip", linux: "linux-x86_64.AppImage"
 
-  version "0.15.0"
-  sha256 arm:          "b0a85b0a8f51d96f2c89cb1f46aca61d45ace044bad66300fe93f9d3a4743dec",
-         intel:        "b0a85b0a8f51d96f2c89cb1f46aca61d45ace044bad66300fe93f9d3a4743dec",
-         x86_64_linux: "ff052dd8838d9a79460ec2e84ff6c761a2c841b28151a7057b9d05b6fc7dc1af"
+  version "0.15.1"
+  sha256 arm:          "d9015b846ea3e3c1ee9ed438b02675352c69fddefb87375021408b2d39047dce",
+         intel:        "d9015b846ea3e3c1ee9ed438b02675352c69fddefb87375021408b2d39047dce",
+         x86_64_linux: "915277d45cd05046e6d6f074d37050af12a9708e88b3b7aa9d350ec48136ca1b"
 
   on_macos do
     depends_on macos: :monterey
