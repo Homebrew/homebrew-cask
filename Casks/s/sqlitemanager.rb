@@ -4,7 +4,7 @@ cask "sqlitemanager" do
 
   url "https://www.sqlabs.com/download/SQLiteManager.zip"
   name "SQLiteManager"
-  desc "Database management system for sqlite databases"
+  desc "SQLite database manager"
   homepage "https://www.sqlabs.com/sqlitemanager.php"
 
   livecheck do

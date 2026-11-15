@@ -4,7 +4,7 @@ cask "maru-jan" do
 
   url "https://www.maru-jan.com/download/Inst_MaruJan_Mac.pkg"
   name "Maru-Jan"
-  desc "Play japanese mahjong online"
+  desc "Online Japanese mahjong game"
   homepage "https://www.maru-jan.com/"
 
   livecheck do

@@ -4,7 +4,7 @@ cask "fabfilter-saturn" do
 
   url "https://cdn-b.fabfilter.com/downloads/ffsaturn#{version.no_dots}.dmg"
   name "FabFilter Saturn"
-  desc "Multiband distorsion/saturation plug-in"
+  desc "Multiband distortion/saturation plug-in"
   homepage "https://www.fabfilter.com/products/saturn-2-multiband-distortion-saturation-plug-in"
 
   livecheck do

@@ -7,7 +7,7 @@ cask "chatbox" do
 
   url "https://download.chatboxai.app/releases/Chatbox-#{version}#{arch}.dmg"
   name "Chatbox"
-  desc "Desktop app for GPT-4 / GPT-3.5 (OpenAI API)"
+  desc "Desktop client for AI models"
   homepage "https://chatboxai.app/en"
 
   livecheck do

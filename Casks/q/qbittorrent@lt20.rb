@@ -57,7 +57,7 @@ cask "qbittorrent@lt20" do
 
   url "https://downloads.sourceforge.net/qbittorrent/qbittorrent-#{os}/qbittorrent-#{version}/qbittorrent-#{version}_lt20#{url_end}"
   name "qBittorrent"
-  desc "Edition of qBitorrent based on libtorrent-rasterbar 2.0.x"
+  desc "Edition of qBittorrent based on libtorrent-rasterbar 2.0.x"
   homepage "https://www.qbittorrent.org/"
 
   conflicts_with cask: [

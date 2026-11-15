@@ -4,7 +4,7 @@ cask "bleunlock" do
 
   url "https://github.com/ts1/BLEUnlock/releases/download/#{version}/BLEUnlock-#{version}.zip"
   name "BLEUnlock"
-  desc "Lock/unlock Apple computers using the proximity of a bluetooth low energy device"
+  desc "Proximity lock and unlock using a Bluetooth Low Energy device"
   homepage "https://github.com/ts1/BLEUnlock"
 
   depends_on :macos

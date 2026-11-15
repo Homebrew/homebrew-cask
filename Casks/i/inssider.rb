@@ -4,7 +4,7 @@ cask "inssider" do
 
   url "https://metageek.link/inssider-5-mac-release-folder/inSSIDer-#{version}.dmg"
   name "inSSIDer"
-  desc "Defeat slow wifi"
+  desc "Wi-Fi network analyser"
   homepage "https://www.metageek.com/products/inssider/"
 
   deprecate! date: "2025-03-02", because: :unmaintained

@@ -4,7 +4,7 @@ cask "flying-carpet" do
 
   url "https://github.com/spieglt/FlyingCarpet/releases/download/v#{version.csv.second || version.csv.first}/macOS_FlyingCarpet_#{version.csv.first}.zip"
   name "Flying Carpet"
-  desc "File transfer over ad-hoc wifi"
+  desc "File transfer over ad-hoc Wi-Fi"
   homepage "https://github.com/spieglt/flyingcarpet"
 
   # Upstream regularly adds patch versions to existing releases

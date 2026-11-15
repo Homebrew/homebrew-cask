@@ -4,7 +4,7 @@ cask "warcraft-logs-uploader" do
 
   url "https://github.com/RPGLogs/Uploaders-warcraftlogs/releases/download/v#{version}/warcraftlogs-v#{version}.dmg"
   name "Warcraft Logs Uploader"
-  desc "Client to upload warcraft logs"
+  desc "Combat log uploader for Warcraft Logs"
   homepage "https://classic.warcraftlogs.com/"
 
   # The download page (https://classic.warcraftlogs.com/client/download) is
