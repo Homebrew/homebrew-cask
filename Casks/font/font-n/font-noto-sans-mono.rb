@@ -3,7 +3,7 @@ cask "font-noto-sans-mono" do
   sha256 "090cf6c5e03f337a755630ca888b1fef463e64ae7b33ee134e9309c05f978732"
 
   url "https://github.com/notofonts/latin-greek-cyrillic/releases/download/NotoSansMono-v#{version}/NotoSansMono-v#{version}.zip"
-  name "Noto Sans"
+  name "Noto Sans Mono"
   homepage "https://notofonts.github.io/"
 
   livecheck do
