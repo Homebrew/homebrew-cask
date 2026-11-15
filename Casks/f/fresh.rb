@@ -17,6 +17,8 @@ cask "fresh" do
 
   app "Fresh.app"
 
+  uninstall quit: "com.ironic.fresh#{version.major}"
+
   zap trash: [
     "~/Library/Application Scripts/com.ironic.fresh#{version.major}",
     "~/Library/Application Support/Fresh",
