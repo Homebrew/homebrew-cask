@@ -4,7 +4,7 @@ cask "pimosa" do
 
   url "https://pub-e98ac9d8ff7347b29207e39fd6b3cb89.r2.dev/Pimosa.zip"
   name "Pimosa"
-  desc "Photo, video, music and pdf editing tools"
+  desc "Photo, video, music and PDF editing tools"
   homepage "https://pimosa.app/"
 
   livecheck do
