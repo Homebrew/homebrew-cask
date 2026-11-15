@@ -4,7 +4,7 @@ cask "font-firjar" do
 
   url "https://github.com/google/fonts/raw/main/ofl/firjar/Firjar%5Bwdth%2Cwght%5D.ttf"
   name "Firjar"
-  homepage "https://github.com/Mestaratype/Firjar"
+  homepage "https://fonts.google.com/specimen/Firjar"
 
   font "Firjar[wdth,wght].ttf"
 
