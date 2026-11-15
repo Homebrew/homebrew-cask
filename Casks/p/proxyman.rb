@@ -32,6 +32,7 @@ cask "proxyman" do
         "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.proxyman.nsproxy.sfl*",
         "~/Library/Application Support/com.proxyman",
         "~/Library/Application Support/com.proxyman.NSProxy",
+        "~/Library/Application Support/Proxyman",
         "~/Library/Caches/com.plausiblelabs.crashreporter.data/com.proxyman.NSProxy",
         "~/Library/Caches/com.proxyman.NSProxy",
         "~/Library/Caches/Proxyman",
