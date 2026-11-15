@@ -4,7 +4,7 @@ cask "rwts-pdfwriter" do
 
   url "https://github.com/rodyager/RWTS-PDFwriter/releases/download/v#{version}/RWTS-PDFwriter.pkg"
   name "RWTS PDFwriter"
-  desc "Print driver for printing documents directly to a pdf file"
+  desc "Printer driver that saves documents as PDF files"
   homepage "https://github.com/rodyager/RWTS-PDFwriter"
 
   depends_on :macos
