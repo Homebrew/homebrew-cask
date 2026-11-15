@@ -1,19 +1,19 @@
 cask "customshortcuts" do
-  version "1.3"
-  sha256 "8bb0dade6f8f0ee8fbb0f3e84c5e8f6fb927a277af5c11f5df4c8be16989e1fa"
+  version "2.0"
+  sha256 "57e3cef4012cc7466a571cce82aa4b8064123f19ea16835c872a9b72ecffe45d"
 
-  url "https://dl.houdah.com/customShortcuts/updates/cast_assets/CustomShortcuts#{version}.zip"
+  url "https://www.houdah.com/customShortcuts/download_assets/CustomShortcuts_#{version}.dmg"
   name "CustomShortcuts"
   desc "Customise menu item keyboard shortcuts"
   homepage "https://www.houdah.com/customShortcuts/"
 
   livecheck do
-    url "https://www.houdah.com/customShortcuts/updates/cast.xml"
-    strategy :sparkle, &:short_version
+    url "https://www.houdah.com/customShortcuts/download.html"
+    regex(/href=.*?CustomShortcuts_(\d+(?:\.\d+)+)\.dmg/i)
   end
 
   auto_updates true
-  depends_on :macos
+  depends_on macos: :monterey
 
   app "CustomShortcuts.app"
 
