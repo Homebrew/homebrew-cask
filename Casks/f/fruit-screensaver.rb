@@ -7,6 +7,8 @@ cask "fruit-screensaver" do
   desc "Screensaver of the vintage Apple logo"
   homepage "https://github.com/Corkscrews/fruit"
 
+  disable! date: "2026-11-15", because: :fails_gatekeeper_check
+
   depends_on :macos
 
   screen_saver "Fruit.saver"
