@@ -4,7 +4,7 @@ cask "container-ps" do
 
   url "https://github.com/Toinane/container-ps/releases/download/#{version}/Container.PS-#{version}.dmg"
   name "Container PS"
-  desc "App to show all docker images"
+  desc "Docker image viewer"
   homepage "https://github.com/Toinane/container-ps"
 
   disable! date: "2026-09-01", because: :fails_gatekeeper_check
