@@ -9,9 +9,10 @@ cask "jamulus" do
 
   livecheck do
     url :url
-    strategy :git do |tags|
+    regex(/^r?(\d+(?:_\d+)+)$/i)
+    strategy :git do |tags, regex|
       tags.filter_map do |tag|
-        tag[/^r?(\d+(?:_\d+)+)$/i, 1]&.tr("_", ".")
+        tag[regex, 1]&.tr("_", ".")
       end
     end
   end
