@@ -1,9 +1,9 @@
 cask "spline" do
   arch arm: "arm64", intel: "x64"
 
-  version "0.20.51"
-  sha256 arm:   "b918fd4384941af9f3e3d8e288f381f0d232a8704d3857d434655918f9fa7d46",
-         intel: "df9be637d93a4a1d9b9a13c9dedaaa63e5919896d1dade84a5c51be2cb9f9a64"
+  version "0.20.52"
+  sha256 arm:   "69aa26fee3a4bb01a3884e7b4cd410e1010ee439b02a8fcf22e3519c2210afdb",
+         intel: "86e88ea50779cc510a5f46f96825718d56a471f144f17978e082b1e34aeee2e3"
 
   url "https://ejtmihpcmqboccdhutyk.supabase.co/storage/v1/object/public/desktop-releases/Spline-#{version}-#{arch}.mac.zip"
   name "Spline"
