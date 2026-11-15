@@ -13,7 +13,9 @@ cask "solidcraft" do
 
     zap trash: [
       "~/Library/Application Support/SolidCraft",
+      "~/Library/Caches/SolidCraft",
       "~/Library/Preferences/ai.storyteller.solidcraft.plist",
+      "~/Library/Preferences/io.tangencylabs.solidcraft.plist",
     ]
   end
   on_linux do
