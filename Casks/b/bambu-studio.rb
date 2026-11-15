@@ -47,4 +47,6 @@ cask "bambu-studio" do
       end
     end
   end
+
+  conflicts_with cask: "bambu-studio@beta"
 end
