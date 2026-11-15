@@ -1,17 +1,22 @@
 cask "jamulus" do
-  version "3.11.0"
-  sha256 "4cf680b643dd1bbb2f52655f5fef71ce222024d3c19713997fbe2a3626cd7d6a"
+  version "3.12.6"
+  sha256 "d1fd341d327a027144f83156f5e958807779a69d22876bbde5a21d90c381432c"
 
-  url "https://downloads.sourceforge.net/llcon/jamulus_#{version}_mac.dmg"
+  url "https://github.com/jamulussoftware/jamulus/releases/download/r#{version.tr(".", "_")}/jamulus_#{version}_mac.dmg"
   name "Jamulus"
   desc "Play music online with friends"
   homepage "https://jamulus.io/"
 
   livecheck do
-    url "https://sourceforge.net/projects/llcon/rss?path=/Jamulus"
+    url :url
+    strategy :git do |tags|
+      tags.filter_map do |tag|
+        tag[/^r?(\d+(?:_\d+)+)$/i, 1]&.tr("_", ".")
+      end
+    end
   end
 
-  depends_on :macos
+  depends_on macos: :ventura
 
   app "Jamulus.app"
   app "JamulusServer.app"
