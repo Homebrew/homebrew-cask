@@ -1,9 +1,9 @@
 cask "token-monitor" do
   arch arm: "arm64", intel: "x64"
 
-  version "0.92.0"
-  sha256 arm:   "973995f3d9f402c4847925349e35e145553184349e1a49135fd4f6467fb62fa0",
-         intel: "d5952324d11526ced8c9fbf06349045b4fa205891b3ca80ed8f3fffcaac3fb14"
+  version "0.93.0"
+  sha256 arm:   "286029ce08d82c9e8dacc1da6391cfd6bf35fdb3486d9c3d7716d674c90f4a63",
+         intel: "8f108b03c7968bff4dc900b86298f2e2ec63d71757d73dcd96d3300b956d02c4"
 
   url "https://github.com/Javis603/token-monitor/releases/download/v#{version}/Token-Monitor-#{version}-#{arch}.dmg"
   name "Token Monitor"
