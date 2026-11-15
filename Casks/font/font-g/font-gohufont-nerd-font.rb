@@ -3,7 +3,7 @@ cask "font-gohufont-nerd-font" do
   sha256 "b56a359a7562beebcc443d2a1c3f57a29e1ac7ffb47da17eca1fa028a0017b5a"
 
   url "https://github.com/ryanoasis/nerd-fonts/releases/download/v#{version}/Gohu.tar.xz"
-  name "GohuFont  Nerd Font families (Gohu)"
+  name "GohuFont Nerd Font families (Gohu)"
   homepage "https://github.com/ryanoasis/nerd-fonts"
 
   livecheck do
