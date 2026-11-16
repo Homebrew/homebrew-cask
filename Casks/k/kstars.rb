@@ -2,8 +2,8 @@ cask "kstars" do
   arch arm: "arm64", intel: "x86_64"
 
   version "3.8.5"
-  sha256 arm:   "ea15f0e9d46ff7a261c1e8657930d8d35d9b6e3d2586015887ea2090414053a1",
-         intel: "46494af5b4b41e54d5cb3571682c792cf8a7e6ba73ede084a3a33271b0c5bf72"
+  sha256 arm:   "3dfe1e6bc0d7a6ad4d7eaf423abfcc3e9b4e59bc187bdccb8a8c2533b7891f10",
+         intel: "206ca157e504a83bb74008874c602596bf1ccc5a9ad11827f160866ad2c61ade"
 
   url "https://www.indilib.org/jdownloads/kstars/kstars-#{version}-#{arch}.dmg",
       user_agent: :browser
