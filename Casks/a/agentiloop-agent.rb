@@ -1,6 +1,6 @@
 cask "agentiloop-agent" do
-  version "1.1.98.298"
-  sha256 "bec994b5dba692ada3b238b43411ed8a0a82a41c6e3e832437c13ed52ae32422"
+  version "1.1.99.299"
+  sha256 "1ac9293ffb4727e4237258c9df1eeaced9f484205ec771da372306df1c1d7df0"
 
   url "https://github.com/AgentiLoop/Agent/releases/download/v#{version}/Agent-v#{version}-macOS.dmg"
   name "Agent!"
