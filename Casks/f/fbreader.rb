@@ -4,12 +4,12 @@ cask "fbreader" do
   url_end = on_system_conditional macos: "dmg", linux: "AppImage"
 
   on_macos do
-    version "2.1.5"
-    sha256 "27c05006a1b16be5219fec9aeb364d4470ffee665ea5a9d185748801d8782b73"
+    version "2.5.2"
+    sha256 "0b214645060593ec49d88a0ee3c5397c0313c84aae17f500ac6a37ff3a9e6699"
 
     depends_on macos: :monterey
 
-    pkg "FBReader.pkg"
+    pkg "FBReader-#{version}.pkg"
 
     uninstall pkgutil: "com.fbreader"
 
@@ -22,9 +22,9 @@ cask "fbreader" do
   on_linux do
     arch arm: "aarch64", intel: "x86_64"
 
-    version "2.1.4"
-    sha256 arm64_linux:  "2cf80dc3494c692ff8ecee908570e1186b0bca30301f47512efa75b98fbffcfe",
-           x86_64_linux: "de4a5044f566a04b4c594ff043c137d7bdd99e951e41a4512e814d90f6978571"
+    version "2.5.2"
+    sha256 arm64_linux:  "6e8d8d412a2064ca17b66658b069aca2b9af97d4fd5d75f9bbbf756f4e0794d3",
+           x86_64_linux: "3bdf22ca87cde733e60ca250fcc68b67f42f5a28699d11cd0bed81efd8c3b6c0"
 
     app_image "FBReader_Book_Reader-#{arch}-#{version}.AppImage", target: "FBReader.AppImage"
 
