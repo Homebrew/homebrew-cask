@@ -23,6 +23,7 @@ cask "aside" do
   app "Aside.app"
 
   uninstall launchctl: [
+              "application.at.studio.AsideBrowser.daemon.*",
               "at.studio.AsideBrowser.UpdaterPrivilegedHelper",
               "at.studio.AsideKeystone.agent",
               "at.studio.asidekeystone.agent",
