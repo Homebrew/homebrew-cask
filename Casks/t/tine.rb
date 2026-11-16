@@ -1,6 +1,6 @@
 cask "tine" do
-  version "0.8.4"
-  sha256 "dde53a271e2bfe8aa371a76d111a02834cad286fb312d414665d3aab8814924b"
+  version "0.9.0"
+  sha256 "3b6ed6c6d0bfc6a51469b01bfe5af7f7124f6dbdbb86ef37335680a3c16d5139"
 
   url "https://github.com/martinkoutecky/tine/releases/download/v#{version}/Tine_#{version}_universal.dmg"
   name "Tine"
