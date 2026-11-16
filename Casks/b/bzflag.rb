@@ -1,6 +1,6 @@
 cask "bzflag" do
-  version "2.4.30"
-  sha256 "4a63f7ef575bb8e3e6507d8f999cbd43e9ccb92fcf4ebfb877d3c9ccb4bbc2b2"
+  version "2.4.32"
+  sha256 "23166216c93b394577d739a12d30457c112afa88d931161d3e426177ec42442c"
 
   url "https://download.bzflag.org/bzflag/macos/#{version}/BZFlag-#{version}-macOS.zip"
   name "BZFlag"
