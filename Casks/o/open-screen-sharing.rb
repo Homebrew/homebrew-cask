@@ -7,6 +7,11 @@ cask "open-screen-sharing" do
   desc "Remote desktop client for VNC and RDP"
   homepage "https://github.com/nekohasekai/open-screen-sharing"
 
+  livecheck do
+    url :url
+    regex(/^v?(\d+(?:\.\d+)+)$/i)
+  end
+
   auto_updates true
   depends_on macos: :sonoma
 
@@ -16,7 +21,9 @@ cask "open-screen-sharing" do
             pkgutil: "io.nekohasekai.screensharing"
 
   zap trash: [
+    "~/Library/Caches/io.nekohasekai.screensharing",
     "~/Library/Group Containers/P8XK3KHB48.io.nekohasekai.screensharing",
+    "~/Library/HTTPStorages/io.nekohasekai.screensharing",
     "~/Library/Preferences/io.nekohasekai.screensharing.plist",
   ]
 end
