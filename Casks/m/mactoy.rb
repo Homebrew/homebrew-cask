@@ -1,6 +1,6 @@
 cask "mactoy" do
-  version "0.8.1"
-  sha256 "c3e8ce8b0ffb3e37bb2420e8b37770f76d5b1a8c42f83b82a2eaad2aa9e6de25"
+  version "0.8.2"
+  sha256 "6f4585dc75d4bbb47d05935b475ca342d4dc0c0caa3f2bca6c007e37596c1b5c"
 
   url "https://github.com/cashcon57/mactoy/releases/download/v#{version}/Mactoy-#{version}.dmg"
   name "Mactoy"
