@@ -1,6 +1,6 @@
 cask "subtitle-studio" do
-  version "1.13.0"
-  sha256 "f3b771fc17499e328fc28d50ec5a288798e0e2bb3307e2ff60afa6e68c1cbccd"
+  version "1.13.1"
+  sha256 "691a17ac7d720507ebf9b38be34759819c881d33ccfba3313f4ee6e49b542145"
 
   url "https://assets.subtitlestudio.ai/releases/Subtitle%20Studio-arm64-#{version}.dmg"
   name "Subtitle Studio"
