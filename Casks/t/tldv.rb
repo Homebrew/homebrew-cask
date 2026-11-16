@@ -1,9 +1,9 @@
 cask "tldv" do
   arch arm: "-arm64"
 
-  version "3.0.417"
-  sha256 arm:   "b678a07861f980fbd5933958599d528ae2910402598356dabe36091d864ad31a",
-         intel: "f189501e2b281d7a5d99c84d394bd6a05538dd7d2bafd7cb9e27e7aa9ea6d3fc"
+  version "3.0.434"
+  sha256 arm:   "8191177187fc3c20ffeb650a57d02799a4ebcd20bf120eb1c2ad431a794768f0",
+         intel: "5fcedd86014851b03c7794b467316ddaf0f876b74bf3c3047386de0200cc25d6"
 
   url "https://releases.tldv.io/tldv-#{version}#{arch}.dmg"
   name "tl;dv"
