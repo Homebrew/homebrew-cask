@@ -1,9 +1,9 @@
 cask "devin-desktop@next" do
   arch arm: "arm64", intel: "x64"
 
-  version "3.12.1059+next.0122b42e15,0122b42e158c7ca62960222fb9725f087cd9544f"
-  sha256 arm:   "89b607d872276ad88156abf6054942a20633e2fcf5c977ec6537f40a80ab8444",
-         intel: "7570df87c9ce00aa6737c87efa8dc0c259ba9a544130de5615a3b19636daa540"
+  version "3.13.1003+next.632d56d3ab,632d56d3abf9004b17cb106a276b1fcd23f329a0"
+  sha256 arm:   "b23e92d734de3a18f3885224947d339f14b35246c06e187f5ebef6344cbfd127",
+         intel: "ae6957e66710e6e294d33a0af3f8bb5e86bd6cf4e896de87229a43f5ce7df62b"
 
   url "https://windsurf-stable.codeiumdata.com/darwin-#{arch}-dmg/next/#{version.csv.second}/Devin-darwin-#{arch}-#{version.csv.first}.dmg"
   name "Devin Desktop Next (Beta)"
