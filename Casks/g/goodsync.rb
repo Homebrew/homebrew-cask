@@ -1,5 +1,5 @@
 cask "goodsync" do
-  version "12.11.12"
+  version "12.11.14"
   sha256 :no_check # required as upstream package is updated in-place
 
   url "https://www.goodsync.com/download/goodsync-vsub-mac.dmg"
@@ -12,7 +12,7 @@ cask "goodsync" do
     regex(/Version\sv?\s*(\d+(?:\.\d+)+)/i)
   end
 
-  depends_on :macos
+  depends_on macos: :monterey
 
   app "GoodSync.app"
 
