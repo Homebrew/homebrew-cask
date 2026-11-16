@@ -1,15 +1,17 @@
 cask "obelisk" do
-  version "0.6.2"
-  sha256 "02c36d9fe2273852abde439f5bbbc3620964717406287190a2bf1edb574cc7bf"
+  version "0.6.3"
+  sha256 "fee13c2ce70e0318d3bfff927a2fc9975e8defe8b67b90890953aad060d44d3f"
 
   url "https://github.com/Zagrios/Obelisk/releases/download/v#{version}/Obelisk-#{version}-arm64.dmg"
   name "Obelisk"
   desc "Game launcher for Steam, Epic Games and GOG libraries"
-  homepage "https://getobelisk.app/"
+  homepage "https://github.com/Zagrios/Obelisk"
 
   livecheck do
     url "https://github.com/Zagrios/Obelisk/releases/latest/download/appcast.xml"
-    strategy :sparkle, &:short_version
+    strategy :sparkle do |items|
+      items.find { |item| item.channel.nil? }&.short_version
+    end
   end
 
   auto_updates true
