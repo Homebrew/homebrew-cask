@@ -1,13 +1,14 @@
 cask "t3-code@nightly" do
   arch arm: "arm64", intel: on_system_conditional(macos: "x64", linux: "x86_64")
-  os macos: "dmg", linux: "AppImage"
 
-  version "0.1.10-nightly.20261113.4643"
-  sha256 arm:          "9b25ebb63c7275ae9bd6ffe001216c4ce5e5b0f795d42e55da937aff1b4f7ebf",
-         intel:        "498e8b3191932f92afabe0c514ef865f58b13bc57340856241c8790806799990",
-         x86_64_linux: "e007b9c39ee9ce97ef9bf9a86dcb11ea52f0ccb7f14295248e5ff36e64e2bf6b"
+  version "0.1.10-nightly.20261116.4761"
+  sha256 arm:          "f4202e4fb1cce896d07fab07196f645a14220db02832530fad7c135361f39222",
+         intel:        "1afc9e81a6abbbef404842e6d7ed4f392e482aa3db6274d376906d5e4ac724e7",
+         x86_64_linux: "e20a45a0173453b21fda2c7c72943ff26494d98352ec8e9ab79ced2baa226333"
 
   on_macos do
+    url "https://github.com/pingdotgg/t3code/releases/download/v#{version}/T3-Code-#{version}-#{arch}.dmg"
+
     auto_updates true
     depends_on macos: :ventura
 
@@ -25,9 +26,11 @@ cask "t3-code@nightly" do
     ]
   end
   on_linux do
+    url "https://github.com/pingdotgg/t3code/releases/download/v#{version}/T3-Code-Nightly-#{arch}.AppImage"
+
     depends_on arch: :x86_64
 
-    app_image "T3-Code-#{version}-#{arch}.AppImage", target: "T3 Code Nightly.AppImage"
+    app_image "T3-Code-Nightly-#{arch}.AppImage", target: "T3 Code Nightly.AppImage"
 
     zap trash: [
       "~/.config/T3 Code (Alpha)",
@@ -44,7 +47,6 @@ cask "t3-code@nightly" do
     ]
   end
 
-  url "https://github.com/pingdotgg/t3code/releases/download/v#{version}/T3-Code-#{version}-#{arch}.#{os}"
   name "T3 Code Nightly"
   desc "Minimal GUI for AI code agents"
   homepage "https://t3.codes/"
