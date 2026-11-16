@@ -1,6 +1,6 @@
 cask "tencent-yingyongbao" do
-  version "0.8.5.2299,RsHmInBRX0pQKbhe"
-  sha256 "1f4458925c4c479c52f1b67610db4377d9285e81f60e7b944e92e58c9fa13ca8"
+  version "0.8.6.2325,yYwlwtrWNcEQvAWB"
+  sha256 "6c19300649912f1b1d0c4e752d6a5f5015c5076ff46a8a8aa785cdfeb04c49aa"
 
   url "https://downmac.yyb.qq.com/channel/formal/raw/#{version.csv.second}/mac_yyb_#{version.csv.first}.dmg"
   name "腾讯应用宝"
