@@ -1,6 +1,6 @@
 cask "picmal" do
-  version "2.2.0"
-  sha256 "83d8a007bbe1c142caba2e84dc8f922520218b81dc0e902510a23a2834b14ae3"
+  version "2.3.0"
+  sha256 "e75a64fa8109a497c9e5bcf14761de63f1af34e13e134c6a670fc4a85a254938"
 
   url "https://picmal.app/downloads/Picmal-#{version}.dmg"
   name "Picmal"
