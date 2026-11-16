@@ -7,13 +7,8 @@ cask "algodoo" do
   desc "Draw and interact with physical systems"
   homepage "https://www.algodoo.com/"
 
-  livecheck do
-    url "https://www.algodoo.com/download/"
-    regex(/href=.*?Algodoo[._-]v?(\d+(?:[._]\d+)+)[._-]macOS\.dmg/i)
-    strategy :page_match do |page, regex|
-      page.scan(regex)&.map { |match| match[0].tr("_", ".") }
-    end
-  end
+  # The download URL is unreachable in the CI environment
+  disable! date: "2026-11-16", because: :unreachable
 
   depends_on :macos
 
