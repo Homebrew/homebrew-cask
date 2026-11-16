@@ -27,10 +27,7 @@ cask "virtualbox" do
     end
   end
 
-  conflicts_with cask: [
-    "virtualbox@6",
-    "virtualbox@beta",
-  ]
+  conflicts_with cask: "virtualbox@beta"
   depends_on :macos
 
   pkg "VirtualBox.pkg",
