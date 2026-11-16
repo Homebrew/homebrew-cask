@@ -161,11 +161,27 @@ jobs:
       matrix:
         include: ${{ fromJson(needs.generate-matrix.outputs.matrix) }}
     steps:
+      # Until `setup-homebrew` fixes their ACLs, the container user can't write the directories the runner mounts.
+      # The image also has no `zstd`, without which the cache lookup misses the zstd-compressed snapshot.
+      # On failure the restore is skipped and `setup-homebrew` clones the tap, as before.
+      - name: Prepare container for Git cache
+        id: prepare-container
+        if: matrix.container && needs.generate-matrix.outputs.git-cache-key
+        continue-on-error: true
+        run: |
+          user="$(whoami)"
+          sudo setfacl --recursive --modify="d:u:${user}:rwX,u:${user}:rwX" "${RUNNER_WORKSPACE}" "${RUNNER_TEMP}"
+          sudo apt-get update --quiet=2
+          sudo apt-get install --yes --quiet=2 --no-install-recommends zstd
+
       # A full clone saved daily by `git-cache.yml`. `setup-homebrew` keeps an existing tap and only fetches newer commits.
       # No `restore-keys`: only the exact key that `generate-matrix` checked may be restored.
+      # Without the ACLs the restore can't write its outputs and would fail the job, so it needs the preparation.
       - name: Restore Git cache
         id: git-cache
-        if: ${{ !matrix.container && needs.generate-matrix.outputs.git-cache-key }}
+        if: >
+          needs.generate-matrix.outputs.git-cache-key &&
+          (!matrix.container || steps.prepare-container.outcome == 'success')
         uses: actions/cache/restore@55cc8345863c7cc4c66a329aec7e433d2d1c52a9 # v6.1.0
         with:
           path: .git
@@ -173,10 +189,21 @@ jobs:
 
       - name: Seed tap from Git cache
         if: steps.git-cache.outputs.cache-matched-key
+        env:
+          CONTAINER: ${{ matrix.container && 'true' || '' }}
         run: |
           tap="$(brew --repository "${GITHUB_REPOSITORY}")"
           mkdir -p "${tap}"
-          mv .git "${tap}/.git"
+          # On a bare runner `setup-homebrew` moves the tap into the workspace, so `actions/checkout` reuses it.
+          # In a container it doesn't, so the workspace keeps a copy to save `actions/checkout` a full fetch.
+          # The tap is on another filesystem there, so a move would copy `.git` anyway.
+          # Steps in a container run in `sh`, which has no `[[`.
+          if [ -n "${CONTAINER}" ]
+          then
+            cp -a .git "${tap}/.git"
+          else
+            mv .git "${tap}/.git"
+          fi
           # The snapshot's remote branches are up to a day old. Unpruned, a branch since replaced by
           # `<branch>/<name>` (or the reverse) makes `setup-homebrew`'s fetch fail.
           git -C "${tap}" config fetch.prune true
@@ -214,13 +241,15 @@ jobs:
           HOMEBREW_NO_INSTALL_FROM_API: ""
         run: brew test-bot --cleanup --only-cleanup-before
 
+      # An archive stores the gems' path relative to the workspace, which differs between a container and a bare
+      # runner, so neither can restore the other's. `cache.yml` saves the bare runner's under the unsuffixed key.
       - name: Cache Homebrew Gems
         id: cache
         uses: actions/cache@55cc8345863c7cc4c66a329aec7e433d2d1c52a9 # v6.1.0
         with:
           path: ${{ steps.set-up-homebrew.outputs.gems-path }}
-          key: ${{ matrix.runner }}-rubygems-${{ steps.set-up-homebrew.outputs.gems-hash }}
-          restore-keys: ${{ matrix.runner }}-rubygems-
+          key: ${{ matrix.runner }}${{ matrix.container && '-container' || '' }}-rubygems-${{ steps.set-up-homebrew.outputs.gems-hash }}
+          restore-keys: ${{ matrix.runner }}${{ matrix.container && '-container' || '' }}-rubygems-
 
       - name: Cache style cache
         if: runner.os == 'macOS' && !matrix.stable
