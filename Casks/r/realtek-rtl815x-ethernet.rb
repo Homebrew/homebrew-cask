@@ -26,8 +26,4 @@ cask "realtek-rtl815x-ethernet" do
     "~/Library/Application Scripts/com.realtek.app.RTL815xEthernet",
     "~/Library/Containers/com.realtek.app.RTL815xEthernet",
   ]
-
-  caveats <<~EOS
-    Launch RTL815xEthernetApp from /Applications and approve its DriverKit extension in System Settings.
-  EOS
 end
