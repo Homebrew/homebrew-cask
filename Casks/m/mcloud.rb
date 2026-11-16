@@ -1,9 +1,9 @@
 cask "mcloud" do
   arch arm: "arm", intel: "intel"
 
-  version "4.3.2,000"
-  sha256 arm:   "2aa43502306353ca57d91dbf10c5c52592ec11f907ef0fdb65f01ee0c96709e2",
-         intel: "76c1d6853a49899963194eb88d88aa90a059c76ddbc490bc3e144995891ea056"
+  version "4.3.3,000"
+  sha256 arm:   "588840c7caf9cc3aa586d6109bd46f88a11f4db852c429ad029424ce26edea96",
+         intel: "8b02acc941746468ae50c8f0315a77c81369e0f3ff6dde53e4fcff0ea8ad2672"
 
   url "https://yun.mcloud.139.com/mCloudPc/macV#{version.csv.first.no_dots}/mCloud-#{version.csv.first}-#{version.csv.second}-#{arch}.dmg"
   name "mcloud"
