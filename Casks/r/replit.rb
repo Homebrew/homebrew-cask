@@ -1,6 +1,6 @@
 cask "replit" do
-  version "1.1.25,1794732695336328"
-  sha256 "8d3d9be3f7b896634552f1652cec5bc2d6fdfe0f46586cfcca88403ef744c873"
+  version "1.1.26,1794810732945910"
+  sha256 "50392e96ec4a1aee595e79d273eeda54014cca50eea3b8ca9e4ae786e6200429"
 
   url "https://desktop-updates.replit.com/desktop-app/updates/stable/darwin/arm64/artifacts/#{version.csv.first}/#{version.csv.second}/Replit-#{version.csv.first}-arm64-mac.zip"
   name "Replit"
