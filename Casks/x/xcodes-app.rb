@@ -20,11 +20,14 @@ cask "xcodes-app" do
 
   app "Xcodes.app"
 
-  zap trash: [
-    "/Library/PrivilegedHelperTools/com.robotsandpencils.XcodesApp.Helper",
-    "~/Library/Application Support/com.robotsandpencils.XcodesApp",
-    "~/Library/Caches/com.xcodesorg.xcodesapp",
-    "~/Library/HTTPStorages/com.xcodesorg.xcodesapp",
-    "~/Library/Preferences/com.xcodesorg.xcodesapp.plist",
-  ]
+  zap delete: [
+        "/Library/PrivilegedHelperTools/com.robotsandpencils.XcodesApp.Helper",
+        "/Library/PrivilegedHelperTools/com.xcodesorg.xcodesapp.Helper",
+      ],
+      trash:  [
+        "~/Library/Application Support/com.robotsandpencils.XcodesApp",
+        "~/Library/Caches/com.xcodesorg.xcodesapp",
+        "~/Library/HTTPStorages/com.xcodesorg.xcodesapp",
+        "~/Library/Preferences/com.xcodesorg.xcodesapp.plist",
+      ]
 end
