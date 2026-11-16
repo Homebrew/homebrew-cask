@@ -10,8 +10,8 @@ cask "discord" do
     end
   end
   on_monterey :or_newer do
-    version "0.0.422"
-    sha256 "6fedd6856cbc48656704dfc718d52114e12ffae9ae904d429ae6e1ded2081fa2"
+    version "0.0.423"
+    sha256 "8edb6957c30e78250909f4f746546077f25e032f9532852c4b1c2f8bfd37beb2"
 
     url "https://stable.dl2.discordapp.net/distro/app/stable/osx/universal/#{version}/Discord.dmg"
 
