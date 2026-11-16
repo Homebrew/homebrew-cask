@@ -1,9 +1,9 @@
 cask "mattermost" do
   arch arm: "arm64", intel: "x64"
 
-  version "6.3.2"
-  sha256 arm:   "7adb624266d125f9ac7d293cc742da52221f0e60991c0728de208c980da3ef33",
-         intel: "c256f69c8d57c1e527bee27205015f0fcc22da2590d11e55afd8d73bce55c5e6"
+  version "6.4.0"
+  sha256 arm:   "9f1f80fb4a4c5a2c6fdff4549bfbe906e6f6dba591fea5f09a62a2ea315791d5",
+         intel: "9c47b7d314d3ab91cb550a49cde04e42f70c08047868203c87e88775b09a8c94"
 
   url "https://releases.mattermost.com/desktop/#{version}/mattermost-desktop-#{version}-mac-#{arch}.zip"
   name "Mattermost"
@@ -19,7 +19,7 @@ cask "mattermost" do
     strategy :github_latest
   end
 
-  depends_on macos: :monterey
+  depends_on macos: :ventura
 
   app "Mattermost.app"
 
