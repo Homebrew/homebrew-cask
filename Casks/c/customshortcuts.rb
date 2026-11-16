@@ -20,6 +20,7 @@ cask "customshortcuts" do
   zap trash: [
     "~/Library/Application Support/com.houdah.CustomShortcuts",
     "~/Library/Caches/com.houdah.CustomShortcuts",
+    "~/Library/HTTPStorages/com.houdah.CustomShortcuts",
     "~/Library/Preferences/com.houdah.CustomShortcuts.plist",
   ]
 end
