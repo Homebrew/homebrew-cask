@@ -1,6 +1,6 @@
 cask "wallpapermachine" do
-  version "1.12.0"
-  sha256 "c762ca347931e2ff5890e28b42a294a3ed65dd1278719c2fde1be97c3035287e"
+  version "1.13.0"
+  sha256 "1e5d903627d16d214d5df379d3ac4cf583e6f69e602eb73d93a6e82775e108cd"
 
   url "https://github.com/MMFoundation/WallpaperMachine/releases/download/v#{version}/WallpaperMachine-#{version}-arm64.dmg"
   name "WallpaperMachine"
