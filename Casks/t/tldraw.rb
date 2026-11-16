@@ -4,11 +4,11 @@ cask "tldraw" do
   arch_end = on_system_conditional macos: "universal", linux: arch
   url_end = on_system_conditional macos: "dmg", linux: "AppImage"
 
-  version "1.24.0"
-  sha256 arm:          "2cbde5be219f3530ea6ab09f435c75364882c2cc545a8f8aec1d2a13e4922b0b",
-         intel:        "2cbde5be219f3530ea6ab09f435c75364882c2cc545a8f8aec1d2a13e4922b0b",
-         arm64_linux:  "ade8374e1d87eb5b79a2d8509cb30372d2ad33367ad6d85cdf49d6ee89ff2d04",
-         x86_64_linux: "d47b5643c6035488d45659b4e8b9ec2225bf12804149f87a3a3baf7a5c2739da"
+  version "1.24.1"
+  sha256 arm:          "4ccf790d462cbc7def653a3747f1a1285e35787d58749e57e74dbf001d97f34e",
+         intel:        "4ccf790d462cbc7def653a3747f1a1285e35787d58749e57e74dbf001d97f34e",
+         arm64_linux:  "ffe195d982b9b3799a34c096b9f04c3df007eaf4a2fafb0d3b723c36e98497ad",
+         x86_64_linux: "5fb084df2a459c92259c440c0dca5c50e11612d19d0575c9cd3c501a63941941"
 
   on_macos do
     auto_updates true
@@ -41,4 +41,9 @@ cask "tldraw" do
   name "tldraw office"
   desc "Editor for .tldr files"
   homepage "https://github.com/tldraw/tldraw-office"
+
+  livecheck do
+    url :url
+    regex(/^v?(\d+(?:\.\d+)+)$/i)
+  end
 end
