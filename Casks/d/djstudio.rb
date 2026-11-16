@@ -2,9 +2,9 @@ cask "djstudio" do
   arch arm: "-arm64"
   livecheck_arch = on_arch_conditional arm: "-apple"
 
-  version "5.0.10"
-  sha256 arm:   "bb154005d33d0c4655bfe28000aceea135ae8b155980d6782533eb923ca09de0",
-         intel: "d5e5b8ac8020106a9ce5c1cf2cabae3bbc64d80f8d325b104f5d1962a42fe517"
+  version "5.0.11"
+  sha256 arm:   "78660abd977da3eac22a6d73d59f90759a567b77d5a21ab7c877778af474ec9e",
+         intel: "ae062cca17478b727337a53fe95f6fa5e409bb1cc4bdd418fb5572372501db73"
 
   url "https://download.dj.studio/DJ.Studio-#{version}#{arch}.dmg"
   name "DJ.Studio"
