@@ -17,7 +17,9 @@ cask "fsnotes" do
   app "FSNotes.app"
 
   zap trash: [
+    "~/Library/Application Scripts/866P6MTE92.co.fluder.FSNotes.Share",
     "~/Library/Application Scripts/co.fluder.FSNotes",
     "~/Library/Containers/co.fluder.FSNotes",
+    "~/Library/Group Containers/866P6MTE92.co.fluder.FSNotes.Share",
   ]
 end

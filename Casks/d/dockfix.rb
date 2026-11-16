@@ -18,6 +18,7 @@ cask "dockfix" do
   app "DockFix.app"
 
   zap trash: [
+    "~/Library/Application Support/DockFix",
     "~/Library/Caches/dk.FIrstForm.DockFix",
     "~/Library/HTTPStorages/dk.FIrstForm.DockFix",
     "~/Library/Preferences/dk.FIrstForm.DockFix.plist",

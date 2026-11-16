@@ -24,5 +24,6 @@ cask "hiddenbar" do
     "~/Library/Application Scripts/com.dwarvesv.minimalbar",
     "~/Library/Containers/com.dwarvesv.LauncherApplication",
     "~/Library/Containers/com.dwarvesv.minimalbar",
+    "~/Library/Preferences/com.dwarvesv.minimalbar.plist",
   ]
 end
