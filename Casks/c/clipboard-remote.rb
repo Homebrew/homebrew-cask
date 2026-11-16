@@ -21,6 +21,8 @@ cask "clipboard-remote" do
 
   zap trash: [
     "~/Library/Application Scripts/com.ntwind.remote.clipboard",
+    "~/Library/Application Scripts/com.ntwind.remote.clipboard-LaunchAtLoginHelper",
     "~/Library/Containers/com.ntwind.remote.clipboard",
+    "~/Library/Containers/com.ntwind.remote.clipboard-LaunchAtLoginHelper",
   ]
 end
