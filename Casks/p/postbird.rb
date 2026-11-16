@@ -1,25 +1,27 @@
 cask "postbird" do
-  version "0.8.4"
-  sha256 "d9ac960e0c48fab31b0662c726a3eb373794c14dd49651fa533ca3c1c67c67be"
+  version "0.9.1"
+  sha256 "20ae32670b9f9b6363398e785dbdf31f8254dd5d99549bef37a523a8eb544f7d"
 
-  url "https://github.com/Paxa/postbird/releases/download/#{version}/Postbird-#{version}.dmg"
+  url "https://github.com/Paxa/postbird/releases/download/v#{version}/Postbird-macos-arm64.dmg"
   name "Postbird"
-  desc "Open-source PostgreSQL GUI client"
+  desc "PostgreSQL GUI client"
   homepage "https://github.com/Paxa/postbird"
 
-  disable! date: "2026-09-01", because: :fails_gatekeeper_check
+  livecheck do
+    url :url
+    strategy :github_latest
+  end
 
-  depends_on :macos
+  depends_on arch: :arm64
+  depends_on macos: ">= :sonoma"
 
   app "Postbird.app"
 
   zap trash: [
     "~/Library/Application Support/Postbird",
     "~/Library/Preferences/com.electron.postbird.plist",
+    "~/Library/Preferences/org.paxa.postbird.plist",
     "~/Library/Saved Application State/com.electron.postbird.savedState",
+    "~/Library/WebKit/org.paxa.postbird",
   ]
-
-  caveats do
-    requires_rosetta
-  end
 end
