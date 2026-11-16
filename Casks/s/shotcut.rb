@@ -2,12 +2,12 @@ cask "shotcut" do
   os = on_system_conditional macos: "macos", linux: "linux-x86_64"
   url_end = on_system_conditional macos: "dmg", linux: "AppImage"
 
-  sha256 arm:          "0e4c95ad41f26d96c442642e03e0c107bf98abfceea78724e2b05aa704ef79c6",
-         intel:        "0e4c95ad41f26d96c442642e03e0c107bf98abfceea78724e2b05aa704ef79c6",
-         x86_64_linux: "a876d10ea083d2d61e62045c410d8951936264978bdd39f46b0a5ae380e0bc47"
+  sha256 arm:          "664c6ea4195d58dbf3fd43f3d74ae46d59b6310f9ac628d5e70a8e2786a4f80b",
+         intel:        "664c6ea4195d58dbf3fd43f3d74ae46d59b6310f9ac628d5e70a8e2786a4f80b",
+         x86_64_linux: "5e2324f32eafc72de0cbd5f1882c54b058ec94efd6973e3f197b844ca4311c4a"
 
   on_macos do
-    version "26.9.28,26.9.27"
+    version "26.11.15"
 
     depends_on macos: :monterey
 
@@ -20,7 +20,7 @@ cask "shotcut" do
     ]
   end
   on_linux do
-    version "26.10.3,26.9.27"
+    version "26.11.15"
 
     depends_on arch: :x86_64
 
