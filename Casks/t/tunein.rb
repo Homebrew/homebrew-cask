@@ -1,6 +1,6 @@
 cask "tunein" do
-  version "1.33.0"
-  sha256 "477a6709cc21e8fe220b1646ff520aadef26f33fdd9bc9ada28898bc127f9136"
+  version "1.34.0"
+  sha256 "5c22bf5994dabec476b00289acb5a5be21db541504018f27c0de5cdcb9157b9a"
 
   url "https://cdn-desktop.tunein.com/release/TuneIn-#{version}-universal.dmg"
   name "TuneIn"
