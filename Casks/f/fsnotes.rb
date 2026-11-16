@@ -1,6 +1,6 @@
 cask "fsnotes" do
   version "7.6.0"
-  sha256 "4f1ba04ff305f0326c60fb5efb47f8c9992e0f3e21b240bcc35d883b52da5d37"
+  sha256 :no_check # required as upstream package is updated in-place
 
   url "https://github.com/glushchenko/fsnotes/releases/download/v#{version}/FSNotes_v#{version}.zip"
   name "FSNotes"
