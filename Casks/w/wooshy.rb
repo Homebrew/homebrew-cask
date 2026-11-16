@@ -1,5 +1,5 @@
 cask "wooshy" do
-  version "53"
+  version "54"
   sha256 :no_check
 
   url "https://releases.wooshy.app/Wooshy.zip"
