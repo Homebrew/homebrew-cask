@@ -14,7 +14,7 @@ cask "whodb" do
 
   depends_on :macos
 
-  app "WhoDB.app"
+  app "WhoDB Community.app"
 
   zap trash: [
     "~/Library/Application Support/whodb",
