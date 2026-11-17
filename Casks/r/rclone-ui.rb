@@ -3,11 +3,11 @@ cask "rclone-ui" do
        intel: on_system_conditional(macos: "x64", linux: "amd64")
   os macos: "dmg", linux: "AppImage"
 
-  version "3.7.5"
-  sha256 arm:          "f2f315d82671e122da7182a62e4abbac2d04bbfce8a0460fc0b6b6e23b1f481d",
-         intel:        "db376085a15265d1a9133a7f9b08850ff961b44a4645597fbba7002dba0b8c81",
-         arm64_linux:  "4466fb1b24131323e4518492fbc4c5e672b7c98131b801e74061df80f9301502",
-         x86_64_linux: "68a8b0c9f5fa9510f9093a9b60c6674715953a49bbec84f0cc31c4d524c609db"
+  version "3.7.6"
+  sha256 arm:          "f7f1dc8195708cb1371eb23e4962f66c2dea5dd01ad80d047e5997fc2691bcc1",
+         intel:        "d864fddd4a2a6ef02fac49940ff31b1973c5aa567d84bf70d9d633acf2697bc5",
+         arm64_linux:  "2ccb9db087353f0d29db5e28eb0ca3934bb971e1e15b31622c38522292997312",
+         x86_64_linux: "4d66440f1bcd790ecb19625cef580992613f022cbad3743c3bfd2600e4dd1e99"
 
   on_macos do
     depends_on macos: :ventura
