@@ -16,7 +16,10 @@ cask "slippi-dolphin" do
 
   app "Slippi Dolphin.app"
 
+  uninstall quit: "com.project-slippi.dolphin"
+
   zap trash: [
+    "~/Library/Application Support/com.project-slippi.dolphin",
     "~/Library/Application Support/Dolphin",
     "~/Library/Preferences/com.project-slippi.dolphin.plist",
   ]
