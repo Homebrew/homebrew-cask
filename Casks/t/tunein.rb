@@ -17,6 +17,7 @@ cask "tunein" do
   app "TuneIn.app"
 
   zap trash: [
+    "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.tunein.desktop.sfl*",
     "~/Library/Application Support/TuneIn",
     "~/Library/Caches/com.tunein.desktop",
     "~/Library/Caches/com.tunein.desktop.ShipIt",
