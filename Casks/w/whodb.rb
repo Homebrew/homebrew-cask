@@ -1,6 +1,6 @@
 cask "whodb" do
-  version "0.138.0"
-  sha256 "4efeba634f9c66eeb153ae84a2c63ad2963312bc47799eb19a921defa603f51c"
+  version "0.139.0"
+  sha256 "8048401a55579548884e9c6c448c869ddf4e5bd9c6c104dd882b87d780382c7b"
 
   url "https://github.com/clidey/whodb/releases/download/#{version}/whodb.dmg"
   name "WhoDB"
@@ -14,7 +14,7 @@ cask "whodb" do
 
   depends_on :macos
 
-  app "WhoDB.app"
+  app "WhoDB Community.app"
 
   zap trash: [
     "~/Library/Application Support/whodb",
