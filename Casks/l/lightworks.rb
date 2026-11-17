@@ -1,8 +1,8 @@
 cask "lightworks" do
-  version "2025.2.56356"
-  sha256 "8771f90dfc4a1872567e320679729df1a9a06b14ad47f69a4b1200528eef0ef1"
+  version "2026.1.1"
+  sha256 "8ba8171d9e0c58292a8f5cd374dcfc5e475864796db802bc9388ad191a7015d4"
 
-  url "https://cdn.lwks.com/releases/#{version.major_minor}/Lightworks-#{version.major_minor}-#{version.patch}.dmg"
+  url "https://cdn.lwks.com/releases/#{version}/Lightworks-#{version}.dmg"
   name "Lightworks"
   desc "Complete video creation package"
   homepage "https://www.lwks.com/"
@@ -15,13 +15,9 @@ cask "lightworks" do
     end
   end
 
-  depends_on :macos
+  depends_on macos: :monterey
 
   app "Lightworks.app"
 
   zap trash: "~/Library/Saved Application State/com.editshare.lightworks.savedState"
-
-  caveats do
-    requires_rosetta
-  end
 end
