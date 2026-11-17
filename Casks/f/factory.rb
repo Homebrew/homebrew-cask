@@ -1,7 +1,7 @@
 cask "factory" do
   arch arm: "arm64", intel: "x64"
 
-  version "1.12.1"
+  version "1.13.0"
   sha256 :no_check # required as upstream package is updated in-place
 
   url "https://downloads.factory.ai/factory-desktop/releases/#{version}/darwin/#{arch}/Factory-#{version}-#{arch}.dmg"
@@ -15,7 +15,7 @@ cask "factory" do
   end
 
   auto_updates true
-  depends_on macos: :monterey
+  depends_on macos: :ventura
 
   app "Factory.app"
 
