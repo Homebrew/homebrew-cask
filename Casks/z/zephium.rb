@@ -15,6 +15,7 @@ cask "zephium" do
 
   zap trash: [
     "~/Library/Application Support/app.zephium",
+    "~/Library/Caches/app.zephium",
     "~/Library/Logs/app.zephium",
     "~/Library/Preferences/app.zephium.plist",
     "~/Library/WebKit/app.zephium",
