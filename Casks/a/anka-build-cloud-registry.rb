@@ -1,9 +1,9 @@
 cask "anka-build-cloud-registry" do
   arch arm: "arm64", intel: "amd64"
 
-  version "1.52.0-36aa9fba"
-  sha256 arm:   "6081e5b4f0d18163f6f2fbfa3f2c422b51fecc4cde181da1106199df17fdabbd",
-         intel: "5a3c06f5e7d924cbbb53a5ec73770438635c0594aecfecda55e49ba3635840dc"
+  version "1.52.1-72c29153"
+  sha256 arm:   "df7a3083d9bfd0f16a8f08e94a1970bd62a5ab69788d79fe9eebe3f9205c9803",
+         intel: "007eeba80802491252e2fe83490583afc226ea8f31c3f82d317b93fecef115d0"
 
   url "https://downloads.veertu.com/anka/anka-registry-#{arch}-#{version}.pkg"
   name "Anka Build Cloud Registry"
