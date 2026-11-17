@@ -45,5 +45,10 @@ cask "nodeterm" do
   desc "Node-based terminal manager for terminals and coding agents on a canvas"
   homepage "https://nodeterm.dev/"
 
+  livecheck do
+    url :url
+    strategy :github_latest
+  end
+
   auto_updates true
 end
