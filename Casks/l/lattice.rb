@@ -1,16 +1,19 @@
 cask "lattice" do
-  arch arm: "aarch64", intel: "x64"
+  version "0.16.19"
+  sha256 "b4596daad22961f4c57b2cc23e71df99a73ff1f25cfb34c5f09a44d81578df4e"
 
-  version "0.16.18"
-  sha256 arm:   "09e316fbb0febf5717e4f0b33fba8e2ce5675a79cf95f35a438a065be1bce20d",
-         intel: "883d49b817f038eaf46c08f00433b96d1a34445ffaf45fb7d55ea9f2b301ced9"
-
-  url "https://github.com/leo1oel/lattice/releases/download/v#{version}/Lattice_#{version}_#{arch}.dmg"
+  url "https://github.com/leo1oel/lattice/releases/download/v#{version}/Lattice_#{version}_aarch64.dmg"
   name "Lattice"
   desc "LaTeX editor"
   homepage "https://leo1oel.github.io/lattice/"
 
+  livecheck do
+    url :url
+    strategy :github_latest
+  end
+
   auto_updates true
+  depends_on arch: :arm64
   depends_on macos: :sonoma
 
   app "Lattice.app"
