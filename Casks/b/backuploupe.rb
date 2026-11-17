@@ -25,6 +25,7 @@ cask "backuploupe" do
   zap trash: [
     "~/Library/Application Support/BackupLoupe",
     "~/Library/Caches/com.apple.helpd/Generated/BackupLoupe*",
+    "~/Library/Logs/BackupLoupe",
     "~/Library/Preferences/com.soma-zone.BackupLoupe.plist",
   ]
 end

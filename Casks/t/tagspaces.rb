@@ -15,6 +15,7 @@ cask "tagspaces" do
     app "TagSpaces.app"
 
     zap trash: [
+      "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/org.tagspaces.desktopapp.sfl*",
       "~/Library/Application Support/TagSpaces",
       "~/Library/Preferences/org.tagspaces.desktopapp.plist",
       "~/Library/Saved Application State/org.tagspaces.desktopapp.savedState",

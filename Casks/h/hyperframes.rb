@@ -27,6 +27,7 @@ cask "hyperframes" do
   app "HyperFrames.app"
 
   zap trash: [
+    "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/dev.hyperframes.desktop.sfl*",
     "~/Library/Application Support/HyperFrames",
     "~/Library/Logs/HyperFrames",
     "~/Library/Preferences/dev.hyperframes.desktop.plist",

@@ -25,6 +25,8 @@ cask "djstudio" do
     "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/dj.studio.app.sfl*",
     "~/Library/Application Support/DJ.Studio",
     "~/Library/Application Support/dj.studio.app",
+    "~/Library/Caches/DJ.Studio",
+    "~/Library/Logs/DJ.Studio",
     "~/Library/Preferences/dj.studio.app.plist",
     "~/Library/Saved Application State/dj.studio.app.savedState",
   ]
