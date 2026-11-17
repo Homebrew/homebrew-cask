@@ -1,6 +1,6 @@
 cask "blave" do
-  version "0.1.44"
-  sha256 "35391c12d0c0a52522d3bb4d360e51b5b2558cccbd0bbe2a9e31299bdb988483"
+  version "0.1.55"
+  sha256 "9348b885d0a343e797d67594fadfbdc6e0ff44c2033176940def6da42c6aafe7"
 
   url "https://github.com/Blave-TW/blave-agent/releases/download/desktop-v#{version}/Blave-#{version}-universal.dmg"
   name "Blave"
@@ -20,7 +20,7 @@ cask "blave" do
 
   zap trash: [
     "~/Library/Application Support/Blave",
-    "~/Library/Application Support/blave-desktop",
+    "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/org.blave.desktop.sfl*",
     "~/Library/Caches/blave-desktop-updater",
     "~/Library/Caches/org.blave.desktop",
     "~/Library/Caches/org.blave.desktop.ShipIt",
