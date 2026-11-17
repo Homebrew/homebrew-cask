@@ -19,6 +19,7 @@ cask "homerow" do
 
   zap trash: [
     "~/Library/Application Scripts/com.superultra.HomerowLauncher",
+    "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.superultra.homerow.sfl*",
     "~/Library/Application Support/com.superultra.Homerow",
     "~/Library/Caches/com.superultra.Homerow",
     "~/Library/HTTPStorages/com.superultra.Homerow",
