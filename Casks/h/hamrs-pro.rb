@@ -23,7 +23,9 @@ cask "hamrs-pro" do
   uninstall quit: "app.hamrs.pro"
 
   zap trash: [
+    "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/app.hamrs.pro.sfl*",
     "~/Library/Application Support/hamrs-pro",
     "~/Library/Logs/hamrs-pro",
+    "~/Library/Preferences/app.hamrs.pro.plist",
   ]
 end
