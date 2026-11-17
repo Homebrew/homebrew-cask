@@ -26,6 +26,7 @@ cask "macwhisper" do
   depends_on macos: :sequoia
 
   app "MacWhisper.app"
+  binary "#{appdir}/MacWhisper.app/Contents/MacOS/mw"
 
   uninstall quit: "com.goodsnooze.MacWhisper"
 
