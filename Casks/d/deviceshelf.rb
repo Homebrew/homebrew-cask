@@ -2,11 +2,11 @@ cask "deviceshelf" do
   arch arm: on_system_conditional(linux: "-arm64")
   os macos: "dmg", linux: "AppImage"
 
-  version "1.9.90"
-  sha256 arm:          "ce9985843a24879769a4f555ab46b6f1639127a31d4047e93edb3fa14f56f8c9",
-         intel:        "ce9985843a24879769a4f555ab46b6f1639127a31d4047e93edb3fa14f56f8c9",
-         arm64_linux:  "c42e70923427408122bed822ee5e5739a0dc0d151697c761ccb70809c262d341",
-         x86_64_linux: "65ac9ef2f0cd4d6596ed6263c9b8c710c1b6e03d118a7276862e9cd2f484edb7"
+  version "1.9.91"
+  sha256 arm:          "6b09098f2da416e92ab2ba897ce4ba318295fca6cf244228f86636077f58bc3c",
+         intel:        "6b09098f2da416e92ab2ba897ce4ba318295fca6cf244228f86636077f58bc3c",
+         arm64_linux:  "c84cd5d9c236a62fc52e35f22c134309dd56a743a8b7676b88f59ebf2477386b",
+         x86_64_linux: "5b9d47105d5a33f71bfeab58f27c76881a081cff7e72e9ac0331b420d152c3d5"
 
   on_macos do
     app "DeviceShelf.app"
