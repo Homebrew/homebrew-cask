@@ -2,12 +2,12 @@ cask "conductor" do
   arch arm: "aarch64", intel: "x86_64"
 
   on_arm do
-    version "0.94.2,01M78N5E73FER33DYBWBVGAD0W"
-    sha256 "0a5fe2c802f8c3715a4a61869e4abb7accee03b5b201e0ef4a18bc50939eed16"
+    version "0.95.0,01M7KFRT970R5HQK402GH1XNEA"
+    sha256 "df01da517408054ac49a16db68a16ffdfb7875cbba010d61359c709b954641da"
   end
   on_intel do
-    version "0.94.2,01M78N5KF1PK3XXKXR1P6Y2KKZ"
-    sha256 "08f37b9d58a7a9204fa2a7516f7d00e1610a719521dbf04614abae22df6f9c39"
+    version "0.95.0,01M7KFT0VEK2A1DNKDEZC09Y0Q"
+    sha256 "e54e36cca5b5d72b3342abd0277869c18bd4f9647be5990cdefb8aada280f528"
   end
 
   url "https://cdn.crabnebula.app/asset/#{version.csv.second}"
@@ -28,13 +28,15 @@ cask "conductor" do
   end
 
   auto_updates true
-  depends_on :macos
+  depends_on macos: :ventura
 
   app "Conductor.app"
 
   zap trash: [
+        "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.conductor.app.sfl*",
         "~/Library/Application Support/com.conductor.app",
         "~/Library/Caches/com.conductor.app",
+        "~/Library/Preferences/com.conductor.app.plist",
         "~/Library/WebKit/com.conductor.app",
       ],
       rmdir: "~/.conductor"
