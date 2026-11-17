@@ -1,5 +1,5 @@
 cask "unclutter" do
-  version "2.2.18d"
+  version "2.3.0d"
   sha256 :no_check
 
   url "https://unclutterapp.com/files/Unclutter.zip"
