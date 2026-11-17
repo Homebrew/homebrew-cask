@@ -2,10 +2,10 @@ cask "hiddenbar" do
   version "1.13.0"
   sha256 "a811717d84faba478ea66caa224f3360a9e5d844a7a50fa09009f32d78131a44"
 
-  url "https://github.com/dwarvesf/hidden/releases/download/v#{version}/Hidden-Bar-v#{version}-macos.zip"
+  url "https://github.com/consolelabs/hidden/releases/download/v#{version}/Hidden-Bar-v#{version}-macos.zip"
   name "Hidden Bar"
   desc "Utility to hide menu bar items"
-  homepage "https://github.com/dwarvesf/hidden/"
+  homepage "https://github.com/consolelabs/hidden/"
 
   livecheck do
     url :url
