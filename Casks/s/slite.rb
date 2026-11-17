@@ -1,9 +1,9 @@
 cask "slite" do
   arch arm: "arm64", intel: "x64"
 
-  version "1.6.2,2609235g77wzgpj"
-  sha256 arm:   "d7815f2bfd0c048c8bae15aebc0d1c6fdd1a31fc70f68fa21ef34834fe2005c9",
-         intel: "67cbcd371151d7593006fe0068a78c004a683564845129ac9a67f3cd08582d0a"
+  version "1.6.3,261117sr7osgrin"
+  sha256 arm:   "ffff0089477de66d918c7936ec6450ffd3b34cb5a67c2e5446898e469a1f18c9",
+         intel: "42a31b62c2d5bff7cc2e72f77c78ea24ca52c1af954d89de338368f8049be042"
 
   url "https://download.todesktop.com/20062929x31pwfi/Slite%20#{version.csv.first}%20-%20Build%20#{version.csv.second}-#{arch}-mac.zip"
   name "Slite"
@@ -23,11 +23,12 @@ cask "slite" do
     end
   end
 
-  depends_on macos: :monterey
+  depends_on macos: :ventura
 
   app "Slite.app"
 
   zap trash: [
+    "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.slite.desktop.sfl*",
     "~/Library/Application Support/Slite",
     "~/Library/Caches/com.slite.desktop",
     "~/Library/Caches/com.slite.desktop.ShipIt",
