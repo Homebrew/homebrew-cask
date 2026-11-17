@@ -25,6 +25,7 @@ cask "podman-desktop" do
 
   zap trash: [
     "~/.local/share/containers/podman-desktop",
+    "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/io.podmandesktop.podmandesktop.sfl*",
     "~/Library/Application Support/Podman Desktop",
     "~/Library/Preferences/io.podmandesktop.PodmanDesktop.plist",
     "~/Library/Saved Application State/io.podmandesktop.PodmanDesktop.savedState",
