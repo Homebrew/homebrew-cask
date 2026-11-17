@@ -1,5 +1,5 @@
 cask "vienna-assistant" do
-  version "1.2.650"
+  version "1.2.656"
   sha256 :no_check
 
   url "https://api.vsl.co.at/data/download/va?os=mac",
