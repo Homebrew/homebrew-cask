@@ -22,8 +22,8 @@ cask "microsoft-word" do
     end
   end
   on_sequoia :or_newer do
-    version "16.115.26110837"
-    sha256 "5db08593bc098f70e02cd2c4a2d0b5a724bb0cae6bc4da26bf208eb716717c2d"
+    version "16.115.26111533"
+    sha256 "5ac9129c878fa04466aec509d47e9dcf86638dd13b5bf55b84b2e0da6392930c"
 
     livecheck do
       url "https://go.microsoft.com/fwlink/p/?linkid=525134"
