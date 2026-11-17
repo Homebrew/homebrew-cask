@@ -1,9 +1,9 @@
 cask "advanced-renamer" do
   arch arm: "arm", intel: "intel"
 
-  version "4.28"
-  sha256 arm:   "3d255e02e1afc47d2688b79dabf2b72228147d70d544cddf0e3fa5ea043dc1f4",
-         intel: "9d10f28ef70f85e7c792ef07d0caa8b30bd02e28cc0fc8a2e38d33430a667466"
+  version "4.29"
+  sha256 arm:   "1172fe40a4601e9e52eeb4b60689aa3b039fd029abc8e1deaf255ee040625be1",
+         intel: "3aca7d44ec3b83487e36cb36382751325936cb14a41c037f8d24aeca7ebc2752"
 
   url "https://www.advancedrenamer.com/down/macos/#{arch}/AdvancedRenamer_#{version.dots_to_underscores}.dmg"
   name "Advanced Renamer"
