@@ -1,6 +1,6 @@
 cask "batteries" do
-  version "3.1.4"
-  sha256 "ab63ccbb85337bf24c75102f76d213c52bdb389021b2c620fbaec3a847b82ace"
+  version "3.1.5"
+  sha256 "da1c52ffa33431e337510d2ac8c4e23af0b6c8af0bf7d04f8a301a068ba0a30c"
 
   url "https://github.com/ronyfadel/BatteriesReleases/releases/download/v#{version}/Batteries.dmg"
   name "Batteries"
