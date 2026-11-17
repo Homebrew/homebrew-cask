@@ -24,6 +24,8 @@ cask "eve-online" do
     "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.ccpgames.eve-online-launcher.sfl*",
     "~/Library/Application Support/EVE Online",
     "~/Library/Caches/CCP/EVE",
+    "~/Library/Caches/com.ccpgames.eve-online-launcher*",
+    "~/Library/HTTPStorages/com.ccpgames.eve-online-launcher",
     "~/Library/Logs/EVE Online",
     "~/Library/Preferences/com.ccpgames.eve-online-launcher.plist",
     "~/Library/Preferences/com.ccpgames.EVE.plist",
