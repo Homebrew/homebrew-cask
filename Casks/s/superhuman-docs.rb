@@ -1,6 +1,6 @@
 cask "superhuman-docs" do
-  version "1.0.22"
-  sha256 "c7c44dcb7e216de0f6c6225045d3d5991fc574d5444f6a63a7e2a09f8cbd596f"
+  version "1.0.24"
+  sha256 "242c2b77b364e5035bf5f176ea504ad4d32351e68a2ffcf263ecdee2e6d6c485"
 
   url "https://docs-desktop.superhuman.com/releases/Superhuman-Docs-#{version}-universal.dmg"
   name "Superhuman Docs"
