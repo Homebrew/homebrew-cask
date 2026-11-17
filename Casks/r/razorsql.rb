@@ -22,5 +22,8 @@ cask "razorsql" do
 
   app "RazorSQL.app"
 
-  zap trash: "~/.razorsql"
+  zap trash: [
+    "~/.razorsql",
+    "~/Library/RazorSQL",
+  ]
 end
