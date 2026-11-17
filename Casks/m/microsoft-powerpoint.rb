@@ -22,8 +22,8 @@ cask "microsoft-powerpoint" do
     end
   end
   on_sequoia :or_newer do
-    version "16.115.26110837"
-    sha256 "3178997f7a53596d2902833d6878dd5b594d3345025c64b83159dfcc93962334"
+    version "16.115.26111533"
+    sha256 "7a2adf3064225a6461c24563ec11bf5766e547228ff2b64c9a1d6e1cb17ea2f1"
 
     livecheck do
       url "https://go.microsoft.com/fwlink/p/?linkid=525136"
