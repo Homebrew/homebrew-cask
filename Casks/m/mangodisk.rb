@@ -1,6 +1,6 @@
 cask "mangodisk" do
-  version "2.0.0"
-  sha256 "abcc30a4ebcefd969f7aaa2272c9794867df9f9ea7adbeeb902a2f078cd4e11d"
+  version "2.1.0"
+  sha256 "5a0c1c04ca6fe16c031087a0e0bdefb020e34dadc837475434476f84b1f897f8"
 
   url "https://github.com/harry0703/MangoDisk/releases/download/v#{version}/MangoDisk-#{version}-macos.dmg"
   name "MangoDisk"
