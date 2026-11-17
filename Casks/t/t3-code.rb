@@ -1,13 +1,15 @@
 cask "t3-code" do
   arch arm: "arm64", intel: on_system_conditional(macos: "x64", linux: "x86_64")
-  os macos: "dmg", linux: "AppImage"
 
-  version "0.1.9"
-  sha256 arm:          "b0a15cb7aac2461425f670b14ac52d7a207a0e2008250882c850b4cd62aa926a",
-         intel:        "d5a3f2c5918c85247b65b7fbf9b98af89c777a71b7e8a0adfdf7ff5da077def9",
-         x86_64_linux: "d0ab56df3e338f242848435621297fd963a33715b0d8208dbf08399659572d81"
+  version "0.1.10"
+  sha256 arm:          "ba7beff605bf080bb46ad9c02c07dc7ccbb4c96da2dfedc268bdbcd99f5f1dff",
+         intel:        "592de59810ad24646125bef557e47cb6f108f5e18ea570e44a182e414abf10ad",
+         arm64_linux:  "592de59810ad24646125bef557e47cb6f108f5e18ea570e44a182e414abf10ad",
+         x86_64_linux: "7cded13c10757153901edddac9a2608b156f17445de506ef9ffdf73c01528d79"
 
   on_macos do
+    url "https://github.com/pingdotgg/t3code/releases/download/v#{version}/T3-Code-#{version}-#{arch}.dmg"
+
     auto_updates true
     depends_on macos: :ventura
 
@@ -26,9 +28,9 @@ cask "t3-code" do
     ]
   end
   on_linux do
-    depends_on arch: :x86_64
+    url "https://github.com/pingdotgg/t3code/releases/download/v#{version}/T3-Code-#{arch}.AppImage"
 
-    app_image "T3-Code-#{version}-#{arch}.AppImage", target: "T3 Code.AppImage"
+    app_image "T3-Code-#{arch}.AppImage", target: "T3 Code.AppImage"
 
     zap trash: [
       "~/.config/T3 Code (Alpha)",
@@ -45,7 +47,6 @@ cask "t3-code" do
     ]
   end
 
-  url "https://github.com/pingdotgg/t3code/releases/download/v#{version}/T3-Code-#{version}-#{arch}.#{os}"
   name "T3 Code"
   desc "Minimal GUI for AI code agents"
   homepage "https://t3.codes/"
