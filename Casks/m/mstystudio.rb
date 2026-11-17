@@ -1,16 +1,16 @@
 cask "mstystudio" do
   arch arm: "arm64", intel: "x64"
 
-  version "2.9.12"
+  version "3.0.1"
   sha256 :no_check
 
-  url "https://next-assets.msty.studio/app/latest/mac/MstyStudio_#{arch}.dmg"
+  url "https://next-assets.msty.studio/app/latest/v3/mac/MstyStudio_#{arch}.dmg"
   name "Msty Studio"
   desc "AI platform with local and online models"
   homepage "https://msty.ai/"
 
   livecheck do
-    url "https://next-assets.msty.studio/app/latest/mac/latest-mac.yml"
+    url "https://next-assets.msty.studio/app/latest/v3/mac/latest-mac.yml"
     strategy :electron_builder
   end
 
@@ -22,10 +22,13 @@ cask "mstystudio" do
   uninstall quit: "com.MstyStudio.app"
 
   zap trash: [
-    "~/Library/Application Support/CrashReporter/MstyStudio_*.plist",
+    "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/mstystudio.sfl*",
     "~/Library/Application Support/MstyStudio",
+    "~/Library/Caches/MstyStudio*",
+    "~/Library/Caches/mstystudio-updater",
+    "~/Library/HTTPStorages/MstyStudio",
     "~/Library/Logs/MstyStudio",
+    "~/Library/Preferences/ByHost/MstyStudio.ShipIt.*.plist",
     "~/Library/Preferences/MstyStudio.plist",
-    "~/Library/Saved Application State/com.MstyStudio.app.savedState",
   ]
 end
