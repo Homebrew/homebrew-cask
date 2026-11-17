@@ -5,7 +5,7 @@ cask "max-messages" do
   url "https://mailarchiver.b-cdn.net/MAXMessages#{version}.dmg"
   name "MAX Messages"
   desc "Archive and browse conversations from the Messages app"
-  homepage "https://www.mothsoftware.com/"
+  homepage "https://www.mothsoftware.com/content/content/maxmessages.php"
 
   livecheck do
     url "https://www.mothsoftware.com/MessagesUpdateInformation.json"
@@ -19,7 +19,7 @@ cask "max-messages" do
   app "MAX Messages Installer.app/Contents/Helpers/MAX Messages.app",
       target: "MAX Messages/MAX Messages.app"
 
-  uninstall launchctl: "com.mothsoftware.messages*",
+  uninstall launchctl: "com.mothsoftware.messages-helper.launchd",
             quit:      "com.mothsoftware.messages*",
             rmdir:     "#{appdir}/MAX Messages"
 
@@ -31,5 +31,6 @@ cask "max-messages" do
     "~/Library/LaunchAgents/com.mothsoftware.messages*.plist",
     "~/Library/Preferences/com.mothsoftware.messages*.plist",
     "~/Library/Saved Application State/com.mothsoftware.messages.savedState",
+    "~/Library/WebKit/com.mothsoftware.messages",
   ]
 end
