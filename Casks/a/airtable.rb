@@ -24,6 +24,7 @@ cask "airtable" do
 
   zap trash: [
     "~/Library/Application Support/Airtable",
+    "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.formagrid.airtable.sfl*",
     "~/Library/Caches/com.FormaGrid.Airtable*",
     "~/Library/Cookies/com.FormaGrid.Airtable.binarycookies",
     "~/Library/HTTPStorages/com.FormaGrid.Airtable*",
