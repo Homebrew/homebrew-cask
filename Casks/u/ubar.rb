@@ -12,7 +12,7 @@ cask "ubar" do
     strategy :sparkle, &:short_version
   end
 
-  depends_on :macos
+  depends_on macos: :tahoe
 
   app "uBar.app"
 
