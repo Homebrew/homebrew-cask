@@ -4,11 +4,11 @@ cask "zen" do
   livecheck_os = on_system_conditional macos: "Darwin", linux: "Linux"
   url_end = on_system_conditional macos: "dmg", linux: "AppImage"
 
-  version "1.24.2b"
-  sha256 arm:          "04ee33c2e906b52f90f73384aa50e80a92530ae4b3414fb26a0a982e257f172c",
-         intel:        "04ee33c2e906b52f90f73384aa50e80a92530ae4b3414fb26a0a982e257f172c",
-         arm64_linux:  "228d42846c7ec9eff24e7ec571bda26fb872ee44ed7baa4af929f7fda8e562e1",
-         x86_64_linux: "2e73140a2adf6b0bb5669396339d2c0e7a119408a392a5a807d87810f1a99bf5"
+  version "1.24.3b"
+  sha256 arm:          "86f6a01e786095d7661c68357396a00cd3e169d6ae5e176245077bb701af8b65",
+         intel:        "86f6a01e786095d7661c68357396a00cd3e169d6ae5e176245077bb701af8b65",
+         arm64_linux:  "a04917abc108762dbce78dce0afb46d09428c45f7264aa770ee7418297895225",
+         x86_64_linux: "4fdbf6a99911b240062366c0ecb0b4c683346a9041fe317069d767053563fa15"
 
   on_macos do
     app "Zen.app"
