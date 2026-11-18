@@ -7,7 +7,7 @@ cask "wailbrew" do
   desc "Manage Homebrew packages with a UI"
   homepage "https://github.com/wickenico/WailBrew"
 
-  depends_on :macos
+  depends_on macos: :monterey
 
   app "WailBrew.app"
 
