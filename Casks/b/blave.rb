@@ -4,7 +4,7 @@ cask "blave" do
 
   url "https://github.com/Blave-TW/blave-agent/releases/download/desktop-v#{version}/Blave-#{version}-universal.dmg"
   name "Blave"
-  desc "Workspace where AI coding agents build, backtest and run trading strategies"
+  desc "Algorithmic trading and backtesting app using AI agents"
   homepage "https://blave.org/"
 
   livecheck do
