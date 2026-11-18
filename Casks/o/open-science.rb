@@ -3,10 +3,10 @@ cask "open-science" do
   os macos: "mac", linux: "linux"
   url_end = on_system_conditional macos: "dmg", linux: "AppImage"
 
-  version "1.2.1"
-  sha256 arm:          "16ce6eda533b716373ddff0758a053067da7a47ad05e354a4672a293c5049212",
-         intel:        "f988760dbe40b46c1071f891680d24cd17192285cfb03f5bfb472352e28198ab",
-         x86_64_linux: "25a9cf59713d22431b3662682461fd07673971b84d0505071302f361504a5b1e"
+  version "1.2.2"
+  sha256 arm:          "9b89c15a0cd33a09c72e2768783bf5d940c27932721c5633feb9d2e11c58ec3b",
+         intel:        "3bb7a99b9ea8dcf7e523643abf1ddc2e71331ce969a57b89c498401f3d3945c7",
+         x86_64_linux: "084581734d0aa4e63c138a84216b2c3e0b35de06cb1f2154d76200ceb741aa7c"
 
   on_macos do
     depends_on macos: :monterey
