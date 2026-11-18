@@ -2,11 +2,11 @@ cask "polypane" do
   arch arm: "-arm64"
   file_ext = on_system_conditional macos: "dmg", linux: "AppImage"
 
-  version "31.0.0"
-  sha256 arm:          "8809ea07fb71d966f5066ea3b42e60b594659cf9a74923fa824de2597e63180f",
-         intel:        "9e4fbb353d042fe7cb650a1f28bed82d00b4b8e19f60c533f241553b571b93ee",
-         arm64_linux:  "2318cc9ce186acd0f03ddb64884711f818b90f8a5f476936ce7b6a6845a15428",
-         x86_64_linux: "7d629ce9da00c9c02e035dfcce4395bfc1470d792c875a2f747b43a95cc6933d"
+  version "32.0.0"
+  sha256 arm:          "5f8939f508a3197cff4058d2906a038f3b7bf9c20c63e16e7542294f70d4c135",
+         intel:        "04ba3b0247d4d44979c67c43a242b65cb0d9af8b82ac4d302ca905c867ab1f83",
+         arm64_linux:  "3d87f8ffcb81c931ca966de758944d59f145e62830cd1b7dc55e472a43b1a911",
+         x86_64_linux: "8742c4e362cff9aad14d98edf7eecb3c179ccfe5bb5e1a9e6ea4101adb8b9c10"
 
   on_macos do
     depends_on macos: :ventura
