@@ -1,6 +1,6 @@
 cask "microsoft-copilot" do
-  version "157.0.4341.41,8a59ff1b-b81b-4296-8643-72ac93190eaf"
-  sha256 "d2eef0283791badd3f67684d1b70e4c4a18e6a9fc63570cc9e11d773ef2ed6a6"
+  version "157.0.4341.55,c1457dea-68df-4466-8766-add66540cab6"
+  sha256 "d917cd8f3dc9cbd644744ae69d856c2e89f89333247b042b690477c2e5492349"
 
   url "https://msedge.sf.dl.delivery.mp.microsoft.com/filestreamingservice/files/#{version.csv.second}/Copilot-#{version.csv.first}.pkg"
   name "Microsoft Copilot"
