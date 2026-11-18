@@ -1,6 +1,6 @@
 cask "rencal" do
-  version "0.9.3"
-  sha256 "516da099efd5f9e98a7c964d3b76400e99789969d6ab595703450066485be217"
+  version "0.10.0"
+  sha256 "3b4d7bd1d2401fb4ebe990d9749128a08826b828a37f77b7d4ad893bc10066c7"
 
   url "https://github.com/t4t5/rencal/releases/download/v#{version}/renCal_#{version}_aarch64.dmg"
   name "renCal"
