@@ -3,11 +3,11 @@ cask "standard-notes" do
   os macos: "mac", linux: "linux"
   url_end = on_system_conditional macos: "zip", linux: "AppImage"
 
-  version "3.202.11"
-  sha256 arm:          "8a8d85860487ddf9a9f89b6e06bf00e36d96dbe4ab99d0c41f52f7ff4d47bcaa",
-         intel:        "6eadbf68056ceed370ddac11c68a6ef18ca46721f02813a36209c1292d9958bd",
-         arm64_linux:  "355772d2356f475e730ec38109bef4bd1fc53c9b62a5c3b64e9cb344ba63f9a8",
-         x86_64_linux: "9f58e1edaa32c612d4cc4c93ad42c6435a03e2ac7c762abb5441f70aca5b25b1"
+  version "3.203.0"
+  sha256 arm:          "207024ec4742c76d24057fc44989a3a2f64e22b08df85fcf6ecf1d9ac1094ed6",
+         intel:        "75f184e78530e55b18854a312a4746dd71d11fc3128aece47c4ce332db47f150",
+         arm64_linux:  "f7ee0b38dc27f0610ee7d8b673945d0b2605bbd0272f44e103436080be3dc11e",
+         x86_64_linux: "fca8dca9f2bcf870efdb29032f4bae13c83f12b730d82a90a390cb2be8759d4a"
 
   on_macos do
     app "Standard Notes.app"
