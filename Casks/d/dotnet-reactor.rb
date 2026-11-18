@@ -2,10 +2,10 @@ cask "dotnet-reactor" do
   arch arm: "arm64", intel: "x64"
   os macos: "macos", linux: "linux"
 
-  version "7.7.1.0"
-  sha256 arm:          "a1b7ff8b7292477c81d85296d774cc576250e8ae2ba47137b0f50c233020426d",
-         intel:        "8241eeee6567c5ee4feccb322207a0d5d54d99291e4290b9d7051249072aa792",
-         x86_64_linux: "75063112fda125444089692b41db9b3b54d45288cf7dd7d9354457ca5cb87116"
+  version "7.7.2.0"
+  sha256 arm:          "d9e57da2b8fcc016073cbb1dc45f48a673e95cb92b28aa672a0038d0976909a7",
+         intel:        "dbab7361117fd7562e3f8eb5eb4a832837190edb9aaccbc9140c7b06f9d06d81",
+         x86_64_linux: "967321acfaa559d0aad8d355cdd571f925d6903e7c25d8177265bad35e6a6c3e"
 
   on_macos do
     disable! date: "2026-11-16", because: :fails_gatekeeper_check
