@@ -1,6 +1,6 @@
 cask "clamshell" do
-  version "2.0.3,243"
-  sha256 "c61f977529337cbb71f10247e49457c43e24845ee60a381de2f03214a954908c"
+  version "2.0.4,244"
+  sha256 "d860db95a5e46eeea9720b3dc5aac027c9efec48fb2b62989ae5394adf30f38c"
 
   url "https://clamshell.dev/Clamshell-#{version.csv.first}-#{version.csv.second}.dmg"
   name "Clamshell"
