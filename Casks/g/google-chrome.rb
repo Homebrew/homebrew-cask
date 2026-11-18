@@ -23,6 +23,8 @@ cask "google-chrome" do
 
   app "Google Chrome.app"
 
+  uninstall quit: "com.google.Chrome"
+
   zap launchctl: [
         "com.google.keystone.agent",
         "com.google.keystone.daemon",
