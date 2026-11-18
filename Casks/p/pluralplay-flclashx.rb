@@ -1,9 +1,9 @@
 cask "pluralplay-flclashx" do
   arch arm: "arm64", intel: "amd64"
 
-  version "0.5.7"
-  sha256 arm:   "c487f48e0330008966cc98fb49210d2d74f028836f4b7448869ddb0ab930efa9",
-         intel: "9b8b22ab98545a0ea4e7e9d02ccfaa9265abbd4dc9ea4263e6da10930e72c145"
+  version "0.5.8"
+  sha256 arm:   "e6a1925d5343ab8fad1391fade374f43b561012ccc674ed5f37297ffd8d19f7e",
+         intel: "6b42cacc2e89b393e845d3d5dfd716b19f28bf84a51b433cc0c395ed2ed27853"
 
   url "https://github.com/pluralplay/FlClashX/releases/download/v#{version}/FlClashX-macos-#{arch}.dmg"
   name "FlClashX"
