@@ -2,11 +2,11 @@ cask "expose" do
   arch arm: "arm64", intel: "amd64"
   os macos: "darwin", linux: "linux"
 
-  version "4.5.0"
-  sha256 arm:          "96205ce60ccb00f064d6ea4352f7af5860130d5b382d36ce2e453e35547869df",
-         intel:        "c9932d0cb0c34bfefef6415ad1fa362e204337931a1d93e7eb28e2037268295d",
-         arm64_linux:  "6959afc6090877ac9ba230715ddd8c27e77d8ee32ba5fe5da149d3279450c3de",
-         x86_64_linux: "a3f2f4b6a498974c7306c382d2dc11650b99922db83f32898de47110cdc338c5"
+  version "4.5.2"
+  sha256 arm:          "cbe342a4f3e9a6d06ba549f1ccb9ad8643bb2b6a9c1bdeb744570c21d74ccd6c",
+         intel:        "dfd5345671d6e57918d9c5e250299c03463389a422ca6916e59f4daa34702273",
+         arm64_linux:  "aed785d602fcf856474f58261da4f9881b69587c8663b8563a6e47eb3a464cb4",
+         x86_64_linux: "b831f748dfb82e86efe41f573f7fc6fd7a029cc09daeae2afff88d2adbf4b495"
 
   url "https://assets.beyondco.de/expose/client/#{version}/expose_#{os}_#{arch}.tar.gz"
   name "Expose"
