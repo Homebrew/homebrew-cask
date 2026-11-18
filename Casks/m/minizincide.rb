@@ -1,9 +1,9 @@
 cask "minizincide" do
   arch arm: "aarch64", intel: "x86_64"
 
-  version "2.10.1"
-  sha256 arm:   "6ab899c06a06bd7542f4df2b39e5afaa1658d6af30a65548a249048d1b3468bc",
-         intel: "c5b50d62ab493a354ae2caa5d7fb80ea51ae53a82942b3f358461e1a4a46a2c1"
+  version "2.11.0"
+  sha256 arm:   "4ac0f50a5b504bebc34eb82ee34daeb094a25e012ba5d424b8c3641b4e37c2e1",
+         intel: "cbe5533046a97173cd698f9913aee0ec4cf84e2746924f627cbada798ed3aa93"
 
   url "https://github.com/MiniZinc/MiniZincIDE/releases/download/#{version}/MiniZincIDE-#{version}-#{arch}-apple-darwin.dmg"
   name "MiniZincIDE"
