@@ -1,6 +1,6 @@
 cask "emeet-studio" do
-  version "2.0.5,20261030_103517"
-  sha256 "c5c607ba19debdf6ff496464c4346135aecaadc9443eb925c2d18155c5859fcb"
+  version "2.0.6,20261118_102259"
+  sha256 "bf660bdd94b84dc55ed7e6a0b38ee5e39c0f4a5b672409b6b4e2a3011727f96a"
 
   url "https://emeetstudio.s3.us-west-2.amazonaws.com/emeet_studio#{version.major}/EMEET_STUDIO_V#{version.csv.first}_intl_mac_#{version.csv.second}.pkg"
   name "EMEET STUDIO"
