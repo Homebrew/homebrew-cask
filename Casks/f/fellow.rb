@@ -17,6 +17,8 @@ cask "fellow" do
 
   app "Fellow.app"
 
+  uninstall quit: "com.electron.fellow"
+
   zap trash: [
     "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.electron.fellow.sfl*",
     "~/Library/Application Support/Fellow",
