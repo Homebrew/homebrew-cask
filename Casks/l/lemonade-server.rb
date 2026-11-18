@@ -1,6 +1,6 @@
 cask "lemonade-server" do
-  version "2026.46.2"
-  sha256 "0155dd9668a7dbe761d2ba3034ebb1b615c79d25f6d7bbbfd974010689e3bb88"
+  version "2026.47.1"
+  sha256 "b4c1110f0f3320ca863884b127214e80a7dd54fe2a505bba1d708c743329c974"
 
   url "https://github.com/lemonade-sdk/lemonade/releases/download/v#{version}/Lemonade-#{version}-Darwin.pkg"
   name "Lemonade Server"
