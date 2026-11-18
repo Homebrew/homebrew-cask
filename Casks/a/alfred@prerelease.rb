@@ -1,8 +1,8 @@
 cask "alfred@prerelease" do
-  version "5.8.1,2349"
-  sha256 "67a9233c711d9285775c7a8ef0ee9ea551f937f439b1f7b4e4c0996fd2d06426"
+  version "6.0,3219"
+  sha256 "ec3b85fadc9ab00793302b1e7f041886575c563feb826d45e15230b11e427978"
 
-  url "https://cachefly.alfredapp.com/Alfred_#{version.csv.first}_#{version.csv.second}.tar.gz"
+  url "https://cachefly.alfredapp.com/Alfred_#{version.csv.first}_#{version.csv.second}.dmg"
   name "Alfred"
   desc "Application launcher and productivity software"
   homepage "https://www.alfredapp.com/"
@@ -20,7 +20,7 @@ cask "alfred@prerelease" do
 
   auto_updates true
   conflicts_with cask: "alfred"
-  depends_on :macos
+  depends_on macos: :monterey
 
   app "Alfred #{version.major}.app"
 
