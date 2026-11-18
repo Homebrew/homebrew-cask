@@ -1,6 +1,6 @@
 cask "zight" do
-  version "8.7.3,3645"
-  sha256 "02724436bfa1d61aa69119e10e5b767a27002fe5e852bef7e8a360e3c0685e65"
+  version "8.8.0,3688"
+  sha256 "50c8ec830d573b3a0f20d35f583c564d419e00d39cd2d2044d37cfcbd7e1493a"
 
   url "https://downloads.zight.com/mac/Zight-#{version.csv.first}.#{version.csv.second}.zip"
   name "Zight"
@@ -19,11 +19,14 @@ cask "zight" do
 
   zap trash: [
     "~/Library/Application Scripts/com.linebreak.CloudAppMacOSX.Share",
+    "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.linebreak.cloudappmacosx.sfl*",
     "~/Library/Application Support/com.linebreak.CloudAppMacOSX",
     "~/Library/Caches/com.linebreak.CloudAppMacOSX",
     "~/Library/Containers/com.linebreak.CloudAppMacOSX-LaunchAtLoginHelper",
     "~/Library/Containers/com.linebreak.CloudAppMacOSX.Share",
+    "~/Library/HTTPStorages/com.linebreak.CloudAppMacOSX",
     "~/Library/Logs/Zight",
     "~/Library/Preferences/com.linebreak.CloudAppMacOSX.plist",
+    "~/Library/WebKit/com.linebreak.CloudAppMacOSX",
   ]
 end
