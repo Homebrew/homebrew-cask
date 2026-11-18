@@ -16,8 +16,11 @@ cask "cardo-update" do
 
   app "Cardo Update.app"
 
+  uninstall quit: "com.cardo.fwupdater"
+
   zap trash: [
     "~/Library/Application Support/Cardo Update",
+    "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.cardo.fwupdater.sfl*",
     "~/Library/Logs/Cardo Update",
     "~/Library/Preferences/com.cardo.fwupdater.plist",
   ]
