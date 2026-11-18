@@ -11,8 +11,8 @@ cask "hummingbird" do
   homepage "https://airvpn.org/hummingbird"
 
   livecheck do
-    url "https://gitlab.com/AirVPN/AirVPN-Suite/-/raw/master/Changelog-Hummingbird.txt"
-    regex(/Version\s+v?(\d+(?:\.\d+)+)\s+-/i)
+    url "https://gitlab.com/AirVPN/AirVPN-Suite/-/raw/master/README-hummingbird.md"
+    regex(/hummingbird[._-]macos[._-]#{arch}[._-]notarized[._-]v?(\d+(?:\.\d+)+)\.zip/i)
   end
 
   depends_on :macos
