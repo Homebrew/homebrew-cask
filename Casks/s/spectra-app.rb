@@ -20,5 +20,6 @@ cask "spectra-app" do
     "~/Library/Caches/app.spectra.dev",
     "~/Library/Preferences/app.spectra.dev.plist",
     "~/Library/Saved Application State/app.spectra.dev.savedState",
+    "~/Library/WebKit/app.spectra.dev",
   ]
 end
