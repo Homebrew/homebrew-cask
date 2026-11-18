@@ -9,7 +9,7 @@ cask "weftcut" do
 
   livecheck do
     url :url
-    strategy :github_latest
+    regex(/^v?(\d+(?:\.\d+)+)$/i)
   end
 
   auto_updates true
@@ -17,6 +17,7 @@ cask "weftcut" do
   depends_on macos: :ventura
 
   app "WeftCut.app"
+  binary "#{appdir}/WeftCut.app/Contents/Resources/cli/weftcut"
 
   zap trash: [
     "~/Library/Application Support/WeftCut",
