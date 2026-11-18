@@ -1,6 +1,6 @@
 cask "bricklink-partdesigner" do
-  version "2.26.3_1"
-  sha256 "e7aaf9f48720200829aa3af79b2e9ad3284e50caa5d1484a73b43abb390bedb7"
+  version "2.26.11_1"
+  sha256 "1d7a52a9443b22c6f7dcf59840a0559079f05d9160020d5ed690aa686927e0d4"
 
   url "https://studio.download.bricklink.info/PartDesigner/Archive/#{version}/PartDesigner.pkg"
   name "PartDesigner"
