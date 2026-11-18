@@ -7,6 +7,7 @@ cask "wakatime" do
   desc "System tray app for automatic time tracking"
   homepage "https://wakatime.com/mac"
 
+  auto_updates true
   depends_on :macos
 
   app "WakaTime.app"
@@ -15,6 +16,7 @@ cask "wakatime" do
     "~/Library/Application Support/macos-wakatime.WakaTime",
     "~/Library/Caches/macos-wakatime.WakaTime",
     "~/Library/HTTPStorages/macos-wakatime.WakaTime",
+    "~/Library/HTTPStorages/macos-wakatime.WakaTime.binarycookies",
     "~/Library/Preferences/macos-wakatime.WakaTime.plist",
   ]
 end
