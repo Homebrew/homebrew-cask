@@ -1,5 +1,5 @@
 cask "roon" do
-  version "2.74.2"
+  version "2.75"
   sha256 :no_check
 
   url "https://download.roonlabs.net/builds/Roon.dmg"
