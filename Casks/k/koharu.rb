@@ -22,6 +22,7 @@ cask "koharu" do
   zap trash: [
     "~/Library/Application Support/Koharu",
     "~/Library/Caches/Koharu",
+    "~/Library/Logs/Koharu",
     "~/Library/WebKit/Koharu",
   ]
 end
