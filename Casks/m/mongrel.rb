@@ -1,6 +1,6 @@
 cask "mongrel" do
-  version "5.75.9,6c8ad45e-eae8-494d-9519-f8e77e6dd192"
-  sha256 "2db741d2df4f2507c19b3393da51fbf2fb9437b9483b359aee50806d330e182c"
+  version "5.75.12,0941ec92-63ee-427f-8ada-aa7c28a67ecd"
+  sha256 "e85507d90a23c9f4499522abe2da5713b64e129027c5449c05ad70d6812d98b3"
 
   url "https://www.visorcraft.com/api/downloads/mongrel/#{version.csv.second}"
   name "Mongrel"
