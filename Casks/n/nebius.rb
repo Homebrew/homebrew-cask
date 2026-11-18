@@ -1,9 +1,9 @@
 cask "nebius" do
   arch arm: "arm64", intel: "x86_64"
 
-  version "0.12.307"
-  sha256 arm:   "950711c94cb6c6aa8e6cc2f9814ee560dbd1e1f1539533324e7978ad978744e6",
-         intel: "6da15bfff31c4aaecfe226d35c2304082059e327f292a45e100a244342b91860"
+  version "0.12.308"
+  sha256 arm:   "6edd5319731000ab5fd044aa44a24b120b1c42aa97c5a78b57d9bb15b5d6449e",
+         intel: "f34b68a9b1b3d569f07703717b0d6553152c13a2fde1a4cf562f2d8aa5e7d618"
 
   url "https://artifacts.nebius.cloud/cli/release/#{version}/darwin/#{arch}/nebius.zip"
   name "Nebius CLI"
