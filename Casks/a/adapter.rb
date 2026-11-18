@@ -20,6 +20,8 @@ cask "adapter" do
     "~/Library/Application Support/Adapter",
     "~/Library/Caches/com.macroplant.adapter",
     "~/Library/com.macroplant.adapter.plist",
+    "~/Library/HTTPStorages/com.macroplant.adapter",
+    "~/Library/Preferences/com.macroplant.adapter.plist",
   ]
 
   caveats do
