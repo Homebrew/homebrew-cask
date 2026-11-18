@@ -4,7 +4,7 @@ cask "microsoft-copilot" do
 
   url "https://msedge.sf.dl.delivery.mp.microsoft.com/filestreamingservice/files/#{version.csv.second}/Copilot-#{version.csv.first}.pkg"
   name "Microsoft Copilot"
-  name "Microsoft 365 Copilot"
+  name "Microsoft Copilot"
   desc "AI assistant"
   homepage "https://www.microsoft.com/en-us/copilot/download-copilot-app"
 
