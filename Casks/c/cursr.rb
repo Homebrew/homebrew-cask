@@ -2,10 +2,10 @@ cask "cursr" do
   arch arm: "arm64", intel: "x64"
   url_end = on_system_conditional macos: "-mac-#{arch}.dmg", linux: ".AppImage"
 
-  version "1.7.4"
-  sha256 arm:          "1403a29035fb386480231844e71476eefbd1aff874dfcb22afebd101a8587194",
-         intel:        "ca7f6f2b5f52796085b0d6764e82e3c73458ac39d20387592691cdfab865dc23",
-         x86_64_linux: "32d6ab61131723bfc11a211664fb66dacf5345951032b9f4fadfd23aa6885ede"
+  version "1.7.5"
+  sha256 arm:          "569307aea627b30d40544b6f2daf338fd5eaa1689383922f16f3235bc66556a0",
+         intel:        "8ff181f8a18b5e9ae35b8111a2d11aafb34b17b2deb44fa5ddad9653290d2b5e",
+         x86_64_linux: "992271057dc4ffed44e2d1bc4ea08fe3690a9451b60de88ed4f4f66f36dfabda"
 
   on_macos do
     app "Cursr.app"
