@@ -4,11 +4,11 @@ cask "zed@preview" do
   filename_start = on_system_conditional macos: "Zed", linux: "zed-linux"
   filename_ext = on_system_conditional macos: "dmg", linux: "tar.gz"
 
-  version "1.30.0"
-  sha256 arm:          "cf2f40959a3e6714500fb72614046db70b9a699977ffa3a0be0b798d41fc9f57",
-         intel:        "7291414719ec824701125b6c73984192025b4c1869e7dcdd0dae1ae0b33695c8",
-         arm64_linux:  "5dc80e61184191ee824e0d8054a1d81498b2050080610cfefb00525e05f2501c",
-         x86_64_linux: "ba89789545cf83958e3276c82f72b37b71ece6cff913fd992b0da83a68ce7889"
+  version "1.30.1"
+  sha256 arm:          "9e6a89db62c7c957554aa50385dd48d0792f79913990a061e5e4daa560945c4e",
+         intel:        "0014dc76be9a40bf9a0fd0ee13fef1deb090e3ab48ca9c36a9bc04b202dcea6a",
+         arm64_linux:  "ab400aae44d0e61c438f948d207f7559c82be07e93db38ad453dd6de1c64bc20",
+         x86_64_linux: "53e66444ef8634f81550b93717c4505fb82b5b39c16cedf119c2e13cc6c24194"
 
   on_macos do
     depends_on macos: :monterey
