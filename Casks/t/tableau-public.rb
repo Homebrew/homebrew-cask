@@ -1,9 +1,9 @@
 cask "tableau-public" do
   arch arm: "-arm64"
 
-  version "2026.3.0"
-  sha256 arm:   "25bb55dda09413e71bce7581a70a2ee98bb8fc8a377eaa573b17ae258d510d43",
-         intel: "50b73dbc3114b15ccbfd9c94ef628596d2e6284c00ed9d0d0abf4612534855d4"
+  version "2026.3.1"
+  sha256 arm:   "fd43d9a1e78c8a8cf0ae1c4ad3653f9efc7abe35b5a1b52de3982bc052d7f324",
+         intel: "cf93e75b564f67c2c7d6585ef29cf57f9b71d7fec589d07cc0f88164f56e5a36"
 
   url "https://downloads.tableau.com/esdalt/#{version}/TableauPublic-#{version.dots_to_hyphens}#{arch}.pkg",
       user_agent: :curl
