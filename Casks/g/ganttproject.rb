@@ -1,9 +1,9 @@
 cask "ganttproject" do
   arch arm: "silicon", intel: "intel"
 
-  version "3.3.3323"
-  sha256 arm:   "1a3c1431a90268453fa0c37981087f5dff2fc5c789196a7e5889ee34f98f9375",
-         intel: "573c59d43ed9206b89eae4c439b88ef9531ddb5c27585559fd0b24ac0f5c138d"
+  version "3.3.3330"
+  sha256 arm:   "79913bd7fbb25ca313fc1429e8b2fcd05afe667d4ad513c6409b16f9e3f66257",
+         intel: "a3f7e08d87318aba2f7261d39c7f6986a9b2443a9cd4a9fbe7475c26dacfa1be"
 
   url "https://github.com/bardsoftware/ganttproject/releases/download/ganttproject-#{version}/ganttproject-#{version}-#{arch}.dmg"
   name "GanttProject"
