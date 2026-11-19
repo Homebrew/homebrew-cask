@@ -20,7 +20,10 @@ cask "ssh-config-editor" do
   app "SSH Config Editor.app"
 
   zap trash: [
+    "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/org.hejki.osx.sshce.sfl*",
     "~/Library/Application Support/SSH Config Editor",
+    "~/Library/Caches/org.hejki.osx.sshce",
+    "~/Library/HTTPStorages/org.hejki.osx.sshce*",
     "~/Library/Preferences/org.hejki.osx.sshce.plist",
     "~/Library/Saved Application State/org.hejki.osx.sshce.savedState",
   ]
