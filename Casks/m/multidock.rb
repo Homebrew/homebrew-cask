@@ -1,5 +1,5 @@
 cask "multidock" do
-  version "2.17"
+  version "2.18"
   sha256 :no_check
 
   url "https://macplus-software.com/downloads/MultiDock%20#{version.major}.zip"
