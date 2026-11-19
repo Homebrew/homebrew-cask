@@ -3,10 +3,10 @@ cask "mindwtr" do
   os macos: "mindwtr_", linux: "Mindwtr-"
   url_end = on_system_conditional macos: "dmg", linux: "AppImage"
 
-  version "1.3.8"
-  sha256 arm:          "78f2d982e2af49be63c0638849afe956b4a3e9f66221a0f21448f1ae322cca89",
-         intel:        "7099feb43680acdee8646e2f570a92737b8c99f21d84a37ad990cdd5744cb0fb",
-         x86_64_linux: "c44496f6df8b478aa2a16f1fff712a1e6ad37d6afecc39cc96d6f3d1c95b6a41"
+  version "1.3.9"
+  sha256 arm:          "c80b5d2dd0f73c04cf604020dacd48237b34f053531133e3fc2b019091331464",
+         intel:        "3a77cf94dda97c459adab7d7da44aec2095921c6ec457765edcb4033bbe5433b",
+         x86_64_linux: "db32fd0a51e72820140f1192f5ec2902a917d1fcf552498e998d4e88025805a9"
 
   on_macos do
     app "Mindwtr.app"
