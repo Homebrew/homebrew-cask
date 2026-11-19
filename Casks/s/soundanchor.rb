@@ -19,5 +19,8 @@ cask "soundanchor" do
 
   uninstall quit: "me.kopiro.soundanchor"
 
-  zap :not_required
+  zap trash: [
+    "~/Library/Application Scripts/me.kopiro.soundanchor",
+    "~/Library/Containers/me.kopiro.soundanchor",
+  ]
 end
