@@ -1,6 +1,6 @@
 cask "plamo-translate" do
-  version "0.8.6"
-  sha256 "ec5c37b4d1a8c41bc284825a136fadacc6cd16a837d3e0025284714f12ed2f55"
+  version "0.9.1"
+  sha256 "1eb633c4751dcdd36f8fe3dd848463462080e675f57f695628c79df4734a3674"
 
   url "https://storage.googleapis.com/plamo-translate-web-downloads-prd/desktop/plamo-translate-desktop-#{version}.dmg"
   name "PLaMo Translate"
