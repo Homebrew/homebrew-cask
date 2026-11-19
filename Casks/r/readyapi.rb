@@ -1,9 +1,9 @@
 cask "readyapi" do
   arch arm: "arm64", intel: "x64"
 
-  version "4.3.0"
-  sha256 arm:   "428f122155df2255d34e9f02da75bee86bcdf6b080f244086d8eda3e09f24b57",
-         intel: "c7f42aab4420e5fb1d3c4d6adc9b0eb5716e484003a503c8f382f82da42b4666"
+  version "4.3.1"
+  sha256 arm:   "46eccd1e132460d5716c6b8f23ef4d605c8c6fd09eb7163df0c6e21d865cd4e8",
+         intel: "5135b1c61959ecbf4a2b264f37045bd7e83e1529dbab680feed2aa0d02b93b29"
 
   url "https://dl.eviware.com/ready-api/#{version}/ReadyAPI-#{arch}-#{version}.dmg"
   name "ReadyAPI Desktop"
