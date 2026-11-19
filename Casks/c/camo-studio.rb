@@ -17,7 +17,8 @@ cask "camo-studio" do
 
   app "Camo Studio.app"
 
-  uninstall delete: [
+  uninstall quit:   "com.reincubate.macos.cam",
+            delete: [
               "/Library/Application Support/Reincubate/Camo",
               "/Library/Audio/Plug-Ins/HAL/ReincubateCamoAudio.driver",
               "/Library/CoreMediaIO/Plug-Ins/DAL/ReincubateCamoDAL.plugin",
@@ -32,6 +33,7 @@ cask "camo-studio" do
         "~/Library/Caches/com.reincubate.macos.cam",
         "~/Library/Caches/SentryCrash/Camo Studio",
         "~/Library/HTTPStorages/com.reincubate.macos.cam",
+        "~/Library/Logs/Camo Studio",
         "~/Library/Preferences/com.reincubate.macos.cam.plist",
         "~/Library/WebKit/com.reincubate.macos.cam",
       ],
