@@ -32,9 +32,11 @@ cask "tnas-pc" do
             ]
 
   zap trash: [
+    "~/Library/Application Scripts/com.terramaster.tnaspc#{version.major}.native.NativeHelperHost.NativeHelperProvider",
     "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.terramaster.tnaspc*.sfl*",
     "~/Library/Application Support/TerraSync",
     "~/Library/Application Support/TNAS PC",
+    "~/Library/Containers/com.terramaster.tnaspc#{version.major}.native.NativeHelperHost.NativeHelperProvider",
     "~/Library/Preferences/com.terramaster.tnaspc*.plist",
   ]
 end
