@@ -1,7 +1,7 @@
 cask "safari-technology-preview" do
   on_tahoe :or_older do
-    version "256,142-53570-20261104-0a424b2d-98ac-491c-9215-ddf803ed6253"
-    sha256 "db9d2e5f01eda23d02f483110dce5eb328d53da42a94fe57f0bd3f4cc59a6a43"
+    version "257,142-68493-20261118-77438b3b-e8e1-4c91-9f96-001cd5a98069"
+    sha256 "db2f58535716f12cb1c05cd9c866ac4fc2c173ef194be407c0f7048a911f713f"
 
     url "https://secure-appldnld.apple.com/STP/#{version.csv.second}/SafariTechnologyPreview.dmg"
 
@@ -22,10 +22,10 @@ cask "safari-technology-preview" do
   end
   # when adjusting the on_{os} scoping, also update the livecheck regex
   on_golden_gate :or_newer do
-    version "256,142-53583-20261104-3efa3282-5778-498f-bf15-a17269776fe0"
-    sha256 "f754df7a314c36664ff9cfa6547023733e4e0ef88eaeae072f348ec2fd1dbe51"
+    version "257,142-68495-20261118-aa18e73c-a899-4615-a28a-eca5706c3f84"
+    sha256 "e5397cc5f6d3c6357c08de6d7372ac6c74e9e0ac88d1569be7e97b3ef10344ab"
 
-    url "https://secure-appldnld.apple.com/STP/#{version.csv.second}/SafariTechPreview#{version.csv.first}.dmg"
+    url "https://secure-appldnld.apple.com/STP/#{version.csv.second}/SafariTechnologyPreview.dmg"
 
     livecheck do
       url :homepage
@@ -40,7 +40,7 @@ cask "safari-technology-preview" do
       end
     end
 
-    pkg "SafariTechPreview#{version.csv.first}.pkg"
+    pkg "Safari Technology Preview.pkg"
   end
 
   name "Safari Technology Preview"
