@@ -17,6 +17,7 @@ cask "linkandroid" do
   uninstall quit: "LinkAndroid"
 
   zap trash: [
+    "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/linkandroid.sfl*",
     "~/Library/Application Support/linkandroid",
     "~/Library/Preferences/LinkAndroid.plist",
     "~/Library/Saved Application State/LinkAndroid.savedState",
