@@ -13,6 +13,7 @@ cask "netbeans" do
   livecheck do
     url :url
     regex(/^nb(\d+(?:-zulu-?\d+)?)/i)
+    strategy :github_latest
   end
 
   depends_on :macos
