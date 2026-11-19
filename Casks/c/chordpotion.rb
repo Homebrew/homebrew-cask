@@ -1,6 +1,6 @@
 cask "chordpotion" do
-  version "2.6.0"
-  sha256 "1704727fde929d06fa99aec83d6f3f57a27d5caff6b86eca758a410d49d45843"
+  version "2.7.0"
+  sha256 "410ece17d37ced1dcbd4edec126137e4dbf5840ff4b514b698f4f2ae62ba523f"
 
   url "https://fys.ams3.cdn.digitaloceanspaces.com/data/ChordPotion_#{version}_mac.zip"
   name "ChordPotion"
