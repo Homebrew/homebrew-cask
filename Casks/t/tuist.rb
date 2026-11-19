@@ -4,8 +4,8 @@ cask "tuist" do
 
   url "https://github.com/tuist/tuist/releases/download/#{version}/tuist.zip"
   name "Tuist"
-  desc "Create, maintain, and interact with Xcode projects at scale"
-  homepage "https://tuist.io/"
+  desc "Build caching and analytics tool"
+  homepage "https://tuist.dev/"
 
   livecheck do
     url :url
