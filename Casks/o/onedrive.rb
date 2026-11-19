@@ -1,6 +1,6 @@
 cask "onedrive" do
-  version "26.198.1011.0006"
-  sha256 "928516faca5cc0ccecdf939b9e101eddf252aea76d499d9ffe2c29b421818bf2"
+  version "26.212.1029.0006"
+  sha256 "678c576c9c3e9a5237867542867fbeadcc7b8af0067fbdfc47ebf0dda3a3c5df"
 
   url "https://oneclient.sfx.ms/Mac/Installers/#{version}/universal/OneDrive.pkg"
   name "OneDrive"
@@ -8,15 +8,13 @@ cask "onedrive" do
   homepage "https://www.microsoft.com/en-us/microsoft-365/onedrive/online-cloud-storage"
 
   livecheck do
-    url "https://go.microsoft.com/fwlink/?linkid=823060"
-    strategy :header_match
+    url "https://g.live.com/0USSDMC_W5T/StandaloneProductManifest"
+    regex(%r{Installers/(\d+(?:\.\d+)+)/universal/OneDrive\.pkg}i)
+    strategy :page_match
   end
 
   auto_updates true
-  conflicts_with cask: [
-    "microsoft-office",
-    "microsoft-office-businesspro",
-  ]
+  conflicts_with cask: "microsoft-office-businesspro"
   depends_on macos: :sonoma
 
   pkg "OneDrive.pkg"
@@ -57,6 +55,7 @@ cask "onedrive" do
     "~/Library/Caches/com.microsoft.OneDriveStandaloneUpdater",
     "~/Library/Caches/com.microsoft.OneDriveUpdater",
     "~/Library/Caches/com.plausiblelabs.crashreporter.data/com.microsoft.OneDrive",
+    "~/Library/Caches/com.plausiblelabs.crashreporter.data/com.microsoft.OneDriveStandaloneUpdater",
     "~/Library/Caches/com.plausiblelabs.crashreporter.data/com.microsoft.OneDriveUpdater",
     "~/Library/Caches/OneDrive",
     "~/Library/Containers/com.microsoft.OneDrive.FileProvider",
