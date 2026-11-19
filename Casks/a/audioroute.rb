@@ -1,6 +1,6 @@
 cask "audioroute" do
-  version "1.2.13"
-  sha256 "7f6e6f04601242ed38b9d82868c2cb14b70d865da7d697a919ead4db75c1f430"
+  version "1.3.0"
+  sha256 "af31276ca7d05c56ec30ebf1b031609ef3f14378b83807ffb08c568a831167be"
 
   url "https://pub-ee5d9eb8d65945d1ba1716bc9ca61b0e.r2.dev/AudioRoute-#{version}-signed.pkg"
   name "AudioRoute"
