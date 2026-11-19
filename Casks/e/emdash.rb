@@ -2,11 +2,11 @@ cask "emdash" do
   arch arm: "arm64", intel: on_system_conditional(macos: "x64", linux: "x86_64")
   os macos: "dmg", linux: "AppImage"
 
-  version "1.2.11"
-  sha256 arm:          "6f36052874fef79a34c802b9c0f34a3fe7f379747f5c89093d6f7b1cd1916b25",
-         intel:        "a9b8685d885df0bb49b6298917a7572fc4f9080f7eaa7ec563fa56671017c44d",
-         arm64_linux:  "9029901c982e344cf08b4d75546cfd10de1cc7c68fb41041ca94298350ace700",
-         x86_64_linux: "8d2187e93fbd5537aa8a5c4bde2d2e70de71c542d0e5ebc8daa4b52690e098a8"
+  version "1.2.12"
+  sha256 arm:          "0a71f31708099533d3a18e81cf008af2a33b004472834248322e7bd1427e2817",
+         intel:        "8b0d55d6781a9fb8d351c8d2f51c95e9fddd43e2bdcf8d304c9a547f6315dc49",
+         arm64_linux:  "5820c1a504a3477c1122b894a7c955f940e9f069330e5bc6ba1ea5ad39dbf38b",
+         x86_64_linux: "7e0e3976f647199de20451ce97911dc9c63fdf2aaea715d0026ff7b134e359a6"
 
   on_macos do
     depends_on macos: :monterey
