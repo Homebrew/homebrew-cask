@@ -1,6 +1,6 @@
 cask "blave" do
-  version "0.1.55"
-  sha256 "9348b885d0a343e797d67594fadfbdc6e0ff44c2033176940def6da42c6aafe7"
+  version "0.1.56"
+  sha256 "c549acd2d0754de0d5a4f80d44304705ede3919b784b018bafaed322b658b662"
 
   url "https://github.com/Blave-TW/blave-agent/releases/download/desktop-v#{version}/Blave-#{version}-universal.dmg"
   name "Blave"
