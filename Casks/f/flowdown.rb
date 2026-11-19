@@ -1,6 +1,6 @@
 cask "flowdown" do
-  version "5.2.11"
-  sha256 "a93e05d29aabc5f508137c3d95ddfc72d598b60e4bb43c14daf2dabe4a7aa03d"
+  version "5.2.13"
+  sha256 "e6e657c87548e4fc86e5f14ce985639a9fdd0f6355e4e33a21724cfabd1d3c88"
 
   url "https://github.com/Lakr233/FlowDown/releases/download/#{version}/FlowDown-#{version}.zip"
   name "FlowDown"
