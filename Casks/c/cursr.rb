@@ -11,6 +11,7 @@ cask "cursr" do
     app "Cursr.app"
 
     zap trash: [
+      "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.bitgapp.cursr.sfl*",
       "~/Library/Application Support/cursr",
       "~/Library/Preferences/com.bitgapp.cursr.plist",
     ]
