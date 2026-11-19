@@ -28,6 +28,7 @@ cask "arctic" do
   zap trash: [
     "~/Library/Application Support/Arctic",
     "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/video.hedge.arctic.mac.sfl*",
+    "~/Library/Caches/video.hedge.Arctic.Mac",
     "~/Library/HTTPStorages/video.hedge.Arctic.Mac",
     "~/Library/HTTPStorages/video.hedge.Arctic.Mac.binarycookies",
     "~/Library/Logs/Arctic",

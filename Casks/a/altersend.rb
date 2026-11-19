@@ -17,7 +17,10 @@ cask "altersend" do
     app "AlterSend.app"
 
     zap trash: [
+      "~/Library/Application Scripts/com.altersend.desktop.ShareExtension",
       "~/Library/Application Support/AlterSend",
+      "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.altersend.desktop.sfl*",
+      "~/Library/Containers/com.altersend.desktop.ShareExtension",
       "~/Library/Preferences/com.altersend.desktop.plist",
     ]
   end

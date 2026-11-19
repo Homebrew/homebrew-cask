@@ -21,6 +21,7 @@ cask "swift-publisher" do
     "~/Library/Application Scripts/7TJZ7EZWM6.com.belightsoft.PrintProducts",
     "~/Library/Application Scripts/com.belightsoft.SwiftPublisher#{version.major}.Thumbnail-Extension",
     "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.belightsoft.swiftpublisher#{version.major}.sfl*",
+    "~/Library/Application Support/Swift Publisher #{version.major}",
     "~/Library/Caches/com.belightsoft.SwiftPublisher#{version.major}",
     "~/Library/Containers/com.belightsoft.SwiftPublisher#{version.major}.Thumbnail-Extension",
     "~/Library/Group Containers/7TJZ7EZWM6.com.belightsoft.PrintProducts",

@@ -22,13 +22,13 @@ cask "redis-insight" do
 
   zap trash: [
     "~/.redisinsight-app",
-    "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/org.redislabs.redisinsight-v#{version.major}.sfl*",
+    "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/org.redislabs.redisinsight-v*.sfl*",
     "~/Library/Application Support/RedisInsight",
-    "~/Library/Caches/org.RedisLabs.RedisInsight-V#{version.major}",
-    "~/Library/Caches/org.RedisLabs.RedisInsight-V#{version.major}.ShipIt",
-    "~/Library/HTTPStorages/org.RedisLabs.RedisInsight-V#{version.major}",
+    "~/Library/Caches/org.RedisLabs.RedisInsight-V*",
+    "~/Library/Caches/org.RedisLabs.RedisInsight-V*.ShipIt",
+    "~/Library/HTTPStorages/org.RedisLabs.RedisInsight-V*",
     "~/Library/Logs/RedisInsight",
-    "~/Library/Preferences/org.RedisLabs.RedisInsight-V#{version.major}.plist",
-    "~/Library/Saved Application State/org.RedisLabs.RedisInsight-V#{version.major}.savedState",
+    "~/Library/Preferences/org.RedisLabs.RedisInsight-V*.plist",
+    "~/Library/Saved Application State/org.RedisLabs.RedisInsight-V*.savedState",
   ]
 end

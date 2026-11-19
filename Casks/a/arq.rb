@@ -31,6 +31,7 @@ cask "arq" do
         "/Library/Application Support/ArqAgent",
         "/Library/Application Support/ArqAgentAPFS",
         "~/Library/Application Support/Arq *",
+        "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.haystacksoftware.arqmonitor.sfl*",
         "~/Library/Arq *",
         "~/Library/Arq",
         "~/Library/HTTPStorages/com.haystacksoftware.Arq*",

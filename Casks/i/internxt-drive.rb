@@ -19,9 +19,14 @@ cask "internxt-drive" do
 
   zap trash: [
     "~/.internxt-desktop",
+    "~/Library/Application Scripts/internxt.InternxtDesktop.sync",
     "~/Library/Application Support/internxt-drive",
+    "~/Library/Application Support/internxt.InternxtDesktop",
+    "~/Library/Containers/internxt.InternxtDesktop.sync",
+    "~/Library/HTTPStorages/internxt.InternxtDesktop",
     "~/Library/Logs/Internxt Drive",
     "~/Library/Logs/internxt-drive",
     "~/Library/Preferences/com.internxt.drive.plist",
+    "~/Library/Preferences/internxt.InternxtDesktop.plist",
   ]
 end

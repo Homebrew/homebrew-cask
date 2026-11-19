@@ -30,8 +30,11 @@ cask "shade" do
 
   zap trash: [
     "~/.shade",
+    "~/Library/Application Scripts/com.shade.Sync",
     "~/Library/Application Support/Shade",
+    "~/Library/Containers/com.shade.Sync",
     "~/Library/Logs/Shade",
+    "~/Library/Logs/ShadeFS XPC Service",
     "~/Library/Preferences/com.shade.shade.plist",
     "~/Library/Saved Application State/com.shade.shade.savedState",
   ]

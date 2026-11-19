@@ -29,6 +29,7 @@ cask "nao" do
   binary "#{appdir}/nao.app/Contents/Resources/app/bin/nao"
 
   zap trash: [
+    "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.nao.sfl*",
     "~/Library/Application Support/nao",
     "~/Library/Caches/com.nao",
     "~/Library/Caches/com.nao.ShipIt",

@@ -29,6 +29,7 @@ cask "plane" do
   app "Plane.app"
 
   zap trash: [
+    "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.todesktop.2405288gp0ar3qc.sfl*",
     "~/Library/Application Support/Plane",
     "~/Library/Preferences/com.todesktop.2405288gp0ar3qc.plist",
     "~/Library/Saved Application State/com.todesktop.2405288gp0ar3qc.savedState",
