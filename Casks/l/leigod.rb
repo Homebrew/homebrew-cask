@@ -1,9 +1,9 @@
 cask "leigod" do
   arch arm: "arm64", intel: "x64"
 
-  version "1.1.5"
-  sha256 arm:   "7f291afc6a866ee9de72c7e0a1d45e1216339f7f21d3c763d095fd8df341aa30",
-         intel: "36f98bc4e7af3ec8df6110b796376242c9428d75fda928954ec8c296121afd64"
+  version "1.1.6"
+  sha256 arm:   "a063d64f459b728f1b324780f7f12ac420712cc4fa84f08af5da2e68b0ab25ac",
+         intel: "c8bfe91fff51eabcbc383f32e0599a241ad6d744fbedf747febecbf7dc0c2de9"
 
   url "https://update.leigod.com/soft/leigod/osx/1.0.0.0/LeiGodSetup_#{version}_#{arch}.dmg"
   name "LeiGod"
