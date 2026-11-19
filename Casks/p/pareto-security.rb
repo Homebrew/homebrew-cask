@@ -1,6 +1,6 @@
 cask "pareto-security" do
-  version "1.48.0"
-  sha256 "a8c56358792736f1731bc70c8379f83e4a6432342d931aae5914ec73bcd06364"
+  version "1.49.0"
+  sha256 "1ae4146adeeb50ef71a4f78347ea0b336bd9d5f26f09c295aa9addcefc3b4f5b"
 
   url "https://github.com/ParetoSecurity/pareto-mac/releases/download/#{version}/ParetoSecurity.dmg"
   name "Pareto Security"
