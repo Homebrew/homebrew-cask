@@ -11,7 +11,7 @@ cask "octuo" do
     skip "No version information available"
   end
 
-  depends_on macos: ">= :sequoia"
+  depends_on macos: :sequoia
 
   app "Octuo.app"
 end
