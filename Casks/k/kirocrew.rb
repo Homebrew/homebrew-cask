@@ -2,11 +2,11 @@ cask "kirocrew" do
   arch arm: "aarch64", intel: "x86_64"
   url_end = on_system_conditional macos: ".dmg", linux: "-#{arch}.AppImage"
 
-  version "0.12.2"
-  sha256 arm:          "8cb62956eb2e68ef5ec18eb5c77f717b635d86f26c22984f1b4ee70e1c2d54f2",
-         intel:        "8cb62956eb2e68ef5ec18eb5c77f717b635d86f26c22984f1b4ee70e1c2d54f2",
-         arm64_linux:  "c2b67ef78115d363a76eb510d0e827cf07c902067cf34cf351b159279c74fdbd",
-         x86_64_linux: "10fc90f0d0b23a71295d5af2bcb83646ab89954791a4980e1fc3f520276b4b7f"
+  version "0.13.0"
+  sha256 arm:          "fada4e713a1bd686a82ea2a5105c486e48f45b0e21b9ec4df2784f78959d4cd1",
+         intel:        "fada4e713a1bd686a82ea2a5105c486e48f45b0e21b9ec4df2784f78959d4cd1",
+         arm64_linux:  "68aa6b12ddf9f2aa6e2f19781db329ba298bf7a2653fd8fef04521bd27679ab1",
+         x86_64_linux: "37cf84928ba58be868f55cb381bb95b7e650aeba6b33a10d37cc39751ee658bd"
 
   on_macos do
     depends_on macos: :ventura
