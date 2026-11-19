@@ -19,6 +19,7 @@ cask "pangolin" do
 
   zap trash: [
     "~/Library/Application Support/Pangolin",
+    "~/Library/Logs/Pangolin",
     "~/Library/Preferences/net.pangolin.Pangolin.plist",
   ]
 end
