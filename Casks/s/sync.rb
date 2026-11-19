@@ -1,6 +1,6 @@
 cask "sync" do
-  version "2.2.65"
-  sha256 "a6b40a453eb3417b9d362a6c705900933b9ef849e6c3ba50ccf83a9ad67ebad7"
+  version "2.2.66"
+  sha256 "7639cc7b2d334de1335b8ad643de3f419463248cc2c5d3769b91cae75f32568f"
 
   url "https://www10.sync.com/download/apple/Sync-#{version}.dmg"
   name "Sync"
@@ -9,7 +9,7 @@ cask "sync" do
 
   livecheck do
     url "https://www.sync.com/install/"
-    regex(/href=.*?Sync[._-]v?(\d+(?:\.\d+)+)\.dmg/i)
+    regex(/classic:\s*["']v?(\d+(?:\.\d+)+)["']/i)
   end
 
   auto_updates true
