@@ -2,11 +2,11 @@ cask "cursor-cli" do
   arch arm: "arm64", intel: "x64"
   os macos: "darwin", linux: "linux"
 
-  version "2026.11.17-f532c45"
-  sha256 arm:          "2e4a679c498d98eb2706ad7d90ccd256e5eb2f6cb3fe2cb4a9dd7f2dbd3efce0",
-         intel:        "291995e57b14290abf0d7a154055a1460a24b89770754812ad70b4f723bd8fa6",
-         arm64_linux:  "dff929e5e5ace2ced880290095df5938545267d73fd1d84be669be75dbdc1558",
-         x86_64_linux: "189ed41d8963cd22dcdafbbd62f072cc55ac08374c922dbd04aee525f4018ab6"
+  version "2026.11.19-f005e9d"
+  sha256 arm:          "16bb33c59733725b466d31f988490de332747f0910d2d64b393c363e510e6c7d",
+         intel:        "0cac2e918bdf9a0ff1a38700929bb3164730354a347dd6b373fe48a83814b236",
+         arm64_linux:  "5ff05be0d7c0b7754574dbcd677c35254a3ff190ed6457e71bbee0f276237e29",
+         x86_64_linux: "a25986eaf0c9330aeeec599a139711cb9f267c64562d073a72b751edf5161695"
 
   url "https://downloads.cursor.com/lab/#{version}/#{os}/#{arch}/agent-cli-package.tar.gz"
   name "Cursor CLI"
