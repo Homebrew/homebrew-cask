@@ -14,6 +14,7 @@ cask "polypane" do
     app "Polypane.app"
 
     zap trash: [
+      "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.firstversionist.polypane.sfl*",
       "~/Library/Application Support/Polypane",
       "~/Library/Caches/com.firstversionist.polypane",
       "~/Library/Caches/com.firstversionist.polypane.ShipIt",
