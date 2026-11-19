@@ -1,6 +1,6 @@
 cask "jpki" do
-  version "3.9,01-01"
-  sha256 "ee7eddf29860eacd7406c91c5113c32a11e51a0e0a8abda387dd728f43255d80"
+  version "4.0,01-01"
+  sha256 "701bbb3f338d6a3fad64867827cae9c9ffe3c8e545ee9d0d6d9fb212c599cfc1"
 
   url "https://www.jpki.go.jp/client/download/101/JPKIMac_#{version.csv.first.split(".").map { |str| str.rjust(2, "0") }.join("-")}#{"_#{version.csv.second}" if version.csv.second}.dmg"
   name "JPKI User Client Software"
