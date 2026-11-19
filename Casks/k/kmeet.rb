@@ -21,6 +21,7 @@ cask "kmeet" do
 
   zap trash: [
     "~/Library/Application Support/Caches/kmeet-electron-updater",
+    "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.infomaniak.meet.sfl*",
     "~/Library/Application Support/kMeet",
     "~/Library/Caches/com.infomaniak.meet*",
     "~/Library/HTTPStorages/com.infomaniak.meet",
