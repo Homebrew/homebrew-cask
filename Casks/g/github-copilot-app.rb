@@ -3,11 +3,11 @@ cask "github-copilot-app" do
   os macos: "darwin", linux: "linux"
   url_end = on_system_conditional macos: "dmg", linux: "AppImage"
 
-  version "1.4.2"
-  sha256 arm:          "171b9228f1913c94a2d463ef7bfb2421c6f0ca01ead6344cdd4a17caf06dcc27",
-         intel:        "86613c7bfbf07463a6e604c8e30e5aa9777759d5c6b6ba3fb35cb8b1aa9ee48f",
-         arm64_linux:  "e3e6e06f2be0c794baa328d918941359d6ed0fe92d50ba26e258283bc268e04b",
-         x86_64_linux: "491e4963eb792da3db33475ea02a31113c019ee691b16e7d91d640882ccdefc4"
+  version "1.4.3"
+  sha256 arm:          "583b422a73b8b0883a60669fab09da6e99f463e0d98bb51834afe0ad9b958119",
+         intel:        "9aabf8a001091557c7ff89305c2b73fdab1cd7d2d0b7425363072865b5e0a6b5",
+         arm64_linux:  "ba2e711ffc13290b61bb8e352c161bebb70c7507341bdafaa2162e5f066625ee",
+         x86_64_linux: "6d319c2daa53c0472273260348134180c1a160fb0c90a7005c243e18246b19b0"
 
   on_macos do
     auto_updates true
