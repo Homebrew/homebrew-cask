@@ -1,9 +1,9 @@
 cask "sina-finance" do
   arch arm: "arm64", intel: "x64"
 
-  version "1.2.3"
-  sha256 arm:   "11a921f6782409fbf0f31943b596b68c7a715494e0b5234dba4b2a4184574854",
-         intel: "5538aafd37a4b89538d3f5e1aa9315e32cc0cbb5bef865ca4e779ea0c0815650"
+  version "1.2.4"
+  sha256 arm:   "2bfc4fb434e12e727ac7d60c211f9210e036f785835f5331b8e441c3de49bfed",
+         intel: "919d80ef02335970d48b3ce87b13a856f7885d4a871f49ef2ba6b55678710cc6"
 
   url "https://file.finance.sina.com.cn/sinafinancedesktop/install/sinafinancedesktop-#{version}-#{arch}.dmg"
   name "Sina Finance"
