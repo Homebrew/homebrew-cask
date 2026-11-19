@@ -21,6 +21,11 @@ cask "veepn" do
 
   zap trash: [
     "~/Library/Application Support/com.veepn.macos.direct",
+    "~/Library/Caches/com.veepn.macos.direct",
+    "~/Library/HTTPStorages/com.veepn.macos.direct",
+    "~/Library/Preferences/4KQR4QVSRS.4KQR4QVSRS.com.veepn.macos.direct.plist",
     "~/Library/Preferences/com.veepn.macos.direct.plist",
+    "~/Library/Preferences/group.com.veepn.macos.direct.firebase.plist",
+    "~/Library/WebKit/com.veepn.macos.direct",
   ]
 end
