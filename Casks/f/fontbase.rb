@@ -18,7 +18,9 @@ cask "fontbase" do
   app "FontBase.app"
 
   zap trash: [
+    "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.dominiklevitsky.fontbase.sfl*",
     "~/Library/Application Support/FontBase",
+    "~/Library/Logs/FontBase",
     "~/Library/Preferences/com.dominiklevitsky.fontbase.helper.plist",
     "~/Library/Preferences/com.dominiklevitsky.fontbase.plist",
     "~/Library/Saved Application State/com.dominiklevitsky.fontbase.savedState",
