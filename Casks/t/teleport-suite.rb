@@ -13,10 +13,7 @@ cask "teleport-suite" do
     regex(/teleport[._-]v?(\d+(?:\.\d+)+)\.pkg/i)
   end
 
-  conflicts_with cask: [
-    "teleport-suite@17",
-    "tsh",
-  ]
+  conflicts_with cask: "teleport-suite@17"
   depends_on :macos
 
   pkg "teleport-#{version}.pkg"

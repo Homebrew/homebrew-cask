@@ -17,10 +17,7 @@ cask "teleport-suite@17" do
   # Support window taken from https://goteleport.com/docs/upcoming-releases/
   disable! date: "2026-08-01", because: :discontinued
 
-  conflicts_with cask: [
-    "teleport-suite",
-    "tsh",
-  ]
+  conflicts_with cask: "teleport-suite"
   depends_on :macos
 
   pkg "teleport-#{version}.pkg"
