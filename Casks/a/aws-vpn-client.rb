@@ -1,9 +1,9 @@
 cask "aws-vpn-client" do
   arch arm: "_ARM64"
 
-  version "6.3.0"
-  sha256 arm:   "e82bb414b1b24fc1d8893c849fee43ed17064f515b0099388ebcca9ea31ae4fd",
-         intel: "1ea2145b83de5287da089b58daf4862f9c14de1c7efe77bd44bb9a15bc249055"
+  version "6.3.1"
+  sha256 arm:   "c6acc93de26e21d9a6654bee28efe0d600f3baa1d61b54c905b35b16431c5c95",
+         intel: "dffe7d7d565facfe79b3355fa08a0383b790cd7d402e9413ddc19bedc379f97e"
 
   url "https://d3c4iklh14o4hj.cloudfront.net/OSX#{arch}/#{version}/AWS_VPN_Client#{arch}.pkg"
   name "AWS Client VPN"
