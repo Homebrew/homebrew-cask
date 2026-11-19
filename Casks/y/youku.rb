@@ -24,6 +24,7 @@ cask "youku" do
     "~/Library/Application Support/youku-app",
     "~/Library/Caches/com.youku.mac",
     "~/Library/Containers/com.youku.mac",
+    "~/Library/Containers/优酷",
     "~/Library/HTTPStorages/com.youku.mac",
     "~/Library/Logs/优酷",
     "~/Library/Preferences/com.youku.mac.plist",
