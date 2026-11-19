@@ -1,9 +1,9 @@
 cask "tikz-editor" do
   arch arm: "aarch64", intel: "x64"
 
-  version "1.2.0"
-  sha256 arm:   "e97bbdf7565fc1037d64fd70b0ed7039cd55e46bf15bf3c473eddc97f456fe21",
-         intel: "51af439131e8a9bd53c77caa46a39a7997d1f070bb3b2386755e456cc8cd87bd"
+  version "1.3.0"
+  sha256 arm:   "e3c81676334cb9a3910cbdaac942f89b98bded255e8593d72cff597cea68631d",
+         intel: "46ad24c2b19ef9c2edb2547129b99c4ebe68b030ce74db2353a34f3120aa924c"
 
   url "https://github.com/DominikPeters/tikz-editor/releases/download/app-v#{version}/TikZ.Editor_#{version}_#{arch}.dmg"
   name "TikZ Editor"
