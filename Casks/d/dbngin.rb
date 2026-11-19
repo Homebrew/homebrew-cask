@@ -21,6 +21,8 @@ cask "dbngin" do
     "~/Library/Application Support/com.tinyapp.DBngin",
     "~/Library/Caches/com.tinyapp.DBngin",
     "~/Library/Cookies/com.tinyapp.DBngin.binarycookies",
+    "~/Library/HTTPStorages/com.tinyapp.DBngin",
     "~/Library/Preferences/com.tinyapp.DBngin.plist",
+    "~/Library/Preferences/com.tinyapp.DBnginMenuHelper.plist",
   ]
 end
