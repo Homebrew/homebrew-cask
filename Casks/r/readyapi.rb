@@ -28,6 +28,7 @@ cask "readyapi" do
   zap trash: [
     "~/.readyapi",
     "~/Library/Application Support/ReadyAPI-#{version}",
+    "~/Library/Preferences/com.install4j.3080-8797-1984-6034.102895.plist",
     "~/Library/Preferences/com.smartbear.ready.plist",
   ]
 end
