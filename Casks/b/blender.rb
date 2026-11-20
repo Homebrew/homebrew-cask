@@ -43,7 +43,7 @@ cask "blender" do
       regex(/href=.*?blender[._-]v?(\d+(?:\.\d+)+)(?:[._-]macos)?[._-]#{arch}\.dmg/i)
     end
 
-    deprecate! date: "2027-07-01", because: :unsupported
+    deprecate! date: "2027-07-01", because: :discontinued
   end
 
   url "https://download.blender.org/release/Blender#{version.major_minor}/blender-#{version}-macos-#{arch}.dmg"
