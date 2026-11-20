@@ -27,6 +27,9 @@ cask "dotnet-sdk@10" do
     end
   end
 
+  deprecate! date: "2028-11-14", because: :unmaintained
+  disable! date: "2029-11-14", because: :unmaintained
+
   depends_on cask: "dotnet-sdk"
   depends_on macos: :monterey
 
