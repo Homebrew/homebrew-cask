@@ -19,5 +19,8 @@ cask "retrospective" do
 
   uninstall quit: "com.retrospective.product"
 
-  zap trash: "~/.Retrospective"
+  zap trash: [
+    "~/.Retrospective",
+    "~/Library/Preferences/com.retrospective.product.plist",
+  ]
 end
