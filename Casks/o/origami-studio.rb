@@ -19,6 +19,7 @@ cask "origami-studio" do
   zap trash: [
     "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.facebook.origami-studio.sfl*",
     "~/Library/Application Support/com.facebook.Origami-Studio",
+    "~/Library/Application Support/Origami Studio",
     "~/Library/Caches/com.facebook.Origami-Studio",
     "~/Library/HTTPStorages/com.facebook.Origami-Studio",
     "~/Library/Logs/com.facebook.Origami-Studio",
