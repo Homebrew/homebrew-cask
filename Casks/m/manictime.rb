@@ -5,11 +5,11 @@ cask "manictime" do
   file_ext = on_system_conditional macos: "dmg", linux: "tar.gz"
 
   on_macos do
-    version "2026.2.1.2"
-    sha256 arm:   "c3405b27cd14658ddc8a9d265b5f34be9c0bce56800457abca9d1212deab9d66",
-           intel: "7bb1e75644d8e70461e0664484541f5e795ddf654720683b86cc025de73744fd"
+    version "2026.3.0.2"
+    sha256 arm:   "84e11b1f5a1a66293ae4751ac7e6fdd574438b9a42cf30e6c18fd2b748b714ce",
+           intel: "db08cbbb2aed80aaaff0c03c4a791af73a43a792af7878e389ad38eeaca4fcd9"
 
-    depends_on macos: :monterey
+    depends_on macos: :sonoma
 
     pkg "ManicTime.pkg"
 
@@ -24,8 +24,8 @@ cask "manictime" do
     ]
   end
   on_linux do
-    version "2026.2.2.2"
-    sha256 x86_64_linux: "552318c34119f9280992d451ace332fd9e31d0e7301c3e617173e5c05c50ffef"
+    version "2026.3.0.1"
+    sha256 x86_64_linux: "718359b39f520f9c777815a3b9ffd52b78e7b1b007652fb1e6e6dc7ba505ba68"
 
     depends_on arch: :x86_64
     depends_on formula: %w[
