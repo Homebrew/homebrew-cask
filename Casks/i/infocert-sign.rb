@@ -20,7 +20,10 @@ cask "infocert-sign" do
 
   zap trash: [
     "~/.infocertsign",
+    "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/it.infocert.desktop.gosign.sfl*",
     "~/Library/Application Support/Infocert Sign Desktop",
+    "~/Library/Caches/it.infocert.desktop.gosign*",
+    "~/Library/HTTPStorages/it.infocert.desktop.gosign",
     "~/Library/Preferences/it.infocert.desktop.gosign.plist",
     "~/Library/Saved Application State/it.infocert.desktop.gosign.savedState",
   ]
