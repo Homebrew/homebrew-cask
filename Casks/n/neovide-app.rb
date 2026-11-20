@@ -9,6 +9,8 @@ cask "neovide-app" do
          x86_64_linux: "eda631003273819e84d2d4b2a4d8229da02fa027e081b7d166f0d630f7811340"
 
   on_macos do
+    depends_on macos: :monterey
+
     app "Neovide.app"
     binary "#{appdir}/Neovide.app/Contents/MacOS/neovide"
 
