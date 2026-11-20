@@ -1,6 +1,6 @@
 cask "vivaldi" do
-  version "8.3.4191.45"
-  sha256 "6c5d72e061a681745224163df0dac80eeb5dab10ae314478cdabacde65135541"
+  version "8.3.4191.47"
+  sha256 "de510e5f1bdc203b9fdaca5b2c277d0c67533808a6fff3039b22f6244b4058e3"
 
   url "https://downloads.vivaldi.com/stable-auto/Vivaldi.#{version}.universal.tar.xz"
   name "Vivaldi"
