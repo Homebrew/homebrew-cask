@@ -1,9 +1,9 @@
 cask "thebrain" do
   arch arm: "arm64", intel: "x64"
 
-  version "15.0.647"
-  sha256 arm:   "464673bf77cc7825bba822741108d849f4468f4da7f7cea349ed047df3000f4b",
-         intel: "f2d824fcb319527d80ef73e4f5861350697ed1b3d7c8c7fee5046b9fb6da8bd6"
+  version "15.0.656"
+  sha256 arm:   "93cebf48bff843f402e97ec23adbcb7babe745fdf7deea9d4982933cba4f6b9f",
+         intel: "141717535b294bf978094d4051b6d23f6048c8aeda1d0a53e826f81cc39874cf"
 
   url "https://updater.thebrain.com/files/TheBrain-#{version}-#{arch}.dmg"
   name "TheBrain"
