@@ -21,7 +21,7 @@ cask "unifi-identity-endpoint" do
   auto_updates true
   depends_on :macos
 
-  pkg "#{version.csv.third}-macOS-#{version.csv.first}-#{version.csv.second}.pkg"
+  pkg "UniFi Endpoint.pkg"
 
   uninstall launchctl: [
               "application.com.ui.uid.standard-desktop.93942643.93942648",
