@@ -1,9 +1,9 @@
 cask "yakit" do
   arch arm: "arm64", intel: "x64"
 
-  version "1.4.9-1113"
-  sha256 arm:   "08f176d234f3c6c655afee8e5f4b81220ebdc926cdb5556ce3fec414e4f07067",
-         intel: "03f997cc29a3aee527d027c78041e52657b689862ab65630907e90008114c754"
+  version "1.4.9-1120"
+  sha256 arm:   "0dec47b4436ff8c9a6d25e5d429664807db804c8799c0786f04bf6bbaa3f5f99",
+         intel: "e355f77ee6cad329b48b1d93277c3a43942d769af9528c865c706f072844973d"
 
   url "https://github.com/yaklang/yakit/releases/download/v#{version}/Yakit-#{version}-darwin-#{arch}.dmg"
   name "Yakit"
@@ -15,7 +15,7 @@ cask "yakit" do
     regex(/^v?(\d+(?:[.-]\d+)+)$/i)
   end
 
-  depends_on :macos
+  depends_on macos: :ventura
 
   app "Yakit.app"
 
