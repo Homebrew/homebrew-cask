@@ -1,0 +1,4 @@
+self-hosted-runner:
+  # Labels of self-hosted or not-yet-known-upstream runner in array of strings.
+  labels:
+    - xcode-27

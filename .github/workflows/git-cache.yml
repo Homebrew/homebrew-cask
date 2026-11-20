@@ -1,0 +1,65 @@
+name: Git cache
+
+on:
+  # Scheduled runs only. Every pull request's CI restores this cache and trusts its contents,
+  # so no push, pull request or manual run may save it.
+  schedule:
+    # Once a day, off the hour because GitHub delays or drops scheduled runs at the top of the hour.
+    - cron: "17 3 * * *"
+
+concurrency:
+  group: git-cache
+  cancel-in-progress: true
+
+permissions:
+  contents: read
+
+jobs:
+  save:
+    if: github.repository_owner == 'Homebrew' && github.event_name == 'schedule'
+    # `ci.yml` restores this on macOS. The cache version includes the compression method, so save on macOS too.
+    runs-on: macos-latest
+    permissions:
+      actions: write # to delete superseded caches
+      contents: read
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          fetch-depth: 0
+          persist-credentials: false
+
+      # `ci.yml` only restores this run's cache if it is the only one. A key that can't be guessed, and is masked
+      # in the log, can't be saved by another job first.
+      - name: Generate Git cache key
+        id: key
+        run: |
+          suffix="$(openssl rand -hex 16)"
+          echo "::add-mask::${suffix}"
+          echo "key=git-snapshot-${GITHUB_RUN_ID}-${suffix}" >>"${GITHUB_OUTPUT}"
+
+      - name: Save Git cache
+        uses: actions/cache/save@55cc8345863c7cc4c66a329aec7e433d2d1c52a9 # v6.1.0
+        with:
+          path: .git
+          key: ${{ steps.key.outputs.key }}
+
+      - name: Delete superseded Git caches
+        env:
+          GH_TOKEN: ${{ github.token }}
+          GH_REPO: ${{ github.repository }}
+          KEY: ${{ steps.key.outputs.key }}
+        run: |
+          caches="$(gh cache list --ref "${GITHUB_REF}" --key git-snapshot- --limit 100 --json id,key)"
+          if ! jq --exit-status --arg key "${KEY}" 'any(.[]; .key == $key)' <<<"${caches}" >/dev/null
+          then
+            # Failing makes `ci.yml` keep using the previous run's cache, which is still there.
+            echo "::error::This run's Git cache is not listed, so keeping the older Git caches."
+            exit 1
+          fi
+
+          jq --raw-output --arg key "${KEY}" '.[] | select(.key != $key) | .id' <<<"${caches}" |
+            while read -r id
+            do
+              gh cache delete "${id}"
+            done

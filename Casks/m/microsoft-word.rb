@@ -1,0 +1,76 @@
+cask "microsoft-word" do
+  on_sonoma :or_older do
+    on_big_sur :or_older do
+      version "16.77.23091703"
+      sha256 "10c8db978206275a557faf3650763a656b1f7170c9b2a65fa6fdce220bd23066"
+    end
+    on_monterey do
+      version "16.89.24091630"
+      sha256 "e064013cf26dc3742f07436fae1bb1a37fdd21fc4fb09640c0de0fc977f4ffd3"
+    end
+    on_ventura do
+      version "16.101.25100321"
+      sha256 "c76066232b3367ad37eb03ce108c3a6de73aeb7c17e9a0baa6962c6cb88a5d6f"
+    end
+    on_sonoma do
+      version "16.114.26110224"
+      sha256 "56cf89c9694a25ee2ea1deaf29b1317f15b800647a2d3619219b91f2e7b9cc38"
+    end
+
+    livecheck do
+      skip "Legacy version"
+    end
+  end
+  on_sequoia :or_newer do
+    version "16.115.26111533"
+    sha256 "5ac9129c878fa04466aec509d47e9dcf86638dd13b5bf55b84b2e0da6392930c"
+
+    livecheck do
+      url "https://go.microsoft.com/fwlink/p/?linkid=525134"
+      strategy :header_match
+    end
+  end
+
+  url "https://res.public.onecdn.static.microsoft/mro1cdnstorage/C1297A47-86C4-4C1F-97FA-950631F94777/MacAutoupdate/Microsoft_Word_#{version}_Installer.pkg"
+  name "Microsoft Word"
+  desc "Word processor"
+  homepage "https://www.microsoft.com/en-US/microsoft-365/word"
+
+  auto_updates true
+  conflicts_with cask: [
+    "microsoft-office",
+    "microsoft-office-businesspro",
+  ]
+  depends_on :macos
+
+  pkg "Microsoft_Word_#{version}_Installer.pkg",
+      choices: [
+        {
+          "choiceIdentifier" => "com.microsoft.autoupdate", # Office16_all_autoupdate.pkg
+          "choiceAttribute"  => "selected",
+          "attributeSetting" => 0,
+        },
+      ]
+
+  uninstall launchctl: [
+              "com.microsoft.office.licensingV2.helper",
+              "com.microsoft.office.licensingV3.helper",
+            ],
+            quit:      "com.microsoft.autoupdate2",
+            pkgutil:   [
+              "com.microsoft.package.Microsoft_Word.app",
+              "com.microsoft.pkg.licensing",
+              "com.microsoft.pkg.licensing.v3",
+            ]
+
+  zap trash: [
+    "~/Library/Application Scripts/com.microsoft.Word*",
+    "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.microsoft.word.sfl*",
+    "~/Library/Application Support/CrashReporter/Microsoft Word_*.plist",
+    "~/Library/Application Support/Microsoft",
+    "~/Library/Containers/com.microsoft.Word*",
+    "~/Library/Group Containers/UBF8T346G9.ms/Microsoft Word.MERP.params.txt",
+    "~/Library/Preferences/com.microsoft.Word.plist",
+    "~/Library/Saved Application State/com.microsoft.Word.savedState",
+  ]
+end

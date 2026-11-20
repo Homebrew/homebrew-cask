@@ -1,0 +1,393 @@
+name: CI
+
+on:
+  push:
+    branches:
+      - main
+      - master
+  pull_request:
+  merge_group:
+  workflow_dispatch:
+    inputs:
+      casks:
+        description: List of casks to audit (comma-separated)
+        required: true
+      skip_install:
+        description: Skip installation of casks
+        required: false
+        default: true
+        type: boolean
+      new_cask:
+        description: Apply new cask audit
+        required: false
+        default: false
+        type: boolean
+
+env:
+  HOMEBREW_DEVELOPER: 1
+  HOMEBREW_NO_AUTO_UPDATE: 1
+  HOMEBREW_NO_INSTALL_FROM_API: 1
+  HOMEBREW_GITHUB_API_TOKEN: ${{ github.token }}
+
+concurrency:
+  group: "${{ github.ref }}"
+  cancel-in-progress: ${{ github.event_name == 'pull_request' }}
+
+permissions:
+  contents: read
+
+jobs:
+  generate-matrix:
+    outputs:
+      matrix: ${{ steps.generate-matrix.outputs.matrix }}
+      git-cache-key: ${{ steps.git-cache.outputs.key }}
+    runs-on: macos-latest
+    permissions:
+      actions: read # to check which run saved the Git cache
+      contents: read
+    steps:
+      # Not `setup-homebrew`: it fetches this tap's full history, but the matrix only needs the pull request's diff.
+      - name: Update Homebrew
+        run: |
+          repository="$(brew --repository)"
+          git -C "${repository}" config remote.origin.fetch "+refs/heads/*:refs/remotes/origin/*"
+          git -C "${repository}" fetch --force --tags origin
+          git -C "${repository}" remote set-head origin --auto
+          git -C "${repository}" checkout --force -B main origin/HEAD
+
+      - name: Check out Pull Request
+        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          # A pull request based on another branch needs full history to be diffed against the default branch.
+          fetch-depth: ${{ case(github.event_name != 'pull_request' || github.base_ref == github.event.repository.default_branch, 2, 0) }}
+          persist-credentials: false
+
+      - name: Tap the checkout
+        run: |
+          tap="$(brew --repository)/Library/Taps/homebrew/homebrew-cask"
+          mkdir -p "$(dirname "${tap}")"
+          rm -rf "${tap}"
+          ln -s "${GITHUB_WORKSPACE}" "${tap}"
+
+          # `brew generate-cask-ci-matrix` diffs `origin...HEAD`.
+          # A pull request's merge commit has the base branch as its first parent.
+          # A full clone already has the real `origin/main`.
+          if [[ "$(git rev-parse --is-shallow-repository)" == "true" ]]
+          then
+            base="HEAD"
+            if [[ "${GITHUB_EVENT_NAME}" == "pull_request" ]]
+            then
+              base="HEAD^1"
+            fi
+            git update-ref refs/remotes/origin/main "$(git rev-parse "${base}")"
+          fi
+          git symbolic-ref refs/remotes/origin/HEAD refs/remotes/origin/main
+
+      - name: Run brew config
+        run: brew config
+
+      - name: Generate CI matrix
+        id: generate-matrix
+        env:
+          INPUT_CASKS: ${{ github.event.inputs.casks }}
+          PULL_REQUEST_URL: ${{ github.event.pull_request.url }}
+        run: |
+          if [[ "${GITHUB_EVENT_NAME}" == "workflow_dispatch" ]]
+          then
+            # shellcheck disable=SC2086 # $INPUT_CASKS is a space-separated list of cask tokens
+            brew generate-cask-ci-matrix ${{ inputs.skip_install && '--skip-install' || '' }} ${{ inputs.new_cask && '--new' || '' }} --casks $INPUT_CASKS
+          elif [[ "${GITHUB_EVENT_NAME}" == "push" || "${GITHUB_EVENT_NAME}" == "merge_group" ]]
+          then
+            brew generate-cask-ci-matrix --syntax-only
+          else
+            brew generate-cask-ci-matrix --url "$PULL_REQUEST_URL"
+          fi
+
+      # Any job on the default branch can save a cache under any key, and restoring one runs whatever it holds.
+      # So `test` only gets a key if the newest scheduled `git-cache.yml` run has exactly one cache, saved while it ran.
+      # Otherwise `test` restores nothing and `setup-homebrew` clones the tap in full.
+      - name: Find Git cache
+        id: git-cache
+        env:
+          GH_TOKEN: ${{ github.token }}
+          DEFAULT_BRANCH: ${{ github.event.repository.default_branch }}
+        run: |
+          run="$(
+            gh api --method GET "repos/${GITHUB_REPOSITORY}/actions/workflows/git-cache.yml/runs" \
+              --raw-field branch="${DEFAULT_BRANCH}" --raw-field event=schedule --raw-field status=success \
+              --raw-field per_page=1 \
+              --jq '.workflow_runs[0] // empty | "\(.id) \(.run_started_at) \(.updated_at)"'
+          )" || run=""
+          read -r run_id started finished <<<"${run}" || true
+          if [[ -z "${run_id}" ]]
+          then
+            echo "No successful scheduled Git cache run found."
+            exit 0
+          fi
+
+          prefix="git-snapshot-${run_id}-"
+          caches="$(
+            gh api --method GET "repos/${GITHUB_REPOSITORY}/actions/caches" \
+              --raw-field key="${prefix}" --raw-field ref="refs/heads/${DEFAULT_BRANCH}" --raw-field per_page=100
+          )" || caches="{}"
+          key="$(
+            jq --raw-output --arg prefix "${prefix}" --arg started "${started}" --arg finished "${finished}" '
+              def seconds: sub("\\.[0-9]+Z$"; "Z") | fromdate;
+              [.actions_caches[]? | select(.key | startswith($prefix))] as $caches |
+              [
+                $caches[] | (.created_at | seconds) as $created |
+                  select($created >= ($started | seconds) and $created <= ($finished | seconds))
+              ] as $saved |
+              select(
+                .total_count == (.actions_caches | length) and ($saved | length) == 1 and
+                  ([$caches[] | select(.key == $saved[0].key)] | length) == 1
+              ) | $saved[0].key
+            ' <<<"${caches}"
+          )" || key=""
+          if [[ "${key}" =~ ^git-snapshot-[0-9]+-[0-9a-f]{32}$ ]]
+          then
+            echo "key=${key}" >>"${GITHUB_OUTPUT}"
+          else
+            echo "::warning::Run ${run_id} does not have exactly one Git cache saved while it ran, so not restoring one."
+          fi
+
+  test:
+    name: ${{ matrix.name }}
+    needs: generate-matrix
+    runs-on: ${{ matrix.runner }}
+    container: ${{ matrix.container || null }}
+    strategy:
+      fail-fast: false
+      matrix:
+        include: ${{ fromJson(needs.generate-matrix.outputs.matrix) }}
+    steps:
+      # Until `setup-homebrew` fixes their ACLs, the container user can't write the directories the runner mounts.
+      # The image also has no `zstd`, without which the cache lookup misses the zstd-compressed snapshot.
+      # On failure the restore is skipped and `setup-homebrew` clones the tap, as before.
+      - name: Prepare container for Git cache
+        id: prepare-container
+        if: matrix.container && needs.generate-matrix.outputs.git-cache-key
+        continue-on-error: true
+        run: |
+          user="$(whoami)"
+          sudo setfacl --recursive --modify="d:u:${user}:rwX,u:${user}:rwX" "${RUNNER_WORKSPACE}" "${RUNNER_TEMP}"
+          sudo apt-get update --quiet=2
+          sudo apt-get install --yes --quiet=2 --no-install-recommends zstd
+
+      # A full clone saved daily by `git-cache.yml`. `setup-homebrew` keeps an existing tap and only fetches newer commits.
+      # No `restore-keys`: only the exact key that `generate-matrix` checked may be restored.
+      # Without the ACLs the restore can't write its outputs and would fail the job, so it needs the preparation.
+      - name: Restore Git cache
+        id: git-cache
+        if: >
+          needs.generate-matrix.outputs.git-cache-key &&
+          (!matrix.container || steps.prepare-container.outcome == 'success')
+        uses: actions/cache/restore@55cc8345863c7cc4c66a329aec7e433d2d1c52a9 # v6.1.0
+        with:
+          path: .git
+          key: ${{ needs.generate-matrix.outputs.git-cache-key }}
+
+      - name: Seed tap from Git cache
+        if: steps.git-cache.outputs.cache-matched-key
+        env:
+          CONTAINER: ${{ matrix.container && 'true' || '' }}
+        run: |
+          tap="$(brew --repository "${GITHUB_REPOSITORY}")"
+          mkdir -p "${tap}"
+          # On a bare runner `setup-homebrew` moves the tap into the workspace, so `actions/checkout` reuses it.
+          # In a container it doesn't, so the workspace keeps a copy to save `actions/checkout` a full fetch.
+          # The tap is on another filesystem there, so a move would copy `.git` anyway.
+          # Steps in a container run in `sh`, which has no `[[`.
+          if [ -n "${CONTAINER}" ]
+          then
+            cp -a .git "${tap}/.git"
+          else
+            mv .git "${tap}/.git"
+          fi
+          # The snapshot's remote branches are up to a day old. Unpruned, a branch since replaced by
+          # `<branch>/<name>` (or the reverse) makes `setup-homebrew`'s fetch fail.
+          git -C "${tap}" config fetch.prune true
+          git -C "${tap}" checkout --force --quiet
+
+      - name: Set up Homebrew
+        id: set-up-homebrew
+        uses: Homebrew/actions/setup-homebrew@ceec4e8419bb3c97ce96e9dda7738499ed5f869d # 2026.11.14.1
+        with:
+          core: false
+          cask: true
+          stable: ${{ matrix.stable || false }}
+
+      # setup-homebrew blanks this via $GITHUB_ENV, which overrides workflow `env:`.
+      # Only steps that need it to load the pull request's cask by name keep it.
+      # The rest blank it again in their `env:` so formulae come from the API.
+      - name: Disable API installs
+        run: echo 'HOMEBREW_NO_INSTALL_FROM_API=1' >> "${GITHUB_ENV}"
+
+      - name: Enable debug mode
+        run: |
+          echo 'HOMEBREW_DEBUG=1' >> "${GITHUB_ENV}"
+          echo 'HOMEBREW_VERBOSE=1' >> "${GITHUB_ENV}"
+        if: runner.debug
+
+      - name: Check out Pull Request
+        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          fetch-depth: 0
+          persist-credentials: false
+
+      - name: Clean up CI machine
+        if: runner.os == 'macOS' && !matrix.stable
+        env:
+          HOMEBREW_NO_INSTALL_FROM_API: ""
+        run: brew test-bot --cleanup --only-cleanup-before
+
+      # An archive stores the gems' path relative to the workspace, which differs between a container and a bare
+      # runner, so neither can restore the other's. `cache.yml` saves the bare runner's under the unsuffixed key.
+      - name: Cache Homebrew Gems
+        id: cache
+        uses: actions/cache@55cc8345863c7cc4c66a329aec7e433d2d1c52a9 # v6.1.0
+        with:
+          path: ${{ steps.set-up-homebrew.outputs.gems-path }}
+          key: ${{ matrix.runner }}${{ matrix.container && '-container' || '' }}-rubygems-${{ steps.set-up-homebrew.outputs.gems-hash }}
+          restore-keys: ${{ matrix.runner }}${{ matrix.container && '-container' || '' }}-rubygems-
+
+      - name: Cache style cache
+        if: runner.os == 'macOS' && !matrix.stable
+        uses: actions/cache@55cc8345863c7cc4c66a329aec7e433d2d1c52a9 # v6.1.0
+        with:
+          path: ~/Library/Caches/Homebrew/style
+          key: macos-style-cache-${{ matrix.stable && 'stable-' || 'main-' }}${{ github.sha }}
+          restore-keys: macos-style-cache-${{ matrix.stable && 'stable-' || 'main-' }}
+
+      - name: Run brew config
+        run: brew config
+
+      - name: Run brew test-bot --only-tap-syntax
+        id: tap-syntax
+        env:
+          HOMEBREW_NO_INSTALL_FROM_API: ""
+        run: brew test-bot --tap '${{ matrix.tap }}' --only-tap-syntax ${{ matrix.stable && '--stable' || '' }}
+        if: always() && !matrix.cask
+
+      - name: Run brew fetch --cask ${{ matrix.cask.token }}
+        id: fetch
+        run: |
+          brew fetch --cask --retry --force ${{ join(matrix.fetch_args, ' ') }} '${{ matrix.cask.token }}'
+        timeout-minutes: 30
+        if: >
+          always() &&
+          contains(fromJSON('["success", "skipped"]'), steps.tap-syntax.outcome) &&
+          matrix.cask
+
+      # On xcode-27, anything that starts CoreSimulator (e.g. `brew config`) launches
+      # simdiskimaged, which then unmounts or moves other disk images while re-adding a
+      # duplicate watchOS runtime: "no mountable file systems" or vanishing mount points.
+      # Stop it after `brew config` and before any DMG is opened.
+      # TODO: remove once the xcode-27 runner image no longer needs this.
+      - name: Stop simdiskimaged
+        if: always() && matrix.runner == 'xcode-27' && steps.fetch.outcome == 'success'
+        run: |
+          sudo launchctl disable system/com.apple.CoreSimulator.simdiskimaged || true
+          sudo launchctl bootout system/com.apple.CoreSimulator.simdiskimaged || true
+          sudo pkill -x simdiskimaged || true
+
+      - name: Run brew audit --cask${{ (matrix.cask && ' ') || ' --tap ' }}${{ matrix.cask.token || matrix.tap }}
+        id: audit
+        env:
+          HOMEBREW_NO_INSTALL_FROM_API: ""
+        run: |
+          brew audit --cask ${{ join(matrix.audit_args, ' ') }}${{ (matrix.cask && ' ') || ' --tap ' }}'${{ matrix.cask.token || matrix.tap }}'
+        timeout-minutes: 30
+        if: >
+          always() &&
+          contains(fromJSON('["success", "skipped"]'), steps.tap-syntax.outcome) &&
+          (!matrix.cask || steps.fetch.outcome == 'success') &&
+          !matrix.skip_audit
+
+      - name: Gather cask information
+        id: info
+        env:
+          CASK_PATH: ${{ matrix.cask.path }}
+          HOMEBREW_NO_INSTALL_FROM_API: ""
+          TAP: ${{ matrix.tap }}
+        run: |
+          tap_cask_path="$(brew --repository "$TAP")/${CASK_PATH#./}"
+          echo "TAP_CASK_PATH=$tap_cask_path" >> "$GITHUB_ENV"
+          brew cask-ci info "$tap_cask_path"
+        if: always() && steps.fetch.outcome == 'success' && matrix.cask
+
+      - name: Uninstall conflicting formulae
+        run: |
+          read -r -a formula_conflicts_array <<< "$FORMULA_CONFLICTS"
+          brew uninstall --formula "${formula_conflicts_array[@]}"
+        if: ${{ always() && steps.info.outcome == 'success' && env.FORMULA_CONFLICTS != '' }}
+        timeout-minutes: 30
+
+      - name: Uninstall conflicting casks
+        run: |
+          read -r -a cask_conflicts_array <<< "$CASK_CONFLICTS"
+          brew uninstall --cask "${cask_conflicts_array[@]}"
+        if: ${{ always() && steps.info.outcome == 'success' && env.CASK_CONFLICTS != '' }}
+        timeout-minutes: 30
+
+      - name: Run brew uninstall --cask --force --zap ${{ matrix.cask.token }}
+        run: |
+          brew uninstall --cask --force --zap '${{ matrix.cask.token }}'
+        if: always() && steps.info.outcome == 'success'
+        timeout-minutes: 30
+
+      - name: Take snapshot of installed and running apps and services (macOS only)
+        id: snapshot
+        run: brew cask-ci snapshot
+        if: always() && steps.info.outcome == 'success' && runner.os == 'macOS'
+
+      - name: Run brew cask-ci install ${{ matrix.cask.token }}
+        id: install
+        env:
+          HOMEBREW_NO_INSTALL_FROM_API: ""
+        run: brew cask-ci install "$TAP_CASK_PATH"
+        if: >
+          always() && steps.info.outcome == 'success' &&
+          fromJSON(steps.info.outputs.macos_requirement_satisfied) &&
+          !matrix.skip_install
+        timeout-minutes: 30
+
+      - name: Check for missing zap paths
+        run: brew cask-ci zap-check "$TAP_CASK_PATH"
+        if: >
+          always() &&
+          steps.install.outcome == 'success' &&
+          runner.os == 'macOS'
+        continue-on-error: true
+        timeout-minutes: 10
+
+      - name: Run brew uninstall --cask ${{ matrix.cask.token }}
+        env:
+          HOMEBREW_NO_INSTALL_FROM_API: ""
+        run: brew uninstall --cask '${{ matrix.cask.token }}'
+        if: always() && steps.install.outcome == 'success' && !fromJSON(steps.info.outputs.manual_installer)
+        timeout-minutes: 30
+
+      - name: Uninstall cask dependencies
+        env:
+          HOMEBREW_NO_INSTALL_FROM_API: ""
+        run: |
+          read -r -a cask_dependencies_array <<< "$CASK_DEPENDENCIES"
+          brew uninstall --cask "${cask_dependencies_array[@]}"
+        if: ${{ always() && steps.install.outcome == 'success' && env.CASK_DEPENDENCIES != '' }}
+        timeout-minutes: 30
+
+      - name: Compare installed and running apps and services with snapshot (macOS only)
+        env:
+          HOMEBREW_NO_INSTALL_FROM_API: ""
+        run: brew cask-ci check "$TAP_CASK_PATH"
+        if: always() && steps.snapshot.outcome == 'success' && steps.install.outcome == 'success' && runner.os == 'macOS'
+
+  conclusion:
+    name: conclusion
+    needs: test
+    runs-on: ubuntu-slim
+    if: always()
+    steps:
+      - name: Result
+        run: ${{ needs.test.result == 'success' }}

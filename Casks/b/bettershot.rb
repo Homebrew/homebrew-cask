@@ -1,0 +1,24 @@
+cask "bettershot" do
+  arch arm: "arm64", intel: "x86_64"
+
+  version "0.5.9"
+  sha256 arm:   "38a2a63c35f1ebf5ce6460eb5229fede12bc96f80edb1eff2066a1a31f525348",
+         intel: "a1959fb6d2dd835bf7ebb0190fa3bce6531294675dd425bf90df3ad6e444d2e0"
+
+  url "https://github.com/KartikLabhshetwar/better-shot/releases/download/v#{version}/BetterShot-#{version}_#{arch}.dmg"
+  name "Better Shot"
+  desc "Screen capturing and editing tool"
+  homepage "https://bettershot.site/"
+
+  auto_updates true
+  depends_on macos: :sonoma
+
+  app "BetterShot.app"
+
+  zap trash: [
+    "~/Library/Application Support/com.kartiklabhshetwar.bettershot",
+    "~/Library/Caches/com.kartiklabhshetwar.bettershot",
+    "~/Library/Preferences/com.kartiklabhshetwar.bettershot.plist",
+    "~/Library/Saved Application State/com.kartiklabhshetwar.bettershot.savedState",
+  ]
+end

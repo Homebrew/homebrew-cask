@@ -1,0 +1,46 @@
+cask "freetube" do
+  arch arm: "arm64", intel: "x64"
+
+  on_big_sur :or_older do
+    version "0.23.15"
+    sha256 arm:   "6a25f689ecf0382c9b3c98be308f5d97eda1c362035dd1d715307a25ab68320a",
+           intel: "ebade3bc4b3cb7c994201cf1bd50459c33c8b4d85ae0e714b2c5a32612c70e69"
+
+    url "https://github.com/FreeTubeApp/FreeTube/releases/download/v#{version}-beta/freetube-#{version}-beta-mac-#{arch}.dmg"
+
+    livecheck do
+      skip "Legacy version"
+    end
+  end
+  on_monterey :or_newer do
+    version "0.25.3"
+    sha256 arm:   "2b445d64f5e56a873debea50c785cd41400bdabc387f0d67fc7be745b2b9146e",
+           intel: "40fb6c671ec75905e035968ec0c14bfe717643730af80536e625d191455f49bf"
+
+    url "https://github.com/FreeTubeApp/FreeTube/releases/download/v#{version}-beta/freetube-#{version}-beta-mac-#{arch}.dmg"
+
+    livecheck do
+      url :url
+      regex(/^v?(\d+(?:\.\d+)+)/i)
+    end
+  end
+
+  name "FreeTube"
+  desc "YouTube player focusing on privacy"
+  homepage "https://freetubeapp.io/"
+
+  disable! date: "2026-09-01", because: :fails_gatekeeper_check
+
+  depends_on :macos
+
+  app "FreeTube.app"
+
+  uninstall quit: "io.freetubeapp.freetube"
+
+  zap trash: [
+    "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/io.freetubeapp.freetube.sfl*",
+    "~/Library/Application Support/FreeTube",
+    "~/Library/Preferences/io.freetubeapp.freetube.plist",
+    "~/Library/Saved Application State/io.freetubeapp.freetube.savedState",
+  ]
+end

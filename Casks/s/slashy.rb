@@ -1,0 +1,29 @@
+cask "slashy" do
+  version "1.3.69"
+  sha256 "2a25b206084b5b22ec70fec2a218593e7f9eb2d9cda5902c474c96ced9fb5307"
+
+  url "https://dl.slashy.com/Slashy-#{version}-universal.dmg"
+  name "Slashy"
+  desc "Email client for Gmail"
+  homepage "https://www.slashy.com/"
+
+  livecheck do
+    url "https://dl.slashy.com/latest-mac.yml"
+    strategy :electron_builder
+  end
+
+  auto_updates true
+  depends_on macos: :monterey
+
+  app "Slashy.app"
+
+  zap trash: [
+    "~/Library/Application Scripts/com.slashy.email.calendar-widget",
+    "~/Library/Application Scripts/HQ26LAYG9H.com.slashy.email.calendar-widget",
+    "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.slashy.email.sfl*",
+    "~/Library/Application Support/slashyemail",
+    "~/Library/Containers/com.slashy.email.calendar-widget",
+    "~/Library/Group Containers/HQ26LAYG9H.com.slashy.email.calendar-widget",
+    "~/Library/Preferences/com.slashy.email.plist",
+  ]
+end

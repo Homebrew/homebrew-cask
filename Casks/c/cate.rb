@@ -1,0 +1,47 @@
+cask "cate" do
+  arch arm: "-arm64"
+  url_end = on_system_conditional macos: "#{arch}.dmg", linux: ".AppImage"
+
+  version "2.1.0"
+  sha256 arm:          "683896fab837ee32ac83e7526bdf79b1228319109b27eb28b733803ba9e94ae6",
+         intel:        "c143a58e43e47357d6795f048a3efb50037ade0826a0e65e650921e5c874ec01",
+         x86_64_linux: "b3b1c7e54b1865fbc573b57f4259346f4397ac492cd451c5ce36bd1a8f6919a2"
+
+  on_macos do
+    depends_on macos: :monterey
+
+    app "Cate.app"
+
+    zap trash: [
+      "~/.cate",
+      "~/Library/Application Support/Cate",
+      "~/Library/Application Support/CrashReporter/Cate Helper_*.plist",
+      "~/Library/Caches/cate-updater",
+      "~/Library/Caches/com.cate.app",
+      "~/Library/Caches/com.cate.app.ShipIt",
+      "~/Library/HTTPStorages/com.cate.app",
+      "~/Library/Logs/Cate",
+      "~/Library/Preferences/ByHost/com.cate.app.ShipIt.*.plist",
+      "~/Library/Preferences/com.cate.app.plist",
+      "~/Library/Saved Application State/com.cate.app.savedState",
+    ]
+  end
+  on_linux do
+    depends_on arch: :x86_64
+
+    app_image "Cate-#{version}.AppImage", target: "Cate.AppImage"
+
+    zap trash: [
+      "~/.cache/cate-updater",
+      "~/.cate",
+      "~/.config/Cate",
+    ]
+  end
+
+  url "https://github.com/0-AI-UG/cate/releases/download/v#{version}/Cate-#{version}#{url_end}"
+  name "Cate"
+  desc "Infinite zoomable canvas with editor, terminal, and browser panels"
+  homepage "https://cate.cero-ai.com/"
+
+  auto_updates true
+end

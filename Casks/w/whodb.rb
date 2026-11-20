@@ -1,0 +1,26 @@
+cask "whodb" do
+  version "0.139.0"
+  sha256 "8048401a55579548884e9c6c448c869ddf4e5bd9c6c104dd882b87d780382c7b"
+
+  url "https://github.com/clidey/whodb/releases/download/#{version}/whodb.dmg"
+  name "WhoDB"
+  desc "Database management tool with AI-powered features"
+  homepage "https://github.com/clidey/whodb"
+
+  livecheck do
+    url :url
+    strategy :github_latest
+  end
+
+  depends_on :macos
+
+  app "WhoDB Community.app"
+
+  zap trash: [
+    "~/Library/Application Support/whodb",
+    "~/Library/Caches/com.clidey.whodb",
+    "~/Library/Preferences/com.clidey.whodb.plist",
+    "~/Library/Saved Application State/com.clidey.whodb.savedState",
+    "~/Library/WebKit/com.clidey.whodb",
+  ]
+end

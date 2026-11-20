@@ -1,0 +1,70 @@
+cask "microsoft-outlook" do
+  on_sonoma :or_older do
+    on_big_sur :or_older do
+      version "16.77.23091703"
+      sha256 "becfe797d1c799a4366385f449e42f7377bd3d6de5d4db20e37bd36ba2f24ef5"
+    end
+    on_monterey do
+      version "16.89.24091630"
+      sha256 "24731ffca0b78c02f2544b145b4a103bd11b724fef0dc938bf5899e156495a72"
+    end
+    on_ventura do
+      version "16.101.25100321"
+      sha256 "db4ce5854bbcb60284041f7a04e2f37e317cff578857486af78069b3935c5e86"
+    end
+    on_sonoma do
+      version "16.114.26102720"
+      sha256 "f91c8e06a4fb9fcd0a7d3b4f0a189f73ab361306f01125f54b60a81d9e7ca766"
+    end
+
+    livecheck do
+      skip "Legacy version"
+    end
+  end
+  on_sequoia :or_newer do
+    version "16.115.26110837"
+    sha256 "89a5f392de320615c0940716d19778d8c1ef3a012130147aef87d000a0c25675"
+
+    livecheck do
+      url "https://go.microsoft.com/fwlink/p/?linkid=525137"
+      strategy :header_match
+    end
+  end
+
+  url "https://res.public.onecdn.static.microsoft/mro1cdnstorage/C1297A47-86C4-4C1F-97FA-950631F94777/MacAutoupdate/Microsoft_Outlook_#{version}_Installer.pkg"
+  name "Microsoft Outlook"
+  desc "Email client"
+  homepage "https://www.microsoft.com/en-us/microsoft-365/outlook/outlook-for-business"
+
+  auto_updates true
+  conflicts_with cask: [
+    "microsoft-office",
+    "microsoft-office-businesspro",
+  ]
+  depends_on :macos
+
+  pkg "Microsoft_Outlook_#{version}_Installer.pkg",
+      choices: [
+        {
+          "choiceIdentifier" => "com.microsoft.autoupdate", # Office16_all_autoupdate.pkg
+          "choiceAttribute"  => "selected",
+          "attributeSetting" => 0,
+        },
+      ]
+
+  uninstall launchctl: [
+              "com.microsoft.office.licensingV2.helper",
+              "com.microsoft.office.licensingV3.helper",
+            ],
+            quit:      "com.microsoft.autoupdate2",
+            pkgutil:   [
+              "com.microsoft.package.Microsoft_Outlook.app",
+              "com.microsoft.pkg.licensing",
+              "com.microsoft.pkg.licensing.v3",
+            ]
+
+  zap trash: [
+    "~/Library/Application Scripts/com.microsoft.Outlook",
+    "~/Library/Containers/com.microsoft.Outlook",
+  ]
+end

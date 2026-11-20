@@ -1,0 +1,28 @@
+cask "mobirise" do
+  arch arm: "-m"
+
+  version "6.3.0"
+  sha256 :no_check
+
+  url "https://download.mobirise.com/MobiriseSetup#{arch}.dmg"
+  name "Mobirise"
+  desc "No-code website creator"
+  homepage "https://mobirise.com/"
+
+  livecheck do
+    url "https://history.mobirisesite.com"
+    regex(/>\s*Mobirise\s+v?(\d+(?:\.\d+)+)/i)
+  end
+
+  depends_on :macos
+
+  app "Mobirise.app"
+
+  zap trash: [
+    "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.mobirise.mobirise.sfl*",
+    "~/Library/Application Support/Mobirise",
+    "~/Library/Application Support/Mobirise.com",
+    "~/Library/Preferences/com.mobirise.Mobirise.plist",
+    "~/Library/Saved Application State/com.mobirise.Mobirise.savedState",
+  ]
+end

@@ -1,0 +1,28 @@
+cask "pastenow" do
+  version "2.40,772"
+  sha256 "87175c812f16a68bc4bc05e98f4fab3c74a1869b13526c513eb687bde274ab7e"
+
+  url "https://pastenow.app/api/release_manager/downloads/app.pastenow.PasteNow/#{version.csv.second}.zip"
+  name "PasteNow"
+  desc "Clipboard manager"
+  homepage "https://pastenow.app/"
+
+  livecheck do
+    url "https://pastenow.app/api/release_manager/app.pastenow.PasteNow.xml"
+    strategy :sparkle
+  end
+
+  auto_updates true
+  depends_on macos: :sonoma
+
+  app "PasteNow.app"
+
+  zap trash: [
+    "~/Library/Application Scripts/*app.pastenow.PasteNow",
+    "~/Library/Caches/app.pastenow.PasteNow",
+    "~/Library/Containers/app.pastenow.PasteNow",
+    "~/Library/Group Containers/*.app.pastenow.PasteNow",
+    "~/Library/HTTPStorages/app.pastenow.PasteNow",
+    "~/Library/Preferences/app.pastenow.PasteNow.plist",
+  ]
+end

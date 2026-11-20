@@ -1,0 +1,73 @@
+cask "betterdisplay" do
+  on_big_sur :or_older do
+    version "1.4.15"
+    sha256 "26a75c3a4e95b076dcb7468e6ce9f9493675e4a9676fd267e5b32459db900077"
+
+    livecheck do
+      skip "Legacy version"
+    end
+  end
+  on_monterey do
+    version "2.3.9"
+    sha256 "3ee043fd5893ab354efbc4c9a92295a21b365e55af34cc64612255878b746722"
+
+    livecheck do
+      skip "Legacy version"
+    end
+  end
+  on_ventura :or_newer do
+    on_sequoia :or_older do
+      version "4.3.7"
+      sha256 "be3ce2d57702156e1263e320a1868e6313818a78aa1b0b9ad4aee26d6e999928"
+
+      livecheck do
+        url "https://betterdisplay.pro/betterdisplay/sparkle/appcast.xml"
+        strategy :sparkle do |items|
+          items.filter_map do |item|
+            next unless item.channel.nil?
+            next unless item.minimum_system_version
+            next if item.minimum_system_version > :sequoia
+
+            item.short_version
+          end
+        end
+      end
+    end
+  end
+  on_tahoe :or_newer do
+    version "5.2.1"
+    sha256 "b61f6f16d536a8eb98f3f6873faa65b0f8c8d8c03f5ad314f2addf630061710c"
+
+    livecheck do
+      url "https://betterdisplay.pro/betterdisplay/sparkle/appcast.xml"
+      strategy :sparkle do |items|
+        items.filter_map { |item| item.channel.nil? && item.short_version }
+      end
+    end
+  end
+
+  url "https://github.com/waydabber/BetterDisplay/releases/download/v#{version}/BetterDisplay-v#{version}.dmg"
+  name "BetterDisplay"
+  desc "Display management tool"
+  homepage "https://betterdisplay.pro/"
+
+  auto_updates true
+  depends_on :macos
+
+  app "BetterDisplay.app"
+  command_wrapper "betterdisplaycli",
+                  executable: "#{appdir}/BetterDisplay.app/Contents/MacOS/BetterDisplay"
+
+  uninstall quit:       "pro.betterdisplay.BetterDisplay",
+            login_item: "BetterDisplay"
+
+  zap trash: [
+    "~/Library/Application Support/BetterDisplay",
+    "~/Library/Application Support/BetterDummy",
+    "~/Library/Caches/pro.betterdisplay.BetterDisplay",
+    "~/Library/Caches/SentryCrash/BetterDisplay",
+    "~/Library/HTTPStorages/pro.betterdisplay.BetterDisplay",
+    "~/Library/HTTPStorages/pro.betterdisplay.BetterDisplay.binarycookies",
+    "~/Library/Preferences/pro.betterdisplay.BetterDisplay.plist",
+  ]
+end

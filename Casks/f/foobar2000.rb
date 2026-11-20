@@ -1,0 +1,25 @@
+cask "foobar2000" do
+  # NOTE: "2000" is not a version number, but an intrinsic part of the product name
+  version "2.26.3"
+  sha256 "f35864f94f4e90a656ee94b4331eb84cf94b724c165fd591bc5a822cd7998b35"
+
+  url "https://www.foobar2000.org/files/foobar2000-v#{version}.dmg"
+  name "foobar2000"
+  desc "Audio player"
+  homepage "https://www.foobar2000.org/mac"
+
+  livecheck do
+    url :homepage
+    regex(%r{href=.*?/foobar2000[._-]v?(\d+(?:\.\d+)+)\.dmg}i)
+  end
+
+  depends_on :macos
+
+  app "foobar2000.app"
+
+  zap trash: [
+    "~/Library/foobar2000",
+    "~/Library/foobar2000-v2",
+    "~/Library/Preferences/com.foobar2000.mac.plist",
+  ]
+end

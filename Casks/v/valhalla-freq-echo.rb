@@ -1,0 +1,28 @@
+cask "valhalla-freq-echo" do
+  version "1.2.8"
+  sha256 "7e8681bd90fe7c1ef5b82a87c5d90bd1051980c256b0bd9424ea9cbfc53a9bdc"
+
+  url "https://valhallaproduction.s3.us-west-2.amazonaws.com/freqecho/ValhallaFreqEchoOSX_#{version.dots_to_underscores}.dmg"
+  name "Valhalla Freq Echo"
+  desc "Frequency shifter plugin"
+  homepage "https://valhalladsp.com/shop/delay/valhalla-freq-echo/"
+
+  livecheck do
+    url "https://valhalladsp.com/demos-downloads/",
+        user_agent: :browser
+    regex(/ValhallaFreqEchoOSX[._-]v?(\d+(?:[._]\d+)+)v?\d?\.dmg/i)
+    strategy :page_match do |page, regex|
+      page.scan(regex).map { |match| match&.first&.tr("_", ".") }
+    end
+  end
+
+  no_autobump! because: "livecheck is unreachable in autobump environment"
+
+  depends_on :macos
+
+  pkg "ValhallaFreqEchoOSX.pkg"
+
+  uninstall pkgutil: "com.valhalladsp.FreqEcho.pkg.*"
+
+  zap :not_required
+end

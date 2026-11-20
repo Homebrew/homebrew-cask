@@ -1,0 +1,28 @@
+cask "ocenaudio" do
+  version "3.22.2"
+  sha256 :no_check
+
+  url "https://www.ocenaudio.com/downloads/index.php/ocenaudio_universal.dmg?",
+      using: :post
+  name "ocenaudio"
+  desc "Audio editor"
+  homepage "https://www.ocenaudio.com/en"
+
+  livecheck do
+    url :url
+    strategy :header_match
+  end
+
+  depends_on macos: :sonoma
+
+  app "ocenaudio.app"
+
+  uninstall quit: "com.ocenaudio"
+
+  zap trash: [
+    "~/Library/Application Support/ocenaudio",
+    "~/Library/Caches/ocenaudio",
+    "~/Library/Preferences/com.ocenaudio.plist",
+    "~/Library/Saved Application State/com.ocenaudio.savedState",
+  ]
+end

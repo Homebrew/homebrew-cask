@@ -1,0 +1,66 @@
+cask "adguard@nightly" do
+  version "2.21.0.2639"
+  sha256 "d61487b2d1b114d42452106c2360814d200b9ac56dea64c0ef022edff33cbd88"
+
+  url "https://static.adguard.com/mac/nightly/AdGuard-#{version}.dmg"
+  name "Adguard"
+  desc "Stand alone ad blocker"
+  homepage "https://adguard.com/"
+
+  livecheck do
+    url "https://static.adguard.com/mac/adguard-nightly-appcast.xml"
+    regex(/AdGuard[._-]v?(\d+(?:\.\d+)+)\.dmg/i)
+    strategy :sparkle do |item|
+      match = item.url.match(regex)
+      next unless match
+
+      match[1]
+    end
+  end
+
+  auto_updates true
+  conflicts_with cask: "adguard"
+  depends_on macos: :ventura
+
+  pkg "AdGuard.pkg"
+
+  uninstall launchctl: [
+              "com.adguard.mac.adguard.helper",
+              "com.adguard.mac.adguard.pac",
+              "com.adguard.mac.adguard.tun-helper",
+              "com.adguard.mac.adguard.xpcgate2",
+            ],
+            quit:      "com.adguard.mac.adguard",
+            pkgutil:   "com.adguard.mac.adguard-pkg",
+            delete:    [
+              "/Library/Application Support/AdGuard Software/com.adguard.mac.adguard",
+              "/Library/Application Support/com.adguard.Adguard",
+              "/Library/com.adguard.mac.adguard.pac",
+            ],
+            rmdir:     "/Library/Application Support/AdGuard Software"
+
+  zap delete: "/Library/Preferences/com.adguard.mac.adguard.helper.plist",
+      trash:  [
+        "/Library/Logs/com.adguard.mac.adguard",
+        "~/Library/Application Scripts/*.com.adguard.mac",
+        "~/Library/Application Scripts/com.adguard.mac.adguard.loginhelper",
+        "~/Library/Application Scripts/com.adguard.mac.adguard.safari-assistant",
+        "~/Library/Application Support/Adguard",
+        "~/Library/Application Support/com.adguard.Adguard",
+        "~/Library/Application Support/com.adguard.mac.adguard.pac",
+        "~/Library/Application Support/com.adguard.mac.adguard.tun-helper",
+        "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.adguard.mac.adguard.loginhelper.sfl*",
+        "~/Library/Caches/com.adguard.Adguard",
+        "~/Library/Caches/com.adguard.mac.adguard",
+        "~/Library/Containers/com.adguard.mac.adguard.loginhelper",
+        "~/Library/Containers/com.adguard.mac.adguard.safari-assistant",
+        "~/Library/Cookies/com.adguard.Adguard.binarycookies",
+        "~/Library/Group Containers/*.com.adguard.mac",
+        "~/Library/HTTPStorages/com.adguard.mac.adguard",
+        "~/Library/HTTPStorages/com.adguard.mac.adguard.binarycookies",
+        "~/Library/Logs/Adguard",
+        "~/Library/Preferences/com.adguard.Adguard.plist",
+        "~/Library/Preferences/com.adguard.mac.adguard.plist",
+        "~/Library/Saved Application State/com.adguard.mac.adguard.savedState",
+      ]
+end

@@ -1,0 +1,71 @@
+name: Triage tasks
+
+on: pull_request_target
+
+concurrency:
+  group: "triage-${{ github.event.number }}"
+  cancel-in-progress: true
+
+jobs:
+  triage:
+    runs-on: ubuntu-slim
+    permissions:
+      contents: read
+      pull-requests: write
+      statuses: write
+    steps:
+      - name: Check commit format
+        uses: Homebrew/actions/check-commit-format@ceec4e8419bb3c97ce96e9dda7738499ed5f869d # 2026.11.14.1
+        with:
+          token: ${{ secrets.HOMEBREW_GITHUB_PUBLIC_REPO_TOKEN }}
+
+      - name: Label pull request
+        uses: Homebrew/actions/label-pull-requests@ceec4e8419bb3c97ce96e9dda7738499ed5f869d # 2026.11.14.1
+        if: always()
+        with:
+          token: ${{secrets.HOMEBREW_GITHUB_PUBLIC_REPO_TOKEN}}
+          def: |
+            - label: cask deprecated
+              path: Casks/.+
+              content: \n  deprecate!.*\n
+
+            - label: cask disabled
+              path: Casks/.+
+              content: \n  disable!.*\n
+
+            - label: unsigned
+              path: Casks/.+
+              content: \n  (deprecate|disable)!.*:fails_gatekeeper_check\n
+
+            - label: new cask
+              status: added
+              path: Casks/.+
+              allow_any_match: true
+
+            - label: marked for removal/rejection
+              status: removed
+              path: Casks/.+
+
+            - label: documentation
+              path: (.*\.md|\.github/ISSUE_TEMPLATE/.*\.yml)
+
+            - label: bump-cask-pr
+              pr_body_content: Created with `brew bump-cask-pr`
+
+            - label: missing description
+              path: Casks/.+
+              missing_content:
+                - \n  desc .+\n
+                - cask "font-
+
+            - label: extract_plist livecheck
+              path: Casks/.+
+              content: strategy :extract_plist
+
+            - label: missing zap
+              path: Casks/.+
+              missing_content: zap .+\n
+
+            - label: linux cask
+              path: Casks/.+
+              content: ((x86_64|arm64|on)_linux|depends_on :linux)
