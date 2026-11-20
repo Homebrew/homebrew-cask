@@ -4,10 +4,10 @@ cask "zed-delta" do
   url_end = on_system_conditional macos: "macos/aarch64/Delta.app.zip",
                                   linux: "delta-linux-#{arch}.tar.gz"
 
-  version "0.28.2"
-  sha256 arm:          "b190a3126e58b987ae806048e045d58da311f4b5c586f515feb4ed6e541257bd",
-         arm64_linux:  "560b571bac647d07913a8a251965450811ae2c7429a109b8bd401bfe6b53545d",
-         x86_64_linux: "b024c8b0eabe647842f0eb2b0ab79661edb880f326326407fbdcefdef9830092"
+  version "0.28.3"
+  sha256 arm:          "b5a06d4620f17cff9231f295dbf0fd8a9f1a8e4e7844f0c5f34e055187a0b661",
+         arm64_linux:  "8178a28a92e893cf8646d4342874aa42a38796c69a17520f349c5fafc5e1df0c",
+         x86_64_linux: "2b7b46240661f436384cee800efb6814f85198f6937a5c5b99fb8102b9d94dd3"
 
   on_macos do
     depends_on arch: :arm64
