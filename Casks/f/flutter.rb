@@ -3,10 +3,10 @@ cask "flutter" do
   os macos: "macos", linux: "linux"
   archive_format = on_system_conditional macos: "zip", linux: "tar.xz"
 
-  version "3.50.0"
-  sha256 arm:          "ed2d08a3e3c023e84cbe9316d21bd88fda6ee9552f90c1eb4da41a07c170fb35",
-         intel:        "d4e1bf2e2fc0c2e92267f45660c16a7d805e84ad42cb40b64b466446bffe48e0",
-         x86_64_linux: "6ea2d806fd57269ae783e6788e2a81fc26eaad782f1e0d0ff38623bb765ff9f5"
+  version "3.50.1"
+  sha256 arm:          "872883d49965e0cc1d8e477d2d87f2f45930d13f94b34889e53783586f04c715",
+         intel:        "5c3d3bbabc8edd58eb98605047c59c31a82895cfe7d119318d0f62cdbd5d47ed",
+         x86_64_linux: "4ad17fc8462fbcef2ba19ff4a78c0a16b7147fde1add8578e267ea62cdb92678"
 
   on_macos do
     suite "flutter", target: "#{HOMEBREW_PREFIX}/share/flutter"
