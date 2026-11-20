@@ -22,7 +22,7 @@ cask "daedalus-mainnet" do
   end
 
   auto_updates true
-  depends_on :macos
+  depends_on macos: :ventura
 
   pkg "daedalus-#{version.csv.first}-#{version.csv.second}-mainnet-#{version.csv.third}-#{arch}-darwin.pkg"
 
