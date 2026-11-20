@@ -13,6 +13,7 @@ cask "notchi" do
   app "Notchi.app"
 
   zap trash: [
+    "~/Library/Application Support/Notchi",
     "~/Library/Caches/com.ruban.notchi",
     "~/Library/HTTPStorages/com.ruban.notchi",
     "~/Library/Preferences/com.ruban.notchi.plist",
