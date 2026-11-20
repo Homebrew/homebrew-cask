@@ -17,6 +17,7 @@ cask "taskade" do
   app "Taskade.app"
 
   zap trash: [
+    "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.taskade.sfl*",
     "~/Library/Application Support/taskade",
     "~/Library/Preferences/com.taskade.plist",
     "~/Library/Saved Application State/com.taskade.savedState",
