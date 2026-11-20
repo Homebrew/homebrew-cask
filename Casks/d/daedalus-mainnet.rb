@@ -1,9 +1,9 @@
 cask "daedalus-mainnet" do
   arch arm: "aarch64", intel: "x86_64"
 
-  version "11.6.2,88427,8d961fa48"
-  sha256 arm:   "6639dc9d9f3f7dd69d1cce37237369b7232d8aec5b836312bb009aca3b8b77b0",
-         intel: "6f0c6ad66e9c7042a69abccf70da967b88bfec9df5416fee61ecd7d91b8e2e58"
+  version "11.6.3,88729,18e0288d9"
+  sha256 arm:   "74128c694035e3a5fcd3ddfe5f380ea5e0f8ea99c55abccc9e37ebbac5b60e94",
+         intel: "33ec8f4a3db6535a915959d2cb6b2d002e35c71978453a2f192359a0bf34f835"
 
   url "https://update-cardano-mainnet.iohk.io/daedalus-#{version.csv.first}-#{version.csv.second}-mainnet-#{version.csv.third}-#{arch}-darwin.pkg"
   name "Daedalus Mainnet"
