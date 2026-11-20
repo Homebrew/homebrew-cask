@@ -2,11 +2,11 @@ cask "teamwork-graph-cli" do
   arch arm: "arm64", intel: "x64"
   os macos: "darwin", linux: "linux"
 
-  version "1.4.5"
-  sha256 arm:          "95013443cdab0ec0a530c9ca4516f8d9fa9f95db5783d765b6505c4d6e9043cf",
-         intel:        "b7c5aa011ac702e3d69b887705ae3290ae7b73ff42356f708c7e83bfca6b46be",
-         arm64_linux:  "8b2e462e5f6efdcfd085207b2607b1f9d4d74d5bd72620f7778993e64ad2b4ac",
-         x86_64_linux: "12cdcd49597ef7c2a7a4b0c8948bc708112fb5901ebce3e54983171b62405595"
+  version "1.4.6"
+  sha256 arm:          "e95b9285a97f3d79a4ae1122264a43f72522740944de2dc8ff1b92376418926d",
+         intel:        "81dfa7629841778d35879e83970c148022878fb51f9bea7d31605d35ab1f0cfb",
+         arm64_linux:  "9acea0127e9bc12f8687da81434fe61e4578ae7dde556dde626d3ecaab45350c",
+         x86_64_linux: "289e804ffae54fe958d0be3ea8374dc806a7e341d3cf34e5feca81ad0c1f41bf"
 
   on_macos do
     depends_on macos: :ventura
