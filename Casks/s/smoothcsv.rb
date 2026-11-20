@@ -10,6 +10,8 @@ cask "smoothcsv" do
          x86_64_linux: "082a79bfbbe843f0f5e406a5805ed47db12bafae3fd51525aa8894364f554bf4"
 
   on_macos do
+    depends_on macos: :ventura
+
     app "SmoothCSV.app"
     binary "#{appdir}/SmoothCSV.app/Contents/MacOS/smoothcsv-cli", target: "smoothcsv"
 
