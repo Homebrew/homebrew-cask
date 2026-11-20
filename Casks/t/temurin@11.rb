@@ -1,9 +1,9 @@
 cask "temurin@11" do
   arch arm: "aarch64", intel: "x64"
 
-  version "11.0.33,10"
-  sha256 arm:   "94ca9f6b7536309890b724108d3817ec1f648215c164433794776ed0fb02b774",
-         intel: "bf22c47b19698703d2da0f564219edfc50fd1b303d66a340f0a87344bfff943f"
+  version "11.0.33.1,1"
+  sha256 arm:   "e4356eec126def1c80d3f4bb9e71079bafe98705efaf67b9b13c3720392cb878",
+         intel: "2fc2999fa1d26d3b73c13f110cfd17bcb70befb0f06f0ca4523416cf0e548190"
 
   url "https://github.com/adoptium/temurin#{version.major}-binaries/releases/download/jdk-#{version.csv.first}%2B#{version.csv.second}/OpenJDK#{version.major}U-jdk_#{arch}_mac_hotspot_#{version.csv.first}_#{version.csv.second.major}.pkg"
   name "Eclipse Temurin 11"
