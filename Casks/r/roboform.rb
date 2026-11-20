@@ -1,15 +1,15 @@
 cask "roboform" do
-  version "9.9.5"
+  version "10.0.2"
   sha256 :no_check
 
-  url "https://www.roboform.com/dist/roboform-mac-v#{version.major}.dmg"
+  url "https://services.roboform.com/dist/roboform-mac-vsub.dmg"
   name "RoboForm"
   desc "Password manager and form filler application"
   homepage "https://www.roboform.com/"
 
   livecheck do
-    url "https://www.roboform.com/news-mac"
-    regex(/Version\s*(\d+(?:\.\d+)+)/i)
+    url "https://www.roboform.com/download"
+    regex(/RoboForm\s+for\s+Mac\s+\.DMG\s+v?(\d+(?:\.\d+)+)/i)
   end
 
   auto_updates true
