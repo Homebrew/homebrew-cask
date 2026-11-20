@@ -9,7 +9,7 @@ cask "manictime" do
     sha256 arm:   "84e11b1f5a1a66293ae4751ac7e6fdd574438b9a42cf30e6c18fd2b748b714ce",
            intel: "db08cbbb2aed80aaaff0c03c4a791af73a43a792af7878e389ad38eeaca4fcd9"
 
-    depends_on macos: :monterey
+    depends_on macos: :sonoma
 
     pkg "ManicTime.pkg"
 
