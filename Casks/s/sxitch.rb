@@ -20,5 +20,6 @@ cask "sxitch" do
     "~/Library/Application Support/Sxitch",
     "~/Library/Caches/app.sxitch",
     "~/Library/Preferences/app.sxitch.plist",
+    "~/Library/Preferences/com.umangsurana.sxitch.plist",
   ]
 end
