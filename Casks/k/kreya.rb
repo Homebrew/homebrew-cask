@@ -15,9 +15,12 @@ cask "kreya" do
     regex(/(\d+(?:\.\d+)+)\s\(\d{4}-\d{2}-\d{2}\)/i)
   end
 
-  depends_on macos: :ventura
+  depends_on macos: :sonoma
 
   app "Kreya.app"
 
-  zap trash: "~/Library/Caches/app.kreya"
+  zap trash: [
+    "~/Library/Application Support/Kreya",
+    "~/Library/Caches/app.kreya",
+  ]
 end
