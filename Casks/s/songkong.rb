@@ -19,6 +19,7 @@ cask "songkong" do
   app "SongKong.app"
 
   zap trash: [
+    "~/Library/Application Support/SongKong",
     "~/Library/Logs/SongKong",
     "~/Library/Preferences/com.jthink.songkong.plist",
     "~/Library/Preferences/SongKong",
