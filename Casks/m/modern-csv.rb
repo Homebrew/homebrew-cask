@@ -1,6 +1,6 @@
 cask "modern-csv" do
-  version "2.4.5"
-  sha256 "bed9ae4794b9d5b0592522bccb62fbbc42ce2bba9dd2bee9d85b84344cab745c"
+  version "3.0"
+  sha256 "b57c96abdacae389518858f0e20702ca735b95422f0cc8aa0278e976490a13ba"
 
   url "https://www.moderncsv.com/release/ModernCSV-Mac-v#{version}.dmg"
   name "Modern CSV"
@@ -12,7 +12,7 @@ cask "modern-csv" do
     strategy :header_match
   end
 
-  depends_on :macos
+  depends_on macos: :ventura
 
   app "Modern CSV.app"
 
