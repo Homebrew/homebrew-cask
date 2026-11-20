@@ -18,9 +18,11 @@ cask "siyuan" do
 
   zap trash: [
     "~/.siyuan",
+    "~/Library/Application Scripts/FJT3K7XAD8.org.b3log.siyuan.quicklook",
     "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/org.b3log.siyuan.sfl*",
     "~/Library/Application Support/SiYuan",
     "~/Library/Application Support/SiYuan-Electron",
+    "~/Library/Group Containers/FJT3K7XAD8.org.b3log.siyuan.quicklook",
     "~/Library/Preferences/org.b3log.siyuan.plist",
     "~/Library/Saved Application State/org.b3log.siyuan.savedState",
   ]
