@@ -7,6 +7,11 @@ cask "gyroflow" do
   desc "Video stabilization using gyroscope data"
   homepage "https://gyroflow.xyz/"
 
+  livecheck do
+    url :url
+    strategy :github_latest
+  end
+
   depends_on :macos
 
   app "Gyroflow.app"
