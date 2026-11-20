@@ -2,18 +2,18 @@ cask "brave-origin" do
   arch arm: "arm64", intel: "x64"
   folder_arch = on_arch_conditional arm: "-arm64"
 
-  version "1.99.57.0"
-  sha256 arm:   "23ef7a70b1d66ec726c1c8afc880162261e5328aef1a4b90322800dfdab97346",
-         intel: "195f5493115665389001fede88e8b1865e0d476b21049665bb6fd6190e173787"
+  version "1.100.58.0,200.58"
+  sha256 arm:   "9f0000ddaa461b517302d36935f2acb08656245d5750b9c8606e637919706e42",
+         intel: "962debe8917fa2268d52f0a46413ff4f6de3607ab65ad9ccddd9bf6cdd76b9f3"
 
-  url "https://updates-cdn.bravesoftware.com/sparkle/Brave-Origin/stable#{folder_arch}/#{version.major_minor_patch.sub(".", "")}/Brave-Origin-#{arch}.dmg"
+  url "https://updates-cdn.bravesoftware.com/sparkle/Brave-Origin/stable#{folder_arch}/#{version.csv.second}/Brave-Origin-#{arch}.dmg"
   name "Brave Origin"
   desc "Privacy-focused web browser"
   homepage "https://brave.com/origin"
 
   livecheck do
     url "https://updates.bravesoftware.com/sparkle/Brave-Origin/stable#{folder_arch}/appcast.xml"
-    strategy :sparkle, &:short_version
+    strategy :sparkle
   end
 
   auto_updates true
