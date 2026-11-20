@@ -36,6 +36,7 @@ cask "conductor" do
         "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.conductor.app.sfl*",
         "~/Library/Application Support/com.conductor.app",
         "~/Library/Caches/com.conductor.app",
+        "~/Library/Logs/com.conductor.app",
         "~/Library/Preferences/com.conductor.app.plist",
         "~/Library/WebKit/com.conductor.app",
       ],
