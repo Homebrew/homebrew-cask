@@ -17,10 +17,12 @@ cask "clipaste" do
 
   app "Clipaste.app"
 
+  uninstall quit: "com.ntwind.clipaste"
+
   zap trash: [
-    "~/Library/Application Support/com.ntwind.clipaste",
-    "~/Library/Caches/com.ntwind.clipaste",
-    "~/Library/Preferences/com.ntwind.clipaste.plist",
-    "~/Library/Saved Application State/com.ntwind.clipaste.savedState",
+    "~/Library/Application Scripts/com.ntwind.clipaste",
+    "~/Library/Application Scripts/com.ntwind.clipaste-LaunchAtLoginHelper",
+    "~/Library/Containers/com.ntwind.clipaste",
+    "~/Library/Containers/com.ntwind.clipaste-LaunchAtLoginHelper",
   ]
 end
