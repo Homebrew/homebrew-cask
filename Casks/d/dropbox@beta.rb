@@ -1,9 +1,9 @@
 cask "dropbox@beta" do
   arch arm: "&arch=arm64"
 
-  version "281.3.5375"
-  sha256 arm:   "744e4e2e432bc823b35cfe5b84a74be9e31cd41a190f76e07d9e18285fe8f71c",
-         intel: "389c2fdf56cc772780c746de3bacb2ab4a65f9f9a71f6a5d3cb60136ce1e2ec5"
+  version "281.3.5397"
+  sha256 arm:   "42c3468283e374233f225066bafd67c0c46dcad4fe7739646c8ad87b484ef145",
+         intel: "470d5173149d8a6f887e86cbe798a138ba34f2ec31b73399c2eaa2968430cb45"
 
   url "https://www.dropbox.com/download?build=#{version}&plat=mac&rtoken=&type=full#{arch}"
   name "Dropbox"
