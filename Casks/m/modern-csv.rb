@@ -20,6 +20,8 @@ cask "modern-csv" do
 
   zap trash: [
     "~/Library/Application Support/Modern CSV",
+    "~/Library/Caches/Modern CSV",
+    "~/Library/Preferences/Modern CSV",
     "~/Library/Saved Application State/net.galliumdigital.Modern-CSV.savedState",
   ]
 end
