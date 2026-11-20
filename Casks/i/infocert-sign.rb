@@ -1,5 +1,5 @@
 cask "infocert-sign" do
-  version "3.1.2.686"
+  version "3.1.3.831"
   sha256 :no_check
 
   url "https://rinnovofirma.infocert.it/infocertsign/international/download/darwin/latest"
