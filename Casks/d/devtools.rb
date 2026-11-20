@@ -10,6 +10,11 @@ cask "devtools" do
   desc "Collection of developer utilities"
   homepage "https://github.com/me-shaon/devtools"
 
+  livecheck do
+    url :url
+    strategy :github_latest
+  end
+
   auto_updates true
   depends_on :macos
 
