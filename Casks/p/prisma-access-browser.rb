@@ -1,6 +1,6 @@
 cask "prisma-access-browser" do
-  version "157.19.6.79,3df06572"
-  sha256 "912fe9680c228ebbbb93b8de6e8899e8653b92e20e512eaffe5bb952063f467e"
+  version "158.19.3.37,e38426ec"
+  sha256 "718c0d6a1a4c357171b8fd16aef31eae465a3216602ad39565cba652a7c71de7"
 
   url "https://updates.talon-sec.com/releases/Prisma%20Access%20Browser/mac/packaged/universal/Prisma%20Access%20Browser-#{version.csv.first}-#{version.csv.second}.pkg"
   name "Prisma Access Browser"
