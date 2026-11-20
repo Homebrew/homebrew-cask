@@ -25,11 +25,21 @@ cask "gram" do
     ]
   end
   on_linux do
-    binary "#{staged_path}/gram.app/bin/gram"
+    binary "gram.app/bin/gram"
+    artifact "gram.app/share/applications/app.liten.Gram.desktop",
+             target: "~/.local/share/applications/app.liten.Gram.desktop"
+
+    preflight_steps do
+      inreplace "gram.app/share/applications/app.liten.Gram.desktop", "Exec=gram",
+                "Exec={{HOMEBREW_PREFIX}}/bin/gram"
+      inreplace "gram.app/share/applications/app.liten.Gram.desktop", "Icon=app.liten.Gram",
+                "Icon={{staged_path}}/gram.app/share/icons/hicolor/scalable/apps/app.liten.Gram.svg"
+    end
 
     zap trash: [
       "~/.cache/gram",
       "~/.config/gram",
+      "~/.local/share/applications/app.liten.Gram.desktop",
       "~/.local/share/gram",
     ]
   end
