@@ -3,12 +3,14 @@ cask "neovide-app" do
   filename = on_system_conditional macos: "Neovide-#{arch}-apple-darwin.dmg",
                                    linux: "neovide.AppImage"
 
-  version "0.17.2"
-  sha256 arm:          "45f6bbec3f067ae595578127249714411dc2a8fb37a34f598eb8175ac767ea7b",
-         intel:        "3f81dce5f8507fa6602c5d194b79d28bc7d9c0bccb5b0380c5648bda25f22a76",
-         x86_64_linux: "99f9b9ffd74d4d20bbb86ea1aaaf46eb2b6617a7193a0f719f046568034d9772"
+  version "0.17.3"
+  sha256 arm:          "024f11f8e5a69b58cd9f9c01cf5d6bbe5c4813474f0c5cc1150cddb70e7cd2cc",
+         intel:        "db77f38e876c21ecef80d7054b46b01730fd9075459037cba4ce022b691ac4b8",
+         x86_64_linux: "eda631003273819e84d2d4b2a4d8229da02fa027e081b7d166f0d630f7811340"
 
   on_macos do
+    depends_on macos: :monterey
+
     app "Neovide.app"
     binary "#{appdir}/Neovide.app/Contents/MacOS/neovide"
 
