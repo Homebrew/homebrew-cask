@@ -9,7 +9,11 @@ cask "gamehub" do
     "zh-cn"
   end
 
-  api_region = (language == "zh-cn") ? "cn" : "international"
+  api_region = if language == "zh-cn"
+    "cn"
+  else
+    "international"
+  end
 
   url "https://api-#{api_region}-gamehub.xiaoji.com/game/download/mac/#{language}"
   name "GameHub"
