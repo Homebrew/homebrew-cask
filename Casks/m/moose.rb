@@ -12,6 +12,7 @@ cask "moose" do
   app "moose.app"
 
   zap trash: [
+    "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.riteshkr.moose.sfl*",
     "~/Library/Application Support/moose",
     "~/Library/Logs/moose",
     "~/Library/Preferences/com.riteshkr.moose.plist",
