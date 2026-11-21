@@ -9,7 +9,7 @@ cask "seafile-client" do
 
   livecheck do
     url "https://www.seafile.com/en/download/"
-    regex(%r{href=.*?/seafile[._-]client[._-]v?(\d+(?:\.\d+)+)\.dmg}i)
+    regex(%r{data-download-url=.*?/seafile[._-]client[._-]v?(\d+(?:\.\d+)+)\.dmg}i)
   end
 
   depends_on :macos
