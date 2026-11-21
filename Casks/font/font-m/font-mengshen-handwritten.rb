@@ -17,7 +17,8 @@ cask "font-mengshen-handwritten" do
         version = release["name"]&.[](regex, 1)
         next if version.blank?
 
-        "#{version},#{release["tag_name"]&.tr("v", "")}"
+        release_tag = release["tag_name"]&.tr("v", "")
+        "#{version},#{release_tag}"
       end
     end
   end
