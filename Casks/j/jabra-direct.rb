@@ -2,13 +2,13 @@ cask "jabra-direct" do
   version "8.4.30601"
   sha256 :no_check
 
-  url "https://jabraxpressonlineprdstor.blob.core.windows.net/jdo/JabraDirectSetup.dmg"
+  url "https://jabraxpressonlineprod.blob.core.windows.net/jdo/JabraDirectSetup.dmg"
   name "Jabra Direct"
   desc "Optimise and personalise your Jabra headset"
   homepage "https://www.jabra.com/software-and-services/jabra-direct"
 
   livecheck do
-    url "https://jabraxpressonlineprdstor.blob.core.windows.net/jdo/jdo.json"
+    url "https://jabraxpressonlineprod.blob.core.windows.net/jdo/jdo.json"
     strategy :json do |json|
       json["MacVersion"]
     end
