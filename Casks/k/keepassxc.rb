@@ -7,6 +7,7 @@ cask "keepassxc" do
          intel:        "28492c5535570020179150b2871b3c54abd032cbb8cdee2f1b3fa7c46cdba43e",
          x86_64_linux: "3ab1bfbb422272334b48057e6bfc984c839375d9a1cd9350c4ea62ca0b55ca5f"
 
+  release_version = version.csv.second || version.csv.first
   on_macos do
     depends_on macos: :monterey
 
@@ -31,7 +32,7 @@ cask "keepassxc" do
   on_linux do
     depends_on arch: :x86_64
 
-    app_image "KeePassXC-#{version.csv.second || version.csv.first}-#{arch}.AppImage", target: "KeePassXC.AppImage"
+    app_image "KeePassXC-#{release_version}-#{arch}.AppImage", target: "KeePassXC.AppImage"
 
     zap trash: [
       "~/.cache/keepassxc",
@@ -39,7 +40,7 @@ cask "keepassxc" do
     ]
   end
 
-  url "https://github.com/keepassxreboot/keepassxc/releases/download/#{version.csv.first}/KeePassXC-#{version.csv.second || version.csv.first}-#{arch}.#{os}"
+  url "https://github.com/keepassxreboot/keepassxc/releases/download/#{version.csv.first}/KeePassXC-#{release_version}-#{arch}.#{os}"
   name "KeePassXC"
   desc "Password manager app"
   homepage "https://keepassxc.org/"
