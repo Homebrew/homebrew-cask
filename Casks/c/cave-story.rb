@@ -7,7 +7,10 @@ cask "cave-story" do
       url "https://www.cavestory.org/downloads/"
       regex(/href=.*?cavestory[._-]?v?(\d{3})[._-]?r(\d+)\.dmg/i)
       strategy :page_match do |page, regex|
-        page.scan(regex).map { |match| "#{match[0].chars.join(".")},#{match[1]}" }
+        page.scan(regex).map do |match|
+          release_version = match[0].chars.join(".")
+          "#{release_version},#{match[1]}"
+        end
       end
     end
 
