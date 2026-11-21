@@ -1,5 +1,5 @@
 cask "publish-or-perish" do
-  version "8.20.5889.9811"
+  version "8.20.5897.9821"
   sha256 :no_check
 
   url "https://harzing.com/download/PoP#{version.major}Mac.pkg"
