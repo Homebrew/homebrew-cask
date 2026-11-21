@@ -7,7 +7,7 @@ cask "shellrs" do
 
   url "https://github.com/since2006/shell-rs/releases/download/v#{version}/ShellRS-#{version}-macos-#{arch}.dmg"
   name "ShellRS"
-  desc "Native GPU-rendered SSH client with SFTP and port forwarding"
+  desc "SSH and SFTP client"
   homepage "https://shellrs.com/"
 
   livecheck do
@@ -19,7 +19,7 @@ cask "shellrs" do
   depends_on :macos
 
   app "ShellRS.app"
-  binary "#{appdir}/ShellRS.app/Contents/MacOS/shellrs", target: "shellrs"
+  binary "#{appdir}/ShellRS.app/Contents/MacOS/shellrs"
 
   uninstall quit: "com.shellrs.ShellRS"
 
