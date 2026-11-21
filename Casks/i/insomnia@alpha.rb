@@ -13,7 +13,10 @@ cask "insomnia@alpha" do
   # where the provided version and newest version are equal, so this uses the
   # previous major for a new major release.
   livecheck do
-    url "https://updates.insomnia.rest/builds/check/mac?v=#{version.include?(".0.0") ? (version.major.to_i - 1) : version.major}.0.0#{"-beta.0" if version.include?("-")}&app=com.insomnia.app&channel=beta"
+    major = version.major
+    major = major.to_i - 1 if version.include?(".0.0")
+    prerelease_suffix = "-beta.0" if version.include?("-")
+    url "https://updates.insomnia.rest/builds/check/mac?v=#{major}.0.0#{prerelease_suffix}&app=com.insomnia.app&channel=beta"
     strategy :json do |json|
       json["name"]
     end
