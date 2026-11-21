@@ -5,7 +5,8 @@ cask "android-studio-preview@canary" do
   sha256 arm:   "b54e1825089029b1fb506bbbe3010c1149ca973199ffc2d5354cec43581bd06d",
          intel: "2df617dbd3e325e95c7c9756baa8c6564ed2d8a98a079e2564054a89779afff6"
 
-  url "https://edgedl.me.gvt1.com/android/studio/install/#{version.csv.first}/android-studio#{"-#{version.csv.second}" if version.csv.second}-#{arch}.dmg"
+  version_suffix = "-#{version.csv.second}" if version.csv.second
+  url "https://edgedl.me.gvt1.com/android/studio/install/#{version.csv.first}/android-studio#{version_suffix}-#{arch}.dmg"
   name "Android Studio Preview (Canary)"
   desc "Tools for building Android applications"
   homepage "https://developer.android.com/studio/preview/"
@@ -15,7 +16,7 @@ cask "android-studio-preview@canary" do
     regex(%r{href=.*?/v?(\d+(?:\.\d+)+)/android[._-]studio(?:[._-]([^"' >]+))?[._-]#{arch}\.dmg[^>]*?canary}i)
     strategy :page_match do |page, regex|
       page.scan(regex).map do |match|
-        match[1].present? ? "#{match[0]},#{match[1]}" : match[0]
+        match.values_at(0, 1).compact_blank.join(",")
       end
     end
   end
