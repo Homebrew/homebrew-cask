@@ -2,7 +2,8 @@ cask "vimediamanager" do
   version "0.7a24,2026_04_01"
   sha256 "217bec52ba71d7d046ce6b0913652162b5e652112778a3895743962bee451729"
 
-  url "https://github.com/vidalvanbergen/ViMediaManager/releases/download/v#{version.csv.first}/ViMediaManager#{"-#{version.csv.second}" if version.csv.second}.zip"
+  version_suffix = "-#{version.csv.second}" if version.csv.second
+  url "https://github.com/vidalvanbergen/ViMediaManager/releases/download/v#{version.csv.first}/ViMediaManager#{version_suffix}.zip"
   name "ViMediaManager"
   desc "Manage digital artifacts for your movie, television and anime collections"
   homepage "https://github.com/vidalvanbergen/ViMediaManager"
@@ -15,7 +16,7 @@ cask "vimediamanager" do
         match = asset["browser_download_url"]&.match(regex)
         next if match.blank?
 
-        match[2].present? ? "#{match[1]},#{match[2]}" : match[1]
+        match.values_at(1, 2).compact_blank.join(",")
       end
     end
   end
