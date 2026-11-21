@@ -70,7 +70,10 @@ cask "firefox@nightly" do
     "zh-CN"
   end
 
-  url "https://ftp.mozilla.org/pub/firefox/nightly/#{version.csv.second.split("-").first}/#{version.csv.second.split("-").second}/#{version.csv.second}-mozilla-central#{"-l10n" if language != "en-US"}/firefox-#{version.csv.first}.#{language}.mac.dmg"
+  year = version.csv.second.split("-").first
+  month = version.csv.second.split("-").second
+  locale_suffix = "-l10n" if language != "en-US"
+  url "https://ftp.mozilla.org/pub/firefox/nightly/#{year}/#{month}/#{version.csv.second}-mozilla-central#{locale_suffix}/firefox-#{version.csv.first}.#{language}.mac.dmg"
   name "Mozilla Firefox Nightly"
   desc "Web browser"
   homepage "https://www.mozilla.org/firefox/channel/desktop/#nightly"
