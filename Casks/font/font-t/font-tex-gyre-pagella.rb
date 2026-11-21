@@ -2,7 +2,8 @@ cask "font-tex-gyre-pagella" do
   version "2.609,31_03_2026"
   sha256 "1fa1284bf30aefa1885ec5ce6c26b24d160104b331b1978a85a2a8b3c781737d"
 
-  url "https://www.gust.org.pl/projects/e-foundry/tex-gyre/pagella/tg_pagella-otf-#{version.csv.first.dots_to_underscores}#{"-#{version.csv.second}" if version.csv.second}.zip"
+  version_suffix = "-#{version.csv.second}" if version.csv.second
+  url "https://www.gust.org.pl/projects/e-foundry/tex-gyre/pagella/tg_pagella-otf-#{version.csv.first.dots_to_underscores}#{version_suffix}.zip"
   name "TeX Gyre Pagella"
   homepage "https://www.gust.org.pl/projects/e-foundry/tex-gyre/pagella"
 
