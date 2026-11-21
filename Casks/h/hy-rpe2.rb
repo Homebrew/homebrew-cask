@@ -2,7 +2,8 @@ cask "hy-rpe2" do
   version "1.2.9,2020"
   sha256 :no_check
 
-  url "https://hy-plugins.com/wp-content/uploads#{"/#{version.csv[1..].join("/")}" if version.csv.length > 1}/HY-RPE2.pkg.zip"
+  download_path = (["uploads"] + version.csv.drop(1)).join("/")
+  url "https://hy-plugins.com/wp-content/#{download_path}/HY-RPE2.pkg.zip"
   name "HY-RPE2"
   desc "8 track midi sequencer plugin"
   homepage "https://hy-plugins.com/product/hy-rpewin-mac/"
