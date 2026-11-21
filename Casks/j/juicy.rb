@@ -18,8 +18,12 @@ cask "juicy" do
   app "Juicy.app"
 
   zap trash: [
+    "~/Library/Application Scripts/2BCW334S4D.io.sevendegrees.juicy",
+    "~/Library/Application Scripts/io.sevendegrees.juicy.direct.JuicyWidgets",
     "~/Library/Application Support/Juicy",
     "~/Library/Caches/io.sevendegrees.juicy.direct",
+    "~/Library/Containers/io.sevendegrees.juicy.direct.JuicyWidgets",
+    "~/Library/Group Containers/2BCW334S4D.io.sevendegrees.juicy",
     "~/Library/HTTPStorages/io.sevendegrees.juicy.direct",
     "~/Library/Preferences/io.sevendegrees.juicy.direct.plist",
     "~/Library/WebKit/io.sevendegrees.juicy.direct",

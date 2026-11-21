@@ -25,16 +25,14 @@ cask "postgres-app" do
 
   app "Postgres.app"
 
-  uninstall launchctl: "com.postgresapp.Postgres#{version.major}LoginHelper",
-            quit:      [
-              "com.postgresapp.Postgres#{version.major}",
-              "com.postgresapp.Postgres#{version.major}MenuHelper",
-            ]
+  uninstall launchctl: "com.postgresapp.Postgres2LoginHelper",
+            quit:      "com.postgresapp.Postgres2"
 
   zap trash: [
     "~/Library/Application Support/Postgres",
-    "~/Library/Caches/com.postgresapp.Postgres#{version.major}",
-    "~/Library/Cookies/com.postgresapp.Postgres#{version.major}.binarycookies",
-    "~/Library/Preferences/com.postgresapp.Postgres#{version.major}.plist",
+    "~/Library/Caches/com.postgresapp.Postgres*",
+    "~/Library/Cookies/com.postgresapp.Postgres*.binarycookies",
+    "~/Library/HTTPStorages/com.postgresapp.Postgres*",
+    "~/Library/Preferences/com.postgresapp.Postgres*.plist",
   ]
 end

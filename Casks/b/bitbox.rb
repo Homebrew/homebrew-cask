@@ -12,7 +12,9 @@ cask "bitbox" do
     app "BitBox.app"
 
     zap trash: [
+      "~/Library/Application Support/bitbox",
       "~/Library/Preferences/ch.shiftcrypto.BitBoxApp.plist",
+      "~/Library/Preferences/ch.shiftcrypto.wallet.plist",
       "~/Library/Saved Application State/ch.shiftcrypto.wallet.savedState",
     ]
   end

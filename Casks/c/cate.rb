@@ -15,6 +15,7 @@ cask "cate" do
     zap trash: [
       "~/.cate",
       "~/Library/Application Support/Cate",
+      "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.cate.app.sfl*",
       "~/Library/Application Support/CrashReporter/Cate Helper_*.plist",
       "~/Library/Caches/cate-updater",
       "~/Library/Caches/com.cate.app",

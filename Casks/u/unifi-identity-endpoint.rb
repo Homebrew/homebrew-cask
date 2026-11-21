@@ -32,5 +32,11 @@ cask "unifi-identity-endpoint" do
             pkgutil:   "com.ui.uid.standard-desktop",
             delete:    "/Applications/UniFi Endpoint.app"
 
-  zap trash: "~/Library/Application Support/com.ui.uid.standard-desktop"
+  zap trash: [
+    "~/Library/Application Support/com.ui.uid.standard-desktop",
+    "~/Library/Caches/com.ui.uid.standard-desktop",
+    "~/Library/HTTPStorages/com.ui.uid.standard-desktop",
+    "~/Library/Logs/com.ui.uid.standard-desktop",
+    "~/Library/Preferences/com.ui.uid.standard-desktop.plist",
+  ]
 end
