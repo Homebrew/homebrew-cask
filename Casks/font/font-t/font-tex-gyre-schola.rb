@@ -2,7 +2,8 @@ cask "font-tex-gyre-schola" do
   version "2.609,31_03_2026"
   sha256 "40f76a93a159ba7a76d6fe2ac6a54b7eb480afc94557742505a847c571da13fc"
 
-  url "https://www.gust.org.pl/projects/e-foundry/tex-gyre/schola/tg_schola-otf-#{version.csv.first.dots_to_underscores}#{"-#{version.csv.second}" if version.csv.second}.zip"
+  version_suffix = "-#{version.csv.second}" if version.csv.second
+  url "https://www.gust.org.pl/projects/e-foundry/tex-gyre/schola/tg_schola-otf-#{version.csv.first.dots_to_underscores}#{version_suffix}.zip"
   name "TeX Gyre Schola"
   homepage "https://www.gust.org.pl/projects/e-foundry/tex-gyre/schola"
 
