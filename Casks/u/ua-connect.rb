@@ -14,7 +14,8 @@ cask "ua-connect" do
       match = headers["location"]&.match(regex)
       next if match.blank?
 
-      "#{match[1].tr("_", ".")},#{match[2]}"
+      release_version = match[1].tr("_", ".")
+      "#{release_version},#{match[2]}"
     end
   end
 
