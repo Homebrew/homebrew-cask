@@ -2,7 +2,8 @@ cask "opensesame" do
   version "4.1.9,py313"
   sha256 "b457bf208d827678e217d39b1317efc8f7048807f6c4606d527923dc2d2ffee1"
 
-  url "https://github.com/open-cogsci/OpenSesame/releases/download/release%2F#{version.csv.first}/opensesame_#{version.csv.first}#{"-#{version.csv.second}" if version.csv.second}-macos-x64-1.dmg"
+  version_suffix = "-#{version.csv.second}" if version.csv.second
+  url "https://github.com/open-cogsci/OpenSesame/releases/download/release%2F#{version.csv.first}/opensesame_#{version.csv.first}#{version_suffix}-macos-x64-1.dmg"
   name "OpenSesame"
   desc "Graphical experiment builder for the social sciences"
   homepage "https://osdoc.cogsci.nl/"
@@ -24,7 +25,7 @@ cask "opensesame" do
     regex(/href=.*?opensesame[._-]v?(\d+(?:\.\d+)+)(?:[._-](py\d+(?:\.\d+)*))?[^"' >]*?\.dmg/i)
     strategy :page_match do |page, regex|
       page.scan(regex).map do |match|
-        match[1] ? "#{match[0]},#{match[1]}" : match[0]
+        match.values_at(0, 1).compact.join(",")
       end
     end
   end
