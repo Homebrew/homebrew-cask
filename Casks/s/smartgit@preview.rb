@@ -14,7 +14,10 @@ cask "smartgit@preview" do
     url "https://www.smartgit.dev/download/preview/"
     regex(/href=.*?smartgit[._-]v?(\d+(?:[._]\d+)+)[._-](preview|rc)(?:[._-]macos)?[._-]#{arch}\.dmg/i)
     strategy :page_match do |page, regex|
-      page.scan(regex).map { |match| "#{match[0].tr("_", ".")},#{match[1]}" }
+      page.scan(regex).map do |match|
+        upstream_version = match[0].tr("_", ".")
+        "#{upstream_version},#{match[1]}"
+      end
     end
   end
 
