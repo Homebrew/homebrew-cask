@@ -47,7 +47,7 @@ cask "bitwarden" do
 
   url "https://github.com/bitwarden/clients/releases/download/desktop-v#{version}/bit-Bitwarden-#{version}-#{url_end}"
   name "Bitwarden"
-  desc "Desktop password and login vault"
+  desc "Open source desktop password manager with encrypted vault and autofilling"
   homepage "https://bitwarden.com/"
 
   livecheck do
