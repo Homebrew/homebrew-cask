@@ -14,7 +14,7 @@ cask "nteract" do
       match = json["version"]&.match(regex)
       next unless match
 
-      match[2].present? ? "#{match[1]},#{match[2]}" : match[1]
+      match.values_at(1, 2).compact_blank.join(",")
     end
   end
 
