@@ -2,7 +2,8 @@ cask "chessx" do
   version "1.6.10"
   sha256 "525927ea622b1834694a5582370a5883cc7bc7dd50e449be96c8c8d553fc9870"
 
-  url "https://downloads.sourceforge.net/chessx/chessx/#{version.csv.second || version.csv.first}/chessx-#{version.csv.first}.dmg"
+  release_version = version.csv.second || version.csv.first
+  url "https://downloads.sourceforge.net/chessx/chessx/#{release_version}/chessx-#{version.csv.first}.dmg"
   name "ChessX"
   desc "Chess database"
   homepage "https://chessx.sourceforge.io/"
@@ -14,7 +15,7 @@ cask "chessx" do
       match = page.match(regex)
       next if match.blank?
 
-      (match[1] == match[2]) ? match[2] : "#{match[2]},#{match[1]}"
+      match.values_at(2, 1).uniq.join(",")
     end
   end
 
