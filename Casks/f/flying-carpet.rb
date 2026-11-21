@@ -2,7 +2,8 @@ cask "flying-carpet" do
   version "10.0.4,10.0.0"
   sha256 "b6db75afed626081275fd56215330fcfaf16af3070ddcfeda09c91a8c9ba2771"
 
-  url "https://github.com/spieglt/FlyingCarpet/releases/download/v#{version.csv.second || version.csv.first}/macOS_FlyingCarpet_#{version.csv.first}.zip"
+  release_version = version.csv.second || version.csv.first
+  url "https://github.com/spieglt/FlyingCarpet/releases/download/v#{release_version}/macOS_FlyingCarpet_#{version.csv.first}.zip"
   name "Flying Carpet"
   desc "File transfer over ad-hoc Wi-Fi"
   homepage "https://github.com/spieglt/flyingcarpet"
@@ -24,7 +25,7 @@ cask "flying-carpet" do
           match = asset["name"]&.match(regex)
           next if match.blank?
 
-          (match[1] == tag_version) ? tag_version : "#{match[1]},#{tag_version}"
+          [match[1], tag_version].uniq.join(",")
         end
       end.flatten
     end
