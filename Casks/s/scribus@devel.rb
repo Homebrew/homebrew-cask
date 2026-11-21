@@ -8,6 +8,7 @@ cask "scribus@devel" do
          intel:        "0ad7c4d8239c7ae39efdaac4d73700adbfc721ae8d0ef58f52cee3e8b91441da",
          x86_64_linux: "52a57b01aff00cf65c04cf3fa5ff83897c0ffc501c04b4b01c14fad3da928b0e"
 
+  release_version = version.csv.second || version.csv.first
   on_macos do
     depends_on macos: :ventura
 
@@ -23,7 +24,7 @@ cask "scribus@devel" do
   on_linux do
     depends_on arch: :x86_64
 
-    app_image "scribus-#{version.csv.second || version.csv.first}-linux-x86_64.AppImage", target: "Scribus.AppImage"
+    app_image "scribus-#{release_version}-linux-x86_64.AppImage", target: "Scribus.AppImage"
 
     zap trash: [
       "~/.config/scribus",
@@ -31,7 +32,7 @@ cask "scribus@devel" do
     ]
   end
 
-  url "https://downloads.sourceforge.net/scribus/scribus-devel/#{version.csv.first}/scribus-#{version.csv.second || version.csv.first}#{os}#{arch}.#{url_end}"
+  url "https://downloads.sourceforge.net/scribus/scribus-devel/#{version.csv.first}/scribus-#{release_version}#{os}#{arch}.#{url_end}"
   name "Scribus"
   desc "Free and open-source page layout program"
   homepage "https://www.scribus.net/"
