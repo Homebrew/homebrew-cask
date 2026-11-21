@@ -14,7 +14,8 @@ cask "canon-mg2500-driver" do
       match = headers["location"]&.match(regex)
       next if match.blank?
 
-      "#{match[4].tr("_", ".")},#{match[3]},#{match[2]},#{match[1]}"
+      release_version = match[4].tr("_", ".")
+      "#{release_version},#{match[3]},#{match[2]},#{match[1]}"
     end
   end
 

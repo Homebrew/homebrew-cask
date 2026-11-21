@@ -2,7 +2,8 @@ cask "proxybridge" do
   version "4.1.3,4.1.3_Macos"
   sha256 "e962f9288a186a0a0e2862d19d4ae39a21913e0ea99853017ecfd7ef43b320ac"
 
-  url "https://github.com/InterceptSuite/ProxyBridge/releases/download/v#{version.csv.second || version.csv.first}/ProxyBridge-v#{version.csv.first}-Universal-Installer.pkg"
+  release_version = version.csv.second || version.csv.first
+  url "https://github.com/InterceptSuite/ProxyBridge/releases/download/v#{release_version}/ProxyBridge-v#{version.csv.first}-Universal-Installer.pkg"
   name "ProxyBridge"
   desc "Proxy client with per-application traffic routing rules"
   homepage "https://proxybridge.interceptsuite.com/"
@@ -22,7 +23,7 @@ cask "proxybridge" do
       tag = json.dig("macos", "download")&.[](regex, 1)
       next unless tag
 
-      (tag == ver) ? ver : "#{ver},#{tag}"
+      [ver, tag].uniq.join(",")
     end
   end
 

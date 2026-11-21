@@ -21,7 +21,7 @@ cask "xpra" do
     regex(/href=.*?Xpra-#{arch}[._-]v?(\d+(?:\.\d+)+)(?:[._-]r(\d+))?\.dmg/i)
     strategy :page_match do |page, regex|
       page.scan(regex).map do |match|
-        match[1] ? "#{match[0]},#{match[1]}" : match[0]
+        match.values_at(0, 1).compact.join(",")
       end
     end
   end

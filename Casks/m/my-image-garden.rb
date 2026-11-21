@@ -14,7 +14,8 @@ cask "my-image-garden" do
       match = headers["location"]&.match(regex)
       next if match.blank?
 
-      "#{match[2].tr("_", ".")},#{match[1]}"
+      release_version = match[2].tr("_", ".")
+      "#{release_version},#{match[1]}"
     end
   end
 

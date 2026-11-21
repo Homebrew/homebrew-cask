@@ -19,7 +19,7 @@ cask "antigravity" do
         match = item["url"]&.match(regex)
         next if match.blank?
 
-        match[2].present? ? "#{match[1]},#{match[2]}" : match[1]
+        match.values_at(1, 2).compact_blank.join(",")
       end
     end
   end

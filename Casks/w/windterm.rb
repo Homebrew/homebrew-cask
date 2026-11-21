@@ -2,7 +2,8 @@ cask "windterm" do
   version "2.7.0"
   sha256 "8c1bc1363e01df5b06f45019da934752f5f29e8603cc843bd38e59bdff121bf7"
 
-  url "https://github.com/kingToolbox/WindTerm/releases/download/#{version.csv.second || version.csv.first}/WindTerm_#{version.csv.first}_Mac_Portable_x86_64.dmg"
+  release_version = version.csv.second || version.csv.first
+  url "https://github.com/kingToolbox/WindTerm/releases/download/#{release_version}/WindTerm_#{version.csv.first}_Mac_Portable_x86_64.dmg"
   name "WindTerm"
   desc "SSH/SFTP/Shell/Telnet/Serial terminal"
   homepage "https://github.com/kingToolbox/WindTerm"
@@ -26,7 +27,7 @@ cask "windterm" do
           match = asset["name"]&.match(regex)
           next if match.blank?
 
-          (match[1] == tag_version) ? tag_version : "#{match[1]},#{tag_version}"
+          [match[1], tag_version].uniq.join(",")
         end
       end.flatten
     end

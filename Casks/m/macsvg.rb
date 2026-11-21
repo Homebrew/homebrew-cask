@@ -9,7 +9,8 @@ cask "macsvg" do
 
   depends_on :macos
 
-  app "macSVG_v#{version.chomp(".0").dots_to_underscores}/macSVG.app"
+  archive_version = version.chomp(".0").dots_to_underscores
+  app "macSVG_v#{archive_version}/macSVG.app"
 
   zap trash: [
     "~/Library/Application Scripts/com.arkphone.macsvg",

@@ -22,7 +22,8 @@ cask "recaf" do
       end
       next if assets.blank? || assets.length != 2
 
-      "#{match[1]},#{assets.map { |asset| asset["updated_at"] }.max.gsub(/\D/, "")}"
+      updated_at = assets.map { |asset| asset["updated_at"] }.max.gsub(/\D/, "")
+      "#{match[1]},#{updated_at}"
     end
   end
 

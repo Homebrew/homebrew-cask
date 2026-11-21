@@ -33,7 +33,8 @@ cask "insta360-studio" do
       match = channel["download_url"]&.match(regex)
       next if match.blank?
 
-      "#{match[2]},#{match[3].tr("()", ",")},#{match[1]}"
+      build_number = match[3].tr("()", ",")
+      "#{match[2]},#{build_number},#{match[1]}"
     end
   end
 

@@ -11,7 +11,9 @@ cask "sauerbraten" do
     url :homepage
     regex(%r{(\d+(?:_\d+)*)/sauerbraten[._-]?v?(\d+(?:_\d+)*)[._-]?macos\.dmg}i)
     strategy :page_match do |page, regex|
-      page.scan(regex).map { |match| "#{match[0].tr("_", ".")},#{match[1].tr("_", ".")}" }
+      page.scan(regex).map do |match|
+        match.first(2).map { |version| version.tr("_", ".") }.join(",")
+      end
     end
   end
 

@@ -14,13 +14,15 @@ cask "imaging-edge" do
       match = headers["location"]&.scan(regex)&.flatten
       next if match.blank?
 
-      "#{match[1].tr("_", ".")},#{match[0]}"
+      release_version = match[1].tr("_", ".")
+      "#{release_version},#{match[0]}"
     end
   end
 
   depends_on macos: :monterey
 
-  pkg "ied_#{version.csv.first.major_minor_patch.dots_to_underscores}.pkg"
+  release_version = version.csv.first.major_minor_patch.dots_to_underscores
+  pkg "ied_#{release_version}.pkg"
 
   uninstall login_item: "Imaging Edge Desktop",
             pkgutil:    [

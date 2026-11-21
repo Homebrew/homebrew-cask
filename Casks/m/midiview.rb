@@ -11,7 +11,8 @@ cask "midiview" do
     url "https://hautetechnique.com/apps/backend/v1/apps/midiview/cast"
     regex(%r{/installers/(.+)$}i)
     strategy :sparkle do |item, regex|
-      "#{item.short_version},#{item.url[regex, 1]}"
+      release_version = item.url[regex, 1]
+      "#{item.short_version},#{release_version}"
     end
   end
 

@@ -11,7 +11,10 @@ cask "rekordbox" do
     url "https://rekordbox.com/en/download/"
     regex(%r{data-url=.*?/(\d+)/Install[._-]rekordbox[._-]v?(\d+(?:[._]\d+)+)[^"'< ]+\.zip}i)
     strategy :page_match do |page, regex|
-      page.scan(regex).map { |match| "#{match[1].tr("_", ".")},#{match[0]}" }
+      page.scan(regex).map do |match|
+        release_version = match[1].tr("_", ".")
+        "#{release_version},#{match[0]}"
+      end
     end
   end
 

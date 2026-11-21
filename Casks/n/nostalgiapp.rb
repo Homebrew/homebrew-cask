@@ -2,7 +2,8 @@ cask "nostalgiapp" do
   version "1.2.6.4,218"
   sha256 "c7e2f2c6cc0edb46de8582e81bf9f1628d670fa74fbba7b2cc3d31b5cce610a8"
 
-  url "https://www.nostalgi.app/downloads/NostalgiApp-#{version.csv.first}#{"-b#{version.csv.second}" if version.csv.second}.dmg"
+  build_suffix = "-b#{version.csv.second}" if version.csv.second
+  url "https://www.nostalgi.app/downloads/NostalgiApp-#{version.csv.first}#{build_suffix}.dmg"
   name "NostalgiApp"
   desc "Launcher for eXoDOS and retro game collections"
   homepage "https://www.nostalgi.app/"
@@ -18,7 +19,7 @@ cask "nostalgiapp" do
       match = item.url&.match(regex)
       next unless match
 
-      match[2].present? ? "#{match[1]},#{match[2]}" : match[1]
+      match.values_at(1, 2).compact_blank.join(",")
     end
   end
 

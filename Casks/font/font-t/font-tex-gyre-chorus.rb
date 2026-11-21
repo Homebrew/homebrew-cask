@@ -2,7 +2,8 @@ cask "font-tex-gyre-chorus" do
   version "2.609,31_03_2026"
   sha256 "4f00506e0b630b2f3b4c9d35f786c17de3cfb11d8265065b79aee2a3e354387b"
 
-  url "https://www.gust.org.pl/projects/e-foundry/tex-gyre/chorus/tg_chorus-otf-#{version.csv.first.dots_to_underscores}#{"-#{version.csv.second}" if version.csv.second}.zip"
+  version_suffix = "-#{version.csv.second}" if version.csv.second
+  url "https://www.gust.org.pl/projects/e-foundry/tex-gyre/chorus/tg_chorus-otf-#{version.csv.first.dots_to_underscores}#{version_suffix}.zip"
   name "TeX Gyre Chorus"
   homepage "https://www.gust.org.pl/projects/e-foundry/tex-gyre/chorus"
 

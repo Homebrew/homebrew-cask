@@ -2,7 +2,8 @@ cask "magicavoxel" do
   version "0.99.6.2,0.99.6"
   sha256 "4ee661e41da07f8c2b2b1c916bd1e18f7c5229900f30467eeea73ad74e861226"
 
-  url "https://github.com/ephtracy/ephtracy.github.io/releases/download/#{version.csv.second || version.csv.first}/MagicaVoxel-#{version.csv.first}-macos-10.15.zip"
+  release_version = version.csv.second || version.csv.first
+  url "https://github.com/ephtracy/ephtracy.github.io/releases/download/#{release_version}/MagicaVoxel-#{version.csv.first}-macos-10.15.zip"
   name "MagicaVoxel"
   desc "8-bit 3D voxel editor and interactive path tracing renderer"
   homepage "https://ephtracy.github.io/"
@@ -23,7 +24,7 @@ cask "magicavoxel" do
           match = asset["name"]&.match(regex)
           next if match.blank?
 
-          (match[1] == tag_version) ? tag_version : "#{match[1]},#{tag_version}"
+          [match[1], tag_version].uniq.join(",")
         end
       end.flatten
     end

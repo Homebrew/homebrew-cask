@@ -2,7 +2,8 @@ cask "font-tex-gyre-bonum" do
   version "2.609,31_03_2026"
   sha256 "6b5798a1d07aa495a369fb6e90981c2d851021afeff1a5caf597c7f0ac318e19"
 
-  url "https://www.gust.org.pl/projects/e-foundry/tex-gyre/bonum/tg_bonum-otf-#{version.csv.first.dots_to_underscores}#{"-#{version.csv.second}" if version.csv.second}.zip"
+  version_suffix = "-#{version.csv.second}" if version.csv.second
+  url "https://www.gust.org.pl/projects/e-foundry/tex-gyre/bonum/tg_bonum-otf-#{version.csv.first.dots_to_underscores}#{version_suffix}.zip"
   name "TeX Gyre Bonum"
   homepage "https://www.gust.org.pl/projects/e-foundry/tex-gyre/bonum"
 

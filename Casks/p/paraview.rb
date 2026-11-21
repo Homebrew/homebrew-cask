@@ -11,7 +11,8 @@ cask "paraview" do
     sha256 "4b33a67f2c7209c0b4124eb47bb6834dc3bcf6e4be15a6843ef82c106de15852"
   end
 
-  url "https://www.paraview.org/paraview-downloads/download.php?submit=Download&version=v#{version.csv.first.major_minor}&type=binary&os=macOS%20#{arch_name}&downloadFile=ParaView-#{version.csv.first}#{"-#{version.csv.second}" if version.csv.second}-#{arch}.dmg",
+  version_suffix = "-#{version.csv.second}" if version.csv.second
+  url "https://www.paraview.org/paraview-downloads/download.php?submit=Download&version=v#{version.csv.first.major_minor}&type=binary&os=macOS%20#{arch_name}&downloadFile=ParaView-#{version.csv.first}#{version_suffix}-#{arch}.dmg",
       user_agent: :fake
   name "ParaView"
   desc "Data analysis and visualization application"
@@ -24,7 +25,7 @@ cask "paraview" do
       page.scan(regex).filter_map do |match|
         next if match[1]&.match?(/^RC/i)
 
-        match[1].present? ? "#{match[0]},#{match[1]}" : match[0]
+        match.values_at(0, 1).compact_blank.join(",")
       end
     end
   end

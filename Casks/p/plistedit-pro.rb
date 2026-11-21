@@ -20,7 +20,8 @@ cask "plistedit-pro" do
       # appcast `shortVersionString` may omit patch for new major/minor
       # versions (e.g. 1100 and 1.10 respectively). This adds `.0` to versions
       # without a patch to avoid this mismatch.
-      "#{match[1]}#{match[2].presence || ".0"}"
+      version_suffix = match[2].presence || ".0"
+      "#{match[1]}#{version_suffix}"
     end
   end
 

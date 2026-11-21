@@ -5,7 +5,8 @@ cask "android-studio" do
   sha256 arm:   "40b50b8328f1e6127f622d1df50ccb2c79fb250a9ecf78d29468a0acbd0652d7",
          intel: "087d4966a0c46890812ce28477f5fdd636f533f1760a0475f91ecd2f6a0ebb58"
 
-  url "https://edgedl.me.gvt1.com/android/studio/install/#{version.csv.first}/android-studio#{"-#{version.csv.second}" if version.csv.second}-#{arch}.dmg"
+  version_suffix = "-#{version.csv.second}" if version.csv.second
+  url "https://edgedl.me.gvt1.com/android/studio/install/#{version.csv.first}/android-studio#{version_suffix}-#{arch}.dmg"
   name "Android Studio"
   desc "Tools for building Android applications"
   homepage "https://developer.android.com/studio/"
@@ -15,7 +16,7 @@ cask "android-studio" do
     regex(%r{href=.*?/v?(\d+(?:\.\d+)+)/android[._-]studio(?:[._-]([^"' >]+))?[._-]#{arch}\.dmg}i)
     strategy :page_match do |page, regex|
       page.scan(regex).map do |match|
-        match[1].present? ? "#{match[0]},#{match[1]}" : match[0]
+        match.values_at(0, 1).compact_blank.join(",")
       end
     end
   end

@@ -7,7 +7,9 @@ cask "silentknight" do
   # version is less than two digits, so we should be able to switch back to
   # `version.csv.first.no_dots` in the filename with version 2.10+.`
   no_dot_version = version.csv.first.split(".").each_with_index.map do |n, i|
-    (i < 1 || n.length > 1) ? n : n.rjust(2, "0")
+    next n if i < 1 || n.length > 1
+
+    n.rjust(2, "0")
   end.join
 
   url "https://eclecticlight.co/wp-content/uploads/#{version.csv.second.major}/#{version.csv.second.minor}/sk#{no_dot_version}.zip"

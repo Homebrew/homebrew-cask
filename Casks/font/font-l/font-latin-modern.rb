@@ -2,7 +2,8 @@ cask "font-latin-modern" do
   version "2.007,31_03_2026"
   sha256 "2d8e05083e211ac838a9e306fb5e4856ed37ec15130e185a971e2683a7c5d1a1"
 
-  url "https://www.gust.org.pl/projects/e-foundry/latin-modern/download/Latin_Modern-otf-#{version.csv.first.dots_to_underscores}#{"-#{version.csv.second}" if version.csv.second}.zip"
+  version_suffix = "-#{version.csv.second}" if version.csv.second
+  url "https://www.gust.org.pl/projects/e-foundry/latin-modern/download/Latin_Modern-otf-#{version.csv.first.dots_to_underscores}#{version_suffix}.zip"
   name "Latin Modern"
   homepage "https://www.gust.org.pl/projects/e-foundry/latin-modern"
 

@@ -2,7 +2,8 @@ cask "phocus" do
   version "4.1.1"
   sha256 "b6870f12c9c8e880bc2d2db19627acaf8152f06ad372c834f980ea726b34007b"
 
-  url "https://cdn.hasselblad.com/software/Phocus_for_Mac/#{version.csv.first}/Phocus_#{version.csv.second || version.csv.first}.dmg"
+  release_version = version.csv.second || version.csv.first
+  url "https://cdn.hasselblad.com/software/Phocus_for_Mac/#{version.csv.first}/Phocus_#{release_version}.dmg"
   name "Hasselblad Phocus"
   desc "RAW file image processing software for Hasselblad cameras"
   homepage "https://www.hasselblad.com/phocus/"
@@ -15,7 +16,7 @@ cask "phocus" do
         match = item["url"]&.match(regex)
         next if match.blank?
 
-        (match[1] == match[2]) ? match[1] : "#{match[1]},#{match[2]}"
+        match.values_at(1, 2).uniq.join(",")
       end
     end
   end

@@ -20,7 +20,8 @@ cask "ibabel" do
                                                                               url:  download_url)[:matches].values.max
       next if app_version.blank?
 
-      "#{app_version.to_s.split(",").first},#{match[1]},#{match[2]}"
+      release_version = app_version.to_s.split(",").first
+      "#{release_version},#{match[1]},#{match[2]}"
     end
   end
 

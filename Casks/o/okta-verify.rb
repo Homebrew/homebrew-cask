@@ -15,7 +15,7 @@ cask "okta-verify" do
         match = file["href"]&.match(regex)
         next unless match
 
-        match[2] ? "#{match[1]},#{match[2]}" : match[1]
+        match.values_at(1, 2).compact.join(",")
       end
     end
   end

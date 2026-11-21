@@ -8,6 +8,7 @@ cask "crosspaste" do
          arm64_linux:  "826e15a1307806919771de317eb1962173a37528e8fe0d26aa3e30268e9f0eb4",
          x86_64_linux: "75870dd1d827bf2612f6a9b20a56083ede9ce6b65d4af411e288bad95156e233"
 
+  build_number = version.split(".").last
   on_macos do
     depends_on macos: :sonoma
 
@@ -24,7 +25,7 @@ cask "crosspaste" do
     ]
   end
   on_linux do
-    app_image "crosspaste-#{version.major_minor_patch}-#{version.split(".").last}-#{arch}.AppImage",
+    app_image "crosspaste-#{version.major_minor_patch}-#{build_number}-#{arch}.AppImage",
               target: "CrossPaste.AppImage"
 
     zap trash: [
@@ -33,7 +34,7 @@ cask "crosspaste" do
     ]
   end
 
-  url "https://github.com/CrossPaste/crosspaste-desktop/releases/download/#{version}/crosspaste-#{version.major_minor_patch}-#{version.split(".").last}-#{url_end}"
+  url "https://github.com/CrossPaste/crosspaste-desktop/releases/download/#{version}/crosspaste-#{version.major_minor_patch}-#{build_number}-#{url_end}"
   name "CrossPaste"
   desc "Universal Pasteboard Across Devices"
   homepage "https://crosspaste.com/en/"

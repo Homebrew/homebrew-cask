@@ -2,7 +2,8 @@ cask "nx-studio" do
   version "1.11.0,apyHf00Vevg307PGU4m68PYjKb11,8"
   sha256 "9adbf4e83d6dc78a026567cb6ca4f5a04c92083319ad37e03680d3098d04ba3a"
 
-  url "https://download.nikonimglib.com/archive#{version.csv.third}/#{version.csv.second}/S-NXSTDO-#{version.csv.first.split(".").map { |n| n.rjust(2, "0") }.join}MF-ALLIN-ALL___.dmg"
+  archive_version = version.csv.first.split(".").map { |n| n.rjust(2, "0") }.join
+  url "https://download.nikonimglib.com/archive#{version.csv.third}/#{version.csv.second}/S-NXSTDO-#{archive_version}MF-ALLIN-ALL___.dmg"
   name "NX Studio"
   desc "Nikon suite for viewing, processing, and editing photos and videos"
   homepage "https://imaging.nikon.com/imaging/lineup/software/nx_studio/"

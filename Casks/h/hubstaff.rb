@@ -17,7 +17,8 @@ cask "hubstaff" do
       match = item.url.match(regex)
       next if match.blank?
 
-      "#{item.short_version.split("-").first},#{match[1]}"
+      release_version = item.short_version.split("-").first
+      "#{release_version},#{match[1]}"
     end
   end
 

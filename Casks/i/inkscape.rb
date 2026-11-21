@@ -29,7 +29,8 @@ cask "inkscape" do
     zap trash: "~/.config/inkscape"
   end
 
-  url "https://media.inkscape.org/dl/resources/file/Inkscape-#{version.csv.second || version.csv.first}#{arch}.#{url_end}"
+  release_version = version.csv.second || version.csv.first
+  url "https://media.inkscape.org/dl/resources/file/Inkscape-#{release_version}#{arch}.#{url_end}"
   name "Inkscape"
   desc "Vector graphics editor"
   homepage "https://inkscape.org/"
@@ -47,7 +48,7 @@ cask "inkscape" do
         match = row[0].match(regex)
         next unless match
 
-        (match[1] == match[2]) ? match[1] : "#{match[1]},#{match[2]}"
+        match.values_at(1, 2).uniq.join(",")
       end
     end
   end

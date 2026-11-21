@@ -14,7 +14,10 @@ cask "dcommander" do
       match = headers["content-disposition"]&.match(regex)
       next if match.blank?
 
-      (version = match[1]).include?(".") ? version : version.chars.join(".")
+      version = match[1]
+      next version if version.include?(".")
+
+      version.chars.join(".")
     end
   end
 

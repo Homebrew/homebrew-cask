@@ -22,7 +22,7 @@ cask "carbon-copy-cloner" do
       match = headers["location"]&.match(regex)
       next if match.blank?
 
-      match[2] ? "#{match[1]},#{match[2]}" : match[1]
+      match.values_at(1, 2).compact.join(",")
     end
   end
 

@@ -2,7 +2,8 @@ cask "insta360-link-controller" do
   version "2.2.5,build25,5691fa4c032d4c15bbaa33dee8188008"
   sha256 "5e8b28bac1b038185ca3da80b53771c9d81d62f97a8ae073280358013129fc62"
 
-  url "https://wassets.insta360.com/common/#{version.csv.last}/Insta360LinkController_#{version.csv.first}(#{version.csv.second})#{version.csv.third if version.csv.length > 3}.pkg"
+  build_suffix = version.csv.third if version.csv.length > 3
+  url "https://wassets.insta360.com/common/#{version.csv.last}/Insta360LinkController_#{version.csv.first}(#{version.csv.second})#{build_suffix}.pkg"
   name "Insta360 Link Controller"
   desc "Controller for Insta360 webcams"
   homepage "https://www.insta360.com/"
@@ -27,13 +28,14 @@ cask "insta360-link-controller" do
       match = channel["download_url"]&.match(regex)
       next unless match
 
-      "#{match[2]},#{match[3].tr("()", ",")},#{match[1]}".gsub(/,{2,}/, ",")
+      build_number = match[3].tr("()", ",")
+      "#{match[2]},#{build_number},#{match[1]}".gsub(/,{2,}/, ",")
     end
   end
 
   depends_on :macos
 
-  pkg "Insta360LinkController_#{version.csv.first}(#{version.csv.second})#{version.csv.third if version.csv.length > 3}.pkg"
+  pkg "Insta360LinkController_#{version.csv.first}(#{version.csv.second})#{build_suffix}.pkg"
 
   uninstall quit:    "com.insta360.linkcontroller",
             pkgutil: "com.insta360.webcam"

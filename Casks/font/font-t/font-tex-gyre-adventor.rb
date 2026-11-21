@@ -2,7 +2,8 @@ cask "font-tex-gyre-adventor" do
   version "2.609,31_03_2026"
   sha256 "4cfef1d3df1674d111081d7410fe393185aef719e5d8465314dece308836033e"
 
-  url "https://www.gust.org.pl/projects/e-foundry/tex-gyre/adventor/tg_adventor-otf-#{version.csv.first.dots_to_underscores}#{"-#{version.csv.second}" if version.csv.second}.zip"
+  version_suffix = "-#{version.csv.second}" if version.csv.second
+  url "https://www.gust.org.pl/projects/e-foundry/tex-gyre/adventor/tg_adventor-otf-#{version.csv.first.dots_to_underscores}#{version_suffix}.zip"
   name "TeX Gyre Adventor"
   homepage "https://www.gust.org.pl/projects/e-foundry/tex-gyre/adventor"
 

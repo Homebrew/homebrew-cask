@@ -9,6 +9,7 @@ cask "aigcpanel" do
          arm64_linux:  "f23f861b6fcc8083de307043f9663a25a9ec2300c57cef2c8f1956dcd6d9f5e4",
          x86_64_linux: "e4e027f75ef63c7eee842d4d7079f10033429c8a9757b0efb86c94708d6bb896"
 
+  release_version = version.csv.second || version.csv.first
   on_macos do
     app "AigcPanel.app"
 
@@ -22,13 +23,13 @@ cask "aigcpanel" do
     ]
   end
   on_linux do
-    app_image "AigcPanel-#{version.csv.second || version.csv.first}-linux-#{arch}.AppImage",
+    app_image "AigcPanel-#{release_version}-linux-#{arch}.AppImage",
               target: "AigcPanel.AppImage"
 
     zap trash: "~/.config/aigcpanel"
   end
 
-  url "https://github.com/modstart-lib/aigcpanel/releases/download/v#{version.csv.first}/AigcPanel-#{version.csv.second || version.csv.first}-#{os}-#{arch}.#{url_end}"
+  url "https://github.com/modstart-lib/aigcpanel/releases/download/v#{version.csv.first}/AigcPanel-#{release_version}-#{os}-#{arch}.#{url_end}"
   name "AigcPanel"
   desc "AI video, audio and broadcast generator"
   homepage "https://aigcpanel.com/"
@@ -44,7 +45,7 @@ cask "aigcpanel" do
           match = asset["browser_download_url"]&.match(regex)
           next if match.blank?
 
-          (match[2] == match[1]) ? match[1] : "#{match[1]},#{match[2]}"
+          match.values_at(1, 2).uniq.join(",")
         end
       end.flatten
     end

@@ -66,7 +66,10 @@ cask "thunderbird@daily" do
     "zh-CN"
   end
 
-  url "https://ftp.mozilla.org/pub/thunderbird/nightly/#{version.csv.second.split("-").first}/#{version.csv.second.split("-").second}/#{version.csv.second}-comm-central#{"-l10n" if language != "en-US"}/thunderbird-#{version.csv.first}.#{language}.mac.dmg"
+  year = version.csv.second.split("-").first
+  month = version.csv.second.split("-").second
+  locale_suffix = "-l10n" if language != "en-US"
+  url "https://ftp.mozilla.org/pub/thunderbird/nightly/#{year}/#{month}/#{version.csv.second}-comm-central#{locale_suffix}/thunderbird-#{version.csv.first}.#{language}.mac.dmg"
   name "Mozilla Thunderbird Daily"
   desc "Customizable email client"
   homepage "https://www.thunderbird.net/#{language}/download/daily/"

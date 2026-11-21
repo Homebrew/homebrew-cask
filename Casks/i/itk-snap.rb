@@ -15,7 +15,7 @@ cask "itk-snap" do
     regex(%r{url=.*?/itksnap[._-]v?(\d+(?:\.\d+)+)(?:-(\d+(?:\.\d+)*))?[._-]Darwin[._-]#{arch}\.dmg}i)
     strategy :sourceforge do |page, regex|
       page.scan(regex).map do |match|
-        match[1].present? ? "#{match[0]},#{match[1]}" : match[0]
+        match.values_at(0, 1).compact_blank.join(",")
       end
     end
   end

@@ -2,7 +2,8 @@ cask "openshot-video-editor@daily" do
   version "4.2.0,19229-88209a25-289816ce,dev1-daily"
   sha256 "6c5e49d2acf054fd5904c0e3b496df1a18296a095f179f94df2d6d309a8a4a2a"
 
-  url "https://github.com/OpenShot/openshot-qt/releases/download/daily/OpenShot-v#{version.csv.first}-#{version.csv.third || "daily"}-#{version.csv.second}-x86_64.dmg"
+  channel = version.csv.third || "daily"
+  url "https://github.com/OpenShot/openshot-qt/releases/download/daily/OpenShot-v#{version.csv.first}-#{channel}-#{version.csv.second}-x86_64.dmg"
   name "OpenShot Video Editor (Daily Build)"
   desc "Cross-platform video editor"
   homepage "https://openshot.org/"
@@ -15,7 +16,9 @@ cask "openshot-video-editor@daily" do
     /ix)
     strategy :page_match do |page, regex|
       page.scan(regex).map do |match|
-        (match[1] == "daily") ? "#{match[0]},#{match[2]}" : "#{match[0]},#{match[2]},#{match[1]}"
+        parts = match.values_at(0, 2)
+        parts << match[1] if match[1] != "daily"
+        parts.join(",")
       end
     end
   end

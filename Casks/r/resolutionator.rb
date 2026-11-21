@@ -2,7 +2,8 @@ cask "resolutionator" do
   version "2.4"
   sha256 "e9fb9b1946deddc62ff0bf5d46066a8cc91564c358e5d33bf85029f4ef75d5bb"
 
-  url "https://manytricks.com/download/_do_not_hotlink_/resolutionator#{version.no_dots.ljust(3, "0")}.dmg"
+  download_version = version.no_dots.ljust(3, "0")
+  url "https://manytricks.com/download/_do_not_hotlink_/resolutionator#{download_version}.dmg"
   name "Resolutionator"
   desc "Use any of your display's available resolutions"
   homepage "https://manytricks.com/resolutionator/"

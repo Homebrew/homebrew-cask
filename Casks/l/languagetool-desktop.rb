@@ -2,7 +2,7 @@ cask "languagetool-desktop" do
   version "3.4.2"
   sha256 "23666fba894080ad8f62d76b24a73069469b79e529d17c2803ab9694a4e92da5"
 
-  url "https://languagetool.org/download/mac-app/LanguageToolDesktop-#{version.csv.first}#{version.csv.second if version.csv.second}.dmg"
+  url "https://languagetool.org/download/mac-app/LanguageToolDesktop-#{version.csv.first}#{version.csv.second}.dmg"
   name "LanguageTool for Desktop"
   desc "Grammar, spelling and style suggestions in all the writing apps"
   homepage "https://languagetool.org/"
@@ -20,7 +20,7 @@ cask "languagetool-desktop" do
         match = item.url&.match(regex)
         next unless match
 
-        match[2].present? ? "#{match[1]},#{match[2]}" : match[1]
+        match.values_at(1, 2).compact_blank.join(",")
       end
     end
   end

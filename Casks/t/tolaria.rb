@@ -7,6 +7,7 @@ cask "tolaria" do
          intel:        "e4016013430ded2336b93e0fa2ba2b0b14f87a943aac344dfe87238e2b4dbad5",
          x86_64_linux: "3b054f92343abfb5ab222c12480d13c2eae5b85c432d1a7fc7bad72e1fad013b"
 
+  release_tag = version.csv.second || version
   on_macos do
     auto_updates true
 
@@ -25,7 +26,7 @@ cask "tolaria" do
   on_linux do
     depends_on arch: :x86_64
 
-    app_image "Tolaria_#{version.csv.second || version}_#{arch}.AppImage", target: "Tolaria.AppImage"
+    app_image "Tolaria_#{release_tag}_#{arch}.AppImage", target: "Tolaria.AppImage"
 
     zap trash: [
       "~/.config/com.tolaria.app",
@@ -35,7 +36,7 @@ cask "tolaria" do
     ]
   end
 
-  url "https://github.com/refactoringhq/tolaria/releases/download/v#{version.csv.first.dots_to_hyphens}/Tolaria_#{version.csv.second || version}#{os}"
+  url "https://github.com/refactoringhq/tolaria/releases/download/v#{version.csv.first.dots_to_hyphens}/Tolaria_#{release_tag}#{os}"
   name "Tolaria"
   desc "Markdown knowledgebase manager"
   homepage "https://tolaria.md/"
@@ -54,7 +55,7 @@ cask "tolaria" do
         match = asset["name"]&.match(regex)
         next if match.blank?
 
-        (match[1] == tag_version) ? tag_version : "#{tag_version},#{match[1]}"
+        [tag_version, match[1]].uniq.join(",")
       end
     end
   end

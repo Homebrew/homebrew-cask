@@ -11,7 +11,8 @@ cask "scrivener" do
     url "https://www.literatureandlatte.com/downloads/scrivener-#{version.major}.xml"
     regex(/scrivener[._-](\d+(?:\.\d+)?+)[._-]/i)
     strategy :sparkle do |item, regex|
-      "#{item.short_version},#{item.version},#{item.url[regex, 1]}"
+      release_version = item.url[regex, 1]
+      "#{item.short_version},#{item.version},#{release_version}"
     end
   end
 

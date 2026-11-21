@@ -11,7 +11,10 @@ cask "simpholders" do
     url "https://simpholders.com/releases/"
     regex(%r{/(\d+)/simpholders[._-](\d+(?:[._]\d+)+)\.dmg}i)
     strategy :sparkle do |item, regex|
-      item.url.scan(regex).map { |match| "#{match[1].tr("_", ".")},#{match[0]}" }
+      item.url.scan(regex).map do |match|
+        release_version = match[1].tr("_", ".")
+        "#{release_version},#{match[0]}"
+      end
     end
   end
 

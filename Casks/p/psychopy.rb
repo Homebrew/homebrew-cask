@@ -5,7 +5,8 @@ cask "psychopy" do
   sha256 arm:   "71eb2e925424bedb72286f4a4e1656883e0482a274ac655a67612f37ee54f86a",
          intel: "bc7cec41bc80d90c44d98199e636736a4bc4c7a279ccfefced6b27a863c4478f"
 
-  url "https://github.com/psychopy/psychopy/releases/download/#{version.csv.first}/StandalonePsychoPy-#{version.csv.second || version.csv.first}-macOS-#{arch}-3.11.dmg"
+  release_version = version.csv.second || version.csv.first
+  url "https://github.com/psychopy/psychopy/releases/download/#{version.csv.first}/StandalonePsychoPy-#{release_version}-macOS-#{arch}-3.11.dmg"
   name "PsychoPy"
   desc "Create experiments in behavioral science"
   homepage "https://www.psychopy.org/"

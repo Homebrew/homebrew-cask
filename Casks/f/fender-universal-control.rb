@@ -13,7 +13,10 @@ cask "fender-universal-control" do
     url "https://www.presonus.com/products/audiobox-usb-96-studio"
     regex(%r{href=.*?/(\d+)/Fender[._-]Universal[._-]Control[._-]v?(\d+(?:[._-]\d+)+)\.dmg}i)
     strategy :page_match do |page, regex|
-      page.scan(regex).map { |match| "#{match[1].tr("_", ".")},#{match[0]}" }
+      page.scan(regex).map do |match|
+        release_version = match[1].tr("_", ".")
+        "#{release_version},#{match[0]}"
+      end
     end
   end
 

@@ -12,7 +12,7 @@ cask "sequel-ace" do
     regex(%r{^production/v?(\d+(?:\.\d+)+)(?:-(\d+))?}i)
     strategy :github_latest do |json, regex|
       json["tag_name"]&.scan(regex)&.map do |match|
-        match[1].present? ? "#{match[0]},#{match[1]}" : match[0]
+        match.values_at(0, 1).compact_blank.join(",")
       end
     end
   end

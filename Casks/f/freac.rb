@@ -12,7 +12,7 @@ cask "freac" do
     regex(%r{href=.*?/freac[._-](\d+(?:\.\d+)+)[._-]macos11\.dmg}i)
     strategy :page_match do |page, regex|
       page.scan(regex).map do |match|
-        match[1].blank? ? match[0] : "#{match[0]},#{match[1]}"
+        match.values_at(0, 1).compact_blank.join(",")
       end
     end
   end

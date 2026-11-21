@@ -18,7 +18,7 @@ cask "lemonlime" do
         match = asset["browser_download_url"]&.match(regex)
         next if match.blank?
 
-        match[2] ? "#{match[1]},#{match[2]}" : match[1]
+        match.values_at(1, 2).compact.join(",")
       end
     end
   end

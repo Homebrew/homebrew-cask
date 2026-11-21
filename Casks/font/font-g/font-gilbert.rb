@@ -20,14 +20,15 @@ cask "font-gilbert" do
           match = asset["name"]&.match(regex)
           next if match.blank?
 
-          match[2] ? "#{match[1]},#{match[2]}" : match[1]
+          match.values_at(1, 2).compact.join(",")
         end
       end.flatten
     end
   end
 
-  font "Gilbert-Bold Preview#{version.before_comma.minor.tr("00", "")}.otf"
-  font "Gilbert-Color Bold Preview#{version.before_comma.minor.tr("00", "")}.otf"
+  preview_version = version.before_comma.minor.tr("00", "")
+  font "Gilbert-Bold Preview#{preview_version}.otf"
+  font "Gilbert-Color Bold Preview#{preview_version}.otf"
 
   zap :not_required
 end

@@ -5,7 +5,8 @@ cask "ultimaker-cura" do
   sha256 arm:   "b517488218c134ef36a7845540dd0778205ffedb24f83f0ee41f67423ffcbf21",
          intel: "83164f8295453933e240f876f91e96f92357a5dba4018060c010fe5fe7f6071d"
 
-  url "https://github.com/Ultimaker/Cura/releases/download/#{version.csv.second || version.csv.first}/UltiMaker-Cura-#{version.csv.first}-macos-#{arch}.dmg"
+  release_version = version.csv.second || version.csv.first
+  url "https://github.com/Ultimaker/Cura/releases/download/#{release_version}/UltiMaker-Cura-#{version.csv.first}-macos-#{arch}.dmg"
   name "UltiMaker Cura"
   name "Cura"
   desc "3D printer and slicing GUI"
@@ -19,7 +20,7 @@ cask "ultimaker-cura" do
       match = tag&.match(regex)
       next if match.blank?
 
-      (match[1] == tag) ? match[1] : "#{match[1]},#{tag}"
+      [match[1], tag].uniq.join(",")
     end
   end
 

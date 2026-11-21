@@ -15,7 +15,10 @@ cask "concept2-utility" do
     regex(/Concept2\s+Utility\s+v?(\d+(?:\.\d+)+)/i)
     strategy :page_match do |page, regex|
       page.scan(regex).map do |match|
-        (match[0].count(".") >= 2) ? match[0] : "#{match[0]}.00"
+        version = match[0]
+        next version if version.count(".") >= 2
+
+        "#{version}.00"
       end
     end
   end

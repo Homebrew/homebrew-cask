@@ -5,7 +5,8 @@ cask "mkvtoolnix-app" do
   sha256 arm:   "05670ef070783a4afa23b9a289373472ac168112c83926dae17e29ab32198501",
          intel: "0d1cbc3fc4d5930d2013e945230a72c90eefa7b565546da557382e3e67459552"
 
-  url "https://mkvtoolnix.download/macos/releases/#{version.split("-").first}/MKVToolNix-#{version}-#{arch}.dmg"
+  release_version = version.split("-").first
+  url "https://mkvtoolnix.download/macos/releases/#{release_version}/MKVToolNix-#{version}-#{arch}.dmg"
   name "MKVToolNix"
   desc "GUI including a set of tools to create, alter and inspect Matroska files (MKV)"
   homepage "https://mkvtoolnix.download/"

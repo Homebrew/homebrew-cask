@@ -14,7 +14,8 @@ cask "pocket-bard" do
   livecheck do
     url "https://downloads.pocketbard.app/desktop/channels/stable/appcast-#{livecheck_arch}.rss"
     strategy :sparkle do |item|
-      "#{item.short_version},#{item.version.split(".").last}"
+      build_number = item.version.split(".").last
+      "#{item.short_version},#{build_number}"
     end
   end
 

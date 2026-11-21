@@ -6,7 +6,8 @@ cask "thorium" do
   sha256 arm:   "23b7d9ab62eaae7a7ef67cbbef579a655c556dce5877278be8c28e96d1fca3a5",
          intel: "23c9270fefbd943dc9401033224b43c6b3f3511cf68ba154d63215cab13b2732"
 
-  url "https://github.com/edrlab/thorium-reader/releases/download/v#{version.csv.first}/Thorium-#{version.csv.second || version.csv.first}#{arch}.dmg"
+  release_version = version.csv.second || version.csv.first
+  url "https://github.com/edrlab/thorium-reader/releases/download/v#{version.csv.first}/Thorium-#{release_version}#{arch}.dmg"
   name "Thorium Reader"
   desc "Epub reader"
   homepage "https://www.edrlab.org/software/thorium-reader/"
@@ -18,7 +19,7 @@ cask "thorium" do
       match = page.match(regex)
       next unless match
 
-      (match[2] == match[1]) ? match[1] : "#{match[1]},#{match[2]}"
+      match.values_at(1, 2).uniq.join(",")
     end
   end
 
