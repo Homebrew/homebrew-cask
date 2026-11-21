@@ -6,7 +6,8 @@ cask "adobe-creative-cloud" do
          intel: "addca3ba7819bb0fdbe1394b8d0ff6a2614e599ded91a3ba5839672c996ec750"
 
   # If url breaks you can find the latest static urls - https://helpx.adobe.com/download-install/kb/creative-cloud-desktop-app-download.html
-  url "https://ccmdls.adobe.com/AdobeProducts/StandaloneBuilds/ACCC/ESD/#{version.major_minor_patch}/#{version.split(".")[3..4].join(".")}/#{arch}/ACCCx#{version.dots_to_underscores}.dmg"
+  build_number = version.split(".")[3..4].join(".")
+  url "https://ccmdls.adobe.com/AdobeProducts/StandaloneBuilds/ACCC/ESD/#{version.major_minor_patch}/#{build_number}/#{arch}/ACCCx#{version.dots_to_underscores}.dmg"
   name "Adobe Creative Cloud"
   desc "Collection of apps and services for photography, design, video, web, and UX"
   homepage "https://www.adobe.com/creativecloud.html"
