@@ -10,6 +10,7 @@ cask "maestro" do
          arm64_linux:  "3931a37c138fe27276008cac969717f5e5855849ef2753b7aa929d4c5513016c",
          x86_64_linux: "65edf56ba017d8b595422609fd0fefdd76ea6179b880b3d102b9def91ef2fd15"
 
+  release_version = version.csv.second || version.csv.first
   on_macos do
     depends_on macos: :monterey
 
@@ -22,12 +23,12 @@ cask "maestro" do
     ]
   end
   on_linux do
-    app_image "maestro-#{version.csv.second || version.csv.first}-#{arch}.AppImage", target: "Maestro.AppImage"
+    app_image "maestro-#{release_version}-#{arch}.AppImage", target: "Maestro.AppImage"
 
     zap trash: "~/.config/maestro"
   end
 
-  url "https://github.com/pedramamini/Maestro/releases/download/v#{version.csv.second || version.csv.first}/#{name_prefix}-#{version.csv.second || version.csv.first}-#{arch}#{url_end}"
+  url "https://github.com/pedramamini/Maestro/releases/download/v#{release_version}/#{name_prefix}-#{release_version}-#{arch}#{url_end}"
   name "Maestro"
   desc "AI agent command center"
   homepage "https://runmaestro.ai/"
@@ -40,7 +41,7 @@ cask "maestro" do
       tag_version = json["tag_name"]&.[](regex, 1)
       next if version.blank? || tag_version.blank?
 
-      (version == tag_version) ? tag_version : "#{version},#{tag_version}"
+      [version, tag_version].uniq.join(",")
     end
   end
 
