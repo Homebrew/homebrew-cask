@@ -2,7 +2,12 @@ cask "vitalsource-bookshelf" do
   version "11.4.3.4204"
   sha256 "5bb4b8d305b620979f4b732ccfa9d0077d03f592a26eccdd48c8f2379fa18fca"
 
-  url "https://downloads.vitalbook.com/vsti/bookshelf/#{(version.patch == "0") ? version.major_minor : version.major_minor_patch}/mac/bookshelf/VitalSource-Bookshelf_#{version}.dmg"
+  release_version = if version.patch == "0"
+    version.major_minor
+  else
+    version.major_minor_patch
+  end
+  url "https://downloads.vitalbook.com/vsti/bookshelf/#{release_version}/mac/bookshelf/VitalSource-Bookshelf_#{version}.dmg"
   name "VitalSource Bookshelf"
   desc "Access etextbooks"
   homepage "https://www.vitalsource.com/bookshelf-features"
