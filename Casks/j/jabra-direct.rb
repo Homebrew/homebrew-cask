@@ -36,6 +36,7 @@ cask "jabra-direct" do
             delete:     "/Applications/Jabra Direct.app"
 
   zap trash: [
+    "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.jabra.directonline.sfl*",
     "~/Library/Application Support/Jabra Direct",
     "~/Library/Application Support/Jabra",
     "~/Library/Application Support/JabraSDK",
