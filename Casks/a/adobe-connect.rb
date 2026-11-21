@@ -11,7 +11,8 @@ cask "adobe-connect" do
         match = headers["location"]&.match(regex)
         next unless match
 
-        "#{match[2].tr("_", ".")},#{match[1]}"
+        release_version = match[2].tr("_", ".")
+        "#{release_version},#{match[1]}"
       end
     end
   end
@@ -27,7 +28,8 @@ cask "adobe-connect" do
         match = headers["location"]&.match(regex)
         next unless match
 
-        "#{match[2].tr("_", ".")},#{match[1]}"
+        release_version = match[2].tr("_", ".")
+        "#{release_version},#{match[1]}"
       end
     end
   end
