@@ -1,6 +1,6 @@
 cask "marked-app" do
-  version "3.2.33,1255"
-  sha256 "04d49fc3c0343ae946e61b6c9e39be2c1d458b2cf0f1ffebd0dd9782924a696f"
+  version "3.2.35,1257"
+  sha256 "87b91eda709920e691f9b6734645e12a2077097c8905f6942f5457dfa9167ccd"
 
   url "https://updates.markedapp.com/updates/Marked%20#{version.csv.first}-#{version.csv.second}.zip"
   name "Marked"
