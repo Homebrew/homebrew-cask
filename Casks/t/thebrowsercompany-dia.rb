@@ -21,6 +21,7 @@ cask "thebrowsercompany-dia" do
   zap trash: [
     "~/Library/Application Support/Dia",
     "~/Library/Caches/company.thebrowser.dia",
+    "~/Library/Caches/Dia",
     "~/Library/HttpStorages/company.thebrowser.dia",
     "~/Library/HttpStorages/company.thebrowser.dia.binarycookies",
     "~/Library/Preferences/company.thebrowser.dia.plist",
