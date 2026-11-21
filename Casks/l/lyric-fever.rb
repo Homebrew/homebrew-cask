@@ -2,7 +2,8 @@ cask "lyric-fever" do
   version "3.3"
   sha256 "48f0ea7f02301534575355b6476156b1bbf615f839ba34943146f50a3cb93df2"
 
-  url "https://github.com/aviwad/LyricFever/releases/download/v#{version.csv.second || version.csv.first}/Lyric.Fever.#{version.csv.first}.dmg"
+  release_version = version.csv.second || version.csv.first
+  url "https://github.com/aviwad/LyricFever/releases/download/v#{release_version}/Lyric.Fever.#{version.csv.first}.dmg"
   name "Lyric Fever"
   desc "Lyrics for Apple Music and Spotify"
   homepage "https://lyricfever.com/"
@@ -14,7 +15,7 @@ cask "lyric-fever" do
       match = item.url&.match(regex)
       next if match.blank?
 
-      (match[2] == match[1]) ? match[2] : "#{match[2]},#{match[1]}"
+      match.values_at(2, 1).uniq.join(",")
     end
   end
 
