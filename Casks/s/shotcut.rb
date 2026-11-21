@@ -33,7 +33,8 @@ cask "shotcut" do
     ]
   end
 
-  url "https://github.com/mltframework/shotcut/releases/download/v#{version.csv.second || version.csv.first}/shotcut-#{os}-#{version.csv.first}.#{url_end}"
+  release_version = version.csv.second || version.csv.first
+  url "https://github.com/mltframework/shotcut/releases/download/v#{release_version}/shotcut-#{os}-#{version.csv.first}.#{url_end}"
   name "Shotcut"
   desc "Video editor"
   homepage "https://www.shotcut.org/"
@@ -48,7 +49,7 @@ cask "shotcut" do
         match = asset["browser_download_url"]&.match(regex)
         next if match.blank?
 
-        (match[1] == match[2]) ? match[1] : "#{match[2]},#{match[1]}"
+        match.values_at(2, 1).uniq.join(",")
       end
     end
   end
