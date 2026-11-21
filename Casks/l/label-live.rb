@@ -17,6 +17,7 @@ cask "label-live" do
   app "Label LIVE.app"
 
   zap trash: [
+    "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.semireg.labellive.sfl*",
     "~/Library/Application Support/Label LIVE",
     "~/Library/Logs/Label LIVE",
     "~/Library/Preferences/com.semireg.LabelLIVE.plist",
