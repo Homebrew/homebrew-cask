@@ -2,7 +2,8 @@ cask "font-d2coding" do
   version "1.4.0,20261003"
   sha256 "17e2da5e2879006eb725b87943f7988736ef8b6c9f8b84bc8e3bdbcb8dd46744"
 
-  url "https://github.com/naver/d2codingfont/releases/download/VER#{version.csv.first}/D2Coding-Ver#{version.csv.first}#{"-#{version.csv.second}" if version.csv.second}.zip"
+  version_suffix = "-#{version.csv.second}" if version.csv.second
+  url "https://github.com/naver/d2codingfont/releases/download/VER#{version.csv.first}/D2Coding-Ver#{version.csv.first}#{version_suffix}.zip"
   name "D2 Coding"
   homepage "https://github.com/naver/d2codingfont"
 
@@ -14,7 +15,7 @@ cask "font-d2coding" do
         match = asset["name"]&.match(regex)
         next if match.blank?
 
-        match[2] ? "#{match[1]},#{match[2]}" : match[1]
+        match.values_at(1, 2).compact.join(",")
       end
     end
   end
