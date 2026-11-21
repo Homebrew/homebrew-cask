@@ -1,6 +1,6 @@
 cask "glean" do
-  version "1.2026.29912"
-  sha256 "4245ebfb7f82b34d496a696b737ac2f5abefa491606c364125cf7cf61856fa21"
+  version "1.2026.32221"
+  sha256 "0f5e734d6ac3c4ff1ca5df504d667ceff9f5039e8b16b4ed53c52383b66516dd"
 
   url "https://storage.googleapis.com/glean-downloads/glean-desktop-app/Glean-darwin-universal-#{version}.zip"
   name "Glean Desktop"
