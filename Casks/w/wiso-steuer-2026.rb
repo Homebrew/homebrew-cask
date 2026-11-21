@@ -3,7 +3,8 @@ cask "wiso-steuer-2026" do
   version "33.10.3740-HF1,33.10.3740"
   sha256 "32749983564825d51c399c4630b8cfa43bc0e8751f773e93d50f10582ab9229e"
 
-  url "https://update.buhl-data.com/Updates/Steuer/2026/Mac/Files/#{version.csv.first}/SteuerMac2026-#{version.csv.second || version.csv.first.split("-").first}.dmg"
+  archive_version = version.csv.second || version.csv.first.split("-").first
+  url "https://update.buhl-data.com/Updates/Steuer/2026/Mac/Files/#{version.csv.first}/SteuerMac2026-#{archive_version}.dmg"
   name "WISO Steuer 2026"
   desc "Tax declaration for the fiscal year 2025"
   homepage "https://www.buhl.de/download/wiso-steuer-2026/"
@@ -15,7 +16,7 @@ cask "wiso-steuer-2026" do
       match = item.url&.match(regex)
       next if match.blank?
 
-      (match[1] == match[2]) ? match[1] : "#{match[1]},#{match[2]}"
+      match.values_at(1, 2).uniq.join(",")
     end
   end
 
