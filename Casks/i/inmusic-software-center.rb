@@ -2,7 +2,8 @@ cask "inmusic-software-center" do
   version "1.41.0,1411"
   sha256 "8a05e14028cd2fdb0a4e4ce669cd17544de42b25b7a662075a73beed0305b2fe"
 
-  url "https://cdn.inmusicbrands.com/SI04/#{version.csv.second || version.no_dots}/inMusic%20Software%20Center-darwin-universal-#{version.csv.first}.zip"
+  download_version = version.csv.second || version.no_dots
+  url "https://cdn.inmusicbrands.com/SI04/#{download_version}/inMusic%20Software%20Center-darwin-universal-#{version.csv.first}.zip"
   name "inMusic Software Center"
   desc "Administration tool for inMusic brand creative software"
   homepage "https://www.airmusictech.com/downloads/"
@@ -14,7 +15,9 @@ cask "inmusic-software-center" do
       match = headers["location"]&.match(regex)
       next if match.blank?
 
-      (match[1] == match[2].tr(".", "")) ? match[2] : "#{match[2]},#{match[1]}"
+      next match[2] if match[1] == match[2].tr(".", "")
+
+      "#{match[2]},#{match[1]}"
     end
   end
 
