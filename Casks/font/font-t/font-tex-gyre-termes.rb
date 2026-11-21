@@ -2,7 +2,8 @@ cask "font-tex-gyre-termes" do
   version "2.609,31_03_2026"
   sha256 "939908103cc061c6b1bc84d17c4fb11283f206ce79bb60f9f1073f4a2b5d8326"
 
-  url "https://www.gust.org.pl/projects/e-foundry/tex-gyre/termes/tg_termes-otf-#{version.csv.first.dots_to_underscores}#{"-#{version.csv.second}" if version.csv.second}.zip"
+  version_suffix = "-#{version.csv.second}" if version.csv.second
+  url "https://www.gust.org.pl/projects/e-foundry/tex-gyre/termes/tg_termes-otf-#{version.csv.first.dots_to_underscores}#{version_suffix}.zip"
   name "TeX Gyre Termes"
   homepage "https://www.gust.org.pl/projects/e-foundry/tex-gyre/termes"
 
