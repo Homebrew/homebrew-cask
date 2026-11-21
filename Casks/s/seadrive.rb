@@ -9,7 +9,7 @@ cask "seadrive" do
 
   livecheck do
     url "https://www.seafile.com/en/download/"
-    regex(%r{href=.*?/seadrive[._-]v?(\d+(?:\.\d+)+)\.pkg}i)
+    regex(%r{(?:href|data-download-url)=.*?/seadrive[._-]v?(\d+(?:\.\d+)+)\.pkg}i)
   end
 
   depends_on macos: :monterey
