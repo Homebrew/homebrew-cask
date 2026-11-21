@@ -11,7 +11,8 @@ cask "dropshare" do
     url "https://dropshare.app/sparkle/Dropshare#{version.major}.xml"
     regex(/(\d+(?:\.\d+)+)/i)
     strategy :sparkle do |item, regex|
-      "#{item.title[regex, 1]},#{item.version}"
+      release_version = item.title[regex, 1]
+      "#{release_version},#{item.version}"
     end
   end
 
