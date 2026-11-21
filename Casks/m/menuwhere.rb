@@ -18,7 +18,8 @@ cask "menuwhere" do
       match = item.short_version&.match(regex)
       next unless match
 
-      "#{match[1]}#{match[2].presence || ".0"}"
+      version_suffix = match[2].presence || ".0"
+      "#{match[1]}#{version_suffix}"
     end
   end
 
