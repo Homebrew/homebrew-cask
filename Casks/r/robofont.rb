@@ -11,7 +11,8 @@ cask "robofont" do
     url "https://robofont.com/appcast.xml"
     regex(/(?:buil[dt]\s+)?v?(\d+(?:\.\d+)*)/i)
     strategy :sparkle do |item, regex|
-      "#{item.short_version},#{item.version[regex, 1]}"
+      release_version = item.version[regex, 1]
+      "#{item.short_version},#{release_version}"
     end
   end
 
