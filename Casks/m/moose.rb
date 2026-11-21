@@ -4,7 +4,8 @@ cask "moose" do
 
   url "https://github.com/ritz078/moose/releases/download/v#{version}/moose-#{version}-mac.zip"
   name "moose"
-  homepage "https://getmoose.in/"
+  desc "Torrent client to download, stream and cast torrents"
+  homepage "https://moose.riteshkr.com/"
 
   depends_on :macos
 
