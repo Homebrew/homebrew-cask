@@ -11,7 +11,7 @@ cask "gnome" do
     url "https://lexfriedman.com/gnome/update.txt"
     regex(/new\s*in\s*v?(\d+(?:\.\d+)+)\s*\((\d*)\)/i)
     strategy :page_match do |page, regex|
-      page.scan(regex).map { |match| "#{match[0]}#{",#{match[1]}" if match[1]}" }
+      page.scan(regex).map { |match| match.first(2).compact.join(",") }
     end
   end
 
