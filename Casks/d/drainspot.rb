@@ -1,6 +1,6 @@
 cask "drainspot" do
-  version "1.5.0,21"
-  sha256 "a0ddd80a01bc87180ec8439355974331ae546128b64105eab95fcf78e3d399a9"
+  version "1.5.0,25"
+  sha256 "50398945c373e4a3943676df6a7fde1fff8653fb38d7b41437a525522daa5b72"
 
   url "https://drainspot.app/downloads/Drainspot-#{version.csv.first}-build#{version.csv.second}.dmg"
   name "Drainspot"
