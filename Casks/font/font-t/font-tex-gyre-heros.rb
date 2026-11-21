@@ -2,7 +2,8 @@ cask "font-tex-gyre-heros" do
   version "2.609,31_03_2026"
   sha256 "a5803bb6211202b0e52447bbcbd41a209716b0952224c1116a28b6d342225abe"
 
-  url "https://www.gust.org.pl/projects/e-foundry/tex-gyre/heros/tg_heros-otf-#{version.csv.first.dots_to_underscores}#{"-#{version.csv.second}" if version.csv.second}.zip"
+  version_suffix = "-#{version.csv.second}" if version.csv.second
+  url "https://www.gust.org.pl/projects/e-foundry/tex-gyre/heros/tg_heros-otf-#{version.csv.first.dots_to_underscores}#{version_suffix}.zip"
   name "TeX Gyre Heros"
   homepage "https://www.gust.org.pl/projects/e-foundry/tex-gyre/heros"
 
