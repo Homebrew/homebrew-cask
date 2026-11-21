@@ -5,7 +5,8 @@ cask "geoda" do
   sha256 arm:   "c58ca95992fc93391b02c4cb5fa1597ac0bb73b03884007685893a53a6ca0a38",
          intel: "c7333a3eed56406284ead2de69deaa833e9df81f74f2ff57a8d5952077ef52db"
 
-  url "https://github.com/GeoDaCenter/geoda/releases/download/v#{version.csv.first}/GeoDa#{version.csv.second || version.csv.first}-#{arch}-Installer.dmg"
+  release_version = version.csv.second || version.csv.first
+  url "https://github.com/GeoDaCenter/geoda/releases/download/v#{version.csv.first}/GeoDa#{release_version}-#{arch}-Installer.dmg"
   name "GeoDa"
   desc "Spatial analysis, statistics, autocorrelation and regression"
   homepage "https://geodacenter.github.io/"
