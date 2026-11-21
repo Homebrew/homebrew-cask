@@ -2,7 +2,8 @@ cask "qgis" do
   version "4.2.3"
   sha256 "cf3af3d3d228a0e2a0ab7fb6b37052ae78064d0aef93b12f41f9bd724fd23401"
 
-  url "https://download.qgis.org/downloads/macos/pr/qgis_pr_final-#{version.dots_to_underscores.csv.join("_")}.dmg"
+  archive_version = version.dots_to_underscores.csv.join("_")
+  url "https://download.qgis.org/downloads/macos/pr/qgis_pr_final-#{archive_version}.dmg"
   name "QGIS"
   desc "Geographic Information System"
   homepage "https://www.qgis.org/"
