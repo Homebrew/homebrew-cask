@@ -3,7 +3,8 @@ cask "wiso-steuer-2020" do
   version "10.21.5040-RC1"
   sha256 "6bfc96a1aedff7a9e21f576a075dcc11fd960570efcea180499215cf189c412e"
 
-  url "https://update.buhl-data.com/Updates/Steuer/2020/Mac/Files/#{version}/steuerMac2020-#{version.split("-").first}.dmg"
+  release_version = version.split("-").first
+  url "https://update.buhl-data.com/Updates/Steuer/2020/Mac/Files/#{version}/steuerMac2020-#{release_version}.dmg"
   name "WISO Steuer 2020"
   desc "Tax declaration for the fiscal year 2019"
   homepage "https://www.buhl.de/produkte/wiso-steuer-mac/"
