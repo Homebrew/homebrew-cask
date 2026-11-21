@@ -1,18 +1,18 @@
 cask "filepane" do
-  version "1.10.7,1576186002"
-  sha256 "8a3ca4424b4a79485b6a4f9daf879b43430326628d18f38b6eccc1eae56ea5bd"
+  version "2.0.18"
+  sha256 :no_check
 
-  url "https://dl.devmate.com/com.mymixapps.FilePane/#{version.csv.first}/#{version.csv.second}/FilePane-#{version.csv.first}.dmg"
+  url "https://dl.devmate.com/com.mymixapps.FilePane/FilePane.dmg"
   name "FilePane"
   desc "File management multi-tool"
   homepage "https://mymixapps.com/filepane"
 
-  # Appcast URL: https://updates.devmate.com/com.mymixapps.FilePane.xml
   livecheck do
-    skip "Appcast only provides the version, no timestamp"
+    url "https://updates.devmate.com/com.mymixapps.FilePane.xml"
+    strategy :sparkle
   end
 
-  depends_on :macos
+  depends_on macos: :ventura
 
   app "FilePane.app"
 
@@ -23,8 +23,4 @@ cask "filepane" do
     "~/Library/Preferences/com.mymixapps.FilePane.plist",
     "~/Users/Shared/FilePane",
   ]
-
-  caveats do
-    requires_rosetta
-  end
 end
