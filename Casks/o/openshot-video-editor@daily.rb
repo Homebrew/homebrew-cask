@@ -1,6 +1,6 @@
 cask "openshot-video-editor@daily" do
-  version "4.1.1,18653-528ebb15-e0aa3886"
-  sha256 "7bba960290ca0c3f7035c91e361c093ecf8369cab6e23adaff6bc667722327c8"
+  version "4.2.0,19229-88209a25-289816ce,dev1-daily"
+  sha256 "6c5e49d2acf054fd5904c0e3b496df1a18296a095f179f94df2d6d309a8a4a2a"
 
   url "https://github.com/OpenShot/openshot-qt/releases/download/daily/OpenShot-v#{version.csv.first}-#{version.csv.third || "daily"}-#{version.csv.second}-x86_64.dmg"
   name "OpenShot Video Editor (Daily Build)"
@@ -11,7 +11,7 @@ cask "openshot-video-editor@daily" do
     url "https://www.openshot.org/download/"
     regex(/
       href=.*?OpenShot[._-]v?(\d+(?:\.\d+)+)
-      [._-]((?:dev-)?daily|release-candidate)[._-](.*)[._-]x86[._-]64\.dmg["' >]
+      [._-]((?:dev1-)?daily|release-candidate)[._-](.*)[._-]x86[._-]64\.dmg["' >]
     /ix)
     strategy :page_match do |page, regex|
       page.scan(regex).map do |match|
