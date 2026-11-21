@@ -26,6 +26,7 @@ cask "atlas-app" do
     "~/Library/Application Support/dev.atlas.ide",
     "~/Library/Caches/dev.atlas.ide",
     "~/Library/HTTPStorages/dev.atlas.ide",
+    "~/Library/Logs/dev.atlas.ide",
     "~/Library/Preferences/dev.atlas.ide.plist",
     "~/Library/Saved Application State/dev.atlas.ide.savedState",
     "~/Library/WebKit/dev.atlas.ide",
