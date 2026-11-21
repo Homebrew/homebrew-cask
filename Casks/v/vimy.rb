@@ -1,6 +1,6 @@
 cask "vimy" do
-  version "07,2023.11"
-  sha256 "b1d9c5eee5d7c82985b88ff3a986e859f94aba4011343d42a6d96e5d818989b9"
+  version "1,2026.11"
+  sha256 "d9d4bc3c914bfa1937a2053b3044aa985116427e6427b5fbfd02e37f8c4834de"
 
   url "https://eclecticlight.co/wp-content/uploads/#{version.csv.second.major}/#{version.csv.second.minor}/vimy#{version.csv.first}.zip"
   name "Vimy"
@@ -19,7 +19,7 @@ cask "vimy" do
 
   depends_on arch: :arm64
   depends_on cask: "viable"
-  depends_on macos: :monterey
+  depends_on macos: :sonoma
 
   app "vimy#{version.csv.first}/Vimy.app"
 
