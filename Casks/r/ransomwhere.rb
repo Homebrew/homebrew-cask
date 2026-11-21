@@ -29,8 +29,6 @@ cask "ransomwhere" do
   zap :not_required
 
   caveats do
-    requires_rosetta
-
     "#{@cask} requires full disk access permissions.
 
     Enable or re-enable it in:
