@@ -2,7 +2,8 @@ cask "telegram-desktop@beta" do
   version "7.4.5-beta,7.4.5"
   sha256 "9e198c214ebd8e15170620975d98fd80409d2f894c915131f3333c3baff3fc2c"
 
-  url "https://github.com/telegramdesktop/tdesktop/releases/download/v#{version.csv.second || version.csv.first}/td-setup-mac-#{version.csv.first}.dmg"
+  release_version = version.csv.second || version.csv.first
+  url "https://github.com/telegramdesktop/tdesktop/releases/download/v#{release_version}/td-setup-mac-#{version.csv.first}.dmg"
   name "Telegram Desktop"
   desc "Desktop client for Telegram messenger"
   homepage "https://desktop.telegram.org/"
@@ -24,7 +25,7 @@ cask "telegram-desktop@beta" do
           match = asset["browser_download_url"]&.match(regex)
           next if match.blank?
 
-          (match[1] == match[2]) ? match[1] : "#{match[2]},#{match[1]}"
+          match.values_at(2, 1).uniq.join(",")
         end.presence || release["tag_name"]&.[](/v?(\d+(?:\.\d+)+(?:[._-]beta)?)/i, 1)
       end.flatten
     end
