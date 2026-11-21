@@ -15,7 +15,7 @@ cask "losslessswitcher" do
         match = asset["browser_download_url"]&.match(regex)
         next if match.blank?
 
-        (match[2] == match[1]) ? match[1] : "#{match[1]},#{match[2]}"
+        match.values_at(1, 2).uniq.join(",")
       end
     end
   end
