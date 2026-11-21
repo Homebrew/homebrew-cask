@@ -12,7 +12,8 @@ cask "apifox" do
   homepage "https://github.com/apifox/apifox"
 
   livecheck do
-    url "https://api.apifox.com/api/v1/configs/client-updates/#{version}/mac#{livecheck_arch}/latest-mac.yml?noCache=#{Time.now.to_i * 2}"
+    timestamp = Time.now.to_i * 2
+    url "https://api.apifox.com/api/v1/configs/client-updates/#{version}/mac#{livecheck_arch}/latest-mac.yml?noCache=#{timestamp}"
     strategy :electron_builder
   end
 
