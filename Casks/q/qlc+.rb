@@ -12,7 +12,8 @@ cask "qlc+" do
     depends_on macos: :monterey
   end
 
-  url "https://www.qlcplus.org/downloads/#{version.split("-").first}/QLC+_#{version}_#{arch}.dmg"
+  release_version = version.split("-").first
+  url "https://www.qlcplus.org/downloads/#{release_version}/QLC+_#{version}_#{arch}.dmg"
   name "Q Light Controller+"
   desc "Control DMX or analogue lighting systems"
   homepage "https://www.qlcplus.org/"
