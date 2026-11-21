@@ -12,7 +12,8 @@ cask "reunion" do
     regex(%r{/Reunion-(\d+(?:-\d+)*)-(\d+.*?)\.zip}i)
     strategy :sparkle do |item, regex|
       item.url.scan(regex).map do |match|
-        "#{match[0].tr("-", ".")},#{match[1]}"
+        release_version = match[0].tr("-", ".")
+        "#{release_version},#{match[1]}"
       end
     end
   end
