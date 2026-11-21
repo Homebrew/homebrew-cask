@@ -13,9 +13,10 @@ cask "purge" do
   app "Purge.app"
 
   uninstall launchctl: [
-    "io.getpurge.helper",
-    "io.getpurge.watch",
-  ]
+              "io.getpurge.helper",
+              "io.getpurge.watch",
+            ],
+            quit:      "io.getpurge.app"
 
   zap trash: [
     "~/Library/Application Support/io.getpurge.app",
