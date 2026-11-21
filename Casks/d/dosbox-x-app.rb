@@ -5,7 +5,8 @@ cask "dosbox-x-app" do
   sha256 arm:   "a2f5f9ace00bb5fccac8cc0644bc5930958a932be139744866e902e0944fdd6e",
          intel: "91363407ec8841771b5ca77fc65a9c9b6383752531202c8abe929809c56d5e75"
 
-  url "https://github.com/joncampbell123/dosbox-x/releases/download/dosbox-x-v#{version.csv.first}/dosbox-x-macosx-#{arch}-#{version.csv.second || version.csv.first}.zip"
+  release_version = version.csv.second || version.csv.first
+  url "https://github.com/joncampbell123/dosbox-x/releases/download/dosbox-x-v#{version.csv.first}/dosbox-x-macosx-#{arch}-#{release_version}.zip"
   name "DOSBox-X"
   desc "Fork of the DOSBox project"
   homepage "https://dosbox-x.com/"
@@ -15,7 +16,7 @@ cask "dosbox-x-app" do
     regex(%r{href=.*?v?(\d+(?:\.\d+)+)/dosbox-x-macosx?-#{arch}[._-]v?(\d+(?:\.\d+)+)\.zip}i)
     strategy :page_match do |page, regex|
       page.scan(regex).map do |match|
-        (match[0] == match[1]) ? match[0] : "#{match[0]},#{match[1]}"
+        match.values_at(0, 1).uniq.join(",")
       end
     end
   end
