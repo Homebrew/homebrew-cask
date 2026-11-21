@@ -14,7 +14,8 @@ cask "playmemories-home" do
       match = headers["location"]&.match(regex)
       next if match.blank?
 
-      "#{match[2].split("", 3).join(".")},#{match[1]}"
+      release_version = match[2].split("", 3).join(".")
+      "#{release_version},#{match[1]}"
     end
   end
 
