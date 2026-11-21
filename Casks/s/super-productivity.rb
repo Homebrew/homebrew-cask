@@ -2,10 +2,10 @@ cask "super-productivity" do
   arch arm: "arm64", intel: on_system_conditional(macos: "x64", linux: "x86_64")
   url_end = on_system_conditional macos: "dmg", linux: "AppImage"
 
-  version "20.0.0"
-  sha256 arm:          "63cd4b4dcb18420b21c61e0f68d1d792653511bccb1de26b5043844ba20be1c0",
-         intel:        "8df6e960e2fa12bc041d6df89831dcde859fe2382b4451827af89c6563515db7",
-         x86_64_linux: "dfc921c7c709c0a608e9b0674e5a642dd7f62f80b5316f0b179d0653b4eab21b"
+  version "20.1.0"
+  sha256 arm:          "fdfb1625603537f0935209b609ba18fba587057ab01139dfe7098968c9a9748c",
+         intel:        "12d97a4b9d283789ce5dc4a268d88737a7d41b973ffd557b9a5954f86ec22fb6",
+         x86_64_linux: "bdb372be0ac0fe4b8822d6e4803473ab67677ace18674ae6c2e1e9223eecc3cb"
 
   on_macos do
     depends_on macos: :ventura
