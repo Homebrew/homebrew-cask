@@ -20,7 +20,8 @@ cask "soundsource@test" do
         next item.version
       end
 
-      "#{item.version.sub("fc", ",")},#{match[2]},#{match[3]},#{match[1]}"
+      build_version = item.version.sub("fc", ",")
+      "#{build_version},#{match[2]},#{match[3]},#{match[1]}"
     end
   end
 
