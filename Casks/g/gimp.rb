@@ -11,6 +11,7 @@ cask "gimp" do
          arm64_linux:  "3fd61dbc40b760f7806ffc04c29dc0d93021b799b9d0e6977571c4425d0323b0",
          x86_64_linux: "8b43dc23e58a1b66ace9dd6d4d5f7e8532f3398e6109f95a1ec0b6ad036aa250"
 
+  version_suffix = "-#{version.csv.second}" if version.csv.second
   on_macos do
     app "GIMP.app"
     command_wrapper "gimp", executable: "#{appdir}/GIMP.app/Contents/MacOS/gimp"
@@ -24,13 +25,13 @@ cask "gimp" do
     ]
   end
   on_linux do
-    app_image "GIMP-#{version.csv.first}-#{arch}#{"-#{version.csv.second}" if version.csv.second}.AppImage",
+    app_image "GIMP-#{version.csv.first}-#{arch}#{version_suffix}.AppImage",
               target: "GIMP.AppImage"
 
     zap trash: "~/.config/GIMP/#{version.major_minor}"
   end
 
-  url "https://download.gimp.org/gimp/v#{version.major_minor}/#{os}/#{name_start}-#{version.csv.first}-#{arch}#{"-#{version.csv.second}" if version.csv.second}.#{url_end}"
+  url "https://download.gimp.org/gimp/v#{version.major_minor}/#{os}/#{name_start}-#{version.csv.first}-#{arch}#{version_suffix}.#{url_end}"
   name "GIMP"
   name "GNU Image Manipulation Program"
   desc "Free and open-source image editor"
