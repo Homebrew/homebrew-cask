@@ -2,7 +2,8 @@ cask "longplay" do
   version "1.1.11"
   sha256 "08568a9a26443389e7cab63918ae488135f2f010bf73adc49d7f8449d2f003d9"
 
-  url "https://download.longplay.app/mac/Longplay-#{version.csv.first}#{"-#{version.csv.second}" if version.csv.second}.dmg"
+  version_suffix = "-#{version.csv.second}" if version.csv.second
+  url "https://download.longplay.app/mac/Longplay-#{version.csv.first}#{version_suffix}.dmg"
   name "Longplay"
   desc "Album-focused music player"
   homepage "https://longplay.rocks/"
