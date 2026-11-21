@@ -1,9 +1,9 @@
 cask "argo-books" do
   arch arm: "arm64", intel: "x64"
 
-  version "2.0.23"
-  sha256 arm:   "44c6a39fda0d4d7182686466a02ec47cbb710d9ab7a80754da84478e2bf627d8",
-         intel: "cb68e387c5f7c80c1a8eb6100b43a3a414c29a875429a9169fb911efd174580e"
+  version "2.0.24"
+  sha256 arm:   "159531444915dae8474a8fadd3654c3d2675b41fdf58c7ad1e4504ab8ca80d2f",
+         intel: "eb862c7bbab0c68aea3ab0f892d8da147c44f5421b4f951d994719e2ad6b2ae4"
 
   url "https://argorobots.com/resources/downloads/#{version}/ArgoBooks-#{version}-osx-#{arch}.zip"
   name "Argo Books"
