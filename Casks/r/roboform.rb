@@ -1,8 +1,8 @@
 cask "roboform" do
-  version "9.9.5"
+  version "10.0.1"
   sha256 :no_check
 
-  url "https://www.roboform.com/dist/roboform-mac-v#{version.major}.dmg"
+  url "https://services.roboform.com/dist/roboform-mac-vsub.dmg"
   name "RoboForm"
   desc "Password manager and form filler application"
   homepage "https://www.roboform.com/"
