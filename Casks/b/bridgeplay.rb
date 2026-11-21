@@ -18,6 +18,8 @@ cask "bridgeplay" do
 
   app "Bridgeplay.app"
 
+  uninstall quit: "com.bridgeplay.Bridgeplay"
+
   zap trash: [
     "~/.bridgeplay",
     "~/Library/Application Support/bridgeplay",
