@@ -2,7 +2,8 @@ cask "flykey" do
   version "1.7.2,2026043002"
   sha256 "e89ce587dcdbbd9a47f638d9cea53e8bb40701a9f1e9ce13006ca3a0c881341c"
 
-  url "https://cdn.better365.cn/FlyKey/#{version.csv.second[0..3]}/FlyKey#{version.csv.first}_#{version.csv.second}.zip"
+  release_year = version.csv.second[0..3]
+  url "https://cdn.better365.cn/FlyKey/#{release_year}/FlyKey#{version.csv.first}_#{version.csv.second}.zip"
   name "FlyKey"
   desc "One-click display of shortcuts"
   homepage "https://www.better365.cn/FlyKey.html"
