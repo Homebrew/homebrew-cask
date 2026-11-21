@@ -24,6 +24,7 @@ cask "vimy" do
   app "vimy#{version.csv.first}/Vimy.app"
 
   zap trash: [
+    "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/co.eclecticlight.vimy.sfl*",
     "~/Library/Caches/co.eclecticlight.Vimy",
     "~/Library/HTTPStorages/co.eclecticlight.Vimy",
     "~/Library/Preferences/co.eclecticlight.Vimy.plist",
