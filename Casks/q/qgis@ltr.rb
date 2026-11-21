@@ -2,7 +2,8 @@ cask "qgis@ltr" do
   version "3.44.15"
   sha256 "302547ebee16d4d38ddfd509469cc86e337b23c545307cdbe13c2c2d233ab7cb"
 
-  url "https://download.qgis.org/downloads/macos/ltr/qgis_ltr_final-#{version.dots_to_underscores.csv.join("_")}.dmg"
+  archive_version = version.dots_to_underscores.csv.join("_")
+  url "https://download.qgis.org/downloads/macos/ltr/qgis_ltr_final-#{archive_version}.dmg"
   name "QGIS LTR"
   desc "Geographic Information System"
   homepage "https://www.qgis.org/"
