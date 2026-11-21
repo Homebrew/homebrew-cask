@@ -2,7 +2,8 @@ cask "temurin@8" do
   version "8,512,09"
   sha256 "522bfd6d5b339f9d049d0bb747c819365e1746b9245aff0fb37b272558893650"
 
-  url "https://github.com/adoptium/temurin8-binaries/releases/download/jdk#{version.csv.first}u#{version.csv.second}-b#{version.csv.third}/OpenJDK#{version.csv.first}U-jdk_x64_mac_hotspot_#{version.csv.first}u#{version.csv.second}b#{version.csv.third.split(".").first}.pkg"
+  build_number = version.csv.third.split(".").first
+  url "https://github.com/adoptium/temurin8-binaries/releases/download/jdk#{version.csv.first}u#{version.csv.second}-b#{version.csv.third}/OpenJDK#{version.csv.first}U-jdk_x64_mac_hotspot_#{version.csv.first}u#{version.csv.second}b#{build_number}.pkg"
   name "Eclipse Temurin 8"
   desc "JDK from the Eclipse Foundation (Adoptium)"
   homepage "https://adoptium.net/"
@@ -22,7 +23,7 @@ cask "temurin@8" do
 
   depends_on :macos
 
-  pkg "OpenJDK#{version.csv.first}U-jdk_x64_mac_hotspot_#{version.csv.first}u#{version.csv.second}b#{version.csv.third.split(".").first}.pkg"
+  pkg "OpenJDK#{version.csv.first}U-jdk_x64_mac_hotspot_#{version.csv.first}u#{version.csv.second}b#{build_number}.pkg"
 
   uninstall pkgutil: "net.temurin.#{version.csv.first}.jdk"
 
