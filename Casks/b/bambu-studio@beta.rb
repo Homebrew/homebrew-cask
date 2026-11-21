@@ -44,7 +44,8 @@ cask "bambu-studio@beta" do
     zap trash: "~/.config/BambuStudio"
   end
 
-  url "https://github.com/bambulab/BambuStudio/releases/download/v#{version.csv.third || version.csv.first}/#{name_start}_#{os}-v#{version.csv.first}-#{version.csv.second}.#{url_end}"
+  release_version = version.csv.third || version.csv.first
+  url "https://github.com/bambulab/BambuStudio/releases/download/v#{release_version}/#{name_start}_#{os}-v#{version.csv.first}-#{version.csv.second}.#{url_end}"
   name "Bambu Studio Beta"
   desc "3D model slicing software for 3D printers, maintained by Bambu Lab"
   homepage "https://bambulab.com/en/download/studio"
@@ -60,7 +61,9 @@ cask "bambu-studio@beta" do
           match = asset["browser_download_url"]&.match(regex)
           next if match.blank?
 
-          (match[2] == match[1]) ? "#{match[2]},#{match[3]}" : "#{match[2]},#{match[3]},#{match[1]}"
+          parts = match.values_at(2, 3)
+          parts << match[1] if match[1] != match[2]
+          parts.join(",")
         end
       end.compact
     end
