@@ -2,7 +2,8 @@ cask "font-tex-gyre-cursor" do
   version "2.609,31_03_2026"
   sha256 "68b86309e9c12cdd822c99e1cce8eba25b8be3cea3a49902a453351b5b6a83da"
 
-  url "https://www.gust.org.pl/projects/e-foundry/tex-gyre/cursor/tg_cursor-otf-#{version.csv.first.dots_to_underscores}#{"-#{version.csv.second}" if version.csv.second}.zip"
+  version_suffix = "-#{version.csv.second}" if version.csv.second
+  url "https://www.gust.org.pl/projects/e-foundry/tex-gyre/cursor/tg_cursor-otf-#{version.csv.first.dots_to_underscores}#{version_suffix}.zip"
   name "TeX Gyre Cursor"
   homepage "https://www.gust.org.pl/projects/e-foundry/tex-gyre/cursor"
 
