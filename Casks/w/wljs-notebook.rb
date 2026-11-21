@@ -5,7 +5,8 @@ cask "wljs-notebook" do
   sha256 arm:   "f7bf064309209a6c6aabfdb701f2e83e4558478308c2ac059613b645b68c2a5d",
          intel: "7d9cb4455ca597a91c7c667e4b1a21538a880b830de055cd9fe9a66c993076a1"
 
-  url "https://github.com/JerryI/wolfram-js-frontend/releases/download/v#{version.csv.second || version.csv.first}/wljs-notebook-#{version.csv.first}-#{arch}-macos.dmg"
+  release_version = version.csv.second || version.csv.first
+  url "https://github.com/JerryI/wolfram-js-frontend/releases/download/v#{release_version}/wljs-notebook-#{version.csv.first}-#{arch}-macos.dmg"
   name "WLJS Notebook"
   desc "Javascript frontend for Wolfram Engine"
   homepage "https://jerryi.github.io/wljs-docs/"
@@ -28,7 +29,9 @@ cask "wljs-notebook" do
           match = asset["name"]&.match(regex)
           next if match.blank?
 
-          (match[1] == tag_version) ? tag_version : "#{match[1]},#{tag}"
+          next tag_version if match[1] == tag_version
+
+          "#{match[1]},#{tag}"
         end
       end.flatten
     end
