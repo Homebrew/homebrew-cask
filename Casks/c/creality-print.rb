@@ -5,7 +5,8 @@ cask "creality-print" do
   sha256 arm:   "747c226e996d22850f587f181a46b7d4e3fe8ce8d7e03ce23c959ef771a30021",
          intel: "a842f88ef8fe14690d2563285a65bf612ff4e18c3977c6fcc402cf048abc2552"
 
-  url "https://github.com/CrealityOfficial/CrealityPrint/releases/download/v#{version.csv.second || version.major_minor_patch}/CrealityPrint-#{version.csv.first}-macx-#{arch}-Release.dmg"
+  release_tag = version.csv.second || version.major_minor_patch
+  url "https://github.com/CrealityOfficial/CrealityPrint/releases/download/v#{release_tag}/CrealityPrint-#{version.csv.first}-macx-#{arch}-Release.dmg"
   name "Creality Print"
   desc "Slicer and cloud services for some Creality FDM 3D printers"
   homepage "https://www.creality.com/pages/download-software"
