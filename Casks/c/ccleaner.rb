@@ -2,7 +2,8 @@ cask "ccleaner" do
   version "2.11.194"
   sha256 "1a641d1d54fe1db5925a3cf15fd25367a92bffc206057f82b83c34ca4850fc7c"
 
-  url "https://download.ccleaner.com/mac/CCMacSetup#{version.major}#{version.minor.rjust(2, "0")}.dmg"
+  minor_version = version.minor.rjust(2, "0")
+  url "https://download.ccleaner.com/mac/CCMacSetup#{version.major}#{minor_version}.dmg"
   name "Piriform CCleaner"
   desc "Remove junk and unused files"
   homepage "https://www.ccleaner.com/ccleaner-mac"
