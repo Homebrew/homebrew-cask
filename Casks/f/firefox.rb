@@ -429,7 +429,6 @@ cask "firefox" do
   auto_updates true
   conflicts_with cask: [
     "firefox@beta",
-    "firefox@cn",
     "firefox@esr",
   ]
   depends_on :macos
