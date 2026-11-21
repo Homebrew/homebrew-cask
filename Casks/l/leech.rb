@@ -2,7 +2,8 @@ cask "leech" do
   version "3.2.1"
   sha256 "91616cf08e302e2c5226f15dede92e2f308aac57a575ef9fbe719ed49a883e99"
 
-  url "https://manytricks.com/download/_do_not_hotlink_/leech#{version.no_dots.ljust(3, "0")}.dmg"
+  download_version = version.no_dots.ljust(3, "0")
+  url "https://manytricks.com/download/_do_not_hotlink_/leech#{download_version}.dmg"
   name "Leech"
   desc "Lightweight download manager"
   homepage "https://manytricks.com/leech/"
