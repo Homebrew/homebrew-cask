@@ -11,7 +11,7 @@ cask "exifrenamer" do
     url "https://www.qdev.de/versions/ExifRenamer.txt"
     regex(/v?(\d+(?:\.\d+)+)(?:\s*\((\d+(?:\.\d+)*)\))?/i)
     strategy :page_match do |page, regex|
-      page.scan(regex).map { |match| "#{match[0]}#{"," + match[1] if match[1]}" }
+      page.scan(regex).map { |match| match.first(2).compact.join(",") }
     end
   end
 
