@@ -8,7 +8,7 @@ cask "cate" do
          x86_64_linux: "33174bc88b2684aa4817bc21aa33e6419fdf6d8a7fda72d62449b4d50a1cc882"
 
   on_macos do
-    depends_on macos: :monterey
+    depends_on macos: :ventura
 
     app "Cate.app"
 
