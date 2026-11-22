@@ -1,6 +1,6 @@
 cask "hiddenbar" do
-  version "1.13.2"
-  sha256 "402ea0c3db0003778e9133ed3849a9a2445b94b291f7b57cecba9dfab663ddd7"
+  version "1.13.3"
+  sha256 "e6168b27091fd002b4d7d47db02e40a02eb07431e4ed8037c260393434d0a73f"
 
   url "https://github.com/consolelabs/hidden/releases/download/v#{version}/Hidden-Bar-v#{version}-macos.zip"
   name "Hidden Bar"
