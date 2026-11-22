@@ -1,26 +1,26 @@
 cask "goldenpassport" do
-  version "0.1.7"
-  sha256 "696a2cd0c6245502727b2cab0f0a2d92c636fca6e4c3c1fbfa289e152cadc46c"
+  version "0.3.0"
+  sha256 "097e8533b109c983758967728ef67f883121bb2ef45a8c30c1f19818c007b256"
 
-  url "https://github.com/stanzhai/GoldenPassport/releases/download/v#{version}/GoldenPassport.zip"
+  url "https://github.com/thatscode/GoldenPassport/releases/download/v#{version}/GoldenPassport-#{version}.zip"
   name "GoldenPassport"
-  desc "Native implementation of Google Authenticator based on Swift3"
-  homepage "https://github.com/stanzhai/GoldenPassport"
+  desc "Menu bar TOTP authenticator"
+  homepage "https://github.com/thatscode/GoldenPassport"
 
   livecheck do
     url :url
     strategy :github_latest
   end
 
-  disable! date: "2026-09-01", because: :fails_gatekeeper_check
-
   auto_updates true
-  depends_on :macos
+  depends_on macos: :ventura
 
-  app "GoldenPassport.app"
+  app "GoldenPassport-#{version}/GoldenPassport.app"
 
   zap trash: [
     "~/Library/Application Support/GoldenPassport",
+    "~/Library/Caches/com.thatscode.GoldenPassport",
+    "~/Library/Preferences/com.thatscode.GoldenPassport.plist",
     "~/Library/Preferences/site.stanzhai.GoldenPassport.plist",
   ]
 end
