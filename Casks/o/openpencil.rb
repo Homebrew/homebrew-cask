@@ -1,10 +1,10 @@
 cask "openpencil" do
   arch arm: "aarch64", intel: "x64"
 
-  version "0.16.0"
-  sha256 arm:          "31d3fc5bdde7acffa506e063263d2a1bcb913f405ddef47d405742514ee65527",
-         intel:        "39ae0083ed6840e80533d4b08187d06fc40e474a2ded35a901d7548c4b5cf6ed",
-         x86_64_linux: "a7d893ac35367c8ea000b00890136ce5861a13bf2574b44760f77849cfdf77a2"
+  version "0.17.0"
+  sha256 arm:          "a8d90e57335c05178e26c939e616f512d8a330a3b41bf6ea0813dbafcf7cb315",
+         intel:        "7c570aa1c20e67ff77bc5d0d4669c651ad2f2cf50d1cfeffc249af22be17bd09",
+         x86_64_linux: "43da3dbd7a223a103692dd2d9193a86f8ddcb3db7577bd373949aae8455e94fc"
 
   on_macos do
     url "https://github.com/open-pencil/open-pencil/releases/download/v#{version}/OpenPencil_#{arch}.app.tar.gz"
