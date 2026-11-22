@@ -1,9 +1,9 @@
 cask "hotovo-aider-desk" do
   arch arm: "arm64", intel: "x64"
 
-  version "0.92.0"
-  sha256 arm:   "9472c4afd8bbe5bb3b15f730e151090b7c2559d5398c8321d9ddf7c85aae6cc6",
-         intel: "2e69b81d8831968ae3a0d073f6f4da3a38abcdb1a3dff44b2d3355c5f23b1cd3"
+  version "0.93.0"
+  sha256 arm:   "b166d37fc423172df8f38e6b2af44baa216d470f82241b0fe8cb4af6c47b25a8",
+         intel: "b56a88d7421cc7452501b4db354e683743ebde212dc70114fdf4f11429d617e3"
 
   url "https://github.com/hotovo/aider-desk/releases/download/v#{version}/aider-desk-#{version}-macos-#{arch}.dmg"
   name "AiderDesk"
