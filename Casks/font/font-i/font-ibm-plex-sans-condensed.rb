@@ -1,6 +1,6 @@
 cask "font-ibm-plex-sans-condensed" do
-  version "2.0.0"
-  sha256 "f86ba73abbeed7cf7690ead863192a87211dfc2b0cef0ac6bf4700533ec5ab9e"
+  version "2.3.1"
+  sha256 "baefcf09fd447d5c8c1b29fa8543a603d5d3c4766a9a495b5eaeaeeff6e5ed86"
 
   url "https://github.com/IBM/plex/releases/download/%40ibm%2Fplex-sans-condensed%40#{version}/ibm-plex-sans-condensed.zip"
   name "IBM Plex Sans Condensed"
@@ -9,6 +9,7 @@ cask "font-ibm-plex-sans-condensed" do
   livecheck do
     url :url
     regex(%r{^@ibm/plex-sans-condensed@?(\d+(?:\.\d+)+)$}i)
+    strategy :github_releases
   end
 
   font "ibm-plex-sans-condensed/fonts/complete/otf/IBMPlexSansCondensed-Bold.otf"
