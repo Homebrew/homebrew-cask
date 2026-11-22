@@ -18,6 +18,7 @@ cask "openpencil" do
       "~/Library/Caches/net.dannote.open-pencil",
       "~/Library/Preferences/net.dannote.open-pencil.plist",
       "~/Library/Saved Application State/net.dannote.open-pencil.savedState",
+      "~/Library/WebKit/net.dannote.open-pencil",
     ]
   end
   on_linux do
