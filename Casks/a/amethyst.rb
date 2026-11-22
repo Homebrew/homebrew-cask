@@ -1,6 +1,6 @@
 cask "amethyst" do
-  version "0.25.0"
-  sha256 "cbdcab38c14e5b1cb359537faf0f274b7d77aeb2d3cfef1982866e2084880437"
+  version "0.25.1"
+  sha256 "ab1a290a40bb4d31bf589f74246683660789a2c988110aadc6d7e2c24a7f7835"
 
   url "https://github.com/ianyh/Amethyst/releases/download/v#{version}/Amethyst.zip"
   name "Amethyst"
