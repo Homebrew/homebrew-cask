@@ -1,15 +1,15 @@
 cask "tiptoi-manager" do
-  version "5.2"
-  sha256 :no_check
+  version "5.3"
+  sha256 "62dc38a2f41c7a2db310a6c8f2ed7a77dd27222f02645bdd778d086076c454cc"
 
-  url "https://cdn.ravensburger.de/db/Installer/tiptoi_Manager_Installer.pkg"
+  url "https://files.tiptoi.ravensburger.cloud/Installer/#{version}/tiptoi_Manager_Installer.pkg"
   name "tiptoi Manager"
   desc "Manage the data on children's Ravensburger tip toi audio pen"
   homepage "https://service.ravensburger.de/tiptoi%25C2%25AE/tiptoi_Manager"
 
   livecheck do
-    url "https://service.ravensburger.de/tiptoi%C2%AE/Produkte_FAQs/Hilfestellungen_tiptoi%C2%AE"
-    regex(/Version\s*v?(\d+(?:\.\d+)+)/i)
+    url "https://www.ravensburger.de/de-DE/entdecken/tiptoi/tiptoi-manager"
+    regex(%r{/Installer/v?(\d+(?:\.\d+)+)/tiptoi_Manager_Installer\.pkg}i)
   end
 
   auto_updates true
