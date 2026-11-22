@@ -23,10 +23,12 @@ cask "petdex" do
 
   zap trash: [
     "~/.petdex",
+    "~/Library/Application Support/CrashReporter/PetdexMacOS_*.plist",
     "~/Library/Application Support/dev.petdex.desktop-native",
     "~/Library/Caches/dev.petdex.macos",
     "~/Library/HTTPStorages/dev.petdex.macos",
     "~/Library/Logs/dev.petdex.desktop-native",
+    "~/Library/Logs/DiagnosticReports/PetdexMacOS-*.ips",
     "~/Library/Preferences/dev.petdex.macos.plist",
   ]
 end
