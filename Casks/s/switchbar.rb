@@ -1,6 +1,6 @@
 cask "switchbar" do
-  version "34.2.1"
-  sha256 "577dfb11ad21cde4a9cb288275eaa8b235ee109dc38c8849b4e11ae536f4719e"
+  version "34.4.0"
+  sha256 "385ce54de97c1609fdf16faf6abdff3d2f3ebd9a9e7545b49c641fb2badac207"
 
   url "https://cdn-2.webcatalog.io/switchbar/Switchbar-#{version}-universal.dmg"
   name "Switchbar"
