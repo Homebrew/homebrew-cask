@@ -15,15 +15,18 @@ cask "petdex" do
     regex(/^desktop[._-]v?(\d+(?:\.\d+)+)$/i)
   end
 
-  depends_on :macos
+  depends_on macos: :ventura
 
   app "Petdex.app"
 
-  uninstall quit: "dev.petdex.desktop-native"
+  uninstall quit: "dev.petdex.macos"
 
   zap trash: [
     "~/.petdex",
     "~/Library/Application Support/dev.petdex.desktop-native",
+    "~/Library/Caches/dev.petdex.macos",
+    "~/Library/HTTPStorages/dev.petdex.macos",
     "~/Library/Logs/dev.petdex.desktop-native",
+    "~/Library/Preferences/dev.petdex.macos.plist",
   ]
 end
