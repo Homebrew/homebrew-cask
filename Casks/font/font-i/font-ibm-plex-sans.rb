@@ -1,6 +1,6 @@
 cask "font-ibm-plex-sans" do
-  version "1.1.0"
-  sha256 "fb365d910566e6d199cc2c15579a7dd9a267128e18431a394ed81f1970c69200"
+  version "1.3.6"
+  sha256 "a52bd405930040a6bfdb5c8aff67f1b7205538999986e2186d8f8895ca6a5de1"
 
   url "https://github.com/IBM/plex/releases/download/%40ibm%2Fplex-sans%40#{version}/ibm-plex-sans.zip"
   name "IBM Plex Sans"
@@ -9,6 +9,7 @@ cask "font-ibm-plex-sans" do
   livecheck do
     url :url
     regex(%r{^@ibm/plex-sans@?(\d+(?:\.\d+)+)$}i)
+    strategy :github_releases
   end
 
   font "ibm-plex-sans/fonts/complete/otf/IBMPlexSans-Bold.otf"
