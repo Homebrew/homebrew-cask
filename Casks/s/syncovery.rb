@@ -1,11 +1,8 @@
 cask "syncovery" do
-  arch arm: "-Apple"
+  version "12.10.2"
+  sha256 "c8944fd5897e9dc9824617c2693e63c378c4aee5794780d67a500bb74688e844"
 
-  version "12.10.1"
-  sha256 arm:   "67a5421ebb0a5d33d016b3b3df4317784b16296363e5fdec9aad25184484379e",
-         intel: "016df9e3c0d391e7e0a7f0536b6755094649792b86a6d6aa4928f7731e12fc80"
-
-  url "https://www.syncovery.com/release/SyncoveryMac#{version}#{arch}.dmg"
+  url "https://www.syncovery.com/release/SyncoveryMac#{version}-Apple.dmg"
   name "Syncovery"
   desc "File synchronisation and backup software"
   homepage "https://www.syncovery.com/"
@@ -15,6 +12,7 @@ cask "syncovery" do
     regex(%r{href=.*?/SyncoveryMac[._-]?v?(\d+(?:\.\d+)+[a-z]?)#{arch}\.dmg}i)
   end
 
+  depends_on arch: :arm64
   depends_on :macos
 
   pkg "SyncoveryMac (double-click to install).pkg"
