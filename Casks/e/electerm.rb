@@ -3,11 +3,11 @@ cask "electerm" do
   os macos: "mac", linux: "linux"
   url_end = on_system_conditional macos: "dmg", linux: "AppImage"
 
-  version "5.11.8"
-  sha256 arm:          "712d6b154341cfef71f463a1062bea26dfa25e80e85b6a3d9b34c1ccc5ee2ba3",
-         intel:        "48185c2154231f4550656fc25643965303090759947da01620dc6ff7ad54517c",
-         arm64_linux:  "589f270f0ac576ad3d80ec582bf8187166bd70c04392f996cf733b2575e821d2",
-         x86_64_linux: "0d6a2d6a27c8452351529e4aa1f49041060e57c3172e012579e1e06599a165a2"
+  version "5.12.6"
+  sha256 arm:          "fa871125f01df5db57e4daebab5d6ccaf505f5581c4abc6138f5fa9c51dfd6d6",
+         intel:        "769e84fa884de041f81e0af694148a118cd23612d2b2549e303d77949e10375e",
+         arm64_linux:  "879704d83c51d4d17a69fe1ba0208bd755be574dcb3ac7c600bdabdb9682a134",
+         x86_64_linux: "1f47c062f62ac83d5d188e64af30eb76f4215a0b494e45345494e1a9ad35259e"
 
   on_macos do
     depends_on macos: :ventura
