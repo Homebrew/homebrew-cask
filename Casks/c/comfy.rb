@@ -1,6 +1,6 @@
 cask "comfy" do
-  version "1.1.10,261118efu5bs6tj"
-  sha256 "37c67455e58766ed664a96f41fb9beee57b5b12b081b1a132603ef5406715330"
+  version "1.2.1,261121uldis3ube"
+  sha256 "ece25db55920ce07a75ef1c37d1f815c9d15cbd6c469bc46bcf82d8c93de23a5"
 
   url "https://download.todesktop.com/241012ess7yxs0e/Comfy%20Desktop%20#{version.csv.first}%20-%20Build%20#{version.csv.second}-arm64-mac.zip"
   name "Comfy Desktop"
@@ -22,7 +22,7 @@ cask "comfy" do
 
   auto_updates true
   depends_on arch: :arm64
-  depends_on macos: :monterey
+  depends_on macos: :ventura
 
   app "Comfy Desktop.app"
 
