@@ -1,5 +1,5 @@
 cask "font-fandol" do
-  version "0.3"
+  version "0.4"
   sha256 :no_check
 
   url "https://mirrors.ctan.org/fonts/fandol.zip"
@@ -11,8 +11,6 @@ cask "font-fandol" do
     regex(/Version.*?>\s*v?(\d+(?:\.\d+)+)\s*</i)
   end
 
-  font "fandol/FandolBraille-Display.otf"
-  font "fandol/FandolBraille-Regular.otf"
   font "fandol/FandolFang-Regular.otf"
   font "fandol/FandolHei-Bold.otf"
   font "fandol/FandolHei-Regular.otf"
