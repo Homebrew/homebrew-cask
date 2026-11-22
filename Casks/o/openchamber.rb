@@ -3,11 +3,11 @@ cask "openchamber" do
   os macos: "mac", linux: "linux"
   url_end = on_system_conditional macos: "dmg", linux: "AppImage"
 
-  version "2.7.3"
-  sha256 arm:          "3b27250271aaeeba0b1841fdb3731e37b532d10738a84e972b77d5638ed3d2f7",
-         intel:        "c6d454adc2399625777f3d6eb02fedd741a34373b30b5be528ce75281af2bab4",
-         arm64_linux:  "912d9dca0d0d7233d9d0e7fcf66d704ceccd16a298046809988b819461f7452c",
-         x86_64_linux: "8044598554a00a84eb85e0d86051709a6ac0ab5259d88d3abb6a7e9eeb12269a"
+  version "2.8.0"
+  sha256 arm:          "336ca3514797568cd54a37343777e2d2a7ffdfb4abd18569afcd36fb45fc3ae9",
+         intel:        "4fb5c840c853a3d623fd538acb5cf6b161dce60f127628a264fa8b12c1597c8f",
+         arm64_linux:  "c17a3cc78e05b366308a3fb08e57ed58c4916c2843d2f02a3614707ea8bbb788",
+         x86_64_linux: "215ded1fdf87d610889b27e4f076bc6878f607346bda58cee5e29f548ff5a55c"
 
   on_macos do
     depends_on macos: :ventura
