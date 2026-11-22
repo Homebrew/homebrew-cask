@@ -1,11 +1,11 @@
 cask "subsurface" do
-  arch arm: "arm", intel: "intel"
+  arch arm: "arm64", intel: "x86_64"
 
-  version "6.0.5738"
-  sha256 arm:   "5c786a6253887e900e1c7d070d9e014f94e1843df1ffc6e267d09acd4f7a19c3",
-         intel: "120a4e890d6cfb9e4fc80039c13b936767c776cc7b8e83988b7a8efac8033f15"
+  version "6.0.5841"
+  sha256 arm:   "5de39087d2788ac8a1c002da46d5f1e75f8f9d07724aac1b8f1461a592f51944",
+         intel: "25c93d61249491d944d63e77d7861b163c7349b1d69e9bdf9354b8a931bee311"
 
-  url "https://subsurface-divelog.org/downloads/Subsurface-#{version}-#{arch}-CICD-release.dmg",
+  url "https://subsurface-divelog.org/downloads/Subsurface-#{version}-CICD-release-#{arch}.dmg",
       user_agent: :fake
   name "Subsurface"
   desc "Open source divelog program"
@@ -13,7 +13,7 @@ cask "subsurface" do
 
   livecheck do
     url "https://subsurface-divelog.org/current-release/"
-    regex(/href=.*?Subsurface[._-]v?(\d+(?:\.\d+)+)[._-]#{arch}[._-]CICD[._-]release\.dmg/i)
+    regex(/href=.*?Subsurface[._-]v?(\d+(?:\.\d+)+)[._-]CICD[._-]release[._-]#{arch}\.dmg/i)
   end
 
   depends_on macos: :monterey
