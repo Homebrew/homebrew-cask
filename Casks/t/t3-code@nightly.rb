@@ -1,10 +1,10 @@
 cask "t3-code@nightly" do
   arch arm: "arm64", intel: on_system_conditional(macos: "x64", linux: "x86_64")
 
-  version "0.1.12-nightly.20261122.5071"
-  sha256 arm:          "dfdcb48284eb63394fca90a179a5360068d29ebd92ba28ea5f3b4f04f072e810",
-         intel:        "c0081393500b466322dc03219005b6dc886b5f2d13148c9bb1c1a10c16adfae2",
-         x86_64_linux: "ae62ad01ea1c4c4cfe00d5aa8d79069901b6b2e4079a1610193708da21f228d9"
+  version "0.1.12-nightly.20261122.5085"
+  sha256 arm:          "14269d74aa397fdaf0801a4aefbbf55de7eecb831ed2ec570fa9237b12d6fa5a",
+         intel:        "c1ccd8cdc76c038c284332cc5a53ba727be5010ec30fc801e3671453be0ee8b6",
+         x86_64_linux: "a32c7e3f2e67aeeee842312fcbeaf5dd2bc45b187bd4eabdb2c168c6f5003340"
 
   on_macos do
     url "https://github.com/pingdotgg/t3code/releases/download/v#{version}/T3-Code-#{version}-#{arch}.dmg"
