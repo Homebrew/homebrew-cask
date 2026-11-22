@@ -1,29 +1,38 @@
 cask "onlook" do
-  arch arm: "arm64", intel: "x64"
+  arch intel: "/intel"
+  arch_livecheck = on_arch_conditional arm: "arm64", intel: "x64"
 
-  version "0.2.32"
-  sha256 arm:   "73a06b8482ac02b5fd2bc3e2253dd7c89eadb617b21ad666aa958288ebf443cc",
-         intel: "e357d4defe7c2c962d2b7c6bceac250bf464eede9c023b63814b3a7453a87a96"
+  version "2.0.4"
+  sha256 :no_check
 
-  url "https://github.com/onlook-dev/onlook/releases/download/v#{version}/Onlook-#{arch}.dmg"
+  url "https://download.onlook.com/latest#{arch}"
   name "Onlook"
   desc "Open-source visual editor for React apps"
   homepage "https://onlook.com/"
 
   livecheck do
     url :url
-    strategy :github_latest
+    regex(/.+Onlook-(\d+(?:\.\d+)+)-#{arch_livecheck}\.dmg/i)
+    strategy :header_match do |headers, regex|
+      match = headers["content-disposition"]&.match(regex)
+      return if match.blank?
+
+      match[1]
+    end
   end
 
   auto_updates true
-  depends_on :macos
+  depends_on macos: :monterey
 
   app "Onlook.app"
 
   zap trash: [
+    "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.onlook.studio.sfl*",
     "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/dev.onlook.studio.sfl*",
+    "~/Library/Application Support/Onlook Studio",
     "~/Library/Application Support/Onlook",
     "~/Library/Logs/Onlook",
+    "~/Library/Preferences/com.onlook.studio.plist",
     "~/Library/Preferences/dev.onlook.studio.plist",
   ]
 end
