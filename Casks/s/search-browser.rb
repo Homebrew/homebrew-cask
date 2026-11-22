@@ -1,9 +1,9 @@
 cask "search-browser" do
   arch intel: "-Intel"
 
-  version "1.0.16"
-  sha256 arm:   "ac9ceac943cadf10cf03710b5f192e9672604176328e8b18e5291d2bda142454",
-         intel: "f04572207a74f675de4bb21b49276026174f7fb09b2910b0e724d19a2cd3e962"
+  version "1.0.17"
+  sha256 arm:   "79ecb4eb89da0f3c20e420ef2d7758b93f0d3d1cf572ea97fa9d712c7c1bb625",
+         intel: "1c947394bb7dc25a4d41069828fa0e7aa246a411beb0b78f46651c6d69d1956e"
 
   url "https://github.com/driceroland/Search/releases/download/v#{version}/Search#{arch}.dmg"
   name "Search"
