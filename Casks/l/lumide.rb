@@ -1,8 +1,11 @@
 cask "lumide" do
-  version "0.24.0"
-  sha256 "72159041315faca937ade8eb40fbcf41c875b3c46c2ad11cabaf9bc2943c8515"
+  arch arm: "AppleSilicon", intel: "Intel"
 
-  url "https://github.com/SoFluffyOS/lumide/releases/download/#{version}/Lumide-macOS-#{version}.dmg"
+  version "0.26.0"
+  sha256 arm:   "058dfe2abb793789690630926ac67380f01a9922242eedeb515ab5e59787fead",
+         intel: "5d1088b8fdeaf0d97b553a7f4eabb245f9f335b7b1311ac11d69896cdb2c9cf1"
+
+  url "https://github.com/SoFluffyOS/lumide/releases/download/#{version}/Lumide-#{arch}-#{version}.dmg"
   name "Lumide"
   desc "Agent-native code editor"
   homepage "https://lumide.dev/"
