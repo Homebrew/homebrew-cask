@@ -2,11 +2,11 @@ cask "kitty" do
   arch arm: "arm64", intel: "x86_64"
   os macos: ".dmg", linux: "-#{arch}.txz"
 
-  version "0.51.0"
-  sha256 arm:          "e7d51ec9f1978ff2fee61647b6f7eb59530e06d9bb1af876b00357ca7779638d",
-         intel:        "e7d51ec9f1978ff2fee61647b6f7eb59530e06d9bb1af876b00357ca7779638d",
-         arm64_linux:  "2a3eab469c37b548c5ceecff4b500a5b6b5c50f99cc17e0213e06a4c9662d31a",
-         x86_64_linux: "c285daaf1b699997614939c8d1cd92dd8b99302ff12f18efcc3f69382aa72b1d"
+  version "0.51.1"
+  sha256 arm:          "7a1c492103d7e5ff825351bdda1833bdf6f95d33da9e1ae22e52f61cc5ec013e",
+         intel:        "7a1c492103d7e5ff825351bdda1833bdf6f95d33da9e1ae22e52f61cc5ec013e",
+         arm64_linux:  "9c3e8e38a5068c511e3a94e065cbd2c5af4922d76d2d205d5084018e8572648d",
+         x86_64_linux: "d309be978f017dbdcccae175d281092fefe7c8bc64478fa620581604ab0b53c0"
 
   on_macos do
     depends_on macos: :monterey
