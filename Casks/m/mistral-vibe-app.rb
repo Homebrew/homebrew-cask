@@ -1,6 +1,6 @@
 cask "mistral-vibe-app" do
-  version "1.3.0"
-  sha256 "1bf26504215989598593494fc3f90d370c5c539f873824e41f377373cbc7cd36"
+  version "1.5.0"
+  sha256 "92c9504a14213f382f7c852727d1922f71773dadc936c09cab750a007b4cd19f"
 
   url "https://storage.googleapis.com/mistralai-ci-desktop-app/vibe-#{version}.dmg"
   name "Mistral Vibe"
