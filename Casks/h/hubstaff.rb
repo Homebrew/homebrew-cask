@@ -28,6 +28,7 @@ cask "hubstaff" do
 
   zap trash: [
     "~/Library/Application Support/Hubstaff",
+    "~/Library/HTTPStorages/com.netsoft.Hubstaff*",
     "~/Library/Preferences/com.netsoft.Hubstaff.plist",
   ]
 end
