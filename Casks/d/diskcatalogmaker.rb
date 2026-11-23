@@ -20,10 +20,12 @@ cask "diskcatalogmaker" do
   uninstall quit: "com.mac.fujisoft.DiskCatalogMaker"
 
   zap trash: [
+    "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.mac.fujisoft.diskcatalogmaker.sfl*",
     "~/Library/Application Support/com.mac.fujisoft.DiskCatalogMaker",
     "~/Library/Application Support/DiskCatalogMaker",
     "~/Library/Caches/com.mac.fujisoft.DiskCatalogMaker",
     "~/Library/Caches/DiskCatalogMaker",
+    "~/Library/HTTPStorages/com.mac.fujisoft.DiskCatalogMaker",
     "~/Library/Logs/DiskCatalogMaker",
     "~/Library/Preferences/com.mac.fujisoft.DiskCatalogMaker.plist",
     "~/Library/Saved Application State/com.mac.fujisoft.DiskCatalogMaker.savedState",
