@@ -1,9 +1,9 @@
 cask "wolai" do
   arch arm: "-arm64"
 
-  version "1.3.5"
-  sha256 arm:   "4cc56e0f16c4ed886e414066e3fb976c7b609e64f869955a45bf4aab017b849b",
-         intel: "9c1ea8712b3dc8991c410f00213f206841f4392d2710e406e3fbdc9d3a5c7a4b"
+  version "1.3.7"
+  sha256 arm:   "0cc7544e133faf9b0e97111d231202e566442374c043563b707345b24db8c403",
+         intel: "97613e419b8d969567c2608aec2c8db83c29854f55a2a268f8b2ce258896123b"
 
   url "https://cdn.wostatic.cn/dist/installers/wolai-#{version}#{arch}.dmg"
   name "wolai for mac"
