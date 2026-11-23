@@ -1,9 +1,9 @@
 cask "agent-orchestrator" do
   arch arm: "arm64", intel: "x64"
 
-  version "0.15.4"
-  sha256 arm:   "f0ba445ca9cf1276e2bc17320ff33c01d8ad0ad9961df91dc703b8409387e88b",
-         intel: "07598edfbb3c77f887f980ab631e289566996d01ae76afd37406e081cd1ad1ce"
+  version "0.15.5"
+  sha256 arm:   "0bd76cf29cf8a831dd1dac5bf3209ad4c6ae0c860145835a6a04896840ab64a9",
+         intel: "8f8852defc305327442744e91b4d8e99e9461ee75e578cad90c885633c4813bf"
 
   url "https://github.com/OrchestratorInc/agent-orchestrator/releases/download/v#{version}/Agent.Orchestrator-darwin-#{arch}-#{version}.zip"
   name "Agent Orchestrator"
