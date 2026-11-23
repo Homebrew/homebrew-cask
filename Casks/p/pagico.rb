@@ -1,6 +1,6 @@
 cask "pagico" do
-  version "10,20260518"
-  sha256 "02533c88810ba861d8785695b6369215f61d5ba4b86bb5f9671bab471d24d57a"
+  version "10,20261122"
+  sha256 "922986c285593eac496ba5a27fb9aa5066974a3413f7b08ad2f522b54e69c23e"
 
   url "https://www.pagico.com/downloads/Pagico_macOS_r#{version.csv.second}.dmg"
   name "Pagico"
