@@ -21,6 +21,7 @@ cask "bentobox" do
     "~/Library/Application Support/org.friendlyventures.BentoBox",
     "~/Library/Caches/org.friendlyventures.BentoBox",
     "~/Library/HTTPStorages/org.friendlyventures.BentoBox",
+    "~/Library/Preferences/ByHost/com.apple.controlcenter.bentoboxes.*.plist",
     "~/Library/Preferences/org.friendlyventures.BentoBox.plist",
     "~/Library/Saved Application State/org.friendlyventures.BentoBox.savedState",
     "~/Library/WebKit/org.friendlyventures.BentoBox",
