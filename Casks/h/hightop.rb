@@ -1,6 +1,6 @@
 cask "hightop" do
-  version "1.4"
-  sha256 "6e7981e7734c2107e528f9885f67711fcdbca98f9f30ccd5bfff53127e347fbf"
+  version "1.5"
+  sha256 "bb73d0bdd42f87066170b9cd1ba4616e515e808e374f2459f909ee60c4fcca69"
 
   url "https://hightop.app/downloads/HighTop#{version}.dmg"
   name "HighTop"
@@ -13,7 +13,7 @@ cask "hightop" do
   end
 
   auto_updates true
-  depends_on :macos
+  depends_on macos: :sonoma
 
   app "HighTop.app"
 
