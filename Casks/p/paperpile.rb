@@ -21,7 +21,9 @@ cask "paperpile" do
   app "Paperpile.app"
 
   zap trash: [
+    "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.paperpile.paperpile.sfl*",
     "~/Library/Application Support/Paperpile",
+    "~/Library/Caches/Paperpile",
     "~/Library/Group Containers/*.Office/User Content.localized/Startup.localized/Word/paperpile*",
     "~/Library/Preferences/com.paperpile.paperpile.plist",
   ]

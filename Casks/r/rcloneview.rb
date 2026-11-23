@@ -20,6 +20,7 @@ cask "rcloneview" do
   app "RcloneView.app"
 
   zap trash: [
+    "~/Documents/rcloneview_app.log",
     "~/Library/Application Support/com.bdrive.rcloneView",
     "~/Library/HTTPStorages/com.bdrive.rcloneView",
     "~/Library/Preferences/com.bdrive.rcloneView.plist",

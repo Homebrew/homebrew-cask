@@ -60,6 +60,7 @@ cask "awesun" do
         "~/AweSun",
         "~/Library/Application Support/AweSun",
         "~/Library/Caches/com.oray.sunlogin.macclient",
+        "~/Library/HTTPStorages/com.oray.sunlogin.macclient.binarycookies",
         "~/Library/Preferences/com.oray.sunlogin.macclient.plist",
         "~/Library/Saved Application State/com.oray.sunlogin.macclient.savedState",
         "~/Library/WebKit/com.oray.sunlogin.macclient",
