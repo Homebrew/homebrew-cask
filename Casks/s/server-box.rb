@@ -1,9 +1,9 @@
 cask "server-box" do
   arch arm: "arm64", intel: "amd64"
 
-  version "1.0.1925"
-  sha256 arm:   "af2ff6d624d2ae7146418d167820f801f136d7701af52224f93f8442fd0c5823",
-         intel: "af41d3fec0e8ea3f74fe86a20c8b70a26196cf427a36f0970e4869bc2dfb304e"
+  version "1.0.1962"
+  sha256 arm:   "8d68b8395b563395b0cee586102f766b98a32ab493df39c831de8f1177cb64f2",
+         intel: "177f7382403574cc7a48a72de67d2b9f1fb7d1254e7b1c19a3e352c5a193d0a6"
 
   url "https://github.com/lollipopkit/flutter_server_box/releases/download/v#{version}/ServerBox-#{version}-#{arch}.dmg"
   name "ServerBox"
