@@ -20,6 +20,7 @@ cask "shadow" do
   app "Shadow PC.app"
 
   zap trash: [
+    "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.electron.shadow.sfl*",
     "~/Library/Application Support/Shadow",
     "~/Library/Preferences/com.electron.shadow.helper.plist",
     "~/Library/Preferences/com.electron.shadow.plist",
