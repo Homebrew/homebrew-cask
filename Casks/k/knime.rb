@@ -21,6 +21,8 @@ cask "knime" do
 
   app "KNIME #{version}.app"
 
+  uninstall quit: "org.knime.product"
+
   zap trash: [
     "~/Library/Caches/org.knime.product",
     "~/Library/Preferences/org.knime.product.plist",
