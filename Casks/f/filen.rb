@@ -17,6 +17,7 @@ cask "filen" do
 
     zap trash: [
       "~/Library/Application Support/@filen",
+      "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/io.filen.desktop.sfl*",
       "~/Library/Application Support/filen-desktop",
       "~/Library/Caches/@filendesktop-updater",
       "~/Library/Caches/io.filen.desktop",
