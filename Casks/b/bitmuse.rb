@@ -1,6 +1,6 @@
 cask "bitmuse" do
-  version "1.6.3"
-  sha256 "0b163caa5c628c432193f5828e92d2993a422d2c2c76950034e3ddf0044ed341"
+  version "1.6.4"
+  sha256 "978a4fb42109716f189084f690f7ca0129c709159dcbf6095bf0c6fb4369a00a"
 
   url "https://updates.bitmuse.app/BitMuse-#{version}.dmg"
   name "BitMuse"
