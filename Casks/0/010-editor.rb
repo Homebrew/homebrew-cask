@@ -1,9 +1,9 @@
 cask "010-editor" do
   arch arm: "ARM64", intel: "64"
 
-  version "17.0.1"
-  sha256 arm:   "6144cac83a6f4c5ab81a9391f2074804e472098a686925de7ad2085bf47a7c8a",
-         intel: "b3ec752155d6390306bfe86de34e2661adde9f89bbd2937a16509c3aa8e94db2"
+  version "17.0.2"
+  sha256 arm:   "116e188dfd6308907220e1812efe3527569a40235a03708069b7f708fbd106cb",
+         intel: "1869bf4743a6bd2b3d0c3d76a9f98322947ffe7ada40dcbc8bb365f43285d0f4"
 
   url "https://download.sweetscape.com/010EditorMac#{arch}Installer#{version}.dmg"
   name "010 Editor"
