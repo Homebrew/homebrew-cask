@@ -23,6 +23,7 @@ cask "bibdesk" do
     "~/Library/Caches/com.apple.helpd/SDMHelpData/Other/English/HelpSDMIndexFile/edu.ucsd.cs.mmccrack.bibdesk.help*",
     "~/Library/Caches/edu.ucsd.cs.mmccrack.bibdesk",
     "~/Library/Cookies/edu.ucsd.cs.mmccrack.bibdesk.binarycookies",
+    "~/Library/HTTPStorages/edu.ucsd.cs.mmccrack.bibdesk",
     "~/Library/Preferences/edu.ucsd.cs.mmccrack.bibdesk.plist",
   ]
 end
