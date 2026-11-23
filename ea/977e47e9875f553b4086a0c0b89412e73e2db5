@@ -1,0 +1,14 @@
+Casks/p/pagico.rb
+  h_9df9c32c3f321d 20-21
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.5",
+  "base_commit_sha": "ea977e47e9875f553b4086a0c0b89412e73e2db5",
+  "prompts": {},
+  "humans": {
+    "h_9df9c32c3f321d": {
+      "author": "Rui Chen <rui@chenrui.dev>"
+    }
+  }
+}
