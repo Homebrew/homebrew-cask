@@ -1,6 +1,6 @@
 cask "coin-wallet" do
-  version "6.32.0"
-  sha256 "8a6f0acbee4b580b316565632953d62fa25c8a2c75a0e472008ab5b14ff582dc"
+  version "6.33.0"
+  sha256 "6a0116f84504f073a3e981b9e5ce025603913f768a26ba7e91da81aee2e3e17b"
 
   url "https://github.com/CoinSpace/CoinSpace/releases/download/v#{version}/Coin.Wallet.dmg"
   name "Coin Wallet"
@@ -18,6 +18,8 @@ cask "coin-wallet" do
   depends_on :macos
 
   app "Coin Wallet.app"
+
+  uninstall quit: "com.coinspace.wallet"
 
   zap trash: [
     "~/Library/Application Support/Coin Wallet",
