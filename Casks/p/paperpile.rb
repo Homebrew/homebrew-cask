@@ -1,9 +1,9 @@
 cask "paperpile" do
   arch arm: "-arm64"
 
-  version "0.10.1"
-  sha256 arm:   "75c29a3651c76c6844aa5d125618310214d88683e50131da76aaf1180522c910",
-         intel: "97efa23fca20d1bb650bf3c4d94db0b6b105d1d2182dab086162cf927349283f"
+  version "0.10.2"
+  sha256 arm:   "199cf37bfe0ca5590570cfb216713f3b8d482855790210335ce65b23f76ea9bf",
+         intel: "ed69e5f63eca98bcdce10d5009a8bed7aab8d082a5480f2d3d0da50137edea93"
 
   url "https://cdn.paperpile.com/download/desktop/Paperpile-#{version}#{arch}.dmg"
   name "Paperpile"
