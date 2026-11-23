@@ -1,6 +1,6 @@
 cask "loginputmac" do
-  version "3.7.3,18051"
-  sha256 "8be8a39f004a314dcfe9b7e4111c1881e83cf47b92e3f902f70a76695a051273"
+  version "3.7.4,18181"
+  sha256 "4ca4e2bf5360ff43d4602163e84fff34f7dcfa67f0334deb9807f3baebfe2d3e"
 
   url "https://loginput-mac2.totest.top/LogInputMac#{version.csv.first.major}.app#{version.csv.second}.zip"
   name "LoginputMac"
