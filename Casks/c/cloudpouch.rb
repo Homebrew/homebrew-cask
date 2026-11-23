@@ -1,10 +1,10 @@
 cask "cloudpouch" do
   url_end = on_system_conditional macos: "-universal-mac.zip", linux: ".AppImage"
 
-  version "2.0.0"
-  sha256 arm:          "20a03db8f5c4ebb6e8b8df6ab184b465f235413ae13d4c33b27c5adf4485d9a6",
-         intel:        "20a03db8f5c4ebb6e8b8df6ab184b465f235413ae13d4c33b27c5adf4485d9a6",
-         x86_64_linux: "ddf9fc64d75cbedde9941dc1baab6aafd2366656716489acb1ad05e928b3ddde"
+  version "2.1.0"
+  sha256 arm:          "f7f6839a8221b1cc8465643693efa08c59b2d89dfb3dfd29f1862e5ea9a6b6c6",
+         intel:        "f7f6839a8221b1cc8465643693efa08c59b2d89dfb3dfd29f1862e5ea9a6b6c6",
+         x86_64_linux: "52a8f422c89d13cb7f171a4c70ffc6c57803708338c8a1fdff6948317209a3e8"
 
   on_macos do
     depends_on macos: :monterey
