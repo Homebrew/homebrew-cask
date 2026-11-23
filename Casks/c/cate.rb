@@ -2,13 +2,13 @@ cask "cate" do
   arch arm: "-arm64"
   url_end = on_system_conditional macos: "#{arch}.dmg", linux: ".AppImage"
 
-  version "2.1.1"
-  sha256 arm:          "9c3f51e7ed776fadad002d34bd10acc65c130ba97ca171372988425c71c1d798",
-         intel:        "6d3218cf542adfa137f42cfb1bb189bfded317fb25ece1c01cdc0abc5da608a2",
-         x86_64_linux: "cbe4416be6d9260568deec3cf1fd7dc352701cb32e209ab2dfc1068cc756c807"
+  version "2.1.2"
+  sha256 arm:          "40ebb80bf015c57b4e0a82289af02a6fa3f3b709fe51bc4e377953d3a0808320",
+         intel:        "f985bffdc27696e4454387e9704e465b70365511faa2d660de146b71798ecf0a",
+         x86_64_linux: "33174bc88b2684aa4817bc21aa33e6419fdf6d8a7fda72d62449b4d50a1cc882"
 
   on_macos do
-    depends_on macos: :monterey
+    depends_on macos: :ventura
 
     app "Cate.app"
 
