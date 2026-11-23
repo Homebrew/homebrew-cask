@@ -1,5 +1,5 @@
 cask "output-factory" do
-  version "3.3"
+  version "3.3.1"
   sha256 :no_check
 
   url "https://zevrix.com/downloads/OutputFactory.dmg"
@@ -16,7 +16,7 @@ cask "output-factory" do
     end
   end
 
-  depends_on :macos
+  depends_on macos: :monterey
 
   app "Output Factory Installer.app/Contents/Resources/appPackage/Output Factory.app"
 
