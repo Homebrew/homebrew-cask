@@ -1,9 +1,9 @@
 cask "pen" do
   arch arm: "arm64", intel: "x64"
 
-  version "1.2.24"
-  sha256 arm:   "c07d299429d4d250f4e49a4e76a72634a9b2922408f225de3197200c4b55154c",
-         intel: "80e3080b7c1da016d3044a1927ddb63ab3f71a9b95ca5ab6af35dd48deb3bb10"
+  version "1.2.25"
+  sha256 arm:   "23e4bf4c3d31ec870ef835343d9b3f2dadc91a972102258fe0a5abd84a742334",
+         intel: "c1d4f934dc538037cdf3fe214f1a8eaead5b9d4b1408d9442a6fd9f3eb58ccf7"
 
   url "https://github.com/highagency/pen-desktop-releases/releases/download/v#{version}/Pen-#{version}-mac-#{arch}.dmg"
   name "Pen"
