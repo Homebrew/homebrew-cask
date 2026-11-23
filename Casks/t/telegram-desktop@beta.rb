@@ -1,6 +1,6 @@
 cask "telegram-desktop@beta" do
-  version "7.4.5-beta,7.4.5"
-  sha256 "9e198c214ebd8e15170620975d98fd80409d2f894c915131f3333c3baff3fc2c"
+  version "7.4.6"
+  sha256 "ad5fbd7aa3b6afbef46b8099ef439d9bb27dac605aa7c85cfb13f97db6fe5897"
 
   release_version = version.csv.second || version.csv.first
   url "https://github.com/telegramdesktop/tdesktop/releases/download/v#{release_version}/td-setup-mac-#{version.csv.first}.dmg"
