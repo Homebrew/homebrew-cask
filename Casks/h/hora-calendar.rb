@@ -1,6 +1,6 @@
 cask "hora-calendar" do
-  version "3.0.4,662"
-  sha256 "58e070c74f0c69a87b04a2932d9549405d790bdafbe300a1ec3b0863e68ff7f7"
+  version "3.0.5,667"
+  sha256 "b232f066f5f6bf543be79e016e0ef99faf72fbaead91ea01755aa7591e4e8bba"
 
   url "https://downloads.horacal.app/direct/stable/releases/#{version.csv.first}/#{version.csv.second}/hora-calendar-#{version.csv.first}-#{version.csv.second}.zip"
   name "hora Calendar"
