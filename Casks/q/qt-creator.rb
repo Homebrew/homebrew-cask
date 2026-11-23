@@ -1,6 +1,6 @@
 cask "qt-creator" do
-  version "20.0.2"
-  sha256 "810e0ef687adf9f6d551e22a9872ad7360d7f0dd1b9862ae7abd0a4f87921a92"
+  version "21.0.0"
+  sha256 "b049a1d5bb92c7728fad412979be48d14f4142ed57fa71ca2d1444015e598cb7"
 
   url "https://download.qt.io/official_releases/qtcreator/#{version.major_minor}/#{version}/qt-creator-opensource-mac-universal-#{version}.dmg"
   name "Qt Creator"
@@ -28,7 +28,7 @@ cask "qt-creator" do
   end
 
   conflicts_with cask: "qt-creator@dev"
-  depends_on macos: :ventura
+  depends_on macos: :sonoma
 
   app "Qt Creator.app"
 
