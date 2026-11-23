@@ -21,8 +21,10 @@ cask "crushpaper" do
   uninstall quit: "com.crushpaper.app"
 
   zap trash: [
+    "~/Library/Application Scripts/com.crushpaper.app",
     "~/Library/Application Support/com.crushpaper.app",
     "~/Library/Caches/com.crushpaper.app",
+    "~/Library/Containers/com.crushpaper.app",
     "~/Library/HTTPStorages/com.crushpaper.app",
     "~/Library/Preferences/com.crushpaper.app.plist",
   ]
