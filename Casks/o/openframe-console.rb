@@ -1,6 +1,6 @@
 cask "openframe-console" do
-  version "1.0.284"
-  sha256 "62d0dae2c546561694829ee2b6142b03e6f4f268bfc6b2a15fc863d2f5b75fcf"
+  version "1.0.287"
+  sha256 "ee75e2342784a5f5636266c7eb1437526e321fd44610a6fe028d56535eb21b50"
 
   url "https://github.com/flamingo-stack/openframe-oss-frontend/releases/download/#{version}/OpenFrame-Console_#{version}_universal.dmg"
   name "OpenFrame Console"
