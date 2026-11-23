@@ -17,6 +17,8 @@ cask "pagico" do
 
   app "Pagico.app"
 
+  uninstall quit: "com.pagico.mac"
+
   zap trash: [
     "~/Library/Application Scripts/com.pagico.mac.Pagico-Extension-for-Safari",
     "~/Library/Application Support/Pagico",
