@@ -1,5 +1,5 @@
 cask "filepane" do
-  version "2.0.18"
+  version "2.0.19"
   sha256 :no_check
 
   url "https://dl.devmate.com/com.mymixapps.FilePane/FilePane.dmg"
