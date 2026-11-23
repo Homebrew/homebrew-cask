@@ -1,6 +1,6 @@
 cask "font-lucide" do
-  version "1.77.0"
-  sha256 "f7bb13abd330802d45938dd3d54cb001bcedeb126528c981b7df395a8ca4ccef"
+  version "1.78.0"
+  sha256 "331fef4cd4413312dc112b10c6cc3b45163efd2d4d9d3b3cda3671aec9f860ab"
 
   url "https://github.com/lucide-icons/lucide/releases/download/#{version}/lucide-font-#{version}.zip"
   name "Lucide"
