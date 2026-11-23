@@ -19,5 +19,8 @@ cask "keystore-explorer" do
 
   app "KeyStore Explorer.app"
 
-  zap trash: "~/Library/Saved Application State/org.kse.keystore-explorer.savedState"
+  zap trash: [
+    "~/Library/Preferences/org.kse.keystore-explorer.plist",
+    "~/Library/Saved Application State/org.kse.keystore-explorer.savedState",
+  ]
 end
