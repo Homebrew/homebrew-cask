@@ -24,6 +24,7 @@ cask "couchbase-server-enterprise" do
   zap trash: [
     "~/Library/Application Support/Couchbase",
     "~/Library/Caches/com.couchbase.couchbase-server",
+    "~/Library/HTTPStorages/com.couchbase.couchbase-server",
     "~/Library/Logs/Couchbase.log",
     "~/Library/Logs/CouchbaseServer.log",
     "~/Library/Preferences/com.couchbase.couchbase-server.plist",
