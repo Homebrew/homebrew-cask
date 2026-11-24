@@ -1,6 +1,6 @@
 cask "tana" do
-  version "1.531.0"
-  sha256 "720a97f1a8131557e6fdbf85e3bfc38003fb41b63ae2ce5c6c741e417706db67"
+  version "1.540.6"
+  sha256 "ca9d1083758edc834328c13676c676118336661fd6ff030625e3caecc7b5898d"
 
   url "https://github.com/tanainc/tana-desktop-releases/releases/download/v#{version}/Tana.Outliner-#{version}-universal.dmg"
   name "Tana"
