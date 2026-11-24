@@ -21,7 +21,10 @@ cask "remote-wake-up" do
   zap trash: [
     "~/Library/Application Support/com.mac-attender.Remote-Wake-Up",
     "~/Library/Application Support/com.mac-attender.Remote_Wake_Up",
+    "~/Library/Application Support/Remote Wake Up",
+    "~/Library/Caches/com.mac-attender.Remote-Wake-Up",
     "~/Library/Containers/com.mac-attender.Remote-Wake-Up",
+    "~/Library/HTTPStorages/com.mac-attender.Remote-Wake-Up*",
     "~/Library/Preferences/com.mac-attender.Remote-Wake-Up.plist",
     "~/Library/Saved Application State/com.mac-attender.Remote-Wake-Up.savedState",
   ]
