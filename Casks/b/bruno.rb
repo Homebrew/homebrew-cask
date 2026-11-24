@@ -11,6 +11,7 @@ cask "bruno" do
 
   on_macos do
     auto_updates true
+    depends_on macos: :monterey
 
     app "Bruno.app"
 
