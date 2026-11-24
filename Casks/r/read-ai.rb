@@ -1,6 +1,6 @@
 cask "read-ai" do
-  version "1.47.0"
-  sha256 "ed0e9c26ab3d67031977dd9baf7b7ece5c58fc16ff08216ba2110440b0166af0"
+  version "1.48.0"
+  sha256 "bde5da29a87143b56ed43404b0cffa3a38049407ea7780f9d2af34202895133d"
 
   url "https://desktop.read.ai/installers/darwin/aarch64/#{version}/Read+AI_#{version}_aarch64.dmg"
   name "Read AI"
