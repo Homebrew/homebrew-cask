@@ -1,6 +1,6 @@
 cask "manus-cue" do
-  version "1.2.0"
-  sha256 "bca78a5eabdd79a88575014fab57bf474931bdf7d733501d3ef20667040839a3"
+  version "1.2.1"
+  sha256 "f960e1c4903e2d07c2f8a662b8c7e1ed67a7f6e69d29714d9561331e0ec562cd"
 
   url "https://download.cue.im/Cue-#{version}-mac-arm64.dmg"
   name "Cue"
