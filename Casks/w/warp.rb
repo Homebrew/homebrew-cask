@@ -1,11 +1,11 @@
 cask "warp" do
   os macos: "dmg", linux: on_arch_conditional(arm: "appimage_arm64", intel: "appimage")
 
-  version "0.2026.11.18.08.17.stable_04"
-  sha256 arm:          "ff5127346cb10c63b499ad177f2c3916848234001cebe23420b53f0313131969",
-         intel:        "ff5127346cb10c63b499ad177f2c3916848234001cebe23420b53f0313131969",
-         arm64_linux:  "6784e357da3a9a8b61e083472c847f68071a1a4cfdcdc76565d7c4f26bb34e30",
-         x86_64_linux: "f057d2a287d7b67b892d09322b000cc36db76b04d2080942b8f64a861bf9dcf7"
+  version "0.2026.11.18.08.17.stable_05"
+  sha256 arm:          "56c7caf4137c41adad30229601aaacd26a19b5a6cee59f82b5ef38381fa41883",
+         intel:        "56c7caf4137c41adad30229601aaacd26a19b5a6cee59f82b5ef38381fa41883",
+         arm64_linux:  "b265fd4fbffaa838e6bd2040293899abf9d3ff233e6dc0a111c0968fb3d62e0e",
+         x86_64_linux: "b562e1e8e03b836f20c0e868d75f89dd4856ec959dfce338bf1d94acf82c2558"
 
   on_macos do
     auto_updates true
