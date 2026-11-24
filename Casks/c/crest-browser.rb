@@ -1,8 +1,8 @@
 cask "crest-browser" do
-  version "0.10.24"
-  sha256 "297fe0bbe29512e403a60efe7fe7d24a507dcbf8d301c6485d66660729890e33"
+  version "0.11.0"
+  sha256 "dce54987e098e6821acc4a9d2e6294e315dd7c76844f161d3f2478870a20c3a8"
 
-  url "https://github.com/pauljoda/Crest/releases/download/v#{version}/Installer-Crest-#{version}-arm64.dmg"
+  url "https://github.com/crest-browser/Crest/releases/download/v#{version}/Installer-Crest-#{version}.dmg"
   name "Crest"
   desc "Open-source web browser"
   homepage "https://crestbrowser.com/"
@@ -14,8 +14,7 @@ cask "crest-browser" do
 
   auto_updates true
   conflicts_with cask: "crest"
-  depends_on arch: :arm64
-  depends_on macos: :tahoe
+  depends_on macos: :sequoia
 
   app "Crest.app"
 
