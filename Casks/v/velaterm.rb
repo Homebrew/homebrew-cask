@@ -1,9 +1,9 @@
 cask "velaterm" do
   arch arm: "aarch64", intel: "x86_64"
 
-  version "0.3.5"
-  sha256 arm:   "f52d7bb24a19fb5ea47533b8a20bbe0852c0a079153452783821ddef79ece8e1",
-         intel: "16501c8af1fbc77e975a9c32ac1b971099c537dd2301b82a3dcf32d7382655b0"
+  version "0.3.6"
+  sha256 arm:   "c47a67cf398c05256865daa1fe1053a3ac8cdd459af188cc75f1dd56458265e5",
+         intel: "4f295650309dc7fbd5c5ffe8c26464b9e60f0ffd9c518e14ddc2fa44142d46c0"
 
   url "https://dl.velaterm.com/#{version}/VelaTerm_#{version}_#{arch}.dmg"
   name "VelaTerm"
