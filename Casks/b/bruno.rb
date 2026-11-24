@@ -3,14 +3,15 @@ cask "bruno" do
   os macos: "mac", linux: "linux"
   url_end = on_system_conditional macos: "dmg", linux: "AppImage"
 
-  version "4.3.0"
-  sha256 arm:          "bb4c4d8de817a6f529880627606137fd16346ddece547c6a0862e84bd1cc69bf",
-         intel:        "d17034ae3f444215419d64dee5d5fbd28a728b54181bef4a70692cee259b722a",
-         arm64_linux:  "6048c3aeb76607c71df7558deea83cfef9d33cf24a63da9e7c5268ab19d13469",
-         x86_64_linux: "3c386b1007f66d875c34a2a502063fbad65c66e37409a316ebe518788b1e80bb"
+  version "4.4.0"
+  sha256 arm:          "b9e7a4d8a371578116c67c20ae2892e840324d58be5a0407b2623701dd40f2a3",
+         intel:        "f76cbbb0a5710b6e621b94a518866b41a44379c13fd07dde27159bff11f13cf3",
+         arm64_linux:  "24a162622c0351f7a00f22a05eaaa0f4e44af52df5f8c8e07d477fa1086337a0",
+         x86_64_linux: "49f9b2e5c552a37522ccae240bf22bb9783213216e3b196297522808ebb191f9"
 
   on_macos do
     auto_updates true
+    depends_on macos: :monterey
 
     app "Bruno.app"
 
