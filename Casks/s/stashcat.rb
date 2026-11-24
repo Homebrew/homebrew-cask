@@ -1,6 +1,6 @@
 cask "stashcat" do
-  version "6.58.0"
-  sha256 "1540d40aa44f58c9dc8da5bfe8ab054a001ed0bc452f79b97a96e793b78dc1e2"
+  version "6.59.0"
+  sha256 "6338c132d34fe3238e4ffb0664fe186d6bc5aaa20df53040d58943889da7938f"
 
   url "https://stashcat.s3-de-central.profitbricks.com/releases/darwin/stashcat-#{version}-darwin.zip"
   name "Stashcat"
@@ -16,7 +16,7 @@ cask "stashcat" do
   end
 
   auto_updates true
-  depends_on macos: :monterey
+  depends_on macos: :ventura
 
   app "Stashcat.app"
 
