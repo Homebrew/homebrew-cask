@@ -1,6 +1,6 @@
 cask "thor" do
-  version "1.5.16"
-  sha256 "07bd68a6378ac66d00fe39e0f0f0589694b19a46d89120b5934173a8c3b41a5a"
+  version "1.5.18"
+  sha256 "f705e6a2cdd464f90565436a7276221fabdaf0fc1202792b611f918d85931fd6"
 
   url "https://github.com/gbammc/Thor/releases/download/#{version}/Thor_#{version}.zip"
   name "Thor"
@@ -15,7 +15,7 @@ cask "thor" do
   end
 
   auto_updates true
-  depends_on macos: :monterey
+  depends_on macos: :sequoia
 
   app "Thor.app"
 
