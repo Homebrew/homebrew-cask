@@ -3,10 +3,10 @@ cask "lobehub" do
   os macos: "-mac"
   url_end = on_system_conditional macos: "zip", linux: "AppImage"
 
-  version "2.3.5"
-  sha256 arm:          "6fb383b55470fa99823c89d9e34c4aa839c30aa624b6784cc34e99a00ef6ab68",
-         intel:        "47d32052063d68e940995bdd9f7ab2b5db8899a99c42c60df7c493187442989b",
-         x86_64_linux: "eb8bff6d2d9c35592f45130ed29b4420933a51f11635c3bd1b5e843ffad03d0f"
+  version "2.3.6"
+  sha256 arm:          "71a0067f3ad8aea14cc7c746e55321db6991fc3f3cc6303e9454471b8729a217",
+         intel:        "6cfbbd18b5c0edecbf857f1b7321ae63a5e6ac7b73a42d76613a7ebb956736e3",
+         x86_64_linux: "bb505161da5eb18e2597058802d3bf4fafb8aaa41de651abff97fc5e9d5e7d7f"
 
   on_macos do
     depends_on macos: :ventura
