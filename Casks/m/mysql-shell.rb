@@ -13,8 +13,8 @@ cask "mysql-shell" do
              intel: "6fd9e3855e70028b88a05ba6be76e9101a601f1416fd6c0eb2078169dbe8937d"
     end
     on_ventura :or_newer do
-      version "26.10.0,15"
-      sha256 arm:   "ee8c53f120a3e846d0e472c26d0eff5e2b33a0530d8a72a21952f69ab9c6881b",
+      version "26.10.0.1,15"
+      sha256 arm:   "f7a1b67b258b4afbb2d926b3f388b54c4fa0a0c0b0ee9e90d38024e0f40fa196",
              intel: "f029ce63ff5d8c77ef2fdcda29deb848ab8fb0bc02ee4613e5b810d33fbb1aff"
     end
 
@@ -23,8 +23,8 @@ cask "mysql-shell" do
     end
   end
   on_sequoia :or_newer do
-    version "26.10.0,15"
-    sha256 "ee8c53f120a3e846d0e472c26d0eff5e2b33a0530d8a72a21952f69ab9c6881b"
+    version "26.10.0.1,15"
+    sha256 "f7a1b67b258b4afbb2d926b3f388b54c4fa0a0c0b0ee9e90d38024e0f40fa196"
 
     livecheck do
       url "https://dev.mysql.com/downloads/shell/?tpl=platform&os=33",
