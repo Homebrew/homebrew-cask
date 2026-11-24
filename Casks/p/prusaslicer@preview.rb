@@ -1,6 +1,6 @@
 cask "prusaslicer@preview" do
-  version "3.0.0-alpha14"
-  sha256 "9ae809965f0facaf868ff7ea38927b53ce6ed7da901acca5a1d99bed3446eaf1"
+  version "3.0.0-alpha15"
+  sha256 "8b3dcba3bb1065e78c51e022e524d88d9efc20962cf1e4467f02880f12075c7c"
 
   url "https://github.com/prusa3d/PrusaSlicer/releases/download/version_#{version}/PrusaSlicer-#{version}.dmg"
   name "PrusaSlicer Preview"
