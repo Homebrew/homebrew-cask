@@ -20,10 +20,13 @@ cask "tana" do
   uninstall quit: "inc.tana.desktop"
 
   zap trash: [
+    "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/inc.tana.desktop.sfl*",
+    "~/Library/Application Support/Tana Outliner",
     "~/Library/Application Support/tana",
     "~/Library/Caches/inc.tana.desktop",
     "~/Library/Caches/inc.tana.desktop.ShipIt",
     "~/Library/HTTPStorages/inc.tana.desktop",
+    "~/Library/Logs/Tana Outliner",
     "~/Library/Logs/tana",
     "~/Library/Preferences/inc.tana.desktop.plist",
   ]
