@@ -2,10 +2,10 @@ cask "openwhispr" do
   arch arm: "-arm64"
   url_end = on_system_conditional macos: ".dmg", linux: "-linux-x86_64.AppImage"
 
-  version "1.12.0"
-  sha256 arm:          "4a3ec44a08d6195066ce271d319cd8e43df2d37b6e3afb64b51c8f933abb3350",
-         intel:        "300363fa2af19c86fb0289f53daa548754946511243ac703a61f5a69a79d22c8",
-         x86_64_linux: "397b736fff23b254bb248135129ee588a9e2023e8cfec1408783a28d3f187410"
+  version "1.12.1"
+  sha256 arm:          "e2484ac2823707732d011fb0a5eee1c592bb1d455b744283676846024c4d2c13",
+         intel:        "f0823ddde8a4772654b45614b99666594cb2c5b7a67e31de240e4683a0ffb12d",
+         x86_64_linux: "718808eb5114511dcf71118917008ee64648c3266dacf301a7e6f4e66a87138e"
 
   on_macos do
     depends_on macos: :monterey
