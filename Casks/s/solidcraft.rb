@@ -2,11 +2,11 @@ cask "solidcraft" do
   arch arm: "aarch64", intel: "x86_64"
   url_end = on_system_conditional macos: "macos-universal.dmg", linux: "linux-#{arch}.AppImage"
 
-  version "0.47.0"
-  sha256 arm:          "d971cb177bd9068ab222c77df3a47b0e8a5a477717e90e3533a7359326a14780",
-         intel:        "d971cb177bd9068ab222c77df3a47b0e8a5a477717e90e3533a7359326a14780",
-         arm64_linux:  "e463167561d227d1ee34027130ca2c933db6f279d86c1b29803c3a38916a4d89",
-         x86_64_linux: "21bb4015a341abe9ccc9eaf66dc85647c45494b94c5767de695e4d7d04f84b55"
+  version "0.48.0"
+  sha256 arm:          "6c39f001ce6e1b52a645474afa3c9bc3ef59fd448dbcaa54facbb6b5228417a3",
+         intel:        "6c39f001ce6e1b52a645474afa3c9bc3ef59fd448dbcaa54facbb6b5228417a3",
+         arm64_linux:  "64ae84ea9787a0d9b9bf2545b6c3d21fd5bd986b8d060e23794ffc864f3cf7e7",
+         x86_64_linux: "5f5cb7707b076ddbd908d18dc01c937ca3cb458ca9a42e437dfdbc3ea9969086"
 
   on_macos do
     app "SolidCraft.app"
