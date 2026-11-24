@@ -21,7 +21,7 @@ cask "hightop" do
 
   zap trash: [
     "~/Library/Application Scripts/com.knollsoft.HighTopLauncher",
-    "~/Library/Application Support/HighTop+",
+    "~/Library/Application Support/HighTop*",
     "~/Library/Caches/com.knollsoft.HighTop",
     "~/Library/Containers/com.knollsoft.HighTopLauncher",
     "~/Library/Cookies/com.knollsoft.HighTop.binarycookies",
