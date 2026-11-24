@@ -1,24 +1,28 @@
 cask "espresso" do
-  version "25.12"
-  sha256 "6a04895bb1e55d637e5e5e61934f017d2b10b32c96c57cecbca865cc4de8275b"
+  version "27"
+  sha256 "1ef859f4d600a91919e007894d9f38e56b7ae6bc06be75b1c458f934734371a4"
 
-  url "https://get.espressoapp.com/Espresso_#{version}.zip"
+  url "https://download.ixian.au/espresso/Espresso_#{version}.zip"
   name "Espresso"
   desc "Website editor focusing on flair and efficiency"
-  homepage "https://espressoapp.com/"
+  homepage "https://ixian.au/espresso/"
 
   livecheck do
-    url "https://espressoapp.com/download/"
-    regex(/data-title=["']?v?(\d+(?:\.\d+)+)["' >]/i)
+    url "https://ixian.au/espresso/download/"
+    regex(/data-title=["']?v?(\d+(?:\.\d+)*)["' >]/i)
   end
 
-  depends_on :macos
+  depends_on macos: :golden_gate
 
   app "Espresso.app"
 
+  uninstall quit: "au.ixian.espresso"
+
   zap trash: [
     "~/Library/Application Support/Espresso",
+    "~/Library/Caches/au.ixian.espresso",
     "~/Library/Caches/com.kanagacode.espresso",
+    "~/Library/Preferences/au.ixian.espresso.plist",
     "~/Library/Preferences/com.kanagacode.espresso.plist",
     "~/Library/WebKit/com.kanagacode.espresso",
   ]
