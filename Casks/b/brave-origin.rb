@@ -2,9 +2,9 @@ cask "brave-origin" do
   arch arm: "arm64", intel: "x64"
   folder_arch = on_arch_conditional arm: "-arm64"
 
-  version "1.100.58.0,200.58"
-  sha256 arm:   "9f0000ddaa461b517302d36935f2acb08656245d5750b9c8606e637919706e42",
-         intel: "962debe8917fa2268d52f0a46413ff4f6de3607ab65ad9ccddd9bf6cdd76b9f3"
+  version "1.100.59.0,200.59"
+  sha256 arm:   "0087e265246147a8d8fd46dc880cf07912b58ffcbf375090acda404276f15779",
+         intel: "5de4cdfcf3c31afc43575ad977eff8ac6ee086784a3135d854a82a499ccb214c"
 
   url "https://updates-cdn.bravesoftware.com/sparkle/Brave-Origin/stable#{folder_arch}/#{version.csv.second}/Brave-Origin-#{arch}.dmg"
   name "Brave Origin"
