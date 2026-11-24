@@ -1,6 +1,6 @@
 cask "swi-prolog-app" do
-  version "11.0.0-1"
-  sha256 "6085ea66dc4a08d95a6343df99aa5d9c491faf93504b300cebaab4c59fd69147"
+  version "11.0.1-1"
+  sha256 "28e54d8f9dbb500a101eed44fa620b6a95567f8d058f921075f215c28f2db711"
 
   url "https://www.swi-prolog.org/download/stable/bin/swipl-#{version}.fat.pkg"
   name "SWI-Prolog"
