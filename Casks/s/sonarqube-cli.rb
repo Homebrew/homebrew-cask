@@ -2,10 +2,10 @@ cask "sonarqube-cli" do
   arch arm: "arm64", intel: "x86-64"
   os macos: "macos", linux: "linux"
 
-  version "1.12.0.17622"
-  sha256 arm:          "b64ce7175fb6cd63b277e6981052285fc4bb0437d98144ca754c054d66972838",
-         arm64_linux:  "258cb106e50721f6e58ba0e0bccd1c88cdc1bfe6b394871dc6640dc43ca12fea",
-         x86_64_linux: "c692e64dad89ea9e2388ec338dad47fa8703954e1c0ca8af111bc43e34afaa99"
+  version "1.13.0.18157"
+  sha256 arm:          "1875ee76aad327bc957d5852b1bbb52408f8754de292ce7d761a8e1061ce86ac",
+         arm64_linux:  "d2a5ce1e4a2fe961027b63227517b542baf16c1d9b776b2cbdc0329dd43ab5c2",
+         x86_64_linux: "75878329178bcba775b5b39e3031124926602c621611c88ab7548db23a9d4dda"
 
   on_macos do
     depends_on arch: :arm64
