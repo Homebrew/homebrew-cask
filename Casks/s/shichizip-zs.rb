@@ -10,7 +10,7 @@ cask "shichizip-zs" do
   desc "7-Zip derivative GUI based on mcmilk/7-Zip-zstd"
   homepage "https://github.com/idawnlight/ShichiZip"
 
-  depends_on macos: :ventura
+  depends_on macos: :sonoma
 
   app "ShichiZip ZS.app"
 
