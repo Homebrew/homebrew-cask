@@ -11,6 +11,7 @@ cask "snapzy" do
   depends_on macos: :ventura
 
   app "Snapzy.app"
+  binary "#{appdir}/Snapzy.app/Contents/Helpers/snapzy"
 
   zap trash: [
     "~/.config/snapzy",
