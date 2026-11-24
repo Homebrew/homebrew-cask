@@ -1,6 +1,6 @@
 cask "kdocs" do
-  version "3.11.2,1001"
-  sha256 "9fe64f666405af7761e2858dcc486fbfb6a3ee58c242122155d989f5446de681"
+  version "3.11.7,1001"
+  sha256 "4b2dacea01ce132f8bc416ee7e956aa5b7f29efa98510ad27175bae7fb7e25fe"
 
   url "https://qn.cache.wpscdn.cn/kdocs/apk/kdesktopmac/KDocs_#{version.csv.second}_v#{version.csv.first}.dmg"
   name "金山文档"
