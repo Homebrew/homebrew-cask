@@ -23,8 +23,10 @@ cask "athas" do
 
   zap trash: [
     "~/Library/Application Support/com.code.athas",
+    "~/Library/Application Support/dev.athas.app",
     "~/Library/Caches/com.code.athas",
     "~/Library/Logs/com.code.athas",
+    "~/Library/Logs/dev.athas.app",
     "~/Library/Preferences/com.code.athas.plist",
     "~/Library/WebKit/com.code.athas",
   ]
