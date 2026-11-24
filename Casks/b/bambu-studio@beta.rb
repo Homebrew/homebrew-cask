@@ -16,8 +16,8 @@ cask "bambu-studio@beta" do
   )
 
   on_macos do
-    version "02.09.01.70,20261103183404"
-    sha256 "e4f42ac1542cb107cb21cbf98717de7b17e735bdb46fd2a18249e30929e3310d"
+    version "02.09.02.62,20261124164959"
+    sha256 "bcd8bbec4b95e673badb156de56fe6a9d86987425a7cf7d89807771373a20213"
 
     app "BambuStudio.app"
 
@@ -33,8 +33,8 @@ cask "bambu-studio@beta" do
     ]
   end
   on_linux do
-    version "02.09.01.70,20261103183404"
-    sha256 "668dabb1be53c758189ed6bc89935285dea5e0af46216546b1bafd6882e9aff0"
+    version "02.09.02.62,20261124164959"
+    sha256 "01a9d25179df6495ecb3d402628232b31a10cff1f8991f052988383adf680eea"
 
     depends_on arch: :x86_64
 
