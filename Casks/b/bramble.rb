@@ -21,10 +21,12 @@ cask "bramble" do
             quit:      "app.bramble.desktop"
 
   zap trash: [
+    "~/Library/Application Scripts/BHGR3PP64J.group.app.bramble.desktop",
     "~/Library/Application Support/*/*/NativeMessagingHosts/app.bramble.desktop.json",
     "~/Library/Application Support/*/NativeMessagingHosts/app.bramble.desktop.json",
     "~/Library/Application Support/app.bramble.desktop",
     "~/Library/Caches/app.bramble.desktop",
+    "~/Library/Group Containers/BHGR3PP64J.group.app.bramble.desktop",
     "~/Library/HTTPStorages/app.bramble.desktop",
     "~/Library/Logs/app.bramble.desktop",
     "~/Library/Preferences/app.bramble.desktop.plist",
