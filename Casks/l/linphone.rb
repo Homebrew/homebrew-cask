@@ -1,6 +1,6 @@
 cask "linphone" do
-  version "6.2.4"
-  sha256 "33ecf88cdc088046919f1c88e3886ed264829ad94717170535e05d4162c8f4f1"
+  version "6.2.5"
+  sha256 "71c66dc98d1fb6b66d995bc70e3bb3946ac2aaa46717a0ead2c3f1ea7866cc1b"
 
   url "https://download.linphone.org/releases/macosx/app/Linphone-#{version}-mac.dmg"
   name "Linphone"
