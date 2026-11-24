@@ -24,6 +24,15 @@ cask "duplicati" do
   depends_on macos: :monterey
 
   app "Duplicati.app"
+  binary "#{appdir}/Duplicati.app/Contents/MacOS/duplicati-cli"
+  binary "#{appdir}/Duplicati.app/Contents/MacOS/duplicati-server"
+  binary "#{appdir}/Duplicati.app/Contents/MacOS/duplicati-server-util"
+  binary "#{appdir}/Duplicati.app/Contents/MacOS/duplicati-backend-tool"
+  binary "#{appdir}/Duplicati.app/Contents/MacOS/duplicati-recovery-tool"
+  binary "#{appdir}/Duplicati.app/Contents/MacOS/duplicati-aescrypt"
+  binary "#{appdir}/Duplicati.app/Contents/MacOS/duplicati-secret-tool"
+  binary "#{appdir}/Duplicati.app/Contents/MacOS/duplicati-database-tool"
+  binary "#{appdir}/Duplicati.app/Contents/MacOS/duplicati-configure"
 
   zap trash: [
     "~/.config/Duplicati",
