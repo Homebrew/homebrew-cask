@@ -1,9 +1,9 @@
 cask "littlebird" do
   arch arm: "arm64", intel: "x64"
 
-  version "0.87.148"
-  sha256 arm:   "f7daf65f4d5df2e8dabd9e59ef2d38d9c6b5be279609abf9c47e8aa9b751ad49",
-         intel: "44b175d9f5ceecb458d7539cba4cf617661af5f20eaa85dd7de2ceed5bb22dcb"
+  version "0.87.154"
+  sha256 arm:   "f1caab14c5b253b3701e9a52f0abadcfcd2d1b93c3f8e8d8af7d8aec1cf48cd5",
+         intel: "723cb8c89522ca1ec14d12b7953683ae008866e7a6c60ad5f75d57ab3ad201b0"
 
   url "https://downloads.littlebird.ai/#{arch}/Littlebird-Mac-#{arch}-#{version}-Installer.dmg"
   name "Littlebird"
