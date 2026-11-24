@@ -1,6 +1,6 @@
 cask "clipbook" do
-  version "2.6.0"
-  sha256 "297a3e868bae1e7d80726914b8ce164f6e33e81841b734342b915e667f1e0378"
+  version "2.7.0"
+  sha256 "e19537bed121461656f1a940d164473dd000f80ae60f222393062e42c783177b"
 
   url "https://f005.backblazeb2.com/file/clipbook/ClipBook-#{version}.dmg"
   name "ClipBook"
