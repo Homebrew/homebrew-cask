@@ -1,10 +1,10 @@
 cask "localsend" do
   os macos: ".dmg", linux: "-linux-x86-64.AppImage"
 
-  version "1.18.2"
-  sha256 arm:          "126860d56f6f49b11845f601aac51de27a49b16d2b48102415da91e0e37e5155",
-         intel:        "126860d56f6f49b11845f601aac51de27a49b16d2b48102415da91e0e37e5155",
-         x86_64_linux: "19f21613d1834f6caa69517113670461a3f10b80a2a315f86548c0663d9c0aaf"
+  version "1.19.0"
+  sha256 arm:          "5645789cc976298b893267c025f0945d8673baed3bb302a201eb8b96991e43d4",
+         intel:        "5645789cc976298b893267c025f0945d8673baed3bb302a201eb8b96991e43d4",
+         x86_64_linux: "e72ce88383a32beec9701583c22e298037f7683f9590cea7b3a281f58c2ec2b3"
 
   on_macos do
     app "LocalSend.app"
