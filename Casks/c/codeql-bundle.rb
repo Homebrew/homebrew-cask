@@ -2,11 +2,11 @@ cask "codeql-bundle" do
   arch arm: on_system_conditional(macos: "64", linux: "-arm64"), intel: "64"
   os macos: "osx", linux: "linux"
 
-  version "2.27.5"
-  sha256 arm:          "c671dd6956a604a189aa43827c54d2cff974b7dfcb10290a7ced4d3e3f52fade",
-         intel:        "c671dd6956a604a189aa43827c54d2cff974b7dfcb10290a7ced4d3e3f52fade",
-         arm64_linux:  "bf4d478810886959783c114a39cb0f95f1f5ca19f6baa84d64c86283ef20fded",
-         x86_64_linux: "141e6eb4e99c8498a1258e282e6f7b59c747b4b1a7eabc7cbf7d1aa92792edf0"
+  version "2.27.6"
+  sha256 arm:          "7240fa82b9ec43d0dc6d00a59f457e639b891f7ec5bc11409d77cf6506a6255f",
+         intel:        "7240fa82b9ec43d0dc6d00a59f457e639b891f7ec5bc11409d77cf6506a6255f",
+         arm64_linux:  "4d8da37ad4fc6527c95133c4097353cdc36d59c890be161d8c9efaa8c7381e91",
+         x86_64_linux: "ebdb5704296af9751b378a03b24fe1f7ede5727455905bb64a9a82939beb1b4b"
 
   url "https://github.com/github/codeql-action/releases/download/codeql-bundle-v#{version}/codeql-bundle-#{os}#{arch}.tar.zst"
   name "CodeQL Bundle"
