@@ -22,8 +22,8 @@ cask "microsoft-excel" do
     end
   end
   on_sequoia :or_newer do
-    version "16.115.26110837"
-    sha256 "de94b56243d96210c65188fc6d23dc0e1614d6746765c14584e6451b61607eff"
+    version "16.115.26112215"
+    sha256 "892c2a5f6676118bba6d4b9f3af22c1aa0b6667c556071ba7e4bbad85edee1e3"
 
     livecheck do
       url "https://go.microsoft.com/fwlink/p/?linkid=525135"
