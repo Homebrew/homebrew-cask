@@ -21,6 +21,7 @@ cask "dockfix" do
     "~/Library/Application Support/DockFix",
     "~/Library/Caches/dk.FIrstForm.DockFix",
     "~/Library/HTTPStorages/dk.FIrstForm.DockFix",
+    "~/Library/Logs/DockFix",
     "~/Library/Preferences/dk.FIrstForm.DockFix.plist",
   ]
 end
