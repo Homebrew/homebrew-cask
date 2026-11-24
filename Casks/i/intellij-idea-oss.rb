@@ -17,7 +17,9 @@ cask "intellij-idea-oss" do
     regex(/^idea[._-]v?(\d+(?:\.\d+)+)#{arch}\.dmg$/i)
     strategy :github_releases do |json, regex|
       json.map do |release|
-        next if release["draft"] || release["prerelease"]
+        next if release["draft"] ||
+                release["prerelease"] ||
+                !release["tag_name"]&.match?(%r{^idea/v?(\d+(?:\.\d+)+)$}i)
 
         release["assets"]&.map do |asset|
           match = asset["name"]&.match(regex)
