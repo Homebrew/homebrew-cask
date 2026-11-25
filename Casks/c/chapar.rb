@@ -10,11 +10,6 @@ cask "chapar" do
   desc "Native API client"
   homepage "https://github.com/chapar-rest/chapar"
 
-  livecheck do
-    url :url
-    strategy :github_latest
-  end
-
   depends_on :macos
 
   app "Chapar.app"
