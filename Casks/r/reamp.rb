@@ -1,6 +1,6 @@
 cask "reamp" do
-  version "2.0.0,1077"
-  sha256 "e415d00abf06efdcf0c99e9d8e2d9c2b3e5b65245648934183ff6610e74750d9"
+  version "2.1.0,1115"
+  sha256 "8ad934eff6d871aa1571bc889bfe5b8e918956b35d1203d7889d1390fb302d76"
 
   url "https://update.re-amp.ru/downloads/Reamp-#{version.csv.first}(#{version.csv.second}).zip"
   name "re:AMP"
