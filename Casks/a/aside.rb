@@ -1,9 +1,9 @@
 cask "aside" do
   arch arm: "arm64", intel: "x64"
 
-  version "1.0.1116.2"
-  sha256 arm:   "2c1f9a8d67e81f84d6aac803d6fdc08e62b78dd9f0c2bc8bd9e83181a8f1cd71",
-         intel: "c880a1e51e223f31f0da36fc1505002d84f41b2e53406151627c2df0208c9dd3"
+  version "1.0.1125.1"
+  sha256 arm:   "6f13dc7395a7cced29189cfc19a179d99fa1bf64c849df02fff521e53c00a10f",
+         intel: "5036c2e9adebe7c61b1cca01535ac107e7568c2e558cdd0f6a08ab6640b1ebc6"
 
   url "https://releases.aside.com/dev-updater/Aside-#{version}-#{arch}.dmg"
   name "Aside"
