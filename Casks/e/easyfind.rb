@@ -1,6 +1,6 @@
 cask "easyfind" do
-  version "5.0.2"
-  sha256 "1539a562539e3b3a243da864fddee0351a4c7d109aa9dcae436775ecbb288fc9"
+  version "6.0"
+  sha256 "4cc13fc5ff8eec0a217e4058078caf7bb6af3bf332a09a779738613790731a11"
 
   url "https://download.devontechnologies.com/download/freeware/easyfind/#{version}/EasyFind.app.zip"
   name "EasyFind"
@@ -17,7 +17,7 @@ cask "easyfind" do
     end
   end
 
-  depends_on :macos
+  depends_on macos: :sequoia
 
   app "EasyFind.app"
 
