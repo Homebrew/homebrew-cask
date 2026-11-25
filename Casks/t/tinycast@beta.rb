@@ -1,6 +1,6 @@
 cask "tinycast@beta" do
-  version "0.15.0-beta.147"
-  sha256 "cf4cead9317672ac375f9b81c2b30dc90b9ed5b5b0338c3c2b39d418f5950f0b"
+  version "0.16.0-beta.148"
+  sha256 "c4968f9993d5a0028f5b06571cba39445e8605c9fcc087bbfdbeff794b893db2"
 
   url "https://github.com/abue-ammar/tinycast/releases/download/v#{version}/Tinycast-#{version}.dmg"
   name "Tinycast Beta"
