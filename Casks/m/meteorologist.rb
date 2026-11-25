@@ -18,7 +18,11 @@ cask "meteorologist" do
 
   zap trash: [
     "~/Library/Caches/com.heat.Meteorologist",
+    "~/Library/Caches/com.heat.MeteorologistSwiftUI",
+    "~/Library/HTTPStorages/com.heat.MeteorologistSwiftUI*",
     "~/Library/Logs/Meteorologist.log",
+    "~/Library/Logs/MeteorologistSwiftUI-*.log",
     "~/Library/Preferences/com.heat.Meteorologist.plist",
+    "~/Library/Preferences/com.heat.MeteorologistSwiftUI.plist",
   ]
 end

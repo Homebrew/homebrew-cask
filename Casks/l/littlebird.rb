@@ -24,17 +24,18 @@ cask "littlebird" do
             quit:      "com.genos.littlebird"
 
   zap trash: [
-    "~/Library/Application Support/@littlebird",
-    "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.genos.littlebird.sfl*",
-    "~/Library/Application Support/com.genos.contextkit-cli",
-    "~/Library/Application Support/CrashReporter/Littlebird_*.plist",
-    "~/Library/Application Support/Littlebird",
-    "~/Library/Caches/com.genos.contextkit-cli",
-    "~/Library/HTTPStorages/com.genos.contextkit-cli",
-    "~/Library/HTTPStorages/com.genos.littlebird",
-    "~/Library/Logs/@littlebird",
-    "~/Library/Logs/Littlebird",
-    "~/Library/Preferences/ByHost/com.genos.littlebird.ShipIt.*.plist",
-    "~/Library/Preferences/com.genos.littlebird.plist",
-  ]
+        "~/Library/Application Support/@littlebird",
+        "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.genos.littlebird.sfl*",
+        "~/Library/Application Support/com.genos.contextkit-cli",
+        "~/Library/Application Support/CrashReporter/Littlebird_*.plist",
+        "~/Library/Application Support/Littlebird",
+        "~/Library/Caches/com.genos.contextkit-cli",
+        "~/Library/HTTPStorages/com.genos.contextkit-cli",
+        "~/Library/HTTPStorages/com.genos.littlebird",
+        "~/Library/Logs/@littlebird",
+        "~/Library/Logs/Littlebird",
+        "~/Library/Preferences/ByHost/com.genos.littlebird.ShipIt.*.plist",
+        "~/Library/Preferences/com.genos.littlebird.plist",
+      ],
+      rmdir: "~/.littlebird"
 end

@@ -14,7 +14,9 @@ cask "keyguard" do
     app "Keyguard.app"
 
     zap trash: [
+      "~/.keyguard",
       "~/Library/Application Support/keyguard",
+      "~/Library/Preferences/com.artemchep.keyguard.plist",
       "~/Library/Saved Application State/com.artemchep.keyguard.savedState",
     ]
   end
@@ -25,7 +27,6 @@ cask "keyguard" do
       "~/.cache/keyguard",
       "~/.config/keyguard",
       "~/.local/share/keyguard",
-      "~/Library/Preferences/com.artemchep.keyguard.plist",
     ]
   end
 

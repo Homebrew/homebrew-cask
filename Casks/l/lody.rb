@@ -15,9 +15,11 @@ cask "lody" do
     zap trash: [
       "~/.lody",
       "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/ai.lody.desktop.sfl*",
+      "~/Library/Application Support/CrashReporter/Lody_*.plist",
       "~/Library/Application Support/Lody",
       "~/Library/Caches/ai.lody.desktop",
       "~/Library/HTTPStorages/ai.lody.desktop",
+      "~/Library/Logs/DiagnosticReports/Lody-*.ips",
       "~/Library/Preferences/ai.lody.desktop.plist",
       "~/Library/Preferences/lody-desktop-nodejs",
     ]

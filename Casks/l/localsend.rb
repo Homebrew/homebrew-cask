@@ -10,10 +10,12 @@ cask "localsend" do
     app "LocalSend.app"
 
     zap trash: [
+      "~/Library/Application Scripts/--AppIdentifierPrefix-localsend.shared_group",
       "~/Library/Application Scripts/org.localsend.localsendApp",
       "~/Library/Application Scripts/org.localsend.localsendApp.ShareExtension",
       "~/Library/Containers/org.localsend.localsendApp",
       "~/Library/Containers/org.localsend.localsendApp.ShareExtension",
+      "~/Library/Group Containers/--AppIdentifierPrefix-localsend.shared_group",
       "~/Library/Preferences/org.localsend.localsendApp.plist",
       "~/Library/Saved Application State/org.localsend.localsendApp.savedState",
     ]

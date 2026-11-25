@@ -19,5 +19,8 @@ cask "lightworks" do
 
   app "Lightworks.app"
 
-  zap trash: "~/Library/Saved Application State/com.editshare.lightworks.savedState"
+  zap trash: [
+    "~/Documents/.Lightworks.thereCanBeOnlyOne",
+    "~/Library/Saved Application State/com.editshare.lightworks.savedState",
+  ]
 end
