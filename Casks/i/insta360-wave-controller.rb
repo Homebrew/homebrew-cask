@@ -28,7 +28,6 @@ cask "insta360-wave-controller" do
       match = channel["download_url"]&.match(regex)
       next unless match
 
-      build_number = match[3].tr("()", ",")
       "#{match[2]},#{match[3]},#{match[4]},#{match[1]}".gsub(/,{2,}/, ",")
     end
   end
