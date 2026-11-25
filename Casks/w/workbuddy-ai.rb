@@ -1,9 +1,9 @@
 cask "workbuddy-ai" do
   arch arm: "arm64", intel: "x64"
 
-  version "5.11.4.44121853-0026dff0"
-  sha256 arm:   "804a6e445ee8f957d0ff675bee1923c54de18ea4f121fb3eef2cb41fe0ece2df",
-         intel: "2208a25721fa660fc53e072ecd0b24646cbd526e4eec2ad5fc450db8c9463a05"
+  version "5.11.7.44923190-525fde10"
+  sha256 arm:   "d7d13b8d3c43403dbbafde5f8d6364f3fc58d573fce56cc3384cc257f47f746a",
+         intel: "1f23b5217cf410fcd49cf9542a2ee147bcef9a5d2adf955ea305c7589329bdb3"
 
   url "https://codebuddy-1328495429.cos.accelerate.myqcloud.com/workbuddy/saas/darwin-#{arch}/WorkBuddy-darwin-#{arch}-#{version}.dmg"
   name "WorkBuddy AI"
