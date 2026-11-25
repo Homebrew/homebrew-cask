@@ -4,10 +4,10 @@ cask "lm-studio" do
   os macos: "darwin", linux: "linux"
   url_end = on_system_conditional macos: "dmg", linux: "AppImage"
 
-  version "0.4.28,2"
-  sha256 arm:          "f8be634f1eeabaa19d9004d6de8b8bf8cd805a22e34b1f9538d4d702cf884775",
-         arm64_linux:  "8a99806356e167844c929dae30d49f8be8c48a0aaf6895d17e85163c6635bcd3",
-         x86_64_linux: "a3e6cf8233697be0a8ad6871197b424242af3c5a346671aeed59959ed7eebf11"
+  version "0.4.29,2"
+  sha256 arm:          "8120d709888370e86e46791b8445482e28615dab5f3e8972a9a22e0f90fcdb14",
+         arm64_linux:  "6761d124e7b5446018c7608135f8f58a5462a1714c46ba1267e67828a33c0e94",
+         x86_64_linux: "55c841359589e58d75e5e1a210b9006053db4c5cef8a721934b24ecc674f5fe2"
 
   on_macos do
     depends_on arch: :arm64
