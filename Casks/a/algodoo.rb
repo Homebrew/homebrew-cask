@@ -1,0 +1,22 @@
+cask "algodoo" do
+  version "2.2.4"
+  sha256 "02bb64abdff9cfd486bdc970fab692a8dd6312dbea78e3b6d31933b5c473916b"
+
+  url "https://www.algodoo.com/download/Algodoo_#{version.dots_to_underscores}-macOS.dmg"
+  name "Algodoo"
+  desc "Draw and interact with physical systems"
+  homepage "https://www.algodoo.com/"
+
+  # The download URL is unreachable in the CI environment
+  disable! date: "2026-11-16", because: :unreachable
+
+  depends_on :macos
+
+  app "Algodoo.app"
+
+  zap trash: [
+    "~/Library/Application Support/Algodoo",
+    "~/Library/Preferences/se.algoryx.Algodoo.plist",
+    "~/Library/Saved Application State/se.algoryx.algodoo-regular.savedState",
+  ]
+end

@@ -1,0 +1,33 @@
+cask "ollama-app" do
+  version "0.40.18"
+  sha256 "1d990f4a8a76985c9defaa9a6ddd007556d117fd8ed586d7e9cbf25a6e9a4a23"
+
+  url "https://github.com/ollama/ollama/releases/download/v#{version}/Ollama-darwin.zip"
+  name "Ollama"
+  desc "Get up and running with large language models locally"
+  homepage "https://ollama.com/"
+
+  livecheck do
+    url :url
+    strategy :github_latest
+  end
+
+  auto_updates true
+  conflicts_with cask: "ollama-binary"
+  depends_on macos: :sonoma
+
+  app "Ollama.app"
+  binary "#{appdir}/Ollama.app/Contents/Resources/ollama"
+
+  uninstall launchctl: "com.ollama.ollama",
+            quit:      "com.electron.ollama"
+
+  zap trash: [
+    "~/.ollama",
+    "~/Library/Application Support/Ollama",
+    "~/Library/Caches/com.electron.ollama",
+    "~/Library/Preferences/com.electron.ollama.plist",
+    "~/Library/Saved Application State/com.electron.ollama.savedState",
+    "~/Library/Webkit/com.electron.ollama",
+  ]
+end

@@ -1,0 +1,25 @@
+cask "raiderio" do
+  version "6.0.6"
+  sha256 "37aa048379524e7bd4ce235a7d89a610b10836cc204471441fb055fdefc25378"
+
+  url "https://github.com/RaiderIO/raiderio-client-builds/releases/download/v#{version}/RaiderIO_Client.dmg"
+  name "Raider.io Client"
+  desc "World of Warcraft client to track Mythic+ and Raid Progression"
+  homepage "https://raider.io/"
+
+  livecheck do
+    url :url
+    strategy :github_latest
+  end
+
+  depends_on macos: :monterey
+
+  app "RaiderIO.app"
+
+  zap trash: [
+    "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/io.raider.client.sfl*",
+    "~/Library/Application Support/RaiderIO",
+    "~/Library/Logs/RaiderIO",
+    "~/Library/Preferences/io.raider.client.plist",
+  ]
+end

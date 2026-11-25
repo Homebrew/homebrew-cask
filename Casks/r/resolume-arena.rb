@@ -1,0 +1,48 @@
+cask "resolume-arena" do
+  version "7.29.0,33052"
+  sha256 "57a4df8baa9962f5e95acb40c9592517d1918eced50009267688a43d95a3f611"
+
+  url "https://dd5sgwxv3xok.cloudfront.net/Resolume_Arena_#{version.csv.first.dots_to_underscores}_rev_#{version.csv.second}_Installer.dmg"
+  name "Resolume Arena"
+  desc "Video mapping software"
+  homepage "https://resolume.com/"
+
+  livecheck do
+    url "https://resolume.com/update/arena_updates_mac.xml"
+    regex(/^v?(\d+(?:\.\d+)+)\s*rev\s*(\d+)$/i)
+    strategy :sparkle do |item, regex|
+      match = item.short_version&.match(regex)
+      next if match.blank?
+
+      "#{match[1]},#{match[2]}"
+    end
+  end
+
+  auto_updates true
+  depends_on macos: :ventura
+
+  pkg "Resolume Arena Installer.pkg"
+
+  uninstall launchctl: "com.resolume.arena",
+            signal:    ["TERM", "com.resolume.arena"],
+            pkgutil:   [
+              "com.resolume.pkg.ResolumeAlley",
+              "com.resolume.pkg.ResolumeArena.*",
+              "com.resolume.pkg.ResolumeCommon",
+              "com.resolume.pkg.ResolumeDXV",
+              "com.resolume.pkg.ResolumeQuickLook",
+              "com.resolume.pkg.ResolumeWire",
+              "com.resolume.pkg.ResolumeWireNodes",
+            ],
+            delete:    "/Applications/Resolume Arena #{version.major}"
+
+  zap pkgutil: [
+        "com.resolume.pkg.ResolumeDXV",
+        "com.resolume.pkg.ResolumeQuickLook",
+      ],
+      trash:   [
+        "~/Library/Caches/com.resolume.arena",
+        "~/Library/Logs/Resolume Arena",
+        "~/Library/Preferences/com.resolume.arena.plist",
+      ]
+end

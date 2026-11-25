@@ -1,0 +1,30 @@
+cask "json-viewer" do
+  version "2.0.0"
+  sha256 "0c642692c6a9aebc1b750a00302c93a3508c1000f21d0be56f621f380c16d506"
+
+  url "https://jsonviewer.app/releases/JSON-Viewer-#{version}.dmg"
+  name "JSON Viewer"
+  desc "App to visualise, validate and format JSON datasets"
+  homepage "https://jsonviewer.app/"
+
+  livecheck do
+    url "https://jsonviewer.app/updates/appcast.xml"
+    strategy :sparkle, &:short_version
+  end
+
+  auto_updates true
+  depends_on macos: :tahoe
+
+  app "JSON Viewer.app"
+
+  zap trash: [
+    "~/Library/Application Scripts/com.pascalgiguere.JSON-Viewer",
+    "~/Library/Application Scripts/dev.pascalgiguere.jsonviewer",
+    "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.pascalgiguere.json-viewer.sfl*",
+    "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/dev.pascalgiguere.jsonviewer.sfl*",
+    "~/Library/Caches/dev.pascalgiguere.jsonviewer",
+    "~/Library/Containers/com.pascalgiguere.JSON-Viewer",
+    "~/Library/Containers/dev.pascalgiguere.jsonviewer",
+    "~/Library/Preferences/dev.pascalgiguere.jsonviewer.plist",
+  ]
+end

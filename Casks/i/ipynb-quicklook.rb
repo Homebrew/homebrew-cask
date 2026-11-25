@@ -1,0 +1,18 @@
+cask "ipynb-quicklook" do
+  version "0.1.5"
+  sha256 "b8d1b10b79d35d3c60537fef34c20bbbe52808c8fc4ad673b862e7094a265ef5"
+
+  url "https://github.com/tuxu/ipynb-quicklook/releases/download/v#{version}/ipynb-quicklook.qlgenerator.zip"
+  name "ipynb-quicklook"
+  desc "Quick Look plugin for Jupyter/IPython notebooks"
+  homepage "https://github.com/tuxu/ipynb-quicklook"
+
+  deprecate! date: "2025-09-22", because: :no_longer_meets_criteria
+  disable! date: "2026-09-27", because: :no_longer_meets_criteria
+
+  depends_on :macos
+
+  qlplugin "ipynb-quicklook.qlgenerator"
+
+  zap :not_required
+end

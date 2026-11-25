@@ -1,0 +1,27 @@
+cask "electrumsv" do
+  version "1.3.16"
+  sha256 "d1910e583813bfc8cbe5d815d0df1059a1d144df6d96fc6bc6c0ae3dccc4bc7e"
+
+  url "https://github.com/electrumsv/electrumsv/releases/download/sv-#{version}/ElectrumSV-#{version}.dmg"
+  name "ElectrumSV"
+  desc "Desktop wallet for Bitcoin SV"
+  homepage "https://electrumsv.io/"
+
+  livecheck do
+    url "https://electrumsv.io/download.html"
+    regex(/href=.*?ElectrumSV[._-]v?(\d+(?:\.\d+)+)\.dmg/i)
+  end
+
+  depends_on :macos
+
+  app "ElectrumSV.app"
+
+  zap trash: [
+    "~/Library/Preferences/io.electrumsv.ElectrumSV.plist",
+    "~/Library/Saved Application State/io.electrumsv.ElectrumSV.savedState",
+  ]
+
+  caveats do
+    requires_rosetta
+  end
+end

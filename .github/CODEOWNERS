@@ -1,0 +1,4 @@
+# Lead maintainers must approve changes to CodeRabbit configuration and CODEOWNERS files.
+CODEOWNERS     @Homebrew/lead-maintainers
+/.coderabbit*  @Homebrew/lead-maintainers
+/coderabbit*   @Homebrew/lead-maintainers

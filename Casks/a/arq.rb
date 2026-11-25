@@ -1,0 +1,42 @@
+cask "arq" do
+  version "7.51.1"
+  sha256 "3ccdbf5f306c7de88e782ddfb95a918162d9c2fc9940251f93a4a7b7d52d5b0f"
+
+  url "https://www.arqbackup.com/download/arqbackup/Arq#{version}.pkg"
+  name "Arq"
+  desc "Multi-cloud backup application"
+  homepage "https://www.arqbackup.com/"
+
+  livecheck do
+    url "https://www.arqbackup.com/download/arqbackup/arq#{version.major}_release_notes.html"
+    regex(/Version\s+v?(\d+(?:\.\d+)+)/i)
+  end
+
+  auto_updates true
+  depends_on :macos
+
+  pkg "Arq#{version}.pkg"
+  binary "#{appdir}/Arq.app/Contents/Resources/arqc"
+
+  uninstall launchctl: [
+              "com.haystacksoftware.arqagent",
+              "com.haystacksoftware.ArqMonitor",
+            ],
+            quit:      "com.haystacksoftware.Arq",
+            pkgutil:   "com.haystacksoftware.Arq",
+            delete:    "/Applications/Arq.app"
+
+  zap delete: "/Library/Logs/ArqAgent",
+      trash:  [
+        "/Library/Application Support/ArqAgent",
+        "/Library/Application Support/ArqAgentAPFS",
+        "~/Library/Application Support/Arq *",
+        "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.haystacksoftware.arqmonitor.sfl*",
+        "~/Library/Arq *",
+        "~/Library/Arq",
+        "~/Library/HTTPStorages/com.haystacksoftware.Arq*",
+        "~/Library/Logs/Arq*",
+        "~/Library/Preferences/com.haystacksoftware.Arq.plist",
+        "~/Library/Preferences/com.haystacksoftware.ArqMonitor.plist",
+      ]
+end

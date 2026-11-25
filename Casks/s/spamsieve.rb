@@ -1,0 +1,42 @@
+cask "spamsieve" do
+  version "3.3.2"
+  sha256 "aee0d32e4b5a7c3c8fd955cf9682ab554af03104da557b3bdccea404bf6e51f6"
+
+  url "https://c-command.com/downloads/SpamSieve-#{version}.dmg"
+  name "SpamSieve"
+  desc "Spam filtering extension for e-mail clients"
+  homepage "https://c-command.com/spamsieve/"
+
+  livecheck do
+    url "https://c-command.com/versions.plist"
+    strategy :xml do |xml|
+      item = xml.elements["//key[text()='com.c-command.SpamSieve']"]&.next_element
+      next unless item
+
+      version = item.elements["key[text()='Version']"]&.next_element&.text
+      next if version.blank?
+
+      version.strip
+    end
+  end
+
+  auto_updates true
+  depends_on :macos
+
+  app "SpamSieve.app"
+
+  uninstall quit: "com.c-command.SpamSieve"
+
+  zap trash: [
+    "~/Library/Application Scripts/com.c-command.SpamSieve.MailAppExtension",
+    "~/Library/Application Support/SpamSieve",
+    "~/Library/Caches/com.apple.helpd/Generated/SpamSieve Help*",
+    "~/Library/Caches/com.c-command.SpamSieve",
+    "~/Library/Containers/com.c-command.SpamSieve.MailAppExtension",
+    "~/Library/HTTPStorages/com.c-command.SpamSieve",
+    "~/Library/LaunchAgents/com.c-command.SpamSieve.LaunchAgent.plist",
+    "~/Library/Logs/SpamSieve",
+    "~/Library/Preferences/com.c-command.SpamSieve.plist",
+    "~/Library/Saved Application State/com.c-command.SpamSieve.savedState",
+  ]
+end

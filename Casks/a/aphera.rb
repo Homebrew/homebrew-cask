@@ -1,0 +1,31 @@
+cask "aphera" do
+  version "1.10.0"
+  sha256 "9108d538fc8a68814dd3c3536d597efee3535d1b4c1ee7c7019b6a4e1bb9ebc3"
+
+  url "https://releases.aphera.app/Aphera.#{version}.dmg"
+  name "Aphera"
+  desc "Raw photo editing software"
+  homepage "https://aphera.co/"
+
+  livecheck do
+    url "https://releases.aphera.app/latest"
+    strategy :header_match
+  end
+
+  depends_on macos: :sequoia
+
+  app "Aphera.app"
+
+  zap trash: [
+    "~/Library/Application Scripts/co.latentco.Aphera",
+    "~/Library/Application Scripts/co.latentco.Aphera.QuickLook",
+    "~/Library/Application Support/Aphera",
+    "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/co.latentco.aphera.sfl*",
+    "~/Library/Caches/co.latentco.Aphera",
+    "~/Library/Containers/co.latentco.Aphera",
+    "~/Library/Containers/co.latentco.Aphera.QuickLook",
+    "~/Library/HTTPStorages/co.latentco.Aphera",
+    "~/Library/Preferences/co.latentco.Aphera.plist",
+    "~/Library/WebKit/co.latentco.Aphera",
+  ]
+end

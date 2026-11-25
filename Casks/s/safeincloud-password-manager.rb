@@ -1,0 +1,22 @@
+cask "safeincloud-password-manager" do
+  version "24.14.1,2414001"
+  sha256 :no_check
+
+  url "https://www.safe-in-cloud.com/download/SafeInCloud.dmg"
+  name "SafeInCloud Password Manager"
+  desc "Cross-platform AES-256 password manager"
+  homepage "https://www.safe-in-cloud.com/"
+
+  disable! date: "2026-03-15", because: :moved_to_mas
+
+  depends_on :macos
+
+  app "SafeInCloud Password Manager.app"
+
+  zap trash: [
+    "~/Library/Application Scripts/com.safeincloud.Safe-In-Cloud.OSX",
+    "~/Library/Application Scripts/com.safeincloud.Safe-In-Cloud.OSX.Safari-Extension",
+    "~/Library/Containers/com.safeincloud.Safe-In-Cloud.OSX",
+    "~/Library/Containers/com.safeincloud.Safe-In-Cloud.OSX.Safari-Extension",
+  ]
+end

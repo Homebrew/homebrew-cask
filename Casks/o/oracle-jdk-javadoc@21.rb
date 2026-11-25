@@ -1,0 +1,28 @@
+cask "oracle-jdk-javadoc@21" do
+  version "21.0.13,10,adbe32906a734567baf4f0d5585a8701"
+  sha256 "15a0ce4028c01dea25642bc29791a67cc9dfd1735d37027642904a0e985f6e7d"
+
+  url "https://download.oracle.com/otn_software/java/jdk/#{version.csv.first}+#{version.csv.second}/#{version.csv.third}/jdk-#{version.csv.first}_doc-all.zip",
+      cookies: {
+        "oraclelicense" => "accept-securebackup-cookie",
+      }
+  name "Oracle Java Standard Edition Development Kit Documentation"
+  desc "Documentation for the Oracle JDK"
+  homepage "https://www.oracle.com/java/technologies/downloads/"
+
+  # The 21.0.13 download has been removed and newer Oracle JDK 21 documentation
+  # is under the OTN licence and needs an Oracle account to download.
+  disable! date: "2026-11-08", because: :no_longer_meets_criteria
+
+  depends_on :macos
+
+  artifact "docs", target: "/Library/Java/JavaVirtualMachines/jdk-#{version.major}.jdk/Contents/Home/docs"
+
+  uninstall rmdir: "/Library/Java/JavaVirtualMachines/jdk-#{version.major}.jdk"
+
+  zap :not_required
+
+  caveats do
+    license "https://download.oracle.com/otndocs/jcp/java_se-#{version.major}-final-spec/license.html"
+  end
+end

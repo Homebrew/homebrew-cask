@@ -1,0 +1,28 @@
+cask "cisco-proximity" do
+  version "4.0.0"
+  sha256 :no_check
+
+  url "https://proximity.cisco.com/mac/Proximity.dmg"
+  name "Cisco Proximity"
+  desc "Content sharing and video conference system control"
+  homepage "https://proximity.cisco.com/"
+
+  disable! date: "2026-05-18", because: :discontinued
+
+  depends_on :macos
+
+  app "Cisco Proximity.app"
+
+  uninstall launchctl: "com.cisco.proximity",
+            signal:    ["TERM", "com.cisco.experimental.Proximity"]
+
+  zap trash: [
+    "~/Library/Preferences/com.cisco.experimental.proximity.plist",
+    "~/Library/Preferences/com.cisco.Proximity.plist",
+    "~/Library/Saved Application State/com.cisco.experimental.Proximity.savedState",
+  ]
+
+  caveats do
+    requires_rosetta
+  end
+end

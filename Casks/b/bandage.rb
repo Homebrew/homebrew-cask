@@ -1,0 +1,25 @@
+cask "bandage" do
+  arch arm: "aarch64", intel: "x86-64"
+
+  version "0.9.0"
+  sha256 arm:   "0bf30966957a5949bf40595ae05d56bb84e504ee8d25e346ccad631c4588e815",
+         intel: "26e775c638bc4da1eb3a1b6e835a3916f64d89cad04050f70ccc41f847488238"
+
+  url "https://github.com/rrwick/Bandage/releases/download/v#{version}/Bandage_macOS-#{arch}_v#{version}.zip"
+  name "Bandage"
+  desc "Bioinformatics app for navigating de novo assembly graphs"
+  homepage "https://rrwick.github.io/Bandage/"
+
+  disable! date: "2026-09-01", because: :fails_gatekeeper_check
+
+  depends_on :macos
+
+  app "Bandage.app"
+  command_wrapper "bandage",
+                  executable: "#{appdir}/Bandage.app/Contents/MacOS/Bandage"
+
+  zap trash: [
+    "~/Library/Preferences/com.rrwick.Bandage.plist",
+    "~/Library/Saved Application State/com.rrwick.Bandage.savedState",
+  ]
+end

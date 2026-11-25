@@ -1,0 +1,24 @@
+cask "photosweeper-x" do
+  version "5.5.6"
+  sha256 :no_check
+
+  url "https://overmacs.com/downloads/PhotoSweeper_X.dmg"
+  name "PhotoSweeper X"
+  desc "Tool to eliminate similar or duplicate photos"
+  homepage "https://overmacs.com/"
+
+  livecheck do
+    url "https://overmacs.com/feeds/photosweeper_update.xml"
+    strategy :sparkle, &:short_version
+  end
+
+  depends_on :macos
+
+  app "PhotoSweeper X.app"
+
+  zap trash: [
+    "~/Library/Application Scripts/com.overmacs.photosweeperpaddle",
+    "~/Library/Containers/com.overmacs.photosweeperpaddle",
+    "~/Library/Preferences/com.overmacs.photosweeperpaddle.plist",
+  ]
+end
