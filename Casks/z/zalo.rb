@@ -1,6 +1,6 @@
 cask "zalo" do
-  version "26.11.10"
-  sha256 "eff7e9c887a1164ae078e919f950b5552ffc3d846f8a63bd12ce88171ba79092"
+  version "26.11.20"
+  sha256 "718d5093a458721dfb0a6d46461eb02058fc239d4890c99a6902455b2d968f36"
 
   url "https://res-download-pc.zadn.vn/mac/ZaloSetup-universal-#{version}.dmg"
   name "Zalo"
@@ -12,9 +12,11 @@ cask "zalo" do
     strategy :header_match
   end
 
-  depends_on :macos
+  depends_on macos: :monterey
 
   app "Zalo.app"
+
+  uninstall quit: "com.vng.zalo"
 
   zap trash: [
     "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.vng.zalo.sfl*",
