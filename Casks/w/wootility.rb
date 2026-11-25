@@ -1,9 +1,9 @@
 cask "wootility" do
   arch arm: "-arm64"
 
-  version "5.4.2"
-  sha256 arm:   "4d4e90b4169990900f7fb9d6aed16ead107aaeba72bed16a68a37d3c1f78912e",
-         intel: "df7258eace27c26de5e27cca1f9cb69fd5feb3dd33c46d1dd92d9d8f3eae5075"
+  version "5.4.3"
+  sha256 arm:   "e331f157c047deca1453f776615ebd64ed62f0208778d40f16216aac48b92a2f",
+         intel: "cbf2df4386c92b583737e998e660c989ebd20fa064deff5de7a942030cbfd3d8"
 
   url "https://wootility-updates.ams3.cdn.digitaloceanspaces.com/wootility-mac/Wootility-#{version}#{arch}.dmg"
   name "Wootility"
@@ -15,11 +15,12 @@ cask "wootility" do
     strategy :electron_builder
   end
 
-  depends_on :macos
+  depends_on macos: :ventura
 
   app "Wootility.app"
 
   zap trash: [
+    "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.wooting.wootility.sfl*",
     "~/Library/Application Support/wootility",
     "~/Library/Logs/wootility",
     "~/Library/Preferences/com.wooting.wootility.plist",
