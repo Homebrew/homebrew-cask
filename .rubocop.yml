@@ -14,8 +14,7 @@ AllCops:
   - Taps/*/*/vendor/**/*
   - "**/.github/copilot-instructions.md"
   - "**/vendor/**/*"
-  SuggestExtensions:
-    rubocop-minitest: false
+  SuggestExtensions: false
 Layout/ArgumentAlignment:
   Exclude:
   - Taps/*/*/*.rb
