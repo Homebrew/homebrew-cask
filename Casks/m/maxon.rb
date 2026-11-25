@@ -46,5 +46,6 @@ cask "maxon" do
     "~/Library/Preferences/Maxon",
     "~/Library/Preferences/net.maxon.app-manager.plist",
     "~/Library/Saved Application State/net.maxon.app-manager.savedState",
+    "~/Library/WebKit/net.maxon.app-manager",
   ]
 end
