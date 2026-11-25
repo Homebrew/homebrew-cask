@@ -1,6 +1,6 @@
 cask "jellybox" do
-  version "2.12.0"
-  sha256 "28c55573e5e8cc322fe13cb51e23a16f64b0c322b66f67a2c187a5c907ce0a82"
+  version "2.13.0"
+  sha256 "0e7515cff2910f491b15dcd592782fddc1bcb767e9bed5c5340b9f05e3c1b472"
 
   url "https://github.com/avdept/JellyBoxPlayer/releases/download/v#{version}/JellyBox-notarized.dmg"
   name "JellyBox"
