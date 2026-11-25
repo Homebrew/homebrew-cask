@@ -1,8 +1,8 @@
 cask "deckset" do
-  version "2.1.0,2823"
-  sha256 "8e61cedaf9b3ad15c218f2142282f64785c9ba5932faf7fbeabadef25097e292"
+  version "2.1.1,2836"
+  sha256 "6a2657bc2ba1dd7843c8c93701cfce436a6795283597121c76a006da588af7ff"
 
-  url "https://dl.decksetapp.com/Deckset+#{version.csv.first}+(#{version.csv.second}).dmg"
+  url "https://dl.decksetapp.com/Deckset%2B#{version.csv.first}%2B(#{version.csv.second}).dmg"
   name "Deckset"
   desc "Presentations from Markdown"
   homepage "https://www.decksetapp.com/"
