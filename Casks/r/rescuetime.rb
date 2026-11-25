@@ -17,7 +17,8 @@ cask "rescuetime" do
 
   app "RescueTime.app"
 
-  uninstall launchctl: "com.rescuetime.RescueTime-Helper"
+  uninstall launchctl: "com.rescuetime.RescueTime-Helper",
+            quit:      "com.rescuetime.RescueTime*"
 
   zap trash: [
     "~/Library/Application Scripts/com.rescuetime.RescueTime-Helper",
