@@ -1,9 +1,9 @@
 cask "smartgit@preview" do
   arch arm: "arm64", intel: "x86_64"
 
-  version "26.2.024,rc"
-  sha256 arm:   "acb97f5e4be50cea4aaf6b966f213cf961dd20ecd5f842c883d0d775d5554515",
-         intel: "319c01b81250d8aa99813b18577fb9bd832519dd880c97a6a28db1072a429db1"
+  version "26.2.025,rc"
+  sha256 arm:   "2d6ba7977034f32732ae489e1b18b6df012f010002695dbda58f97c0a0ca246a",
+         intel: "fda474f9983015ce74512575728b90e7c778b32a3f293974069b42401191ac7c"
 
   url "https://download.smartgit.dev/smartgit/smartgit-#{version.csv.first.dots_to_underscores}-#{version.csv.second}-macos-#{arch}.dmg"
   name "SmartGit"
