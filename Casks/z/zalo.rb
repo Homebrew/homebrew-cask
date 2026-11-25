@@ -16,6 +16,8 @@ cask "zalo" do
 
   app "Zalo.app"
 
+  uninstall quit: "com.vng.zalo"
+
   zap trash: [
     "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.vng.zalo.sfl*",
     "~/Library/Application Support/Zalo",
