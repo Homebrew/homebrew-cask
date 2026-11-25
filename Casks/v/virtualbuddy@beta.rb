@@ -18,6 +18,8 @@ cask "virtualbuddy@beta" do
 
   app "VirtualBuddy.app"
   binary "#{appdir}/VirtualBuddy.app/Contents/MacOS/vctool", target: "vctool"
+  generate_completions_from_executable "#{appdir}/VirtualBuddy.app/Contents/MacOS/vctool",
+                                       "--generate-completion-script"
 
   zap trash: [
     "~/Library/Application Support/VirtualBuddy",
