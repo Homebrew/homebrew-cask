@@ -3,10 +3,10 @@ cask "krita" do
   os macos: "signed"
   url_end = on_system_conditional macos: "dmg", linux: "AppImage"
 
-  version "5.3.4.1"
-  sha256 arm:          "531e261da1fd8d5c468cfcd4eebd16e9edf6ab320e89406d2875f2e43c1148de",
-         intel:        "531e261da1fd8d5c468cfcd4eebd16e9edf6ab320e89406d2875f2e43c1148de",
-         x86_64_linux: "e315dfb3da81cdb8bddc4bb3fcd4d9bacd0630fc7065d8ed07de758b267573f0"
+  version "5.3.5"
+  sha256 arm:          "273f61d6b6a0bfacb21084336cc6522b66c1d74b9f92a59e641b69cd66988175",
+         intel:        "273f61d6b6a0bfacb21084336cc6522b66c1d74b9f92a59e641b69cd66988175",
+         x86_64_linux: "05bfa8e17d61c5f626842892f48c9074503708d1ddd1d87ad841dd2d2af19fa8"
 
   on_macos do
     # Renamed for consistency: app name is different in the Finder and in a shell.
