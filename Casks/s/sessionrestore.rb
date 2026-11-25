@@ -1,5 +1,5 @@
 cask "sessionrestore" do
-  version "4.0"
+  version "4.0.1"
   sha256 :no_check
 
   url "https://sweetpproductions.com/products/sessionrestore/SessionRestore.dmg"
@@ -17,7 +17,11 @@ cask "sessionrestore" do
 
   app "SessionRestore.app"
 
+  uninstall quit: "com.sweetpproductions.SessionRestore"
+
   zap trash: [
+    "~/Library/Application Scripts/com.sweetpproductions.SessionRestore*",
+    "~/Library/Application Scripts/U928YCMMNK.com.sweetpproductions.SessionRestore",
     "~/Library/Containers/com.sweetpproductions.SessionRestore",
     "~/Library/Containers/com.sweetpproductions.SessionRestore.Extension",
     "~/Library/Group Containers/U928YCMMNK.com.sweetpproductions.SessionRestore",
