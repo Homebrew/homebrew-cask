@@ -23,8 +23,7 @@ cask "uuremote" do
     # The postinstall script automatically opens the app. Therefore, we must
     # suppress this behavior to make the cask installation non-interactive.
     terminate_process(
-      "/Applications/UURemote.app",
-      match:           :full,
+      "UURemote",
       attempts:        3,
       must_succeed:    false,
       notices:         [
@@ -46,15 +45,22 @@ cask "uuremote" do
               "/Library/Caches/UURemote",
               "/Library/LaunchAgents/com.netease.uuremote.agent.plist",
               "/Library/LaunchDaemons/com.netease.uuremote.daemon.plist",
+              "/usr/local/bin/uuyc-cli",
             ]
 
   zap trash: [
     "/Users/Shared/UURemote",
     "~/Library/Application Support/com.netease.uuremote",
+    "~/Library/Application Support/com.netease.uuremote.helper",
+    "~/Library/Application Support/com.netease.uuremote.server",
+    "~/Library/Application Support/com.netease.uuremote.updater",
+    "~/Library/Application Support/CrashReporter/UURemote_*.plist",
+    "~/Library/Application Support/CrashReporter/UURemoteServer_*.plist",
     "~/Library/Application Support/UURemote",
     "~/Library/Caches/com.netease.uuremote",
     "~/Library/Caches/com.netease.uuremote.server",
     "~/Library/HTTPStorages/com.netease.uuremote",
+    "~/Library/HTTPStorages/com.netease.uuremote.binarycookies",
     "~/Library/HTTPStorages/com.netease.uuremote.server",
     "~/Library/Preferences/com.netease.uuremote.plist",
     "~/Library/Preferences/com.netease.uuremote.server.plist",
