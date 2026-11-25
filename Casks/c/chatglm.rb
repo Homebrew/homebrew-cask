@@ -20,6 +20,7 @@ cask "chatglm" do
 
   zap trash: [
     "~/Library/Application Support/chatglm",
+    "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.zhipu.chatglm.sfl*",
     "~/Library/Logs/chatglm",
     "~/Library/Preferences/com.zhipu.chatglm.plist",
   ]
