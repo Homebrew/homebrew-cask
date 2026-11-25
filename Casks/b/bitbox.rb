@@ -39,8 +39,23 @@ cask "bitbox" do
   desc "Protect your coins with the latest Swiss made hardware wallet"
   homepage "https://bitbox.swiss/"
 
+  # Not every GitHub release provides a file for macOS, so we check multiple
+  # recent releases instead of only the "latest" release.
+  # https://bitbox.swiss/download/ blocks GitHub's runners, so it can't be used.
   livecheck do
     url :url
-    strategy :github_latest
+    regex(/^BitBox[._-]v?(\d+(?:\.\d+)+)[._-]#{url_end}$/i)
+    strategy :github_releases do |json, regex|
+      json.map do |release|
+        next if release["draft"] || release["prerelease"]
+
+        release["assets"]&.map do |asset|
+          match = asset["name"]&.match(regex)
+          next if match.blank?
+
+          match[1]
+        end
+      end.flatten
+    end
   end
 end
