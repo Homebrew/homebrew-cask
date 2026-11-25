@@ -23,6 +23,9 @@ cask "thor" do
 
   zap trash: [
     "~/Library/Application Scripts/me.alvinzhu.Thor",
+    "~/Library/Caches/me.alvinzhu.Thor",
     "~/Library/Containers/me.alvinzhu.Thor",
+    "~/Library/HTTPStorages/me.alvinzhu.Thor",
+    "~/Library/Preferences/me.alvinzhu.Thor.plist",
   ]
 end
