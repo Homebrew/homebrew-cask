@@ -23,6 +23,7 @@ cask "desktime" do
   uninstall quit: "DeskTime"
 
   zap trash: [
+    "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.desktime.desktime.sfl*",
     "~/Library/Application Support/DeskTime",
     "~/Library/Logs/DeskTime",
     "~/Library/Preferences/com.desktime.DeskTime.plist",
