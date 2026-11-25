@@ -64,6 +64,7 @@ cask "betterdisplay" do
   zap trash: [
     "~/Library/Application Support/BetterDisplay",
     "~/Library/Application Support/BetterDummy",
+    "~/Library/Application Support/pro.betterdisplay.BetterDisplay",
     "~/Library/Caches/pro.betterdisplay.BetterDisplay",
     "~/Library/Caches/SentryCrash/BetterDisplay",
     "~/Library/HTTPStorages/pro.betterdisplay.BetterDisplay",
