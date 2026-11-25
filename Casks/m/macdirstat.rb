@@ -1,6 +1,6 @@
 cask "macdirstat" do
-  version "0.3.0"
-  sha256 "727e3e8a85642d60479153c31a472f6596f045faa037781236c3f401f16e1980"
+  version "0.4.1"
+  sha256 "3e81a72aae518af6b6611bfe383f255846b929b4f65eb3b2f3c9d0e7d73b56cf"
 
   url "https://github.com/phalladar/MacDirStat/releases/download/v#{version}/MacDirStat.zip"
   name "MacDirStat"
