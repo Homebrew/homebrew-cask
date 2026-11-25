@@ -1,6 +1,6 @@
 cask "chatglm" do
-  version "2.0.7"
-  sha256 "1e502d121a7ca0c2796c0d651044a3143b7f84f4c38d0a0abc2c070f5429f836"
+  version "2.0.9"
+  sha256 "9cd4ab2bf1b3e541c8fc303679f46137cddc1888812f64d037a136d48af373d3"
 
   url "https://sfile.chatglm.cn/apk/xinyu/windows/chatglm_#{version}_universal.dmg"
   name "ChatGLM"
