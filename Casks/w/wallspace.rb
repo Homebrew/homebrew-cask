@@ -1,6 +1,6 @@
 cask "wallspace" do
-  version "1.5.1"
-  sha256 "ac3b52dbe675273793256d03a12392a6fdccdf05f46d1d6d5d8cb745e173d61c"
+  version "1.7"
+  sha256 "cb25978f944e9b258dcce62df536c77c36fc992f05b29b706403370464fc1a4f"
 
   url "https://dvivcibhncrefmnjtjeq.supabase.co/functions/v1/download-version?v=#{version}"
   name "Wallspace"
