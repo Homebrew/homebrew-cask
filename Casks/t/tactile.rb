@@ -1,6 +1,6 @@
 cask "tactile" do
-  version "1.1.5"
-  sha256 "13a4fa0d99fb61d76b5224a191a0bb39a92f04c55fd02d9aca0f5bd1a62b9936"
+  version "1.2.0"
+  sha256 "da5679363f4f26c364751d62e15a1d39810cc361d6abce602a424d4bc161a77d"
 
   url "https://github.com/Mason363/Tactile/releases/download/v#{version}/Tactile-#{version}.zip"
   name "Tactile"
