@@ -1,5 +1,5 @@
 cask "ladybird" do
-  version "2026.47.7"
+  version "2026.47.8"
   sha256 "d3647babc442aca475354b19158045cd5b5f40f4be92fe55762be8eb90727ed8"
 
   url "https://download.ladybird.org/macos/#{version}/ladybird-#{version}-macOS-arm64.dmg"
