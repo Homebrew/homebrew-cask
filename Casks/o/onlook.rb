@@ -2,7 +2,7 @@ cask "onlook" do
   arch intel: "/intel"
   arch_livecheck = on_arch_conditional arm: "arm64", intel: "x64"
 
-  version "2.0.6"
+  version "2.0.8"
   sha256 :no_check
 
   url "https://download.onlook.com/latest#{arch}"
