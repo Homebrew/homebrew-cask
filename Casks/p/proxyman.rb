@@ -17,6 +17,8 @@ cask "proxyman" do
 
   app "Proxyman.app"
   binary "#{appdir}/Proxyman.app/Contents/MacOS/proxyman-cli"
+  generate_completions_from_executable "#{appdir}/Proxyman.app/Contents/MacOS/proxyman-cli",
+                                       "--generate-completion-script"
 
   uninstall_postflight_steps do
     delete_keychain_certificates "Proxyman"
