@@ -6,7 +6,7 @@ cask "manictime" do
 
   sha256 arm:          "84e11b1f5a1a66293ae4751ac7e6fdd574438b9a42cf30e6c18fd2b748b714ce",
          intel:        "db08cbbb2aed80aaaff0c03c4a791af73a43a792af7878e389ad38eeaca4fcd9",
-         x86_64_linux: "718359b39f520f9c777815a3b9ffd52b78e7b1b007652fb1e6e6dc7ba505ba68"
+         x86_64_linux: "ecc1e9e640ecb664597db4313cc9609f4a989b457a5930573be4f110808de86d"
 
   on_macos do
     version "2026.3.0.2"
@@ -26,7 +26,7 @@ cask "manictime" do
     ]
   end
   on_linux do
-    version "2026.3.0.1"
+    version "2026.3.1.0"
 
     depends_on arch: :x86_64
     depends_on formula: %w[
