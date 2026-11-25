@@ -22,6 +22,7 @@ cask "filepane" do
     "~/Library/Caches/com.mymixapps.FilePane",
     "~/Library/HTTPStorages/com.mymixapps.FilePane",
     "~/Library/Preferences/com.mymixapps.FilePane.plist",
+    "~/Library/WebKit/com.mymixapps.FilePane",
     "~/Users/Shared/FilePane",
   ]
 end
