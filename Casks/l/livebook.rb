@@ -3,11 +3,11 @@ cask "livebook" do
   os macos: "darwin", linux: "linux"
   url_end = on_system_conditional macos: "dmg", linux: "AppImage"
 
-  version "0.19.10"
-  sha256 arm:          "c234425512ed992acc30eb06febf36707418185dffd1373f71baa810354d430f",
-         intel:        "3226c86444028a4fa464781717ef7af3cd9ab0a3a1fc9c588c4d2e2a35d3adb6",
-         arm64_linux:  "ecbcd18f0909efbe790adbc1472cf6c1c6bd82ef027d2990d6954eec785b4148",
-         x86_64_linux: "7e60b86ab24f1c0fc48bd9fb82088e1f27de501e8e68f0ba3171176f62e5f34c"
+  version "0.19.11"
+  sha256 arm:          "d862f6751419237be5c666edea008a9224d436512a382e4762662e4f82259af1",
+         intel:        "2640f2db5c33e0fda4ba9e9e796b89acadfdb3f5f0d06c86e1bf7d3b5bb2bc53",
+         arm64_linux:  "e63c1cc31403559510f3adfa9396fb2ec7c97ea7fc652e218b6ca4a5ef91718e",
+         x86_64_linux: "f0034cbac4a1a301bf846bd90de384810ff8729e2386837b070717d5f311253b"
 
   on_macos do
     app "Livebook.app"
