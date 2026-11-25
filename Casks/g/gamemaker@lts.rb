@@ -1,6 +1,6 @@
 cask "gamemaker@lts" do
-  version "2026.1.0.27"
-  sha256 "b2b1a225576013d647e8eb4279033d5ddcf295b978166ed8befe194db8d4ef22"
+  version "2026.1.1.34"
+  sha256 "1db60f9b301bdfa5f86c210335ce51ddc620810296c3cff13f115526bfd57701"
 
   url "https://gms.yoyogames.com/GameMaker-#{version}.pkg"
   name "GameMaker LTS #{version.major}"
