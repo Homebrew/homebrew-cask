@@ -21,8 +21,12 @@ cask "keymapp" do
 
   zap trash: [
     "~/Library/Application Support/.keymapp",
+    "~/Library/Application Support/keymapp",
     "~/Library/Caches/com.zsa.io.Keymapp",
+    "~/Library/Caches/io.zsa.keymapp",
     "~/Library/Preferences/com.zsa.io.Keymapp.plist",
+    "~/Library/Preferences/io.zsa.keymapp.plist",
     "~/Library/WebKit/com.zsa.io.Keymapp",
+    "~/Library/WebKit/io.zsa.keymapp",
   ]
 end
