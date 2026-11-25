@@ -1,18 +1,18 @@
 cask "yubico-authenticator" do
-  version "7.4.1"
-  sha256 "9adb0de91b139003c86903296d042053a78f3f60ead68388341bf1b1bc2e1ef3"
+  version "7.5.0"
+  sha256 "551fdf19e17a7848ad45837b90896327c7fd0449d569e781db8627fc06a1540b"
 
-  url "https://developers.yubico.com/yubioath-flutter/Releases/yubico-authenticator-#{version}-mac.dmg"
+  url "https://developers.yubico.com/yubioath-flutter/Releases/yubico-authenticator-#{version}-macos.dmg"
   name "Yubico Authenticator"
   desc "Full-featured companion app to the YubiKey"
   homepage "https://developers.yubico.com/yubioath-flutter/"
 
   livecheck do
     url "https://developers.yubico.com/yubioath-flutter/Releases/"
-    regex(/href=.*?yubico[._-]authenticator[._-]v?(\d+(?:\.\d+)+)[._-]mac\.dmg/i)
+    regex(/href=.*?yubico[._-]authenticator[._-]v?(\d+(?:\.\d+)+)[._-]mac(?:os)?\.dmg/i)
   end
 
-  depends_on :macos
+  depends_on macos: :monterey
 
   app "Yubico Authenticator.app"
 
