@@ -18,6 +18,7 @@ cask "opgg" do
   app "OP.GG.app"
 
   zap trash: [
+    "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/desktop.op.gg.sfl*",
     "~/Library/Application Support/opgg-electron-app",
     "~/Library/Caches/desktop.op.gg",
     "~/Library/Caches/desktop.op.gg.ShipIt",
