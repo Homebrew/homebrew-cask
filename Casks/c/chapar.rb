@@ -8,7 +8,7 @@ cask "chapar" do
   url "https://github.com/chapar-rest/chapar/releases/download/v#{version}/chapar-macos-v#{version}-#{arch}.dmg"
   name "Chapar"
   desc "Native API client"
-  homepage "https://github.com/chapar-rest/chapar"
+  homepage "https://chapar.rest/"
 
   depends_on :macos
 
