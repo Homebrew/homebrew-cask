@@ -27,6 +27,7 @@ cask "kdocs" do
   app "金山文档.app"
 
   zap trash: [
+    "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.kingsoft.kdocs.mac.sfl*",
     "~/Library/Preferences/com.kingsoft.kdocs.mac.plist",
     "~/Library/Saved Application State/com.kingsoft.kdocs.mac.savedState",
   ]
