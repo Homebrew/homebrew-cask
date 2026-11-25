@@ -2,7 +2,7 @@ cask "keymapp" do
   version "2.1.0"
   sha256 :no_check
 
-  url "https://oryx.nyc3.cdn.digitaloceanspaces.com/keymapp/keymapp-latest.dmg"
+  url "https://downloads.zsa.io/files/keymapp/#{version}/Keymapp_#{version}_universal.dmg"
   name "Keymapp"
   desc "ZSA keyboard firmware flasher"
   homepage "https://www.zsa.io/flash"
