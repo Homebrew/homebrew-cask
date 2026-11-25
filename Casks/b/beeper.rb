@@ -5,11 +5,11 @@ cask "beeper" do
                                    linux: on_arch_conditional(arm: "-arm64", intel: "-x86_64")
   url_end = on_system_conditional macos: "-mac.zip", linux: ".AppImage"
 
-  version "4.3.340"
-  sha256 arm:          "c4485b51af4508362c62605642c4199ea6d87c790fa701d0574435b9574101ba",
-         intel:        "78e76b46995bd8897d1c282581e7267cfd2386697067a0aba9a09531fad689a4",
-         arm64_linux:  "d7644ce078572140dfb88f65d87e8792a7e9b44600a38a60bc6a7d5f50d67254",
-         x86_64_linux: "cb2d7e1a69f30d902bd3ca9c9f9020ead48e459bcc20ef8b0cbb0460b82b0dee"
+  version "4.3.352"
+  sha256 arm:          "fa88c38a6ecaf40b320b372880ebed2cbafd9a7ff97be59efa95bb3e8e402524",
+         intel:        "cc5fb5c7ce9720987747de9f3e0ea667cb6c5b77772019625a81ab3b44df0b1a",
+         arm64_linux:  "3ba65309f90bd5d4efbf4135bf5aed413fba8cba4ae8b7abafbeeff83078827a",
+         x86_64_linux: "b642f83d708d4e49c4a5d1e749d86c5e5cced78d6d0b7d5a937c97eba755e048"
 
   on_macos do
     depends_on macos: :ventura
