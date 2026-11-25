@@ -3,11 +3,11 @@ cask "filen" do
   os macos: "mac", linux: "linux"
   url_end = on_system_conditional macos: "dmg", linux: "AppImage"
 
-  version "3.0.54"
-  sha256 arm:          "da2228e126e7fe1356e7b8513edc83312a7f183e8e0679cb1a9ab722a1632cc1",
-         intel:        "ebd19b55e4e1308b0fedc49a752996e9cce3aaafbf7c1b9820d4d9947c0a69e2",
-         arm64_linux:  "6dabe1ac2ebfb496fd208ecc28d905b56a9a76c90443982769fc758d56136600",
-         x86_64_linux: "bb6c26cca95bec0abe4fb9a95a1a5c6d5e08b67204a0c24f2bafe0bfe33d43e3"
+  version "3.0.55"
+  sha256 arm:          "74076ba28b26b87996b783c875783cbce46d18815c4f3a2bedafb41399fe9fee",
+         intel:        "5c2077ea7b0a2a7af3a3886c55b82347c55fb06d6d7cb265f516eb3871741eff",
+         arm64_linux:  "aac5dc93301d8e13ceeb677ff6c4e100517fe6f0bfd44c09e9aefa9bb6e484da",
+         x86_64_linux: "6d7d2e6e7b8b3bc46022da84d3d16b693e808cee7a32f734a54699851c7abdd7"
 
   on_macos do
     auto_updates true
