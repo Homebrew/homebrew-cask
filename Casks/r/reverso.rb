@@ -1,6 +1,6 @@
 cask "reverso" do
-  version "2.17.2,710"
-  sha256 "3aa90dadd43faa993a64a230449fc1d6aa6cfecc0551b822842ce043c7db77b6"
+  version "2.18.0,722"
+  sha256 "7f702ab3b79faa4b7427e8779de16933252c13000b931933d4b567d53af54a5b"
 
   url "https://cdn.reverso.net/download/reverso/desktop/macos/distrib/Reverso_#{version.csv.first}.#{version.csv.second}.zip"
   name "Reverso"
@@ -19,6 +19,7 @@ cask "reverso" do
 
   uninstall launchctl: "com.softissimo.ReversoContext.Auto-Launcher-Reverso",
             quit:      [
+              "com.softissimo.ReversoContext.Auto-Launcher-Reverso",
               "com.softissimo.ReversoContext.macosapp",
               "com.softissimo.ReversoContext.macosapp.helper",
               "com.softissimo.ReversoContext.Reverso-Quick-Search",
@@ -26,10 +27,17 @@ cask "reverso" do
 
   zap trash: [
     "~/Library/Application Scripts/com.softissimo.ReversoContext.*",
+    "~/Library/Application Scripts/DDF2GQLETS.com.softissimo.ReversoExchange",
     "~/Library/Application Scripts/group.com.softissimo.ReversoExchange",
     "~/Library/Caches/com.softissimo.ReversoContext.macosapp",
+    "~/Library/Caches/com.softissimo.ReversoContext.Reverso-Quick-Search",
     "~/Library/Containers/com.softissimo.ReversoContext.*",
+    "~/Library/Group Containers/DDF2GQLETS.com.softissimo.ReversoExchange",
     "~/Library/Group Containers/group.com.softissimo.ReversoExchange",
+    "~/Library/HTTPStorages/com.softissimo.ReversoContext.macosapp*",
     "~/Library/Preferences/com.softissimo.ReversoContext.macosapp.plist",
+    "~/Library/Preferences/com.softissimo.ReversoContext.Reverso-Quick-Search.plist",
+    "~/Library/WebKit/com.softissimo.ReversoContext.macosapp",
+    "~/Library/WebKit/com.softissimo.ReversoContext.Reverso-Quick-Search",
   ]
 end
