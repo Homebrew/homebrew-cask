@@ -11,6 +11,8 @@ cask "snapzy" do
   depends_on macos: :ventura
 
   app "Snapzy.app"
+  binary "#{appdir}/Snapzy.app/Contents/Helpers/snapzy"
+  generate_completions_from_executable "#{appdir}/Snapzy.app/Contents/Helpers/snapzy", "--generate-completion-script"
 
   zap trash: [
     "~/.config/snapzy",
