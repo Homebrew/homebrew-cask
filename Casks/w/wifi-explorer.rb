@@ -20,6 +20,7 @@ cask "wifi-explorer" do
   uninstall quit: "wifiexplorer"
 
   zap trash: [
+    "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/wifiexplorer.sfl*",
     "~/Library/Application Support/WiFi Explorer",
     "~/Library/Caches/wifiexplorer",
     "~/Library/Cookies/wifiexplorer.binarycookies",
