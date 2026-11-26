@@ -1,6 +1,6 @@
 cask "lattice" do
-  version "0.20.0"
-  sha256 "4949697925a15bd0142b0c76b0e473c8d121b19e0718a5ac24a520c6ae83f8fe"
+  version "0.20.1"
+  sha256 "39605730acceaa0f0f38641487084d8d13c2126ac93e78d4c32f8df3f0e4e975"
 
   url "https://github.com/leo1oel/lattice/releases/download/v#{version}/Lattice_#{version}_aarch64.dmg"
   name "Lattice"
