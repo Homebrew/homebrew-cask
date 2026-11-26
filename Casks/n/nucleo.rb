@@ -20,6 +20,7 @@ cask "nucleo" do
   app "Nucleo.app"
 
   zap trash: [
+    "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/co.ambercreative.nucleo.sfl*",
     "~/Library/Application Support/Nucleo",
     "~/Library/Logs/Nucleo",
     "~/Library/Preferences/co.ambercreative.nucleo.plist",
