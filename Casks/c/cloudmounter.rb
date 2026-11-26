@@ -1,5 +1,5 @@
 cask "cloudmounter" do
-  version "4.18"
+  version "4.19"
   sha256 :no_check
 
   url "https://cdn.electronic.us/products/cloudmounter/mac/download/cloudmounter.dmg"
