@@ -1,6 +1,6 @@
 cask "radix" do
-  version "1.8.0"
-  sha256 "4105b6b830562c1049390d0052488e38fc6cfd822f2bada286997fee4533b1ad"
+  version "1.9.0"
+  sha256 "6bb66389c4da2e7f322bf91e180fc92566b4658209809a44320ad1c508db55e1"
 
   url "https://github.com/colinvkim/Radix/releases/download/v#{version}/Radix.zip"
   name "Radix"
