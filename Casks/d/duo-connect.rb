@@ -29,8 +29,4 @@ cask "duo-connect" do
         "~/Liibrary/Logs/Duo/Duoconnect",
       ],
       rmdir: "~/Library/Logs/Duo"
-
-  caveats do
-    requires_rosetta
-  end
 end
