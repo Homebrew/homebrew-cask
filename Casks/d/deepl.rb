@@ -29,8 +29,8 @@ cask "deepl" do
     end
   end
   on_sequoia :or_newer do
-    version "26.11.13023090762"
-    sha256 "85aacdd551fc4d876536f29322c1787c6089fec2bd132666bc3b76d5d043a88f"
+    version "26.11.23117384962"
+    sha256 "dfa27ea2700e02ef8cc84fcc9c62386b7a6f70766dea6e7a85b72fc6f90245b0"
 
     url "https://www.deepl.com/macos/download/#{version.major_minor}/#{version.patch}/DeepL.dmg"
     livecheck do
