@@ -12,18 +12,14 @@ jobs:
     permissions:
       contents: read
       pull-requests: write
-      statuses: write
     steps:
       - name: Check commit format
         uses: Homebrew/actions/check-commit-format@ceec4e8419bb3c97ce96e9dda7738499ed5f869d # 2026.11.14.1
-        with:
-          token: ${{ secrets.HOMEBREW_GITHUB_PUBLIC_REPO_TOKEN }}
 
       - name: Label pull request
         uses: Homebrew/actions/label-pull-requests@ceec4e8419bb3c97ce96e9dda7738499ed5f869d # 2026.11.14.1
         if: always()
         with:
-          token: ${{secrets.HOMEBREW_GITHUB_PUBLIC_REPO_TOKEN}}
           def: |
             - label: cask deprecated
               path: Casks/.+
