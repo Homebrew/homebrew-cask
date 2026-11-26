@@ -28,6 +28,7 @@ cask "wrike" do
   app "Wrike for Mac.app"
 
   zap trash: [
+    "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.wrike.wrike.sfl*",
     "~/Library/Application Support/Wrike",
     "~/Library/Logs/Wrike",
     "~/Library/Preferences/com.wrike.Wrike.plist",
