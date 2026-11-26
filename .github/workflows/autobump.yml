@@ -114,6 +114,8 @@ jobs:
           branch: ${{ steps.bump.outputs.branch }}
           directory: ${{ steps.setup.outputs.repository-path }}
           tries: 1
+          force: ${{ steps.sign.outputs.force }}
+          no_lease: ${{ steps.sign.outputs.force }}
           token: ${{ secrets.HOMEBREW_CASK_REPO_WORKFLOW_TOKEN }}
 
       - name: Open pull request
