@@ -51,8 +51,8 @@ cask "propresenter@beta" do
     end
   end
   on_sonoma :or_newer do
-    version "22.1,369164319"
-    sha256 "9be2aee9ebb48bb770bd78266b443e09124a3c4595dff43196643189ef9f0a35"
+    version "22.1,369164326"
+    sha256 "a9f5d8602a1f65737aa3551c59ac98066aadd95df6cf1c1c121fe7e5a860f785"
 
     url "https://renewedvision.com/downloads//propresenter/mac/ProPresenter_#{version.csv.first}_#{version.csv.second}.zip"
 
