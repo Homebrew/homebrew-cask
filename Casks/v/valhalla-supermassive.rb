@@ -8,7 +8,12 @@ cask "valhalla-supermassive" do
   homepage "https://valhalladsp.com/shop/reverb/valhalla-supermassive/"
 
   livecheck do
-    skip "Livecheck is unreachable in autobump environment"
+    url "https://valhalladsp.com/demos-downloads/",
+        user_agent: :browser
+    regex(/ValhallaSupermassiveOSX[._-]v?(\d+(?:[._]\d+)+(?:v\d+)?)\.dmg/i)
+    strategy :page_match do |page, regex|
+      page.scan(regex).map { |match| match&.first&.tr("_", ".") }
+    end
   end
 
   no_autobump! because: "livecheck is unreachable in autobump environment"
