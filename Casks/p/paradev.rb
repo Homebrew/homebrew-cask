@@ -1,43 +1,52 @@
-cask "superset" do
+cask "paradev" do
   arch arm: "arm64", intel: on_system_conditional(macos: "x64", linux: "x86_64")
   os macos: "dmg", linux: "AppImage"
 
-  version "2.0.11"
-  sha256 arm:          "1a24832fb56575552291ffb960455f8d00a77b0a33b5abc8f95753307a578d42",
-         intel:        "932460324a78c2c299cd74bd7bc96fbf80715497cfeff732a2996b3537f862c2",
-         x86_64_linux: "85aa939d521d14105cb85029fd4ab5a40b9ec5111ce4226532f44ee01fae0762"
+  version "2.0.12"
+  sha256 arm:          "fa223394efd8bd7f6e6520c86cb18af888edab0f9df9a49d275498362dd787e7",
+         intel:        "37142496a770b8e04a4a9eb6fc58a09dac813534666a147b91d37afaa0fffbb7",
+         x86_64_linux: "90eb8a1230c6e522cd7f2019815e4681a8c3f05e05a478a4709fd246004a6e4b"
 
   on_macos do
     depends_on macos: :ventura
 
-    app "Superset.app"
+    app "Paradev.app"
 
     uninstall quit: "com.superset.desktop"
 
     zap trash: [
           "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.superset.desktop.sfl*",
+          "~/Library/Application Support/Paradev",
           "~/Library/Application Support/Superset",
           "~/Library/Caches/com.superset.desktop",
           "~/Library/HTTPStorages/com.superset.desktop",
+          "~/Library/Logs/Paradev",
           "~/Library/Logs/Superset",
           "~/Library/Preferences/com.superset.desktop.plist",
           "~/Library/Saved Application State/com.superset.desktop.savedState",
         ],
-        rmdir: "~/.superset"
+        rmdir: [
+          "~/.paradev",
+          "~/.superset",
+        ]
   end
   on_linux do
     depends_on arch: :x86_64
 
-    app_image "Superset-x86_64.AppImage", target: "Superset.AppImage"
+    app_image "Paradev-x86_64.AppImage", target: "Paradev.AppImage"
 
     zap trash: [
           "~/.cache/@supersetdesktop-updater",
+          "~/.config/Paradev",
           "~/.config/Superset",
         ],
-        rmdir: "~/.superset"
+        rmdir: [
+          "~/.paradev",
+          "~/.superset",
+        ]
   end
 
-  url "https://github.com/ParadevAI/Paradev/releases/download/desktop-v#{version}/Superset-#{arch}.#{os}"
+  url "https://github.com/ParadevAI/Paradev/releases/download/desktop-v#{version}/Paradev-#{arch}.#{os}"
   name "Paradev"
   name "Superset"
   desc "Workspace for running coding agents in parallel"
