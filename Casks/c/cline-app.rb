@@ -1,6 +1,6 @@
 cask "cline-app" do
-  version "0.0.50"
-  sha256 "363f0fc43b123a5619a931372869934aa967345c51ff08ab8667027b8f69306f"
+  version "0.0.51"
+  sha256 "a7b7aee9056b66a5fb5e2308d303bee383d7bf1279bf1629b05d297523397930"
 
   url "https://github.com/cline/cline/releases/download/desktop-v#{version}/Cline_#{version}_universal.dmg"
   name "Cline"
