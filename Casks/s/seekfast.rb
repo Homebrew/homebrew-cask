@@ -1,6 +1,6 @@
 cask "seekfast" do
-  version "7.4"
-  sha256 "446cf92a45b830f802b32e20204b42464aa242b213bec4adc9be400c1e8bb17d"
+  version "7.5"
+  sha256 "262f56f6061a34af08a93f589d3e7ef67346b1a6add7fb94504fc9674f1e1e3e"
 
   url "https://seekfast.org/files_933/SeekFast_#{version}.dmg"
   name "SeekFast"
