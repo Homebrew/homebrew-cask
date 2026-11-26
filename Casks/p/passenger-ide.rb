@@ -1,9 +1,9 @@
 cask "passenger-ide" do
   arch arm: "arm64", intel: "x64"
 
-  version "0.4.4"
-  sha256 arm:   "6fe646476804d0e6fb01c1d025898d6964e3fc858c4ab487484320cfd16fe1c7",
-         intel: "107ffc8c797ec8f180a3c5aa8ac4fa077c0e33002a6d3a5aeee61ff719ea35a0"
+  version "0.4.5"
+  sha256 arm:   "b8f15ab610d118ff65214f6bac4387bb89b6ce67a0e0841eb488984e815dbcf8",
+         intel: "cef760e3869048938f115fc1a0872d375f1c8adbbd0c769a4e6f9618cc77b7ec"
 
   url "https://github.com/Zaneris/passenger/releases/download/v#{version}/Passenger-macos-#{arch}.dmg"
   name "Passenger"
