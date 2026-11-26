@@ -1,5 +1,5 @@
 cask "jiba" do
-  version "2.0.1,78"
+  version "2.0.2,79"
   sha256 :no_check # required as upstream package can be updated in-place
 
   url "https://hee.ink/updates/stable/JiBA-#{version.csv.first}.dmg"
