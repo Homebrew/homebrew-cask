@@ -1,4 +1,4 @@
-cask "superset" do
+cask "paradev" do
   arch arm: "arm64", intel: on_system_conditional(macos: "x64", linux: "x86_64")
   os macos: "dmg", linux: "AppImage"
 
@@ -33,7 +33,7 @@ cask "superset" do
   on_linux do
     depends_on arch: :x86_64
 
-    app_image "Superset-x86_64.AppImage", target: "Superset.AppImage"
+    app_image "Paradev-x86_64.AppImage", target: "Paradev.AppImage"
 
     zap trash: [
           "~/.cache/@supersetdesktop-updater",
@@ -46,7 +46,7 @@ cask "superset" do
         ]
   end
 
-  url "https://github.com/ParadevAI/Paradev/releases/download/desktop-v#{version}/Superset-#{arch}.#{os}"
+  url "https://github.com/ParadevAI/Paradev/releases/download/desktop-v#{version}/Paradev-#{arch}.#{os}"
   name "Paradev"
   name "Superset"
   desc "Workspace for running coding agents in parallel"
