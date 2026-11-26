@@ -1,0 +1,14 @@
+Casks/b/blockstream.rb
+  h_9df9c32c3f321d 11
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.5",
+  "base_commit_sha": "218010b573d4801d38132034fabf83d8114a4723",
+  "prompts": {},
+  "humans": {
+    "h_9df9c32c3f321d": {
+      "author": "Rui Chen <rui@chenrui.dev>"
+    }
+  }
+}
