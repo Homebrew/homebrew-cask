@@ -1,6 +1,6 @@
 cask "macwhisper" do
-  version "15.12,1596"
-  sha256 "c2177b30a6138b395c0621dbe12e9598f548d3186d574ae572edece09be030c7"
+  version "16.0,1604"
+  sha256 "ab083978791fbc390c1da7fdf671f783f4aaa8977a1c4ee675696047fe3a57b3"
 
   download_suffix = "_#{version.csv.third}" if version.csv.third
   url "https://cdn.macwhisper.com/macwhisper/MacWhisper-#{version.csv.second}#{download_suffix}.zip"
