@@ -23,7 +23,7 @@ cask "wrike" do
     end
   end
 
-  depends_on macos: :monterey
+  depends_on macos: :ventura
 
   app "Wrike for Mac.app"
 
