@@ -20,6 +20,7 @@ cask "weftcut" do
   binary "#{appdir}/WeftCut.app/Contents/Resources/cli/weftcut"
 
   zap trash: [
+    "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/dev.weftcut.desktop.sfl*",
     "~/Library/Application Support/WeftCut",
     "~/Library/Caches/dev.weftcut.desktop",
     "~/Library/Caches/dev.weftcut.desktop.ShipIt",
