@@ -18,8 +18,14 @@ cask "docker-desktop" do
   homepage "https://www.docker.com/products/docker-desktop"
 
   livecheck do
-    url "https://desktop.docker.com/mac/main/#{arch}/appcast.xml"
-    strategy :sparkle
+    url "https://docs.docker.com/desktop/release-notes.md"
+    regex(%r{^## (\d+(?:\.\d+){2})\s.*?desktop\.docker\.com/mac/main/#{arch}/(\d+)/Docker\.dmg}m)
+    strategy :page_match do |page, regex|
+      match = page.match(regex)
+      next if match.blank?
+
+      "#{match[1]},#{match[2]}"
+    end
   end
 
   auto_updates true
