@@ -1,6 +1,6 @@
 cask "yandex-document" do
-  version "1.1.0"
-  sha256 "4a28cce408322aedd8faa8d2344ba7fc670f256af8e3ebed23f17da0fff733c0"
+  version "1.2.7"
+  sha256 "6aa81950d0e3865a143cddc29db4a11158a1a69438aa31d911a4a23933405d87"
 
   url "https://cdn.docs.yandex.net/releases/public/#{version}/macos/universal/yandex-document.pkg"
   name "Yandex Document"
