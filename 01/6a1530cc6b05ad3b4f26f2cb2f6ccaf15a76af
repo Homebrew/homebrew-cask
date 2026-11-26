@@ -1,0 +1,14 @@
+Casks/s/sizzy.rb
+  h_9df9c32c3f321d 4
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.5",
+  "base_commit_sha": "016a1530cc6b05ad3b4f26f2cb2f6ccaf15a76af",
+  "prompts": {},
+  "humans": {
+    "h_9df9c32c3f321d": {
+      "author": "Rui Chen <rui@chenrui.dev>"
+    }
+  }
+}
