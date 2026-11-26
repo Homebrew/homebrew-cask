@@ -1,9 +1,9 @@
 cask "irbis-zen" do
   arch arm: "arm64", intel: "amd64"
 
-  version "0.29.0"
-  sha256 arm:   "699eb5547bbca34999b200eccf8c5bf61ad06d0a948981e7560f9ec5884de8cf",
-         intel: "fd41f14b1bbc8d4c020a128674db6b4edaf54efbff56ce1a6a6e407c84f1d771"
+  version "0.30.0"
+  sha256 arm:   "d8503e2a3bc51a3e3a5325a1db58588f847c98b95344e6777050c2c7e434e712",
+         intel: "d9181622f306fef61da51105539daa559bab0f1a9c00c71e2973b8c273764792"
 
   url "https://github.com/irbis-sh/zen-desktop/releases/download/v#{version}/Zen_darwin_#{arch}_noselfupdate.tar.gz"
   name "Zen"
