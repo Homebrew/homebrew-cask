@@ -1,6 +1,6 @@
 cask "anomaly-spaceman" do
-  version "0.3.6,2e11a039b0829c43c750c9bd70a3186d69ea1992b0c1b52068bae21351f0f443"
-  sha256 "2e11a039b0829c43c750c9bd70a3186d69ea1992b0c1b52068bae21351f0f443"
+  version "0.3.7,3cc8f44a3ed93fbc8a0f08ff587e98bc9ffe253217f566090dad2fa5feab8f86"
+  sha256 "3cc8f44a3ed93fbc8a0f08ff587e98bc9ffe253217f566090dad2fa5feab8f86"
 
   url "https://anoma.ly/release/spaceman/files/#{version.csv.second}/Spaceman.zip"
   name "Spaceman"
