@@ -18,7 +18,7 @@ cask "archivewebpage" do
       "~/Library/Caches/net.webrecorder.archivewebpage.ShipIt",
       "~/Library/HTTPStorages/net.webrecorder.archivewebpage",
       "~/Library/Logs/ArchiveWeb.page",
-      "~/Library/Preferences/net.webrecorder.archivewebpage.plst",
+      "~/Library/Preferences/net.webrecorder.archivewebpage.plist",
       "~/Library/Saved Application State/net.webrecorder.archivewebpage.savedState",
     ]
   end
