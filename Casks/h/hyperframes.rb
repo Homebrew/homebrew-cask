@@ -1,9 +1,9 @@
 cask "hyperframes" do
   arch arm: "arm64", intel: "x64"
 
-  version "1294,470877026"
-  sha256 arm:   "7536b6ada47b856c2be476d36f09a2e60b72fb285a7ea1cf74f5f64c7f18fefd",
-         intel: "c601955118b2caf60451cec3d2f7b4115b3f078f812a9e2755cef45658607983"
+  version "1301,470877026"
+  sha256 arm:   "999ac1adf5871b62c098163b120bd092e52fbf7212b0654a8fa28fa2f556bf46",
+         intel: "2c6cd5c813339bf59d510f99815a6fd8808d9ed0fca6a4b75953677935d882a5"
 
   url "https://static.heygen.ai/hyperframes-oss/desktop/HyperFrames-b#{version.csv.first}-#{version.csv.second}-#{arch}.zip"
   name "HyperFrames"
