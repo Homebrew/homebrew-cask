@@ -1,6 +1,6 @@
 cask "lumo" do
-  version "0.5.9"
-  sha256 "637afbe66119bfbc9f5b0cc134ad62b5b12564878ff4641f5ceea81c86df5cda"
+  version "0.5.10"
+  sha256 "87205f30036d6e9463d08c5db8ef34c2e9c2b74e9d34e44f3ea995f18932e50d"
 
   url "https://proton.me/download/lumo/darwin/#{version}/Lumo-#{version}.dmg"
   name "Lumo"
@@ -19,7 +19,7 @@ cask "lumo" do
   end
 
   auto_updates true
-  depends_on :macos
+  depends_on macos: :ventura
 
   app "Lumo.app"
 
