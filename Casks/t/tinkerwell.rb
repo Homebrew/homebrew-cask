@@ -22,6 +22,7 @@ cask "tinkerwell" do
 
   zap trash: [
     "~/.config/tinkerwell",
+    "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/de.beyondco.tinkerwell.sfl*",
     "~/Library/Application Support/Tinkerwell",
     "~/Library/Caches/de.beyondco.tinkerwell",
     "~/Library/Caches/de.beyondco.tinkerwell.ShipIt",
