@@ -1,6 +1,11 @@
 name: Bump casks on schedule or request
 
 on:
+  push:
+    branches:
+      - main
+    paths:
+      - .github/workflows/autobump.yml
   workflow_dispatch:
     inputs:
       casks:
@@ -11,49 +16,112 @@ on:
     - cron: "23 */3 * * *"
 
 concurrency:
-  group: autobump-${{ inputs.casks && github.run_id || 'scheduled' }}
+  group: autobump-${{ case(!!inputs.casks, github.run_id, 'scheduled') }}
   cancel-in-progress: true
 
 permissions:
   contents: read
+  pull-requests: read
+
+defaults:
+  run:
+    shell: bash -xeuo pipefail {0}
 
 jobs:
   autobump:
-    if: github.repository == 'Homebrew/homebrew-cask'
+    if: github.repository_owner == 'Homebrew' && github.ref == 'refs/heads/main'
+    outputs:
+      casks: ${{ steps.bump.outputs.casks }}
+      artifact: ${{ steps.upload.outputs.artifact-id }}
+    runs-on: macos-26
     env:
       HOMEBREW_DEVELOPER: 1
-    runs-on: macos-26
     steps:
       - name: Set up Homebrew
-        id: set-up-homebrew
         uses: Homebrew/actions/setup-homebrew@ceec4e8419bb3c97ce96e9dda7738499ed5f869d # 2026.11.14.1
         with:
           core: true
           cask: true
 
+      - run: brew config
+
+      - name: Bump casks
+        id: bump
+        env:
+          HOMEBREW_TEST_BOT_AUTOBUMP: 1
+        run: brew bump --casks --prepare-prs=bumps.json
+
+      - name: Upload bumps
+        if: ${{ !cancelled() && steps.bump.outputs.casks != '' }}
+        id: upload
+        uses: actions/upload-artifact@cf430e030ddbb5b0abf93d22962f4752f3646cd9 # v7.0.2
+        with:
+          path: bumps.json
+          archive: false
+          overwrite: true
+          retention-days: 1
+
+  publish:
+    needs: autobump
+    if: ${{ !cancelled() && needs.autobump.outputs.artifact != '' }}
+    runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+      matrix:
+        cask: ${{ fromJSON(needs.autobump.outputs.casks) }}
+    steps:
+      - name: Set up Homebrew
+        id: setup
+        uses: Homebrew/actions/setup-homebrew@ceec4e8419bb3c97ce96e9dda7738499ed5f869d # 2026.11.14.1
+        with:
+          core: false
+          cask: true
+
+      - uses: actions/download-artifact@9000827ccba6bdab643e8b6fd33ac0654aef8333 # v8.0.2
+        with:
+          name: bumps.json
+          skip-decompress: true
+
       - name: Configure Git user
         uses: Homebrew/actions/git-user-config@ceec4e8419bb3c97ce96e9dda7738499ed5f869d # 2026.11.14.1
         with:
-          username: ${{ (github.event_name == 'workflow_dispatch' && github.actor) || 'BrewTestBot' }}
+          username: ${{ case(github.event_name == 'workflow_dispatch', github.actor, 'BrewTestBot') }}
+
+      - name: Prepare branch
+        id: bump
+        env:
+          CASK: ${{ matrix.cask }}
+        run: brew bump --casks --commit-pr-from=bumps.json -- "$CASK"
 
       - name: Set up commit signing
+        if: steps.bump.outputs.branch
         uses: Homebrew/actions/setup-commit-signing@ceec4e8419bb3c97ce96e9dda7738499ed5f869d # 2026.11.14.1
         with:
           signing_key: ${{ secrets.BREWTESTBOT_SSH_SIGNING_KEY }}
 
-      - name: Bump casks
-        id: autobump
+      - name: Sign commits
+        id: sign
+        if: steps.bump.outputs.branch
         env:
-          HOMEBREW_TEST_BOT_AUTOBUMP: 1
-          HOMEBREW_GITHUB_API_TOKEN: ${{ secrets.HOMEBREW_CASK_REPO_WORKFLOW_TOKEN }}
           HOMEBREW_GIT_COMMITTER_NAME: BrewTestBot
           HOMEBREW_GIT_COMMITTER_EMAIL: 1589480+BrewTestBot@users.noreply.github.com
-          CASKS: ${{ inputs.casks }}
-        continue-on-error: true
-        run: |
-          BREW_BUMP=(brew bump --no-fork --open-pr --casks)
-          if [[ -n "${CASKS-}" ]]; then
-            xargs "${BREW_BUMP[@]}" <<<"${CASKS}"
-          else
-            "${BREW_BUMP[@]}" --auto --tap=Homebrew/cask
-          fi
+        run: brew bump --casks --sign-pr
+
+      - name: Push branch
+        if: steps.sign.outputs.push
+        uses: Homebrew/actions/git-try-push@ceec4e8419bb3c97ce96e9dda7738499ed5f869d # 2026.11.14.1
+        with:
+          branch: ${{ steps.bump.outputs.branch }}
+          directory: ${{ steps.setup.outputs.repository-path }}
+          tries: 1
+          token: ${{ secrets.HOMEBREW_CASK_REPO_WORKFLOW_TOKEN }}
+
+      - name: Open pull request
+        if: steps.bump.outputs.branch
+        uses: Homebrew/actions/create-pull-request@ceec4e8419bb3c97ce96e9dda7738499ed5f869d # 2026.11.14.1
+        with:
+          head: ${{ steps.bump.outputs.branch }}
+          base: main
+          title: ${{ fromJSON(steps.bump.outputs.pr).title }}
+          body: ${{ fromJSON(steps.bump.outputs.pr).body }}
+          token: ${{ secrets.HOMEBREW_CASK_REPO_WORKFLOW_TOKEN }}
