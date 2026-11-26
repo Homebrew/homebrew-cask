@@ -1,6 +1,6 @@
 cask "cleeen" do
-  version "0.12.3"
-  sha256 "3477cf00d6cef05ba0469fa4551243cc734c8a39658823529bd743e65b999d4b"
+  version "0.13.0"
+  sha256 "3bf51c9a859e4dc59be4bdf69644a5560257f640c8603eff67468db8090c5c8f"
 
   url "https://dl.cleeen.fehey.com/Cleeen-#{version}.dmg"
   name "Cleeen"
