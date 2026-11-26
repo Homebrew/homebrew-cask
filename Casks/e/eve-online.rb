@@ -1,6 +1,6 @@
 cask "eve-online" do
-  version "1.17.9"
-  sha256 "fce5ccb0d07f9d3cd8ebec73d2d2d0b941886c5e5c91ffc7a25a6e2d806003ae"
+  version "1.17.10"
+  sha256 "deb2ab9816e1a66c28264f36ff4d81028f4d2e61c97672a9b031fdb4807953b0"
 
   url "https://launcher.ccpgames.com/eve-online/release/darwin/universal/eve-online-darwin-universal-#{version}.zip"
   name "EVE Online"
