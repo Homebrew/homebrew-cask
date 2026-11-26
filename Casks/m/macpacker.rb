@@ -1,6 +1,6 @@
 cask "macpacker" do
-  version "1.3.0"
-  sha256 "c1703906ac34a47780a13718785c14959aba72cdfecd9c71d0c0b3c218aecbab"
+  version "1.3.1"
+  sha256 "fddaec2994ad913394c6f2490d5c02cfd133f9b3af0602d4adc5250904f7efca"
 
   url "https://github.com/sarensw/MacPacker/releases/download/v#{version}/MacPacker_v#{version}.zip"
   name "MacPacker"
