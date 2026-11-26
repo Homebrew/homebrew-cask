@@ -1,6 +1,6 @@
 cask "anomaly-hex" do
-  version "3.4.0"
-  sha256 "1a71e62955924e4e51c28ca3c5867adf6c6af2fc29179a354f0843343a7afc44"
+  version "3.5.0"
+  sha256 "fd4892a9c72185effc00639cb3f2c723d24b7850ca89ac57cc69b068a2d64312"
 
   url "https://github.com/anomalyco/hex/releases/download/v#{version}/hex-#{version}-macos-arm64.dmg"
   name "Hex"
