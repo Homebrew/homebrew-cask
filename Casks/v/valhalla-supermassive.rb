@@ -1,6 +1,6 @@
 cask "valhalla-supermassive" do
-  version "5.0.0"
-  sha256 "eaac6d0a24ffed0a02afd1dd06124d12f94716d32a8ac376606aa2d701a70c3e"
+  version "6.0.0v2"
+  sha256 "d0b40014469bbdaec1d59b734c99151ec6b998e93e5322124d7d0dda68190e23"
 
   url "https://valhallaproduction.s3.us-west-2.amazonaws.com/supermassive/ValhallaSupermassiveOSX_#{version.dots_to_underscores}.dmg"
   name "Valhalla Supermassive"
@@ -10,7 +10,7 @@ cask "valhalla-supermassive" do
   livecheck do
     url "https://valhalladsp.com/demos-downloads/",
         user_agent: :browser
-    regex(/ValhallaSupermassiveOSX[._-]v?(\d+(?:[._]\d+)+)\.dmg/i)
+    regex(/ValhallaSupermassiveOSX[._-]v?(\d+(?:[._]\d+)+(?:v\d+)?)\.dmg/i)
     strategy :page_match do |page, regex|
       page.scan(regex).map { |match| match&.first&.tr("_", ".") }
     end
