@@ -8,7 +8,7 @@ cask "blockstream" do
          x86_64_linux: "2cdad420ff71f32b826a043c3a9577a91756caafa0a5ec52b306ef4a3a2797a3"
 
   on_macos do
-    depends_on macos: :ventura
+    depends_on macos: :sonoma
 
     app "Blockstream.app"
 
