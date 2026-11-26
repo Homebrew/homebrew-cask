@@ -1,6 +1,6 @@
 cask "open-screen-sharing" do
-  version "1.0.10"
-  sha256 "3897c5b889e22d79de1330bc9c3b91ebfa78a949a081954d3833244766aa16c8"
+  version "1.0.11"
+  sha256 "11556d8f48c4584e6f155248688d3f44bbc0310cf1cc5b78a0c035d0e7bf0121"
 
   url "https://github.com/nekohasekai/open-screen-sharing/releases/download/v#{version}/OpenScreenSharing.pkg"
   name "Open Screen Sharing"
