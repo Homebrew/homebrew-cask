@@ -17,8 +17,12 @@ cask "cloudmounter" do
 
   app "CloudMounter.app"
 
+  uninstall quit: "com.eltima.cloudmounter"
+
   zap trash: [
     "~/Library/Application Scripts/*.com.eltima.cloudmounter*",
+    "~/Library/Application Scripts/com.eltima.cloudmounter.CMFinderSync",
+    "~/Library/Application Scripts/com.eltima.cloudmounter.mountprovider",
     "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.eltima.cloudmounter.sfl*",
     "~/Library/Application Support/com.eltima.cloudmounter",
     "~/Library/Application Support/FileProvider/com.eltima.cloudmounter.mountprovider",
@@ -29,5 +33,6 @@ cask "cloudmounter" do
     "~/Library/Logs/CloudMounter.log",
     "~/Library/Preferences/com.eltima.activator.xml",
     "~/Library/Preferences/com.eltima.cloudmounter.plist",
+    "~/Library/WebKit/com.eltima.cloudmounter",
   ]
 end
