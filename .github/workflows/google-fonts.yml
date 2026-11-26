@@ -16,6 +16,8 @@ jobs:
     name: ${{ matrix.mode }}
     if: github.repository == 'Homebrew/homebrew-cask'
     runs-on: ubuntu-latest
+    env:
+      BRANCH: auto-${{ matrix.mode }}-google-fonts
     strategy:
       matrix:
         include:
@@ -73,7 +75,7 @@ jobs:
 
       - name: Checkout branch
         if: env.changes == 'true'
-        run: git checkout -b "auto-${{ matrix.mode }}-google-fonts"
+        run: git checkout -b "$BRANCH"
 
       - name: Create commits
         if: env.changes == 'true'
@@ -92,12 +94,30 @@ jobs:
           GIT_COMMITTER_EMAIL: ${{ steps.git-user-config.outputs.email }}
           MODE: ${{ matrix.mode }}
 
-      - name: Push commits
+      - name: Push new branch
+        id: push-new
         if: env.changes == 'true'
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          # Existing PRs need a bot push to trigger CI on the new head.
+          if git ls-remote --exit-code --heads origin "$BRANCH"
+          then
+            echo "existing=true" >> "$GITHUB_OUTPUT"
+          elif [[ $? == 2 ]]
+          then
+            git -c 'credential.helper=!gh auth git-credential' push \
+              --force-with-lease="refs/heads/$BRANCH:" origin "$BRANCH"
+          else
+            exit 1
+          fi
+
+      - name: Update existing branch as BrewTestBot
+        if: env.changes == 'true' && steps.push-new.outputs.existing == 'true'
         uses: Homebrew/actions/git-try-push@ceec4e8419bb3c97ce96e9dda7738499ed5f869d # 2026.11.14.1
         with:
           token: ${{ secrets.HOMEBREW_GITHUB_PUBLIC_REPO_TOKEN }}
-          branch: "auto-${{ matrix.mode }}-google-fonts"
+          branch: ${{ env.BRANCH }}
           GIT_COMMITTER_NAME: ${{ steps.git-user-config.outputs.name }}
           GIT_COMMITTER_EMAIL: ${{ steps.git-user-config.outputs.email }}
 
@@ -113,5 +133,5 @@ jobs:
         run: |
           gh pr create \
             --body "$PR_BODY" \
-            --head "auto-${{ matrix.mode }}-google-fonts" \
+            --head "$BRANCH" \
             --title "${{matrix.mode}} Google Fonts"
