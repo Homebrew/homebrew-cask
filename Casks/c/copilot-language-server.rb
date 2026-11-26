@@ -2,11 +2,11 @@ cask "copilot-language-server" do
   arch arm: "arm64", intel: "x64"
   os macos: "darwin", linux: "linux"
 
-  version "1.574.2"
-  sha256 arm:          "885c533d14dcf169a23af4abfbd97b3e6b0f76d5f835de9d3f8f04116897c69a",
-         intel:        "b76ea905e002f882f9a3789dedaa884f268b772b798697eaebfca0ea3cc71546",
-         arm64_linux:  "366e94f182ec7761304f9180f019cc3ee8d01a41eccce14c10acd833ed795ce9",
-         x86_64_linux: "00531dba1098dfcfe986902366cd04d870227d387a6b4f9d0e720b42b85902ea"
+  version "1.574.3"
+  sha256 arm:          "b03e35596115e5666b245ef6e7c5267dd04289417df50f46088d9110dce63030",
+         intel:        "d6ebd7665bbad8188ac19fbbb698c4caddb8d55d43b66c963862103e234cc31e",
+         arm64_linux:  "a5a34dee22f226f117aaa1701c8eeb86b87484e988ab150fcbf201a5cc3adcd6",
+         x86_64_linux: "b11c26d8ab772719aad70fdd85b828be40228cb88cca5a4adc4354dacfce8b76"
 
   url "https://github.com/github/copilot-language-server-release/releases/download/#{version}/copilot-language-server-#{os}-#{arch}-#{version}.zip"
   name "GitHub Copilot Language Server"
