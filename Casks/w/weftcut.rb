@@ -1,6 +1,6 @@
 cask "weftcut" do
-  version "0.8.1"
-  sha256 "b49ecf11b802951991dedc27f0b3719078560597c84b8d5ced07d81d69e43cbd"
+  version "0.9.0"
+  sha256 "c73a69e78d38d9c535209fd8ed9b8ee10b3dccee19e775760c959667c96bb21b"
 
   url "https://github.com/WeftCut/WeftCut/releases/download/v#{version}/WeftCut-mac-arm64.dmg"
   name "WeftCut"
