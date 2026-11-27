@@ -17,6 +17,8 @@ cask "sfm" do
 
   zap trash: [
     "~/Library/Application Scripts/287TTNZF8L.io.nekohasekai.sfavt",
+    "~/Library/Application Scripts/io.nekohasekai.sfamt.standalone.share",
+    "~/Library/Containers/io.nekohasekai.sfamt.standalone.share",
     "~/Library/Group Containers/287TTNZF8L.io.nekohasekai.sfavt",
     "~/Library/Preferences/io.nekohasekai.sfavt.standalone.plist",
   ]
