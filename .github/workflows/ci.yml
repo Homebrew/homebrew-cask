@@ -86,6 +86,7 @@ jobs:
       (needs.packages_detect.result == 'success' && needs.packages_detect.outputs.testing_casks != ''))
     outputs:
       runners: ${{ steps.determine-runners.outputs.runners }}
+      runners_present: ${{ steps.determine-runners.outputs.runners_present }}
       git-cache-key: ${{ steps.git-cache.outputs.key }}
     runs-on: macos-latest
     permissions:
@@ -122,8 +123,8 @@ jobs:
           SKIP_INSTALL: ${{ inputs.skip_install && '1' || '' }}
           NEW_CASK: ${{ inputs.new_cask && '1' || '' }}
         run: |
-          brew generate-cask-ci-matrix --testing-casks="$TESTING_CASKS" --added-casks="$ADDED_CASKS" \
-            ${PULL_REQUEST_URL:+--url "$PULL_REQUEST_URL"} ${SKIP_INSTALL:+"--skip-install"} ${NEW_CASK:+"--new"}
+          brew determine-test-runners --cask "$TESTING_CASKS" "$ADDED_CASKS" \
+            ${PULL_REQUEST_URL:+--url="$PULL_REQUEST_URL"} ${SKIP_INSTALL:+"--skip-install"} ${NEW_CASK:+"--new"}
 
       # Any job on the default branch can save a cache under any key, and restoring one runs whatever it holds.
       # So `test` only gets a key if the newest scheduled `git-cache.yml` run has exactly one cache, saved while it ran.
@@ -178,7 +179,7 @@ jobs:
     needs: [tap_syntax, setup_runners]
     if: >-
       !cancelled() && needs.tap_syntax.result == 'success' &&
-      needs.setup_runners.result == 'success' && needs.setup_runners.outputs.runners != '[]'
+      needs.setup_runners.result == 'success' && fromJson(needs.setup_runners.outputs.runners_present)
     runs-on: ${{ matrix.runner }}
     container: ${{ matrix.container || null }}
     strategy:
