@@ -1,6 +1,6 @@
 cask "seekfast" do
   version "7.5"
-  sha256 "262f56f6061a34af08a93f589d3e7ef67346b1a6add7fb94504fc9674f1e1e3e"
+  sha256 "00e795d573b9ac171231780bfbd5ece9db4224762395f7da61d68e2d7b02ae87"
 
   url "https://seekfast.org/files_933/SeekFast_#{version}.dmg"
   name "SeekFast"
@@ -20,6 +20,8 @@ cask "seekfast" do
 
   zap trash: [
     "~/Library/Application Support/SeekFast",
+    "~/Library/Caches/SeekFast",
     "~/Library/Caches/velopack/org.seekfast.SeekFast",
+    "~/Library/WebKit/SeekFast",
   ]
 end
