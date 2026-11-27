@@ -23,6 +23,7 @@ cask "focusrite-control-2" do
 
   zap trash: [
     "~/Library/Application Support/Focusrite",
+    "~/Library/Caches/com.focusrite.control",
     "~/Library/Caches/com.juce.locks",
     "~/Library/HTTPStorages/com.focusrite.control",
     "~/Library/Logs/Focusrite Control 2",
