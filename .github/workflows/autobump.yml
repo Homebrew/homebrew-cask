@@ -38,7 +38,7 @@ jobs:
       HOMEBREW_DEVELOPER: 1
     steps:
       - name: Set up Homebrew
-        uses: Homebrew/actions/setup-homebrew@ceec4e8419bb3c97ce96e9dda7738499ed5f869d # 2026.11.14.1
+        uses: Homebrew/actions/setup-homebrew@61b401267256bb9c047d6d1481b176d5772a0ba7 # 2026.11.23.1
         with:
           core: true
           cask: true
@@ -75,7 +75,7 @@ jobs:
     steps:
       - name: Set up Homebrew
         id: setup
-        uses: Homebrew/actions/setup-homebrew@ceec4e8419bb3c97ce96e9dda7738499ed5f869d # 2026.11.14.1
+        uses: Homebrew/actions/setup-homebrew@61b401267256bb9c047d6d1481b176d5772a0ba7 # 2026.11.23.1
         with:
           core: false
           cask: true
@@ -86,7 +86,7 @@ jobs:
           skip-decompress: true
 
       - name: Configure Git user
-        uses: Homebrew/actions/git-user-config@ceec4e8419bb3c97ce96e9dda7738499ed5f869d # 2026.11.14.1
+        uses: Homebrew/actions/git-user-config@61b401267256bb9c047d6d1481b176d5772a0ba7 # 2026.11.23.1
         with:
           username: ${{ case(github.event_name == 'workflow_dispatch', github.actor, 'BrewTestBot') }}
 
@@ -98,7 +98,7 @@ jobs:
 
       - name: Set up commit signing
         if: steps.bump.outputs.branch
-        uses: Homebrew/actions/setup-commit-signing@ceec4e8419bb3c97ce96e9dda7738499ed5f869d # 2026.11.14.1
+        uses: Homebrew/actions/setup-commit-signing@61b401267256bb9c047d6d1481b176d5772a0ba7 # 2026.11.23.1
         with:
           signing_key: ${{ secrets.BREWTESTBOT_SSH_SIGNING_KEY }}
 
@@ -112,7 +112,7 @@ jobs:
 
       - name: Push branch
         if: steps.sign.outputs.push
-        uses: Homebrew/actions/git-try-push@ceec4e8419bb3c97ce96e9dda7738499ed5f869d # 2026.11.14.1
+        uses: Homebrew/actions/git-try-push@61b401267256bb9c047d6d1481b176d5772a0ba7 # 2026.11.23.1
         with:
           branch: ${{ steps.bump.outputs.branch }}
           directory: ${{ steps.setup.outputs.repository-path }}
@@ -123,7 +123,7 @@ jobs:
 
       - name: Open pull request
         if: steps.bump.outputs.branch
-        uses: Homebrew/actions/create-pull-request@ceec4e8419bb3c97ce96e9dda7738499ed5f869d # 2026.11.14.1
+        uses: Homebrew/actions/create-pull-request@61b401267256bb9c047d6d1481b176d5772a0ba7 # 2026.11.23.1
         with:
           head: ${{ steps.bump.outputs.branch }}
           base: main
