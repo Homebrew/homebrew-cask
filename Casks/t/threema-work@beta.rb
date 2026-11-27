@@ -1,9 +1,9 @@
 cask "threema-work@beta" do
   arch arm: "arm64", intel: "x64"
 
-  version "2.0-beta67"
-  sha256 arm:   "d2c2ca8ff07794a1d1d27663a759d4e841c2ae21258db338fdfe57769c203dd3",
-         intel: "9e78967165bea37f41013099c896aaa33cdeef28412a7966cd9406612dc9739c"
+  version "2.0-beta68"
+  sha256 arm:   "829880a57df0744fe8ac6881dc7e186f789ff423bd6164826ace45eec9f25354",
+         intel: "bcf08cf613137f0e6135240ff65554b9bf00c6132f30aa6ef2430ac4a55b8892"
 
   url "https://releases.threema.ch/desktop/#{version}/threema-work-desktop-v#{version}-macos-#{arch}.dmg"
   name "Threema Work"
@@ -17,7 +17,7 @@ cask "threema-work@beta" do
     end
   end
 
-  depends_on macos: :monterey
+  depends_on macos: :ventura
 
   app "Threema Work Beta.app"
 
