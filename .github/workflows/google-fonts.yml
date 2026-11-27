@@ -104,14 +104,14 @@ jobs:
 
       - name: Create pull request with updated files
         if: env.changes == 'true'
-        env:
-          GH_TOKEN: ${{ secrets.HOMEBREW_GITHUB_PUBLIC_REPO_TOKEN }}
-          PR_BODY: >
+        # TODO: Pin a released Homebrew/actions commit and add its version tag.
+        uses: Homebrew/actions/get-or-create-pull-request@b4c226ae32acab42c7c2c0745ad224a1e9958022
+        with:
+          token: ${{ secrets.HOMEBREW_GITHUB_PUBLIC_REPO_TOKEN }}
+          base: ${{ github.event.repository.default_branch }}
+          head: auto-${{ matrix.mode }}-google-fonts
+          title: ${{ matrix.mode }} Google Fonts
+          body: >-
             This pull request was created automatically by the
             [`google-fonts`](https://github.com/Homebrew/homebrew-cask/blob/HEAD/.github/workflows/google-fonts.yml)
             workflow.
-        run: |
-          gh pr create \
-            --body "$PR_BODY" \
-            --head "auto-${{ matrix.mode }}-google-fonts" \
-            --title "${{matrix.mode}} Google Fonts"
