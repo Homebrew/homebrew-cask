@@ -25,6 +25,7 @@ cask "kugelblitz" do
     "~/Library/Containers/me.metaebene.Kugelblitz.Preview",
     "~/Library/Containers/me.metaebene.Kugelblitz.Share",
     "~/Library/HTTPStorages/me.metaebene.Kugelblitz",
+    "~/Library/HTTPStorages/me.metaebene.Kugelblitz.binarycookies",
     "~/Library/Preferences/me.metaebene.Kugelblitz.plist",
     "~/Library/WebKit/me.metaebene.Kugelblitz",
   ]
