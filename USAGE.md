@@ -121,7 +121,7 @@ Firefox.app (App)
 
 ## Updating/Upgrading Casks
 
-Since the Homebrew Cask repository is a Homebrew tap, you’ll pull down the latest casks every time you issue the regular Homebrew command `brew update`. You can check for outdated casks with `brew outdated` and install the outdated casks with `brew upgrade`. Many applications update themselves, so their casks are ignored by `brew outdated` and `brew upgrade`. This behaviour can be overridden by adding `--greedy` to either command.
+Since the Homebrew Cask repository is a Homebrew tap, you’ll pull down the latest casks every time you issue the regular Homebrew command `brew update`. You can check for outdated casks with `brew outdated` and install the outdated casks with `brew upgrade`. Many applications update themselves. By default, `brew outdated` and `brew upgrade` include their casks when Homebrew can determine that the currently installed version is outdated, and skip them otherwise. Add `--greedy` to either command to include casks that would be skipped. See [How does `brew upgrade` handle apps that update themselves?](https://docs.brew.sh/FAQ#how-does-brew-upgrade-handle-apps-that-update-themselves) for details.
 
 ## Updating/Upgrading Homebrew Cask
 
