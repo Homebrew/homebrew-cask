@@ -2,11 +2,11 @@ cask "motrix" do
   arch arm: "arm64", intel: on_system_conditional(macos: "x64", linux: "x86_64")
   os macos: "dmg", linux: "AppImage"
 
-  version "2.4.7"
-  sha256 arm:          "b76af07d2fe077b6916b343e22c369a1e7fca84330fcb866aeaf5f48905f6238",
-         intel:        "9856e69bc0a039033d74803b3c6623dbdff09967fe6da1bd4c613c8fd61de0a8",
-         arm64_linux:  "c5759ed9b9694f3794510a8ba080f99cd63ce409ca10709521bc6e26d29cc35f",
-         x86_64_linux: "99e8c90e78a003d59972c4f1512f9a89c46eb5d8eab06aeaad1884a487f23234"
+  version "2.4.8"
+  sha256 arm:          "dae99f8b5f29335a04273d9a461ceeeb647551dc95cbf4ff707db908c80798d8",
+         intel:        "1b532c38cde70352e4274b3ef177bb20bd2a1d4cc6a61eae5db4d99aa4d09fdd",
+         arm64_linux:  "4652fa0ee2dbd3d9a456e8335b4b206778a44e1d2884a39b625cdd00769e0790",
+         x86_64_linux: "639dd121257e8c90ff819265b7d31f03f373904523821e9397a79a0629546a5c"
 
   on_macos do
     depends_on macos: :ventura
