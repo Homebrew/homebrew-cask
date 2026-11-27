@@ -1,6 +1,6 @@
 cask "slideshower" do
-  version "4.15"
-  sha256 "1d45a238e4dbde254933df8c9f6e28a811be31c5c1cd714706c8501e2777004b"
+  version "4.16"
+  sha256 "490c0676ba96e99a5d3c77a08e6be0e80c779125f8f52776445f83c1801b7d30"
 
   url "https://slideshower.com/slideshower_#{version.dots_to_underscores}.dmg"
   name "Slideshower for macOS"
