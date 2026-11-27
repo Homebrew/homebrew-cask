@@ -26,7 +26,7 @@ cask "duo-connect" do
 
   zap trash: [
         "~/.duoconnect",
-        "~/Liibrary/Logs/Duo/Duoconnect",
+        "~/Library/Logs/Duo/Duoconnect",
       ],
       rmdir: "~/Library/Logs/Duo"
 end
