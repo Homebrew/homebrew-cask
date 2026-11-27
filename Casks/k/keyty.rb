@@ -1,6 +1,6 @@
 cask "keyty" do
-  version "1.8.0"
-  sha256 "f80665a951ddb545dba229705aedd56720d49a4c047cf49ee1296644330fc127"
+  version "1.9.0"
+  sha256 "43f05fd29e6c80cce9761e7987bb07ef55146cad61eab357cf0552935b936dba"
 
   url "https://github.com/keytyapp/Keyty/releases/download/v#{version}/Keyty.dmg"
   name "Keyty"
