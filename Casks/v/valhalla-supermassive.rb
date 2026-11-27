@@ -1,6 +1,6 @@
 cask "valhalla-supermassive" do
-  version "6.0.0v2"
-  sha256 "d0b40014469bbdaec1d59b734c99151ec6b998e93e5322124d7d0dda68190e23"
+  version "6.0.1v2"
+  sha256 "a300c8b400c5dbfa5387b7300468afc06d21367ea9d5f5932099170d417ee8a8"
 
   url "https://valhallaproduction.s3.us-west-2.amazonaws.com/supermassive/ValhallaSupermassiveOSX_#{version.dots_to_underscores}.dmg"
   name "Valhalla Supermassive"
