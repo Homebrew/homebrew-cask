@@ -3,12 +3,14 @@ cask "blink1control" do
   arch arm: "arm64", intel: "x64"
   url_end = on_system_conditional macos: "mac-#{arch}.dmg", linux: "linux-x86_64.AppImage"
 
-  version "2.3.0"
-  sha256 arm:          "4b05ba63024c00c1226acdd48337fc0258d6cfb045d6ae720e588e11da78d13c",
-         intel:        "778dad2b5914e6e2cb792260e24fed3a490a3d762c6693033fa89472720ce737",
-         x86_64_linux: "147c220e339140ad6c6c3cf426aba56ded7dd1347fc94a42f4e71493398cffa5"
+  version "2.4.0"
+  sha256 arm:          "cb7719c01eb3c5418315c56c36d0dfae28d28766eac24f432f45588817f16e37",
+         intel:        "52247a22e36c4458d3db1ca4223b032fe29f183762694151a58fcc14795aaa94",
+         x86_64_linux: "0c785a2466af31d7843dceef0605c35908eb46541ca64478af02ce0311e57422"
 
   on_macos do
+    depends_on macos: :monterey
+
     app "Blink1Control#{version.major}.app"
 
     zap trash: [
