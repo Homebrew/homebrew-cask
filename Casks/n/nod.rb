@@ -1,9 +1,9 @@
 cask "nod" do
   arch arm: "arm64", intel: "x64"
 
-  version "0.10.0"
-  sha256 arm:   "0e71b3801dfb3247d3dc1adda1d56d75bd2c0d0e8d43a9e9d008ca9cdba16af0",
-         intel: "10d83b8409ca2e8f39cce04fc7167f5b1b5be053d42acc8ad50efc7d9aaba0b5"
+  version "0.10.2"
+  sha256 arm:   "439abb676def327aacd6adab12c3552e6521abdf00b24d760c694eaf1e9c3164",
+         intel: "3d3eb2a999831bf81b1f3d0f9ad9440b43960034f20037dd857fbcb0975d382f"
 
   url "https://github.com/n8n-io/nod/releases/download/nod-v#{version}/nod-#{arch}.dmg"
   name "Nod"
@@ -28,6 +28,7 @@ cask "nod" do
     "~/Library/Application Support/nod",
     "~/Library/Caches/dev.nod.desktop",
     "~/Library/Caches/dev.nod.desktop.ShipIt",
+    "~/Library/HTTPStorages/dev.nod.desktop",
     "~/Library/Preferences/dev.nod.desktop.plist",
   ]
 end
