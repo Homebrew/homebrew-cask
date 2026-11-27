@@ -1,6 +1,6 @@
 cask "notchi" do
-  version "1.3.1"
-  sha256 "18a596a7d3764af21ec2d4766b48a45082a9db3b025280623b026f6d4ee2a3da"
+  version "1.3.2"
+  sha256 "5bbb58720b5186ad0d80f9611c1e39188c9938da57dddbfa69d20d83f928a479"
 
   url "https://github.com/sk-ruban/notchi/releases/download/v#{version}/Notchi-#{version}.dmg"
   name "Notchi"
