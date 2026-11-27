@@ -24,6 +24,7 @@ cask "jlcone" do
             login_item: "JLCONE"
 
   zap trash: [
+    "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.jlcpcb.www.sfl*",
     "~/Library/Application Support/jlcone",
     "~/Library/Caches/com.jlcpcb.www.ShipIt",
     "~/Library/Caches/jlcone-updater",
