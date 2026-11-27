@@ -19,6 +19,8 @@ cask "archiver-app" do
   uninstall quit: "com.incrediblebee.Archiver"
 
   zap trash: [
+    "~/Library/Application Support/Archiver",
+    "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.incrediblebee.archiver.sfl*",
     "~/Library/Application Support/com.incrediblebee.Archiver*",
     "~/Library/Preferences/com.incrediblebee.Archiver*.plist",
   ]
