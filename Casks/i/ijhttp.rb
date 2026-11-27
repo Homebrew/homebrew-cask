@@ -1,6 +1,6 @@
 cask "ijhttp" do
-  version "261.25134.95"
-  sha256 "4656e9c1e2c798fbe7fd78ed8fc124bc071ebb46e02770e198a562689da32c9d"
+  version "263.7307.353"
+  sha256 "7194c0409cd1b748eaabaaa46f11dcef0f366d03fb9175fe8556a86a91fd22a4"
 
   url "https://download.jetbrains.com/resources/intellij/http-client/#{version}/intellij-http-client.zip"
   name "IntelliJ HTTP Client CLI"
