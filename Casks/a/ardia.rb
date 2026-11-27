@@ -1,6 +1,6 @@
 cask "ardia" do
-  version "0.2.48"
-  sha256 "7df7c14fe726c7d19a96cf98871fbab72a79911a51c725fb28693697b7e6f007"
+  version "0.2.49"
+  sha256 "a6b2ac66e4da66ecf7473adbed6bb00e01e4388f908e0e119d97c8a428a2badc"
 
   url "https://github.com/ardia-browser/ardia/releases/download/v#{version}/Ardia-#{version}.dmg"
   name "Ardia"
