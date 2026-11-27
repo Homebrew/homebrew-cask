@@ -8,7 +8,7 @@ cask "chronoagent" do
   homepage "https://www.econtechnologies.com/"
 
   livecheck do
-    url "https://www.econtechnologies.com/UC/updatecheck.php?prod=ChronoAgent&vers=0&lang=en&plat=mac&os=99&hw=arm64&req=1"
+    url "https://www.econtechnologies.com/UC/updatecheck.php?prod=ChronoAgent&vers=#{version}&lang=en&plat=mac&os=99&hw=arm64&req=1"
     regex(/VERSION=(\d+(?:\.\d+)+)/i)
   end
 
