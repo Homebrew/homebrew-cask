@@ -3,13 +3,13 @@ cask "craft-agents" do
   os macos: "mac", linux: "linux"
   url_end = on_system_conditional macos: "dmg", linux: "AppImage"
 
-  sha256 arm:          "cff236073858335023bc86933ba5eaa21483bcdc8ef5d8f3bd8b20aed67ce286",
+  sha256 arm:          "af6ccffdb10a540c772df601791fa08286af39d8644a8a29245cd0a63a3e219c",
          intel:        "9ac17ef80625df3957f5b0ecddee5a707038fad4a5c86f508f19dfe9c4405b00",
-         x86_64_linux: "1b5cf83b6330db24464c3566b588efc8ac1f50856ae3f2c420ccd3a5e45bb17a"
+         x86_64_linux: "283ee8f68e44bd7ca027386c35e64b834b9f7a75e3a80a3dfcb5ceafa2421413"
 
   on_macos do
     on_arm do
-      version "0.15.8"
+      version "0.16.2"
     end
     on_intel do
       version "0.10.1"
@@ -34,7 +34,7 @@ cask "craft-agents" do
     ]
   end
   on_linux do
-    version "0.15.8"
+    version "0.16.2"
 
     depends_on arch: :x86_64
 
