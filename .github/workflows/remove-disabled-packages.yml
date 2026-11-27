@@ -32,19 +32,19 @@ jobs:
     steps:
       - name: Set up Homebrew
         id: set-up-homebrew
-        uses: Homebrew/actions/setup-homebrew@ceec4e8419bb3c97ce96e9dda7738499ed5f869d # 2026.11.14.1
+        uses: Homebrew/actions/setup-homebrew@61b401267256bb9c047d6d1481b176d5772a0ba7 # 2026.11.23.1
         with:
           core: false
           cask: true
 
       - name: Configure Git user
         id: git-user-config
-        uses: Homebrew/actions/git-user-config@ceec4e8419bb3c97ce96e9dda7738499ed5f869d # 2026.11.14.1
+        uses: Homebrew/actions/git-user-config@61b401267256bb9c047d6d1481b176d5772a0ba7 # 2026.11.23.1
         with:
           username: BrewTestBot
 
       - name: Set up commit signing
-        uses: Homebrew/actions/setup-commit-signing@ceec4e8419bb3c97ce96e9dda7738499ed5f869d # 2026.11.14.1
+        uses: Homebrew/actions/setup-commit-signing@61b401267256bb9c047d6d1481b176d5772a0ba7 # 2026.11.23.1
         with:
           signing_key: ${{ secrets.BREWTESTBOT_SSH_SIGNING_KEY }}
 
@@ -54,13 +54,13 @@ jobs:
 
       - name: Remove disabled packages
         id: remove_disabled
-        uses: Homebrew/actions/remove-disabled-packages@ceec4e8419bb3c97ce96e9dda7738499ed5f869d # 2026.11.14.1
+        uses: Homebrew/actions/remove-disabled-packages@61b401267256bb9c047d6d1481b176d5772a0ba7 # 2026.11.23.1
         env:
           HOMEBREW_NO_INSTALL_FROM_API: 1
 
       - name: Push commits
         if: fromJson(steps.remove_disabled.outputs.packages-removed)
-        uses: Homebrew/actions/git-try-push@ceec4e8419bb3c97ce96e9dda7738499ed5f869d # 2026.11.14.1
+        uses: Homebrew/actions/git-try-push@61b401267256bb9c047d6d1481b176d5772a0ba7 # 2026.11.23.1
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
           directory: ${{ steps.set-up-homebrew.outputs.repository-path }}
@@ -92,7 +92,7 @@ jobs:
       issues: write # for Homebrew/actions/create-or-update-issue
     steps:
       - name: Report partially disabled casks
-        uses: Homebrew/actions/create-or-update-issue@ceec4e8419bb3c97ce96e9dda7738499ed5f869d # 2026.11.14.1
+        uses: Homebrew/actions/create-or-update-issue@61b401267256bb9c047d6d1481b176d5772a0ba7 # 2026.11.23.1
         with:
           # Keep the default `GITHUB_TOKEN`: issues it opens don't trigger `check-issues.yml`,
           # which would otherwise close this one for not following an issue template.
