@@ -1,9 +1,9 @@
 cask "jlcone" do
   arch arm: "arm64", intel: "x64"
 
-  version "1.0.72"
-  sha256 arm:   "43ece43a58848983ad816e2c22a4b587900d73b667d2c290bbf282f47a4abc93",
-         intel: "97d6d45c92d8669f81d128f3b3749c27e6d1dfc5896647e03d8825d8ecea51ae"
+  version "1.0.74"
+  sha256 arm:   "6c5182500629cace0198f19a1c8c131210ebe230a8cf8896315c322d60ab8b1c",
+         intel: "a957e37789d9a704153250cb79cca43bea796a822478312b2198208e7596855f"
 
   url "https://rs.jlcone.com/static/APP/app_version/jlcone-#{version}-#{arch}.dmg"
   name "JLCONE"
