@@ -10,21 +10,32 @@ cask "commandpost" do
       sha256 "c879eb95f6271b54cb6beb3aa04b36d670955df34f7dfe962bdaea75363b19f5"
     end
 
+    url "https://github.com/CommandPost/CommandPost/releases/download/#{version}/CommandPost_#{version}.dmg"
+
     livecheck do
       skip "Legacy version"
     end
   end
   on_ventura :or_newer do
-    version "2.1.0"
-    sha256 "b1a3ca256053a083b59dd1d1db59b68d9b2ea8b83dc2e5214d0eba921eba5e64"
+    version "3.1.1,8175"
+    sha256 "0d7352b928c6c88a79bfcc2b5c04095a46d7560e4d26882239e8fa64ac01a24a"
+
+    url "https://github.com/CommandPost/CommandPost/releases/download/#{version.csv.first}-build-#{version.csv.second}/CommandPost-Helper-#{version.csv.first}-#{version.csv.second}.dmg"
 
     livecheck do
       url :url
-      strategy :github_latest
+      regex(/^(\d+(?:\.\d+)+)[._-]build[._-](\d+)$/i)
+      strategy :git do |tags, regex|
+        tags.filter_map do |tag|
+          match = tag.match(regex)
+          next if match.blank?
+
+          "#{match[1]},#{match[2]}"
+        end
+      end
     end
   end
 
-  url "https://github.com/CommandPost/CommandPost/releases/download/#{version}/CommandPost_#{version}.dmg"
   name "CommandPost"
   desc "Workflow enhancements for Final Cut Pro"
   homepage "https://commandpost.io/"
