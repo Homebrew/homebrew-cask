@@ -15,6 +15,7 @@ cask "blink1control" do
 
     zap trash: [
       "~/Library/Application Support/Blink1Control#{version.major}",
+      "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.thingm.blink1control#{version.major}.sfl*",
       "~/Library/Logs/Blink1Control#{version.major}",
       "~/Library/Preferences/com.thingm.blink1control#{version.major}.plist",
       "~/Library/Saved Application State/com.thingm.blink1control#{version.major}.savedState",
