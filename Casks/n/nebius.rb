@@ -19,5 +19,21 @@ cask "nebius" do
 
   binary "nebius"
 
+  preflight_steps do
+    run "/usr/bin/codesign", args: [
+      "--verify",
+      "--strict",
+      "-R",
+      "=anchor apple generic and certificate 1[field.1.2.840.113635.100.6.2.6] exists and " \
+      "certificate leaf[field.1.2.840.113635.100.6.1.13] exists and " \
+      'certificate leaf[subject.OU] = "3FUTJV7Y7X"',
+      "{{staged_path}}/nebius",
+    ]
+  end
+
+  postflight_steps do
+    run "{{staged_path}}/nebius", args: ["__post_update_hook"]
+  end
+
   zap trash: "~/.nebius/.last_check_update.yaml"
 end
