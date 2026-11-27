@@ -23,6 +23,7 @@ cask "mitti" do
     "~/Library/Application Scripts/com.imimot.Mitti.*.MittiQuicklook",
     "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.imimot.mitti.*.sfl*",
     "~/Library/Application Support/Mitti",
+    "~/Library/Caches/com.imimot.Mitti.*",
     "~/Library/Containers/com.imimot.Mitti.*.MittiQuicklook",
     "~/Library/HTTPStorages/com.imimot.Mitti.*",
     "~/Library/Logs/Mitti",
