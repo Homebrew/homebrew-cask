@@ -1,9 +1,9 @@
 cask "nimbalyst" do
   arch arm: "arm64", intel: "x64"
 
-  version "0.83.0"
-  sha256 arm:   "7928a2e637591baac66624330659339523bdc471e5634645c320d2adb2d8be65",
-         intel: "cc7ccdf8350c525a34377e35c5ec563e8b322213b706d8eb3d49a8582055596d"
+  version "0.84.5"
+  sha256 arm:   "124f4c5981252b6d3ac31f7942467156c5dec7d5ff490172b17c881edaa1ba5e",
+         intel: "2755cdfd9d74f14f05e3c77d2ce4a7b83a71e5dbf9a66367d1ca547e9fa8f74e"
 
   url "https://github.com/Nimbalyst/nimbalyst/releases/download/v#{version}/Nimbalyst-macOS-#{arch}.dmg"
   name "Nimbalyst"
@@ -15,7 +15,7 @@ cask "nimbalyst" do
     strategy :github_latest
   end
 
-  depends_on macos: :monterey
+  depends_on macos: :ventura
 
   app "Nimbalyst.app"
 
