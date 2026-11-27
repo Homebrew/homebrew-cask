@@ -1,25 +1,26 @@
 cask "confectionery" do
-  version "1.2.1"
-  sha256 "8f8d8e666a9809ddb171abe68b1d341327a13e4d649873648f129fdebd93d043"
+  version "2.4,1"
+  sha256 :no_check
 
-  url "https://app-updates.vadimdemedes.com/confectionery/download/Confectionery-#{version}-mac.dmg"
+  url "https://confectioneryapp.com/download"
   name "Confectionery"
   desc "Website screenshot tool"
   homepage "https://confectioneryapp.com/"
 
   livecheck do
-    url "https://app-updates.vadimdemedes.com/confectionery/update/darwin/0.0.0"
-    strategy :json do |json|
-      json["name"]&.tr("v", "")
-    end
+    url :url
+    strategy :extract_plist
   end
 
-  depends_on :macos
+  depends_on arch: :arm64
+  depends_on macos: :tahoe
 
   app "Confectionery.app"
 
   zap trash: [
+    "~/Library/Application Scripts/com.vadimdemedes.Confectionery",
     "~/Library/Application Support/Confectionery",
+    "~/Library/Containers/com.vadimdemedes.Confectionery",
     "~/Library/Preferences/com.vadimdemedes.Confectionery.plist",
     "~/Library/Saved Application State/com.vadimdemedes.Confectionery.savedState",
   ]
