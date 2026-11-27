@@ -18,8 +18,8 @@ cask "karabiner-elements" do
     end
   end
   on_ventura :or_newer do
-    version "16.3.0"
-    sha256 "19cce7bed3d48a722242ca683bd1bae406b6a87fed520728d1c91dee175b75e4"
+    version "17.0.0"
+    sha256 "97730c7d4dc831cf2fb5b5ee534ed19f885b205bf8470bf6b201f932046a53aa"
 
     livecheck do
       url "https://appcast.pqrs.org/karabiner-elements-appcast.xml"
@@ -39,7 +39,10 @@ cask "karabiner-elements" do
                 "org.pqrs.karabiner.karabiner_observer",
                 "org.pqrs.karabiner.karabiner_session_monitor",
                 "org.pqrs.karabiner.NotificationWindow",
+                "org.pqrs.service.agent.Karabiner-Console-User-Server-v3",
+                "org.pqrs.service.agent.Karabiner-Core-Service-v3",
               ],
+              quit:         "org.pqrs.Karabiner-Elements.Settings",
               signal:       [
                 ["TERM", "org.pqrs.Karabiner-Menu"],
                 ["TERM", "org.pqrs.Karabiner-NotificationWindow"],
@@ -64,7 +67,7 @@ cask "karabiner-elements" do
   auto_updates true
   depends_on :macos
 
-  binary "/Library/Application Support/org.pqrs/Karabiner-Elements/bin/karabiner_cli"
+  binary "#{appdir}/Karabiner-Elements.app/Contents/Helpers/karabiner_cli"
 
   zap trash: [
     "~/.config/karabiner",
