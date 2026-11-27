@@ -17,6 +17,8 @@ cask "scapple" do
 
   app "Scapple.app"
 
+  uninstall quit: "com.literatureandlatte.scapple"
+
   zap trash: [
     "~/Library/Application Support/CloudDocs/session/containers/iCloud.com.literatureandlatte.scapple",
     "~/Library/Application Support/CloudDocs/session/containers/iCloud.com.literatureandlatte.scapple.plist",
