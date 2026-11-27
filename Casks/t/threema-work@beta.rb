@@ -17,7 +17,7 @@ cask "threema-work@beta" do
     end
   end
 
-  depends_on macos: :monterey
+  depends_on macos: :ventura
 
   app "Threema Work Beta.app"
 
