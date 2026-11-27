@@ -26,4 +26,9 @@ cask "gridcraft" do
   name "GridCraft"
   desc "Spreadsheet editor"
   homepage "https://github.com/storytold/gridcraft"
+
+  livecheck do
+    url :url
+    regex(/^v?(\d+(?:\.\d+)+)$/i)
+  end
 end
