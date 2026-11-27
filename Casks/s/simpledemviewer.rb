@@ -14,7 +14,9 @@ cask "simpledemviewer" do
 
   depends_on macos: :monterey
 
-  app "SimpleDEMViewer #{version}/SimpleDEMViewer.app"
+  rename "SimpleDEMViewer */SimpleDEMViewer.app", "SimpleDEMViewer.app"
+
+  app "SimpleDEMViewer.app"
 
   uninstall quit: "jp.jizoh.SDVr*"
 
