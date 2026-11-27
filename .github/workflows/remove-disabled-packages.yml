@@ -29,6 +29,7 @@ jobs:
       REMOVAL_BRANCH: remove-disabled-packages
     permissions:
       contents: write # for Homebrew/actions/git-try-push
+      pull-requests: read
     steps:
       - name: Set up Homebrew
         id: set-up-homebrew
@@ -72,18 +73,17 @@ jobs:
       - name: Create pull request
         id: pr-create
         if: fromJson(steps.remove_disabled.outputs.packages-removed)
-        working-directory: ${{ steps.set-up-homebrew.outputs.repository-path }}
-        env:
-          GH_TOKEN: ${{ secrets.HOMEBREW_GITHUB_PUBLIC_REPO_TOKEN }}
-          PR_BODY: >
+        # TODO: Pin a released Homebrew/actions commit and add its version tag.
+        uses: Homebrew/actions/get-or-create-pull-request@b4c226ae32acab42c7c2c0745ad224a1e9958022
+        with:
+          token: ${{ secrets.HOMEBREW_GITHUB_PUBLIC_REPO_TOKEN }}
+          base: ${{ github.event.repository.default_branch }}
+          head: ${{ env.REMOVAL_BRANCH }}
+          title: Remove disabled packages
+          body: >-
             This pull request was created automatically by the
             [`remove-disabled-packages`](https://github.com/Homebrew/homebrew-cask/blob/HEAD/.github/workflows/remove-disabled-packages.yml)
             workflow.
-        run: |
-          gh pr create \
-            --body "$PR_BODY" \
-            --head "$REMOVAL_BRANCH" \
-            --title 'Remove disabled packages'
 
   partially-disabled-issue:
     needs: remove-disabled-packages

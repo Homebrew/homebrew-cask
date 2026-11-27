@@ -123,7 +123,8 @@ jobs:
 
       - name: Open pull request
         if: steps.bump.outputs.branch
-        uses: Homebrew/actions/create-pull-request@61b401267256bb9c047d6d1481b176d5772a0ba7 # 2026.11.23.1
+        # TODO: Pin a released Homebrew/actions commit and add its version tag.
+        uses: Homebrew/actions/get-or-create-pull-request@b4c226ae32acab42c7c2c0745ad224a1e9958022
         with:
           head: ${{ steps.bump.outputs.branch }}
           base: main
