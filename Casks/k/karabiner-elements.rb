@@ -16,6 +16,8 @@ cask "karabiner-elements" do
         skip "Legacy version"
       end
     end
+
+    binary "/Library/Application Support/org.pqrs/Karabiner-Elements/bin/karabiner_cli"
   end
   on_ventura :or_newer do
     version "17.0.0"
@@ -26,6 +28,7 @@ cask "karabiner-elements" do
       strategy :sparkle
     end
     pkg "Karabiner-Elements.pkg"
+    binary "/Applications/Karabiner-Elements.app/Contents/Helpers/karabiner_cli"
 
     uninstall early_script: {
                 executable: "/Library/Application Support/org.pqrs/Karabiner-DriverKit-VirtualHIDDevice/scripts/uninstall/remove_files.sh",
@@ -48,7 +51,7 @@ cask "karabiner-elements" do
                 ["TERM", "org.pqrs.Karabiner-NotificationWindow"],
               ],
               script:       {
-                executable: "/Library/Application Support/org.pqrs/Karabiner-Elements/uninstall_core.sh",
+                executable: "/Applications/Karabiner-Elements.app/Contents/Resources/uninstall_core.sh",
                 sudo:       true,
               },
               pkgutil:      [
@@ -67,8 +70,6 @@ cask "karabiner-elements" do
   auto_updates true
   depends_on :macos
 
-  binary "#{appdir}/Karabiner-Elements.app/Contents/Helpers/karabiner_cli"
-
   zap trash: [
     "~/.config/karabiner",
     "~/.local/share/karabiner",
@@ -77,6 +78,7 @@ cask "karabiner-elements" do
     "~/Library/Caches/org.pqrs.Karabiner-Elements.Updater",
     "~/Library/Containers/org.pqrs.Karabiner-VirtualHIDDevice-Manager",
     "~/Library/HTTPStorages/org.pqrs.Karabiner-Elements.Settings",
+    "~/Library/Preferences/org.pqrs.Karabiner-Elements.Settings.plist",
     "~/Library/Preferences/org.pqrs.Karabiner-Elements.Updater.plist",
   ]
 end
