@@ -65,6 +65,9 @@ jobs:
     needs: autobump
     if: ${{ !cancelled() && needs.autobump.outputs.artifact != '' }}
     runs-on: ubuntu-latest
+    permissions:
+      contents: write # for Homebrew/actions/git-try-push
+      pull-requests: read
     strategy:
       fail-fast: false
       matrix:
@@ -116,7 +119,7 @@ jobs:
           tries: 1
           force: ${{ steps.sign.outputs.force }}
           no_lease: ${{ steps.sign.outputs.force }}
-          token: ${{ secrets.HOMEBREW_CASK_REPO_WORKFLOW_TOKEN }}
+          token: ${{ github.token }}
 
       - name: Open pull request
         if: steps.bump.outputs.branch
