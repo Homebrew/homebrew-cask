@@ -21,7 +21,11 @@ cask "riverside-studio" do
   uninstall launchctl: "RVS-Riverside.fm.Riverside-Helper"
 
   zap trash: [
+    "~/Library/Application Scripts/group.com.riverside.macapp.shared",
     "~/Library/Application Scripts/RVS-Riverside.fm-Mac",
+    "~/Library/Application Scripts/RVS-Riverside.fm.Riverside-Helper",
     "~/Library/Containers/RVS-Riverside.fm-Mac",
+    "~/Library/Containers/RVS-Riverside.fm.Riverside-Helper",
+    "~/Library/Group Containers/group.com.riverside.macapp.shared",
   ]
 end
