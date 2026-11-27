@@ -5,11 +5,11 @@ cask "antigravity" do
   livecheck_os = on_system_conditional macos: "mac", linux: "linux#{on_arch_conditional(arm: "-arm64")}"
   url_end = on_system_conditional macos: "dmg", linux: "AppImage"
 
-  version "2.35.2,4585983447007232"
-  sha256 arm:          "33b2123f12dee526b2d2d6bd7fe622ff328e697f51ece8c606ccdffe1aadd038",
-         intel:        "ec104570bc9815d9149df5ded020075a5f939d6f75022ad13d587320856a3775",
-         arm64_linux:  "4ffe15a59724d01bc50d99166cab3d57b68dae304bba05b40ebe2b3382ec4980",
-         x86_64_linux: "96c9c1ef899ce433bae1cfe72034ff5408afcc3a812ba46bdde09385fcc215aa"
+  version "2.36.0,5596661662220288"
+  sha256 arm:          "e89b3500d38e045907ba6c8e0aae2560c68f4d0a64aed8d93b2d14b43181d344",
+         intel:        "b8de7fa2e3090f8507439a0da43c7f0e8fb69ee333434c07b91d296326db48b2",
+         arm64_linux:  "d651ba6ad83a0814cc5dbff45958bc4f455fa39f86455c4fa88a95ef049c481a",
+         x86_64_linux: "4d92d52325d843dfec799d3915942c107d0a0a124ca80c3e5dcf66d2e1b511a3"
 
   on_macos do
     depends_on macos: :ventura
