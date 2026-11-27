@@ -2,11 +2,11 @@ cask "vesktop" do
   arch arm: on_system_conditional(linux: "-arm64")
   os macos: "-universal.dmg", linux: ".AppImage"
 
-  version "1.7.0"
-  sha256 arm:          "8d669765c890642fa52d565ce5c8161cc5f1519fe0e68a3384a0bd327bee2236",
-         intel:        "8d669765c890642fa52d565ce5c8161cc5f1519fe0e68a3384a0bd327bee2236",
-         arm64_linux:  "f7f8c0ad99a7303dbf613549886bad1aa88e7f380449b816792d210267f5b691",
-         x86_64_linux: "b996c66da9fdefbe0f16ef13c4ad6c9c94576f82252bdc33130b5703895fef74"
+  version "1.7.2"
+  sha256 arm:          "a98c4f5f9d5ad5387558c27355ad684e9c4a221ec0e8068a62f782b11a3f0a06",
+         intel:        "a98c4f5f9d5ad5387558c27355ad684e9c4a221ec0e8068a62f782b11a3f0a06",
+         arm64_linux:  "5387652b90742cb444a24d88fd1fc440298b5c6c14fbaffa0ca32f9968b3ba68",
+         x86_64_linux: "7a5bbe126e858c325f4f24356714db1a98cb79240505665ab3ea454bd8f9ff42"
 
   on_macos do
     depends_on macos: :ventura
