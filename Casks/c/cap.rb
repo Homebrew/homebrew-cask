@@ -2,14 +2,16 @@ cask "cap" do
   arch arm: "aarch64", intel: "x86_64"
   os macos: "darwin", linux: "linux"
 
+  sha256 arm:          "3dbd8c954fb8ca902d2b2c405fa5e89bb05c2f71770f7b639f86c1f98ff1ca5b",
+         intel:        "95897861c37badba57bc2efca36e780f02d5f1899dc8481c94200dde663cc3bc",
+         x86_64_linux: "f96518446cffbbc84d89143d6b44ca17cd2c306df1256551bbe8fc5913e23420"
+
   on_macos do
     on_arm do
-      version "0.6.2,01M625F2C69VMCTS7HHCSJBNSM"
-      sha256 "27cd666957f31c588f82b898076c0dcc51277143c2df26dd366c14506164b2d1"
+      version "0.6.3,01M767RX4AACM4AZEHX8XXG1E3"
     end
     on_intel do
-      version "0.6.2,01M6261PJQT6B2K6QBVTZXVNTQ"
-      sha256 "86808705aff14634f5f2aba61b5ed8c70d71bc77991601f6abeb3b0c63e00f0d"
+      version "0.6.3,01M767VVCBNZ0TZ14TYH79JX5V"
     end
 
     depends_on macos: :monterey
@@ -28,8 +30,7 @@ cask "cap" do
     ]
   end
   on_linux do
-    version "0.6.2,01M62633P16DT6AC4D6W223KK0"
-    sha256 "8984353ea010ecc7bef36b4aa23dac7094cb7b28c734a4804b006dedb8981c64"
+    version "0.6.3,01M768B4NZD7DHVSKG8TFY8QJB"
 
     depends_on arch: :x86_64
 
