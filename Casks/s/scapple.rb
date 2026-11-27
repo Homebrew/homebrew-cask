@@ -1,5 +1,5 @@
 cask "scapple" do
-  version "1.5.4"
+  version "1.5.5"
   sha256 :no_check
 
   url "https://scrivener.s3.amazonaws.com/Scapple.dmg"
@@ -16,6 +16,8 @@ cask "scapple" do
   depends_on :macos
 
   app "Scapple.app"
+
+  uninstall quit: "com.literatureandlatte.scapple"
 
   zap trash: [
     "~/Library/Application Support/CloudDocs/session/containers/iCloud.com.literatureandlatte.scapple",
