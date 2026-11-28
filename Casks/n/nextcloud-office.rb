@@ -2,8 +2,7 @@ cask "nextcloud-office" do
   version "9.3.8"
   sha256 "93845ab6af8873c187d23ba4a277df25bfd70cc6824936e6a817060044651fd3"
 
-  url "https://github.com/nextcloud-releases/Office-DesktopEditors/releases/download/v#{version}/Nextcloud-Office-DesktopEditors-#{version}-0-macos-arm64.dmg",
-      verified: "github.com/nextcloud-releases/Office-DesktopEditors/"
+  url "https://github.com/nextcloud-releases/Office-DesktopEditors/releases/download/v#{version}/Nextcloud-Office-DesktopEditors-#{version}-0-macos-arm64.dmg"
   name "Nextcloud Office"
   desc "Desktop editors for documents, spreadsheets and presentations"
   homepage "https://nextcloud.com/office/"
