@@ -10,8 +10,8 @@ cask "fliqlo" do
     screen_saver "Fliqlo.saver"
   end
   on_sonoma :or_newer do
-    version "2.6.2"
-    sha256 "afcd88595d4d2163bbe86dfc80d4024219f758160dc752c972bd8dccab891080"
+    version "2.6.3"
+    sha256 "c7b170821c9bfef72529750c6c8d635141fc71e28816da7e725a1704455ae8c3"
 
     livecheck do
       url :homepage
