@@ -1,9 +1,9 @@
 cask "codebuddy-cn" do
   arch arm: "arm64", intel: "x64"
 
-  version "4.12.4.43368774,62ef1801"
-  sha256 arm:   "50a2dfa0d8d6974e9fb88606805f0e023a77e1be1fc9d694714d65483981945e",
-         intel: "c75f18f5589a0df067e7e4986752fb9f328d6fba655e7dcfb2ca9b5ef8e4c6bd"
+  version "5.0.0.44991058,9268db16"
+  sha256 arm:   "a2d84bf022b5197a0d1635a2c0f0300d2f6470118102f0cffb850e5708ee26d9",
+         intel: "1275ddc54e675815ed7eb5edab707a235b07be2d04c8612422dcf88a1ed12d14"
 
   url "https://acc-1258344699.cos.accelerate.myqcloud.com/aiide/darwin-#{arch}/CodeBuddy-darwin-#{arch}-#{version.csv.first}-#{version.csv.second}-cn.zip"
   name "CodeBuddy CN"
@@ -22,7 +22,7 @@ cask "codebuddy-cn" do
   end
 
   auto_updates true
-  depends_on :macos
+  depends_on macos: :monterey
 
   app "CodeBuddy CN.app"
 
