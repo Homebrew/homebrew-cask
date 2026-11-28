@@ -30,8 +30,4 @@ cask "senadevicemanager" do
     "~/Library/HTTPStorages/com.sena.SenaDeviceManager",
     "~/Library/WebKit/com.sena.SenaDeviceManager",
   ]
-
-  caveats do
-    requires_rosetta
-  end
 end
