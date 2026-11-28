@@ -1,9 +1,9 @@
 cask "sdrmm-app" do
   arch arm: "aarch64", intel: "x64"
 
-  version "2.4.4"
-  sha256 arm:   "e838bfa170898ada254afaff5c8677f6718703b9ada96ee4a30c2163c0bb4b0a",
-         intel: "4dea3b0929a213b103de80b090d264f08759fc1560dc32fc61c2200c2b87e905"
+  version "2.5.0"
+  sha256 arm:   "13d68129f4573360d98706156825e47321f1b1710c51b3f633fd92c1d7ca8c4d",
+         intel: "046f0dac09aaac7e3403d527699c09c3907ddccd2dbd42875c942d9fa14a9a74"
 
   url "https://github.com/Newspicel/sdrmm/releases/download/v#{version}/SDRmm_#{version}_#{arch}.dmg"
   name "SDR--"
