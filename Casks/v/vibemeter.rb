@@ -8,6 +8,7 @@ cask "vibemeter" do
   homepage "https://www.vibemeter.ai/"
 
   deprecate! date: "2025-11-20", because: :unmaintained
+  disable! date: "2026-11-28", because: :unmaintained, replacement_cask: "codexbar"
 
   auto_updates true
   depends_on macos: :sequoia
