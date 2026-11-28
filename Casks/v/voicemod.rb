@@ -1,11 +1,11 @@
 cask "voicemod" do
   arch arm: "AppleSilicon", intel: "Intel"
 
-  version "3.17.49"
-  sha256 arm:   "1082b91958027bd3d92beac04fda1d4d6ef1faab8775721514e497f581e60ed4",
-         intel: "b86dcd91d320a6d7056c7f2c604605683adbbaa505b20b7da474d3ec122643bd"
+  version "3.17.68"
+  sha256 arm:   "a5944d7c0cdaa5564c0629bf105dce2ff1033dae32a31a51b01310d7f245425f",
+         intel: "621a2e53e95840557ce04332ef22c211f055857ca462d91b87a84cb50444194f"
 
-  url "https://flagship-versions.voicemod.net/#{version}/Voicemod_#{version}-#{arch}.pkg"
+  url "https://flagship-versions.voicemod.net/#{version}/Voicemod_#{version}-#{arch}_Update.zip"
   name "Voicemod"
   desc "Real-time voice changer and soundboard"
   homepage "https://www.voicemod.net/"
@@ -18,16 +18,11 @@ cask "voicemod" do
   end
 
   auto_updates true
-  depends_on :macos
+  depends_on macos: :ventura
 
-  pkg "Voicemod_#{version}-#{arch}.pkg"
+  app "Voicemod.app"
 
-  uninstall quit:    "net.voicemod.desktop",
-            pkgutil: [
-              "com.voicemod.desktop",
-              "net.voicemod.desktop",
-              "net.voicemod.voicemod",
-            ]
+  uninstall quit: "net.voicemod.desktop"
 
   zap trash: [
     "~/Library/Application Support/Voicemod",
