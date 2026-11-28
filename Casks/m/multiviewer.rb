@@ -1,14 +1,14 @@
 cask "multiviewer" do
   arch arm: "arm64", intel: "x64"
 
-  sha256 arm:   "0c9c55ead222f4a264044871dc29b3eeed998f10fa71a66f8ab7f2666e1f7fae",
-         intel: "ae2927f775abc8f7702d50b8fd27f66ea6020e6b74d31648161b515b0ce0a4cc"
+  sha256 arm:   "d759c7793510dd32b6e93f256e18e3a648464729aeff9fcd6b02643bf4e41f35",
+         intel: "42595d40fc79a33d26506004e348fc796b3a70fca303dff04ec0a8b55b27ff12"
 
   on_arm do
-    version "2.17.3,05fhngQIWldwYCuDLgxWrMZ6k1UoGcZx"
+    version "2.18.0,WcSO1Js2Ohio6q5Bvk0zzbI5yl3No8N6"
   end
   on_intel do
-    version "2.17.3,44P5gXHb6aQfe4oassLUm1FIhXX4E89s"
+    version "2.18.0,CTX3nyoZC94H6mumSm5oxJrlVyEctUcw"
   end
 
   url "https://releases.multiviewer.app/v/#{version.csv.first}/1/#{version.csv.second}/MultiViewer-#{version.csv.first}-#{arch}.dmg"
