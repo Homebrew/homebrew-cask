@@ -1,8 +1,8 @@
 cask "alfred@prerelease" do
-  version "6.0.3,3225"
-  sha256 "3d7484ceebae9dd5acd2f842f406cb4050e62eb8366987974c9c47762717d741"
+  version "6.0.4,3234"
+  sha256 "5ff23aede079de9a11887f8fac85196b26d591943396122402371337a67e887f"
 
-  url "https://cachefly.alfredapp.com/Alfred_#{version.csv.first}_#{version.csv.second}.dmg"
+  url "https://cachefly.alfredapp.com/Alfred_#{version.csv.first}_#{version.csv.second}.tar.xz"
   name "Alfred"
   desc "Application launcher and productivity software"
   homepage "https://www.alfredapp.com/"
