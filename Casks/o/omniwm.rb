@@ -12,6 +12,7 @@ cask "omniwm" do
     strategy :github_latest
   end
 
+  auto_updates true
   conflicts_with cask: "omniwm@canary"
   depends_on arch: :arm64
   depends_on macos: :tahoe
@@ -23,11 +24,12 @@ cask "omniwm" do
   uninstall quit: "com.barut.OmniWM"
 
   zap trash: [
-    "~/.config/omniwm",
     "~/.local/state/omniwm",
     "~/Library/Application Support/com.barut.OmniWM",
+    "~/Library/Application Support/CrashReporter/OmniWM_*.plist",
     "~/Library/Caches/com.barut.OmniWM",
     "~/Library/HTTPStorages/com.barut.OmniWM",
+    "~/Library/Logs/DiagnosticReports/OmniWM-*.ips",
     "~/Library/Preferences/com.barut.OmniWM.plist",
   ]
 end
