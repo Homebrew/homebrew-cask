@@ -1,9 +1,9 @@
 cask "netbeans" do
   arch arm: "arm64", intel: "x86_64"
 
-  version "31"
-  sha256 arm:   "9592fb7e416d433c11c1cdc2f0e33ae1e526a92e1f85172e2a25bdc7a107c3bf",
-         intel: "00182b85b77c24b37c63092b75bbb9c06c7eded62fbe582d5f6ffb51b3411099"
+  version "32"
+  sha256 arm:   "8f87398d8076d664d2dddeb26c25cc7e4267d1cf1aca5116fa9a72cede96ed99",
+         intel: "a751bbfe82332d82182cd6d0b260f487d8973ecd1b73347d29f0bf7688b8c94e"
 
   url "https://github.com/Friends-of-Apache-NetBeans/netbeans-installers/releases/download/nb#{version}/Apache-NetBeans-#{version}-#{arch}.pkg"
   name "NetBeans IDE"
