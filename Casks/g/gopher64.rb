@@ -3,10 +3,10 @@ cask "gopher64" do
   os macos: "macos", linux: "linux"
   url_end = on_system_conditional macos: ".zip"
 
-  version "1.2.2"
-  sha256 arm:          "8aa8fc44e0f41b0306d5e441a3413a0d1a3d3e7016257d2a57c88d5229284e2c",
-         arm64_linux:  "61e9f61eaa799bf16d017e029a1809040c23fb1bb0d04538e613957c76bc49ae",
-         x86_64_linux: "da9cfd625394d317592d2e1e0d47e1bf61c3f294eccb5c59a806f68bb5a77b85"
+  version "1.2.4"
+  sha256 arm:          "15ac6dcc135c4de5ed5160067d0dde1f9cdbb06ee6361fa66b9ef720bf6189c4",
+         arm64_linux:  "738390197d834093246d1055b578399c7935a873b855edf5a4a442c57012144b",
+         x86_64_linux: "d8d342936d5178ec9eccf7e9d793ae11b8fae57c9b98481d65cc3542901d9ab3"
 
   on_macos do
     depends_on arch: :arm64
