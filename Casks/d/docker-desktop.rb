@@ -18,14 +18,18 @@ cask "docker-desktop" do
   homepage "https://www.docker.com/products/docker-desktop"
 
   livecheck do
-    url "https://docs.docker.com/desktop/release-notes.md"
-    regex(%r{^## (\d+(?:\.\d+){2})\s.*?desktop\.docker\.com/mac/main/#{arch}/(\d+)/Docker\.dmg}m)
-    strategy :page_match do |page, regex|
-      match = page.match(regex)
-      next if match.blank?
+  livecheck do
+    url "https://desktop.docker.com/mac/main/#{arch}/appcast.json"
+    strategy :json do |json|
+      json["Items"]&.map do |item|
+        version = item["AppVersion"]
+        build = item["BuildNumber"]
+        next if version.blank? || build.blank?
 
-      "#{match[1]},#{match[2]}"
+        "#{version},#{build}"
+      end
     end
+  end
   end
 
   auto_updates true
