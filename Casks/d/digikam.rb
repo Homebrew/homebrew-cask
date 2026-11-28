@@ -1,13 +1,13 @@
 cask "digikam" do
   arch arm: "arm64", intel: on_system_conditional(macos: "x86_64", linux: "x86-64")
   os macos: "-MacOS"
-  variant = on_system_conditional macos: on_arch_conditional(arm: "Qt6", intel: "Qt5"), linux: "Qt6"
+  variant = on_system_conditional macos: on_arch_conditional(arm: "Qt6", intel: "Qt6"), linux: "Qt6"
   file_ext = on_system_conditional macos: "pkg", linux: "appimage"
 
-  version "9.1.0"
-  sha256 arm:          "280fb7f8bd69f512946b1a5acc63a4f4fb66aed464afc2a03a3e4355150cc8ac",
-         intel:        "d5edf0f8e498dad0e6748c3bdc9a55433bf8b43601d8467704f47cc995b3f4a2",
-         x86_64_linux: "0f2f61f2cde14718d709db6b37877fdb9f61b734cd3b2b9b812ebac1c00c8cae"
+  version "9.2.0"
+  sha256 arm:          "61af8865a0a95f6a043af01a4c96117701c4442c0c40ce1d28f8cb6f789e36f5",
+         intel:        "d9c09bfd1820957962a13d4c2146ac5393fb9498576276fd0d969e7194a482ce",
+         x86_64_linux: "bc95f6999b82612805fcc81d55e6a5c95aaa882acfca7f0bed87ec7840f7f37f"
 
   on_macos do
     disable! date: "2026-09-01", because: :fails_gatekeeper_check
