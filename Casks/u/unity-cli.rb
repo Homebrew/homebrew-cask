@@ -31,4 +31,7 @@ cask "unity-cli" do
   end
 
   binary "unity-#{os}-#{arch}", target: "unity"
+  generate_completions_from_executable "#{staged_path}/unity-#{os}-#{arch}",
+                                       base_name:              "unity",
+                                       shell_parameter_format: :cobra
 end
