@@ -1,6 +1,6 @@
 cask "font-mengshen-regular" do
-  version "2.0.0,20261125-125901"
-  sha256 "8bb634db60a278e20a888a12749d5eb4ad6769ccb2614191368e2bc4832a29b1"
+  version "2.0.0,20261128-170155"
+  sha256 "0b731d4db2d7631453520ca986110b8b9ec6ddce26b8a5660509559276c5271a"
 
   url "https://github.com/MaruTama/Mengshen-pinyin-font/releases/download/v#{version.csv.second}/Mengshen-HanSerif.ttf"
   name "Mengshen Pinyin"
