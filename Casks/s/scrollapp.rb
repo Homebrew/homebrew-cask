@@ -11,5 +11,7 @@ cask "scrollapp" do
 
   app "Scrollapp.app"
 
+  uninstall quit: "com.corinthians.Scrollapp"
+
   zap trash: "~/Library/Preferences/com.corinthians.Scrollapp.plist"
 end
