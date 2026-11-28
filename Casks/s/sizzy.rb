@@ -1,7 +1,7 @@
 cask "sizzy" do
   arch arm: "arm64", intel: "x64"
 
-  version "77.1.8"
+  version "77.1.9"
   sha256 :no_check
 
   url "https://proxy.sizzy.co/updates/download/mac?arch=#{arch}"
