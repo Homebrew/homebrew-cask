@@ -1,9 +1,9 @@
 cask "docker-desktop" do
   arch arm: "arm64", intel: "amd64"
 
-  version "4.99.0,245822"
-  sha256 arm:   "0ede7f9917b55c396a17b03c069cadf457a7d21904bc264c6d398fe132da7fb9",
-         intel: "0584a21e7503a4e12e25c7c829ef9439ceca6f453842e47ade9d1961c2fbd2af"
+  version "4.100.1,247138"
+  sha256 arm:   "cb8b2d63b312173df166aef3da4cdb92a8cd6ac66947fba026745fa7890eb5df",
+         intel: "5fbffdf1318564bf23599b7485f45aa734955857f12978588c0650f56fe9b35a"
 
   on_intel do
     binary "#{appdir}/Docker.app/Contents/Resources/bin/com.docker.hyperkit",
@@ -18,8 +18,16 @@ cask "docker-desktop" do
   homepage "https://www.docker.com/products/docker-desktop"
 
   livecheck do
-    url "https://desktop.docker.com/mac/main/#{arch}/appcast.xml"
-    strategy :sparkle
+    url "https://desktop.docker.com/mac/main/#{arch}/appcast.json"
+    strategy :json do |json|
+      json["Items"]&.map do |item|
+        version = item["AppVersion"]
+        build = item["BuildNumber"]
+        next if version.blank? || build.blank?
+
+        "#{version},#{build}"
+      end
+    end
   end
 
   auto_updates true
