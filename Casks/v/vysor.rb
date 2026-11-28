@@ -20,9 +20,11 @@ cask "vysor" do
   app "Vysor.app"
 
   zap trash: [
+    "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.electron.vysor.sfl*",
     "~/Library/Application Support/Vysor",
     "~/Library/Caches/com.electron.vysor",
     "~/Library/Caches/com.electron.vysor.ShipIt",
+    "~/Library/HTTPStorages/com.electron.vysor",
     "~/Library/Preferences/com.electron.vysor.helper.plist",
     "~/Library/Preferences/com.electron.vysor.plist",
     "~/Library/Saved Application State/com.electron.vysor.savedState",
