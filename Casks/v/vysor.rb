@@ -1,8 +1,11 @@
 cask "vysor" do
-  version "5.0.7"
-  sha256 "b3db71a61e6b46df7242038335b0ff6be961fcfd3e31250fda0488236bcadd6f"
+  arch arm: "arm64", intel: "x64"
 
-  url "https://github.com/koush/vysor.io/releases/download/v#{version}/Vysor-mac-#{version}.zip"
+  version "6.0.23"
+  sha256 arm:   "7c67d94b9f2b22886a733d6763e12e730106f409062161e05455caead9898746",
+         intel: "6334eb01f0bb400f00edb240f56c4d80d44f84a3412d7063c780f970ad908a1e"
+
+  url "https://github.com/koush/vysor.io/releases/download/v#{version}/Vysor-darwin-#{arch}-#{version}.zip"
   name "Vysor"
   desc "Mirror and control your phone"
   homepage "https://www.vysor.io/"
@@ -12,7 +15,7 @@ cask "vysor" do
     strategy :github_latest
   end
 
-  depends_on :macos
+  depends_on macos: :monterey
 
   app "Vysor.app"
 
