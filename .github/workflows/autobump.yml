@@ -49,6 +49,7 @@ jobs:
         id: bump
         env:
           HOMEBREW_TEST_BOT_AUTOBUMP: 1
+        continue-on-error: true
         run: brew bump --casks --prepare-prs=bumps.json
 
       - name: Upload bumps
