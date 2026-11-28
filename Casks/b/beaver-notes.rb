@@ -1,13 +1,13 @@
 cask "beaver-notes" do
-  arch arm: "-arm64"
-  url_end = on_system_conditional macos: "-universal.dmg", linux: "#{arch}.AppImage"
-  name_start = on_system_conditional macos: "Beaver-notes", linux: "Beaver-Notes"
+  arch arm: "-aarch64", intel: "-x86_64"
+  url_end = on_system_conditional macos: "_universal.dmg", linux: "#{arch}.AppImage"
+  name_start = on_system_conditional macos: "Beaver.Notes_", linux: "Beaver-Notes-"
 
-  version "4.4.0"
-  sha256 arm:          "c2b83192c2b25542e8c8d5ffcaa4152e0175208de1d5caefa83095c6fd064f43",
-         intel:        "c2b83192c2b25542e8c8d5ffcaa4152e0175208de1d5caefa83095c6fd064f43",
-         arm64_linux:  "ed729c63e9ef6f8fcd3919626d37119f4abfcd131958c25140ab3d169d9e54f3",
-         x86_64_linux: "55aec4f6a5ca57f8c2ee805c8bddfdffab8ae1f23ec9e7269c62794ae37c775f"
+  version "5.0.0"
+  sha256 arm:          "eb467931d8873d19b949e85dddb81fcf58f628273fe85caf796dcd91eca37194",
+         intel:        "eb467931d8873d19b949e85dddb81fcf58f628273fe85caf796dcd91eca37194",
+         arm64_linux:  "76de775b7e4b6417b78119253826c51d98a5a9ae9eaf14ea44b0e4e8d17d2990",
+         x86_64_linux: "d55f3e578aca4527b7e62c1130cd095add893da201de254f4d687d41312a4694"
 
   on_macos do
     depends_on macos: :monterey
@@ -26,7 +26,7 @@ cask "beaver-notes" do
     zap trash: "~/.config/Beaver Notes"
   end
 
-  url "https://github.com/Beaver-Notes/Beaver-Notes/releases/download/#{version}/#{name_start}-#{version}#{url_end}"
+  url "https://github.com/Beaver-Notes/Beaver-Notes/releases/download/v#{version}/#{name_start}#{version}#{url_end}"
   name "Beaver Notes"
   desc "Privacy-focused note-taking app"
   homepage "https://beavernotes.com/"
