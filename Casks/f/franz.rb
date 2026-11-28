@@ -2,11 +2,11 @@ cask "franz" do
   arch arm: "arm64", intel: on_system_conditional(macos: "x64", linux: "x86_64")
   os macos: "dmg", linux: "AppImage"
 
-  version "6.11.3"
-  sha256 arm:          "3458d4a6c6991a24702a4b1ea47d2b44a888bf2a5800c5bae8957b322e2bb36a",
-         intel:        "a13ca1d0967e8eaadefed84c443b43cd105af87e61581d5d8eefc81436d44630",
-         arm64_linux:  "32f8fb554d9a606708566beb4fb63c44551f1b8e23515e51605935521f8f0b8b",
-         x86_64_linux: "922fee39c7b7018c933712ea50ab074dcc1c67d66d434753575cd531ad7f3f0e"
+  version "6.12.0"
+  sha256 arm:          "221a8d6af72b836163de4ec81c3cabd8117c492032584a2b17124545052c05ac",
+         intel:        "5be04fc3e9bf0bf95db6232c84d141b094ba9d03c2300e61bb73ffa062110346",
+         arm64_linux:  "f8916a207a133976e6ef3b42b64a9f71aee6e7855fb7e2475410422bf44c6514",
+         x86_64_linux: "d911aa4f028b7f52fa92e04b6dfd73c39f05f2ffce2b0f3099a9a6ae0f6d8afa"
 
   on_macos do
     depends_on macos: :ventura
