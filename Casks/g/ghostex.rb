@@ -1,6 +1,6 @@
 cask "ghostex" do
-  version "12.4.0"
-  sha256 "9d434e78a1cb4d4758f99f449058e8d1d1a4dd1ac0adc7d0845cc841dbc8dff8"
+  version "12.5.0"
+  sha256 "0b59fddf16d0069783f37799c6fa080269618c51b43dc5d67e64c79f795c3049"
 
   url "https://github.com/maddada/Ghostex/releases/download/v#{version}/ghostex-#{version}-arm64.dmg"
   name "Ghostex"
@@ -14,7 +14,7 @@ cask "ghostex" do
 
   auto_updates true
   depends_on arch: :arm64
-  depends_on macos: :ventura
+  depends_on macos: :sequoia
 
   app "Ghostex.app"
   binary "#{appdir}/Ghostex.app/Contents/Resources/CLI/ghostex"
