@@ -18,7 +18,6 @@ cask "docker-desktop" do
   homepage "https://www.docker.com/products/docker-desktop"
 
   livecheck do
-  livecheck do
     url "https://desktop.docker.com/mac/main/#{arch}/appcast.json"
     strategy :json do |json|
       json["Items"]&.map do |item|
@@ -29,7 +28,6 @@ cask "docker-desktop" do
         "#{version},#{build}"
       end
     end
-  end
   end
 
   auto_updates true
