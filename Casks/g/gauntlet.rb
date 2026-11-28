@@ -8,6 +8,7 @@ cask "gauntlet" do
   homepage "https://github.com/project-gauntlet/gauntlet"
 
   deprecate! date: "2025-11-20", because: :unmaintained
+  disable! date: "2026-11-28", because: :unmaintained
 
   depends_on :macos
 
