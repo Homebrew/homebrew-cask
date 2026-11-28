@@ -1,9 +1,9 @@
 cask "shellrs" do
   arch arm: "aarch64", intel: "x86_64"
 
-  version "0.1.20"
-  sha256 arm:   "ce8eea1da39558f8750bf68c1167bfe7527fc0963e333657f41d8abf90adf972",
-         intel: "d6c33b296f4bb10f86a3378e9b580268afdae9ea1ce7e1c2852ceb464b352507"
+  version "0.1.21"
+  sha256 arm:   "6cce31380df1be8d16cedc18f0309ff06c20fc46f940341a8d11588b6df6319c",
+         intel: "510f7e50c6de8ff8d5342a03b91b48aad4efbf44eb69434801153fdbc05e3a7e"
 
   url "https://github.com/since2006/shell-rs/releases/download/v#{version}/ShellRS-#{version}-macos-#{arch}.dmg"
   name "ShellRS"
