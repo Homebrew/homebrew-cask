@@ -3,10 +3,10 @@ cask "freellmapi" do
   os macos: "-macos"
   url_end = on_system_conditional macos: "dmg", linux: "AppImage"
 
-  version "0.16.51"
-  sha256 arm:          "74ba0774953f75a652e3985a1734f264c40d71b47ded3de0ef82400c9e93ad64",
-         intel:        "ebacbd75d3b105129372af2fda60e92e3a2982cfe30b1bb6c827121c80674d34",
-         x86_64_linux: "5e43b98caf1888d9381e143dfb00c8e6eabcae856e35a003b21e7ed819523bf9"
+  version "0.16.53"
+  sha256 arm:          "c8e21dbd688378032fd70538549290eeea0d1d921e35ba3420c608a6b3019840",
+         intel:        "c089606dbd485fbaa7cc6de853dbd3dd02f3074c1a8bf5fdad34188274aa22d2",
+         x86_64_linux: "9fe0bdf65f2111c57eb8e4113642ac2bea2ea6f9ca949e94a8574081983bcddb"
 
   on_macos do
     depends_on macos: :monterey
