@@ -15,9 +15,13 @@ cask "beaver-notes" do
     app "Beaver Notes.app"
 
     zap trash: [
+      "~/Library/Application Support/com.beavernotes.beaver-notes",
+      "~/Library/Caches/com.beavernotes.beaver-notes",
       "~/Library/Caches/com.danielerolli.beaver-notes",
+      "~/Library/Logs/com.beavernotes.beaver-notes",
       "~/Library/Preferences/com.danielerolli.beaver-notes.plist",
       "~/Library/Saved Application State/com.danielerolli.beaver-notes.savedState",
+      "~/Library/WebKit/com.beavernotes.beaver-notes",
     ]
   end
   on_linux do
