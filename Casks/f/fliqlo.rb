@@ -33,5 +33,6 @@ cask "fliqlo" do
     "/Library/Screen Savers/Fliqlo.saver",
     "~/Library/Application Scripts/com.9031.fliqloMA",
     "~/Library/Containers/com.9031.fliqloMA",
+    "~/Library/Preferences/com.9031.fliqloMA.plist",
   ]
 end
