@@ -37,9 +37,37 @@ permissions:
   contents: read
 
 jobs:
-  generate-matrix:
+  tap_syntax:
+    name: tap_syntax${{ case(matrix.stable, ' (stable)', '') }}
+    runs-on: macos-26
+    strategy:
+      fail-fast: false
+      matrix:
+        stable: [false, true]
+    steps:
+      - name: Set up Homebrew
+        uses: Homebrew/actions/setup-homebrew@ceec4e8419bb3c97ce96e9dda7738499ed5f869d # 2026.11.14.1
+        with:
+          cask: true
+          stable: ${{ matrix.stable }}
+
+      - name: Cache style cache
+        if: ${{ !matrix.stable }}
+        uses: actions/cache@55cc8345863c7cc4c66a329aec7e433d2d1c52a9 # v6.1.0
+        with:
+          path: ~/Library/Caches/Homebrew/style
+          key: macos-style-cache-main-${{ github.sha }}
+          restore-keys: macos-style-cache-main-
+
+      - run: brew test-bot --only-tap-syntax ${STABLE:+"--stable"}
+        env:
+          HOMEBREW_SORBET_RECURSIVE: 1
+          STABLE: ${{ case(matrix.stable, '1', '') }}
+
+  setup_runners:
+    if: github.event_name == 'pull_request' || github.event_name == 'workflow_dispatch'
     outputs:
-      matrix: ${{ steps.generate-matrix.outputs.matrix }}
+      runners: ${{ steps.determine-runners.outputs.runners }}
       git-cache-key: ${{ steps.git-cache.outputs.key }}
     runs-on: macos-latest
     permissions:
@@ -87,7 +115,7 @@ jobs:
         run: brew config
 
       - name: Generate CI matrix
-        id: generate-matrix
+        id: determine-runners
         env:
           INPUT_CASKS: ${{ github.event.inputs.casks }}
           PULL_REQUEST_URL: ${{ github.event.pull_request.url }}
@@ -96,9 +124,6 @@ jobs:
           then
             # shellcheck disable=SC2086 # $INPUT_CASKS is a space-separated list of cask tokens
             brew generate-cask-ci-matrix ${{ inputs.skip_install && '--skip-install' || '' }} ${{ inputs.new_cask && '--new' || '' }} --casks $INPUT_CASKS
-          elif [[ "${GITHUB_EVENT_NAME}" == "push" || "${GITHUB_EVENT_NAME}" == "merge_group" ]]
-          then
-            brew generate-cask-ci-matrix --syntax-only
           else
             brew generate-cask-ci-matrix --url "$PULL_REQUEST_URL"
           fi
@@ -153,20 +178,23 @@ jobs:
 
   test:
     name: ${{ matrix.name }}
-    needs: generate-matrix
+    needs: [tap_syntax, setup_runners]
+    if: >-
+      !cancelled() && needs.tap_syntax.result == 'success' &&
+      needs.setup_runners.result == 'success' && needs.setup_runners.outputs.runners != '[]'
     runs-on: ${{ matrix.runner }}
     container: ${{ matrix.container || null }}
     strategy:
       fail-fast: false
       matrix:
-        include: ${{ fromJson(needs.generate-matrix.outputs.matrix) }}
+        include: ${{ fromJson(needs.setup_runners.outputs.runners) }}
     steps:
       # Until `setup-homebrew` fixes their ACLs, the container user can't write the directories the runner mounts.
       # The image also has no `zstd`, without which the cache lookup misses the zstd-compressed snapshot.
       # On failure the restore is skipped and `setup-homebrew` clones the tap, as before.
       - name: Prepare container for Git cache
         id: prepare-container
-        if: matrix.container && needs.generate-matrix.outputs.git-cache-key
+        if: matrix.container && needs.setup_runners.outputs.git-cache-key
         continue-on-error: true
         run: |
           user="$(whoami)"
@@ -175,17 +203,17 @@ jobs:
           sudo apt-get install --yes --quiet=2 --no-install-recommends zstd
 
       # A full clone saved daily by `git-cache.yml`. `setup-homebrew` keeps an existing tap and only fetches newer commits.
-      # No `restore-keys`: only the exact key that `generate-matrix` checked may be restored.
+      # No `restore-keys`: only the exact key that `setup_runners` checked may be restored.
       # Without the ACLs the restore can't write its outputs and would fail the job, so it needs the preparation.
       - name: Restore Git cache
         id: git-cache
         if: >
-          needs.generate-matrix.outputs.git-cache-key &&
+          needs.setup_runners.outputs.git-cache-key &&
           (!matrix.container || steps.prepare-container.outcome == 'success')
         uses: actions/cache/restore@55cc8345863c7cc4c66a329aec7e433d2d1c52a9 # v6.1.0
         with:
           path: .git
-          key: ${{ needs.generate-matrix.outputs.git-cache-key }}
+          key: ${{ needs.setup_runners.outputs.git-cache-key }}
 
       - name: Seed tap from Git cache
         if: steps.git-cache.outputs.cache-matched-key
@@ -215,7 +243,7 @@ jobs:
         with:
           core: false
           cask: true
-          stable: ${{ matrix.stable || false }}
+          stable: false
 
       # setup-homebrew blanks this via $GITHUB_ENV, which overrides workflow `env:`.
       # Only steps that need it to load the pull request's cask by name keep it.
@@ -236,7 +264,7 @@ jobs:
           persist-credentials: false
 
       - name: Clean up CI machine
-        if: runner.os == 'macOS' && !matrix.stable
+        if: runner.os == 'macOS'
         env:
           HOMEBREW_NO_INSTALL_FROM_API: ""
         run: brew test-bot --cleanup --only-cleanup-before
@@ -251,33 +279,14 @@ jobs:
           key: ${{ matrix.runner }}${{ matrix.container && '-container' || '' }}-rubygems-${{ steps.set-up-homebrew.outputs.gems-hash }}
           restore-keys: ${{ matrix.runner }}${{ matrix.container && '-container' || '' }}-rubygems-
 
-      - name: Cache style cache
-        if: runner.os == 'macOS' && !matrix.stable
-        uses: actions/cache@55cc8345863c7cc4c66a329aec7e433d2d1c52a9 # v6.1.0
-        with:
-          path: ~/Library/Caches/Homebrew/style
-          key: macos-style-cache-${{ matrix.stable && 'stable-' || 'main-' }}${{ github.sha }}
-          restore-keys: macos-style-cache-${{ matrix.stable && 'stable-' || 'main-' }}
-
       - name: Run brew config
         run: brew config
-
-      - name: Run brew test-bot --only-tap-syntax
-        id: tap-syntax
-        env:
-          HOMEBREW_NO_INSTALL_FROM_API: ""
-        run: brew test-bot --tap '${{ matrix.tap }}' --only-tap-syntax ${{ matrix.stable && '--stable' || '' }}
-        if: always() && !matrix.cask
 
       - name: Run brew fetch --cask ${{ matrix.cask.token }}
         id: fetch
         run: |
           brew fetch --cask --retry --force ${{ join(matrix.fetch_args, ' ') }} '${{ matrix.cask.token }}'
         timeout-minutes: 30
-        if: >
-          always() &&
-          contains(fromJSON('["success", "skipped"]'), steps.tap-syntax.outcome) &&
-          matrix.cask
 
       # On xcode-27, anything that starts CoreSimulator (e.g. `brew config`) launches
       # simdiskimaged, which then unmounts or moves other disk images while re-adding a
@@ -291,18 +300,14 @@ jobs:
           sudo launchctl bootout system/com.apple.CoreSimulator.simdiskimaged || true
           sudo pkill -x simdiskimaged || true
 
-      - name: Run brew audit --cask${{ (matrix.cask && ' ') || ' --tap ' }}${{ matrix.cask.token || matrix.tap }}
+      - name: Run brew audit --cask ${{ matrix.cask.token }}
         id: audit
         env:
           HOMEBREW_NO_INSTALL_FROM_API: ""
         run: |
-          brew audit --cask ${{ join(matrix.audit_args, ' ') }}${{ (matrix.cask && ' ') || ' --tap ' }}'${{ matrix.cask.token || matrix.tap }}'
+          brew audit --cask ${{ join(matrix.audit_args, ' ') }} '${{ matrix.cask.token }}'
         timeout-minutes: 30
-        if: >
-          always() &&
-          contains(fromJSON('["success", "skipped"]'), steps.tap-syntax.outcome) &&
-          (!matrix.cask || steps.fetch.outcome == 'success') &&
-          !matrix.skip_audit
+        if: always() && steps.fetch.outcome == 'success'
 
       - name: Gather cask information
         id: info
@@ -385,9 +390,9 @@ jobs:
 
   conclusion:
     name: conclusion
-    needs: test
+    needs: [tap_syntax, setup_runners, test]
     runs-on: ubuntu-slim
-    if: always()
+    if: ${{ !cancelled() }}
     steps:
       - name: Result
-        run: ${{ needs.test.result == 'success' }}
+        run: ${{ !contains(needs.*.result, 'failure') && !contains(needs.*.result, 'cancelled') }}
