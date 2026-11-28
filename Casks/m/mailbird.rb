@@ -1,8 +1,6 @@
 cask "mailbird" do
-  arch arm: "arm64", intel: "x86_64"
-
-  version "1.9.2"
-  sha256 "1b77fcd1c04de9be968930e778c93de37557db3c53839bf2e0e95cb045a7a47e"
+  version "4.38.2"
+  sha256 "05e4d48edad48b07523d9b54b9ab087fc017da2ad372599b542e40853da48992"
 
   url "https://download.getmailbird.com/installers/mailbird_next/macos/Mailbird-for-Mac-#{version}.dmg"
   name "Mailbird"
@@ -10,7 +8,7 @@ cask "mailbird" do
   homepage "https://www.getmailbird.com/"
 
   livecheck do
-    url "https://links.getmailbird.com/mailbird_mac_#{arch}_installer"
+    url "https://links.getmailbird.com/mailbird_mac_universal_installer"
     strategy :header_match
   end
 
