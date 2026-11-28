@@ -1,6 +1,6 @@
 cask "markdown-preview" do
-  version "0.0.75"
-  sha256 "26a548b104ec49d406562530bba8d0a2029dad777c7c54019f37b54f231fec3d"
+  version "0.0.76"
+  sha256 "618d18bb799a9a8982058ab2db3e3bcd176cc96677c446878ec63b328420e267"
 
   url "https://github.com/pluk-inc/markdown-preview/releases/download/v#{version}/Markdown-Preview.dmg"
   name "Markdown Preview"
