@@ -1,9 +1,9 @@
 cask "soapui" do
   arch arm: "arm64", intel: "x64"
 
-  version "5.9.1"
-  sha256 arm:   "8fd400d40bebfa0260d2f7a8ccead22742a08b6c0b33ef321def7b2f19022969",
-         intel: "1c95a58c88151b20adb7fc76cfbe22f3a429d2306cd7e20496a5dce7e5b16eec"
+  version "5.10.1"
+  sha256 arm:   "f106c827cea60d53ab56661c4289a10ec284fc947359c15def431a2afd992c01",
+         intel: "db85014a40e46623e8fb6ff986ba0768df4aee6f95ba7444c7326a42171c6848"
 
   url "https://dl.eviware.com/soapuios/#{version}/SoapUI-#{arch}-#{version}.dmg"
   name "SmartBear SoapUI"
