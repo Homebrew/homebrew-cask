@@ -1,5 +1,5 @@
 cask "dockfix" do
-  version "5.4.2"
+  version "5.5.0"
   sha256 :no_check
 
   url "https://www.dockfix.app/downloads/DockFix.dmg"
