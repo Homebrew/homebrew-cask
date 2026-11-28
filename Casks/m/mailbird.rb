@@ -18,6 +18,7 @@ cask "mailbird" do
 
   zap trash: [
     "~/Library/Preferences/com.getmailbird.Mailbird Helper (Renderer).plist",
+    "~/Library/Preferences/com.getmailbird.Mailbird.plist",
     "~/Library/Saved Application State/com.getmailbird.Mailbird.savedState",
   ]
 end
